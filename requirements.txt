@@ -1,0 +1,4 @@
+Django>=6.0.7,<6.1
+gunicorn>=23,<24
+PyYAML>=6.0.2,<7
+whitenoise>=6.9,<7

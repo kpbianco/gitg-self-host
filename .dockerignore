@@ -1,0 +1,15 @@
+.git
+.env
+.npm-cache
+.pytest_cache
+.playwright-browsers
+.ruff_cache
+.test-data
+.venv
+__pycache__
+*.py[cod]
+*.sqlite3
+data/notion/final_notion_export_G2.zip
+legacy
+playwright-report
+test-results

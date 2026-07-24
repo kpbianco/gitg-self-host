@@ -22,11 +22,16 @@ Then inspect the canonical data under:
 
 Treat `legacy/` as provenance only. Do not build implementation behavior from legacy notes when canonical files disagree.
 
-Your task is **Milestone 1 only**: build a self-hosted guided-practice UX with static scores. Do not enable dynamic mastery/confidence mutation.
+Work only on the milestone batch explicitly authorized by the repository
+owner. M1A is a review gate: if its pull request has not been approved and
+merged, do not begin M1B. Do not enable dynamic mastery/confidence mutation.
 
-Use the technical and UX constraints in `AGENTS.md`. The desired default stack is Next.js + TypeScript, SQLite + Drizzle, Zod, Tailwind, Vitest, Playwright, Dockerfile, and Docker Compose. You may propose a materially simpler equivalent, but explain and receive approval before deviating.
+Use the binding stack in `AGENTS.md`: a Python/Django monolith with Django
+templates, local assets, SQLite, Gunicorn, pytest, Ruff, Playwright, Dockerfile,
+and one Docker Compose application service. The earlier Next.js suggestion is
+superseded by ADR 0001. Do not add a Node.js runtime server.
 
-Implement:
+After M1A approval, and only when M1B is explicitly authorized, implement:
 - curriculum/profile import with stable IDs and version metadata;
 - concise home page;
 - profile page explaining raw/calibrated/confidence;
@@ -44,12 +49,12 @@ Acceptance criteria are in `docs/PROJECT_HANDOFF.md`. Add automated tests for ev
 
 Before changing code:
 1. Audit the repository and data package.
-2. Propose a concise architecture and milestone plan.
+2. Confirm the accepted architecture and make a concise batch plan.
 3. Identify data inconsistencies or missing canonical inputs.
 4. Do not ask me to restate background already in the repository.
 
 Then implement in reviewable batches. For each batch:
-- run format/lint/typecheck/unit/E2E tests;
+- run Ruff, Django checks, pytest, and applicable Playwright tests;
 - audit against the product doctrine;
 - report exact passes/failures;
 - open a PR and ask me to approve it.

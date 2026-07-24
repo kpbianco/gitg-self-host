@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+{% load growth_extras %}
+
+{% block title %}Developmental profile · Grounded Growth{% endblock %}
+
+{% block content %}
+  <section class="page-heading profile-heading">
+    <div>
+      <p class="eyebrow">Developmental profile</p>
+      <h1>A provisional map, not an identity.</h1>
+      <p class="lede">
+        This profile is a starting hypothesis from self-report. It helps select
+        useful practices; it does not establish mastery or measure worth.
+      </p>
+    </div>
+    {% if summary.assessment_run %}
+      <div class="version-card">
+        <span>Assessment</span>
+        <strong>v{{ summary.assessment_run.assessment_version }}</strong>
+        <small>Imported starting profile</small>
+      </div>
+    {% endif %}
+  </section>
+
+  {% if summary.assessment_run %}
+    <section class="definition-grid" aria-label="How to read this profile">
+      <article>
+        <h2>Raw self-report</h2>
+        <p>What your answers directly imply before conservative calibration.</p>
+      </article>
+      <article>
+        <h2>Calibrated estimate</h2>
+        <p>A cautious starting estimate that remains provisional until real-world evidence accumulates.</p>
+      </article>
+      <article>
+        <h2>Evidence confidence</h2>
+        <p>How much support the estimate has. It is not another judgment of ability.</p>
+      </article>
+    </section>
+
+    <div class="profile-grid">
+      <section class="panel" aria-labelledby="orientations-heading">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Engagement style</p>
+            <h2 id="orientations-heading">Orientations</h2>
+          </div>
+        </div>
+        <p class="panel-intro">Preferences that shape framing and tie-breaking—not skill or obligation.</p>
+        <ul class="score-list">
+          {% for orientation in summary.assessment_run.orientation_results.all %}
+            <li>
+              <div class="score-label">
+                <strong>{{ orientation.name }}</strong>
+                <span>{{ orientation.score|percentage }} expression</span>
+              </div>
+              <meter min="0" max="1" value="{{ orientation.score }}">{{ orientation.score|percentage }}</meter>
+              <small>{{ orientation.confidence|percentage }} evidence confidence</small>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+
+      <section class="panel" aria-labelledby="archetypes-heading">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Narrative mixture</p>
+            <h2 id="archetypes-heading">Archetypes</h2>
+          </div>
+        </div>
+        <p class="panel-intro">Paired orientation patterns, not diagnoses or personality boxes.</p>
+        <ol class="archetype-list">
+          {% for archetype in summary.assessment_run.archetype_results.all %}
+            <li>
+              <span class="rank">{{ archetype.rank|stringformat:"02d" }}</span>
+              <div>
+                <strong>{{ archetype.name }}</strong>
+                <span>{{ archetype.orientation_slugs|join:" + " }}</span>
+              </div>
+              <b>{{ archetype.fit_index|percentage }}</b>
+            </li>
+          {% endfor %}
+        </ol>
+        <p class="fine-print">
+          This imported profile preserves its three published archetypes. Future
+          in-app assessment runs retain all fifteen outputs.
+        </p>
+      </section>
+    </div>
+
+    <div class="profile-grid">
+      <section class="panel" aria-labelledby="strengths-heading">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Current signal</p>
+            <h2 id="strengths-heading">Strongest provisional capacities</h2>
+          </div>
+        </div>
+        <ol class="capacity-list">
+          {% for baseline in summary.strongest_capacities %}
+            <li>
+              <div>
+                <strong>{{ baseline.lever.name }}</strong>
+                <span>
+                  Raw {{ baseline.raw_self_report|percentage }} ·
+                  confidence {{ baseline.evidence_confidence|percentage }}
+                </span>
+              </div>
+              <b>{{ baseline.calibrated_estimate|percentage }}</b>
+            </li>
+          {% endfor %}
+        </ol>
+      </section>
+
+      <section class="panel" aria-labelledby="needs-heading">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Balancing work</p>
+            <h2 id="needs-heading">Highest provisional developmental needs</h2>
+          </div>
+        </div>
+        <ol class="capacity-list">
+          {% for baseline in summary.highest_needs %}
+            <li>
+              <span class="rank">{{ baseline.need_rank|stringformat:"02d" }}</span>
+              <div>
+                <strong>{{ baseline.lever.name }}</strong>
+                <span>
+                  Estimate {{ baseline.calibrated_estimate|percentage }} ·
+                  confidence {{ baseline.evidence_confidence|percentage }}
+                </span>
+              </div>
+            </li>
+          {% endfor %}
+        </ol>
+      </section>
+    </div>
+
+    <aside class="mastery-notice">
+      <strong>Static-score boundary</strong>
+      <p>
+        M1 records no score updates. Practice completion will remain separate from
+        competency mastery, and completing a practice will not change this profile.
+      </p>
+    </aside>
+  {% else %}
+    <div class="empty-state">
+      <h2>No assessment profile is available</h2>
+      <p>Run the canonical seed after creating a user, or import an assessment in a later milestone.</p>
+    </div>
+  {% endif %}
+{% endblock %}

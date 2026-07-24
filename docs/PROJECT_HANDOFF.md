@@ -27,6 +27,24 @@ Therefore:
 - build a self-hosted web application for the guided user experience;
 - delay dynamic score mutation until evidence capture is validated.
 
+## Accepted runtime architecture
+The consumer runtime is a deliberately simple Django monolith:
+
+- Python and the current supported stable Django release;
+- Django templates, local CSS, and only small amounts of local JavaScript;
+- SQLite through the Django ORM, stored at
+  `/data/grounded_growth.sqlite3`;
+- Gunicorn bound to `0.0.0.0` in one Docker Compose application service;
+- pytest, Ruff, and Playwright for verification.
+
+M1 does not use React, Next.js, a separate API/frontend, PostgreSQL, Redis,
+Celery, a queue, a reverse proxy, or externally hosted browser assets. SQLite
+uses a 20-second busy timeout and WAL where supported. This is intentionally a
+single-instance local-network deployment while keeping ordinary ORM code
+portable to PostgreSQL later.
+
+See `docs/architecture/0001-django-monolith-and-sqlite.md`.
+
 ## Canonical conceptual model
 ### Competency
 A broad human capacity, such as Maintaining Friendship.
@@ -109,6 +127,22 @@ Completion does not imply mastery.
 ## Milestone sequence
 ### M1 — Guided UX, static scores
 Build the app shell and full friendship protocol. Import profile and curriculum. Do not mutate scores.
+
+#### M1A — Foundation
+- Django project and complete M1 domain schema;
+- one-service Docker deployment with persistent SQLite;
+- bootstrap authentication and public health endpoint;
+- validated, idempotent canonical import;
+- assessment v1.1 golden-test boundary;
+- Pilot 002-backed authenticated home and profile.
+
+#### M1B — Guided workflow
+- take assessment v1.1 in the application or import GGA11;
+- retain GGA1 decoding compatibility;
+- practice recommendation explanation and setup;
+- active practice, compact draft/submitted check-ins, pause/resume/stop;
+- completion and final review with an explicit mastery disclaimer;
+- browser coverage for the complete M1 path.
 
 ### M2 — Evidence engine
 Add structured evidence events, drafts/submission, quality, independence, context breadth, repetition, and contradiction.

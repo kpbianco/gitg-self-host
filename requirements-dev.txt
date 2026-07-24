@@ -1,0 +1,6 @@
+-r requirements.txt
+playwright>=1.55,<2
+pytest>=8.4,<9
+pytest-django>=4.11,<5
+pytest-playwright>=0.7,<1
+ruff>=0.12,<1
