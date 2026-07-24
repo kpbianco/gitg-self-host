@@ -22,16 +22,19 @@ Use these files in priority order:
 7. `docs/pilot/PILOT_002_FINDINGS.md`
 8. `legacy/` only for provenance and design research; do not treat it as canonical implementation data.
 
-## Required initial milestone
-Milestone 1 validates the UX only:
+## Implemented initial milestone
+Milestone 1 validates the UX with static scores:
 - import Pilot 002 profile;
+- take assessment v1.1 or import a supported share code;
 - show a concise working profile;
 - recommend one bounded practice;
 - provide a setup wizard;
 - provide a compact evidence check-in;
 - provide a final review;
-- show a score-impact preview;
 - do **not** mutate mastery or confidence.
+
+A review may show a clearly labeled hypothetical score-impact preview, but M1
+currently saves no preview and no score impact.
 
 Implement one complete protocol first: `Deepen One Existing Friendship`.
 Create inactive placeholders for four others:
@@ -93,8 +96,13 @@ Before asking for review:
 5. Do not claim dynamic scoring works until score mutation is deliberately enabled and tested.
 
 ## Current implementation boundary
-M1A establishes the Django runtime, persistent SQLite schema, authentication,
-canonical importer, assessment golden fixtures, Pilot 002 profile, and minimal
-authenticated home/profile pages. M1B owns the assessment-taking/import UI and
-the complete practice setup, sprint, check-in, pause/resume, completion, and
-review experience. Do not begin M1B before M1A is reviewed.
+M1A established the runtime, persistent schema, authentication, canonical
+importer, golden assessment boundary, and Pilot 002 profile. M1B integrates the
+canonical assessment and completes the friendship recommendation, setup,
+sprint, draft/submitted check-in, pause/resume/stop, completion, and review
+experience.
+
+M1 is a static-score product boundary. Do not implement M2 evidence weights,
+M3 posterior updates, hidden score mutation, or dynamic recommendation changes
+without a separately reviewed milestone. Practice completion remains separate
+from competency mastery.

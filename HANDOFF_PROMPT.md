@@ -23,27 +23,26 @@ Then inspect the canonical data under:
 Treat `legacy/` as provenance only. Do not build implementation behavior from legacy notes when canonical files disagree.
 
 Work only on the milestone batch explicitly authorized by the repository
-owner. M1A is a review gate: if its pull request has not been approved and
-merged, do not begin M1B. Do not enable dynamic mastery/confidence mutation.
+owner. M1A is merged; M1B completes the guided M1 workflow and remains a review
+gate. Do not begin M2 until M1B is approved and the owner explicitly
+authorizes a bounded evidence-engine batch. Do not enable dynamic
+mastery/confidence mutation.
 
 Use the binding stack in `AGENTS.md`: a Python/Django monolith with Django
 templates, local assets, SQLite, Gunicorn, pytest, Ruff, Playwright, Dockerfile,
 and one Docker Compose application service. The earlier Next.js suggestion is
 superseded by ADR 0001. Do not add a Node.js runtime server.
 
-After M1A approval, and only when M1B is explicitly authorized, implement:
-- curriculum/profile import with stable IDs and version metadata;
-- concise home page;
-- profile page explaining raw/calibrated/confidence;
-- practice recommendation page;
-- setup wizard;
-- active practice page;
-- under-two-minute evidence check-in;
-- pause/resume;
-- final review;
-- static score-impact preview only;
+The implemented M1 boundary includes:
+
+- canonical curriculum/profile import with stable IDs and version metadata;
+- assessment v1.1 taking plus GGA11/GGA1 import;
+- concise home/profile and recommendation explanation;
+- seven-step setup, active practice, compact draft/submitted check-ins;
+- active/paused/stopped/completed states and final review;
 - one complete `Deepen One Existing Friendship` protocol;
-- inactive placeholders for the four additional protocols named in `AGENTS.md`.
+- inactive placeholders for the four additional protocols in `AGENTS.md`;
+- no score mutation.
 
 Acceptance criteria are in `docs/PROJECT_HANDOFF.md`. Add automated tests for every testable criterion. The app must run through Docker Compose.
 
@@ -59,6 +58,7 @@ Then implement in reviewable batches. For each batch:
 - report exact passes/failures;
 - open a PR and ask me to approve it.
 
-Do not implement M2 evidence scoring or M3 dynamic scoring unless I explicitly authorize the next milestone after reviewing M1.
+Do not implement M2 evidence semantics or M3 dynamic scoring unless I
+explicitly authorize the next milestone after reviewing M1B.
 
 ---

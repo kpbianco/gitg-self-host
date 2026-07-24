@@ -17,7 +17,15 @@
       <div class="version-card">
         <span>Assessment</span>
         <strong>v{{ summary.assessment_run.assessment_version }}</strong>
-        <small>Imported starting profile</small>
+        <small>
+          {% if summary.assessment_run.source == "application" %}
+            Completed in this application
+          {% elif summary.assessment_run.source == "share_code" %}
+            Imported share code
+          {% else %}
+            Pilot 002 demonstration seed
+          {% endif %}
+        </small>
       </div>
     {% endif %}
   </section>
@@ -81,10 +89,17 @@
             </li>
           {% endfor %}
         </ol>
-        <p class="fine-print">
-          This imported profile preserves its three published archetypes. Future
-          in-app assessment runs retain all fifteen outputs.
-        </p>
+        {% if summary.assessment_run.source == "pilot_seed" %}
+          <p class="fine-print">
+            The Pilot 002 source publishes only these three archetypes; missing
+            outputs were not invented.
+          </p>
+        {% else %}
+          <p class="fine-print">
+            This assessment run retains all fifteen archetype outputs; the order
+            above is a provisional narrative aid, not a personality type.
+          </p>
+        {% endif %}
       </section>
     </div>
 
@@ -146,7 +161,8 @@
   {% else %}
     <div class="empty-state">
       <h2>No assessment profile is available</h2>
-      <p>Run the canonical seed after creating a user, or import an assessment in a later milestone.</p>
+      <p>Take assessment v1.1 or import a supported GGA11/GGA1 share code.</p>
+      <a class="button button-secondary" href="{% url 'growth:assessment' %}">Open assessment</a>
     </div>
   {% endif %}
 {% endblock %}

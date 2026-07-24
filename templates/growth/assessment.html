@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Assessment · Grounded Growth{% endblock %}
+
+{% block content %}
+  <section class="page-heading assessment-heading">
+    <div>
+      <p class="eyebrow">Assessment v1.1</p>
+      <h1>A provisional starting point.</h1>
+      <p class="lede">
+        Fifty required questions establish a self-report baseline. Optional
+        clarifiers can improve uncertain estimates. This is not a diagnosis and
+        does not establish mastery.
+      </p>
+    </div>
+    <span class="status-pill">About 11–15 minutes</span>
+  </section>
+
+  <div
+    id="assessment-app"
+    data-storage-key="{{ assessment_storage_key }}"
+    data-save-url="{% url 'growth:assessment-save' %}"
+  >
+    <section id="assessment-intro" class="panel assessment-stage">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">Before you begin</p>
+          <h2>Answer from the past six months.</h2>
+        </div>
+      </div>
+      <p>
+        Use ordinary behavior across contexts—not your ideal self or a single
+        best or worst moment. Choose <strong>Not applicable</strong> when you
+        genuinely lack enough experience.
+      </p>
+      <div class="assessment-facts" aria-label="Assessment details">
+        <span>50 required questions</span>
+        <span>Autosaves on this device</span>
+        <span>1–5, N, Enter, and ← shortcuts</span>
+        <span id="assessment-load-status">Loading local assessment engine…</span>
+      </div>
+      <div class="button-row">
+        <button id="assessment-start" class="button" type="button" disabled>Begin assessment</button>
+        <button id="assessment-reset" class="button button-quiet" type="button" disabled>
+          Clear saved answers
+        </button>
+      </div>
+    </section>
+
+    <section id="assessment-quiz" class="panel assessment-stage hidden" aria-live="polite">
+      <div class="assessment-progress-meta">
+        <strong id="assessment-count"></strong>
+        <span id="assessment-autosave" class="muted">Saved locally</span>
+      </div>
+      <div class="assessment-progress" aria-hidden="true">
+        <div id="assessment-progress-fill"></div>
+      </div>
+      <p id="assessment-prompt" class="assessment-question"></p>
+      <div id="assessment-scale" class="assessment-scale"></div>
+      <div class="button-row">
+        <button id="assessment-back" class="button button-quiet" type="button">Back</button>
+        <button id="assessment-next" class="button" type="button" disabled>Next</button>
+      </div>
+    </section>
+
+    <section id="assessment-clarify" class="panel assessment-stage hidden">
+      <p class="eyebrow">Optional accuracy pass</p>
+      <h2>Your core assessment is complete.</h2>
+      <p>
+        You can answer up to eight capability clarifiers and two orientation
+        clarifiers selected from your least-certain estimates, or continue now.
+      </p>
+      <div class="button-row">
+        <button id="assessment-clarify-start" class="button" type="button">
+          Answer targeted clarifiers
+        </button>
+        <button id="assessment-clarify-skip" class="button button-quiet" type="button">
+          Continue without clarifiers
+        </button>
+      </div>
+    </section>
+
+    <section id="assessment-results" class="assessment-stage hidden">
+      <div class="status-note" role="note">
+        <strong>How to read this result.</strong>
+        Raw self-report reflects your answers. The calibrated estimate remains
+        conservative under uncertainty. Confidence describes evidence strength,
+        not ability or worth.
+      </div>
+
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Provisional result</p>
+          <h2>Your working profile</h2>
+        </div>
+        <span id="assessment-save-status" class="status-pill">Saving…</span>
+      </div>
+
+      <div id="assessment-quality" class="panel compact-panel"></div>
+
+      <div class="profile-grid">
+        <section class="panel">
+          <p class="eyebrow">Engagement style</p>
+          <h2>Orientations</h2>
+          <div id="assessment-orientations" class="result-card-list"></div>
+        </section>
+        <section class="panel">
+          <p class="eyebrow">Narrative mixture</p>
+          <h2>Leading archetypes</h2>
+          <div id="assessment-archetypes" class="result-card-list"></div>
+        </section>
+      </div>
+
+      <section class="panel">
+        <p class="eyebrow">Balancing work</p>
+        <h2>Highest provisional developmental needs</h2>
+        <p class="panel-intro">
+          The complete 37-lever result is stored without turning this page into
+          a database report.
+        </p>
+        <div id="assessment-needs" class="result-card-list"></div>
+      </section>
+
+      <section class="panel share-code-panel">
+        <p class="eyebrow">Portable result</p>
+        <h2>GGA11 share code</h2>
+        <p>
+          This code contains your assessment answers. Treat it as private account
+          data and share it only when you intend to.
+        </p>
+        <textarea id="assessment-share-code" readonly aria-label="GGA11 share code"></textarea>
+        <div class="button-row">
+          <button id="assessment-copy" class="button button-secondary" type="button">
+            Copy share code
+          </button>
+          <a id="assessment-profile-link" class="button hidden" href="{% url 'growth:profile' %}">
+            View saved profile
+          </a>
+          <button id="assessment-retry-save" class="button button-quiet hidden" type="button">
+            Retry save
+          </button>
+          <button id="assessment-retake" class="button button-quiet" type="button">Retake</button>
+        </div>
+        <p id="assessment-save-error" class="form-error hidden" role="alert"></p>
+      </section>
+    </section>
+
+    <section class="panel assessment-import">
+      <p class="eyebrow">Already have a result?</p>
+      <h2>Import a share code</h2>
+      <p>
+        Import a GGA11 code or a supported legacy GGA1 code. It will be decoded
+        and scored locally with the same v1.1 reference engine before saving.
+      </p>
+      <label for="assessment-import-code">Share code</label>
+      <textarea id="assessment-import-code" placeholder="GGA11.…"></textarea>
+      <div class="button-row">
+        <button id="assessment-import-submit" class="button button-secondary" type="button" disabled>
+          Import profile
+        </button>
+      </div>
+      <p id="assessment-import-error" class="form-error hidden" role="alert"></p>
+    </section>
+
+    <form class="hidden" aria-hidden="true">{% csrf_token %}</form>
+  </div>
+
+  {{ assessment_spec|json_script:"assessment-spec" }}
+  {{ assessment_model|json_script:"assessment-model" }}
+  <script src="{% url 'growth:assessment-scorer' %}"></script>
+  <script src="{% static 'growth/assessment.js' %}"></script>
+{% endblock %}

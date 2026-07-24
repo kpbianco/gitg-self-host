@@ -13,9 +13,9 @@ Open `http://<server-local-ip>:<APP_PORT>`; the default port is
 `3000`. Sign in with the bootstrap credentials from `.env`.
 
 Grounded Growth is a self-hosted, evidence-oriented guided-development
-application. M1A provides the secure Django foundation, canonical curriculum
-import, Pilot 002 profile, and static-score boundary. The guided assessment and
-practice workflow follows in M1B after review.
+application. M1 provides a secure Django runtime, the canonical v1.1
+assessment, an immediately usable Pilot 002 demonstration profile, and one
+complete guided practice workflow. Scores remain static.
 
 ## Deployment essentials
 
@@ -42,11 +42,15 @@ existing password.
 See [deployment](docs/deployment.md) for environment options, updates,
 local-network access, shutdown behavior, and the future HTTPS boundary.
 
-## What M1A contains
+## What M1 contains
 
 - Django 6.0 monolith with server-rendered responsive pages.
 - Built-in Django authentication, sessions, CSRF protection, and HttpOnly
   session cookies.
+- In-application assessment with 50 required questions, optional targeted
+  clarifiers, full-question timing, canonical browser scoring, and GGA11 share
+  codes.
+- GGA11 profile import with supported GGA1 backward decoding.
 - Complete M1 schema for assessments, baselines, curriculum links, protocols,
   sprints, actions, check-ins, and reviews.
 - Validated import of 27 domains, 383 competencies, 37 levers, and 1,403
@@ -55,10 +59,27 @@ local-network access, shutdown behavior, and the future HTTPS boundary.
   archetypes published in the canonical profile.
 - The complete `Deepen One Existing Friendship` protocol data plus four
   inactive structured placeholders.
-- Assessment v1.1 golden coverage for all scoring outputs, GGA11 generation,
-  and supported GGA1 decoding.
+- The complete 14-day **Deepen One Existing Friendship** experience: reason,
+  applicability, context, boundaries, start date, defined actions, activation,
+  compact draft/submitted check-ins, pause/resume/stop, completion, and review.
+- Assessment v1.1 golden and browser coverage for all scoring outputs, GGA11
+  generation/import, and supported GGA1 decoding.
 - SQLite WAL/busy-timeout configuration and consistent online backup command.
 - Ruff, pytest, and Playwright coverage.
+
+## Product flow
+
+1. Sign in with the bootstrap account.
+2. Use the Pilot 002 profile immediately, take assessment v1.1, or import an
+   existing GGA11/GGA1 share code.
+3. Review the provisional profile and why a practice was selected.
+4. Complete the seven-step guided setup; the three actions are already defined.
+5. Save check-ins as drafts or submit them as evidence.
+6. Pause/resume when needed, or stop the practice.
+7. Submit a final review after the bounded completion criteria are met.
+
+Draft check-ins never appear as submitted evidence. Completing a practice does
+not establish mastery and does not change any score.
 
 ## Common commands
 
@@ -128,13 +149,15 @@ Migrations and canonical seeding run safely on startup.
 
 ## M1 limitations
 
-- Assessment taking and GGA11 import are planned for M1B; M1A only establishes
-  their immutable storage model and golden integration boundary.
-- Practice setup, check-ins, pause/resume, completion, and review UI are M1B.
 - Pilot 002 source files publish only the top three archetypes and do not
   include original answers or a share code; the seed does not invent them.
-- Scores are static. No practice action, check-in, completion, or review
-  changes lever mastery, confidence, need, archetype, or orientation values.
+- Scores are deliberately static. No practice action, check-in, completion, or
+  review changes lever mastery, confidence, evidence mass, task priority,
+  archetype, or orientation values.
+- Only **Deepen One Existing Friendship** is active. Four additional protocols
+  are structured inactive placeholders, not generic generated exercises.
+- The canonical JavaScript scorer remains the browser reference. Node.js is
+  used by a development golden test only; no Node.js server exists at runtime.
 - Direct local-network HTTP is supported. Add Caddy or another proxy later for
   HTTPS or remote access; no proxy is included in M1.
 - The product and assessment are not psychometrically validated and do not
@@ -146,6 +169,7 @@ Migrations and canonical seeding run safely on startup.
 - [Deployment](docs/deployment.md)
 - [Canonical data import](docs/data-import.md)
 - [Assessment integration](docs/assessment-integration.md)
+- [Practice workflow](docs/practice-workflow.md)
 - [Backup and restore](docs/backup-and-restore.md)
 - [Testing](docs/testing.md)
 - [Project handoff](docs/PROJECT_HANDOFF.md)

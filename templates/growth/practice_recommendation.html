@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}{{ protocol.name }} · Grounded Growth{% endblock %}
+
+{% block content %}
+  <p class="back-link"><a href="{% url 'growth:practice-list' %}">← Practice recommendations</a></p>
+  <section class="page-heading">
+    <div>
+      <p class="eyebrow">{% if is_recommended %}Recommended next{% else %}Practice protocol{% endif %}</p>
+      <h1>{{ protocol.name }}</h1>
+      {% if protocol.duration_days %}
+        <p class="lede">{{ protocol.duration_days }} days · three defined actions · compact check-ins</p>
+      {% endif %}
+    </div>
+    {% if protocol.availability == "active" %}
+      <span class="status-pill status-pill-ready">Available</span>
+    {% else %}
+      <span class="status-pill status-pill-muted">Inactive placeholder</span>
+    {% endif %}
+  </section>
+
+  {% if protocol.availability == "active" %}
+    <div class="dashboard-grid">
+      <section class="panel panel-prominent">
+        <p class="eyebrow">Why this was selected</p>
+        {% if has_profile %}
+          <h2>A focused response to a provisional need</h2>
+          <p>{{ protocol.recommendation_reason }}</p>
+        {% else %}
+          <h2>Establish a profile first</h2>
+          <p>
+            Complete or import the assessment before Grounded Growth treats
+            this protocol as a personal recommendation.
+          </p>
+        {% endif %}
+        <p class="fine-print">
+          Recommendation priority is static in M1. Practice activity does not
+          update lever scores, confidence, orientations, or archetypes.
+        </p>
+      </section>
+      <section class="panel">
+        <p class="eyebrow">Applicability</p>
+        <h2>A real relationship, not a hypothetical exercise</h2>
+        <p>{{ protocol.applicability_prompt }}</p>
+      </section>
+    </div>
+
+    <section class="panel protocol-preview">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">The intervention</p>
+          <h2>You will not need to invent the practice.</h2>
+        </div>
+        <span>{{ protocol.actions.count }} actions</span>
+      </div>
+      <ol class="protocol-actions">
+        {% for action in protocol.actions.all %}
+          <li>
+            <span class="rank">{{ action.sequence|stringformat:"02d" }}</span>
+            <div>
+              <strong>{{ action.title }}</strong>
+              <p>{{ action.instructions }}</p>
+            </div>
+          </li>
+        {% endfor %}
+      </ol>
+    </section>
+
+    {% if not has_profile %}
+      <div class="button-row">
+        <a class="button" href="{% url 'growth:assessment' %}">Open assessment</a>
+      </div>
+    {% elif current_sprint %}
+      <div class="status-note" role="note">
+        You already have a current practice. Finish or stop it before starting another.
+        <a href="{% url 'growth:practice-sprint' current_sprint.pk %}">Open current practice</a>
+      </div>
+    {% else %}
+      <div class="button-row">
+        <a class="button" href="{% url 'growth:practice-setup' protocol.slug 1 %}">
+          Start guided setup
+        </a>
+      </div>
+    {% endif %}
+  {% else %}
+    <section class="empty-state">
+      <h2>Structured, but not yet available</h2>
+      <p>
+        This is an intentional placeholder. Grounded Growth does not generate a
+        generic intervention simply to fill the catalog.
+      </p>
+    </section>
+  {% endif %}
+{% endblock %}

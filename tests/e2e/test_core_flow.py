@@ -1,26 +1,64 @@
+import json
+import re
+from datetime import date
+from pathlib import Path
+
 import pytest
 from django.contrib.auth import get_user_model
-from playwright.sync_api import Page
+from playwright.sync_api import Page, expect
 
+from growth.models import AssessmentRun, PracticeCheckIn, PracticeSprint
+from growth.services.assessment import encode_share_code, load_assessment_assets
 from growth.services.canonical_import import seed_canonical_data
+
+ROOT = Path(__file__).resolve().parents[2]
+BUNDLE = ROOT / "data" / "assessment" / "v1.1_bundle" / "grounded_growth_assessment_v1_1"
+LEGACY_GGA1_CODE = (
+    "GGA1.eyJ2IjoiMS4wIiwiciI6IjU1MzQ0MzQyNDI0NDQ0MzMyMzQzMjQzNTQ0NDQzNDU0"
+    "NDQzMjIyMzQ0NDMzMzE0NDM0IiwiZSI6eyJDX0wzNCI6MiwiQ19MMzUiOjMsIkNfTDA1"
+    "Ijo0LCJDX0wwOSI6MywiQ19MMTkiOjQsIkNfTDI2IjoyLCJDX0wwOCI6MywiQ19MMTciOj"
+    "R9LCJ0Ijo0MC43ODc5OTk5OTk5OTk5OH0="
+)
+
+
+def create_browser_user():
+    return get_user_model().objects.create_user(
+        username="grounded",
+        password="Browser-Test-Password-2047!",
+    )
+
+
+def log_in(live_server, page):
+    page.goto(f"{live_server.url}/")
+    page.get_by_label("Username").fill("grounded")
+    page.get_by_label("Password").fill("Browser-Test-Password-2047!")
+    page.get_by_role("button", name="Sign in").click()
+    page.wait_for_url(f"{live_server.url}/")
+
+
+def wait_for_assessment_save(page):
+    status = page.locator("#assessment-save-status")
+    expect(status).to_have_text(re.compile(r"Saved|Already saved|Save failed"))
+    assert status.inner_text() != "Save failed", page.locator("#assessment-save-error").inner_text()
+
+
+def open_assessment(live_server, page):
+    page.get_by_role("link", name="Assessment", exact=True).click()
+    page.wait_for_url(f"{live_server.url}/assessment/")
+    page.wait_for_load_state("load")
+    expect(page.locator("#assessment-app")).to_be_visible()
+    assert page.evaluate("typeof window.GroundedGrowthAssessment") == "object"
+    assert page.evaluate("typeof window.GroundedGrowthAssessmentApp") == "object"
 
 
 @pytest.mark.e2e
 @pytest.mark.django_db(transaction=True)
 def test_login_home_and_profile_core_flow(live_server, page: Page):
-    get_user_model().objects.create_user(
-        username="grounded",
-        password="Browser-Test-Password-2047!",
-    )
+    create_browser_user()
     seed_canonical_data()
 
-    page.goto(f"{live_server.url}/")
-    assert "/accounts/login/" in page.url
-    page.get_by_label("Username").fill("grounded")
-    page.get_by_label("Password").fill("Browser-Test-Password-2047!")
-    page.get_by_role("button", name="Sign in").click()
-
-    page.wait_for_url(f"{live_server.url}/")
+    log_in(live_server, page)
+    assert page.url == f"{live_server.url}/"
     page.get_by_role("heading", name="No practice in progress").wait_for()
     page.get_by_text("Deepen One Existing Friendship", exact=True).wait_for()
     page.get_by_role("link", name="View developmental profile").click()
@@ -29,3 +67,147 @@ def test_login_home_and_profile_core_flow(live_server, page: Page):
     page.get_by_role("heading", name="A provisional map, not an identity.").wait_for()
     page.get_by_text("The Seeker", exact=True).wait_for()
     page.get_by_text("Completing a practice will not change this profile.").wait_for()
+
+
+@pytest.mark.e2e
+@pytest.mark.django_db(transaction=True)
+def test_complete_assessment_and_save_canonical_outputs(live_server, page: Page):
+    user = create_browser_user()
+    seed_canonical_data()
+    log_in(live_server, page)
+
+    open_assessment(live_server, page)
+    page.get_by_role("button", name="Begin assessment").click()
+    for index in range(50):
+        expect(page.locator("#assessment-count")).to_have_text(f"{index + 1} of 50")
+        answer = ("1" if index % 2 == 0 else "5") if index < 12 else "4"
+        page.get_by_role("button", name=re.compile(rf"^{answer} —")).click()
+        page.get_by_role(
+            "button",
+            name="Finish" if index == 49 else "Next",
+            exact=True,
+        ).click()
+    page.get_by_role("button", name="Answer targeted clarifiers").click()
+    clarifier_count = int(page.locator("#assessment-count").inner_text().split()[-1])
+    assert 1 <= clarifier_count <= 10
+    for index in range(clarifier_count):
+        page.get_by_role("button", name=re.compile(r"^4 —")).click()
+        page.get_by_role(
+            "button",
+            name="Finish" if index == clarifier_count - 1 else "Next",
+            exact=True,
+        ).click()
+    page.get_by_role("heading", name="Your working profile").wait_for()
+    wait_for_assessment_save(page)
+    assert page.locator("#assessment-share-code").input_value().startswith("GGA11.")
+
+    run = AssessmentRun.objects.filter(user=user, source=AssessmentRun.Source.APPLICATION).get()
+    assert len(run.answers) == 50
+    assert any(item_id.startswith("O_") for item_id in run.clarifier_answers)
+    assert run.orientation_results.count() == 6
+    assert run.archetype_results.count() == 15
+    assert run.lever_baselines.count() == 37
+
+
+@pytest.mark.e2e
+@pytest.mark.django_db(transaction=True)
+def test_import_gga11_and_supported_gga1(live_server, page: Page):
+    user = create_browser_user()
+    seed_canonical_data()
+    input_data = json.loads((BUNDLE / "pilot_001_responses_v1_compatible.json").read_text())
+    current_code = encode_share_code(
+        load_assessment_assets().spec,
+        input_data["responses"],
+        total_seconds=sum(input_data["timings_seconds"].values()),
+    )
+    log_in(live_server, page)
+
+    open_assessment(live_server, page)
+    page.get_by_label("Share code", exact=True).fill(current_code)
+    page.get_by_role("button", name="Import profile").click()
+    wait_for_assessment_save(page)
+    page.get_by_role("button", name="Retake").click()
+
+    page.get_by_label("Share code", exact=True).fill(LEGACY_GGA1_CODE)
+    page.get_by_role("button", name="Import profile").click()
+    wait_for_assessment_save(page)
+
+    imported = AssessmentRun.objects.filter(
+        user=user,
+        source=AssessmentRun.Source.SHARE_CODE,
+    )
+    assert imported.count() == 2
+    assert imported.filter(original_share_code__startswith="GGA11.").exists()
+    assert imported.filter(original_share_code__startswith="GGA1.").exists()
+
+
+@pytest.mark.e2e
+@pytest.mark.django_db(transaction=True)
+def test_guided_practice_draft_pause_and_completion_flow(live_server, page: Page):
+    create_browser_user()
+    seed_canonical_data()
+    log_in(live_server, page)
+
+    page.get_by_role("link", name="Practices", exact=True).click()
+    page.get_by_role("link", name="Review protocol").first.click()
+    page.get_by_role("heading", name="Deepen One Existing Friendship").wait_for()
+    page.get_by_text("You will not need to invent the practice.").wait_for()
+    page.get_by_role("link", name="Start guided setup").click()
+
+    page.get_by_role("button", name="Continue").click()
+    page.get_by_label("Yes, this relationship is available").check()
+    page.get_by_role("button", name="Continue").click()
+    page.get_by_label("Private label for the person or context").fill("R.")
+    page.get_by_role("button", name="Continue").click()
+    page.get_by_label(re.compile(r"I will choose welcome contact")).check()
+    page.get_by_role(
+        "button",
+        name="I understand and will respect these boundaries",
+    ).click()
+    page.get_by_label("Start date").fill(date.today().isoformat())
+    page.get_by_role("button", name="Continue").click()
+    page.get_by_role("button", name="I have reviewed the three actions").click()
+    page.get_by_role("button", name="Begin practice").click()
+    page.get_by_role("heading", name="Deepen One Existing Friendship").wait_for()
+
+    page.get_by_role("button", name="Pause practice").click()
+    page.get_by_role("button", name="Resume practice").click()
+    page.get_by_role("link", name="Add compact check-in").click()
+    page.get_by_label("Which action is this about?").select_option(
+        label="Action 1: Listen to what matters now"
+    )
+    page.get_by_label("Action attempted").check()
+    page.get_by_label("Action completed").check()
+    page.get_by_label("The interaction moved beyond transactional content").check()
+    page.get_by_label("Personally meaningful information was voluntarily shared").check()
+    page.get_by_role("button", name="Save draft").click()
+    page.get_by_role("heading", name="Draft check-ins").wait_for()
+    assert PracticeCheckIn.objects.filter(status=PracticeCheckIn.Status.SUBMITTED).count() == 0
+
+    page.locator(".draft-list a").click()
+    page.get_by_role("button", name="Submit check-in").click()
+    page.get_by_text("Check-in submitted and added to evidence history.").wait_for()
+
+    for label, completed in (
+        ("Action 2: Make a specific invitation", True),
+        ("Action 3: Follow up", False),
+    ):
+        page.get_by_role("link", name="New check-in").click()
+        page.get_by_label("Which action is this about?").select_option(label=label)
+        page.get_by_label("Action attempted").check()
+        if completed:
+            page.get_by_label("Action completed").check()
+        page.get_by_role("button", name="Submit check-in").click()
+
+    page.get_by_role("link", name="Review and complete").click()
+    page.get_by_text("Completing this practice does not establish mastery.").wait_for()
+    page.get_by_label("What did this practice show you?").fill(
+        "Specific invitations made the next step clearer."
+    )
+    page.get_by_role(
+        "button",
+        name="Submit final review and complete practice",
+    ).click()
+    page.get_by_role("heading", name="The experiment is closed.").wait_for()
+    page.get_by_text("Completing this practice does not establish mastery.").wait_for()
+    assert PracticeSprint.objects.get().status == PracticeSprint.Status.COMPLETED

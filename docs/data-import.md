@@ -87,7 +87,12 @@ before dynamic scoring is enabled.
 
 Pilot 002 is a demonstration seed, not a reconstructed assessment. Its
 canonical files do not provide original answers, clarifier answers, a GGA11
-code, or the complete 15-archetype vector. M1A stores those unavailable fields
+code, or the complete 15-archetype vector. M1 stores those unavailable fields
 as empty and imports only the six orientations, 37 baselines, response-quality
 summary, timing summary, and three published archetypes. It does not invent
 missing source data.
+
+The seed remains idempotent after a user takes or imports another assessment.
+It reconciles the stable Pilot 002 row but does not overwrite or remove
+user-created immutable assessment runs, practice sprints, check-ins, or
+reviews.

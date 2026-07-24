@@ -29,7 +29,10 @@ def build_profile_summary(user: get_user_model()) -> ProfileSummary:
     )
     need_lever_ids = [baseline.lever_id for baseline in highest_needs]
     recommendations = list(
-        PracticeProtocol.objects.filter(target_levers__stable_id__in=need_lever_ids)
+        PracticeProtocol.objects.filter(
+            availability=PracticeProtocol.Availability.ACTIVE,
+            target_levers__stable_id__in=need_lever_ids,
+        )
         .distinct()
         .order_by("display_order")[:3]
     )

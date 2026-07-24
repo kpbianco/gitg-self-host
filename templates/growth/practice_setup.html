@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block title %}Set up {{ protocol.name }} · Grounded Growth{% endblock %}
+
+{% block content %}
+  <p class="back-link">
+    <a href="{% url 'growth:practice-recommendation' protocol.slug %}">← {{ protocol.name }}</a>
+  </p>
+  <section class="setup-shell">
+    <div class="setup-progress" aria-label="Setup progress">
+      <span>Guided setup</span>
+      <strong>Step {{ step }} of 7</strong>
+      <div><i style="width: {% widthratio step 7 100 %}%"></i></div>
+    </div>
+
+    <section class="panel setup-card">
+      {% if step == 1 %}
+        <p class="eyebrow">Why this practice</p>
+        <h1>A focused response to a provisional need.</h1>
+        <p class="lede">{{ protocol.recommendation_reason }}</p>
+        <div class="status-note" role="note">
+          <strong>Static-score boundary.</strong>
+          This recommendation does not diagnose you. Completing it will not
+          change mastery, confidence, orientation, or archetype scores in M1.
+        </div>
+        <form method="post">
+          {% csrf_token %}
+          <button class="button" type="submit">Continue</button>
+        </form>
+      {% elif step == 2 %}
+        <p class="eyebrow">Current fit</p>
+        <h1>Is this applicable now?</h1>
+        <p class="lede">{{ protocol.applicability_prompt }}</p>
+        {% include "growth/partials/setup_form.html" with submit_label="Continue" %}
+      {% elif step == 3 %}
+        <p class="eyebrow">Person or context</p>
+        <h1>Choose one existing relationship.</h1>
+        <p class="lede">{{ protocol.setup_prompt }}</p>
+        {% include "growth/partials/setup_form.html" with submit_label="Continue" %}
+      {% elif step == 4 %}
+        <p class="eyebrow">Privacy and interpersonal boundaries</p>
+        <h1>Depth must remain freely chosen.</h1>
+        <p class="lede">{{ protocol.privacy_and_boundaries }}</p>
+        <div class="boundary-note">
+          <strong>Keep the record lean.</strong>
+          Store only what you need for your own reflection. Do not record the
+          other person's sensitive disclosures.
+        </div>
+        {% include "growth/partials/setup_form.html" with submit_label="I understand and will respect these boundaries" %}
+      {% elif step == 5 %}
+        <p class="eyebrow">Timing</p>
+        <h1>Choose a start date.</h1>
+        <p class="lede">
+          The protocol runs for {{ protocol.duration_days }} days. Choose a date
+          when a real, welcome interaction is plausible.
+        </p>
+        {% include "growth/partials/setup_form.html" with submit_label="Continue" %}
+      {% elif step == 6 %}
+        <p class="eyebrow">Review the intervention</p>
+        <h1>Three actions, already defined.</h1>
+        <p class="lede">
+          The protocol is specific on purpose. Adapt timing to consent and
+          circumstance, but do not turn it into an open-ended worksheet.
+        </p>
+        <ol class="protocol-actions">
+          {% for action in protocol.actions.all %}
+            <li>
+              <span class="rank">{{ action.sequence|stringformat:"02d" }}</span>
+              <div>
+                <strong>{{ action.title }}</strong>
+                <p>{{ action.instructions }}</p>
+              </div>
+            </li>
+          {% endfor %}
+        </ol>
+        <form method="post">
+          {% csrf_token %}
+          <button class="button" type="submit">I have reviewed the three actions</button>
+        </form>
+      {% else %}
+        <p class="eyebrow">Ready to begin</p>
+        <h1>Your 14-day practice is prepared.</h1>
+        <dl class="setup-summary">
+          <div>
+            <dt>Private context label</dt>
+            <dd>{{ setup.person_or_context }}</dd>
+          </div>
+          <div>
+            <dt>Start date</dt>
+            <dd>{{ setup.start_date }}</dd>
+          </div>
+          <div>
+            <dt>Protocol</dt>
+            <dd>{{ protocol.name }} · {{ protocol.duration_days }} days</dd>
+          </div>
+        </dl>
+        <p>
+          Check-ins are compact and may be saved as drafts. Drafts do not count
+          as submitted evidence.
+        </p>
+        <form method="post">
+          {% csrf_token %}
+          <button class="button" type="submit">Begin practice</button>
+        </form>
+      {% endif %}
+    </section>
+  </section>
+{% endblock %}

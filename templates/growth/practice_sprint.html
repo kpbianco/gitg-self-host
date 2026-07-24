@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+
+{% block title %}{{ sprint.protocol.name }} · Grounded Growth{% endblock %}
+
+{% block content %}
+  <section class="page-heading">
+    <div>
+      <p class="eyebrow">Active practice</p>
+      <h1>{{ sprint.protocol.name }}</h1>
+      <p class="lede">
+        {{ sprint.start_date|date:"M j" }}–{{ end_date|date:"M j, Y" }} ·
+        private context: {{ sprint.person_or_context }}
+      </p>
+    </div>
+    <span class="status-pill{% if sprint.status == 'stopped' %} status-pill-muted{% endif %}">
+      {{ sprint.get_status_display }}
+    </span>
+  </section>
+
+  {% if sprint.status == "completed" %}
+    <div class="mastery-notice" role="note">
+      <strong>Completing this practice does not establish mastery.</strong>
+      <p>Your assessment scores and confidence remain unchanged.</p>
+    </div>
+  {% endif %}
+
+  <div class="dashboard-grid">
+    <section class="panel panel-prominent">
+      <p class="eyebrow">Next required action</p>
+      {% if sprint.status == "paused" %}
+        <h2>Resume when the practice fits again.</h2>
+        <p>No check-in is required while this practice is paused.</p>
+      {% elif sprint.status == "stopped" %}
+        <h2>This practice was stopped.</h2>
+        <p>Submitted evidence remains in your history; drafts remain excluded.</p>
+      {% elif sprint.status == "completed" %}
+        <h2>Final review submitted.</h2>
+        <p>The protocol is complete, without changing mastery.</p>
+        <a class="button button-secondary" href="{% url 'growth:practice-review-complete' sprint.pk %}">
+          Read practice review
+        </a>
+      {% elif next_action %}
+        <h2>{{ next_action.title }}</h2>
+        <p>{{ next_action.instructions }}</p>
+        <a class="button" href="{% url 'growth:practice-check-in-new' sprint.pk %}">
+          Add compact check-in
+        </a>
+      {% elif evidence.ready_for_review %}
+        <h2>Submit the final review.</h2>
+        <p>The activity criteria are present in submitted check-ins.</p>
+        <a class="button" href="{% url 'growth:practice-review' sprint.pk %}">
+          Review and complete
+        </a>
+      {% else %}
+        <h2>Add the remaining evidence.</h2>
+        <p>
+          All actions have an attempt, but completion still needs two completed
+          actions and one substantive interaction.
+        </p>
+        <a class="button" href="{% url 'growth:practice-check-in-new' sprint.pk %}">
+          Add compact check-in
+        </a>
+      {% endif %}
+    </section>
+
+    <section class="panel">
+      <p class="eyebrow">Practice controls</p>
+      <h2>{{ sprint.get_status_display }}</h2>
+      {% if sprint.status == "active" %}
+        <form class="button-stack" method="post" action="{% url 'growth:practice-state' sprint.pk %}">
+          {% csrf_token %}
+          <button class="button button-secondary" name="status" value="paused" type="submit">Pause practice</button>
+          <button class="button button-quiet" name="status" value="stopped" type="submit">Stop practice</button>
+        </form>
+      {% elif sprint.status == "paused" %}
+        <form class="button-stack" method="post" action="{% url 'growth:practice-state' sprint.pk %}">
+          {% csrf_token %}
+          <button class="button" name="status" value="active" type="submit">Resume practice</button>
+          <button class="button button-quiet" name="status" value="stopped" type="submit">Stop practice</button>
+        </form>
+      {% endif %}
+      <p class="fine-print">Stopping is final. Pausing preserves the practice for later.</p>
+    </section>
+  </div>
+
+  <section class="panel protocol-preview">
+    <div class="panel-heading">
+      <div>
+        <p class="eyebrow">Protocol progress</p>
+        <h2>Three defined actions</h2>
+      </div>
+      <span>{{ evidence.actions_completed }} of 3 completed</span>
+    </div>
+    <ol class="protocol-actions action-progress">
+      {% for row in action_rows %}
+        <li>
+          <span class="action-state{% if row.completed %} complete{% elif row.attempted %} attempted{% endif %}">
+            {% if row.completed %}Completed{% elif row.attempted %}Attempted{% else %}Not attempted{% endif %}
+          </span>
+          <div>
+            <strong>{{ row.action.title }}</strong>
+            <p>{{ row.action.instructions }}</p>
+          </div>
+        </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  {% if draft_check_ins %}
+    <section class="section-block">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Private working notes</p>
+          <h2>Draft check-ins</h2>
+        </div>
+        <p class="section-note">Drafts are not submitted evidence.</p>
+      </div>
+      <div class="draft-list">
+        {% for check_in in draft_check_ins %}
+          <a href="{% url 'growth:practice-check-in-edit' sprint.pk check_in.pk %}">
+            <strong>{{ check_in.action.title }}</strong>
+            <span>Last saved {{ check_in.updated_at|date:"M j, g:i a" }} · edit draft</span>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+  <section class="section-block">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Evidence history</p>
+        <h2>Submitted check-ins</h2>
+      </div>
+      {% if sprint.status == "active" %}
+        <a class="button button-secondary" href="{% url 'growth:practice-check-in-new' sprint.pk %}">
+          New check-in
+        </a>
+      {% endif %}
+    </div>
+    {% if submitted_check_ins %}
+      <ol class="history-list">
+        {% for check_in in submitted_check_ins %}
+          <li>
+            <div>
+              <strong>{{ check_in.action.title }}</strong>
+              <span>
+                {% if check_in.action_completed %}Completed{% elif check_in.action_attempted %}Attempted{% else %}Observed{% endif %}
+                {% if check_in.moved_beyond_transactional %} · substantive interaction{% endif %}
+              </span>
+            </div>
+            <time datetime="{{ check_in.submitted_at|date:'c' }}">{{ check_in.submitted_at|date:"M j, Y" }}</time>
+          </li>
+        {% endfor %}
+      </ol>
+    {% else %}
+      <div class="empty-state compact">
+        <p>No submitted check-ins yet. Saved drafts do not appear here.</p>
+      </div>
+    {% endif %}
+  </section>
+{% endblock %}

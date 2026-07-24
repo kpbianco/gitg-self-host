@@ -57,9 +57,10 @@ operational complexity is justified.
 **Status:** Accepted
 
 Assessment v1.1's canonical JavaScript scoring engine remains the reference
-implementation. M1A locks its known input/output behavior with a golden test.
-Integration may wrap or mount it, but may not rewrite its mathematics or
-enable its dormant evidence-update functions.
+implementation. Golden tests lock its known input/output behavior. Django
+serves that exact engine to the authenticated assessment page and validates
+the complete persisted result, but does not rewrite its mathematics or enable
+its dormant evidence-update functions.
 
 ## Decision 011 — M1A before guided workflow
 **Status:** Accepted
@@ -67,3 +68,25 @@ enable its dormant evidence-update functions.
 M1A establishes deployment, authentication, schema, canonical import, and the
 Pilot 002 profile. Assessment-taking/import and the practice workflow are M1B
 and begin only after M1A review.
+
+## Decision 012 — Submitted evidence is distinct from working state
+**Status:** Accepted
+
+Practice check-ins may be saved as drafts. Only explicitly submitted,
+timestamped, immutable check-ins appear in evidence history or count toward
+completion. Submitted evidence is not converted into a score in M1.
+
+## Decision 013 — Bounded completion without mastery
+**Status:** Accepted
+
+The first practice completes only after all three actions have been attempted,
+at least two completed, a substantive interaction recorded, and a final review
+submitted. Completion records protocol participation only. Every review and
+completion screen states that completion does not establish mastery.
+
+## Decision 014 — One current practice
+**Status:** Accepted
+
+A user may have one active or paused practice at a time. Pausing is reversible;
+stopping is terminal. This keeps the home page and next action unambiguous
+while M1 validates the guided experience.

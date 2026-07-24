@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}Practice review · Grounded Growth{% endblock %}
+
+{% block content %}
+  <p class="back-link"><a href="{% url 'growth:practice-sprint' sprint.pk %}">← Practice</a></p>
+  <section class="page-heading">
+    <div>
+      <p class="eyebrow">Final review</p>
+      <h1>Close the experiment carefully.</h1>
+      <p class="lede">
+        Review what happened without converting practice completion into a claim
+        about identity, worth, or mastery.
+      </p>
+    </div>
+  </section>
+
+  <div class="mastery-notice" role="note">
+    <strong>Completing this practice does not establish mastery.</strong>
+    <p>No lever, confidence, evidence-mass, priority, archetype, or orientation score will change.</p>
+  </div>
+
+  <section class="panel completion-criteria">
+    <p class="eyebrow">Completion evidence</p>
+    <h2>Submitted check-ins only</h2>
+    <ul>
+      <li class="{% if evidence.all_actions_attempted %}met{% endif %}">
+        All three actions attempted — {{ evidence.actions_attempted }} of 3
+      </li>
+      <li class="{% if evidence.enough_actions_completed %}met{% endif %}">
+        At least two actions completed — {{ evidence.actions_completed }} of 3
+      </li>
+      <li class="{% if evidence.substantive_interaction_occurred %}met{% endif %}">
+        At least one substantive interaction
+      </li>
+      <li>Final review submitted — this step</li>
+    </ul>
+  </section>
+
+  {% if evidence.ready_for_review %}
+    <form class="workflow-form" method="post">
+      {% csrf_token %}
+      {% if form.non_field_errors %}<div class="form-error">{{ form.non_field_errors }}</div>{% endif %}
+      {% for field in form %}
+        <div class="form-field">
+          <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+          {{ field }}
+          {% if field.help_text %}<p class="helptext">{{ field.help_text }}</p>{% endif %}
+          {% for error in field.errors %}<p class="form-error">{{ error }}</p>{% endfor %}
+        </div>
+      {% endfor %}
+      <button class="button" type="submit">Submit final review and complete practice</button>
+    </form>
+  {% else %}
+    <div class="empty-state compact">
+      <p>
+        The activity criteria are not complete yet. Return to the practice and
+        submit only evidence that actually occurred.
+      </p>
+      <a class="button button-secondary" href="{% url 'growth:practice-sprint' sprint.pk %}">
+        Return to practice
+      </a>
+    </div>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Check in · {{ sprint.protocol.name }}{% endblock %}
+
+{% block content %}
+  <p class="back-link">
+    <a href="{% url 'growth:practice-sprint' sprint.pk %}">← {{ sprint.protocol.name }}</a>
+  </p>
+  <section class="page-heading">
+    <div>
+      <p class="eyebrow">Compact check-in</p>
+      <h1>{% if check_in %}Continue your draft.{% else %}Record only what matters.{% endif %}</h1>
+      <p class="lede">
+        This should normally take under two minutes. Keep another person's
+        private disclosures out of the note.
+      </p>
+    </div>
+    {% if check_in %}<span class="status-pill status-pill-muted">Draft</span>{% endif %}
+  </section>
+
+  {% if sprint.status != "active" %}
+    <div class="status-note" role="note">
+      Check-ins can only be saved while this practice is active.
+    </div>
+  {% endif %}
+
+  <form class="workflow-form check-in-form" method="post">
+    {% csrf_token %}
+    {% if form.non_field_errors %}<div class="form-error">{{ form.non_field_errors }}</div>{% endif %}
+    {% for field in form %}
+      <div class="form-field{% if field.field.widget.input_type == 'checkbox' %} checkbox-field{% endif %}">
+        {% if field.field.widget.input_type == "checkbox" %}
+          {{ field }}
+          <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+        {% else %}
+          <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+          {{ field }}
+        {% endif %}
+        {% if field.help_text %}<p class="helptext">{{ field.help_text }}</p>{% endif %}
+        {% for error in field.errors %}<p class="form-error">{{ error }}</p>{% endfor %}
+      </div>
+    {% endfor %}
+    <div class="button-row">
+      <button class="button button-secondary" name="intent" value="draft" type="submit"{% if sprint.status != "active" %} disabled{% endif %}>
+        Save draft
+      </button>
+      <button class="button" name="intent" value="submit" type="submit"{% if sprint.status != "active" %} disabled{% endif %}>
+        Submit check-in
+      </button>
+    </div>
+    <p class="fine-print">
+      Submitted check-ins become immutable evidence. A draft remains private
+      working state and does not appear in submitted history.
+    </p>
+  </form>
+{% endblock %}
