@@ -40,20 +40,26 @@ Create inactive placeholders for four others:
 - State and Maintain One Boundary
 - Complete an Attention-Presence Experiment
 
-## Suggested stack
-- Next.js + TypeScript, App Router
-- SQLite + Drizzle ORM
-- Zod
-- Tailwind CSS and restrained components
-- Vitest for domain/scoring tests
-- Playwright for user-flow tests
-- Dockerfile + Docker Compose
+## Binding application stack
+- Current supported stable Django and Python.
+- Django templates with ordinary local CSS and small amounts of vanilla JavaScript.
+- Locally bundled HTMX only when it materially improves an interaction.
+- SQLite through the Django ORM.
+- Gunicorn.
+- pytest, Ruff, and Playwright.
+- One application service in Docker Compose.
 
-Equivalent alternatives are acceptable only when documented and demonstrably simpler.
+Do not introduce React, Next.js, a separate frontend or API service,
+PostgreSQL/MariaDB, Redis, Celery, a message queue, Kubernetes, a reverse proxy,
+externally hosted assets, live Notion synchronization, or microservices for M1.
+There must be no Node.js server at runtime.
+
+The accepted rationale is recorded in
+`docs/architecture/0001-django-monolith-and-sqlite.md`.
 
 ## Engineering rules
-- Strict TypeScript.
-- Keep domain/scoring logic outside React components.
+- Keep domain, import, recommendation, and eventual scoring logic outside
+  Django views and templates.
 - Stable IDs are authoritative; never join canonical entities by display text.
 - Store curriculum and algorithm version metadata.
 - Every eventual scoring update must be deterministic, auditable, reversible, and explainable.
@@ -61,6 +67,13 @@ Equivalent alternatives are acceptable only when documented and demonstrably sim
 - Validate all imported weight sums and IDs.
 - Do not silently normalize malformed data; fail with actionable diagnostics.
 - Add tests before enabling any score mutation.
+- Use Django migrations; keep ORM code portable to PostgreSQL without adding a
+  PostgreSQL service in M1.
+- The deployed SQLite database is `/data/grounded_growth.sqlite3`; enable a
+  busy timeout and WAL where supported.
+- Require authentication for all application pages except login, health, and
+  required static assets.
+- Bundle every browser asset locally.
 
 ## UX rules
 - Do not show 37 levers or 383 competencies on the home page.
@@ -72,8 +85,16 @@ Equivalent alternatives are acceptable only when documented and demonstrably sim
 
 ## Definition of done for each batch
 Before asking for review:
-1. Run formatter, linter, typecheck, unit tests, and relevant Playwright tests.
+1. Run Ruff formatting/linting, Django system checks, pytest, and relevant
+   Playwright tests.
 2. Run the app through Docker Compose.
 3. Audit changed files against this document and `docs/PROJECT_HANDOFF.md`.
 4. Report failed or unverified acceptance criteria plainly.
 5. Do not claim dynamic scoring works until score mutation is deliberately enabled and tested.
+
+## Current implementation boundary
+M1A establishes the Django runtime, persistent SQLite schema, authentication,
+canonical importer, assessment golden fixtures, Pilot 002 profile, and minimal
+authenticated home/profile pages. M1B owns the assessment-taking/import UI and
+the complete practice setup, sprint, check-in, pause/resume, completion, and
+review experience. Do not begin M1B before M1A is reviewed.

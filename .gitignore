@@ -1,0 +1,14 @@
+.env
+.npm-cache/
+.pytest_cache/
+.playwright-browsers/
+.ruff_cache/
+.test-data/
+.venv/
+__pycache__/
+*.py[cod]
+*.sqlite3
+/staticfiles/
+/var/
+/playwright-report/
+/test-results/

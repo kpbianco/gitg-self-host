@@ -1,0 +1,46 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>{% block title %}Grounded Growth{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'growth/app.css' %}">
+  </head>
+  <body>
+    {% if request.user.is_authenticated %}
+      <header class="site-header">
+        <a class="brand" href="{% url 'growth:home' %}" aria-label="Grounded Growth home">
+          <span class="brand-mark" aria-hidden="true">G</span>
+          <span>Grounded Growth</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="{% url 'growth:home' %}" {% if request.path == '/' %}aria-current="page"{% endif %}>Home</a>
+          <a href="{% url 'growth:profile' %}" {% if request.path == '/profile/' %}aria-current="page"{% endif %}>Profile</a>
+          <a href="{% url 'password_change' %}">Account</a>
+          <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button class="nav-button" type="submit">Sign out</button>
+          </form>
+        </nav>
+      </header>
+    {% endif %}
+
+    {% if messages %}
+      <div class="message-stack" aria-live="polite">
+        {% for message in messages %}
+          <p class="message">{{ message }}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <main class="{% block main_class %}page-shell{% endblock %}">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+      <p>Scores are provisional evidence estimates, not measures of human worth.</p>
+    </footer>
+  </body>
+</html>

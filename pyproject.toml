@@ -1,0 +1,44 @@
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "grounded_growth.settings_test"
+addopts = "--strict-config --strict-markers -ra"
+testpaths = ["tests"]
+markers = [
+  "e2e: browser-based Playwright coverage",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+extend-exclude = [
+  "data",
+  "legacy",
+  "staticfiles",
+]
+
+[tool.ruff.lint]
+select = [
+  "B",
+  "C4",
+  "DJ",
+  "E",
+  "F",
+  "I",
+  "N",
+  "PERF",
+  "PIE",
+  "RUF",
+  "SIM",
+  "UP",
+]
+ignore = [
+  "DJ001",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"growth/migrations/*.py" = ["E501", "RUF012"]
+"growth/models.py" = ["RUF012"]
+"tests/*.py" = ["S101"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
