@@ -130,6 +130,10 @@ The database is:
 
 Future uploads use `/data/uploads`; backups use `/data/backups`.
 
+Assessment runs, share codes, practice setup records, draft/submitted
+check-ins, and final reviews all live in the same SQLite database and survive
+container replacement with the named volume.
+
 ## Updating
 
 Back up first, then rebuild:
@@ -143,6 +147,13 @@ docker compose ps
 
 Startup applies new migrations and reconciles canonical seed data by stable
 ID. Review `docs/data-import.md` before changing canonical files.
+
+After an update, sign in and verify:
+
+1. `/assessment/` loads the locally served scorer;
+2. `/practices/` shows the friendship protocol;
+3. any current practice and draft check-ins remain present;
+4. `/health/` returns `{"status":"ok"}`.
 
 ## HTTPS or remote access later
 

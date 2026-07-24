@@ -124,6 +124,28 @@ Completion criteria:
 
 Completion does not imply mastery.
 
+## Current implementation state
+
+M1 is implemented as two reviewable batches:
+
+- **M1A foundation:** one-service Docker deployment, non-root Gunicorn,
+  persistent SQLite, bootstrap authentication, health, migrations, idempotent
+  canonical import, Pilot 002 demonstration seed, and authenticated
+  home/profile.
+- **M1B guided workflow:** canonical assessment v1.1 taking and GGA11/GGA1
+  import; profile persistence with all 6 orientation, 15 archetype, and 37
+  lever outputs; recommendations; the seven-step friendship setup; active,
+  paused, stopped, and completed practice states; compact draft/submitted
+  check-ins; guarded completion; and immutable final review.
+
+Only submitted check-ins count toward completion. A database constraint limits
+each user to one active or paused practice. Services—not templates—own state
+transitions, evidence aggregation, and completion rules.
+
+The static-score boundary is tested before and after practice completion. No
+M1 workflow writes lever mastery, confidence, evidence mass, need/priority,
+archetype, or orientation scores.
+
 ## Milestone sequence
 ### M1 — Guided UX, static scores
 Build the app shell and full friendship protocol. Import profile and curriculum. Do not mutate scores.
@@ -136,6 +158,8 @@ Build the app shell and full friendship protocol. Import profile and curriculum.
 - assessment v1.1 golden-test boundary;
 - Pilot 002-backed authenticated home and profile.
 
+Status: implemented and merged.
+
 #### M1B — Guided workflow
 - take assessment v1.1 in the application or import GGA11;
 - retain GGA1 decoding compatibility;
@@ -144,8 +168,16 @@ Build the app shell and full friendship protocol. Import profile and curriculum.
 - completion and final review with an explicit mastery disclaimer;
 - browser coverage for the complete M1 path.
 
+Status: implemented; pending pull-request review.
+
 ### M2 — Evidence engine
-Add structured evidence events, drafts/submission, quality, independence, context breadth, repetition, and contradiction.
+Extend submitted check-ins with versioned evidence quality, independence,
+context breadth, repetition, and contradiction semantics. Draft/submitted
+state already exists in M1.
+
+Do not begin M2 until the M1B pull request is reviewed and a separate M2
+contract resolves evidence semantics, migration strategy, and scoring
+boundaries.
 
 ### M3 — Dynamic scoring
 Implement versioned posterior updates and dynamic recommendation ranking in a pure domain package with exhaustive tests and immutable snapshots.
@@ -164,3 +196,17 @@ Create reusable protocol patterns and convert more of the 383 competencies into 
 8. Review explicitly distinguishes completion from mastery.
 9. App runs via Docker Compose.
 10. Tests cover the core path.
+
+## Handoff audit notes
+
+- Canonical curriculum counts remain 27 domains, 383 competencies, 37 levers,
+  6 orientations, 15 archetypes, and 1,403 weighted links.
+- The M1B assessment view serves the canonical
+  `assessment_scoring_v1_1.js` directly; it does not maintain a divergent copy.
+- The standalone UI omitted the spec's optional orientation-clarifier stage.
+  The integrated page exposes both canonical capability and orientation
+  clarifiers without changing question wording or scoring.
+- Valid all-N/A assessment outcomes can produce null raw/calibrated/need
+  values, so M1B allows those baseline fields to be null.
+- Pilot 002 remains available for immediate demonstration. Later in-app or
+  imported assessments become the current profile without rewriting the seed.

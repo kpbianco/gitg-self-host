@@ -9,12 +9,16 @@
       <p class="eyebrow">Working profile</p>
       <h1>Welcome back.</h1>
       {% if summary.assessment_run %}
-        <p class="lede">
-          A meaning-driven systems thinker with strong discernment and a preference
-          for coherence, durable systems, and purposeful exploration. Current
-          balancing work emphasizes relationships, play, social perception,
-          communication, repair, and boundaries.
-        </p>
+        {% with lead=summary.assessment_run.archetype_results.all.0 strength=summary.strongest_capacities.0 need=summary.highest_needs.0 %}
+          <p class="lede">
+            Your latest provisional map is led by
+            {% if lead %}{{ lead.name }}{% else %}a mixed orientation profile{% endif %},
+            with a strong current signal in
+            {% if strength %}{{ strength.lever.name }}{% else %}several capacities{% endif %}.
+            The first balancing focus is
+            {% if need %}{{ need.lever.name }}{% else %}still being established{% endif %}.
+          </p>
+        {% endwith %}
       {% else %}
         <p class="lede">Your profile will appear after an assessment is available.</p>
       {% endif %}
@@ -40,26 +44,61 @@
             <h2>No practice in progress</h2>
           {% endif %}
         </div>
-        {% if active_sprint %}<span class="status-pill">Active</span>{% endif %}
+        {% if active_sprint %}<span class="status-pill">{{ active_sprint.get_status_display }}</span>{% endif %}
       </div>
       {% if active_sprint %}
-        <p>Your next action will appear here.</p>
-      {% else %}
+        {% if active_sprint.status == "paused" %}
+          <p>This practice is paused. Resume it when the relationship and timing fit.</p>
+        {% elif next_action %}
+          <p><strong>{{ next_action.title }}:</strong> {{ next_action.instructions }}</p>
+        {% elif practice_evidence.ready_for_review %}
+          <p>The submitted activity criteria are complete. The final review is next.</p>
+        {% else %}
+          <p>Add a compact check-in for the remaining completion evidence.</p>
+        {% endif %}
+        <a class="button button-secondary" href="{% url 'growth:practice-sprint' active_sprint.pk %}">
+          Open current practice
+        </a>
+      {% elif summary.assessment_run %}
         <p>
-          Guided setup is not available in this foundation release. Your first
-          protocol is already grounded in the imported starting profile.
+          Your first complete protocol is ready. Guided setup will help you
+          confirm fit, boundaries, timing, and the three defined actions.
         </p>
+        <a class="button button-secondary" href="{% url 'growth:practice-list' %}">
+          Review recommendations
+        </a>
+      {% else %}
+        <p>Complete or import the assessment to establish a provisional profile.</p>
+        <a class="button button-secondary" href="{% url 'growth:assessment' %}">
+          Open assessment
+        </a>
       {% endif %}
     </section>
 
     <section class="panel next-action">
       <p class="eyebrow">Next required action</p>
-      <h2>Review your starting profile</h2>
-      <p>
-        Understand how raw self-report, calibration, and evidence confidence differ
-        before beginning a practice.
-      </p>
-      <a class="button button-secondary" href="{% url 'growth:profile' %}">Review profile</a>
+      {% if active_sprint %}
+        {% if active_sprint.status == "paused" %}
+          <h2>Decide whether to resume.</h2>
+          <p>No evidence is expected while the practice remains paused.</p>
+        {% elif practice_evidence.ready_for_review %}
+          <h2>Submit the final review.</h2>
+          <p>Review completion separately from mastery.</p>
+          <a class="button button-secondary" href="{% url 'growth:practice-review' active_sprint.pk %}">Open final review</a>
+        {% else %}
+          <h2>{% if next_action %}{{ next_action.title }}{% else %}Add a check-in{% endif %}</h2>
+          <p>Record only what occurred. A draft will remain outside submitted evidence.</p>
+          <a class="button button-secondary" href="{% url 'growth:practice-check-in-new' active_sprint.pk %}">Add check-in</a>
+        {% endif %}
+      {% elif summary.assessment_run %}
+        <h2>Choose the first bounded practice.</h2>
+        <p>Understand why it was selected, then use the seven-step guided setup.</p>
+        <a class="button button-secondary" href="{% url 'growth:practice-list' %}">Review practices</a>
+      {% else %}
+        <h2>Complete the assessment.</h2>
+        <p>Fifty required questions establish the first static profile.</p>
+        <a class="button button-secondary" href="{% url 'growth:assessment' %}">Begin assessment</a>
+      {% endif %}
     </section>
   </div>
 
@@ -88,7 +127,10 @@
           {% else %}
             <p>This protocol remains inactive until its bounded intervention is reviewed.</p>
           {% endif %}
-          <p class="muted">Setup and activation are not yet available.</p>
+          <a class="text-link" href="{% url 'growth:practice-recommendation' protocol.slug %}">
+            {% if protocol.availability == "active" %}Review and set up{% else %}Review placeholder{% endif %}
+            <span aria-hidden="true">→</span>
+          </a>
         </article>
       {% empty %}
         <article class="empty-state">

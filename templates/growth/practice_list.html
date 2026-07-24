@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Practice recommendations · Grounded Growth{% endblock %}
+
+{% block content %}
+  <section class="page-heading">
+    <div>
+      <p class="eyebrow">Practice recommendations</p>
+      <h1>Specific experiments, held lightly.</h1>
+      <p class="lede">
+        Recommendations connect your provisional profile to a bounded protocol.
+        They are invitations to gather experience—not judgments, prescriptions,
+        or evidence of human value.
+      </p>
+    </div>
+  </section>
+
+  {% if current_sprint %}
+    <section class="status-note" role="note">
+      <strong>One current practice:</strong>
+      {{ current_sprint.protocol.name }} is {{ current_sprint.get_status_display|lower }}.
+      <a href="{% url 'growth:practice-sprint' current_sprint.pk %}">Open practice</a>
+    </section>
+  {% endif %}
+
+  <div class="card-grid">
+    {% for protocol in protocols %}
+      <article class="practice-card">
+        <div class="card-meta">
+          {% if protocol.duration_days %}
+            <span>{{ protocol.duration_days }} days</span>
+          {% else %}
+            <span>Duration pending</span>
+          {% endif %}
+          {% if protocol.pk in recommended_ids %}
+            <span class="status-pill status-pill-ready">Recommended</span>
+          {% elif protocol.availability == "active" %}
+            <span class="status-pill">Available</span>
+          {% else %}
+            <span class="status-pill status-pill-muted">Inactive</span>
+          {% endif %}
+        </div>
+        <h2>{{ protocol.name }}</h2>
+        {% if protocol.recommendation_reason %}
+          <p>{{ protocol.recommendation_reason }}</p>
+        {% else %}
+          <p>This structured placeholder is intentionally inactive until its protocol is reviewed.</p>
+        {% endif %}
+        <a class="text-link" href="{% url 'growth:practice-recommendation' protocol.slug %}">
+          Review protocol <span aria-hidden="true">→</span>
+        </a>
+      </article>
+    {% endfor %}
+  </div>
+{% endblock %}

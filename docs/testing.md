@@ -30,20 +30,30 @@ make e2e
 - idempotent curriculum, protocol, and Pilot 002 seeding;
 - one-time bootstrap user behavior and password-hash preservation;
 - login enforcement, CSRF-bearing login, and public health;
-- authenticated home/profile rendering;
-- immutable assessment runs;
-- static mastery/confidence after a completed practice review;
+- authenticated home/profile/assessment/practice rendering;
+- immutable and idempotent assessment-run persistence;
+- exact 6-orientation, 15-archetype, and 37-lever golden-result persistence;
+- GGA11 answer/code agreement and malformed assessment rejection;
+- the seven-step practice setup and not-applicable exit;
+- one-current-practice and per-user authorization boundaries;
+- draft/submitted check-in separation and submitted immutability;
+- pause/resume/stop transitions and completion criteria;
+- static raw/calibrated/confidence/need values after final review;
 - SQLite foreign keys, busy timeout, and WAL;
 - consistent backup and SQLite integrity;
 - assessment v1.1 complete golden output, GGA11, and GGA1.
 
-`make e2e` uses Playwright Chromium for:
+`make e2e` uses Playwright Chromium for four browser journeys:
 
-1. unauthenticated redirect;
-2. login;
-3. Pilot 002 home;
-4. first recommendation visibility;
-5. developmental profile and mastery boundary.
+1. login, Pilot 002 home, and developmental profile;
+2. all 50 required assessment questions, result save, and 6/15/37 persistence;
+3. GGA11 import and supported GGA1 import;
+4. recommendation explanation, seven-step setup, start, pause/resume, draft,
+   submit, all three actions, final review, completion, and mastery disclaimer.
+
+The server-side golden test and browser flow complement each other: the first
+deep-compares every canonical output, while the second proves that the mounted
+UI reaches and persists that engine.
 
 ## Docker acceptance
 
@@ -69,12 +79,13 @@ docker compose exec app python manage.py shell -c \
   'from django.contrib.auth import get_user_model; from growth.models import Competency; print(get_user_model().objects.count(), Competency.objects.count())'
 ```
 
-Both checks must retain the user count and report 383 competencies. Run
-`seed_canonical` twice and confirm counts do not change. Inspect logs for
-migration, seed, permission, or shutdown errors.
+Both checks must retain the user count and report 383 competencies. Also
+confirm assessment/practice rows survive when present. Run `seed_canonical`
+twice and confirm counts do not change. Inspect logs for migration, seed,
+permission, or shutdown errors.
 
-## Current M1A test boundary
+## Current M1 test boundary
 
-M1A does not claim browser coverage for assessment completion/import or the
-practice workflow. Those become applicable in M1B. Dynamic scoring tests are
-deliberately absent because dynamic scoring is disabled.
+M1 proves guided UX and static persistence. It deliberately has no M2 evidence
+weighting or M3 posterior-update tests because those algorithms are disabled
+and no workflow path mutates scores.

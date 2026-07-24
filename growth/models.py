@@ -195,10 +195,10 @@ class LeverBaseline(models.Model):
         AssessmentRun, on_delete=models.CASCADE, related_name="lever_baselines"
     )
     lever = models.ForeignKey(Lever, on_delete=models.PROTECT, related_name="baselines")
-    raw_self_report = models.DecimalField(max_digits=6, decimal_places=4)
-    calibrated_estimate = models.DecimalField(max_digits=6, decimal_places=4)
+    raw_self_report = models.DecimalField(max_digits=6, decimal_places=4, null=True, blank=True)
+    calibrated_estimate = models.DecimalField(max_digits=6, decimal_places=4, null=True, blank=True)
     evidence_confidence = models.DecimalField(max_digits=6, decimal_places=4)
-    need_score = models.DecimalField(max_digits=6, decimal_places=4)
+    need_score = models.DecimalField(max_digits=6, decimal_places=4, null=True, blank=True)
     need_rank = models.PositiveSmallIntegerField()
     notes = models.TextField(blank=True)
 
@@ -286,12 +286,21 @@ class PracticeSprint(models.Model):
     start_date = models.DateField()
     status = models.CharField(max_length=12, choices=Status.choices, default=Status.ACTIVE)
     created_at = models.DateTimeField(auto_now_add=True)
+    setup_completed_at = models.DateTimeField(null=True, blank=True)
+    boundaries_acknowledged_at = models.DateTimeField(null=True, blank=True)
     paused_at = models.DateTimeField(null=True, blank=True)
     stopped_at = models.DateTimeField(null=True, blank=True)
     completed_at = models.DateTimeField(null=True, blank=True)
 
     class Meta:
         ordering = ["-created_at"]
+        constraints = [
+            models.UniqueConstraint(
+                fields=["user"],
+                condition=Q(status__in=["active", "paused"]),
+                name="one_current_practice_per_user",
+            )
+        ]
 
     def __str__(self) -> str:
         return f"{self.protocol_id} for {self.user_id} ({self.status})"
@@ -331,9 +340,31 @@ class PracticeCheckIn(models.Model):
 
     class Meta:
         ordering = ["-created_at"]
+        constraints = [
+            models.CheckConstraint(
+                condition=Q(action_completed=False) | Q(action_attempted=True),
+                name="completed_check_in_requires_attempt",
+            ),
+            models.CheckConstraint(
+                condition=(
+                    Q(status="draft", submitted_at__isnull=True)
+                    | Q(status="submitted", submitted_at__isnull=False)
+                ),
+                name="check_in_submission_timestamp_matches_status",
+            ),
+        ]
 
     def __str__(self) -> str:
         return f"{self.sprint_id}: {self.action_id} ({self.status})"
+
+    def save(self, *args, **kwargs):
+        if self.pk:
+            stored_status = (
+                type(self).objects.filter(pk=self.pk).values_list("status", flat=True).first()
+            )
+            if stored_status == self.Status.SUBMITTED:
+                raise ValidationError("Submitted check-ins are immutable.")
+        return super().save(*args, **kwargs)
 
 
 class PracticeReview(models.Model):
@@ -350,3 +381,8 @@ class PracticeReview(models.Model):
 
     def __str__(self) -> str:
         return f"Review for {self.sprint_id}"
+
+    def save(self, *args, **kwargs):
+        if self.pk and type(self).objects.filter(pk=self.pk).exists():
+            raise ValidationError("Submitted practice reviews are immutable.")
+        return super().save(*args, **kwargs)

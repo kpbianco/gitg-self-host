@@ -73,5 +73,6 @@ Constraints:
 - one application instance owns the SQLite file;
 - long transactions and high write concurrency must be avoided;
 - HTTPS requires a later reverse proxy;
-- browser-side assessment scoring remains JavaScript until its reference
-  behavior is integrated and locked by golden tests.
+- browser-side assessment scoring remains the canonical JavaScript reference;
+  its integration is locked by golden and browser tests, while Node.js remains
+  a development-test dependency only.

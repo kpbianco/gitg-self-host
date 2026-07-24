@@ -18,9 +18,33 @@ Its substantive behavior must remain unchanged:
 The browser-side `assessment_scoring_v1_1.js` remains the M1 reference
 implementation.
 
-## M1A implementation
+## M1 implementation
 
-M1A provides an immutable `AssessmentRun` schema for:
+The authenticated `/assessment/` page renders the canonical specification
+through Django templates and loads:
+
+- the exact canonical `assessment_scoring_v1_1.js` from an authenticated local
+  Django route;
+- a small local controller for question navigation, timing, autosave,
+  clarifiers, result presentation, import, and persistence;
+- no CDN, external CSS/JavaScript, frontend framework, or runtime Node server.
+
+The page requires all 50 core questions, records the full interval from
+question display until Next/Back, and offers the engine's targeted capability
+and orientation clarifiers. It displays a concise result while retaining the
+complete output.
+
+The CSRF-protected persistence endpoint validates:
+
+- submission UUID, source, and assessment version;
+- all 50 canonical core IDs and response ranges;
+- optional clarifier IDs and N/A applicability;
+- complete core timing for an in-app run;
+- exact agreement between submitted answers and the original share code;
+- all 6 orientation, 15 archetype, and 37 lever outputs;
+- the complete 37-lever need ranking and finite output ranges.
+
+It then atomically writes an immutable `AssessmentRun` with:
 
 - assessment/curriculum versions and source;
 - answers and clarifier answers;
@@ -31,9 +55,13 @@ M1A provides an immutable `AssessmentRun` schema for:
 
 Related orientation, archetype, and lever-baseline rows support efficient
 profile rendering. Saving an existing `AssessmentRun` through the model raises
-a validation error.
+a validation error. A repeated submission UUID returns the original run
+without duplicating it.
 
-M1A does not yet expose assessment-taking or share-code import.
+The import panel decodes GGA11 or supported GGA1 locally, scores the decoded
+answers through the same canonical v1.1 engine, preserves the original code,
+and uses the same validated persistence path. The displayed portable result is
+always a current GGA11 code.
 
 ## Golden fixture
 
@@ -63,24 +91,22 @@ also:
 - decodes the canonical legacy GGA1 code;
 - confirms 37 lever and 15 archetype outputs.
 
-pytest also checks SHA-256 hashes for the engine, spec, input, and output.
+pytest also checks SHA-256 hashes for the engine, spec, input, and output. The
+integrated persistence test passes that same golden result through Django and
+verifies the exact 6/15/37 related rows and representative raw, calibrated,
+confidence, and need values. Playwright completes all 50 questions and imports
+both GGA11 and GGA1 in a real browser.
 
-## M1B integration plan
+## Integration defects corrected
 
-1. Extract the existing standalone markup into Django templates without
-   changing question wording or scoring constants.
-2. Copy the canonical scorer into a locally served static asset; do not load
-   it from a CDN.
-3. Post the complete answers, clarifiers, timings, quality result, outputs,
-   and original GGA11 code to a CSRF-protected Django endpoint.
-4. Validate payload shape, IDs, version, and output completeness server-side
-   before one atomic immutable insert.
-5. Add a separate GGA11 import form using the same canonical decoder and
-   persistence path.
-6. Retain GGA1 decoder coverage.
-7. Run the same golden fixture through both the standalone reference and
-   integrated page.
-8. Add Playwright coverage for completion and share-code import.
+The standalone HTML exposed capability clarifiers but did not expose the
+canonical spec's optional orientation clarifiers. The integrated controller
+uses both suggestion lists—up to eight capability and two orientation
+clarifiers—without changing wording or scoring.
+
+The canonical scorer can return null raw/calibrated/need values when every
+relevant response is genuinely N/A. M1 therefore permits null in those
+baseline fields instead of coercing an unsupported score.
 
 ## Static-score boundary
 
@@ -88,3 +114,8 @@ The canonical scorer also contains future evidence-update helper functions.
 The Django application does not import, call, or persist their output in M1.
 Assessment baselines, mastery, confidence, need, orientations, and archetypes
 remain unchanged after practices and reviews.
+
+Browser scoring is a stated M1 trust boundary. Django verifies shape, IDs,
+ranges, version, and share-code/answer agreement; it does not maintain a
+second scoring implementation. A future server-side scorer would require a
+separate versioned decision and parity suite.

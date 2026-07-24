@@ -15,3 +15,4 @@ STORAGES["staticfiles"] = {  # noqa: F405
 }
 STATIC_ROOT = DATA_DIR / "staticfiles"  # noqa: F405
 STATIC_ROOT.mkdir(parents=True, exist_ok=True)
+WHITENOISE_USE_FINDERS = True

@@ -1,6 +1,6 @@
 # Assessment v1.1 golden fixture
 
-The M1A golden test deliberately references the canonical, pre-integration files
+The golden test deliberately references the canonical, pre-integration files
 instead of copying them:
 
 - `pilot_001_responses_v1_compatible.json` is the known input.
@@ -13,5 +13,6 @@ instead of copying them:
 substantive output. It also verifies GGA11 round-trip encoding and the existing
 GGA1 compatibility code.
 
-The hashes in `manifest.json` make fixture drift explicit during pytest. M1B
-must use this same fixture when the assessment is mounted in Django templates.
+The hashes in `manifest.json` make fixture drift explicit during pytest. The
+Django persistence test uses this same input and complete output, while
+Playwright verifies the mounted 50-question and import paths.

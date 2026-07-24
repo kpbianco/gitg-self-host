@@ -4,7 +4,13 @@ from django.urls import reverse
 
 @pytest.mark.django_db
 def test_login_is_required_for_user_facing_pages(client):
-    for url in (reverse("growth:home"), reverse("growth:profile"), reverse("password_change")):
+    for url in (
+        reverse("growth:home"),
+        reverse("growth:profile"),
+        reverse("growth:assessment"),
+        reverse("growth:practice-list"),
+        reverse("password_change"),
+    ):
         response = client.get(url)
         assert response.status_code == 302
         assert response.url.startswith(f"{reverse('login')}?next=")
@@ -30,7 +36,7 @@ def test_authenticated_home_and_profile_render_pilot_seed(client, user, seeded):
     assert home.status_code == 200
     assert b"starting profile is fixed for this release" in home.content
     assert b"Deepen One Existing Friendship" in home.content
-    assert b"Setup and activation are not yet available" in home.content
+    assert b"Review and set up" in home.content
 
     profile = client.get(reverse("growth:profile"))
     assert profile.status_code == 200
