@@ -46,6 +46,9 @@ def check_in_post(action, **overrides):
         "internal_resistance": "",
         "expected_reciprocity": "",
         "observed_reciprocity": "",
+        "support_level": "independent",
+        "context_comparison": "first_record",
+        "evidence_direction": "supports",
         "contradictory_evidence": "",
         "note": "",
     }
@@ -222,11 +225,13 @@ def test_completion_and_review_do_not_mutate_static_scores(client, user, seeded)
             actions[1],
             action_completed="on",
             future_interaction_scheduled="on",
+            context_comparison="same_context",
         ),
         check_in_post(
             actions[2],
             follow_up_question_asked="on",
             follow_up_within_seven_days="on",
+            context_comparison="same_context",
         ),
     )
     for row in evidence_rows:

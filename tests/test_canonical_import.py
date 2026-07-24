@@ -120,6 +120,12 @@ def test_repeated_seed_is_idempotent_and_imports_pilot_profile(user):
         PracticeProtocol.objects.filter(availability=PracticeProtocol.Availability.INACTIVE).count()
         == 4
     )
+    friendship_actions = PracticeAction.objects.filter(protocol_id="PRACTICE-FRIENDSHIP-01")
+    assert friendship_actions.count() == 3
+    assert all(
+        action.evidence_rules["schema_version"] == "practice-observation-v1"
+        for action in friendship_actions
+    )
 
 
 @pytest.mark.django_db

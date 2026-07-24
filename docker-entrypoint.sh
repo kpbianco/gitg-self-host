@@ -4,6 +4,7 @@ set -eu
 python manage.py migrate --noinput
 python manage.py bootstrap_user
 python manage.py seed_canonical
+python manage.py backfill_evidence_events
 python manage.py collectstatic --noinput
 
 exec gunicorn grounded_growth.wsgi:application \

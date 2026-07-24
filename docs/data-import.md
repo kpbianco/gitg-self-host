@@ -46,7 +46,9 @@ The command opens one transaction and fails before model writes when it finds:
 - a mapping slot with only an ID or only a weight;
 - nonnumeric, nonpositive, or greater-than-one weights;
 - competency weights that differ from 1.0 by more than `0.000001`;
-- disagreement between the structured mapping CSV and canonical model JSON.
+- disagreement between the structured mapping CSV and canonical model JSON;
+- a practice action with a missing schema version, unknown observation field,
+  duplicate marker, or overlapping primary/supporting evidence marker.
 
 No malformed value is silently normalized.
 
@@ -69,6 +71,11 @@ A successful command reports the imported counts. Repeated runs update
 canonical rows by stable ID, remove stale weighted links, and do not duplicate
 entities, assessment runs, baselines, protocols, or actions.
 
+The active friendship actions also receive validated
+`practice-observation-v1` evidence rules keyed by stable action IDs. Seeding
+does not create evidence events. `backfill_evidence_events` runs afterward and
+creates events only for submitted check-ins that do not already have one.
+
 ## Versioning
 
 `CurriculumVersion` records:
@@ -80,8 +87,8 @@ entities, assessment runs, baselines, protocols, or actions.
 - import timestamp.
 
 Assessment runs and practice sprints retain their curriculum-version
-reference. Future scoring algorithm versions must be recorded separately
-before dynamic scoring is enabled.
+reference. M2A records `GG-EVIDENCE-1.0` separately on each immutable event.
+This does not authorize dynamic scoring.
 
 ## Pilot 002 boundary
 
@@ -96,3 +103,17 @@ The seed remains idempotent after a user takes or imports another assessment.
 It reconciles the stable Pilot 002 row but does not overwrite or remove
 user-created immutable assessment runs, practice sprints, check-ins, or
 reviews.
+
+## Existing M1 check-ins
+
+After upgrading, run:
+
+```bash
+python manage.py backfill_evidence_events --dry-run
+python manage.py backfill_evidence_events
+```
+
+The command leaves submitted check-ins unchanged. Missing M1 support/context
+metadata uses conservative factors, and absent contradiction remains unknown
+rather than supportive. Repeated runs verify existing event snapshots and
+create no duplicates.

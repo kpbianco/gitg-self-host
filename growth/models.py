@@ -250,6 +250,7 @@ class PracticeAction(models.Model):
     title = models.CharField(max_length=180)
     instructions = models.TextField()
     due_within_days = models.PositiveSmallIntegerField(null=True, blank=True)
+    evidence_rules = models.JSONField(default=dict)
 
     class Meta:
         ordering = ["protocol_id", "sequence"]
@@ -306,10 +307,46 @@ class PracticeSprint(models.Model):
         return f"{self.protocol_id} for {self.user_id} ({self.status})"
 
 
+class PracticeCheckInQuerySet(models.QuerySet):
+    def update(self, **kwargs):
+        if kwargs.get("status") == "submitted" or self.filter(status="submitted").exists():
+            raise ValidationError("Submitted check-ins are immutable.")
+        return super().update(**kwargs)
+
+    def bulk_update(self, objs, fields, batch_size=None):
+        objects = list(objs)
+        object_ids = [obj.pk for obj in objects if obj.pk]
+        if (
+            any(obj.status == "submitted" for obj in objects)
+            or self.filter(
+                pk__in=object_ids,
+                status="submitted",
+            ).exists()
+        ):
+            raise ValidationError("Submitted check-ins are immutable.")
+        return super().bulk_update(objects, fields, batch_size=batch_size)
+
+
 class PracticeCheckIn(models.Model):
     class Status(models.TextChoices):
         DRAFT = "draft", "Draft"
         SUBMITTED = "submitted", "Submitted"
+
+    class SupportLevel(models.TextChoices):
+        INDEPENDENT = "independent", "Self-directed"
+        PLANNING_AID = "planning_aid", "Used a reminder or planning aid"
+        GUIDED = "guided", "Needed real-time prompting or guidance"
+
+    class ContextComparison(models.TextChoices):
+        FIRST_RECORD = "first_record", "First record for this practice"
+        SAME_CONTEXT = "same_context", "Similar setting or situation"
+        VARIED_CONTEXT = "varied_context", "Meaningfully different setting or situation"
+
+    class EvidenceDirection(models.TextChoices):
+        SUPPORTS = "supports", "Supported the expected pattern"
+        MIXED = "mixed", "Mixed or unclear"
+        CONTRADICTS = "contradicts", "Contradicted the expected pattern"
+        INCONCLUSIVE = "inconclusive", "Not enough happened to tell"
 
     stable_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     sprint = models.ForeignKey(PracticeSprint, on_delete=models.CASCADE, related_name="check_ins")
@@ -332,11 +369,31 @@ class PracticeCheckIn(models.Model):
     observed_reciprocity = models.PositiveSmallIntegerField(
         null=True, blank=True, validators=[MinValueValidator(0), MaxValueValidator(4)]
     )
+    support_level = models.CharField(
+        max_length=20,
+        choices=SupportLevel.choices,
+        blank=True,
+        default="",
+    )
+    context_comparison = models.CharField(
+        max_length=20,
+        choices=ContextComparison.choices,
+        blank=True,
+        default="",
+    )
+    evidence_direction = models.CharField(
+        max_length=20,
+        choices=EvidenceDirection.choices,
+        blank=True,
+        default="",
+    )
     contradictory_evidence = models.TextField(blank=True)
     note = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     submitted_at = models.DateTimeField(null=True, blank=True)
+
+    objects = PracticeCheckInQuerySet.as_manager()
 
     class Meta:
         ordering = ["-created_at"]
@@ -352,6 +409,13 @@ class PracticeCheckIn(models.Model):
                 ),
                 name="check_in_submission_timestamp_matches_status",
             ),
+            models.CheckConstraint(
+                condition=(
+                    ~Q(evidence_direction__in=["mixed", "contradicts"])
+                    | ~Q(contradictory_evidence="")
+                ),
+                name="directed_contradiction_requires_detail",
+            ),
         ]
 
     def __str__(self) -> str:
@@ -365,6 +429,131 @@ class PracticeCheckIn(models.Model):
             if stored_status == self.Status.SUBMITTED:
                 raise ValidationError("Submitted check-ins are immutable.")
         return super().save(*args, **kwargs)
+
+
+class ImmutableEvidenceEventQuerySet(models.QuerySet):
+    def update(self, **kwargs):
+        raise ValidationError("Evidence events are immutable after creation.")
+
+    def bulk_update(self, objs, fields, batch_size=None):
+        raise ValidationError("Evidence events are immutable after creation.")
+
+
+class EvidenceEvent(models.Model):
+    stable_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    check_in = models.OneToOneField(
+        PracticeCheckIn,
+        on_delete=models.CASCADE,
+        related_name="evidence_event",
+    )
+    algorithm_version = models.CharField(max_length=40)
+    protocol_stable_id = models.CharField(max_length=80)
+    action_stable_id = models.CharField(max_length=100)
+    input_snapshot = models.JSONField()
+    performance = models.DecimalField(
+        max_digits=5,
+        decimal_places=4,
+        validators=[MinValueValidator(0), MaxValueValidator(1)],
+    )
+    quality = models.DecimalField(
+        max_digits=5,
+        decimal_places=4,
+        validators=[MinValueValidator(0), MaxValueValidator(1)],
+    )
+    independence = models.DecimalField(
+        max_digits=5,
+        decimal_places=4,
+        validators=[MinValueValidator(0), MaxValueValidator(1)],
+    )
+    context_breadth = models.DecimalField(
+        max_digits=5,
+        decimal_places=4,
+        validators=[MinValueValidator(0), MaxValueValidator(1)],
+    )
+    repetition_index = models.PositiveSmallIntegerField()
+    repetition_multiplier = models.DecimalField(
+        max_digits=5,
+        decimal_places=4,
+        validators=[MinValueValidator(0), MaxValueValidator(1)],
+    )
+    contradiction_level = models.DecimalField(
+        max_digits=5,
+        decimal_places=4,
+        null=True,
+        blank=True,
+        validators=[MinValueValidator(0), MaxValueValidator(1)],
+    )
+    base_evidence_mass = models.DecimalField(
+        max_digits=5,
+        decimal_places=4,
+        validators=[MinValueValidator(0), MaxValueValidator(1)],
+    )
+    explanation = models.JSONField(default=dict)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    objects = ImmutableEvidenceEventQuerySet.as_manager()
+
+    class Meta:
+        ordering = ["check_in__submitted_at", "stable_id"]
+        constraints = [
+            models.CheckConstraint(
+                condition=Q(repetition_index__gte=1),
+                name="evidence_repetition_index_positive",
+            ),
+            models.CheckConstraint(
+                condition=Q(performance__gte=0) & Q(performance__lte=1),
+                name="evidence_performance_in_range",
+            ),
+            models.CheckConstraint(
+                condition=Q(quality__gte=0) & Q(quality__lte=1),
+                name="evidence_quality_in_range",
+            ),
+            models.CheckConstraint(
+                condition=Q(independence__gte=0) & Q(independence__lte=1),
+                name="evidence_independence_in_range",
+            ),
+            models.CheckConstraint(
+                condition=Q(context_breadth__gte=0) & Q(context_breadth__lte=1),
+                name="evidence_context_breadth_in_range",
+            ),
+            models.CheckConstraint(
+                condition=Q(repetition_multiplier__gt=0) & Q(repetition_multiplier__lte=1),
+                name="evidence_repetition_multiplier_in_range",
+            ),
+            models.CheckConstraint(
+                condition=(
+                    Q(contradiction_level__isnull=True)
+                    | (Q(contradiction_level__gte=0) & Q(contradiction_level__lte=1))
+                ),
+                name="evidence_contradiction_level_in_range",
+            ),
+            models.CheckConstraint(
+                condition=Q(base_evidence_mass__gte=0) & Q(base_evidence_mass__lte=1),
+                name="evidence_base_mass_in_range",
+            ),
+        ]
+
+    def __str__(self) -> str:
+        return f"{self.check_in_id}: {self.algorithm_version}"
+
+    def save(self, *args, **kwargs):
+        if self.pk and type(self).objects.filter(pk=self.pk).exists():
+            raise ValidationError("Evidence events are immutable after creation.")
+        return super().save(*args, **kwargs)
+
+    def clean(self):
+        super().clean()
+        if not self.check_in_id:
+            return
+        if (
+            self.check_in.status != PracticeCheckIn.Status.SUBMITTED
+            or self.check_in.submitted_at is None
+        ):
+            raise ValidationError("Evidence events require a submitted check-in.")
+        if self.protocol_stable_id != self.check_in.sprint.protocol_id:
+            raise ValidationError("Evidence event protocol does not match its check-in.")
+        if self.action_stable_id != self.check_in.action_id:
+            raise ValidationError("Evidence event action does not match its check-in.")
 
 
 class PracticeReview(models.Model):

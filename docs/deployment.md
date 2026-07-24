@@ -1,6 +1,6 @@
 # Deployment
 
-## Supported M1 topology
+## Supported single-instance topology
 
 M1 runs one `app` service. Gunicorn listens on `0.0.0.0:8000` in the
 container, and Docker Compose maps the configured host port. SQLite and future
@@ -57,12 +57,13 @@ The non-root container user runs these steps on every start:
 1. `manage.py migrate --noinput`
 2. `manage.py bootstrap_user`
 3. `manage.py seed_canonical`
-4. `manage.py collectstatic --noinput`
-5. `gunicorn grounded_growth.wsgi:application`
+4. `manage.py backfill_evidence_events`
+5. `manage.py collectstatic --noinput`
+6. `gunicorn grounded_growth.wsgi:application`
 
-Migrations and seeding are idempotent. Bootstrap creation occurs only when the
-auth user table is empty. An existing user prevents password creation or
-reset, even if bootstrap environment values change.
+Migrations, seeding, and evidence backfill are idempotent. Bootstrap creation
+occurs only when the auth user table is empty. An existing user prevents
+password creation or reset, even if bootstrap environment values change.
 
 ## Authentication hardening
 
@@ -131,8 +132,8 @@ The database is:
 Future uploads use `/data/uploads`; backups use `/data/backups`.
 
 Assessment runs, share codes, practice setup records, draft/submitted
-check-ins, and final reviews all live in the same SQLite database and survive
-container replacement with the named volume.
+check-ins, immutable evidence events, and final reviews all live in the same
+SQLite database and survive container replacement with the named volume.
 
 ## Updating
 
@@ -153,7 +154,8 @@ After an update, sign in and verify:
 1. `/assessment/` loads the locally served scorer;
 2. `/practices/` shows the friendship protocol;
 3. any current practice and draft check-ins remain present;
-4. `/health/` returns `{"status":"ok"}`.
+4. a submitted check-in opens its evidence-reading page;
+5. `/health/` returns `{"status":"ok"}`.
 
 ## HTTPS or remote access later
 

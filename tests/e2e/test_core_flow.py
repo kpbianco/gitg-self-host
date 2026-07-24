@@ -185,8 +185,16 @@ def test_guided_practice_draft_pause_and_completion_flow(live_server, page: Page
     assert PracticeCheckIn.objects.filter(status=PracticeCheckIn.Status.SUBMITTED).count() == 0
 
     page.locator(".draft-list a").click()
+    page.get_by_label("How much support did you use?").select_option("independent")
+    page.get_by_label("What direction did the observation point?").select_option("supports")
     page.get_by_role("button", name="Submit check-in").click()
     page.get_by_text("Check-in submitted and added to evidence history.").wait_for()
+    page.get_by_role("link", name="Listen to what matters now").click()
+    page.get_by_role("heading", name="Listen to what matters now").wait_for()
+    page.get_by_text("Your developmental profile is unchanged.").wait_for()
+    page.get_by_text("Technical audit details").click()
+    page.get_by_text("GG-EVIDENCE-1.0").wait_for()
+    page.get_by_role("link", name=re.compile(r"Deepen One Existing Friendship")).click()
 
     for label, completed in (
         ("Action 2: Make a specific invitation", True),
@@ -197,6 +205,11 @@ def test_guided_practice_draft_pause_and_completion_flow(live_server, page: Page
         page.get_by_label("Action attempted").check()
         if completed:
             page.get_by_label("Action completed").check()
+        page.get_by_label("How much support did you use?").select_option("independent")
+        page.get_by_label("How does this setting compare with earlier check-ins?").select_option(
+            "same_context"
+        )
+        page.get_by_label("What direction did the observation point?").select_option("supports")
         page.get_by_role("button", name="Submit check-in").click()
 
     page.get_by_role("link", name="Review and complete").click()

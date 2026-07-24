@@ -24,6 +24,12 @@
     </div>
   {% endif %}
 
+  <div class="status-note" role="note">
+    <strong>Evidence reading, not a mastery judgment.</strong>
+    The support, context, and direction choices make this observation
+    explainable. Submitting it will not change your profile or recommendation.
+  </div>
+
   <form class="workflow-form check-in-form" method="post">
     {% csrf_token %}
     {% if form.non_field_errors %}<div class="form-error">{{ form.non_field_errors }}</div>{% endif %}
@@ -49,8 +55,9 @@
       </button>
     </div>
     <p class="fine-print">
-      Submitted check-ins become immutable evidence. A draft remains private
-      working state and does not appear in submitted history.
+      Submitted check-ins and their versioned evidence reading become
+      immutable. A draft remains private working state and does not appear in
+      submitted history.
     </p>
   </form>
 {% endblock %}

@@ -12,6 +12,10 @@ PLAYWRIGHT_BROWSERS_PATH="$PWD/.playwright-browsers" \
 Node.js is used only to execute the canonical assessment JavaScript in golden
 tests. It is not a deployed server or runtime dependency.
 
+Each pytest invocation uses a unique SQLite database under the system
+temporary directory. This prevents a completed WAL-enabled process from
+leaving sidecars that can collide with a subsequent unit or browser run.
+
 ## Commands
 
 ```bash
@@ -37,6 +41,12 @@ make e2e
 - the seven-step practice setup and not-applicable exit;
 - one-current-practice and per-user authorization boundaries;
 - draft/submitted check-in separation and submitted immutability;
+- required M2 evidence metadata on submission;
+- deterministic `GG-EVIDENCE-1.0` output and exact replay;
+- action-specific repetition and bounded context semantics;
+- structured and legacy contradiction handling;
+- atomic event creation, event immutability, and privacy-minimized snapshots;
+- conservative, idempotent M1 evidence backfill;
 - pause/resume/stop transitions and completion criteria;
 - static raw/calibrated/confidence/need values after final review;
 - SQLite foreign keys, busy timeout, and WAL;
@@ -49,7 +59,8 @@ make e2e
 2. all 50 required assessment questions, result save, and 6/15/37 persistence;
 3. GGA11 import and supported GGA1 import;
 4. recommendation explanation, seven-step setup, start, pause/resume, draft,
-   submit, all three actions, final review, completion, and mastery disclaimer.
+   M2 evidence submission/detail, all three actions, final review, completion,
+   and mastery disclaimer.
 
 The server-side golden test and browser flow complement each other: the first
 deep-compares every canonical output, while the second proves that the mounted
@@ -84,8 +95,9 @@ confirm assessment/practice rows survive when present. Run `seed_canonical`
 twice and confirm counts do not change. Inspect logs for migration, seed,
 permission, or shutdown errors.
 
-## Current M1 test boundary
+## Current scoring boundary
 
-M1 proves guided UX and static persistence. It deliberately has no M2 evidence
-weighting or M3 posterior-update tests because those algorithms are disabled
-and no workflow path mutates scores.
+M1 proves guided UX and static persistence. M2A tests event-level evidence
+classification and base mass. It deliberately has no task-to-lever
+allocation, success/failure contribution, score snapshot, posterior update, or
+dynamic recommendation test because those paths do not exist.

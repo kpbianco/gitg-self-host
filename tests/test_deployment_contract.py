@@ -28,8 +28,9 @@ def test_container_runs_nonroot_gunicorn_and_safe_startup_sequence():
     migrate = entrypoint.index("manage.py migrate")
     bootstrap = entrypoint.index("manage.py bootstrap_user")
     seed = entrypoint.index("manage.py seed_canonical")
+    evidence_backfill = entrypoint.index("manage.py backfill_evidence_events")
     gunicorn = entrypoint.index("exec gunicorn")
-    assert migrate < bootstrap < seed < gunicorn
+    assert migrate < bootstrap < seed < evidence_backfill < gunicorn
     assert "--bind 0.0.0.0:8000" in entrypoint
     assert "--access-logfile -" in entrypoint
     assert "--error-logfile -" in entrypoint

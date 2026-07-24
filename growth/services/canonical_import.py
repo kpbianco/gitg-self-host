@@ -12,6 +12,7 @@ from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.db import transaction
 
+from growth.domain.evidence import EvidenceContractError, validate_evidence_rules
 from growth.models import (
     ArchetypeResult,
     AssessmentRun,
@@ -272,6 +273,17 @@ PROTOCOLS = (
                     "primarily listening."
                 ),
                 "due_within_days": None,
+                "evidence_rules": {
+                    "schema_version": "practice-observation-v1",
+                    "primary_markers": [
+                        "moved_beyond_transactional",
+                        "meaningful_information_shared",
+                    ],
+                    "supporting_markers": [
+                        "follow_up_question_asked",
+                        "user_initiated",
+                    ],
+                },
             },
             {
                 "stable_id": "PRACTICE-FRIENDSHIP-01-A2",
@@ -282,6 +294,11 @@ PROTOCOLS = (
                     "future intention."
                 ),
                 "due_within_days": None,
+                "evidence_rules": {
+                    "schema_version": "practice-observation-v1",
+                    "primary_markers": ["future_interaction_scheduled"],
+                    "supporting_markers": ["user_initiated"],
+                },
             },
             {
                 "stable_id": "PRACTICE-FRIENDSHIP-01-A3",
@@ -292,6 +309,17 @@ PROTOCOLS = (
                     "how it developed."
                 ),
                 "due_within_days": 7,
+                "evidence_rules": {
+                    "schema_version": "practice-observation-v1",
+                    "primary_markers": [
+                        "follow_up_within_seven_days",
+                        "follow_up_question_asked",
+                    ],
+                    "supporting_markers": [
+                        "meaningful_information_shared",
+                        "user_initiated",
+                    ],
+                },
             },
         ],
     },
@@ -346,6 +374,12 @@ def _seed_protocols() -> None:
         protocol.target_levers.set(Lever.objects.filter(stable_id__in=item["target_levers"]))
         desired_actions: set[str] = set()
         for action in item.get("actions", []):
+            try:
+                validate_evidence_rules(action["evidence_rules"])
+            except (KeyError, EvidenceContractError) as exc:
+                raise CanonicalDataError(
+                    f"{action['stable_id']}: invalid evidence rules: {exc}"
+                ) from exc
             desired_actions.add(action["stable_id"])
             PracticeAction.objects.update_or_create(
                 stable_id=action["stable_id"],
@@ -355,6 +389,7 @@ def _seed_protocols() -> None:
                     "title": action["title"],
                     "instructions": action["instructions"],
                     "due_within_days": action["due_within_days"],
+                    "evidence_rules": action["evidence_rules"],
                 },
             )
         protocol.actions.exclude(stable_id__in=desired_actions).delete()

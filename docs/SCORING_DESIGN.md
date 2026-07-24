@@ -1,6 +1,8 @@
-# Scoring Design — Deferred Implementation Reference
+# Scoring Design — M2 evidence / deferred M3 reference
 
-This document describes the intended algorithm. It is not authorization to enable score mutation in Milestone 1.
+M2A implements only the event-level contract in `docs/evidence-contract.md`.
+The task-to-lever and posterior sections below remain design reference and are
+not authorization to enable profile mutation.
 
 ## Assessment response transform
 For a 1–5 answer:
@@ -12,7 +14,7 @@ N/A is excluded.
 Assessment v1.1 maintains raw self-report, calibrated estimate, evidence confidence, and response-quality modifiers. The implementation in `data/assessment/` is the canonical reference for initial scoring.
 
 ## Task evidence event
-An evidence event eventually contains:
+`GG-EVIDENCE-1.0` now contains:
 - performance `p`;
 - evidence quality `q`;
 - independence `i`;
@@ -24,6 +26,14 @@ An evidence event eventually contains:
 Base evidence mass:
 
 `e = q * i * b * r`
+
+M2A stores `e` on an immutable event. Quality is capped at `0.85` because the
+source is structured self-report; independence and context factors are
+explicit; repetition is scoped to the same stable action within one sprint;
+and contradiction is retained separately. Exact constants and migration
+semantics are binding in `docs/evidence-contract.md`.
+
+The following task-to-lever coefficient and contributions are deferred to M3:
 
 Repeat multipliers:
 - first attempt: 1.00
@@ -73,3 +83,7 @@ Personality/orientation style fit may only apply a narrow presentation/tie-break
 - exhaustive unit/property tests;
 - no update from drafts;
 - no update from completion alone.
+
+M2A satisfies purity, determinism, versioning, immutable input/output, replay,
+and draft exclusion at the event layer. It deliberately has no score snapshot
+because it makes no score-state transition.
