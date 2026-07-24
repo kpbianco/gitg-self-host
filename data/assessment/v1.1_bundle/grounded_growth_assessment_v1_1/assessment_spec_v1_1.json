@@ -1,0 +1,2776 @@
+{
+  "assessment": {
+    "title": "Grounded Growth Initial Alignment and Capability Assessment v1.1",
+    "version": "1.1",
+    "purpose": "Estimate six non-evaluative personality orientations and create provisional 0-1 evidence states for 37 developmental levers.",
+    "status": "prototype_not_psychometrically_validated",
+    "core_item_count": 50,
+    "adaptive_capability_clarifiers_available": 37,
+    "adaptive_orientation_clarifiers_available": 6,
+    "estimated_minutes": "11-15 core; 14-19 with clarifiers",
+    "instructions": [
+      "Answer from your behavior during the past six months, not from your ideal self.",
+      "Use ordinary behavior across contexts, not your single best or worst moment.",
+      "Choose Not applicable / insufficient experience when a role or context has not occurred.",
+      "The result is a provisional self-report estimate. It is not a diagnosis and does not prove mastery."
+    ],
+    "response_scales": {
+      "orientation": {
+        "1": "Least like me",
+        "2": "Usually not like me",
+        "3": "Mixed or context-dependent",
+        "4": "Usually like me",
+        "5": "Most like me"
+      },
+      "capability": {
+        "1": "Rarely demonstrated; I usually need substantial guidance",
+        "2": "Sometimes demonstrated with prompts, structure, or support",
+        "3": "Usually demonstrated in familiar, low-pressure situations",
+        "4": "Reliably demonstrated across ordinary situations",
+        "5": "Reliable under pressure or novelty; I can adapt or help others"
+      },
+      "response_quality": {
+        "1": "Strongly disagree",
+        "2": "Disagree",
+        "3": "Mixed",
+        "4": "Agree",
+        "5": "Strongly agree"
+      }
+    },
+    "scoring_constants": {
+      "prior_alpha": 0.35,
+      "prior_beta": 0.35,
+      "quiz_mass_per_effective_item": 0.9,
+      "quiz_mass_cap_per_lever": 3.2,
+      "task_mass_budget_per_lever": 24.0,
+      "task_event_mass_cap_per_lever": 1.5,
+      "task_repeat_multipliers": [
+        1.0,
+        0.65,
+        0.4,
+        0.25
+      ],
+      "need_exponent": 1.5,
+      "response_quality_floor": 0.45,
+      "timing_extreme_seconds": 1.5,
+      "timing_fast_seconds": 2.5
+    },
+    "core_items": [
+      {
+        "id": "Q01",
+        "type": "orientation",
+        "prompt": "When facing a new problem, I naturally want to understand its structure before acting.",
+        "orientation_weights": {
+          "discernment": 1.0
+        }
+      },
+      {
+        "id": "Q02",
+        "type": "orientation",
+        "prompt": "I am energized by finding patterns, inconsistencies, and the most accurate explanation.",
+        "orientation_weights": {
+          "discernment": 1.0
+        }
+      },
+      {
+        "id": "Q03",
+        "type": "orientation",
+        "prompt": "When an important decision is stalled, I would rather take responsibility for choosing a workable direction than keep gathering input.",
+        "orientation_weights": {
+          "agency": 1.0
+        }
+      },
+      {
+        "id": "Q04",
+        "type": "orientation",
+        "prompt": "I gain energy from initiating difficult action, even when I may be judged for the outcome.",
+        "orientation_weights": {
+          "agency": 1.0
+        }
+      },
+      {
+        "id": "Q05",
+        "type": "orientation",
+        "prompt": "When a group has both a task problem and a relationship problem, my attention naturally goes first to whether people feel understood and included.",
+        "orientation_weights": {
+          "connection": 1.0
+        }
+      },
+      {
+        "id": "Q06",
+        "type": "orientation",
+        "prompt": "Given equal free time, I am more drawn to deepening or repairing a relationship than to working alone on an idea or project.",
+        "orientation_weights": {
+          "connection": 1.0
+        }
+      },
+      {
+        "id": "Q07",
+        "type": "orientation",
+        "prompt": "I naturally maintain systems, commitments, and resources so they remain dependable over time.",
+        "orientation_weights": {
+          "stewardship": 1.0
+        }
+      },
+      {
+        "id": "Q08",
+        "type": "orientation",
+        "prompt": "I would rather strengthen an important responsibility or proven structure than leave it for a more novel possibility.",
+        "orientation_weights": {
+          "stewardship": 1.0
+        }
+      },
+      {
+        "id": "Q09",
+        "type": "orientation",
+        "prompt": "When a sound method already exists, I still feel pulled to test an unfamiliar alternative.",
+        "orientation_weights": {
+          "exploration": 1.0
+        }
+      },
+      {
+        "id": "Q10",
+        "type": "orientation",
+        "prompt": "I gain energy from entering unfamiliar subjects, places, or ways of doing things even without an immediate practical payoff.",
+        "orientation_weights": {
+          "exploration": 1.0
+        }
+      },
+      {
+        "id": "Q11",
+        "type": "orientation",
+        "prompt": "When a personally advantageous option conflicts with a principle or larger good I believe in, my attention goes first to the principle or larger good.",
+        "orientation_weights": {
+          "transcendence": 1.0
+        }
+      },
+      {
+        "id": "Q12",
+        "type": "orientation",
+        "prompt": "I am energized by questions of meaning, virtue, sacredness, beauty, or what should outlast me.",
+        "orientation_weights": {
+          "transcendence": 1.0
+        }
+      },
+      {
+        "id": "Q13",
+        "type": "capability",
+        "prompt": "When major choices compete, I can explain which direction best fits what I believe my life is for.",
+        "primary_lever_id": "L01",
+        "lever_weights": {
+          "L01": 1.0,
+          "L36": 0.3,
+          "L02": 0.2
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q14",
+        "type": "capability",
+        "prompt": "I follow the same ethical standard when doing so costs me as when it benefits me.",
+        "primary_lever_id": "L02",
+        "lever_weights": {
+          "L02": 1.0,
+          "L05": 0.2,
+          "L31": 0.2
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q15",
+        "type": "capability",
+        "prompt": "I maintain a deliberate practice that connects me to meaning, sacredness, or reality beyond immediate self-interest.",
+        "primary_lever_id": "L03",
+        "lever_weights": {
+          "L03": 1.0,
+          "L01": 0.25,
+          "L04": 0.15
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q16",
+        "type": "capability",
+        "prompt": "After loss or serious setback, I can face what happened without denial and still identify a reason to continue.",
+        "primary_lever_id": "L04",
+        "lever_weights": {
+          "L04": 1.0,
+          "L07": 0.25,
+          "L03": 0.15
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q17",
+        "type": "capability",
+        "prompt": "I recognize my recurring defensive patterns before they fully control my behavior.",
+        "primary_lever_id": "L05",
+        "lever_weights": {
+          "L05": 1.0,
+          "L13": 0.2,
+          "L06": 0.2
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q18",
+        "type": "capability",
+        "prompt": "I can identify the specific emotion I am feeling, its intensity, and what triggered it.",
+        "primary_lever_id": "L06",
+        "lever_weights": {
+          "L06": 1.0,
+          "L24": 0.25,
+          "L07": 0.2
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q19",
+        "type": "capability",
+        "prompt": "When strongly upset, I can settle enough to choose a response I will still endorse later.",
+        "primary_lever_id": "L07",
+        "lever_weights": {
+          "L07": 1.0,
+          "L09": 0.2,
+          "L11": 0.2
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q20",
+        "type": "capability",
+        "prompt": "I can keep attention on the person or task I chose even when easier stimulation is available.",
+        "primary_lever_id": "L08",
+        "lever_weights": {
+          "L08": 1.0,
+          "L10": 0.2,
+          "L19": 0.2
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q21",
+        "type": "capability",
+        "prompt": "When I strongly want pleasure, approval, comfort, or escape, I can delay acting long enough to decide deliberately.",
+        "primary_lever_id": "L09",
+        "lever_weights": {
+          "L09": 1.0,
+          "L08": 0.2,
+          "L25": 0.2
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q22",
+        "type": "capability",
+        "prompt": "I begin and complete important work on schedule even when motivation is low.",
+        "primary_lever_id": "L10",
+        "lever_weights": {
+          "L10": 1.0,
+          "L36": 0.25,
+          "L32": 0.2
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q23",
+        "type": "capability",
+        "prompt": "When a plan fails, I revise quickly without clinging to the old approach or abandoning the goal reflexively.",
+        "primary_lever_id": "L11",
+        "lever_weights": {
+          "L11": 1.0,
+          "L14": 0.25,
+          "L07": 0.2
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q24",
+        "type": "capability",
+        "prompt": "I can identify the assumptions and logical steps that connect a claim to its conclusion.",
+        "primary_lever_id": "L12",
+        "lever_weights": {
+          "L12": 1.0,
+          "L13": 0.3,
+          "L14": 0.2
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q25",
+        "type": "capability",
+        "prompt": "When credible evidence conflicts with a belief I value, I update the belief rather than dismissing the evidence.",
+        "primary_lever_id": "L13",
+        "lever_weights": {
+          "L13": 1.0,
+          "L12": 0.3,
+          "L05": 0.2
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q26",
+        "type": "capability",
+        "prompt": "Before a consequential decision, I consider downstream effects, tradeoffs, feedback loops, and likely failure modes.",
+        "primary_lever_id": "L14",
+        "lever_weights": {
+          "L14": 1.0,
+          "L20": 0.2,
+          "L36": 0.2,
+          "L22": 0.1
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q27",
+        "type": "capability",
+        "prompt": "When learning something difficult, I use recall, practice, and feedback rather than mainly rereading or consuming explanations.",
+        "primary_lever_id": "L15",
+        "lever_weights": {
+          "L15": 1.0,
+          "L11": 0.2,
+          "L23": 0.15
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q28",
+        "type": "capability",
+        "prompt": "I regularly create or interpret something using both technique and personal judgment.",
+        "primary_lever_id": "L16",
+        "lever_weights": {
+          "L16": 1.0,
+          "L35": 0.2,
+          "L34": 0.2
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q29",
+        "type": "capability",
+        "prompt": "I maintain health routines that reliably support my energy and physical function.",
+        "primary_lever_id": "L17",
+        "lever_weights": {
+          "L17": 1.0,
+          "L10": 0.2,
+          "L36": 0.2
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q30",
+        "type": "capability",
+        "prompt": "I can independently maintain a clean, safe, fed, and functional household.",
+        "primary_lever_id": "L18",
+        "lever_weights": {
+          "L18": 1.0,
+          "L20": 0.2,
+          "L21": 0.2
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q31",
+        "type": "capability",
+        "prompt": "I use digital systems deliberately enough to protect my information and avoid being passively steered by them.",
+        "primary_lever_id": "L19",
+        "lever_weights": {
+          "L19": 1.0,
+          "L13": 0.25,
+          "L08": 0.2
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q32",
+        "type": "capability",
+        "prompt": "I can recognize common hazards and carry out a proportionate plan for emergencies or high-risk situations.",
+        "primary_lever_id": "L20",
+        "lever_weights": {
+          "L20": 1.0,
+          "L14": 0.25,
+          "L18": 0.2,
+          "L17": 0.1
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q33",
+        "type": "capability",
+        "prompt": "My financial system reliably covers obligations, foreseeable risks, and long-term goals.",
+        "primary_lever_id": "L21",
+        "lever_weights": {
+          "L21": 1.0,
+          "L36": 0.2,
+          "L28": 0.15,
+          "L22": 0.15
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q34",
+        "type": "capability",
+        "prompt": "When I want to create economic value, I can test a real need and adapt based on feedback.",
+        "primary_lever_id": "L22",
+        "lever_weights": {
+          "L22": 1.0,
+          "L14": 0.25,
+          "L32": 0.2
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q35",
+        "type": "capability",
+        "prompt": "In difficult conversations, I can state my meaning clearly and accurately summarize the other person's view before responding.",
+        "primary_lever_id": "L23",
+        "lever_weights": {
+          "L23": 1.0,
+          "L24": 0.25,
+          "L29": 0.2
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q36",
+        "type": "capability",
+        "prompt": "I can infer how a situation looks to someone else and then check my interpretation instead of assuming it is correct.",
+        "primary_lever_id": "L24",
+        "lever_weights": {
+          "L24": 1.0,
+          "L23": 0.25,
+          "L31": 0.2
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q37",
+        "type": "capability",
+        "prompt": "I state and enforce limits directly even when I risk disappointment or disapproval.",
+        "primary_lever_id": "L25",
+        "lever_weights": {
+          "L25": 1.0,
+          "L29": 0.25,
+          "L02": 0.2,
+          "L27": 0.15
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q38",
+        "type": "capability",
+        "prompt": "I consistently initiate, maintain, and reciprocate important relationships instead of waiting for others to carry them.",
+        "primary_lever_id": "L26",
+        "lever_weights": {
+          "L26": 1.0,
+          "L24": 0.2,
+          "L34": 0.2,
+          "L27": 0.15
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q39",
+        "type": "capability",
+        "prompt": "In intimate relationships, I communicate honestly about desire, consent, expectations, and vulnerability.",
+        "primary_lever_id": "L27",
+        "lever_weights": {
+          "L27": 1.0,
+          "L25": 0.25,
+          "L29": 0.2
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q40",
+        "type": "capability",
+        "prompt": "When someone depends on me, I provide reliable care while preserving their agency and my own limits.",
+        "primary_lever_id": "L28",
+        "lever_weights": {
+          "L28": 1.0,
+          "L26": 0.2,
+          "L37": 0.2,
+          "L27": 0.1
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q41",
+        "type": "capability",
+        "prompt": "After relational harm, I can own my part, seek repair, and distinguish forgiveness from restored trust.",
+        "primary_lever_id": "L29",
+        "lever_weights": {
+          "L29": 1.0,
+          "L23": 0.25,
+          "L04": 0.15,
+          "L27": 0.2
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q42",
+        "type": "capability",
+        "prompt": "I can identify the responsible institution and take practical civic action on an issue that matters.",
+        "primary_lever_id": "L30",
+        "lever_weights": {
+          "L30": 1.0,
+          "L31": 0.3,
+          "L33": 0.2
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q43",
+        "type": "capability",
+        "prompt": "I apply standards of dignity and fairness even to people or groups I dislike or disagree with.",
+        "primary_lever_id": "L31",
+        "lever_weights": {
+          "L31": 1.0,
+          "L02": 0.25,
+          "L24": 0.2,
+          "L30": 0.25
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q44",
+        "type": "capability",
+        "prompt": "I reliably produce useful, high-quality work and understand who depends on it.",
+        "primary_lever_id": "L32",
+        "lever_weights": {
+          "L32": 1.0,
+          "L10": 0.25,
+          "L15": 0.2,
+          "L22": 0.15
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q45",
+        "type": "capability",
+        "prompt": "When responsible for others, I set clear direction, invite dissent, and use authority without unnecessary control.",
+        "primary_lever_id": "L33",
+        "lever_weights": {
+          "L33": 1.0,
+          "L02": 0.2,
+          "L23": 0.2,
+          "L30": 0.15
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q46",
+        "type": "capability",
+        "prompt": "I regularly engage in rest, play, or celebration without turning it into optimization or numbing escape.",
+        "primary_lever_id": "L34",
+        "lever_weights": {
+          "L34": 1.0,
+          "L07": 0.2,
+          "L35": 0.2,
+          "L17": 0.15
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q47",
+        "type": "capability",
+        "prompt": "I deliberately seek unfamiliar or natural environments and navigate them with curiosity and proportionate preparation.",
+        "primary_lever_id": "L35",
+        "lever_weights": {
+          "L35": 1.0,
+          "L20": 0.2,
+          "L16": 0.2
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q48",
+        "type": "capability",
+        "prompt": "My calendar, commitments, and environment reflect my stated priorities for this season of life.",
+        "primary_lever_id": "L36",
+        "lever_weights": {
+          "L36": 1.0,
+          "L01": 0.25,
+          "L10": 0.2,
+          "L17": 0.15
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q49",
+        "type": "capability",
+        "prompt": "I deliberately transfer knowledge, care, opportunity, or durable work so value remains after my involvement.",
+        "primary_lever_id": "L37",
+        "lever_weights": {
+          "L37": 1.0,
+          "L28": 0.2,
+          "L32": 0.2,
+          "L30": 0.1
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "Q50",
+        "type": "response_quality",
+        "prompt": "I based these answers on what I have actually done during the past six months, not mainly on who I hope or believe I should be."
+      }
+    ],
+    "adaptive_capability_clarifiers": [
+      {
+        "id": "C_L01",
+        "type": "capability_clarifier",
+        "prompt": "I can name the few commitments that should win when important demands conflict.",
+        "primary_lever_id": "L01",
+        "lever_weights": {
+          "L01": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L02",
+        "type": "capability_clarifier",
+        "prompt": "I keep promises and standards even when nobody would know if I did not.",
+        "primary_lever_id": "L02",
+        "lever_weights": {
+          "L02": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L03",
+        "type": "capability_clarifier",
+        "prompt": "My spiritual or contemplative beliefs influence concrete choices rather than remaining abstract ideas.",
+        "primary_lever_id": "L03",
+        "lever_weights": {
+          "L03": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L04",
+        "type": "capability_clarifier",
+        "prompt": "I can hold grief, uncertainty, or suffering without either minimizing it or losing all hope.",
+        "primary_lever_id": "L04",
+        "lever_weights": {
+          "L04": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L05",
+        "type": "capability_clarifier",
+        "prompt": "When trusted feedback contradicts my self-image, I can examine it without immediate defensiveness.",
+        "primary_lever_id": "L05",
+        "lever_weights": {
+          "L05": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L06",
+        "type": "capability_clarifier",
+        "prompt": "I can distinguish what I feel from what I think happened or what I want to do next.",
+        "primary_lever_id": "L06",
+        "lever_weights": {
+          "L06": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L07",
+        "type": "capability_clarifier",
+        "prompt": "After a destabilizing event, I can recover routines and adapt without prolonged avoidance or impulsive reaction.",
+        "primary_lever_id": "L07",
+        "lever_weights": {
+          "L07": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L08",
+        "type": "capability_clarifier",
+        "prompt": "I notice when my attention has drifted and can return it without needing a new burst of stimulation.",
+        "primary_lever_id": "L08",
+        "lever_weights": {
+          "L08": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L09",
+        "type": "capability_clarifier",
+        "prompt": "I can enjoy pleasure without repeatedly exceeding limits I chose in advance.",
+        "primary_lever_id": "L09",
+        "lever_weights": {
+          "L09": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L10",
+        "type": "capability_clarifier",
+        "prompt": "I maintain important routines through ordinary disruption rather than only during motivated periods.",
+        "primary_lever_id": "L10",
+        "lever_weights": {
+          "L10": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L11",
+        "type": "capability_clarifier",
+        "prompt": "I can remain effective when plans, roles, or expectations change unexpectedly.",
+        "primary_lever_id": "L11",
+        "lever_weights": {
+          "L11": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L12",
+        "type": "capability_clarifier",
+        "prompt": "I can detect when a conclusion does not actually follow from the reasons offered for it.",
+        "primary_lever_id": "L12",
+        "lever_weights": {
+          "L12": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L13",
+        "type": "capability_clarifier",
+        "prompt": "Before repeating a claim, I check the source, evidence quality, uncertainty, and plausible alternatives.",
+        "primary_lever_id": "L13",
+        "lever_weights": {
+          "L13": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L14",
+        "type": "capability_clarifier",
+        "prompt": "I can distinguish a symptom from a root cause and choose an intervention that addresses the system.",
+        "primary_lever_id": "L14",
+        "lever_weights": {
+          "L14": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L15",
+        "type": "capability_clarifier",
+        "prompt": "I can teach or apply what I learned after time has passed and in a different context.",
+        "primary_lever_id": "L15",
+        "lever_weights": {
+          "L15": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L16",
+        "type": "capability_clarifier",
+        "prompt": "I complete and share creative work rather than remaining only in inspiration, taste, or unfinished drafts.",
+        "primary_lever_id": "L16",
+        "lever_weights": {
+          "L16": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L17",
+        "type": "capability_clarifier",
+        "prompt": "I can adjust training, food, sleep, and medical care based on evidence from my body and qualified guidance.",
+        "primary_lever_id": "L17",
+        "lever_weights": {
+          "L17": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L18",
+        "type": "capability_clarifier",
+        "prompt": "I can troubleshoot ordinary household problems and recognize when professional help is required.",
+        "primary_lever_id": "L18",
+        "lever_weights": {
+          "L18": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L19",
+        "type": "capability_clarifier",
+        "prompt": "I can identify manipulated or low-quality digital information before acting on or sharing it.",
+        "primary_lever_id": "L19",
+        "lever_weights": {
+          "L19": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L20",
+        "type": "capability_clarifier",
+        "prompt": "I maintain realistic emergency knowledge, supplies, and plans appropriate to my environment.",
+        "primary_lever_id": "L20",
+        "lever_weights": {
+          "L20": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L21",
+        "type": "capability_clarifier",
+        "prompt": "I know my current cash flow, debt, reserves, insurance, and long-term financial plan.",
+        "primary_lever_id": "L21",
+        "lever_weights": {
+          "L21": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L22",
+        "type": "capability_clarifier",
+        "prompt": "I understand the incentives, costs, customers, and tradeoffs behind an economic decision or venture.",
+        "primary_lever_id": "L22",
+        "lever_weights": {
+          "L22": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L23",
+        "type": "capability_clarifier",
+        "prompt": "People usually leave difficult conversations knowing what I meant and feeling that I understood them.",
+        "primary_lever_id": "L23",
+        "lever_weights": {
+          "L23": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L24",
+        "type": "capability_clarifier",
+        "prompt": "I revise my judgment of another person when their account or new evidence contradicts my first interpretation.",
+        "primary_lever_id": "L24",
+        "lever_weights": {
+          "L24": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L25",
+        "type": "capability_clarifier",
+        "prompt": "I can say no, make a request, or confront disrespect without becoming passive, apologetic, or aggressive.",
+        "primary_lever_id": "L25",
+        "lever_weights": {
+          "L25": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L26",
+        "type": "capability_clarifier",
+        "prompt": "My close relationships receive regular time, initiative, reliability, and practical support from me.",
+        "primary_lever_id": "L26",
+        "lever_weights": {
+          "L26": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L27",
+        "type": "capability_clarifier",
+        "prompt": "I can discuss sexual and relational boundaries calmly before ambiguity or pressure creates a problem.",
+        "primary_lever_id": "L27",
+        "lever_weights": {
+          "L27": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L28",
+        "type": "capability_clarifier",
+        "prompt": "I can coordinate care, responsibilities, and limits without controlling or abandoning the person who depends on me.",
+        "primary_lever_id": "L28",
+        "lever_weights": {
+          "L28": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L29",
+        "type": "capability_clarifier",
+        "prompt": "When conflict recurs, I change the underlying pattern rather than only apologizing after each episode.",
+        "primary_lever_id": "L29",
+        "lever_weights": {
+          "L29": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L30",
+        "type": "capability_clarifier",
+        "prompt": "I participate in civic or community life through informed action rather than only opinion or outrage.",
+        "primary_lever_id": "L30",
+        "lever_weights": {
+          "L30": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L31",
+        "type": "capability_clarifier",
+        "prompt": "I can advocate for justice while representing opposing views fairly and resisting dehumanization.",
+        "primary_lever_id": "L31",
+        "lever_weights": {
+          "L31": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L32",
+        "type": "capability_clarifier",
+        "prompt": "I improve my craft through standards, deliberate practice, feedback, documentation, and reliable delivery.",
+        "primary_lever_id": "L32",
+        "lever_weights": {
+          "L32": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L33",
+        "type": "capability_clarifier",
+        "prompt": "People under my authority become clearer, safer, and more capable rather than merely more dependent on me.",
+        "primary_lever_id": "L33",
+        "lever_weights": {
+          "L33": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L34",
+        "type": "capability_clarifier",
+        "prompt": "I can rest or celebrate with full presence and return to responsibility without guilt or avoidance.",
+        "primary_lever_id": "L34",
+        "lever_weights": {
+          "L34": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L35",
+        "type": "capability_clarifier",
+        "prompt": "I pursue challenge and exploration without confusing recklessness, novelty, or consumption with growth.",
+        "primary_lever_id": "L35",
+        "lever_weights": {
+          "L35": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L36",
+        "type": "capability_clarifier",
+        "prompt": "I deliberately rebalance work, relationships, health, service, and rest as the season of life changes.",
+        "primary_lever_id": "L36",
+        "lever_weights": {
+          "L36": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      },
+      {
+        "id": "C_L37",
+        "type": "capability_clarifier",
+        "prompt": "I build people, systems, traditions, or records that continue to create value without my constant presence.",
+        "primary_lever_id": "L37",
+        "lever_weights": {
+          "L37": 1.0
+        },
+        "timeframe": "past_6_months",
+        "allow_not_applicable": true
+      }
+    ],
+    "adaptive_orientation_clarifiers": [
+      {
+        "id": "O_DISC",
+        "type": "orientation_clarifier",
+        "prompt": "I would rather delay action briefly to improve my model of a problem than move immediately with an incomplete understanding.",
+        "orientation_weights": {
+          "discernment": 1.0
+        }
+      },
+      {
+        "id": "O_AGEN",
+        "type": "orientation_clarifier",
+        "prompt": "I would rather own a difficult decision and its consequences than wait for someone else to resolve it.",
+        "orientation_weights": {
+          "agency": 1.0
+        }
+      },
+      {
+        "id": "O_CONN",
+        "type": "orientation_clarifier",
+        "prompt": "I would rather invest effort in mutual understanding than win a low-stakes point or maximize a task result.",
+        "orientation_weights": {
+          "connection": 1.0
+        }
+      },
+      {
+        "id": "O_STEW",
+        "type": "orientation_clarifier",
+        "prompt": "I would rather maintain an important responsibility well than chase a new opportunity that could weaken it.",
+        "orientation_weights": {
+          "stewardship": 1.0
+        }
+      },
+      {
+        "id": "O_EXPL",
+        "type": "orientation_clarifier",
+        "prompt": "I would rather explore several plausible paths than commit early to the first workable one.",
+        "orientation_weights": {
+          "exploration": 1.0
+        }
+      },
+      {
+        "id": "O_TRAN",
+        "type": "orientation_clarifier",
+        "prompt": "I would accept meaningful personal cost for a principle or common good I deeply endorse.",
+        "orientation_weights": {
+          "transcendence": 1.0
+        }
+      }
+    ],
+    "display_order": [
+      "Q39",
+      "Q30",
+      "Q21",
+      "Q09",
+      "Q31",
+      "Q45",
+      "Q36",
+      "Q07",
+      "Q24",
+      "Q33",
+      "Q18",
+      "Q02",
+      "Q14",
+      "Q47",
+      "Q37",
+      "Q11",
+      "Q17",
+      "Q43",
+      "Q25",
+      "Q01",
+      "Q27",
+      "Q35",
+      "Q48",
+      "Q10",
+      "Q34",
+      "Q46",
+      "Q26",
+      "Q08",
+      "Q19",
+      "Q42",
+      "Q40",
+      "Q06",
+      "Q32",
+      "Q49",
+      "Q41",
+      "Q04",
+      "Q16",
+      "Q23",
+      "Q22",
+      "Q03",
+      "Q44",
+      "Q28",
+      "Q15",
+      "Q05",
+      "Q38",
+      "Q13",
+      "Q29",
+      "Q12",
+      "Q20",
+      "Q50"
+    ],
+    "lever_catalog": [
+      {
+        "id": "L01",
+        "name": "Purpose and Direction",
+        "family": "orientation_moral_center",
+        "definition": "Clarifies what is worth pursuing, why it matters, and how present commitments express a coherent direction.",
+        "task_weight_denominator": 7.300000000000001,
+        "mapped_competency_count": 27
+      },
+      {
+        "id": "L02",
+        "name": "Values, Integrity, and Moral Courage",
+        "family": "orientation_moral_center",
+        "definition": "Translates ethical commitments into truthful, reliable, fair, and courageous conduct across contexts.",
+        "task_weight_denominator": 13.84999999999999,
+        "mapped_competency_count": 55
+      },
+      {
+        "id": "L03",
+        "name": "Spirituality, Reverence, and Transcendence",
+        "family": "orientation_moral_center",
+        "definition": "Develops relationship to the sacred, ultimate concern, ritual, contemplation, vocation, and realities larger than the isolated self.",
+        "task_weight_denominator": 9.5,
+        "mapped_competency_count": 30
+      },
+      {
+        "id": "L04",
+        "name": "Mortality, Suffering, Gratitude, and Hope",
+        "family": "orientation_moral_center",
+        "definition": "Builds the capacity to face impermanence, tragedy, loss, limitation, received life, and hope without denial.",
+        "task_weight_denominator": 9.15,
+        "mapped_competency_count": 27
+      },
+      {
+        "id": "L05",
+        "name": "Self-Knowledge, Identity, and Humility",
+        "family": "inner_governance",
+        "definition": "Improves accurate self-understanding, identity coherence, awareness of limitations and defenses, and proportionate self-regard.",
+        "task_weight_denominator": 14.349999999999996,
+        "mapped_competency_count": 53
+      },
+      {
+        "id": "L06",
+        "name": "Emotional Awareness and Literacy",
+        "family": "inner_governance",
+        "definition": "Recognizes, differentiates, names, and communicates emotions and their bodily and situational signals.",
+        "task_weight_denominator": 3.4,
+        "mapped_competency_count": 10
+      },
+      {
+        "id": "L07",
+        "name": "Emotional Regulation and Resilience",
+        "family": "inner_governance",
+        "definition": "Regulates emotion without suppression, recovers from setbacks, seeks help appropriately, and generalizes coping skills under stress.",
+        "task_weight_denominator": 9.599999999999998,
+        "mapped_competency_count": 37
+      },
+      {
+        "id": "L08",
+        "name": "Attention and Presence",
+        "family": "inner_governance",
+        "definition": "Directs attention deliberately, sustains contact with the present, and notices distraction, interpretation, and automaticity.",
+        "task_weight_denominator": 3.600000000000001,
+        "mapped_competency_count": 15
+      },
+      {
+        "id": "L09",
+        "name": "Temperance and Desire Governance",
+        "family": "inner_governance",
+        "definition": "Uses pleasure, consumption, craving, status, comfort, and impulse without being ruled by them.",
+        "task_weight_denominator": 5.7,
+        "mapped_competency_count": 21
+      },
+      {
+        "id": "L10",
+        "name": "Discipline, Habits, and Follow-Through",
+        "family": "inner_governance",
+        "definition": "Converts intentions into consistent action through habits, planning, accountability, perseverance, and completion.",
+        "task_weight_denominator": 17.799999999999994,
+        "mapped_competency_count": 76
+      },
+      {
+        "id": "L11",
+        "name": "Adaptability, Uncertainty, and Learning from Failure",
+        "family": "inner_governance",
+        "definition": "Acts under uncertainty, revises plans, tolerates change, and converts setbacks or disconfirmation into improved behavior.",
+        "task_weight_denominator": 7.8500000000000005,
+        "mapped_competency_count": 40
+      },
+      {
+        "id": "L12",
+        "name": "Critical Reasoning and Logic",
+        "family": "thought_learning",
+        "definition": "Analyzes claims, arguments, assumptions, contradictions, and alternatives with disciplined reasoning.",
+        "task_weight_denominator": 4.6499999999999995,
+        "mapped_competency_count": 18
+      },
+      {
+        "id": "L13",
+        "name": "Evidence, Truth, and Epistemic Humility",
+        "family": "thought_learning",
+        "definition": "Evaluates sources and evidence, tracks uncertainty, updates beliefs, and resists bias, misinformation, and overconfidence.",
+        "task_weight_denominator": 12.999999999999995,
+        "mapped_competency_count": 57
+      },
+      {
+        "id": "L14",
+        "name": "Systems Thinking, Judgment, and Decision-Making",
+        "family": "thought_learning",
+        "definition": "Understands causality, tradeoffs, risk, feedback, context, and second-order effects to make and revise sound decisions.",
+        "task_weight_denominator": 14.649999999999997,
+        "mapped_competency_count": 56
+      },
+      {
+        "id": "L15",
+        "name": "Learning Agility, Memory, and Teaching",
+        "family": "thought_learning",
+        "definition": "Acquires, organizes, practices, retains, transfers, explains, and transmits knowledge and skill.",
+        "task_weight_denominator": 13.049999999999999,
+        "mapped_competency_count": 44
+      },
+      {
+        "id": "L16",
+        "name": "Creativity, Aesthetics, and Cultural Literacy",
+        "family": "thought_learning",
+        "definition": "Creates, interprets, refines, and shares meaningful work while developing imagination, taste, cultural context, and attribution ethics.",
+        "task_weight_denominator": 11.0,
+        "mapped_competency_count": 35
+      },
+      {
+        "id": "L17",
+        "name": "Physical Health, Vitality, and Embodiment",
+        "family": "embodied_practical",
+        "definition": "Maintains health, movement capacity, recovery, body literacy, bodily autonomy, and sustainable physical functioning.",
+        "task_weight_denominator": 18.000000000000004,
+        "mapped_competency_count": 52
+      },
+      {
+        "id": "L18",
+        "name": "Domestic Competence and Material Self-Sufficiency",
+        "family": "embodied_practical",
+        "definition": "Operates and maintains a safe, functional home and everyday material life through practical skills and systems.",
+        "task_weight_denominator": 11.099999999999998,
+        "mapped_competency_count": 25
+      },
+      {
+        "id": "L19",
+        "name": "Digital Agency, Media Literacy, and Security",
+        "family": "embodied_practical",
+        "definition": "Uses digital tools and AI competently while governing attention, verifying information, protecting identity and data, and participating responsibly online.",
+        "task_weight_denominator": 8.65,
+        "mapped_competency_count": 22
+      },
+      {
+        "id": "L20",
+        "name": "Safety, Risk, and Preparedness",
+        "family": "embodied_practical",
+        "definition": "Anticipates hazards, prevents avoidable harm, responds to emergencies, and builds personal and communal resilience.",
+        "task_weight_denominator": 14.049999999999999,
+        "mapped_competency_count": 47
+      },
+      {
+        "id": "L21",
+        "name": "Financial Stewardship and Provision",
+        "family": "embodied_practical",
+        "definition": "Manages cash flow, debt, saving, investing, protection, consumption, generosity, and material obligations responsibly.",
+        "task_weight_denominator": 8.7,
+        "mapped_competency_count": 27
+      },
+      {
+        "id": "L22",
+        "name": "Economic Agency, Entrepreneurship, and Market Literacy",
+        "family": "embodied_practical",
+        "definition": "Understands economic systems and creates, prices, negotiates, operates, and governs value-producing activity responsibly.",
+        "task_weight_denominator": 7.499999999999998,
+        "mapped_competency_count": 22
+      },
+      {
+        "id": "L23",
+        "name": "Communication and Listening",
+        "family": "relational_care",
+        "definition": "Listens attentively and expresses ideas, needs, feedback, stories, and arguments clearly across audiences and contexts.",
+        "task_weight_denominator": 14.749999999999995,
+        "mapped_competency_count": 57
+      },
+      {
+        "id": "L24",
+        "name": "Empathy, Social Perception, and Perspective-Taking",
+        "family": "relational_care",
+        "definition": "Accurately perceives others' experiences, motives, emotions, needs, contexts, and viewpoints without erasing difference.",
+        "task_weight_denominator": 13.35,
+        "mapped_competency_count": 67
+      },
+      {
+        "id": "L25",
+        "name": "Boundaries, Assertiveness, and Self-Respect",
+        "family": "relational_care",
+        "definition": "States needs and limits, protects autonomy and dignity, resists coercion, and says no or exits responsibly.",
+        "task_weight_denominator": 10.350000000000001,
+        "mapped_competency_count": 49
+      },
+      {
+        "id": "L26",
+        "name": "Friendship, Belonging, and Hospitality",
+        "family": "relational_care",
+        "definition": "Initiates, selects, maintains, and contributes to reciprocal friendships, networks, communities, and inclusive belonging.",
+        "task_weight_denominator": 10.249999999999998,
+        "mapped_competency_count": 35
+      },
+      {
+        "id": "L27",
+        "name": "Intimacy, Sexuality, and Partnership",
+        "family": "relational_care",
+        "definition": "Builds consensual, secure, communicative, mutually responsible intimate relationships across changing stages and forms.",
+        "task_weight_denominator": 6.65,
+        "mapped_competency_count": 17
+      },
+      {
+        "id": "L28",
+        "name": "Family, Parenting, and Caregiving",
+        "family": "relational_care",
+        "definition": "Participates responsibly in family systems, parenting, reproduction, elder care, disability care, safeguarding, and shared household care.",
+        "task_weight_denominator": 11.799999999999999,
+        "mapped_competency_count": 42
+      },
+      {
+        "id": "L29",
+        "name": "Conflict, Repair, Forgiveness, and Reconciliation",
+        "family": "relational_care",
+        "definition": "Navigates disagreement, de-escalates harm, apologizes, repairs trust, forgives wisely, and supports reconciliation where possible.",
+        "task_weight_denominator": 6.65,
+        "mapped_competency_count": 27
+      },
+      {
+        "id": "L30",
+        "name": "Service, Citizenship, and Civic Agency",
+        "family": "contribution_society",
+        "definition": "Contributes to community needs, understands civic channels, organizes responsibly, and builds collective capacity.",
+        "task_weight_denominator": 8.7,
+        "mapped_competency_count": 36
+      },
+      {
+        "id": "L31",
+        "name": "Justice, Pluralism, and Social Responsibility",
+        "family": "contribution_society",
+        "definition": "Understands rights, inequality, institutions, power, difference, and shared risk while preserving dignity and peaceful coexistence.",
+        "task_weight_denominator": 25.849999999999998,
+        "mapped_competency_count": 100
+      },
+      {
+        "id": "L32",
+        "name": "Work, Craft, Professionalism, and Contribution",
+        "family": "contribution_society",
+        "definition": "Builds reliable, adaptive, ethical competence and delivers useful, high-quality work with appropriate boundaries.",
+        "task_weight_denominator": 11.45,
+        "mapped_competency_count": 44
+      },
+      {
+        "id": "L33",
+        "name": "Leadership, Power, Mentorship, and Institutions",
+        "family": "contribution_society",
+        "definition": "Sets direction, uses power ethically, develops others, designs accountable institutions, and responds to conflict, crisis, corruption, and abuse.",
+        "task_weight_denominator": 10.150000000000004,
+        "mapped_competency_count": 39
+      },
+      {
+        "id": "L34",
+        "name": "Play, Rest, Celebration, and Joy",
+        "family": "integration_flourishing",
+        "definition": "Cultivates non-instrumental play, restoration, delight, humor, festivity, and sustainable freedom from constant optimization.",
+        "task_weight_denominator": 5.900000000000001,
+        "mapped_competency_count": 22
+      },
+      {
+        "id": "L35",
+        "name": "Nature, Exploration, and Adventure",
+        "family": "integration_flourishing",
+        "definition": "Builds curiosity, place-awareness, ecological relationship, travel competence, outdoor capability, wonder, and calculated challenge.",
+        "task_weight_denominator": 5.6000000000000005,
+        "mapped_competency_count": 17
+      },
+      {
+        "id": "L36",
+        "name": "Life Design, Balance, and Seasonality",
+        "family": "integration_flourishing",
+        "definition": "Integrates competing goods, roles, capacities, seasons, transitions, reviews, ambition, contentment, and multiple legitimate pathways.",
+        "task_weight_denominator": 13.2,
+        "mapped_competency_count": 48
+      },
+      {
+        "id": "L37",
+        "name": "Legacy, Generativity, and Transmission",
+        "family": "integration_flourishing",
+        "definition": "Invests in people, institutions, traditions, knowledge, works, and provisions that outlast the self without confusing legacy with status.",
+        "task_weight_denominator": 1.9000000000000001,
+        "mapped_competency_count": 7
+      }
+    ],
+    "orientation_catalog": [
+      {
+        "id": "O01",
+        "slug": "discernment",
+        "name": "Discernment",
+        "definition": "Preference for understanding, truth-seeking, reflection, pattern recognition, and sound judgment.",
+        "high_expression": "Pauses to understand, tests assumptions, seeks coherence, and differentiates signal from noise.",
+        "possible_excess": "Analysis, detachment, hesitation, or treating lived problems as intellectual puzzles."
+      },
+      {
+        "id": "O02",
+        "slug": "agency",
+        "name": "Agency",
+        "definition": "Preference for initiating, asserting, deciding, persisting, and producing change.",
+        "high_expression": "Moves toward difficulty, makes choices, takes responsibility, and creates momentum.",
+        "possible_excess": "Control, impatience, domination, overwork, or action without sufficient listening."
+      },
+      {
+        "id": "O03",
+        "slug": "connection",
+        "name": "Connection",
+        "definition": "Preference for empathy, belonging, cooperation, mutual understanding, and relational attunement.",
+        "high_expression": "Reads people, builds trust, includes others, and protects relationship quality.",
+        "possible_excess": "Approval-seeking, enmeshment, conflict avoidance, or sacrificing truth and self-respect."
+      },
+      {
+        "id": "O04",
+        "slug": "stewardship",
+        "name": "Stewardship",
+        "definition": "Preference for responsibility, reliability, maintenance, protection, provision, and long-term continuity.",
+        "high_expression": "Preserves what matters, anticipates consequences, fulfills duties, and builds durable structures.",
+        "possible_excess": "Rigidity, burden, paternalism, risk aversion, or loyalty to obsolete structures."
+      },
+      {
+        "id": "O05",
+        "slug": "exploration",
+        "name": "Exploration",
+        "definition": "Preference for novelty, experimentation, creativity, discovery, and possibility.",
+        "high_expression": "Generates options, crosses boundaries, learns through experience, and adapts quickly.",
+        "possible_excess": "Scattered attention, impulsivity, unfinished work, or novelty without depth."
+      },
+      {
+        "id": "O06",
+        "slug": "transcendence",
+        "name": "Transcendence",
+        "definition": "Preference for meaning, virtue, reverence, service, beauty, legacy, and realities larger than the isolated self.",
+        "high_expression": "Connects action to purpose, conscience, sacred concern, or the common good.",
+        "possible_excess": "Moralism, abstraction, self-sacrifice without boundaries, or bypassing practical reality."
+      }
+    ],
+    "archetypes": [
+      {
+        "id": "A01",
+        "slug": "strategist",
+        "name": "The Strategist",
+        "orientations": [
+          "discernment",
+          "agency"
+        ],
+        "core_drive": "Turn clear understanding into deliberate, effective action.",
+        "signature": "Analytical, decisive, goal-directed, and comfortable making tradeoffs.",
+        "contribution": "Creates direction, chooses priorities, and converts ambiguity into an executable path.",
+        "shadow": "Can over-control, treat people as variables, or mistake decisiveness for wisdom.",
+        "growth_edge": "Practice relational awareness, receptivity, play, and respect for goods that cannot be optimized.",
+        "balancing_levers": [
+          "L24",
+          "L26",
+          "L34",
+          "L03"
+        ],
+        "signature_levers": [
+          "L12",
+          "L13",
+          "L10",
+          "L14",
+          "L08",
+          "L22",
+          "L09"
+        ],
+        "signature_affinity": {
+          "L12": 0.85,
+          "L13": 0.7,
+          "L10": 0.65,
+          "L14": 0.65,
+          "L08": 0.6,
+          "L22": 0.6,
+          "L09": 0.55
+        },
+        "lever_affinity": {
+          "L01": 0.2,
+          "L02": 0.3,
+          "L03": 0.0,
+          "L04": 0.2,
+          "L05": 0.5,
+          "L06": 0.4,
+          "L07": 0.5,
+          "L08": 0.6,
+          "L09": 0.55,
+          "L10": 0.65,
+          "L11": 0.5,
+          "L12": 0.85,
+          "L13": 0.7,
+          "L14": 0.65,
+          "L15": 0.55,
+          "L16": 0.1,
+          "L17": 0.5,
+          "L18": 0.45,
+          "L19": 0.55,
+          "L20": 0.45,
+          "L21": 0.35,
+          "L22": 0.6,
+          "L23": 0.35,
+          "L24": 0.15,
+          "L25": 0.5,
+          "L26": 0.0,
+          "L27": 0.1,
+          "L28": 0.1,
+          "L29": 0.25,
+          "L30": 0.25,
+          "L31": 0.3,
+          "L32": 0.5,
+          "L33": 0.4,
+          "L34": 0.1,
+          "L35": 0.25,
+          "L36": 0.3,
+          "L37": 0.15
+        }
+      },
+      {
+        "id": "A02",
+        "slug": "counselor",
+        "name": "The Counselor",
+        "orientations": [
+          "discernment",
+          "connection"
+        ],
+        "core_drive": "Understand people and situations deeply enough to help them move toward clarity and repair.",
+        "signature": "Reflective, perceptive, empathic, interpretive, and skilled at seeing motives and patterns.",
+        "contribution": "Helps others name what is happening, understand competing perspectives, and make humane choices.",
+        "shadow": "Can over-analyze, absorb others' emotions, become indirect, or substitute insight for action.",
+        "growth_edge": "Strengthen boundaries, decisive action, disciplined follow-through, and tolerance for imperfect execution.",
+        "balancing_levers": [
+          "L25",
+          "L10",
+          "L14",
+          "L32"
+        ],
+        "signature_levers": [
+          "L06",
+          "L24",
+          "L12",
+          "L13",
+          "L05",
+          "L23",
+          "L26"
+        ],
+        "signature_affinity": {
+          "L06": 0.8,
+          "L24": 0.8,
+          "L12": 0.7,
+          "L13": 0.7,
+          "L05": 0.65,
+          "L23": 0.65,
+          "L26": 0.65
+        },
+        "lever_affinity": {
+          "L01": 0.2,
+          "L02": 0.1,
+          "L03": 0.1,
+          "L04": 0.3,
+          "L05": 0.65,
+          "L06": 0.8,
+          "L07": 0.35,
+          "L08": 0.35,
+          "L09": 0.1,
+          "L10": 0.1,
+          "L11": 0.2,
+          "L12": 0.7,
+          "L13": 0.7,
+          "L14": 0.45,
+          "L15": 0.55,
+          "L16": 0.2,
+          "L17": 0.1,
+          "L18": 0.2,
+          "L19": 0.35,
+          "L20": 0.2,
+          "L21": 0.3,
+          "L22": 0.25,
+          "L23": 0.65,
+          "L24": 0.8,
+          "L25": 0.45,
+          "L26": 0.65,
+          "L27": 0.6,
+          "L28": 0.45,
+          "L29": 0.5,
+          "L30": 0.35,
+          "L31": 0.35,
+          "L32": 0.2,
+          "L33": 0.35,
+          "L34": 0.25,
+          "L35": 0.1,
+          "L36": 0.3,
+          "L37": 0.3
+        }
+      },
+      {
+        "id": "A03",
+        "slug": "systems_steward",
+        "name": "The Systems Steward",
+        "orientations": [
+          "discernment",
+          "stewardship"
+        ],
+        "core_drive": "Build coherent systems that remain reliable over time.",
+        "signature": "Structured, principled, precise, responsible, and attentive to dependencies and consequences.",
+        "contribution": "Designs durable processes, institutions, plans, and safeguards that others can trust.",
+        "shadow": "Can become rigid, perfectionistic, detached from lived experience, or loyal to systems after they stop serving people.",
+        "growth_edge": "Develop emotional fluency, adaptability, creative experimentation, and restorative play.",
+        "balancing_levers": [
+          "L06",
+          "L11",
+          "L16",
+          "L34"
+        ],
+        "signature_levers": [
+          "L13",
+          "L12",
+          "L21",
+          "L14",
+          "L19",
+          "L20",
+          "L18"
+        ],
+        "signature_affinity": {
+          "L13": 0.85,
+          "L12": 0.8,
+          "L21": 0.75,
+          "L14": 0.7,
+          "L19": 0.65,
+          "L20": 0.65,
+          "L18": 0.55
+        },
+        "lever_affinity": {
+          "L01": 0.4,
+          "L02": 0.5,
+          "L03": 0.0,
+          "L04": 0.1,
+          "L05": 0.5,
+          "L06": 0.3,
+          "L07": 0.25,
+          "L08": 0.5,
+          "L09": 0.4,
+          "L10": 0.45,
+          "L11": 0.2,
+          "L12": 0.8,
+          "L13": 0.85,
+          "L14": 0.7,
+          "L15": 0.4,
+          "L16": 0.1,
+          "L17": 0.25,
+          "L18": 0.55,
+          "L19": 0.65,
+          "L20": 0.65,
+          "L21": 0.75,
+          "L22": 0.5,
+          "L23": 0.3,
+          "L24": 0.15,
+          "L25": 0.35,
+          "L26": 0.15,
+          "L27": 0.15,
+          "L28": 0.35,
+          "L29": 0.2,
+          "L30": 0.35,
+          "L31": 0.5,
+          "L32": 0.5,
+          "L33": 0.5,
+          "L34": 0.05,
+          "L35": 0.05,
+          "L36": 0.5,
+          "L37": 0.45
+        },
+        "display_note": "Previously called The Architect; renamed to avoid confusion with the common MBTI nickname for INTJ."
+      },
+      {
+        "id": "A04",
+        "slug": "explorer",
+        "name": "The Explorer",
+        "orientations": [
+          "discernment",
+          "exploration"
+        ],
+        "core_drive": "Discover new ideas, patterns, possibilities, and ways of seeing.",
+        "signature": "Curious, inventive, intellectually independent, open-ended, and energized by complexity.",
+        "contribution": "Expands the map, questions stale assumptions, and connects knowledge across boundaries.",
+        "shadow": "Can chase novelty, avoid commitment, intellectualize life, or leave promising work unfinished.",
+        "growth_edge": "Build follow-through, practical stewardship, embodied routines, and durable belonging.",
+        "balancing_levers": [
+          "L10",
+          "L18",
+          "L21",
+          "L26"
+        ],
+        "signature_levers": [
+          "L12",
+          "L13",
+          "L15",
+          "L16",
+          "L05",
+          "L11",
+          "L35"
+        ],
+        "signature_affinity": {
+          "L12": 0.75,
+          "L13": 0.75,
+          "L15": 0.7,
+          "L16": 0.7,
+          "L05": 0.65,
+          "L11": 0.6,
+          "L35": 0.6
+        },
+        "lever_affinity": {
+          "L01": 0.2,
+          "L02": 0.1,
+          "L03": 0.0,
+          "L04": 0.1,
+          "L05": 0.65,
+          "L06": 0.3,
+          "L07": 0.1,
+          "L08": 0.35,
+          "L09": 0.1,
+          "L10": 0.1,
+          "L11": 0.6,
+          "L12": 0.75,
+          "L13": 0.75,
+          "L14": 0.55,
+          "L15": 0.7,
+          "L16": 0.7,
+          "L17": 0.15,
+          "L18": 0.1,
+          "L19": 0.5,
+          "L20": 0.15,
+          "L21": 0.2,
+          "L22": 0.4,
+          "L23": 0.3,
+          "L24": 0.25,
+          "L25": 0.15,
+          "L26": 0.1,
+          "L27": 0.05,
+          "L28": 0.0,
+          "L29": 0.05,
+          "L30": 0.1,
+          "L31": 0.2,
+          "L32": 0.25,
+          "L33": 0.15,
+          "L34": 0.4,
+          "L35": 0.6,
+          "L36": 0.3,
+          "L37": 0.1
+        }
+      },
+      {
+        "id": "A05",
+        "slug": "seeker",
+        "name": "The Seeker",
+        "orientations": [
+          "discernment",
+          "transcendence"
+        ],
+        "core_drive": "Find truth, meaning, wisdom, and a life worthy of commitment.",
+        "signature": "Contemplative, philosophically serious, self-examining, and attentive to ultimate questions.",
+        "contribution": "Provides moral and existential orientation, challenges superficial goals, and preserves depth.",
+        "shadow": "Can retreat into abstraction, spiritualize avoidable problems, or wait for certainty before living.",
+        "growth_edge": "Translate conviction into concrete action, embodiment, practical competence, and accountable relationships.",
+        "balancing_levers": [
+          "L10",
+          "L17",
+          "L18",
+          "L23"
+        ],
+        "signature_levers": [
+          "L03",
+          "L01",
+          "L13",
+          "L04",
+          "L05",
+          "L12",
+          "L08"
+        ],
+        "signature_affinity": {
+          "L03": 0.9,
+          "L01": 0.8,
+          "L13": 0.8,
+          "L04": 0.7,
+          "L05": 0.7,
+          "L12": 0.7,
+          "L08": 0.6
+        },
+        "lever_affinity": {
+          "L01": 0.8,
+          "L02": 0.4,
+          "L03": 0.9,
+          "L04": 0.7,
+          "L05": 0.7,
+          "L06": 0.4,
+          "L07": 0.2,
+          "L08": 0.6,
+          "L09": 0.25,
+          "L10": 0.1,
+          "L11": 0.3,
+          "L12": 0.7,
+          "L13": 0.8,
+          "L14": 0.45,
+          "L15": 0.4,
+          "L16": 0.3,
+          "L17": 0.0,
+          "L18": 0.1,
+          "L19": 0.35,
+          "L20": 0.15,
+          "L21": 0.2,
+          "L22": 0.25,
+          "L23": 0.2,
+          "L24": 0.25,
+          "L25": 0.15,
+          "L26": 0.1,
+          "L27": 0.1,
+          "L28": 0.1,
+          "L29": 0.2,
+          "L30": 0.35,
+          "L31": 0.45,
+          "L32": 0.15,
+          "L33": 0.2,
+          "L34": 0.2,
+          "L35": 0.2,
+          "L36": 0.4,
+          "L37": 0.4
+        }
+      },
+      {
+        "id": "A06",
+        "slug": "catalyst",
+        "name": "The Catalyst",
+        "orientations": [
+          "agency",
+          "connection"
+        ],
+        "core_drive": "Mobilize people toward growth, action, and shared possibility.",
+        "signature": "Energetic, persuasive, socially attuned, encouraging, and comfortable initiating change.",
+        "contribution": "Creates momentum, raises confidence, and helps groups cross the gap between intention and action.",
+        "shadow": "Can rush consent, overpromise, rescue others, or confuse intensity and popularity with progress.",
+        "growth_edge": "Slow down for evidence, boundaries, systems, and patient maintenance after the initial spark.",
+        "balancing_levers": [
+          "L13",
+          "L20",
+          "L25",
+          "L33"
+        ],
+        "signature_levers": [
+          "L27",
+          "L07",
+          "L24",
+          "L25",
+          "L26",
+          "L29",
+          "L06"
+        ],
+        "signature_affinity": {
+          "L27": 0.7,
+          "L07": 0.65,
+          "L24": 0.65,
+          "L25": 0.65,
+          "L26": 0.65,
+          "L29": 0.65,
+          "L06": 0.6
+        },
+        "lever_affinity": {
+          "L01": 0.0,
+          "L02": 0.2,
+          "L03": 0.1,
+          "L04": 0.3,
+          "L05": 0.15,
+          "L06": 0.6,
+          "L07": 0.65,
+          "L08": 0.25,
+          "L09": 0.45,
+          "L10": 0.55,
+          "L11": 0.3,
+          "L12": 0.15,
+          "L13": 0.0,
+          "L14": 0.2,
+          "L15": 0.3,
+          "L16": 0.1,
+          "L17": 0.6,
+          "L18": 0.45,
+          "L19": 0.2,
+          "L20": 0.35,
+          "L21": 0.25,
+          "L22": 0.35,
+          "L23": 0.6,
+          "L24": 0.65,
+          "L25": 0.65,
+          "L26": 0.65,
+          "L27": 0.7,
+          "L28": 0.55,
+          "L29": 0.65,
+          "L30": 0.4,
+          "L31": 0.25,
+          "L32": 0.4,
+          "L33": 0.45,
+          "L34": 0.35,
+          "L35": 0.25,
+          "L36": 0.2,
+          "L37": 0.25
+        }
+      },
+      {
+        "id": "A07",
+        "slug": "builder",
+        "name": "The Builder",
+        "orientations": [
+          "agency",
+          "stewardship"
+        ],
+        "core_drive": "Turn responsibility into concrete capability, provision, and finished results.",
+        "signature": "Practical, persistent, accountable, productive, and comfortable carrying weight.",
+        "contribution": "Makes plans real, creates stability, solves material problems, and completes difficult work.",
+        "shadow": "Can overwork, dominate, suppress emotion, or equate human worth with usefulness and output.",
+        "growth_edge": "Cultivate emotional awareness, intimacy, rest, joy, and identities not dependent on achievement.",
+        "balancing_levers": [
+          "L06",
+          "L27",
+          "L34",
+          "L05"
+        ],
+        "signature_levers": [
+          "L10",
+          "L18",
+          "L20",
+          "L09",
+          "L17",
+          "L21",
+          "L32"
+        ],
+        "signature_affinity": {
+          "L10": 0.9,
+          "L18": 0.8,
+          "L20": 0.8,
+          "L09": 0.75,
+          "L17": 0.75,
+          "L21": 0.7,
+          "L32": 0.7
+        },
+        "lever_affinity": {
+          "L01": 0.2,
+          "L02": 0.6,
+          "L03": 0.0,
+          "L04": 0.1,
+          "L05": 0.0,
+          "L06": 0.1,
+          "L07": 0.55,
+          "L08": 0.4,
+          "L09": 0.75,
+          "L10": 0.9,
+          "L11": 0.3,
+          "L12": 0.25,
+          "L13": 0.15,
+          "L14": 0.45,
+          "L15": 0.15,
+          "L16": 0.0,
+          "L17": 0.75,
+          "L18": 0.8,
+          "L19": 0.5,
+          "L20": 0.8,
+          "L21": 0.7,
+          "L22": 0.6,
+          "L23": 0.25,
+          "L24": 0.0,
+          "L25": 0.55,
+          "L26": 0.15,
+          "L27": 0.25,
+          "L28": 0.45,
+          "L29": 0.35,
+          "L30": 0.4,
+          "L31": 0.4,
+          "L32": 0.7,
+          "L33": 0.6,
+          "L34": 0.15,
+          "L35": 0.2,
+          "L36": 0.4,
+          "L37": 0.4
+        }
+      },
+      {
+        "id": "A08",
+        "slug": "trailblazer",
+        "name": "The Trailblazer",
+        "orientations": [
+          "agency",
+          "exploration"
+        ],
+        "core_drive": "Open new paths through experimentation, courage, and rapid learning.",
+        "signature": "Bold, adaptable, entrepreneurial, novelty-seeking, and willing to move before certainty.",
+        "contribution": "Breaks inertia, tests possibilities, creates opportunities, and normalizes intelligent risk.",
+        "shadow": "Can become impulsive, scattered, bored by maintenance, or leave others carrying the consequences.",
+        "growth_edge": "Build discipline, risk controls, financial stewardship, reliability, and completion habits.",
+        "balancing_levers": [
+          "L10",
+          "L20",
+          "L21",
+          "L02"
+        ],
+        "signature_levers": [
+          "L35",
+          "L11",
+          "L17",
+          "L16",
+          "L10",
+          "L22",
+          "L34"
+        ],
+        "signature_affinity": {
+          "L35": 0.75,
+          "L11": 0.7,
+          "L17": 0.65,
+          "L16": 0.6,
+          "L10": 0.55,
+          "L22": 0.5,
+          "L34": 0.5
+        },
+        "lever_affinity": {
+          "L01": 0.0,
+          "L02": 0.2,
+          "L03": 0.0,
+          "L04": 0.1,
+          "L05": 0.15,
+          "L06": 0.1,
+          "L07": 0.4,
+          "L08": 0.25,
+          "L09": 0.45,
+          "L10": 0.55,
+          "L11": 0.7,
+          "L12": 0.2,
+          "L13": 0.05,
+          "L14": 0.3,
+          "L15": 0.45,
+          "L16": 0.6,
+          "L17": 0.65,
+          "L18": 0.35,
+          "L19": 0.35,
+          "L20": 0.3,
+          "L21": 0.15,
+          "L22": 0.5,
+          "L23": 0.25,
+          "L24": 0.1,
+          "L25": 0.35,
+          "L26": 0.1,
+          "L27": 0.15,
+          "L28": 0.1,
+          "L29": 0.2,
+          "L30": 0.15,
+          "L31": 0.1,
+          "L32": 0.45,
+          "L33": 0.25,
+          "L34": 0.5,
+          "L35": 0.75,
+          "L36": 0.2,
+          "L37": 0.05
+        }
+      },
+      {
+        "id": "A09",
+        "slug": "reformer",
+        "name": "The Reformer",
+        "orientations": [
+          "agency",
+          "transcendence"
+        ],
+        "core_drive": "Act on conviction to align people and institutions with a higher standard.",
+        "signature": "Purposeful, courageous, values-led, demanding, and willing to confront complacency.",
+        "contribution": "Names moral failures, organizes meaningful change, and protects ideals from becoming empty language.",
+        "shadow": "Can become self-righteous, absolutist, punitive, chronically dissatisfied, or consumed by the cause.",
+        "growth_edge": "Practice pluralism, humility, repair, proportionality, and sustainable rhythms.",
+        "balancing_levers": [
+          "L31",
+          "L05",
+          "L29",
+          "L34"
+        ],
+        "signature_levers": [
+          "L03",
+          "L04",
+          "L01",
+          "L09",
+          "L10",
+          "L02",
+          "L07"
+        ],
+        "signature_affinity": {
+          "L03": 0.9,
+          "L04": 0.7,
+          "L01": 0.6,
+          "L09": 0.6,
+          "L10": 0.55,
+          "L02": 0.5,
+          "L07": 0.5
+        },
+        "lever_affinity": {
+          "L01": 0.6,
+          "L02": 0.5,
+          "L03": 0.9,
+          "L04": 0.7,
+          "L05": 0.2,
+          "L06": 0.2,
+          "L07": 0.5,
+          "L08": 0.5,
+          "L09": 0.6,
+          "L10": 0.55,
+          "L11": 0.4,
+          "L12": 0.15,
+          "L13": 0.1,
+          "L14": 0.2,
+          "L15": 0.15,
+          "L16": 0.2,
+          "L17": 0.5,
+          "L18": 0.35,
+          "L19": 0.2,
+          "L20": 0.3,
+          "L21": 0.15,
+          "L22": 0.35,
+          "L23": 0.15,
+          "L24": 0.1,
+          "L25": 0.35,
+          "L26": 0.1,
+          "L27": 0.2,
+          "L28": 0.2,
+          "L29": 0.35,
+          "L30": 0.4,
+          "L31": 0.35,
+          "L32": 0.35,
+          "L33": 0.3,
+          "L34": 0.3,
+          "L35": 0.35,
+          "L36": 0.3,
+          "L37": 0.35
+        }
+      },
+      {
+        "id": "A10",
+        "slug": "guardian",
+        "name": "The Guardian",
+        "orientations": [
+          "connection",
+          "stewardship"
+        ],
+        "core_drive": "Protect people, relationships, and the conditions that let them thrive.",
+        "signature": "Loyal, dependable, nurturing, attentive, and sensitive to practical and relational needs.",
+        "contribution": "Creates safety, continuity, belonging, and dependable care in families and communities.",
+        "shadow": "Can overfunction, become paternalistic, avoid necessary disruption, or neglect personal needs.",
+        "growth_edge": "Strengthen boundaries, self-direction, experimentation, and the ability to let others carry responsibility.",
+        "balancing_levers": [
+          "L25",
+          "L01",
+          "L11",
+          "L35"
+        ],
+        "signature_levers": [
+          "L26",
+          "L28",
+          "L27",
+          "L21",
+          "L24",
+          "L29",
+          "L18"
+        ],
+        "signature_affinity": {
+          "L26": 0.8,
+          "L28": 0.8,
+          "L27": 0.75,
+          "L21": 0.65,
+          "L24": 0.65,
+          "L29": 0.6,
+          "L18": 0.55
+        },
+        "lever_affinity": {
+          "L01": 0.2,
+          "L02": 0.4,
+          "L03": 0.1,
+          "L04": 0.2,
+          "L05": 0.15,
+          "L06": 0.5,
+          "L07": 0.4,
+          "L08": 0.15,
+          "L09": 0.3,
+          "L10": 0.35,
+          "L11": 0.0,
+          "L12": 0.1,
+          "L13": 0.15,
+          "L14": 0.25,
+          "L15": 0.15,
+          "L16": 0.1,
+          "L17": 0.35,
+          "L18": 0.55,
+          "L19": 0.3,
+          "L20": 0.55,
+          "L21": 0.65,
+          "L22": 0.25,
+          "L23": 0.55,
+          "L24": 0.65,
+          "L25": 0.5,
+          "L26": 0.8,
+          "L27": 0.75,
+          "L28": 0.8,
+          "L29": 0.6,
+          "L30": 0.5,
+          "L31": 0.45,
+          "L32": 0.4,
+          "L33": 0.55,
+          "L34": 0.3,
+          "L35": 0.05,
+          "L36": 0.4,
+          "L37": 0.55
+        }
+      },
+      {
+        "id": "A11",
+        "slug": "connector",
+        "name": "The Connector",
+        "orientations": [
+          "connection",
+          "exploration"
+        ],
+        "core_drive": "Create belonging and possibility by linking people, cultures, and experiences.",
+        "signature": "Sociable, curious, expressive, inclusive, and energized by shared discovery.",
+        "contribution": "Builds networks, translates across groups, creates hospitality, and makes life feel larger.",
+        "shadow": "Can seek approval, diffuse attention, avoid depth, or mistake activity and contact for intimacy.",
+        "growth_edge": "Develop disciplined attention, evidence standards, boundaries, and sustained commitment.",
+        "balancing_levers": [
+          "L08",
+          "L13",
+          "L25",
+          "L10"
+        ],
+        "signature_levers": [
+          "L24",
+          "L26",
+          "L16",
+          "L27",
+          "L34",
+          "L35",
+          "L23"
+        ],
+        "signature_affinity": {
+          "L24": 0.75,
+          "L26": 0.75,
+          "L16": 0.7,
+          "L27": 0.65,
+          "L34": 0.65,
+          "L35": 0.6,
+          "L23": 0.55
+        },
+        "lever_affinity": {
+          "L01": 0.0,
+          "L02": 0.0,
+          "L03": 0.1,
+          "L04": 0.2,
+          "L05": 0.3,
+          "L06": 0.5,
+          "L07": 0.25,
+          "L08": 0.0,
+          "L09": 0.0,
+          "L10": 0.0,
+          "L11": 0.4,
+          "L12": 0.05,
+          "L13": 0.05,
+          "L14": 0.1,
+          "L15": 0.45,
+          "L16": 0.7,
+          "L17": 0.25,
+          "L18": 0.1,
+          "L19": 0.15,
+          "L20": 0.05,
+          "L21": 0.1,
+          "L22": 0.15,
+          "L23": 0.55,
+          "L24": 0.75,
+          "L25": 0.3,
+          "L26": 0.75,
+          "L27": 0.65,
+          "L28": 0.45,
+          "L29": 0.45,
+          "L30": 0.25,
+          "L31": 0.15,
+          "L32": 0.15,
+          "L33": 0.2,
+          "L34": 0.65,
+          "L35": 0.6,
+          "L36": 0.2,
+          "L37": 0.2
+        }
+      },
+      {
+        "id": "A12",
+        "slug": "healer",
+        "name": "The Healer",
+        "orientations": [
+          "connection",
+          "transcendence"
+        ],
+        "core_drive": "Relieve suffering and restore dignity, trust, wholeness, and hope.",
+        "signature": "Compassionate, patient, receptive, meaning-oriented, and attentive to vulnerability.",
+        "contribution": "Supports repair, accompanies people through loss, and keeps mercy connected to human dignity.",
+        "shadow": "Can become a martyr, blur boundaries, excuse harm, or make being needed central to identity.",
+        "growth_edge": "Pair compassion with assertion, justice, accountability, and material self-stewardship.",
+        "balancing_levers": [
+          "L25",
+          "L31",
+          "L02",
+          "L21"
+        ],
+        "signature_levers": [
+          "L03",
+          "L04",
+          "L24",
+          "L26",
+          "L27",
+          "L01",
+          "L06"
+        ],
+        "signature_affinity": {
+          "L03": 1.0,
+          "L04": 0.8,
+          "L24": 0.75,
+          "L26": 0.75,
+          "L27": 0.7,
+          "L01": 0.6,
+          "L06": 0.6
+        },
+        "lever_affinity": {
+          "L01": 0.6,
+          "L02": 0.3,
+          "L03": 1.0,
+          "L04": 0.8,
+          "L05": 0.35,
+          "L06": 0.6,
+          "L07": 0.35,
+          "L08": 0.25,
+          "L09": 0.15,
+          "L10": 0.0,
+          "L11": 0.1,
+          "L12": 0.0,
+          "L13": 0.1,
+          "L14": 0.0,
+          "L15": 0.15,
+          "L16": 0.3,
+          "L17": 0.1,
+          "L18": 0.1,
+          "L19": 0.0,
+          "L20": 0.05,
+          "L21": 0.1,
+          "L22": 0.0,
+          "L23": 0.45,
+          "L24": 0.75,
+          "L25": 0.3,
+          "L26": 0.75,
+          "L27": 0.7,
+          "L28": 0.55,
+          "L29": 0.6,
+          "L30": 0.5,
+          "L31": 0.4,
+          "L32": 0.05,
+          "L33": 0.25,
+          "L34": 0.45,
+          "L35": 0.2,
+          "L36": 0.3,
+          "L37": 0.5
+        }
+      },
+      {
+        "id": "A13",
+        "slug": "craftsman",
+        "name": "The Craftsman",
+        "orientations": [
+          "stewardship",
+          "exploration"
+        ],
+        "core_drive": "Improve reality through disciplined skill, experimentation, and care for quality.",
+        "signature": "Hands-on, inventive, patient with iteration, standards-conscious, and absorbed by mastery.",
+        "contribution": "Produces useful and beautiful work, preserves tacit knowledge, and raises the quality of practice.",
+        "shadow": "Can become perfectionistic, narrow, isolated, or more comfortable with objects and systems than people.",
+        "growth_edge": "Connect craft to purpose, communication, belonging, teaching, and broader social consequence.",
+        "balancing_levers": [
+          "L01",
+          "L23",
+          "L26",
+          "L30"
+        ],
+        "signature_levers": [
+          "L16",
+          "L21",
+          "L35",
+          "L20",
+          "L18",
+          "L19",
+          "L32"
+        ],
+        "signature_affinity": {
+          "L16": 0.6,
+          "L21": 0.55,
+          "L35": 0.55,
+          "L20": 0.5,
+          "L18": 0.45,
+          "L19": 0.45,
+          "L32": 0.45
+        },
+        "lever_affinity": {
+          "L01": 0.2,
+          "L02": 0.4,
+          "L03": 0.0,
+          "L04": 0.0,
+          "L05": 0.15,
+          "L06": 0.0,
+          "L07": 0.15,
+          "L08": 0.15,
+          "L09": 0.3,
+          "L10": 0.35,
+          "L11": 0.4,
+          "L12": 0.15,
+          "L13": 0.2,
+          "L14": 0.35,
+          "L15": 0.3,
+          "L16": 0.6,
+          "L17": 0.4,
+          "L18": 0.45,
+          "L19": 0.45,
+          "L20": 0.5,
+          "L21": 0.55,
+          "L22": 0.4,
+          "L23": 0.2,
+          "L24": 0.1,
+          "L25": 0.2,
+          "L26": 0.25,
+          "L27": 0.2,
+          "L28": 0.35,
+          "L29": 0.15,
+          "L30": 0.25,
+          "L31": 0.3,
+          "L32": 0.45,
+          "L33": 0.35,
+          "L34": 0.45,
+          "L35": 0.55,
+          "L36": 0.4,
+          "L37": 0.35
+        }
+      },
+      {
+        "id": "A14",
+        "slug": "steward",
+        "name": "The Steward",
+        "orientations": [
+          "stewardship",
+          "transcendence"
+        ],
+        "core_drive": "Preserve and transmit what is valuable across people, institutions, resources, and generations.",
+        "signature": "Faithful, patient, duty-conscious, long-term oriented, and grounded in responsibility beyond the self.",
+        "contribution": "Maintains continuity, protects shared goods, mentors successors, and prevents short-term appetite from consuming the future.",
+        "shadow": "Can become burdened, conservative by reflex, controlling, or loyal to inherited forms that need reform.",
+        "growth_edge": "Welcome creativity, experimentation, adaptability, joy, and necessary endings.",
+        "balancing_levers": [
+          "L16",
+          "L11",
+          "L34",
+          "L04"
+        ],
+        "signature_levers": [
+          "L03",
+          "L01",
+          "L02",
+          "L37",
+          "L04",
+          "L21",
+          "L31"
+        ],
+        "signature_affinity": {
+          "L03": 0.9,
+          "L01": 0.8,
+          "L02": 0.7,
+          "L37": 0.65,
+          "L04": 0.6,
+          "L21": 0.55,
+          "L31": 0.55
+        },
+        "lever_affinity": {
+          "L01": 0.8,
+          "L02": 0.7,
+          "L03": 0.9,
+          "L04": 0.6,
+          "L05": 0.2,
+          "L06": 0.1,
+          "L07": 0.25,
+          "L08": 0.4,
+          "L09": 0.45,
+          "L10": 0.35,
+          "L11": 0.1,
+          "L12": 0.1,
+          "L13": 0.25,
+          "L14": 0.25,
+          "L15": 0.0,
+          "L16": 0.2,
+          "L17": 0.25,
+          "L18": 0.45,
+          "L19": 0.3,
+          "L20": 0.5,
+          "L21": 0.55,
+          "L22": 0.25,
+          "L23": 0.1,
+          "L24": 0.1,
+          "L25": 0.2,
+          "L26": 0.25,
+          "L27": 0.25,
+          "L28": 0.45,
+          "L29": 0.3,
+          "L30": 0.5,
+          "L31": 0.55,
+          "L32": 0.35,
+          "L33": 0.4,
+          "L34": 0.25,
+          "L35": 0.15,
+          "L36": 0.5,
+          "L37": 0.65
+        }
+      },
+      {
+        "id": "A15",
+        "slug": "creator",
+        "name": "The Creator",
+        "orientations": [
+          "exploration",
+          "transcendence"
+        ],
+        "core_drive": "Express meaning and reveal possibility through imagination, beauty, and original form.",
+        "signature": "Visionary, expressive, intuitive, aesthetically sensitive, and drawn to symbolic or transformative work.",
+        "contribution": "Gives shape to what others cannot yet articulate and renews culture through art, story, design, and imagination.",
+        "shadow": "Can romanticize chaos, resist structure, confuse expression with contribution, or abandon work before refinement.",
+        "growth_edge": "Develop discipline, critical testing, material stewardship, and consistent completion.",
+        "balancing_levers": [
+          "L10",
+          "L12",
+          "L21",
+          "L32"
+        ],
+        "signature_levers": [
+          "L03",
+          "L16",
+          "L35",
+          "L01",
+          "L04",
+          "L34",
+          "L11"
+        ],
+        "signature_affinity": {
+          "L03": 0.9,
+          "L16": 0.8,
+          "L35": 0.7,
+          "L01": 0.6,
+          "L04": 0.6,
+          "L34": 0.6,
+          "L11": 0.5
+        },
+        "lever_affinity": {
+          "L01": 0.6,
+          "L02": 0.3,
+          "L03": 0.9,
+          "L04": 0.6,
+          "L05": 0.35,
+          "L06": 0.1,
+          "L07": 0.1,
+          "L08": 0.25,
+          "L09": 0.15,
+          "L10": 0.0,
+          "L11": 0.5,
+          "L12": 0.05,
+          "L13": 0.15,
+          "L14": 0.1,
+          "L15": 0.3,
+          "L16": 0.8,
+          "L17": 0.15,
+          "L18": 0.0,
+          "L19": 0.15,
+          "L20": 0.0,
+          "L21": 0.0,
+          "L22": 0.15,
+          "L23": 0.1,
+          "L24": 0.2,
+          "L25": 0.0,
+          "L26": 0.2,
+          "L27": 0.15,
+          "L28": 0.1,
+          "L29": 0.15,
+          "L30": 0.25,
+          "L31": 0.25,
+          "L32": 0.1,
+          "L33": 0.05,
+          "L34": 0.6,
+          "L35": 0.7,
+          "L36": 0.3,
+          "L37": 0.3
+        }
+      }
+    ],
+    "lever_families": [
+      {
+        "id": "F01",
+        "slug": "orientation_moral_center",
+        "name": "Orientation and Moral Center",
+        "definition": "The goods, commitments, virtues, sacred concerns, and responses to suffering that orient a life.",
+        "lever_ids": [
+          "L01",
+          "L02",
+          "L03",
+          "L04"
+        ]
+      },
+      {
+        "id": "F02",
+        "slug": "inner_governance",
+        "name": "Inner Governance",
+        "definition": "The capacities used to understand and regulate identity, emotion, attention, desire, behavior, and adaptation.",
+        "lever_ids": [
+          "L05",
+          "L06",
+          "L07",
+          "L08",
+          "L09",
+          "L10",
+          "L11"
+        ]
+      },
+      {
+        "id": "F03",
+        "slug": "thought_learning",
+        "name": "Thought, Learning, and Imagination",
+        "definition": "The capacities used to reason, establish truth, make judgments, learn, teach, create, and interpret culture.",
+        "lever_ids": [
+          "L12",
+          "L13",
+          "L14",
+          "L15",
+          "L16"
+        ]
+      },
+      {
+        "id": "F04",
+        "slug": "embodied_practical",
+        "name": "Embodied and Practical Agency",
+        "definition": "The capacities needed to inhabit a body, maintain a life, use technology, manage risk, and steward material resources.",
+        "lever_ids": [
+          "L17",
+          "L18",
+          "L19",
+          "L20",
+          "L21",
+          "L22"
+        ]
+      },
+      {
+        "id": "F05",
+        "slug": "relational_care",
+        "name": "Relationship and Care",
+        "definition": "The capacities needed to communicate, understand others, preserve boundaries, belong, love, care, and repair.",
+        "lever_ids": [
+          "L23",
+          "L24",
+          "L25",
+          "L26",
+          "L27",
+          "L28",
+          "L29"
+        ]
+      },
+      {
+        "id": "F06",
+        "slug": "contribution_society",
+        "name": "Contribution, Society, and Power",
+        "definition": "The capacities used to contribute through service, justice, work, leadership, and responsible participation in institutions.",
+        "lever_ids": [
+          "L30",
+          "L31",
+          "L32",
+          "L33"
+        ]
+      },
+      {
+        "id": "F07",
+        "slug": "integration_flourishing",
+        "name": "Integration and Flourishing",
+        "definition": "The capacities used to rest, explore, balance life across seasons, and transmit value beyond the self.",
+        "lever_ids": [
+          "L34",
+          "L35",
+          "L36",
+          "L37"
+        ]
+      }
+    ],
+    "revision_notes": [
+      "Fixed per-question timing so selecting an answer no longer resets the clock.",
+      "Reduced the severity of timing and response-style penalties.",
+      "Reworded orientation items to distinguish connection, stewardship, agency, exploration, and transcendence more clearly.",
+      "Renamed The Architect archetype to The Systems Steward to avoid collision with the MBTI INTJ nickname.",
+      "Results now display raw self-report, calibrated estimate, and confidence separately.",
+      "Added clearer archetype confidence and interpretation language."
+    ]
+  }
+}

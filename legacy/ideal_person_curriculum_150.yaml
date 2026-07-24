@@ -1,0 +1,693 @@
+curriculum:
+  title: The Ideal Person Curriculum
+  subtitle: A deliberately impossible, integrative curriculum for becoming more capable, ethical, wise, loving, disciplined,
+    and useful.
+  design_notes:
+  - Condensed from the original 876-item task corpus.
+  - Personal, gender-specific, demographic-specific, and dating-strategy items were generalized or removed.
+  - Near-duplicate tasks were consolidated into broader master competencies.
+  - The curriculum is intentionally aspirational; completion is evidence of practice, not proof of permanent mastery.
+  - Religious and spiritual content is written to support committed, questioning, pluralistic, and secular users.
+  domains:
+  - id: '01'
+    name: Meaning, Worldview, and Direction
+    tasks:
+    - id: '01.01'
+      task: Define a provisional philosophy of life
+      practice: Write a one-page statement covering what makes a life good, what you owe others, what you refuse to become,
+        and what currently deserves your effort.
+      evidence_of_progress: A written philosophy that can guide at least three real decisions and is revised after testing.
+    - id: '01.02'
+      task: Study the major answers to how one should live
+      practice: Compare representative ideas from virtue ethics, Stoicism, existentialism, religious ethics, humanism, consequentialism,
+        and duty-based ethics.
+      evidence_of_progress: A comparison that identifies what each tradition sees clearly, what it neglects, and what you
+        provisionally accept.
+    - id: '01.03'
+      task: Identify the sources of your values
+      practice: Trace several important beliefs to family, culture, religion, experience, fear, admiration, or deliberate
+        reasoning.
+      evidence_of_progress: A values map that distinguishes inherited convictions from consciously chosen ones.
+    - id: '01.04'
+      task: Separate genuine desire from borrowed ambition
+      practice: List your major goals and examine whether each comes from meaning, social comparison, insecurity, duty, curiosity,
+        or love.
+      evidence_of_progress: At least one goal is reaffirmed, redesigned, or abandoned for a stated reason.
+    - id: '01.05'
+      task: Construct a hierarchy of commitments
+      practice: Rank the people, principles, responsibilities, and projects that should govern your choices when they conflict.
+      evidence_of_progress: A hierarchy that resolves a real scheduling, spending, career, or relationship tradeoff.
+    - id: '01.06'
+      task: Develop a practice of deliberate life review
+      practice: Review your direction at a fixed interval rather than waiting for crisis or dissatisfaction to force reflection.
+      evidence_of_progress: A repeatable monthly or quarterly review with decisions, not merely observations.
+    - id: '01.07'
+      task: Learn to choose under uncertainty
+      practice: Practice making consequential decisions when evidence is incomplete by defining assumptions, reversibility,
+        downside, and review points.
+      evidence_of_progress: A decision record showing sound reasoning and a scheduled reassessment.
+    - id: '01.08'
+      task: Distinguish meaning from mood
+      practice: Observe when temporary enthusiasm, boredom, fear, or discouragement distorts your judgment about what matters.
+      evidence_of_progress: A meaningful commitment is maintained or responsibly changed without treating emotion as final
+        authority.
+    - id: '01.09'
+      task: Form a coherent vision of a worthwhile future
+      practice: Describe the kind of person, relationships, work, community, and daily life you want to help create.
+      evidence_of_progress: A concrete three-to-five-year direction linked to present behavior.
+    - id: '01.10'
+      task: Accept that no final life system will remove uncertainty
+      practice: Recognize that maturity requires revising principles while still acting decisively.
+      evidence_of_progress: You can explain what remains uncertain without using uncertainty as an excuse for passivity.
+  - id: '02'
+    name: Ethics, Integrity, and Character
+    tasks:
+    - id: '02.01'
+      task: Define the virtues you intend to embody
+      practice: Choose a small set of virtues such as courage, honesty, justice, temperance, compassion, loyalty, humility,
+        and wisdom; define them behaviorally.
+      evidence_of_progress: Each virtue has observable examples, limits, and common distortions.
+    - id: '02.02'
+      task: Practice honesty without cruelty
+      practice: Tell the truth accurately while considering timing, relevance, privacy, and the dignity of others.
+      evidence_of_progress: A difficult truth is communicated clearly without manipulation or needless harm.
+    - id: '02.03'
+      task: Align private conduct with public principles
+      practice: Identify where your behavior changes when no one is watching, when incentives change, or when reputation is
+        at stake.
+      evidence_of_progress: A recurring inconsistency is corrected through a concrete safeguard or habit.
+    - id: '02.04'
+      task: Keep promises or renegotiate them early
+      practice: Track commitments and communicate before failure rather than hiding, rationalizing, or disappearing.
+      evidence_of_progress: Commitments are completed, declined, or renegotiated transparently.
+    - id: '02.05'
+      task: Learn moral courage
+      practice: Practice opposing wrongdoing, unfairness, or group pressure when doing so carries a social or personal cost.
+      evidence_of_progress: You take a proportionate stand in a real situation and review the consequences honestly.
+    - id: '02.06'
+      task: Balance loyalty with principle
+      practice: Examine when loyalty to a person, team, tradition, or institution becomes complicity.
+      evidence_of_progress: You can state what loyalty requires, what it cannot require, and where your boundary lies.
+    - id: '02.07'
+      task: Develop fairness in judgment
+      practice: Apply comparable standards to yourself, allies, strangers, and opponents.
+      evidence_of_progress: A judgment is revised after identifying favoritism, resentment, or double standards.
+    - id: '02.08'
+      task: Use power responsibly
+      practice: Notice where you possess authority, expertise, money, status, physical strength, information, or emotional
+        leverage.
+      evidence_of_progress: You establish practices that prevent exploitation and make accountability possible.
+    - id: '02.09'
+      task: Repair harm instead of defending your image
+      practice: When you cause harm, identify impact, accept responsibility, apologize specifically, and make restitution
+        where possible.
+      evidence_of_progress: The harmed party receives a meaningful repair attempt rather than a self-protective explanation.
+    - id: '02.10'
+      task: Build an ethical decision process
+      practice: For difficult choices, examine duties, consequences, virtues, rights, stakeholders, uncertainty, and reversibility.
+      evidence_of_progress: A written decision shows that competing moral considerations were genuinely weighed.
+  - id: '03'
+    name: Self-Knowledge, Identity, and Humility
+    tasks:
+    - id: '03.01'
+      task: Create an honest personal inventory
+      practice: Document strengths, weaknesses, habits, fears, privileges, wounds, obligations, and repeated patterns without
+        turning the exercise into praise or self-condemnation.
+      evidence_of_progress: The inventory includes uncomfortable truths and concrete examples.
+    - id: '03.02'
+      task: Separate identity from performance
+      practice: Observe how achievement, failure, status, appearance, intelligence, productivity, or approval influence your
+        sense of worth.
+      evidence_of_progress: You can experience a meaningful success or failure without converting it into a total judgment
+        of yourself.
+    - id: '03.03'
+      task: Identify your recurring defenses
+      practice: Study how you use avoidance, rationalization, blame, intellectualization, humor, control, perfectionism, or
+        withdrawal.
+      evidence_of_progress: You catch one defense in real time and choose a more honest response.
+    - id: '03.04'
+      task: Invite disconfirming feedback
+      practice: Ask trusted people how your intentions differ from your impact and listen without arguing.
+      evidence_of_progress: You summarize the feedback accurately and test at least one change.
+    - id: '03.05'
+      task: Understand your temperament without becoming trapped by it
+      practice: Use personality systems as hypotheses about tendencies, not excuses or fixed identities.
+      evidence_of_progress: You identify one strength to refine and one opposite capacity to deliberately practice.
+    - id: '03.06'
+      task: Map your emotional and behavioral triggers
+      practice: Record situations that reliably produce anger, shame, fear, envy, defensiveness, numbness, or impulsivity.
+      evidence_of_progress: A trigger map includes early warning signs and a planned alternative response.
+    - id: '03.07'
+      task: Recognize projection and attribution errors
+      practice: Examine when you assign motives to others that may reflect your own fears, desires, or limited information.
+      evidence_of_progress: You revise at least one interpersonal interpretation after gathering evidence.
+    - id: '03.08'
+      task: Develop intellectual humility
+      practice: Practice stating confidence levels, assumptions, unknowns, and what evidence would change your mind.
+      evidence_of_progress: A strongly held view is clarified or updated without humiliation or evasiveness.
+    - id: '03.09'
+      task: Integrate conflicting parts of yourself
+      practice: Identify tensions such as ambition versus contentment, independence versus belonging, reason versus emotion,
+        or strength versus vulnerability.
+      evidence_of_progress: You design a practice that honors both legitimate sides rather than suppressing one.
+    - id: '03.10'
+      task: Write a truthful personal narrative
+      practice: Describe your life without casting yourself solely as hero, victim, failure, or exceptional case.
+      evidence_of_progress: The narrative recognizes agency, context, harm, help, contingency, and responsibility.
+  - id: '04'
+    name: Emotional Regulation and Resilience
+    tasks:
+    - id: '04.01'
+      task: Learn to identify emotions precisely
+      practice: Expand beyond good, bad, angry, and stressed by naming emotion, intensity, bodily sensation, trigger, and
+        action urge.
+      evidence_of_progress: You can distinguish several similar emotions and respond differently to each.
+    - id: '04.02'
+      task: Pause between impulse and action
+      practice: Build a reliable interruption practice using breath, movement, delay, prayer, grounding, or written reflection.
+      evidence_of_progress: You prevent at least one regrettable reaction without suppressing the underlying issue.
+    - id: '04.03'
+      task: Tolerate discomfort without immediate escape
+      practice: Practice remaining present with boredom, uncertainty, embarrassment, craving, frustration, or sadness.
+      evidence_of_progress: You complete a chosen action while discomfort is present and record what actually happened.
+    - id: '04.04'
+      task: Recover constructively from failure
+      practice: Separate facts, responsibility, lessons, repair, and next action instead of collapsing into denial or shame.
+      evidence_of_progress: A setback produces a concrete adjustment and renewed attempt.
+    - id: '04.05'
+      task: Regulate anger without becoming passive
+      practice: Identify legitimate boundary violations, reduce physiological escalation, and communicate the issue directly.
+      evidence_of_progress: You express anger proportionately and pursue resolution without intimidation or avoidance.
+    - id: '04.06'
+      task: Work with anxiety through graded action
+      practice: Break a feared but worthwhile behavior into increasingly difficult exposures.
+      evidence_of_progress: You complete repeated exposures and track whether feared outcomes occurred.
+    - id: '04.07'
+      task: Develop self-compassion without self-excuse
+      practice: Respond to suffering with care while preserving responsibility and standards.
+      evidence_of_progress: Your internal response helps you repair and act rather than indulge or punish yourself.
+    - id: '04.08'
+      task: Process grief and loss
+      practice: Allow sorrow, remembrance, ritual, conversation, and changed expectations rather than demanding premature
+        closure.
+      evidence_of_progress: You can name what was lost, what remains, and how life must now be carried forward.
+    - id: '04.09'
+      task: Build resilience before crisis
+      practice: Strengthen sleep, relationships, physical health, savings, routines, skills, and sources of meaning.
+      evidence_of_progress: You establish at least three protective factors that reduce dependence on willpower during hardship.
+    - id: '04.10'
+      task: Know when to seek qualified help
+      practice: Learn the limits of self-help and identify signs that require medical, psychological, legal, spiritual, or
+        emergency support.
+      evidence_of_progress: You maintain a practical support list and use it when the situation exceeds your competence.
+  - id: '05'
+    name: Attention, Discipline, and Self-Mastery
+    tasks:
+    - id: '05.01'
+      task: Audit where your attention goes
+      practice: Track a representative week of devices, entertainment, work, conversation, rumination, and intentional practice.
+      evidence_of_progress: You identify major attention leaks and redesign at least one environment.
+    - id: '05.02'
+      task: Create a stable daily foundation
+      practice: Establish a minimal routine for sleep, hygiene, movement, planning, nourishment, and shutdown.
+      evidence_of_progress: The routine survives ordinary disruption without becoming an elaborate ritual.
+    - id: '05.03'
+      task: Practice doing necessary work without waiting for motivation
+      practice: Choose a small, clear action and begin at a scheduled time regardless of mood.
+      evidence_of_progress: You demonstrate repeated starts under low motivation.
+    - id: '05.04'
+      task: Control digital distraction
+      practice: Remove unnecessary notifications, add friction to compulsive media, define communication windows, and protect
+        focused work.
+      evidence_of_progress: Screen use reflects deliberate choices rather than default checking.
+    - id: '05.05'
+      task: Develop sustained concentration
+      practice: Train progressively longer periods of undistracted reading, creation, study, or problem solving.
+      evidence_of_progress: You complete focused sessions with measurable output and minimal task switching.
+    - id: '05.06'
+      task: Use desire without being ruled by it
+      practice: Observe cravings for food, sex, spending, approval, novelty, comfort, and stimulation before choosing a response.
+      evidence_of_progress: You can delay or decline a strong impulse for a reason you endorse.
+    - id: '05.07'
+      task: Build consistency through minimum standards
+      practice: Define the smallest acceptable version of important practices for difficult days.
+      evidence_of_progress: You preserve continuity without pretending that minimum effort equals full performance.
+    - id: '05.08'
+      task: Practice voluntary hardship wisely
+      practice: Use safe, purposeful challenges such as difficult exercise, fasting where appropriate, silence, cold, solitude,
+        or restrained consumption.
+      evidence_of_progress: The practice increases freedom and gratitude rather than pride, injury, or self-punishment.
+    - id: '05.09'
+      task: Finish what deserves completion
+      practice: Reduce abandoned projects by clarifying scope, defining done, limiting simultaneous work, and closing loops.
+      evidence_of_progress: A meaningful unfinished commitment is completed or consciously terminated.
+    - id: '05.10'
+      task: Design systems that support discipline
+      practice: Use cues, environment, defaults, accountability, checklists, and review cycles so character is not tested
+        unnecessarily.
+      evidence_of_progress: A recurring behavior becomes easier because the environment now supports it.
+  - id: '06'
+    name: Reasoning, Learning, and Sound Judgment
+    tasks:
+    - id: '06.01'
+      task: Learn how to learn
+      practice: Use retrieval, spacing, elaboration, interleaving, feedback, and deliberate practice instead of passive rereading.
+      evidence_of_progress: You demonstrate retention and transfer in a chosen subject.
+    - id: '06.02'
+      task: Distinguish observation from interpretation
+      practice: Separate what happened from what you inferred, felt, predicted, or assumed.
+      evidence_of_progress: A disagreement or problem statement is rewritten into facts, interpretations, and uncertainties.
+    - id: '06.03'
+      task: Recognize common reasoning errors
+      practice: Study confirmation bias, motivated reasoning, sunk cost, availability, overconfidence, survivorship bias,
+        and base-rate neglect.
+      evidence_of_progress: You identify and correct one bias in a real decision.
+    - id: '06.04'
+      task: Evaluate sources and claims
+      practice: Check expertise, incentives, evidence quality, replication, uncertainty, and competing explanations.
+      evidence_of_progress: You produce a reasoned confidence assessment rather than accepting or dismissing a claim reflexively.
+    - id: '06.05'
+      task: Think probabilistically
+      practice: Replace absolute predictions with ranges, likelihoods, scenarios, and updating.
+      evidence_of_progress: You make and later score several forecasts to calibrate judgment.
+    - id: '06.06'
+      task: Solve problems systematically
+      practice: Define the problem, constraints, root causes, options, tradeoffs, experiments, and success criteria.
+      evidence_of_progress: A recurring problem is improved through a documented process rather than repeated improvisation.
+    - id: '06.07'
+      task: Learn to reason from principles and examples
+      practice: Move between abstract models and concrete cases to avoid empty theory or narrow anecdote.
+      evidence_of_progress: You explain a concept, apply it to a new case, and identify where the model breaks.
+    - id: '06.08'
+      task: Practice constructive skepticism
+      practice: Question claims without making cynicism, contrarianism, or distrust into an identity.
+      evidence_of_progress: You can reject weak evidence while acknowledging what remains plausible or unknown.
+    - id: '06.09'
+      task: Seek corrective feedback quickly
+      practice: Design work so errors become visible early through tests, critique, measurement, rehearsal, or review.
+      evidence_of_progress: A project improves because feedback was obtained before final commitment.
+    - id: '06.10'
+      task: Teach what you understand
+      practice: Explain a difficult idea in plain language, answer questions, and locate gaps exposed by teaching.
+      evidence_of_progress: Another person can apply the concept and you revise the explanation based on confusion.
+  - id: '07'
+    name: Physical Stewardship and Practical Capability
+    tasks:
+    - id: '07.01'
+      task: Establish sustainable physical training
+      practice: Build a balanced practice of strength, endurance, mobility, coordination, and recovery suited to your body
+        and responsibilities.
+      evidence_of_progress: You follow a progressive program and adjust it using performance and health evidence.
+    - id: '07.02'
+      task: Learn the fundamentals of nutrition
+      practice: Understand energy balance, protein, fiber, micronutrients, hydration, food quality, and individual constraints.
+      evidence_of_progress: You can maintain a practical eating pattern without fad dependence or obsessive control.
+    - id: '07.03'
+      task: Protect sleep and circadian health
+      practice: Manage schedule, light, caffeine, environment, stress, and recovery.
+      evidence_of_progress: Sleep is sufficiently regular to support mood, cognition, and physical performance.
+    - id: '07.04'
+      task: Use healthcare responsibly
+      practice: Maintain preventive care, understand basic health markers, prepare for appointments, and follow evidence-based
+        treatment.
+      evidence_of_progress: You have an up-to-date care plan and know when symptoms require attention.
+    - id: '07.05'
+      task: Learn basic first aid and emergency response
+      practice: Train in bleeding control, CPR/AED, choking response, emergency communication, and scene safety.
+      evidence_of_progress: You complete recognized training or can demonstrate the procedures accurately.
+    - id: '07.06'
+      task: Develop practical household competence
+      practice: Learn routine cleaning, cooking, laundry, maintenance, tool use, organization, and basic repairs.
+      evidence_of_progress: You can maintain a safe, functional living environment without chronic dependence on others.
+    - id: '07.07'
+      task: Prepare for foreseeable emergencies
+      practice: Plan for power loss, fire, evacuation, severe weather, medical events, and temporary supply disruption.
+      evidence_of_progress: You maintain a proportionate kit, contacts, documents, and practiced plan.
+    - id: '07.08'
+      task: Respect bodily limits without becoming fragile
+      practice: Distinguish discomfort, fatigue, pain, injury, and illness; train courage together with restraint.
+      evidence_of_progress: You can push appropriately, stop appropriately, and seek help appropriately.
+    - id: '07.09'
+      task: Develop embodied confidence
+      practice: Practice posture, movement, breathing, spatial awareness, and competent physical engagement with the world.
+      evidence_of_progress: You move through ordinary and demanding environments with increasing calm and capability.
+    - id: '07.10'
+      task: Care for appearance without worshiping it
+      practice: Maintain hygiene, grooming, clothing, and presentation as expressions of respect and context.
+      evidence_of_progress: Your appearance supports health, dignity, and purpose without becoming the basis of worth.
+  - id: 08
+    name: Relationships, Love, and Family
+    tasks:
+    - id: '08.01'
+      task: Learn to give and receive care
+      practice: Notice what others genuinely need while communicating your own needs directly.
+      evidence_of_progress: Care becomes reciprocal, specific, and sustainable rather than performative or resentful.
+    - id: '08.02'
+      task: Choose relationships by character and compatibility
+      practice: Evaluate trustworthiness, values, reciprocity, emotional safety, responsibility, and direction over charm
+        or intensity alone.
+      evidence_of_progress: You can explain why a close relationship is healthy, limited, repaired, or ended.
+    - id: '08.03'
+      task: Practice secure attachment behaviors
+      practice: Communicate consistently, tolerate reasonable distance, ask rather than test, and repair ruptures.
+      evidence_of_progress: You reduce pursuing, withdrawing, controlling, or mind-reading patterns.
+    - id: '08.04'
+      task: Build intimacy through truthful vulnerability
+      practice: Share relevant fears, hopes, needs, mistakes, and affection with trustworthy people.
+      evidence_of_progress: Disclosure deepens connection while respecting boundaries and timing.
+    - id: '08.05'
+      task: Set and honor boundaries
+      practice: Define limits around time, body, privacy, money, communication, responsibility, and disrespect.
+      evidence_of_progress: You state and enforce a boundary without cruelty, threats, or repeated empty warnings.
+    - id: '08.06'
+      task: Handle conflict as a shared problem
+      practice: Slow escalation, describe impact, understand interests, own your part, and negotiate concrete changes.
+      evidence_of_progress: A disagreement produces clearer understanding, repair, or a responsible decision to disengage.
+    - id: '08.07'
+      task: Become a reliable friend
+      practice: Show up, listen, celebrate, tell difficult truths, respect confidence, and provide practical support.
+      evidence_of_progress: Your friendship is demonstrated through repeated reciprocal behavior rather than sentiment alone.
+    - id: '08.08'
+      task: Prepare for committed partnership
+      practice: Develop competence in communication, domestic work, money, sexuality, caregiving, fidelity, and shared decision
+        making.
+      evidence_of_progress: You can discuss expectations and responsibilities before crisis forces the conversation.
+    - id: '08.09'
+      task: Practice responsible sexuality and intimacy
+      practice: Ground sexual behavior in consent, honesty, mutual care, health, commitment expectations, and respect for
+        consequences.
+      evidence_of_progress: Your conduct protects dignity, safety, and trust for everyone involved.
+    - id: '08.10'
+      task: Contribute to healthy family life
+      practice: Understand intergenerational patterns, maintain appropriate loyalty, care for dependents and elders, and create
+        constructive traditions.
+      evidence_of_progress: You preserve what is good, interrupt what is harmful, and accept proportionate responsibility.
+  - id: 09
+    name: Communication, Social Intelligence, and Conflict
+    tasks:
+    - id: '09.01'
+      task: Listen to understand
+      practice: Give full attention, reflect meaning, ask clarifying questions, and resist preparing your rebuttal.
+      evidence_of_progress: The other person agrees that you understood their position before you respond.
+    - id: '09.02'
+      task: Speak clearly and directly
+      practice: State observations, reasoning, feelings, requests, and boundaries without vagueness or manipulation.
+      evidence_of_progress: A difficult message is understood without requiring others to decode hints.
+    - id: '09.03'
+      task: Adapt communication to audience and context
+      practice: Consider knowledge, culture, role, emotion, medium, urgency, and desired outcome.
+      evidence_of_progress: The same idea is communicated effectively in several different contexts.
+    - id: '09.04'
+      task: Develop conversational reciprocity
+      practice: Balance questions, disclosure, humor, attention, and topic transitions.
+      evidence_of_progress: Conversations feel mutual rather than interrogative, performative, or monopolized.
+    - id: '09.05'
+      task: Give useful feedback
+      practice: Make feedback timely, specific, evidence-based, actionable, and proportionate.
+      evidence_of_progress: The recipient can identify what to continue, change, and why.
+    - id: '09.06'
+      task: Receive criticism constructively
+      practice: Separate tone from content, ask for examples, look for truth, and decide what action is warranted.
+      evidence_of_progress: You can use valid criticism without accepting abuse or collapsing into defensiveness.
+    - id: '09.07'
+      task: Negotiate interests rather than positions
+      practice: Identify underlying needs, alternatives, constraints, leverage, fairness, and possible trades.
+      evidence_of_progress: An agreement or principled refusal improves on reactive bargaining.
+    - id: '09.08'
+      task: De-escalate conflict
+      practice: Regulate yourself, lower threat, acknowledge legitimate concerns, slow the interaction, and establish next
+        steps.
+      evidence_of_progress: A tense interaction becomes safer and more solvable.
+    - id: '09.09'
+      task: Recognize manipulation and coercion
+      practice: Study guilt, intimidation, love-bombing, gaslighting, false urgency, triangulation, and exploitative reciprocity.
+      evidence_of_progress: You identify a manipulative pattern and respond with evidence, boundaries, or distance.
+    - id: '09.10'
+      task: Repair communication failures
+      practice: Return to misunderstandings, clarify intent and impact, apologize where warranted, and confirm new expectations.
+      evidence_of_progress: A damaged interaction is repaired or closed with greater clarity.
+  - id: '10'
+    name: Community, Citizenship, and Service
+    tasks:
+    - id: '10.01'
+      task: Understand your dependence on society
+      practice: Trace how institutions, workers, infrastructure, law, knowledge, and inherited culture support your life.
+      evidence_of_progress: You can name obligations that follow from benefits you did not create alone.
+    - id: '10.02'
+      task: Contribute beyond your immediate circle
+      practice: Choose a recurring form of service suited to your abilities and community needs.
+      evidence_of_progress: You contribute time, skill, money, advocacy, or care consistently enough to matter.
+    - id: '10.03'
+      task: Learn responsible citizenship
+      practice: Understand basic government, law, rights, duties, public institutions, and local decision making.
+      evidence_of_progress: You can participate in civic life based on informed judgment rather than slogans.
+    - id: '10.04'
+      task: Engage across difference
+      practice: Practice respectful conversation with people of different class, culture, religion, politics, age, or experience.
+      evidence_of_progress: You can represent another perspective fairly without surrendering your own convictions.
+    - id: '10.05'
+      task: Support the vulnerable without paternalism
+      practice: Ask what is needed, preserve agency, understand systems, and avoid making help about your identity.
+      evidence_of_progress: Assistance increases another person's capacity or safety rather than dependence or humiliation.
+    - id: '10.06'
+      task: Build trustworthy communities
+      practice: Create norms for welcome, contribution, honesty, accountability, conflict, and belonging.
+      evidence_of_progress: A group becomes more functional because responsibilities and standards are shared.
+    - id: '10.07'
+      task: Practice stewardship of common resources
+      practice: Use public spaces, natural resources, shared knowledge, and institutional trust with care.
+      evidence_of_progress: Your behavior leaves a commons at least as usable for others as you found it.
+    - id: '10.08'
+      task: Learn to organize collective action
+      practice: Define a shared problem, recruit stakeholders, assign roles, coordinate work, and review outcomes.
+      evidence_of_progress: A small community project reaches a concrete result.
+    - id: '10.09'
+      task: Resist dehumanization
+      practice: Notice language and narratives that reduce people to enemies, stereotypes, statistics, or instruments.
+      evidence_of_progress: You preserve moral clarity while acknowledging the humanity of people you oppose.
+    - id: '10.10'
+      task: Leave institutions better than you found them
+      practice: Document knowledge, mentor successors, improve processes, and challenge harmful norms responsibly.
+      evidence_of_progress: A team or community retains value after your direct involvement ends.
+  - id: '11'
+    name: Work, Craft, Leadership, and Contribution
+    tasks:
+    - id: '11.01'
+      task: Discover work worth doing
+      practice: Evaluate work by aptitude, service, meaning, environment, growth, livelihood, and real-world need.
+      evidence_of_progress: You choose or redesign a path using explicit criteria rather than prestige alone.
+    - id: '11.02'
+      task: Develop professional reliability
+      practice: Be prepared, punctual, communicative, organized, and honest about status and risk.
+      evidence_of_progress: Others can plan around your commitments with justified confidence.
+    - id: '11.03'
+      task: Master the fundamentals of a craft
+      practice: Identify core skills, standards, tools, and feedback loops in your chosen field.
+      evidence_of_progress: You produce competent work repeatedly, not only occasional inspired results.
+    - id: '11.04'
+      task: Raise quality through deliberate practice
+      practice: Isolate weaknesses, practice at the edge of competence, seek expert feedback, and repeat.
+      evidence_of_progress: A measurable skill improves through structured training.
+    - id: '11.05'
+      task: Understand systems, not only assigned tasks
+      practice: Study customers, stakeholders, constraints, interfaces, incentives, failure modes, and downstream consequences.
+      evidence_of_progress: You improve a result by seeing beyond your immediate role.
+    - id: '11.06'
+      task: Manage projects to completion
+      practice: Define scope, requirements, milestones, ownership, dependencies, risks, and acceptance criteria.
+      evidence_of_progress: A meaningful project is delivered with transparent tradeoffs and lessons captured.
+    - id: '11.07'
+      task: Lead through clarity and example
+      practice: Set direction, explain why, model standards, remove obstacles, and accept responsibility.
+      evidence_of_progress: People understand priorities and become more capable rather than merely more dependent on you.
+    - id: '11.08'
+      task: Delegate and develop others
+      practice: Match responsibility to readiness, provide context and authority, review outcomes, and coach without micromanaging.
+      evidence_of_progress: Another person grows in competence while meaningful work moves forward.
+    - id: '11.09'
+      task: Navigate institutions without losing integrity
+      practice: Understand incentives, politics, bureaucracy, power, and informal norms while preserving principles.
+      evidence_of_progress: You achieve a legitimate objective without unnecessary naïveté or corruption.
+    - id: '11.10'
+      task: Build work that outlasts you
+      practice: Document decisions, create maintainable systems, teach successors, and connect work to a larger contribution.
+      evidence_of_progress: The value persists when you are absent.
+  - id: '12'
+    name: Money, Resources, and Stewardship
+    tasks:
+    - id: '12.01'
+      task: Understand personal financial fundamentals
+      practice: Learn income, expenses, cash flow, debt, interest, taxes, insurance, inflation, and opportunity cost.
+      evidence_of_progress: You can explain your current financial position and major risks accurately.
+    - id: '12.02'
+      task: Create and follow a values-based budget
+      practice: Allocate resources toward obligations, resilience, generosity, enjoyment, and long-term goals.
+      evidence_of_progress: Spending reflects stated priorities over several months.
+    - id: '12.03'
+      task: Build an emergency reserve
+      practice: Define likely emergencies, target an appropriate reserve, and automate contributions.
+      evidence_of_progress: Unexpected costs no longer require immediate high-cost debt or panic.
+    - id: '12.04'
+      task: Use debt cautiously and deliberately
+      practice: Understand terms, total cost, leverage, risk, and alternatives before borrowing.
+      evidence_of_progress: You can justify each debt and maintain a credible repayment plan.
+    - id: '12.05'
+      task: Invest for long-term resilience
+      practice: Learn diversification, fees, risk, compounding, tax considerations, and the limits of prediction.
+      evidence_of_progress: You implement a simple strategy appropriate to your horizon and tolerance.
+    - id: '12.06'
+      task: Earn by creating genuine value
+      practice: Develop skills, solve meaningful problems, negotiate fairly, and avoid confusing extraction with entrepreneurship.
+      evidence_of_progress: Income growth is tied to increased capability or useful contribution.
+    - id: '12.07'
+      task: Consume intentionally
+      practice: Evaluate purchases by purpose, durability, total cost, maintenance, environmental impact, and opportunity
+        cost.
+      evidence_of_progress: You reduce impulsive or status-driven consumption without treating deprivation as virtue.
+    - id: '12.08'
+      task: Practice generosity with judgment
+      practice: Give time, money, knowledge, access, or care in ways that are sustainable and effective.
+      evidence_of_progress: Generosity serves real needs without enabling exploitation or self-display.
+    - id: '12.09'
+      task: Protect yourself and dependents
+      practice: Maintain appropriate insurance, beneficiaries, records, passwords, estate documents, and contingency plans.
+      evidence_of_progress: Essential people can act if you are unavailable or incapacitated.
+    - id: '12.10'
+      task: Treat resources as entrusted, not merely owned
+      practice: Consider how money, property, knowledge, time, and influence affect future people and the wider world.
+      evidence_of_progress: A meaningful resource decision balances personal benefit with stewardship.
+  - id: '13'
+    name: Creativity, Beauty, Play, and Culture
+    tasks:
+    - id: '13.01'
+      task: Develop a regular creative practice
+      practice: Make something through writing, music, visual art, design, craft, performance, building, or invention.
+      evidence_of_progress: You produce work consistently rather than waiting for inspiration or permission.
+    - id: '13.02'
+      task: Learn to observe closely
+      practice: Study form, color, sound, movement, language, pattern, nature, and human behavior without immediately judging
+        utility.
+      evidence_of_progress: Your notes or creations show details you previously overlooked.
+    - id: '13.03'
+      task: Cultivate taste through comparison
+      practice: Engage deeply with excellent and flawed works; identify choices, effects, context, and standards.
+      evidence_of_progress: You can explain why you value something beyond saying you like it.
+    - id: '13.04'
+      task: Create before consuming
+      practice: Protect time for original work before entertainment, commentary, or endless research.
+      evidence_of_progress: A defined portion of your cultural life produces rather than only absorbs.
+    - id: '13.05'
+      task: Practice play without instrumentalizing it
+      practice: Engage in games, exploration, humor, movement, or imagination that need not optimize status or productivity.
+      evidence_of_progress: You experience restoration, connection, or discovery without converting play into another performance
+        metric.
+    - id: '13.06'
+      task: Learn from cultural traditions
+      practice: Study literature, art, ritual, music, stories, and customs from your own and other cultures.
+      evidence_of_progress: You can appreciate inheritance while recognizing exclusion, change, and context.
+    - id: '13.07'
+      task: Express difficult truths through art
+      practice: Use creative work to explore ambiguity, grief, conflict, hope, identity, or social reality.
+      evidence_of_progress: The work communicates something that straightforward explanation could not fully carry.
+    - id: '13.08'
+      task: Collaborate creatively
+      practice: Share authorship, negotiate differences, combine strengths, and receive critique.
+      evidence_of_progress: A joint work is stronger because control and credit were handled maturely.
+    - id: '13.09'
+      task: Complete and share meaningful work
+      practice: Define a finished form, revise, tolerate exposure, and publish or present appropriately.
+      evidence_of_progress: At least one creation reaches an audience and produces usable feedback.
+    - id: '13.10'
+      task: Preserve wonder
+      practice: Regularly encounter nature, science, art, craftsmanship, sacred spaces, or human excellence with sustained
+        attention.
+      evidence_of_progress: A practice of awe changes how you perceive time, gratitude, or responsibility.
+  - id: '14'
+    name: Spirituality, Mortality, and Transcendence
+    tasks:
+    - id: '14.01'
+      task: Examine your beliefs about ultimate reality
+      practice: Explore religious, spiritual, philosophical, and secular accounts of existence, consciousness, morality, and
+        meaning.
+      evidence_of_progress: You can state your present beliefs, uncertainties, and reasons without pretending certainty.
+    - id: '14.02'
+      task: Develop a contemplative practice
+      practice: Use prayer, meditation, silence, sacred reading, examen, breath, or attentive walking.
+      evidence_of_progress: The practice reliably increases awareness, honesty, gratitude, or moral attention.
+    - id: '14.03'
+      task: Study a wisdom tradition seriously
+      practice: Engage primary texts, history, practices, exemplars, and internal disagreements rather than consuming slogans.
+      evidence_of_progress: You can explain the tradition fairly and identify what it asks of a practitioner.
+    - id: '14.04'
+      task: Practice reverence without abandoning reason
+      practice: Allow humility, sacredness, ritual, mystery, and devotion while remaining alert to manipulation and error.
+      evidence_of_progress: You can participate sincerely without surrendering conscience or evidence.
+    - id: '14.05'
+      task: Confront mortality
+      practice: Reflect on death, impermanence, unfinished obligations, and what would make your remaining time well used.
+      evidence_of_progress: A concrete priority changes because life is finite.
+    - id: '14.06'
+      task: Develop gratitude as perception and practice
+      practice: Notice dependence, gifts, ordinary goods, sacrifice, and contingency; express gratitude specifically.
+      evidence_of_progress: Gratitude produces conduct such as care, generosity, restraint, or presence.
+    - id: '14.07'
+      task: Learn forgiveness without erasing justice
+      practice: Distinguish release of vengeance from reconciliation, trust, accountability, and continued access.
+      evidence_of_progress: You reduce corrosive resentment while preserving truthful boundaries.
+    - id: '14.08'
+      task: Practice humility before what exceeds you
+      practice: Recognize limits of control, knowledge, self-sufficiency, and personal importance.
+      evidence_of_progress: You accept help, uncertainty, or correction without surrendering agency.
+    - id: '14.09'
+      task: Serve something larger than the self
+      practice: Commit to a person, community, truth, craft, cause, God, or future good that places demands on you.
+      evidence_of_progress: The commitment changes how you allocate time, comfort, and resources.
+    - id: '14.10'
+      task: Create rituals that embody meaning
+      practice: Design or adopt recurring practices for beginnings, endings, grief, gratitude, commitment, rest, and community.
+      evidence_of_progress: The ritual strengthens memory, identity, and action rather than functioning as empty performance.
+  - id: '15'
+    name: Integration, Life Design, and Legacy
+    tasks:
+    - id: '15.01'
+      task: Translate ideals into a workable life architecture
+      practice: Connect values to calendar, environment, finances, relationships, responsibilities, and recurring practices.
+      evidence_of_progress: Your ordinary week visibly reflects your declared priorities.
+    - id: '15.02'
+      task: Balance competing goods
+      practice: Practice choosing among work, family, health, service, rest, growth, and enjoyment without pretending every
+        good can be maximized.
+      evidence_of_progress: You make a difficult tradeoff transparently and review whether it was wise.
+    - id: '15.03'
+      task: Build seasons rather than demand permanent balance
+      practice: Identify when life requires emphasis, maintenance, recovery, exploration, or sacrifice.
+      evidence_of_progress: You define what must advance, what must be protected, and what can temporarily wait.
+    - id: '15.04'
+      task: Create a personal operating review
+      practice: Review commitments, health, relationships, finances, learning, contribution, and direction at a sustainable
+        cadence.
+      evidence_of_progress: Reviews consistently produce decisions, scheduled actions, and removed obligations.
+    - id: '15.05'
+      task: Use goals as experiments, not identities
+      practice: Define hypotheses, measures, time limits, and learning questions for major pursuits.
+      evidence_of_progress: You can stop, adapt, or continue a goal without treating revision as personal failure.
+    - id: '15.06'
+      task: Prepare for major life transitions
+      practice: Anticipate changes in work, partnership, parenthood, health, aging, relocation, caregiving, and loss.
+      evidence_of_progress: You create practical and emotional preparation for at least one foreseeable transition.
+    - id: '15.07'
+      task: Mentor and be mentored
+      practice: Seek people with relevant wisdom while sharing your own knowledge responsibly.
+      evidence_of_progress: A mentoring relationship produces increased judgment and capability on both sides.
+    - id: '15.08'
+      task: Develop a legacy of people, not only achievements
+      practice: Invest in relationships, teaching, institutions, records, traditions, and successors.
+      evidence_of_progress: Others are stronger and better equipped because of your sustained involvement.
+    - id: '15.09'
+      task: Reconcile ambition with contentment
+      practice: Pursue excellence while learning sufficiency, rest, gratitude, and freedom from constant comparison.
+      evidence_of_progress: You can strive intensely without making future achievement a condition for present dignity.
+    - id: '15.10'
+      task: Conduct an annual integration and recommitment
+      practice: Review who you became, what you served, where you failed, what changed, and what the next season requires.
+      evidence_of_progress: You produce an honest annual account and a limited set of renewed commitments.

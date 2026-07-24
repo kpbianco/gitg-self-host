@@ -1,0 +1,476 @@
+ ~/Projects/personality-test │ master ?5  node archetype.js                                           ✔ │ ⬢ 21.7.3 │ 17:31:31
+Welcome to the archetype test.
+ Please answer the following questions from 1-5 on likelihood of it representing you, with 1 being not like you at all, and 5 being like you entirely.
+ Press 'enter' to continue
+
+I find that my social battery runs out after a long period surrounded by others.
+I find that my social battery runs out after a long period surrounded by others.
+I find that my social battery runs out after a long period surrounded by others.
+I find that my social battery runs out after a long period surrounded by others.
+2
+I find when there is something that needs to be dnoe in front of me, that I usually jump in and get it started without spending excess time on a plan.
+I find when there is something that needs to be dnoe in front of me, that I usually jump in and get it started without spending excess time on a plan.
+3
+I generally prefer reading with the intent to learn versus for fun.
+I generally prefer reading with the intent to learn versus for fun.
+3
+If someone speaks badly to me to my face, I confront them instead of taking it.
+If someone speaks badly to me to my face, I confront them instead of taking it.
+4
+I am more concerned with the way things are than what they could be.
+I am more concerned with the way things are than what they could be.
+4
+I would rather spend time alone in introspection than out socializing.
+I would rather spend time alone in introspection than out socializing.
+2
+I often find that I speak faster than I can think my words over carefully
+I often find that I speak faster than I can think my words over carefully
+3
+I find that I would rather talk about work, tech, or news over pop culture, movies, or entertainment.
+I find that I would rather talk about work, tech, or news over pop culture, movies, or entertainment.
+4
+When someone says incorrect information I make sure to correct them.
+When someone says incorrect information I make sure to correct them.
+4
+I find it easier to be living in the moment or strung up on the past than to be worried about the future
+I find it easier to be living in the moment or strung up on the past than to be worried about the future
+5
+I prefer the quiet to the hustle and bustle of the city.
+I prefer the quiet to the hustle and bustle of the city.
+3
+I find that a lot of my fun or entertainment oriented purchases are impulsive_score.
+I find that a lot of my fun or entertainment oriented purchases are impulsive_score.
+2
+I usually care more for the overarching plot than characters and their interpersonal or emotional_score journey.
+I usually care more for the overarching plot than characters and their interpersonal or emotional_score journey.
+2
+I generally find that I take charge if no one else steps forward with good ideas.
+I generally find that I take charge if no one else steps forward with good ideas.
+5
+I prefer science class to literature class.
+I prefer science class to literature class.
+1
+Being around people makesa me feel energetic and whole.
+Being around people makesa me feel energetic and whole.
+Being around people makesa me feel energetic and whole.
+Being around people makesa me feel energetic and whole.
+4
+You love to plan your outfits versus just picking something right before wearing it.
+You love to plan your outfits versus just picking something right before wearing it.
+1
+Generally in group discussions you stick to listening instead of being the center of attention.
+Generally in group discussions you stick to listening instead of being the center of attention.
+3
+You love to look at possible or alternate interpretations of art.
+You love to look at possible or alternate interpretations of art.
+4
+You naturally feel drawn to provide comfort to others when they are in pain.
+You naturally feel drawn to provide comfort to others when they are in pain.
+5
+Going out with others on the weekend is one of my favorite things to do.
+Going out with others on the weekend is one of my favorite things to do.
+4
+You generally live life organized in a known steady way instead of just 'taking it how it is'
+You generally live life organized in a known steady way instead of just 'taking it how it is'
+You generally live life organized in a known steady way instead of just 'taking it how it is'
+You generally live life organized in a known steady way instead of just 'taking it how it is'
+2
+you seek to avoid conflict when others  are instigating it.
+you seek to avoid conflict when others  are instigating it.
+4
+You love movies that have open-endings over a resolute ending.
+You love movies that have open-endings over a resolute ending.
+You love movies that have open-endings over a resolute ending.
+You love movies that have open-endings over a resolute ending.
+1
+You can easily tell what emotion others are feeling and empathize with them.
+You can easily tell what emotion others are feeling and empathize with them.
+5
+Talking with or working with others makes the job easier or more fun.
+Talking with or working with others makes the job easier or more fun.
+5
+You often reach for the itenerary at meetings or events.
+You often reach for the itenerary at meetings or events.
+3
+You prefer mellow environments to fast-paced environments.
+You prefer mellow environments to fast-paced environments.
+3
+You love conversing with others about grand ideas of the ways things should be.
+You love conversing with others about grand ideas of the ways things should be.
+4
+You often find you make decisions with your heart over your head.4
+You find most of your hobbies are done by yourself or with one other person.
+You find most of your hobbies are done by yourself or with one other person.
+3
+You love trying new things over a ritualistic lifestyle.
+You love trying new things over a ritualistic lifestyle.
+3
+You are able to perform or excell under high levels of stress and tension.
+You are able to perform or excell under high levels of stress and tension.
+4
+People often describe you as aloof or with your head in the clouds.
+People often describe you as aloof or with your head in the clouds.
+1
+You often feel people let emotions get in the way of important decisions.
+You often feel people let emotions get in the way of important decisions.
+2
+I find alone time recharged me.
+I find alone time recharged me.
+3
+You prefer vacations that have a plan over those where you wing it.
+You prefer vacations that have a plan over those where you wing it.
+3
+I would rather let others have the limelight.
+I would rather let others have the limelight.
+3
+People often describe me as creative and forward-thinking.
+People often describe me as creative and forward-thinking.
+4
+You prefer solving technical problems over people problems.
+You prefer solving technical problems over people problems.
+2
+You find not talking with someone for an extended period of time drives you crazy.
+You find not talking with someone for an extended period of time drives you crazy.
+1
+You are known for being thrill seeking and spontaneous.
+You are known for being thrill seeking and spontaneous.
+1
+When something needs to be said you say it, regardless of potential backlash.
+When something needs to be said you say it, regardless of potential backlash.
+3
+You are known for telling things straight.
+You are known for telling things straight.
+4
+You make sure to include everyone.
+You make sure to include everyone.
+5
+Your dream vacation includes multiple other people.
+Your dream vacation includes multiple other people.
+4
+Most of a jobs time should be taken up by planning.
+Most of a jobs time should be taken up by planning.
+2
+It is okay if people don't listen to what you have to say.
+It is okay if people don't listen to what you have to say.
+3
+You care about what ises, not what ifs.
+You care about what ises, not what ifs.
+4
+Humans need to be more kind, not more logical.
+Humans need to be more kind, not more logical.
+3
+[ 'Extroverted', 'Assertive', 'Emotional', 'Concrete', 'Impulsive' ]
+0
+****Extroverted,Assertive,Emotional,Concrete,Impulsive,structured,impulse,rational,introvert,abstract,reserved,concrete,extrovert,assertive,emotional
+ ~/Projects/personality-test │ master ?5  node archetype.js                                  ✔ │ 8m 48s │ ⬢ 21.7.3 │ 17:41:08
+Welcome to the archetype test.
+ Please answer the following questions from 1-5 on likelihood of it representing you, with 1 being not like you at all, and 5 being like you entirely.
+ Press 'enter' to continue
+
+I find that my social battery runs out after a long period surrounded by others.
+I find that my social battery runs out after a long period surrounded by others.
+5
+I find when there is something that needs to be dnoe in front of me, that I usually jump in and get it started without spending excess time on a plan.
+I find when there is something that needs to be dnoe in front of me, that I usually jump in and get it started without spending excess time on a plan.
+4
+I generally prefer reading with the intent to learn versus for fun.
+I generally prefer reading with the intent to learn versus for fun.
+4
+If someone speaks badly to me to my face, I confront them instead of taking it.
+If someone speaks badly to me to my face, I confront them instead of taking it.
+3
+I am more concerned with the way things are than what they could be.
+I am more concerned with the way things are than what they could be.
+4
+I would rather spend time alone in introspection than out socializing.
+I would rather spend time alone in introspection than out socializing.
+4
+I often find that I speak faster than I can think my words over carefully
+I often find that I speak faster than I can think my words over carefully
+3
+I find that I would rather talk about work, tech, or news over pop culture, movies, or entertainment.
+I find that I would rather talk about work, tech, or news over pop culture, movies, or entertainment.
+2
+When someone says incorrect information I make sure to correct them.
+When someone says incorrect information I make sure to correct them.
+4
+I find it easier to be living in the moment or strung up on the past than to be worried about the future
+I find it easier to be living in the moment or strung up on the past than to be worried about the future
+2
+I prefer the quiet to the hustle and bustle of the city.
+I prefer the quiet to the hustle and bustle of the city.
+4
+I find that a lot of my fun or entertainment oriented purchases are impulsive_score.
+I find that a lot of my fun or entertainment oriented purchases are impulsive_score.
+3
+I usually care more for the overarching plot than characters and their interpersonal or emotional_score journey.
+I usually care more for the overarching plot than characters and their interpersonal or emotional_score journey.
+4
+I generally find that I take charge if no one else steps forward with good ideas.
+I generally find that I take charge if no one else steps forward with good ideas.
+3
+I prefer science class to literature class.
+I prefer science class to literature class.
+2
+Being around people makesa me feel energetic and whole.
+Being around people makesa me feel energetic and whole.
+2
+You love to plan your outfits versus just picking something right before wearing it.
+You love to plan your outfits versus just picking something right before wearing it.
+2
+Generally in group discussions you stick to listening instead of being the center of attention.
+Generally in group discussions you stick to listening instead of being the center of attention.
+2
+You love to look at possible or alternate interpretations of art.
+You love to look at possible or alternate interpretations of art.
+2
+You naturally feel drawn to provide comfort to others when they are in pain.
+You naturally feel drawn to provide comfort to others when they are in pain.
+2
+Going out with others on the weekend is one of my favorite things to do.
+Going out with others on the weekend is one of my favorite things to do.
+1
+You generally live life organized in a known steady way instead of just 'taking it how it is'
+You generally live life organized in a known steady way instead of just 'taking it how it is'
+2
+you seek to avoid conflict when others  are instigating it.
+you seek to avoid conflict when others  are instigating it.
+2
+You love movies that have open-endings over a resolute ending.
+You love movies that have open-endings over a resolute ending.
+3
+You can easily tell what emotion others are feeling and empathize with them.
+You can easily tell what emotion others are feeling and empathize with them.
+2
+Talking with or working with others makes the job easier or more fun.
+Talking with or working with others makes the job easier or more fun.
+3
+You often reach for the itenerary at meetings or events.
+You often reach for the itenerary at meetings or events.
+2
+You prefer mellow environments to fast-paced environments.
+You prefer mellow environments to fast-paced environments.
+4
+You love conversing with others about grand ideas of the ways things should be.
+You love conversing with others about grand ideas of the ways things should be.
+4
+You often find you make decisions with your heart over your head.2
+You find most of your hobbies are done by yourself or with one other person.
+You find most of your hobbies are done by yourself or with one other person.
+4
+You love trying new things over a ritualistic lifestyle.
+You love trying new things over a ritualistic lifestyle.
+2
+You are able to perform or excell under high levels of stress and tension.
+You are able to perform or excell under high levels of stress and tension.
+3
+People often describe you as aloof or with your head in the clouds.
+People often describe you as aloof or with your head in the clouds.
+2
+You often feel people let emotions get in the way of important decisions.
+You often feel people let emotions get in the way of important decisions.
+3
+I find alone time recharged me.
+I find alone time recharged me.
+4
+You prefer vacations that have a plan over those where you wing it.
+You prefer vacations that have a plan over those where you wing it.
+5
+I would rather let others have the limelight.
+I would rather let others have the limelight.
+3
+People often describe me as creative and forward-thinking.
+People often describe me as creative and forward-thinking.
+3
+You prefer solving technical problems over people problems.
+You prefer solving technical problems over people problems.
+2
+You find not talking with someone for an extended period of time drives you crazy.
+You find not talking with someone for an extended period of time drives you crazy.
+1
+You are known for being thrill seeking and spontaneous.
+You are known for being thrill seeking and spontaneous.
+1
+When something needs to be said you say it, regardless of potential backlash.
+When something needs to be said you say it, regardless of potential backlash.
+5
+You are known for telling things straight.
+You are known for telling things straight.
+5
+You make sure to include everyone.
+You make sure to include everyone.
+4
+Your dream vacation includes multiple other people.
+Your dream vacation includes multiple other people.
+2
+Most of a jobs time should be taken up by planning.
+Most of a jobs time should be taken up by planning.
+3
+It is okay if people don't listen to what you have to say.
+It is okay if people don't listen to what you have to say.
+4
+You care about what ises, not what ifs.
+You care about what ises, not what ifs.
+3
+Humans need to be more kind, not more logical.
+Humans need to be more kind, not more logical.
+3
+[ 'Introverted', 'Assertive', 'Rational', 'Concrete', 'Structured' ]
+21
+****Introverted,Assertive,Rational,Concrete,Structured,extrovert,emotional,impulse,abstract,structured,reserved,rational,concrete,assertive,introvert
+ ~/Projects/personality-test │ master ?5  node archetype.js                                   ✔ │ 9m 2s │ ⬢ 21.7.3 │ 17:57:30
+Welcome to the archetype test.
+ Please answer the following questions from 1-5 on likelihood of it representing you, with 1 being not like you at all, and 5 being like you entirely.
+ Press 'enter' to continue
+
+I find that my social battery runs out after a long period surrounded by others.
+I find that my social battery runs out after a long period surrounded by others.
+5
+I find when there is something that needs to be dnoe in front of me, that I usually jump in and get it started without spending excess time on a plan.
+I find when there is something that needs to be dnoe in front of me, that I usually jump in and get it started without spending excess time on a plan.
+4
+I generally prefer reading with the intent to learn versus for fun.
+I generally prefer reading with the intent to learn versus for fun.
+2
+If someone speaks badly to me to my face, I confront them instead of taking it.
+If someone speaks badly to me to my face, I confront them instead of taking it.
+4
+I am more concerned with the way things are than what they could be.
+I am more concerned with the way things are than what they could be.
+3
+I would rather spend time alone in introspection than out socializing.
+I would rather spend time alone in introspection than out socializing.
+3
+I often find that I speak faster than I can think my words over carefully
+I often find that I speak faster than I can think my words over carefully
+3
+I find that I would rather talk about work, tech, or news over pop culture, movies, or entertainment.
+I find that I would rather talk about work, tech, or news over pop culture, movies, or entertainment.
+3
+When someone says incorrect information I make sure to correct them.
+When someone says incorrect information I make sure to correct them.
+3
+I find it easier to be living in the moment or strung up on the past than to be worried about the future
+I find it easier to be living in the moment or strung up on the past than to be worried about the future
+4
+I prefer the quiet to the hustle and bustle of the city.
+I prefer the quiet to the hustle and bustle of the city.
+4
+I find that a lot of my fun or entertainment oriented purchases are impulsive_score.
+I find that a lot of my fun or entertainment oriented purchases are impulsive_score.
+3
+I usually care more for the overarching plot than characters and their interpersonal or emotional_score journey.
+I usually care more for the overarching plot than characters and their interpersonal or emotional_score journey.
+2
+I generally find that I take charge if no one else steps forward with good ideas.
+I generally find that I take charge if no one else steps forward with good ideas.
+4
+I prefer science class to literature class.
+I prefer science class to literature class.
+2
+Being around people makesa me feel energetic and whole.
+Being around people makesa me feel energetic and whole.
+3
+You love to plan your outfits versus just picking something right before wearing it.
+You love to plan your outfits versus just picking something right before wearing it.
+4
+Generally in group discussions you stick to listening instead of being the center of attention.
+Generally in group discussions you stick to listening instead of being the center of attention.
+3
+You love to look at possible or alternate interpretations of art.
+You love to look at possible or alternate interpretations of art.
+4
+You naturally feel drawn to provide comfort to others when they are in pain.
+You naturally feel drawn to provide comfort to others when they are in pain.
+4
+Going out with others on the weekend is one of my favorite things to do.
+Going out with others on the weekend is one of my favorite things to do.
+3
+You generally live life organized in a known steady way instead of just 'taking it how it is'
+You generally live life organized in a known steady way instead of just 'taking it how it is'
+2
+you seek to avoid conflict when others  are instigating it.
+you seek to avoid conflict when others  are instigating it.
+3
+You love movies that have open-endings over a resolute ending.
+You love movies that have open-endings over a resolute ending.
+1
+You can easily tell what emotion others are feeling and empathize with them.
+You can easily tell what emotion others are feeling and empathize with them.
+3
+Talking with or working with others makes the job easier or more fun.
+Talking with or working with others makes the job easier or more fun.
+4
+You often reach for the itenerary at meetings or events.
+You often reach for the itenerary at meetings or events.
+1
+You prefer mellow environments to fast-paced environments.
+You prefer mellow environments to fast-paced environments.
+4
+You love conversing with others about grand ideas of the ways things should be.
+You love conversing with others about grand ideas of the ways things should be.
+4
+You often find you make decisions with your heart over your head.4
+You find most of your hobbies are done by yourself or with one other person.
+You find most of your hobbies are done by yourself or with one other person.
+3
+You love trying new things over a ritualistic lifestyle.
+You love trying new things over a ritualistic lifestyle.
+3
+You are able to perform or excell under high levels of stress and tension.
+You are able to perform or excell under high levels of stress and tension.
+3
+People often describe you as aloof or with your head in the clouds.
+People often describe you as aloof or with your head in the clouds.
+3
+You often feel people let emotions get in the way of important decisions.
+You often feel people let emotions get in the way of important decisions.
+2
+I find alone time recharged me.
+I find alone time recharged me.
+4
+You prefer vacations that have a plan over those where you wing it.
+You prefer vacations that have a plan over those where you wing it.
+1
+I would rather let others have the limelight.
+I would rather let others have the limelight.
+4
+People often describe me as creative and forward-thinking.
+People often describe me as creative and forward-thinking.
+5
+You prefer solving technical problems over people problems.
+You prefer solving technical problems over people problems.
+3
+You find not talking with someone for an extended period of time drives you crazy.
+You find not talking with someone for an extended period of time drives you crazy.
+2
+You are known for being thrill seeking and spontaneous.
+You are known for being thrill seeking and spontaneous.
+4
+When something needs to be said you say it, regardless of potential backlash.
+When something needs to be said you say it, regardless of potential backlash.
+3
+You are known for telling things straight.
+You are known for telling things straight.
+3
+You make sure to include everyone.
+You make sure to include everyone.
+5
+Your dream vacation includes multiple other people.
+Your dream vacation includes multiple other people.
+3
+Most of a jobs time should be taken up by planning.
+Most of a jobs time should be taken up by planning.
+2
+It is okay if people don't listen to what you have to say.
+It is okay if people don't listen to what you have to say.
+3
+You care about what ises, not what ifs.
+You care about what ises, not what ifs.
+3
+Humans need to be more kind, not more logical.
+Humans need to be more kind, not more logical.
+4
+[ 'Introverted', 'Assertive', 'Emotional', 'Abstract', 'Impulsive' ]
+18
+****Introverted,Assertive,Emotional,Abstract,Impulsive,structured,rational,extrovert,concrete,reserved,abstract,assertive,impulse,introvert,emotional

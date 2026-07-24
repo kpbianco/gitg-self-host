@@ -1,0 +1,20 @@
+
+const fs=require("fs");
+const engine=require("./assessment_scoring_v1_1.js");
+const spec=JSON.parse(fs.readFileSync("./assessment_spec_v1_1.json","utf8"));
+const model=JSON.parse(fs.readFileSync("./grounded_growth_model_v1.json","utf8"));
+const responses={};
+let i=0; for(const q of spec.assessment.core_items) responses[q.id]=q.id==="Q50"?4:[2,3,4,5,3][(i++)%5];
+const data={responses,timings_seconds:Object.fromEntries(Object.keys(responses).map(k=>[k,6]))};
+const result=engine.scoreAssessment(spec,model,data);
+if(Object.keys(result.levers).length!==37) throw new Error("Expected 37 lever scores");
+if(result.archetypes.length!==15) throw new Error("Expected 15 archetypes");
+if(result.response_quality.modifier<0.85) throw new Error("Unexpected quality penalty for normal timing");
+const code=engine.encodeShareCode(spec,data);
+if(!code.startsWith("GGA11.")) throw new Error("Expected GGA11 prefix");
+const decoded=engine.decodeShareCode(spec,code);
+if(Object.keys(decoded.responses).length!==50) throw new Error("Share-code round trip failed");
+const oldCode="GGA1.eyJ2IjoiMS4wIiwiciI6IjU1MzQ0MzQyNDI0NDQ0MzMyMzQzMjQzNTQ0NDQzNDU0NDQzMjIyMzQ0NDMzMzE0NDM0IiwiZSI6eyJDX0wzNCI6MiwiQ19MMzUiOjMsIkNfTDA1Ijo0LCJDX0wwOSI6MywiQ19MMTkiOjQsIkNfTDI2IjoyLCJDX0wwOCI6MywiQ19MMTciOjR9LCJ0Ijo0MC43ODc5OTk5OTk5OTk5OH0=";
+const oldDecoded=engine.decodeShareCode(spec,oldCode);
+if(Object.keys(oldDecoded.responses).length<50) throw new Error("v1 compatibility failed");
+console.log(JSON.stringify({version:spec.assessment.version,quality:result.response_quality.modifier,lever_count:Object.keys(result.levers).length,archetype_count:result.archetypes.length,share_prefix:code.slice(0,6)},null,2));

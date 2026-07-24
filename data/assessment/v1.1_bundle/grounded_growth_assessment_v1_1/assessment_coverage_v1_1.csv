@@ -1,0 +1,38 @@
+﻿lever_id,lever_name,direct_core_items,all_core_signals,core_weight_sum,effective_core_item_count,clarifier_available,mapped_competencies,task_weight_denominator
+L01,Purpose and Direction,1,3,1.5,2.0,yes,27,7.3
+L02,"Values, Integrity, and Moral Courage",1,5,1.85,2.894,yes,55,13.85
+L03,"Spirituality, Reverence, and Transcendence",1,2,1.15,1.293,yes,30,9.5
+L04,"Mortality, Suffering, Gratitude, and Hope",1,3,1.3,1.617,yes,27,9.15
+L05,"Self-Knowledge, Identity, and Humility",1,3,1.4,1.815,yes,53,14.35
+L06,Emotional Awareness and Literacy,1,2,1.2,1.385,yes,10,3.4
+L07,Emotional Regulation and Resilience,1,5,1.85,2.894,yes,37,9.6
+L08,Attention and Presence,1,3,1.4,1.815,yes,15,3.6
+L09,Temperance and Desire Governance,1,2,1.2,1.385,yes,21,5.7
+L10,"Discipline, Habits, and Follow-Through",1,5,1.85,2.894,yes,76,17.8
+L11,"Adaptability, Uncertainty, and Learning from Failure",1,3,1.4,1.815,yes,40,7.85
+L12,Critical Reasoning and Logic,1,2,1.3,1.55,yes,18,4.65
+L13,"Evidence, Truth, and Epistemic Humility",1,4,1.75,2.568,yes,57,13.0
+L14,"Systems Thinking, Judgment, and Decision-Making",1,5,1.95,3.098,yes,56,14.65
+L15,"Learning Agility, Memory, and Teaching",1,2,1.2,1.385,yes,44,13.05
+L16,"Creativity, Aesthetics, and Cultural Literacy",1,2,1.2,1.385,yes,35,11.0
+L17,"Physical Health, Vitality, and Embodiment",1,4,1.4,1.858,yes,52,18.0
+L18,Domestic Competence and Material Self-Sufficiency,1,2,1.2,1.385,yes,25,11.1
+L19,"Digital Agency, Media Literacy, and Security",1,2,1.2,1.385,yes,22,8.65
+L20,"Safety, Risk, and Preparedness",1,4,1.6,2.286,yes,47,14.05
+L21,Financial Stewardship and Provision,1,2,1.2,1.385,yes,27,8.7
+L22,"Economic Agency, Entrepreneurship, and Market Literacy",1,4,1.4,1.858,yes,22,7.5
+L23,Communication and Listening,1,5,1.85,2.882,yes,57,14.75
+L24,"Empathy, Social Perception, and Perspective-Taking",1,5,1.9,2.996,yes,67,13.35
+L25,"Boundaries, Assertiveness, and Self-Respect",1,3,1.45,1.907,yes,49,10.35
+L26,"Friendship, Belonging, and Hospitality",1,2,1.2,1.385,yes,35,10.25
+L27,"Intimacy, Sexuality, and Partnership",1,5,1.6,2.338,yes,17,6.65
+L28,"Family, Parenting, and Caregiving",1,3,1.35,1.715,yes,42,11.8
+L29,"Conflict, Repair, Forgiveness, and Reconciliation",1,4,1.65,2.383,yes,27,6.65
+L30,"Service, Citizenship, and Civic Agency",1,4,1.5,2.055,yes,36,8.7
+L31,"Justice, Pluralism, and Social Responsibility",1,4,1.7,2.47,yes,100,25.85
+L32,"Work, Craft, Professionalism, and Contribution",1,4,1.6,2.286,yes,44,11.45
+L33,"Leadership, Power, Mentorship, and Institutions",1,2,1.2,1.385,yes,39,10.15
+L34,"Play, Rest, Celebration, and Joy",1,3,1.4,1.815,yes,22,5.9
+L35,"Nature, Exploration, and Adventure",1,3,1.4,1.815,yes,17,5.6
+L36,"Life Design, Balance, and Seasonality",1,6,2.15,3.633,yes,48,13.2
+L37,"Legacy, Generativity, and Transmission",1,2,1.2,1.385,yes,7,1.9

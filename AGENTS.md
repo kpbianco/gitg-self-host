@@ -1,0 +1,79 @@
+# AGENTS.md — Grounded Growth
+
+## Mission
+Build a self-hosted, evidence-oriented guided-development application. The product converts an assessment-derived developmental need into a bounded, concrete real-world practice without exposing internal curriculum databases to the user.
+
+## Product boundary
+- Notion is an internal curriculum/content studio, not the consumer runtime.
+- The application recommends executable **Practice Protocols**, not abstract competencies.
+- Completion is never equivalent to mastery.
+- Human dignity is never scored.
+- Personality/orientation changes framing and tie-breaking only; it does not determine worth or obligation.
+- Do not activate dynamic score updates until the guided workflow and evidence capture pass acceptance tests.
+
+## Canonical source hierarchy
+Use these files in priority order:
+1. `docs/PROJECT_HANDOFF.md`
+2. `docs/PRODUCT_DECISIONS.md`
+3. `data/curriculum/ideal_person_curriculum_v2_pluralist_full_scope.yaml`
+4. `data/model/grounded_growth_model_v1.json`
+5. `data/model/competency_lever_mapping_v1.csv`
+6. `data/assessment/v1.1_bundle/`
+7. `docs/pilot/PILOT_002_FINDINGS.md`
+8. `legacy/` only for provenance and design research; do not treat it as canonical implementation data.
+
+## Required initial milestone
+Milestone 1 validates the UX only:
+- import Pilot 002 profile;
+- show a concise working profile;
+- recommend one bounded practice;
+- provide a setup wizard;
+- provide a compact evidence check-in;
+- provide a final review;
+- show a score-impact preview;
+- do **not** mutate mastery or confidence.
+
+Implement one complete protocol first: `Deepen One Existing Friendship`.
+Create inactive placeholders for four others:
+- Schedule Non-Instrumental Play
+- Practice Emotional Cue Detection
+- State and Maintain One Boundary
+- Complete an Attention-Presence Experiment
+
+## Suggested stack
+- Next.js + TypeScript, App Router
+- SQLite + Drizzle ORM
+- Zod
+- Tailwind CSS and restrained components
+- Vitest for domain/scoring tests
+- Playwright for user-flow tests
+- Dockerfile + Docker Compose
+
+Equivalent alternatives are acceptable only when documented and demonstrably simpler.
+
+## Engineering rules
+- Strict TypeScript.
+- Keep domain/scoring logic outside React components.
+- Stable IDs are authoritative; never join canonical entities by display text.
+- Store curriculum and algorithm version metadata.
+- Every eventual scoring update must be deterministic, auditable, reversible, and explainable.
+- Never infer missing task-to-lever links from display strings at runtime.
+- Validate all imported weight sums and IDs.
+- Do not silently normalize malformed data; fail with actionable diagnostics.
+- Add tests before enabling any score mutation.
+
+## UX rules
+- Do not show 37 levers or 383 competencies on the home page.
+- Do not show raw Notion/database property names to the user.
+- Avoid giant tables, long bullet-form worksheets, gamified streak pressure, personality stereotypes, or self-help hype.
+- A user should start a recommended practice in under five minutes without inventing the intervention.
+- Evidence check-ins should take under two minutes.
+- Clearly distinguish practice completion from mastery.
+
+## Definition of done for each batch
+Before asking for review:
+1. Run formatter, linter, typecheck, unit tests, and relevant Playwright tests.
+2. Run the app through Docker Compose.
+3. Audit changed files against this document and `docs/PROJECT_HANDOFF.md`.
+4. Report failed or unverified acceptance criteria plainly.
+5. Do not claim dynamic scoring works until score mutation is deliberately enabled and tested.

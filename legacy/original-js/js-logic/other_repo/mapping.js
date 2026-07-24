@@ -1,0 +1,31 @@
+// mapping.js
+export const mapping = {
+  enneagram: {
+    1: 'Perfect',
+    2: 'Helping',
+    3: 'Achieving',
+    4: 'Individual',
+    5: 'Investigating',
+    6: 'Loyal',
+    7: 'Enthusiastic',
+    8: 'Challenging',
+    9: 'Peacemaking',
+  },
+  mbti: {
+    ENFJ: 'Catalyst',
+    ENFP: 'Trailblazer',
+    ENTP: 'Innovator',
+    ESFJ: 'Caregiver',
+    ESFP: 'Performer',
+    ESTJ: 'Leader',
+    ESTP: 'Problem-solver',
+    INFJ: 'Visionary',
+    INFP: 'Dreamer',
+    INTJ: 'Architect',
+    INTP: 'Explorer',
+    ISFJ: 'Protector',
+    ISFP: 'Artist',
+    ISTJ: 'Strategist',
+    ISTP: 'Craftsman',
+  },
+};

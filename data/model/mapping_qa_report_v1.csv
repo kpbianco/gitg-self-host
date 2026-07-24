@@ -1,0 +1,9 @@
+﻿check,result,details
+Curriculum competencies mapped,PASS,383 of 383
+Missing competency mappings,PASS,[]
+Extra competency mappings,PASS,[]
+Invalid lever IDs,PASS,[]
+Competency weights sum to 1.0,PASS,383 of 383
+All 37 levers represented,PASS,"min=7, max=100 competencies"
+Archetype pair coverage,PASS,15 unique pairwise archetypes from 6 orientation modes
+Orientation weights sum to 1.0 per lever,PASS,{}

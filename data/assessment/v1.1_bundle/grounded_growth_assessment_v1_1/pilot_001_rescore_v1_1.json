@@ -1,0 +1,1188 @@
+{
+  "assessment_version": "1.1",
+  "generated_at": "2026-07-23T03:11:33.643Z",
+  "response_quality": {
+    "modifier": 0.955,
+    "self_honesty": 0.75,
+    "median_seconds_per_item": 6,
+    "total_timed_seconds": 348,
+    "response_sd": 0.8692269873603531,
+    "unique_capability_answers": 5,
+    "core_completion": 1,
+    "timing_method": "full interval from question display until Next/Back",
+    "flags": []
+  },
+  "orientations": {
+    "scores": {
+      "discernment": {
+        "score": 1,
+        "relative_expression": 1,
+        "answered_items": 2,
+        "agreement": 1,
+        "confidence": 0.6494
+      },
+      "agency": {
+        "score": 0.625,
+        "relative_expression": 0.25,
+        "answered_items": 2,
+        "agreement": 0.8625,
+        "confidence": 0.5601
+      },
+      "connection": {
+        "score": 0.625,
+        "relative_expression": 0.25,
+        "answered_items": 2,
+        "agreement": 0.8625,
+        "confidence": 0.5601
+      },
+      "stewardship": {
+        "score": 0.5,
+        "relative_expression": 0,
+        "answered_items": 2,
+        "agreement": 0.725,
+        "confidence": 0.4708
+      },
+      "exploration": {
+        "score": 0.5,
+        "relative_expression": 0,
+        "answered_items": 2,
+        "agreement": 0.725,
+        "confidence": 0.4708
+      },
+      "transcendence": {
+        "score": 0.75,
+        "relative_expression": 0.5,
+        "answered_items": 2,
+        "agreement": 1,
+        "confidence": 0.6494
+      }
+    },
+    "differentiation_range": 0.5
+  },
+  "archetypes": [
+    {
+      "id": "A05",
+      "name": "The Seeker",
+      "orientations": [
+        "discernment",
+        "transcendence"
+      ],
+      "raw_fit": 0.8304,
+      "fit_confidence": 0.6494,
+      "contribution": "Provides moral and existential orientation, challenges superficial goals, and preserves depth.",
+      "shadow": "Can retreat into abstraction, spiritualize avoidable problems, or wait for certainty before living.",
+      "display_note": null,
+      "normalized_fit": 0.0956
+    },
+    {
+      "id": "A01",
+      "name": "The Strategist",
+      "orientations": [
+        "discernment",
+        "agency"
+      ],
+      "raw_fit": 0.722,
+      "fit_confidence": 0.6031,
+      "contribution": "Creates direction, chooses priorities, and converts ambiguity into an executable path.",
+      "shadow": "Can over-control, treat people as variables, or mistake decisiveness for wisdom.",
+      "display_note": null,
+      "normalized_fit": 0.0831
+    },
+    {
+      "id": "A02",
+      "name": "The Counselor",
+      "orientations": [
+        "discernment",
+        "connection"
+      ],
+      "raw_fit": 0.722,
+      "fit_confidence": 0.6031,
+      "contribution": "Helps others name what is happening, understand competing perspectives, and make humane choices.",
+      "shadow": "Can over-analyze, absorb others' emotions, become indirect, or substitute insight for action.",
+      "display_note": null,
+      "normalized_fit": 0.0831
+    },
+    {
+      "id": "A09",
+      "name": "The Reformer",
+      "orientations": [
+        "agency",
+        "transcendence"
+      ],
+      "raw_fit": 0.6293,
+      "fit_confidence": 0.6031,
+      "contribution": "Names moral failures, organizes meaningful change, and protects ideals from becoming empty language.",
+      "shadow": "Can become self-righteous, absolutist, punitive, chronically dissatisfied, or consumed by the cause.",
+      "display_note": null,
+      "normalized_fit": 0.0725
+    },
+    {
+      "id": "A12",
+      "name": "The Healer",
+      "orientations": [
+        "connection",
+        "transcendence"
+      ],
+      "raw_fit": 0.6293,
+      "fit_confidence": 0.6031,
+      "contribution": "Supports repair, accompanies people through loss, and keeps mercy connected to human dignity.",
+      "shadow": "Can become a martyr, blur boundaries, excuse harm, or make being needed central to identity.",
+      "display_note": null,
+      "normalized_fit": 0.0725
+    },
+    {
+      "id": "A03",
+      "name": "The Systems Steward",
+      "orientations": [
+        "discernment",
+        "stewardship"
+      ],
+      "raw_fit": 0.5915,
+      "fit_confidence": 0.5529,
+      "contribution": "Designs durable processes, institutions, plans, and safeguards that others can trust.",
+      "shadow": "Can become rigid, perfectionistic, detached from lived experience, or loyal to systems after they stop serving people.",
+      "display_note": "Previously called The Architect; renamed to avoid confusion with the common MBTI nickname for INTJ.",
+      "normalized_fit": 0.0681
+    },
+    {
+      "id": "A04",
+      "name": "The Explorer",
+      "orientations": [
+        "discernment",
+        "exploration"
+      ],
+      "raw_fit": 0.5915,
+      "fit_confidence": 0.5529,
+      "contribution": "Expands the map, questions stale assumptions, and connects knowledge across boundaries.",
+      "shadow": "Can chase novelty, avoid commitment, intellectualize life, or leave promising work unfinished.",
+      "display_note": null,
+      "normalized_fit": 0.0681
+    },
+    {
+      "id": "A06",
+      "name": "The Catalyst",
+      "orientations": [
+        "agency",
+        "connection"
+      ],
+      "raw_fit": 0.565,
+      "fit_confidence": 0.5601,
+      "contribution": "Creates momentum, raises confidence, and helps groups cross the gap between intention and action.",
+      "shadow": "Can rush consent, overpromise, rescue others, or confuse intensity and popularity with progress.",
+      "display_note": null,
+      "normalized_fit": 0.0651
+    },
+    {
+      "id": "A14",
+      "name": "The Steward",
+      "orientations": [
+        "stewardship",
+        "transcendence"
+      ],
+      "raw_fit": 0.5278,
+      "fit_confidence": 0.5529,
+      "contribution": "Maintains continuity, protects shared goods, mentors successors, and prevents short-term appetite from consuming the future.",
+      "shadow": "Can become burdened, conservative by reflex, controlling, or loyal to inherited forms that need reform.",
+      "display_note": null,
+      "normalized_fit": 0.0608
+    },
+    {
+      "id": "A15",
+      "name": "The Creator",
+      "orientations": [
+        "exploration",
+        "transcendence"
+      ],
+      "raw_fit": 0.5278,
+      "fit_confidence": 0.5529,
+      "contribution": "Gives shape to what others cannot yet articulate and renews culture through art, story, design, and imagination.",
+      "shadow": "Can romanticize chaos, resist structure, confuse expression with contribution, or abandon work before refinement.",
+      "display_note": null,
+      "normalized_fit": 0.0608
+    },
+    {
+      "id": "A07",
+      "name": "The Builder",
+      "orientations": [
+        "agency",
+        "stewardship"
+      ],
+      "raw_fit": 0.4818,
+      "fit_confidence": 0.5135,
+      "contribution": "Makes plans real, creates stability, solves material problems, and completes difficult work.",
+      "shadow": "Can overwork, dominate, suppress emotion, or equate human worth with usefulness and output.",
+      "display_note": null,
+      "normalized_fit": 0.0555
+    },
+    {
+      "id": "A08",
+      "name": "The Trailblazer",
+      "orientations": [
+        "agency",
+        "exploration"
+      ],
+      "raw_fit": 0.4818,
+      "fit_confidence": 0.5135,
+      "contribution": "Breaks inertia, tests possibilities, creates opportunities, and normalizes intelligent risk.",
+      "shadow": "Can become impulsive, scattered, bored by maintenance, or leave others carrying the consequences.",
+      "display_note": null,
+      "normalized_fit": 0.0555
+    },
+    {
+      "id": "A10",
+      "name": "The Guardian",
+      "orientations": [
+        "connection",
+        "stewardship"
+      ],
+      "raw_fit": 0.4818,
+      "fit_confidence": 0.5135,
+      "contribution": "Creates safety, continuity, belonging, and dependable care in families and communities.",
+      "shadow": "Can overfunction, become paternalistic, avoid necessary disruption, or neglect personal needs.",
+      "display_note": null,
+      "normalized_fit": 0.0555
+    },
+    {
+      "id": "A11",
+      "name": "The Connector",
+      "orientations": [
+        "connection",
+        "exploration"
+      ],
+      "raw_fit": 0.4818,
+      "fit_confidence": 0.5135,
+      "contribution": "Builds networks, translates across groups, creates hospitality, and makes life feel larger.",
+      "shadow": "Can seek approval, diffuse attention, avoid depth, or mistake activity and contact for intimacy.",
+      "display_note": null,
+      "normalized_fit": 0.0555
+    },
+    {
+      "id": "A13",
+      "name": "The Craftsman",
+      "orientations": [
+        "stewardship",
+        "exploration"
+      ],
+      "raw_fit": 0.42,
+      "fit_confidence": 0.4708,
+      "contribution": "Produces useful and beautiful work, preserves tacit knowledge, and raises the quality of practice.",
+      "shadow": "Can become perfectionistic, narrow, isolated, or more comfortable with objects and systems than people.",
+      "display_note": null,
+      "normalized_fit": 0.0484
+    }
+  ],
+  "levers": {
+    "L01": {
+      "name": "Purpose and Direction",
+      "family": "orientation_moral_center",
+      "estimate": 0.6445,
+      "raw_self_report": 0.7083,
+      "confidence": 0.4515,
+      "alpha": 1.471196,
+      "beta": 0.811669,
+      "evidence_mass": 1.5829,
+      "effective_item_count": 2,
+      "direct_item_count": 1,
+      "inconsistency": 0.0792,
+      "status": "provisional_self_report"
+    },
+    "L02": {
+      "name": "Values, Integrity, and Moral Courage",
+      "family": "orientation_moral_center",
+      "estimate": 0.6017,
+      "raw_self_report": 0.6351,
+      "confidence": 0.479,
+      "alpha": 1.701146,
+      "beta": 1.12619,
+      "evidence_mass": 2.1273,
+      "effective_item_count": 2.8943,
+      "direct_item_count": 1,
+      "inconsistency": 0.1448,
+      "status": "provisional_self_report"
+    },
+    "L03": {
+      "name": "Spirituality, Reverence, and Transcendence",
+      "family": "orientation_moral_center",
+      "estimate": 0.5,
+      "raw_self_report": 0.5,
+      "confidence": 0.4065,
+      "alpha": 0.905838,
+      "beta": 0.905838,
+      "evidence_mass": 1.1117,
+      "effective_item_count": 1.2934,
+      "direct_item_count": 1,
+      "inconsistency": 0,
+      "status": "provisional_self_report"
+    },
+    "L04": {
+      "name": "Mortality, Suffering, Gratitude, and Hope",
+      "family": "orientation_moral_center",
+      "estimate": 0.5187,
+      "raw_self_report": 0.5288,
+      "confidence": 0.4125,
+      "alpha": 1.035192,
+      "beta": 0.960444,
+      "evidence_mass": 1.2956,
+      "effective_item_count": 1.6172,
+      "direct_item_count": 1,
+      "inconsistency": 0.0679,
+      "status": "provisional_self_report"
+    },
+    "L05": {
+      "name": "Self-Knowledge, Identity, and Humility",
+      "family": "inner_governance",
+      "estimate": 0.5304,
+      "raw_self_report": 0.5417,
+      "confidence": 0.42,
+      "alpha": 1.369116,
+      "beta": 1.212329,
+      "evidence_mass": 1.8814,
+      "effective_item_count": 2.7692,
+      "direct_item_count": 2,
+      "inconsistency": 0.2095,
+      "status": "provisional_self_report"
+    },
+    "L06": {
+      "name": "Emotional Awareness and Literacy",
+      "family": "inner_governance",
+      "estimate": 0.4746,
+      "raw_self_report": 0.4583,
+      "confidence": 0.3712,
+      "alpha": 0.852255,
+      "beta": 0.943575,
+      "evidence_mass": 1.0958,
+      "effective_item_count": 1.3846,
+      "direct_item_count": 1,
+      "inconsistency": 0.0792,
+      "status": "provisional_self_report"
+    },
+    "L07": {
+      "name": "Emotional Regulation and Resilience",
+      "family": "inner_governance",
+      "estimate": 0.56,
+      "raw_self_report": 0.5811,
+      "confidence": 0.4372,
+      "alpha": 1.509375,
+      "beta": 1.185828,
+      "evidence_mass": 1.9952,
+      "effective_item_count": 2.8943,
+      "direct_item_count": 1,
+      "inconsistency": 0.198,
+      "status": "provisional_self_report"
+    },
+    "L08": {
+      "name": "Attention and Presence",
+      "family": "inner_governance",
+      "estimate": 0.5155,
+      "raw_self_report": 0.5208,
+      "confidence": 0.4771,
+      "alpha": 1.421044,
+      "beta": 1.335361,
+      "evidence_mass": 2.0564,
+      "effective_item_count": 2.7692,
+      "direct_item_count": 2,
+      "inconsistency": 0.136,
+      "status": "provisional_self_report"
+    },
+    "L09": {
+      "name": "Temperance and Desire Governance",
+      "family": "inner_governance",
+      "estimate": 0.435,
+      "raw_self_report": 0.4091,
+      "confidence": 0.4452,
+      "alpha": 1.070266,
+      "beta": 1.390384,
+      "evidence_mass": 1.7607,
+      "effective_item_count": 2.3725,
+      "direct_item_count": 2,
+      "inconsistency": 0.1366,
+      "status": "provisional_self_report"
+    },
+    "L10": {
+      "name": "Discipline, Habits, and Follow-Through",
+      "family": "inner_governance",
+      "estimate": 0.6235,
+      "raw_self_report": 0.6622,
+      "confidence": 0.5135,
+      "alpha": 1.830119,
+      "beta": 1.105163,
+      "evidence_mass": 2.2353,
+      "effective_item_count": 2.8943,
+      "direct_item_count": 1,
+      "inconsistency": 0.1014,
+      "status": "provisional_self_report"
+    },
+    "L11": {
+      "name": "Adaptability, Uncertainty, and Learning from Failure",
+      "family": "inner_governance",
+      "estimate": 0.5477,
+      "raw_self_report": 0.5714,
+      "confidence": 0.4183,
+      "alpha": 1.155767,
+      "beta": 0.954326,
+      "evidence_mass": 1.4101,
+      "effective_item_count": 1.8148,
+      "direct_item_count": 1,
+      "inconsistency": 0.096,
+      "status": "provisional_self_report"
+    },
+    "L12": {
+      "name": "Critical Reasoning and Logic",
+      "family": "thought_learning",
+      "estimate": 0.7805,
+      "raw_self_report": 0.9423,
+      "confidence": 0.3888,
+      "alpha": 1.493309,
+      "beta": 0.419999,
+      "evidence_mass": 1.2133,
+      "effective_item_count": 1.5505,
+      "direct_item_count": 1,
+      "inconsistency": 0.0895,
+      "status": "provisional_self_report"
+    },
+    "L13": {
+      "name": "Evidence, Truth, and Epistemic Humility",
+      "family": "thought_learning",
+      "estimate": 0.6953,
+      "raw_self_report": 0.7714,
+      "confidence": 0.4239,
+      "alpha": 1.736491,
+      "beta": 0.760812,
+      "evidence_mass": 1.7973,
+      "effective_item_count": 2.5681,
+      "direct_item_count": 1,
+      "inconsistency": 0.1857,
+      "status": "provisional_self_report"
+    },
+    "L14": {
+      "name": "Systems Thinking, Judgment, and Decision-Making",
+      "family": "thought_learning",
+      "estimate": 0.6884,
+      "raw_self_report": 0.7436,
+      "confidence": 0.527,
+      "alpha": 2.12801,
+      "beta": 0.963107,
+      "evidence_mass": 2.3911,
+      "effective_item_count": 3.0978,
+      "direct_item_count": 1,
+      "inconsistency": 0.1019,
+      "status": "provisional_self_report"
+    },
+    "L15": {
+      "name": "Learning Agility, Memory, and Teaching",
+      "family": "thought_learning",
+      "estimate": 0.6271,
+      "raw_self_report": 0.7083,
+      "confidence": 0.3712,
+      "alpha": 1.126213,
+      "beta": 0.669617,
+      "evidence_mass": 1.0958,
+      "effective_item_count": 1.3846,
+      "direct_item_count": 1,
+      "inconsistency": 0.0792,
+      "status": "provisional_self_report"
+    },
+    "L16": {
+      "name": "Creativity, Aesthetics, and Cultural Literacy",
+      "family": "thought_learning",
+      "estimate": 0.6574,
+      "raw_self_report": 0.75,
+      "confidence": 0.4225,
+      "alpha": 1.242558,
+      "beta": 0.647519,
+      "evidence_mass": 1.1901,
+      "effective_item_count": 1.3846,
+      "direct_item_count": 1,
+      "inconsistency": 0,
+      "status": "provisional_self_report"
+    },
+    "L17": {
+      "name": "Physical Health, Vitality, and Embodiment",
+      "family": "embodied_practical",
+      "estimate": 0.5734,
+      "raw_self_report": 0.599,
+      "confidence": 0.4556,
+      "alpha": 1.552659,
+      "beta": 1.155259,
+      "evidence_mass": 2.0079,
+      "effective_item_count": 2.8029,
+      "direct_item_count": 2,
+      "inconsistency": 0.1665,
+      "status": "provisional_self_report"
+    },
+    "L18": {
+      "name": "Domestic Competence and Material Self-Sufficiency",
+      "family": "embodied_practical",
+      "estimate": 0.6574,
+      "raw_self_report": 0.75,
+      "confidence": 0.4225,
+      "alpha": 1.242558,
+      "beta": 0.647519,
+      "evidence_mass": 1.1901,
+      "effective_item_count": 1.3846,
+      "direct_item_count": 1,
+      "inconsistency": 0,
+      "status": "provisional_self_report"
+    },
+    "L19": {
+      "name": "Digital Agency, Media Literacy, and Security",
+      "family": "embodied_practical",
+      "estimate": 0.7439,
+      "raw_self_report": 0.8409,
+      "confidence": 0.4452,
+      "alpha": 1.830547,
+      "beta": 0.630103,
+      "evidence_mass": 1.7607,
+      "effective_item_count": 2.3725,
+      "direct_item_count": 2,
+      "inconsistency": 0.1366,
+      "status": "provisional_self_report"
+    },
+    "L20": {
+      "name": "Safety, Risk, and Preparedness",
+      "family": "embodied_practical",
+      "estimate": 0.6843,
+      "raw_self_report": 0.75,
+      "confidence": 0.5415,
+      "alpha": 1.823429,
+      "beta": 0.841143,
+      "evidence_mass": 1.9646,
+      "effective_item_count": 2.2857,
+      "direct_item_count": 1,
+      "inconsistency": 0,
+      "status": "provisional_self_report"
+    },
+    "L21": {
+      "name": "Financial Stewardship and Provision",
+      "family": "embodied_practical",
+      "estimate": 0.6574,
+      "raw_self_report": 0.75,
+      "confidence": 0.4225,
+      "alpha": 1.242558,
+      "beta": 0.647519,
+      "evidence_mass": 1.1901,
+      "effective_item_count": 1.3846,
+      "direct_item_count": 1,
+      "inconsistency": 0,
+      "status": "provisional_self_report"
+    },
+    "L22": {
+      "name": "Economic Agency, Entrepreneurship, and Market Literacy",
+      "family": "embodied_practical",
+      "estimate": 0.6519,
+      "raw_self_report": 0.7232,
+      "confidence": 0.4449,
+      "alpha": 1.428925,
+      "beta": 0.762922,
+      "evidence_mass": 1.4918,
+      "effective_item_count": 1.8578,
+      "direct_item_count": 1,
+      "inconsistency": 0.0657,
+      "status": "provisional_self_report"
+    },
+    "L23": {
+      "name": "Communication and Listening",
+      "family": "relational_care",
+      "estimate": 0.5153,
+      "raw_self_report": 0.5203,
+      "confidence": 0.494,
+      "alpha": 1.477988,
+      "beta": 1.390093,
+      "evidence_mass": 2.1681,
+      "effective_item_count": 2.8821,
+      "direct_item_count": 1,
+      "inconsistency": 0.1248,
+      "status": "provisional_self_report"
+    },
+    "L24": {
+      "name": "Empathy, Social Perception, and Perspective-Taking",
+      "family": "relational_care",
+      "estimate": 0.3788,
+      "raw_self_report": 0.3421,
+      "confidence": 0.5198,
+      "alpha": 1.140602,
+      "beta": 1.870388,
+      "evidence_mass": 2.311,
+      "effective_item_count": 2.9959,
+      "direct_item_count": 1,
+      "inconsistency": 0.1025,
+      "status": "provisional_self_report"
+    },
+    "L25": {
+      "name": "Boundaries, Assertiveness, and Self-Respect",
+      "family": "relational_care",
+      "estimate": 0.3587,
+      "raw_self_report": 0.2931,
+      "confidence": 0.4403,
+      "alpha": 0.79186,
+      "beta": 1.415662,
+      "evidence_mass": 1.5075,
+      "effective_item_count": 1.907,
+      "direct_item_count": 1,
+      "inconsistency": 0.0803,
+      "status": "provisional_self_report"
+    },
+    "L26": {
+      "name": "Friendship, Belonging, and Hospitality",
+      "family": "relational_care",
+      "estimate": 0.353,
+      "raw_self_report": 0.2955,
+      "confidence": 0.4561,
+      "alpha": 0.878881,
+      "beta": 1.611177,
+      "evidence_mass": 1.7901,
+      "effective_item_count": 2.3725,
+      "direct_item_count": 2,
+      "inconsistency": 0.1222,
+      "status": "provisional_self_report"
+    },
+    "L27": {
+      "name": "Intimacy, Sexuality, and Partnership",
+      "family": "relational_care",
+      "estimate": 0.5,
+      "raw_self_report": 0.5,
+      "confidence": 0.4471,
+      "alpha": 1.22397,
+      "beta": 1.22397,
+      "evidence_mass": 1.7479,
+      "effective_item_count": 2.3379,
+      "direct_item_count": 1,
+      "inconsistency": 0.1301,
+      "status": "provisional_self_report"
+    },
+    "L28": {
+      "name": "Family, Parenting, and Caregiving",
+      "family": "relational_care",
+      "estimate": 0.6407,
+      "raw_self_report": 0.713,
+      "confidence": 0.4203,
+      "alpha": 1.321769,
+      "beta": 0.741232,
+      "evidence_mass": 1.363,
+      "effective_item_count": 1.7153,
+      "direct_item_count": 1,
+      "inconsistency": 0.0755,
+      "status": "provisional_self_report"
+    },
+    "L29": {
+      "name": "Conflict, Repair, Forgiveness, and Reconciliation",
+      "family": "relational_care",
+      "estimate": 0.5808,
+      "raw_self_report": 0.6136,
+      "confidence": 0.4303,
+      "alpha": 1.408568,
+      "beta": 1.016506,
+      "evidence_mass": 1.7251,
+      "effective_item_count": 2.3829,
+      "direct_item_count": 1,
+      "inconsistency": 0.1577,
+      "status": "provisional_self_report"
+    },
+    "L30": {
+      "name": "Service, Citizenship, and Civic Agency",
+      "family": "contribution_society",
+      "estimate": 0.6157,
+      "raw_self_report": 0.6667,
+      "confidence": 0.4421,
+      "alpha": 1.409453,
+      "beta": 0.879727,
+      "evidence_mass": 1.5892,
+      "effective_item_count": 2.0548,
+      "direct_item_count": 1,
+      "inconsistency": 0.1002,
+      "status": "provisional_self_report"
+    },
+    "L31": {
+      "name": "Justice, Pluralism, and Social Responsibility",
+      "family": "contribution_society",
+      "estimate": 0.532,
+      "raw_self_report": 0.5441,
+      "confidence": 0.4577,
+      "alpha": 1.353737,
+      "beta": 1.190969,
+      "evidence_mass": 1.8447,
+      "effective_item_count": 2.4701,
+      "direct_item_count": 1,
+      "inconsistency": 0.1311,
+      "status": "provisional_self_report"
+    },
+    "L32": {
+      "name": "Work, Craft, Professionalism, and Contribution",
+      "family": "contribution_society",
+      "estimate": 0.5449,
+      "raw_self_report": 0.5625,
+      "confidence": 0.471,
+      "alpha": 1.353388,
+      "beta": 1.130413,
+      "evidence_mass": 1.7838,
+      "effective_item_count": 2.2857,
+      "direct_item_count": 1,
+      "inconsistency": 0.092,
+      "status": "provisional_self_report"
+    },
+    "L33": {
+      "name": "Leadership, Power, Mentorship, and Institutions",
+      "family": "contribution_society",
+      "estimate": 0.5254,
+      "raw_self_report": 0.5417,
+      "confidence": 0.3712,
+      "alpha": 0.943575,
+      "beta": 0.852255,
+      "evidence_mass": 1.0958,
+      "effective_item_count": 1.3846,
+      "direct_item_count": 1,
+      "inconsistency": 0.0792,
+      "status": "provisional_self_report"
+    },
+    "L34": {
+      "name": "Play, Rest, Celebration, and Joy",
+      "family": "integration_flourishing",
+      "estimate": 0.2697,
+      "raw_self_report": 0.1875,
+      "confidence": 0.4457,
+      "alpha": 0.717646,
+      "beta": 1.943135,
+      "evidence_mass": 1.9608,
+      "effective_item_count": 2.7692,
+      "direct_item_count": 2,
+      "inconsistency": 0.1762,
+      "status": "provisional_self_report"
+    },
+    "L35": {
+      "name": "Nature, Exploration, and Adventure",
+      "family": "integration_flourishing",
+      "estimate": 0.5613,
+      "raw_self_report": 0.5833,
+      "confidence": 0.4423,
+      "alpha": 1.487687,
+      "beta": 1.162634,
+      "evidence_mass": 1.9503,
+      "effective_item_count": 2.7692,
+      "direct_item_count": 2,
+      "inconsistency": 0.1806,
+      "status": "provisional_self_report"
+    },
+    "L36": {
+      "name": "Life Design, Balance, and Seasonality",
+      "family": "integration_flourishing",
+      "estimate": 0.6823,
+      "raw_self_report": 0.7267,
+      "confidence": 0.5883,
+      "alpha": 2.433846,
+      "beta": 1.133526,
+      "evidence_mass": 2.8674,
+      "effective_item_count": 3.6326,
+      "direct_item_count": 1,
+      "inconsistency": 0.0617,
+      "status": "provisional_self_report"
+    },
+    "L37": {
+      "name": "Legacy, Generativity, and Transmission",
+      "family": "integration_flourishing",
+      "estimate": 0.5254,
+      "raw_self_report": 0.5417,
+      "confidence": 0.3712,
+      "alpha": 0.943575,
+      "beta": 0.852255,
+      "evidence_mass": 1.0958,
+      "effective_item_count": 1.3846,
+      "direct_item_count": 1,
+      "inconsistency": 0.0792,
+      "status": "provisional_self_report"
+    }
+  },
+  "families": {
+    "F01": {
+      "name": "Orientation and Moral Center",
+      "estimate": 0.5695,
+      "confidence": 0.4374,
+      "lever_ids": [
+        "L01",
+        "L02",
+        "L03",
+        "L04"
+      ]
+    },
+    "F02": {
+      "name": "Inner Governance",
+      "estimate": 0.5297,
+      "confidence": 0.4404,
+      "lever_ids": [
+        "L05",
+        "L06",
+        "L07",
+        "L08",
+        "L09",
+        "L10",
+        "L11"
+      ]
+    },
+    "F03": {
+      "name": "Thought, Learning, and Imagination",
+      "estimate": 0.6898,
+      "confidence": 0.4267,
+      "lever_ids": [
+        "L12",
+        "L13",
+        "L14",
+        "L15",
+        "L16"
+      ]
+    },
+    "F04": {
+      "name": "Embodied and Practical Agency",
+      "estimate": 0.6619,
+      "confidence": 0.4554,
+      "lever_ids": [
+        "L17",
+        "L18",
+        "L19",
+        "L20",
+        "L21",
+        "L22"
+      ]
+    },
+    "F05": {
+      "name": "Relationship and Care",
+      "estimate": 0.4717,
+      "confidence": 0.4583,
+      "lever_ids": [
+        "L23",
+        "L24",
+        "L25",
+        "L26",
+        "L27",
+        "L28",
+        "L29"
+      ]
+    },
+    "F06": {
+      "name": "Contribution, Society, and Power",
+      "estimate": 0.5553,
+      "confidence": 0.4355,
+      "lever_ids": [
+        "L30",
+        "L31",
+        "L32",
+        "L33"
+      ]
+    },
+    "F07": {
+      "name": "Integration and Flourishing",
+      "estimate": 0.5223,
+      "confidence": 0.4619,
+      "lever_ids": [
+        "L34",
+        "L35",
+        "L36",
+        "L37"
+      ]
+    }
+  },
+  "lever_need_ranking": [
+    {
+      "lever_id": "L34",
+      "name": "Play, Rest, Celebration, and Joy",
+      "score": 0.4857,
+      "estimate": 0.2697,
+      "confidence": 0.4457
+    },
+    {
+      "lever_id": "L26",
+      "name": "Friendship, Belonging, and Hospitality",
+      "score": 0.4072,
+      "estimate": 0.353,
+      "confidence": 0.4561
+    },
+    {
+      "lever_id": "L25",
+      "name": "Boundaries, Assertiveness, and Self-Respect",
+      "score": 0.3986,
+      "estimate": 0.3587,
+      "confidence": 0.4403
+    },
+    {
+      "lever_id": "L24",
+      "name": "Empathy, Social Perception, and Perspective-Taking",
+      "score": 0.3956,
+      "estimate": 0.3788,
+      "confidence": 0.5198
+    },
+    {
+      "lever_id": "L09",
+      "name": "Temperance and Desire Governance",
+      "score": 0.3304,
+      "estimate": 0.435,
+      "confidence": 0.4452
+    },
+    {
+      "lever_id": "L06",
+      "name": "Emotional Awareness and Literacy",
+      "score": 0.285,
+      "estimate": 0.4746,
+      "confidence": 0.3712
+    },
+    {
+      "lever_id": "L27",
+      "name": "Intimacy, Sexuality, and Partnership",
+      "score": 0.2754,
+      "estimate": 0.5,
+      "confidence": 0.4471
+    },
+    {
+      "lever_id": "L03",
+      "name": "Spirituality, Reverence, and Transcendence",
+      "score": 0.2696,
+      "estimate": 0.5,
+      "confidence": 0.4065
+    },
+    {
+      "lever_id": "L23",
+      "name": "Communication and Listening",
+      "score": 0.2692,
+      "estimate": 0.5153,
+      "confidence": 0.494
+    },
+    {
+      "lever_id": "L08",
+      "name": "Attention and Presence",
+      "score": 0.2667,
+      "estimate": 0.5155,
+      "confidence": 0.4771
+    },
+    {
+      "lever_id": "L04",
+      "name": "Mortality, Suffering, Gratitude, and Hope",
+      "score": 0.2554,
+      "estimate": 0.5187,
+      "confidence": 0.4125
+    },
+    {
+      "lever_id": "L31",
+      "name": "Justice, Pluralism, and Social Responsibility",
+      "score": 0.2507,
+      "estimate": 0.532,
+      "confidence": 0.4577
+    },
+    {
+      "lever_id": "L05",
+      "name": "Self-Knowledge, Identity, and Humility",
+      "score": 0.2471,
+      "estimate": 0.5304,
+      "confidence": 0.42
+    },
+    {
+      "lever_id": "L33",
+      "name": "Leadership, Power, Mentorship, and Institutions",
+      "score": 0.2447,
+      "estimate": 0.5254,
+      "confidence": 0.3712
+    },
+    {
+      "lever_id": "L37",
+      "name": "Legacy, Generativity, and Transmission",
+      "score": 0.2447,
+      "estimate": 0.5254,
+      "confidence": 0.3712
+    },
+    {
+      "lever_id": "L32",
+      "name": "Work, Craft, Professionalism, and Contribution",
+      "score": 0.2421,
+      "estimate": 0.5449,
+      "confidence": 0.471
+    },
+    {
+      "lever_id": "L11",
+      "name": "Adaptability, Uncertainty, and Learning from Failure",
+      "score": 0.2334,
+      "estimate": 0.5477,
+      "confidence": 0.4183
+    },
+    {
+      "lever_id": "L07",
+      "name": "Emotional Regulation and Resilience",
+      "score": 0.2262,
+      "estimate": 0.56,
+      "confidence": 0.4372
+    },
+    {
+      "lever_id": "L35",
+      "name": "Nature, Exploration, and Adventure",
+      "score": 0.2257,
+      "estimate": 0.5613,
+      "confidence": 0.4423
+    },
+    {
+      "lever_id": "L17",
+      "name": "Physical Health, Vitality, and Embodiment",
+      "score": 0.218,
+      "estimate": 0.5734,
+      "confidence": 0.4556
+    },
+    {
+      "lever_id": "L29",
+      "name": "Conflict, Repair, Forgiveness, and Reconciliation",
+      "score": 0.2096,
+      "estimate": 0.5808,
+      "confidence": 0.4303
+    },
+    {
+      "lever_id": "L02",
+      "name": "Values, Integrity, and Moral Courage",
+      "score": 0.199,
+      "estimate": 0.6017,
+      "confidence": 0.479
+    },
+    {
+      "lever_id": "L10",
+      "name": "Discipline, Habits, and Follow-Through",
+      "score": 0.1861,
+      "estimate": 0.6235,
+      "confidence": 0.5135
+    },
+    {
+      "lever_id": "L30",
+      "name": "Service, Citizenship, and Civic Agency",
+      "score": 0.1851,
+      "estimate": 0.6157,
+      "confidence": 0.4421
+    },
+    {
+      "lever_id": "L15",
+      "name": "Learning Agility, Memory, and Teaching",
+      "score": 0.1704,
+      "estimate": 0.6271,
+      "confidence": 0.3712
+    },
+    {
+      "lever_id": "L01",
+      "name": "Purpose and Direction",
+      "score": 0.1655,
+      "estimate": 0.6445,
+      "confidence": 0.4515
+    },
+    {
+      "lever_id": "L28",
+      "name": "Family, Parenting, and Caregiving",
+      "score": 0.1654,
+      "estimate": 0.6407,
+      "confidence": 0.4203
+    },
+    {
+      "lever_id": "L22",
+      "name": "Economic Agency, Entrepreneurship, and Market Literacy",
+      "score": 0.1598,
+      "estimate": 0.6519,
+      "confidence": 0.4449
+    },
+    {
+      "lever_id": "L16",
+      "name": "Creativity, Aesthetics, and Cultural Literacy",
+      "score": 0.1542,
+      "estimate": 0.6574,
+      "confidence": 0.4225
+    },
+    {
+      "lever_id": "L18",
+      "name": "Domestic Competence and Material Self-Sufficiency",
+      "score": 0.1542,
+      "estimate": 0.6574,
+      "confidence": 0.4225
+    },
+    {
+      "lever_id": "L21",
+      "name": "Financial Stewardship and Provision",
+      "score": 0.1542,
+      "estimate": 0.6574,
+      "confidence": 0.4225
+    },
+    {
+      "lever_id": "L36",
+      "name": "Life Design, Balance, and Seasonality",
+      "score": 0.1496,
+      "estimate": 0.6823,
+      "confidence": 0.5883
+    },
+    {
+      "lever_id": "L20",
+      "name": "Safety, Risk, and Preparedness",
+      "score": 0.1449,
+      "estimate": 0.6843,
+      "confidence": 0.5415
+    },
+    {
+      "lever_id": "L14",
+      "name": "Systems Thinking, Judgment, and Decision-Making",
+      "score": 0.141,
+      "estimate": 0.6884,
+      "confidence": 0.527
+    },
+    {
+      "lever_id": "L13",
+      "name": "Evidence, Truth, and Epistemic Humility",
+      "score": 0.1294,
+      "estimate": 0.6953,
+      "confidence": 0.4239
+    },
+    {
+      "lever_id": "L19",
+      "name": "Digital Agency, Media Literacy, and Security",
+      "score": 0.1008,
+      "estimate": 0.7439,
+      "confidence": 0.4452
+    },
+    {
+      "lever_id": "L12",
+      "name": "Critical Reasoning and Logic",
+      "score": 0.0777,
+      "estimate": 0.7805,
+      "confidence": 0.3888
+    }
+  ],
+  "suggested_capability_clarifiers": [
+    {
+      "lever_id": "L05",
+      "uncertainty": 0.7895000000000001,
+      "clarifier_id": "C_L05"
+    },
+    {
+      "lever_id": "L13",
+      "uncertainty": 0.7618,
+      "clarifier_id": "C_L13"
+    },
+    {
+      "lever_id": "L07",
+      "uncertainty": 0.7607999999999999,
+      "clarifier_id": "C_L07"
+    },
+    {
+      "lever_id": "L35",
+      "uncertainty": 0.7383,
+      "clarifier_id": "C_L35"
+    },
+    {
+      "lever_id": "L34",
+      "uncertainty": 0.7305,
+      "clarifier_id": "C_L34"
+    },
+    {
+      "lever_id": "L29",
+      "uncertainty": 0.7274,
+      "clarifier_id": "C_L29"
+    },
+    {
+      "lever_id": "L17",
+      "uncertainty": 0.7109,
+      "clarifier_id": "C_L17"
+    },
+    {
+      "lever_id": "L06",
+      "uncertainty": 0.7080000000000001,
+      "clarifier_id": "C_L06"
+    }
+  ],
+  "suggested_orientation_clarifiers": [],
+  "interpretation_notice": "These are provisional self-report estimates. They are intended to initialize task selection, not prove mastery or define human worth.",
+  "note": "Mathematical rescore of Pilot 001 with 6 seconds per answered item because the original v1 timing data was invalid. Revised orientation wording requires an actual retake before content-level comparison."
+}

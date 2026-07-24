@@ -1,0 +1,556 @@
+﻿archetype_id,archetype_name,orientation_1,orientation_2,lever_id,lever_name,lever_family,affinity
+A01,The Strategist,discernment,agency,L01,Purpose and Direction,orientation_moral_center,0.2
+A01,The Strategist,discernment,agency,L02,"Values, Integrity, and Moral Courage",orientation_moral_center,0.3
+A01,The Strategist,discernment,agency,L03,"Spirituality, Reverence, and Transcendence",orientation_moral_center,0.0
+A01,The Strategist,discernment,agency,L04,"Mortality, Suffering, Gratitude, and Hope",orientation_moral_center,0.2
+A01,The Strategist,discernment,agency,L05,"Self-Knowledge, Identity, and Humility",inner_governance,0.5
+A01,The Strategist,discernment,agency,L06,Emotional Awareness and Literacy,inner_governance,0.4
+A01,The Strategist,discernment,agency,L07,Emotional Regulation and Resilience,inner_governance,0.5
+A01,The Strategist,discernment,agency,L08,Attention and Presence,inner_governance,0.6
+A01,The Strategist,discernment,agency,L09,Temperance and Desire Governance,inner_governance,0.55
+A01,The Strategist,discernment,agency,L10,"Discipline, Habits, and Follow-Through",inner_governance,0.65
+A01,The Strategist,discernment,agency,L11,"Adaptability, Uncertainty, and Learning from Failure",inner_governance,0.5
+A01,The Strategist,discernment,agency,L12,Critical Reasoning and Logic,thought_learning,0.85
+A01,The Strategist,discernment,agency,L13,"Evidence, Truth, and Epistemic Humility",thought_learning,0.7
+A01,The Strategist,discernment,agency,L14,"Systems Thinking, Judgment, and Decision-Making",thought_learning,0.65
+A01,The Strategist,discernment,agency,L15,"Learning Agility, Memory, and Teaching",thought_learning,0.55
+A01,The Strategist,discernment,agency,L16,"Creativity, Aesthetics, and Cultural Literacy",thought_learning,0.1
+A01,The Strategist,discernment,agency,L17,"Physical Health, Vitality, and Embodiment",embodied_practical,0.5
+A01,The Strategist,discernment,agency,L18,Domestic Competence and Material Self-Sufficiency,embodied_practical,0.45
+A01,The Strategist,discernment,agency,L19,"Digital Agency, Media Literacy, and Security",embodied_practical,0.55
+A01,The Strategist,discernment,agency,L20,"Safety, Risk, and Preparedness",embodied_practical,0.45
+A01,The Strategist,discernment,agency,L21,Financial Stewardship and Provision,embodied_practical,0.35
+A01,The Strategist,discernment,agency,L22,"Economic Agency, Entrepreneurship, and Market Literacy",embodied_practical,0.6
+A01,The Strategist,discernment,agency,L23,Communication and Listening,relational_care,0.35
+A01,The Strategist,discernment,agency,L24,"Empathy, Social Perception, and Perspective-Taking",relational_care,0.15
+A01,The Strategist,discernment,agency,L25,"Boundaries, Assertiveness, and Self-Respect",relational_care,0.5
+A01,The Strategist,discernment,agency,L26,"Friendship, Belonging, and Hospitality",relational_care,0.0
+A01,The Strategist,discernment,agency,L27,"Intimacy, Sexuality, and Partnership",relational_care,0.1
+A01,The Strategist,discernment,agency,L28,"Family, Parenting, and Caregiving",relational_care,0.1
+A01,The Strategist,discernment,agency,L29,"Conflict, Repair, Forgiveness, and Reconciliation",relational_care,0.25
+A01,The Strategist,discernment,agency,L30,"Service, Citizenship, and Civic Agency",contribution_society,0.25
+A01,The Strategist,discernment,agency,L31,"Justice, Pluralism, and Social Responsibility",contribution_society,0.3
+A01,The Strategist,discernment,agency,L32,"Work, Craft, Professionalism, and Contribution",contribution_society,0.5
+A01,The Strategist,discernment,agency,L33,"Leadership, Power, Mentorship, and Institutions",contribution_society,0.4
+A01,The Strategist,discernment,agency,L34,"Play, Rest, Celebration, and Joy",integration_flourishing,0.1
+A01,The Strategist,discernment,agency,L35,"Nature, Exploration, and Adventure",integration_flourishing,0.25
+A01,The Strategist,discernment,agency,L36,"Life Design, Balance, and Seasonality",integration_flourishing,0.3
+A01,The Strategist,discernment,agency,L37,"Legacy, Generativity, and Transmission",integration_flourishing,0.15
+A02,The Counselor,discernment,connection,L01,Purpose and Direction,orientation_moral_center,0.2
+A02,The Counselor,discernment,connection,L02,"Values, Integrity, and Moral Courage",orientation_moral_center,0.1
+A02,The Counselor,discernment,connection,L03,"Spirituality, Reverence, and Transcendence",orientation_moral_center,0.1
+A02,The Counselor,discernment,connection,L04,"Mortality, Suffering, Gratitude, and Hope",orientation_moral_center,0.3
+A02,The Counselor,discernment,connection,L05,"Self-Knowledge, Identity, and Humility",inner_governance,0.65
+A02,The Counselor,discernment,connection,L06,Emotional Awareness and Literacy,inner_governance,0.8
+A02,The Counselor,discernment,connection,L07,Emotional Regulation and Resilience,inner_governance,0.35
+A02,The Counselor,discernment,connection,L08,Attention and Presence,inner_governance,0.35
+A02,The Counselor,discernment,connection,L09,Temperance and Desire Governance,inner_governance,0.1
+A02,The Counselor,discernment,connection,L10,"Discipline, Habits, and Follow-Through",inner_governance,0.1
+A02,The Counselor,discernment,connection,L11,"Adaptability, Uncertainty, and Learning from Failure",inner_governance,0.2
+A02,The Counselor,discernment,connection,L12,Critical Reasoning and Logic,thought_learning,0.7
+A02,The Counselor,discernment,connection,L13,"Evidence, Truth, and Epistemic Humility",thought_learning,0.7
+A02,The Counselor,discernment,connection,L14,"Systems Thinking, Judgment, and Decision-Making",thought_learning,0.45
+A02,The Counselor,discernment,connection,L15,"Learning Agility, Memory, and Teaching",thought_learning,0.55
+A02,The Counselor,discernment,connection,L16,"Creativity, Aesthetics, and Cultural Literacy",thought_learning,0.2
+A02,The Counselor,discernment,connection,L17,"Physical Health, Vitality, and Embodiment",embodied_practical,0.1
+A02,The Counselor,discernment,connection,L18,Domestic Competence and Material Self-Sufficiency,embodied_practical,0.2
+A02,The Counselor,discernment,connection,L19,"Digital Agency, Media Literacy, and Security",embodied_practical,0.35
+A02,The Counselor,discernment,connection,L20,"Safety, Risk, and Preparedness",embodied_practical,0.2
+A02,The Counselor,discernment,connection,L21,Financial Stewardship and Provision,embodied_practical,0.3
+A02,The Counselor,discernment,connection,L22,"Economic Agency, Entrepreneurship, and Market Literacy",embodied_practical,0.25
+A02,The Counselor,discernment,connection,L23,Communication and Listening,relational_care,0.65
+A02,The Counselor,discernment,connection,L24,"Empathy, Social Perception, and Perspective-Taking",relational_care,0.8
+A02,The Counselor,discernment,connection,L25,"Boundaries, Assertiveness, and Self-Respect",relational_care,0.45
+A02,The Counselor,discernment,connection,L26,"Friendship, Belonging, and Hospitality",relational_care,0.65
+A02,The Counselor,discernment,connection,L27,"Intimacy, Sexuality, and Partnership",relational_care,0.6
+A02,The Counselor,discernment,connection,L28,"Family, Parenting, and Caregiving",relational_care,0.45
+A02,The Counselor,discernment,connection,L29,"Conflict, Repair, Forgiveness, and Reconciliation",relational_care,0.5
+A02,The Counselor,discernment,connection,L30,"Service, Citizenship, and Civic Agency",contribution_society,0.35
+A02,The Counselor,discernment,connection,L31,"Justice, Pluralism, and Social Responsibility",contribution_society,0.35
+A02,The Counselor,discernment,connection,L32,"Work, Craft, Professionalism, and Contribution",contribution_society,0.2
+A02,The Counselor,discernment,connection,L33,"Leadership, Power, Mentorship, and Institutions",contribution_society,0.35
+A02,The Counselor,discernment,connection,L34,"Play, Rest, Celebration, and Joy",integration_flourishing,0.25
+A02,The Counselor,discernment,connection,L35,"Nature, Exploration, and Adventure",integration_flourishing,0.1
+A02,The Counselor,discernment,connection,L36,"Life Design, Balance, and Seasonality",integration_flourishing,0.3
+A02,The Counselor,discernment,connection,L37,"Legacy, Generativity, and Transmission",integration_flourishing,0.3
+A03,The Architect,discernment,stewardship,L01,Purpose and Direction,orientation_moral_center,0.4
+A03,The Architect,discernment,stewardship,L02,"Values, Integrity, and Moral Courage",orientation_moral_center,0.5
+A03,The Architect,discernment,stewardship,L03,"Spirituality, Reverence, and Transcendence",orientation_moral_center,0.0
+A03,The Architect,discernment,stewardship,L04,"Mortality, Suffering, Gratitude, and Hope",orientation_moral_center,0.1
+A03,The Architect,discernment,stewardship,L05,"Self-Knowledge, Identity, and Humility",inner_governance,0.5
+A03,The Architect,discernment,stewardship,L06,Emotional Awareness and Literacy,inner_governance,0.3
+A03,The Architect,discernment,stewardship,L07,Emotional Regulation and Resilience,inner_governance,0.25
+A03,The Architect,discernment,stewardship,L08,Attention and Presence,inner_governance,0.5
+A03,The Architect,discernment,stewardship,L09,Temperance and Desire Governance,inner_governance,0.4
+A03,The Architect,discernment,stewardship,L10,"Discipline, Habits, and Follow-Through",inner_governance,0.45
+A03,The Architect,discernment,stewardship,L11,"Adaptability, Uncertainty, and Learning from Failure",inner_governance,0.2
+A03,The Architect,discernment,stewardship,L12,Critical Reasoning and Logic,thought_learning,0.8
+A03,The Architect,discernment,stewardship,L13,"Evidence, Truth, and Epistemic Humility",thought_learning,0.85
+A03,The Architect,discernment,stewardship,L14,"Systems Thinking, Judgment, and Decision-Making",thought_learning,0.7
+A03,The Architect,discernment,stewardship,L15,"Learning Agility, Memory, and Teaching",thought_learning,0.4
+A03,The Architect,discernment,stewardship,L16,"Creativity, Aesthetics, and Cultural Literacy",thought_learning,0.1
+A03,The Architect,discernment,stewardship,L17,"Physical Health, Vitality, and Embodiment",embodied_practical,0.25
+A03,The Architect,discernment,stewardship,L18,Domestic Competence and Material Self-Sufficiency,embodied_practical,0.55
+A03,The Architect,discernment,stewardship,L19,"Digital Agency, Media Literacy, and Security",embodied_practical,0.65
+A03,The Architect,discernment,stewardship,L20,"Safety, Risk, and Preparedness",embodied_practical,0.65
+A03,The Architect,discernment,stewardship,L21,Financial Stewardship and Provision,embodied_practical,0.75
+A03,The Architect,discernment,stewardship,L22,"Economic Agency, Entrepreneurship, and Market Literacy",embodied_practical,0.5
+A03,The Architect,discernment,stewardship,L23,Communication and Listening,relational_care,0.3
+A03,The Architect,discernment,stewardship,L24,"Empathy, Social Perception, and Perspective-Taking",relational_care,0.15
+A03,The Architect,discernment,stewardship,L25,"Boundaries, Assertiveness, and Self-Respect",relational_care,0.35
+A03,The Architect,discernment,stewardship,L26,"Friendship, Belonging, and Hospitality",relational_care,0.15
+A03,The Architect,discernment,stewardship,L27,"Intimacy, Sexuality, and Partnership",relational_care,0.15
+A03,The Architect,discernment,stewardship,L28,"Family, Parenting, and Caregiving",relational_care,0.35
+A03,The Architect,discernment,stewardship,L29,"Conflict, Repair, Forgiveness, and Reconciliation",relational_care,0.2
+A03,The Architect,discernment,stewardship,L30,"Service, Citizenship, and Civic Agency",contribution_society,0.35
+A03,The Architect,discernment,stewardship,L31,"Justice, Pluralism, and Social Responsibility",contribution_society,0.5
+A03,The Architect,discernment,stewardship,L32,"Work, Craft, Professionalism, and Contribution",contribution_society,0.5
+A03,The Architect,discernment,stewardship,L33,"Leadership, Power, Mentorship, and Institutions",contribution_society,0.5
+A03,The Architect,discernment,stewardship,L34,"Play, Rest, Celebration, and Joy",integration_flourishing,0.05
+A03,The Architect,discernment,stewardship,L35,"Nature, Exploration, and Adventure",integration_flourishing,0.05
+A03,The Architect,discernment,stewardship,L36,"Life Design, Balance, and Seasonality",integration_flourishing,0.5
+A03,The Architect,discernment,stewardship,L37,"Legacy, Generativity, and Transmission",integration_flourishing,0.45
+A04,The Explorer,discernment,exploration,L01,Purpose and Direction,orientation_moral_center,0.2
+A04,The Explorer,discernment,exploration,L02,"Values, Integrity, and Moral Courage",orientation_moral_center,0.1
+A04,The Explorer,discernment,exploration,L03,"Spirituality, Reverence, and Transcendence",orientation_moral_center,0.0
+A04,The Explorer,discernment,exploration,L04,"Mortality, Suffering, Gratitude, and Hope",orientation_moral_center,0.1
+A04,The Explorer,discernment,exploration,L05,"Self-Knowledge, Identity, and Humility",inner_governance,0.65
+A04,The Explorer,discernment,exploration,L06,Emotional Awareness and Literacy,inner_governance,0.3
+A04,The Explorer,discernment,exploration,L07,Emotional Regulation and Resilience,inner_governance,0.1
+A04,The Explorer,discernment,exploration,L08,Attention and Presence,inner_governance,0.35
+A04,The Explorer,discernment,exploration,L09,Temperance and Desire Governance,inner_governance,0.1
+A04,The Explorer,discernment,exploration,L10,"Discipline, Habits, and Follow-Through",inner_governance,0.1
+A04,The Explorer,discernment,exploration,L11,"Adaptability, Uncertainty, and Learning from Failure",inner_governance,0.6
+A04,The Explorer,discernment,exploration,L12,Critical Reasoning and Logic,thought_learning,0.75
+A04,The Explorer,discernment,exploration,L13,"Evidence, Truth, and Epistemic Humility",thought_learning,0.75
+A04,The Explorer,discernment,exploration,L14,"Systems Thinking, Judgment, and Decision-Making",thought_learning,0.55
+A04,The Explorer,discernment,exploration,L15,"Learning Agility, Memory, and Teaching",thought_learning,0.7
+A04,The Explorer,discernment,exploration,L16,"Creativity, Aesthetics, and Cultural Literacy",thought_learning,0.7
+A04,The Explorer,discernment,exploration,L17,"Physical Health, Vitality, and Embodiment",embodied_practical,0.15
+A04,The Explorer,discernment,exploration,L18,Domestic Competence and Material Self-Sufficiency,embodied_practical,0.1
+A04,The Explorer,discernment,exploration,L19,"Digital Agency, Media Literacy, and Security",embodied_practical,0.5
+A04,The Explorer,discernment,exploration,L20,"Safety, Risk, and Preparedness",embodied_practical,0.15
+A04,The Explorer,discernment,exploration,L21,Financial Stewardship and Provision,embodied_practical,0.2
+A04,The Explorer,discernment,exploration,L22,"Economic Agency, Entrepreneurship, and Market Literacy",embodied_practical,0.4
+A04,The Explorer,discernment,exploration,L23,Communication and Listening,relational_care,0.3
+A04,The Explorer,discernment,exploration,L24,"Empathy, Social Perception, and Perspective-Taking",relational_care,0.25
+A04,The Explorer,discernment,exploration,L25,"Boundaries, Assertiveness, and Self-Respect",relational_care,0.15
+A04,The Explorer,discernment,exploration,L26,"Friendship, Belonging, and Hospitality",relational_care,0.1
+A04,The Explorer,discernment,exploration,L27,"Intimacy, Sexuality, and Partnership",relational_care,0.05
+A04,The Explorer,discernment,exploration,L28,"Family, Parenting, and Caregiving",relational_care,0.0
+A04,The Explorer,discernment,exploration,L29,"Conflict, Repair, Forgiveness, and Reconciliation",relational_care,0.05
+A04,The Explorer,discernment,exploration,L30,"Service, Citizenship, and Civic Agency",contribution_society,0.1
+A04,The Explorer,discernment,exploration,L31,"Justice, Pluralism, and Social Responsibility",contribution_society,0.2
+A04,The Explorer,discernment,exploration,L32,"Work, Craft, Professionalism, and Contribution",contribution_society,0.25
+A04,The Explorer,discernment,exploration,L33,"Leadership, Power, Mentorship, and Institutions",contribution_society,0.15
+A04,The Explorer,discernment,exploration,L34,"Play, Rest, Celebration, and Joy",integration_flourishing,0.4
+A04,The Explorer,discernment,exploration,L35,"Nature, Exploration, and Adventure",integration_flourishing,0.6
+A04,The Explorer,discernment,exploration,L36,"Life Design, Balance, and Seasonality",integration_flourishing,0.3
+A04,The Explorer,discernment,exploration,L37,"Legacy, Generativity, and Transmission",integration_flourishing,0.1
+A05,The Seeker,discernment,transcendence,L01,Purpose and Direction,orientation_moral_center,0.8
+A05,The Seeker,discernment,transcendence,L02,"Values, Integrity, and Moral Courage",orientation_moral_center,0.4
+A05,The Seeker,discernment,transcendence,L03,"Spirituality, Reverence, and Transcendence",orientation_moral_center,0.9
+A05,The Seeker,discernment,transcendence,L04,"Mortality, Suffering, Gratitude, and Hope",orientation_moral_center,0.7
+A05,The Seeker,discernment,transcendence,L05,"Self-Knowledge, Identity, and Humility",inner_governance,0.7
+A05,The Seeker,discernment,transcendence,L06,Emotional Awareness and Literacy,inner_governance,0.4
+A05,The Seeker,discernment,transcendence,L07,Emotional Regulation and Resilience,inner_governance,0.2
+A05,The Seeker,discernment,transcendence,L08,Attention and Presence,inner_governance,0.6
+A05,The Seeker,discernment,transcendence,L09,Temperance and Desire Governance,inner_governance,0.25
+A05,The Seeker,discernment,transcendence,L10,"Discipline, Habits, and Follow-Through",inner_governance,0.1
+A05,The Seeker,discernment,transcendence,L11,"Adaptability, Uncertainty, and Learning from Failure",inner_governance,0.3
+A05,The Seeker,discernment,transcendence,L12,Critical Reasoning and Logic,thought_learning,0.7
+A05,The Seeker,discernment,transcendence,L13,"Evidence, Truth, and Epistemic Humility",thought_learning,0.8
+A05,The Seeker,discernment,transcendence,L14,"Systems Thinking, Judgment, and Decision-Making",thought_learning,0.45
+A05,The Seeker,discernment,transcendence,L15,"Learning Agility, Memory, and Teaching",thought_learning,0.4
+A05,The Seeker,discernment,transcendence,L16,"Creativity, Aesthetics, and Cultural Literacy",thought_learning,0.3
+A05,The Seeker,discernment,transcendence,L17,"Physical Health, Vitality, and Embodiment",embodied_practical,0.0
+A05,The Seeker,discernment,transcendence,L18,Domestic Competence and Material Self-Sufficiency,embodied_practical,0.1
+A05,The Seeker,discernment,transcendence,L19,"Digital Agency, Media Literacy, and Security",embodied_practical,0.35
+A05,The Seeker,discernment,transcendence,L20,"Safety, Risk, and Preparedness",embodied_practical,0.15
+A05,The Seeker,discernment,transcendence,L21,Financial Stewardship and Provision,embodied_practical,0.2
+A05,The Seeker,discernment,transcendence,L22,"Economic Agency, Entrepreneurship, and Market Literacy",embodied_practical,0.25
+A05,The Seeker,discernment,transcendence,L23,Communication and Listening,relational_care,0.2
+A05,The Seeker,discernment,transcendence,L24,"Empathy, Social Perception, and Perspective-Taking",relational_care,0.25
+A05,The Seeker,discernment,transcendence,L25,"Boundaries, Assertiveness, and Self-Respect",relational_care,0.15
+A05,The Seeker,discernment,transcendence,L26,"Friendship, Belonging, and Hospitality",relational_care,0.1
+A05,The Seeker,discernment,transcendence,L27,"Intimacy, Sexuality, and Partnership",relational_care,0.1
+A05,The Seeker,discernment,transcendence,L28,"Family, Parenting, and Caregiving",relational_care,0.1
+A05,The Seeker,discernment,transcendence,L29,"Conflict, Repair, Forgiveness, and Reconciliation",relational_care,0.2
+A05,The Seeker,discernment,transcendence,L30,"Service, Citizenship, and Civic Agency",contribution_society,0.35
+A05,The Seeker,discernment,transcendence,L31,"Justice, Pluralism, and Social Responsibility",contribution_society,0.45
+A05,The Seeker,discernment,transcendence,L32,"Work, Craft, Professionalism, and Contribution",contribution_society,0.15
+A05,The Seeker,discernment,transcendence,L33,"Leadership, Power, Mentorship, and Institutions",contribution_society,0.2
+A05,The Seeker,discernment,transcendence,L34,"Play, Rest, Celebration, and Joy",integration_flourishing,0.2
+A05,The Seeker,discernment,transcendence,L35,"Nature, Exploration, and Adventure",integration_flourishing,0.2
+A05,The Seeker,discernment,transcendence,L36,"Life Design, Balance, and Seasonality",integration_flourishing,0.4
+A05,The Seeker,discernment,transcendence,L37,"Legacy, Generativity, and Transmission",integration_flourishing,0.4
+A06,The Catalyst,agency,connection,L01,Purpose and Direction,orientation_moral_center,0.0
+A06,The Catalyst,agency,connection,L02,"Values, Integrity, and Moral Courage",orientation_moral_center,0.2
+A06,The Catalyst,agency,connection,L03,"Spirituality, Reverence, and Transcendence",orientation_moral_center,0.1
+A06,The Catalyst,agency,connection,L04,"Mortality, Suffering, Gratitude, and Hope",orientation_moral_center,0.3
+A06,The Catalyst,agency,connection,L05,"Self-Knowledge, Identity, and Humility",inner_governance,0.15
+A06,The Catalyst,agency,connection,L06,Emotional Awareness and Literacy,inner_governance,0.6
+A06,The Catalyst,agency,connection,L07,Emotional Regulation and Resilience,inner_governance,0.65
+A06,The Catalyst,agency,connection,L08,Attention and Presence,inner_governance,0.25
+A06,The Catalyst,agency,connection,L09,Temperance and Desire Governance,inner_governance,0.45
+A06,The Catalyst,agency,connection,L10,"Discipline, Habits, and Follow-Through",inner_governance,0.55
+A06,The Catalyst,agency,connection,L11,"Adaptability, Uncertainty, and Learning from Failure",inner_governance,0.3
+A06,The Catalyst,agency,connection,L12,Critical Reasoning and Logic,thought_learning,0.15
+A06,The Catalyst,agency,connection,L13,"Evidence, Truth, and Epistemic Humility",thought_learning,0.0
+A06,The Catalyst,agency,connection,L14,"Systems Thinking, Judgment, and Decision-Making",thought_learning,0.2
+A06,The Catalyst,agency,connection,L15,"Learning Agility, Memory, and Teaching",thought_learning,0.3
+A06,The Catalyst,agency,connection,L16,"Creativity, Aesthetics, and Cultural Literacy",thought_learning,0.1
+A06,The Catalyst,agency,connection,L17,"Physical Health, Vitality, and Embodiment",embodied_practical,0.6
+A06,The Catalyst,agency,connection,L18,Domestic Competence and Material Self-Sufficiency,embodied_practical,0.45
+A06,The Catalyst,agency,connection,L19,"Digital Agency, Media Literacy, and Security",embodied_practical,0.2
+A06,The Catalyst,agency,connection,L20,"Safety, Risk, and Preparedness",embodied_practical,0.35
+A06,The Catalyst,agency,connection,L21,Financial Stewardship and Provision,embodied_practical,0.25
+A06,The Catalyst,agency,connection,L22,"Economic Agency, Entrepreneurship, and Market Literacy",embodied_practical,0.35
+A06,The Catalyst,agency,connection,L23,Communication and Listening,relational_care,0.6
+A06,The Catalyst,agency,connection,L24,"Empathy, Social Perception, and Perspective-Taking",relational_care,0.65
+A06,The Catalyst,agency,connection,L25,"Boundaries, Assertiveness, and Self-Respect",relational_care,0.65
+A06,The Catalyst,agency,connection,L26,"Friendship, Belonging, and Hospitality",relational_care,0.65
+A06,The Catalyst,agency,connection,L27,"Intimacy, Sexuality, and Partnership",relational_care,0.7
+A06,The Catalyst,agency,connection,L28,"Family, Parenting, and Caregiving",relational_care,0.55
+A06,The Catalyst,agency,connection,L29,"Conflict, Repair, Forgiveness, and Reconciliation",relational_care,0.65
+A06,The Catalyst,agency,connection,L30,"Service, Citizenship, and Civic Agency",contribution_society,0.4
+A06,The Catalyst,agency,connection,L31,"Justice, Pluralism, and Social Responsibility",contribution_society,0.25
+A06,The Catalyst,agency,connection,L32,"Work, Craft, Professionalism, and Contribution",contribution_society,0.4
+A06,The Catalyst,agency,connection,L33,"Leadership, Power, Mentorship, and Institutions",contribution_society,0.45
+A06,The Catalyst,agency,connection,L34,"Play, Rest, Celebration, and Joy",integration_flourishing,0.35
+A06,The Catalyst,agency,connection,L35,"Nature, Exploration, and Adventure",integration_flourishing,0.25
+A06,The Catalyst,agency,connection,L36,"Life Design, Balance, and Seasonality",integration_flourishing,0.2
+A06,The Catalyst,agency,connection,L37,"Legacy, Generativity, and Transmission",integration_flourishing,0.25
+A07,The Builder,agency,stewardship,L01,Purpose and Direction,orientation_moral_center,0.2
+A07,The Builder,agency,stewardship,L02,"Values, Integrity, and Moral Courage",orientation_moral_center,0.6
+A07,The Builder,agency,stewardship,L03,"Spirituality, Reverence, and Transcendence",orientation_moral_center,0.0
+A07,The Builder,agency,stewardship,L04,"Mortality, Suffering, Gratitude, and Hope",orientation_moral_center,0.1
+A07,The Builder,agency,stewardship,L05,"Self-Knowledge, Identity, and Humility",inner_governance,0.0
+A07,The Builder,agency,stewardship,L06,Emotional Awareness and Literacy,inner_governance,0.1
+A07,The Builder,agency,stewardship,L07,Emotional Regulation and Resilience,inner_governance,0.55
+A07,The Builder,agency,stewardship,L08,Attention and Presence,inner_governance,0.4
+A07,The Builder,agency,stewardship,L09,Temperance and Desire Governance,inner_governance,0.75
+A07,The Builder,agency,stewardship,L10,"Discipline, Habits, and Follow-Through",inner_governance,0.9
+A07,The Builder,agency,stewardship,L11,"Adaptability, Uncertainty, and Learning from Failure",inner_governance,0.3
+A07,The Builder,agency,stewardship,L12,Critical Reasoning and Logic,thought_learning,0.25
+A07,The Builder,agency,stewardship,L13,"Evidence, Truth, and Epistemic Humility",thought_learning,0.15
+A07,The Builder,agency,stewardship,L14,"Systems Thinking, Judgment, and Decision-Making",thought_learning,0.45
+A07,The Builder,agency,stewardship,L15,"Learning Agility, Memory, and Teaching",thought_learning,0.15
+A07,The Builder,agency,stewardship,L16,"Creativity, Aesthetics, and Cultural Literacy",thought_learning,0.0
+A07,The Builder,agency,stewardship,L17,"Physical Health, Vitality, and Embodiment",embodied_practical,0.75
+A07,The Builder,agency,stewardship,L18,Domestic Competence and Material Self-Sufficiency,embodied_practical,0.8
+A07,The Builder,agency,stewardship,L19,"Digital Agency, Media Literacy, and Security",embodied_practical,0.5
+A07,The Builder,agency,stewardship,L20,"Safety, Risk, and Preparedness",embodied_practical,0.8
+A07,The Builder,agency,stewardship,L21,Financial Stewardship and Provision,embodied_practical,0.7
+A07,The Builder,agency,stewardship,L22,"Economic Agency, Entrepreneurship, and Market Literacy",embodied_practical,0.6
+A07,The Builder,agency,stewardship,L23,Communication and Listening,relational_care,0.25
+A07,The Builder,agency,stewardship,L24,"Empathy, Social Perception, and Perspective-Taking",relational_care,0.0
+A07,The Builder,agency,stewardship,L25,"Boundaries, Assertiveness, and Self-Respect",relational_care,0.55
+A07,The Builder,agency,stewardship,L26,"Friendship, Belonging, and Hospitality",relational_care,0.15
+A07,The Builder,agency,stewardship,L27,"Intimacy, Sexuality, and Partnership",relational_care,0.25
+A07,The Builder,agency,stewardship,L28,"Family, Parenting, and Caregiving",relational_care,0.45
+A07,The Builder,agency,stewardship,L29,"Conflict, Repair, Forgiveness, and Reconciliation",relational_care,0.35
+A07,The Builder,agency,stewardship,L30,"Service, Citizenship, and Civic Agency",contribution_society,0.4
+A07,The Builder,agency,stewardship,L31,"Justice, Pluralism, and Social Responsibility",contribution_society,0.4
+A07,The Builder,agency,stewardship,L32,"Work, Craft, Professionalism, and Contribution",contribution_society,0.7
+A07,The Builder,agency,stewardship,L33,"Leadership, Power, Mentorship, and Institutions",contribution_society,0.6
+A07,The Builder,agency,stewardship,L34,"Play, Rest, Celebration, and Joy",integration_flourishing,0.15
+A07,The Builder,agency,stewardship,L35,"Nature, Exploration, and Adventure",integration_flourishing,0.2
+A07,The Builder,agency,stewardship,L36,"Life Design, Balance, and Seasonality",integration_flourishing,0.4
+A07,The Builder,agency,stewardship,L37,"Legacy, Generativity, and Transmission",integration_flourishing,0.4
+A08,The Trailblazer,agency,exploration,L01,Purpose and Direction,orientation_moral_center,0.0
+A08,The Trailblazer,agency,exploration,L02,"Values, Integrity, and Moral Courage",orientation_moral_center,0.2
+A08,The Trailblazer,agency,exploration,L03,"Spirituality, Reverence, and Transcendence",orientation_moral_center,0.0
+A08,The Trailblazer,agency,exploration,L04,"Mortality, Suffering, Gratitude, and Hope",orientation_moral_center,0.1
+A08,The Trailblazer,agency,exploration,L05,"Self-Knowledge, Identity, and Humility",inner_governance,0.15
+A08,The Trailblazer,agency,exploration,L06,Emotional Awareness and Literacy,inner_governance,0.1
+A08,The Trailblazer,agency,exploration,L07,Emotional Regulation and Resilience,inner_governance,0.4
+A08,The Trailblazer,agency,exploration,L08,Attention and Presence,inner_governance,0.25
+A08,The Trailblazer,agency,exploration,L09,Temperance and Desire Governance,inner_governance,0.45
+A08,The Trailblazer,agency,exploration,L10,"Discipline, Habits, and Follow-Through",inner_governance,0.55
+A08,The Trailblazer,agency,exploration,L11,"Adaptability, Uncertainty, and Learning from Failure",inner_governance,0.7
+A08,The Trailblazer,agency,exploration,L12,Critical Reasoning and Logic,thought_learning,0.2
+A08,The Trailblazer,agency,exploration,L13,"Evidence, Truth, and Epistemic Humility",thought_learning,0.05
+A08,The Trailblazer,agency,exploration,L14,"Systems Thinking, Judgment, and Decision-Making",thought_learning,0.3
+A08,The Trailblazer,agency,exploration,L15,"Learning Agility, Memory, and Teaching",thought_learning,0.45
+A08,The Trailblazer,agency,exploration,L16,"Creativity, Aesthetics, and Cultural Literacy",thought_learning,0.6
+A08,The Trailblazer,agency,exploration,L17,"Physical Health, Vitality, and Embodiment",embodied_practical,0.65
+A08,The Trailblazer,agency,exploration,L18,Domestic Competence and Material Self-Sufficiency,embodied_practical,0.35
+A08,The Trailblazer,agency,exploration,L19,"Digital Agency, Media Literacy, and Security",embodied_practical,0.35
+A08,The Trailblazer,agency,exploration,L20,"Safety, Risk, and Preparedness",embodied_practical,0.3
+A08,The Trailblazer,agency,exploration,L21,Financial Stewardship and Provision,embodied_practical,0.15
+A08,The Trailblazer,agency,exploration,L22,"Economic Agency, Entrepreneurship, and Market Literacy",embodied_practical,0.5
+A08,The Trailblazer,agency,exploration,L23,Communication and Listening,relational_care,0.25
+A08,The Trailblazer,agency,exploration,L24,"Empathy, Social Perception, and Perspective-Taking",relational_care,0.1
+A08,The Trailblazer,agency,exploration,L25,"Boundaries, Assertiveness, and Self-Respect",relational_care,0.35
+A08,The Trailblazer,agency,exploration,L26,"Friendship, Belonging, and Hospitality",relational_care,0.1
+A08,The Trailblazer,agency,exploration,L27,"Intimacy, Sexuality, and Partnership",relational_care,0.15
+A08,The Trailblazer,agency,exploration,L28,"Family, Parenting, and Caregiving",relational_care,0.1
+A08,The Trailblazer,agency,exploration,L29,"Conflict, Repair, Forgiveness, and Reconciliation",relational_care,0.2
+A08,The Trailblazer,agency,exploration,L30,"Service, Citizenship, and Civic Agency",contribution_society,0.15
+A08,The Trailblazer,agency,exploration,L31,"Justice, Pluralism, and Social Responsibility",contribution_society,0.1
+A08,The Trailblazer,agency,exploration,L32,"Work, Craft, Professionalism, and Contribution",contribution_society,0.45
+A08,The Trailblazer,agency,exploration,L33,"Leadership, Power, Mentorship, and Institutions",contribution_society,0.25
+A08,The Trailblazer,agency,exploration,L34,"Play, Rest, Celebration, and Joy",integration_flourishing,0.5
+A08,The Trailblazer,agency,exploration,L35,"Nature, Exploration, and Adventure",integration_flourishing,0.75
+A08,The Trailblazer,agency,exploration,L36,"Life Design, Balance, and Seasonality",integration_flourishing,0.2
+A08,The Trailblazer,agency,exploration,L37,"Legacy, Generativity, and Transmission",integration_flourishing,0.05
+A09,The Reformer,agency,transcendence,L01,Purpose and Direction,orientation_moral_center,0.6
+A09,The Reformer,agency,transcendence,L02,"Values, Integrity, and Moral Courage",orientation_moral_center,0.5
+A09,The Reformer,agency,transcendence,L03,"Spirituality, Reverence, and Transcendence",orientation_moral_center,0.9
+A09,The Reformer,agency,transcendence,L04,"Mortality, Suffering, Gratitude, and Hope",orientation_moral_center,0.7
+A09,The Reformer,agency,transcendence,L05,"Self-Knowledge, Identity, and Humility",inner_governance,0.2
+A09,The Reformer,agency,transcendence,L06,Emotional Awareness and Literacy,inner_governance,0.2
+A09,The Reformer,agency,transcendence,L07,Emotional Regulation and Resilience,inner_governance,0.5
+A09,The Reformer,agency,transcendence,L08,Attention and Presence,inner_governance,0.5
+A09,The Reformer,agency,transcendence,L09,Temperance and Desire Governance,inner_governance,0.6
+A09,The Reformer,agency,transcendence,L10,"Discipline, Habits, and Follow-Through",inner_governance,0.55
+A09,The Reformer,agency,transcendence,L11,"Adaptability, Uncertainty, and Learning from Failure",inner_governance,0.4
+A09,The Reformer,agency,transcendence,L12,Critical Reasoning and Logic,thought_learning,0.15
+A09,The Reformer,agency,transcendence,L13,"Evidence, Truth, and Epistemic Humility",thought_learning,0.1
+A09,The Reformer,agency,transcendence,L14,"Systems Thinking, Judgment, and Decision-Making",thought_learning,0.2
+A09,The Reformer,agency,transcendence,L15,"Learning Agility, Memory, and Teaching",thought_learning,0.15
+A09,The Reformer,agency,transcendence,L16,"Creativity, Aesthetics, and Cultural Literacy",thought_learning,0.2
+A09,The Reformer,agency,transcendence,L17,"Physical Health, Vitality, and Embodiment",embodied_practical,0.5
+A09,The Reformer,agency,transcendence,L18,Domestic Competence and Material Self-Sufficiency,embodied_practical,0.35
+A09,The Reformer,agency,transcendence,L19,"Digital Agency, Media Literacy, and Security",embodied_practical,0.2
+A09,The Reformer,agency,transcendence,L20,"Safety, Risk, and Preparedness",embodied_practical,0.3
+A09,The Reformer,agency,transcendence,L21,Financial Stewardship and Provision,embodied_practical,0.15
+A09,The Reformer,agency,transcendence,L22,"Economic Agency, Entrepreneurship, and Market Literacy",embodied_practical,0.35
+A09,The Reformer,agency,transcendence,L23,Communication and Listening,relational_care,0.15
+A09,The Reformer,agency,transcendence,L24,"Empathy, Social Perception, and Perspective-Taking",relational_care,0.1
+A09,The Reformer,agency,transcendence,L25,"Boundaries, Assertiveness, and Self-Respect",relational_care,0.35
+A09,The Reformer,agency,transcendence,L26,"Friendship, Belonging, and Hospitality",relational_care,0.1
+A09,The Reformer,agency,transcendence,L27,"Intimacy, Sexuality, and Partnership",relational_care,0.2
+A09,The Reformer,agency,transcendence,L28,"Family, Parenting, and Caregiving",relational_care,0.2
+A09,The Reformer,agency,transcendence,L29,"Conflict, Repair, Forgiveness, and Reconciliation",relational_care,0.35
+A09,The Reformer,agency,transcendence,L30,"Service, Citizenship, and Civic Agency",contribution_society,0.4
+A09,The Reformer,agency,transcendence,L31,"Justice, Pluralism, and Social Responsibility",contribution_society,0.35
+A09,The Reformer,agency,transcendence,L32,"Work, Craft, Professionalism, and Contribution",contribution_society,0.35
+A09,The Reformer,agency,transcendence,L33,"Leadership, Power, Mentorship, and Institutions",contribution_society,0.3
+A09,The Reformer,agency,transcendence,L34,"Play, Rest, Celebration, and Joy",integration_flourishing,0.3
+A09,The Reformer,agency,transcendence,L35,"Nature, Exploration, and Adventure",integration_flourishing,0.35
+A09,The Reformer,agency,transcendence,L36,"Life Design, Balance, and Seasonality",integration_flourishing,0.3
+A09,The Reformer,agency,transcendence,L37,"Legacy, Generativity, and Transmission",integration_flourishing,0.35
+A10,The Guardian,connection,stewardship,L01,Purpose and Direction,orientation_moral_center,0.2
+A10,The Guardian,connection,stewardship,L02,"Values, Integrity, and Moral Courage",orientation_moral_center,0.4
+A10,The Guardian,connection,stewardship,L03,"Spirituality, Reverence, and Transcendence",orientation_moral_center,0.1
+A10,The Guardian,connection,stewardship,L04,"Mortality, Suffering, Gratitude, and Hope",orientation_moral_center,0.2
+A10,The Guardian,connection,stewardship,L05,"Self-Knowledge, Identity, and Humility",inner_governance,0.15
+A10,The Guardian,connection,stewardship,L06,Emotional Awareness and Literacy,inner_governance,0.5
+A10,The Guardian,connection,stewardship,L07,Emotional Regulation and Resilience,inner_governance,0.4
+A10,The Guardian,connection,stewardship,L08,Attention and Presence,inner_governance,0.15
+A10,The Guardian,connection,stewardship,L09,Temperance and Desire Governance,inner_governance,0.3
+A10,The Guardian,connection,stewardship,L10,"Discipline, Habits, and Follow-Through",inner_governance,0.35
+A10,The Guardian,connection,stewardship,L11,"Adaptability, Uncertainty, and Learning from Failure",inner_governance,0.0
+A10,The Guardian,connection,stewardship,L12,Critical Reasoning and Logic,thought_learning,0.1
+A10,The Guardian,connection,stewardship,L13,"Evidence, Truth, and Epistemic Humility",thought_learning,0.15
+A10,The Guardian,connection,stewardship,L14,"Systems Thinking, Judgment, and Decision-Making",thought_learning,0.25
+A10,The Guardian,connection,stewardship,L15,"Learning Agility, Memory, and Teaching",thought_learning,0.15
+A10,The Guardian,connection,stewardship,L16,"Creativity, Aesthetics, and Cultural Literacy",thought_learning,0.1
+A10,The Guardian,connection,stewardship,L17,"Physical Health, Vitality, and Embodiment",embodied_practical,0.35
+A10,The Guardian,connection,stewardship,L18,Domestic Competence and Material Self-Sufficiency,embodied_practical,0.55
+A10,The Guardian,connection,stewardship,L19,"Digital Agency, Media Literacy, and Security",embodied_practical,0.3
+A10,The Guardian,connection,stewardship,L20,"Safety, Risk, and Preparedness",embodied_practical,0.55
+A10,The Guardian,connection,stewardship,L21,Financial Stewardship and Provision,embodied_practical,0.65
+A10,The Guardian,connection,stewardship,L22,"Economic Agency, Entrepreneurship, and Market Literacy",embodied_practical,0.25
+A10,The Guardian,connection,stewardship,L23,Communication and Listening,relational_care,0.55
+A10,The Guardian,connection,stewardship,L24,"Empathy, Social Perception, and Perspective-Taking",relational_care,0.65
+A10,The Guardian,connection,stewardship,L25,"Boundaries, Assertiveness, and Self-Respect",relational_care,0.5
+A10,The Guardian,connection,stewardship,L26,"Friendship, Belonging, and Hospitality",relational_care,0.8
+A10,The Guardian,connection,stewardship,L27,"Intimacy, Sexuality, and Partnership",relational_care,0.75
+A10,The Guardian,connection,stewardship,L28,"Family, Parenting, and Caregiving",relational_care,0.8
+A10,The Guardian,connection,stewardship,L29,"Conflict, Repair, Forgiveness, and Reconciliation",relational_care,0.6
+A10,The Guardian,connection,stewardship,L30,"Service, Citizenship, and Civic Agency",contribution_society,0.5
+A10,The Guardian,connection,stewardship,L31,"Justice, Pluralism, and Social Responsibility",contribution_society,0.45
+A10,The Guardian,connection,stewardship,L32,"Work, Craft, Professionalism, and Contribution",contribution_society,0.4
+A10,The Guardian,connection,stewardship,L33,"Leadership, Power, Mentorship, and Institutions",contribution_society,0.55
+A10,The Guardian,connection,stewardship,L34,"Play, Rest, Celebration, and Joy",integration_flourishing,0.3
+A10,The Guardian,connection,stewardship,L35,"Nature, Exploration, and Adventure",integration_flourishing,0.05
+A10,The Guardian,connection,stewardship,L36,"Life Design, Balance, and Seasonality",integration_flourishing,0.4
+A10,The Guardian,connection,stewardship,L37,"Legacy, Generativity, and Transmission",integration_flourishing,0.55
+A11,The Connector,connection,exploration,L01,Purpose and Direction,orientation_moral_center,0.0
+A11,The Connector,connection,exploration,L02,"Values, Integrity, and Moral Courage",orientation_moral_center,0.0
+A11,The Connector,connection,exploration,L03,"Spirituality, Reverence, and Transcendence",orientation_moral_center,0.1
+A11,The Connector,connection,exploration,L04,"Mortality, Suffering, Gratitude, and Hope",orientation_moral_center,0.2
+A11,The Connector,connection,exploration,L05,"Self-Knowledge, Identity, and Humility",inner_governance,0.3
+A11,The Connector,connection,exploration,L06,Emotional Awareness and Literacy,inner_governance,0.5
+A11,The Connector,connection,exploration,L07,Emotional Regulation and Resilience,inner_governance,0.25
+A11,The Connector,connection,exploration,L08,Attention and Presence,inner_governance,0.0
+A11,The Connector,connection,exploration,L09,Temperance and Desire Governance,inner_governance,0.0
+A11,The Connector,connection,exploration,L10,"Discipline, Habits, and Follow-Through",inner_governance,0.0
+A11,The Connector,connection,exploration,L11,"Adaptability, Uncertainty, and Learning from Failure",inner_governance,0.4
+A11,The Connector,connection,exploration,L12,Critical Reasoning and Logic,thought_learning,0.05
+A11,The Connector,connection,exploration,L13,"Evidence, Truth, and Epistemic Humility",thought_learning,0.05
+A11,The Connector,connection,exploration,L14,"Systems Thinking, Judgment, and Decision-Making",thought_learning,0.1
+A11,The Connector,connection,exploration,L15,"Learning Agility, Memory, and Teaching",thought_learning,0.45
+A11,The Connector,connection,exploration,L16,"Creativity, Aesthetics, and Cultural Literacy",thought_learning,0.7
+A11,The Connector,connection,exploration,L17,"Physical Health, Vitality, and Embodiment",embodied_practical,0.25
+A11,The Connector,connection,exploration,L18,Domestic Competence and Material Self-Sufficiency,embodied_practical,0.1
+A11,The Connector,connection,exploration,L19,"Digital Agency, Media Literacy, and Security",embodied_practical,0.15
+A11,The Connector,connection,exploration,L20,"Safety, Risk, and Preparedness",embodied_practical,0.05
+A11,The Connector,connection,exploration,L21,Financial Stewardship and Provision,embodied_practical,0.1
+A11,The Connector,connection,exploration,L22,"Economic Agency, Entrepreneurship, and Market Literacy",embodied_practical,0.15
+A11,The Connector,connection,exploration,L23,Communication and Listening,relational_care,0.55
+A11,The Connector,connection,exploration,L24,"Empathy, Social Perception, and Perspective-Taking",relational_care,0.75
+A11,The Connector,connection,exploration,L25,"Boundaries, Assertiveness, and Self-Respect",relational_care,0.3
+A11,The Connector,connection,exploration,L26,"Friendship, Belonging, and Hospitality",relational_care,0.75
+A11,The Connector,connection,exploration,L27,"Intimacy, Sexuality, and Partnership",relational_care,0.65
+A11,The Connector,connection,exploration,L28,"Family, Parenting, and Caregiving",relational_care,0.45
+A11,The Connector,connection,exploration,L29,"Conflict, Repair, Forgiveness, and Reconciliation",relational_care,0.45
+A11,The Connector,connection,exploration,L30,"Service, Citizenship, and Civic Agency",contribution_society,0.25
+A11,The Connector,connection,exploration,L31,"Justice, Pluralism, and Social Responsibility",contribution_society,0.15
+A11,The Connector,connection,exploration,L32,"Work, Craft, Professionalism, and Contribution",contribution_society,0.15
+A11,The Connector,connection,exploration,L33,"Leadership, Power, Mentorship, and Institutions",contribution_society,0.2
+A11,The Connector,connection,exploration,L34,"Play, Rest, Celebration, and Joy",integration_flourishing,0.65
+A11,The Connector,connection,exploration,L35,"Nature, Exploration, and Adventure",integration_flourishing,0.6
+A11,The Connector,connection,exploration,L36,"Life Design, Balance, and Seasonality",integration_flourishing,0.2
+A11,The Connector,connection,exploration,L37,"Legacy, Generativity, and Transmission",integration_flourishing,0.2
+A12,The Healer,connection,transcendence,L01,Purpose and Direction,orientation_moral_center,0.6
+A12,The Healer,connection,transcendence,L02,"Values, Integrity, and Moral Courage",orientation_moral_center,0.3
+A12,The Healer,connection,transcendence,L03,"Spirituality, Reverence, and Transcendence",orientation_moral_center,1.0
+A12,The Healer,connection,transcendence,L04,"Mortality, Suffering, Gratitude, and Hope",orientation_moral_center,0.8
+A12,The Healer,connection,transcendence,L05,"Self-Knowledge, Identity, and Humility",inner_governance,0.35
+A12,The Healer,connection,transcendence,L06,Emotional Awareness and Literacy,inner_governance,0.6
+A12,The Healer,connection,transcendence,L07,Emotional Regulation and Resilience,inner_governance,0.35
+A12,The Healer,connection,transcendence,L08,Attention and Presence,inner_governance,0.25
+A12,The Healer,connection,transcendence,L09,Temperance and Desire Governance,inner_governance,0.15
+A12,The Healer,connection,transcendence,L10,"Discipline, Habits, and Follow-Through",inner_governance,0.0
+A12,The Healer,connection,transcendence,L11,"Adaptability, Uncertainty, and Learning from Failure",inner_governance,0.1
+A12,The Healer,connection,transcendence,L12,Critical Reasoning and Logic,thought_learning,0.0
+A12,The Healer,connection,transcendence,L13,"Evidence, Truth, and Epistemic Humility",thought_learning,0.1
+A12,The Healer,connection,transcendence,L14,"Systems Thinking, Judgment, and Decision-Making",thought_learning,0.0
+A12,The Healer,connection,transcendence,L15,"Learning Agility, Memory, and Teaching",thought_learning,0.15
+A12,The Healer,connection,transcendence,L16,"Creativity, Aesthetics, and Cultural Literacy",thought_learning,0.3
+A12,The Healer,connection,transcendence,L17,"Physical Health, Vitality, and Embodiment",embodied_practical,0.1
+A12,The Healer,connection,transcendence,L18,Domestic Competence and Material Self-Sufficiency,embodied_practical,0.1
+A12,The Healer,connection,transcendence,L19,"Digital Agency, Media Literacy, and Security",embodied_practical,0.0
+A12,The Healer,connection,transcendence,L20,"Safety, Risk, and Preparedness",embodied_practical,0.05
+A12,The Healer,connection,transcendence,L21,Financial Stewardship and Provision,embodied_practical,0.1
+A12,The Healer,connection,transcendence,L22,"Economic Agency, Entrepreneurship, and Market Literacy",embodied_practical,0.0
+A12,The Healer,connection,transcendence,L23,Communication and Listening,relational_care,0.45
+A12,The Healer,connection,transcendence,L24,"Empathy, Social Perception, and Perspective-Taking",relational_care,0.75
+A12,The Healer,connection,transcendence,L25,"Boundaries, Assertiveness, and Self-Respect",relational_care,0.3
+A12,The Healer,connection,transcendence,L26,"Friendship, Belonging, and Hospitality",relational_care,0.75
+A12,The Healer,connection,transcendence,L27,"Intimacy, Sexuality, and Partnership",relational_care,0.7
+A12,The Healer,connection,transcendence,L28,"Family, Parenting, and Caregiving",relational_care,0.55
+A12,The Healer,connection,transcendence,L29,"Conflict, Repair, Forgiveness, and Reconciliation",relational_care,0.6
+A12,The Healer,connection,transcendence,L30,"Service, Citizenship, and Civic Agency",contribution_society,0.5
+A12,The Healer,connection,transcendence,L31,"Justice, Pluralism, and Social Responsibility",contribution_society,0.4
+A12,The Healer,connection,transcendence,L32,"Work, Craft, Professionalism, and Contribution",contribution_society,0.05
+A12,The Healer,connection,transcendence,L33,"Leadership, Power, Mentorship, and Institutions",contribution_society,0.25
+A12,The Healer,connection,transcendence,L34,"Play, Rest, Celebration, and Joy",integration_flourishing,0.45
+A12,The Healer,connection,transcendence,L35,"Nature, Exploration, and Adventure",integration_flourishing,0.2
+A12,The Healer,connection,transcendence,L36,"Life Design, Balance, and Seasonality",integration_flourishing,0.3
+A12,The Healer,connection,transcendence,L37,"Legacy, Generativity, and Transmission",integration_flourishing,0.5
+A13,The Craftsman,stewardship,exploration,L01,Purpose and Direction,orientation_moral_center,0.2
+A13,The Craftsman,stewardship,exploration,L02,"Values, Integrity, and Moral Courage",orientation_moral_center,0.4
+A13,The Craftsman,stewardship,exploration,L03,"Spirituality, Reverence, and Transcendence",orientation_moral_center,0.0
+A13,The Craftsman,stewardship,exploration,L04,"Mortality, Suffering, Gratitude, and Hope",orientation_moral_center,0.0
+A13,The Craftsman,stewardship,exploration,L05,"Self-Knowledge, Identity, and Humility",inner_governance,0.15
+A13,The Craftsman,stewardship,exploration,L06,Emotional Awareness and Literacy,inner_governance,0.0
+A13,The Craftsman,stewardship,exploration,L07,Emotional Regulation and Resilience,inner_governance,0.15
+A13,The Craftsman,stewardship,exploration,L08,Attention and Presence,inner_governance,0.15
+A13,The Craftsman,stewardship,exploration,L09,Temperance and Desire Governance,inner_governance,0.3
+A13,The Craftsman,stewardship,exploration,L10,"Discipline, Habits, and Follow-Through",inner_governance,0.35
+A13,The Craftsman,stewardship,exploration,L11,"Adaptability, Uncertainty, and Learning from Failure",inner_governance,0.4
+A13,The Craftsman,stewardship,exploration,L12,Critical Reasoning and Logic,thought_learning,0.15
+A13,The Craftsman,stewardship,exploration,L13,"Evidence, Truth, and Epistemic Humility",thought_learning,0.2
+A13,The Craftsman,stewardship,exploration,L14,"Systems Thinking, Judgment, and Decision-Making",thought_learning,0.35
+A13,The Craftsman,stewardship,exploration,L15,"Learning Agility, Memory, and Teaching",thought_learning,0.3
+A13,The Craftsman,stewardship,exploration,L16,"Creativity, Aesthetics, and Cultural Literacy",thought_learning,0.6
+A13,The Craftsman,stewardship,exploration,L17,"Physical Health, Vitality, and Embodiment",embodied_practical,0.4
+A13,The Craftsman,stewardship,exploration,L18,Domestic Competence and Material Self-Sufficiency,embodied_practical,0.45
+A13,The Craftsman,stewardship,exploration,L19,"Digital Agency, Media Literacy, and Security",embodied_practical,0.45
+A13,The Craftsman,stewardship,exploration,L20,"Safety, Risk, and Preparedness",embodied_practical,0.5
+A13,The Craftsman,stewardship,exploration,L21,Financial Stewardship and Provision,embodied_practical,0.55
+A13,The Craftsman,stewardship,exploration,L22,"Economic Agency, Entrepreneurship, and Market Literacy",embodied_practical,0.4
+A13,The Craftsman,stewardship,exploration,L23,Communication and Listening,relational_care,0.2
+A13,The Craftsman,stewardship,exploration,L24,"Empathy, Social Perception, and Perspective-Taking",relational_care,0.1
+A13,The Craftsman,stewardship,exploration,L25,"Boundaries, Assertiveness, and Self-Respect",relational_care,0.2
+A13,The Craftsman,stewardship,exploration,L26,"Friendship, Belonging, and Hospitality",relational_care,0.25
+A13,The Craftsman,stewardship,exploration,L27,"Intimacy, Sexuality, and Partnership",relational_care,0.2
+A13,The Craftsman,stewardship,exploration,L28,"Family, Parenting, and Caregiving",relational_care,0.35
+A13,The Craftsman,stewardship,exploration,L29,"Conflict, Repair, Forgiveness, and Reconciliation",relational_care,0.15
+A13,The Craftsman,stewardship,exploration,L30,"Service, Citizenship, and Civic Agency",contribution_society,0.25
+A13,The Craftsman,stewardship,exploration,L31,"Justice, Pluralism, and Social Responsibility",contribution_society,0.3
+A13,The Craftsman,stewardship,exploration,L32,"Work, Craft, Professionalism, and Contribution",contribution_society,0.45
+A13,The Craftsman,stewardship,exploration,L33,"Leadership, Power, Mentorship, and Institutions",contribution_society,0.35
+A13,The Craftsman,stewardship,exploration,L34,"Play, Rest, Celebration, and Joy",integration_flourishing,0.45
+A13,The Craftsman,stewardship,exploration,L35,"Nature, Exploration, and Adventure",integration_flourishing,0.55
+A13,The Craftsman,stewardship,exploration,L36,"Life Design, Balance, and Seasonality",integration_flourishing,0.4
+A13,The Craftsman,stewardship,exploration,L37,"Legacy, Generativity, and Transmission",integration_flourishing,0.35
+A14,The Steward,stewardship,transcendence,L01,Purpose and Direction,orientation_moral_center,0.8
+A14,The Steward,stewardship,transcendence,L02,"Values, Integrity, and Moral Courage",orientation_moral_center,0.7
+A14,The Steward,stewardship,transcendence,L03,"Spirituality, Reverence, and Transcendence",orientation_moral_center,0.9
+A14,The Steward,stewardship,transcendence,L04,"Mortality, Suffering, Gratitude, and Hope",orientation_moral_center,0.6
+A14,The Steward,stewardship,transcendence,L05,"Self-Knowledge, Identity, and Humility",inner_governance,0.2
+A14,The Steward,stewardship,transcendence,L06,Emotional Awareness and Literacy,inner_governance,0.1
+A14,The Steward,stewardship,transcendence,L07,Emotional Regulation and Resilience,inner_governance,0.25
+A14,The Steward,stewardship,transcendence,L08,Attention and Presence,inner_governance,0.4
+A14,The Steward,stewardship,transcendence,L09,Temperance and Desire Governance,inner_governance,0.45
+A14,The Steward,stewardship,transcendence,L10,"Discipline, Habits, and Follow-Through",inner_governance,0.35
+A14,The Steward,stewardship,transcendence,L11,"Adaptability, Uncertainty, and Learning from Failure",inner_governance,0.1
+A14,The Steward,stewardship,transcendence,L12,Critical Reasoning and Logic,thought_learning,0.1
+A14,The Steward,stewardship,transcendence,L13,"Evidence, Truth, and Epistemic Humility",thought_learning,0.25
+A14,The Steward,stewardship,transcendence,L14,"Systems Thinking, Judgment, and Decision-Making",thought_learning,0.25
+A14,The Steward,stewardship,transcendence,L15,"Learning Agility, Memory, and Teaching",thought_learning,0.0
+A14,The Steward,stewardship,transcendence,L16,"Creativity, Aesthetics, and Cultural Literacy",thought_learning,0.2
+A14,The Steward,stewardship,transcendence,L17,"Physical Health, Vitality, and Embodiment",embodied_practical,0.25
+A14,The Steward,stewardship,transcendence,L18,Domestic Competence and Material Self-Sufficiency,embodied_practical,0.45
+A14,The Steward,stewardship,transcendence,L19,"Digital Agency, Media Literacy, and Security",embodied_practical,0.3
+A14,The Steward,stewardship,transcendence,L20,"Safety, Risk, and Preparedness",embodied_practical,0.5
+A14,The Steward,stewardship,transcendence,L21,Financial Stewardship and Provision,embodied_practical,0.55
+A14,The Steward,stewardship,transcendence,L22,"Economic Agency, Entrepreneurship, and Market Literacy",embodied_practical,0.25
+A14,The Steward,stewardship,transcendence,L23,Communication and Listening,relational_care,0.1
+A14,The Steward,stewardship,transcendence,L24,"Empathy, Social Perception, and Perspective-Taking",relational_care,0.1
+A14,The Steward,stewardship,transcendence,L25,"Boundaries, Assertiveness, and Self-Respect",relational_care,0.2
+A14,The Steward,stewardship,transcendence,L26,"Friendship, Belonging, and Hospitality",relational_care,0.25
+A14,The Steward,stewardship,transcendence,L27,"Intimacy, Sexuality, and Partnership",relational_care,0.25
+A14,The Steward,stewardship,transcendence,L28,"Family, Parenting, and Caregiving",relational_care,0.45
+A14,The Steward,stewardship,transcendence,L29,"Conflict, Repair, Forgiveness, and Reconciliation",relational_care,0.3
+A14,The Steward,stewardship,transcendence,L30,"Service, Citizenship, and Civic Agency",contribution_society,0.5
+A14,The Steward,stewardship,transcendence,L31,"Justice, Pluralism, and Social Responsibility",contribution_society,0.55
+A14,The Steward,stewardship,transcendence,L32,"Work, Craft, Professionalism, and Contribution",contribution_society,0.35
+A14,The Steward,stewardship,transcendence,L33,"Leadership, Power, Mentorship, and Institutions",contribution_society,0.4
+A14,The Steward,stewardship,transcendence,L34,"Play, Rest, Celebration, and Joy",integration_flourishing,0.25
+A14,The Steward,stewardship,transcendence,L35,"Nature, Exploration, and Adventure",integration_flourishing,0.15
+A14,The Steward,stewardship,transcendence,L36,"Life Design, Balance, and Seasonality",integration_flourishing,0.5
+A14,The Steward,stewardship,transcendence,L37,"Legacy, Generativity, and Transmission",integration_flourishing,0.65
+A15,The Creator,exploration,transcendence,L01,Purpose and Direction,orientation_moral_center,0.6
+A15,The Creator,exploration,transcendence,L02,"Values, Integrity, and Moral Courage",orientation_moral_center,0.3
+A15,The Creator,exploration,transcendence,L03,"Spirituality, Reverence, and Transcendence",orientation_moral_center,0.9
+A15,The Creator,exploration,transcendence,L04,"Mortality, Suffering, Gratitude, and Hope",orientation_moral_center,0.6
+A15,The Creator,exploration,transcendence,L05,"Self-Knowledge, Identity, and Humility",inner_governance,0.35
+A15,The Creator,exploration,transcendence,L06,Emotional Awareness and Literacy,inner_governance,0.1
+A15,The Creator,exploration,transcendence,L07,Emotional Regulation and Resilience,inner_governance,0.1
+A15,The Creator,exploration,transcendence,L08,Attention and Presence,inner_governance,0.25
+A15,The Creator,exploration,transcendence,L09,Temperance and Desire Governance,inner_governance,0.15
+A15,The Creator,exploration,transcendence,L10,"Discipline, Habits, and Follow-Through",inner_governance,0.0
+A15,The Creator,exploration,transcendence,L11,"Adaptability, Uncertainty, and Learning from Failure",inner_governance,0.5
+A15,The Creator,exploration,transcendence,L12,Critical Reasoning and Logic,thought_learning,0.05
+A15,The Creator,exploration,transcendence,L13,"Evidence, Truth, and Epistemic Humility",thought_learning,0.15
+A15,The Creator,exploration,transcendence,L14,"Systems Thinking, Judgment, and Decision-Making",thought_learning,0.1
+A15,The Creator,exploration,transcendence,L15,"Learning Agility, Memory, and Teaching",thought_learning,0.3
+A15,The Creator,exploration,transcendence,L16,"Creativity, Aesthetics, and Cultural Literacy",thought_learning,0.8
+A15,The Creator,exploration,transcendence,L17,"Physical Health, Vitality, and Embodiment",embodied_practical,0.15
+A15,The Creator,exploration,transcendence,L18,Domestic Competence and Material Self-Sufficiency,embodied_practical,0.0
+A15,The Creator,exploration,transcendence,L19,"Digital Agency, Media Literacy, and Security",embodied_practical,0.15
+A15,The Creator,exploration,transcendence,L20,"Safety, Risk, and Preparedness",embodied_practical,0.0
+A15,The Creator,exploration,transcendence,L21,Financial Stewardship and Provision,embodied_practical,0.0
+A15,The Creator,exploration,transcendence,L22,"Economic Agency, Entrepreneurship, and Market Literacy",embodied_practical,0.15
+A15,The Creator,exploration,transcendence,L23,Communication and Listening,relational_care,0.1
+A15,The Creator,exploration,transcendence,L24,"Empathy, Social Perception, and Perspective-Taking",relational_care,0.2
+A15,The Creator,exploration,transcendence,L25,"Boundaries, Assertiveness, and Self-Respect",relational_care,0.0
+A15,The Creator,exploration,transcendence,L26,"Friendship, Belonging, and Hospitality",relational_care,0.2
+A15,The Creator,exploration,transcendence,L27,"Intimacy, Sexuality, and Partnership",relational_care,0.15
+A15,The Creator,exploration,transcendence,L28,"Family, Parenting, and Caregiving",relational_care,0.1
+A15,The Creator,exploration,transcendence,L29,"Conflict, Repair, Forgiveness, and Reconciliation",relational_care,0.15
+A15,The Creator,exploration,transcendence,L30,"Service, Citizenship, and Civic Agency",contribution_society,0.25
+A15,The Creator,exploration,transcendence,L31,"Justice, Pluralism, and Social Responsibility",contribution_society,0.25
+A15,The Creator,exploration,transcendence,L32,"Work, Craft, Professionalism, and Contribution",contribution_society,0.1
+A15,The Creator,exploration,transcendence,L33,"Leadership, Power, Mentorship, and Institutions",contribution_society,0.05
+A15,The Creator,exploration,transcendence,L34,"Play, Rest, Celebration, and Joy",integration_flourishing,0.6
+A15,The Creator,exploration,transcendence,L35,"Nature, Exploration, and Adventure",integration_flourishing,0.7
+A15,The Creator,exploration,transcendence,L36,"Life Design, Balance, and Seasonality",integration_flourishing,0.3
+A15,The Creator,exploration,transcendence,L37,"Legacy, Generativity, and Transmission",integration_flourishing,0.3
