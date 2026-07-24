@@ -16,6 +16,7 @@ from growth.forms import (
 )
 from growth.models import (
     AssessmentRun,
+    EvidenceEvent,
     PracticeCheckIn,
     PracticeProtocol,
     PracticeReview,
@@ -213,7 +214,7 @@ def practice_sprint(request, sprint_id):
     sprint = _sprint(request.user, sprint_id)
     submitted = list(
         sprint.check_ins.filter(status=PracticeCheckIn.Status.SUBMITTED)
-        .select_related("action")
+        .select_related("action", "evidence_event")
         .order_by("-submitted_at")
     )
     drafts = list(
@@ -283,13 +284,14 @@ def practice_check_in(request, sprint_id, check_in_id=None):
             sprint=sprint,
             status=PracticeCheckIn.Status.DRAFT,
         )
+    submit = request.method == "POST" and request.POST.get("intent") == "submit"
     form = PracticeCheckInForm(
         request.POST or None,
         instance=check_in,
         sprint=sprint,
+        require_evidence_metadata=submit,
     )
     if request.method == "POST" and form.is_valid():
-        submit = request.POST.get("intent") == "submit"
         try:
             saved = save_check_in(
                 sprint=sprint,
@@ -312,6 +314,26 @@ def practice_check_in(request, sprint_id, check_in_id=None):
             "sprint": sprint,
             "form": form,
             "check_in": check_in,
+        },
+    )
+
+
+def practice_check_in_detail(request, sprint_id, check_in_id):
+    sprint = _sprint(request.user, sprint_id)
+    check_in = get_object_or_404(
+        PracticeCheckIn.objects.select_related("action"),
+        pk=check_in_id,
+        sprint=sprint,
+        status=PracticeCheckIn.Status.SUBMITTED,
+    )
+    event = get_object_or_404(EvidenceEvent, check_in=check_in)
+    return render(
+        request,
+        "growth/practice_check_in_detail.html",
+        {
+            "sprint": sprint,
+            "check_in": check_in,
+            "event": event,
         },
     )
 

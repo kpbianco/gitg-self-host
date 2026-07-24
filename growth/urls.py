@@ -50,6 +50,11 @@ urlpatterns = [
         name="practice-check-in-edit",
     ),
     path(
+        "practice-sprints/<uuid:sprint_id>/check-ins/<uuid:check_in_id>/evidence/",
+        views_practice.practice_check_in_detail,
+        name="practice-check-in-detail",
+    ),
+    path(
         "practice-sprints/<uuid:sprint_id>/review/",
         views_practice.practice_review,
         name="practice-review",

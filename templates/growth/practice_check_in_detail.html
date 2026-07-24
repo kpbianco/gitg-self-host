@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% block title %}Evidence reading · {{ check_in.action.title }}{% endblock %}
+
+{% block content %}
+  <p class="back-link">
+    <a href="{% url 'growth:practice-sprint' sprint.pk %}">← {{ sprint.protocol.name }}</a>
+  </p>
+
+  <section class="page-heading">
+    <div>
+      <p class="eyebrow">Submitted evidence</p>
+      <h1>{{ check_in.action.title }}</h1>
+      <p class="lede">
+        Recorded {{ check_in.submitted_at|date:"M j, Y, g:i a" }}. This reading
+        describes one observation; it does not establish mastery.
+      </p>
+    </div>
+    <span class="status-pill">Immutable</span>
+  </section>
+
+  <div class="mastery-notice" role="note">
+    <strong>Your developmental profile is unchanged.</strong>
+    <p>
+      M2A classifies evidence quality and context only. It does not allocate
+      this event to levers, change confidence, or rerank practices.
+    </p>
+  </div>
+
+  <section class="definition-grid evidence-reading-grid">
+    <article>
+      <p class="eyebrow">Evidence reading</p>
+      <h2>{{ event.explanation.base_evidence.label }}</h2>
+      <p>{{ event.explanation.base_evidence.reason }}</p>
+    </article>
+    <article>
+      <p class="eyebrow">Direction</p>
+      <h2>{{ event.explanation.direction.label }}</h2>
+      <p>{{ event.explanation.direction.reason }}</p>
+    </article>
+    <article>
+      <p class="eyebrow">Structured detail</p>
+      <h2>{{ event.explanation.quality.label }}</h2>
+      <p>{{ event.explanation.quality.reason }}</p>
+    </article>
+  </section>
+
+  <section class="panel">
+    <p class="eyebrow">Why it was read this way</p>
+    <dl class="metric-list">
+      <div>
+        <dt>Support used</dt>
+        <dd>{{ event.explanation.independence.label }}</dd>
+      </div>
+      <div>
+        <dt>Context breadth</dt>
+        <dd>{{ event.explanation.context_breadth.label }}</dd>
+      </div>
+      <div>
+        <dt>Repetition</dt>
+        <dd>{{ event.explanation.repetition.label }}</dd>
+      </div>
+      <div>
+        <dt>Protocol observation</dt>
+        <dd>
+          {% if check_in.action_completed %}
+            Completed
+          {% elif check_in.action_attempted %}
+            Attempted
+          {% else %}
+            Not attempted
+          {% endif %}
+        </dd>
+      </div>
+    </dl>
+  </section>
+
+  {% if check_in.contradictory_evidence or check_in.note %}
+    <section class="section-block">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Your record</p>
+          <h2>Minimal private notes</h2>
+        </div>
+      </div>
+      <div class="dashboard-grid">
+        {% if check_in.contradictory_evidence %}
+          <article class="panel">
+            <h3>Contradictory or mixed evidence</h3>
+            <p>{{ check_in.contradictory_evidence }}</p>
+          </article>
+        {% endif %}
+        {% if check_in.note %}
+          <article class="panel">
+            <h3>Optional note</h3>
+            <p>{{ check_in.note }}</p>
+          </article>
+        {% endif %}
+      </div>
+    </section>
+  {% endif %}
+
+  <details class="panel audit-details">
+    <summary>Technical audit details</summary>
+    <p class="fine-print">
+      These event-level values support later replay and review. They are not
+      displayed as a personal score.
+    </p>
+    <dl class="metric-list">
+      <div><dt>Algorithm</dt><dd>{{ event.algorithm_version }}</dd></div>
+      <div><dt>Performance observation</dt><dd>{{ event.performance }}</dd></div>
+      <div><dt>Evidence quality</dt><dd>{{ event.quality }}</dd></div>
+      <div><dt>Independence</dt><dd>{{ event.independence }}</dd></div>
+      <div><dt>Context breadth</dt><dd>{{ event.context_breadth }}</dd></div>
+      <div><dt>Repeat multiplier</dt><dd>{{ event.repetition_multiplier }}</dd></div>
+      <div><dt>Base evidence mass</dt><dd>{{ event.base_evidence_mass }}</dd></div>
+      <div>
+        <dt>Contradiction level</dt>
+        <dd>
+          {% if event.contradiction_level is None %}
+            Unknown
+          {% else %}
+            {{ event.contradiction_level }}
+          {% endif %}
+        </dd>
+      </div>
+    </dl>
+  </details>
+{% endblock %}

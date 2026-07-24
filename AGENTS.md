@@ -36,6 +36,12 @@ Milestone 1 validates the UX with static scores:
 A review may show a clearly labeled hypothetical score-impact preview, but M1
 currently saves no preview and no score impact.
 
+M2A adds versioned, immutable event-level evidence classification under the
+contract in `docs/evidence-contract.md`. It may calculate protocol performance,
+quality, independence, context breadth, repetition, contradiction, and base
+event mass. It must not allocate that mass to levers or mutate any profile
+score.
+
 Implement one complete protocol first: `Deepen One Existing Friendship`.
 Create inactive placeholders for four others:
 - Schedule Non-Instrumental Play
@@ -70,6 +76,9 @@ The accepted rationale is recorded in
 - Validate all imported weight sums and IDs.
 - Do not silently normalize malformed data; fail with actionable diagnostics.
 - Add tests before enabling any score mutation.
+- Every submitted M2 check-in must create its evidence event atomically.
+  Event snapshots must contain enough structured input and versioned rules for
+  exact replay without duplicating private free text.
 - Use Django migrations; keep ORM code portable to PostgreSQL without adding a
   PostgreSQL service in M1.
 - The deployed SQLite database is `/data/grounded_growth.sqlite3`; enable a
@@ -102,7 +111,8 @@ canonical assessment and completes the friendship recommendation, setup,
 sprint, draft/submitted check-in, pause/resume/stop, completion, and review
 experience.
 
-M1 is a static-score product boundary. Do not implement M2 evidence weights,
-M3 posterior updates, hidden score mutation, or dynamic recommendation changes
-without a separately reviewed milestone. Practice completion remains separate
-from competency mastery.
+M1 remains a static-profile boundary. M2A may calculate base event evidence
+mass under its reviewed contract, but it cannot implement task-to-lever
+allocation, posterior updates, hidden score mutation, score snapshots, or
+dynamic recommendation changes. Practice completion remains separate from
+competency mastery.

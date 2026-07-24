@@ -16,6 +16,7 @@ from growth.models import (
     PracticeReview,
     PracticeSprint,
 )
+from growth.services.evidence import EvidenceWorkflowError, create_evidence_event
 
 
 class PracticeWorkflowError(ValueError):
@@ -176,6 +177,9 @@ def save_check_in(
         "internal_resistance",
         "expected_reciprocity",
         "observed_reciprocity",
+        "support_level",
+        "context_comparison",
+        "evidence_direction",
         "contradictory_evidence",
         "note",
     )
@@ -183,11 +187,54 @@ def save_check_in(
         setattr(check_in, field, cleaned_data[field])
     check_in.status = PracticeCheckIn.Status.SUBMITTED if submit else PracticeCheckIn.Status.DRAFT
     check_in.submitted_at = timezone.now() if submit else None
+    if submit:
+        missing = [
+            label
+            for field, label in (
+                ("support_level", "support used"),
+                ("context_comparison", "context comparison"),
+                ("evidence_direction", "evidence direction"),
+            )
+            if not getattr(check_in, field)
+        ]
+        if missing:
+            raise PracticeWorkflowError(f"Submitted evidence requires: {', '.join(missing)}.")
+        has_prior = locked_sprint.check_ins.filter(status=PracticeCheckIn.Status.SUBMITTED).exists()
+        if (
+            check_in.context_comparison == PracticeCheckIn.ContextComparison.FIRST_RECORD
+            and has_prior
+        ):
+            raise PracticeWorkflowError(
+                "First record is only available before any evidence has been submitted."
+            )
+        if (
+            check_in.context_comparison != PracticeCheckIn.ContextComparison.FIRST_RECORD
+            and not has_prior
+        ):
+            raise PracticeWorkflowError(
+                "The first submitted check-in must use first record for its context."
+            )
+        if (
+            check_in.evidence_direction
+            in (
+                PracticeCheckIn.EvidenceDirection.MIXED,
+                PracticeCheckIn.EvidenceDirection.CONTRADICTS,
+            )
+            and not check_in.contradictory_evidence.strip()
+        ):
+            raise PracticeWorkflowError(
+                "Mixed or contradictory evidence requires a brief explanation."
+            )
     try:
         check_in.full_clean()
     except ValidationError as exc:
         raise PracticeWorkflowError("; ".join(exc.messages)) from exc
     check_in.save()
+    if submit:
+        try:
+            create_evidence_event(check_in)
+        except EvidenceWorkflowError as exc:
+            raise PracticeWorkflowError(str(exc)) from exc
     return check_in
 
 

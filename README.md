@@ -16,6 +16,8 @@ Grounded Growth is a self-hosted, evidence-oriented guided-development
 application. M1 provides a secure Django runtime, the canonical v1.1
 assessment, an immediately usable Pilot 002 demonstration profile, and one
 complete guided practice workflow. Scores remain static.
+M2A adds immutable, versioned evidence readings for submitted check-ins while
+leaving every developmental profile value unchanged.
 
 ## Deployment essentials
 
@@ -23,7 +25,8 @@ complete guided practice workflow. Scores remain static.
 - Application data persists in the `grounded_growth_data` named volume.
 - The SQLite database is `/data/grounded_growth.sqlite3` inside the container.
 - Startup applies migrations, creates the bootstrap user only when no user
-  exists, and idempotently seeds canonical data.
+  exists, idempotently seeds canonical data, and backfills missing evidence
+  events.
 - Health is available without authentication at `/health/`.
 - Every other application page requires login; static assets are bundled
   locally.
@@ -67,6 +70,21 @@ local-network access, shutdown behavior, and the future HTTPS boundary.
 - SQLite WAL/busy-timeout configuration and consistent online backup command.
 - Ruff, pytest, and Playwright coverage.
 
+## What M2A adds
+
+- Three compact submission choices for support used, context variation, and
+  evidence direction.
+- Stable action-specific observation rules.
+- Pure `GG-EVIDENCE-1.0` classification of protocol performance, structured
+  quality, independence, bounded context breadth, repetition, contradiction,
+  and base event mass.
+- One immutable evidence event per submitted check-in, with exact replay from
+  a privacy-minimized input snapshot.
+- Conservative, idempotent backfill of existing M1 submissions.
+- Plain-language evidence detail with optional collapsed technical audit
+  values.
+- No lever allocation, baseline mutation, or dynamic recommendation.
+
 ## Product flow
 
 1. Sign in with the bootstrap account.
@@ -74,12 +92,13 @@ local-network access, shutdown behavior, and the future HTTPS boundary.
    existing GGA11/GGA1 share code.
 3. Review the provisional profile and why a practice was selected.
 4. Complete the seven-step guided setup; the three actions are already defined.
-5. Save check-ins as drafts or submit them as evidence.
+5. Save check-ins as drafts or submit them with a versioned evidence reading.
 6. Pause/resume when needed, or stop the practice.
 7. Submit a final review after the bounded completion criteria are met.
 
 Draft check-ins never appear as submitted evidence. Completing a practice does
-not establish mastery and does not change any score.
+not establish mastery. Event-level evidence mass does not change any profile
+score.
 
 ## Common commands
 
@@ -99,6 +118,7 @@ make test
 make e2e
 make migrate
 make seed
+make evidence-backfill
 make run
 make compose-up
 make compose-down
@@ -147,13 +167,14 @@ docker compose up -d --build
 
 Migrations and canonical seeding run safely on startup.
 
-## M1 limitations
+## Current limitations
 
 - Pilot 002 source files publish only the top three archetypes and do not
   include original answers or a share code; the seed does not invent them.
-- Scores are deliberately static. No practice action, check-in, completion, or
-  review changes lever mastery, confidence, evidence mass, task priority,
-  archetype, or orientation values.
+- Profile scores are deliberately static. A submitted check-in creates base
+  event evidence mass, but no practice action, check-in, completion, or review
+  changes lever mastery, lever confidence, need, task priority, archetype,
+  orientation, or recommendation values.
 - Only **Deepen One Existing Friendship** is active. Four additional protocols
   are structured inactive placeholders, not generic generated exercises.
 - The canonical JavaScript scorer remains the browser reference. Node.js is
@@ -170,6 +191,7 @@ Migrations and canonical seeding run safely on startup.
 - [Canonical data import](docs/data-import.md)
 - [Assessment integration](docs/assessment-integration.md)
 - [Practice workflow](docs/practice-workflow.md)
+- [M2A evidence contract](docs/evidence-contract.md)
 - [Backup and restore](docs/backup-and-restore.md)
 - [Testing](docs/testing.md)
 - [Project handoff](docs/PROJECT_HANDOFF.md)

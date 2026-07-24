@@ -58,7 +58,13 @@ protocol fields:
 
 A draft has no submission timestamp, is editable, does not appear in submitted
 history, and does not count toward completion. Submission adds a timestamp and
-makes the check-in immutable.
+makes the check-in immutable. In M2A, submission also requires three compact
+choices: support used, context comparison, and evidence direction.
+
+Submission and `GG-EVIDENCE-1.0` event creation occur in one transaction. The
+event is immutable and replayable from its structured snapshot. The submitted
+history links to a plain-language evidence reading; technical values remain in
+a collapsed audit section.
 
 ## Completion and review
 
@@ -79,9 +85,13 @@ impact preview, and the required disclaimer:
 No assessment or lever row is updated. Tests snapshot every raw, calibrated,
 confidence, need, and rank value before completion and compare it afterward.
 
-## M1 boundary
+## M2A boundary
 
-M1 records protocol participation, not validated behavior change. It does not
-calculate evidence quality, independence, context breadth, repetition,
-evidence mass, posterior scores, or dynamic recommendations. Those concepts
-require a separately reviewed M2/M3 design.
+M1 records protocol participation, not validated behavior change. M2A adds
+versioned event-level quality, independence, bounded context breadth,
+action-specific repetition, contradiction, protocol performance, and base
+evidence mass.
+
+M2A still does not distribute evidence through competency-to-lever mappings,
+calculate success/failure contributions, mutate mastery/confidence/need, or
+change recommendations. See `docs/evidence-contract.md`.

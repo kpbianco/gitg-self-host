@@ -143,10 +143,19 @@
         {% for check_in in submitted_check_ins %}
           <li>
             <div>
-              <strong>{{ check_in.action.title }}</strong>
+              {% if check_in.evidence_event %}
+                <a href="{% url 'growth:practice-check-in-detail' sprint.pk check_in.pk %}">
+                  <strong>{{ check_in.action.title }}</strong>
+                </a>
+              {% else %}
+                <strong>{{ check_in.action.title }}</strong>
+              {% endif %}
               <span>
                 {% if check_in.action_completed %}Completed{% elif check_in.action_attempted %}Attempted{% else %}Observed{% endif %}
                 {% if check_in.moved_beyond_transactional %} · substantive interaction{% endif %}
+                {% if check_in.evidence_event %}
+                  · {{ check_in.evidence_event.explanation.base_evidence.label|lower }}
+                {% endif %}
               </span>
             </div>
             <time datetime="{{ check_in.submitted_at|date:'c' }}">{{ check_in.submitted_at|date:"M j, Y" }}</time>

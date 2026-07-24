@@ -93,6 +93,24 @@ class PracticeCheckInForm(forms.ModelForm):
         empty_value=None,
         required=False,
     )
+    support_level = forms.ChoiceField(
+        label="How much support did you use?",
+        choices=(("", "Choose one"), *PracticeCheckIn.SupportLevel.choices),
+        required=False,
+        help_text="A reminder or planning aid is different from real-time guidance.",
+    )
+    context_comparison = forms.ChoiceField(
+        label="How does this setting compare with earlier check-ins?",
+        choices=(),
+        required=False,
+        help_text="This describes context variation within the same relationship.",
+    )
+    evidence_direction = forms.ChoiceField(
+        label="What direction did the observation point?",
+        choices=(("", "Choose one"), *PracticeCheckIn.EvidenceDirection.choices),
+        required=False,
+        help_text="Mixed or contradictory evidence is useful and will not be hidden.",
+    )
 
     class Meta:
         model = PracticeCheckIn
@@ -109,6 +127,9 @@ class PracticeCheckInForm(forms.ModelForm):
             "internal_resistance",
             "expected_reciprocity",
             "observed_reciprocity",
+            "support_level",
+            "context_comparison",
+            "evidence_direction",
             "contradictory_evidence",
             "note",
         )
@@ -138,14 +159,55 @@ class PracticeCheckInForm(forms.ModelForm):
             "note": forms.Textarea(attrs={"rows": 3}),
         }
 
-    def __init__(self, *args, sprint, **kwargs):
+    def __init__(self, *args, sprint, require_evidence_metadata=False, **kwargs):
         super().__init__(*args, **kwargs)
+        self.sprint = sprint
+        self.require_evidence_metadata = require_evidence_metadata
         self.fields["action"].queryset = sprint.protocol.actions.all()
+        has_prior = sprint.check_ins.filter(status=PracticeCheckIn.Status.SUBMITTED).exists()
+        if has_prior:
+            context_choices = (
+                ("", "Choose one"),
+                (
+                    PracticeCheckIn.ContextComparison.SAME_CONTEXT,
+                    PracticeCheckIn.ContextComparison.SAME_CONTEXT.label,
+                ),
+                (
+                    PracticeCheckIn.ContextComparison.VARIED_CONTEXT,
+                    PracticeCheckIn.ContextComparison.VARIED_CONTEXT.label,
+                ),
+            )
+        else:
+            context_choices = (
+                (
+                    PracticeCheckIn.ContextComparison.FIRST_RECORD,
+                    PracticeCheckIn.ContextComparison.FIRST_RECORD.label,
+                ),
+            )
+            if not self.is_bound and not self.instance.context_comparison:
+                self.initial["context_comparison"] = PracticeCheckIn.ContextComparison.FIRST_RECORD
+        self.fields["context_comparison"].choices = context_choices
 
     def clean(self):
         cleaned_data = super().clean()
         if cleaned_data.get("action_completed") and not cleaned_data.get("action_attempted"):
             self.add_error("action_attempted", "A completed action must also be attempted.")
+        if self.require_evidence_metadata:
+            for field in ("support_level", "context_comparison", "evidence_direction"):
+                if not cleaned_data.get(field):
+                    self.add_error(field, "Choose one before submitting evidence.")
+        if (
+            cleaned_data.get("evidence_direction")
+            in (
+                PracticeCheckIn.EvidenceDirection.MIXED,
+                PracticeCheckIn.EvidenceDirection.CONTRADICTS,
+            )
+            and not cleaned_data.get("contradictory_evidence", "").strip()
+        ):
+            self.add_error(
+                "contradictory_evidence",
+                "Briefly describe what was mixed or contradictory.",
+            )
         return cleaned_data
 
 

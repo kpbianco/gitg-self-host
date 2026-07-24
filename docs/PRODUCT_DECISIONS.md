@@ -90,3 +90,22 @@ completion screen states that completion does not establish mastery.
 A user may have one active or paused practice at a time. Pausing is reversible;
 stopping is terminal. This keeps the home page and next action unambiguous
 while M1 validates the guided experience.
+
+## Decision 015 — Versioned evidence events before score updates
+**Status:** Accepted
+
+Each submitted check-in creates one immutable `GG-EVIDENCE-1.0` event in the
+same transaction. The event records protocol adherence, structured quality,
+independence, bounded context breadth, action-specific repetition,
+contradiction, and base evidence mass. It snapshots exact structured inputs
+and action rules for deterministic replay without copying private note text.
+Drafts create no event.
+
+## Decision 016 — M2 event mass is not lever state
+**Status:** Accepted
+
+M2A stops at `e = q × i × b × r`. It does not calculate task-to-lever
+coefficients, success/failure contributions, posterior mastery, confidence,
+need, task priority, or dynamic recommendations. Existing M1 submissions are
+backfilled conservatively: missing context/support stay explicitly unknown,
+and absence of contradiction text is not converted into supportive evidence.

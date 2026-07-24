@@ -113,6 +113,7 @@ Evidence fields:
 - follow-up occurred within seven days;
 - internal resistance;
 - expected reciprocity versus actual reciprocity;
+- support used, context comparison, and evidence direction;
 - contradictory evidence;
 - optional note.
 
@@ -137,14 +138,19 @@ M1 is implemented as two reviewable batches:
   lever outputs; recommendations; the seven-step friendship setup; active,
   paused, stopped, and completed practice states; compact draft/submitted
   check-ins; guarded completion; and immutable final review.
+- **M2A evidence contract:** each submitted check-in atomically creates a
+  replayable `GG-EVIDENCE-1.0` event with protocol performance, structured
+  quality, independence, bounded context breadth, action-specific repetition,
+  contradiction, and base event mass.
 
 Only submitted check-ins count toward completion. A database constraint limits
 each user to one active or paused practice. Services—not templates—own state
 transitions, evidence aggregation, and completion rules.
 
-The static-score boundary is tested before and after practice completion. No
-M1 workflow writes lever mastery, confidence, evidence mass, need/priority,
-archetype, or orientation scores.
+The static-profile boundary is tested before and after practice completion and
+event creation. M2A stores event-level base evidence mass only. No workflow
+writes lever mastery, confidence, need/priority, archetype, orientation, or
+recommendation state.
 
 ## Milestone sequence
 ### M1 — Guided UX, static scores
@@ -168,16 +174,27 @@ Status: implemented and merged.
 - completion and final review with an explicit mastery disclaimer;
 - browser coverage for the complete M1 path.
 
-Status: implemented; pending pull-request review.
+Status: implemented and merged.
 
 ### M2 — Evidence engine
 Extend submitted check-ins with versioned evidence quality, independence,
 context breadth, repetition, and contradiction semantics. Draft/submitted
 state already exists in M1.
 
-Do not begin M2 until the M1B pull request is reviewed and a separate M2
-contract resolves evidence semantics, migration strategy, and scoring
-boundaries.
+#### M2A — Evidence contract and events
+- three compact structured metadata choices on submission;
+- stable action-specific observation rules;
+- pure deterministic `GG-EVIDENCE-1.0` evaluation;
+- immutable, replayable evidence events;
+- conservative idempotent backfill for submitted M1 rows;
+- plain-language evidence detail with collapsed technical audit values;
+- no lever allocation or profile mutation.
+
+Status: implemented; pending pull-request review.
+
+The binding semantics, migration strategy, and exclusions are in
+`docs/evidence-contract.md`. Do not begin M3 merely because base event mass is
+available.
 
 ### M3 — Dynamic scoring
 Implement versioned posterior updates and dynamic recommendation ranking in a pure domain package with exhaustive tests and immutable snapshots.
@@ -210,3 +227,6 @@ Create reusable protocol patterns and convert more of the 383 competencies into 
   values, so M1B allows those baseline fields to be null.
 - Pilot 002 remains available for immediate demonstration. Later in-app or
   imported assessments become the current profile without rewriting the seed.
+- M2A preserves existing submitted check-ins byte-for-byte. Its startup
+  backfill creates separate events with conservative unknowns and verifies
+  existing events by replaying their input snapshots.

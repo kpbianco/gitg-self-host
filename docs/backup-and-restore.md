@@ -33,8 +33,9 @@ database backup does not include future files under `/data/uploads`; copy that
 directory separately when uploads are introduced.
 
 The SQLite snapshot includes users, assessment answers/results/share codes,
-practice state, drafts, submitted check-ins, and reviews. Treat it as sensitive
-personal data and protect both the file and any off-host copies accordingly.
+practice state, drafts, submitted check-ins, evidence events, and reviews.
+Treat it as sensitive personal data and protect both the file and any off-host
+copies accordingly.
 
 ## Verify a backup
 
