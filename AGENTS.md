@@ -131,13 +131,16 @@ The accepted rationale is recorded in
 Before asking for review:
 1. Run Ruff formatting/linting, Django system checks, pytest, and relevant
    Playwright tests.
-2. Run `make compose-smoke` in a Docker-capable environment. It must exercise
+2. Run `make pilot-check` against an isolated fresh database.
+3. Run `make compose-smoke` in a Docker-capable environment. It must exercise
    the mapped host port, health check, login, migrations, idempotent seed,
-   score replay, container recreation, volume persistence, backup/restore, and
-   clean shutdown.
-3. Audit changed files against this document and `docs/PROJECT_HANDOFF.md`.
-4. Report failed or unverified acceptance criteria plainly.
-5. Do not claim dynamic scoring works until score mutation is deliberately enabled and tested.
+   evidence/score/readiness replay, container recreation, volume persistence,
+   backup/restore, and clean shutdown.
+4. Require the aggregate GitHub **Pilot readiness gate**, then review its
+   desktop/mobile browser artifact for a pilot-bound merge.
+5. Audit changed files against this document and `docs/PROJECT_HANDOFF.md`.
+6. Report failed or unverified acceptance criteria plainly.
+7. Do not claim dynamic scoring works until score mutation is deliberately enabled and tested.
 
 ## Current implementation boundary
 M1A established the runtime, persistent schema, authentication, canonical
@@ -146,8 +149,8 @@ canonical assessment and completes the friendship recommendation, setup,
 sprint, draft/submitted check-in, pause/resume/stop, completion, and review
 experience.
 
-M1 through M3B are reviewed and merged. M4A through M4C are also reviewed and
-merged; Decisions 023–032 are accepted.
+M1 through M3B and M4A through M4D are reviewed and merged; Decisions 023–034
+are accepted.
 M3B may update only separate current lever state from replay-verified
 friendship evidence. Baselines, raw self-report, orientations, archetypes,
 completion, and human worth remain unchanged.
@@ -175,3 +178,14 @@ does not authorize score activation. Any newly score-active protocol requires
 a stable canonical parent competency, validated structured weights, reviewed
 evidence semantics, and golden coverage before it may affect current state or
 recommendation order.
+
+M4E is the post-M4 pilot-readiness closeout. It adds the read-only
+`GG-PILOT-READINESS-1.0` inventory/replay contract, an isolated
+`make pilot-check`, an aggregate GitHub gate over quality, Playwright, and
+Compose, retained desktop/mobile walkthrough artifacts, and keyboard/mobile
+hardening. It must not add protocols or expand score activation.
+
+The proposed M5A boundary is private-pilot operations and optional structured
+usability feedback kept entirely separate from assessment, practice evidence,
+score state, recommendation order, and completion. M5A must not add telemetry,
+new protocols, or scoring changes without separate authorization.

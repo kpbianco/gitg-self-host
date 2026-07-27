@@ -276,7 +276,7 @@ submissions create immutable evidence events but no score snapshot, current
 lever-state change, or recommendation-order change.
 
 ## Decision 033 — Attention-presence practice uses competency 08.02
-**Status:** Proposed for M4D review
+**Status:** Accepted after M4D review
 
 `PRACTICE-PRESENCE-01` is anchored to canonical competency `08.02`,
 Mindfulness and present attention, because its intervention practices a
@@ -290,7 +290,7 @@ mastery. It requires no tracking application, browser history, camera,
 microphone, or observation of another person.
 
 ## Decision 034 — Presence is an accessible condition comparison
-**Status:** Proposed for M4D review
+**Status:** Accepted after M4D review
 
 The intervention compares the same low-stakes 15-minute activity under usual
 conditions and after changing exactly one user-controlled condition, then
@@ -305,3 +305,34 @@ operating equipment, supervising a hazard, or after disabling emergency,
 accessibility, or caregiving alerts. Completion uses the existing reviewed
 all-marker rule and creates immutable evidence without a score snapshot or
 lever-state change.
+
+## Decision 035 — Pilot readiness is a versioned read-only contract
+**Status:** Proposed for M4E review
+
+`GG-PILOT-READINESS-1.0` freezes the reviewed post-M4 software boundary:
+canonical source/database counts, the exact five protocols and fifteen
+actions, their reviewed configuration fingerprint, stable parent and
+recommendation-target links, Pilot 002 completeness, draft/evidence
+separation, friendship-only score activation, evidence replay, and score-state
+replay.
+
+The verifier performs no seed, repair, backfill, score processing, or profile
+write. It fails closed on drift and is paired with a separate isolated drill
+that constructs the expected state through the real migration and startup
+commands. A future protocol or scoring expansion must version or deliberately
+replace this contract rather than silently weakening it.
+
+## Decision 036 — Pilot release requires aggregate automation and human review
+**Status:** Proposed for M4E review
+
+One GitHub **Pilot readiness gate** depends on quality/pytest, Playwright, and
+the production Docker Compose drill for the same commit. The Playwright job
+retains desktop/mobile walkthrough screenshots and failure diagnostics.
+Branch protection is an instance-owner setting and should require this
+aggregate check for pilot-bound merges.
+
+Automation proves stable behavior, not visual judgment or participant
+experience. A human must review the retained artifact and the live local
+deployment before pilot use. This gate does not claim clinical, psychometric,
+accessibility-pilot, or longitudinal validation and does not authorize another
+protocol or score-active mapping.

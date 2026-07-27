@@ -71,6 +71,7 @@ For local development:
 ```bash
 make migrate
 make seed
+make pilot-check
 ```
 
 A successful command reports the imported counts. Repeated runs update
@@ -107,6 +108,9 @@ or authorizing dynamic scoring. M3A records the stable parent competency on
 the protocol and established `GG-SCORING-SHADOW-1.0`. M3B retains that exact
 math version and separately records `GG-SCORE-STATE-1.0` and
 `GG-NEED-RANKING-1.0`.
+The post-M4 `GG-PILOT-READINESS-1.0` verifier then checks the exact reviewed
+source/database counts, protocol/action/link inventory, Pilot 002 shape, and
+replay boundaries without writing or repairing canonical data.
 
 ## Pilot 002 boundary
 

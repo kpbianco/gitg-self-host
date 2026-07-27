@@ -39,6 +39,9 @@ def test_authenticated_home_and_profile_render_pilot_seed(client, user, seeded):
     assert b"assessment baseline remains fixed" in home.content
     assert b"Deepen One Existing Friendship" in home.content
     assert b"Review and set up" in home.content
+    assert b'href="#main-content"' in home.content
+    assert b'id="main-content"' in home.content
+    assert b'tabindex="-1"' in home.content
 
     profile = client.get(reverse("growth:profile"))
     assert profile.status_code == 200

@@ -25,6 +25,10 @@ clearly labeled unsaved preview. The reviewed and accepted M3B contract
 activates it for the friendship protocol with separate current state,
 immutable transition snapshots, deterministic rebuild/reversal, and dynamic
 provisional recommendation ordering.
+M4 completes the five-protocol library while keeping friendship as the only
+score-active practice. The post-M4 closeout adds a versioned read-only
+pilot-readiness audit and one aggregate CI gate over quality, browser, and
+production Compose verification.
 
 ## Deployment essentials
 
@@ -160,6 +164,30 @@ local-network access, shutdown behavior, and the future HTTPS boundary.
 - All five seeded protocols are executable; friendship remains the only
   score-active protocol.
 
+## Post-M4 pilot readiness
+
+Run the complete source/database boundary from an isolated fresh database:
+
+```bash
+make pilot-check
+```
+
+For a running instance, use the read-only verifier:
+
+```bash
+docker compose exec app python manage.py verify_pilot_readiness
+```
+
+It checks exact canonical counts, the five reviewed protocol/action/link
+contracts, Pilot 002 completeness, evidence replay, score-state replay, and
+friendship-only score activation. GitHub's **Pilot readiness gate**
+additionally requires Playwright and the production Compose drill on the same
+commit.
+
+See the
+[post-M4 pilot-readiness closeout](docs/pilot/PILOT_READINESS_CLOSEOUT.md)
+for the desktop/mobile review matrix and release criteria.
+
 ## Product flow
 
 1. Sign in with the bootstrap account.
@@ -202,6 +230,7 @@ make evidence-backfill
 make evidence-verify
 make score-rebuild
 make score-verify
+make pilot-check
 make run
 make compose-up
 make compose-down
@@ -250,6 +279,7 @@ For updates:
 make backup
 git pull --ff-only
 docker compose up -d --build
+docker compose exec app python manage.py verify_pilot_readiness
 ```
 
 Migrations and canonical seeding run safely on startup.
@@ -295,6 +325,7 @@ Migrations and canonical seeding run safely on startup.
 - [M2B evidence audit and calibration](docs/evidence-audit.md)
 - [M3A shadow scoring contract](docs/scoring-shadow.md)
 - [M3B score-state activation contract](docs/scoring-state.md)
+- [Post-M4 pilot-readiness closeout](docs/pilot/PILOT_READINESS_CLOSEOUT.md)
 - [Backup and restore](docs/backup-and-restore.md)
 - [Testing](docs/testing.md)
 - [Project handoff](docs/PROJECT_HANDOFF.md)
