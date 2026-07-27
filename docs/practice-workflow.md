@@ -13,7 +13,10 @@ days and provides three fixed actions:
 The user does not design the intervention. M4A also activates
 **Schedule Non-Instrumental Play**, a 10-day protocol with three fixed actions:
 reserve a play window, engage without an output goal, and return once within
-seven days. Three other protocols remain inactive structured placeholders.
+seven days. M4B activates **Practice Emotional Cue Detection**, a 10-day
+protocol that separates observation from interpretation, holds multiple
+hypotheses, and checks an impression with a neutral question. Two other
+protocols remain inactive structured placeholders.
 
 ## Guided setup
 
@@ -117,3 +120,8 @@ M4A makes protocol setup copy, compact observation labels, and completion
 markers data-driven. The play protocol creates immutable evidence, but its
 explicit `score_active=false` boundary means submission creates no score
 snapshot and cannot change current lever state or recommendation order.
+
+M4B reuses that configuration for emotional cue detection. Its safety boundary
+is substantive: nonverbal cues are uncertain and culturally contextual, and
+direct clarification is required before completion. It also remains
+`score_active=false`.

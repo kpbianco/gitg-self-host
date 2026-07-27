@@ -209,7 +209,7 @@ upgrade path. Pilot 002's four ambiguous neutral levers remain baseline-only;
 the four levers used by the friendship practice are identifiable and active.
 
 ## Decision 027 — Protocol availability does not imply score activation
-**Status:** Proposed for M4A review
+**Status:** Accepted after M4A review
 
 `PRACTICE-PLAY-01` is an executable evidence-capturing protocol anchored to
 canonical competency `26.01`, but `score_active` remains false. Its submitted
@@ -218,9 +218,28 @@ replay selects explicitly score-active protocols only, preserving the reviewed
 friendship-only M3 boundary.
 
 ## Decision 028 — Reuse the versioned observation vocabulary
-**Status:** Proposed for M4A review
+**Status:** Accepted after M4A review
 
 M4 protocols configure user-facing labels and action rules over the existing
 `GG-EVIDENCE-1.0` observation vocabulary. M4A does not add fields to the v1
 snapshot because doing so would change historical replay. A genuinely new
 observation vocabulary requires a separately versioned evidence contract.
+
+## Decision 029 — Emotional cues remain hypotheses
+**Status:** Proposed for M4B review
+
+`PRACTICE-EMOTIONAL-CUES-01` is anchored to canonical competency `16.03`,
+Nonverbal communication. Its intervention separates observable changes from
+interpretation, requires more than one plausible explanation, and prefers a
+neutral direct question over inference. Eye contact, facial expression,
+posture, tone, and distance must not be treated as universal indicators or
+used to diagnose intent, emotion, disability, or neurotype.
+
+## Decision 030 — Recommendation targets follow the canonical parent
+**Status:** Proposed for M4B review
+
+The placeholder's earlier broad targets `L24` and `L06` are not retained as a
+runtime scoring or recommendation mapping. Canonical parent `16.03` maps to
+L23, L24, and L05; M4B uses `L24` as its non-empty recommendation-target
+subset. It does not invent an L06 link, parse display text, or activate
+scoring.

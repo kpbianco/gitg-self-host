@@ -76,6 +76,11 @@ make compose-smoke
 - missing required baseline mass rolling back check-in, event, state, and
   snapshot together;
 - dynamic active-protocol ordering from current need and canonical weights;
+- complete play and emotional-cue protocol configuration;
+- protocol-specific compact check-in fields and boundary language;
+- immutable evidence with zero score snapshots or lever-state movement for
+  score-inactive protocols;
+- direct clarification required for emotional-cue completion;
 - score-state management-command verify and repair behavior;
 - pause/resume/stop transitions and completion criteria;
 - unchanged assessment baselines and no review-only current-state transition;
@@ -83,12 +88,14 @@ make compose-smoke
 - consistent backup and SQLite integrity;
 - assessment v1.1 complete golden output, GGA11, and GGA1.
 
-`make e2e` uses Playwright Chromium for four browser journeys:
+`make e2e` uses Playwright Chromium for six browser journeys:
 
 1. login, Pilot 002 home, and developmental profile;
-2. all 50 required assessment questions, result save, and 6/15/37 persistence;
-3. GGA11 import and supported GGA1 import;
-4. recommendation explanation, seven-step setup, start, pause/resume, draft,
+2. non-instrumental-play setup and protocol-specific compact check-in;
+3. emotional-cue setup, anti-mind-reading boundary, and compact check-in;
+4. all 50 required assessment questions, result save, and 6/15/37 persistence;
+5. GGA11 import and supported GGA1 import;
+6. recommendation explanation, seven-step setup, start, pause/resume, draft,
    M2 evidence submission/detail, ledger, minimized JSON download, all three
    actions, M3B evidence-updated profile state, final review, completion, and
    mastery disclaimer.
@@ -116,7 +123,7 @@ Compose project, and volume are removed on exit. Set `SMOKE_APP_PORT` only
 when a fixed test port is required.
 
 `.github/workflows/verification.yml` runs three required jobs on pull requests
-and `main`: Ruff/Django/pytest, the four Playwright journeys, and this exact
+and `main`: Ruff/Django/pytest, the six Playwright journeys, and this exact
 Docker Compose drill.
 
 ## Current scoring boundary
