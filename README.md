@@ -29,6 +29,8 @@ M4 completes the five-protocol library while keeping friendship as the only
 score-active practice. The post-M4 closeout adds a versioned read-only
 pilot-readiness audit and one aggregate CI gate over quality, browser, and
 production Compose verification.
+M5A adds private-pilot operations and optional structured usability feedback
+that remains completely separate from developmental evidence and score state.
 
 ## Deployment essentials
 
@@ -188,6 +190,27 @@ See the
 [post-M4 pilot-readiness closeout](docs/pilot/PILOT_READINESS_CLOSEOUT.md)
 for the desktop/mobile review matrix and release criteria.
 
+## What M5A adds
+
+- A bounded private-pilot operator/session checklist covering voluntary
+  participation, neutral observation, accessibility/safety response, data
+  handling, and stop criteria.
+- An authenticated optional product-feedback form under **Account**.
+- Applicability, participant-estimated setup/check-in time bands,
+  confusing-step, and accessibility/safety-friction categories.
+- Append-only `GG-PILOT-FEEDBACK-1.0` records in the local SQLite database.
+- A deterministic `grounded-growth-private-pilot-export-v1` download that
+  excludes identity, record IDs, exact timestamps, free text, private context,
+  assessment data, evidence, scores, orientations, and archetypes.
+- Tests proving feedback submission and export leave assessment, evidence,
+  score state, recommendations, completion, orientations, and archetypes
+  unchanged.
+- No automatic timer, external analytics, remote telemetry, new protocol, or
+  score activation.
+
+See the [pilot feedback contract](docs/pilot-feedback.md) and
+[private pilot operations](docs/pilot/PRIVATE_PILOT_OPERATIONS.md).
+
 ## Product flow
 
 1. Sign in with the bootstrap account.
@@ -202,6 +225,8 @@ for the desktop/mobile review matrix and release criteria.
    profile.
 8. Pause/resume when needed, or stop the practice.
 9. Submit a final review after the bounded completion criteria are met.
+10. During an authorized private pilot, optionally report product friction
+    under **Account** without changing any developmental record.
 
 Draft check-ins never appear as submitted evidence. Eligible directional
 observations can adjust a provisional current estimate; inconclusive evidence
@@ -303,6 +328,12 @@ Migrations and canonical seeding run safely on startup.
 - The minimized JSON export omits direct identity and free text, but its
   structured behavioral values can still be sensitive and should be reviewed
   before sharing.
+- The separate pilot-feedback export is also privacy-minimized rather than
+  anonymous. Optional local comment text is excluded from it, and the
+  application does not transmit feedback remotely.
+- M5A provides the operating and collection boundary; it does not claim that
+  private-pilot sessions have occurred or that participant usability findings
+  have been validated yet.
 - Only **Deepen One Existing Friendship** is score-active. Play, emotional cue
   detection, boundary practice, and the attention-presence experiment are
   executable but score-inactive.
@@ -326,6 +357,8 @@ Migrations and canonical seeding run safely on startup.
 - [M3A shadow scoring contract](docs/scoring-shadow.md)
 - [M3B score-state activation contract](docs/scoring-state.md)
 - [Post-M4 pilot-readiness closeout](docs/pilot/PILOT_READINESS_CLOSEOUT.md)
+- [Private-pilot feedback contract](docs/pilot-feedback.md)
+- [Private pilot operations](docs/pilot/PRIVATE_PILOT_OPERATIONS.md)
 - [Backup and restore](docs/backup-and-restore.md)
 - [Testing](docs/testing.md)
 - [Project handoff](docs/PROJECT_HANDOFF.md)

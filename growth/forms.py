@@ -4,7 +4,7 @@ from typing import ClassVar
 from django import forms
 from django.utils import timezone
 
-from growth.models import PracticeAction, PracticeCheckIn
+from growth.models import PilotFeedback, PracticeAction, PracticeCheckIn, PracticeProtocol
 
 
 class PracticeApplicabilityForm(forms.Form):
@@ -274,3 +274,97 @@ class PracticeReviewForm(forms.Form):
         required=False,
         help_text="Optional, but useful when the evidence was mixed or the practice did not fit.",
     )
+
+
+class PilotFeedbackForm(forms.ModelForm):
+    journey_stage = forms.ChoiceField(
+        label="Which part are you commenting on?",
+        choices=(("", "Choose one"), *PilotFeedback.JourneyStage.choices),
+    )
+    protocol = forms.ModelChoiceField(
+        label="Practice, if relevant",
+        queryset=PracticeProtocol.objects.none(),
+        required=False,
+        empty_label="Not about a specific practice",
+    )
+    applicability = forms.ChoiceField(
+        label="Did the recommendation fit your current situation?",
+        choices=(("", "Not answered"), *PilotFeedback.Applicability.choices),
+        required=False,
+    )
+    time_to_start = forms.ChoiceField(
+        label="Roughly how long did setup take before you could begin?",
+        choices=(("", "Not answered"), *PilotFeedback.StartTimeBand.choices),
+        required=False,
+        help_text="Choose an estimate. The application does not time you.",
+    )
+    time_to_check_in = forms.ChoiceField(
+        label="Roughly how long did a check-in take?",
+        choices=(("", "Not answered"), *PilotFeedback.CheckInTimeBand.choices),
+        required=False,
+        help_text="Choose an estimate. The application does not time you.",
+    )
+    confusing_step = forms.ChoiceField(
+        label="Which step was most confusing?",
+        choices=(("", "Not answered"), *PilotFeedback.ConfusingStep.choices),
+        required=False,
+    )
+    accessibility_friction = forms.ChoiceField(
+        label="Did an accessibility need make the application harder to use?",
+        choices=(("", "Not answered"), *PilotFeedback.Friction.choices),
+        required=False,
+    )
+    safety_friction = forms.ChoiceField(
+        label="Did any instruction or interaction feel unsafe or poorly bounded?",
+        choices=(("", "Not answered"), *PilotFeedback.Friction.choices),
+        required=False,
+    )
+
+    class Meta:
+        model = PilotFeedback
+        fields = (
+            "journey_stage",
+            "protocol",
+            "applicability",
+            "time_to_start",
+            "time_to_check_in",
+            "confusing_step",
+            "accessibility_friction",
+            "safety_friction",
+            "comment",
+        )
+        labels: ClassVar[dict[str, str]] = {
+            "comment": "Optional detail",
+        }
+        help_texts: ClassVar[dict[str, str]] = {
+            "comment": (
+                "Describe the product friction, not private life details. This local "
+                "form is not monitored for urgent support."
+            ),
+        }
+        widgets: ClassVar[dict[str, forms.Widget]] = {
+            "comment": forms.Textarea(attrs={"rows": 4, "maxlength": 1000}),
+        }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["protocol"].queryset = PracticeProtocol.objects.filter(
+            availability=PracticeProtocol.Availability.ACTIVE
+        ).order_by("display_order", "stable_id")
+
+    def clean(self):
+        cleaned_data = super().clean()
+        signal_fields = (
+            "applicability",
+            "time_to_start",
+            "time_to_check_in",
+            "confusing_step",
+            "accessibility_friction",
+            "safety_friction",
+            "comment",
+        )
+        if not any(str(cleaned_data.get(field, "") or "").strip() for field in signal_fields):
+            raise forms.ValidationError(
+                "Answer at least one optional feedback question before submitting."
+            )
+        return cleaned_data

@@ -22,7 +22,7 @@
           <a href="{% url 'growth:practice-list' %}" {% if '/practice' in request.path %}aria-current="page"{% endif %}>Practices</a>
           <a href="{% url 'growth:evidence-ledger' %}" {% if '/evidence/' in request.path %}aria-current="page"{% endif %}>Evidence</a>
           <a href="{% url 'growth:profile' %}" {% if request.path == '/profile/' %}aria-current="page"{% endif %}>Profile</a>
-          <a href="{% url 'password_change' %}">Account</a>
+          <a href="{% url 'password_change' %}" {% if '/account' in request.path %}aria-current="page"{% endif %}>Account</a>
           <form method="post" action="{% url 'logout' %}">
             {% csrf_token %}
             <button class="nav-button" type="submit">Sign out</button>

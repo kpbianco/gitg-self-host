@@ -140,6 +140,9 @@ check-ins, immutable evidence events, exact assessment baseline mass, and final
 reviews all live in the same SQLite database and survive container replacement
 with the named volume. M3B current lever state and immutable hashed score
 snapshots live in that same database; assessment baselines remain separate.
+Optional M5A pilot-feedback records also persist in SQLite, but remain in a
+separate table and never enter assessment, evidence, score, recommendation, or
+completion services.
 
 ## Updating
 
@@ -169,6 +172,8 @@ After an update, sign in and verify:
 9. `/health/` returns `{"status":"ok"}`.
 10. `docker compose exec app python manage.py verify_pilot_readiness` reports
     the exact reviewed five-protocol boundary and replay state.
+11. **Account → Open feedback form** explains that pilot feedback is optional,
+    local, and separate from developmental state.
 
 The evidence verifier is intentionally not an automatic repair step. Startup
 backfill reconciles missing legacy events and verifies existing ones;
@@ -239,3 +244,16 @@ GitHub Actions runs the same command in
 `.github/workflows/verification.yml`, alongside Ruff, Django, pytest,
 the isolated `make pilot-check`, and Playwright. The aggregate **Pilot
 readiness gate** succeeds only when quality, browser, and Compose all pass.
+
+## Private-pilot feedback data
+
+M5A adds no analytics host or outbound feedback integration. Participant
+feedback stays in `/data/grounded_growth.sqlite3` and is covered by the normal
+backup/restore procedure. The authenticated minimized download is available at
+`/account/pilot-feedback/export.json`.
+
+The download excludes free text and direct identifiers, but remains sensitive
+pilot data. Review it before sharing, avoid participant names in filenames,
+and retain it only where access is appropriate. Local free-text comments stay
+inside the database and backup; they are never included in the minimized
+export.

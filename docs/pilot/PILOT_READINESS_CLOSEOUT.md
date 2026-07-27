@@ -52,7 +52,8 @@ docker compose exec app python manage.py verify_pilot_readiness --json
 Pull requests and `main` have four GitHub Actions jobs:
 
 1. Ruff, Django checks, pytest, and the isolated readiness drill;
-2. nine Playwright journeys;
+2. ten Playwright journeys (the original nine closeout journeys plus the M5A
+   feedback boundary);
 3. the production Docker Compose deployment drill;
 4. one aggregate **Pilot readiness gate** that passes only when the other
    three jobs pass.
@@ -82,6 +83,7 @@ follow-up issue.
 | Emotional cues | Hypothesis/direct-clarification boundary is visible | Setup says it is score-inactive |
 | Boundary | Coercion, retaliation, and safety exclusions are visible | Setup says it is score-inactive |
 | Attention-presence | Accessibility and anti-surveillance boundary is visible | Setup says it is score-inactive |
+| Optional pilot feedback | Product data is visibly separate from evidence | No telemetry, local storage, minimized export, and no overflow are visible |
 
 For every protocol, confirm:
 

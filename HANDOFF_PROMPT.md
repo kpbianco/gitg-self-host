@@ -23,7 +23,7 @@ Then inspect the canonical data under:
 Treat `legacy/` as provenance only. Do not build implementation behavior from legacy notes when canonical files disagree.
 
 Work only on the milestone batch explicitly authorized by the repository
-owner. M1 through M3B and M4A–M4D are reviewed and merged; Decisions 023–034
+owner. M1 through M3B and M4A–M4E are reviewed and merged; Decisions 023–036
 are accepted.
 M4A adds score-inactive non-instrumental play; M4B adds score-inactive
 emotional cue detection; M4C adds score-inactive boundary practice; M4D adds a
@@ -75,9 +75,16 @@ The M4E boundary verifies the exact five-protocol/fifteen-action inventory,
 canonical parent and target links, Pilot 002 completeness, evidence replay,
 score-state replay, and friendship-only score activation without writing
 state. `make pilot-check` exercises the contract from a fresh isolated
-database. The proposed next batch, M5A, is private-pilot operations and
-optional usability feedback kept separate from assessment, evidence, scoring,
-recommendation order, and completion.
+database.
+
+M5A adds a bounded private-pilot operator guide plus optional append-only
+`GG-PILOT-FEEDBACK-1.0` usability records. Timing uses participant-selected
+broad bands, not instrumentation. Its deterministic
+`grounded-growth-private-pilot-export-v1` allowlist excludes identity, record
+IDs, exact timestamps, free text, private context, assessment data, evidence,
+scores, orientations, and archetypes. Feedback never enters assessment,
+evidence, ranking, scoring, completion, orientation, or archetype logic. M5A
+adds no protocol, remote telemetry, or score activation.
 
 Acceptance criteria are in `docs/PROJECT_HANDOFF.md`. Add automated tests for
 every testable criterion. The app must pass `make compose-smoke` in a
@@ -99,5 +106,9 @@ Then implement in reviewable batches. For each batch:
 Do not generalize score activation merely because M4 adds a protocol. A newly
 score-active protocol requires its own reviewed canonical mapping, evidence
 semantics, and golden coverage.
+
+Do not repurpose M5A product feedback as an applicability, ranking, evidence,
+or score input. That would replace the accepted pilot privacy/consent boundary
+and requires a separately authorized milestone.
 
 ---

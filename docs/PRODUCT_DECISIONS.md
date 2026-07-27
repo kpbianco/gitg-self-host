@@ -307,7 +307,7 @@ all-marker rule and creates immutable evidence without a score snapshot or
 lever-state change.
 
 ## Decision 035 — Pilot readiness is a versioned read-only contract
-**Status:** Proposed for M4E review
+**Status:** Accepted after M4E review
 
 `GG-PILOT-READINESS-1.0` freezes the reviewed post-M4 software boundary:
 canonical source/database counts, the exact five protocols and fifteen
@@ -323,7 +323,7 @@ commands. A future protocol or scoring expansion must version or deliberately
 replace this contract rather than silently weakening it.
 
 ## Decision 036 — Pilot release requires aggregate automation and human review
-**Status:** Proposed for M4E review
+**Status:** Accepted after M4E review
 
 One GitHub **Pilot readiness gate** depends on quality/pytest, Playwright, and
 the production Docker Compose drill for the same commit. The Playwright job
@@ -336,3 +336,31 @@ experience. A human must review the retained artifact and the live local
 deployment before pilot use. This gate does not claim clinical, psychometric,
 accessibility-pilot, or longitudinal validation and does not authorize another
 protocol or score-active mapping.
+
+## Decision 037 — Pilot feedback is a separate product-data domain
+**Status:** Proposed for M5A review
+
+`GG-PILOT-FEEDBACK-1.0` stores optional usability observations in a dedicated
+append-only model. A record may reference an active protocol by stable ID only
+to identify the product surface. It is not a check-in, developmental evidence,
+an applicability factor for ranking, or an input to assessment, score state,
+completion, orientations, or archetypes.
+
+The participant may report recommendation fit, a rough setup/check-in time
+band, a confusing step, and accessibility or safety friction. Free text is
+optional, locally stored, limited to 1,000 characters, and described as
+product detail rather than a monitored support channel.
+
+## Decision 038 — Pilot measurement is explicit and privacy-minimized
+**Status:** Proposed for M5A review
+
+M5A adds no automatic timer, browser analytics, session recorder, tracking
+pixel, external asset, or remote telemetry. Timing is a participant-selected
+category. The application does not infer duration from page events.
+
+`grounded-growth-private-pilot-export-v1` is deterministic for unchanged
+records and built only from an allowlist. It excludes identity, database IDs,
+exact timestamps, every free-text comment, private practice context,
+assessment data, developmental evidence, score state, orientations, and
+archetypes. The resulting JSON is privacy-minimized but remains sensitive
+pilot data rather than anonymous public data.

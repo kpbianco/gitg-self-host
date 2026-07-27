@@ -100,9 +100,18 @@ and never touches `./var`, `.env`, or the deployed volume.
 - unchanged assessment baselines and no review-only current-state transition;
 - SQLite foreign keys, busy timeout, and WAL;
 - consistent backup and SQLite integrity;
-- assessment v1.1 complete golden output, GGA11, and GGA1.
+- assessment v1.1 complete golden output, GGA11, and GGA1;
+- authenticated optional pilot-feedback submission and per-user isolation;
+- append-only `GG-PILOT-FEEDBACK-1.0` persistence and fail-closed export
+  validation;
+- deterministic `grounded-growth-private-pilot-export-v1` output with
+  identity, IDs, timestamps, free text, private context, assessment, evidence,
+  score, orientation, and archetype data excluded;
+- unchanged assessment, evidence, lever state, snapshots, sprint, check-in,
+  review, orientation, archetype, recommendation priorities, and
+  recommendation order after feedback submission and export.
 
-`make e2e` uses Playwright Chromium for nine browser journeys:
+`make e2e` uses Playwright Chromium for ten browser journeys:
 
 1. login, Pilot 002 home, and developmental profile;
 2. mobile keyboard content access, five-protocol setup coverage, no horizontal
@@ -117,6 +126,9 @@ and never touches `./var`, `.env`, or the deployed volume.
    M2 evidence submission/detail, ledger, minimized JSON download, all three
    actions, M3B evidence-updated profile state, final review, completion, and
    mastery disclaimer.
+10. mobile/desktop optional pilot feedback, explicit no-telemetry and
+    non-developmental boundaries, categorical submission, confirmation, and
+    privacy-minimized download.
 
 The server-side golden test and browser flow complement each other: the first
 deep-compares every canonical output, while the second proves that the mounted
@@ -145,7 +157,7 @@ The command never uses the deployment `.env`. Its temporary credentials,
 Compose project, and volume are removed on exit. Set `SMOKE_APP_PORT` only
 when a fixed test port is required.
 
-`.github/workflows/verification.yml` runs quality/readiness, the nine
+`.github/workflows/verification.yml` runs quality/readiness, the ten
 Playwright journeys, and this exact Docker Compose drill on pull requests and
 `main`. One aggregate **Pilot readiness gate** succeeds only when all three
 jobs succeed. Configure branch protection to require that aggregate check for

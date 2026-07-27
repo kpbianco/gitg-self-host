@@ -2,11 +2,12 @@ import uuid
 
 from django.conf import settings
 from django.core.exceptions import ValidationError
-from django.core.validators import MaxValueValidator, MinValueValidator
+from django.core.validators import MaxLengthValidator, MaxValueValidator, MinValueValidator
 from django.db import models
 from django.db.models import Q
 
 MASTERY_DISCLAIMER = "Completing this practice does not establish mastery."
+PILOT_FEEDBACK_CONTRACT_VERSION = "GG-PILOT-FEEDBACK-1.0"
 
 
 class CurriculumVersion(models.Model):
@@ -822,3 +823,170 @@ class PracticeReview(models.Model):
         if self.pk and type(self).objects.filter(pk=self.pk).exists():
             raise ValidationError("Submitted practice reviews are immutable.")
         return super().save(*args, **kwargs)
+
+
+class ImmutablePilotFeedbackQuerySet(models.QuerySet):
+    def update(self, **kwargs):
+        raise ValidationError("Submitted pilot feedback is immutable.")
+
+    def bulk_update(self, objs, fields, batch_size=None):
+        raise ValidationError("Submitted pilot feedback is immutable.")
+
+
+class PilotFeedback(models.Model):
+    class JourneyStage(models.TextChoices):
+        LOGIN = "login", "Signing in"
+        ASSESSMENT = "assessment", "Taking or importing the assessment"
+        PROFILE = "profile", "Understanding the profile"
+        RECOMMENDATION = "recommendation", "Choosing a recommended practice"
+        SETUP = "setup", "Setting up a practice"
+        ACTIVE_PRACTICE = "active_practice", "Using an active practice"
+        CHECK_IN = "check_in", "Submitting a check-in"
+        REVIEW = "review", "Completing the final review"
+        ACCOUNT = "account", "Account settings"
+        OTHER = "other", "Another part of the experience"
+
+    class Applicability(models.TextChoices):
+        YES = "yes", "It fit my current situation"
+        PARTLY = "partly", "It partly fit"
+        NO = "no", "It did not fit my current situation"
+        UNSURE = "unsure", "I was unsure"
+
+    class StartTimeBand(models.TextChoices):
+        UNDER_TWO = "under_2_minutes", "Under 2 minutes"
+        TWO_TO_FIVE = "2_to_5_minutes", "2-5 minutes"
+        OVER_FIVE = "over_5_minutes", "More than 5 minutes"
+        NOT_STARTED = "not_started", "I did not start"
+
+    class CheckInTimeBand(models.TextChoices):
+        UNDER_ONE = "under_1_minute", "Under 1 minute"
+        ONE_TO_TWO = "1_to_2_minutes", "1-2 minutes"
+        OVER_TWO = "over_2_minutes", "More than 2 minutes"
+        NOT_COMPLETED = "not_completed", "I did not complete a check-in"
+
+    class ConfusingStep(models.TextChoices):
+        NONE = "none", "Nothing was confusing"
+        LOGIN = "login", "Signing in"
+        ASSESSMENT = "assessment", "Assessment questions or import"
+        PROFILE = "profile", "Profile language"
+        RECOMMENDATION = "recommendation", "Why a practice was recommended"
+        SETUP = "setup", "Practice setup"
+        ACTIONS = "actions", "Practice action instructions"
+        CHECK_IN = "check_in", "Check-in questions"
+        REVIEW = "review", "Final review or completion"
+        ACCOUNT = "account", "Account settings"
+        OTHER = "other", "Another step"
+
+    class Friction(models.TextChoices):
+        NONE = "none", "No"
+        PRESENT = "present", "Yes"
+        PREFER_NOT = "prefer_not_to_say", "Prefer not to say"
+
+    stable_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="pilot_feedback",
+    )
+    contract_version = models.CharField(
+        max_length=40,
+        default=PILOT_FEEDBACK_CONTRACT_VERSION,
+        editable=False,
+    )
+    journey_stage = models.CharField(max_length=24, choices=JourneyStage.choices)
+    protocol = models.ForeignKey(
+        PracticeProtocol,
+        on_delete=models.PROTECT,
+        related_name="pilot_feedback",
+        null=True,
+        blank=True,
+    )
+    applicability = models.CharField(
+        max_length=12,
+        choices=Applicability.choices,
+        blank=True,
+        default="",
+    )
+    time_to_start = models.CharField(
+        max_length=20,
+        choices=StartTimeBand.choices,
+        blank=True,
+        default="",
+    )
+    time_to_check_in = models.CharField(
+        max_length=20,
+        choices=CheckInTimeBand.choices,
+        blank=True,
+        default="",
+    )
+    confusing_step = models.CharField(
+        max_length=20,
+        choices=ConfusingStep.choices,
+        blank=True,
+        default="",
+    )
+    accessibility_friction = models.CharField(
+        max_length=20,
+        choices=Friction.choices,
+        blank=True,
+        default="",
+    )
+    safety_friction = models.CharField(
+        max_length=20,
+        choices=Friction.choices,
+        blank=True,
+        default="",
+    )
+    comment = models.TextField(
+        blank=True,
+        validators=[MaxLengthValidator(1000)],
+    )
+    submitted_at = models.DateTimeField(auto_now_add=True)
+
+    objects = ImmutablePilotFeedbackQuerySet.as_manager()
+
+    class Meta:
+        ordering = ["submitted_at", "stable_id"]
+        constraints = [
+            models.CheckConstraint(
+                condition=Q(contract_version=PILOT_FEEDBACK_CONTRACT_VERSION),
+                name="pilot_feedback_contract_version_v1",
+            ),
+            models.CheckConstraint(
+                condition=~Q(
+                    applicability="",
+                    time_to_start="",
+                    time_to_check_in="",
+                    confusing_step="",
+                    accessibility_friction="",
+                    safety_friction="",
+                    comment="",
+                ),
+                name="pilot_feedback_has_signal",
+            ),
+        ]
+
+    def __str__(self) -> str:
+        return f"{self.journey_stage} feedback for user {self.user_id}"
+
+    def save(self, *args, **kwargs):
+        if self.pk and type(self).objects.filter(pk=self.pk).exists():
+            raise ValidationError("Submitted pilot feedback is immutable.")
+        return super().save(*args, **kwargs)
+
+    def clean(self):
+        super().clean()
+        if self.contract_version != PILOT_FEEDBACK_CONTRACT_VERSION:
+            raise ValidationError("Pilot feedback contract version is not supported.")
+        if not any(
+            (
+                self.applicability,
+                self.time_to_start,
+                self.time_to_check_in,
+                self.confusing_step,
+                self.accessibility_friction,
+                self.safety_friction,
+                self.comment.strip(),
+            )
+        ):
+            raise ValidationError("Provide at least one optional feedback response.")

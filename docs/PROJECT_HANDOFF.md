@@ -154,6 +154,10 @@ M1 is implemented as two reviewable batches:
   updates separate current lever state under the accepted M3A mathematics,
   with immutable hashed before/after snapshots, deterministic rebuild and
   reversal, recalculated provisional need, and dynamic active-protocol order.
+- **M5A private-pilot operations:** optional participant-selected usability
+  categories are stored as a separate append-only record and exported through
+  a privacy-minimized allowlist. They never enter assessment, evidence,
+  scoring, recommendation, completion, orientation, or archetype logic.
 
 Only submitted check-ins count toward completion. A database constraint limits
 each user to one active or paused practice. Services—not templates—own state
@@ -338,23 +342,45 @@ evidence semantics, and golden tests are explicitly reviewed.
 - add a keyboard skip path, conspicuous focus, and stable mobile navigation;
 - add no protocols and activate no additional scoring.
 
-Status: implemented for review. Decisions 035–036 are proposed.
+Status: implemented, reviewed, and merged. Decisions 035–036 are accepted.
 
 The verification record and human sign-off checklist are in
 `docs/pilot/PILOT_READINESS_CLOSEOUT.md`.
 
-### Proposed M5 — Private pilot operations
+### M5 — Private pilot operations
 
 #### M5A — Structured usability feedback
-- add a bounded operator/session guide;
-- collect optional usability and accessibility/safety-friction feedback
-  separately from developmental evidence;
-- provide a privacy-minimized, versioned pilot export;
-- prove feedback cannot mutate assessment, score state, recommendation order,
-  completion, orientations, or archetypes;
-- add no protocol, remote telemetry, or scoring expansion.
+- add a bounded operator/session guide with consent, observation,
+  accessibility/safety, data-handling, and stop criteria;
+- collect optional applicability, participant-estimated setup/check-in time,
+  confusing-step, and accessibility/safety-friction categories;
+- store `GG-PILOT-FEEDBACK-1.0` separately and append-only;
+- provide deterministic
+  `grounded-growth-private-pilot-export-v1` JSON by allowlist;
+- exclude identity, record IDs, exact timestamps, free text, private context,
+  assessment data, evidence, scores, orientations, and archetypes from the
+  export;
+- prove submission, viewing, and export cannot mutate assessment, evidence,
+  score state, recommendation order, completion, orientations, or archetypes;
+- use no automatic timing, protocol addition, remote telemetry, or scoring
+  expansion.
 
-Status: proposed after M4E approval; not implemented.
+Status: implemented for review. Decisions 037–038 are proposed.
+
+The binding engineering/privacy contract is in `docs/pilot-feedback.md`; the
+session checklist is in `docs/pilot/PRIVATE_PILOT_OPERATIONS.md`.
+
+#### Proposed M5B — Pilot findings closeout
+- run authorized private-pilot sessions using the reviewed M5A checklist;
+- record aggregate, de-identified product findings under `docs/pilot/`;
+- address observed critical usability, keyboard/mobile, privacy, and safety
+  defects in reviewable changes;
+- make any feedback retention/deletion policy an explicit participant-data
+  decision;
+- do not infer developmental conclusions or expand scoring from usability
+  feedback.
+
+Status: deferred until M5A is reviewed and real pilot observations exist.
 
 ## M1 acceptance criteria
 1. User understands why a practice was recommended without seeing backend fields.
@@ -433,6 +459,31 @@ Status: proposed after M4E approval; not implemented.
 10. M4E creates no migration, protocol, evidence algorithm, scoring algorithm,
     current-state mutation path, or external telemetry.
 
+## M5A acceptance criteria
+
+1. Feedback submission and export require an authenticated session.
+2. The UI says feedback is optional, local, not developmental evidence, and
+   not monitored for urgent support.
+3. Applicability, rough time-to-start/check-in, confusing-step, and
+   accessibility/safety-friction categories are available without requiring
+   free text.
+4. Timing is participant-estimated in broad bands; the application adds no
+   automatic timing, analytics, recording, or remote telemetry.
+5. Submitted feedback is append-only and versioned as
+   `GG-PILOT-FEEDBACK-1.0`.
+6. The per-user export is deterministic, allowlisted, and versioned as
+   `grounded-growth-private-pilot-export-v1`.
+7. The export excludes identity, database IDs, exact timestamps, free text,
+   private context, assessment data, evidence, score state, orientations, and
+   archetypes.
+8. Submission and export leave every assessment, baseline, current state,
+   score snapshot, evidence event, sprint/check-in/review state, orientation,
+   archetype, and recommendation priority unchanged.
+9. The operator guide covers consent, neutral observation, non-fabricated
+   evidence, accessibility/safety response, export review, and stop criteria.
+10. M5A adds no protocol, score activation, scoring/ranking input, external
+    service, or administrative surface for ordinary users.
+
 ## Handoff audit notes
 
 - Canonical curriculum counts remain 27 domains, 383 competencies, 37 levers,
@@ -486,6 +537,14 @@ Status: proposed after M4E approval; not implemented.
 - M4E adds no migration or state-changing startup step. Its readiness command
   is strictly read-only; `make pilot-check` constructs disposable state before
   calling it.
-- The GitHub Pilot readiness gate combines quality, nine Playwright journeys,
+- The GitHub Pilot readiness gate combines quality, ten Playwright journeys,
   and Compose. Its retained artifact supports, but does not replace, human
   desktop/mobile review.
+- M5A adds one migration for a separate optional `PilotFeedback` table. No
+  existing canonical, assessment, evidence, score, sprint, or review table is
+  changed.
+- Pilot timing categories are participant estimates. There is no automatic
+  measurement, external analytics endpoint, or remote telemetry.
+- Pilot feedback free text remains local and is deliberately excluded from
+  the deterministic minimized export. The export is still sensitive pilot
+  data and is not claimed to be anonymous.
