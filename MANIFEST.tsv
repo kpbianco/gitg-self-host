@@ -77,7 +77,7 @@ growth/models.py	37888
 growth/services/__init__.py	1
 growth/services/canonical_import.py	52437
 growth/services/profile.py	6988
-growth/static/growth/app.css	24942
+growth/static/growth/app.css	24952
 growth/templatetags/__init__.py	1
 growth/templatetags/growth_extras.py	379
 growth/urls.py	2492
