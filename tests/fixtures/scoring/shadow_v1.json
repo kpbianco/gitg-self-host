@@ -1,0 +1,102 @@
+{
+  "schema_version": "grounded-growth-shadow-scoring-fixture-v1",
+  "algorithm_version": "GG-SCORING-SHADOW-1.0",
+  "competency_id": "17.03",
+  "baselines": {
+    "L10": {"alpha": "1.000000", "beta": "1.000000", "confidence": "0.4000"},
+    "L23": {"alpha": "1.000000", "beta": "1.000000", "confidence": "0.4000"},
+    "L24": {"alpha": "1.000000", "beta": "1.000000", "confidence": "0.4000"},
+    "L26": {"alpha": "1.000000", "beta": "1.000000", "confidence": "0.4000"}
+  },
+  "weights": [
+    {"lever_id": "L26", "weight": "0.65", "total_competency_weight": "10.25"},
+    {"lever_id": "L10", "weight": "0.15", "total_competency_weight": "17.80"},
+    {"lever_id": "L23", "weight": "0.10", "total_competency_weight": "14.75"},
+    {"lever_id": "L24", "weight": "0.10", "total_competency_weight": "13.35"}
+  ],
+  "events": [
+    {
+      "event_key": "E-SUPPORTS",
+      "action_stable_id": "PRACTICE-FRIENDSHIP-01-A1",
+      "performance": "1.0000",
+      "base_evidence_mass": "0.4675",
+      "direction": "supports"
+    },
+    {
+      "event_key": "E-MIXED",
+      "action_stable_id": "PRACTICE-FRIENDSHIP-01-A2",
+      "performance": "0.4500",
+      "base_evidence_mass": "0.1530",
+      "direction": "mixed"
+    },
+    {
+      "event_key": "E-CONTRADICTS",
+      "action_stable_id": "PRACTICE-FRIENDSHIP-01-A3",
+      "performance": "0.3500",
+      "base_evidence_mass": "0.4675",
+      "direction": "contradicts"
+    },
+    {
+      "event_key": "E-INCONCLUSIVE",
+      "action_stable_id": "PRACTICE-FRIENDSHIP-01-A1",
+      "performance": "0.3500",
+      "base_evidence_mass": "0.2279",
+      "direction": "inconclusive"
+    },
+    {
+      "event_key": "E-UNKNOWN",
+      "action_stable_id": "PRACTICE-FRIENDSHIP-01-A1",
+      "performance": "0.3500",
+      "base_evidence_mass": "0.2118",
+      "direction": ""
+    }
+  ],
+  "expected": {
+    "event_count": 5,
+    "scored_event_count": 3,
+    "withheld_event_count": 2,
+    "withheld_event_keys": ["E-INCONCLUSIVE", "E-UNKNOWN"],
+    "levers": {
+      "L10": {
+        "task_coefficient": "0.202247",
+        "evidence_mass": "0.220044",
+        "success_mass": "0.101512",
+        "failure_mass": "0.118532",
+        "projected_alpha": "1.101512",
+        "projected_beta": "1.118532",
+        "projected_estimate": "0.4962",
+        "projected_confidence": "0.4768"
+      },
+      "L23": {
+        "task_coefficient": "0.162712",
+        "evidence_mass": "0.177031",
+        "success_mass": "0.081669",
+        "failure_mass": "0.095362",
+        "projected_alpha": "1.081669",
+        "projected_beta": "1.095362",
+        "projected_estimate": "0.4969",
+        "projected_confidence": "0.4633"
+      },
+      "L24": {
+        "task_coefficient": "0.179775",
+        "evidence_mass": "0.195596",
+        "success_mass": "0.090234",
+        "failure_mass": "0.105362",
+        "projected_alpha": "1.090234",
+        "projected_beta": "1.105362",
+        "projected_estimate": "0.4966",
+        "projected_confidence": "0.4692"
+      },
+      "L26": {
+        "task_coefficient": "1.500000",
+        "evidence_mass": "1.632000",
+        "success_mass": "0.752888",
+        "failure_mass": "0.879112",
+        "projected_alpha": "1.752888",
+        "projected_beta": "1.879112",
+        "projected_estimate": "0.4826",
+        "projected_confidence": "0.7126"
+      }
+    }
+  }
+}

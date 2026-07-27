@@ -66,7 +66,9 @@ def test_login_home_and_profile_core_flow(live_server, page: Page):
     page.wait_for_url(f"{live_server.url}/profile/")
     page.get_by_role("heading", name="A provisional map, not an identity.").wait_for()
     page.get_by_text("The Seeker", exact=True).wait_for()
-    page.get_by_text("Completing a practice will not change this profile.").wait_for()
+    page.get_by_text(
+        re.compile(r"completing a practice does not change this profile"),
+    ).wait_for()
 
 
 @pytest.mark.e2e
@@ -107,6 +109,9 @@ def test_complete_assessment_and_save_canonical_outputs(live_server, page: Page)
     assert run.orientation_results.count() == 6
     assert run.archetype_results.count() == 15
     assert run.lever_baselines.count() == 37
+    assert not run.lever_baselines.filter(
+        baseline_alpha__isnull=True,
+    ).exists()
 
 
 @pytest.mark.e2e
@@ -205,6 +210,14 @@ def test_guided_practice_draft_pause_and_completion_flow(live_server, page: Page
     assert exported["event_count"] == 1
     assert exported["profile_scores_modified"] is False
     page.get_by_role("link", name="Read evidence explanation").click()
+    page.get_by_role("heading", name="Listen to what matters now").wait_for()
+    page.get_by_role("link", name="Profile", exact=True).click()
+    page.get_by_role("heading", name="What submitted evidence would change").wait_for()
+    page.get_by_text("Preview only · not saved").wait_for()
+    page.get_by_text(
+        "Your live profile and practice recommendations remain unchanged.",
+    ).wait_for()
+    page.go_back()
     page.get_by_role("heading", name="Listen to what matters now").wait_for()
     page.get_by_role("link", name=re.compile(r"Deepen One Existing Friendship")).click()
 

@@ -22,10 +22,15 @@ from growth.models import (
     CurriculumVersion,
     EvidenceEvent,
     LeverBaseline,
+    PracticeAction,
     PracticeCheckIn,
     PracticeProtocol,
 )
-from growth.services.evidence import EVIDENCE_EXPORT_SCHEMA_VERSION
+from growth.services.evidence import (
+    EVIDENCE_EXPORT_SCHEMA_VERSION,
+    EvidenceWorkflowError,
+    verify_evidence_event,
+)
 from growth.services.practice import save_check_in, start_practice
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -92,6 +97,9 @@ def _baseline_snapshot(user):
             "raw_self_report",
             "calibrated_estimate",
             "evidence_confidence",
+            "baseline_alpha",
+            "baseline_beta",
+            "baseline_mass_source",
             "need_score",
             "need_rank",
         )
@@ -209,6 +217,78 @@ def test_replay_verification_fails_on_missing_or_drifted_event(user, seeded):
 
     with pytest.raises(CommandError, match="algorithm_version"):
         call_command("verify_evidence_events")
+
+
+@pytest.mark.django_db
+def test_replay_verification_rejects_action_from_another_protocol(user, seeded):
+    sprint = _sprint(user)
+    friendship_action = sprint.protocol.actions.get(sequence=1)
+    other_protocol = PracticeProtocol.objects.get(stable_id="PRACTICE-PLAY-01")
+    other_action = PracticeAction.objects.create(
+        stable_id="TEST-OTHER-PROTOCOL-ACTION",
+        protocol=other_protocol,
+        sequence=1,
+        title="Test action",
+        instructions="Used only to verify cross-protocol corruption is rejected.",
+        evidence_rules=friendship_action.evidence_rules,
+    )
+    check_in = PracticeCheckIn.objects.create(
+        sprint=sprint,
+        action=other_action,
+        status=PracticeCheckIn.Status.SUBMITTED,
+        action_attempted=True,
+        action_completed=True,
+        moved_beyond_transactional=True,
+        meaningful_information_shared=True,
+        support_level=PracticeCheckIn.SupportLevel.INDEPENDENT,
+        context_comparison=PracticeCheckIn.ContextComparison.FIRST_RECORD,
+        evidence_direction=PracticeCheckIn.EvidenceDirection.SUPPORTS,
+        submitted_at=timezone.now(),
+    )
+    replayed = evaluate_evidence(
+        EvidenceInput(
+            protocol_stable_id=sprint.protocol_id,
+            action_stable_id=other_action.pk,
+            action_attempted=True,
+            action_completed=True,
+            observations={
+                "user_initiated": False,
+                "moved_beyond_transactional": True,
+                "follow_up_question_asked": False,
+                "meaningful_information_shared": True,
+                "future_interaction_scheduled": False,
+                "follow_up_within_seven_days": False,
+            },
+            internal_resistance=None,
+            expected_reciprocity=None,
+            observed_reciprocity=None,
+            support_level=PracticeCheckIn.SupportLevel.INDEPENDENT,
+            context_comparison=PracticeCheckIn.ContextComparison.FIRST_RECORD,
+            evidence_direction=PracticeCheckIn.EvidenceDirection.SUPPORTS,
+            contradiction_text_present=False,
+            repetition_index=1,
+        ),
+        other_action.evidence_rules,
+    )
+    event = EvidenceEvent.objects.create(
+        check_in=check_in,
+        algorithm_version=replayed.algorithm_version,
+        protocol_stable_id=replayed.input_snapshot["protocol_stable_id"],
+        action_stable_id=replayed.input_snapshot["action_stable_id"],
+        input_snapshot=replayed.input_snapshot,
+        performance=replayed.performance,
+        quality=replayed.quality,
+        independence=replayed.independence,
+        context_breadth=replayed.context_breadth,
+        repetition_index=replayed.repetition_index,
+        repetition_multiplier=replayed.repetition_multiplier,
+        contradiction_level=replayed.contradiction_level,
+        base_evidence_mass=replayed.base_evidence_mass,
+        explanation=replayed.explanation,
+    )
+
+    with pytest.raises(EvidenceWorkflowError, match="does not belong"):
+        verify_evidence_event(event)
 
 
 @pytest.mark.django_db

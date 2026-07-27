@@ -17,6 +17,7 @@ from growth.services.practice import (
     start_practice,
     transition_sprint,
 )
+from growth.services.scoring import build_user_shadow_projection
 
 
 def friendship_protocol():
@@ -240,6 +241,8 @@ def test_completion_and_review_do_not_mutate_static_scores(client, user, seeded)
 
     evidence = completion_evidence(sprint)
     assert evidence.ready_for_review is True
+    projection_before_review = build_user_shadow_projection(user).projection
+    assert projection_before_review.event_count == 3
     review_url = reverse("growth:practice-review", kwargs={"sprint_id": sprint.pk})
     review_page = client.get(review_url)
     assert review_page.status_code == 200
@@ -280,6 +283,7 @@ def test_completion_and_review_do_not_mutate_static_scores(client, user, seeded)
         )
     )
     assert after == before
+    assert build_user_shadow_projection(user).projection == projection_before_review
 
 
 @pytest.mark.django_db

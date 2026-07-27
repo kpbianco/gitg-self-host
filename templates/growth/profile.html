@@ -151,11 +151,83 @@
       </section>
     </div>
 
+    <section class="panel shadow-projection" aria-labelledby="shadow-projection-heading">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">M3A review preview</p>
+          <h2 id="shadow-projection-heading">What submitted evidence would change</h2>
+        </div>
+        <span class="status-pill">Preview only · not saved</span>
+      </div>
+      <p class="panel-intro">
+        This read-only calculation tests a proposed scoring contract against your
+        submitted evidence. Your live profile and practice recommendations remain unchanged.
+      </p>
+
+      {% if shadow.unavailable_reason %}
+        <div class="inline-note">
+          <strong>Projection unavailable</strong>
+          <p>{{ shadow.unavailable_reason }}</p>
+        </div>
+      {% elif shadow.projection.event_count == 0 %}
+        <div class="inline-note">
+          <strong>No submitted evidence to project yet</strong>
+          <p>Drafts and practice completion alone are never treated as scoring evidence.</p>
+        </div>
+      {% else %}
+        <div class="shadow-summary" aria-label="Projection event summary">
+          <div>
+            <strong>{{ shadow.projection.scored_event_count }}</strong>
+            <span>directional observation{{ shadow.projection.scored_event_count|pluralize }}</span>
+          </div>
+          <div>
+            <strong>{{ shadow.projection.withheld_event_count }}</strong>
+            <span>withheld as inconclusive or not recorded</span>
+          </div>
+          <div>
+            <strong>Review contract v1</strong>
+            <span>versioned calculation</span>
+          </div>
+        </div>
+
+        <div class="projection-list">
+          {% for row in shadow.rows %}
+            <article>
+              <div>
+                <strong>{{ row.lever.name }}</strong>
+                <span>
+                  Current {{ row.baseline.calibrated_estimate|percentage }}
+                  → projected {{ row.projection.projected_estimate|percentage }}
+                </span>
+              </div>
+              <div class="projection-confidence">
+                <span>Evidence confidence</span>
+                <strong>
+                  {{ row.baseline.evidence_confidence|percentage }}
+                  → {{ row.projection.projected_confidence|percentage }}
+                </strong>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+
+        <p class="fine-print">
+          Supportive observations use recorded protocol performance; mixed observations
+          receive half directional credit; contradictory observations allocate no success
+          mass. Inconclusive and legacy direction-unknown observations are withheld.
+          {% if shadow.uses_reconstructed_baseline %}
+            This preview reconstructs at least one starting evidence mass from rounded
+            published assessment values and is therefore marked for review.
+          {% endif %}
+        </p>
+      {% endif %}
+    </section>
+
     <aside class="mastery-notice">
-      <strong>Static-score boundary</strong>
+      <strong>Read-only scoring boundary</strong>
       <p>
-        M1 records no score updates. Practice completion will remain separate from
-        competency mastery, and completing a practice will not change this profile.
+        M3A saves no score update or recommendation change. Practice completion remains
+        separate from competency mastery, and completing a practice does not change this profile.
       </p>
     </aside>
   {% else %}

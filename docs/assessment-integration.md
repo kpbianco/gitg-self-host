@@ -42,6 +42,7 @@ The CSRF-protected persistence endpoint validates:
 - complete core timing for an in-app run;
 - exact agreement between submitted answers and the original share code;
 - all 6 orientation, 15 archetype, and 37 lever outputs;
+- canonical alpha/beta/evidence-mass agreement for every assessed lever;
 - the complete 37-lever need ranking and finite output ranges.
 
 It then atomically writes an immutable `AssessmentRun` with:
@@ -51,6 +52,7 @@ It then atomically writes an immutable `AssessmentRun` with:
 - timing and response-quality result;
 - orientation and archetype outputs;
 - raw lever scores, calibrated estimates, and confidence;
+- exact six-decimal alpha/beta baseline mass for later replayable projections;
 - original share code and creation timestamp.
 
 Related orientation, archetype, and lever-baseline rows support efficient
@@ -111,11 +113,14 @@ baseline fields instead of coercing an unsupported score.
 ## Static-score boundary
 
 The canonical scorer also contains future evidence-update helper functions.
-The Django application does not import, call, or persist their output in M1.
-Assessment baselines, mastery, confidence, need, orientations, and archetypes
-remain unchanged after practices and reviews.
+M1 and M2 do not call or persist their task-update output. M3A implements the
+posterior reference and a versioned, assessment-anchored confidence correction
+in a pure Python Decimal package only as an unsaved preview. Assessment
+baselines, need, orientations, archetypes, and recommendations remain unchanged
+after practices, reviews, and preview rendering.
 
 Browser scoring is a stated M1 trust boundary. Django verifies shape, IDs,
-ranges, version, and share-code/answer agreement; it does not maintain a
-second scoring implementation. A future server-side scorer would require a
-separate versioned decision and parity suite.
+ranges, version, share-code/answer agreement, and internal consistency of
+alpha/beta/evidence mass. It does not maintain a second initial-assessment
+scorer. The M3A server-side code starts from the browser scorer's persisted
+mass and has a separate version, contract, and golden suite.

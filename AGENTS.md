@@ -9,7 +9,8 @@ Build a self-hosted, evidence-oriented guided-development application. The produ
 - Completion is never equivalent to mastery.
 - Human dignity is never scored.
 - Personality/orientation changes framing and tie-breaking only; it does not determine worth or obligation.
-- Do not activate dynamic score updates until the guided workflow and evidence capture pass acceptance tests.
+- Do not activate dynamic score updates until the guided workflow, evidence
+  capture, audit, and M3A shadow contract pass their separate review gates.
 
 ## Canonical source hierarchy
 Use these files in priority order:
@@ -47,6 +48,12 @@ per-user ledger, a privacy-minimized deterministic export, strict read-only
 replay verification, and synthetic calibration fixtures. It does not add a
 new evidence algorithm, task-to-lever allocation, or profile mutation.
 
+M3A adds `GG-SCORING-SHADOW-1.0`: exact or conservatively reconstructed
+assessment mass, an explicit stable practice-to-competency link, canonical
+structured task weights, direction-aware posterior projection, and a clearly
+labeled profile preview. It is read-only. It must not create current score
+state, snapshots, or dynamic recommendations.
+
 Implement one complete protocol first: `Deepen One Existing Friendship`.
 Create inactive placeholders for four others:
 - Schedule Non-Instrumental Play
@@ -77,6 +84,9 @@ The accepted rationale is recorded in
 - Stable IDs are authoritative; never join canonical entities by display text.
 - Store curriculum and algorithm version metadata.
 - Every eventual scoring update must be deterministic, auditable, reversible, and explainable.
+- M3A shadow projection must use only replay-verified submitted events tied to
+  the same assessment run. Inconclusive and legacy direction-unknown events
+  remain visible but are withheld from its posterior.
 - Never infer missing task-to-lever links from display strings at runtime.
 - Validate all imported weight sums and IDs.
 - Do not silently normalize malformed data; fail with actionable diagnostics.
@@ -116,9 +126,9 @@ canonical assessment and completes the friendship recommendation, setup,
 sprint, draft/submitted check-in, pause/resume/stop, completion, and review
 experience.
 
-M1 remains a static-profile boundary. M2A may calculate base event evidence
-mass under its reviewed contract, and M2B may expose and verify those immutable
-events. Neither batch can implement task-to-lever allocation, posterior
-updates, hidden score mutation, score snapshots, or dynamic recommendation
-changes. Practice completion remains separate from competency mastery. Do not
-begin M3 until M2B is reviewed and explicitly approved.
+M1 and M2 are merged. M3A may calculate a versioned task-to-lever posterior
+projection under `docs/scoring-shadow.md` and render it as an explicitly
+unsaved preview. It cannot mutate mastery, confidence, need, priority,
+archetype, orientation, or recommendation state and cannot create a score
+snapshot. Practice completion remains separate from competency mastery. Do not
+begin M3B activation until M3A is reviewed and explicitly approved.

@@ -128,3 +128,45 @@ assessment answers, and share codes. Event sequence is retained so repetition
 can be calibrated. The export is deterministic for unchanged records and is
 still treated as sensitive behavioral data rather than advertised as
 anonymous public data.
+
+## Decision 019 — Explicit practice-to-competency scoring links
+**Status:** Proposed in M3A for review
+
+A scoreable practice must reference a stable canonical parent competency.
+Task-to-lever allocation comes from that competency's structured
+`CompetencyLeverLink` rows and must sum to approximately 1.0. The first
+friendship protocol references `17.03`, Maintaining friendship. Runtime code
+must fail if its recommendation targets are not a non-empty subset of that
+mapping and must never parse display text to recover weights. Recommendation
+targets remain a separate product-selection concept and are not broadened by
+M3A.
+
+## Decision 020 — Direction-aware shadow policy
+**Status:** Proposed in M3A for review
+
+`GG-SCORING-SHADOW-1.0` multiplies protocol performance by `1.0` for
+supportive, `0.5` for mixed, and `0.0` for contradictory evidence before
+splitting allocated mass into success and failure. Inconclusive and legacy
+direction-unknown events are withheld from posterior and confidence rather
+than silently becoming supportive. The policy is visible, versioned, and
+golden-tested before activation.
+
+## Decision 021 — Exact baseline mass and read-only M3A
+**Status:** Proposed in M3A for review
+
+New assessment runs retain the canonical scorer's exact alpha and beta mass.
+Pilot 002 mass is reconstructed from rounded published raw/calibrated values
+only where the solution is identifiable; ambiguous neutral values remain
+unavailable. M3A may render the result as a preview but writes no current score,
+score snapshot, need, priority, or recommendation. M3B activation requires a
+separate review.
+
+## Decision 022 — Confidence is anchored and monotonic
+**Status:** Proposed in M3A for review
+
+Assessment confidence already incorporates coverage, response quality, and
+consistency. The dormant task helper's mass-only confidence recalculation can
+make confidence fall after adding evidence, so M3A does not use it. The shadow
+contract starts at stored assessment confidence and adds a bounded gain
+`(1 - C0) × E / (E + 1.5)`. Included evidence cannot lower confidence;
+withheld evidence leaves it unchanged.

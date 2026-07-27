@@ -47,6 +47,9 @@ The command opens one transaction and fails before model writes when it finds:
 - nonnumeric, nonpositive, or greater-than-one weights;
 - competency weights that differ from 1.0 by more than `0.000001`;
 - disagreement between the structured mapping CSV and canonical model JSON;
+- a scoreable protocol whose stable parent competency is missing, whose
+  recommendation targets are not a non-empty subset of its mapping, or whose
+  structured weights are malformed;
 - a practice action with a missing schema version, unknown observation field,
   duplicate marker, or overlapping primary/supporting evidence marker.
 
@@ -73,8 +76,10 @@ entities, assessment runs, baselines, protocols, or actions.
 
 The active friendship actions also receive validated
 `practice-observation-v1` evidence rules keyed by stable action IDs. Seeding
-does not create evidence events. `backfill_evidence_events` runs afterward and
-creates events only for submitted check-ins that do not already have one.
+links the protocol to canonical competency `17.03` and requires its four
+structured weights to sum to 1.0. Seeding does not create evidence events.
+`backfill_evidence_events` runs afterward and creates events only for submitted
+check-ins that do not already have one.
 
 ## Versioning
 
@@ -89,7 +94,8 @@ creates events only for submitted check-ins that do not already have one.
 Assessment runs and practice sprints retain their curriculum-version
 reference. M2A records `GG-EVIDENCE-1.0` separately on each immutable event.
 M2B verifies and exports those stored versions without altering canonical data
-or authorizing dynamic scoring.
+or authorizing dynamic scoring. M3A records the stable parent competency on
+the protocol and uses `GG-SCORING-SHADOW-1.0` only for a read-only projection.
 
 ## Pilot 002 boundary
 
@@ -99,6 +105,13 @@ code, or the complete 15-archetype vector. M1 stores those unavailable fields
 as empty and imports only the six orientations, 37 baselines, response-quality
 summary, timing summary, and three published archetypes. It does not invent
 missing source data.
+
+For M3A, the seed reconstructs Pilot 002 alpha/beta mass from the published
+rounded raw and calibrated values only when the canonical equal-prior
+equations identify one solution. It records
+`published_reconstruction` as the source. Neutral `0.5000`/`0.5000` pairs are
+ambiguous and remain null; the importer does not infer mass from confidence.
+All four levers required by competency `17.03` are identifiable.
 
 The seed remains idempotent after a user takes or imports another assessment.
 It reconciles the stable Pilot 002 row but does not overwrite or remove
