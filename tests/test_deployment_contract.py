@@ -59,8 +59,10 @@ def test_environment_example_covers_deployment_and_cookie_contract():
 def test_repeatable_compose_acceptance_is_wired_into_make_and_ci():
     makefile = (ROOT / "Makefile").read_text()
     smoke_script = (ROOT / "scripts" / "verify_compose.sh").read_text()
+    pilot_script = (ROOT / "scripts" / "verify_pilot_readiness.sh").read_text()
     login_probe = (ROOT / "scripts" / "verify_http_login.py").read_text()
     workflow = (ROOT / ".github" / "workflows" / "verification.yml").read_text()
+    workflow_data = yaml.safe_load(workflow)
 
     assert "compose-smoke:" in makefile
     assert "./scripts/verify_compose.sh" in makefile
@@ -75,3 +77,15 @@ def test_repeatable_compose_acceptance_is_wired_into_make_and_ci():
     assert "csrfmiddlewaretoken" in login_probe
     assert "HttpOnly" in login_probe
     assert "make compose-smoke" in workflow
+    assert "pilot-check:" in makefile
+    assert "verify_pilot_readiness.sh" in makefile
+    assert "verify_pilot_readiness" in pilot_script
+    assert smoke_script.count("verify_pilot_readiness") == 3
+    assert "make pilot-check PYTHON=python" in workflow
+    assert "Pilot readiness gate" in workflow
+    assert set(workflow_data["jobs"]["pilot-ready"]["needs"]) == {
+        "quality",
+        "browser",
+        "compose",
+    }
+    assert workflow_data["jobs"]["pilot-ready"]["if"] == "always()"

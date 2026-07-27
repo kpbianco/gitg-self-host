@@ -125,3 +125,18 @@ L08 for recommendation and remains score-inactive.
 
 All five seeded protocols are now executable. Friendship remains the only
 score-active protocol; availability alone never authorizes scoring.
+
+## Post-M4 freeze
+
+`GG-PILOT-READINESS-1.0` treats these five protocols, their fifteen stable
+actions, canonical parents, recommendation targets, and friendship-only score
+activation as the reviewed private-pilot inventory. Run:
+
+```bash
+make pilot-check
+```
+
+The verifier is read-only and fails on drift. Expanding the library or score
+activation requires a new reviewed contract version; it must not be smuggled
+through a seed edit. See
+`docs/pilot/PILOT_READINESS_CLOSEOUT.md`.

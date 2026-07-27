@@ -1,7 +1,7 @@
 PYTHON ?= .venv/bin/python
 APP_DATA_DIR ?= $(CURDIR)/var
 
-.PHONY: format lint test e2e migrate seed evidence-backfill evidence-verify score-rebuild score-verify run compose-up compose-down compose-smoke backup
+.PHONY: format lint test e2e migrate seed evidence-backfill evidence-verify score-rebuild score-verify pilot-check run compose-up compose-down compose-smoke backup
 
 format:
 	$(PYTHON) -m ruff format .
@@ -18,7 +18,10 @@ test:
 
 e2e:
 	PLAYWRIGHT_BROWSERS_PATH="$(CURDIR)/.playwright-browsers" \
-		$(PYTHON) -m pytest -m e2e
+		$(PYTHON) -m pytest -m e2e \
+		--tracing=retain-on-failure \
+		--screenshot=only-on-failure \
+		--output=test-results
 
 migrate:
 	APP_DATA_DIR="$(APP_DATA_DIR)" DJANGO_SECRET_KEY=local-development-secret APP_DEBUG=true \
@@ -43,6 +46,9 @@ score-rebuild:
 score-verify:
 	APP_DATA_DIR="$(APP_DATA_DIR)" DJANGO_SECRET_KEY=local-development-secret APP_DEBUG=true \
 		$(PYTHON) manage.py rebuild_score_state --verify-only
+
+pilot-check:
+	PYTHON_BIN="$(PYTHON)" ./scripts/verify_pilot_readiness.sh
 
 run:
 	APP_DATA_DIR="$(APP_DATA_DIR)" DJANGO_SECRET_KEY=local-development-secret APP_DEBUG=true \

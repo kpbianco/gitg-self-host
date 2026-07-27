@@ -114,6 +114,7 @@ test "$before_counts" = "$after_counts"
 test "$after_counts" = "$expected_counts"
 compose exec -T app python manage.py verify_evidence_events
 compose exec -T app python manage.py rebuild_score_state --verify-only
+compose exec -T app python manage.py verify_pilot_readiness
 
 printf '\n==> Create and integrity-check an online SQLite backup\n'
 compose exec -T app python manage.py backup_database --output "$backup_path"
@@ -131,6 +132,7 @@ http_probe "$changed_env_password" failure
 test "$(canonical_counts)" = "$expected_counts"
 compose exec -T app python manage.py migrate --check
 compose exec -T app python manage.py rebuild_score_state --verify-only
+compose exec -T app python manage.py verify_pilot_readiness
 
 printf '\n==> Restore the verified backup inside the isolated volume\n'
 compose down
@@ -142,6 +144,7 @@ http_probe "$persisted_password" failure
 http_probe "$changed_env_password" failure
 test "$(canonical_counts)" = "$expected_counts"
 compose exec -T app python manage.py rebuild_score_state --verify-only
+compose exec -T app python manage.py verify_pilot_readiness
 
 printf '\n==> Confirm clean Gunicorn shutdown\n'
 compose stop --timeout 30 app

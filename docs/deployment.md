@@ -167,6 +167,8 @@ After an update, sign in and verify:
 8. `/profile/` distinguishes the assessment baseline from current
    evidence-updated estimates;
 9. `/health/` returns `{"status":"ok"}`.
+10. `docker compose exec app python manage.py verify_pilot_readiness` reports
+    the exact reviewed five-protocol boundary and replay state.
 
 The evidence verifier is intentionally not an automatic repair step. Startup
 backfill reconciles missing legacy events and verifies existing ones;
@@ -221,7 +223,8 @@ It verifies:
 - the Compose health check and public `/health/` response;
 - anonymous redirect plus a real CSRF-protected login over the mapped port;
 - the non-root runtime, applied migrations, exact canonical counts, repeated
-  seed idempotency, evidence replay, and score-state replay;
+  seed idempotency, evidence replay, score-state replay, and the read-only
+  `GG-PILOT-READINESS-1.0` contract;
 - database and bootstrap-password persistence after forced container
   recreation;
 - an online SQLite backup, `PRAGMA integrity_check`, and restore;
@@ -233,5 +236,6 @@ read or modify the deployment `.env` or `grounded_growth_data` volume.
 deployment continues to default to `.env`.
 
 GitHub Actions runs the same command in
-`.github/workflows/verification.yml`, alongside Ruff, Django, pytest, and
-Playwright jobs.
+`.github/workflows/verification.yml`, alongside Ruff, Django, pytest,
+the isolated `make pilot-check`, and Playwright. The aggregate **Pilot
+readiness gate** succeeds only when quality, browser, and Compose all pass.

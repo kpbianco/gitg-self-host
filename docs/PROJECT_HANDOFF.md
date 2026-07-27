@@ -317,12 +317,44 @@ Status: implemented, reviewed, and merged. Decisions 031–032 are accepted.
 - require both a condition comparison and one repeat within seven days;
 - retain immutable `GG-EVIDENCE-1.0` events while remaining score-inactive.
 
-Status: implemented for review.
+Status: implemented, reviewed, and merged. Decisions 033–034 are accepted.
 
 The initial five-protocol library is complete after M4D. Further expansion
 must use separately reviewed batches. A new executable protocol does not
 become score-active until its stable canonical parent, structured weights,
 evidence semantics, and golden tests are explicitly reviewed.
+
+#### M4E — Post-M4 pilot-readiness closeout
+- freeze the reviewed initial inventory under
+  `GG-PILOT-READINESS-1.0`;
+- verify exact canonical/source/database counts, stable protocol links,
+  action inventory and configuration fingerprint, Pilot 002 completeness,
+  draft/evidence separation, evidence replay, score-state replay, and
+  friendship-only activation without writing state;
+- provide an isolated `make pilot-check` from a fresh migrated database;
+- require one aggregate GitHub gate over quality, nine Playwright journeys,
+  and the production Docker Compose drill;
+- retain desktop/mobile walkthrough screenshots and failure diagnostics;
+- add a keyboard skip path, conspicuous focus, and stable mobile navigation;
+- add no protocols and activate no additional scoring.
+
+Status: implemented for review. Decisions 035–036 are proposed.
+
+The verification record and human sign-off checklist are in
+`docs/pilot/PILOT_READINESS_CLOSEOUT.md`.
+
+### Proposed M5 — Private pilot operations
+
+#### M5A — Structured usability feedback
+- add a bounded operator/session guide;
+- collect optional usability and accessibility/safety-friction feedback
+  separately from developmental evidence;
+- provide a privacy-minimized, versioned pilot export;
+- prove feedback cannot mutate assessment, score state, recommendation order,
+  completion, orientations, or archetypes;
+- add no protocol, remote telemetry, or scoring expansion.
+
+Status: proposed after M4E approval; not implemented.
 
 ## M1 acceptance criteria
 1. User understands why a practice was recommended without seeing backend fields.
@@ -379,6 +411,28 @@ evidence semantics, and golden tests are explicitly reviewed.
     completion, mastery, and worth.
 14. Orientations and archetypes remain unchanged.
 
+## M4E acceptance criteria
+
+1. A fresh isolated database passes migrations, bootstrap, repeated seed,
+   evidence reconciliation, score initialization, and
+   `GG-PILOT-READINESS-1.0`.
+2. The readiness verifier is read-only and exits nonzero on canonical,
+   protocol, Pilot 002, evidence, or score-state drift.
+3. Exactly five reviewed protocols and fifteen reviewed actions are active.
+4. Friendship remains the only score-active protocol.
+5. All protocol parents and recommendation targets use reviewed stable IDs
+   and canonical structured mappings.
+6. Draft check-ins remain outside the evidence ledger; score-inactive
+   protocol events have no score snapshots.
+7. The GitHub Pilot readiness gate requires quality, browser, and Compose
+   success on the same commit.
+8. The mobile walkthrough proves keyboard content access, five-protocol
+   coverage, score-boundary copy, and no horizontal overflow.
+9. Desktop/mobile screenshots and failure traces are retained for human
+   review.
+10. M4E creates no migration, protocol, evidence algorithm, scoring algorithm,
+    current-state mutation path, or external telemetry.
+
 ## Handoff audit notes
 
 - Canonical curriculum counts remain 27 domains, 383 competencies, 37 levers,
@@ -426,6 +480,12 @@ evidence semantics, and golden tests are explicitly reviewed.
   mathematics or activation boundary.
 - `make compose-smoke` is the repeatable deployment gate. It uses an isolated
   Compose project and throwaway named volume to prove the image, mapped-port
-  login, health, migrations, idempotent seeding, score replay, persistence,
-  online backup, restore, and clean shutdown without touching a real `.env` or
-  deployment volume.
+  login, health, migrations, idempotent seeding, evidence/score/readiness
+  replay, persistence, online backup, restore, and clean shutdown without
+  touching a real `.env` or deployment volume.
+- M4E adds no migration or state-changing startup step. Its readiness command
+  is strictly read-only; `make pilot-check` constructs disposable state before
+  calling it.
+- The GitHub Pilot readiness gate combines quality, nine Playwright journeys,
+  and Compose. Its retained artifact supports, but does not replace, human
+  desktop/mobile review.

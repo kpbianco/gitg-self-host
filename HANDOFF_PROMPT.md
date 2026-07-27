@@ -23,13 +23,14 @@ Then inspect the canonical data under:
 Treat `legacy/` as provenance only. Do not build implementation behavior from legacy notes when canonical files disagree.
 
 Work only on the milestone batch explicitly authorized by the repository
-owner. M1 through M3B and M4A–M4C are reviewed and merged; Decisions 023–032
+owner. M1 through M3B and M4A–M4D are reviewed and merged; Decisions 023–034
 are accepted.
 M4A adds score-inactive non-instrumental play; M4B adds score-inactive
 emotional cue detection; M4C adds score-inactive boundary practice; M4D adds a
-score-inactive attention-presence experiment. Further M4 protocol-library
-expansion must proceed in separately
-authorized, reviewable batches.
+score-inactive attention-presence experiment. M4E adds the read-only
+`GG-PILOT-READINESS-1.0` boundary, aggregate GitHub gate, retained browser
+walkthrough, and keyboard/mobile hardening. Further protocol or score
+activation must proceed in separately authorized, reviewable batches.
 
 Use the binding stack in `AGENTS.md`: a Python/Django monolith with Django
 templates, local assets, SQLite, Gunicorn, pytest, Ruff, Playwright, Dockerfile,
@@ -70,6 +71,14 @@ protocol ordering from canonical weights. Assessment baselines, raw
 self-report, orientations, archetypes, completion, and human worth remain
 unchanged.
 
+The M4E boundary verifies the exact five-protocol/fifteen-action inventory,
+canonical parent and target links, Pilot 002 completeness, evidence replay,
+score-state replay, and friendship-only score activation without writing
+state. `make pilot-check` exercises the contract from a fresh isolated
+database. The proposed next batch, M5A, is private-pilot operations and
+optional usability feedback kept separate from assessment, evidence, scoring,
+recommendation order, and completion.
+
 Acceptance criteria are in `docs/PROJECT_HANDOFF.md`. Add automated tests for
 every testable criterion. The app must pass `make compose-smoke` in a
 Docker-capable environment.
@@ -82,6 +91,7 @@ Before changing code:
 
 Then implement in reviewable batches. For each batch:
 - run Ruff, Django checks, pytest, and applicable Playwright tests;
+- run `make pilot-check`;
 - audit against the product doctrine;
 - report exact passes/failures;
 - open a PR and ask me to approve it.

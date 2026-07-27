@@ -21,6 +21,34 @@ LEGACY_GGA1_CODE = (
     "R9LCJ0Ijo0MC43ODc5OTk5OTk5OTk5OH0="
 )
 
+PROTOCOL_WALKTHROUGH = (
+    (
+        "deepen-one-existing-friendship",
+        "Deepen One Existing Friendship",
+        "Eligible submitted observations may adjust provisional capacity estimates.",
+    ),
+    (
+        "schedule-non-instrumental-play",
+        "Schedule Non-Instrumental Play",
+        "This protocol records evidence but is not score-active",
+    ),
+    (
+        "practice-emotional-cue-detection",
+        "Practice Emotional Cue Detection",
+        "This protocol records evidence but is not score-active",
+    ),
+    (
+        "state-and-maintain-one-boundary",
+        "State and Maintain One Boundary",
+        "This protocol records evidence but is not score-active",
+    ),
+    (
+        "complete-an-attention-presence-experiment",
+        "Complete an Attention-Presence Experiment",
+        "This protocol records evidence but is not score-active",
+    ),
+)
+
 
 def create_browser_user():
     return get_user_model().objects.create_user(
@@ -57,6 +85,18 @@ def open_assessment(live_server, page):
     assert page.evaluate("typeof window.GroundedGrowthAssessmentApp") == "object"
 
 
+def assert_no_horizontal_overflow(page):
+    assert page.evaluate("document.documentElement.scrollWidth <= window.innerWidth"), (
+        f"Page has horizontal overflow at {page.viewport_size}"
+    )
+
+
+def save_walkthrough_screenshot(page, name):
+    path = ROOT / "test-results" / "pilot-walkthrough" / f"{name}.png"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    page.screenshot(path=path, full_page=True)
+
+
 @pytest.mark.e2e
 @pytest.mark.django_db(transaction=True)
 def test_login_home_and_profile_core_flow(live_server, page: Page):
@@ -75,6 +115,52 @@ def test_login_home_and_profile_core_flow(live_server, page: Page):
     page.get_by_text(
         re.compile(r"completing this practice does not establish mastery"),
     ).wait_for()
+
+
+@pytest.mark.e2e
+@pytest.mark.django_db(transaction=True)
+def test_mobile_keyboard_walkthrough_covers_all_five_protocols(live_server, page: Page):
+    page.set_viewport_size({"width": 390, "height": 844})
+    create_browser_user()
+    seed_browser_data()
+    log_in(live_server, page)
+
+    page.goto(f"{live_server.url}/")
+    page.keyboard.press("Tab")
+    expect(page.get_by_role("link", name="Skip to main content")).to_be_focused()
+    page.keyboard.press("Enter")
+    expect(page.locator("#main-content")).to_be_focused()
+    assert_no_horizontal_overflow(page)
+    save_walkthrough_screenshot(page, "mobile-home")
+
+    page.get_by_role("link", name="Practices", exact=True).click()
+    expect(page.locator(".practice-card")).to_have_count(5)
+    assert_no_horizontal_overflow(page)
+    save_walkthrough_screenshot(page, "mobile-practice-library")
+
+    for slug, name, score_boundary in PROTOCOL_WALKTHROUGH:
+        page.goto(f"{live_server.url}/practices/{slug}/")
+        page.get_by_role("heading", name=name, exact=True).wait_for()
+        page.get_by_text("You will not need to invent the practice.").wait_for()
+        assert_no_horizontal_overflow(page)
+
+        page.get_by_role("link", name="Start guided setup").click()
+        page.get_by_text(score_boundary).wait_for()
+        page.get_by_role("button", name="Continue").wait_for()
+        assert_no_horizontal_overflow(page)
+        save_walkthrough_screenshot(page, f"mobile-{slug}-setup")
+
+    page.set_viewport_size({"width": 1440, "height": 1000})
+    page.goto(f"{live_server.url}/profile/")
+    page.get_by_role("heading", name="A provisional map, not an identity.").wait_for()
+    assert_no_horizontal_overflow(page)
+    save_walkthrough_screenshot(page, "desktop-profile")
+
+    for slug, name, _score_boundary in PROTOCOL_WALKTHROUGH:
+        page.goto(f"{live_server.url}/practices/{slug}/")
+        page.get_by_role("heading", name=name, exact=True).wait_for()
+        assert_no_horizontal_overflow(page)
+        save_walkthrough_screenshot(page, f"desktop-{slug}")
 
 
 @pytest.mark.e2e

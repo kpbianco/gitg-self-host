@@ -22,11 +22,18 @@ leaving sidecars that can collide with a subsequent unit or browser run.
 make format
 make lint
 make test
+make pilot-check
 make e2e
 make compose-smoke
 ```
 
 `make lint` runs Ruff format/lint checks and Django's system check.
+
+`make pilot-check` creates a temporary data directory, applies every
+migration, creates the one-time bootstrap user, seeds twice, reconciles
+evidence and score state, and then runs the read-only
+`GG-PILOT-READINESS-1.0` verifier. It removes its isolated database on exit
+and never touches `./var`, `.env`, or the deployed volume.
 
 `make test` covers:
 
@@ -78,6 +85,9 @@ make compose-smoke
 - dynamic active-protocol ordering from current need and canonical weights;
 - complete play, emotional-cue, boundary, and attention-presence protocol
   configuration;
+- exact `GG-PILOT-READINESS-1.0` source/database/protocol/Pilot 002 inventory;
+- read-only readiness verification and fail-closed score-activation,
+  profile-completeness, and availability drift behavior;
 - protocol-specific compact check-in fields and boundary language;
 - immutable evidence with zero score snapshots or lever-state movement for
   score-inactive protocols;
@@ -92,16 +102,18 @@ make compose-smoke
 - consistent backup and SQLite integrity;
 - assessment v1.1 complete golden output, GGA11, and GGA1.
 
-`make e2e` uses Playwright Chromium for eight browser journeys:
+`make e2e` uses Playwright Chromium for nine browser journeys:
 
 1. login, Pilot 002 home, and developmental profile;
-2. non-instrumental-play setup and protocol-specific compact check-in;
-3. emotional-cue setup, anti-mind-reading boundary, and compact check-in;
-4. boundary setup, anti-coercion and retaliation exclusions, and compact check-in;
-5. accessible attention-presence setup, condition comparison, and compact check-in;
-6. all 50 required assessment questions, result save, and 6/15/37 persistence;
-7. GGA11 import and supported GGA1 import;
-8. recommendation explanation, seven-step setup, start, pause/resume, draft,
+2. mobile keyboard content access, five-protocol setup coverage, no horizontal
+   overflow, score-boundary copy, and desktop/mobile walkthrough screenshots;
+3. non-instrumental-play setup and protocol-specific compact check-in;
+4. emotional-cue setup, anti-mind-reading boundary, and compact check-in;
+5. boundary setup, anti-coercion and retaliation exclusions, and compact check-in;
+6. accessible attention-presence setup, condition comparison, and compact check-in;
+7. all 50 required assessment questions, result save, and 6/15/37 persistence;
+8. GGA11 import and supported GGA1 import;
+9. recommendation explanation, seven-step setup, start, pause/resume, draft,
    M2 evidence submission/detail, ledger, minimized JSON download, all three
    actions, M3B evidence-updated profile state, final review, completion, and
    mastery disclaimer.
@@ -109,6 +121,11 @@ make compose-smoke
 The server-side golden test and browser flow complement each other: the first
 deep-compares every canonical output, while the second proves that the mounted
 UI reaches and persists that engine.
+
+Playwright retains traces and failure screenshots under `test-results`. GitHub
+also retains the passing `pilot-walkthrough` desktop/mobile screenshots in the
+`playwright-results` artifact for seven days. Review that artifact as described
+in `docs/pilot/PILOT_READINESS_CLOSEOUT.md`.
 
 ## Docker acceptance
 
@@ -128,9 +145,11 @@ The command never uses the deployment `.env`. Its temporary credentials,
 Compose project, and volume are removed on exit. Set `SMOKE_APP_PORT` only
 when a fixed test port is required.
 
-`.github/workflows/verification.yml` runs three required jobs on pull requests
-and `main`: Ruff/Django/pytest, the eight Playwright journeys, and this exact
-Docker Compose drill.
+`.github/workflows/verification.yml` runs quality/readiness, the nine
+Playwright journeys, and this exact Docker Compose drill on pull requests and
+`main`. One aggregate **Pilot readiness gate** succeeds only when all three
+jobs succeed. Configure branch protection to require that aggregate check for
+pilot-bound merges.
 
 ## Current scoring boundary
 
