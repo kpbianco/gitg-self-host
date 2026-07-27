@@ -328,7 +328,10 @@ def test_boundary_setup_and_check_in_are_safe_and_specific(live_server, page: Pa
     page.get_by_role("button", name="Begin practice").click()
     page.get_by_role("link", name="Add compact check-in").click()
     page.get_by_label("I chose a specific limit and a response that I control").wait_for()
-    expect(page.get_by_label("I stated the boundary directly in specific words")).to_be_hidden()
+    page.get_by_label("I stated the boundary directly in specific words").wait_for()
+    expect(
+        page.get_by_label("I checked understanding without bargaining or testing")
+    ).to_be_hidden()
     expect(
         page.get_by_label(
             "I followed through proportionately or restated the boundary within seven days"

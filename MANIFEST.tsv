@@ -170,7 +170,7 @@ templates/registration/password_change_form.html	992
 tests/__init__.py	1
 tests/conftest.py	866
 tests/e2e/conftest.py	233
-tests/e2e/test_core_flow.py	26749
+tests/e2e/test_core_flow.py	26853
 tests/fixtures/assessment/README.md	878
 tests/fixtures/assessment/manifest.json	415
 tests/test_assessment_golden.py	1251
