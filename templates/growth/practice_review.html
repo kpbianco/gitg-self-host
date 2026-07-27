@@ -35,7 +35,7 @@
         At least two actions completed — {{ evidence.actions_completed }} of 3
       </li>
       <li class="{% if evidence.substantive_interaction_occurred %}met{% endif %}">
-        At least one substantive interaction
+        {{ sprint.protocol.setup_copy.completion_signal_label|default:"At least one meaningful attempt" }}
       </li>
       <li>Final review submitted — this step</li>
     </ul>

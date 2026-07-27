@@ -68,7 +68,8 @@ local-network access, shutdown behavior, and the future HTTPS boundary.
 - Idempotent Pilot 002 seed: 37 baselines, six orientations, and the three
   archetypes published in the canonical profile.
 - The complete `Deepen One Existing Friendship` protocol data plus four
-  inactive structured placeholders.
+  a second score-inactive executable play protocol and three inactive
+  structured placeholders.
 - The complete 14-day **Deepen One Existing Friendship** experience: reason,
   applicability, context, boundaries, start date, defined actions, activation,
   compact draft/submitted check-ins, pause/resume/stop, completion, and review.

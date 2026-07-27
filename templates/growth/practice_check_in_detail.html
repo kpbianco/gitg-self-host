@@ -20,12 +20,21 @@
   </section>
 
   <div class="mastery-notice" role="note">
-    <strong>This observation has a versioned score disposition.</strong>
-    <p>
-      Eligible directional evidence is allocated only through the reviewed
-      practice mapping. Inconclusive evidence is withheld. One observation
-      remains provisional and does not establish mastery.
-    </p>
+    {% if sprint.protocol.score_active %}
+      <strong>This observation has a versioned score disposition.</strong>
+      <p>
+        Eligible directional evidence is allocated only through the reviewed
+        practice mapping. Inconclusive evidence is withheld. One observation
+        remains provisional and does not establish mastery.
+      </p>
+    {% else %}
+      <strong>This protocol is not score-active.</strong>
+      <p>
+        The observation remains available in your evidence ledger, but it
+        created no score snapshot and did not change your current profile,
+        confidence, need, or recommendation order.
+      </p>
+    {% endif %}
   </div>
 
   <section class="definition-grid evidence-reading-grid">

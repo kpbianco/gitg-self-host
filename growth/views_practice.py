@@ -141,7 +141,7 @@ def practice_setup(request, slug, step):
             _save_setup_data(request, protocol, setup)
             return redirect("growth:practice-setup", slug=slug, step=2)
     elif step == 2:
-        form = PracticeApplicabilityForm(request.POST or None)
+        form = PracticeApplicabilityForm(request.POST or None, protocol=protocol)
         if request.method == "POST" and form.is_valid():
             if form.cleaned_data["applicable"] == "no":
                 request.session.pop(_setup_session_key(request, protocol), None)
@@ -156,6 +156,7 @@ def practice_setup(request, slug, step):
     elif step == 3:
         form = PracticeContextForm(
             request.POST or None,
+            protocol=protocol,
             initial={"person_or_context": setup.get("person_or_context", "")},
         )
         if request.method == "POST" and form.is_valid():
@@ -163,7 +164,7 @@ def practice_setup(request, slug, step):
             _save_setup_data(request, protocol, setup)
             return redirect("growth:practice-setup", slug=slug, step=4)
     elif step == 4:
-        form = PracticeBoundaryForm(request.POST or None)
+        form = PracticeBoundaryForm(request.POST or None, protocol=protocol)
         if request.method == "POST" and form.is_valid():
             setup["boundaries_acknowledged"] = True
             _save_setup_data(request, protocol, setup)

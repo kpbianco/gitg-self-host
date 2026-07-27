@@ -12,7 +12,11 @@ from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.db import transaction
 
-from growth.domain.evidence import EvidenceContractError, validate_evidence_rules
+from growth.domain.evidence import (
+    ALLOWED_OBSERVATION_FIELDS,
+    EvidenceContractError,
+    validate_evidence_rules,
+)
 from growth.domain.scoring import (
     ScoringContractError,
     reconstruct_published_baseline_mass,
@@ -265,6 +269,37 @@ PROTOCOLS = (
             "At least one substantive interaction",
             "Final review submitted",
         ],
+        "completion_rules": {
+            "minimum_completed": 2,
+            "substantive_markers": [
+                "moved_beyond_transactional",
+                "meaningful_information_shared",
+            ],
+        },
+        "setup_copy": {
+            "context_heading": "Choose one existing relationship.",
+            "boundary_heading": "Depth must remain freely chosen.",
+            "timing_hint": "Choose a date when a real, welcome interaction is plausible.",
+            "context_help": "Use a first name, initials, or another private label.",
+            "applicability_heading": "A real relationship, not a hypothetical exercise",
+            "completion_signal_label": "At least one substantive interaction",
+            "boundary_acknowledgement": (
+                "I will choose welcome contact, respect privacy and autonomy, "
+                "and treat reciprocity as freely given—not owed."
+            ),
+        },
+        "check_in_fields": [
+            "user_initiated",
+            "moved_beyond_transactional",
+            "follow_up_question_asked",
+            "meaningful_information_shared",
+            "future_interaction_scheduled",
+            "follow_up_within_seven_days",
+            "internal_resistance",
+            "expected_reciprocity",
+            "observed_reciprocity",
+        ],
+        "score_active": True,
         "target_levers": ["L26", "L23", "L24"],
         "display_order": 1,
         "actions": [
@@ -332,8 +367,121 @@ PROTOCOLS = (
         "stable_id": "PRACTICE-PLAY-01",
         "slug": "schedule-non-instrumental-play",
         "name": "Schedule Non-Instrumental Play",
+        "parent_competency_id": "26.01",
+        "availability": PracticeProtocol.Availability.ACTIVE,
+        "duration_days": 10,
+        "recommendation_reason": (
+            "Your current provisional profile identifies playfulness, recreation, "
+            "and non-instrumental activity as a useful area for practice."
+        ),
+        "applicability_prompt": (
+            "Is there a safe, accessible activity you can do primarily for enjoyment "
+            "rather than productivity or improvement?"
+        ),
+        "setup_prompt": (
+            "Choose one low-stakes form of play that is realistically available now. "
+            "Examples may include a game, making something, movement, music, "
+            "or playful exploration."
+        ),
+        "privacy_and_boundaries": (
+            "Choose an activity that is physically, financially, and socially safe. "
+            "Do not use the practice to pressure another person, ignore responsibilities, "
+            "or turn rest into another performance target."
+        ),
+        "completion_criteria": [
+            "All three actions attempted",
+            "At least two actions completed",
+            "At least one period of genuinely non-instrumental engagement",
+            "Final review submitted",
+        ],
+        "completion_rules": {
+            "minimum_completed": 2,
+            "substantive_markers": [
+                "moved_beyond_transactional",
+                "meaningful_information_shared",
+            ],
+        },
+        "setup_copy": {
+            "context_heading": "Choose one form of play.",
+            "boundary_heading": "Keep play safe and freely chosen.",
+            "timing_hint": "Choose a date when an unhurried play window is realistic.",
+            "context_help": "Use a short private label for the activity or setting.",
+            "applicability_heading": "A real activity, not an abstract intention",
+            "completion_signal_label": (
+                "At least one period of genuinely non-instrumental engagement"
+            ),
+            "boundary_acknowledgement": (
+                "I will keep this activity safe, voluntary, and proportionate "
+                "to my responsibilities."
+            ),
+            "check_in_labels": {
+                "future_interaction_scheduled": "A specific play window was reserved",
+                "moved_beyond_transactional": "I engaged in the activity",
+                "meaningful_information_shared": (
+                    "I kept the activity free of output or optimization goals"
+                ),
+                "follow_up_within_seven_days": "I returned to play within seven days",
+            },
+        },
+        "check_in_fields": [
+            "future_interaction_scheduled",
+            "moved_beyond_transactional",
+            "meaningful_information_shared",
+            "follow_up_within_seven_days",
+            "internal_resistance",
+        ],
         "target_levers": ["L34"],
         "display_order": 2,
+        "actions": [
+            {
+                "stable_id": "PRACTICE-PLAY-01-A1",
+                "sequence": 1,
+                "title": "Reserve a play window",
+                "instructions": (
+                    "Choose a specific activity and reserve at least 30 minutes "
+                    "for it within the next three days."
+                ),
+                "due_within_days": 3,
+                "evidence_rules": {
+                    "schema_version": "practice-observation-v1",
+                    "primary_markers": ["future_interaction_scheduled"],
+                    "supporting_markers": ["user_initiated"],
+                },
+            },
+            {
+                "stable_id": "PRACTICE-PLAY-01-A2",
+                "sequence": 2,
+                "title": "Play without an output goal",
+                "instructions": (
+                    "Use the reserved time for the activity. For that window, do not "
+                    "optimize, publish, measure, or turn it into work."
+                ),
+                "due_within_days": None,
+                "evidence_rules": {
+                    "schema_version": "practice-observation-v1",
+                    "primary_markers": [
+                        "moved_beyond_transactional",
+                        "meaningful_information_shared",
+                    ],
+                    "supporting_markers": ["user_initiated"],
+                },
+            },
+            {
+                "stable_id": "PRACTICE-PLAY-01-A3",
+                "sequence": 3,
+                "title": "Return once",
+                "instructions": (
+                    "Within seven days, return to the activity for another short period "
+                    "or choose a second playful activity."
+                ),
+                "due_within_days": 7,
+                "evidence_rules": {
+                    "schema_version": "practice-observation-v1",
+                    "primary_markers": ["follow_up_within_seven_days"],
+                    "supporting_markers": ["moved_beyond_transactional"],
+                },
+            },
+        ],
     },
     {
         "stable_id": "PRACTICE-EMOTIONAL-CUES-01",
@@ -361,6 +509,30 @@ PROTOCOLS = (
 
 def _seed_protocols() -> None:
     for item in PROTOCOLS:
+        completion_rules = item.get("completion_rules", {})
+        minimum_completed = completion_rules.get("minimum_completed", 2)
+        substantive_markers = completion_rules.get("substantive_markers", [])
+        if completion_rules and (
+            not isinstance(minimum_completed, int)
+            or minimum_completed < 1
+            or minimum_completed > len(item.get("actions", []))
+        ):
+            raise CanonicalDataError(
+                f"{item['stable_id']}: completion minimum is invalid for its actions."
+            )
+        if completion_rules and (
+            not isinstance(substantive_markers, list)
+            or not substantive_markers
+            or set(substantive_markers) - ALLOWED_OBSERVATION_FIELDS
+        ):
+            raise CanonicalDataError(
+                f"{item['stable_id']}: completion markers must use the reviewed "
+                "evidence observation vocabulary."
+            )
+        if item.get("score_active", False) and item["stable_id"] != "PRACTICE-FRIENDSHIP-01":
+            raise CanonicalDataError(
+                f"{item['stable_id']}: score activation requires a separate reviewed contract."
+            )
         parent_competency = None
         parent_competency_id = item.get("parent_competency_id")
         if parent_competency_id:
@@ -398,6 +570,10 @@ def _seed_protocols() -> None:
             "setup_prompt": item.get("setup_prompt", ""),
             "privacy_and_boundaries": item.get("privacy_and_boundaries", ""),
             "completion_criteria": item.get("completion_criteria", []),
+            "completion_rules": item.get("completion_rules", {}),
+            "setup_copy": item.get("setup_copy", {}),
+            "check_in_fields": item.get("check_in_fields", []),
+            "score_active": item.get("score_active", False),
             "display_order": item["display_order"],
         }
         protocol, _ = PracticeProtocol.objects.update_or_create(

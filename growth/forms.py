@@ -14,6 +14,14 @@ class PracticeApplicabilityForm(forms.Form):
         widget=forms.RadioSelect,
     )
 
+    def __init__(self, *args, protocol=None, **kwargs):
+        super().__init__(*args, **kwargs)
+        if protocol and protocol.stable_id != "PRACTICE-FRIENDSHIP-01":
+            self.fields["applicable"].choices = (
+                ("yes", "Yes, this activity or context is available"),
+                ("no", "Not right now"),
+            )
+
 
 class PracticeContextForm(forms.Form):
     person_or_context = forms.CharField(
@@ -25,6 +33,13 @@ class PracticeContextForm(forms.Form):
         ),
     )
 
+    def __init__(self, *args, protocol=None, **kwargs):
+        super().__init__(*args, **kwargs)
+        if protocol:
+            self.fields["person_or_context"].help_text = protocol.setup_copy.get(
+                "context_help", self.fields["person_or_context"].help_text
+            )
+
 
 class PracticeBoundaryForm(forms.Form):
     boundaries_acknowledged = forms.BooleanField(
@@ -33,6 +48,14 @@ class PracticeBoundaryForm(forms.Form):
             "autonomy, and treat reciprocity as freely given—not owed."
         ),
     )
+
+    def __init__(self, *args, protocol=None, **kwargs):
+        super().__init__(*args, **kwargs)
+        if protocol:
+            self.fields["boundaries_acknowledged"].label = protocol.setup_copy.get(
+                "boundary_acknowledgement",
+                self.fields["boundaries_acknowledged"].label,
+            )
 
 
 class PracticeStartDateForm(forms.Form):
@@ -164,6 +187,26 @@ class PracticeCheckInForm(forms.ModelForm):
         self.sprint = sprint
         self.require_evidence_metadata = require_evidence_metadata
         self.fields["action"].queryset = sprint.protocol.actions.all()
+        optional_observations = {
+            "user_initiated",
+            "moved_beyond_transactional",
+            "follow_up_question_asked",
+            "meaningful_information_shared",
+            "future_interaction_scheduled",
+            "follow_up_within_seven_days",
+            "internal_resistance",
+            "expected_reciprocity",
+            "observed_reciprocity",
+        }
+        configured = set(sprint.protocol.check_in_fields)
+        for field_name in optional_observations - configured:
+            self.fields.pop(field_name, None)
+        for field_name, label in sprint.protocol.setup_copy.get("check_in_labels", {}).items():
+            if field_name in self.fields:
+                self.fields[field_name].label = label
+        self.fields[
+            "context_comparison"
+        ].help_text = "This describes context variation within the same practice."
         has_prior = sprint.check_ins.filter(status=PracticeCheckIn.Status.SUBMITTED).exists()
         if has_prior:
             context_choices = (

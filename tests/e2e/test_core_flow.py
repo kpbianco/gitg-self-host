@@ -79,6 +79,35 @@ def test_login_home_and_profile_core_flow(live_server, page: Page):
 
 @pytest.mark.e2e
 @pytest.mark.django_db(transaction=True)
+def test_play_protocol_setup_is_specific_and_score_inactive(live_server, page: Page):
+    create_browser_user()
+    seed_browser_data()
+    log_in(live_server, page)
+
+    page.goto(f"{live_server.url}/practices/schedule-non-instrumental-play/")
+    page.get_by_role("heading", name="Schedule Non-Instrumental Play").wait_for()
+    page.get_by_text("You will not need to invent the practice.").wait_for()
+    page.get_by_role("link", name="Start guided setup").click()
+    page.get_by_text("will not change your profile or recommendation").wait_for()
+    page.get_by_role("button", name="Continue").click()
+    page.get_by_label("Yes, this activity or context is available").check()
+    page.get_by_role("button", name="Continue").click()
+    page.get_by_label("Private label for the person or context").fill("tabletop game")
+    page.get_by_role("button", name="Continue").click()
+    page.get_by_label(
+        "I will keep this activity safe, voluntary, and proportionate to my responsibilities."
+    ).check()
+    page.get_by_role("button", name=re.compile(r"I understand")).click()
+    page.get_by_role("button", name="Continue").click()
+    page.get_by_role("button", name="I have reviewed the three actions").click()
+    page.get_by_role("button", name="Begin practice").click()
+    page.get_by_role("link", name="Add compact check-in").click()
+    page.get_by_label("A specific play window was reserved").wait_for()
+    assert page.get_by_label("Expected reciprocity").count() == 0
+
+
+@pytest.mark.e2e
+@pytest.mark.django_db(transaction=True)
 def test_complete_assessment_and_save_canonical_outputs(live_server, page: Page):
     user = create_browser_user()
     seed_browser_data()

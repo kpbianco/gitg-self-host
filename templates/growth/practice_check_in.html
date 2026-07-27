@@ -27,7 +27,8 @@
   <div class="status-note" role="note">
     <strong>Evidence reading, not a mastery judgment.</strong>
     The support, context, and direction choices make this observation
-    explainable. Submitting it will not change your profile or recommendation.
+    explainable.
+    {% if sprint.protocol.score_active %}Eligible directional evidence may adjust your separate current working profile.{% else %}This protocol is score-inactive, so submitting it will not change your profile or recommendation.{% endif %}
   </div>
 
   <form class="workflow-form check-in-form" method="post">

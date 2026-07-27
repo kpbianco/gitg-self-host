@@ -125,13 +125,18 @@ def completion_evidence(sprint: PracticeSprint) -> CompletionEvidence:
     submitted = sprint.check_ins.filter(status=PracticeCheckIn.Status.SUBMITTED)
     attempted_ids = set(submitted.filter(action_attempted=True).values_list("action_id", flat=True))
     completed_ids = set(submitted.filter(action_completed=True).values_list("action_id", flat=True))
-    substantive = (
-        submitted.filter(action_attempted=True)
-        .filter(Q(moved_beyond_transactional=True) | Q(meaningful_information_shared=True))
-        .exists()
+    substantive_markers = sprint.protocol.completion_rules.get(
+        "substantive_markers",
+        ["moved_beyond_transactional", "meaningful_information_shared"],
     )
+    substantive_query = Q()
+    for marker in substantive_markers:
+        substantive_query |= Q(**{marker: True})
+    substantive = submitted.filter(action_attempted=True).filter(substantive_query).exists()
     all_attempted = bool(action_ids) and action_ids.issubset(attempted_ids)
-    enough_completed = len(completed_ids) >= 2
+    enough_completed = len(completed_ids) >= int(
+        sprint.protocol.completion_rules.get("minimum_completed", 2)
+    )
     return CompletionEvidence(
         actions_attempted=len(attempted_ids & action_ids),
         actions_completed=len(completed_ids & action_ids),
@@ -185,7 +190,8 @@ def save_check_in(
         "note",
     )
     for field in editable_fields:
-        setattr(check_in, field, cleaned_data[field])
+        if field in cleaned_data:
+            setattr(check_in, field, cleaned_data[field])
     check_in.status = PracticeCheckIn.Status.SUBMITTED if submit else PracticeCheckIn.Status.DRAFT
     check_in.submitted_at = timezone.now() if submit else None
     if submit:
@@ -234,7 +240,8 @@ def save_check_in(
     if submit:
         try:
             event = create_evidence_event(check_in)
-            apply_evidence_event(event)
+            if locked_sprint.protocol.score_active:
+                apply_evidence_event(event)
         except (EvidenceWorkflowError, ScoreStateError) as exc:
             raise PracticeWorkflowError(str(exc)) from exc
     return check_in
@@ -256,7 +263,7 @@ def complete_with_review(
     if not evidence.ready_for_review:
         raise PracticeWorkflowError(
             "Completion requires all three actions attempted, at least two completed, "
-            "and at least one substantive interaction."
+            "and the protocol's meaningful-attempt criterion."
         )
     review = PracticeReview.objects.create(
         sprint=locked,

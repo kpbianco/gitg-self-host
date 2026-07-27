@@ -400,6 +400,10 @@ def test_protocol_priority_is_weighted_versioned_and_fails_closed():
 
 @pytest.mark.django_db
 def test_active_protocol_order_tracks_current_need_and_reversal(user, seeded):
+    PracticeProtocol.objects.filter(stable_id="PRACTICE-PLAY-01").update(
+        availability=PracticeProtocol.Availability.INACTIVE
+    )
+
     def needs():
         return {
             state.lever_id: state.current_need_score
