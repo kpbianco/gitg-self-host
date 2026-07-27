@@ -23,10 +23,9 @@ Then inspect the canonical data under:
 Treat `legacy/` as provenance only. Do not build implementation behavior from legacy notes when canonical files disagree.
 
 Work only on the milestone batch explicitly authorized by the repository
-owner. M1A, M1B, M2A, M2B, and M3A are merged. M3B is the bounded
-score-state activation and dynamic provisional-ranking batch in
-`docs/scoring-state.md` and remains a review gate. Do not begin M4 protocol
-expansion.
+owner. M1 through M3B are reviewed and merged; Decisions 023–026 are accepted.
+M4 protocol-library expansion is next, but it must proceed in separately
+authorized, reviewable batches.
 
 Use the binding stack in `AGENTS.md`: a Python/Django monolith with Django
 templates, local assets, SQLite, Gunicorn, pytest, Ruff, Playwright, Dockerfile,
@@ -67,7 +66,9 @@ protocol ordering from canonical weights. Assessment baselines, raw
 self-report, orientations, archetypes, completion, and human worth remain
 unchanged.
 
-Acceptance criteria are in `docs/PROJECT_HANDOFF.md`. Add automated tests for every testable criterion. The app must run through Docker Compose.
+Acceptance criteria are in `docs/PROJECT_HANDOFF.md`. Add automated tests for
+every testable criterion. The app must pass `make compose-smoke` in a
+Docker-capable environment.
 
 Before changing code:
 1. Audit the repository and data package.
@@ -81,7 +82,8 @@ Then implement in reviewable batches. For each batch:
 - report exact passes/failures;
 - open a PR and ask me to approve it.
 
-Do not implement M4 protocol expansion unless I explicitly authorize the next
-batch after reviewing M3B.
+Do not generalize score activation merely because M4 adds a protocol. A newly
+score-active protocol requires its own reviewed canonical mapping, evidence
+semantics, and golden coverage.
 
 ---

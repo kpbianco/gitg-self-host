@@ -85,6 +85,15 @@ Expected output is `ok`.
 Startup applies any migrations required by the currently checked-out
 application version.
 
+## Automated restore drill
+
+`make compose-smoke` performs the backup, integrity check, and restore
+procedure against an isolated throwaway named volume. It changes the probe
+user's password after the snapshot, proves that change survives container
+recreation, restores the snapshot while the app is stopped, and proves the
+original password returns. This is the release-level restore check; it never
+touches the normal deployment volume.
+
 ## Volume deletion warning
 
 `docker compose down` preserves data. `docker compose down --volumes` deletes

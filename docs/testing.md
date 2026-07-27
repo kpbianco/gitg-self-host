@@ -23,6 +23,7 @@ make format
 make lint
 make test
 make e2e
+make compose-smoke
 ```
 
 `make lint` runs Ruff format/lint checks and Django's system check.
@@ -98,33 +99,25 @@ UI reaches and persists that engine.
 
 ## Docker acceptance
 
-Before release:
+Run:
 
 ```bash
-cp .env.example .env
-# Set real test values in .env.
-docker compose build
-docker compose up -d
-docker compose ps
-curl --fail http://127.0.0.1:${APP_PORT:-3000}/health/
+make compose-smoke
 ```
 
-Verify login from the mapped host port. Then record database identity, recreate
-the application container, and compare:
+This builds and starts the real production image in an isolated Compose
+project. It proves the mapped-port health and CSRF login path, non-root user,
+migrations, repeated canonical seeding, evidence and score replay, named-volume
+persistence across forced recreation, one-time bootstrap behavior, online
+backup integrity, restore, and graceful Gunicorn shutdown.
 
-```bash
-docker compose exec app python manage.py shell -c \
-  'from django.contrib.auth import get_user_model; from growth.models import Competency; print(get_user_model().objects.count(), Competency.objects.count())'
-docker compose up -d --force-recreate
-docker compose exec app python manage.py shell -c \
-  'from django.contrib.auth import get_user_model; from growth.models import Competency; print(get_user_model().objects.count(), Competency.objects.count())'
-```
+The command never uses the deployment `.env`. Its temporary credentials,
+Compose project, and volume are removed on exit. Set `SMOKE_APP_PORT` only
+when a fixed test port is required.
 
-Both checks must retain the user count and report 383 competencies. Also
-confirm assessment/practice rows survive when present. Run `seed_canonical`
-twice and confirm counts do not change. Run `make evidence-verify` and
-`make score-verify`. Inspect logs for migration, seed, score-state, permission,
-or shutdown errors.
+`.github/workflows/verification.yml` runs three required jobs on pull requests
+and `main`: Ruff/Django/pytest, the four Playwright journeys, and this exact
+Docker Compose drill.
 
 ## Current scoring boundary
 

@@ -172,7 +172,7 @@ contract starts at stored assessment confidence and adds a bounded gain
 withheld evidence leaves it unchanged.
 
 ## Decision 023 — Baseline and current state remain separate
-**Status:** Proposed in M3B for review
+**Status:** Accepted after M3B review
 
 `LeverBaseline` remains the immutable assessment record. M3B stores current
 alpha/beta mass, provisional estimate, confidence, evidence mass, and need
@@ -180,7 +180,7 @@ rank in a separate per-assessment `LeverState`. A newer assessment starts a new
 state; evidence tied to an older sprint is never transferred silently.
 
 ## Decision 024 — Append-only transitions around atomic score application
-**Status:** Proposed in M3B for review
+**Status:** Accepted after M3B review
 
 Check-in submission, evidence creation, score replay, current-state update, and
 the process snapshot commit in one transaction. Every initialization,
@@ -190,7 +190,7 @@ Reversal retains the evidence event and requires an audit reason. Startup
 rebuild is deterministic and idempotent.
 
 ## Decision 025 — Dynamic ranking uses the existing provisional need
-**Status:** Proposed in M3B for review
+**Status:** Accepted after M3B review
 
 M3B recalculates assessment v1.1's existing provisional need
 `(1 - M)^1.5 × (0.60 + 0.40 × C)` from current estimate and confidence, then
@@ -200,7 +200,7 @@ urgency, and opportunity are not collected as separate per-user inputs.
 M3B does not invent hidden defaults or apply an orientation modifier.
 
 ## Decision 026 — Unavailable evidence mass fails closed
-**Status:** Proposed in M3B for review
+**Status:** Accepted after M3B review
 
 A baseline without an assessed estimate or exact/identifiable alpha/beta mass
 is marked `baseline_only`. It remains visible and may retain its provisional

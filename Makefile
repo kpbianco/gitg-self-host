@@ -1,7 +1,7 @@
 PYTHON ?= .venv/bin/python
 APP_DATA_DIR ?= $(CURDIR)/var
 
-.PHONY: format lint test e2e migrate seed evidence-backfill evidence-verify score-rebuild score-verify run compose-up compose-down backup
+.PHONY: format lint test e2e migrate seed evidence-backfill evidence-verify score-rebuild score-verify run compose-up compose-down compose-smoke backup
 
 format:
 	$(PYTHON) -m ruff format .
@@ -53,6 +53,9 @@ compose-up:
 
 compose-down:
 	docker compose down
+
+compose-smoke:
+	./scripts/verify_compose.sh
 
 backup:
 	docker compose exec app python manage.py backup_database

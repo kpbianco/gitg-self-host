@@ -263,13 +263,17 @@ software-review and calibration gate, not psychometric validation.
 - unchanged assessment baseline, completion state, orientations, archetypes,
   and human-worth boundary.
 
-Status: implemented; pending pull-request review. Do not begin M4 until M3B is
-reviewed and explicitly approved.
+Status: implemented, reviewed, and merged. Decisions 023–026 are accepted.
 
 The binding activation contract is in `docs/scoring-state.md`.
 
 ### M4 — Protocol library expansion
 Create reusable protocol patterns and convert more of the 383 competencies into executable interventions.
+
+Status: authorized as the next milestone, but not yet implemented. Deliver it
+in separately reviewed batches. A new executable protocol does not become
+score-active until its stable canonical parent, structured weights, evidence
+semantics, and golden tests are explicitly reviewed.
 
 ## M1 acceptance criteria
 1. User understands why a practice was recommended without seeing backend fields.
@@ -369,3 +373,10 @@ Create reusable protocol patterns and convert more of the 383 competencies into 
 - The only canonical active protocol remains Deepen One Existing Friendship.
   Synthetic competing protocols test dynamic ordering without shipping
   invented interventions.
+- M3B review accepted Decisions 023–026 without changing its scoring
+  mathematics or activation boundary.
+- `make compose-smoke` is the repeatable deployment gate. It uses an isolated
+  Compose project and throwaway named volume to prove the image, mapped-port
+  login, health, migrations, idempotent seeding, score replay, persistence,
+  online backup, restore, and clean shutdown without touching a real `.env` or
+  deployment volume.

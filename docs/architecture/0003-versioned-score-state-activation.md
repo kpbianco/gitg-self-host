@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed in M3B for review.
+Accepted after M3B review.
 
 ## Context
 

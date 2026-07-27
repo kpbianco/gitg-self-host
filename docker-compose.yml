@@ -3,7 +3,7 @@ services:
     build:
       context: .
     env_file:
-      - .env
+      - "${APP_ENV_FILE:-.env}"
     environment:
       APP_DATA_DIR: /data
     ports:
