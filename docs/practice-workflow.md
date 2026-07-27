@@ -10,8 +10,10 @@ days and provides three fixed actions:
 2. propose a specific shared activity and date;
 3. follow up within seven days on something the person shared.
 
-The user does not design the intervention. Four other protocols remain
-inactive structured placeholders.
+The user does not design the intervention. M4A also activates
+**Schedule Non-Instrumental Play**, a 10-day protocol with three fixed actions:
+reserve a play window, engage without an output goal, and return once within
+seven days. Three other protocols remain inactive structured placeholders.
 
 ## Guided setup
 
@@ -110,3 +112,8 @@ M3A reviewed the task allocation and posterior contract. M3B activates that
 exact contract only for the friendship protocol, stores current state
 separately from baselines, and recalculates provisional recommendation order.
 See `docs/scoring-shadow.md` and `docs/scoring-state.md`.
+
+M4A makes protocol setup copy, compact observation labels, and completion
+markers data-driven. The play protocol creates immutable evidence, but its
+explicit `score_active=false` boundary means submission creates no score
+snapshot and cannot change current lever state or recommendation order.

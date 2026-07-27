@@ -270,8 +270,16 @@ The binding activation contract is in `docs/scoring-state.md`.
 ### M4 — Protocol library expansion
 Create reusable protocol patterns and convert more of the 383 competencies into executable interventions.
 
-Status: authorized as the next milestone, but not yet implemented. Deliver it
-in separately reviewed batches. A new executable protocol does not become
+#### M4A — Non-instrumental play
+- activate `PRACTICE-PLAY-01` as a complete 10-day, three-action protocol;
+- anchor it to canonical competency `26.01`, Play for its own sake;
+- make setup, check-in labels, and completion evidence protocol-configurable;
+- retain immutable `GG-EVIDENCE-1.0` events without altering historical replay;
+- keep the protocol score-inactive and create no score snapshot.
+
+Status: implemented for review.
+
+Continue M4 in separately reviewed batches. A new executable protocol does not become
 score-active until its stable canonical parent, structured weights, evidence
 semantics, and golden tests are explicitly reviewed.
 

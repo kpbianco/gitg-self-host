@@ -20,9 +20,9 @@
         <p class="lede">{{ protocol.recommendation_reason }}</p>
         <div class="status-note" role="note">
           <strong>Evidence, not completion.</strong>
-          This recommendation does not diagnose you. Eligible submitted
-          observations may adjust provisional capacity estimates; completing
-          the practice itself does not establish mastery or change orientations.
+          This recommendation does not diagnose you.
+          {% if protocol.score_active %}Eligible submitted observations may adjust provisional capacity estimates.{% else %}This protocol records evidence but is not score-active, so it will not change your profile or recommendation.{% endif %}
+          Completing the practice itself does not establish mastery or change orientations.
         </div>
         <form method="post">
           {% csrf_token %}
@@ -35,12 +35,12 @@
         {% include "growth/partials/setup_form.html" with submit_label="Continue" %}
       {% elif step == 3 %}
         <p class="eyebrow">Person or context</p>
-        <h1>Choose one existing relationship.</h1>
+        <h1>{{ protocol.setup_copy.context_heading|default:"Choose one context." }}</h1>
         <p class="lede">{{ protocol.setup_prompt }}</p>
         {% include "growth/partials/setup_form.html" with submit_label="Continue" %}
       {% elif step == 4 %}
         <p class="eyebrow">Privacy and interpersonal boundaries</p>
-        <h1>Depth must remain freely chosen.</h1>
+        <h1>{{ protocol.setup_copy.boundary_heading|default:"Keep the practice safe and freely chosen." }}</h1>
         <p class="lede">{{ protocol.privacy_and_boundaries }}</p>
         <div class="boundary-note">
           <strong>Keep the record lean.</strong>
@@ -53,7 +53,7 @@
         <h1>Choose a start date.</h1>
         <p class="lede">
           The protocol runs for {{ protocol.duration_days }} days. Choose a date
-          when a real, welcome interaction is plausible.
+          {{ protocol.setup_copy.timing_hint|default:"Choose a date when the practice is realistic." }}
         </p>
         {% include "growth/partials/setup_form.html" with submit_label="Continue" %}
       {% elif step == 6 %}
@@ -80,7 +80,7 @@
         </form>
       {% else %}
         <p class="eyebrow">Ready to begin</p>
-        <h1>Your 14-day practice is prepared.</h1>
+        <h1>Your {{ protocol.duration_days }}-day practice is prepared.</h1>
         <dl class="setup-summary">
           <div>
             <dt>Private context label</dt>

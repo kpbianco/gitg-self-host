@@ -166,6 +166,7 @@ def _events_for_run(assessment_run: AssessmentRun) -> list[EvidenceEvent]:
     events = list(
         EvidenceEvent.objects.filter(
             check_in__sprint__assessment_run=assessment_run,
+            check_in__sprint__protocol__score_active=True,
         )
         .select_related(
             "check_in__action",
@@ -180,6 +181,7 @@ def _events_for_run(assessment_run: AssessmentRun) -> list[EvidenceEvent]:
     )
     submitted_count = PracticeCheckIn.objects.filter(
         sprint__assessment_run=assessment_run,
+        sprint__protocol__score_active=True,
         status=PracticeCheckIn.Status.SUBMITTED,
     ).count()
     if len(events) != submitted_count:

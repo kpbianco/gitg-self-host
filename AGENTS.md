@@ -151,8 +151,11 @@ M3B may update only separate current lever state from replay-verified
 friendship evidence. Baselines, raw self-report, orientations, archetypes,
 completion, and human worth remain unchanged.
 
-M4 protocol-library expansion is the next milestone and must proceed in
-separately authorized, reviewable batches. Adding a protocol to the library
+M4A activates **Schedule Non-Instrumental Play** as the second complete
+protocol and establishes protocol-configured setup, check-in, and completion
+copy. It records immutable evidence but remains explicitly score-inactive.
+The remaining M4 protocol-library expansion must proceed in separately
+authorized, reviewable batches. Adding a protocol to the library
 does not authorize score activation. Any newly score-active protocol requires
 a stable canonical parent competency, validated structured weights, reviewed
 evidence semantics, and golden coverage before it may affect current state or

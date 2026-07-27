@@ -227,7 +227,7 @@ def test_replay_verification_rejects_action_from_another_protocol(user, seeded):
     other_action = PracticeAction.objects.create(
         stable_id="TEST-OTHER-PROTOCOL-ACTION",
         protocol=other_protocol,
-        sequence=1,
+        sequence=99,
         title="Test action",
         instructions="Used only to verify cross-protocol corruption is rejected.",
         evidence_rules=friendship_action.evidence_rules,
