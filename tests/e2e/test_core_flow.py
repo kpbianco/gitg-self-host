@@ -7,7 +7,7 @@ import pytest
 from django.contrib.auth import get_user_model
 from playwright.sync_api import Page, expect
 
-from growth.models import AssessmentRun, PracticeCheckIn, PracticeSprint
+from growth.models import AssessmentRun, PilotFeedback, PracticeCheckIn, PracticeSprint
 from growth.services.assessment import encode_share_code, load_assessment_assets
 from growth.services.canonical_import import seed_canonical_data
 from growth.services.score_state import synchronize_all_score_states
@@ -161,6 +161,60 @@ def test_mobile_keyboard_walkthrough_covers_all_five_protocols(live_server, page
         page.get_by_role("heading", name=name, exact=True).wait_for()
         assert_no_horizontal_overflow(page)
         save_walkthrough_screenshot(page, f"desktop-{slug}")
+
+
+@pytest.mark.e2e
+@pytest.mark.django_db(transaction=True)
+def test_optional_pilot_feedback_is_local_minimized_and_score_separate(
+    live_server,
+    page: Page,
+):
+    page.set_viewport_size({"width": 390, "height": 844})
+    create_browser_user()
+    seed_browser_data()
+    log_in(live_server, page)
+
+    page.get_by_role("link", name="Account", exact=True).click()
+    page.get_by_role("link", name="Open feedback form").click()
+    page.get_by_role("heading", name="Tell the pilot what got in the way.").wait_for()
+    page.get_by_text("This is usability feedback, not developmental evidence.").wait_for()
+    page.get_by_text("No automatic timing or remote telemetry").wait_for()
+    assert_no_horizontal_overflow(page)
+    save_walkthrough_screenshot(page, "mobile-pilot-feedback")
+
+    page.get_by_label("Which part are you commenting on?").select_option("setup")
+    page.get_by_label("Practice, if relevant").select_option("PRACTICE-FRIENDSHIP-01")
+    page.get_by_label("Did the recommendation fit your current situation?").select_option("partly")
+    page.get_by_label("Roughly how long did setup take before you could begin?").select_option(
+        "2_to_5_minutes"
+    )
+    page.get_by_label("Roughly how long did a check-in take?").select_option("1_to_2_minutes")
+    page.get_by_label("Which step was most confusing?").select_option("setup")
+    page.get_by_label(
+        "Did an accessibility need make the application harder to use?"
+    ).select_option("none")
+    page.get_by_label(
+        "Did any instruction or interaction feel unsafe or poorly bounded?"
+    ).select_option("none")
+    page.get_by_label("Optional detail").fill("PRIVATE-BROWSER-FEEDBACK-TOKEN")
+    page.get_by_role("button", name="Submit optional feedback").click()
+    page.get_by_text(
+        "Optional product feedback submitted. It did not change your profile or practice."
+    ).wait_for()
+    assert PilotFeedback.objects.count() == 1
+
+    with page.expect_download() as download_info:
+        page.get_by_role("link", name="Download minimized JSON").click()
+    payload = json.loads(Path(download_info.value.path()).read_text())
+    assert payload["record_count"] == 1
+    assert payload["remote_telemetry_used"] is False
+    assert payload["developmental_state_modified_by_feedback"] is False
+    assert "PRIVATE-BROWSER-FEEDBACK-TOKEN" not in json.dumps(payload)
+
+    page.set_viewport_size({"width": 1440, "height": 1000})
+    page.goto(f"{live_server.url}/account/pilot-feedback/")
+    assert_no_horizontal_overflow(page)
+    save_walkthrough_screenshot(page, "desktop-pilot-feedback")
 
 
 @pytest.mark.e2e

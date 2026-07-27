@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}Optional pilot feedback · Grounded Growth{% endblock %}
+
+{% block content %}
+  <section class="page-heading feedback-heading">
+    <div>
+      <p class="eyebrow">Optional product feedback</p>
+      <h1>Tell the pilot what got in the way.</h1>
+      <p class="lede">
+        This is usability feedback, not developmental evidence. Nothing here
+        changes your assessment, working profile, recommendation order,
+        practice status, completion, orientations, or archetypes.
+      </p>
+    </div>
+    {% if summary.total %}
+      <a class="button button-secondary" href="{% url 'growth:pilot-feedback-export' %}">
+        Download minimized JSON
+      </a>
+    {% endif %}
+  </section>
+
+  <section class="panel feedback-boundary" aria-labelledby="feedback-boundary-heading">
+    <div>
+      <p class="eyebrow">Collection boundary</p>
+      <h2 id="feedback-boundary-heading">No automatic timing or remote telemetry</h2>
+      <p>
+        Answer only what is useful. Time choices are rough estimates selected
+        by you; this application does not time, record, or send your activity
+        anywhere. Submitted feedback remains in this self-hosted database.
+      </p>
+    </div>
+    <div class="mastery-notice" role="note">
+      <strong>This form is not monitored for urgent support.</strong>
+      <p>
+        If an activity or interaction feels unsafe, stop it. Seek appropriate
+        trusted, professional, medical, legal, organizational, or emergency
+        support for the situation rather than relying on this form.
+      </p>
+    </div>
+  </section>
+
+  <div class="feedback-layout">
+    <section aria-labelledby="feedback-form-heading">
+      <p class="eyebrow">Participant report</p>
+      <h2 id="feedback-form-heading">A short, optional record</h2>
+      <form method="post" class="workflow-form feedback-form">
+        {% csrf_token %}
+        {% if form.non_field_errors %}
+          <div class="form-error">{{ form.non_field_errors }}</div>
+        {% endif %}
+        {% for field in form %}
+          <div class="form-field">
+            {{ field.label_tag }}
+            {{ field }}
+            {% if field.help_text %}<p class="helptext">{{ field.help_text }}</p>{% endif %}
+            {% for error in field.errors %}<p class="form-error">{{ error }}</p>{% endfor %}
+          </div>
+        {% endfor %}
+        <div class="button-row">
+          <button class="button" type="submit">Submit optional feedback</button>
+          <a class="button button-quiet" href="{% url 'password_change' %}">Back to account</a>
+        </div>
+      </form>
+    </section>
+
+    <aside class="panel feedback-history" aria-labelledby="feedback-history-heading">
+      <p class="eyebrow">Local record</p>
+      <h2 id="feedback-history-heading">{{ summary.total }} submitted entr{{ summary.total|pluralize:"y,ies" }}</h2>
+      <p>
+        Entries are append-only. They never appear in evidence history and are
+        excluded from all scoring and recommendation calculations.
+      </p>
+      {% if summary.recent %}
+        <ol>
+          {% for record in summary.recent %}
+            <li>
+              <strong>{{ record.get_journey_stage_display }}</strong>
+              {% if record.protocol %}<span>{{ record.protocol.name }}</span>{% endif %}
+              <time datetime="{{ record.submitted_at|date:'c' }}">
+                {{ record.submitted_at|date:"M j, Y" }}
+              </time>
+            </li>
+          {% endfor %}
+        </ol>
+      {% else %}
+        <p class="muted">No feedback has been submitted. Skipping this form has no effect.</p>
+      {% endif %}
+      <p class="fine-print">
+        The minimized export excludes identity, IDs, exact timestamps, free
+        text, private context, assessment data, evidence, and scores.
+      </p>
+    </aside>
+  </div>
+{% endblock %}

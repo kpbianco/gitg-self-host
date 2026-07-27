@@ -104,6 +104,11 @@ The accepted rationale is recorded in
   current evidence-informed state.
 - Only `PRACTICE-FRIENDSHIP-01` is score-activated. A required baseline with
   unavailable mass fails closed and requires reassessment.
+- `GG-PILOT-FEEDBACK-1.0` is product-usability data only. Never route it into
+  assessment, evidence, scoring, ranking, completion, orientation, or
+  archetype logic.
+- Do not add automatic timing, browser analytics, session recording, tracking
+  pixels, or remote telemetry under the pilot-feedback contract.
 - Never infer missing task-to-lever links from display strings at runtime.
 - Validate all imported weight sums and IDs.
 - Do not silently normalize malformed data; fail with actionable diagnostics.
@@ -149,7 +154,7 @@ canonical assessment and completes the friendship recommendation, setup,
 sprint, draft/submitted check-in, pause/resume/stop, completion, and review
 experience.
 
-M1 through M3B and M4A through M4D are reviewed and merged; Decisions 023–034
+M1 through M3B and M4A through M4E are reviewed and merged; Decisions 023–036
 are accepted.
 M3B may update only separate current lever state from replay-verified
 friendship evidence. Baselines, raw self-report, orientations, archetypes,
@@ -185,7 +190,20 @@ M4E is the post-M4 pilot-readiness closeout. It adds the read-only
 Compose, retained desktop/mobile walkthrough artifacts, and keyboard/mobile
 hardening. It must not add protocols or expand score activation.
 
-The proposed M5A boundary is private-pilot operations and optional structured
-usability feedback kept entirely separate from assessment, practice evidence,
-score state, recommendation order, and completion. M5A must not add telemetry,
-new protocols, or scoring changes without separate authorization.
+M5A adds a bounded operator guide and optional, authenticated, append-only
+`GG-PILOT-FEEDBACK-1.0` product-usability records. Setup/check-in timing is
+participant-selected in broad bands; no activity is timed automatically. The
+`grounded-growth-private-pilot-export-v1` allowlist excludes identity, record
+IDs, exact timestamps, free text, private context, assessment data, evidence,
+and scores. Submission, viewing, and export must leave assessment, evidence,
+score state, recommendation order, completion, orientations, and archetypes
+unchanged.
+
+M5A must not add remote telemetry, new protocols, new score activation, or any
+path from pilot feedback into developmental state without separate
+authorization.
+
+Do not begin a speculative M5B feature expansion before M5A review and real
+private-pilot findings. The next closeout should prioritize observed
+usability, accessibility, privacy, safety, and participant-data lifecycle
+issues rather than inventing new developmental behavior.
