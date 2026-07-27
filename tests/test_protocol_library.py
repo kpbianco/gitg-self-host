@@ -1,9 +1,10 @@
 from datetime import date
+from decimal import Decimal
 
 import pytest
 from django.urls import reverse
 
-from growth.forms import PracticeCheckInForm
+from growth.forms import PracticeApplicabilityForm, PracticeCheckInForm
 from growth.models import (
     EvidenceEvent,
     LeverState,
@@ -234,6 +235,135 @@ def test_emotional_cues_evidence_completes_without_score_mutation(user, seeded):
         sprint=sprint,
         reflection="Direct clarification corrected part of my first impression.",
         contradictory_evidence="Tone alone was not enough to infer emotion.",
+    )
+    sprint.refresh_from_db()
+    assert EvidenceEvent.objects.filter(check_in__sprint=sprint).count() == 4
+    assert sprint.status == PracticeSprint.Status.COMPLETED
+    assert review.static_score_impact_preview == {}
+    assert review.sprint.protocol.mastery_disclaimer == (
+        "Completing this practice does not establish mastery."
+    )
+    assert ScoreSnapshot.objects.filter(assessment_run=sprint.assessment_run).count() == (
+        snapshots_before
+    )
+    assert _state(user) == before
+
+
+@pytest.mark.django_db
+def test_boundary_protocol_is_specific_safe_and_score_inactive(client, user, seeded):
+    client.force_login(user)
+    protocol = PracticeProtocol.objects.get(stable_id="PRACTICE-BOUNDARY-01")
+    recommendation = client.get(
+        reverse("growth:practice-recommendation", kwargs={"slug": protocol.slug})
+    )
+    setup = client.get(reverse("growth:practice-setup", kwargs={"slug": protocol.slug, "step": 1}))
+    sprint = start_practice(
+        user=user,
+        protocol=protocol,
+        person_or_context="after-hours requests",
+        start_date=date.today(),
+    )
+    check_in_form = PracticeCheckInForm(sprint=sprint)
+    applicability_form = PracticeApplicabilityForm(protocol=protocol)
+    canonical_weights = {
+        link.lever_id: link.weight for link in protocol.parent_competency.lever_links.all()
+    }
+
+    assert protocol.parent_competency_id == "11.10"
+    assert canonical_weights == {
+        "L25": Decimal("0.4000"),
+        "L36": Decimal("0.2500"),
+        "L10": Decimal("0.2000"),
+        "L29": Decimal("0.1500"),
+    }
+    assert set(protocol.target_levers.values_list("stable_id", flat=True)) == {"L25"}
+    assert protocol.score_active is False
+    assert protocol.actions.count() == 3
+    assert protocol.completion_rules == {
+        "minimum_completed": 2,
+        "substantive_markers": [
+            "moved_beyond_transactional",
+            "follow_up_within_seven_days",
+        ],
+        "marker_mode": "all",
+    }
+    assert "A boundary is not coercion or punishment" in protocol.setup_copy["boundary_heading"]
+    assert "retaliation" in protocol.privacy_and_boundaries
+    assert "A specific, likely situation—not a test of another person" in (
+        recommendation.content.decode()
+    )
+    assert "Define what you control" in recommendation.content.decode()
+    assert "will not change your profile or recommendation" in setup.content.decode()
+    assert applicability_form.fields["applicable"].choices[0][1] == (
+        "Yes, one safe, low-stakes situation is likely to arise"
+    )
+    assert check_in_form.fields["moved_beyond_transactional"].label == (
+        "I stated the boundary directly in specific words"
+    )
+    assert check_in_form.fields["follow_up_within_seven_days"].label == (
+        "I followed through proportionately or restated the boundary within seven days"
+    )
+    assert "expected_reciprocity" not in check_in_form.fields
+    assert "observed_reciprocity" not in check_in_form.fields
+    assert "meaningful_information_shared" not in check_in_form.fields
+
+
+@pytest.mark.django_db
+def test_boundary_requires_statement_and_follow_through_without_score_mutation(user, seeded):
+    protocol = PracticeProtocol.objects.get(stable_id="PRACTICE-BOUNDARY-01")
+    sprint = start_practice(
+        user=user,
+        protocol=protocol,
+        person_or_context="after-hours requests",
+        start_date=date.today(),
+    )
+    before = _state(user)
+    snapshots_before = ScoreSnapshot.objects.filter(assessment_run=sprint.assessment_run).count()
+    actions = list(protocol.actions.all())
+
+    save_check_in(
+        sprint=sprint,
+        cleaned_data=_data(actions[0], user_initiated=True),
+        submit=True,
+    )
+    save_check_in(
+        sprint=sprint,
+        cleaned_data=_data(
+            actions[1],
+            context_comparison="same_context",
+            follow_up_question_asked=True,
+        ),
+        submit=True,
+    )
+    save_check_in(
+        sprint=sprint,
+        cleaned_data=_data(
+            actions[2],
+            action_completed=False,
+            context_comparison="same_context",
+            follow_up_within_seven_days=True,
+        ),
+        submit=True,
+    )
+    assert not completion_evidence(sprint).ready_for_review
+
+    save_check_in(
+        sprint=sprint,
+        cleaned_data=_data(
+            actions[1],
+            action_completed=False,
+            context_comparison="same_context",
+            moved_beyond_transactional=True,
+        ),
+        submit=True,
+    )
+    completion = completion_evidence(sprint)
+    assert completion.ready_for_review
+
+    review = complete_with_review(
+        sprint=sprint,
+        reflection="The specific limit was easier to maintain than a vague request.",
+        contradictory_evidence="The first wording sounded broader than I intended.",
     )
     sprint.refresh_from_db()
     assert EvidenceEvent.objects.filter(check_in__sprint=sprint).count() == 4

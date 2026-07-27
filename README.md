@@ -147,11 +147,14 @@ local-network access, shutdown behavior, and the future HTTPS boundary.
 - Score-inactive **Practice Emotional Cue Detection**, with a defined 10-day
   setup, three actions, direct-clarification requirement, and explicit
   anti-mind-reading and anti-stereotyping boundaries.
+- Score-inactive **State and Maintain One Boundary**, with a defined 10-day
+  setup, direct statement and follow-through requirements, and explicit
+  coercion, punishment, retaliation, and safety exclusions.
 - Protocol-configured setup copy, compact check-in fields, completion markers,
-  and score activation.
-- Stable canonical parents `26.01` and `16.03` with validated recommendation
-  targets.
-- Two remaining inactive structured placeholders.
+  completion-marker modes, and an explicit score-activation flag.
+- Stable canonical parents `26.01`, `16.03`, and `11.10` with validated
+  recommendation targets.
+- One remaining inactive structured placeholder.
 
 ## Product flow
 
@@ -252,7 +255,8 @@ Migrations and canonical seeding run safely on startup.
 - Pilot 002 source files publish only the top three archetypes and do not
   include original answers or a share code; the seed does not invent them.
 - Dynamic scoring is activated only for **Deepen One Existing Friendship**.
-  Other protocols require a reviewed parent mapping and activation decision.
+  A reviewed parent mapping does not activate scoring; every additional
+  score-active protocol requires a separate reviewed activation decision.
 - Pilot 002 does not publish original alpha/beta mass. Canonical seeding
   reconstructs 33 identifiable rows; L06, L15, L32, and L37 remain
   baseline-only. All four friendship-mapped rows are active.
@@ -265,9 +269,9 @@ Migrations and canonical seeding run safely on startup.
 - The minimized JSON export omits direct identity and free text, but its
   structured behavioral values can still be sensitive and should be reviewed
   before sharing.
-- Only **Deepen One Existing Friendship** is score-active. Play and emotional
-  cue detection are executable but score-inactive; two additional protocols
-  remain structured inactive placeholders.
+- Only **Deepen One Existing Friendship** is score-active. Play, emotional cue
+  detection, and boundary practice are executable but score-inactive; one
+  additional protocol remains a structured inactive placeholder.
 - The canonical JavaScript scorer remains the browser reference. Node.js is
   used by a development golden test only; no Node.js server exists at runtime.
 - Direct local-network HTTP is supported. Add Caddy or another proxy later for

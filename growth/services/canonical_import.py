@@ -614,8 +614,140 @@ PROTOCOLS = (
         "stable_id": "PRACTICE-BOUNDARY-01",
         "slug": "state-and-maintain-one-boundary",
         "name": "State and Maintain One Boundary",
+        "parent_competency_id": "11.10",
+        "availability": PracticeProtocol.Availability.ACTIVE,
+        "duration_days": 10,
+        "recommendation_reason": (
+            "Your current provisional profile identifies clear, proportionate limits "
+            "as a useful area for careful practice."
+        ),
+        "applicability_prompt": (
+            "Is there one low-stakes request, recurring expectation, or optional "
+            "commitment likely to arise in the next ten days where you can safely "
+            "state a limit and choose your own follow-through?"
+        ),
+        "setup_prompt": (
+            "Choose one specific request, expectation, or commitment—not a person to "
+            "fix. Use this practice only where direct communication is reasonably safe."
+        ),
+        "privacy_and_boundaries": (
+            "A boundary states what you will or will not participate in and what you "
+            "will do; it does not force another person to agree. Do not use threats, "
+            "punishment, withdrawal of care, silent tests, or pressure to control "
+            "someone. Do not use this protocol where abuse, coercive control, stalking, "
+            "discrimination, unsafe dependency, or retaliation is present or likely. "
+            "Prioritize safety planning and appropriate trusted, professional, legal, "
+            "medical, or organizational support in those situations."
+        ),
+        "completion_criteria": [
+            "All three actions attempted",
+            "At least two actions completed",
+            "One boundary stated directly",
+            "One proportionate follow-through observed within seven days",
+            "Final review submitted",
+        ],
+        "completion_rules": {
+            "minimum_completed": 2,
+            "substantive_markers": [
+                "moved_beyond_transactional",
+                "follow_up_within_seven_days",
+            ],
+            "marker_mode": "all",
+        },
+        "setup_copy": {
+            "context_heading": "Choose one low-stakes limit you can control.",
+            "boundary_heading": "A boundary is not coercion or punishment.",
+            "timing_hint": (
+                "Choose a date when this specific situation is likely to arise safely."
+            ),
+            "context_help": (
+                "Use a short private label for the request, expectation, or commitment. "
+                "Do not record identifying or sensitive details."
+            ),
+            "applicability_heading": ("A specific, likely situation—not a test of another person"),
+            "applicability_yes_label": ("Yes, one safe, low-stakes situation is likely to arise"),
+            "completion_signal_label": (
+                "One boundary stated directly and one proportionate follow-through "
+                "within seven days"
+            ),
+            "history_marker_label": "direct boundary statement",
+            "boundary_acknowledgement": (
+                "I will use a low-stakes context where direct communication is "
+                "reasonably safe, state only what I control, and not use threats, "
+                "punishment, silent tests, or pressure."
+            ),
+            "check_in_labels": {
+                "user_initiated": ("I chose a specific limit and a response that I control"),
+                "moved_beyond_transactional": ("I stated the boundary directly in specific words"),
+                "follow_up_question_asked": (
+                    "I checked understanding without bargaining or testing"
+                ),
+                "follow_up_within_seven_days": (
+                    "I followed through proportionately or restated the boundary within seven days"
+                ),
+            },
+        },
+        "check_in_fields": [
+            "user_initiated",
+            "moved_beyond_transactional",
+            "follow_up_question_asked",
+            "follow_up_within_seven_days",
+            "internal_resistance",
+        ],
         "target_levers": ["L25"],
         "display_order": 4,
+        "actions": [
+            {
+                "stable_id": "PRACTICE-BOUNDARY-01-A1",
+                "sequence": 1,
+                "title": "Define what you control",
+                "instructions": (
+                    "Identify one low-stakes limit. Write one sentence stating what "
+                    "you will or will not participate in and the proportionate action "
+                    "you will take if the limit is crossed. Do not make another "
+                    "person's compliance the intervention."
+                ),
+                "due_within_days": 3,
+                "evidence_rules": {
+                    "schema_version": "practice-observation-v1",
+                    "primary_markers": ["user_initiated"],
+                    "supporting_markers": ["moved_beyond_transactional"],
+                },
+            },
+            {
+                "stable_id": "PRACTICE-BOUNDARY-01-A2",
+                "sequence": 2,
+                "title": "State the boundary directly",
+                "instructions": (
+                    "In a reasonably safe context, state the limit in plain, specific "
+                    "words. You may make a request, but the boundary must not depend "
+                    "on forcing agreement. Do not threaten, punish, or set a silent test."
+                ),
+                "due_within_days": None,
+                "evidence_rules": {
+                    "schema_version": "practice-observation-v1",
+                    "primary_markers": ["moved_beyond_transactional"],
+                    "supporting_markers": ["follow_up_question_asked"],
+                },
+            },
+            {
+                "stable_id": "PRACTICE-BOUNDARY-01-A3",
+                "sequence": 3,
+                "title": "Follow through once",
+                "instructions": (
+                    "Within seven days, when the situation arises, carry out the "
+                    "proportionate action you named or calmly restate the limit. Stop "
+                    "the protocol and seek appropriate support if safety or retaliation "
+                    "becomes a concern."
+                ),
+                "due_within_days": 7,
+                "evidence_rules": {
+                    "schema_version": "practice-observation-v1",
+                    "primary_markers": ["follow_up_within_seven_days"],
+                    "supporting_markers": ["user_initiated"],
+                },
+            },
+        ],
     },
     {
         "stable_id": "PRACTICE-PRESENCE-01",
@@ -632,6 +764,7 @@ def _seed_protocols() -> None:
         completion_rules = item.get("completion_rules", {})
         minimum_completed = completion_rules.get("minimum_completed", 2)
         substantive_markers = completion_rules.get("substantive_markers", [])
+        marker_mode = completion_rules.get("marker_mode", "any")
         if completion_rules and (
             not isinstance(minimum_completed, int)
             or minimum_completed < 1
@@ -644,10 +777,11 @@ def _seed_protocols() -> None:
             not isinstance(substantive_markers, list)
             or not substantive_markers
             or set(substantive_markers) - ALLOWED_OBSERVATION_FIELDS
+            or marker_mode not in {"any", "all"}
         ):
             raise CanonicalDataError(
                 f"{item['stable_id']}: completion markers must use the reviewed "
-                "evidence observation vocabulary."
+                "evidence observation vocabulary and a supported marker mode."
             )
         if item.get("score_active", False) and item["stable_id"] != "PRACTICE-FRIENDSHIP-01":
             raise CanonicalDataError(

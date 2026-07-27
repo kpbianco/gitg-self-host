@@ -35,9 +35,9 @@ every action rule before writing.
 ## Scoring boundary
 
 Availability and scoring are independent. The friendship protocol is
-`score_active=true`; the play protocol is `score_active=false`. Play
-submissions create immutable evidence events but no score snapshot and no
-change to current lever state, confidence, need, or recommendation order.
+`score_active=true`; the other executable protocols are `score_active=false`.
+Their submissions create immutable evidence events but no score snapshot and
+no change to current lever state, confidence, need, or recommendation order.
 
 M4A deliberately reuses the existing v1 structured observation vocabulary
 with protocol-specific user-facing labels. Adding fields to the v1 snapshot
@@ -67,5 +67,34 @@ The stable parent maps canonically to L23, L24, and L05. The protocol targets
 only L24 for recommendation and remains score-inactive. The placeholder's
 earlier L06 target is not inferred into the canonical parent mapping.
 
-The remaining two placeholders stay inactive. No protocol becomes
+## M4C boundary
+
+M4C activates `PRACTICE-BOUNDARY-01`, **State and Maintain One Boundary**, as
+a 10-day experiment anchored to canonical competency `11.10`, Saying no and
+ending responsibly.
+
+The three fixed actions are:
+
+1. define one low-stakes limit and a proportionate response the user controls;
+2. state the boundary directly without threats, punishment, or a silent test;
+3. follow through once or calmly restate the limit within seven days.
+
+Completion requires all three actions attempted, at least two completed, both
+a direct statement and a proportionate follow-through, and a final review.
+The reusable completion rules retain `any` as the default marker behavior and
+add an explicit `all` mode for this two-part criterion.
+
+The setup distinguishes a boundary from control: another person does not have
+to agree, and the intervention cannot depend on forcing compliance. It excludes
+abuse, coercive control, stalking, discrimination, unsafe dependency, and
+likely-retaliation contexts. Those situations call for safety planning and
+appropriate trusted, professional, legal, medical, or organizational support,
+not a guided confrontation.
+
+Canonical parent `11.10` maps to L25, L36, L10, and L29. The protocol targets
+only L25 for recommendation and remains score-inactive. M4C does not bind the
+generic practice to the higher-risk bodily-autonomy or harmful-relationship
+competencies.
+
+The remaining presence placeholder stays inactive. No protocol becomes
 score-active merely because it becomes executable.

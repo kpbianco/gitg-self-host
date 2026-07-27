@@ -53,8 +53,8 @@ The command opens one transaction and fails before model writes when it finds:
 - a practice action with a missing schema version, unknown observation field,
   duplicate marker, or overlapping primary/supporting evidence marker.
 - an invalid completion minimum, completion marker outside the reviewed
-  observation vocabulary, or score activation beyond the reviewed friendship
-  protocol.
+  observation vocabulary, unsupported completion-marker mode, or score
+  activation beyond the reviewed friendship protocol.
 
 No malformed value is silently normalized.
 
@@ -79,9 +79,11 @@ entities, assessment runs, baselines, protocols, or actions.
 
 Every executable action receives validated `practice-observation-v1` evidence
 rules keyed by stable action IDs. Seeding links friendship to `17.03`, play to
-`26.01`, and emotional cue detection to `16.03`, then validates each
-recommendation-target subset against canonical structured weights. Seeding
-does not create evidence events.
+`26.01`, emotional cue detection to `16.03`, and boundary practice to `11.10`,
+then validates each recommendation-target subset against canonical structured
+weights. Completion rules may require any configured marker or all configured
+markers; every marker must remain in the reviewed observation vocabulary.
+Seeding does not create evidence events.
 `backfill_evidence_events` runs afterward and creates events only for submitted
 check-ins that do not already have one. `rebuild_score_state` then initializes
 or reconciles current state from those events; canonical seeding itself does

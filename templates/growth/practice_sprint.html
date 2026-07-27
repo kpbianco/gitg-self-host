@@ -58,7 +58,8 @@
         <h2>Add the remaining evidence.</h2>
         <p>
           All actions have an attempt, but completion still needs two completed
-          actions and one substantive interaction.
+          actions and
+          {{ sprint.protocol.setup_copy.completion_signal_label|default:"one meaningful attempt" }}.
         </p>
         <a class="button" href="{% url 'growth:practice-check-in-new' sprint.pk %}">
           Add compact check-in
@@ -155,7 +156,9 @@
               {% endif %}
               <span>
                 {% if check_in.action_completed %}Completed{% elif check_in.action_attempted %}Attempted{% else %}Observed{% endif %}
-                {% if check_in.moved_beyond_transactional %} · substantive interaction{% endif %}
+                {% if check_in.moved_beyond_transactional %}
+                  · {{ sprint.protocol.setup_copy.history_marker_label|default:"substantive interaction" }}
+                {% endif %}
                 {% if check_in.evidence_event %}
                   · {{ check_in.evidence_event.explanation.base_evidence.label|lower }}
                 {% endif %}

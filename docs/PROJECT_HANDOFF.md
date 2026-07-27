@@ -289,6 +289,19 @@ Status: implemented, reviewed, and merged. Decisions 027–028 are accepted.
   stereotyping;
 - retain immutable `GG-EVIDENCE-1.0` events while remaining score-inactive.
 
+Status: implemented, reviewed, and merged. Decisions 029–030 are accepted.
+
+#### M4C — State and maintain one boundary
+- activate `PRACTICE-BOUNDARY-01` as a complete 10-day, three-action protocol;
+- anchor it to canonical competency `11.10`, Saying no and ending responsibly;
+- use only canonical target lever `L25` from that competency's structured mapping;
+- distinguish a self-directed boundary from coercion, punishment, threats, or
+  silent tests;
+- exclude abuse, coercive control, stalking, unsafe dependency,
+  discrimination, and likely-retaliation contexts from this guided practice;
+- require both a direct boundary statement and one proportionate follow-through;
+- retain immutable `GG-EVIDENCE-1.0` events while remaining score-inactive.
+
 Status: implemented for review.
 
 Continue M4 in separately reviewed batches. A new executable protocol does not become
@@ -390,9 +403,9 @@ semantics, and golden tests are explicitly reviewed.
 - Dynamic need intentionally reproduces the assessment v1.1 provisional
   function. Context-aware applicability/importance/readiness/urgency ranking
   is not claimed because those inputs are not collected.
-- The only canonical active protocol remains Deepen One Existing Friendship.
-  Synthetic competing protocols test dynamic ordering without shipping
-  invented interventions.
+- The only score-active protocol remains Deepen One Existing Friendship.
+  Play, emotional cue detection, and boundary practice are executable but
+  score-inactive.
 - M3B review accepted Decisions 023–026 without changing its scoring
   mathematics or activation boundary.
 - `make compose-smoke` is the repeatable deployment gate. It uses an isolated

@@ -146,7 +146,8 @@ canonical assessment and completes the friendship recommendation, setup,
 sprint, draft/submitted check-in, pause/resume/stop, completion, and review
 experience.
 
-M1 through M3B are reviewed and merged. Decisions 023–026 are accepted.
+M1 through M3B are reviewed and merged. M4A and M4B are also reviewed and
+merged; Decisions 023–030 are accepted.
 M3B may update only separate current lever state from replay-verified
 friendship evidence. Baselines, raw self-report, orientations, archetypes,
 completion, and human worth remain unchanged.
@@ -158,6 +159,11 @@ M4B activates **Practice Emotional Cue Detection** as the third complete
 protocol. It is anchored to canonical nonverbal communication competency
 `16.03`, treats cues as uncertain hypotheses, requires direct clarification,
 and remains score-inactive.
+M4C activates **State and Maintain One Boundary** as the fourth complete
+protocol. It is anchored to canonical competency `11.10`, limits the
+intervention to a safely stateable low-stakes situation, distinguishes a
+boundary from coercion or punishment, requires both a direct statement and
+proportionate follow-through, and remains score-inactive.
 The remaining M4 protocol-library expansion must proceed in separately
 authorized, reviewable batches. Adding a protocol to the library
 does not authorize score activation. Any newly score-active protocol requires

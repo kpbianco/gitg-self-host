@@ -23,9 +23,10 @@ Then inspect the canonical data under:
 Treat `legacy/` as provenance only. Do not build implementation behavior from legacy notes when canonical files disagree.
 
 Work only on the milestone batch explicitly authorized by the repository
-owner. M1 through M3B are reviewed and merged; Decisions 023–026 are accepted.
+owner. M1 through M3B and M4A–M4B are reviewed and merged; Decisions 023–030
+are accepted.
 M4A adds score-inactive non-instrumental play; M4B adds score-inactive
-emotional cue detection. Remaining
+emotional cue detection; M4C adds score-inactive boundary practice. Remaining
 M4 protocol-library expansion must proceed in separately
 authorized, reviewable batches.
 

@@ -129,10 +129,17 @@ def completion_evidence(sprint: PracticeSprint) -> CompletionEvidence:
         "substantive_markers",
         ["moved_beyond_transactional", "meaningful_information_shared"],
     )
-    substantive_query = Q()
-    for marker in substantive_markers:
-        substantive_query |= Q(**{marker: True})
-    substantive = submitted.filter(action_attempted=True).filter(substantive_query).exists()
+    attempted = submitted.filter(action_attempted=True)
+    marker_mode = sprint.protocol.completion_rules.get("marker_mode", "any")
+    if marker_mode == "all":
+        substantive = all(
+            attempted.filter(**{marker: True}).exists() for marker in substantive_markers
+        )
+    else:
+        substantive_query = Q()
+        for marker in substantive_markers:
+            substantive_query |= Q(**{marker: True})
+        substantive = attempted.filter(substantive_query).exists()
     all_attempted = bool(action_ids) and action_ids.issubset(attempted_ids)
     enough_completed = len(completed_ids) >= int(
         sprint.protocol.completion_rules.get("minimum_completed", 2)
