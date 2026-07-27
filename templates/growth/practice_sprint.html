@@ -20,7 +20,10 @@
   {% if sprint.status == "completed" %}
     <div class="mastery-notice" role="note">
       <strong>Completing this practice does not establish mastery.</strong>
-      <p>Your assessment scores and confidence remain unchanged.</p>
+      <p>
+        The final review created no score evidence. Earlier eligible submitted
+        observations retain their separate, versioned effect.
+      </p>
     </div>
   {% endif %}
 
@@ -35,7 +38,7 @@
         <p>Submitted evidence remains in your history; drafts remain excluded.</p>
       {% elif sprint.status == "completed" %}
         <h2>Final review submitted.</h2>
-        <p>The protocol is complete, without changing mastery.</p>
+        <p>The protocol is complete; completion remains separate from mastery.</p>
         <a class="button button-secondary" href="{% url 'growth:practice-review-complete' sprint.pk %}">
           Read practice review
         </a>

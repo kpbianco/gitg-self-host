@@ -17,7 +17,7 @@ inactive structured placeholders.
 
 The seven server-rendered steps cover:
 
-1. why the static profile produced this recommendation;
+1. why the current provisional profile produced this recommendation;
 2. whether the relationship is currently applicable;
 3. a minimal private label for one person or context;
 4. privacy, welcome contact, disclosure, autonomy, and reciprocity boundaries;
@@ -67,6 +67,11 @@ history links to a plain-language evidence reading; technical values remain in
 a collapsed audit section. M2B adds a private cross-practice ledger and
 minimized calibration export without exposing draft or free-text content.
 
+In M3B, submission also processes the event against the reviewed friendship
+mapping and appends an immutable score snapshot in that same transaction.
+Drafts create neither event nor snapshot. Inconclusive observations receive an
+auditable process transition but do not move current state.
+
 ## Completion and review
 
 The service derives completion evidence from submitted check-ins only:
@@ -83,10 +88,12 @@ impact preview, and the required disclaimer:
 
 > Completing this practice does not establish mastery.
 
-No assessment or lever row is updated. Tests snapshot every raw, calibrated,
-confidence, need, and rank value before completion and compare it afterward.
+No assessment baseline, orientation, or archetype row is updated. The final
+review creates no score event or snapshot; eligible check-ins were processed
+at submission time. Tests compare current state immediately before and after
+completion to prove that completion alone has no effect.
 
-## M2 boundary
+## Evidence and scoring boundary
 
 M1 records protocol participation, not validated behavior change. M2A adds
 versioned event-level quality, independence, bounded context breadth,
@@ -98,3 +105,8 @@ surfaces around those immutable events. M2 still does not distribute evidence
 through competency-to-lever mappings, calculate success/failure contributions,
 mutate mastery/confidence/need, or change recommendations. See
 `docs/evidence-contract.md` and `docs/evidence-audit.md`.
+
+M3A reviewed the task allocation and posterior contract. M3B activates that
+exact contract only for the friendship protocol, stores current state
+separately from baselines, and recalculates provisional recommendation order.
+See `docs/scoring-shadow.md` and `docs/scoring-state.md`.

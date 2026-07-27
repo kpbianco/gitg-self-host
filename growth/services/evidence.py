@@ -15,7 +15,7 @@ from growth.domain.evidence import (
     evaluate_evidence,
     replay_evidence,
 )
-from growth.models import EvidenceEvent, PracticeCheckIn
+from growth.models import EvidenceEvent, LeverState, PracticeCheckIn
 
 
 class EvidenceWorkflowError(ValueError):
@@ -406,9 +406,14 @@ def build_privacy_safe_evidence_export(user) -> dict[str, Any]:
             }
         )
 
+    profile_scores_modified = LeverState.objects.filter(
+        user=user,
+        cumulative_evidence_mass__gt=0,
+    ).exists()
     return {
         "schema_version": EVIDENCE_EXPORT_SCHEMA_VERSION,
-        "profile_scores_modified": False,
+        "profile_scores_modified": profile_scores_modified,
+        "profile_scores_modified_by_export": False,
         "source": "structured_self_report",
         "privacy": {
             "contains_user_identity": False,

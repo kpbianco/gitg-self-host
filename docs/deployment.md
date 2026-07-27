@@ -58,12 +58,16 @@ The non-root container user runs these steps on every start:
 2. `manage.py bootstrap_user`
 3. `manage.py seed_canonical`
 4. `manage.py backfill_evidence_events`
-5. `manage.py collectstatic --noinput`
-6. `gunicorn grounded_growth.wsgi:application`
+5. `manage.py rebuild_score_state`
+6. `manage.py collectstatic --noinput`
+7. `gunicorn grounded_growth.wsgi:application`
 
-Migrations, seeding, and evidence backfill are idempotent. Bootstrap creation
-occurs only when the auth user table is empty. An existing user prevents
-password creation or reset, even if bootstrap environment values change.
+Migrations, seeding, evidence backfill, and score-state reconciliation are
+idempotent. Score-state startup initializes missing current rows, processes
+pending versioned events once, verifies replay, and appends a rebuild snapshot
+only if current state actually drifted. Bootstrap creation occurs only when
+the auth user table is empty. An existing user prevents password creation or
+reset, even if bootstrap environment values change.
 
 ## Authentication hardening
 
@@ -134,7 +138,8 @@ Future uploads use `/data/uploads`; backups use `/data/backups`.
 Assessment runs, share codes, practice setup records, draft/submitted
 check-ins, immutable evidence events, exact assessment baseline mass, and final
 reviews all live in the same SQLite database and survive container replacement
-with the named volume. The M3A projection itself is not persisted.
+with the named volume. M3B current lever state and immutable hashed score
+snapshots live in that same database; assessment baselines remain separate.
 
 ## Updating
 
@@ -158,13 +163,36 @@ After an update, sign in and verify:
 4. a submitted check-in opens its evidence-reading page;
 5. `/evidence/` shows only the signed-in user's submitted events;
 6. `make evidence-verify` reports complete replay coverage;
-7. `/profile/` labels any M3A projection as a preview and unsaved;
-8. `/health/` returns `{"status":"ok"}`.
+7. `make score-verify` reports deterministic score-state coverage;
+8. `/profile/` distinguishes the assessment baseline from current
+   evidence-updated estimates;
+9. `/health/` returns `{"status":"ok"}`.
 
 The evidence verifier is intentionally not an automatic repair step. Startup
 backfill reconciles missing legacy events and verifies existing ones;
 `evidence-verify` is the strict read-only operational audit. See
 `docs/evidence-audit.md`.
+
+Score-state operations are:
+
+```bash
+docker compose exec app python manage.py rebuild_score_state --verify-only
+docker compose exec app python manage.py rebuild_score_state
+```
+
+The first command is read-only. The second initializes pending state and
+repairs drift from immutable baselines/events with an audit snapshot. To
+permanently exclude one processed event from current state without deleting
+it from the evidence ledger:
+
+```bash
+docker compose exec app python manage.py rebuild_score_state \
+  --reverse-event <event-uuid> \
+  --reason "Documented correction reason"
+```
+
+Reversal is idempotent and has no M3B undo command. Back up first and use it
+only for a documented correction. See `docs/scoring-state.md`.
 
 ## HTTPS or remote access later
 

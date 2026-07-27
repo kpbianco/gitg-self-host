@@ -4,6 +4,7 @@ import pytest
 from django.contrib.auth import get_user_model
 
 from growth.services.canonical_import import seed_canonical_data
+from growth.services.score_state import synchronize_all_score_states
 
 
 @pytest.fixture
@@ -16,7 +17,9 @@ def user(db):
 
 @pytest.fixture
 def seeded(user):
-    return seed_canonical_data()
+    summary = seed_canonical_data()
+    synchronize_all_score_states()
+    return summary
 
 
 @pytest.fixture(scope="session")

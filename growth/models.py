@@ -262,6 +262,95 @@ class LeverBaseline(models.Model):
         return f"{self.assessment_run_id}: {self.lever_id}"
 
 
+class LeverState(models.Model):
+    class Status(models.TextChoices):
+        ACTIVE = "active", "Evidence updates available"
+        BASELINE_ONLY = "baseline_only", "Baseline only"
+
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="lever_states",
+    )
+    assessment_run = models.ForeignKey(
+        AssessmentRun,
+        on_delete=models.PROTECT,
+        related_name="lever_states",
+    )
+    baseline = models.OneToOneField(
+        LeverBaseline,
+        on_delete=models.PROTECT,
+        related_name="current_state",
+    )
+    lever = models.ForeignKey(Lever, on_delete=models.PROTECT, related_name="states")
+    algorithm_version = models.CharField(max_length=40)
+    status = models.CharField(max_length=20, choices=Status.choices)
+    current_alpha = models.DecimalField(
+        max_digits=12,
+        decimal_places=6,
+        null=True,
+        blank=True,
+    )
+    current_beta = models.DecimalField(
+        max_digits=12,
+        decimal_places=6,
+        null=True,
+        blank=True,
+    )
+    current_estimate = models.DecimalField(
+        max_digits=6,
+        decimal_places=4,
+        null=True,
+        blank=True,
+    )
+    current_confidence = models.DecimalField(max_digits=6, decimal_places=4)
+    cumulative_evidence_mass = models.DecimalField(
+        max_digits=12,
+        decimal_places=6,
+        default=0,
+    )
+    included_evidence_events = models.PositiveIntegerField(default=0)
+    current_need_score = models.DecimalField(
+        max_digits=6,
+        decimal_places=4,
+        null=True,
+        blank=True,
+    )
+    current_need_rank = models.PositiveSmallIntegerField()
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ["current_need_rank", "lever_id"]
+        constraints = [
+            models.UniqueConstraint(
+                fields=["assessment_run", "lever"],
+                name="unique_lever_state_per_assessment",
+            ),
+            models.CheckConstraint(
+                condition=(
+                    Q(current_alpha__isnull=True, current_beta__isnull=True)
+                    | Q(current_alpha__isnull=False, current_beta__isnull=False)
+                ),
+                name="lever_state_mass_pair_complete",
+            ),
+            models.CheckConstraint(
+                condition=Q(current_alpha__isnull=True) | Q(current_alpha__gte=0),
+                name="lever_state_alpha_nonnegative",
+            ),
+            models.CheckConstraint(
+                condition=Q(current_beta__isnull=True) | Q(current_beta__gte=0),
+                name="lever_state_beta_nonnegative",
+            ),
+            models.CheckConstraint(
+                condition=Q(cumulative_evidence_mass__gte=0),
+                name="lever_state_evidence_mass_nonnegative",
+            ),
+        ]
+
+    def __str__(self) -> str:
+        return f"{self.assessment_run_id}: {self.lever_id} current state"
+
+
 class PracticeProtocol(models.Model):
     class Availability(models.TextChoices):
         ACTIVE = "active", "Active"
@@ -608,6 +697,106 @@ class EvidenceEvent(models.Model):
             raise ValidationError("Evidence event protocol does not match its check-in.")
         if self.action_stable_id != self.check_in.action_id:
             raise ValidationError("Evidence event action does not match its check-in.")
+
+
+class ImmutableScoreSnapshotQuerySet(models.QuerySet):
+    def update(self, **kwargs):
+        raise ValidationError("Score snapshots are immutable after creation.")
+
+    def bulk_update(self, objs, fields, batch_size=None):
+        raise ValidationError("Score snapshots are immutable after creation.")
+
+    def delete(self):
+        raise ValidationError("Score snapshots are immutable after creation.")
+
+
+class ScoreSnapshot(models.Model):
+    class Operation(models.TextChoices):
+        INITIALIZE = "initialize", "Initialize baseline state"
+        PROCESS = "process", "Process evidence event"
+        REVERSE = "reverse", "Reverse evidence event"
+        REBUILD = "rebuild", "Repair current state from event history"
+
+    stable_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    assessment_run = models.ForeignKey(
+        AssessmentRun,
+        on_delete=models.PROTECT,
+        related_name="score_snapshots",
+    )
+    evidence_event = models.ForeignKey(
+        EvidenceEvent,
+        on_delete=models.PROTECT,
+        related_name="score_snapshots",
+        null=True,
+        blank=True,
+    )
+    operation = models.CharField(max_length=12, choices=Operation.choices)
+    sequence = models.PositiveIntegerField()
+    algorithm_version = models.CharField(max_length=40)
+    state_schema_version = models.CharField(max_length=40)
+    before_state = models.JSONField(default=list, blank=True)
+    after_state = models.JSONField(default=list, blank=True)
+    contribution_snapshot = models.JSONField(default=dict, blank=True)
+    active_event_count = models.PositiveIntegerField(default=0)
+    active_event_hash = models.CharField(max_length=64)
+    before_state_hash = models.CharField(max_length=64)
+    after_state_hash = models.CharField(max_length=64)
+    reason = models.TextField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    objects = ImmutableScoreSnapshotQuerySet.as_manager()
+
+    class Meta:
+        ordering = ["assessment_run_id", "sequence"]
+        constraints = [
+            models.UniqueConstraint(
+                fields=["assessment_run", "sequence"],
+                name="unique_score_snapshot_sequence",
+            ),
+            models.UniqueConstraint(
+                fields=["assessment_run"],
+                condition=Q(operation="initialize"),
+                name="unique_score_state_initialization",
+            ),
+            models.UniqueConstraint(
+                fields=["evidence_event"],
+                condition=Q(operation="process"),
+                name="unique_score_event_processing",
+            ),
+            models.UniqueConstraint(
+                fields=["evidence_event"],
+                condition=Q(operation="reverse"),
+                name="unique_score_event_reversal",
+            ),
+            models.CheckConstraint(
+                condition=(
+                    Q(
+                        operation__in=["process", "reverse"],
+                        evidence_event__isnull=False,
+                    )
+                    | Q(
+                        operation__in=["initialize", "rebuild"],
+                        evidence_event__isnull=True,
+                    )
+                ),
+                name="score_snapshot_event_matches_operation",
+            ),
+            models.CheckConstraint(
+                condition=~Q(operation="reverse") | ~Q(reason=""),
+                name="score_reversal_requires_reason",
+            ),
+        ]
+
+    def __str__(self) -> str:
+        return f"{self.assessment_run_id}: {self.sequence} {self.operation}"
+
+    def save(self, *args, **kwargs):
+        if self.pk and type(self).objects.filter(pk=self.pk).exists():
+            raise ValidationError("Score snapshots are immutable after creation.")
+        return super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        raise ValidationError("Score snapshots are immutable after creation.")
 
 
 class PracticeReview(models.Model):

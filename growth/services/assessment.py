@@ -474,6 +474,9 @@ def persist_assessment_run(user, payload: Any) -> tuple[AssessmentRun, bool]:
     if existing is not None:
         if existing.user_id != user.pk:
             raise AssessmentPayloadError("Assessment submission belongs to another user.")
+        from growth.services.score_state import synchronize_score_state_for_run
+
+        synchronize_score_state_for_run(existing)
         return existing, False
 
     assets = load_assessment_assets()
@@ -559,4 +562,7 @@ def persist_assessment_run(user, payload: Any) -> tuple[AssessmentRun, bool]:
             need_rank=rank,
             notes="Assessment v1.1 provisional self-report baseline.",
         )
+    from growth.services.score_state import synchronize_score_state_for_run
+
+    synchronize_score_state_for_run(run)
     return run, True

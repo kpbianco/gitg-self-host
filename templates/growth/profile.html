@@ -9,8 +9,9 @@
       <p class="eyebrow">Developmental profile</p>
       <h1>A provisional map, not an identity.</h1>
       <p class="lede">
-        This profile is a starting hypothesis from self-report. It helps select
-        useful practices; it does not establish mastery or measure worth.
+        This profile begins with self-report and can incorporate reviewed,
+        structured practice evidence. It remains provisional; it does not
+        establish mastery or measure worth.
       </p>
     </div>
     {% if summary.assessment_run %}
@@ -38,11 +39,15 @@
       </article>
       <article>
         <h2>Calibrated estimate</h2>
-        <p>A cautious starting estimate that remains provisional until real-world evidence accumulates.</p>
+        <p>The cautious assessment estimate retained as an immutable starting point.</p>
       </article>
       <article>
         <h2>Evidence confidence</h2>
-        <p>How much support the estimate has. It is not another judgment of ability.</p>
+        <p>How much support the current estimate has. It is not another judgment of ability.</p>
+      </article>
+      <article>
+        <h2>Current estimate</h2>
+        <p>The starting estimate plus eligible submitted evidence, rebuilt from an audit trail.</p>
       </article>
     </section>
 
@@ -112,16 +117,16 @@
           </div>
         </div>
         <ol class="capacity-list">
-          {% for baseline in summary.strongest_capacities %}
+          {% for capacity in summary.strongest_capacities %}
             <li>
               <div>
-                <strong>{{ baseline.lever.name }}</strong>
+                <strong>{{ capacity.lever.name }}</strong>
                 <span>
-                  Raw {{ baseline.raw_self_report|percentage }} ·
-                  confidence {{ baseline.evidence_confidence|percentage }}
+                  Raw {{ capacity.raw_self_report|percentage }} ·
+                  confidence {{ capacity.confidence|percentage }}
                 </span>
               </div>
-              <b>{{ baseline.calibrated_estimate|percentage }}</b>
+              <b>{{ capacity.estimate|percentage }}</b>
             </li>
           {% endfor %}
         </ol>
@@ -135,14 +140,14 @@
           </div>
         </div>
         <ol class="capacity-list">
-          {% for baseline in summary.highest_needs %}
+          {% for capacity in summary.highest_needs %}
             <li>
-              <span class="rank">{{ baseline.need_rank|stringformat:"02d" }}</span>
+              <span class="rank">{{ capacity.need_rank|stringformat:"02d" }}</span>
               <div>
-                <strong>{{ baseline.lever.name }}</strong>
+                <strong>{{ capacity.lever.name }}</strong>
                 <span>
-                  Estimate {{ baseline.calibrated_estimate|percentage }} ·
-                  confidence {{ baseline.evidence_confidence|percentage }}
+                  Estimate {{ capacity.estimate|percentage }} ·
+                  confidence {{ capacity.confidence|percentage }}
                 </span>
               </div>
             </li>
@@ -151,60 +156,74 @@
       </section>
     </div>
 
-    <section class="panel shadow-projection" aria-labelledby="shadow-projection-heading">
+    <section class="panel shadow-projection" aria-labelledby="current-state-heading">
       <div class="panel-heading">
         <div>
-          <p class="eyebrow">M3A review preview</p>
-          <h2 id="shadow-projection-heading">What submitted evidence would change</h2>
+          <p class="eyebrow">Evidence-updated working state</p>
+          <h2 id="current-state-heading">What submitted evidence has changed</h2>
         </div>
-        <span class="status-pill">Preview only · not saved</span>
+        {% if summary.dynamic_state_active %}
+          <span class="status-pill">Current · versioned</span>
+        {% else %}
+          <span class="status-pill">Baseline only</span>
+        {% endif %}
       </div>
       <p class="panel-intro">
-        This read-only calculation tests a proposed scoring contract against your
-        submitted evidence. Your live profile and practice recommendations remain unchanged.
+        Eligible directional observations update only the capacities linked to
+        the reviewed practice. Every transition keeps an immutable before-and-after
+        record and can be rebuilt from the original assessment and evidence events.
       </p>
 
-      {% if shadow.unavailable_reason %}
+      {% if not summary.dynamic_state_active %}
         <div class="inline-note">
-          <strong>Projection unavailable</strong>
-          <p>{{ shadow.unavailable_reason }}</p>
+          <strong>Current state verification is required</strong>
+          <p>
+            {% if summary.state_verification_error %}
+              {{ summary.state_verification_error }}
+            {% else %}
+              The assessment baseline remains available, but evidence updates are not active.
+            {% endif %}
+          </p>
         </div>
-      {% elif shadow.projection.event_count == 0 %}
+      {% elif not summary.evidence_updated_capacities %}
         <div class="inline-note">
-          <strong>No submitted evidence to project yet</strong>
-          <p>Drafts and practice completion alone are never treated as scoring evidence.</p>
+          <strong>No directional evidence has changed the profile yet</strong>
+          <p>
+            Drafts, inconclusive observations, practice completion, and the final
+            review alone do not change current estimates.
+          </p>
         </div>
       {% else %}
         <div class="shadow-summary" aria-label="Projection event summary">
           <div>
-            <strong>{{ shadow.projection.scored_event_count }}</strong>
-            <span>directional observation{{ shadow.projection.scored_event_count|pluralize }}</span>
+            <strong>{{ summary.evidence_updated_capacities|length }}</strong>
+            <span>capacity signal{{ summary.evidence_updated_capacities|length|pluralize }} updated</span>
           </div>
           <div>
-            <strong>{{ shadow.projection.withheld_event_count }}</strong>
-            <span>withheld as inconclusive or not recorded</span>
+            <strong>{{ summary.score_snapshot_count }}</strong>
+            <span>immutable audit snapshot{{ summary.score_snapshot_count|pluralize }}</span>
           </div>
           <div>
-            <strong>Review contract v1</strong>
-            <span>versioned calculation</span>
+            <strong>State contract v1</strong>
+            <span>deterministic calculation</span>
           </div>
         </div>
 
         <div class="projection-list">
-          {% for row in shadow.rows %}
+          {% for capacity in summary.evidence_updated_capacities %}
             <article>
               <div>
-                <strong>{{ row.lever.name }}</strong>
+                <strong>{{ capacity.lever.name }}</strong>
                 <span>
-                  Current {{ row.baseline.calibrated_estimate|percentage }}
-                  → projected {{ row.projection.projected_estimate|percentage }}
+                  Started {{ capacity.starting_estimate|percentage }}
+                  → current {{ capacity.estimate|percentage }}
                 </span>
               </div>
               <div class="projection-confidence">
                 <span>Evidence confidence</span>
                 <strong>
-                  {{ row.baseline.evidence_confidence|percentage }}
-                  → {{ row.projection.projected_confidence|percentage }}
+                  {{ capacity.starting_confidence|percentage }}
+                  → {{ capacity.confidence|percentage }}
                 </strong>
               </div>
             </article>
@@ -215,19 +234,18 @@
           Supportive observations use recorded protocol performance; mixed observations
           receive half directional credit; contradictory observations allocate no success
           mass. Inconclusive and legacy direction-unknown observations are withheld.
-          {% if shadow.uses_reconstructed_baseline %}
-            This preview reconstructs at least one starting evidence mass from rounded
-            published assessment values and is therefore marked for review.
-          {% endif %}
+          Recommendation order uses the same provisional need function as assessment
+          v1.1 and does not invent uncollected context ratings.
         </p>
       {% endif %}
     </section>
 
     <aside class="mastery-notice">
-      <strong>Read-only scoring boundary</strong>
+      <strong>Completion remains separate from mastery</strong>
       <p>
-        M3A saves no score update or recommendation change. Practice completion remains
-        separate from competency mastery, and completing a practice does not change this profile.
+        A submitted directional observation can adjust a provisional working estimate.
+        Completing a practice or submitting its final review creates no additional score
+        evidence, and completing this practice does not establish mastery.
       </p>
     </aside>
   {% else %}

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from collections.abc import Iterable
 from dataclasses import dataclass
 from decimal import Decimal
 
@@ -15,8 +16,12 @@ from growth.domain.scoring import (
     project_scores,
     reconstruct_published_baseline_mass,
 )
-from growth.models import AssessmentRun, Lever, LeverBaseline, PracticeProtocol
-from growth.services.evidence import EvidenceWorkflowError, build_evidence_ledger
+from growth.models import AssessmentRun, EvidenceEvent, Lever, LeverBaseline, PracticeProtocol
+from growth.services.evidence import (
+    EvidenceWorkflowError,
+    build_evidence_ledger,
+    verify_evidence_event,
+)
 
 FRIENDSHIP_PROTOCOL_ID = "PRACTICE-FRIENDSHIP-01"
 FRIENDSHIP_COMPETENCY_ID = "17.03"
@@ -45,6 +50,15 @@ class UserShadowProjection:
     projection: ScoreProjection | None
     rows: tuple[ShadowLeverRow, ...]
     unavailable_reason: str
+    uses_reconstructed_baseline: bool
+
+
+@dataclass(frozen=True)
+class AssessmentScoreProjection:
+    assessment_run: AssessmentRun
+    protocol: PracticeProtocol
+    projection: ScoreProjection
+    baselines: tuple[LeverBaseline, ...]
     uses_reconstructed_baseline: bool
 
 
@@ -84,6 +98,100 @@ def _baseline_mass(baseline: LeverBaseline) -> tuple[BaselineMass | None, bool]:
         evidence_confidence=baseline.evidence_confidence,
     )
     return reconstructed, reconstructed is not None
+
+
+def project_assessment_events(
+    assessment_run: AssessmentRun,
+    events: Iterable[EvidenceEvent],
+) -> AssessmentScoreProjection:
+    """Project reviewed friendship evidence for one immutable assessment run."""
+
+    protocol = (
+        PracticeProtocol.objects.filter(stable_id=FRIENDSHIP_PROTOCOL_ID)
+        .select_related("parent_competency")
+        .prefetch_related("target_levers", "parent_competency__lever_links__lever")
+        .first()
+    )
+    if protocol is None or protocol.parent_competency_id != FRIENDSHIP_COMPETENCY_ID:
+        raise ScoringContractError(
+            "The reviewed practice-to-competency scoring link is unavailable."
+        )
+    links = tuple(protocol.parent_competency.lever_links.all())
+    link_ids = {link.lever_id for link in links}
+    target_ids = {lever.stable_id for lever in protocol.target_levers.all()}
+    if not target_ids or not target_ids.issubset(link_ids):
+        raise ScoringContractError(
+            "Recommendation targets do not match the reviewed scoring mapping."
+        )
+
+    baseline_rows = {
+        baseline.lever_id: baseline
+        for baseline in LeverBaseline.objects.filter(
+            user=assessment_run.user,
+            assessment_run=assessment_run,
+            lever_id__in=link_ids,
+        ).select_related("lever")
+    }
+    if set(baseline_rows) != link_ids:
+        raise ScoringContractError(
+            "The assessment does not contain every reviewed scoring baseline."
+        )
+    masses: dict[str, BaselineMass] = {}
+    uses_reconstructed = False
+    for lever_id in sorted(link_ids):
+        mass, reconstructed = _baseline_mass(baseline_rows[lever_id])
+        if mass is None:
+            raise ScoringContractError(f"{lever_id}: scoring baseline mass is unavailable.")
+        masses[lever_id] = mass
+        uses_reconstructed = uses_reconstructed or reconstructed
+
+    resolved_events = tuple(events)
+    for event in resolved_events:
+        if event.protocol_stable_id != protocol.stable_id:
+            raise ScoringContractError(
+                f"{event.pk}: evidence belongs to an unreviewed scoring protocol."
+            )
+        if event.check_in.sprint.assessment_run_id != assessment_run.pk:
+            raise ScoringContractError(
+                f"{event.pk}: evidence and assessment stable IDs do not match."
+            )
+        if event.check_in.sprint.user_id != assessment_run.user_id:
+            raise ScoringContractError(f"{event.pk}: evidence and assessment users do not match.")
+        try:
+            verify_evidence_event(event)
+        except EvidenceWorkflowError as exc:
+            raise ScoringContractError(str(exc)) from exc
+
+    weights = tuple(
+        LeverWeight(
+            lever_id=link.lever_id,
+            weight=link.weight,
+            total_competency_weight=link.lever.total_competency_weight,
+        )
+        for link in links
+    )
+    scoring_events = tuple(
+        ScoringEvidence(
+            event_key=str(event.pk),
+            action_stable_id=event.action_stable_id,
+            performance=event.performance,
+            base_evidence_mass=event.base_evidence_mass,
+            direction=event.input_snapshot.get("evidence_direction") or "",
+        )
+        for event in resolved_events
+    )
+    projection = project_scores(
+        baselines=masses,
+        weights=weights,
+        events=scoring_events,
+    )
+    return AssessmentScoreProjection(
+        assessment_run=assessment_run,
+        protocol=protocol,
+        projection=projection,
+        baselines=tuple(baseline_rows[key] for key in sorted(baseline_rows)),
+        uses_reconstructed_baseline=uses_reconstructed,
+    )
 
 
 def build_user_shadow_projection(

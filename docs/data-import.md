@@ -79,7 +79,9 @@ The active friendship actions also receive validated
 links the protocol to canonical competency `17.03` and requires its four
 structured weights to sum to 1.0. Seeding does not create evidence events.
 `backfill_evidence_events` runs afterward and creates events only for submitted
-check-ins that do not already have one.
+check-ins that do not already have one. `rebuild_score_state` then initializes
+or reconciles current state from those events; canonical seeding itself does
+not score a check-in.
 
 ## Versioning
 
@@ -95,7 +97,9 @@ Assessment runs and practice sprints retain their curriculum-version
 reference. M2A records `GG-EVIDENCE-1.0` separately on each immutable event.
 M2B verifies and exports those stored versions without altering canonical data
 or authorizing dynamic scoring. M3A records the stable parent competency on
-the protocol and uses `GG-SCORING-SHADOW-1.0` only for a read-only projection.
+the protocol and established `GG-SCORING-SHADOW-1.0`. M3B retains that exact
+math version and separately records `GG-SCORE-STATE-1.0` and
+`GG-NEED-RANKING-1.0`.
 
 ## Pilot 002 boundary
 
@@ -111,7 +115,10 @@ rounded raw and calibrated values only when the canonical equal-prior
 equations identify one solution. It records
 `published_reconstruction` as the source. Neutral `0.5000`/`0.5000` pairs are
 ambiguous and remain null; the importer does not infer mass from confidence.
-All four levers required by competency `17.03` are identifiable.
+All four levers required by competency `17.03` are identifiable. M3B creates
+37 separate current states: 33 evidence-active and L06, L15, L32, and L37
+baseline-only. Taking or importing v1.1 is the upgrade path before a future
+practice can score one of those four.
 
 The seed remains idempotent after a user takes or imports another assessment.
 It reconciles the stable Pilot 002 row but does not overwrite or remove
@@ -125,9 +132,13 @@ After upgrading, run:
 ```bash
 python manage.py backfill_evidence_events --dry-run
 python manage.py backfill_evidence_events
+python manage.py rebuild_score_state
+python manage.py rebuild_score_state --verify-only
 ```
 
 The command leaves submitted check-ins unchanged. Missing M1 support/context
 metadata uses conservative factors, and absent contradiction remains unknown
 rather than supportive. Repeated runs verify existing event snapshots and
-create no duplicates.
+create no duplicates. Score-state rebuild processes each event at most once,
+retains immutable before/after snapshots, and appends a repair snapshot only
+when deterministic replay finds current-state drift.

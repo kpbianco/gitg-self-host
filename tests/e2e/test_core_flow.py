@@ -10,6 +10,7 @@ from playwright.sync_api import Page, expect
 from growth.models import AssessmentRun, PracticeCheckIn, PracticeSprint
 from growth.services.assessment import encode_share_code, load_assessment_assets
 from growth.services.canonical_import import seed_canonical_data
+from growth.services.score_state import synchronize_all_score_states
 
 ROOT = Path(__file__).resolve().parents[2]
 BUNDLE = ROOT / "data" / "assessment" / "v1.1_bundle" / "grounded_growth_assessment_v1_1"
@@ -26,6 +27,11 @@ def create_browser_user():
         username="grounded",
         password="Browser-Test-Password-2047!",
     )
+
+
+def seed_browser_data():
+    seed_canonical_data()
+    synchronize_all_score_states()
 
 
 def log_in(live_server, page):
@@ -55,7 +61,7 @@ def open_assessment(live_server, page):
 @pytest.mark.django_db(transaction=True)
 def test_login_home_and_profile_core_flow(live_server, page: Page):
     create_browser_user()
-    seed_canonical_data()
+    seed_browser_data()
 
     log_in(live_server, page)
     assert page.url == f"{live_server.url}/"
@@ -67,7 +73,7 @@ def test_login_home_and_profile_core_flow(live_server, page: Page):
     page.get_by_role("heading", name="A provisional map, not an identity.").wait_for()
     page.get_by_text("The Seeker", exact=True).wait_for()
     page.get_by_text(
-        re.compile(r"completing a practice does not change this profile"),
+        re.compile(r"completing this practice does not establish mastery"),
     ).wait_for()
 
 
@@ -75,7 +81,7 @@ def test_login_home_and_profile_core_flow(live_server, page: Page):
 @pytest.mark.django_db(transaction=True)
 def test_complete_assessment_and_save_canonical_outputs(live_server, page: Page):
     user = create_browser_user()
-    seed_canonical_data()
+    seed_browser_data()
     log_in(live_server, page)
 
     open_assessment(live_server, page)
@@ -118,7 +124,7 @@ def test_complete_assessment_and_save_canonical_outputs(live_server, page: Page)
 @pytest.mark.django_db(transaction=True)
 def test_import_gga11_and_supported_gga1(live_server, page: Page):
     user = create_browser_user()
-    seed_canonical_data()
+    seed_browser_data()
     input_data = json.loads((BUNDLE / "pilot_001_responses_v1_compatible.json").read_text())
     current_code = encode_share_code(
         load_assessment_assets().spec,
@@ -150,7 +156,7 @@ def test_import_gga11_and_supported_gga1(live_server, page: Page):
 @pytest.mark.django_db(transaction=True)
 def test_guided_practice_draft_pause_and_completion_flow(live_server, page: Page):
     create_browser_user()
-    seed_canonical_data()
+    seed_browser_data()
     log_in(live_server, page)
 
     page.get_by_role("link", name="Practices", exact=True).click()
@@ -196,7 +202,7 @@ def test_guided_practice_draft_pause_and_completion_flow(live_server, page: Page
     page.get_by_text("Check-in submitted and added to evidence history.").wait_for()
     page.get_by_role("link", name="Listen to what matters now").click()
     page.get_by_role("heading", name="Listen to what matters now").wait_for()
-    page.get_by_text("Your developmental profile is unchanged.").wait_for()
+    page.get_by_text("This observation has a versioned score disposition.").wait_for()
     page.get_by_text("Technical audit details").click()
     page.get_by_text("GG-EVIDENCE-1.0").wait_for()
     page.get_by_role("link", name="Evidence", exact=True).click()
@@ -208,14 +214,15 @@ def test_guided_practice_draft_pause_and_completion_flow(live_server, page: Page
         page.get_by_role("link", name="Download privacy-safe JSON").click()
     exported = json.loads(Path(download_info.value.path()).read_text())
     assert exported["event_count"] == 1
-    assert exported["profile_scores_modified"] is False
+    assert exported["profile_scores_modified"] is True
+    assert exported["profile_scores_modified_by_export"] is False
     page.get_by_role("link", name="Read evidence explanation").click()
     page.get_by_role("heading", name="Listen to what matters now").wait_for()
     page.get_by_role("link", name="Profile", exact=True).click()
-    page.get_by_role("heading", name="What submitted evidence would change").wait_for()
-    page.get_by_text("Preview only · not saved").wait_for()
+    page.get_by_role("heading", name="What submitted evidence has changed").wait_for()
+    page.get_by_text("Current · versioned").wait_for()
     page.get_by_text(
-        "Your live profile and practice recommendations remain unchanged.",
+        re.compile(r"Every transition keeps an immutable before-and-after"),
     ).wait_for()
     page.go_back()
     page.get_by_role("heading", name="Listen to what matters now").wait_for()

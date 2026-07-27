@@ -15,8 +15,8 @@ practice transition, management command, migration, or seed operation writes a
 current mastery score, current confidence, need, task priority, archetype,
 orientation, recommendation, or score snapshot.
 
-M3A is the review gate for the proposed direction and confidence semantics.
-M3B may activate state transitions only after this contract is reviewed.
+M3A was the review gate for the direction and confidence semantics. The
+contract was accepted before M3B state activation began.
 
 ## Exact inputs
 
@@ -90,7 +90,7 @@ coefficients and mass terms are fixed to six decimal places, while displayed
 estimates and confidence are fixed to four. The golden fixture locks this
 rounding order as part of the algorithm version.
 
-## Direction policy proposed for review
+## Accepted direction policy
 
 Protocol performance and evidence direction remain separate inputs. Direction
 controls how much recorded performance may become success mass:
@@ -162,11 +162,10 @@ all five direction states and all four canonical weights. Tests require:
 
 The fixture is software calibration, not psychometric validation.
 
-## M3B review gate
+## M3B activation
 
-M3B remains out of scope until M3A is approved. Activation must add immutable
-before/after score snapshots, atomic and idempotent state transitions,
-reversal/rebuild procedures, dynamic need and recommendation tests, and an
-upgrade path for older assessment runs whose baseline mass is not
-identifiable. It must not silently reinterpret existing M2 events under a new
-algorithm version.
+M3A was approved without changing this mathematics. M3B retains the exact
+algorithm version and adds immutable before/after snapshots, atomic and
+idempotent state transitions, reversal/rebuild procedures, dynamic
+provisional-need and recommendation tests, and an explicit baseline-only
+upgrade policy. See `docs/scoring-state.md`.

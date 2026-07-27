@@ -6,7 +6,7 @@ import pytest
 from django.test import Client
 from django.urls import reverse
 
-from growth.models import AssessmentRun
+from growth.models import AssessmentRun, LeverState, ScoreSnapshot
 from growth.services.assessment import (
     decode_share_code,
     encode_share_code,
@@ -61,6 +61,8 @@ def test_golden_assessment_persists_complete_immutable_outputs(user, seeded):
     assert run.orientation_results.count() == 6
     assert run.archetype_results.count() == 15
     assert run.lever_baselines.count() == 37
+    assert run.lever_states.count() == 37
+    assert run.score_snapshots.count() == 1
 
     expected = payload["result"]
     l34 = run.lever_baselines.get(lever_id="L34")
@@ -69,11 +71,19 @@ def test_golden_assessment_persists_complete_immutable_outputs(user, seeded):
     assert float(l34.evidence_confidence) == expected["levers"]["L34"]["confidence"]
     assert float(l34.need_score) == expected["lever_need_ranking"][0]["score"]
     assert l34.need_rank == 1
+    l34_state = run.lever_states.get(lever_id="L34")
+    assert l34_state.current_alpha == l34.baseline_alpha
+    assert l34_state.current_beta == l34.baseline_beta
+    assert l34_state.current_estimate == l34.calibrated_estimate
+    assert l34_state.current_confidence == l34.evidence_confidence
+    assert l34_state.current_need_score == l34.need_score
+    assert l34_state.current_need_rank == l34.need_rank
 
     same_run, created_again = persist_assessment_run(user, payload)
     assert created_again is False
     assert same_run.pk == run.pk
     assert AssessmentRun.objects.filter(user=user).count() == 2
+    assert ScoreSnapshot.objects.filter(assessment_run=run).count() == 1
 
 
 @pytest.mark.django_db
@@ -188,3 +198,7 @@ def test_valid_nullable_lever_outputs_can_be_persisted(user, seeded):
     assert baseline.raw_self_report is None
     assert baseline.calibrated_estimate is None
     assert baseline.need_score is None
+    state = run.lever_states.get(lever_id="L37")
+    assert state.status == LeverState.Status.BASELINE_ONLY
+    assert state.current_estimate is None
+    assert state.current_need_score is None

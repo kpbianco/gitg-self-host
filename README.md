@@ -15,14 +15,16 @@ Open `http://<server-local-ip>:<APP_PORT>`; the default port is
 Grounded Growth is a self-hosted, evidence-oriented guided-development
 application. M1 provides a secure Django runtime, the canonical v1.1
 assessment, an immediately usable Pilot 002 demonstration profile, and one
-complete guided practice workflow. Stored scores remain unchanged.
+complete guided practice workflow.
 M2A adds immutable, versioned evidence readings for submitted check-ins while
 leaving every developmental profile value unchanged.
 M2B adds a private evidence ledger, deterministic minimized export, strict
 replay verification, and calibration fixtures around those same static events.
 M3A adds a versioned, direction-aware posterior projection on the profile as a
-clearly labeled unsaved preview. It does not activate score mutation or dynamic
-recommendations.
+clearly labeled unsaved preview. M3B activates that reviewed contract for the
+friendship protocol with separate current state, immutable transition
+snapshots, deterministic rebuild/reversal, and dynamic provisional
+recommendation ordering.
 
 ## Deployment essentials
 
@@ -31,7 +33,7 @@ recommendations.
 - The SQLite database is `/data/grounded_growth.sqlite3` inside the container.
 - Startup applies migrations, creates the bootstrap user only when no user
   exists, idempotently seeds canonical data, and backfills missing evidence
-  events.
+  events, then deterministically reconciles current score state.
 - Health is available without authentication at `/health/`.
 - Every other application page requires login; static assets are bundled
   locally.
@@ -121,6 +123,23 @@ local-network access, shutdown behavior, and the future HTTPS boundary.
 - No current-score model, score snapshot, need/rank write, or dynamic
   recommendation.
 
+## What M3B adds
+
+- A separate 37-lever current state for every immutable assessment baseline.
+- Atomic check-in, evidence-event, score-state, and snapshot persistence.
+- Full hashed before/after snapshots for initialization, processed evidence,
+  reversal, and actual state repair.
+- Idempotent event processing, strict replay verification, startup rebuild,
+  and audited permanent reversal without deleting the evidence ledger.
+- Current estimate and confidence using the exact accepted
+  `GG-SCORING-SHADOW-1.0` mathematics.
+- `GG-NEED-RANKING-1.0`, which reproduces assessment v1.1's provisional need
+  function and orders active protocols from canonical competency weights.
+- A baseline-only state and reassessment path when exact/identifiable
+  alpha/beta mass is unavailable.
+- No assessment-baseline, raw self-report, orientation, archetype, completion,
+  dignity, or human-worth mutation.
+
 ## Product flow
 
 1. Sign in with the bootstrap account.
@@ -131,13 +150,15 @@ local-network access, shutdown behavior, and the future HTTPS boundary.
 5. Save check-ins as drafts or submit them with a versioned evidence reading.
 6. Review submitted observations in the evidence ledger or download the
    minimized calibration export.
-7. Review the unsaved M3A projection on the developmental profile.
+7. Review the versioned evidence-updated working state on the developmental
+   profile.
 8. Pause/resume when needed, or stop the practice.
 9. Submit a final review after the bounded completion criteria are met.
 
-Draft check-ins never appear as submitted evidence. Completing a practice does
-not establish mastery. M3A calculates a preview in memory but does not change
-any stored profile score.
+Draft check-ins never appear as submitted evidence. Eligible directional
+observations can adjust a provisional current estimate; inconclusive evidence
+is withheld. Completing a practice and submitting its final review create no
+additional score evidence and do not establish mastery.
 
 ## Common commands
 
@@ -159,6 +180,8 @@ make migrate
 make seed
 make evidence-backfill
 make evidence-verify
+make score-rebuild
+make score-verify
 make run
 make compose-up
 make compose-down
@@ -212,14 +235,17 @@ Migrations and canonical seeding run safely on startup.
 
 - Pilot 002 source files publish only the top three archetypes and do not
   include original answers or a share code; the seed does not invent them.
-- Stored profile scores remain deliberately static in M3A. A submitted
-  check-in creates base event evidence mass and may appear in an unsaved
-  projection, but no practice action, check-in, completion, review, or preview
-  changes lever mastery, lever confidence, need, task priority, archetype,
-  orientation, or recommendation values.
-- Pilot 002 does not publish original alpha/beta mass. M3A reconstructs it only
-  where rounded raw/calibrated values identify one result; ambiguous neutral
-  baselines remain unavailable for scoring.
+- Dynamic scoring is activated only for **Deepen One Existing Friendship**.
+  Other protocols require a reviewed parent mapping and activation decision.
+- Pilot 002 does not publish original alpha/beta mass. Canonical seeding
+  reconstructs 33 identifiable rows; L06, L15, L32, and L37 remain
+  baseline-only. All four friendship-mapped rows are active.
+- Dynamic need remains provisional. M3B updates assessment v1.1's
+  gap-and-confidence need function but does not invent the uncollected
+  applicability, importance, readiness, urgency, or opportunity inputs from
+  the fuller context model.
+- Event reversal is an instance-owner operation and is intentionally
+  permanent in M3B. Restore a verified backup if the wrong event is reversed.
 - The minimized JSON export omits direct identity and free text, but its
   structured behavioral values can still be sensitive and should be reviewed
   before sharing.
@@ -242,6 +268,7 @@ Migrations and canonical seeding run safely on startup.
 - [M2 evidence contract](docs/evidence-contract.md)
 - [M2B evidence audit and calibration](docs/evidence-audit.md)
 - [M3A shadow scoring contract](docs/scoring-shadow.md)
+- [M3B score-state activation contract](docs/scoring-state.md)
 - [Backup and restore](docs/backup-and-restore.md)
 - [Testing](docs/testing.md)
 - [Project handoff](docs/PROJECT_HANDOFF.md)

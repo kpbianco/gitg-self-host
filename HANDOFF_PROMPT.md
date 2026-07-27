@@ -23,9 +23,10 @@ Then inspect the canonical data under:
 Treat `legacy/` as provenance only. Do not build implementation behavior from legacy notes when canonical files disagree.
 
 Work only on the milestone batch explicitly authorized by the repository
-owner. M1A, M1B, M2A, and M2B are merged. M3A is the bounded read-only shadow
-scoring batch in `docs/scoring-shadow.md` and remains a review gate. Do not
-begin M3B or enable dynamic mastery/confidence mutation.
+owner. M1A, M1B, M2A, M2B, and M3A are merged. M3B is the bounded
+score-state activation and dynamic provisional-ranking batch in
+`docs/scoring-state.md` and remains a review gate. Do not begin M4 protocol
+expansion.
 
 Use the binding stack in `AGENTS.md`: a Python/Django monolith with Django
 templates, local assets, SQLite, Gunicorn, pytest, Ruff, Playwright, Dockerfile,
@@ -58,6 +59,14 @@ direction-aware posterior projection, golden fixtures, and an unsaved profile
 preview. It creates no current score, score snapshot, need/rank update, or
 dynamic recommendation.
 
+The M3B boundary activates that exact accepted math only for the friendship
+protocol. It adds separate 37-lever current state, immutable hashed transition
+snapshots, atomic/idempotent event processing, deterministic rebuild and
+audited reversal, assessment v1.1 provisional-need recalculation, and active
+protocol ordering from canonical weights. Assessment baselines, raw
+self-report, orientations, archetypes, completion, and human worth remain
+unchanged.
+
 Acceptance criteria are in `docs/PROJECT_HANDOFF.md`. Add automated tests for every testable criterion. The app must run through Docker Compose.
 
 Before changing code:
@@ -72,7 +81,7 @@ Then implement in reviewable batches. For each batch:
 - report exact passes/failures;
 - open a PR and ask me to approve it.
 
-Do not implement M3B state activation or dynamic recommendations unless I
-explicitly authorize the next batch after reviewing M3A.
+Do not implement M4 protocol expansion unless I explicitly authorize the next
+batch after reviewing M3B.
 
 ---

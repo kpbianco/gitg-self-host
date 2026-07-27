@@ -1,11 +1,16 @@
-# Scoring Design — M3A shadow projection
+# Scoring Design — M3 evidence and current state
 
 M2A implements only the event-level contract in `docs/evidence-contract.md`.
 M2B adds ledger, export, replay-verification, and calibration surfaces around
 those immutable events without changing their mathematics. M3A implements the
 task-to-lever and posterior sections as `GG-SCORING-SHADOW-1.0`, a pure
-read-only projection documented in `docs/scoring-shadow.md`. It is not
-authorization to enable profile mutation.
+read-only projection documented in `docs/scoring-shadow.md`. M3A itself did
+not authorize profile mutation.
+
+M3A was reviewed and accepted. M3B activates that exact mathematics for the
+friendship protocol with separate current state and immutable transitions
+under `docs/scoring-state.md`. It does not rewrite the browser assessment
+scorer or the M2 event contract.
 
 ## Assessment response transform
 For a 1–5 answer:
@@ -89,15 +94,25 @@ Confidence remains bounded, cannot decrease when evidence is added, and is
 separately displayed. Withheld evidence adds no confidence.
 
 ## Need and recommendation
-A provisional need form remains deferred to M3B:
+The complete context-aware need design remains:
 
 `N_l = applicability * importance * readiness * urgency * confidence_factor * (1 - M_l)^1.5`
 
-Dynamic task priority also remains deferred to M3B:
+Complete task priority remains:
 
 `P_t = sum_l(w_tl * N_l)`
 
 Personality/orientation style fit may only apply a narrow presentation/tie-breaking modifier, historically ±5%.
+
+M3B does not yet collect applicability, importance, readiness, urgency, and
+opportunity as separate per-user inputs. It therefore activates the existing
+assessment v1.1 provisional need function rather than inventing them:
+
+`N_l = (1 - M_l)^1.5 * (0.60 + 0.40 * C_l)`
+
+`GG-NEED-RANKING-1.0` reproduces every assessment baseline need/rank and then
+recalculates it from current estimate and confidence. Active protocol priority
+uses `P_t = sum_l(w_tl * N_l)`. M3B applies no personality modifier.
 
 ## Required implementation properties
 - pure function;
@@ -119,6 +134,8 @@ pure Decimal posterior, synthetic golden fixtures, and an authenticated
 unsaved preview.
 
 M3A deliberately has no score snapshot because it makes no score-state
-transition. M3B must add immutable before/after snapshots, atomic idempotent
-application, rebuild/reversal, and dynamic recommendation tests before any
-projection can become stored current state.
+transition. M3B adds a separate 37-row `LeverState`, full hashed immutable
+snapshots, atomic idempotent application, deterministic replay and repair,
+audited reversal, and dynamic recommendation tests. `LeverBaseline`,
+orientation, and archetype values remain unchanged. Only the reviewed
+friendship protocol is score-active.

@@ -110,17 +110,20 @@ The canonical scorer can return null raw/calibrated/need values when every
 relevant response is genuinely N/A. M1 therefore permits null in those
 baseline fields instead of coercing an unsupported score.
 
-## Static-score boundary
+## Assessment-baseline boundary
 
 The canonical scorer also contains future evidence-update helper functions.
-M1 and M2 do not call or persist their task-update output. M3A implements the
+M1 and M2 do not call or persist their task-update output. M3A implemented the
 posterior reference and a versioned, assessment-anchored confidence correction
-in a pure Python Decimal package only as an unsaved preview. Assessment
-baselines, need, orientations, archetypes, and recommendations remain unchanged
-after practices, reviews, and preview rendering.
+in a pure Python Decimal package. M3B activates that accepted server-side
+contract in separate `LeverState` rows. It never rewrites assessment
+baselines, raw self-report, orientations, or archetypes. Completion and final
+review create no score event.
 
 Browser scoring is a stated M1 trust boundary. Django verifies shape, IDs,
 ranges, version, share-code/answer agreement, and internal consistency of
 alpha/beta/evidence mass. It does not maintain a second initial-assessment
 scorer. The M3A server-side code starts from the browser scorer's persisted
-mass and has a separate version, contract, and golden suite.
+mass and has a separate version, contract, and golden suite. M3B creates 37
+current states and an initialization snapshot when a new assessment is saved;
+an idempotent repeat submission creates neither a new run nor a new snapshot.

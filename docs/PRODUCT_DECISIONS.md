@@ -130,7 +130,7 @@ still treated as sensitive behavioral data rather than advertised as
 anonymous public data.
 
 ## Decision 019 — Explicit practice-to-competency scoring links
-**Status:** Proposed in M3A for review
+**Status:** Accepted after M3A review
 
 A scoreable practice must reference a stable canonical parent competency.
 Task-to-lever allocation comes from that competency's structured
@@ -142,7 +142,7 @@ targets remain a separate product-selection concept and are not broadened by
 M3A.
 
 ## Decision 020 — Direction-aware shadow policy
-**Status:** Proposed in M3A for review
+**Status:** Accepted after M3A review
 
 `GG-SCORING-SHADOW-1.0` multiplies protocol performance by `1.0` for
 supportive, `0.5` for mixed, and `0.0` for contradictory evidence before
@@ -152,7 +152,7 @@ than silently becoming supportive. The policy is visible, versioned, and
 golden-tested before activation.
 
 ## Decision 021 — Exact baseline mass and read-only M3A
-**Status:** Proposed in M3A for review
+**Status:** Accepted after M3A review
 
 New assessment runs retain the canonical scorer's exact alpha and beta mass.
 Pilot 002 mass is reconstructed from rounded published raw/calibrated values
@@ -162,7 +162,7 @@ score snapshot, need, priority, or recommendation. M3B activation requires a
 separate review.
 
 ## Decision 022 — Confidence is anchored and monotonic
-**Status:** Proposed in M3A for review
+**Status:** Accepted after M3A review
 
 Assessment confidence already incorporates coverage, response quality, and
 consistency. The dormant task helper's mass-only confidence recalculation can
@@ -170,3 +170,40 @@ make confidence fall after adding evidence, so M3A does not use it. The shadow
 contract starts at stored assessment confidence and adds a bounded gain
 `(1 - C0) × E / (E + 1.5)`. Included evidence cannot lower confidence;
 withheld evidence leaves it unchanged.
+
+## Decision 023 — Baseline and current state remain separate
+**Status:** Proposed in M3B for review
+
+`LeverBaseline` remains the immutable assessment record. M3B stores current
+alpha/beta mass, provisional estimate, confidence, evidence mass, and need
+rank in a separate per-assessment `LeverState`. A newer assessment starts a new
+state; evidence tied to an older sprint is never transferred silently.
+
+## Decision 024 — Append-only transitions around atomic score application
+**Status:** Proposed in M3B for review
+
+Check-in submission, evidence creation, score replay, current-state update, and
+the process snapshot commit in one transaction. Every initialization,
+processed event, reversal, and actual repair records a full hashed 37-lever
+before/after snapshot. An event is processed and reversed at most once.
+Reversal retains the evidence event and requires an audit reason. Startup
+rebuild is deterministic and idempotent.
+
+## Decision 025 — Dynamic ranking uses the existing provisional need
+**Status:** Proposed in M3B for review
+
+M3B recalculates assessment v1.1's existing provisional need
+`(1 - M)^1.5 × (0.60 + 0.40 × C)` from current estimate and confidence, then
+ranks active practices by canonical parent-competency weights. The fuller
+context model remains deferred because applicability, importance, readiness,
+urgency, and opportunity are not collected as separate per-user inputs.
+M3B does not invent hidden defaults or apply an orientation modifier.
+
+## Decision 026 — Unavailable evidence mass fails closed
+**Status:** Proposed in M3B for review
+
+A baseline without an assessed estimate or exact/identifiable alpha/beta mass
+is marked `baseline_only`. It remains visible and may retain its provisional
+need, but a practice cannot apply evidence to it. Reassessment is the supported
+upgrade path. Pilot 002's four ambiguous neutral levers remain baseline-only;
+the four levers used by the friendship practice are identifiable and active.

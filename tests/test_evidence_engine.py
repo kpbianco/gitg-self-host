@@ -407,8 +407,8 @@ def test_evidence_detail_is_authenticated_private_and_plain_language(client, use
     client.force_login(user)
     page = client.get(url)
     assert page.status_code == 200
-    assert "Your developmental profile is unchanged." in page.content.decode()
+    assert "This observation has a versioned score disposition." in page.content.decode()
     assert "does not establish mastery" in page.content.decode()
     assert "GG-EVIDENCE-1.0" in page.content.decode()
-    assert "does not allocate" in page.content.decode()
-    assert "this event to levers" in page.content.decode()
+    assert "reviewed" in page.content.decode()
+    assert "practice mapping" in page.content.decode()

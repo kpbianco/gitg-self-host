@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed in M3A for review.
+Accepted after M3A review.
 
 ## Context
 
@@ -42,5 +42,5 @@ rebuild/reversal, and dynamic ranking.
 Reviewers can inspect real projections and golden fixtures before accepting
 state-changing behavior. Existing profile values remain stable. Some legacy or
 neutral published baselines cannot be projected and fail closed. The M3A
-preview is intentionally not a promise that the proposed algorithm is
+preview is intentionally not a promise that the reviewed algorithm is
 psychometrically validated.

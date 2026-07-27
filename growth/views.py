@@ -6,7 +6,6 @@ from django.views.decorators.cache import never_cache
 from growth.models import PracticeCheckIn
 from growth.services.practice import completion_evidence, current_sprint_for
 from growth.services.profile import build_profile_summary
-from growth.services.scoring import build_user_shadow_projection
 
 
 @never_cache
@@ -63,6 +62,5 @@ def profile(request):
         "growth/profile.html",
         {
             "summary": build_profile_summary(request.user),
-            "shadow": build_user_shadow_projection(request.user),
         },
     )

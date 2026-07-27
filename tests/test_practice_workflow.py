@@ -7,9 +7,11 @@ from django.urls import reverse
 
 from growth.models import (
     LeverBaseline,
+    LeverState,
     PracticeCheckIn,
     PracticeProtocol,
     PracticeSprint,
+    ScoreSnapshot,
 )
 from growth.services.practice import (
     PracticeWorkflowError,
@@ -84,7 +86,7 @@ def test_seven_step_setup_starts_practice_without_inventing_intervention(client,
     first = client.get(setup_url(1))
     assert first.status_code == 200
     assert b"Why this practice" in first.content
-    assert b"Static-score boundary" in first.content
+    assert b"Evidence, not completion" in first.content
     assert client.post(setup_url(1)).status_code == 302
 
     applicable = client.get(setup_url(2))
@@ -243,6 +245,20 @@ def test_completion_and_review_do_not_mutate_static_scores(client, user, seeded)
     assert evidence.ready_for_review is True
     projection_before_review = build_user_shadow_projection(user).projection
     assert projection_before_review.event_count == 3
+    state_before_review = list(
+        LeverState.objects.filter(user=user)
+        .order_by("lever_id")
+        .values_list(
+            "lever_id",
+            "current_estimate",
+            "current_confidence",
+            "current_need_score",
+            "current_need_rank",
+        )
+    )
+    snapshot_count_before_review = ScoreSnapshot.objects.filter(
+        assessment_run=sprint.assessment_run
+    ).count()
     review_url = reverse("growth:practice-review", kwargs={"sprint_id": sprint.pk})
     review_page = client.get(review_url)
     assert review_page.status_code == 200
@@ -260,7 +276,7 @@ def test_completion_and_review_do_not_mutate_static_scores(client, user, seeded)
     assert completed.status_code == 200
     assert b"The experiment is closed" in completed.content
     assert b"Completing this practice does not establish mastery." in completed.content
-    assert b"Saved score impact" in completed.content
+    assert b"Review-only score impact" in completed.content
     assert b"None" in completed.content
 
     sprint.refresh_from_db()
@@ -284,6 +300,24 @@ def test_completion_and_review_do_not_mutate_static_scores(client, user, seeded)
     )
     assert after == before
     assert build_user_shadow_projection(user).projection == projection_before_review
+    assert (
+        list(
+            LeverState.objects.filter(user=user)
+            .order_by("lever_id")
+            .values_list(
+                "lever_id",
+                "current_estimate",
+                "current_confidence",
+                "current_need_score",
+                "current_need_rank",
+            )
+        )
+        == state_before_review
+    )
+    assert (
+        ScoreSnapshot.objects.filter(assessment_run=sprint.assessment_run).count()
+        == snapshot_count_before_review
+    )
 
 
 @pytest.mark.django_db

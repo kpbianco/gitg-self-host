@@ -62,8 +62,22 @@ make e2e
 - malformed task weights, duplicate events, and ambiguous baseline mass
   failing closed;
 - draft exclusion and unchanged stored profile state after shadow projection;
+- exact assessment v1.1 provisional-need reproduction across all 37 baseline
+  rows;
+- separate 37-row current-state initialization and four conservative Pilot
+  baseline-only rows;
+- atomic and idempotent submitted-event application with unchanged assessment
+  baselines;
+- withheld inconclusive state, immutable contribution snapshots, and
+  protected scored events;
+- full score-history hash/replay verification, audited event reversal, and
+  deterministic drift repair;
+- missing required baseline mass rolling back check-in, event, state, and
+  snapshot together;
+- dynamic active-protocol ordering from current need and canonical weights;
+- score-state management-command verify and repair behavior;
 - pause/resume/stop transitions and completion criteria;
-- static raw/calibrated/confidence/need values after final review;
+- unchanged assessment baselines and no review-only current-state transition;
 - SQLite foreign keys, busy timeout, and WAL;
 - consistent backup and SQLite integrity;
 - assessment v1.1 complete golden output, GGA11, and GGA1.
@@ -75,8 +89,8 @@ make e2e
 3. GGA11 import and supported GGA1 import;
 4. recommendation explanation, seven-step setup, start, pause/resume, draft,
    M2 evidence submission/detail, ledger, minimized JSON download, all three
-   actions, M3A unsaved profile preview, final review, completion, and mastery
-   disclaimer.
+   actions, M3B evidence-updated profile state, final review, completion, and
+   mastery disclaimer.
 
 The server-side golden test and browser flow complement each other: the first
 deep-compares every canonical output, while the second proves that the mounted
@@ -108,17 +122,20 @@ docker compose exec app python manage.py shell -c \
 
 Both checks must retain the user count and report 383 competencies. Also
 confirm assessment/practice rows survive when present. Run `seed_canonical`
-twice and confirm counts do not change. Inspect logs for migration, seed,
-permission, or shutdown errors.
+twice and confirm counts do not change. Run `make evidence-verify` and
+`make score-verify`. Inspect logs for migration, seed, score-state, permission,
+or shutdown errors.
 
 ## Current scoring boundary
 
-M1 proves guided UX and static persistence. M2A tests event-level evidence
-classification and base mass. M2B tests read-only audit, export, replay, and
-calibration behavior. M3A tests task-to-lever allocation and posterior
-projection in memory and through a clearly labeled profile preview.
+M1 proves guided UX and static assessment persistence. M2A tests event-level
+evidence classification and base mass. M2B tests read-only audit, export,
+replay, and calibration behavior. M3A tests task-to-lever allocation and the
+accepted posterior contract. M3B tests its bounded activation for the
+friendship protocol.
 
-There is still no current-score model, score snapshot, mutation, need/rank
-recalculation, or dynamic recommendation path. Tests snapshot stored baselines
-before and after projection so read-only behavior is enforced rather than
-assumed.
+Current state, need rank, and active-practice order may now change after
+eligible submitted evidence. Tests prove that assessment baselines, raw
+self-report, orientations, archetypes, completion, and final review remain
+separate. Dynamic context priority and additional score-activated protocols
+remain outside M3B.
