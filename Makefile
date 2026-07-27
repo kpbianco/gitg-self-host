@@ -1,7 +1,7 @@
 PYTHON ?= .venv/bin/python
 APP_DATA_DIR ?= $(CURDIR)/var
 
-.PHONY: format lint test e2e migrate seed evidence-backfill run compose-up compose-down backup
+.PHONY: format lint test e2e migrate seed evidence-backfill evidence-verify run compose-up compose-down backup
 
 format:
 	$(PYTHON) -m ruff format .
@@ -31,6 +31,10 @@ seed:
 evidence-backfill:
 	APP_DATA_DIR="$(APP_DATA_DIR)" DJANGO_SECRET_KEY=local-development-secret APP_DEBUG=true \
 		$(PYTHON) manage.py backfill_evidence_events
+
+evidence-verify:
+	APP_DATA_DIR="$(APP_DATA_DIR)" DJANGO_SECRET_KEY=local-development-secret APP_DEBUG=true \
+		$(PYTHON) manage.py verify_evidence_events
 
 run:
 	APP_DATA_DIR="$(APP_DATA_DIR)" DJANGO_SECRET_KEY=local-development-secret APP_DEBUG=true \

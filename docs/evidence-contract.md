@@ -1,4 +1,4 @@
-# M2A evidence contract
+# M2 evidence contract
 
 ## Purpose
 
@@ -6,9 +6,11 @@ M2A turns each submitted practice check-in into one immutable, versioned
 `EvidenceEvent`. The event explains the observation's structured detail,
 independence, context breadth, repetition, and contradictory direction.
 
-This is an event-classification layer, not dynamic developmental scoring. M2A
-does not allocate evidence to levers, calculate task-to-lever coefficients,
-split success/failure mass, update a posterior, change confidence, or rerank a
+M2B adds read-only ledger, privacy-minimized export, replay verification, and
+calibration surfaces around those exact events. This is an event-classification
+and audit layer, not dynamic developmental scoring. M2 does not allocate
+evidence to levers, calculate task-to-lever coefficients, split
+success/failure mass, update a posterior, change confidence, or rerank a
 practice.
 
 Algorithm version: `GG-EVIDENCE-1.0`.
@@ -145,7 +147,7 @@ The event-level mass is:
 
 It is stored for audit and later algorithm design. It is not distributed
 through competency-to-lever weights, and it never writes an assessment
-baseline or current score in M2A.
+baseline or current score in M2.
 
 ## Existing M1 data
 
@@ -166,14 +168,32 @@ Use `--dry-run` to inspect the number of missing events.
 ## User presentation
 
 Submitted history shows a plain-language event reading. The detail page
-explains direction, structured detail, support, context, and repetition.
+explains direction, structured detail, support, context, and repetition. M2B
+adds one authenticated, paginated ledger across the user's practices, with
+plain-language direction filtering and no private context or note text.
 Numeric internals and the algorithm version are available only in a collapsed
 technical audit section.
 
 Every evidence page states that the developmental profile is unchanged and
 that one observation does not establish mastery.
 
-## Explicit M2A exclusions
+## M2B audit boundary
+
+The `grounded-growth-evidence-export-v1` JSON export is deterministic and built
+by allowlist. It preserves stable protocol/action IDs, event order, structured
+inputs, snapshotted rules, and stored outputs while excluding user and record
+IDs, exact timestamps, private context labels, all free text, assessment
+answers, and share codes.
+
+`verify_evidence_events` is read-only and fails on a missing event, an extra
+event, incorrect repetition order, stable-ID mismatch, malformed snapshot, or
+any replay drift. Direction-complete synthetic fixtures live under
+`tests/fixtures/evidence/`.
+
+The detailed privacy, operational, and calibration contract is in
+`docs/evidence-audit.md`.
+
+## Explicit M2 exclusions
 
 - no `k_tl` task-to-lever coefficient;
 - no lever evidence/success/failure contributions;

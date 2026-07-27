@@ -88,7 +88,8 @@ creates events only for submitted check-ins that do not already have one.
 
 Assessment runs and practice sprints retain their curriculum-version
 reference. M2A records `GG-EVIDENCE-1.0` separately on each immutable event.
-This does not authorize dynamic scoring.
+M2B verifies and exports those stored versions without altering canonical data
+or authorizing dynamic scoring.
 
 ## Pilot 002 boundary
 

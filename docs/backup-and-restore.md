@@ -37,6 +37,10 @@ practice state, drafts, submitted check-ins, evidence events, and reviews.
 Treat it as sensitive personal data and protect both the file and any off-host
 copies accordingly.
 
+The downloadable evidence JSON is not a database backup. It omits identity,
+record IDs, dates, free text, assessment state, and workflow state by design
+and cannot restore the application.
+
 ## Verify a backup
 
 ```bash

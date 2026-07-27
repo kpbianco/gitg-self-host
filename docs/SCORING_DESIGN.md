@@ -1,8 +1,10 @@
 # Scoring Design — M2 evidence / deferred M3 reference
 
 M2A implements only the event-level contract in `docs/evidence-contract.md`.
-The task-to-lever and posterior sections below remain design reference and are
-not authorization to enable profile mutation.
+M2B adds ledger, export, replay-verification, and calibration surfaces around
+those immutable events without changing their mathematics. The task-to-lever
+and posterior sections below remain design reference and are not authorization
+to enable profile mutation.
 
 ## Assessment response transform
 For a 1–5 answer:
@@ -85,5 +87,7 @@ Personality/orientation style fit may only apply a narrow presentation/tie-break
 - no update from completion alone.
 
 M2A satisfies purity, determinism, versioning, immutable input/output, replay,
-and draft exclusion at the event layer. It deliberately has no score snapshot
-because it makes no score-state transition.
+and draft exclusion at the event layer. M2B adds strict whole-database replay
+verification, direction-complete golden cases, and a deterministic
+privacy-minimized export. It deliberately has no score snapshot because it
+makes no score-state transition.

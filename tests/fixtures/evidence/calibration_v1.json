@@ -1,0 +1,217 @@
+{
+  "schema_version": "grounded-growth-evidence-calibration-v1",
+  "algorithm_version": "GG-EVIDENCE-1.0",
+  "cases": [
+    {
+      "case_id": "CAL-SUPPORTS-01",
+      "description": "Completed first listening action with all observable markers, independently.",
+      "input": {
+        "protocol_stable_id": "PRACTICE-FRIENDSHIP-01",
+        "action_stable_id": "PRACTICE-FRIENDSHIP-01-A1",
+        "action_attempted": true,
+        "action_completed": true,
+        "observations": {
+          "moved_beyond_transactional": true,
+          "meaningful_information_shared": true,
+          "follow_up_question_asked": true,
+          "user_initiated": true
+        },
+        "internal_resistance": 2,
+        "expected_reciprocity": 3,
+        "observed_reciprocity": 3,
+        "support_level": "independent",
+        "context_comparison": "first_record",
+        "evidence_direction": "supports",
+        "contradiction_text_present": false,
+        "repetition_index": 1
+      },
+      "evidence_rules": {
+        "schema_version": "practice-observation-v1",
+        "primary_markers": [
+          "moved_beyond_transactional",
+          "meaningful_information_shared"
+        ],
+        "supporting_markers": [
+          "follow_up_question_asked",
+          "user_initiated"
+        ]
+      },
+      "expected": {
+        "performance": "1.0000",
+        "quality": "0.8500",
+        "independence": "1.0000",
+        "context_breadth": "0.5500",
+        "repetition_multiplier": "1.0000",
+        "contradiction_level": "0.0000",
+        "base_evidence_mass": "0.4675",
+        "direction_label": "Supported the expected pattern",
+        "mass_label": "Moderate event evidence"
+      }
+    },
+    {
+      "case_id": "CAL-INCONCLUSIVE-01",
+      "description": "A second minimally observed attempt using a planning aid, with too little happening to tell.",
+      "input": {
+        "protocol_stable_id": "PRACTICE-FRIENDSHIP-01",
+        "action_stable_id": "PRACTICE-FRIENDSHIP-01-A1",
+        "action_attempted": true,
+        "action_completed": false,
+        "observations": {},
+        "internal_resistance": 3,
+        "expected_reciprocity": null,
+        "observed_reciprocity": null,
+        "support_level": "planning_aid",
+        "context_comparison": "same_context",
+        "evidence_direction": "inconclusive",
+        "contradiction_text_present": false,
+        "repetition_index": 2
+      },
+      "evidence_rules": {
+        "schema_version": "practice-observation-v1",
+        "primary_markers": [
+          "moved_beyond_transactional",
+          "meaningful_information_shared"
+        ],
+        "supporting_markers": [
+          "follow_up_question_asked",
+          "user_initiated"
+        ]
+      },
+      "expected": {
+        "performance": "0.3500",
+        "quality": "0.7500",
+        "independence": "0.8500",
+        "context_breadth": "0.5500",
+        "repetition_multiplier": "0.6500",
+        "contradiction_level": "0.0000",
+        "base_evidence_mass": "0.2279",
+        "direction_label": "Not enough happened to tell",
+        "mass_label": "Limited event evidence"
+      }
+    },
+    {
+      "case_id": "CAL-MIXED-01",
+      "description": "A third invitation attempt in a varied setting, with real-time guidance and mixed evidence.",
+      "input": {
+        "protocol_stable_id": "PRACTICE-FRIENDSHIP-01",
+        "action_stable_id": "PRACTICE-FRIENDSHIP-01-A2",
+        "action_attempted": true,
+        "action_completed": false,
+        "observations": {
+          "future_interaction_scheduled": false,
+          "user_initiated": true
+        },
+        "internal_resistance": 4,
+        "expected_reciprocity": null,
+        "observed_reciprocity": null,
+        "support_level": "guided",
+        "context_comparison": "varied_context",
+        "evidence_direction": "mixed",
+        "contradiction_text_present": true,
+        "repetition_index": 3
+      },
+      "evidence_rules": {
+        "schema_version": "practice-observation-v1",
+        "primary_markers": [
+          "future_interaction_scheduled"
+        ],
+        "supporting_markers": [
+          "user_initiated"
+        ]
+      },
+      "expected": {
+        "performance": "0.4500",
+        "quality": "0.8500",
+        "independence": "0.6000",
+        "context_breadth": "0.7500",
+        "repetition_multiplier": "0.4000",
+        "contradiction_level": "0.5000",
+        "base_evidence_mass": "0.1530",
+        "direction_label": "Mixed or unclear",
+        "mass_label": "Very limited event evidence"
+      }
+    },
+    {
+      "case_id": "CAL-CONTRADICTS-01",
+      "description": "A clear failed first follow-up attempt with structured contradictory evidence.",
+      "input": {
+        "protocol_stable_id": "PRACTICE-FRIENDSHIP-01",
+        "action_stable_id": "PRACTICE-FRIENDSHIP-01-A3",
+        "action_attempted": true,
+        "action_completed": false,
+        "observations": {},
+        "internal_resistance": 2,
+        "expected_reciprocity": 2,
+        "observed_reciprocity": 0,
+        "support_level": "independent",
+        "context_comparison": "first_record",
+        "evidence_direction": "contradicts",
+        "contradiction_text_present": true,
+        "repetition_index": 1
+      },
+      "evidence_rules": {
+        "schema_version": "practice-observation-v1",
+        "primary_markers": [
+          "follow_up_within_seven_days",
+          "follow_up_question_asked"
+        ],
+        "supporting_markers": [
+          "meaningful_information_shared",
+          "user_initiated"
+        ]
+      },
+      "expected": {
+        "performance": "0.3500",
+        "quality": "0.8500",
+        "independence": "1.0000",
+        "context_breadth": "0.5500",
+        "repetition_multiplier": "1.0000",
+        "contradiction_level": "1.0000",
+        "base_evidence_mass": "0.4675",
+        "direction_label": "Contradicted the expected pattern",
+        "mass_label": "Moderate event evidence"
+      }
+    },
+    {
+      "case_id": "CAL-LEGACY-UNKNOWN-01",
+      "description": "Conservative backfill shape for an attempted M1 action with no M2 metadata.",
+      "input": {
+        "protocol_stable_id": "PRACTICE-FRIENDSHIP-01",
+        "action_stable_id": "PRACTICE-FRIENDSHIP-01-A1",
+        "action_attempted": true,
+        "action_completed": false,
+        "observations": {},
+        "internal_resistance": null,
+        "expected_reciprocity": null,
+        "observed_reciprocity": null,
+        "support_level": "",
+        "context_comparison": "",
+        "evidence_direction": "",
+        "contradiction_text_present": false,
+        "repetition_index": 1
+      },
+      "evidence_rules": {
+        "schema_version": "practice-observation-v1",
+        "primary_markers": [
+          "moved_beyond_transactional",
+          "meaningful_information_shared"
+        ],
+        "supporting_markers": [
+          "follow_up_question_asked",
+          "user_initiated"
+        ]
+      },
+      "expected": {
+        "performance": "0.3500",
+        "quality": "0.5500",
+        "independence": "0.7000",
+        "context_breadth": "0.5500",
+        "repetition_multiplier": "1.0000",
+        "contradiction_level": null,
+        "base_evidence_mass": "0.2118",
+        "direction_label": "Direction not recorded in M1",
+        "mass_label": "Limited event evidence"
+      }
+    }
+  ]
+}

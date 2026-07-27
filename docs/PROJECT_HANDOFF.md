@@ -142,15 +142,21 @@ M1 is implemented as two reviewable batches:
   replayable `GG-EVIDENCE-1.0` event with protocol performance, structured
   quality, independence, bounded context breadth, action-specific repetition,
   contradiction, and base event mass.
+- **M2B evidence audit:** authenticated users can review all submitted events
+  in one paginated ledger, filter by evidence direction, and download a
+  deterministic privacy-minimized calibration export. A read-only management
+  command verifies complete event coverage, submission order, and exact replay
+  against direction-complete synthetic golden fixtures.
 
 Only submitted check-ins count toward completion. A database constraint limits
 each user to one active or paused practice. Services—not templates—own state
 transitions, evidence aggregation, and completion rules.
 
-The static-profile boundary is tested before and after practice completion and
-event creation. M2A stores event-level base evidence mass only. No workflow
-writes lever mastery, confidence, need/priority, archetype, orientation, or
-recommendation state.
+The static-profile boundary is tested before and after practice completion,
+event creation, ledger viewing, export, and replay verification. M2 stores
+event-level base evidence mass only. No workflow or audit surface writes lever
+mastery, confidence, need/priority, archetype, orientation, or recommendation
+state.
 
 ## Milestone sequence
 ### M1 — Guided UX, static scores
@@ -190,11 +196,27 @@ state already exists in M1.
 - plain-language evidence detail with collapsed technical audit values;
 - no lever allocation or profile mutation.
 
-Status: implemented; pending pull-request review.
+Status: implemented and merged.
 
 The binding semantics, migration strategy, and exclusions are in
 `docs/evidence-contract.md`. Do not begin M3 merely because base event mass is
 available.
+
+#### M2B — Evidence audit and calibration
+- authenticated per-user ledger of submitted evidence events;
+- plain-language direction filtering and event explanations;
+- deterministic `grounded-growth-evidence-export-v1` JSON export built by
+  allowlist, without identity, record IDs, timestamps, private labels, free
+  text, assessment answers, or share codes;
+- strict read-only whole-database replay verification;
+- versioned synthetic golden fixtures for supportive, inconclusive, mixed,
+  contradictory, and legacy-unknown events;
+- no algorithm change, lever allocation, or profile mutation.
+
+Status: implemented; pending pull-request review.
+
+The operational and privacy contract is in `docs/evidence-audit.md`. M2B is
+the review gate before any separately authorized M3 design or implementation.
 
 ### M3 — Dynamic scoring
 Implement versioned posterior updates and dynamic recommendation ranking in a pure domain package with exhaustive tests and immutable snapshots.
@@ -230,3 +252,7 @@ Create reusable protocol patterns and convert more of the 383 competencies into 
 - M2A preserves existing submitted check-ins byte-for-byte. Its startup
   backfill creates separate events with conservative unknowns and verifies
   existing events by replaying their input snapshots.
+- M2B adds no migration and changes no stored event. Its export is minimized
+  for calibration but remains sensitive behavioral data. Exact event and user
+  identifiers, dates, private context, notes, contradiction detail, assessment
+  answers, and share codes are deliberately absent.

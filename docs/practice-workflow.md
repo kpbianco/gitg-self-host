@@ -64,7 +64,8 @@ choices: support used, context comparison, and evidence direction.
 Submission and `GG-EVIDENCE-1.0` event creation occur in one transaction. The
 event is immutable and replayable from its structured snapshot. The submitted
 history links to a plain-language evidence reading; technical values remain in
-a collapsed audit section.
+a collapsed audit section. M2B adds a private cross-practice ledger and
+minimized calibration export without exposing draft or free-text content.
 
 ## Completion and review
 
@@ -85,13 +86,15 @@ impact preview, and the required disclaimer:
 No assessment or lever row is updated. Tests snapshot every raw, calibrated,
 confidence, need, and rank value before completion and compare it afterward.
 
-## M2A boundary
+## M2 boundary
 
 M1 records protocol participation, not validated behavior change. M2A adds
 versioned event-level quality, independence, bounded context breadth,
 action-specific repetition, contradiction, protocol performance, and base
 evidence mass.
 
-M2A still does not distribute evidence through competency-to-lever mappings,
-calculate success/failure contributions, mutate mastery/confidence/need, or
-change recommendations. See `docs/evidence-contract.md`.
+M2B adds ledger, export, replay-verification, and synthetic calibration
+surfaces around those immutable events. M2 still does not distribute evidence
+through competency-to-lever mappings, calculate success/failure contributions,
+mutate mastery/confidence/need, or change recommendations. See
+`docs/evidence-contract.md` and `docs/evidence-audit.md`.

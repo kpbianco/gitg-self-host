@@ -9,6 +9,8 @@ def test_login_is_required_for_user_facing_pages(client):
         reverse("growth:profile"),
         reverse("growth:assessment"),
         reverse("growth:practice-list"),
+        reverse("growth:evidence-ledger"),
+        reverse("growth:evidence-export"),
         reverse("password_change"),
     ):
         response = client.get(url)

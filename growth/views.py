@@ -27,7 +27,7 @@ def home(request):
             sprint__user=request.user,
             status=PracticeCheckIn.Status.SUBMITTED,
         )
-        .select_related("action", "sprint__protocol")
+        .select_related("action", "sprint__protocol", "evidence_event")
         .order_by("-submitted_at")[:5]
     )
     next_action = None

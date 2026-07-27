@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block title %}Evidence ledger · Grounded Growth{% endblock %}
+
+{% block content %}
+  <section class="page-heading">
+    <div>
+      <p class="eyebrow">Evidence ledger</p>
+      <h1>What your check-ins recorded.</h1>
+      <p class="lede">
+        A chronological reading of submitted observations. Direction, support,
+        context, and repetition remain visible without turning one check-in
+        into a judgment about you.
+      </p>
+    </div>
+    <a class="button button-secondary" href="{% url 'growth:evidence-export' %}">
+      Download privacy-safe JSON
+    </a>
+  </section>
+
+  <div class="mastery-notice" role="note">
+    <strong>Your developmental profile is unchanged.</strong>
+    <p>
+      This ledger does not update mastery, confidence, need, orientations,
+      archetypes, or recommendations. Completing a practice does not establish mastery.
+    </p>
+  </div>
+
+  <section class="ledger-summary" aria-label="Evidence direction summary">
+    <article>
+      <span>Submitted events</span>
+      <strong>{{ ledger.summary.total }}</strong>
+    </article>
+    <article>
+      <span>Supported pattern</span>
+      <strong>{{ ledger.summary.supports }}</strong>
+    </article>
+    <article>
+      <span>Mixed or unclear</span>
+      <strong>{{ ledger.summary.mixed }}</strong>
+    </article>
+    <article>
+      <span>Contradicted pattern</span>
+      <strong>{{ ledger.summary.contradicts }}</strong>
+    </article>
+    <article>
+      <span>Inconclusive</span>
+      <strong>{{ ledger.summary.inconclusive }}</strong>
+    </article>
+    <article>
+      <span>Not recorded</span>
+      <strong>{{ ledger.summary.not_recorded }}</strong>
+    </article>
+  </section>
+
+  <section class="panel privacy-panel">
+    <div>
+      <p class="eyebrow">Calibration export</p>
+      <h2>Structured observations, with private context removed</h2>
+      <p>
+        The JSON download excludes your identity, record IDs, exact dates,
+        person or context labels, notes, contradiction detail, assessment
+        answers, and share codes. It contains stable protocol/action IDs and
+        replayable structured values only.
+      </p>
+    </div>
+    <p class="fine-print">The same unchanged records produce the same export bytes.</p>
+  </section>
+
+  <section class="section-block" aria-labelledby="ledger-events-heading">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Submitted observations</p>
+        <h2 id="ledger-events-heading">Evidence readings</h2>
+      </div>
+      <form class="ledger-filter" method="get">
+        <label for="direction">Show direction</label>
+        <select id="direction" name="direction">
+          {% for value, label in direction_options %}
+            <option value="{{ value }}"{% if ledger.active_direction == value %} selected{% endif %}>
+              {{ label }}
+            </option>
+          {% endfor %}
+        </select>
+        <button class="button button-quiet" type="submit">Apply</button>
+      </form>
+    </div>
+
+    {% if page.object_list %}
+      <ol class="ledger-list">
+        {% for row in page.object_list %}
+          <li class="ledger-card">
+            <div class="ledger-card-heading">
+              <div>
+                <p class="eyebrow">{{ row.event.check_in.sprint.protocol.name }}</p>
+                <h3>{{ row.event.check_in.action.title }}</h3>
+              </div>
+              <span class="direction-pill direction-{{ row.direction_key }}">
+                {{ row.direction_label }}
+              </span>
+            </div>
+            <p>
+              {{ row.event.explanation.base_evidence.label }} ·
+              {{ row.event.explanation.independence.label }} ·
+              {{ row.event.explanation.repetition.label }}
+            </p>
+            <div class="ledger-card-footer">
+              <time datetime="{{ row.event.check_in.submitted_at|date:'c' }}">
+                {{ row.event.check_in.submitted_at|date:"M j, Y, g:i a" }}
+              </time>
+              <a class="text-link" href="{% url 'growth:practice-check-in-detail' row.event.check_in.sprint_id row.event.check_in_id %}">
+                Read evidence explanation <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </li>
+        {% endfor %}
+      </ol>
+
+      {% if page.paginator.num_pages > 1 %}
+        <nav class="pagination" aria-label="Evidence ledger pages">
+          {% if page.has_previous %}
+            <a href="?direction={{ ledger.active_direction }}&amp;page={{ page.previous_page_number }}">← Newer</a>
+          {% endif %}
+          <span>Page {{ page.number }} of {{ page.paginator.num_pages }}</span>
+          {% if page.has_next %}
+            <a href="?direction={{ ledger.active_direction }}&amp;page={{ page.next_page_number }}">Older →</a>
+          {% endif %}
+        </nav>
+      {% endif %}
+    {% else %}
+      <div class="empty-state compact">
+        {% if ledger.summary.total %}
+          <p>No submitted evidence matches this direction.</p>
+        {% else %}
+          <p>
+            No submitted evidence yet. Draft check-ins remain private working
+            state and never appear in this ledger.
+          </p>
+        {% endif %}
+      </div>
+    {% endif %}
+  </section>
+{% endblock %}

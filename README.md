@@ -18,6 +18,8 @@ assessment, an immediately usable Pilot 002 demonstration profile, and one
 complete guided practice workflow. Scores remain static.
 M2A adds immutable, versioned evidence readings for submitted check-ins while
 leaving every developmental profile value unchanged.
+M2B adds a private evidence ledger, deterministic minimized export, strict
+replay verification, and calibration fixtures around those same static events.
 
 ## Deployment essentials
 
@@ -85,6 +87,20 @@ local-network access, shutdown behavior, and the future HTTPS boundary.
   values.
 - No lever allocation, baseline mutation, or dynamic recommendation.
 
+## What M2B adds
+
+- One authenticated evidence ledger across practices, newest first and
+  filterable by evidence direction.
+- A deterministic `grounded-growth-evidence-export-v1` download that excludes
+  identity, database IDs, timestamps, private labels, free text, assessment
+  answers, and share codes.
+- A strict read-only verifier for event coverage, order, stable IDs, and exact
+  replay.
+- Synthetic golden cases for supportive, inconclusive, mixed,
+  contradictory, and legacy-unknown evidence.
+- No new evidence algorithm, lever allocation, baseline mutation, or dynamic
+  recommendation.
+
 ## Product flow
 
 1. Sign in with the bootstrap account.
@@ -93,8 +109,10 @@ local-network access, shutdown behavior, and the future HTTPS boundary.
 3. Review the provisional profile and why a practice was selected.
 4. Complete the seven-step guided setup; the three actions are already defined.
 5. Save check-ins as drafts or submit them with a versioned evidence reading.
-6. Pause/resume when needed, or stop the practice.
-7. Submit a final review after the bounded completion criteria are met.
+6. Review submitted observations in the evidence ledger or download the
+   minimized calibration export.
+7. Pause/resume when needed, or stop the practice.
+8. Submit a final review after the bounded completion criteria are met.
 
 Draft check-ins never appear as submitted evidence. Completing a practice does
 not establish mastery. Event-level evidence mass does not change any profile
@@ -119,6 +137,7 @@ make e2e
 make migrate
 make seed
 make evidence-backfill
+make evidence-verify
 make run
 make compose-up
 make compose-down
@@ -175,6 +194,9 @@ Migrations and canonical seeding run safely on startup.
   event evidence mass, but no practice action, check-in, completion, or review
   changes lever mastery, lever confidence, need, task priority, archetype,
   orientation, or recommendation values.
+- The minimized JSON export omits direct identity and free text, but its
+  structured behavioral values can still be sensitive and should be reviewed
+  before sharing.
 - Only **Deepen One Existing Friendship** is active. Four additional protocols
   are structured inactive placeholders, not generic generated exercises.
 - The canonical JavaScript scorer remains the browser reference. Node.js is
@@ -191,7 +213,8 @@ Migrations and canonical seeding run safely on startup.
 - [Canonical data import](docs/data-import.md)
 - [Assessment integration](docs/assessment-integration.md)
 - [Practice workflow](docs/practice-workflow.md)
-- [M2A evidence contract](docs/evidence-contract.md)
+- [M2 evidence contract](docs/evidence-contract.md)
+- [M2B evidence audit and calibration](docs/evidence-audit.md)
 - [Backup and restore](docs/backup-and-restore.md)
 - [Testing](docs/testing.md)
 - [Project handoff](docs/PROJECT_HANDOFF.md)
