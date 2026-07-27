@@ -38,6 +38,11 @@ state, immutable score snapshots, reversals, reviews, and optional local pilot
 feedback including its free text. Treat it as sensitive personal data and
 protect both the file and any off-host copies accordingly.
 
+If optional pilot feedback is deleted under a participant retention or
+withdrawal agreement, existing backup files may still contain those rows.
+Rotate or delete affected backups deliberately; `purge_pilot_feedback` changes
+only the live database and never edits backup files.
+
 The downloadable evidence JSON is not a database backup. It omits identity,
 record IDs, dates, free text, assessment state, and workflow state by design
 and cannot restore the application.

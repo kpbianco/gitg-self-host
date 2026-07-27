@@ -18,12 +18,16 @@ from growth.services.pilot_feedback import (
 def pilot_feedback(request):
     form = PilotFeedbackForm(request.POST or None)
     if request.method == "POST" and form.is_valid():
-        submit_pilot_feedback(user=request.user, cleaned_data=form.cleaned_data)
-        messages.success(
-            request,
-            "Optional product feedback submitted. It did not change your profile or practice.",
-        )
-        return redirect("growth:pilot-feedback")
+        try:
+            submit_pilot_feedback(user=request.user, cleaned_data=form.cleaned_data)
+        except PilotFeedbackError as exc:
+            form.add_error(None, str(exc))
+        else:
+            messages.success(
+                request,
+                "Optional product feedback submitted. It did not change your profile or practice.",
+            )
+            return redirect("growth:pilot-feedback")
 
     return render(
         request,

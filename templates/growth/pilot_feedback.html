@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Optional pilot feedback · Grounded Growth{% endblock %}
 
@@ -92,4 +93,5 @@
       </p>
     </aside>
   </div>
+  <script src="{% static 'growth/contextual_forms.js' %}"></script>
 {% endblock %}

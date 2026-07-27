@@ -285,12 +285,18 @@ def practice_check_in(request, sprint_id, check_in_id=None):
             sprint=sprint,
             status=PracticeCheckIn.Status.DRAFT,
         )
+    initial = None
+    if check_in is None and request.method == "GET":
+        requested_action = request.GET.get("action")
+        if requested_action and sprint.protocol.actions.filter(pk=requested_action).exists():
+            initial = {"action": requested_action}
     submit = request.method == "POST" and request.POST.get("intent") == "submit"
     form = PracticeCheckInForm(
         request.POST or None,
         instance=check_in,
         sprint=sprint,
         require_evidence_metadata=submit,
+        initial=initial,
     )
     if request.method == "POST" and form.is_valid():
         try:

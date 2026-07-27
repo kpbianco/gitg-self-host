@@ -63,9 +63,14 @@ report it.
 5. **Compact check-in — target under 2 minutes**
    - Use a real check-in only after an actual action. For an interface-only
      session, inspect the blank form without submitting fabricated evidence.
+   - Confirm the page shows only prompts relevant to the selected action.
+   - Before an action occurs, save a draft; the application must refuse a
+     submitted evidence record without an attempt.
    - Confirm draft and submitted evidence are understood as different states.
 6. **Optional product feedback — about 3 minutes**
    - Open **Account → Open feedback form**.
+   - Choose one journey stage per record and confirm irrelevant practice or
+     timing questions are not shown.
    - The participant may answer any useful categories and omit the rest.
    - Do not ask the participant to include names, health details, relationship
      details, or other sensitive free text.
@@ -115,6 +120,9 @@ barrier.
 - [ ] Store the export as sensitive private-pilot data with limited access.
 - [ ] Record product defects as repository issues without copying private
       participant content.
+- [ ] Apply the agreed retention period. If feedback must be removed, preview
+      `purge_pilot_feedback --username <username>` before using `--confirm`,
+      and handle any backups under the same agreement.
 - [ ] Run `docker compose exec app python manage.py
       verify_pilot_readiness`.
 - [ ] Back up after the session if the instance state must be retained.

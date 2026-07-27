@@ -50,6 +50,9 @@ and never touches `./var`, `.env`, or the deployed volume.
 - the seven-step practice setup and not-applicable exit;
 - one-current-practice and per-user authorization boundaries;
 - draft/submitted check-in separation and submitted immutability;
+- prospective evidence submission requiring an actual attempted action;
+- action-specific observation prompts and rejection of markers belonging to
+  another action;
 - required M2 evidence metadata on submission;
 - deterministic `GG-EVIDENCE-1.0` output and exact replay;
 - action-specific repetition and bounded context semantics;
@@ -102,6 +105,8 @@ and never touches `./var`, `.env`, or the deployed volume.
 - consistent backup and SQLite integrity;
 - assessment v1.1 complete golden output, GGA11, and GGA1;
 - authenticated optional pilot-feedback submission and per-user isolation;
+- journey-stage-specific feedback questions with matching no-JavaScript
+  server enforcement;
 - append-only `GG-PILOT-FEEDBACK-1.0` persistence and fail-closed export
   validation;
 - deterministic `grounded-growth-private-pilot-export-v1` output with
@@ -110,25 +115,27 @@ and never touches `./var`, `.env`, or the deployed volume.
 - unchanged assessment, evidence, lever state, snapshots, sprint, check-in,
   review, orientation, archetype, recommendation priorities, and
   recommendation order after feedback submission and export.
+- preview-first, exact-user pilot-feedback deletion with other users and all
+  developmental state unchanged.
 
 `make e2e` uses Playwright Chromium for ten browser journeys:
 
 1. login, Pilot 002 home, and developmental profile;
 2. mobile keyboard content access, five-protocol setup coverage, no horizontal
    overflow, score-boundary copy, and desktop/mobile walkthrough screenshots;
-3. non-instrumental-play setup and protocol-specific compact check-in;
-4. emotional-cue setup, anti-mind-reading boundary, and compact check-in;
-5. boundary setup, anti-coercion and retaliation exclusions, and compact check-in;
-6. accessible attention-presence setup, condition comparison, and compact check-in;
+3. non-instrumental-play setup and action-specific compact check-in;
+4. emotional-cue setup, anti-mind-reading boundary, and action-specific check-in;
+5. boundary setup, anti-coercion and retaliation exclusions, and action-specific check-in;
+6. accessible attention-presence setup, condition comparison, and action-specific check-in;
 7. all 50 required assessment questions, result save, and 6/15/37 persistence;
 8. GGA11 import and supported GGA1 import;
 9. recommendation explanation, seven-step setup, start, pause/resume, draft,
    M2 evidence submission/detail, ledger, minimized JSON download, all three
    actions, M3B evidence-updated profile state, final review, completion, and
    mastery disclaimer.
-10. mobile/desktop optional pilot feedback, explicit no-telemetry and
-    non-developmental boundaries, categorical submission, confirmation, and
-    privacy-minimized download.
+10. mobile/desktop optional pilot feedback, journey-stage progressive
+    disclosure, explicit no-telemetry and non-developmental boundaries,
+    categorical submission, confirmation, and privacy-minimized download.
 
 The server-side golden test and browser flow complement each other: the first
 deep-compares every canonical output, while the second proves that the mounted

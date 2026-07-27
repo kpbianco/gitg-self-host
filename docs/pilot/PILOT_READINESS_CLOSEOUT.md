@@ -83,7 +83,7 @@ follow-up issue.
 | Emotional cues | Hypothesis/direct-clarification boundary is visible | Setup says it is score-inactive |
 | Boundary | Coercion, retaliation, and safety exclusions are visible | Setup says it is score-inactive |
 | Attention-presence | Accessibility and anti-surveillance boundary is visible | Setup says it is score-inactive |
-| Optional pilot feedback | Product data is visibly separate from evidence | No telemetry, local storage, minimized export, and no overflow are visible |
+| Optional pilot feedback | Product data is visibly separate from evidence | No telemetry, local storage, journey-scoped questions, minimized export, and no overflow are visible |
 
 For every protocol, confirm:
 
@@ -92,6 +92,8 @@ For every protocol, confirm:
 - all three actions are visible before starting;
 - privacy and interpersonal boundaries are specific;
 - the compact check-in exposes only protocol-relevant fields;
+- the selected action exposes only its reviewed observation prompts and a
+  submission without an actual attempt is refused;
 - completion and review state that completion does not establish mastery;
 - no score-inactive protocol claims a profile change.
 
@@ -120,10 +122,10 @@ The private pilot gate is satisfied only when:
   keyboard-blocking, or horizontal-overflow finding remains;
 - the instance owner explicitly approves proceeding.
 
-## Proposed next milestone: M5A
+## Follow-on milestone: M5A (completed)
 
-After this closeout is approved, M5A should add bounded private-pilot
-operations and feedback capture:
+After this closeout was approved, M5A added bounded private-pilot operations
+and feedback capture:
 
 - an operator guide and session checklist;
 - optional structured usability feedback kept separate from developmental
@@ -134,6 +136,7 @@ operations and feedback capture:
 - tests proving feedback cannot alter assessment, evidence, score state,
   recommendation order, completion, orientations, or archetypes.
 
-M5A should not activate another protocol for scoring, change posterior
+M5A did not activate another protocol for scoring, change posterior
 mathematics, add protocols, add remote telemetry, or send participant data to
-an external service. Any such expansion requires its own reviewed batch.
+an external service. Any such expansion still requires its own reviewed
+batch.

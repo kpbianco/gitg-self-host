@@ -121,6 +121,18 @@ def validate_evidence_rules(rules: Mapping[str, Any]) -> None:
         )
 
 
+def observation_fields_for_rules(rules: Mapping[str, Any]) -> frozenset[str]:
+    """Return the reviewed observation fields relevant to one practice action."""
+
+    validate_evidence_rules(rules)
+    return frozenset(
+        {
+            *_validated_markers(rules, "primary_markers"),
+            *_validated_markers(rules, "supporting_markers"),
+        }
+    )
+
+
 def repetition_multiplier(repetition_index: int) -> Decimal:
     if repetition_index < 1:
         raise EvidenceContractError("Repetition index must be at least one.")

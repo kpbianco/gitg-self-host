@@ -31,6 +31,9 @@ pilot-readiness audit and one aggregate CI gate over quality, browser, and
 production Compose verification.
 M5A adds private-pilot operations and optional structured usability feedback
 that remains completely separate from developmental evidence and score state.
+M5B records the first de-identified pilot findings and narrows both feedback
+and check-in forms to coherent journey/action contexts without changing any
+evidence or scoring mathematics.
 
 ## Deployment essentials
 
@@ -211,6 +214,25 @@ for the desktop/mobile review matrix and release criteria.
 See the [pilot feedback contract](docs/pilot-feedback.md) and
 [private pilot operations](docs/pilot/PRIVATE_PILOT_OPERATIONS.md).
 
+## What M5B adds
+
+- A de-identified record of the first owner-operated private-pilot session;
+  minimized source exports remain uncommitted sensitive data.
+- Journey-stage-specific pilot-feedback questions with matching server-side
+  validation.
+- Action-specific check-in observation prompts derived from reviewed stable
+  `evidence_rules`.
+- A prospective requirement that submitted evidence records a real attempted
+  action; a draft remains available before the action occurs.
+- Rejection of observations belonging to another action rather than silent
+  normalization.
+- A preview-first, exact-user `purge_pilot_feedback` operator command for an
+  agreed retention or withdrawal request.
+- No migration, telemetry, automatic timing, protocol, evidence/scoring
+  algorithm, recommendation input, or score-activation change.
+
+See [Private Pilot 001 findings](docs/pilot/PRIVATE_PILOT_001_FINDINGS.md).
+
 ## Product flow
 
 1. Sign in with the bootstrap account.
@@ -331,9 +353,12 @@ Migrations and canonical seeding run safely on startup.
 - The separate pilot-feedback export is also privacy-minimized rather than
   anonymous. Optional local comment text is excluded from it, and the
   application does not transmit feedback remotely.
-- M5A provides the operating and collection boundary; it does not claim that
-  private-pilot sessions have occurred or that participant usability findings
-  have been validated yet.
+- Private Pilot 001 is one owner-operated session. Its findings support the
+  narrow M5B form-coherence changes but do not establish general participant,
+  accessibility, psychometric, or longitudinal validation.
+- Pilot feedback has no automatic retention timer. The operator may explicitly
+  purge one exact user's feedback, but backups may retain prior copies and must
+  be handled under the same participant agreement.
 - Only **Deepen One Existing Friendship** is score-active. Play, emotional cue
   detection, boundary practice, and the attention-presence experiment are
   executable but score-inactive.
@@ -359,6 +384,7 @@ Migrations and canonical seeding run safely on startup.
 - [Post-M4 pilot-readiness closeout](docs/pilot/PILOT_READINESS_CLOSEOUT.md)
 - [Private-pilot feedback contract](docs/pilot-feedback.md)
 - [Private pilot operations](docs/pilot/PRIVATE_PILOT_OPERATIONS.md)
+- [Private Pilot 001 findings](docs/pilot/PRIVATE_PILOT_001_FINDINGS.md)
 - [Backup and restore](docs/backup-and-restore.md)
 - [Testing](docs/testing.md)
 - [Project handoff](docs/PROJECT_HANDOFF.md)

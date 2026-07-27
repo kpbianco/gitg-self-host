@@ -12,6 +12,34 @@ from growth.models import (
 
 PILOT_EXPORT_SCHEMA_VERSION = "grounded-growth-private-pilot-export-v1"
 
+PRACTICE_FEEDBACK_STAGES = frozenset(
+    {
+        PilotFeedback.JourneyStage.RECOMMENDATION,
+        PilotFeedback.JourneyStage.SETUP,
+        PilotFeedback.JourneyStage.ACTIVE_PRACTICE,
+        PilotFeedback.JourneyStage.CHECK_IN,
+        PilotFeedback.JourneyStage.REVIEW,
+    }
+)
+FEEDBACK_FIELD_STAGES = {
+    "protocol": PRACTICE_FEEDBACK_STAGES,
+    "applicability": PRACTICE_FEEDBACK_STAGES,
+    "time_to_start": frozenset(
+        {
+            PilotFeedback.JourneyStage.SETUP,
+            PilotFeedback.JourneyStage.ACTIVE_PRACTICE,
+            PilotFeedback.JourneyStage.CHECK_IN,
+            PilotFeedback.JourneyStage.REVIEW,
+        }
+    ),
+    "time_to_check_in": frozenset(
+        {
+            PilotFeedback.JourneyStage.CHECK_IN,
+            PilotFeedback.JourneyStage.REVIEW,
+        }
+    ),
+}
+
 
 class PilotFeedbackError(ValueError):
     pass
@@ -23,8 +51,29 @@ class PilotFeedbackSummary:
     recent: tuple[PilotFeedback, ...]
 
 
+def feedback_scope_errors(cleaned_data: dict[str, Any]) -> dict[str, str]:
+    """Return participant-facing errors for answers outside the selected stage."""
+
+    stage = cleaned_data.get("journey_stage")
+    if stage not in PilotFeedback.JourneyStage.values:
+        return {"journey_stage": "Choose the part of the experience you are commenting on."}
+
+    errors = {}
+    for field_name, allowed_stages in FEEDBACK_FIELD_STAGES.items():
+        if cleaned_data.get(field_name) and stage not in allowed_stages:
+            errors[field_name] = (
+                "This question does not apply to the selected part of the experience. "
+                "Choose a practice-related part or leave it unanswered."
+            )
+    return errors
+
+
 def submit_pilot_feedback(*, user, cleaned_data: dict[str, Any]) -> PilotFeedback:
     """Create one immutable usability record without touching developmental state."""
+
+    scope_errors = feedback_scope_errors(cleaned_data)
+    if scope_errors:
+        raise PilotFeedbackError("; ".join(scope_errors.values()))
 
     record = PilotFeedback(
         user=user,

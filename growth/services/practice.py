@@ -9,6 +9,10 @@ from django.db import IntegrityError, transaction
 from django.db.models import Q
 from django.utils import timezone
 
+from growth.domain.evidence import (
+    ALLOWED_OBSERVATION_FIELDS,
+    observation_fields_for_rules,
+)
 from growth.models import (
     AssessmentRun,
     PracticeCheckIn,
@@ -202,6 +206,27 @@ def save_check_in(
     check_in.status = PracticeCheckIn.Status.SUBMITTED if submit else PracticeCheckIn.Status.DRAFT
     check_in.submitted_at = timezone.now() if submit else None
     if submit:
+        if not check_in.action_attempted:
+            raise PracticeWorkflowError(
+                "Submit evidence only after a real attempt. Save a draft if the action "
+                "has not occurred."
+            )
+        relevant_fields = observation_fields_for_rules(action.evidence_rules)
+        unexpected_fields = sorted(
+            field_name
+            for field_name in ALLOWED_OBSERVATION_FIELDS
+            if getattr(check_in, field_name) and field_name not in relevant_fields
+        )
+        if unexpected_fields:
+            labels = locked_sprint.protocol.setup_copy.get("check_in_labels", {})
+            unexpected_labels = [
+                labels.get(field_name, field_name.replace("_", " ").capitalize())
+                for field_name in unexpected_fields
+            ]
+            raise PracticeWorkflowError(
+                "These observations belong to another action: "
+                f"{', '.join(unexpected_labels)}. Choose the matching action or clear them."
+            )
         missing = [
             label
             for field, label in (

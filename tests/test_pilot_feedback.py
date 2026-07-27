@@ -1,9 +1,12 @@
 import json
 from datetime import date
+from io import StringIO
 
 import pytest
 from django.contrib.auth import get_user_model
 from django.core.exceptions import ValidationError
+from django.core.management import call_command
+from django.core.management.base import CommandError
 from django.urls import reverse
 
 from growth.models import (
@@ -21,6 +24,8 @@ from growth.models import (
 )
 from growth.services.pilot_feedback import (
     PILOT_EXPORT_SCHEMA_VERSION,
+    PilotFeedbackError,
+    build_privacy_safe_pilot_export,
     submit_pilot_feedback,
 )
 from growth.services.profile import build_profile_summary
@@ -28,7 +33,7 @@ from growth.services.profile import build_profile_summary
 
 def _feedback_data(protocol, **overrides):
     data = {
-        "journey_stage": PilotFeedback.JourneyStage.SETUP,
+        "journey_stage": PilotFeedback.JourneyStage.REVIEW,
         "protocol": protocol,
         "applicability": PilotFeedback.Applicability.PARTLY,
         "time_to_start": PilotFeedback.StartTimeBand.TWO_TO_FIVE,
@@ -147,6 +152,108 @@ def test_feedback_requires_one_optional_signal(client, user, seeded):
     assert response.status_code == 200
     assert "Answer at least one optional feedback question" in response.content.decode()
     assert PilotFeedback.objects.count() == 0
+
+
+@pytest.mark.django_db
+def test_feedback_questions_are_scoped_to_the_selected_journey_stage(client, user, seeded):
+    protocol = (
+        user.assessment_runs.get()
+        .curriculum_version.levers.get(stable_id="L26")
+        .practice_protocols.get(stable_id="PRACTICE-FRIENDSHIP-01")
+    )
+    client.force_login(user)
+
+    page = client.get(reverse("growth:pilot-feedback"))
+    content = page.content.decode()
+    assert "contextual_forms.js" in content
+    assert "data-feedback-stage-control" in content
+    assert "data-feedback-stages" in content
+
+    invalid = {
+        "journey_stage": PilotFeedback.JourneyStage.ASSESSMENT,
+        "protocol": protocol.pk,
+        "applicability": PilotFeedback.Applicability.YES,
+        "time_to_start": PilotFeedback.StartTimeBand.UNDER_TWO,
+        "time_to_check_in": PilotFeedback.CheckInTimeBand.UNDER_ONE,
+        "confusing_step": PilotFeedback.ConfusingStep.NONE,
+        "accessibility_friction": PilotFeedback.Friction.NONE,
+        "safety_friction": PilotFeedback.Friction.NONE,
+        "comment": "",
+    }
+    response = client.post(reverse("growth:pilot-feedback"), invalid)
+
+    assert response.status_code == 200
+    assert (
+        response.content.decode().count(
+            "This question does not apply to the selected part of the experience."
+        )
+        == 4
+    )
+    assert not PilotFeedback.objects.exists()
+
+    with pytest.raises(PilotFeedbackError, match="does not apply"):
+        submit_pilot_feedback(
+            user=user,
+            cleaned_data={
+                **invalid,
+                "protocol": protocol,
+            },
+        )
+
+    valid = {
+        "journey_stage": PilotFeedback.JourneyStage.ASSESSMENT,
+        "protocol": "",
+        "applicability": "",
+        "time_to_start": "",
+        "time_to_check_in": "",
+        "confusing_step": PilotFeedback.ConfusingStep.NONE,
+        "accessibility_friction": PilotFeedback.Friction.NONE,
+        "safety_friction": PilotFeedback.Friction.NONE,
+        "comment": "",
+    }
+    saved = client.post(reverse("growth:pilot-feedback"), valid)
+    assert saved.status_code == 302
+    assert PilotFeedback.objects.get().journey_stage == PilotFeedback.JourneyStage.ASSESSMENT
+
+
+@pytest.mark.django_db
+def test_pre_m5b_ambiguous_feedback_remains_unchanged_and_exportable(user, seeded):
+    protocol = (
+        user.assessment_runs.get()
+        .curriculum_version.levers.get(stable_id="L26")
+        .practice_protocols.get(stable_id="PRACTICE-FRIENDSHIP-01")
+    )
+    historical = PilotFeedback.objects.create(
+        user=user,
+        journey_stage=PilotFeedback.JourneyStage.ASSESSMENT,
+        protocol=protocol,
+        applicability=PilotFeedback.Applicability.YES,
+        time_to_start=PilotFeedback.StartTimeBand.UNDER_TWO,
+        time_to_check_in=PilotFeedback.CheckInTimeBand.UNDER_ONE,
+        confusing_step=PilotFeedback.ConfusingStep.NONE,
+        accessibility_friction=PilotFeedback.Friction.NONE,
+        safety_friction=PilotFeedback.Friction.NONE,
+    )
+
+    payload = build_privacy_safe_pilot_export(user)
+    historical.refresh_from_db()
+
+    assert payload["record_count"] == 1
+    assert payload["records"][0] == {
+        "sequence": 1,
+        "contract_version": historical.contract_version,
+        "journey_stage": "assessment",
+        "protocol_stable_id": "PRACTICE-FRIENDSHIP-01",
+        "applicability": "yes",
+        "time_to_start_band": "under_2_minutes",
+        "time_to_check_in_band": "under_1_minute",
+        "confusing_step": "none",
+        "accessibility_friction": "none",
+        "safety_friction": "none",
+        "optional_comment_present": False,
+    }
+    assert historical.journey_stage == PilotFeedback.JourneyStage.ASSESSMENT
+    assert historical.protocol_id == "PRACTICE-FRIENDSHIP-01"
 
 
 @pytest.mark.django_db
@@ -315,3 +422,39 @@ def test_pilot_export_fails_closed_without_partial_data(client, user, seeded):
         b"Pilot feedback export stopped because stored feedback failed validation."
     )
     assert str(record.pk).encode() not in response.content
+
+
+@pytest.mark.django_db
+def test_feedback_purge_is_scoped_explicit_and_developmentally_inert(user, seeded):
+    protocol = (
+        user.assessment_runs.get()
+        .curriculum_version.levers.get(stable_id="L26")
+        .practice_protocols.get(stable_id="PRACTICE-FRIENDSHIP-01")
+    )
+    submit_pilot_feedback(user=user, cleaned_data=_feedback_data(protocol))
+    other_user = get_user_model().objects.create_user(
+        username="other-pilot",
+        password="local-test-password-47!",
+    )
+    submit_pilot_feedback(user=other_user, cleaned_data=_feedback_data(protocol))
+    before = _developmental_state_snapshot(user)
+
+    preview = StringIO()
+    call_command("purge_pilot_feedback", username=user.username, stdout=preview)
+    assert "Dry run: 1" in preview.getvalue()
+    assert PilotFeedback.objects.filter(user=user).count() == 1
+
+    deleted = StringIO()
+    call_command(
+        "purge_pilot_feedback",
+        username=user.username,
+        confirm=True,
+        stdout=deleted,
+    )
+    assert "Deleted 1 optional pilot-feedback record" in deleted.getvalue()
+    assert not PilotFeedback.objects.filter(user=user).exists()
+    assert PilotFeedback.objects.filter(user=other_user).count() == 1
+    assert _developmental_state_snapshot(user) == before
+
+    with pytest.raises(CommandError, match="local user was not found"):
+        call_command("purge_pilot_feedback", username="missing-pilot")
