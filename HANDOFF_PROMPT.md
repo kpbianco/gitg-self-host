@@ -23,9 +23,9 @@ Then inspect the canonical data under:
 Treat `legacy/` as provenance only. Do not build implementation behavior from legacy notes when canonical files disagree.
 
 Work only on the milestone batch explicitly authorized by the repository
-owner. M1A, M1B, and M2A are merged. M2B is the bounded evidence-audit batch in
-`docs/evidence-audit.md` and remains a review gate. Do not begin M3 or enable
-dynamic mastery/confidence mutation.
+owner. M1A, M1B, M2A, and M2B are merged. M3A is the bounded read-only shadow
+scoring batch in `docs/scoring-shadow.md` and remains a review gate. Do not
+begin M3B or enable dynamic mastery/confidence mutation.
 
 Use the binding stack in `AGENTS.md`: a Python/Django monolith with Django
 templates, local assets, SQLite, Gunicorn, pytest, Ruff, Playwright, Dockerfile,
@@ -52,6 +52,12 @@ deterministic export, strict read-only replay verification, and synthetic
 direction-complete calibration fixtures. It changes no evidence mathematics
 or profile score.
 
+The M3A boundary adds exact/reconstructed baseline mass, an explicit stable
+practice-to-competency link, canonical structured task weights, a pure
+direction-aware posterior projection, golden fixtures, and an unsaved profile
+preview. It creates no current score, score snapshot, need/rank update, or
+dynamic recommendation.
+
 Acceptance criteria are in `docs/PROJECT_HANDOFF.md`. Add automated tests for every testable criterion. The app must run through Docker Compose.
 
 Before changing code:
@@ -66,7 +72,7 @@ Then implement in reviewable batches. For each batch:
 - report exact passes/failures;
 - open a PR and ask me to approve it.
 
-Do not implement M3 dynamic scoring unless I explicitly authorize the next
-milestone after reviewing M2B.
+Do not implement M3B state activation or dynamic recommendations unless I
+explicitly authorize the next batch after reviewing M3A.
 
 ---

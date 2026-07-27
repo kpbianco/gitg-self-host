@@ -141,6 +141,10 @@ def verify_evidence_event(event: EvidenceEvent) -> None:
         raise EvidenceWorkflowError(
             f"{event.pk}: action stable ID does not match its submitted check-in."
         )
+    if event.check_in.action.protocol_id != event.check_in.sprint.protocol_id:
+        raise EvidenceWorkflowError(
+            f"{event.pk}: check-in action does not belong to its practice protocol."
+        )
 
 
 @transaction.atomic
@@ -277,7 +281,11 @@ def _direction_key(event: EvidenceEvent) -> str:
 def _events_for_user(user) -> list[EvidenceEvent]:
     return list(
         EvidenceEvent.objects.filter(check_in__sprint__user=user)
-        .select_related("check_in__action", "check_in__sprint__protocol")
+        .select_related(
+            "check_in__action",
+            "check_in__sprint__assessment_run",
+            "check_in__sprint__protocol",
+        )
         .order_by(
             "check_in__submitted_at",
             "check_in__created_at",

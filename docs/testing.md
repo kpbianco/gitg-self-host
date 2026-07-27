@@ -37,6 +37,7 @@ make e2e
 - authenticated home/profile/assessment/practice rendering;
 - immutable and idempotent assessment-run persistence;
 - exact 6-orientation, 15-archetype, and 37-lever golden-result persistence;
+- exact canonical alpha/beta baseline-mass persistence and drift rejection;
 - GGA11 answer/code agreement and malformed assessment rejection;
 - the seven-step practice setup and not-applicable exit;
 - one-current-practice and per-user authorization boundaries;
@@ -53,6 +54,14 @@ make e2e
   and assessment data excluded;
 - strict whole-database replay verification and nonzero failure on gaps/drift;
 - unchanged lever baselines after ledger, export, and verification operations;
+- stable `17.03` practice mapping and four task weights summing to 1.0;
+- exact `GG-SCORING-SHADOW-1.0` coefficients, direction routing,
+  success/failure mass, posterior, and confidence against a synthetic fixture;
+- monotonic confidence for included evidence and unchanged confidence for
+  withheld evidence;
+- malformed task weights, duplicate events, and ambiguous baseline mass
+  failing closed;
+- draft exclusion and unchanged stored profile state after shadow projection;
 - pause/resume/stop transitions and completion criteria;
 - static raw/calibrated/confidence/need values after final review;
 - SQLite foreign keys, busy timeout, and WAL;
@@ -66,7 +75,8 @@ make e2e
 3. GGA11 import and supported GGA1 import;
 4. recommendation explanation, seven-step setup, start, pause/resume, draft,
    M2 evidence submission/detail, ledger, minimized JSON download, all three
-   actions, final review, completion, and mastery disclaimer.
+   actions, M3A unsaved profile preview, final review, completion, and mastery
+   disclaimer.
 
 The server-side golden test and browser flow complement each other: the first
 deep-compares every canonical output, while the second proves that the mounted
@@ -105,6 +115,10 @@ permission, or shutdown errors.
 
 M1 proves guided UX and static persistence. M2A tests event-level evidence
 classification and base mass. M2B tests read-only audit, export, replay, and
-calibration behavior. M2 deliberately has no task-to-lever allocation,
-success/failure contribution, score snapshot, posterior update, or dynamic
-recommendation test because those paths do not exist.
+calibration behavior. M3A tests task-to-lever allocation and posterior
+projection in memory and through a clearly labeled profile preview.
+
+There is still no current-score model, score snapshot, mutation, need/rank
+recalculation, or dynamic recommendation path. Tests snapshot stored baselines
+before and after projection so read-only behavior is enforced rather than
+assumed.

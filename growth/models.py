@@ -188,6 +188,13 @@ class ArchetypeResult(models.Model):
 
 
 class LeverBaseline(models.Model):
+    class BaselineMassSource(models.TextChoices):
+        CANONICAL_RESULT = "canonical_result", "Canonical assessment result"
+        PUBLISHED_RECONSTRUCTION = (
+            "published_reconstruction",
+            "Reconstructed from published rounded values",
+        )
+
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="lever_baselines"
     )
@@ -198,6 +205,24 @@ class LeverBaseline(models.Model):
     raw_self_report = models.DecimalField(max_digits=6, decimal_places=4, null=True, blank=True)
     calibrated_estimate = models.DecimalField(max_digits=6, decimal_places=4, null=True, blank=True)
     evidence_confidence = models.DecimalField(max_digits=6, decimal_places=4)
+    baseline_alpha = models.DecimalField(
+        max_digits=10,
+        decimal_places=6,
+        null=True,
+        blank=True,
+    )
+    baseline_beta = models.DecimalField(
+        max_digits=10,
+        decimal_places=6,
+        null=True,
+        blank=True,
+    )
+    baseline_mass_source = models.CharField(
+        max_length=32,
+        choices=BaselineMassSource.choices,
+        blank=True,
+        default="",
+    )
     need_score = models.DecimalField(max_digits=6, decimal_places=4, null=True, blank=True)
     need_rank = models.PositiveSmallIntegerField()
     notes = models.TextField(blank=True)
@@ -208,7 +233,29 @@ class LeverBaseline(models.Model):
             models.UniqueConstraint(
                 fields=["assessment_run", "lever"],
                 name="unique_lever_baseline_per_assessment",
-            )
+            ),
+            models.CheckConstraint(
+                condition=(
+                    Q(
+                        baseline_alpha__isnull=True,
+                        baseline_beta__isnull=True,
+                        baseline_mass_source="",
+                    )
+                    | (
+                        Q(baseline_alpha__isnull=False, baseline_beta__isnull=False)
+                        & ~Q(baseline_mass_source="")
+                    )
+                ),
+                name="lever_baseline_mass_state_complete",
+            ),
+            models.CheckConstraint(
+                condition=Q(baseline_alpha__isnull=True) | Q(baseline_alpha__gte=0),
+                name="lever_baseline_alpha_nonnegative",
+            ),
+            models.CheckConstraint(
+                condition=Q(baseline_beta__isnull=True) | Q(baseline_beta__gte=0),
+                name="lever_baseline_beta_nonnegative",
+            ),
         ]
 
     def __str__(self) -> str:
@@ -223,6 +270,13 @@ class PracticeProtocol(models.Model):
     stable_id = models.CharField(max_length=80, primary_key=True)
     slug = models.SlugField(max_length=120, unique=True)
     name = models.CharField(max_length=180)
+    parent_competency = models.ForeignKey(
+        Competency,
+        on_delete=models.PROTECT,
+        related_name="practice_protocols",
+        null=True,
+        blank=True,
+    )
     availability = models.CharField(
         max_length=10, choices=Availability.choices, default=Availability.INACTIVE
     )

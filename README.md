@@ -15,11 +15,14 @@ Open `http://<server-local-ip>:<APP_PORT>`; the default port is
 Grounded Growth is a self-hosted, evidence-oriented guided-development
 application. M1 provides a secure Django runtime, the canonical v1.1
 assessment, an immediately usable Pilot 002 demonstration profile, and one
-complete guided practice workflow. Scores remain static.
+complete guided practice workflow. Stored scores remain unchanged.
 M2A adds immutable, versioned evidence readings for submitted check-ins while
 leaving every developmental profile value unchanged.
 M2B adds a private evidence ledger, deterministic minimized export, strict
 replay verification, and calibration fixtures around those same static events.
+M3A adds a versioned, direction-aware posterior projection on the profile as a
+clearly labeled unsaved preview. It does not activate score mutation or dynamic
+recommendations.
 
 ## Deployment essentials
 
@@ -101,6 +104,23 @@ local-network access, shutdown behavior, and the future HTTPS boundary.
 - No new evidence algorithm, lever allocation, baseline mutation, or dynamic
   recommendation.
 
+## What M3A adds
+
+- Exact canonical alpha/beta baseline mass for newly taken or imported
+  assessments.
+- Conservative, labeled reconstruction of Pilot 002 mass only where its
+  rounded published values identify one solution.
+- An explicit stable link from the friendship protocol to competency `17.03`
+  and its structured four-lever weights.
+- Pure Decimal `GG-SCORING-SHADOW-1.0` projection with explicit supportive,
+  mixed, contradictory, inconclusive, and legacy-unknown behavior.
+- Synthetic golden coverage for coefficients, success/failure mass, posterior,
+  and confidence.
+- A calm authenticated profile preview that states it is not saved and leaves
+  recommendations unchanged.
+- No current-score model, score snapshot, need/rank write, or dynamic
+  recommendation.
+
 ## Product flow
 
 1. Sign in with the bootstrap account.
@@ -111,12 +131,13 @@ local-network access, shutdown behavior, and the future HTTPS boundary.
 5. Save check-ins as drafts or submit them with a versioned evidence reading.
 6. Review submitted observations in the evidence ledger or download the
    minimized calibration export.
-7. Pause/resume when needed, or stop the practice.
-8. Submit a final review after the bounded completion criteria are met.
+7. Review the unsaved M3A projection on the developmental profile.
+8. Pause/resume when needed, or stop the practice.
+9. Submit a final review after the bounded completion criteria are met.
 
 Draft check-ins never appear as submitted evidence. Completing a practice does
-not establish mastery. Event-level evidence mass does not change any profile
-score.
+not establish mastery. M3A calculates a preview in memory but does not change
+any stored profile score.
 
 ## Common commands
 
@@ -157,8 +178,9 @@ container always uses `/data`.
 - `data/notion/initial_mvp/` — Pilot 002 baselines, static task ranking, and
   starting profile.
 
-The importer uses stable IDs and the structured mapping CSV. It never parses
-human-readable `Lever Mapping` text. See
+The importer uses stable IDs and the structured mapping CSV. The friendship
+protocol references competency `17.03` and validates that its four weights sum
+to 1.0. It never parses human-readable `Lever Mapping` text. See
 [data import](docs/data-import.md).
 
 `legacy/` is provenance and design archaeology only. Canonical structured data
@@ -190,10 +212,14 @@ Migrations and canonical seeding run safely on startup.
 
 - Pilot 002 source files publish only the top three archetypes and do not
   include original answers or a share code; the seed does not invent them.
-- Profile scores are deliberately static. A submitted check-in creates base
-  event evidence mass, but no practice action, check-in, completion, or review
+- Stored profile scores remain deliberately static in M3A. A submitted
+  check-in creates base event evidence mass and may appear in an unsaved
+  projection, but no practice action, check-in, completion, review, or preview
   changes lever mastery, lever confidence, need, task priority, archetype,
   orientation, or recommendation values.
+- Pilot 002 does not publish original alpha/beta mass. M3A reconstructs it only
+  where rounded raw/calibrated values identify one result; ambiguous neutral
+  baselines remain unavailable for scoring.
 - The minimized JSON export omits direct identity and free text, but its
   structured behavioral values can still be sensitive and should be reviewed
   before sharing.
@@ -215,6 +241,7 @@ Migrations and canonical seeding run safely on startup.
 - [Practice workflow](docs/practice-workflow.md)
 - [M2 evidence contract](docs/evidence-contract.md)
 - [M2B evidence audit and calibration](docs/evidence-audit.md)
+- [M3A shadow scoring contract](docs/scoring-shadow.md)
 - [Backup and restore](docs/backup-and-restore.md)
 - [Testing](docs/testing.md)
 - [Project handoff](docs/PROJECT_HANDOFF.md)

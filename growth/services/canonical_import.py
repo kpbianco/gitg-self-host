@@ -13,6 +13,10 @@ from django.contrib.auth import get_user_model
 from django.db import transaction
 
 from growth.domain.evidence import EvidenceContractError, validate_evidence_rules
+from growth.domain.scoring import (
+    ScoringContractError,
+    reconstruct_published_baseline_mass,
+)
 from growth.models import (
     ArchetypeResult,
     AssessmentRun,
@@ -235,6 +239,7 @@ PROTOCOLS = (
         "stable_id": "PRACTICE-FRIENDSHIP-01",
         "slug": "deepen-one-existing-friendship",
         "name": "Deepen One Existing Friendship",
+        "parent_competency_id": "17.03",
         "availability": PracticeProtocol.Availability.ACTIVE,
         "duration_days": 14,
         "recommendation_reason": (
@@ -356,9 +361,36 @@ PROTOCOLS = (
 
 def _seed_protocols() -> None:
     for item in PROTOCOLS:
+        parent_competency = None
+        parent_competency_id = item.get("parent_competency_id")
+        if parent_competency_id:
+            parent_competency = (
+                Competency.objects.filter(stable_id=parent_competency_id)
+                .prefetch_related("lever_links")
+                .first()
+            )
+            if parent_competency is None:
+                raise CanonicalDataError(
+                    f"{item['stable_id']}: unknown parent competency {parent_competency_id}."
+                )
+            links = tuple(parent_competency.lever_links.all())
+            linked_lever_ids = {link.lever_id for link in links}
+            target_lever_ids = set(item["target_levers"])
+            if not target_lever_ids or not target_lever_ids.issubset(linked_lever_ids):
+                raise CanonicalDataError(
+                    f"{item['stable_id']}: recommendation targets must be a non-empty "
+                    f"subset of {parent_competency_id}'s canonical structured mapping."
+                )
+            weight_sum = sum((link.weight for link in links), Decimal("0"))
+            if abs(weight_sum - Decimal("1")) > Decimal("0.0001"):
+                raise CanonicalDataError(
+                    f"{item['stable_id']}: task-to-lever weights sum to {weight_sum}; "
+                    "expected approximately 1.0."
+                )
         defaults = {
             "slug": item["slug"],
             "name": item["name"],
+            "parent_competency": parent_competency,
             "availability": item.get("availability", PracticeProtocol.Availability.INACTIVE),
             "duration_days": item.get("duration_days", 0),
             "recommendation_reason": item.get("recommendation_reason", ""),
@@ -485,6 +517,15 @@ def _seed_pilot(version: CurriculumVersion, model: dict) -> tuple[int, int]:
         )
 
     for row in baseline_rows:
+        try:
+            mass = reconstruct_published_baseline_mass(
+                lever_id=row["Lever ID"],
+                raw_self_report=Decimal(row["Raw Self-Report"]),
+                calibrated_estimate=Decimal(row["Baseline Mastery"]),
+                evidence_confidence=Decimal(row["Evidence Confidence"]),
+            )
+        except ScoringContractError as exc:
+            raise CanonicalDataError(f"Pilot 002 {row['Lever ID']}: {exc}") from exc
         LeverBaseline.objects.update_or_create(
             assessment_run=run,
             lever_id=row["Lever ID"],
@@ -493,6 +534,13 @@ def _seed_pilot(version: CurriculumVersion, model: dict) -> tuple[int, int]:
                 "raw_self_report": Decimal(row["Raw Self-Report"]),
                 "calibrated_estimate": Decimal(row["Baseline Mastery"]),
                 "evidence_confidence": Decimal(row["Evidence Confidence"]),
+                "baseline_alpha": mass.alpha if mass is not None else None,
+                "baseline_beta": mass.beta if mass is not None else None,
+                "baseline_mass_source": (
+                    LeverBaseline.BaselineMassSource.PUBLISHED_RECONSTRUCTION
+                    if mass is not None
+                    else ""
+                ),
                 "need_score": Decimal(row["Need Score"]),
                 "need_rank": int(row["Need Rank"]),
                 "notes": row["Notes"],

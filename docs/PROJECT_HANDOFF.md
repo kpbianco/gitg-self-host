@@ -147,16 +147,19 @@ M1 is implemented as two reviewable batches:
   deterministic privacy-minimized calibration export. A read-only management
   command verifies complete event coverage, submission order, and exact replay
   against direction-complete synthetic golden fixtures.
+- **M3A shadow scoring:** a pure Decimal package applies an explicit
+  direction-aware policy and canonical `17.03` task weights to replay-verified
+  events. The profile displays the result only as an unsaved preview.
 
 Only submitted check-ins count toward completion. A database constraint limits
 each user to one active or paused practice. Services—not templates—own state
 transitions, evidence aggregation, and completion rules.
 
-The static-profile boundary is tested before and after practice completion,
-event creation, ledger viewing, export, and replay verification. M2 stores
-event-level base evidence mass only. No workflow or audit surface writes lever
-mastery, confidence, need/priority, archetype, orientation, or recommendation
-state.
+The stored-profile boundary is tested before and after practice completion,
+event creation, ledger viewing, export, replay verification, and M3A
+projection. M2 stores event-level base evidence mass. M3A computes posterior
+values in memory but writes no current mastery, confidence, need/priority,
+archetype, orientation, recommendation, or score snapshot.
 
 ## Milestone sequence
 ### M1 — Guided UX, static scores
@@ -199,8 +202,8 @@ state already exists in M1.
 Status: implemented and merged.
 
 The binding semantics, migration strategy, and exclusions are in
-`docs/evidence-contract.md`. Do not begin M3 merely because base event mass is
-available.
+`docs/evidence-contract.md`. Base event mass alone was not treated as
+authorization for scoring; M2B completed the required audit gate.
 
 #### M2B — Evidence audit and calibration
 - authenticated per-user ledger of submitted evidence events;
@@ -213,13 +216,43 @@ available.
   contradictory, and legacy-unknown events;
 - no algorithm change, lever allocation, or profile mutation.
 
-Status: implemented; pending pull-request review.
+Status: implemented and merged.
 
-The operational and privacy contract is in `docs/evidence-audit.md`. M2B is
-the review gate before any separately authorized M3 design or implementation.
+The operational and privacy contract is in `docs/evidence-audit.md`.
 
 ### M3 — Dynamic scoring
-Implement versioned posterior updates and dynamic recommendation ranking in a pure domain package with exhaustive tests and immutable snapshots.
+Build and review a versioned projection before activating any stored state.
+
+#### M3A — Shadow scoring contract
+- persist exact canonical assessment alpha/beta mass for new runs;
+- conservatively reconstruct published Pilot 002 mass only when identifiable;
+- link `PRACTICE-FRIENDSHIP-01` to canonical competency `17.03`;
+- validate the four structured weights and recommendation-target
+  compatibility without changing recommendation eligibility;
+- apply the reviewed `k_tl` coefficient once to M2 base event mass;
+- route supportive, mixed, contradictory, inconclusive, and legacy-unknown
+  direction explicitly;
+- anchor confidence at the assessment value and add only a bounded monotonic
+  gain from included evidence;
+- render an authenticated, clearly labeled unsaved profile preview;
+- lock exact behavior with synthetic golden fixtures;
+- create no current score, score snapshot, need/rank, or recommendation write.
+
+Status: implemented; pending pull-request review.
+
+The binding proposed contract is in `docs/scoring-shadow.md`. M3A is a
+software-review and calibration gate, not psychometric validation.
+
+#### M3B — State activation and dynamic ranking
+- immutable before/after score snapshots;
+- atomic, idempotent state application;
+- rebuild and reversal from versioned events;
+- current mastery/confidence state separated from assessment baseline;
+- recalculated need and dynamic practice ranking;
+- migration policy for baselines whose exact mass is unavailable.
+
+Status: not started. Do not begin until M3A is reviewed and explicitly
+approved.
 
 ### M4 — Protocol library expansion
 Create reusable protocol patterns and convert more of the 383 competencies into executable interventions.
@@ -235,6 +268,25 @@ Create reusable protocol patterns and convert more of the 383 competencies into 
 8. Review explicitly distinguishes completion from mastery.
 9. App runs via Docker Compose.
 10. Tests cover the core path.
+
+## M3A acceptance criteria
+
+1. The friendship protocol uses stable competency `17.03` and its structured
+   four-lever mapping.
+2. Task weights sum to approximately 1.0 and malformed mappings fail closed.
+3. Only replay-verified submitted events tied to the current assessment enter
+   the projection.
+4. Supportive, mixed, contradictory, inconclusive, and direction-unknown cases
+   have explicit golden-tested behavior.
+5. Included evidence cannot lower confidence; withheld evidence cannot raise
+   it.
+6. Drafts, completion, and review alone do not affect the projection.
+7. New assessment runs retain exact canonical alpha/beta mass.
+8. Pilot reconstruction is labeled and ambiguous mass remains unavailable.
+9. Profile rendering leaves every stored profile and recommendation value
+   unchanged.
+10. The UI states that the result is a preview and completion is not mastery.
+11. M3B mutation and dynamic ranking remain absent.
 
 ## Handoff audit notes
 
@@ -256,3 +308,14 @@ Create reusable protocol patterns and convert more of the 383 competencies into 
   for calibration but remains sensitive behavioral data. Exact event and user
   identifiers, dates, private context, notes, contradiction detail, assessment
   answers, and share codes are deliberately absent.
+- M3A does not parse the Notion `Lever Mapping` field. The friendship protocol
+  references `17.03`, whose canonical structured weights are L26 `0.65`, L10
+  `0.15`, L23 `0.10`, and L24 `0.10`.
+- New assessment baselines store the canonical scorer's alpha/beta values.
+  Pilot 002 reconstruction succeeds for all four friendship levers; neutral
+  published pairs that do not identify mass remain null.
+- `GG-SCORING-SHADOW-1.0` keeps inconclusive and legacy-unknown events in the
+  audit ledger but withholds them from posterior and confidence.
+- The dormant browser helper's mass-only confidence line was not adopted: it
+  can lower the displayed assessment confidence after adding evidence. M3A
+  uses an anchored monotonic gain and leaves assessment v1.1 unchanged.

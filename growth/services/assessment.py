@@ -277,20 +277,70 @@ def _validate_result(
     for lever_id, lever in levers.items():
         if not isinstance(lever, dict):
             raise AssessmentPayloadError(f"Lever {lever_id} output is malformed.")
-        for field in ("raw_self_report", "estimate"):
-            _finite_number(
-                lever.get(field),
-                f"{lever_id} {field}",
-                minimum=0,
-                maximum=1,
-                nullable=True,
-            )
+        raw = _finite_number(
+            lever.get("raw_self_report"),
+            f"{lever_id} raw_self_report",
+            minimum=0,
+            maximum=1,
+            nullable=True,
+        )
+        estimate = _finite_number(
+            lever.get("estimate"),
+            f"{lever_id} estimate",
+            minimum=0,
+            maximum=1,
+            nullable=True,
+        )
         _finite_number(
             lever.get("confidence"),
             f"{lever_id} confidence",
             minimum=0,
             maximum=1,
         )
+        alpha = _finite_number(
+            lever.get("alpha"),
+            f"{lever_id} alpha",
+            minimum=0,
+        )
+        beta = _finite_number(
+            lever.get("beta"),
+            f"{lever_id} beta",
+            minimum=0,
+        )
+        prior_alpha = float(assets.spec["assessment"]["scoring_constants"]["prior_alpha"])
+        prior_beta = float(assets.spec["assessment"]["scoring_constants"]["prior_beta"])
+        if estimate is None:
+            if (
+                raw is not None
+                or abs(alpha - prior_alpha) > 0.000001
+                or abs(beta - prior_beta) > 0.000001
+            ):
+                raise AssessmentPayloadError(
+                    f"{lever_id} unassessed output must retain only the canonical prior."
+                )
+        else:
+            if raw is None or alpha + beta <= 0:
+                raise AssessmentPayloadError(
+                    f"{lever_id} assessed output requires raw score and positive mass."
+                )
+            evidence_mass = _finite_number(
+                lever.get("evidence_mass"),
+                f"{lever_id} evidence mass",
+                minimum=0,
+                maximum=float(
+                    assets.spec["assessment"]["scoring_constants"]["quiz_mass_cap_per_lever"]
+                ),
+            )
+            expected_alpha = prior_alpha + evidence_mass * raw
+            expected_beta = prior_beta + evidence_mass * (1 - raw)
+            if (
+                abs(alpha - expected_alpha) > 0.00025
+                or abs(beta - expected_beta) > 0.00025
+                or abs(alpha / (alpha + beta) - estimate) > 0.0002
+            ):
+                raise AssessmentPayloadError(
+                    f"{lever_id} baseline masses do not match the canonical assessment output."
+                )
 
     ranking = result.get("lever_need_ranking")
     if not isinstance(ranking, list) or len(ranking) != len(expected_lever_ids):
@@ -502,6 +552,9 @@ def persist_assessment_run(user, payload: Any) -> tuple[AssessmentRun, bool]:
             raw_self_report=_decimal(output["raw_self_report"]),
             calibrated_estimate=_decimal(output["estimate"]),
             evidence_confidence=_decimal(output["confidence"]),
+            baseline_alpha=_decimal(output["alpha"]),
+            baseline_beta=_decimal(output["beta"]),
+            baseline_mass_source=LeverBaseline.BaselineMassSource.CANONICAL_RESULT,
             need_score=_decimal(need_score),
             need_rank=rank,
             notes="Assessment v1.1 provisional self-report baseline.",

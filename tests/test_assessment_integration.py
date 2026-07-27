@@ -173,6 +173,10 @@ def test_valid_nullable_lever_outputs_can_be_persisted(user, seeded):
     payload = golden_payload()
     payload["result"]["levers"]["L37"]["raw_self_report"] = None
     payload["result"]["levers"]["L37"]["estimate"] = None
+    payload["result"]["levers"]["L37"]["confidence"] = 0
+    payload["result"]["levers"]["L37"]["alpha"] = 0.35
+    payload["result"]["levers"]["L37"]["beta"] = 0.35
+    payload["result"]["levers"]["L37"].pop("evidence_mass", None)
     for ranked in payload["result"]["lever_need_ranking"]:
         if ranked["lever_id"] == "L37":
             ranked["score"] = None

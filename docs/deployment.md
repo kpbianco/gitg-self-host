@@ -132,8 +132,9 @@ The database is:
 Future uploads use `/data/uploads`; backups use `/data/backups`.
 
 Assessment runs, share codes, practice setup records, draft/submitted
-check-ins, immutable evidence events, and final reviews all live in the same
-SQLite database and survive container replacement with the named volume.
+check-ins, immutable evidence events, exact assessment baseline mass, and final
+reviews all live in the same SQLite database and survive container replacement
+with the named volume. The M3A projection itself is not persisted.
 
 ## Updating
 
@@ -157,7 +158,8 @@ After an update, sign in and verify:
 4. a submitted check-in opens its evidence-reading page;
 5. `/evidence/` shows only the signed-in user's submitted events;
 6. `make evidence-verify` reports complete replay coverage;
-7. `/health/` returns `{"status":"ok"}`.
+7. `/profile/` labels any M3A projection as a preview and unsaved;
+8. `/health/` returns `{"status":"ok"}`.
 
 The evidence verifier is intentionally not an automatic repair step. Startup
 backfill reconciles missing legacy events and verifies existing ones;
