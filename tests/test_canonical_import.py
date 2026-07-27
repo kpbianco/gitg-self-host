@@ -133,7 +133,7 @@ def test_repeated_seed_is_idempotent_and_imports_pilot_profile(user):
             "archetypes": 3,
             "baselines": 37,
             "protocols": 5,
-            "actions": 12,
+            "actions": 15,
         }
     )
     assert AssessmentRun.objects.get().assessment_version == "1.1"
@@ -145,7 +145,7 @@ def test_repeated_seed_is_idempotent_and_imports_pilot_profile(user):
     )
     assert (
         PracticeProtocol.objects.filter(availability=PracticeProtocol.Availability.INACTIVE).count()
-        == 1
+        == 0
     )
     friendship_actions = PracticeAction.objects.filter(protocol_id="PRACTICE-FRIENDSHIP-01")
     assert friendship_actions.count() == 3
@@ -171,6 +171,13 @@ def test_repeated_seed_is_idempotent_and_imports_pilot_profile(user):
     assert boundary.score_active is False
     assert boundary.actions.count() == 3
     assert boundary.completion_rules["marker_mode"] == "all"
+    presence = PracticeProtocol.objects.get(stable_id="PRACTICE-PRESENCE-01")
+    assert presence.availability == PracticeProtocol.Availability.ACTIVE
+    assert presence.parent_competency_id == "08.02"
+    assert set(presence.target_levers.values_list("stable_id", flat=True)) == {"L08"}
+    assert presence.score_active is False
+    assert presence.actions.count() == 3
+    assert presence.completion_rules["marker_mode"] == "all"
 
 
 @pytest.mark.django_db

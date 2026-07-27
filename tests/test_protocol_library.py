@@ -376,3 +376,139 @@ def test_boundary_requires_statement_and_follow_through_without_score_mutation(u
         snapshots_before
     )
     assert _state(user) == before
+
+
+@pytest.mark.django_db
+def test_presence_protocol_is_accessible_specific_and_score_inactive(client, user, seeded):
+    client.force_login(user)
+    protocol = PracticeProtocol.objects.get(stable_id="PRACTICE-PRESENCE-01")
+    recommendation = client.get(
+        reverse("growth:practice-recommendation", kwargs={"slug": protocol.slug})
+    )
+    setup = client.get(reverse("growth:practice-setup", kwargs={"slug": protocol.slug, "step": 1}))
+    sprint = start_practice(
+        user=user,
+        protocol=protocol,
+        person_or_context="technical reading",
+        start_date=date.today(),
+    )
+    check_in_form = PracticeCheckInForm(sprint=sprint)
+    applicability_form = PracticeApplicabilityForm(protocol=protocol)
+    canonical_weights = {
+        link.lever_id: link.weight for link in protocol.parent_competency.lever_links.all()
+    }
+
+    assert protocol.parent_competency_id == "08.02"
+    assert canonical_weights == {
+        "L08": Decimal("0.7500"),
+        "L03": Decimal("0.1500"),
+        "L17": Decimal("0.1000"),
+    }
+    assert set(protocol.target_levers.values_list("stable_id", flat=True)) == {"L08"}
+    assert protocol.score_active is False
+    assert protocol.actions.count() == 3
+    assert protocol.completion_rules == {
+        "minimum_completed": 2,
+        "substantive_markers": [
+            "meaningful_information_shared",
+            "follow_up_within_seven_days",
+        ],
+        "marker_mode": "all",
+    }
+    assert (
+        "Presence is not stillness, perfection, or surveillance"
+        in (protocol.setup_copy["boundary_heading"])
+    )
+    assert "disability, neurodiversity, pain, fatigue" in protocol.privacy_and_boundaries
+    assert "One repeatable activity with one changeable condition" in (
+        recommendation.content.decode()
+    )
+    assert "Run the usual-condition window" in recommendation.content.decode()
+    assert "will not change your profile or recommendation" in setup.content.decode()
+    assert applicability_form.fields["applicable"].choices[0][1] == (
+        "Yes, I have a safe 15-minute activity I can repeat"
+    )
+    assert check_in_form.fields["follow_up_question_asked"].label == (
+        "I noticed attention drift and deliberately returned"
+    )
+    assert check_in_form.fields["meaningful_information_shared"].label == (
+        "I compared the usual and changed condition"
+    )
+    assert "future_interaction_scheduled" not in check_in_form.fields
+    assert "expected_reciprocity" not in check_in_form.fields
+    assert "observed_reciprocity" not in check_in_form.fields
+
+
+@pytest.mark.django_db
+def test_presence_requires_comparison_and_repeat_without_score_mutation(user, seeded):
+    protocol = PracticeProtocol.objects.get(stable_id="PRACTICE-PRESENCE-01")
+    sprint = start_practice(
+        user=user,
+        protocol=protocol,
+        person_or_context="technical reading",
+        start_date=date.today(),
+    )
+    before = _state(user)
+    snapshots_before = ScoreSnapshot.objects.filter(assessment_run=sprint.assessment_run).count()
+    actions = list(protocol.actions.all())
+
+    save_check_in(
+        sprint=sprint,
+        cleaned_data=_data(
+            actions[0],
+            user_initiated=True,
+            moved_beyond_transactional=True,
+            follow_up_question_asked=True,
+        ),
+        submit=True,
+    )
+    save_check_in(
+        sprint=sprint,
+        cleaned_data=_data(
+            actions[1],
+            context_comparison="varied_context",
+            moved_beyond_transactional=True,
+        ),
+        submit=True,
+    )
+    save_check_in(
+        sprint=sprint,
+        cleaned_data=_data(
+            actions[2],
+            action_completed=False,
+            context_comparison="same_context",
+            follow_up_within_seven_days=True,
+        ),
+        submit=True,
+    )
+    assert not completion_evidence(sprint).ready_for_review
+
+    save_check_in(
+        sprint=sprint,
+        cleaned_data=_data(
+            actions[1],
+            action_completed=False,
+            context_comparison="varied_context",
+            meaningful_information_shared=True,
+        ),
+        submit=True,
+    )
+    completion = completion_evidence(sprint)
+    assert completion.ready_for_review
+
+    review = complete_with_review(
+        sprint=sprint,
+        reflection="Removing one visual competitor made returning easier.",
+        contradictory_evidence="The changed condition did not prevent every drift.",
+    )
+    sprint.refresh_from_db()
+    assert EvidenceEvent.objects.filter(check_in__sprint=sprint).count() == 4
+    assert sprint.status == PracticeSprint.Status.COMPLETED
+    assert review.static_score_impact_preview == {}
+    assert review.sprint.protocol.mastery_disclaimer == (
+        "Completing this practice does not establish mastery."
+    )
+    assert ScoreSnapshot.objects.filter(assessment_run=sprint.assessment_run).count() == (
+        snapshots_before
+    )
+    assert _state(user) == before

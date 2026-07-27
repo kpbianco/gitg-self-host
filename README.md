@@ -150,11 +150,15 @@ local-network access, shutdown behavior, and the future HTTPS boundary.
 - Score-inactive **State and Maintain One Boundary**, with a defined 10-day
   setup, direct statement and follow-through requirements, and explicit
   coercion, punishment, retaliation, and safety exclusions.
+- Score-inactive **Complete an Attention-Presence Experiment**, with usual and
+  changed 15-minute conditions, an accessible repeat, and explicit
+  anti-surveillance and non-productivity boundaries.
 - Protocol-configured setup copy, compact check-in fields, completion markers,
   completion-marker modes, and an explicit score-activation flag.
-- Stable canonical parents `26.01`, `16.03`, and `11.10` with validated
-  recommendation targets.
-- One remaining inactive structured placeholder.
+- Stable canonical parents `26.01`, `16.03`, `11.10`, and `08.02` with
+  validated recommendation targets.
+- All five seeded protocols are executable; friendship remains the only
+  score-active protocol.
 
 ## Product flow
 
@@ -270,8 +274,8 @@ Migrations and canonical seeding run safely on startup.
   structured behavioral values can still be sensitive and should be reviewed
   before sharing.
 - Only **Deepen One Existing Friendship** is score-active. Play, emotional cue
-  detection, and boundary practice are executable but score-inactive; one
-  additional protocol remains a structured inactive placeholder.
+  detection, boundary practice, and the attention-presence experiment are
+  executable but score-inactive.
 - The canonical JavaScript scorer remains the browser reference. Node.js is
   used by a development golden test only; no Node.js server exists at runtime.
 - Direct local-network HTTP is supported. Add Caddy or another proxy later for

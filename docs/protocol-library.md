@@ -96,5 +96,32 @@ only L25 for recommendation and remains score-inactive. M4C does not bind the
 generic practice to the higher-risk bodily-autonomy or harmful-relationship
 competencies.
 
-The remaining presence placeholder stays inactive. No protocol becomes
-score-active merely because it becomes executable.
+## M4D boundary
+
+M4D activates `PRACTICE-PRESENCE-01`, **Complete an Attention-Presence
+Experiment**, as a 10-day experiment anchored to canonical competency `08.02`,
+Mindfulness and present attention.
+
+The three fixed actions are:
+
+1. run a 15-minute window under the user's usual safe conditions;
+2. repeat the same activity after changing exactly one controlled condition;
+3. repeat the more workable condition within seven days.
+
+The comparison concerns noticing and returning attention, not output,
+distraction counts, or perfect concentration. Completion requires all three
+actions attempted, at least two completed, an actual condition comparison, a
+repeat within seven days, and a final review.
+
+Presence is not equated with stillness, silence, eye contact, or zero
+distraction. Movement, fidgets, assistive technology, reminders, and necessary
+alerts are valid. The protocol does not run during driving, equipment
+operation, hazard supervision, or after disabling emergency, accessibility,
+or caregiving alerts. It requires no surveillance or recording of another
+person.
+
+Canonical parent `08.02` maps to L08, L03, and L17. The protocol targets only
+L08 for recommendation and remains score-inactive.
+
+All five seeded protocols are now executable. Friendship remains the only
+score-active protocol; availability alone never authorizes scoring.

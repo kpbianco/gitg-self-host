@@ -76,12 +76,15 @@ make compose-smoke
 - missing required baseline mass rolling back check-in, event, state, and
   snapshot together;
 - dynamic active-protocol ordering from current need and canonical weights;
-- complete play, emotional-cue, and boundary protocol configuration;
+- complete play, emotional-cue, boundary, and attention-presence protocol
+  configuration;
 - protocol-specific compact check-in fields and boundary language;
 - immutable evidence with zero score snapshots or lever-state movement for
   score-inactive protocols;
 - direct clarification required for emotional-cue completion;
 - both a direct statement and follow-through required for boundary completion;
+- both a condition comparison and repeat required for attention-presence
+  completion;
 - score-state management-command verify and repair behavior;
 - pause/resume/stop transitions and completion criteria;
 - unchanged assessment baselines and no review-only current-state transition;
@@ -89,15 +92,16 @@ make compose-smoke
 - consistent backup and SQLite integrity;
 - assessment v1.1 complete golden output, GGA11, and GGA1.
 
-`make e2e` uses Playwright Chromium for seven browser journeys:
+`make e2e` uses Playwright Chromium for eight browser journeys:
 
 1. login, Pilot 002 home, and developmental profile;
 2. non-instrumental-play setup and protocol-specific compact check-in;
 3. emotional-cue setup, anti-mind-reading boundary, and compact check-in;
 4. boundary setup, anti-coercion and retaliation exclusions, and compact check-in;
-5. all 50 required assessment questions, result save, and 6/15/37 persistence;
-6. GGA11 import and supported GGA1 import;
-7. recommendation explanation, seven-step setup, start, pause/resume, draft,
+5. accessible attention-presence setup, condition comparison, and compact check-in;
+6. all 50 required assessment questions, result save, and 6/15/37 persistence;
+7. GGA11 import and supported GGA1 import;
+8. recommendation explanation, seven-step setup, start, pause/resume, draft,
    M2 evidence submission/detail, ledger, minimized JSON download, all three
    actions, M3B evidence-updated profile state, final review, completion, and
    mastery disclaimer.
@@ -125,7 +129,7 @@ Compose project, and volume are removed on exit. Set `SMOKE_APP_PORT` only
 when a fixed test port is required.
 
 `.github/workflows/verification.yml` runs three required jobs on pull requests
-and `main`: Ruff/Django/pytest, the seven Playwright journeys, and this exact
+and `main`: Ruff/Django/pytest, the eight Playwright journeys, and this exact
 Docker Compose drill.
 
 ## Current scoring boundary

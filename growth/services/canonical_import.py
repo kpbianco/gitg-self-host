@@ -753,8 +753,155 @@ PROTOCOLS = (
         "stable_id": "PRACTICE-PRESENCE-01",
         "slug": "complete-an-attention-presence-experiment",
         "name": "Complete an Attention-Presence Experiment",
+        "parent_competency_id": "08.02",
+        "availability": PracticeProtocol.Availability.ACTIVE,
+        "duration_days": 10,
+        "recommendation_reason": (
+            "Your current provisional profile identifies deliberate attention and "
+            "contact with the present as a useful area for a bounded experiment."
+        ),
+        "applicability_prompt": (
+            "Is there one safe, low-stakes 15-minute activity you can repeat under "
+            "usual conditions, with one changed condition, and once more within "
+            "seven days?"
+        ),
+        "setup_prompt": (
+            "Choose one repeatable activity such as reading, a routine desk task, "
+            "making something, or attending to your surroundings. Compare conditions "
+            "around the same activity rather than judging your productivity."
+        ),
+        "privacy_and_boundaries": (
+            "Presence does not require stillness, silence, eye contact, or zero "
+            "distraction. Keep movement, fidgets, assistive technology, reminders, "
+            "and other supports that help you participate. Do not disable emergency, "
+            "accessibility, or caregiving alerts. Do not run the experiment while "
+            "driving, operating equipment, or supervising a hazard; install "
+            "surveillance; or record another person. Treat disability, "
+            "neurodiversity, pain, fatigue, "
+            "and stress as design context—not failure. This protocol is not diagnosis "
+            "or treatment; persistent or safety-affecting attention difficulty may "
+            "need qualified support."
+        ),
+        "completion_criteria": [
+            "All three actions attempted",
+            "At least two actions completed",
+            "Usual and changed conditions compared",
+            "The more workable condition repeated within seven days",
+            "Final review submitted",
+        ],
+        "completion_rules": {
+            "minimum_completed": 2,
+            "substantive_markers": [
+                "meaningful_information_shared",
+                "follow_up_within_seven_days",
+            ],
+            "marker_mode": "all",
+        },
+        "setup_copy": {
+            "context_heading": "Choose one repeatable 15-minute activity.",
+            "boundary_heading": "Presence is not stillness, perfection, or surveillance.",
+            "timing_hint": "Choose a date when a safe, low-stakes attention window is realistic.",
+            "context_help": (
+                "Use a short private label for the activity. Do not record another "
+                "person or the content of a private interaction."
+            ),
+            "applicability_heading": "One repeatable activity with one changeable condition",
+            "applicability_yes_label": "Yes, I have a safe 15-minute activity I can repeat",
+            "completion_signal_label": (
+                "Usual and changed conditions compared, then the more workable "
+                "condition repeated within seven days"
+            ),
+            "history_marker_label": "completed attention window",
+            "boundary_acknowledgement": (
+                "I will use a safe, low-stakes activity, keep supports and alerts "
+                "needed for access or safety, and treat distraction as information—not "
+                "failure."
+            ),
+            "check_in_labels": {
+                "user_initiated": "I deliberately began the planned attention window",
+                "moved_beyond_transactional": "I completed the full attention window",
+                "follow_up_question_asked": "I noticed attention drift and deliberately returned",
+                "meaningful_information_shared": "I compared the usual and changed condition",
+                "follow_up_within_seven_days": (
+                    "I repeated the more workable condition within seven days"
+                ),
+            },
+        },
+        "check_in_fields": [
+            "user_initiated",
+            "moved_beyond_transactional",
+            "follow_up_question_asked",
+            "meaningful_information_shared",
+            "follow_up_within_seven_days",
+            "internal_resistance",
+        ],
         "target_levers": ["L08"],
         "display_order": 5,
+        "actions": [
+            {
+                "stable_id": "PRACTICE-PRESENCE-01-A1",
+                "sequence": 1,
+                "title": "Run the usual-condition window",
+                "instructions": (
+                    "Spend 15 minutes on the chosen activity under your usual safe "
+                    "conditions. When attention drifts, notice it and return without "
+                    "counting every drift or treating distraction as failure. Keep "
+                    "your normal accessibility supports."
+                ),
+                "due_within_days": 3,
+                "evidence_rules": {
+                    "schema_version": "practice-observation-v1",
+                    "primary_markers": [
+                        "user_initiated",
+                        "moved_beyond_transactional",
+                    ],
+                    "supporting_markers": ["follow_up_question_asked"],
+                },
+            },
+            {
+                "stable_id": "PRACTICE-PRESENCE-01-A2",
+                "sequence": 2,
+                "title": "Change one condition and compare",
+                "instructions": (
+                    "Repeat a comparable 15-minute window after changing exactly one "
+                    "condition you control—for example, silence nonessential alerts, "
+                    "clear one competing item, or add a movement, fidget, or visual "
+                    "cue. Compare how readily you noticed and returned attention, not "
+                    "how much output you produced."
+                ),
+                "due_within_days": None,
+                "evidence_rules": {
+                    "schema_version": "practice-observation-v1",
+                    "primary_markers": [
+                        "meaningful_information_shared",
+                        "moved_beyond_transactional",
+                    ],
+                    "supporting_markers": [
+                        "user_initiated",
+                        "follow_up_question_asked",
+                    ],
+                },
+            },
+            {
+                "stable_id": "PRACTICE-PRESENCE-01-A3",
+                "sequence": 3,
+                "title": "Repeat the more workable condition",
+                "instructions": (
+                    "Within seven days, repeat the condition that made noticing and "
+                    "returning more workable. Record what happened, including evidence "
+                    "that the change made no difference or worked less well."
+                ),
+                "due_within_days": 7,
+                "evidence_rules": {
+                    "schema_version": "practice-observation-v1",
+                    "primary_markers": ["follow_up_within_seven_days"],
+                    "supporting_markers": [
+                        "moved_beyond_transactional",
+                        "meaningful_information_shared",
+                    ],
+                },
+            },
+        ],
     },
 )
 

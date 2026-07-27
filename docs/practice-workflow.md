@@ -17,17 +17,19 @@ seven days. M4B activates **Practice Emotional Cue Detection**, a 10-day
 protocol that separates observation from interpretation, holds multiple
 hypotheses, and checks an impression with a neutral question. M4C activates
 **State and Maintain One Boundary**, a 10-day protocol that defines a
-self-directed limit, states it directly, and follows through once. One other
-protocol remains an inactive structured placeholder.
+self-directed limit, states it directly, and follows through once. M4D
+activates **Complete an Attention-Presence Experiment**, a 10-day protocol
+that compares one usual and one changed 15-minute condition, then repeats the
+more workable condition. All five seeded protocols are executable.
 
 ## Guided setup
 
 The seven server-rendered steps cover:
 
 1. why the current provisional profile produced this recommendation;
-2. whether the relationship is currently applicable;
+2. whether the protocol is currently applicable;
 3. a minimal private label for one person or context;
-4. privacy, welcome contact, disclosure, autonomy, and reciprocity boundaries;
+4. protocol-specific privacy, safety, access, and interpersonal boundaries;
 5. a start date within two weeks;
 6. review of the exact three actions;
 7. final summary and activation.
@@ -53,8 +55,8 @@ the domain service, not in templates.
 
 ## Compact check-ins
 
-A check-in is tied to a stable practice-action ID and captures only the M1
-protocol fields:
+A check-in is tied to a stable practice-action ID and displays a
+protocol-configured subset of the reviewed fields:
 
 - attempted/completed;
 - user initiation and movement beyond transactional content;
@@ -134,3 +136,10 @@ restatement within seven days. It distinguishes a boundary from threats,
 punishment, silent tests, or forced agreement and excludes contexts with
 abuse, coercive control, unsafe dependency, or likely retaliation. It remains
 `score_active=false`.
+
+M4D also uses the all-marker completion mode. It requires a usual-versus-changed
+condition comparison and one repeat within seven days. Its 15-minute windows
+measure noticing and returning attention rather than output or distraction
+counts. Movement, fidgets, assistive technology, reminders, and necessary
+alerts remain valid supports; safety-critical contexts and surveillance are
+excluded. It remains `score_active=false`.
