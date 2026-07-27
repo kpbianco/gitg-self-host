@@ -36,7 +36,7 @@ def test_authenticated_home_and_profile_render_pilot_seed(client, user, seeded):
 
     home = client.get(reverse("growth:home"))
     assert home.status_code == 200
-    assert b"starting profile is fixed for this release" in home.content
+    assert b"assessment baseline remains fixed" in home.content
     assert b"Deepen One Existing Friendship" in home.content
     assert b"Review and set up" in home.content
 
@@ -45,6 +45,7 @@ def test_authenticated_home_and_profile_render_pilot_seed(client, user, seeded):
     assert b"Raw self-report" in profile.content
     assert b"Calibrated estimate" in profile.content
     assert b"Evidence confidence" in profile.content
+    assert b"Current estimate" in profile.content
     assert b"The Seeker" in profile.content
     assert b"Friendship, Belonging, and Hospitality" in profile.content
     assert b"human worth" in profile.content

@@ -9,8 +9,9 @@ Build a self-hosted, evidence-oriented guided-development application. The produ
 - Completion is never equivalent to mastery.
 - Human dignity is never scored.
 - Personality/orientation changes framing and tie-breaking only; it does not determine worth or obligation.
-- Do not activate dynamic score updates until the guided workflow, evidence
-  capture, audit, and M3A shadow contract pass their separate review gates.
+- Dynamic score updates are limited to the reviewed M3A contract and the one
+  explicitly activated friendship protocol. Do not generalize scoring to
+  unreviewed protocols or invent missing priority inputs.
 
 ## Canonical source hierarchy
 Use these files in priority order:
@@ -54,6 +55,15 @@ structured task weights, direction-aware posterior projection, and a clearly
 labeled profile preview. It is read-only. It must not create current score
 state, snapshots, or dynamic recommendations.
 
+M3B activates that exact reviewed mathematics as `GG-SCORE-STATE-1.0`.
+Assessment baselines remain immutable; current lever state and full
+before/after snapshots are separate. Evidence processing is atomic,
+idempotent, replay-verified, rebuildable, and reversible through an append-only
+audit transition. `GG-NEED-RANKING-1.0` reproduces assessment v1.1's
+provisional need function and ranks active protocols from canonical structured
+weights. It does not invent applicability, importance, readiness, urgency, or
+opportunity values that the product does not collect.
+
 Implement one complete protocol first: `Deepen One Existing Friendship`.
 Create inactive placeholders for four others:
 - Schedule Non-Instrumental Play
@@ -87,6 +97,13 @@ The accepted rationale is recorded in
 - M3A shadow projection must use only replay-verified submitted events tied to
   the same assessment run. Inconclusive and legacy direction-unknown events
   remain visible but are withheld from its posterior.
+- M3B current state must reproduce the accepted M3A projection exactly.
+  Every process, reversal, initialization, and repair must retain immutable
+  hashed before/after state and a versioned active-event set.
+- `LeverBaseline` remains the assessment record. Never overwrite it with
+  current evidence-informed state.
+- Only `PRACTICE-FRIENDSHIP-01` is score-activated. A required baseline with
+  unavailable mass fails closed and requires reassessment.
 - Never infer missing task-to-lever links from display strings at runtime.
 - Validate all imported weight sums and IDs.
 - Do not silently normalize malformed data; fail with actionable diagnostics.
@@ -126,9 +143,9 @@ canonical assessment and completes the friendship recommendation, setup,
 sprint, draft/submitted check-in, pause/resume/stop, completion, and review
 experience.
 
-M1 and M2 are merged. M3A may calculate a versioned task-to-lever posterior
-projection under `docs/scoring-shadow.md` and render it as an explicitly
-unsaved preview. It cannot mutate mastery, confidence, need, priority,
-archetype, orientation, or recommendation state and cannot create a score
-snapshot. Practice completion remains separate from competency mastery. Do not
-begin M3B activation until M3A is reviewed and explicitly approved.
+M1, M2, and M3A are merged. M3B is the bounded state-activation and dynamic
+ranking batch in `docs/scoring-state.md`. It may update only separate current
+lever state from replay-verified friendship evidence. Baselines, raw
+self-report, orientations, archetypes, completion, and human worth remain
+unchanged. Do not begin M4 protocol expansion until M3B is reviewed and
+explicitly approved.

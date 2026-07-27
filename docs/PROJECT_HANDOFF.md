@@ -150,16 +150,21 @@ M1 is implemented as two reviewable batches:
 - **M3A shadow scoring:** a pure Decimal package applies an explicit
   direction-aware policy and canonical `17.03` task weights to replay-verified
   events. The profile displays the result only as an unsaved preview.
+- **M3B score-state activation:** submitted friendship evidence atomically
+  updates separate current lever state under the accepted M3A mathematics,
+  with immutable hashed before/after snapshots, deterministic rebuild and
+  reversal, recalculated provisional need, and dynamic active-protocol order.
 
 Only submitted check-ins count toward completion. A database constraint limits
 each user to one active or paused practice. Services—not templates—own state
 transitions, evidence aggregation, and completion rules.
 
-The stored-profile boundary is tested before and after practice completion,
-event creation, ledger viewing, export, replay verification, and M3A
-projection. M2 stores event-level base evidence mass. M3A computes posterior
-values in memory but writes no current mastery, confidence, need/priority,
-archetype, orientation, recommendation, or score snapshot.
+The assessment baseline remains unchanged through practice completion, event
+creation, ledger viewing, export, replay verification, and current-state
+activation. M2 stores event-level base evidence mass. M3A established the
+posterior contract in memory. M3B writes only separate `LeverState` rows and
+append-only `ScoreSnapshot` transitions. It never rewrites raw self-report,
+assessment baselines, orientations, or archetypes.
 
 ## Milestone sequence
 ### M1 — Guided UX, static scores
@@ -238,21 +243,30 @@ Build and review a versioned projection before activating any stored state.
 - lock exact behavior with synthetic golden fixtures;
 - create no current score, score snapshot, need/rank, or recommendation write.
 
-Status: implemented; pending pull-request review.
+Status: implemented, reviewed, and merged.
 
-The binding proposed contract is in `docs/scoring-shadow.md`. M3A is a
+The accepted contract is in `docs/scoring-shadow.md`. M3A is a
 software-review and calibration gate, not psychometric validation.
 
 #### M3B — State activation and dynamic ranking
-- immutable before/after score snapshots;
-- atomic, idempotent state application;
-- rebuild and reversal from versioned events;
-- current mastery/confidence state separated from assessment baseline;
-- recalculated need and dynamic practice ranking;
-- migration policy for baselines whose exact mass is unavailable.
+- separate 37-lever current state for each immutable assessment baseline;
+- immutable, hashed initialization/process/reversal/rebuild snapshots;
+- atomic and idempotent evidence creation plus score application;
+- strict replay of evidence, contributions, transition history, need ranks,
+  active-event sets, and final current state;
+- startup reconciliation and read-only verification command;
+- audited permanent event reversal without deleting the evidence ledger;
+- assessment v1.1 provisional-need recalculation from current estimate and
+  confidence;
+- active-practice priority from canonical parent-competency weights;
+- `baseline_only` policy and reassessment path for unavailable mass;
+- unchanged assessment baseline, completion state, orientations, archetypes,
+  and human-worth boundary.
 
-Status: not started. Do not begin until M3A is reviewed and explicitly
-approved.
+Status: implemented; pending pull-request review. Do not begin M4 until M3B is
+reviewed and explicitly approved.
+
+The binding activation contract is in `docs/scoring-state.md`.
 
 ### M4 — Protocol library expansion
 Create reusable protocol patterns and convert more of the 383 competencies into executable interventions.
@@ -288,6 +302,30 @@ Create reusable protocol patterns and convert more of the 383 competencies into 
 10. The UI states that the result is a preview and completion is not mastery.
 11. M3B mutation and dynamic ranking remain absent.
 
+## M3B acceptance criteria
+
+1. M3A mathematics, direction semantics, weights, and rounding remain
+   unchanged.
+2. Every baseline has a separate current state; baseline values never mutate.
+3. Check-in, evidence event, score update, and process snapshot commit or roll
+   back together.
+4. Reprocessing the same event is idempotent.
+5. Each initialization, processed event, reversal, and repair retains a full
+   immutable hashed before/after state.
+6. Draft, completion, review, inconclusive, and direction-unknown cases do not
+   move current estimates.
+7. Reversal retains the evidence event, requires a reason, and is idempotent.
+8. Rebuild reproduces current state and repairs drift with an audit snapshot.
+9. Startup initializes and reconciles score state after evidence backfill.
+10. Current need reproduces assessment v1.1 at baseline and recalculates after
+    eligible evidence.
+11. Active practice order uses stable canonical weights and current need.
+12. Missing required baseline mass fails the submission transaction and
+    directs the user toward reassessment.
+13. Profile language distinguishes baseline, current estimate, confidence,
+    completion, mastery, and worth.
+14. Orientations and archetypes remain unchanged.
+
 ## Handoff audit notes
 
 - Canonical curriculum counts remain 27 domains, 383 competencies, 37 levers,
@@ -319,3 +357,15 @@ Create reusable protocol patterns and convert more of the 383 competencies into 
 - The dormant browser helper's mass-only confidence line was not adopted: it
   can lower the displayed assessment confidence after adding evidence. M3A
   uses an anchored monotonic gain and leaves assessment v1.1 unchanged.
+- M3A review accepted Decisions 019–022 without a scoring-math change.
+- M3B retains `GG-SCORING-SHADOW-1.0` as the exact accepted math version and
+  versions persistence and ranking separately as `GG-SCORE-STATE-1.0` and
+  `GG-NEED-RANKING-1.0`.
+- Pilot 002 initializes 37 current rows: 33 evidence-active and L06, L15, L32,
+  and L37 baseline-only. All four friendship-mapped rows are active.
+- Dynamic need intentionally reproduces the assessment v1.1 provisional
+  function. Context-aware applicability/importance/readiness/urgency ranking
+  is not claimed because those inputs are not collected.
+- The only canonical active protocol remains Deepen One Existing Friendship.
+  Synthetic competing protocols test dynamic ordering without shipping
+  invented interventions.

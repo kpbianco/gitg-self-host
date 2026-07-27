@@ -341,10 +341,10 @@ def test_profile_shadow_projection_is_read_only_and_excludes_drafts(client, user
     assert len(shadow.rows) == 4
     assert shadow.uses_reconstructed_baseline is True
     assert response.status_code == 200
-    assert "What submitted evidence would change" in content
-    assert "Preview only · not saved" in content
-    assert "Your live profile and practice recommendations remain unchanged." in content
-    assert "completing a practice does not change this profile." in content
+    assert "What submitted evidence has changed" in content
+    assert "Current · versioned" in content
+    assert "immutable before-and-after" in content
+    assert "completing this practice does not establish mastery" in content
     assert "0.6500" not in content
     assert "1.500000" not in content
     assert SCORING_ALGORITHM_VERSION not in content
@@ -377,7 +377,7 @@ def test_profile_shadow_projection_fails_closed_on_incomplete_evidence(client, u
     content = response.content.decode()
 
     assert response.status_code == 200
-    assert "Evidence replay verification must pass" in content
+    assert "Evidence and score-state verification must pass" in content
     assert "Current 33%" not in content
     assert str(missing.pk) not in content
     assert _baseline_snapshot(user) == before

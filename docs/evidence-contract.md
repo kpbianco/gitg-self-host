@@ -174,8 +174,10 @@ plain-language direction filtering and no private context or note text.
 Numeric internals and the algorithm version are available only in a collapsed
 technical audit section.
 
-Every evidence page states that the developmental profile is unchanged and
-that one observation does not establish mastery.
+Every evidence page states that one observation does not establish mastery.
+Under M3B, it also explains that eligible directional evidence may contribute
+to the separate current working profile while inconclusive or unknown
+direction is withheld.
 
 ## M2B audit boundary
 

@@ -28,8 +28,15 @@
 
   {% if summary.assessment_run %}
     <div class="status-note" role="note">
-      <strong>Your starting profile is fixed for this release.</strong>
-      Practice activity does not change mastery, confidence, orientations, or archetypes.
+      {% if summary.state_verification_error %}
+        <strong>Current evidence updates are paused.</strong>
+        {{ summary.state_verification_error }} The assessment baseline is shown
+        until the instance owner repairs the audit state.
+      {% else %}
+        <strong>Your assessment baseline remains fixed.</strong>
+        Eligible submitted evidence can update provisional capacity estimates,
+        confidence, and recommendation order. Orientations and archetypes do not change.
+      {% endif %}
     </div>
   {% endif %}
 
@@ -96,7 +103,7 @@
         <a class="button button-secondary" href="{% url 'growth:practice-list' %}">Review practices</a>
       {% else %}
         <h2>Complete the assessment.</h2>
-        <p>Fifty required questions establish the first static profile.</p>
+        <p>Fifty required questions establish the provisional starting profile.</p>
         <a class="button button-secondary" href="{% url 'growth:assessment' %}">Begin assessment</a>
       {% endif %}
     </section>
@@ -108,7 +115,9 @@
         <p class="eyebrow">Recommended next</p>
         <h2 id="recommendations-heading">Bounded practices, not open-ended homework</h2>
       </div>
-      <p class="section-note">Recommendation order is fixed in this release.</p>
+      <p class="section-note">
+        Recommendation order reflects current provisional need; completion never implies mastery.
+      </p>
     </div>
     <div class="card-grid">
       {% for protocol in summary.recommendations %}
@@ -135,7 +144,7 @@
       {% empty %}
         <article class="empty-state">
           <h3>No recommendations yet</h3>
-          <p>Seed or import a profile to establish a static starting point.</p>
+          <p>Seed or import a profile to establish a provisional starting point.</p>
         </article>
       {% endfor %}
     </div>

@@ -33,9 +33,9 @@ database backup does not include future files under `/data/uploads`; copy that
 directory separately when uploads are introduced.
 
 The SQLite snapshot includes users, assessment answers/results/share codes,
-practice state, drafts, submitted check-ins, evidence events, and reviews.
-Treat it as sensitive personal data and protect both the file and any off-host
-copies accordingly.
+practice state, drafts, submitted check-ins, evidence events, current lever
+state, immutable score snapshots, reversals, and reviews. Treat it as sensitive
+personal data and protect both the file and any off-host copies accordingly.
 
 The downloadable evidence JSON is not a database backup. It omits identity,
 record IDs, dates, free text, assessment state, and workflow state by design
@@ -78,6 +78,8 @@ Expected output is `ok`.
    docker compose up -d
    docker compose ps
    curl --fail http://127.0.0.1:${APP_PORT:-3000}/health/
+   docker compose exec app python manage.py verify_evidence_events
+   docker compose exec app python manage.py rebuild_score_state --verify-only
    ```
 
 Startup applies any migrations required by the currently checked-out

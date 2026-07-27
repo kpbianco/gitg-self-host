@@ -34,7 +34,8 @@ The ledger:
   rendering; no partial ledger is shown on integrity failure;
 - is marked private and non-cacheable;
 - shows no person/context label, note, or contradiction-detail text;
-- explicitly states that the developmental profile is unchanged.
+- explains that eligible directional evidence may contribute to the separate
+  current working profile without establishing mastery.
 
 The full private note remains available only on the user-scoped individual
 evidence-reading page.
@@ -75,6 +76,11 @@ It deliberately excludes:
 The sequence is retained because repetition order is part of the evidence
 contract. No export-generation timestamp is added, so identical stored records
 produce identical bytes. Responses are marked private and non-cacheable.
+
+The compatibility field `profile_scores_modified` reports whether the user's
+persisted current state contains included evidence mass. The separate
+`profile_scores_modified_by_export` field is always false: downloading the
+file is read-only.
 
 This is a privacy-minimized calibration artifact, not an anonymous public-data
 guarantee. Structured behavioral values can still be sensitive. Review the
@@ -125,10 +131,11 @@ They are golden software fixtures, not psychometric validation. A future
 algorithm must add a newly versioned fixture set instead of silently replacing
 these expected outputs.
 
-## Static-profile boundary
+## Read-only audit boundary
 
 Ledger views, export, and replay verification are read-only. Tests snapshot all
-37 Pilot 002 lever baselines before and after these operations. M2B does not:
+37 Pilot 002 assessment baselines before and after these operations. M2B
+itself does not:
 
 - allocate event mass to levers;
 - calculate success or failure contributions;
@@ -137,4 +144,7 @@ Ledger views, export, and replay verification are read-only. Tests snapshot all
 - rerank recommendations;
 - create score snapshots.
 
-M3 remains a separate design and review gate.
+M3B may already have processed the events when they were submitted. Merely
+opening, filtering, exporting, or replay-verifying the ledger never creates a
+score transition. Score-state verification is a separate command documented
+in `docs/scoring-state.md`.

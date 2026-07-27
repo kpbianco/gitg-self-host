@@ -17,6 +17,7 @@ from growth.models import (
     PracticeSprint,
 )
 from growth.services.evidence import EvidenceWorkflowError, create_evidence_event
+from growth.services.score_state import ScoreStateError, apply_evidence_event
 
 
 class PracticeWorkflowError(ValueError):
@@ -232,8 +233,9 @@ def save_check_in(
     check_in.save()
     if submit:
         try:
-            create_evidence_event(check_in)
-        except EvidenceWorkflowError as exc:
+            event = create_evidence_event(check_in)
+            apply_evidence_event(event)
+        except (EvidenceWorkflowError, ScoreStateError) as exc:
             raise PracticeWorkflowError(str(exc)) from exc
     return check_in
 

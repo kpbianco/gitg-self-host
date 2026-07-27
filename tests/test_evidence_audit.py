@@ -32,6 +32,7 @@ from growth.services.evidence import (
     verify_evidence_event,
 )
 from growth.services.practice import save_check_in, start_practice
+from growth.services.score_state import synchronize_score_state_for_run
 
 ROOT = Path(__file__).resolve().parents[1]
 CALIBRATION_PATH = ROOT / "tests" / "fixtures" / "evidence" / "calibration_v1.json"
@@ -45,13 +46,34 @@ def _ensure_assessment(user):
     existing = AssessmentRun.objects.filter(user=user).first()
     if existing is not None:
         return existing
-    return AssessmentRun.objects.create(
+    source = AssessmentRun.objects.first()
+    run = AssessmentRun.objects.create(
         stable_id=f"TEST-ASSESSMENT-{user.pk}",
         user=user,
         curriculum_version=CurriculumVersion.objects.get(active=True),
         assessment_version="1.1",
         source=AssessmentRun.Source.APPLICATION,
     )
+    if source is not None:
+        LeverBaseline.objects.bulk_create(
+            LeverBaseline(
+                user=user,
+                assessment_run=run,
+                lever=baseline.lever,
+                raw_self_report=baseline.raw_self_report,
+                calibrated_estimate=baseline.calibrated_estimate,
+                evidence_confidence=baseline.evidence_confidence,
+                baseline_alpha=baseline.baseline_alpha,
+                baseline_beta=baseline.baseline_beta,
+                baseline_mass_source=baseline.baseline_mass_source,
+                need_score=baseline.need_score,
+                need_rank=baseline.need_rank,
+                notes="Synthetic copied baseline for user-scope verification.",
+            )
+            for baseline in source.lever_baselines.all()
+        )
+        synchronize_score_state_for_run(run)
+    return run
 
 
 def _sprint(user, *, private_context="PRIVATE-CONTEXT-TOKEN"):
@@ -191,29 +213,7 @@ def test_replay_verification_fails_on_missing_or_drifted_event(user, seeded):
         submit=True,
     )
     event = check_in.evidence_event
-    stored = {
-        field: getattr(event, field)
-        for field in (
-            "protocol_stable_id",
-            "action_stable_id",
-            "input_snapshot",
-            "performance",
-            "quality",
-            "independence",
-            "context_breadth",
-            "repetition_index",
-            "repetition_multiplier",
-            "contradiction_level",
-            "base_evidence_mass",
-            "explanation",
-        )
-    }
-    event.delete()
-    EvidenceEvent.objects.create(
-        check_in=check_in,
-        algorithm_version="GG-EVIDENCE-BROKEN",
-        **stored,
-    )
+    EvidenceEvent._base_manager.filter(pk=event.pk).update(algorithm_version="GG-EVIDENCE-BROKEN")
 
     with pytest.raises(CommandError, match="algorithm_version"):
         call_command("verify_evidence_events")
@@ -338,7 +338,7 @@ def test_ledger_is_authenticated_filtered_user_scoped_and_score_static(client, u
     assert response.context["ledger"].summary.supports == 1
     assert response.context["ledger"].summary.contradicts == 1
     assert len(response.context["page"].object_list) == 2
-    assert "Your developmental profile is unchanged." in content
+    assert "Directional evidence may contribute to your working profile." in content
     assert "PRIVATE-CONTEXT-TOKEN" not in content
     assert "PRIVATE-NOTE-TOKEN" not in content
     assert "PRIVATE-CONTRADICTION-TOKEN" not in content
@@ -428,7 +428,8 @@ def test_privacy_safe_export_is_deterministic_allowlisted_and_user_scoped(client
     assert first.content == second.content
     assert payload["schema_version"] == EVIDENCE_EXPORT_SCHEMA_VERSION
     assert payload["event_count"] == 1
-    assert payload["profile_scores_modified"] is False
+    assert payload["profile_scores_modified"] is True
+    assert payload["profile_scores_modified_by_export"] is False
     assert payload["events"][0]["protocol_stable_id"] == sprint.protocol_id
     assert payload["events"][0]["action_stable_id"] == action.pk
     assert payload["events"][0]["output"]["base_evidence_mass"] == "0.4675"
