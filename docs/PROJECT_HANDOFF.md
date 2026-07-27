@@ -302,11 +302,27 @@ Status: implemented, reviewed, and merged. Decisions 029–030 are accepted.
 - require both a direct boundary statement and one proportionate follow-through;
 - retain immutable `GG-EVIDENCE-1.0` events while remaining score-inactive.
 
+Status: implemented, reviewed, and merged. Decisions 031–032 are accepted.
+
+#### M4D — Attention-presence experiment
+- activate `PRACTICE-PRESENCE-01` as a complete 10-day, three-action protocol;
+- anchor it to canonical competency `08.02`, Mindfulness and present attention;
+- use only canonical target lever `L08` from that competency's structured mapping;
+- compare one usual and one changed 15-minute condition around the same
+  low-stakes activity;
+- treat noticing and returning attention—not output or zero distraction—as the
+  relevant observation;
+- preserve movement, fidgets, assistive technology, reminders, and necessary
+  alerts while excluding safety-critical activity and surveillance;
+- require both a condition comparison and one repeat within seven days;
+- retain immutable `GG-EVIDENCE-1.0` events while remaining score-inactive.
+
 Status: implemented for review.
 
-Continue M4 in separately reviewed batches. A new executable protocol does not become
-score-active until its stable canonical parent, structured weights, evidence
-semantics, and golden tests are explicitly reviewed.
+The initial five-protocol library is complete after M4D. Further expansion
+must use separately reviewed batches. A new executable protocol does not
+become score-active until its stable canonical parent, structured weights,
+evidence semantics, and golden tests are explicitly reviewed.
 
 ## M1 acceptance criteria
 1. User understands why a practice was recommended without seeing backend fields.
@@ -404,8 +420,8 @@ semantics, and golden tests are explicitly reviewed.
   function. Context-aware applicability/importance/readiness/urgency ranking
   is not claimed because those inputs are not collected.
 - The only score-active protocol remains Deepen One Existing Friendship.
-  Play, emotional cue detection, and boundary practice are executable but
-  score-inactive.
+  Play, emotional cue detection, boundary practice, and the attention-presence
+  experiment are executable but score-inactive.
 - M3B review accepted Decisions 023–026 without changing its scoring
   mathematics or activation boundary.
 - `make compose-smoke` is the repeatable deployment gate. It uses an isolated

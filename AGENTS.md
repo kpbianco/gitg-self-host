@@ -146,8 +146,8 @@ canonical assessment and completes the friendship recommendation, setup,
 sprint, draft/submitted check-in, pause/resume/stop, completion, and review
 experience.
 
-M1 through M3B are reviewed and merged. M4A and M4B are also reviewed and
-merged; Decisions 023–030 are accepted.
+M1 through M3B are reviewed and merged. M4A through M4C are also reviewed and
+merged; Decisions 023–032 are accepted.
 M3B may update only separate current lever state from replay-verified
 friendship evidence. Baselines, raw self-report, orientations, archetypes,
 completion, and human worth remain unchanged.
@@ -164,8 +164,13 @@ protocol. It is anchored to canonical competency `11.10`, limits the
 intervention to a safely stateable low-stakes situation, distinguishes a
 boundary from coercion or punishment, requires both a direct statement and
 proportionate follow-through, and remains score-inactive.
-The remaining M4 protocol-library expansion must proceed in separately
-authorized, reviewable batches. Adding a protocol to the library
+M4D activates **Complete an Attention-Presence Experiment** as the fifth
+complete protocol. It is anchored to canonical competency `08.02`, compares
+one usual and one changed condition without productivity scoring or
+surveillance, preserves accessibility supports, requires a repeat within seven
+days, and remains score-inactive.
+The initial five-protocol library is now complete. Further protocol-library
+expansion must proceed in separately authorized, reviewable batches. Adding a protocol to the library
 does not authorize score activation. Any newly score-active protocol requires
 a stable canonical parent competency, validated structured weights, reviewed
 evidence semantics, and golden coverage before it may affect current state or

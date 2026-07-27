@@ -245,7 +245,7 @@ subset. It does not invent an L06 link, parse display text, or activate
 scoring.
 
 ## Decision 031 — Low-stakes boundary practice uses competency 11.10
-**Status:** Proposed for M4C review
+**Status:** Accepted after M4C review
 
 `PRACTICE-BOUNDARY-01` is anchored to canonical competency `11.10`, Saying no
 and ending responsibly. That competency directly supports declining demands
@@ -262,7 +262,7 @@ retaliation require safety planning and appropriate trusted, professional,
 legal, medical, or organizational support rather than this protocol.
 
 ## Decision 032 — Boundary completion requires statement and follow-through
-**Status:** Proposed for M4C review
+**Status:** Accepted after M4C review
 
 A boundary in M4C describes the user's own participation and proportionate
 response; it is not a threat, punishment, withdrawal of care, silent test, or
@@ -274,3 +274,34 @@ while preserving the previous `any` default for reviewed protocols.
 Both observations use the unchanged `GG-EVIDENCE-1.0` vocabulary. Boundary
 submissions create immutable evidence events but no score snapshot, current
 lever-state change, or recommendation-order change.
+
+## Decision 033 — Attention-presence practice uses competency 08.02
+**Status:** Proposed for M4D review
+
+`PRACTICE-PRESENCE-01` is anchored to canonical competency `08.02`,
+Mindfulness and present attention, because its intervention practices a
+bounded period of sustained presence and earlier recognition of distraction.
+It is not a broad attention audit across the user's life. The structured
+mapping is L08 `0.75`, L03 `0.15`, and L17 `0.10`; the protocol targets only
+L08 as a non-empty recommendation subset and remains score-inactive.
+
+M4D does not interpret completion time, output, or distraction count as
+mastery. It requires no tracking application, browser history, camera,
+microphone, or observation of another person.
+
+## Decision 034 — Presence is an accessible condition comparison
+**Status:** Proposed for M4D review
+
+The intervention compares the same low-stakes 15-minute activity under usual
+conditions and after changing exactly one user-controlled condition, then
+repeats the more workable condition within seven days. The relevant
+observation is whether the user noticed and returned attention more readily,
+including contradictory evidence that the change did not help.
+
+Stillness, silence, eye contact, and zero distraction are not requirements.
+Movement, fidgets, assistive technology, reminders, and alerts needed for
+access or safety remain available. The experiment must not run while driving,
+operating equipment, supervising a hazard, or after disabling emergency,
+accessibility, or caregiving alerts. Completion uses the existing reviewed
+all-marker rule and creates immutable evidence without a score snapshot or
+lever-state change.

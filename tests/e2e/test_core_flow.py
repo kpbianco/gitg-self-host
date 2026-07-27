@@ -180,6 +180,42 @@ def test_boundary_setup_and_check_in_are_safe_and_specific(live_server, page: Pa
 
 @pytest.mark.e2e
 @pytest.mark.django_db(transaction=True)
+def test_presence_setup_and_check_in_are_accessible_and_specific(live_server, page: Page):
+    create_browser_user()
+    seed_browser_data()
+    log_in(live_server, page)
+
+    page.goto(f"{live_server.url}/practices/complete-an-attention-presence-experiment/")
+    page.get_by_role("heading", name="Complete an Attention-Presence Experiment").wait_for()
+    page.get_by_text("Run the usual-condition window").wait_for()
+    page.get_by_role("link", name="Start guided setup").click()
+    page.get_by_text("will not change your profile or recommendation").wait_for()
+    page.get_by_role("button", name="Continue").click()
+    page.get_by_label("Yes, I have a safe 15-minute activity I can repeat").check()
+    page.get_by_role("button", name="Continue").click()
+    page.get_by_label("Private label for the person or context").fill("technical reading")
+    page.get_by_role("button", name="Continue").click()
+    page.get_by_text("Presence is not stillness, perfection, or surveillance.").wait_for()
+    page.get_by_text("disability, neurodiversity, pain, fatigue").wait_for()
+    page.get_by_label(
+        "I will use a safe, low-stakes activity, keep supports and alerts needed "
+        "for access or safety, and treat distraction as information—not failure."
+    ).check()
+    page.get_by_role("button", name=re.compile(r"I understand")).click()
+    page.get_by_role("button", name="Continue").click()
+    page.get_by_role("button", name="I have reviewed the three actions").click()
+    page.get_by_role("button", name="Begin practice").click()
+    page.get_by_role("link", name="Add compact check-in").click()
+    page.get_by_label("I noticed attention drift and deliberately returned").wait_for()
+    page.get_by_label("I compared the usual and changed condition").wait_for()
+    page.get_by_label("I repeated the more workable condition within seven days").wait_for()
+    assert page.get_by_label("Expected reciprocity").count() == 0
+    assert page.get_by_label("Observed reciprocity").count() == 0
+    assert page.get_by_label("A specific future interaction was scheduled").count() == 0
+
+
+@pytest.mark.e2e
+@pytest.mark.django_db(transaction=True)
 def test_complete_assessment_and_save_canonical_outputs(live_server, page: Page):
     user = create_browser_user()
     seed_browser_data()
