@@ -205,3 +205,33 @@ APP_SECURE_COOKIES=true
 ```
 
 Do not expose the direct HTTP port to the public internet.
+
+## Repeatable deployment verification
+
+Run the complete deployment drill from a Docker-capable host:
+
+```bash
+make compose-smoke
+```
+
+The drill builds the production image and uses an isolated Compose project,
+temporary environment files, a free host port, and a throwaway named volume.
+It verifies:
+
+- the Compose health check and public `/health/` response;
+- anonymous redirect plus a real CSRF-protected login over the mapped port;
+- the non-root runtime, applied migrations, exact canonical counts, repeated
+  seed idempotency, evidence replay, and score-state replay;
+- database and bootstrap-password persistence after forced container
+  recreation;
+- an online SQLite backup, `PRAGMA integrity_check`, and restore;
+- clean Gunicorn shutdown.
+
+The script removes its isolated containers and volume on exit. It does not
+read or modify the deployment `.env` or `grounded_growth_data` volume.
+`APP_ENV_FILE` is an internal Compose override used by this drill; normal
+deployment continues to default to `.env`.
+
+GitHub Actions runs the same command in
+`.github/workflows/verification.yml`, alongside Ruff, Django, pytest, and
+Playwright jobs.

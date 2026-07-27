@@ -131,7 +131,10 @@ The accepted rationale is recorded in
 Before asking for review:
 1. Run Ruff formatting/linting, Django system checks, pytest, and relevant
    Playwright tests.
-2. Run the app through Docker Compose.
+2. Run `make compose-smoke` in a Docker-capable environment. It must exercise
+   the mapped host port, health check, login, migrations, idempotent seed,
+   score replay, container recreation, volume persistence, backup/restore, and
+   clean shutdown.
 3. Audit changed files against this document and `docs/PROJECT_HANDOFF.md`.
 4. Report failed or unverified acceptance criteria plainly.
 5. Do not claim dynamic scoring works until score mutation is deliberately enabled and tested.
@@ -143,9 +146,14 @@ canonical assessment and completes the friendship recommendation, setup,
 sprint, draft/submitted check-in, pause/resume/stop, completion, and review
 experience.
 
-M1, M2, and M3A are merged. M3B is the bounded state-activation and dynamic
-ranking batch in `docs/scoring-state.md`. It may update only separate current
-lever state from replay-verified friendship evidence. Baselines, raw
-self-report, orientations, archetypes, completion, and human worth remain
-unchanged. Do not begin M4 protocol expansion until M3B is reviewed and
-explicitly approved.
+M1 through M3B are reviewed and merged. Decisions 023–026 are accepted.
+M3B may update only separate current lever state from replay-verified
+friendship evidence. Baselines, raw self-report, orientations, archetypes,
+completion, and human worth remain unchanged.
+
+M4 protocol-library expansion is the next milestone and must proceed in
+separately authorized, reviewable batches. Adding a protocol to the library
+does not authorize score activation. Any newly score-active protocol requires
+a stable canonical parent competency, validated structured weights, reviewed
+evidence semantics, and golden coverage before it may affect current state or
+recommendation order.

@@ -9,6 +9,7 @@ def test_compose_is_one_service_with_persistent_data_and_healthcheck():
     compose = yaml.safe_load((ROOT / "docker-compose.yml").read_text())
     assert set(compose["services"]) == {"app"}
     app = compose["services"]["app"]
+    assert app["env_file"] == ["${APP_ENV_FILE:-.env}"]
     assert app["ports"] == ["${APP_PORT:-3000}:8000"]
     assert app["volumes"] == ["grounded_growth_data:/data"]
     assert app["restart"] == "unless-stopped"
@@ -53,3 +54,24 @@ def test_environment_example_covers_deployment_and_cookie_contract():
         "APP_DEBUG",
         "APP_SECURE_COOKIES",
     } <= keys
+
+
+def test_repeatable_compose_acceptance_is_wired_into_make_and_ci():
+    makefile = (ROOT / "Makefile").read_text()
+    smoke_script = (ROOT / "scripts" / "verify_compose.sh").read_text()
+    login_probe = (ROOT / "scripts" / "verify_http_login.py").read_text()
+    workflow = (ROOT / ".github" / "workflows" / "verification.yml").read_text()
+
+    assert "compose-smoke:" in makefile
+    assert "./scripts/verify_compose.sh" in makefile
+    assert "docker compose --project-name" in smoke_script
+    assert "up -d --build --wait" in smoke_script
+    assert "seed_canonical" in smoke_script
+    assert "migrate --check" in smoke_script
+    assert "backup_database" in smoke_script
+    assert "--force-recreate" in smoke_script
+    assert "shutil.copy2" in smoke_script
+    assert "verify_http_login.py" in smoke_script
+    assert "csrfmiddlewaretoken" in login_probe
+    assert "HttpOnly" in login_probe
+    assert "make compose-smoke" in workflow

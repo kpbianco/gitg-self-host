@@ -21,10 +21,10 @@ leaving every developmental profile value unchanged.
 M2B adds a private evidence ledger, deterministic minimized export, strict
 replay verification, and calibration fixtures around those same static events.
 M3A adds a versioned, direction-aware posterior projection on the profile as a
-clearly labeled unsaved preview. M3B activates that reviewed contract for the
-friendship protocol with separate current state, immutable transition
-snapshots, deterministic rebuild/reversal, and dynamic provisional
-recommendation ordering.
+clearly labeled unsaved preview. The reviewed and accepted M3B contract
+activates it for the friendship protocol with separate current state,
+immutable transition snapshots, deterministic rebuild/reversal, and dynamic
+provisional recommendation ordering.
 
 ## Deployment essentials
 
@@ -185,11 +185,14 @@ make score-verify
 make run
 make compose-up
 make compose-down
+make compose-smoke
 make backup
 ```
 
 The local `migrate`, `seed`, and `run` targets use `./var`; the deployed
-container always uses `/data`.
+container always uses `/data`. `compose-smoke` creates and removes an isolated
+Compose project and throwaway volume; it never uses the deployment `.env` or
+volume.
 
 ## Canonical data
 
