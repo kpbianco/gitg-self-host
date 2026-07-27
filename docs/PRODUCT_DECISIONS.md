@@ -226,7 +226,7 @@ snapshot because doing so would change historical replay. A genuinely new
 observation vocabulary requires a separately versioned evidence contract.
 
 ## Decision 029 — Emotional cues remain hypotheses
-**Status:** Proposed for M4B review
+**Status:** Accepted after M4B review
 
 `PRACTICE-EMOTIONAL-CUES-01` is anchored to canonical competency `16.03`,
 Nonverbal communication. Its intervention separates observable changes from
@@ -236,10 +236,41 @@ posture, tone, and distance must not be treated as universal indicators or
 used to diagnose intent, emotion, disability, or neurotype.
 
 ## Decision 030 — Recommendation targets follow the canonical parent
-**Status:** Proposed for M4B review
+**Status:** Accepted after M4B review
 
 The placeholder's earlier broad targets `L24` and `L06` are not retained as a
 runtime scoring or recommendation mapping. Canonical parent `16.03` maps to
 L23, L24, and L05; M4B uses `L24` as its non-empty recommendation-target
 subset. It does not invent an L06 link, parse display text, or activate
 scoring.
+
+## Decision 031 — Low-stakes boundary practice uses competency 11.10
+**Status:** Proposed for M4C review
+
+`PRACTICE-BOUNDARY-01` is anchored to canonical competency `11.10`, Saying no
+and ending responsibly. That competency directly supports declining demands
+and closing commitments cleanly without requiring the guided intervention to
+enter the higher-risk bodily-autonomy or harmful-relationship scopes of
+`12.12` or `17.06`. Its structured mapping is L25 `0.40`, L36 `0.25`, L10
+`0.20`, and L29 `0.15`; the protocol targets only L25 as a non-empty subset
+and remains score-inactive.
+
+The setup is restricted to a low-stakes request, recurring expectation, or
+optional commitment where direct communication is reasonably safe. Abuse,
+coercive control, stalking, discrimination, unsafe dependency, and likely
+retaliation require safety planning and appropriate trusted, professional,
+legal, medical, or organizational support rather than this protocol.
+
+## Decision 032 — Boundary completion requires statement and follow-through
+**Status:** Proposed for M4C review
+
+A boundary in M4C describes the user's own participation and proportionate
+response; it is not a threat, punishment, withdrawal of care, silent test, or
+method of forcing agreement. Completion requires both a directly stated
+boundary and a proportionate follow-through or restatement within seven days.
+The reusable completion configuration therefore supports `marker_mode=all`
+while preserving the previous `any` default for reviewed protocols.
+
+Both observations use the unchanged `GG-EVIDENCE-1.0` vocabulary. Boundary
+submissions create immutable evidence events but no score snapshot, current
+lever-state change, or recommendation-order change.

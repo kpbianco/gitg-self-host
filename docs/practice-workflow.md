@@ -15,8 +15,10 @@ The user does not design the intervention. M4A also activates
 reserve a play window, engage without an output goal, and return once within
 seven days. M4B activates **Practice Emotional Cue Detection**, a 10-day
 protocol that separates observation from interpretation, holds multiple
-hypotheses, and checks an impression with a neutral question. Two other
-protocols remain inactive structured placeholders.
+hypotheses, and checks an impression with a neutral question. M4C activates
+**State and Maintain One Boundary**, a 10-day protocol that defines a
+self-directed limit, states it directly, and follows through once. One other
+protocol remains an inactive structured placeholder.
 
 ## Guided setup
 
@@ -83,8 +85,8 @@ The service derives completion evidence from submitted check-ins only:
 
 - all three stable action IDs have an attempt;
 - at least two distinct actions are completed;
-- at least one attempted interaction moved beyond transactional content or
-  involved voluntarily shared meaningful information;
+- the protocol's configured completion markers are present, using its reviewed
+  `any` or `all` marker mode;
 - a final review is submitted.
 
 The review and sprint completion are written in one transaction. The review
@@ -124,4 +126,11 @@ snapshot and cannot change current lever state or recommendation order.
 M4B reuses that configuration for emotional cue detection. Its safety boundary
 is substantive: nonverbal cues are uncertain and culturally contextual, and
 direct clarification is required before completion. It also remains
+`score_active=false`.
+
+M4C uses the same evidence vocabulary but requires both configured markers:
+one direct boundary statement and one proportionate follow-through or
+restatement within seven days. It distinguishes a boundary from threats,
+punishment, silent tests, or forced agreement and excludes contexts with
+abuse, coercive control, unsafe dependency, or likely retaliation. It remains
 `score_active=false`.

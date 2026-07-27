@@ -16,7 +16,12 @@ class PracticeApplicabilityForm(forms.Form):
 
     def __init__(self, *args, protocol=None, **kwargs):
         super().__init__(*args, **kwargs)
-        if protocol and protocol.stable_id != "PRACTICE-FRIENDSHIP-01":
+        if protocol and protocol.setup_copy.get("applicability_yes_label"):
+            self.fields["applicable"].choices = (
+                ("yes", protocol.setup_copy["applicability_yes_label"]),
+                ("no", "Not right now"),
+            )
+        elif protocol and protocol.stable_id != "PRACTICE-FRIENDSHIP-01":
             self.fields["applicable"].choices = (
                 ("yes", "Yes, this activity or context is available"),
                 ("no", "Not right now"),

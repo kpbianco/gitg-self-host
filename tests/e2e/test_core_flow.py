@@ -140,6 +140,46 @@ def test_emotional_cue_setup_and_check_in_are_bounded(live_server, page: Page):
 
 @pytest.mark.e2e
 @pytest.mark.django_db(transaction=True)
+def test_boundary_setup_and_check_in_are_safe_and_specific(live_server, page: Page):
+    create_browser_user()
+    seed_browser_data()
+    log_in(live_server, page)
+
+    page.goto(f"{live_server.url}/practices/state-and-maintain-one-boundary/")
+    page.get_by_role("heading", name="State and Maintain One Boundary").wait_for()
+    page.get_by_text("Define what you control").wait_for()
+    page.get_by_role("link", name="Start guided setup").click()
+    page.get_by_text("will not change your profile or recommendation").wait_for()
+    page.get_by_role("button", name="Continue").click()
+    page.get_by_label("Yes, one safe, low-stakes situation is likely to arise").check()
+    page.get_by_role("button", name="Continue").click()
+    page.get_by_label("Private label for the person or context").fill("after-hours requests")
+    page.get_by_role("button", name="Continue").click()
+    page.get_by_text("A boundary is not coercion or punishment.").wait_for()
+    page.get_by_text("unsafe dependency, or retaliation").wait_for()
+    page.get_by_label(
+        "I will use a low-stakes context where direct communication is reasonably "
+        "safe, state only what I control, and not use threats, punishment, silent "
+        "tests, or pressure."
+    ).check()
+    page.get_by_role("button", name=re.compile(r"I understand")).click()
+    page.get_by_role("button", name="Continue").click()
+    page.get_by_role("button", name="I have reviewed the three actions").click()
+    page.get_by_role("button", name="Begin practice").click()
+    page.get_by_role("link", name="Add compact check-in").click()
+    page.get_by_label("I stated the boundary directly in specific words").wait_for()
+    page.get_by_label(
+        "I followed through proportionately or restated the boundary within seven days"
+    ).wait_for()
+    assert page.get_by_label("Expected reciprocity").count() == 0
+    assert page.get_by_label("Observed reciprocity").count() == 0
+    assert (
+        page.get_by_label("Personally meaningful information was voluntarily shared").count() == 0
+    )
+
+
+@pytest.mark.e2e
+@pytest.mark.django_db(transaction=True)
 def test_complete_assessment_and_save_canonical_outputs(live_server, page: Page):
     user = create_browser_user()
     seed_browser_data()

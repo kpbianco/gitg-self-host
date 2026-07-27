@@ -15,6 +15,7 @@ from growth.models import (
     PracticeAction,
     PracticeProtocol,
 )
+from growth.services import canonical_import
 from growth.services.canonical_import import (
     CanonicalDataError,
     _mapping_weights,
@@ -64,6 +65,32 @@ def test_mapping_validator_rejects_partial_and_malformed_slots():
 
 
 @pytest.mark.django_db
+def test_protocol_seed_rejects_unsupported_completion_marker_mode(monkeypatch):
+    monkeypatch.setattr(
+        canonical_import,
+        "PROTOCOLS",
+        (
+            {
+                "stable_id": "PRACTICE-INVALID-MARKER-MODE",
+                "slug": "invalid-marker-mode",
+                "name": "Invalid marker mode",
+                "target_levers": ["L25"],
+                "display_order": 99,
+                "completion_rules": {
+                    "minimum_completed": 1,
+                    "substantive_markers": ["user_initiated"],
+                    "marker_mode": "every",
+                },
+                "actions": [{}],
+            },
+        ),
+    )
+
+    with pytest.raises(CanonicalDataError, match="supported marker mode"):
+        canonical_import._seed_protocols()
+
+
+@pytest.mark.django_db
 def test_repeated_seed_is_idempotent_and_imports_pilot_profile(user):
     first = seed_canonical_data()
     counts_after_first = {
@@ -106,7 +133,7 @@ def test_repeated_seed_is_idempotent_and_imports_pilot_profile(user):
             "archetypes": 3,
             "baselines": 37,
             "protocols": 5,
-            "actions": 9,
+            "actions": 12,
         }
     )
     assert AssessmentRun.objects.get().assessment_version == "1.1"
@@ -118,7 +145,7 @@ def test_repeated_seed_is_idempotent_and_imports_pilot_profile(user):
     )
     assert (
         PracticeProtocol.objects.filter(availability=PracticeProtocol.Availability.INACTIVE).count()
-        == 2
+        == 1
     )
     friendship_actions = PracticeAction.objects.filter(protocol_id="PRACTICE-FRIENDSHIP-01")
     assert friendship_actions.count() == 3
@@ -137,6 +164,13 @@ def test_repeated_seed_is_idempotent_and_imports_pilot_profile(user):
     assert set(emotional_cues.target_levers.values_list("stable_id", flat=True)) == {"L24"}
     assert emotional_cues.score_active is False
     assert emotional_cues.actions.count() == 3
+    boundary = PracticeProtocol.objects.get(stable_id="PRACTICE-BOUNDARY-01")
+    assert boundary.availability == PracticeProtocol.Availability.ACTIVE
+    assert boundary.parent_competency_id == "11.10"
+    assert set(boundary.target_levers.values_list("stable_id", flat=True)) == {"L25"}
+    assert boundary.score_active is False
+    assert boundary.actions.count() == 3
+    assert boundary.completion_rules["marker_mode"] == "all"
 
 
 @pytest.mark.django_db
