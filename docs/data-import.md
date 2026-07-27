@@ -52,6 +52,9 @@ The command opens one transaction and fails before model writes when it finds:
   structured weights are malformed;
 - a practice action with a missing schema version, unknown observation field,
   duplicate marker, or overlapping primary/supporting evidence marker.
+- an invalid completion minimum, completion marker outside the reviewed
+  observation vocabulary, or score activation beyond the reviewed friendship
+  protocol.
 
 No malformed value is silently normalized.
 
@@ -74,10 +77,11 @@ A successful command reports the imported counts. Repeated runs update
 canonical rows by stable ID, remove stale weighted links, and do not duplicate
 entities, assessment runs, baselines, protocols, or actions.
 
-The active friendship actions also receive validated
-`practice-observation-v1` evidence rules keyed by stable action IDs. Seeding
-links the protocol to canonical competency `17.03` and requires its four
-structured weights to sum to 1.0. Seeding does not create evidence events.
+Every executable action receives validated `practice-observation-v1` evidence
+rules keyed by stable action IDs. Seeding links friendship to `17.03`, play to
+`26.01`, and emotional cue detection to `16.03`, then validates each
+recommendation-target subset against canonical structured weights. Seeding
+does not create evidence events.
 `backfill_evidence_events` runs afterward and creates events only for submitted
 check-ins that do not already have one. `rebuild_score_state` then initializes
 or reconciles current state from those events; canonical seeding itself does

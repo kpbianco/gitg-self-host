@@ -106,7 +106,7 @@ def test_repeated_seed_is_idempotent_and_imports_pilot_profile(user):
             "archetypes": 3,
             "baselines": 37,
             "protocols": 5,
-            "actions": 6,
+            "actions": 9,
         }
     )
     assert AssessmentRun.objects.get().assessment_version == "1.1"
@@ -118,7 +118,7 @@ def test_repeated_seed_is_idempotent_and_imports_pilot_profile(user):
     )
     assert (
         PracticeProtocol.objects.filter(availability=PracticeProtocol.Availability.INACTIVE).count()
-        == 3
+        == 2
     )
     friendship_actions = PracticeAction.objects.filter(protocol_id="PRACTICE-FRIENDSHIP-01")
     assert friendship_actions.count() == 3
@@ -131,6 +131,12 @@ def test_repeated_seed_is_idempotent_and_imports_pilot_profile(user):
     assert play.parent_competency_id == "26.01"
     assert play.score_active is False
     assert play.actions.count() == 3
+    emotional_cues = PracticeProtocol.objects.get(stable_id="PRACTICE-EMOTIONAL-CUES-01")
+    assert emotional_cues.availability == PracticeProtocol.Availability.ACTIVE
+    assert emotional_cues.parent_competency_id == "16.03"
+    assert set(emotional_cues.target_levers.values_list("stable_id", flat=True)) == {"L24"}
+    assert emotional_cues.score_active is False
+    assert emotional_cues.actions.count() == 3
 
 
 @pytest.mark.django_db

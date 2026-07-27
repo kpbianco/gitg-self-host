@@ -154,6 +154,10 @@ completion, and human worth remain unchanged.
 M4A activates **Schedule Non-Instrumental Play** as the second complete
 protocol and establishes protocol-configured setup, check-in, and completion
 copy. It records immutable evidence but remains explicitly score-inactive.
+M4B activates **Practice Emotional Cue Detection** as the third complete
+protocol. It is anchored to canonical nonverbal communication competency
+`16.03`, treats cues as uncertain hypotheses, requires direct clarification,
+and remains score-inactive.
 The remaining M4 protocol-library expansion must proceed in separately
 authorized, reviewable batches. Adding a protocol to the library
 does not authorize score activation. Any newly score-active protocol requires

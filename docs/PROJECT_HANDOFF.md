@@ -277,6 +277,18 @@ Create reusable protocol patterns and convert more of the 383 competencies into 
 - retain immutable `GG-EVIDENCE-1.0` events without altering historical replay;
 - keep the protocol score-inactive and create no score snapshot.
 
+Status: implemented, reviewed, and merged. Decisions 027–028 are accepted.
+
+#### M4B — Emotional cue detection
+- activate `PRACTICE-EMOTIONAL-CUES-01` as a complete 10-day, three-action protocol;
+- anchor it to canonical competency `16.03`, Nonverbal communication;
+- use only canonical target lever `L24` from that competency's structured mapping;
+- require observable description, multiple tentative explanations, and neutral
+  direct clarification;
+- explicitly reject mind-reading, diagnosis, and cultural or neurotype
+  stereotyping;
+- retain immutable `GG-EVIDENCE-1.0` events while remaining score-inactive.
+
 Status: implemented for review.
 
 Continue M4 in separately reviewed batches. A new executable protocol does not become

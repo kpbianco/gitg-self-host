@@ -487,8 +487,128 @@ PROTOCOLS = (
         "stable_id": "PRACTICE-EMOTIONAL-CUES-01",
         "slug": "practice-emotional-cue-detection",
         "name": "Practice Emotional Cue Detection",
-        "target_levers": ["L24", "L06"],
+        "parent_competency_id": "16.03",
+        "availability": PracticeProtocol.Availability.ACTIVE,
+        "duration_days": 10,
+        "recommendation_reason": (
+            "Your current provisional profile identifies empathy, social perception, "
+            "and perspective-taking as a useful area for careful practice."
+        ),
+        "applicability_prompt": (
+            "Is there a familiar, low-stakes interaction where contact is welcome and "
+            "you can check your impressions directly rather than guessing?"
+        ),
+        "setup_prompt": (
+            "Choose one familiar person or recurring low-stakes setting. Use this "
+            "practice only where a neutral clarification question would be welcome."
+        ),
+        "privacy_and_boundaries": (
+            "Treat every cue as uncertain and context-dependent. Do not diagnose, "
+            "claim to know another person's feelings, test someone secretly, or infer "
+            "intent from eye contact or body language alone. Culture, disability, "
+            "neurotype, stress, and habit can all change how cues appear."
+        ),
+        "completion_criteria": [
+            "All three actions attempted",
+            "At least two actions completed",
+            "At least one impression checked through direct clarification",
+            "Final review submitted",
+        ],
+        "completion_rules": {
+            "minimum_completed": 2,
+            "substantive_markers": ["follow_up_question_asked"],
+        },
+        "setup_copy": {
+            "context_heading": "Choose one low-stakes interaction context.",
+            "boundary_heading": "Observation is not mind-reading.",
+            "timing_hint": "Choose a date when a familiar, unhurried interaction is realistic.",
+            "context_help": (
+                "Use initials or a short private label. Do not record sensitive details."
+            ),
+            "applicability_heading": "A checkable interaction, not a personality judgment",
+            "completion_signal_label": (
+                "At least one impression checked through direct clarification"
+            ),
+            "boundary_acknowledgement": (
+                "I will treat cues as uncertain, avoid diagnosis and stereotyping, "
+                "and prefer direct clarification over assumption."
+            ),
+            "check_in_labels": {
+                "user_initiated": "I deliberately paused to observe before interpreting",
+                "moved_beyond_transactional": (
+                    "I noticed a change in tone, pace, posture, expression, or distance"
+                ),
+                "follow_up_question_asked": "I asked a neutral question to check my impression",
+                "meaningful_information_shared": (
+                    "The person voluntarily clarified their experience"
+                ),
+                "follow_up_within_seven_days": (
+                    "I compared my initial reading with later information within seven days"
+                ),
+            },
+        },
+        "check_in_fields": [
+            "user_initiated",
+            "moved_beyond_transactional",
+            "follow_up_question_asked",
+            "meaningful_information_shared",
+            "follow_up_within_seven_days",
+            "internal_resistance",
+        ],
+        "target_levers": ["L24"],
         "display_order": 3,
+        "actions": [
+            {
+                "stable_id": "PRACTICE-EMOTIONAL-CUES-01-A1",
+                "sequence": 1,
+                "title": "Notice before interpreting",
+                "instructions": (
+                    "During one welcome, low-stakes interaction, notice one observable "
+                    "change in tone, pace, posture, expression, gesture, or distance. "
+                    "Describe only what changed; do not assign a feeling or motive yet."
+                ),
+                "due_within_days": 3,
+                "evidence_rules": {
+                    "schema_version": "practice-observation-v1",
+                    "primary_markers": ["moved_beyond_transactional"],
+                    "supporting_markers": ["user_initiated"],
+                },
+            },
+            {
+                "stable_id": "PRACTICE-EMOTIONAL-CUES-01-A2",
+                "sequence": 2,
+                "title": "Hold more than one explanation",
+                "instructions": (
+                    "Name at least two plausible explanations for the cue, including "
+                    "one that does not concern you. Keep both tentative."
+                ),
+                "due_within_days": None,
+                "evidence_rules": {
+                    "schema_version": "practice-observation-v1",
+                    "primary_markers": ["user_initiated"],
+                    "supporting_markers": ["moved_beyond_transactional"],
+                },
+            },
+            {
+                "stable_id": "PRACTICE-EMOTIONAL-CUES-01-A3",
+                "sequence": 3,
+                "title": "Clarify without leading",
+                "instructions": (
+                    "When welcome, ask one neutral question such as “I may be reading "
+                    "this wrong—how is this landing?” Within seven days, compare the "
+                    "answer or later information with your initial impression."
+                ),
+                "due_within_days": 7,
+                "evidence_rules": {
+                    "schema_version": "practice-observation-v1",
+                    "primary_markers": [
+                        "follow_up_question_asked",
+                        "follow_up_within_seven_days",
+                    ],
+                    "supporting_markers": ["meaningful_information_shared"],
+                },
+            },
+        ],
     },
     {
         "stable_id": "PRACTICE-BOUNDARY-01",

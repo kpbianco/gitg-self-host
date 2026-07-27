@@ -24,7 +24,8 @@ Treat `legacy/` as provenance only. Do not build implementation behavior from le
 
 Work only on the milestone batch explicitly authorized by the repository
 owner. M1 through M3B are reviewed and merged; Decisions 023–026 are accepted.
-M4A adds the score-inactive Schedule Non-Instrumental Play protocol. Remaining
+M4A adds score-inactive non-instrumental play; M4B adds score-inactive
+emotional cue detection. Remaining
 M4 protocol-library expansion must proceed in separately
 authorized, reviewable batches.
 

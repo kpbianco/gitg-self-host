@@ -108,6 +108,38 @@ def test_play_protocol_setup_is_specific_and_score_inactive(live_server, page: P
 
 @pytest.mark.e2e
 @pytest.mark.django_db(transaction=True)
+def test_emotional_cue_setup_and_check_in_are_bounded(live_server, page: Page):
+    create_browser_user()
+    seed_browser_data()
+    log_in(live_server, page)
+
+    page.goto(f"{live_server.url}/practices/practice-emotional-cue-detection/")
+    page.get_by_role("heading", name="Practice Emotional Cue Detection").wait_for()
+    page.get_by_text("Notice before interpreting").wait_for()
+    page.get_by_role("link", name="Start guided setup").click()
+    page.get_by_text("will not change your profile or recommendation").wait_for()
+    page.get_by_role("button", name="Continue").click()
+    page.get_by_label("Yes, this activity or context is available").check()
+    page.get_by_role("button", name="Continue").click()
+    page.get_by_label("Private label for the person or context").fill("weekly project sync")
+    page.get_by_role("button", name="Continue").click()
+    page.get_by_text("Observation is not mind-reading.").wait_for()
+    page.get_by_label(
+        "I will treat cues as uncertain, avoid diagnosis and stereotyping, "
+        "and prefer direct clarification over assumption."
+    ).check()
+    page.get_by_role("button", name=re.compile(r"I understand")).click()
+    page.get_by_role("button", name="Continue").click()
+    page.get_by_role("button", name="I have reviewed the three actions").click()
+    page.get_by_role("button", name="Begin practice").click()
+    page.get_by_role("link", name="Add compact check-in").click()
+    page.get_by_label("I asked a neutral question to check my impression").wait_for()
+    assert page.get_by_label("Expected reciprocity").count() == 0
+    assert page.get_by_label("A specific future interaction was scheduled").count() == 0
+
+
+@pytest.mark.e2e
+@pytest.mark.django_db(transaction=True)
 def test_complete_assessment_and_save_canonical_outputs(live_server, page: Page):
     user = create_browser_user()
     seed_browser_data()

@@ -67,9 +67,8 @@ local-network access, shutdown behavior, and the future HTTPS boundary.
   structured competency-to-lever links.
 - Idempotent Pilot 002 seed: 37 baselines, six orientations, and the three
   archetypes published in the canonical profile.
-- The complete `Deepen One Existing Friendship` protocol data plus four
-  a second score-inactive executable play protocol and three inactive
-  structured placeholders.
+- The complete **Deepen One Existing Friendship** protocol data and four
+  structured placeholders for later review.
 - The complete 14-day **Deepen One Existing Friendship** experience: reason,
   applicability, context, boundaries, start date, defined actions, activation,
   compact draft/submitted check-ins, pause/resume/stop, completion, and review.
@@ -140,6 +139,19 @@ local-network access, shutdown behavior, and the future HTTPS boundary.
   alpha/beta mass is unavailable.
 - No assessment-baseline, raw self-report, orientation, archetype, completion,
   dignity, or human-worth mutation.
+
+## What M4 adds
+
+- Score-inactive **Schedule Non-Instrumental Play**, with a defined 10-day
+  setup, three actions, compact observations, and completion rules.
+- Score-inactive **Practice Emotional Cue Detection**, with a defined 10-day
+  setup, three actions, direct-clarification requirement, and explicit
+  anti-mind-reading and anti-stereotyping boundaries.
+- Protocol-configured setup copy, compact check-in fields, completion markers,
+  and score activation.
+- Stable canonical parents `26.01` and `16.03` with validated recommendation
+  targets.
+- Two remaining inactive structured placeholders.
 
 ## Product flow
 
@@ -253,8 +265,9 @@ Migrations and canonical seeding run safely on startup.
 - The minimized JSON export omits direct identity and free text, but its
   structured behavioral values can still be sensitive and should be reviewed
   before sharing.
-- Only **Deepen One Existing Friendship** is active. Four additional protocols
-  are structured inactive placeholders, not generic generated exercises.
+- Only **Deepen One Existing Friendship** is score-active. Play and emotional
+  cue detection are executable but score-inactive; two additional protocols
+  remain structured inactive placeholders.
 - The canonical JavaScript scorer remains the browser reference. Node.js is
   used by a development golden test only; no Node.js server exists at runtime.
 - Direct local-network HTTP is supported. Add Caddy or another proxy later for
@@ -269,6 +282,7 @@ Migrations and canonical seeding run safely on startup.
 - [Canonical data import](docs/data-import.md)
 - [Assessment integration](docs/assessment-integration.md)
 - [Practice workflow](docs/practice-workflow.md)
+- [Protocol library](docs/protocol-library.md)
 - [M2 evidence contract](docs/evidence-contract.md)
 - [M2B evidence audit and calibration](docs/evidence-audit.md)
 - [M3A shadow scoring contract](docs/scoring-shadow.md)
