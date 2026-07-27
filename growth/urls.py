@@ -1,12 +1,18 @@
 from django.urls import path
 
-from . import views, views_assessment, views_practice
+from . import views, views_assessment, views_evidence, views_practice
 
 app_name = "growth"
 
 urlpatterns = [
     path("", views.home, name="home"),
     path("profile/", views.profile, name="profile"),
+    path("evidence/", views_evidence.evidence_ledger, name="evidence-ledger"),
+    path(
+        "evidence/export.json",
+        views_evidence.evidence_export,
+        name="evidence-export",
+    ),
     path("assessment/", views_assessment.assessment, name="assessment"),
     path(
         "assessment/scoring-v1-1.js",

@@ -47,6 +47,12 @@ make e2e
 - structured and legacy contradiction handling;
 - atomic event creation, event immutability, and privacy-minimized snapshots;
 - conservative, idempotent M1 evidence backfill;
+- direction-complete synthetic calibration fixtures and exact golden outputs;
+- authenticated, filtered, per-user evidence-ledger isolation;
+- deterministic allowlisted export with identity, IDs, timestamps, free text,
+  and assessment data excluded;
+- strict whole-database replay verification and nonzero failure on gaps/drift;
+- unchanged lever baselines after ledger, export, and verification operations;
 - pause/resume/stop transitions and completion criteria;
 - static raw/calibrated/confidence/need values after final review;
 - SQLite foreign keys, busy timeout, and WAL;
@@ -59,8 +65,8 @@ make e2e
 2. all 50 required assessment questions, result save, and 6/15/37 persistence;
 3. GGA11 import and supported GGA1 import;
 4. recommendation explanation, seven-step setup, start, pause/resume, draft,
-   M2 evidence submission/detail, all three actions, final review, completion,
-   and mastery disclaimer.
+   M2 evidence submission/detail, ledger, minimized JSON download, all three
+   actions, final review, completion, and mastery disclaimer.
 
 The server-side golden test and browser flow complement each other: the first
 deep-compares every canonical output, while the second proves that the mounted
@@ -98,6 +104,7 @@ permission, or shutdown errors.
 ## Current scoring boundary
 
 M1 proves guided UX and static persistence. M2A tests event-level evidence
-classification and base mass. It deliberately has no task-to-lever
-allocation, success/failure contribution, score snapshot, posterior update, or
-dynamic recommendation test because those paths do not exist.
+classification and base mass. M2B tests read-only audit, export, replay, and
+calibration behavior. M2 deliberately has no task-to-lever allocation,
+success/failure contribution, score snapshot, posterior update, or dynamic
+recommendation test because those paths do not exist.

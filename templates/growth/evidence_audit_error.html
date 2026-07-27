@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Evidence verification needed · Grounded Growth{% endblock %}
+
+{% block content %}
+  <section class="page-heading">
+    <div>
+      <p class="eyebrow">Evidence ledger</p>
+      <h1>Verification is needed.</h1>
+      <p class="lede">
+        The ledger stopped because submitted check-ins and replayable evidence
+        are not in complete agreement. No partial history has been shown or exported.
+      </p>
+    </div>
+  </section>
+
+  <div class="mastery-notice" role="alert">
+    <strong>Your developmental profile is unchanged.</strong>
+    <p>
+      Ask the instance owner to run the documented evidence verification and
+      restore a consistent backup if needed.
+    </p>
+  </div>
+
+  <div class="button-row">
+    <a class="button button-secondary" href="{% url 'growth:home' %}">Return home</a>
+  </div>
+{% endblock %}

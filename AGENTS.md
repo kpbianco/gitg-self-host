@@ -42,6 +42,11 @@ quality, independence, context breadth, repetition, contradiction, and base
 event mass. It must not allocate that mass to levers or mutate any profile
 score.
 
+M2B adds auditability around those unchanged events: an authenticated
+per-user ledger, a privacy-minimized deterministic export, strict read-only
+replay verification, and synthetic calibration fixtures. It does not add a
+new evidence algorithm, task-to-lever allocation, or profile mutation.
+
 Implement one complete protocol first: `Deepen One Existing Friendship`.
 Create inactive placeholders for four others:
 - Schedule Non-Instrumental Play
@@ -112,7 +117,8 @@ sprint, draft/submitted check-in, pause/resume/stop, completion, and review
 experience.
 
 M1 remains a static-profile boundary. M2A may calculate base event evidence
-mass under its reviewed contract, but it cannot implement task-to-lever
-allocation, posterior updates, hidden score mutation, score snapshots, or
-dynamic recommendation changes. Practice completion remains separate from
-competency mastery.
+mass under its reviewed contract, and M2B may expose and verify those immutable
+events. Neither batch can implement task-to-lever allocation, posterior
+updates, hidden score mutation, score snapshots, or dynamic recommendation
+changes. Practice completion remains separate from competency mastery. Do not
+begin M3 until M2B is reviewed and explicitly approved.

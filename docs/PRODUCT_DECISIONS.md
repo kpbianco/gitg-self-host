@@ -109,3 +109,22 @@ coefficients, success/failure contributions, posterior mastery, confidence,
 need, task priority, or dynamic recommendations. Existing M1 submissions are
 backfilled conservatively: missing context/support stay explicitly unknown,
 and absence of contradiction text is not converted into supportive evidence.
+
+## Decision 017 — Evidence auditability before dynamic scoring
+**Status:** Accepted
+
+M2B adds a user-scoped evidence ledger, strict read-only replay verification,
+and versioned synthetic calibration fixtures before any M3 score update is
+designed. Audit surfaces read the immutable `GG-EVIDENCE-1.0` events and never
+write assessment, baseline, recommendation, archetype, or orientation state.
+
+## Decision 018 — Privacy-minimized export by allowlist
+**Status:** Accepted
+
+The M2B JSON export includes only stable protocol/action IDs, replayable
+structured inputs, and event outputs. It excludes user identity, database
+record IDs, exact timestamps, person/context labels, all free text,
+assessment answers, and share codes. Event sequence is retained so repetition
+can be calibrated. The export is deterministic for unchanged records and is
+still treated as sensitive behavioral data rather than advertised as
+anonymous public data.

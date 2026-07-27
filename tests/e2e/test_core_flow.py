@@ -194,6 +194,18 @@ def test_guided_practice_draft_pause_and_completion_flow(live_server, page: Page
     page.get_by_text("Your developmental profile is unchanged.").wait_for()
     page.get_by_text("Technical audit details").click()
     page.get_by_text("GG-EVIDENCE-1.0").wait_for()
+    page.get_by_role("link", name="Evidence", exact=True).click()
+    page.wait_for_url(f"{live_server.url}/evidence/")
+    page.get_by_role("heading", name="What your check-ins recorded.").wait_for()
+    page.get_by_text("Structured observations, with private context removed").wait_for()
+    page.get_by_role("listitem").get_by_text("Supported expected pattern", exact=True).wait_for()
+    with page.expect_download() as download_info:
+        page.get_by_role("link", name="Download privacy-safe JSON").click()
+    exported = json.loads(Path(download_info.value.path()).read_text())
+    assert exported["event_count"] == 1
+    assert exported["profile_scores_modified"] is False
+    page.get_by_role("link", name="Read evidence explanation").click()
+    page.get_by_role("heading", name="Listen to what matters now").wait_for()
     page.get_by_role("link", name=re.compile(r"Deepen One Existing Friendship")).click()
 
     for label, completed in (

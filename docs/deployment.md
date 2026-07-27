@@ -155,7 +155,14 @@ After an update, sign in and verify:
 2. `/practices/` shows the friendship protocol;
 3. any current practice and draft check-ins remain present;
 4. a submitted check-in opens its evidence-reading page;
-5. `/health/` returns `{"status":"ok"}`.
+5. `/evidence/` shows only the signed-in user's submitted events;
+6. `make evidence-verify` reports complete replay coverage;
+7. `/health/` returns `{"status":"ok"}`.
+
+The evidence verifier is intentionally not an automatic repair step. Startup
+backfill reconciles missing legacy events and verifies existing ones;
+`evidence-verify` is the strict read-only operational audit. See
+`docs/evidence-audit.md`.
 
 ## HTTPS or remote access later
 

@@ -23,9 +23,9 @@ Then inspect the canonical data under:
 Treat `legacy/` as provenance only. Do not build implementation behavior from legacy notes when canonical files disagree.
 
 Work only on the milestone batch explicitly authorized by the repository
-owner. M1A and M1B are merged. M2A is the bounded evidence-contract batch in
-`docs/evidence-contract.md` and remains a review gate. Do not begin M3 or
-enable dynamic mastery/confidence mutation.
+owner. M1A, M1B, and M2A are merged. M2B is the bounded evidence-audit batch in
+`docs/evidence-audit.md` and remains a review gate. Do not begin M3 or enable
+dynamic mastery/confidence mutation.
 
 Use the binding stack in `AGENTS.md`: a Python/Django monolith with Django
 templates, local assets, SQLite, Gunicorn, pytest, Ruff, Playwright, Dockerfile,
@@ -47,6 +47,11 @@ The M2A boundary adds immutable, replayable `GG-EVIDENCE-1.0` events and
 conservative M1 backfill. It stops before task-to-lever allocation, posterior
 updates, score snapshots, and dynamic recommendations.
 
+The M2B boundary adds an authenticated evidence ledger, privacy-minimized
+deterministic export, strict read-only replay verification, and synthetic
+direction-complete calibration fixtures. It changes no evidence mathematics
+or profile score.
+
 Acceptance criteria are in `docs/PROJECT_HANDOFF.md`. Add automated tests for every testable criterion. The app must run through Docker Compose.
 
 Before changing code:
@@ -62,6 +67,6 @@ Then implement in reviewable batches. For each batch:
 - open a PR and ask me to approve it.
 
 Do not implement M3 dynamic scoring unless I explicitly authorize the next
-milestone after reviewing M2A.
+milestone after reviewing M2B.
 
 ---
