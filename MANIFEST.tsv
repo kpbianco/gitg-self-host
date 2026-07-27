@@ -230,6 +230,6 @@ growth/management/commands/rebuild_score_state.py	2959
 growth/migrations/0005_m3b_score_state.py	9957
 growth/services/score_state.py	27571
 tests/test_score_state.py	18080
-.github/workflows/verification.yml	1292
+.github/workflows/verification.yml	1378
 scripts/verify_compose.sh	6374
 scripts/verify_http_login.py	4952
