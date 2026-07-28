@@ -23,7 +23,7 @@ Then inspect the canonical data under:
 Treat `legacy/` as provenance only. Do not build implementation behavior from legacy notes when canonical files disagree.
 
 Work only on the milestone batch explicitly authorized by the repository
-owner. M1 through M3B and M4A–M4E are reviewed and merged; Decisions 023–036
+owner. M1 through M3B, M4A–M4E, and M5A are reviewed and merged; Decisions 023–038
 are accepted.
 M4A adds score-inactive non-instrumental play; M4B adds score-inactive
 emotional cue detection; M4C adds score-inactive boundary practice; M4D adds a
@@ -85,6 +85,15 @@ IDs, exact timestamps, free text, private context, assessment data, evidence,
 scores, orientations, and archetypes. Feedback never enters assessment,
 evidence, ranking, scoring, completion, orientation, or archetype logic. M5A
 adds no protocol, remote telemetry, or score activation.
+
+M5B is the findings closeout from the first owner-operated session. It
+progressively scopes pilot-feedback questions to the selected journey stage,
+scopes check-in observations to the selected action's reviewed evidence
+markers, and requires a real attempt before a new evidence submission. It
+also adds a preview-first, exact-user operator purge for the optional
+pilot-feedback table. Existing feedback, check-ins, evidence, score
+transitions, and replay mathematics remain unchanged. Decisions 039–041 are
+proposed for M5B review.
 
 Acceptance criteria are in `docs/PROJECT_HANDOFF.md`. Add automated tests for
 every testable criterion. The app must pass `make compose-smoke` in a

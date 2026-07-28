@@ -34,6 +34,21 @@ The form is not an urgent-support channel. Its safety copy tells a participant
 to stop an unsafe activity and seek appropriate support instead of relying on
 the locally stored form.
 
+## Journey-stage coherence
+
+One feedback record comments on one selected part of the experience.
+Practice-specific questions are available only for recommendation, setup,
+active-practice, check-in, or review stages. Setup timing is available only
+after setup begins; check-in timing is available only for check-in or review.
+
+Local JavaScript progressively hides irrelevant questions. The Django form and
+submission service enforce the same rules when JavaScript is unavailable or
+bypassed. An out-of-scope answer fails with a participant-facing explanation;
+it is never silently discarded.
+
+M5A records created before this rule remain append-only and exportable. M5B
+does not rewrite an ambiguous historical record to make it appear cleaner.
+
 ## Structured fields
 
 Only journey stage is required to locate the feedback. Submission also
@@ -82,6 +97,33 @@ did not modify developmental state.
 This minimization reduces disclosure; it does not make the file anonymous.
 Structured patterns can still be sensitive. Review the JSON before sharing
 and store it with access appropriate for private pilot data.
+
+## Retention and deletion
+
+There is no automatic retention timer. Before collecting feedback, the
+instance owner should state how long local records and any de-identified
+findings will be kept.
+
+Ordinary application use remains append-only. To preview deletion for one
+exact local username:
+
+```bash
+docker compose exec app python manage.py purge_pilot_feedback \
+  --username <username>
+```
+
+After confirming the count and the participant-data agreement:
+
+```bash
+docker compose exec app python manage.py purge_pilot_feedback \
+  --username <username> \
+  --confirm
+```
+
+The command deletes only that user's optional pilot-feedback rows. It does not
+delete assessment, evidence, score, practice, review, orientation, or
+archetype state. It does not remove copies already present in SQLite backups;
+those backups must be rotated or deleted separately under the same agreement.
 
 ## Non-mutation invariant
 

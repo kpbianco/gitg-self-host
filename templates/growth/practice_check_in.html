@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Check in · {{ sprint.protocol.name }}{% endblock %}
 
@@ -34,6 +35,9 @@
   <form class="workflow-form check-in-form" method="post">
     {% csrf_token %}
     {% if form.non_field_errors %}<div class="form-error">{{ form.non_field_errors }}</div>{% endif %}
+    <p class="helptext" data-check-in-action-prompt>
+      Choose an action to see only the observations relevant to that action.
+    </p>
     {% for field in form %}
       <div class="form-field{% if field.field.widget.input_type == 'checkbox' %} checkbox-field{% endif %}">
         {% if field.field.widget.input_type == "checkbox" %}
@@ -61,4 +65,6 @@
       submitted history.
     </p>
   </form>
+  {{ form.action_observation_map|json_script:"check-in-action-observations" }}
+  <script src="{% static 'growth/contextual_forms.js' %}"></script>
 {% endblock %}

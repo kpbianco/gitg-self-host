@@ -338,7 +338,7 @@ accessibility-pilot, or longitudinal validation and does not authorize another
 protocol or score-active mapping.
 
 ## Decision 037 — Pilot feedback is a separate product-data domain
-**Status:** Proposed for M5A review
+**Status:** Accepted after M5A review
 
 `GG-PILOT-FEEDBACK-1.0` stores optional usability observations in a dedicated
 append-only model. A record may reference an active protocol by stable ID only
@@ -352,7 +352,7 @@ optional, locally stored, limited to 1,000 characters, and described as
 product detail rather than a monitored support channel.
 
 ## Decision 038 — Pilot measurement is explicit and privacy-minimized
-**Status:** Proposed for M5A review
+**Status:** Accepted after M5A review
 
 M5A adds no automatic timer, browser analytics, session recorder, tracking
 pixel, external asset, or remote telemetry. Timing is a participant-selected
@@ -364,3 +364,44 @@ exact timestamps, every free-text comment, private practice context,
 assessment data, developmental evidence, score state, orientations, and
 archetypes. The resulting JSON is privacy-minimized but remains sensitive
 pilot data rather than anonymous public data.
+
+## Decision 039 — Pilot forms collect one coherent context at a time
+**Status:** Proposed for M5B review
+
+The first owner-operated session produced an assessment-stage feedback record
+that also identified a practice and answered setup/check-in timing questions.
+M5B treats this as a form-coherence defect, not a participant deficit. The
+feedback page progressively exposes practice-specific questions only for
+relevant journey stages and rejects out-of-scope combinations server-side.
+
+The existing append-only M5A record remains valid historical pilot data and
+continues to export unchanged. M5B adds no inferred timing, hidden default,
+telemetry, developmental input, or correction of an immutable record.
+
+## Decision 040 — Submitted evidence requires an action-specific attempt
+**Status:** Proposed for M5B review
+
+The first session also produced a submitted check-in with no recorded attempt
+and observations outside the selected action's reviewed marker set. M5B
+requires a real attempted action before submission and derives visible
+observation prompts from that action's snapshotted `evidence_rules`. A draft
+remains available before the action occurs.
+
+This is a prospective input-integrity gate. It does not change
+`GG-EVIDENCE-1.0`, `GG-SCORING-SHADOW-1.0`, `GG-SCORE-STATE-1.0`, historical
+event replay, completion criteria, or the friendship-only score-activation
+boundary. Existing immutable records are not rewritten or silently
+normalized.
+
+## Decision 041 — Pilot-feedback deletion is explicit and user-scoped
+**Status:** Proposed for M5B review
+
+Optional pilot feedback is retained locally until the participant agreement
+or instance-owner policy says otherwise; there is no automatic retention
+timer. Ordinary application use remains append-only. The operator-only
+`purge_pilot_feedback` command previews by default and requires an exact local
+username plus `--confirm` before deleting only that user's feedback rows.
+
+Deletion does not touch assessment, evidence, score, practice, review,
+orientation, or archetype state. Backups may retain deleted rows and remain
+subject to the same participant-data agreement.

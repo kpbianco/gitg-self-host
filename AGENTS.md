@@ -116,6 +116,10 @@ The accepted rationale is recorded in
 - Every submitted M2 check-in must create its evidence event atomically.
   Event snapshots must contain enough structured input and versioned rules for
   exact replay without duplicating private free text.
+- New submitted check-ins require a real attempted action. Observation fields
+  must belong to the selected action's reviewed primary/supporting marker set.
+  Drafts remain available before an action occurs; do not rewrite historical
+  events to apply this prospective M5B gate.
 - Use Django migrations; keep ORM code portable to PostgreSQL without adding a
   PostgreSQL service in M1.
 - The deployed SQLite database is `/data/grounded_growth.sqlite3`; enable a
@@ -154,7 +158,7 @@ canonical assessment and completes the friendship recommendation, setup,
 sprint, draft/submitted check-in, pause/resume/stop, completion, and review
 experience.
 
-M1 through M3B and M4A through M4E are reviewed and merged; Decisions 023–036
+M1 through M3B and M4A through M4E are reviewed and merged; Decisions 023–038
 are accepted.
 M3B may update only separate current lever state from replay-verified
 friendship evidence. Baselines, raw self-report, orientations, archetypes,
@@ -203,7 +207,15 @@ M5A must not add remote telemetry, new protocols, new score activation, or any
 path from pilot feedback into developmental state without separate
 authorization.
 
-Do not begin a speculative M5B feature expansion before M5A review and real
-private-pilot findings. The next closeout should prioritize observed
-usability, accessibility, privacy, safety, and participant-data lifecycle
-issues rather than inventing new developmental behavior.
+M5B is a narrow closeout of the first owner-operated session. It scopes
+feedback questions to the selected journey stage, scopes observation prompts
+to the selected action, requires a real attempt before evidence submission,
+and provides an explicit operator-only pilot-feedback purge. Existing
+feedback, check-ins, evidence, and score transitions remain immutable and
+replayable; no algorithm or activation boundary changes.
+
+Do not generalize from one session or begin another feature expansion without
+additional private-pilot findings or separate owner authorization. The next
+closeout should continue to prioritize observed usability, accessibility,
+privacy, safety, and participant-data lifecycle issues rather than inventing
+new developmental behavior.

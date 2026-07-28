@@ -158,6 +158,12 @@ M1 is implemented as two reviewable batches:
   categories are stored as a separate append-only record and exported through
   a privacy-minimized allowlist. They never enter assessment, evidence,
   scoring, recommendation, completion, orientation, or archetype logic.
+- **M5B pilot findings closeout:** the first owner-operated session is recorded
+  without private content. Feedback questions are journey-scoped, check-in
+  observations are action-scoped, evidence submission requires a real
+  attempted action, and an explicit user-scoped feedback purge supports the
+  agreed participant-data lifecycle. Historical records and all reviewed
+  evidence/scoring mathematics remain unchanged.
 
 Only submitted check-ins count toward completion. A database constraint limits
 each user to one active or paused practice. Services—not templates—own state
@@ -365,22 +371,28 @@ The verification record and human sign-off checklist are in
 - use no automatic timing, protocol addition, remote telemetry, or scoring
   expansion.
 
-Status: implemented for review. Decisions 037–038 are proposed.
+Status: implemented, reviewed, and merged. Decisions 037–038 are accepted.
 
 The binding engineering/privacy contract is in `docs/pilot-feedback.md`; the
 session checklist is in `docs/pilot/PRIVATE_PILOT_OPERATIONS.md`.
 
-#### Proposed M5B — Pilot findings closeout
+#### M5B — Pilot findings and form-coherence closeout
 - run authorized private-pilot sessions using the reviewed M5A checklist;
 - record aggregate, de-identified product findings under `docs/pilot/`;
-- address observed critical usability, keyboard/mobile, privacy, and safety
-  defects in reviewable changes;
-- make any feedback retention/deletion policy an explicit participant-data
-  decision;
+- scope optional feedback questions to the selected journey stage;
+- scope check-in observations to the selected action and require a real
+  attempt before submission;
+- preserve drafts before an action and every existing immutable event;
+- provide a preview-first, exact-user operator command for feedback deletion;
+- document that backups remain within the same retention agreement;
 - do not infer developmental conclusions or expand scoring from usability
   feedback.
 
-Status: deferred until M5A is reviewed and real pilot observations exist.
+Status: implemented for review from the first owner-operated session.
+Decisions 039–041 are proposed.
+
+The de-identified record is in
+`docs/pilot/PRIVATE_PILOT_001_FINDINGS.md`.
 
 ## M1 acceptance criteria
 1. User understands why a practice was recommended without seeing backend fields.
@@ -484,6 +496,29 @@ Status: deferred until M5A is reviewed and real pilot observations exist.
 10. M5A adds no protocol, score activation, scoring/ranking input, external
     service, or administrative surface for ordinary users.
 
+## M5B acceptance criteria
+
+1. A non-practice feedback stage does not display or accept a protocol,
+   applicability, setup-time, or check-in-time response.
+2. Practice feedback questions appear only for their documented journey
+   stages, with server-side enforcement when JavaScript is absent or bypassed.
+3. Existing `GG-PILOT-FEEDBACK-1.0` records remain unchanged and exportable.
+4. A check-in displays only observation prompts from the selected action's
+   reviewed primary/supporting marker set.
+5. The next required action is preselected when entering its check-in from the
+   active-practice page.
+6. A new submitted check-in requires `action_attempted=true`; a draft remains
+   available before the action occurs.
+7. Truthy observations belonging to another action fail with an actionable
+   error rather than being ignored or normalized.
+8. The prospective submission gate changes no existing event, evidence
+   output, score transition, replay result, completion rule, protocol, or
+   activation boundary.
+9. Pilot-feedback deletion is read-only by default, requires an exact local
+   username and explicit confirmation, and cannot delete developmental state.
+10. M5B adds no telemetry, automatic timing, evidence/scoring mathematics,
+    protocol, recommendation input, or score activation.
+
 ## Handoff audit notes
 
 - Canonical curriculum counts remain 27 domains, 383 competencies, 37 levers,
@@ -548,3 +583,13 @@ Status: deferred until M5A is reviewed and real pilot observations exist.
 - Pilot feedback free text remains local and is deliberately excluded from
   the deterministic minimized export. The export is still sensitive pilot
   data and is not claimed to be anonymous.
+- Private Pilot 001 retained no direct identity or private content in the
+  repository. Its minimized exports showed one stage/practice mismatch,
+  action-irrelevant observation fields, and a no-attempt evidence submission.
+- M5B responds prospectively at form and service boundaries. It does not
+  migrate, rewrite, delete, reinterpret, or change replay of the original
+  append-only feedback/check-in/evidence rows.
+- Optional pilot feedback has no automatic retention timer. The
+  preview-first `purge_pilot_feedback` command deletes only an explicitly
+  named local user's feedback after `--confirm`; backups must be handled
+  separately under the same participant agreement.

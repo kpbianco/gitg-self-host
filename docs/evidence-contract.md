@@ -20,6 +20,12 @@ Algorithm version: `GG-EVIDENCE-1.0`.
 - Draft check-ins are editable working state and have no evidence event.
 - Submission requires the M1 observation fields plus three compact choices:
   support used, context comparison, and evidence direction.
+- After the first private-pilot session, new submissions also require a real
+  attempted action. Before an action occurs, the participant may save a draft
+  but cannot create evidence.
+- The check-in UI and service accept truthy observation markers only from the
+  selected action's reviewed primary/supporting marker set. Markers belonging
+  to another action fail with an actionable error rather than being ignored.
 - Submission and event creation occur in one database transaction.
 - A submitted check-in has exactly one evidence event.
 - Both the submitted check-in and event are immutable through model and
@@ -27,6 +33,10 @@ Algorithm version: `GG-EVIDENCE-1.0`.
 - The event snapshots every structured input and the exact action-level
   evidence rules needed for deterministic replay. Free-text notes and the
   contents of contradictory evidence are not duplicated into the snapshot.
+
+The M5B submission rules are a prospective input-integrity gate. They do not
+change `GG-EVIDENCE-1.0` evaluation, rewrite historical submissions, or make
+an older no-attempt event fail replay.
 
 ## Protocol-specific observation rules
 

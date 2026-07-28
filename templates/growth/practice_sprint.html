@@ -45,7 +45,7 @@
       {% elif next_action %}
         <h2>{{ next_action.title }}</h2>
         <p>{{ next_action.instructions }}</p>
-        <a class="button" href="{% url 'growth:practice-check-in-new' sprint.pk %}">
+        <a class="button" href="{% url 'growth:practice-check-in-new' sprint.pk %}?action={{ next_action.pk }}">
           Add compact check-in
         </a>
       {% elif evidence.ready_for_review %}

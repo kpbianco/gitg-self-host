@@ -182,7 +182,16 @@ def test_optional_pilot_feedback_is_local_minimized_and_score_separate(
     assert_no_horizontal_overflow(page)
     save_walkthrough_screenshot(page, "mobile-pilot-feedback")
 
-    page.get_by_label("Which part are you commenting on?").select_option("setup")
+    page.get_by_label("Which part are you commenting on?").select_option("assessment")
+    expect(page.get_by_label("Practice, if relevant")).to_be_hidden()
+    expect(
+        page.get_by_label("Roughly how long did setup take before you could begin?")
+    ).to_be_hidden()
+    expect(page.get_by_label("Roughly how long did a check-in take?")).to_be_hidden()
+
+    page.get_by_label("Which part are you commenting on?").select_option("check_in")
+    expect(page.get_by_label("Practice, if relevant")).to_be_visible()
+    expect(page.get_by_label("Roughly how long did a check-in take?")).to_be_visible()
     page.get_by_label("Practice, if relevant").select_option("PRACTICE-FRIENDSHIP-01")
     page.get_by_label("Did the recommendation fit your current situation?").select_option("partly")
     page.get_by_label("Roughly how long did setup take before you could begin?").select_option(
@@ -243,7 +252,14 @@ def test_play_protocol_setup_is_specific_and_score_inactive(live_server, page: P
     page.get_by_role("button", name="Begin practice").click()
     page.get_by_role("link", name="Add compact check-in").click()
     page.get_by_label("A specific play window was reserved").wait_for()
+    expect(page.get_by_label("I engaged in the activity")).to_be_hidden()
+    expect(page.get_by_label("I returned to play within seven days")).to_be_hidden()
     assert page.get_by_label("Expected reciprocity").count() == 0
+    page.set_viewport_size({"width": 390, "height": 844})
+    page.get_by_role("button", name="Submit check-in").click()
+    page.get_by_text("Submit evidence only after a real attempt.").wait_for()
+    assert_no_horizontal_overflow(page)
+    save_walkthrough_screenshot(page, "mobile-action-specific-check-in")
 
 
 @pytest.mark.e2e
@@ -273,7 +289,11 @@ def test_emotional_cue_setup_and_check_in_are_bounded(live_server, page: Page):
     page.get_by_role("button", name="I have reviewed the three actions").click()
     page.get_by_role("button", name="Begin practice").click()
     page.get_by_role("link", name="Add compact check-in").click()
-    page.get_by_label("I asked a neutral question to check my impression").wait_for()
+    page.get_by_label("I deliberately paused to observe before interpreting").wait_for()
+    page.get_by_label(
+        "I noticed a change in tone, pace, posture, expression, or distance"
+    ).wait_for()
+    expect(page.get_by_label("I asked a neutral question to check my impression")).to_be_hidden()
     assert page.get_by_label("Expected reciprocity").count() == 0
     assert page.get_by_label("A specific future interaction was scheduled").count() == 0
 
@@ -307,10 +327,16 @@ def test_boundary_setup_and_check_in_are_safe_and_specific(live_server, page: Pa
     page.get_by_role("button", name="I have reviewed the three actions").click()
     page.get_by_role("button", name="Begin practice").click()
     page.get_by_role("link", name="Add compact check-in").click()
+    page.get_by_label("I chose a specific limit and a response that I control").wait_for()
     page.get_by_label("I stated the boundary directly in specific words").wait_for()
-    page.get_by_label(
-        "I followed through proportionately or restated the boundary within seven days"
-    ).wait_for()
+    expect(
+        page.get_by_label("I checked understanding without bargaining or testing")
+    ).to_be_hidden()
+    expect(
+        page.get_by_label(
+            "I followed through proportionately or restated the boundary within seven days"
+        )
+    ).to_be_hidden()
     assert page.get_by_label("Expected reciprocity").count() == 0
     assert page.get_by_label("Observed reciprocity").count() == 0
     assert (
@@ -347,8 +373,10 @@ def test_presence_setup_and_check_in_are_accessible_and_specific(live_server, pa
     page.get_by_role("button", name="Begin practice").click()
     page.get_by_role("link", name="Add compact check-in").click()
     page.get_by_label("I noticed attention drift and deliberately returned").wait_for()
-    page.get_by_label("I compared the usual and changed condition").wait_for()
-    page.get_by_label("I repeated the more workable condition within seven days").wait_for()
+    expect(page.get_by_label("I compared the usual and changed condition")).to_be_hidden()
+    expect(
+        page.get_by_label("I repeated the more workable condition within seven days")
+    ).to_be_hidden()
     assert page.get_by_label("Expected reciprocity").count() == 0
     assert page.get_by_label("Observed reciprocity").count() == 0
     assert page.get_by_label("A specific future interaction was scheduled").count() == 0

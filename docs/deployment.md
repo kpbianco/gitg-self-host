@@ -201,6 +201,25 @@ docker compose exec app python manage.py rebuild_score_state \
 Reversal is idempotent and has no M3B undo command. Back up first and use it
 only for a documented correction. See `docs/scoring-state.md`.
 
+Optional pilot feedback has a separate participant-data lifecycle. Preview
+the exact user-scoped deletion first:
+
+```bash
+docker compose exec app python manage.py purge_pilot_feedback \
+  --username <username>
+```
+
+After confirming the count and the participant agreement:
+
+```bash
+docker compose exec app python manage.py purge_pilot_feedback \
+  --username <username> \
+  --confirm
+```
+
+This command does not touch developmental state. It also does not remove rows
+from existing backups; apply the same retention decision to backup copies.
+
 ## HTTPS or remote access later
 
 M1 intentionally has no reverse proxy. For remote access, first establish an

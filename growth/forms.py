@@ -4,7 +4,15 @@ from typing import ClassVar
 from django import forms
 from django.utils import timezone
 
+from growth.domain.evidence import (
+    ALLOWED_OBSERVATION_FIELDS,
+    observation_fields_for_rules,
+)
 from growth.models import PilotFeedback, PracticeAction, PracticeCheckIn, PracticeProtocol
+from growth.services.pilot_feedback import (
+    FEEDBACK_FIELD_STAGES,
+    feedback_scope_errors,
+)
 
 
 class PracticeApplicabilityForm(forms.Form):
@@ -209,6 +217,15 @@ class PracticeCheckInForm(forms.ModelForm):
         for field_name, label in sprint.protocol.setup_copy.get("check_in_labels", {}).items():
             if field_name in self.fields:
                 self.fields[field_name].label = label
+        self.fields["action"].widget.attrs["data-check-in-action-control"] = "true"
+        for field_name in ALLOWED_OBSERVATION_FIELDS & self.fields.keys():
+            self.fields[field_name].widget.attrs["data-check-in-observation"] = field_name
+        self.action_observation_map = {
+            str(action.pk): sorted(
+                observation_fields_for_rules(action.evidence_rules) & self.fields.keys()
+            )
+            for action in self.fields["action"].queryset
+        }
         self.fields[
             "context_comparison"
         ].help_text = "This describes context variation within the same practice."
@@ -240,6 +257,26 @@ class PracticeCheckInForm(forms.ModelForm):
         cleaned_data = super().clean()
         if cleaned_data.get("action_completed") and not cleaned_data.get("action_attempted"):
             self.add_error("action_attempted", "A completed action must also be attempted.")
+        if self.require_evidence_metadata and not cleaned_data.get("action_attempted"):
+            self.add_error(
+                "action_attempted",
+                (
+                    "Submit evidence only after a real attempt. Save a draft if the "
+                    "action has not occurred."
+                ),
+            )
+        action = cleaned_data.get("action")
+        if action is not None:
+            relevant_fields = observation_fields_for_rules(action.evidence_rules)
+            for field_name in ALLOWED_OBSERVATION_FIELDS:
+                if cleaned_data.get(field_name) and field_name not in relevant_fields:
+                    self.add_error(
+                        field_name,
+                        (
+                            "This observation belongs to another action. Choose the "
+                            "matching action or clear this response."
+                        ),
+                    )
         if self.require_evidence_metadata:
             for field in ("support_level", "context_comparison", "evidence_direction"):
                 if not cleaned_data.get(field):
@@ -351,6 +388,14 @@ class PilotFeedbackForm(forms.ModelForm):
         self.fields["protocol"].queryset = PracticeProtocol.objects.filter(
             availability=PracticeProtocol.Availability.ACTIVE
         ).order_by("display_order", "stable_id")
+        self.fields[
+            "journey_stage"
+        ].help_text = "Choose one part. The form will show only questions relevant to that part."
+        self.fields["journey_stage"].widget.attrs["data-feedback-stage-control"] = "true"
+        for field_name, allowed_stages in FEEDBACK_FIELD_STAGES.items():
+            self.fields[field_name].widget.attrs["data-feedback-stages"] = " ".join(
+                sorted(allowed_stages)
+            )
 
     def clean(self):
         cleaned_data = super().clean()
@@ -367,4 +412,6 @@ class PilotFeedbackForm(forms.ModelForm):
             raise forms.ValidationError(
                 "Answer at least one optional feedback question before submitting."
             )
+        for field_name, message in feedback_scope_errors(cleaned_data).items():
+            self.add_error(field_name, message)
         return cleaned_data
