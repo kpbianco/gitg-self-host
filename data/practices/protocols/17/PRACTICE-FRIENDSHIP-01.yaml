@@ -1,0 +1,266 @@
+schema_version: GG-PRACTICE-CONTENT-1.0
+protocol_version: 1.0.0
+stable_id: PRACTICE-FRIENDSHIP-01
+slug: deepen-one-existing-friendship
+name: Deepen One Existing Friendship
+parent_competency_id: '17.03'
+domain_id: '17'
+governance:
+  availability: active
+  editorial_status: projected_legacy
+  runtime_projection: GG-PRACTICE-RUNTIME-PROJECTION-1.0
+  risk_class_id: RISK-LOW
+  scoring_policy_id: SP-SELF-REPORT-ELIGIBLE
+  scoring_status: active
+  source_ids:
+  - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-PRODUCT-DECISIONS
+  - SRC-PROTOCOL-LIBRARY-M4
+  - SRC-CURRICULUM-SCOPE-AUDIT
+  - SRC-PILOT-002-FINDINGS
+  authoring:
+    provenance: Exact projection of the reviewed M4 runtime protocol with additive M6A governance metadata.
+    content_review_status: frozen_runtime_behavior
+    research_review_status: internal_sources_only_external_review_required
+    safety_review_status: pilot_boundary_reviewed_expansion_review_pending
+    accessibility_review_status: pilot_boundary_reviewed_expansion_review_pending
+    originality_review_status: legacy_exceptions_recorded_expansion_review_pending
+    ui_test_status: existing_runtime_coverage
+    last_reviewed: null
+    known_gap_ids:
+    - RG-M6A-001
+    - RG-M6A-002
+    - RG-M6A-003
+    expert_review_ids:
+    - ER-M6A-003
+  legacy_compatibility_exceptions:
+  - exception_id: LEGACY-DUPLICATE-FRIENDSHIP-A2-PLAY-A1
+    category: duplicate_evidence_rules
+    affected_action_ids:
+    - PRACTICE-FRIENDSHIP-01-A2
+    - PRACTICE-PLAY-01-A1
+    affected_markers: []
+    detail: The reviewed M4 actions share an identical practice-observation-v1 evidence-rule payload.
+    resolution_gate: M6B typed-evidence architecture and any later protocol revision.
+  deprecation:
+    deprecated: false
+    replaced_by: null
+meaning_and_fit:
+  purpose: Practice maintaining one valued friendship through welcome attention, a specific invitation,
+    and proportionate follow-up.
+  why_recommended: Your provisional profile places friendship, belonging, and hospitality among the highest
+    current developmental needs.
+  claims:
+  - statement: This bounded practice samples ordinary friendship-maintenance behavior; it does not establish
+      relationship quality, reciprocity, or broad social mastery.
+    classification: product_design_judgment
+    source_ids:
+    - SRC-CANONICAL-CURRICULUM-V2
+    - SRC-PROTOCOL-LIBRARY-M4
+    limitations: The migrated five-protocol slice has not been validated as a psychometric instrument
+      or as proof of broad competency change.
+  applicability_question: Is there an existing friend you genuinely value and would realistically like
+    to know more deeply right now?
+  not_applicable_behavior: Record not applicable or defer without penalty, do not infer a deficit, and
+    offer the listed safe alternative when useful.
+  readiness_considerations: Use only when the user wants contact and can tolerate either acceptance, decline,
+    delay, or limited reciprocity without treating the outcome as owed.
+  opportunity_considerations: Requires one existing, welcome relationship and a realistic opportunity
+    for a substantive conversation or invitation during fourteen days.
+  prerequisites:
+  - One existing friend whom the user genuinely values.
+  dependencies: []
+  safe_alternatives:
+  - Choose a lower-intensity check-in or shared activity if deeper conversation is not welcome.
+  - Defer without penalty when there is no suitable relationship or contact opportunity.
+  role_conditions:
+  - Adapt expectations for distance, caregiving, work, and communication roles.
+  pathway_conditions:
+  - Contact may be in person, voice, text, or another mutually workable medium.
+  worldview_conditions:
+  - No particular family structure, social style, or philosophy of friendship is assumed.
+intervention:
+  protocol_class: PF-RELATIONAL-CONVERSATION
+  duration_days: 14
+  cadence: Three sequenced actions over fourteen days, paced around welcome contact.
+  setup: Choose one existing friend whom you genuinely value and would realistically like to know more
+    deeply.
+  privacy_and_boundaries: Choose a relationship where contact is welcome. Do not pressure disclosure,
+    treat reciprocity as owed, record private details unnecessarily, or use this practice in place of
+    professional support.
+  expected_burden: About 25–50 minutes plus any mutually chosen shared activity.
+  action_count_rationale: null
+  foreseeable_misuse:
+  - Pressuring disclosure or using a response, invitation, or follow-up as a loyalty or reciprocity test.
+  exclusions:
+  - Unwelcome contact, abuse, stalking, crisis, or unsafe dependency.
+  actions:
+  - stable_id: PRACTICE-FRIENDSHIP-01-A1
+    sequence: 1
+    title: Listen to what matters now
+    instructions: Initiate a substantive conversation about something currently meaningful in your friend's
+      life. Spend at least ten minutes primarily listening.
+    due_within_days: null
+    evidence_rules:
+      schema_version: practice-observation-v1
+      primary_markers:
+      - moved_beyond_transactional
+      - meaningful_information_shared
+      supporting_markers:
+      - follow_up_question_asked
+      - user_initiated
+    expected_time: 15–30 minutes
+  - stable_id: PRACTICE-FRIENDSHIP-01-A2
+    sequence: 2
+    title: Make a specific invitation
+    instructions: Propose a specific shared activity and date rather than a vague future intention.
+    due_within_days: null
+    evidence_rules:
+      schema_version: practice-observation-v1
+      primary_markers:
+      - future_interaction_scheduled
+      supporting_markers:
+      - user_initiated
+    expected_time: 5–10 minutes
+  - stable_id: PRACTICE-FRIENDSHIP-01-A3
+    sequence: 3
+    title: Follow up
+    instructions: Within seven days, reference something the person shared and ask how it developed.
+    due_within_days: 7
+    evidence_rules:
+      schema_version: practice-observation-v1
+      primary_markers:
+      - follow_up_within_seven_days
+      - follow_up_question_asked
+      supporting_markers:
+      - meaningful_information_shared
+      - user_initiated
+    expected_time: 5–10 minutes
+  adaptations:
+    low_resource:
+    - Use a free conversation, walk, message, or shared routine instead of a paid activity.
+    accessibility:
+    - Use asynchronous, augmentative, or lower-sensory communication when mutually workable.
+    cultural_context:
+    - Adjust disclosure depth, invitation style, and follow-up to the relationship's norms.
+    resource_variants:
+    - A short message or accessible remote activity can substitute for travel.
+  pause_conditions:
+  - Pause when welcome, timing, privacy, or capacity is uncertain; resume only when contact is freely chosen.
+  stop_conditions:
+  - Stop if contact is unwelcome, privacy cannot be respected, or the interaction becomes coercive.
+  escalation_conditions:
+  - Use trusted or qualified support rather than this protocol for abuse, stalking, crisis, or unsafe
+    dependency.
+  professional_referral_conditions:
+  - Seek appropriate qualified or emergency support for crisis, abuse, stalking, or unsafe dependency rather than continuing the protocol.
+evidence_and_scoring:
+  accepted_evidence_types:
+  - structured firsthand observation
+  - behavioral adherence
+  - consented longitudinal or relational feedback
+  observation_contract_version: practice-observation-v1
+  check_in_fields:
+  - user_initiated
+  - moved_beyond_transactional
+  - follow_up_question_asked
+  - meaningful_information_shared
+  - future_interaction_scheduled
+  - follow_up_within_seven_days
+  - internal_resistance
+  - expected_reciprocity
+  - observed_reciprocity
+  adverse_or_contradictory_indicators:
+  - Contact was unwelcome or pressured.
+  - Private information was recorded or shared unnecessarily.
+  - The user treated reciprocity as owed or interpreted nonresponse as proof of deficit.
+  independence_rule: Record self-directed, planning-aid, or guided support under GG-EVIDENCE-1.0; support
+    changes evidence mass, not human worth.
+  context_transfer_rule: Evidence remains attached to the observed context; one context never establishes
+    broad competency transfer.
+  repetition_rule: Repeated observations use the frozen diminishing-return multipliers in GG-EVIDENCE-1.0
+    and remain independently replayable.
+  recency_rule: No new retention mathematics is introduced in M6A; later evidence remains dated and any
+    future recency rule requires a versioned contract.
+  performance_rubric: Performance describes attempted and completed protocol actions plus the reviewed
+    action-specific markers; it is not a rating of the friendship.
+  evidence_quality_rubric: Quality reflects structured, firsthand detail, independence, and context; free-text
+    length and emotional intensity do not increase evidence mass.
+  scoring_eligibility: Only replay-verified evidence under GG-EVIDENCE-1.0 and the separately activated
+    GG-SCORE-STATE-1.0 contract may update current lever state.
+  competency_contribution: The runtime event is evidence about protocol performance only; direct competency
+    state is not implemented in M6A.
+  canonical_lever_allocation: parent_competency_mapping
+  recommendation_target_lever_ids:
+  - L26
+  - L23
+  - L24
+  minimum_evidence_before_state_update: A submitted, attempted action with contract-valid structured observations
+    and available baseline mass; drafts and inconclusive evidence are withheld.
+  withholding_conditions:
+  - No real action was attempted.
+  - Evidence direction is inconclusive or legacy-unknown.
+  - The evidence is outside the reviewed observation vocabulary.
+  - The baseline mass or deterministic replay is unavailable.
+completion_and_review:
+  completion_criteria:
+  - All three actions attempted
+  - At least two actions completed
+  - At least one substantive interaction
+  - Final review submitted
+  completion_rules:
+    minimum_completed: 2
+    substantive_markers:
+    - moved_beyond_transactional
+    - meaningful_information_shared
+  mastery_disclaimer: Completing this practice does not establish mastery.
+  progression_criteria: Consider another cycle only when contact remained welcome and the user can name
+    a proportionate next behavior rather than claiming mastery.
+  transfer_limit: Evidence concerns one relationship and does not transfer automatically to other relationships,
+    social settings, or the full competency.
+  reflection:
+    before: What would respectful, freely chosen investment in this particular friendship look like now?
+    during: What did the friend actually welcome or share, and where did you notice assumptions about
+      reciprocity?
+    after: What pattern did the conversation, invitation, and follow-up support, contradict, or leave
+      unknown?
+  review_guidance:
+    repeat: Repeat only if contact remained welcome and another ordinary follow-up fits.
+    adapt: Reduce intensity, change medium, or choose a simpler shared activity when that better fits
+      both people.
+    stop: Stop when contact is declined, privacy is at risk, or the practice becomes a test of the other
+      person.
+    escalate: Seek appropriate support when safety, abuse, stalking, crisis, or dependency concerns are
+      present.
+  evidence_examples:
+    supportive: The user listened, made a specific welcome invitation, and followed up without demanding
+      disclosure or reciprocity.
+    mixed: A substantive conversation occurred, but the invitation was vague or follow-up did not fit
+      the other person's availability.
+    contradictory: The contact was pressured, privacy was crossed, or reciprocity was treated as owed.
+    inconclusive: The friend was unavailable or too little interaction occurred to evaluate the practice.
+presentation:
+  setup_copy:
+    context_heading: Choose one existing relationship.
+    boundary_heading: Depth must remain freely chosen.
+    timing_hint: Choose a date when a real, welcome interaction is plausible.
+    context_help: Use a first name, initials, or another private label.
+    applicability_heading: A real relationship, not a hypothetical exercise
+    completion_signal_label: At least one substantive interaction
+    boundary_acknowledgement: I will choose welcome contact, respect privacy and autonomy, and treat reciprocity
+      as freely given—not owed.
+  check_in_labels:
+    user_initiated: I initiated the welcome contact or invitation
+    moved_beyond_transactional: The interaction moved beyond logistics or small talk
+    follow_up_question_asked: I asked a genuine follow-up question
+    meaningful_information_shared: Meaningful information was freely shared
+    future_interaction_scheduled: A specific future interaction was mutually scheduled
+    follow_up_within_seven_days: I followed up within seven days
+    internal_resistance: I noticed how difficult or vulnerable the action felt
+    expected_reciprocity: I recorded my expectation without treating reciprocity as owed
+    observed_reciprocity: I recorded only what was observable about reciprocity
+  completion_copy: Review what happened in this relationship without turning one cycle into a judgment
+    about either person's worth or the friendship as a whole.
+  plain_language_evidence: The record describes what you attempted, what was observable, how much support
+    or context was involved, and what remains uncertain.
+  display_order: 1

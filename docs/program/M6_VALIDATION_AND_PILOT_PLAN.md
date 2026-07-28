@@ -1,0 +1,97 @@
+# M6 validation and pilot plan
+
+## Purpose
+
+M6 validation is layered so content completeness, software correctness,
+evidence replay, safety review, and human experience are not collapsed into
+one pass/fail claim.
+
+## Foundation gates
+
+M6A requires:
+
+- offline JSON Schema validation for the release manifest, packages, source
+  registry, risk taxonomy, scoring policies, protocol families, and activation
+  ledger;
+- stable-ID, uniqueness, reference, path, parent/domain, and target-lever
+  validation before database writes;
+- exact projection parity with the reviewed five-protocol fingerprint;
+- idempotent seeding with five protocols and fifteen actions;
+- deterministic 383-row coverage, domain, lever, risk, and originality
+  reports;
+- an independent passing `GG-PILOT-READINESS-1.0`;
+- additive passing
+  `GG-CURRICULUM-EXPANSION-READINESS-1.0`;
+- unchanged assessment, evidence, score-state, ranking, and replay fixtures.
+
+`make curriculum-check` constructs disposable state, seeds twice, reconciles
+evidence and score state, invokes the old verifier through the new additive
+contract, and removes the database. `make pilot-check` remains available and
+independent.
+
+## Content review layers
+
+| Layer | Required evidence |
+|---|---|
+| Editorial | Individually authored purpose, fit, actions, reflection, examples, and presentation copy |
+| Source | Claim-level source IDs, classification, evidence strength, limitations, access and quotation constraints |
+| Mapping | Exact parent competency/domain and canonical lever allocation; recommendation targets are a non-empty subset |
+| Originality | Exact, normalized, near-duplicate, reflection, action-shape, duration, and evidence-rule report reviewed |
+| Accessibility/context | Low-resource, disability/access, cultural, role, pathway, season, and worldview variants reviewed |
+| Safety/privacy | Risk class, foreseeable misuse, exclusions, minimum sensitive data, stop/escalation/referral behavior reviewed |
+| Evidence | Typed observations, independence, context, repetition, recency, direction, contradiction, adverse outcomes, and withholding reviewed |
+| Scoring | Explicit policy and activation-ledger state; deterministic fixtures before any mutation |
+| Experience | Ordinary UI language, burden, setup under five minutes where possible, check-in under two minutes, and completion/mastery distinction |
+
+Moderate and high-risk content needs the specialist role specified by the risk
+taxonomy. High-risk content remains qualified-only or non-scored unless a
+separate decision establishes a safer boundary.
+
+## Context foundation and representative-batch pilot
+
+M6C establishes the minimum context and Personal OS foundation before broad
+authoring: applicability, importance, readiness, urgency,
+opportunity/resources, current season and capacity, defer/not-now, mission,
+principles, anti-goals, priority stack, a concise Truth/Autopilot Audit, and
+useful alternatives after “not now.” Personality remains framing or a
+tie-break input, never hidden psychometrics.
+
+After M6C, the Phase B representative vertical slices should exercise protocol
+families, risk classes, evidence policies, N/A paths, and accessibility
+variants. Review:
+
+- whether a user can act without inventing the intervention;
+- whether N/A/defer produces a useful alternative and no deficit language;
+- whether actions fit actual burden and resources;
+- whether observations are understandable and cannot be spoofed as mere
+  completion;
+- whether contradictory, adverse, and unknown outcomes remain visible;
+- whether privacy and consent language prevents unnecessary sensitive detail;
+- whether mobile, keyboard, zoom, reduced-motion, screen-reader, and
+  low-bandwidth use remain workable;
+- whether summaries communicate provisional evidence without implying worth
+  or mastery.
+
+Usability feedback remains in `GG-PILOT-FEEDBACK-1.0` and never becomes
+developmental evidence.
+
+## Release evidence
+
+Every PR report includes:
+
+- objective and exclusions;
+- protocol/competency changes;
+- before/after competency, domain, lever, risk, scoring-policy, and activation
+  coverage;
+- source and migration behavior;
+- source additions and limitations;
+- evidence/scoring versions affected;
+- safety and privacy decisions;
+- exact command results;
+- browser, Compose, screenshot, and human visual-review results;
+- originality findings and reviewed exceptions;
+- failed, skipped, and unverified criteria;
+- known limitations and the proposed next batch.
+
+Passing automation does not constitute clinical, psychometric,
+accessibility-population, cross-cultural, or longitudinal validation.

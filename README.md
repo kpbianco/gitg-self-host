@@ -34,6 +34,11 @@ that remains completely separate from developmental evidence and score state.
 M5B records the first de-identified pilot findings and narrows both feedback
 and check-in forms to coherent journey/action contexts without changing any
 evidence or scoring mathematics.
+M6A begins the owner-authorized full-curriculum expansion program by moving
+the exact five-protocol runtime into manifest-listed canonical packages,
+adding source/risk/scoring/activation governance, and generating an honest
+383-row coverage baseline. It adds no new protocol, UI, evidence mathematics,
+or score activation.
 
 ## Deployment essentials
 
@@ -233,6 +238,30 @@ See the [pilot feedback contract](docs/pilot-feedback.md) and
 
 See [Private Pilot 001 findings](docs/pilot/PRIVATE_PILOT_001_FINDINGS.md).
 
+## What M6A adds
+
+- `GG-PRACTICE-CONTENT-1.0` YAML packages under `data/practices/`, validated
+  offline against manifest-listed JSON Schemas.
+- An exact projection of the five existing protocols and fifteen actions;
+  the reviewed runtime fingerprint remains unchanged.
+- Canonical source, risk, scoring-policy, protocol-family, research-gap,
+  expert-review, and score-activation registries.
+- A separate catalog content hash without changing the existing
+  curriculum/model/mapping hash or assessment version.
+- Deterministic 383-row competency coverage, domain and lever matrices, risk
+  register, coverage summary, and anti-boilerplate/originality report.
+- The explicit baseline: five projected packages, 378 unauthored
+  competencies, five covered domains, thirteen parent-mapped levers, six
+  recommendation targets, and zero source-complete release candidates.
+- Additive `GG-CURRICULUM-EXPANSION-READINESS-1.0`, which invokes the
+  unchanged post-M4 verifier and compares canonical content with the seeded
+  runtime.
+- No ORM migration, new action, new screen, typed evidence execution,
+  scoring/ranking change, or second score-active protocol.
+
+See [canonical practice content](docs/practice-content.md) and the
+[M6 program charter](docs/program/M6_CURRICULUM_EXPANSION.md).
+
 ## Product flow
 
 1. Sign in with the bootstrap account.
@@ -278,6 +307,9 @@ make evidence-verify
 make score-rebuild
 make score-verify
 make pilot-check
+make practice-reports
+make practice-report-check
+make curriculum-check
 make run
 make compose-up
 make compose-down
@@ -299,10 +331,15 @@ volume.
   standalone UI, compatibility code, and fixtures.
 - `data/notion/initial_mvp/` — Pilot 002 baselines, static task ranking, and
   starting profile.
+- `data/practices/` — manifest-listed canonical protocol packages, schemas,
+  registries, research gaps, expert-review queue, and activation ledger.
+- `reports/practice-content/` — deterministic generated coverage, risk, and
+  originality controls for the 383-competency expansion.
 
-The importer uses stable IDs and the structured mapping CSV. The friendship
-protocol references competency `17.03` and validates that its four weights sum
-to 1.0. It never parses human-readable `Lever Mapping` text. See
+The importer validates both canonical bundles before writes. Practice
+recommendation targets must be non-empty subsets of each parent competency's
+structured mapping; runtime score activation comes only from the activation
+ledger. It never parses human-readable `Lever Mapping` text. See
 [data import](docs/data-import.md).
 
 `legacy/` is provenance and design archaeology only. Canonical structured data
@@ -327,6 +364,7 @@ make backup
 git pull --ff-only
 docker compose up -d --build
 docker compose exec app python manage.py verify_pilot_readiness
+docker compose exec app python manage.py verify_expansion_readiness
 ```
 
 Migrations and canonical seeding run safely on startup.
@@ -362,6 +400,12 @@ Migrations and canonical seeding run safely on startup.
 - Only **Deepen One Existing Friendship** is score-active. Play, emotional cue
   detection, boundary practice, and the attention-presence experiment are
   executable but score-inactive.
+- M6A covers only five of 383 competencies. The other 378 are explicit
+  unauthored ledger rows, not empty packages. None of the five migrated
+  packages is yet marked source-complete for full-library release.
+- The five packages retain the friendship-oriented
+  `practice-observation-v1` vocabulary for exact replay. Typed evidence and
+  direct competency state remain deferred to M6B.
 - The canonical JavaScript scorer remains the browser reference. Node.js is
   used by a development golden test only; no Node.js server exists at runtime.
 - Direct local-network HTTP is supported. Add Caddy or another proxy later for
@@ -377,6 +421,9 @@ Migrations and canonical seeding run safely on startup.
 - [Assessment integration](docs/assessment-integration.md)
 - [Practice workflow](docs/practice-workflow.md)
 - [Protocol library](docs/protocol-library.md)
+- [Canonical practice content](docs/practice-content.md)
+- [M6 curriculum expansion charter](docs/program/M6_CURRICULUM_EXPANSION.md)
+- [M6 validation and pilot plan](docs/program/M6_VALIDATION_AND_PILOT_PLAN.md)
 - [M2 evidence contract](docs/evidence-contract.md)
 - [M2B evidence audit and calibration](docs/evidence-audit.md)
 - [M3A shadow scoring contract](docs/scoring-shadow.md)

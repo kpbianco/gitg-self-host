@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grounded-growth.local/schema/practice-release-manifest-v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "release_id",
+    "content_schema_version",
+    "protocol_files",
+    "content_files",
+    "content_hash",
+    "legacy_projection_version",
+    "legacy_projection_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "GG-PRACTICE-RELEASE-1.0"},
+    "release_id": {"const": "M6A-CANONICAL-PRACTICE-FOUNDATION-1"},
+    "content_schema_version": {"const": "GG-PRACTICE-CONTENT-1.0"},
+    "protocol_files": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^protocols/[0-9]{2}/PRACTICE-[A-Z0-9-]+-[0-9]{2}\\.yaml$"}
+    },
+    "content_files": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^(protocols|registries|schema)/.+|^(research_gaps|expert_review_queue)\\.yaml$"}
+    },
+    "content_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "legacy_projection_version": {"const": "GG-PRACTICE-RUNTIME-PROJECTION-1.0"},
+    "legacy_projection_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  }
+}

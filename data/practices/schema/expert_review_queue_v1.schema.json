@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grounded-growth.local/schema/practice-expert-review-v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "reviews"],
+  "properties": {
+    "schema_version": {"const": "GG-PRACTICE-EXPERT-REVIEW-1.0"},
+    "reviews": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "review_id",
+          "scope",
+          "review_type",
+          "status",
+          "required_roles",
+          "completed_roles",
+          "completed_on",
+          "decision_reference",
+          "blocking_gates",
+          "review_questions",
+          "release_effect"
+        ],
+        "properties": {
+          "review_id": {"type": "string", "pattern": "^ER-[A-Z0-9-]+-[0-9]{3}$"},
+          "scope": {
+            "oneOf": [
+              {"const": "full_catalog"},
+              {
+                "type": "string",
+                "pattern": "^PRACTICE-[A-Z0-9-]+-[0-9]{2}$"
+              }
+            ]
+          },
+          "review_type": {
+            "enum": [
+              "specialist_safety",
+              "measurement_architecture",
+              "accessibility",
+              "content"
+            ]
+          },
+          "status": {"enum": ["pending", "in_review", "complete", "deferred"]},
+          "required_roles": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "completed_roles": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "completed_on": {"type": ["string", "null"], "format": "date"},
+          "decision_reference": {
+            "type": ["string", "null"],
+            "minLength": 1
+          },
+          "blocking_gates": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "safety_review_complete",
+                "release_candidate",
+                "m6b_acceptance",
+                "mass_authoring",
+                "score_activation"
+              ]
+            }
+          },
+          "review_questions": {
+            "type": "array",
+            "minItems": 1,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "release_effect": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

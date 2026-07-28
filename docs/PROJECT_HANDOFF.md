@@ -82,6 +82,15 @@ An immutable audit record of score state before and after any future update.
 - Real-world transfer and contradiction matter.
 - Personality affects presentation and tie-breaking only.
 - Scores must be explainable, provisional, and evidence-sensitive.
+- Grounded Growth is becoming a guided life OS for people who may be driven
+  yet misdirected, fragmented, or operating on autopilot. Assessment,
+  personality, orientations, and archetypes frame the work; they are not the
+  headline, destiny, stereotype, or measure of worth.
+- The longer path connects a concise Truth/Autopilot Audit with mission,
+  principles, anti-goals, current season and capacity, priority stack,
+  twelve-month direction, weekly execution, and proof-based review. The home
+  experience should offer a small context-fit set of next practices—not a
+  383-item checklist, content encyclopedia, or giant worksheet.
 
 ## Pilot 002 working profile
 Primary archetype: The Seeker.
@@ -164,6 +173,13 @@ M1 is implemented as two reviewable batches:
   attempted action, and an explicit user-scoped feedback purge supports the
   agreed participant-data lifecycle. Historical records and all reviewed
   evidence/scoring mathematics remain unchanged.
+- **M6A canonical protocol-content foundation:** five versioned YAML packages
+  and their source, family, risk, scoring-policy, research-gap, expert-review,
+  and activation registries replace the hard-coded Python catalog. Offline
+  schemas, deterministic 383-row coverage/originality reports, and the
+  additive expansion-readiness contract preserve the exact five-protocol
+  runtime and friendship-only scoring boundary. No ORM, UI, evidence, scoring,
+  or ranking change is included.
 
 Only submitted check-ins count toward completion. A database constraint limits
 each user to one active or paused practice. Services—not templates—own state
@@ -394,6 +410,58 @@ Decisions 039–041 are proposed.
 The de-identified record is in
 `docs/pilot/PRIVATE_PILOT_001_FINDINGS.md`.
 
+### M6 — Full-curriculum expansion
+
+#### M6A — Canonical protocol-content foundation
+
+- record the owner-authorized multi-PR expansion and its non-worth,
+  pluralist, accessibility, safety, source, and anti-boilerplate boundaries;
+- add a manifest-driven, versioned canonical package format under
+  `data/practices/`;
+- project the five existing protocols and fifteen actions exactly into the
+  existing runtime;
+- add source, risk, scoring-policy, protocol-family, and activation
+  registries plus research gaps and expert review;
+- generate the 383-row coverage ledger, domain/lever matrices, risk register,
+  coverage summary, and originality report;
+- preserve the old pilot verifier and add
+  `GG-CURRICULUM-EXPANSION-READINESS-1.0`;
+- add no new protocol, action, score activation, migration, UI, evidence
+  execution, or scoring mathematics.
+
+Status: implemented for owner review. Decisions 042–045 are accepted as the
+M6 program direction.
+
+The program charter is in `docs/program/M6_CURRICULUM_EXPANSION.md`; package
+and report mechanics are in `docs/practice-content.md`.
+
+#### M6B — Competency evidence and scoring architecture
+
+- keep assessment baseline, protocol evidence, direct competency evidence,
+  transfer disposition, and lever state distinct;
+- define a backward-compatible typed evidence contract with fail-closed
+  version dispatch;
+- add pure domain implementations, accepted ADR updates, exact synthetic
+  fixtures, property tests, replay, reversal, and no-baseline-mutation proofs;
+- keep production score activation at friendship only.
+
+Status: proposed next batch after M6A is reviewed and merged. Do not begin mass
+protocol authoring while evidence, safety, schema, or UX questions remain open.
+
+#### M6C — Context-aware priority and Personal OS foundation
+
+- add applicability, importance, readiness, urgency, opportunity/resources,
+  current season and capacity, and defer/not-now inputs;
+- add the minimum mission, principles, anti-goals, priority-stack, and concise
+  Truth/Autopilot Audit experience;
+- keep personality as framing or a tie-break only;
+- prove a useful alternative recommendation after “not now” without deficit
+  language;
+- preserve concise home and practice flows.
+
+Status: follows M6B. Representative 10–12 competency vertical slices are
+Phase B after M6C, not a replacement for the context foundation.
+
 ## M1 acceptance criteria
 1. User understands why a practice was recommended without seeing backend fields.
 2. User starts within five minutes.
@@ -519,6 +587,31 @@ The de-identified record is in
 10. M5B adds no telemetry, automatic timing, evidence/scoring mathematics,
     protocol, recommendation input, or score activation.
 
+## M6A acceptance criteria
+
+1. The practice release manifest explicitly enumerates all packages, schemas,
+   and registries and rejects unlisted, unsafe, unknown-version, or
+   unknown-field inputs.
+2. Canonical parent/domain IDs and recommendation-target subsets validate
+   against the unchanged 383-competency, 37-lever mapping before writes.
+3. Five `projected_legacy` packages and fifteen actions reproduce the exact
+   reviewed runtime fingerprint and seed idempotently.
+4. `CurriculumVersion.source_hash` remains unchanged; the practice release has
+   a separate deterministic content hash.
+5. The coverage ledger has exactly 383 rows: five projected packages and 378
+   explicitly unauthored competencies across all 27 domains.
+6. Domain, lever, risk, scoring-policy, source, activation, research-gap,
+   expert-review, and originality state are explicit and deterministic.
+7. The known 383-row Notion journal-prompt duplication, uniform five-package
+   action/duration warnings, and two legacy evidence-rule duplicates are
+   reported rather than silently normalized.
+8. Friendship remains the only score-active protocol. The other four remain
+   executable but shadow-only for scoring.
+9. `GG-PILOT-READINESS-1.0` remains independently callable and unchanged;
+   `GG-CURRICULUM-EXPANSION-READINESS-1.0` is additive and read-only.
+10. M6A adds no migration, protocol, action, UI, typed evidence execution,
+    scoring/ranking mathematics, or score activation.
+
 ## Handoff audit notes
 
 - Canonical curriculum counts remain 27 domains, 383 competencies, 37 levers,
@@ -593,3 +686,18 @@ The de-identified record is in
   preview-first `purge_pilot_feedback` command deletes only an explicitly
   named local user's feedback after `--confirm`; backups must be handled
   separately under the same participant agreement.
+- M6A replaces the importer tuple with manifest-listed canonical packages.
+  The release is fully validated before writes and projects only existing ORM
+  fields.
+- The canonical curriculum/model/mapping source hash remains
+  `6958ccfbe0c0d80b7485ac866a8418578850284b58956f59168429819447dfc5`;
+  the reviewed five-protocol projection remains
+  `274f7244630ed56d56a443a6a699399edade6c67fcf964237559e05b72368e35`.
+- The generated baseline is intentionally incomplete: 5/383 competencies,
+  5/27 domains, 13/37 parent-mapped levers, six recommendation-target levers,
+  three low-risk and two moderate-risk packages, one score-active protocol,
+  and zero source-complete release candidates.
+- All five migrated packages retain `practice-observation-v1` solely for
+  compatibility. M6A metadata describing richer evidence does not execute;
+  M6B must establish typed replay semantics before later authoring or
+  activation.

@@ -140,3 +140,21 @@ The verifier is read-only and fails on drift. Expanding the library or score
 activation requires a new reviewed contract version; it must not be smuggled
 through a seed edit. See
 `docs/pilot/PILOT_READINESS_CLOSEOUT.md`.
+
+## M6A canonical source
+
+M6A moves the exact five-protocol configuration from the importer into
+manifest-listed, schema-validated packages under `data/practices/protocols/`.
+The ORM and ordinary user experience are unchanged. Rich source, risk,
+adaptation, reflection, and evidence-design metadata remains source-only.
+
+The activation ledger derives friendship's existing `score_active=true` and
+keeps the other four false. The full projection must continue to hash to:
+
+```text
+274f7244630ed56d56a443a6a699399edade6c67fcf964237559e05b72368e35
+```
+
+`GG-CURRICULUM-EXPANSION-READINESS-1.0` calls the unchanged old verifier,
+checks the canonical packages and generated reports, and compares them with
+the seeded database. See `docs/practice-content.md`.

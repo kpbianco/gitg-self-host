@@ -1,0 +1,131 @@
+schema_version: GG-PRACTICE-SOURCES-1.0
+claim_classes:
+  - empirical_finding
+  - professional_or_public_standard
+  - philosophical_or_normative_position
+  - cross_tradition_synthesis
+  - product_design_judgment
+  - safety_precaution
+sources:
+  - source_id: SRC-CANONICAL-CURRICULUM-V2
+    title: Ideal Person Curriculum v2 — Pluralist Full Scope
+    authors_or_issuing_body: Grounded Growth
+    publication_date: "2026-07-23"
+    locator: data/curriculum/ideal_person_curriculum_v2_pluralist_full_scope.yaml
+    locator_kind: repository_path
+    content_sha256: 0b397894deca28855c04a13d59d2b8af8aec3b43210f8aecbe2519f4200bc560
+    source_class: canonical_repository_source
+    evidence_strength: design_only
+    supported_claim: Defines the canonical competency identity, scope, evidence-of-progress language, and measurement minimums.
+    claim_classification: product_design_judgment
+    limitations: A product curriculum is not empirical intervention validation and does not establish moral worth, universality, or psychometric validity.
+    applicable_competency_ids:
+      - "08.02"
+      - "11.10"
+      - "16.03"
+      - "17.03"
+      - "26.01"
+    applicable_protocol_ids:
+      - PRACTICE-BOUNDARY-01
+      - PRACTICE-EMOTIONAL-CUES-01
+      - PRACTICE-FRIENDSHIP-01
+      - PRACTICE-PLAY-01
+      - PRACTICE-PRESENCE-01
+    date_accessed: null
+    license_or_quotation_constraints: Internal repository source; paraphrase in user-facing copy and preserve attribution in derived documentation.
+  - source_id: SRC-PRODUCT-DECISIONS
+    title: Grounded Growth Product Decisions
+    authors_or_issuing_body: Grounded Growth
+    publication_date: "2026-07-27"
+    locator: docs/PRODUCT_DECISIONS.md
+    locator_kind: repository_path
+    content_sha256: 0ef1be1be1f1013db23f2a26bd0c7af09682193782d9fbeb0a8fda071f6d2c6c
+    source_class: internal_decision_record
+    evidence_strength: design_only
+    supported_claim: Records accepted product boundaries for dignity, completion versus mastery, scoring activation, privacy, and protocol behavior.
+    claim_classification: product_design_judgment
+    limitations: Governance rationale is not an external research source and cannot substantiate intervention effectiveness.
+    applicable_competency_ids:
+      - "08.02"
+      - "11.10"
+      - "16.03"
+      - "17.03"
+      - "26.01"
+    applicable_protocol_ids:
+      - PRACTICE-BOUNDARY-01
+      - PRACTICE-EMOTIONAL-CUES-01
+      - PRACTICE-FRIENDSHIP-01
+      - PRACTICE-PLAY-01
+      - PRACTICE-PRESENCE-01
+    date_accessed: null
+    license_or_quotation_constraints: Internal repository source; quote only when preserving decision language is necessary.
+  - source_id: SRC-PROTOCOL-LIBRARY-M4
+    title: Protocol Library — Reviewed Five-Protocol Boundary
+    authors_or_issuing_body: Grounded Growth
+    publication_date: "2026-07-27"
+    locator: docs/protocol-library.md
+    locator_kind: repository_path
+    content_sha256: 7d95b26721e8bff90be210d1628b603db84d44b69327b726b8c4f26b52425b6d
+    source_class: internal_decision_record
+    evidence_strength: design_only
+    supported_claim: Documents the five reviewed protocol identities, runtime availability, safety boundaries, and friendship-only scoring limit.
+    claim_classification: product_design_judgment
+    limitations: The reviewed runtime boundary is not evidence that a protocol improves broad competency or transfers across contexts.
+    applicable_competency_ids:
+      - "08.02"
+      - "11.10"
+      - "16.03"
+      - "17.03"
+      - "26.01"
+    applicable_protocol_ids:
+      - PRACTICE-BOUNDARY-01
+      - PRACTICE-EMOTIONAL-CUES-01
+      - PRACTICE-FRIENDSHIP-01
+      - PRACTICE-PLAY-01
+      - PRACTICE-PRESENCE-01
+    date_accessed: null
+    license_or_quotation_constraints: Internal repository source; runtime copy remains fingerprint-locked.
+  - source_id: SRC-CURRICULUM-SCOPE-AUDIT
+    title: Ideal Person Curriculum Scope Audit
+    authors_or_issuing_body: Grounded Growth research synthesis
+    publication_date: "2026-07-23"
+    locator: docs/ideal_person_curriculum_scope_audit.md
+    locator_kind: repository_path
+    content_sha256: 33778f1a468ca6229bd4d9272d9c939bd4e3220718677329e0b91f669763202c
+    source_class: internal_research_review
+    evidence_strength: limited
+    supported_claim: Supports pluralist capability framing, contextual applicability, disability access, and the separation of development from human worth.
+    claim_classification: cross_tradition_synthesis
+    limitations: This is a repository synthesis, not a systematic review or validation study; protocol-specific external research remains incomplete.
+    applicable_competency_ids:
+      - "08.02"
+      - "11.10"
+      - "16.03"
+      - "17.03"
+      - "26.01"
+    applicable_protocol_ids:
+      - PRACTICE-BOUNDARY-01
+      - PRACTICE-EMOTIONAL-CUES-01
+      - PRACTICE-FRIENDSHIP-01
+      - PRACTICE-PLAY-01
+      - PRACTICE-PRESENCE-01
+    date_accessed: null
+    license_or_quotation_constraints: Internal synthesis; consult and cite underlying authoritative sources before making external factual claims.
+  - source_id: SRC-PILOT-002-FINDINGS
+    title: Pilot 002 Findings
+    authors_or_issuing_body: Grounded Growth
+    publication_date: "2026-07-23"
+    locator: docs/pilot/PILOT_002_FINDINGS.md
+    locator_kind: repository_path
+    content_sha256: e82d5ef46f5edcebc484bda2637557fbac853be4a41aa4f42ba58fa5ea92ae39
+    source_class: internal_research_review
+    evidence_strength: limited
+    supported_claim: Supplies bounded usability evidence for the initial assessment-to-practice journey.
+    claim_classification: product_design_judgment
+    limitations: One static Notion user test is not evidence of intervention effectiveness, generalizability, accessibility across populations, or psychometric validity.
+    applicable_competency_ids:
+      - "17.03"
+    applicable_protocol_ids:
+      - PRACTICE-FRIENDSHIP-01
+    date_accessed: null
+    license_or_quotation_constraints: User-test conclusions may be summarized without exposing participant identity or free text.

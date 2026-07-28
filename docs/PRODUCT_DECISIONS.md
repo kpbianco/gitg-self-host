@@ -366,7 +366,7 @@ archetypes. The resulting JSON is privacy-minimized but remains sensitive
 pilot data rather than anonymous public data.
 
 ## Decision 039 — Pilot forms collect one coherent context at a time
-**Status:** Proposed for M5B review
+**Status:** Accepted after M5B review
 
 The first owner-operated session produced an assessment-stage feedback record
 that also identified a practice and answered setup/check-in timing questions.
@@ -379,7 +379,7 @@ continues to export unchanged. M5B adds no inferred timing, hidden default,
 telemetry, developmental input, or correction of an immutable record.
 
 ## Decision 040 — Submitted evidence requires an action-specific attempt
-**Status:** Proposed for M5B review
+**Status:** Accepted after M5B review
 
 The first session also produced a submitted check-in with no recorded attempt
 and observations outside the selected action's reviewed marker set. M5B
@@ -394,7 +394,7 @@ boundary. Existing immutable records are not rewritten or silently
 normalized.
 
 ## Decision 041 — Pilot-feedback deletion is explicit and user-scoped
-**Status:** Proposed for M5B review
+**Status:** Accepted after M5B review
 
 Optional pilot feedback is retained locally until the participant agreement
 or instance-owner policy says otherwise; there is no automatic retention
@@ -405,3 +405,95 @@ username plus `--confirm` before deleting only that user's feedback rows.
 Deletion does not touch assessment, evidence, score, practice, review,
 orientation, or archetype state. Backups may retain deleted rows and remain
 subject to the same participant-data agreement.
+
+## Decision 042 — Full curriculum expansion is a governed multi-PR program
+**Status:** Accepted by owner for M6 implementation
+
+Grounded Growth will move from the five-protocol vertical slice toward an
+individually authored protocol package for every one of the 383 canonical
+competencies. This is a pluralist capability and guided-practice program, not
+a perfect-person ranking. Dignity, moral worth, universality, clinical
+validity, psychometric validity, and mastery must not be inferred from
+coverage or completion.
+
+The program proceeds through reviewed batches. M6A establishes governance and
+exact migration only; it does not authorize 378 generated stubs, mass
+authoring, new UI, typed evidence execution, or another score-active protocol.
+Later authoring should normally remain 8–15 packages per PR and must update
+sources, risk, coverage, originality, fixtures, and UI evidence together.
+
+## Decision 043 — Canonical packages project onto the frozen runtime
+**Status:** Accepted by owner for M6A implementation
+
+`data/practices/release_manifest.yaml` and its explicitly listed,
+schema-validated packages and registries become the canonical protocol source.
+The Python tuple is removed. The importer validates the full release,
+parent/domain identity, source/risk/policy/family/activation references, and
+recommendation-target subsets before database writes.
+
+M6A projects only existing ORM fields and must retain the reviewed five
+protocols, fifteen actions, all stable IDs and copy, active availability,
+friendship-only score activation, and configuration fingerprint
+`274f7244630ed56d56a443a6a699399edade6c67fcf964237559e05b72368e35`.
+
+The practice catalog uses its own content hash.
+`CurriculumVersion.source_hash` continues to hash only curriculum, model, and
+mapping source bytes, so existing assessment versions do not appear to change
+because editorial protocol metadata moved.
+
+## Decision 044 — Evidence layers and typed versions fail closed
+**Status:** Accepted architectural boundary for M6A; implementation deferred to M6B
+
+Protocol adherence, direct competency evidence, cross-context transfer, and
+current lever state are distinct. Recommendation-target levers are a routing
+subset, while any scoring allocation continues to use the parent's full
+canonical structured mapping.
+
+M6A preserves `GG-EVIDENCE-1.0`, `practice-observation-v1`,
+`GG-SCORING-SHADOW-1.0`, `GG-SCORE-STATE-1.0`, and
+`GG-NEED-RANKING-1.0`. It does not stretch friendship-oriented Boolean
+markers across the curriculum. A new Boolean/count/ordinal/duration/artifact/
+conceptual/observer/objective/qualified evidence contract must have a new
+version, explicit dispatch, snapshotted replay rules, migration policy,
+direction-complete exact fixtures, and fail-closed unknown-version behavior.
+Free text never becomes an opaque score input.
+
+## Decision 045 — Activation is ledgered and expansion readiness is additive
+**Status:** Accepted by owner for M6A implementation
+
+Protocol availability, editorial status, evidence capture, shadow testing,
+and production score mutation are separate decisions.
+`data/practices/registries/activation_ledger.yaml` is the only source for the
+runtime `score_active` projection. It retains friendship as the sole
+score-active protocol; the other four are shadow-only and inactive for score
+mutation.
+
+`GG-CURRICULUM-EXPANSION-READINESS-1.0` does not replace or weaken the
+independent `GG-PILOT-READINESS-1.0` contract. It invokes that unchanged
+verifier, validates packages and deterministic reports, requires the exact
+runtime projection, and records the honest M6A baseline: five projected
+packages, 378 unauthored competencies, three low-risk and two moderate-risk
+packages, one score-active protocol, and zero source-complete release
+candidates.
+
+## Decision 046 — Grounded Growth is a guided life OS, not a curriculum browser
+**Status:** Accepted by owner for the M6 program
+
+The core user problem is not merely missing knowledge. A person may be highly
+driven while misdirected, fragmented, or operating on autopilot. Assessment,
+orientation, personality, and archetype results are diagnostic and framing
+inputs; they are not the product headline, destiny, stereotype, or measure of
+worth.
+
+The product should connect a concise Truth/Autopilot Audit with mission,
+principles, anti-goals, current season and capacity, priority stack,
+twelve-month direction, weekly execution, and proof-based review. The ordinary
+home experience presents only a small, contextually appropriate set of next
+practices. It must not expose the 383-item ontology as a checklist, content
+encyclopedia, or giant worksheet.
+
+M6B first resolves typed competency evidence and scoring architecture. M6C
+then establishes applicability, importance, readiness, urgency,
+opportunity/resources, defer/not-now behavior, and the minimum Personal OS
+foundation. Representative 10–12 competency vertical slices follow as
+Phase B; mass authoring does not begin before those foundations are reviewed.

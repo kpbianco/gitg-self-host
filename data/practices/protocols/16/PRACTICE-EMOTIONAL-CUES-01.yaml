@@ -1,0 +1,250 @@
+schema_version: GG-PRACTICE-CONTENT-1.0
+protocol_version: 1.0.0
+stable_id: PRACTICE-EMOTIONAL-CUES-01
+slug: practice-emotional-cue-detection
+name: Practice Emotional Cue Detection
+parent_competency_id: '16.03'
+domain_id: '16'
+governance:
+  availability: active
+  editorial_status: projected_legacy
+  runtime_projection: GG-PRACTICE-RUNTIME-PROJECTION-1.0
+  risk_class_id: RISK-MODERATE
+  scoring_policy_id: SP-SHADOW-ONLY
+  scoring_status: shadow_only
+  source_ids:
+  - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-PRODUCT-DECISIONS
+  - SRC-PROTOCOL-LIBRARY-M4
+  - SRC-CURRICULUM-SCOPE-AUDIT
+  authoring:
+    provenance: Exact projection of the reviewed M4 runtime protocol with additive M6A governance metadata.
+    content_review_status: frozen_runtime_behavior
+    research_review_status: internal_sources_only_external_review_required
+    safety_review_status: pending_specialist_expansion_review
+    accessibility_review_status: pilot_boundary_reviewed_expansion_review_pending
+    originality_review_status: legacy_exceptions_recorded_expansion_review_pending
+    ui_test_status: existing_runtime_coverage
+    last_reviewed: null
+    known_gap_ids:
+    - RG-M6A-001
+    - RG-M6A-002
+    - RG-M6A-005
+    expert_review_ids:
+    - ER-M6A-001
+    - ER-M6A-003
+  legacy_compatibility_exceptions: []
+  deprecation:
+    deprecated: false
+    replaced_by: null
+meaning_and_fit:
+  purpose: Practice describing an observable interpersonal cue, holding multiple possible explanations,
+    and checking an impression through neutral clarification.
+  why_recommended: Your current provisional profile identifies empathy, social perception, and perspective-taking
+    as a useful area for careful practice.
+  claims:
+  - statement: Nonverbal cues may inform a tentative question but cannot reveal a person's inner state,
+      diagnosis, intent, truthfulness, or character.
+    classification: product_design_judgment
+    source_ids:
+    - SRC-CANONICAL-CURRICULUM-V2
+    - SRC-PROTOCOL-LIBRARY-M4
+    limitations: The migrated five-protocol slice has not been validated as a psychometric instrument
+      or as proof of broad competency change.
+  applicability_question: Is there a familiar, low-stakes interaction where contact is welcome and you
+    can check your impressions directly rather than guessing?
+  not_applicable_behavior: Record not applicable or defer without penalty, do not infer a deficit, and
+    offer the listed safe alternative when useful.
+  readiness_considerations: Use only in a familiar, low-stakes interaction where contact and a neutral
+    clarification question are welcome.
+  opportunity_considerations: Requires a suitable interaction within ten days and the ability to pause
+    without turning observation into surveillance or a test.
+  prerequisites:
+  - Willingness to keep interpretations tentative and accept correction.
+  dependencies: []
+  safe_alternatives:
+  - Practice distinguishing observation from interpretation using a fictional scenario.
+  - Ask a direct, neutral question without recording or interpreting nonverbal behavior.
+  role_conditions:
+  - Do not use power-imbalanced workplace, clinical, caregiving, or evaluative roles as a covert test.
+  pathway_conditions:
+  - Text, voice, signed, augmentative, and in-person communication each provide different and incomplete
+    cues.
+  worldview_conditions:
+  - Culture, disability, neurotype, stress, and habit can change how cues appear and are interpreted.
+intervention:
+  protocol_class: PF-SKILL-REHEARSAL
+  duration_days: 10
+  cadence: Observe, generate alternatives, and clarify once during ten days.
+  setup: Choose one familiar person or recurring low-stakes setting. Use this practice only where a neutral
+    clarification question would be welcome.
+  privacy_and_boundaries: Treat every cue as uncertain and context-dependent. Do not diagnose, claim to
+    know another person's feelings, test someone secretly, or infer intent from eye contact or body language
+    alone. Culture, disability, neurotype, stress, and habit can all change how cues appear.
+  expected_burden: About 15–30 minutes across one familiar interaction and later comparison.
+  action_count_rationale: null
+  foreseeable_misuse:
+  - Treating cues as mind-reading, diagnosis, deception detection, character evidence, stereotyping, or a covert test.
+  exclusions:
+  - High-stakes, clinical, legal, disciplinary, safety, abuse, non-consensual, or power-imbalanced interpretation.
+  actions:
+  - stable_id: PRACTICE-EMOTIONAL-CUES-01-A1
+    sequence: 1
+    title: Notice before interpreting
+    instructions: During one welcome, low-stakes interaction, notice one observable change in tone, pace,
+      posture, expression, gesture, or distance. Describe only what changed; do not assign a feeling or
+      motive yet.
+    due_within_days: 3
+    evidence_rules:
+      schema_version: practice-observation-v1
+      primary_markers:
+      - moved_beyond_transactional
+      supporting_markers:
+      - user_initiated
+    expected_time: 5 minutes
+  - stable_id: PRACTICE-EMOTIONAL-CUES-01-A2
+    sequence: 2
+    title: Hold more than one explanation
+    instructions: Name at least two plausible explanations for the cue, including one that does not concern
+      you. Keep both tentative.
+    due_within_days: null
+    evidence_rules:
+      schema_version: practice-observation-v1
+      primary_markers:
+      - user_initiated
+      supporting_markers:
+      - moved_beyond_transactional
+    expected_time: 5 minutes
+  - stable_id: PRACTICE-EMOTIONAL-CUES-01-A3
+    sequence: 3
+    title: Clarify without leading
+    instructions: When welcome, ask one neutral question such as “I may be reading this wrong—how is this
+      landing?” Within seven days, compare the answer or later information with your initial impression.
+    due_within_days: 7
+    evidence_rules:
+      schema_version: practice-observation-v1
+      primary_markers:
+      - follow_up_question_asked
+      - follow_up_within_seven_days
+      supporting_markers:
+      - meaningful_information_shared
+    expected_time: 5–10 minutes
+  adaptations:
+    low_resource:
+    - Use an ordinary welcome conversation; no recording, instrument, or paid material is needed.
+    accessibility:
+    - Treat eye contact, facial expression, posture, speech, and response timing as optional and context-dependent.
+    cultural_context:
+    - Generate explanations that include cultural and situational differences before personal judgments.
+    resource_variants:
+    - Use a fictional or retrospective low-stakes scenario when direct clarification is not appropriate.
+  pause_conditions:
+  - Pause when clarification is unwelcome, the context becomes evaluative, or uncertainty cannot be maintained.
+  stop_conditions:
+  - Stop if observation becomes covert testing, diagnosis, stereotyping, surveillance, or unwanted questioning.
+  escalation_conditions:
+  - Use qualified support rather than cue interpretation for safety, abuse, clinical, legal, or high-stakes
+    decisions.
+  professional_referral_conditions:
+  - Refer clinical, safety, abuse, legal, disciplinary, or other high-stakes interpretation to an appropriately qualified person.
+evidence_and_scoring:
+  accepted_evidence_types:
+  - structured observation-versus-interpretation record
+  - neutral clarification attempt
+  - consented feedback or later contextual information
+  observation_contract_version: practice-observation-v1
+  check_in_fields:
+  - user_initiated
+  - moved_beyond_transactional
+  - follow_up_question_asked
+  - meaningful_information_shared
+  - follow_up_within_seven_days
+  - internal_resistance
+  adverse_or_contradictory_indicators:
+  - A cue was treated as proof of emotion, intent, diagnosis, deception, or character.
+  - The person was tested, pressured, recorded, or stereotyped.
+  - Direct clarification contradicted the initial interpretation.
+  independence_rule: Record self-directed, planning-aid, or guided support under GG-EVIDENCE-1.0; support
+    changes evidence mass, not human worth.
+  context_transfer_rule: Evidence remains attached to the observed context; one context never establishes
+    broad competency transfer.
+  repetition_rule: Repeated observations use the frozen diminishing-return multipliers in GG-EVIDENCE-1.0
+    and remain independently replayable.
+  recency_rule: No new retention mathematics is introduced in M6A; later evidence remains dated and any
+    future recency rule requires a versioned contract.
+  performance_rubric: Performance concerns separating observation from interpretation, generating alternatives,
+    and clarifying neutrally; guessing another person's state is not rewarded.
+  evidence_quality_rubric: Quality requires observable description and uncertainty. Direct clarification
+    or later information may contradict the initial impression and must remain visible.
+  scoring_eligibility: M6A preserves the legacy observation contract for replay but permits no production
+    score mutation; corroborated performance evidence needs M6B design.
+  competency_contribution: The runtime event is evidence about protocol performance only; direct competency
+    state is not implemented in M6A.
+  canonical_lever_allocation: parent_competency_mapping
+  recommendation_target_lever_ids:
+  - L24
+  minimum_evidence_before_state_update: No current-state update is permitted under the shadow-only policy.
+  withholding_conditions:
+  - All evidence is withheld from current score state.
+  - Unverified interpretations and free text are never score inputs.
+  - High-stakes or non-consensual contexts are excluded.
+completion_and_review:
+  completion_criteria:
+  - All three actions attempted
+  - At least two actions completed
+  - At least one impression checked through direct clarification
+  - Final review submitted
+  completion_rules:
+    minimum_completed: 2
+    substantive_markers:
+    - follow_up_question_asked
+  mastery_disclaimer: Completing this practice does not establish mastery.
+  progression_criteria: Progress to another low-stakes scenario only when the user can name uncertainty,
+    accept correction, and avoid treating cues as diagnostic.
+  transfer_limit: One clarified interaction does not establish general accuracy across people, cultures,
+    disabilities, communication modes, or contexts.
+  reflection:
+    before: Which observable changes can you describe without assigning a feeling or motive?
+    during: What alternative explanations remain plausible, including one unrelated to you?
+    after: What did direct clarification or later information support, contradict, or leave uncertain?
+  review_guidance:
+    repeat: Repeat only in another welcome, low-stakes context with the same uncertainty discipline.
+    adapt: Use a fictional scenario or direct verbal clarification when cue observation is inaccessible
+      or inappropriate.
+    stop: Stop when the exercise becomes diagnosis, surveillance, stereotyping, testing, or unwanted questioning.
+    escalate: Use qualified support for clinical, safety, legal, abuse, or other high-stakes interpretation.
+  evidence_examples:
+    supportive: The user described a change, held multiple explanations, and a neutral clarification supported
+      one limited interpretation.
+    mixed: The user described the cue carefully but could not clarify or later information only partly
+      fit.
+    contradictory: Clarification contradicted the initial impression or the user treated the cue as proof.
+    inconclusive: The interaction was too brief, ambiguous, or unsuitable for clarification.
+presentation:
+  setup_copy:
+    context_heading: Choose one low-stakes interaction context.
+    boundary_heading: Observation is not mind-reading.
+    timing_hint: Choose a date when a familiar, unhurried interaction is realistic.
+    context_help: Use initials or a short private label. Do not record sensitive details.
+    applicability_heading: A checkable interaction, not a personality judgment
+    completion_signal_label: At least one impression checked through direct clarification
+    boundary_acknowledgement: I will treat cues as uncertain, avoid diagnosis and stereotyping, and prefer
+      direct clarification over assumption.
+    check_in_labels:
+      user_initiated: I deliberately paused to observe before interpreting
+      moved_beyond_transactional: I noticed a change in tone, pace, posture, expression, or distance
+      follow_up_question_asked: I asked a neutral question to check my impression
+      meaningful_information_shared: The person voluntarily clarified their experience
+      follow_up_within_seven_days: I compared my initial reading with later information within seven days
+  check_in_labels:
+    user_initiated: I deliberately paused to observe before interpreting
+    moved_beyond_transactional: I noticed an observable change without assigning a motive
+    follow_up_question_asked: I asked a neutral question to check my impression
+    meaningful_information_shared: The person voluntarily clarified their experience
+    follow_up_within_seven_days: I compared my initial reading with later information within seven days
+    internal_resistance: I noticed how hard it was to keep my interpretation tentative
+  completion_copy: Review how well you kept observation separate from interpretation. One clarification
+    does not establish general social-perception accuracy.
+  plain_language_evidence: The record shows what was directly observable, how uncertainty was handled,
+    and whether clarification supported or contradicted the first impression.
+  display_order: 3

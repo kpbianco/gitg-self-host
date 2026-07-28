@@ -1,0 +1,252 @@
+schema_version: GG-PRACTICE-CONTENT-1.0
+protocol_version: 1.0.0
+stable_id: PRACTICE-PLAY-01
+slug: schedule-non-instrumental-play
+name: Schedule Non-Instrumental Play
+parent_competency_id: '26.01'
+domain_id: '26'
+governance:
+  availability: active
+  editorial_status: projected_legacy
+  runtime_projection: GG-PRACTICE-RUNTIME-PROJECTION-1.0
+  risk_class_id: RISK-LOW
+  scoring_policy_id: SP-SHADOW-ONLY
+  scoring_status: shadow_only
+  source_ids:
+  - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-PRODUCT-DECISIONS
+  - SRC-PROTOCOL-LIBRARY-M4
+  - SRC-CURRICULUM-SCOPE-AUDIT
+  authoring:
+    provenance: Exact projection of the reviewed M4 runtime protocol with additive M6A governance metadata.
+    content_review_status: frozen_runtime_behavior
+    research_review_status: internal_sources_only_external_review_required
+    safety_review_status: pilot_boundary_reviewed_expansion_review_pending
+    accessibility_review_status: pilot_boundary_reviewed_expansion_review_pending
+    originality_review_status: legacy_exceptions_recorded_expansion_review_pending
+    ui_test_status: existing_runtime_coverage
+    last_reviewed: null
+    known_gap_ids:
+    - RG-M6A-001
+    - RG-M6A-002
+    - RG-M6A-004
+    expert_review_ids:
+    - ER-M6A-003
+  legacy_compatibility_exceptions:
+  - exception_id: LEGACY-PLAY-A1-USER-INITIATED-UNCOLLECTABLE
+    category: uncollectable_action_marker
+    affected_action_ids:
+    - PRACTICE-PLAY-01-A1
+    affected_markers:
+    - user_initiated
+    detail: The frozen M4 action rule names user_initiated, but the runtime check-in vocabulary omits that field.
+    resolution_gate: M6B typed-evidence architecture and any later protocol revision.
+  deprecation:
+    deprecated: false
+    replaced_by: null
+meaning_and_fit:
+  purpose: Create and repeat one safe period of play pursued for enjoyment rather than output, optimization,
+    or public performance.
+  why_recommended: Your current provisional profile identifies playfulness, recreation, and non-instrumental
+    activity as a useful area for practice.
+  claims:
+  - statement: This experiment observes whether one chosen activity can remain non-instrumental; it does
+      not measure creativity, happiness, or a person's worth.
+    classification: product_design_judgment
+    source_ids:
+    - SRC-CANONICAL-CURRICULUM-V2
+    - SRC-PROTOCOL-LIBRARY-M4
+    limitations: The migrated five-protocol slice has not been validated as a psychometric instrument
+      or as proof of broad competency change.
+  applicability_question: Is there a safe, accessible activity you can do primarily for enjoyment rather
+    than productivity or improvement?
+  not_applicable_behavior: Record not applicable or defer without penalty, do not infer a deficit, and
+    offer the listed safe alternative when useful.
+  readiness_considerations: Use when a low-stakes activity can be chosen voluntarily without neglecting
+    care, work, safety, recovery, or other current responsibilities.
+  opportunity_considerations: Requires two realistically available windows and a free or affordable activity
+    that can be adapted to current energy, mobility, and sensory needs.
+  prerequisites: []
+  dependencies: []
+  safe_alternatives:
+  - Use a five-minute playful variation of an existing routine when a longer window is unavailable.
+  - Defer without penalty during seasons where rest or essential responsibilities need priority.
+  role_conditions:
+  - Caregivers and shift workers may split the activity into shorter safe windows.
+  pathway_conditions:
+  - Solo, shared, indoor, outdoor, quiet, active, digital, and analog play are all legitimate.
+  worldview_conditions:
+  - The practice does not prescribe one theory of leisure, celebration, or flourishing.
+intervention:
+  protocol_class: PF-BEHAVIORAL-EXPERIMENT
+  duration_days: 10
+  cadence: Reserve, complete, and revisit one form of play during ten days.
+  setup: Choose one low-stakes form of play that is realistically available now. Examples may include
+    a game, making something, movement, music, or playful exploration.
+  privacy_and_boundaries: Choose an activity that is physically, financially, and socially safe. Do not
+    use the practice to pressure another person, ignore responsibilities, or turn rest into another performance
+    target.
+  expected_burden: About 50–75 minutes total; shorter accessible variants are legitimate.
+  action_count_rationale: null
+  foreseeable_misuse:
+  - Turning play into a compulsory optimization target or using a risky, costly, compulsive, or pressured activity.
+  exclusions:
+  - Gambling, substance use, unsafe physical activity, material financial risk, or neglect of essential care and responsibilities.
+  actions:
+  - stable_id: PRACTICE-PLAY-01-A1
+    sequence: 1
+    title: Reserve a play window
+    instructions: Choose a specific activity and reserve at least 30 minutes for it within the next three
+      days.
+    due_within_days: 3
+    evidence_rules:
+      schema_version: practice-observation-v1
+      primary_markers:
+      - future_interaction_scheduled
+      supporting_markers:
+      - user_initiated
+    expected_time: 5 minutes
+  - stable_id: PRACTICE-PLAY-01-A2
+    sequence: 2
+    title: Play without an output goal
+    instructions: Use the reserved time for the activity. For that window, do not optimize, publish, measure,
+      or turn it into work.
+    due_within_days: null
+    evidence_rules:
+      schema_version: practice-observation-v1
+      primary_markers:
+      - moved_beyond_transactional
+      - meaningful_information_shared
+      supporting_markers:
+      - user_initiated
+    expected_time: 30 minutes
+  - stable_id: PRACTICE-PLAY-01-A3
+    sequence: 3
+    title: Return once
+    instructions: Within seven days, return to the activity for another short period or choose a second
+      playful activity.
+    due_within_days: 7
+    evidence_rules:
+      schema_version: practice-observation-v1
+      primary_markers:
+      - follow_up_within_seven_days
+      supporting_markers:
+      - moved_beyond_transactional
+    expected_time: 10–30 minutes
+  adaptations:
+    low_resource:
+    - Use imagination, humor, movement, music, nature, or a free game with materials already available.
+    accessibility:
+    - Choose seated, low-sensory, asynchronous, or assistive-technology-supported play.
+    cultural_context:
+    - Choose forms of play that fit the person's community, privacy, age, and responsibilities.
+    resource_variants:
+    - Shorten or split the play window while keeping it free of an output goal.
+  pause_conditions:
+  - Pause when energy, pain, cost, safety, consent, or essential responsibilities make the chosen window unsuitable.
+  stop_conditions:
+  - Stop if the activity becomes unsafe, compulsive, financially disproportionate, or another performance
+    demand.
+  escalation_conditions:
+  - Use appropriate qualified support when play is entangled with gambling, substance use, injury risk,
+    or severe functional impairment.
+  professional_referral_conditions:
+  - Seek appropriate qualified support for gambling, substance, injury, compulsion, or severe functional-impairment concerns.
+evidence_and_scoring:
+  accepted_evidence_types:
+  - structured firsthand observation
+  - behavioral adherence
+  - optional artifact or longitudinal record
+  observation_contract_version: practice-observation-v1
+  check_in_fields:
+  - future_interaction_scheduled
+  - moved_beyond_transactional
+  - meaningful_information_shared
+  - follow_up_within_seven_days
+  - internal_resistance
+  adverse_or_contradictory_indicators:
+  - The activity created avoidable safety, financial, or responsibility harm.
+  - Another person was pressured to participate.
+  - The activity was converted into output, optimization, or public evaluation.
+  independence_rule: Record self-directed, planning-aid, or guided support under GG-EVIDENCE-1.0; support
+    changes evidence mass, not human worth.
+  context_transfer_rule: Evidence remains attached to the observed context; one context never establishes
+    broad competency transfer.
+  repetition_rule: Repeated observations use the frozen diminishing-return multipliers in GG-EVIDENCE-1.0
+    and remain independently replayable.
+  recency_rule: No new retention mathematics is introduced in M6A; later evidence remains dated and any
+    future recency rule requires a versioned contract.
+  performance_rubric: Performance concerns reserving, engaging in, and revisiting the selected activity
+    without an output goal; enjoyment intensity is not scored.
+  evidence_quality_rubric: Quality reflects a clear activity, firsthand observations, and distinguishable
+    conditions; free-text enthusiasm does not increase evidence.
+  scoring_eligibility: M6A records structured observations for audit only. This protocol has no production
+    score activation and no typed competency-evidence contract.
+  competency_contribution: The runtime event is evidence about protocol performance only; direct competency
+    state is not implemented in M6A.
+  canonical_lever_allocation: parent_competency_mapping
+  recommendation_target_lever_ids:
+  - L34
+  minimum_evidence_before_state_update: No current-state update is permitted under the shadow-only policy.
+  withholding_conditions:
+  - All evidence is withheld from current score state.
+  - Completion or reported enjoyment does not establish transfer or mastery.
+  - Unsafe, pressured, or materially harmful activity is adverse evidence, not success.
+completion_and_review:
+  completion_criteria:
+  - All three actions attempted
+  - At least two actions completed
+  - At least one period of genuinely non-instrumental engagement
+  - Final review submitted
+  completion_rules:
+    minimum_completed: 2
+    substantive_markers:
+    - moved_beyond_transactional
+    - meaningful_information_shared
+  mastery_disclaimer: Completing this practice does not establish mastery.
+  progression_criteria: Repeat or vary the activity only when the practice remained safe, voluntary, and
+    realistically compatible with responsibilities.
+  transfer_limit: One or two play windows show only what happened in the selected activity and do not
+    establish a stable capacity for leisure or spontaneity.
+  reflection:
+    before: What would make this activity genuinely playful rather than another task to optimize?
+    during: When did output, comparison, or self-evaluation enter the activity, and what helped you return
+      to play?
+    after: What made play workable, what constrained it, and did the second window support or contradict
+      the first?
+  review_guidance:
+    repeat: Repeat a workable low-stakes form of play when it still feels freely chosen.
+    adapt: Change duration, sensory load, social format, cost, or movement demands.
+    stop: Stop if the activity becomes unsafe, compulsive, pressured, or another performance obligation.
+    escalate: Seek appropriate support for gambling, substance, injury, or severe impairment concerns.
+  evidence_examples:
+    supportive: The user reserved time, played without an output goal, and returned once without creating
+      harm.
+    mixed: The activity happened but repeatedly shifted into optimization or could not be revisited.
+    contradictory: The activity created pressure, avoidable harm, or displaced essential responsibilities.
+    inconclusive: The window was interrupted or too little activity occurred to tell whether it was non-instrumental.
+presentation:
+  setup_copy:
+    context_heading: Choose one form of play.
+    boundary_heading: Keep play safe and freely chosen.
+    timing_hint: Choose a date when an unhurried play window is realistic.
+    context_help: Use a short private label for the activity or setting.
+    applicability_heading: A real activity, not an abstract intention
+    completion_signal_label: At least one period of genuinely non-instrumental engagement
+    boundary_acknowledgement: I will keep this activity safe, voluntary, and proportionate to my responsibilities.
+    check_in_labels:
+      future_interaction_scheduled: A specific play window was reserved
+      moved_beyond_transactional: I engaged in the activity
+      meaningful_information_shared: I kept the activity free of output or optimization goals
+      follow_up_within_seven_days: I returned to play within seven days
+  check_in_labels:
+    future_interaction_scheduled: A specific play window was reserved
+    moved_beyond_transactional: I engaged in the activity
+    meaningful_information_shared: I kept the activity free of output or optimization goals
+    follow_up_within_seven_days: I returned to play within seven days
+    internal_resistance: I noticed how difficult it was to keep play non-instrumental
+  completion_copy: Review what made play more or less workable. Completing two windows does not establish
+    a stable trait or require you to enjoy the activity.
+  plain_language_evidence: The record shows whether a safe activity was reserved, experienced without
+    an output goal, and revisited; it does not score enjoyment.
+  display_order: 2

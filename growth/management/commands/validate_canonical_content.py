@@ -1,0 +1,31 @@
+from pathlib import Path
+
+from django.conf import settings
+from django.core.management.base import BaseCommand, CommandError
+
+from growth.domain.practice_content import PracticeContentError, load_practice_content_bundle
+from growth.services.canonical_import import (
+    CanonicalDataError,
+    load_and_validate_bundle,
+    validate_practice_content_mapping,
+)
+
+
+class Command(BaseCommand):
+    help = "Validate canonical model and practice content without writing database state."
+
+    def handle(self, *args, **options):
+        try:
+            canonical = load_and_validate_bundle()
+            practices = load_practice_content_bundle(Path(settings.BASE_DIR))
+            validate_practice_content_mapping(practices, canonical)
+        except (CanonicalDataError, PracticeContentError) as exc:
+            raise CommandError(str(exc)) from exc
+        self.stdout.write(
+            self.style.SUCCESS(
+                "Canonical content valid: "
+                f"{len(practices.protocols)} practice packages, "
+                f"content hash {practices.content_hash}, "
+                f"runtime projection {practices.release_manifest['legacy_projection_hash']}."
+            )
+        )

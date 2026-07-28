@@ -23,6 +23,8 @@ make format
 make lint
 make test
 make pilot-check
+make practice-report-check
+make curriculum-check
 make e2e
 make compose-smoke
 ```
@@ -35,11 +37,34 @@ evidence and score state, and then runs the read-only
 `GG-PILOT-READINESS-1.0` verifier. It removes its isolated database on exit
 and never touches `./var`, `.env`, or the deployed volume.
 
+`make practice-report-check` recomputes the 383-row coverage ledger, domain
+and lever matrices, risk register, summary, and originality report as exact
+bytes. It fails on missing or stale committed output.
+
+`make curriculum-check` creates another disposable database, validates the
+manifest-listed practice release, seeds twice, reconciles evidence and score
+state, invokes the unchanged pilot verifier through the additive
+`GG-CURRICULUM-EXPANSION-READINESS-1.0` contract, and compares the canonical
+projection with the seeded runtime.
+
 `make test` covers:
 
 - canonical counts, IDs, mapping coverage, and weights;
 - malformed mapping rejection;
 - idempotent curriculum, protocol, and Pilot 002 seeding;
+- offline JSON Schema validation for protocol packages and every practice
+  registry;
+- manifest path safety, exact package enumeration, content hashing, stable-ID
+  uniqueness, and cross-reference rejection;
+- exact five-protocol runtime projection parity with the post-M4 fingerprint;
+- canonical parent/domain and recommendation-target-subset validation before
+  writes;
+- deterministic 383-row coverage with five projected and 378 unauthored rows,
+  27-domain and 37-lever matrices, and explicit risk/scoring/activation state;
+- exact/normalized/near-duplicate, reflection, action-shape, duration,
+  evidence-rule, and known Notion journal-prompt originality reporting;
+- additive, read-only expansion readiness while the independent
+  `GG-PILOT-READINESS-1.0` contract remains callable;
 - one-time bootstrap user behavior and password-hash preservation;
 - login enforcement, CSRF-bearing login, and public health;
 - authenticated home/profile/assessment/practice rendering;
@@ -158,7 +183,8 @@ This builds and starts the real production image in an isolated Compose
 project. It proves the mapped-port health and CSRF login path, non-root user,
 migrations, repeated canonical seeding, evidence and score replay, named-volume
 persistence across forced recreation, one-time bootstrap behavior, online
-backup integrity, restore, and graceful Gunicorn shutdown.
+backup integrity, restore, both readiness contracts, and graceful Gunicorn
+shutdown.
 
 The command never uses the deployment `.env`. Its temporary credentials,
 Compose project, and volume are removed on exit. Set `SMOKE_APP_PORT` only

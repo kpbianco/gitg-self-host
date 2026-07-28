@@ -1,0 +1,55 @@
+schema_version: GG-PROTOCOL-RISK-1.0
+risk_classes:
+  - risk_class_id: RISK-LOW
+    name: Low-risk everyday practice
+    definition: A voluntary, reversible everyday practice with limited foreseeable consequence when the stated boundaries are followed.
+    required_safety_sections:
+      - privacy_and_boundaries
+      - adaptations
+      - stop_conditions
+      - escalation_conditions
+    required_reviewer_role: Trained content reviewer; specialist review when the actual topic introduces a moderate or high-risk context.
+    specialist_review_required: false
+    sensitive_data_limit: Collect only the minimum private context needed to run the practice; do not request identifying details about other people.
+    pre_review_scoring_ceiling: active_if_separately_approved
+    production_release_conditions:
+      - Content, accessibility, privacy, and safety review complete.
+      - Evidence and scoring contracts independently approved before score activation.
+  - risk_class_id: RISK-MODERATE
+    name: Moderate-consequence practice
+    definition: A practice with plausible interpersonal, physical, financial, occupational, or emotional consequence that remains bounded away from high-risk contexts.
+    required_safety_sections:
+      - foreseeable_misuse
+      - exclusions
+      - privacy_and_boundaries
+      - adaptations
+      - stop_conditions
+      - escalation_conditions
+    required_reviewer_role: Relevant specialist or domain-qualified human reviewer before expansion release or score activation.
+    specialist_review_required: true
+    sensitive_data_limit: Store no diagnoses, allegations, third-party secrets, or unnecessary sensitive narrative; prefer category-level signals.
+    pre_review_scoring_ceiling: shadow_only
+    production_release_conditions:
+      - Specialist safety review complete.
+      - Misuse, exclusion, stop, and escalation paths tested in content and UI.
+      - Scoring remains shadow-only until a separate activation decision.
+  - risk_class_id: RISK-HIGH
+    name: High-risk or qualified-support practice
+    definition: Medical, mental-health, trauma, abuse, sexuality, substance, legal, financial-loss, emergency, or vulnerable-person content.
+    required_safety_sections:
+      - foreseeable_misuse
+      - exclusions
+      - privacy_and_boundaries
+      - adaptations
+      - stop_conditions
+      - escalation_conditions
+      - qualified_referral_boundary
+    required_reviewer_role: Licensed or otherwise appropriately qualified specialist for the jurisdiction and topic.
+    specialist_review_required: true
+    sensitive_data_limit: Do not collect or retain sensitive case detail unless separately justified, consented, secured, and reviewed.
+    pre_review_scoring_ceiling: qualified_only
+    production_release_conditions:
+      - Qualified specialist approval recorded.
+      - Jurisdictional, emergency, and vulnerable-person boundaries reviewed.
+      - No unverified hotline, diagnosis, treatment, confrontation, or coercive exposure.
+      - Evidence is qualified-only or non-scored unless separately approved.

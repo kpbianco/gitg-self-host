@@ -4,5 +4,9 @@
 - [ADR 0002 — Shadow scoring before profile mutation](0002-shadow-scoring-before-mutation.md)
 - [ADR 0003 — Versioned score-state activation](0003-versioned-score-state-activation.md)
 - [ADR 0004 — Isolated private-pilot feedback](0004-isolated-private-pilot-feedback.md)
+- [ADR 0005 — Canonical practice content and exact runtime projection](0005-canonical-practice-content.md)
+- [ADR 0006 — Keep protocol evidence, competency evidence, and lever state distinct](0006-competency-evidence-and-lever-state.md)
+- [ADR 0007 — New evidence types require a versioned replay contract](0007-versioned-typed-evidence-boundary.md)
+- [ADR 0008 — Score activation is an explicit release decision](0008-explicit-score-activation-ledger.md)
 
 Accepted records are binding unless a later record explicitly supersedes them.

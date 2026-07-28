@@ -1,6 +1,7 @@
 #!/bin/sh
 set -eu
 
+python manage.py validate_canonical_content
 python manage.py migrate --noinput
 python manage.py bootstrap_user
 python manage.py seed_canonical

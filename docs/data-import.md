@@ -7,11 +7,13 @@
 1. `data/curriculum/ideal_person_curriculum_v2_pluralist_full_scope.yaml`
 2. `data/model/grounded_growth_model_v1.json`
 3. `data/model/competency_lever_mapping_v1.csv`
-4. `data/notion/initial_mvp/01_lever_baselines_import.csv`
-5. `data/notion/initial_mvp/03_orientation_profile_import.csv`
+4. `data/practices/release_manifest.yaml` and every package, registry, and
+   schema it explicitly lists
+5. `data/notion/initial_mvp/01_lever_baselines_import.csv`
+6. `data/notion/initial_mvp/03_orientation_profile_import.csv`
 
-The first three define global curriculum/model rows. The last two initialize
-Pilot 002 for the first application user. The three Pilot 002 archetypes come
+The first four define global curriculum/model and practice rows. The last two
+initialize Pilot 002 for the first application user. The three Pilot 002 archetypes come
 from the stable IDs and exact fit indexes published in
 `data/notion/initial_mvp/04_starting_profile_page.md`.
 
@@ -34,6 +36,9 @@ The importer never uses `legacy/` and never parses the human-readable Notion
 | Pilot 002 orientation results | 6 |
 | Pilot 002 published archetype results | 3 |
 | Seeded practice protocols | 5 |
+| Seeded practice actions | 15 |
+| Canonical practice packages | 5 |
+| Explicit unauthored competency rows | 378 |
 
 ## Validation before writes
 
@@ -47,11 +52,27 @@ The command opens one transaction and fails before model writes when it finds:
 - nonnumeric, nonpositive, or greater-than-one weights;
 - competency weights that differ from 1.0 by more than `0.000001`;
 - disagreement between the structured mapping CSV and canonical model JSON;
+- an unknown practice-content, registry, activation, or release version;
+- a missing, duplicate, unlisted, traversing, or misplaced manifest path;
+- a repository-source locator that is missing, escaping, or differs from its
+  recorded SHA-256;
+- a protocol or registry field outside its offline JSON Schema;
+- duplicate protocol/action/source/risk/policy/family/activation stable IDs or
+  broken cross-references;
+- a practice package whose domain differs from its canonical parent or whose
+  recommendation targets fall outside the parent's structured mapping;
+- a package/content hash mismatch or a runtime projection that differs from
+  the reviewed five-protocol fingerprint;
+- an activation-ledger mismatch or score activation beyond friendship;
+- a release candidate with unresolved global or protocol-scoped research,
+  specialist, accessibility, originality, source, or UI/test gates;
 - a scoreable protocol whose stable parent competency is missing, whose
   recommendation targets are not a non-empty subset of its mapping, or whose
   structured weights are malformed;
-- a practice action with a missing schema version, unknown observation field,
-  duplicate marker, or overlapping primary/supporting evidence marker.
+- a practice action with a missing schema version, noncanonical action ID,
+  due window beyond its protocol duration, unknown/uncollectable observation
+  field without the one frozen exception, duplicate marker, or overlapping
+  primary/supporting evidence marker;
 - an invalid completion minimum, completion marker outside the reviewed
   observation vocabulary, unsupported completion-marker mode, or score
   activation beyond the reviewed friendship protocol.
@@ -72,6 +93,8 @@ For local development:
 make migrate
 make seed
 make pilot-check
+make practice-report-check
+make curriculum-check
 ```
 
 A successful command reports the imported counts. Repeated runs update
@@ -111,6 +134,17 @@ math version and separately records `GG-SCORE-STATE-1.0` and
 The post-M4 `GG-PILOT-READINESS-1.0` verifier then checks the exact reviewed
 source/database counts, protocol/action/link inventory, Pilot 002 shape, and
 replay boundaries without writing or repairing canonical data.
+
+M6A keeps that hash and verifier unchanged. The practice release stores a
+separate deterministic content hash because editorial protocol metadata is
+not an assessment curriculum version. The additive
+`GG-CURRICULUM-EXPANSION-READINESS-1.0` contract invokes the old verifier,
+checks the manifest/packages/reports, and compares the exact canonical
+projection with the seeded database.
+
+The five packages are `projected_legacy`. Rich research, safety, adaptation,
+reflection, and evidence-design metadata remains source-only in M6A; it does
+not expand the ORM or execute a new evidence algorithm.
 
 ## Pilot 002 boundary
 

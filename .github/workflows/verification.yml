@@ -29,6 +29,7 @@ jobs:
       - run: make lint PYTHON=python
       - run: make test PYTHON=python
       - run: make pilot-check PYTHON=python
+      - run: make curriculum-check PYTHON=python
 
   browser:
     name: Playwright core journeys

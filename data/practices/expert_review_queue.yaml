@@ -1,0 +1,62 @@
+schema_version: GG-PRACTICE-EXPERT-REVIEW-1.0
+reviews:
+  - review_id: ER-M6A-001
+    scope: PRACTICE-EMOTIONAL-CUES-01
+    review_type: specialist_safety
+    status: pending
+    required_roles:
+      - cross-cultural communication specialist
+      - disability or neurodiversity reviewer
+      - clinical safety reviewer
+    completed_roles: []
+    completed_on: null
+    decision_reference: null
+    blocking_gates:
+      - safety_review_complete
+      - release_candidate
+      - score_activation
+    review_questions:
+      - Do the exclusions prevent diagnosis, deception inference, stereotyping, and covert testing?
+      - Are direct clarification and consent boundaries sufficient across communication modes?
+      - What evidence contract could legitimately represent performance without rewarding normative eye contact or body language?
+    release_effect: Blocks expansion release-candidate status and any score activation; does not alter the frozen five-protocol runtime.
+  - review_id: ER-M6A-002
+    scope: PRACTICE-BOUNDARY-01
+    review_type: specialist_safety
+    status: pending
+    required_roles:
+      - trauma-informed interpersonal-safety specialist
+      - employment or organizational reviewer
+      - legal-boundary reviewer where jurisdictionally relevant
+    completed_roles: []
+    completed_on: null
+    decision_reference: null
+    blocking_gates:
+      - safety_review_complete
+      - release_candidate
+      - score_activation
+    review_questions:
+      - Are abuse, retaliation, coercive-control, power, dependency, and discrimination exclusions sufficient?
+      - Do alternatives avoid encouraging unsafe confrontation?
+      - What minimal typed evidence could distinguish a controllable limit from coercion without storing sensitive narrative?
+    release_effect: Blocks expansion release-candidate status and any score activation; does not alter the frozen five-protocol runtime.
+  - review_id: ER-M6A-003
+    scope: full_catalog
+    review_type: measurement_architecture
+    status: pending
+    required_roles:
+      - measurement specialist
+      - accessibility reviewer
+      - privacy and safety reviewer
+    completed_roles: []
+    completed_on: null
+    decision_reference: null
+    blocking_gates:
+      - m6b_acceptance
+      - mass_authoring
+      - score_activation
+    review_questions:
+      - How should competency evidence, protocol adherence, lever allocation, and current score state remain separate?
+      - Which evidence policies require corroboration, artifacts, objective indicators, qualified review, shadow-only handling, or non-scored reflection?
+      - Which canonical fields and fixtures are required before the Phase B representative authoring batch?
+    release_effect: Blocks M6B acceptance and mass protocol authoring.
