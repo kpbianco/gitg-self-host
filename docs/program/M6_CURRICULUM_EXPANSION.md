@@ -69,12 +69,27 @@ compatibility facts, not patterns for future mass authoring.
 
 - resolve assessment baseline versus protocol evidence versus direct
   competency evidence versus lever state;
-- design backward-compatible typed evidence and explicit unknown,
-  contradiction, adverse, provenance, and withholding behavior;
-- add pure domain implementations, accepted ADR updates, exact synthetic
-  golden fixtures, property tests, replay, reversal, and no-baseline-mutation
-  proofs;
+- add pure `GG-TYPED-EVIDENCE-1.0` evaluation from materialized
+  `typed-evidence-rules-v1` snapshots with fail-closed version dispatch;
+- keep assessment v1.1 lever baselines separate from evidence-only
+  `GG-COMPETENCY-EVIDENCE-SHADOW-1.0`;
+- add one-way `GG-COMPETENCY-LEVER-SHADOW-1.0` with duplicate-event
+  protection and no lever-to-competency feedback;
+- evaluate `GG-PRODUCTION-SCORE-ELIGIBILITY-1.0` separately from capture and
+  shadow behavior;
+- add proposed ADR/decision updates, exact synthetic golden fixtures,
+  property tests, replay, reversal, and no-baseline-mutation proofs;
+- add additive `GG-COMPETENCY-EVIDENCE-READINESS-1.0`;
 - keep production scoring at the existing friendship-only boundary.
+
+M6B adds no migration, typed check-in UI, protocol, action, context-priority
+input, or production state write. It preserves exact v1 replay and keeps old
+evidence attached to its original assessment epoch.
+
+Software implementation and readiness do not clear specialist review.
+`ER-M6A-003` remains pending and `RG-M6A-002` remains open; measurement,
+accessibility, and privacy/safety review blocks M6B acceptance and mass
+authoring.
 
 ### M6C — Context-aware priority and Personal OS foundation
 
@@ -178,3 +193,22 @@ For every later batch:
 - no changed assessment v1.1 or existing hash semantics;
 - no claim that the five migrated packages are externally validated,
   source-complete, psychometric, universal, or proof of mastery.
+
+## Explicit non-goals for M6B
+
+- no ORM migration or persisted typed event/state;
+- no rewrite, conversion, or reinterpretation of a v1 event or snapshot;
+- no new protocol, action, content package, source-complete claim, or coverage
+  increase;
+- no typed evidence form, profile UI, browser journey, or ordinary-user
+  numeric competency score;
+- no M6C applicability, importance, readiness, urgency,
+  opportunity/resources, season/capacity, mission, principles, anti-goals, or
+  priority-stack input;
+- no recommendation/ranking change or automatic evidence carry-forward after
+  reassessment;
+- no second production score-active protocol;
+- no claim that synthetic fixtures establish measurement, accessibility,
+  clinical, cross-cultural, psychometric, or longitudinal validity;
+- no fabricated specialist-review completion and no weakening of
+  `ER-M6A-003`.

@@ -1,0 +1,71 @@
+{
+  "boundary": "Software readiness is additive and shadow-only. Pending specialist review and the open research gap block M6B acceptance, mass authoring, and typed production score activation.",
+  "catalog": {
+    "canonical_protocol_packages": 5,
+    "competencies": 383,
+    "practice_actions": 15,
+    "score_active_protocols": 1,
+    "uncovered_competencies": 378
+  },
+  "contract_version": "GG-COMPETENCY-EVIDENCE-READINESS-1.0",
+  "contracts": {
+    "competency_evidence_shadow": "GG-COMPETENCY-EVIDENCE-SHADOW-1.0",
+    "competency_lever_shadow": "GG-COMPETENCY-LEVER-SHADOW-1.0",
+    "preserved_curriculum_expansion": "GG-CURRICULUM-EXPANSION-READINESS-1.0",
+    "preserved_evidence": "GG-EVIDENCE-1.0",
+    "production_score_eligibility": "GG-PRODUCTION-SCORE-ELIGIBILITY-1.0",
+    "production_score_eligibility_fingerprint": "f7639a0c623f1baac9469f34fe49ca9e2eb0be8fc1c616ab662996b2e90bf2bf",
+    "typed_evidence": "GG-TYPED-EVIDENCE-1.0",
+    "typed_evidence_rules": "typed-evidence-rules-v1"
+  },
+  "deterministic_checks": {
+    "assessment_epoch_isolation_exact": true,
+    "canonical_catalog_exact": true,
+    "canonical_mapping_envelope_rejection_exact": true,
+    "competency_reversal_and_unknown_state_exact": true,
+    "competency_shadow_golden_fixture_exact": true,
+    "competency_to_full_parent_mapping_shadow_exact": true,
+    "evidence_v1_dispatch_replay_exact": true,
+    "production_score_eligibility_source_exact": true,
+    "scoring_policy_registry_and_execution_exact": true,
+    "typed_evidence_manifest_and_hash_exact": true,
+    "typed_fixture_dispatch_replay_exact": true,
+    "typed_production_boundary_exact": true,
+    "typed_to_competency_shadow_exact": true
+  },
+  "governance": {
+    "expert_review": {
+      "blocking_gates": [
+        "m6b_acceptance",
+        "mass_authoring",
+        "score_activation"
+      ],
+      "completed_roles": [],
+      "required_roles": [
+        "measurement specialist",
+        "accessibility reviewer",
+        "privacy and safety reviewer"
+      ],
+      "review_id": "ER-M6A-003",
+      "status": "pending"
+    },
+    "research_gap": {
+      "blocking_gates": [
+        "m6b_acceptance",
+        "mass_authoring",
+        "score_activation"
+      ],
+      "gap_id": "RG-M6A-002",
+      "status": "open"
+    }
+  },
+  "m6b_accepted": false,
+  "scoring_policies": {
+    "canonical": 6,
+    "synthetically_executed": 6
+  },
+  "software_ready": true,
+  "specialist_review_complete": false,
+  "typed_production_protocols": 0,
+  "typed_score_active_protocols": 0
+}

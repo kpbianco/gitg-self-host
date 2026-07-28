@@ -169,3 +169,34 @@ algorithm version and adds immutable before/after snapshots, atomic and
 idempotent state transitions, reversal/rebuild procedures, dynamic
 provisional-need and recommendation tests, and an explicit baseline-only
 upgrade policy. See `docs/scoring-state.md`.
+
+## Proposed M6B parallel shadows
+
+M6B does not route typed evidence through
+`GG-SCORING-SHADOW-1.0`. It adds two distinct pure versions:
+
+- `GG-COMPETENCY-EVIDENCE-SHADOW-1.0` aggregates direct typed evidence for one
+  canonical competency and assessment epoch;
+- `GG-COMPETENCY-LEVER-SHADOW-1.0` projects each designated competency
+  contribution once through the full canonical parent mapping.
+
+There is no competency baseline in assessment v1.1. With no eligible direct
+evidence, the competency shadow is unknown. A lever-derived competency summary
+cannot enter the competency shadow or be projected back to levers.
+
+The one-way lever shadow rejects duplicate event keys, malformed or duplicate
+weights, and any attempt to use the recommendation-target subset as scoring
+allocation. Unknown, inconclusive, not-observed, not-applicable, deferred,
+policy-ineligible, adverse-withheld, and reversed evidence remains visible
+with a stable withholding reason and contributes no mass. Reversing the only
+active event restores the exact starting projection.
+
+Old evidence stays attached to its original assessment epoch. A newer
+assessment starts a new immutable lever baseline; M6B defines no automatic
+carry-forward.
+
+`GG-PRODUCTION-SCORE-ELIGIBILITY-1.0` is evaluated separately and remains
+false for every new typed path in M6B. These shadows do not write
+`LeverState`, `ScoreSnapshot`, need/rank, recommendation order, or the
+activation ledger. Their fixtures are software invariants, not measurement or
+psychometric validation.

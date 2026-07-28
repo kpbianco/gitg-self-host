@@ -442,7 +442,7 @@ mapping source bytes, so existing assessment versions do not appear to change
 because editorial protocol metadata moved.
 
 ## Decision 044 — Evidence layers and typed versions fail closed
-**Status:** Accepted architectural boundary for M6A; implementation deferred to M6B
+**Status:** Accepted architectural boundary from M6A; M6B implementation is proposed in Decisions 047–049
 
 Protocol adherence, direct competency evidence, cross-context transfer, and
 current lever state are distinct. Recommendation-target levers are a routing
@@ -497,3 +497,63 @@ then establishes applicability, importance, readiness, urgency,
 opportunity/resources, defer/not-now behavior, and the minimum Personal OS
 foundation. Representative 10–12 competency vertical slices follow as
 Phase B; mass authoring does not begin before those foundations are reviewed.
+
+## Decision 047 — Typed evidence is parallel, explicit, and replay-first
+**Status:** Proposed for M6B review
+
+M6B introduces pure `GG-TYPED-EVIDENCE-1.0` evaluation with
+`typed-evidence-rules-v1` snapshots. It does not modify
+`GG-EVIDENCE-1.0`, `practice-observation-v1`, or any historical event.
+Dispatch uses the immutable event and rule versions and fails closed on an
+unknown version.
+
+The typed contract represents Boolean, count/frequency, ordinal, duration,
+artifact, conceptual, scenario, objective, consented-observer, and minimal
+qualified-attestation evidence. It distinguishes unknown, not observed,
+inconclusive, not applicable, defer, contradiction, and adverse outcome.
+Evidence direction and adversity are independent; an adverse outcome may
+force withholding or a safety stop without automatically becoming negative
+competency evidence. Typed values have no implicit “more is better” meaning.
+
+Every replay snapshot contains the materialized rule, rule version and hash,
+stable protocol/action/competency IDs, scoring-policy ID, structured input,
+and minimal provenance. Free text, observer identity, sensitive narrative,
+and artifact contents are not opaque score inputs.
+
+## Decision 048 — Competency evidence is evidence-only and flows one way
+**Status:** Proposed for M6B review
+
+Assessment v1.1 creates immutable lever baselines; it does not create a
+competency baseline. `GG-COMPETENCY-EVIDENCE-SHADOW-1.0` therefore represents
+only direct replay-verified evidence. With no eligible evidence, its state is
+unknown rather than a neutral numeric estimate. A lever-derived competency
+summary may later inform explanation or routing, but cannot seed direct
+competency evidence.
+
+`GG-COMPETENCY-LEVER-SHADOW-1.0` applies one designated competency
+contribution per immutable event through the complete canonical parent
+mapping. It rejects duplicate event keys and never applies protocol
+performance and direct competency evidence as two independent contributions
+from the same event. Recommendation-target levers remain routing metadata.
+Old evidence stays attached to its original assessment epoch and is never
+silently transferred after reassessment.
+
+Both projections are deterministic, reversible, non-persisted M6B outputs.
+They do not write assessment baselines, current lever state, score snapshots,
+need/rank, recommendations, or activation.
+
+## Decision 049 — Shadow capability does not grant production eligibility
+**Status:** Proposed for M6B review
+
+`GG-PRODUCTION-SCORE-ELIGIBILITY-1.0` evaluates production eligibility
+separately from evidence capture and shadow projection. Eligibility requires a
+satisfied executable policy, valid stable mappings, sufficient replayable
+evidence, available lever baseline mass, cleared source/risk/specialist
+reviews, and an explicitly approved activation-ledger entry.
+
+M6B leaves all new typed paths production-ineligible and preserves friendship
+as the only score-active protocol under the existing v1 contracts.
+`GG-COMPETENCY-EVIDENCE-READINESS-1.0` may prove the software inventory,
+fixtures, replay, reversal, and invariants, but it cannot clear
+`ER-M6A-003`. Measurement, accessibility, and privacy/safety review remains
+pending and blocks M6B acceptance and mass authoring.

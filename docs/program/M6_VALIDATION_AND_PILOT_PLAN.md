@@ -29,6 +29,42 @@ evidence and score state, invokes the old verifier through the new additive
 contract, and removes the database. `make pilot-check` remains available and
 independent.
 
+## M6B software gates
+
+`GG-COMPETENCY-EVIDENCE-READINESS-1.0` is additive to both existing
+readiness contracts. It must verify:
+
+- exact independent replay of `GG-EVIDENCE-1.0` /
+  `practice-observation-v1`;
+- fail-closed dispatch for `GG-TYPED-EVIDENCE-1.0` and
+  `typed-evidence-rules-v1`;
+- deterministic materialized rule snapshots whose hashes, stable IDs,
+  structured inputs, and minimal provenance reproduce exact outputs;
+- Boolean, count/frequency, ordinal, duration, artifact,
+  conceptual/scenario, objective, consented-observer, qualified-attestation,
+  unknown/not-observed, contradiction, and adverse-outcome fixtures;
+- evidence-only `GG-COMPETENCY-EVIDENCE-SHADOW-1.0` with an unknown
+  zero-evidence state and no invented competency baseline;
+- one-way `GG-COMPETENCY-LEVER-SHADOW-1.0`, duplicate-event rejection,
+  canonical full-mapping validation, reversal, and no circular feedback;
+- separate `GG-PRODUCTION-SCORE-ELIGIBILITY-1.0` that remains false for all
+  new typed paths;
+- property/invariant coverage for determinism, bounds, input-order
+  independence, idempotent replay, exact reversal, withholding, no double
+  counting, no baseline mutation, and assessment-epoch isolation;
+- deterministic `typed_evidence_capability_v1.csv`,
+  `scoring_policy_execution_v1.csv`, and
+  `competency_evidence_readiness_v1.json`, with software readiness and
+  specialist acceptance reported separately;
+- unchanged five-protocol/fifteen-action projection, 5/383 coverage,
+  friendship-only activation, and all v1 score/recommendation outputs;
+- no migration, UI, new protocol/action, M6C input, or production write.
+
+Passing this software gate does not mean that M6B is accepted.
+`ER-M6A-003` remains pending and `RG-M6A-002` remains open. Measurement,
+accessibility, and privacy/safety review must be truthfully recorded before
+M6B acceptance or mass authoring.
+
 ## Content review layers
 
 | Layer | Required evidence |

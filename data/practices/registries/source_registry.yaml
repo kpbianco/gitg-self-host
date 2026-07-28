@@ -39,7 +39,7 @@ sources:
     publication_date: "2026-07-27"
     locator: docs/PRODUCT_DECISIONS.md
     locator_kind: repository_path
-    content_sha256: 0ef1be1be1f1013db23f2a26bd0c7af09682193782d9fbeb0a8fda071f6d2c6c
+    content_sha256: d5bbdd69e187518d37700bd50b058eaa711af26c39ba97dc19186991d5e82393
     source_class: internal_decision_record
     evidence_strength: design_only
     supported_claim: Records accepted product boundaries for dignity, completion versus mastery, scoring activation, privacy, and protocol behavior.

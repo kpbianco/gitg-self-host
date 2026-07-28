@@ -62,7 +62,13 @@ A bounded intervention with a duration, setup, concrete actions, evidence questi
 The initial self-report and response-quality result.
 
 ### Lever State
-Baseline mastery, confidence, evidence mass, and eventually current posterior state.
+Immutable provisional assessment baseline plus separate evidence-updated
+working state. It is not a direct competency or mastery observation.
+
+### Direct Competency Evidence Shadow
+An evidence-only, non-production projection from replay-verified typed events.
+Assessment v1.1 supplies no competency baseline; zero eligible evidence is
+explicitly unknown.
 
 ### Practice Sprint
 An instantiated protocol for a user.
@@ -180,6 +186,12 @@ M1 is implemented as two reviewable batches:
   additive expansion-readiness contract preserve the exact five-protocol
   runtime and friendship-only scoring boundary. No ORM, UI, evidence, scoring,
   or ranking change is included.
+- **M6B competency-evidence architecture (proposed for review):** pure
+  `GG-TYPED-EVIDENCE-1.0`, evidence-only competency shadow, one-way lever
+  shadow, production-eligibility gate, synthetic fixtures, deterministic
+  reports, and additive software readiness. It adds no migration, UI,
+  protocol/action, recommendation input, or activation. Pending
+  `ER-M6A-003` review prevents an M6B-accepted or mass-authoring claim.
 
 Only submitted check-ins count toward completion. A database constraint limits
 each user to one active or paused practice. Services—not templates—own state
@@ -429,8 +441,8 @@ The de-identified record is in
 - add no new protocol, action, score activation, migration, UI, evidence
   execution, or scoring mathematics.
 
-Status: implemented for owner review. Decisions 042–045 are accepted as the
-M6 program direction.
+Status: implemented, reviewed, and merged. Decisions 042–045 are accepted as
+the M6 program direction.
 
 The program charter is in `docs/program/M6_CURRICULUM_EXPANSION.md`; package
 and report mechanics are in `docs/practice-content.md`.
@@ -439,14 +451,29 @@ and report mechanics are in `docs/practice-content.md`.
 
 - keep assessment baseline, protocol evidence, direct competency evidence,
   transfer disposition, and lever state distinct;
-- define a backward-compatible typed evidence contract with fail-closed
-  version dispatch;
-- add pure domain implementations, accepted ADR updates, exact synthetic
-  fixtures, property tests, replay, reversal, and no-baseline-mutation proofs;
+- add pure `GG-TYPED-EVIDENCE-1.0` evaluation from materialized
+  `typed-evidence-rules-v1` snapshots with fail-closed dispatch;
+- establish evidence-only `GG-COMPETENCY-EVIDENCE-SHADOW-1.0`, with no
+  invented competency baseline;
+- add one-way `GG-COMPETENCY-LEVER-SHADOW-1.0`, duplicate-event protection,
+  and no lever-derived feedback;
+- separate `GG-PRODUCTION-SCORE-ELIGIBILITY-1.0` from capture and shadow
+  execution;
+- add proposed ADR/decision updates, exact synthetic fixtures, property
+  tests, replay, reversal, no-double-counting, assessment-epoch isolation, and
+  no-baseline-mutation proofs;
+- add additive `GG-COMPETENCY-EVIDENCE-READINESS-1.0`;
 - keep production score activation at friendship only.
 
-Status: proposed next batch after M6A is reviewed and merged. Do not begin mass
-protocol authoring while evidence, safety, schema, or UX questions remain open.
+Status: implementation authorized for a focused M6B review branch. Decisions
+047–049 and ADR 0009 remain proposed until owner review. The batch adds no
+migration, UI, protocol/action, M6C context input, recommendation change, or
+production activation.
+
+`ER-M6A-003` remains pending and `RG-M6A-002` remains open. Software
+implementation can complete, but M6B acceptance and mass protocol authoring
+remain blocked until measurement, accessibility, and privacy/safety review is
+truthfully recorded.
 
 #### M6C — Context-aware priority and Personal OS foundation
 
@@ -612,6 +639,65 @@ Phase B after M6C, not a replacement for the context foundation.
 10. M6A adds no migration, protocol, action, UI, typed evidence execution,
     scoring/ranking mathematics, or score activation.
 
+## M6B acceptance criteria
+
+Software implementation may satisfy criteria 1–13, but criterion 14 is an
+external governance gate. Until it is satisfied, report the branch as
+software-ready but not M6B-accepted.
+
+1. `GG-EVIDENCE-1.0`, `practice-observation-v1`,
+   `GG-SCORING-SHADOW-1.0`, `GG-SCORE-STATE-1.0`, and
+   `GG-NEED-RANKING-1.0` retain exact independent replay and output.
+2. `GG-TYPED-EVIDENCE-1.0` dispatches only
+   `typed-evidence-rules-v1`, snapshots materialized rules and minimal
+   structured provenance, and fails closed on missing, malformed, mismatched,
+   or unknown versions.
+3. Exact fixtures cover Boolean, count/frequency, ordinal, duration, artifact,
+   conceptual/scenario, objective, consented-observer, qualified-attestation,
+   unknown/not-observed, contradictory, and adverse input.
+4. Typed values have rule-defined normalization; the engine never assumes
+   that more, longer, or higher is better. Free text, artifact content, and
+   unnecessary observer/qualified-review narrative cannot affect output.
+5. Unknown, not observed, inconclusive, not applicable, deferred,
+   contradictory, and adverse states remain distinct. N/A/defer never
+   produces a deficit, and adversity does not silently become contradiction.
+6. `GG-COMPETENCY-EVIDENCE-SHADOW-1.0` is evidence-only, returns unknown for
+   zero eligible evidence, and does not invent or mutate a competency or
+   assessment baseline.
+7. `GG-COMPETENCY-LEVER-SHADOW-1.0` uses the complete canonical parent
+   mapping, rejects duplicate event keys and malformed mappings, applies one
+   designated competency contribution per event, and never feeds a
+   lever-derived competency summary back to levers.
+8. Replay is deterministic and input-order independent; reversal restores the
+   exact starting projection; old evidence remains attached to its original
+   assessment epoch after reassessment.
+9. `GG-PRODUCTION-SCORE-ELIGIBILITY-1.0` enforces exact eligibility with
+   explicit fail-closed diagnostics. Typed-shadow withholding reasons remain
+   in their evidence contributions. Every new typed path is
+   production-ineligible in M6B, and friendship remains the only
+   score-active protocol.
+10. Property/invariant tests prove bounds, idempotent replay, duplicate
+    rejection, no double counting, explicit withholding, exact reversal, no
+    baseline mutation, and fail-closed version behavior.
+11. `typed_evidence_capability_v1.csv`,
+    `scoring_policy_execution_v1.csv`, and
+    `competency_evidence_readiness_v1.json` are deterministic and fresh. The
+    readiness report records zero typed production protocols, zero typed
+    score-active protocols, and does not equate software readiness with M6B
+    acceptance.
+12. The exact five-protocol/fifteen-action runtime projection, 5/383 content
+    coverage, curriculum/model/mapping source hash, existing readiness gates,
+    and recommendation behavior remain unchanged. M6B governance inputs use a
+    new deterministic practice-catalog content hash without changing the
+    legacy runtime projection hash.
+13. M6B adds no migration, persistence model, UI, protocol, action, M6C
+    context-priority input, recommendation/ranking change, or production
+    state write.
+14. `ER-M6A-003` is truthfully completed by the required measurement,
+    accessibility, and privacy/safety roles with date and decision reference,
+    and `RG-M6A-002` is resolved. Until then, M6B acceptance and mass
+    authoring remain blocked even when software readiness passes.
+
 ## Handoff audit notes
 
 - Canonical curriculum counts remain 27 domains, 383 competencies, 37 levers,
@@ -701,3 +787,11 @@ Phase B after M6C, not a replacement for the context foundation.
   compatibility. M6A metadata describing richer evidence does not execute;
   M6B must establish typed replay semantics before later authoring or
   activation.
+- M6B's proposed direct competency state is evidence-only because assessment
+  v1.1 provides lever baselines, not competency baselines. Zero eligible
+  evidence is unknown, not a neutral score.
+- Typed evidence remains pinned to its original assessment epoch. The proposed
+  M6B contracts define no automatic carry-forward after reassessment.
+- Passing `GG-COMPETENCY-EVIDENCE-READINESS-1.0` demonstrates software
+  determinism only. `ER-M6A-003` and `RG-M6A-002` remain the explicit
+  specialist-review blockers for M6B acceptance and mass authoring.

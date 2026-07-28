@@ -19,11 +19,18 @@ from growth.models import (
     LeverBaseline,
     LeverState,
     PracticeCheckIn,
+    PracticeProtocol,
     ScoreSnapshot,
 )
-from growth.services.scoring import project_assessment_events
+from growth.services.scoring import (
+    FRIENDSHIP_PROTOCOL_ID,
+    PRODUCTION_SCORE_STATE_VERSION,
+    project_assessment_events,
+    validate_production_scoring_event,
+    validate_production_scoring_protocol,
+)
 
-STATE_SCHEMA_VERSION = "GG-SCORE-STATE-1.0"
+STATE_SCHEMA_VERSION = PRODUCTION_SCORE_STATE_VERSION
 
 
 class ScoreStateError(ValueError):
@@ -163,10 +170,26 @@ def _baseline_values(
 
 
 def _events_for_run(assessment_run: AssessmentRun) -> list[EvidenceEvent]:
-    events = list(
+    protocol = (
+        PracticeProtocol.objects.filter(stable_id=FRIENDSHIP_PROTOCOL_ID)
+        .select_related("parent_competency")
+        .prefetch_related(
+            "target_levers",
+            "parent_competency__lever_links__lever",
+        )
+        .first()
+    )
+    if protocol is None:
+        raise ScoreStateError("The reviewed friendship scoring protocol is unavailable.")
+    try:
+        validate_production_scoring_protocol(protocol)
+    except ScoringContractError as exc:
+        raise ScoreStateError(str(exc)) from exc
+
+    processed_ids = _processed_event_ids(assessment_run)
+    all_events = list(
         EvidenceEvent.objects.filter(
             check_in__sprint__assessment_run=assessment_run,
-            check_in__sprint__protocol__score_active=True,
         )
         .select_related(
             "check_in__action",
@@ -179,15 +202,23 @@ def _events_for_run(assessment_run: AssessmentRun) -> list[EvidenceEvent]:
             "check_in__stable_id",
         )
     )
+    events = [
+        event
+        for event in all_events
+        if event.protocol_stable_id == FRIENDSHIP_PROTOCOL_ID or event.pk in processed_ids
+    ]
     submitted_count = PracticeCheckIn.objects.filter(
         sprint__assessment_run=assessment_run,
-        sprint__protocol__score_active=True,
+        sprint__protocol_id=FRIENDSHIP_PROTOCOL_ID,
         status=PracticeCheckIn.Status.SUBMITTED,
     ).count()
-    if len(events) != submitted_count:
+    friendship_event_count = sum(
+        event.protocol_stable_id == FRIENDSHIP_PROTOCOL_ID for event in events
+    )
+    if friendship_event_count != submitted_count:
         raise ScoreStateError(
             f"{assessment_run.pk}: {submitted_count} submitted check-ins have "
-            f"{len(events)} evidence events."
+            f"{friendship_event_count} production-eligible evidence events."
         )
     return events
 
@@ -532,6 +563,10 @@ def apply_evidence_event(event: EvidenceEvent) -> ScoreSnapshot:
         raise ScoreStateError(
             "Evidence without an assessment link remains auditable but cannot update a score."
         )
+    try:
+        validate_production_scoring_event(source, assessment_run)
+    except ScoringContractError as exc:
+        raise ScoreStateError(str(exc)) from exc
     synchronize_score_state_for_run(assessment_run)
     return ScoreSnapshot.objects.get(
         evidence_event=source,
@@ -556,6 +591,10 @@ def reverse_evidence_event(
     assessment_run = source.check_in.sprint.assessment_run
     if assessment_run is None:
         raise ScoreStateError("Evidence without an assessment link has no score to reverse.")
+    try:
+        validate_production_scoring_event(source, assessment_run)
+    except ScoringContractError as exc:
+        raise ScoreStateError(str(exc)) from exc
     synchronize_score_state_for_run(assessment_run)
     existing = ScoreSnapshot.objects.filter(
         evidence_event=source,

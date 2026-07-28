@@ -39,6 +39,11 @@ the exact five-protocol runtime into manifest-listed canonical packages,
 adding source/risk/scoring/activation governance, and generating an honest
 383-row coverage baseline. It adds no new protocol, UI, evidence mathematics,
 or score activation.
+M6B adds a parallel typed-evidence and competency-shadow architecture for
+software review. It keeps assessment lever baselines, historical v1 replay,
+the five-protocol runtime, and friendship-only production activation
+unchanged. Specialist measurement, accessibility, and privacy/safety review
+still blocks M6B acceptance and mass authoring.
 
 ## Deployment essentials
 
@@ -262,6 +267,27 @@ See [Private Pilot 001 findings](docs/pilot/PRIVATE_PILOT_001_FINDINGS.md).
 See [canonical practice content](docs/practice-content.md) and the
 [M6 program charter](docs/program/M6_CURRICULUM_EXPANSION.md).
 
+## What M6B adds
+
+- Pure `GG-TYPED-EVIDENCE-1.0` evaluation from materialized
+  `typed-evidence-rules-v1` snapshots, with fail-closed version dispatch.
+- Explicit Boolean, count/frequency, ordinal, duration, artifact,
+  conceptual/scenario, objective, consented-observer, qualified-attestation,
+  unknown/not-observed, contradiction, and adverse-outcome semantics.
+- Evidence-only `GG-COMPETENCY-EVIDENCE-SHADOW-1.0`; assessment v1.1 still
+  supplies lever baselines and no competency baseline is invented.
+- One-way `GG-COMPETENCY-LEVER-SHADOW-1.0`, with duplicate-event rejection
+  and no feedback from a lever-derived competency summary.
+- Separate `GG-PRODUCTION-SCORE-ELIGIBILITY-1.0`; passing typed or shadow
+  checks cannot authorize a production score update.
+- Additive `GG-COMPETENCY-EVIDENCE-READINESS-1.0` software verification.
+- No migration, typed check-in UI, new protocol/action, M6C context input, or
+  score-activation expansion.
+
+M6B software completion is not measurement validation. `ER-M6A-003` remains
+pending and `RG-M6A-002` remains open, so M6B acceptance and mass authoring
+remain blocked.
+
 ## Product flow
 
 1. Sign in with the bootstrap account.
@@ -310,6 +336,7 @@ make pilot-check
 make practice-reports
 make practice-report-check
 make curriculum-check
+make competency-evidence-check
 make run
 make compose-up
 make compose-down
@@ -333,8 +360,11 @@ volume.
   starting profile.
 - `data/practices/` — manifest-listed canonical protocol packages, schemas,
   registries, research gaps, expert-review queue, and activation ledger.
-- `reports/practice-content/` — deterministic generated coverage, risk, and
-  originality controls for the 383-competency expansion.
+- `data/evidence/` — manifest-listed M6B typed-evidence engine specification
+  and release schemas; it contains no production protocol rules or user data.
+- `reports/practice-content/` — deterministic generated coverage, risk,
+  originality, typed-capability, scoring-policy, and software-readiness
+  controls for the 383-competency expansion.
 
 The importer validates both canonical bundles before writes. Practice
 recommendation targets must be non-empty subsets of each parent competency's
@@ -365,6 +395,7 @@ git pull --ff-only
 docker compose up -d --build
 docker compose exec app python manage.py verify_pilot_readiness
 docker compose exec app python manage.py verify_expansion_readiness
+docker compose exec app python manage.py verify_competency_evidence_readiness
 ```
 
 Migrations and canonical seeding run safely on startup.
@@ -404,8 +435,12 @@ Migrations and canonical seeding run safely on startup.
   unauthored ledger rows, not empty packages. None of the five migrated
   packages is yet marked source-complete for full-library release.
 - The five packages retain the friendship-oriented
-  `practice-observation-v1` vocabulary for exact replay. Typed evidence and
-  direct competency state remain deferred to M6B.
+  `practice-observation-v1` vocabulary for exact replay. M6B's typed evidence
+  and direct competency projections are pure, parallel, and shadow-only; no
+  existing package is converted and no new typed event is persisted.
+- `ER-M6A-003` remains a real external governance gate. Passing
+  `GG-COMPETENCY-EVIDENCE-READINESS-1.0` does not clear measurement,
+  accessibility, or privacy/safety review.
 - The canonical JavaScript scorer remains the browser reference. Node.js is
   used by a development golden test only; no Node.js server exists at runtime.
 - Direct local-network HTTP is supported. Add Caddy or another proxy later for
@@ -427,6 +462,7 @@ Migrations and canonical seeding run safely on startup.
 - [M2 evidence contract](docs/evidence-contract.md)
 - [M2B evidence audit and calibration](docs/evidence-audit.md)
 - [M3A shadow scoring contract](docs/scoring-shadow.md)
+- [M6B one-way competency shadow](docs/architecture/0009-one-way-competency-shadow-and-production-eligibility.md)
 - [M3B score-state activation contract](docs/scoring-state.md)
 - [Post-M4 pilot-readiness closeout](docs/pilot/PILOT_READINESS_CLOSEOUT.md)
 - [Private-pilot feedback contract](docs/pilot-feedback.md)

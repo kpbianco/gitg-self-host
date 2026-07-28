@@ -1,0 +1,7 @@
+contract_version,policy_id,policy_name,registry_state_effect,competency_shadow_version,synthetic_execution,included_events,withheld_events,legacy_v1_score_active_protocols,typed_production_protocols,typed_score_active_protocols,typed_execution_boundary,production_status
+GG-COMPETENCY-EVIDENCE-READINESS-1.0,SP-ARTIFACT-OBJECTIVE-PREFERRED,Objective or artifact evidence preferred,eligible_if_activated,GG-COMPETENCY-EVIDENCE-SHADOW-1.0,passed,1,0,0,0,0,pure_shadow_only,not_authorized
+GG-COMPETENCY-EVIDENCE-READINESS-1.0,SP-CORROBORATION-REQUIRED,Corroborated or multi-source evidence required,eligible_if_activated,GG-COMPETENCY-EVIDENCE-SHADOW-1.0,passed,2,0,0,0,0,pure_shadow_only,not_authorized
+GG-COMPETENCY-EVIDENCE-READINESS-1.0,SP-NON-SCORED-REFLECTION,Non-scored reflection,no_score_update,GG-COMPETENCY-EVIDENCE-SHADOW-1.0,passed,0,1,0,0,0,pure_shadow_only,not_authorized
+GG-COMPETENCY-EVIDENCE-READINESS-1.0,SP-QUALIFIED-EVIDENCE-REQUIRED,Qualified professional evidence required,qualified_update_only,GG-COMPETENCY-EVIDENCE-SHADOW-1.0,passed,1,0,0,0,0,pure_shadow_only,not_authorized
+GG-COMPETENCY-EVIDENCE-READINESS-1.0,SP-SELF-REPORT-ELIGIBLE,Structured self-report eligible,eligible_if_activated,GG-COMPETENCY-EVIDENCE-SHADOW-1.0,passed,1,0,1,0,0,pure_shadow_only,legacy_v1_only
+GG-COMPETENCY-EVIDENCE-READINESS-1.0,SP-SHADOW-ONLY,Shadow-only evidence,shadow_only,GG-COMPETENCY-EVIDENCE-SHADOW-1.0,passed,1,0,0,0,0,pure_shadow_only,not_authorized

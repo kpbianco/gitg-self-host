@@ -25,6 +25,7 @@ make test
 make pilot-check
 make practice-report-check
 make curriculum-check
+make competency-evidence-check
 make e2e
 make compose-smoke
 ```
@@ -47,6 +48,23 @@ state, invokes the unchanged pilot verifier through the additive
 `GG-CURRICULUM-EXPANSION-READINESS-1.0` contract, and compares the canonical
 projection with the seeded runtime.
 
+`make competency-evidence-check` runs additive
+`GG-COMPETENCY-EVIDENCE-READINESS-1.0`. It verifies exact v1 replay,
+fail-closed typed dispatch, golden typed evidence and shadow projections,
+property/invariant coverage, deterministic reports, and unchanged production
+state. A pass means software-ready, not M6B-accepted:
+`ER-M6A-003` and `RG-M6A-002` remain external governance blockers.
+
+The M6B report set is:
+
+- `reports/practice-content/typed_evidence_capability_v1.csv`;
+- `reports/practice-content/scoring_policy_execution_v1.csv`;
+- `reports/practice-content/competency_evidence_readiness_v1.json`.
+
+The readiness JSON must distinguish software readiness from specialist review,
+record zero typed production protocols and zero typed score-active protocols,
+and keep M6B acceptance false while `ER-M6A-003` is pending.
+
 `make test` covers:
 
 - canonical counts, IDs, mapping coverage, and weights;
@@ -65,6 +83,22 @@ projection with the seeded runtime.
   evidence-rule, and known Notion journal-prompt originality reporting;
 - additive, read-only expansion readiness while the independent
   `GG-PILOT-READINESS-1.0` contract remains callable;
+- exact `GG-EVIDENCE-1.0` replay through version dispatch and fail-closed
+  unknown event/rule versions;
+- `GG-TYPED-EVIDENCE-1.0` fixtures for Boolean, count/frequency, ordinal,
+  duration, artifact, conceptual/scenario, objective, consented-observer,
+  qualified-attestation, unknown/not-observed, contradiction, and adversity;
+- explicit rule normalization with no inferred “more is better” semantics and
+  no free-text score input;
+- evidence-only `GG-COMPETENCY-EVIDENCE-SHADOW-1.0` unknown baseline,
+  typed withholding, replay, and reversal;
+- one-way `GG-COMPETENCY-LEVER-SHADOW-1.0` full-mapping validation,
+  duplicate-event rejection, input-order independence, no double counting,
+  and no lever-to-competency feedback;
+- separate `GG-PRODUCTION-SCORE-ELIGIBILITY-1.0` with every new M6B typed
+  path production-ineligible;
+- `GG-COMPETENCY-EVIDENCE-READINESS-1.0` proving no assessment baseline,
+  current lever state, score snapshot, recommendation, or activation change;
 - one-time bootstrap user behavior and password-hash preservation;
 - login enforcement, CSRF-bearing login, and public health;
 - authenticated home/profile/assessment/practice rendering;
@@ -183,8 +217,8 @@ This builds and starts the real production image in an isolated Compose
 project. It proves the mapped-port health and CSRF login path, non-root user,
 migrations, repeated canonical seeding, evidence and score replay, named-volume
 persistence across forced recreation, one-time bootstrap behavior, online
-backup integrity, restore, both readiness contracts, and graceful Gunicorn
-shutdown.
+backup integrity, restore, all applicable readiness contracts, and graceful
+Gunicorn shutdown.
 
 The command never uses the deployment `.env`. Its temporary credentials,
 Compose project, and volume are removed on exit. Set `SMOKE_APP_PORT` only

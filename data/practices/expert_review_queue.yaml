@@ -59,4 +59,7 @@ reviews:
       - How should competency evidence, protocol adherence, lever allocation, and current score state remain separate?
       - Which evidence policies require corroboration, artifacts, objective indicators, qualified review, shadow-only handling, or non-scored reflection?
       - Which canonical fields and fixtures are required before the Phase B representative authoring batch?
-    release_effect: Blocks M6B acceptance and mass protocol authoring.
+      - Does the evidence-only unknown baseline avoid presenting a lever-derived estimate as direct competency observation?
+      - Do one-way allocation, assessment-epoch isolation, duplicate-event rejection, and reversal prevent circularity and double counting?
+      - Do typed provenance and snapshots minimize observer, artifact, qualified-review, and other sensitive information appropriately?
+    release_effect: Passing GG-COMPETENCY-EVIDENCE-READINESS-1.0 may establish software readiness, but this pending review still blocks M6B acceptance, Phase B authorization, mass protocol authoring, and any typed production score activation.

@@ -216,3 +216,66 @@ The detailed privacy, operational, and calibration contract is in
 - no archetype or orientation update;
 - no inference from free-text note length or sentiment;
 - no claim that self-report is independently verified.
+
+## Proposed M6B parallel typed contract
+
+M6B does not revise this v1 contract or rewrite a historical event. It adds a
+parallel pure evaluator:
+
+```text
+event algorithm: GG-TYPED-EVIDENCE-1.0
+rule snapshot:   typed-evidence-rules-v1
+```
+
+In M6B, `typed-evidence-rules-v1` is an exact code-enforced materialization
+contract, not a claim that production protocol rule files exist. The
+manifest-listed JSON Schemas validate the typed release and engine
+specification; runtime rule objects additionally pass strict, closed-field
+validation before they can be materialized or replayed.
+
+Version dispatch uses the immutable event algorithm and rule-schema versions.
+Unknown versions, missing materialized rules, mismatched rule hashes, unknown
+typed fields, and malformed values fail closed. The snapshot contains the
+materialized rules and only the structured input and minimal provenance needed
+for replay; future registry contents are not consulted during replay.
+
+Supported representations include:
+
+- Boolean observations;
+- bounded counts and frequencies;
+- ordinal rubrics;
+- bounded duration or adherence windows;
+- artifact criteria without storing the artifact contents;
+- conceptual explanations and scenario/rehearsal rubrics without scoring
+  prose length or sentiment;
+- bounded objective indicators;
+- consented-observer evidence without unnecessary observer identity;
+- minimal qualified attestations without clinical, legal, or other sensitive
+  narrative.
+
+Every typed field requires an explicit rule-specific normalization. Data type,
+quantity, duration, and ordinal position do not imply that more is better.
+
+The contract distinguishes:
+
+- observed;
+- unknown;
+- not observed;
+- inconclusive;
+- not applicable;
+- deferred;
+- supportive, mixed, or contradictory direction;
+- adverse outcome.
+
+Not applicable and deferred are context dispositions, not negative evidence.
+Adverse outcome is independent of direction and may force withholding or a
+safety stop. It becomes contradictory evidence only when the materialized
+rule explicitly defines that relationship.
+
+The result preserves performance, quality, independence/support, context,
+repetition, recency, transfer disposition, provenance, direction, adversity,
+base mass, and exact withholding reasons. Free text remains explanation only.
+
+M6B uses typed results only in pure competency and lever shadows. It adds no
+new persistence, check-in UI, backfill, or production score path. Existing v1
+verification remains independently callable and exact.

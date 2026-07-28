@@ -19,7 +19,12 @@ from growth.domain.scoring import (
 from growth.models import LeverBaseline, PracticeCheckIn, PracticeProtocol
 from growth.services.assessment import AssessmentPayloadError, persist_assessment_run
 from growth.services.practice import save_check_in, start_practice
-from growth.services.scoring import build_user_shadow_projection
+from growth.services.scoring import (
+    PRODUCTION_SCORE_ELIGIBILITY_CONTRACT_VERSION,
+    PRODUCTION_SCORE_MAPPING_FINGERPRINT,
+    build_user_shadow_projection,
+    validate_production_scoring_protocol,
+)
 from tests.test_assessment_integration import golden_payload
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -216,8 +221,14 @@ def test_published_baseline_reconstruction_is_conservative():
 def test_seed_links_friendship_protocol_to_canonical_weights_and_baseline_masses(user, seeded):
     protocol = PracticeProtocol.objects.get(stable_id="PRACTICE-FRIENDSHIP-01")
     links = protocol.parent_competency.lever_links.order_by("-weight", "lever_id")
+    reviewed_links = validate_production_scoring_protocol(protocol)
 
+    assert PRODUCTION_SCORE_ELIGIBILITY_CONTRACT_VERSION == "GG-PRODUCTION-SCORE-ELIGIBILITY-1.0"
+    assert PRODUCTION_SCORE_MAPPING_FINGERPRINT == (
+        "f7639a0c623f1baac9469f34fe49ca9e2eb0be8fc1c616ab662996b2e90bf2bf"
+    )
     assert protocol.parent_competency_id == "17.03"
+    assert {link.lever_id for link in reviewed_links} == {"L10", "L23", "L24", "L26"}
     assert list(links.values_list("lever_id", "weight")) == [
         ("L26", Decimal("0.6500")),
         ("L10", Decimal("0.1500")),
@@ -243,6 +254,15 @@ def test_seed_links_friendship_protocol_to_canonical_weights_and_baseline_masses
     assert neutral.baseline_alpha is None
     assert neutral.baseline_beta is None
     assert neutral.baseline_mass_source == ""
+
+
+@pytest.mark.django_db
+def test_production_contract_requires_exact_recommendation_targets(user, seeded):
+    protocol = PracticeProtocol.objects.get(stable_id="PRACTICE-FRIENDSHIP-01")
+    protocol.target_levers.remove(protocol.target_levers.get(stable_id="L23"))
+
+    with pytest.raises(ScoringContractError, match="recommendation targets"):
+        validate_production_scoring_protocol(protocol)
 
 
 @pytest.mark.django_db
