@@ -1,0 +1,37 @@
+{
+  "canonical_curriculum_source_hash": "6958ccfbe0c0d80b7485ac866a8418578850284b58956f59168429819447dfc5",
+  "competencies": {
+    "authored_packages": 5,
+    "projected_legacy": 5,
+    "total": 383,
+    "uncovered": 378
+  },
+  "contract_version": "GG-CURRICULUM-EXPANSION-REPORTS-1.0",
+  "domains": {
+    "total": 27,
+    "with_authored_package": 5,
+    "with_projected_protocol": 5,
+    "without_authored_package": 22
+  },
+  "levers": {
+    "covered_through_parent_mapping": 13,
+    "recommendation_targets": 6,
+    "total": 37
+  },
+  "practice_catalog_content_hash": "77dfae7546824046045df919ff4970b28132e76a1580bba5b532fa185afb94b3",
+  "protocols": {
+    "actions": 15,
+    "risk_classes": {
+      "RISK-LOW": 3,
+      "RISK-MODERATE": 2
+    },
+    "score_active": 1,
+    "scoring_policies": {
+      "SP-SELF-REPORT-ELIGIBLE": 1,
+      "SP-SHADOW-ONLY": 4
+    },
+    "total": 5
+  },
+  "release_candidates": 0,
+  "sources_complete": 0
+}

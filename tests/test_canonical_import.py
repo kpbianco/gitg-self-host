@@ -65,29 +65,24 @@ def test_mapping_validator_rejects_partial_and_malformed_slots():
 
 
 @pytest.mark.django_db
-def test_protocol_seed_rejects_unsupported_completion_marker_mode(monkeypatch):
-    monkeypatch.setattr(
-        canonical_import,
-        "PROTOCOLS",
-        (
-            {
-                "stable_id": "PRACTICE-INVALID-MARKER-MODE",
-                "slug": "invalid-marker-mode",
-                "name": "Invalid marker mode",
-                "target_levers": ["L25"],
-                "display_order": 99,
-                "completion_rules": {
-                    "minimum_completed": 1,
-                    "substantive_markers": ["user_initiated"],
-                    "marker_mode": "every",
-                },
-                "actions": [{}],
+def test_protocol_seed_rejects_unsupported_completion_marker_mode():
+    protocols = (
+        {
+            "stable_id": "PRACTICE-INVALID-MARKER-MODE",
+            "slug": "invalid-marker-mode",
+            "name": "Invalid marker mode",
+            "target_levers": ["L25"],
+            "display_order": 99,
+            "completion_rules": {
+                "minimum_completed": 1,
+                "substantive_markers": ["user_initiated"],
+                "marker_mode": "every",
             },
-        ),
+            "actions": [{}],
+        },
     )
-
     with pytest.raises(CanonicalDataError, match="supported marker mode"):
-        canonical_import._seed_protocols()
+        canonical_import._seed_protocols(protocols)
 
 
 @pytest.mark.django_db

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grounded-growth.local/schema/protocol-family-registry-v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "families"],
+  "properties": {
+    "schema_version": {"const": "GG-PROTOCOL-FAMILY-1.0"},
+    "families": {
+      "type": "array",
+      "minItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["family_id", "name", "definition", "allowed_structure", "individuality_requirement"],
+        "properties": {
+          "family_id": {"type": "string", "pattern": "^PF-[A-Z0-9-]+$"},
+          "name": {"type": "string", "minLength": 1},
+          "definition": {"type": "string", "minLength": 1},
+          "allowed_structure": {"type": "string", "minLength": 1},
+          "individuality_requirement": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,269 @@
+schema_version: GG-PRACTICE-CONTENT-1.0
+protocol_version: 1.0.0
+stable_id: PRACTICE-PRESENCE-01
+slug: complete-an-attention-presence-experiment
+name: Complete an Attention-Presence Experiment
+parent_competency_id: '08.02'
+domain_id: 08
+governance:
+  availability: active
+  editorial_status: projected_legacy
+  runtime_projection: GG-PRACTICE-RUNTIME-PROJECTION-1.0
+  risk_class_id: RISK-LOW
+  scoring_policy_id: SP-SHADOW-ONLY
+  scoring_status: shadow_only
+  source_ids:
+  - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-PRODUCT-DECISIONS
+  - SRC-PROTOCOL-LIBRARY-M4
+  - SRC-CURRICULUM-SCOPE-AUDIT
+  authoring:
+    provenance: Exact projection of the reviewed M4 runtime protocol with additive M6A governance metadata.
+    content_review_status: frozen_runtime_behavior
+    research_review_status: internal_sources_only_external_review_required
+    safety_review_status: pilot_boundary_reviewed_expansion_review_pending
+    accessibility_review_status: pilot_boundary_reviewed_expansion_review_pending
+    originality_review_status: legacy_exceptions_recorded_expansion_review_pending
+    ui_test_status: existing_runtime_coverage
+    last_reviewed: null
+    known_gap_ids:
+    - RG-M6A-001
+    - RG-M6A-002
+    - RG-M6A-007
+    expert_review_ids:
+    - ER-M6A-003
+  legacy_compatibility_exceptions: []
+  deprecation:
+    deprecated: false
+    replaced_by: null
+meaning_and_fit:
+  purpose: Compare one repeatable attention activity under usual and deliberately changed conditions,
+    then repeat the more workable condition.
+  why_recommended: Your current provisional profile identifies deliberate attention and contact with the
+    present as a useful area for a bounded experiment.
+  claims:
+  - statement: This bounded experiment observes noticing and returning attention in one activity; it does
+      not diagnose attention, require stillness, or measure productivity.
+    classification: product_design_judgment
+    source_ids:
+    - SRC-CANONICAL-CURRICULUM-V2
+    - SRC-PROTOCOL-LIBRARY-M4
+    limitations: The migrated five-protocol slice has not been validated as a psychometric instrument
+      or as proof of broad competency change.
+  applicability_question: Is there one safe, low-stakes 15-minute activity you can repeat under usual
+    conditions, with one changed condition, and once more within seven days?
+  not_applicable_behavior: Record not applicable or defer without penalty, do not infer a deficit, and
+    offer the listed safe alternative when useful.
+  readiness_considerations: Use only for a safe, low-stakes activity where essential accessibility, caregiving,
+    and emergency supports can remain available.
+  opportunity_considerations: Requires three short windows with a comparable activity and one condition
+    the user can change without surveillance, hazard, or loss of necessary support.
+  prerequisites:
+  - One safe, repeatable fifteen-minute activity.
+  dependencies: []
+  safe_alternatives:
+  - Use a shorter window or a movement-based attention activity.
+  - Keep the usual condition when no safe or accessible change is available.
+  role_conditions:
+  - Caregiving, work, and safety roles require all essential alerts and supervision to remain active.
+  pathway_conditions:
+  - Movement, fidgets, assistive technology, reminders, sound, and visual cues may support rather than
+    undermine attention.
+  worldview_conditions:
+  - The practice does not require a contemplative tradition, stillness, silence, or a particular theory
+    of mindfulness.
+intervention:
+  protocol_class: PF-BEHAVIORAL-EXPERIMENT
+  duration_days: 10
+  cadence: Three comparable fifteen-minute windows during ten days.
+  setup: Choose one repeatable activity such as reading, a routine desk task, making something, or attending
+    to your surroundings. Compare conditions around the same activity rather than judging your productivity.
+  privacy_and_boundaries: Presence does not require stillness, silence, eye contact, or zero distraction.
+    Keep movement, fidgets, assistive technology, reminders, and other supports that help you participate.
+    Do not disable emergency, accessibility, or caregiving alerts. Do not run the experiment while driving,
+    operating equipment, or supervising a hazard; install surveillance; or record another person. Treat
+    disability, neurodiversity, pain, fatigue, and stress as design context—not failure. This protocol
+    is not diagnosis or treatment; persistent or safety-affecting attention difficulty may need qualified
+    support.
+  expected_burden: About 50–60 minutes including setup and comparison.
+  action_count_rationale: null
+  foreseeable_misuse:
+  - Disabling necessary supports, surveilling another person, or scoring stillness, distraction, or productivity as personal worth.
+  exclusions:
+  - Driving, equipment operation, hazard supervision, surveillance, or removal of emergency, accessibility, or caregiving alerts.
+  actions:
+  - stable_id: PRACTICE-PRESENCE-01-A1
+    sequence: 1
+    title: Run the usual-condition window
+    instructions: Spend 15 minutes on the chosen activity under your usual safe conditions. When attention
+      drifts, notice it and return without counting every drift or treating distraction as failure. Keep
+      your normal accessibility supports.
+    due_within_days: 3
+    evidence_rules:
+      schema_version: practice-observation-v1
+      primary_markers:
+      - user_initiated
+      - moved_beyond_transactional
+      supporting_markers:
+      - follow_up_question_asked
+    expected_time: 15 minutes
+  - stable_id: PRACTICE-PRESENCE-01-A2
+    sequence: 2
+    title: Change one condition and compare
+    instructions: Repeat a comparable 15-minute window after changing exactly one condition you control—for
+      example, silence nonessential alerts, clear one competing item, or add a movement, fidget, or visual
+      cue. Compare how readily you noticed and returned attention, not how much output you produced.
+    due_within_days: null
+    evidence_rules:
+      schema_version: practice-observation-v1
+      primary_markers:
+      - meaningful_information_shared
+      - moved_beyond_transactional
+      supporting_markers:
+      - user_initiated
+      - follow_up_question_asked
+    expected_time: 15 minutes
+  - stable_id: PRACTICE-PRESENCE-01-A3
+    sequence: 3
+    title: Repeat the more workable condition
+    instructions: Within seven days, repeat the condition that made noticing and returning more workable.
+      Record what happened, including evidence that the change made no difference or worked less well.
+    due_within_days: 7
+    evidence_rules:
+      schema_version: practice-observation-v1
+      primary_markers:
+      - follow_up_within_seven_days
+      supporting_markers:
+      - moved_beyond_transactional
+      - meaningful_information_shared
+    expected_time: 15 minutes
+  adaptations:
+    low_resource:
+    - Change one free environmental condition such as a visual cue, competing item, or nonessential alert.
+    accessibility:
+    - Keep movement, fidgets, assistive technology, reminders, medication routines, and accessibility
+      alerts.
+    cultural_context:
+    - Choose an ordinary activity and attention style that fits the person's setting and responsibilities.
+    resource_variants:
+    - Shorten windows consistently when fifteen minutes is not workable, and record that limitation.
+  pause_conditions:
+  - Pause when pain, fatigue, distress, supervision, alerts, or changing conditions make the comparison unsafe or non-comparable.
+  stop_conditions:
+  - Stop if the experiment affects driving, equipment, supervision, essential alerts, pain, fatigue, or
+    safety.
+  escalation_conditions:
+  - Use qualified support when attention difficulty is persistent, distressing, or safety-affecting; this
+    protocol is not diagnosis or treatment.
+  professional_referral_conditions:
+  - Seek appropriate qualified support for persistent, distressing, or safety-affecting attention difficulty rather than treating this experiment as diagnosis or treatment.
+evidence_and_scoring:
+  accepted_evidence_types:
+  - structured firsthand observation
+  - behavioral adherence window
+  - condition-comparison artifact
+  observation_contract_version: practice-observation-v1
+  check_in_fields:
+  - user_initiated
+  - moved_beyond_transactional
+  - follow_up_question_asked
+  - meaningful_information_shared
+  - follow_up_within_seven_days
+  - internal_resistance
+  adverse_or_contradictory_indicators:
+  - Essential safety, accessibility, caregiving, or emergency supports were disabled.
+  - Another person was recorded or surveilled.
+  - Productivity, stillness, or absence of distraction was treated as the outcome.
+  independence_rule: Record self-directed, planning-aid, or guided support under GG-EVIDENCE-1.0; support
+    changes evidence mass, not human worth.
+  context_transfer_rule: Evidence remains attached to the observed context; one context never establishes
+    broad competency transfer.
+  repetition_rule: Repeated observations use the frozen diminishing-return multipliers in GG-EVIDENCE-1.0
+    and remain independently replayable.
+  recency_rule: No new retention mathematics is introduced in M6A; later evidence remains dated and any
+    future recency rule requires a versioned contract.
+  performance_rubric: Performance concerns completing comparable windows, noticing and returning attention,
+    comparing one condition, and repeating what was more workable.
+  evidence_quality_rubric: Quality requires a clear activity and one identifiable changed condition; output
+    quantity, stillness, and free-text claims are not evidence of presence.
+  scoring_eligibility: M6A preserves legacy observations for audit only. Objective or artifact evidence
+    and typed competency contribution require M6B review before activation.
+  competency_contribution: The runtime event is evidence about protocol performance only; direct competency
+    state is not implemented in M6A.
+  canonical_lever_allocation: parent_competency_mapping
+  recommendation_target_lever_ids:
+  - L08
+  minimum_evidence_before_state_update: No current-state update is permitted under the shadow-only policy.
+  withholding_conditions:
+  - All evidence is withheld from current score state.
+  - Unsafe windows, surveillance, and removal of essential supports are excluded.
+  - A single activity cannot establish cross-context attention or mastery.
+completion_and_review:
+  completion_criteria:
+  - All three actions attempted
+  - At least two actions completed
+  - Usual and changed conditions compared
+  - The more workable condition repeated within seven days
+  - Final review submitted
+  completion_rules:
+    minimum_completed: 2
+    substantive_markers:
+    - meaningful_information_shared
+    - follow_up_within_seven_days
+    marker_mode: all
+  mastery_disclaimer: Completing this practice does not establish mastery.
+  progression_criteria: Repeat the more workable condition in another safe window only when the comparison
+    was clear and necessary supports remained available.
+  transfer_limit: Evidence concerns one activity under two conditions and does not transfer automatically
+    to other tasks, settings, disabilities, or stress states.
+  reflection:
+    before: Which one safe condition will remain usual, and which one condition can you change without
+      removing needed support?
+    during: When attention drifted, what helped you notice and return without turning drift into failure?
+    after: Which condition was more workable, less workable, or indistinguishable, and what remains unknown
+      outside this activity?
+  review_guidance:
+    repeat: Repeat the more workable condition once while keeping the activity and safety boundaries comparable.
+    adapt: Change duration, movement, sensory load, cue, or environment while retaining needed supports.
+    stop: Stop when the activity, changed condition, pain, fatigue, supervision, or alerts create a safety
+      concern.
+    escalate: Use qualified support for persistent, distressing, or safety-affecting attention difficulty.
+  evidence_examples:
+    supportive: The user completed comparable windows and one safe condition made noticing and returning
+      more workable.
+    mixed: Both windows were completed but the changed condition helped some aspects and hindered others.
+    contradictory: The changed condition made attention less workable or removed a needed support.
+    inconclusive: The activities or circumstances differed too much to compare, or interruption prevented
+      observation.
+presentation:
+  setup_copy:
+    context_heading: Choose one repeatable 15-minute activity.
+    boundary_heading: Presence is not stillness, perfection, or surveillance.
+    timing_hint: Choose a date when a safe, low-stakes attention window is realistic.
+    context_help: Use a short private label for the activity. Do not record another person or the content
+      of a private interaction.
+    applicability_heading: One repeatable activity with one changeable condition
+    applicability_yes_label: Yes, I have a safe 15-minute activity I can repeat
+    completion_signal_label: Usual and changed conditions compared, then the more workable condition repeated
+      within seven days
+    history_marker_label: completed attention window
+    boundary_acknowledgement: I will use a safe, low-stakes activity, keep supports and alerts needed
+      for access or safety, and treat distraction as information—not failure.
+    check_in_labels:
+      user_initiated: I deliberately began the planned attention window
+      moved_beyond_transactional: I completed the full attention window
+      follow_up_question_asked: I noticed attention drift and deliberately returned
+      meaningful_information_shared: I compared the usual and changed condition
+      follow_up_within_seven_days: I repeated the more workable condition within seven days
+  check_in_labels:
+    user_initiated: I deliberately began the planned attention window
+    moved_beyond_transactional: I completed the full attention window
+    follow_up_question_asked: I noticed attention drift and deliberately returned
+    meaningful_information_shared: I compared the usual and changed condition
+    follow_up_within_seven_days: I repeated the more workable condition within seven days
+    internal_resistance: I noticed how workable or effortful the condition felt
+  completion_copy: Review the condition comparison without scoring productivity, stillness, or distraction.
+    One experiment does not establish broad attention mastery.
+  plain_language_evidence: The record compares how noticing and returning attention worked in one activity
+    under two conditions, including no difference or a worse result.
+  display_order: 5

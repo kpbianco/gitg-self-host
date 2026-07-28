@@ -1,0 +1,79 @@
+schema_version: GG-PRACTICE-RESEARCH-GAPS-1.0
+gaps:
+  - gap_id: RG-M6A-001
+    scope: full_catalog
+    status: open
+    priority: blocking_before_mass_authoring
+    blocking_gates:
+      - source_complete
+      - release_candidate
+      - mass_authoring
+    question: Which external primary, systematic-review, official, professional, or authoritative sources support each intervention and evidence design?
+    current_evidence: Internal curriculum, decision, scope-audit, and pilot records only.
+    resolution_gate: Every authored protocol identifies claim-level sources and limitations before release-candidate status.
+  - gap_id: RG-M6A-002
+    scope: full_catalog
+    status: open
+    priority: M6B
+    blocking_gates:
+      - m6b_acceptance
+      - mass_authoring
+      - score_activation
+    question: How should direct competency evidence remain distinct from immutable protocol evidence and lever score state?
+    current_evidence: The current runtime records protocol-performance evidence and projects only friendship evidence through frozen lever mathematics.
+    resolution_gate: Accepted ADR, typed evidence contract, deterministic fixtures, replay, reversal, and no-baseline-mutation tests.
+  - gap_id: RG-M6A-003
+    scope: PRACTICE-FRIENDSHIP-01
+    status: open
+    priority: before_content_release_claim
+    blocking_gates:
+      - source_complete
+      - release_candidate
+      - score_activation
+    question: What evidence supports the chosen friendship-maintenance actions, burden, and transfer limits across cultures, disability, age, and relationship forms?
+    current_evidence: Internal product design plus one bounded owner-operated pilot.
+    resolution_gate: Claim-level external review and accessibility/cultural review.
+  - gap_id: RG-M6A-004
+    scope: PRACTICE-PLAY-01
+    status: open
+    priority: before_content_release_claim
+    blocking_gates:
+      - source_complete
+      - release_candidate
+      - score_activation
+    question: What evidence supports non-instrumental play interventions without turning leisure, disability, or enjoyment into a deficit measure?
+    current_evidence: Internal product design only.
+    resolution_gate: External research review plus non-scored and shadow-only evidence fixtures.
+  - gap_id: RG-M6A-005
+    scope: PRACTICE-EMOTIONAL-CUES-01
+    status: open
+    priority: specialist_review
+    blocking_gates:
+      - source_complete
+      - release_candidate
+      - score_activation
+    question: What evidence and safeguards distinguish cautious cue observation from unreliable inference, stereotyping, diagnosis, or deception detection?
+    current_evidence: Internal product and safety design only.
+    resolution_gate: Communication, disability, cultural, and clinical specialist review before expansion release or scoring.
+  - gap_id: RG-M6A-006
+    scope: PRACTICE-BOUNDARY-01
+    status: open
+    priority: specialist_review
+    blocking_gates:
+      - source_complete
+      - release_candidate
+      - score_activation
+    question: Which contexts make direct boundary practice unsafe, and how should role, power, abuse, retaliation, legal, and organizational conditions alter the pathway?
+    current_evidence: Internal product and safety design only.
+    resolution_gate: Trauma-informed, interpersonal-safety, employment, and legal-boundary review before expansion release or scoring.
+  - gap_id: RG-M6A-007
+    scope: PRACTICE-PRESENCE-01
+    status: open
+    priority: before_content_release_claim
+    blocking_gates:
+      - source_complete
+      - release_candidate
+      - score_activation
+    question: What evidence supports a condition-comparison attention experiment across disability, neurodiversity, pain, fatigue, stress, and varied tasks?
+    current_evidence: Internal product and accessibility design only.
+    resolution_gate: External research and disability-access review before content release claims or scoring.

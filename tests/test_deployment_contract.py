@@ -26,13 +26,14 @@ def test_container_runs_nonroot_gunicorn_and_safe_startup_sequence():
     assert "EXPOSE 8000" in dockerfile
     assert "node" not in dockerfile.lower()
 
+    validate = entrypoint.index("manage.py validate_canonical_content")
     migrate = entrypoint.index("manage.py migrate")
     bootstrap = entrypoint.index("manage.py bootstrap_user")
     seed = entrypoint.index("manage.py seed_canonical")
     evidence_backfill = entrypoint.index("manage.py backfill_evidence_events")
     score_rebuild = entrypoint.index("manage.py rebuild_score_state")
     gunicorn = entrypoint.index("exec gunicorn")
-    assert migrate < bootstrap < seed < evidence_backfill < score_rebuild < gunicorn
+    assert validate < migrate < bootstrap < seed < evidence_backfill < score_rebuild < gunicorn
     assert "--bind 0.0.0.0:8000" in entrypoint
     assert "--access-logfile -" in entrypoint
     assert "--error-logfile -" in entrypoint
@@ -60,6 +61,7 @@ def test_repeatable_compose_acceptance_is_wired_into_make_and_ci():
     makefile = (ROOT / "Makefile").read_text()
     smoke_script = (ROOT / "scripts" / "verify_compose.sh").read_text()
     pilot_script = (ROOT / "scripts" / "verify_pilot_readiness.sh").read_text()
+    expansion_script = (ROOT / "scripts" / "verify_expansion_readiness.sh").read_text()
     login_probe = (ROOT / "scripts" / "verify_http_login.py").read_text()
     workflow = (ROOT / ".github" / "workflows" / "verification.yml").read_text()
     workflow_data = yaml.safe_load(workflow)
@@ -82,6 +84,12 @@ def test_repeatable_compose_acceptance_is_wired_into_make_and_ci():
     assert "verify_pilot_readiness" in pilot_script
     assert smoke_script.count("verify_pilot_readiness") == 3
     assert "make pilot-check PYTHON=python" in workflow
+    assert "curriculum-check:" in makefile
+    assert "verify_expansion_readiness.sh" in makefile
+    assert "generate_practice_reports --check" in expansion_script
+    assert "verify_expansion_readiness" in expansion_script
+    assert smoke_script.count("verify_expansion_readiness") == 3
+    assert "make curriculum-check PYTHON=python" in workflow
     assert "Pilot readiness gate" in workflow
     assert set(workflow_data["jobs"]["pilot-ready"]["needs"]) == {
         "quality",

@@ -1,0 +1,62 @@
+schema_version: GG-PROTOCOL-FAMILY-1.0
+families:
+  - family_id: PF-BEHAVIORAL-EXPERIMENT
+    name: Behavioral experiment
+    definition: Compare a bounded behavior or condition and observe what happens without treating one result as broad mastery.
+    allowed_structure: Setup, baseline or usual condition, changed condition, and bounded review.
+    individuality_requirement: Actions, conditions, observations, and transfer criteria must operationalize the named parent competency.
+  - family_id: PF-KNOWLEDGE-APPLICATION
+    name: Knowledge-and-application practice
+    definition: Learn a bounded concept and demonstrate its use in a relevant case.
+    allowed_structure: Source review, explanation, application, and correction.
+    individuality_requirement: Concepts, cases, misconceptions, and evidence criteria must be competency-specific.
+  - family_id: PF-ARTIFACT-PLAN
+    name: Artifact or plan creation
+    definition: Produce and review a concrete artifact, plan, checklist, or decision record.
+    allowed_structure: Define criteria, draft, test or review, and revise.
+    individuality_requirement: Artifact requirements and review rubric must trace to the parent competency.
+  - family_id: PF-AUDIT-REDESIGN
+    name: Audit and redesign
+    definition: Inspect an existing environment, routine, or system and make one bounded redesign.
+    allowed_structure: Inventory, diagnose, change, and compare.
+    individuality_requirement: Audit dimensions and redesign constraints must be specific to the competency.
+  - family_id: PF-RELATIONAL-CONVERSATION
+    name: Relational conversation
+    definition: Practice a consent-respecting conversation or interpersonal behavior in a welcome, bounded context.
+    allowed_structure: Prepare, communicate, clarify or follow through, and review.
+    individuality_requirement: Relationship role, consent boundary, communication act, and evidence must be competency-specific.
+  - family_id: PF-REPEATED-HABIT
+    name: Repeated habit
+    definition: Repeat a small behavior with explicit burden, interruption, and retention rules.
+    allowed_structure: Cue, repetition window, interruption handling, and longitudinal review.
+    individuality_requirement: The target behavior and retention measure must not be generic habit-tracker substitutions.
+  - family_id: PF-SKILL-REHEARSAL
+    name: Skill rehearsal
+    definition: Rehearse a defined skill in scenarios before or alongside appropriate real-world use.
+    allowed_structure: Model, rehearse, receive or generate feedback, and retry.
+    individuality_requirement: Scenario, observable criteria, and error correction must operationalize the competency.
+  - family_id: PF-CONTEMPLATIVE-MEANING
+    name: Contemplative or meaning practice
+    definition: Explore attention, meaning, values, or worldview without prescribing one tradition as universal.
+    allowed_structure: Frame, practice, notice, and interpret within declared worldview limits.
+    individuality_requirement: Prompts and interpretation limits must fit the stated tradition, pluralist framing, and competency.
+  - family_id: PF-COMMUNITY-CONTRIBUTION
+    name: Community contribution
+    definition: Complete a bounded contribution shaped by community-defined needs and consent.
+    allowed_structure: Listen, agree scope, contribute, and obtain proportionate feedback.
+    individuality_requirement: Community role, power, reciprocity, and impact criteria must be explicit.
+  - family_id: PF-QUALIFIED-CONSULTATION
+    name: Qualified consultation or supported planning
+    definition: Prepare for and use appropriately qualified support without replacing professional judgment.
+    allowed_structure: Clarify question, gather minimum information, consult, and record a bounded plan.
+    individuality_requirement: Qualification, privacy boundary, jurisdiction, and referral purpose must be topic-specific.
+  - family_id: PF-SAFETY-PREPARATION
+    name: Safety preparation
+    definition: Create a non-confrontational safety or support plan without simulating an emergency response.
+    allowed_structure: Identify boundary, select support, prepare safe next step, and review.
+    individuality_requirement: Hazards, exclusions, escalation, and professional boundaries must be specifically reviewed.
+  - family_id: PF-LONGITUDINAL-REVIEW
+    name: Longitudinal review
+    definition: Review a pattern across sufficient time and contexts before drawing a limited conclusion.
+    allowed_structure: Define indicators, collect bounded observations, compare contexts, and review uncertainty.
+    individuality_requirement: Time window, indicators, missing-data treatment, and transfer limit must fit the competency.

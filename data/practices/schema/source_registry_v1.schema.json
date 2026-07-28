@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grounded-growth.local/schema/practice-source-registry-v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "claim_classes", "sources"],
+  "properties": {
+    "schema_version": {"const": "GG-PRACTICE-SOURCES-1.0"},
+    "claim_classes": {
+      "const": [
+        "empirical_finding",
+        "professional_or_public_standard",
+        "philosophical_or_normative_position",
+        "cross_tradition_synthesis",
+        "product_design_judgment",
+        "safety_precaution"
+      ]
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source_id",
+          "title",
+          "authors_or_issuing_body",
+          "publication_date",
+          "locator",
+          "locator_kind",
+          "content_sha256",
+          "source_class",
+          "evidence_strength",
+          "supported_claim",
+          "claim_classification",
+          "limitations",
+          "applicable_competency_ids",
+          "applicable_protocol_ids",
+          "date_accessed",
+          "license_or_quotation_constraints"
+        ],
+        "properties": {
+          "source_id": {"type": "string", "pattern": "^SRC-[A-Z0-9-]+$"},
+          "title": {"type": "string", "minLength": 1},
+          "authors_or_issuing_body": {"type": "string", "minLength": 1},
+          "publication_date": {"type": "string", "minLength": 1},
+          "locator": {"type": "string", "minLength": 1},
+          "locator_kind": {
+            "enum": ["repository_path", "external_url", "bibliographic_reference"]
+          },
+          "content_sha256": {
+            "type": ["string", "null"],
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "source_class": {
+            "enum": [
+              "canonical_repository_source",
+              "internal_decision_record",
+              "internal_research_review",
+              "primary_research",
+              "systematic_review",
+              "official_guidance",
+              "professional_standard",
+              "authoritative_primary_source",
+              "reputable_synthesis"
+            ]
+          },
+          "evidence_strength": {"enum": ["authoritative", "strong", "moderate", "limited", "design_only"]},
+          "supported_claim": {"type": "string", "minLength": 1},
+          "claim_classification": {
+            "enum": [
+              "empirical_finding",
+              "professional_or_public_standard",
+              "philosophical_or_normative_position",
+              "cross_tradition_synthesis",
+              "product_design_judgment",
+              "safety_precaution"
+            ]
+          },
+          "limitations": {"type": "string", "minLength": 1},
+          "applicable_competency_ids": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {"type": "string", "pattern": "^[0-9]{2}\\.[0-9]{2}$"}
+          },
+          "applicable_protocol_ids": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {"type": "string", "pattern": "^PRACTICE-[A-Z0-9-]+-[0-9]{2}$"}
+          },
+          "date_accessed": {"type": ["string", "null"], "format": "date"},
+          "license_or_quotation_constraints": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

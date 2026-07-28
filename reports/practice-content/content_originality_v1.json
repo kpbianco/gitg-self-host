@@ -1,0 +1,934 @@
+{
+  "approved_shared_content": [
+    "schema labels and version identifiers",
+    "the canonical completion-does-not-establish-mastery disclaimer",
+    "the no-deficit not-applicable disposition",
+    "the frozen legacy evidence architecture fields named in approved_shared_field_paths"
+  ],
+  "approved_shared_field_paths": [
+    "completion_and_review.mastery_disclaimer",
+    "evidence_and_scoring.canonical_lever_allocation",
+    "evidence_and_scoring.competency_contribution",
+    "evidence_and_scoring.context_transfer_rule",
+    "evidence_and_scoring.independence_rule",
+    "evidence_and_scoring.minimum_evidence_before_state_update",
+    "evidence_and_scoring.observation_contract_version",
+    "evidence_and_scoring.recency_rule",
+    "evidence_and_scoring.repetition_rule",
+    "evidence_and_scoring.withholding_conditions[",
+    "meaning_and_fit.claims[0].limitations",
+    "meaning_and_fit.not_applicable_behavior"
+  ],
+  "catalog_content_hash": "77dfae7546824046045df919ff4970b28132e76a1580bba5b532fa185afb94b3",
+  "contract_version": "GG-CURRICULUM-EXPANSION-REPORTS-1.0",
+  "evidence_markers_that_only_restate_completion": [],
+  "exact_or_normalized_duplicates": {
+    "action_expected_times": [
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-PRESENCE-01-A1",
+          "PRACTICE-PRESENCE-01-A2",
+          "PRACTICE-PRESENCE-01-A3"
+        ],
+        "normalized_sha256": "2f18bc2a00e782d933b393e8b28adb86b81162d593dc4d307e70b38e8d6428cb"
+      },
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-BOUNDARY-01-A2",
+          "PRACTICE-BOUNDARY-01-A3",
+          "PRACTICE-EMOTIONAL-CUES-01-A3",
+          "PRACTICE-FRIENDSHIP-01-A2",
+          "PRACTICE-FRIENDSHIP-01-A3"
+        ],
+        "normalized_sha256": "6934985e72092969bc348ec3647918899c22417ce9c412f1d2bc92c8ef3476d6"
+      },
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-EMOTIONAL-CUES-01-A1",
+          "PRACTICE-EMOTIONAL-CUES-01-A2",
+          "PRACTICE-PLAY-01-A1"
+        ],
+        "normalized_sha256": "3170543ce47c2f0baa50254b13b82b58b0962675647c39a20643690168f572d7"
+      }
+    ],
+    "action_instructions": [],
+    "action_titles": [],
+    "completion_and_review": [
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.completion_and_review.completion_criteria[0]",
+          "PRACTICE-EMOTIONAL-CUES-01.completion_and_review.completion_criteria[0]",
+          "PRACTICE-FRIENDSHIP-01.completion_and_review.completion_criteria[0]",
+          "PRACTICE-PLAY-01.completion_and_review.completion_criteria[0]",
+          "PRACTICE-PRESENCE-01.completion_and_review.completion_criteria[0]"
+        ],
+        "normalized_sha256": "06ef437e5629a4cb0af4f12ea0353dee682e289967fd9e75a9c795d5856ea4e5"
+      },
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.completion_and_review.completion_criteria[1]",
+          "PRACTICE-EMOTIONAL-CUES-01.completion_and_review.completion_criteria[1]",
+          "PRACTICE-FRIENDSHIP-01.completion_and_review.completion_criteria[1]",
+          "PRACTICE-PLAY-01.completion_and_review.completion_criteria[1]",
+          "PRACTICE-PRESENCE-01.completion_and_review.completion_criteria[1]"
+        ],
+        "normalized_sha256": "3ffb18222b8fc3172fa8c56440d6fd4f76c1bf5dc73dff92fedd0b25b450fea1"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.completion_and_review.mastery_disclaimer",
+          "PRACTICE-EMOTIONAL-CUES-01.completion_and_review.mastery_disclaimer",
+          "PRACTICE-FRIENDSHIP-01.completion_and_review.mastery_disclaimer",
+          "PRACTICE-PLAY-01.completion_and_review.mastery_disclaimer",
+          "PRACTICE-PRESENCE-01.completion_and_review.mastery_disclaimer"
+        ],
+        "normalized_sha256": "7a4a41ff98c5e479f7acb9fc079ada0805408fd9bfc9d0aa2c451d93aba03733"
+      },
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.completion_and_review.completion_criteria[4]",
+          "PRACTICE-EMOTIONAL-CUES-01.completion_and_review.completion_criteria[3]",
+          "PRACTICE-FRIENDSHIP-01.completion_and_review.completion_criteria[3]",
+          "PRACTICE-PLAY-01.completion_and_review.completion_criteria[3]",
+          "PRACTICE-PRESENCE-01.completion_and_review.completion_criteria[4]"
+        ],
+        "normalized_sha256": "fd3da86823d7ff5110c4d259f8351d04bf631457d69c33c0a1e5e45557355c90"
+      }
+    ],
+    "evidence_and_scoring": [
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.withholding_conditions[0]",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.withholding_conditions[0]",
+          "PRACTICE-PLAY-01.evidence_and_scoring.withholding_conditions[0]",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.withholding_conditions[0]"
+        ],
+        "normalized_sha256": "7fa44656042c56606113d62c24c44592fbbab6c13a09f92dc46074c6fb67be87"
+      },
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.accepted_evidence_types[1]",
+          "PRACTICE-PLAY-01.evidence_and_scoring.accepted_evidence_types[1]"
+        ],
+        "normalized_sha256": "0180aeaa3ced6dbb6fccafaaa324fba66ff9b4cf4b8b24a0eb72260a9ac41f8f"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.context_transfer_rule",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.context_transfer_rule",
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.context_transfer_rule",
+          "PRACTICE-PLAY-01.evidence_and_scoring.context_transfer_rule",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.context_transfer_rule"
+        ],
+        "normalized_sha256": "8258dbb80d1b4d5fa6b02d6f59747d88f3046212b49f1ee4f411da20752ade64"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.minimum_evidence_before_state_update",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.minimum_evidence_before_state_update",
+          "PRACTICE-PLAY-01.evidence_and_scoring.minimum_evidence_before_state_update",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.minimum_evidence_before_state_update"
+        ],
+        "normalized_sha256": "72a027c37eb5932c69a3265c6bfedf411cc7f067f7b0b987017deb66a31e9391"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.recency_rule",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.recency_rule",
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.recency_rule",
+          "PRACTICE-PLAY-01.evidence_and_scoring.recency_rule",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.recency_rule"
+        ],
+        "normalized_sha256": "d3eea9b5366c7cdb0640c017f26ba2761c10e8c5b8fb6015e976af9ac6f40503"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.canonical_lever_allocation",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.canonical_lever_allocation",
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.canonical_lever_allocation",
+          "PRACTICE-PLAY-01.evidence_and_scoring.canonical_lever_allocation",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.canonical_lever_allocation"
+        ],
+        "normalized_sha256": "756009e8e959f5c29d220eab22da4ef60f8df0bc4ea3af71a2fa51cd26ae9dc5"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.observation_contract_version",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.observation_contract_version",
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.observation_contract_version",
+          "PRACTICE-PLAY-01.evidence_and_scoring.observation_contract_version",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.observation_contract_version"
+        ],
+        "normalized_sha256": "46528627219119f4d50f4d19faf4787388c7445ad4d613b7ae63032241f8ff99"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.independence_rule",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.independence_rule",
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.independence_rule",
+          "PRACTICE-PLAY-01.evidence_and_scoring.independence_rule",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.independence_rule"
+        ],
+        "normalized_sha256": "96e9a839f297cf7587ce87b027ea57eb4e5abf99ec4af0942beb24457995ec81"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.repetition_rule",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.repetition_rule",
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.repetition_rule",
+          "PRACTICE-PLAY-01.evidence_and_scoring.repetition_rule",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.repetition_rule"
+        ],
+        "normalized_sha256": "10e4dfbc0bf1d22509137a1232d2f10792770076188ff51c1453a62bd4a8e084"
+      },
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.accepted_evidence_types[0]",
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.accepted_evidence_types[0]",
+          "PRACTICE-PLAY-01.evidence_and_scoring.accepted_evidence_types[0]",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.accepted_evidence_types[0]"
+        ],
+        "normalized_sha256": "7820700a3c836f9ba2521785d779279fb50b0b584c682fbb2f8dd2ecd4963aaa"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.competency_contribution",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.competency_contribution",
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.competency_contribution",
+          "PRACTICE-PLAY-01.evidence_and_scoring.competency_contribution",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.competency_contribution"
+        ],
+        "normalized_sha256": "a3d548fa28140697498e66612410f7bca386c186e2da34ebdc4b63d9c8f8400f"
+      }
+    ],
+    "evidence_rule_payloads": [
+      {
+        "action_ids": [
+          "PRACTICE-FRIENDSHIP-01-A2",
+          "PRACTICE-PLAY-01-A1"
+        ],
+        "classification": "legacy_compatibility_exception",
+        "exception_id": "LEGACY-DUPLICATE-FRIENDSHIP-A2-PLAY-A1"
+      },
+      {
+        "action_ids": [
+          "PRACTICE-BOUNDARY-01-A1",
+          "PRACTICE-EMOTIONAL-CUES-01-A2"
+        ],
+        "classification": "legacy_compatibility_exception",
+        "exception_id": "LEGACY-DUPLICATE-BOUNDARY-A1-EMOTIONAL-CUES-A2"
+      }
+    ],
+    "presentation": [],
+    "reflection_sets": [],
+    "safety": [],
+    "substantive_fields": [
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.meaning_and_fit.not_applicable_behavior",
+          "PRACTICE-EMOTIONAL-CUES-01.meaning_and_fit.not_applicable_behavior",
+          "PRACTICE-FRIENDSHIP-01.meaning_and_fit.not_applicable_behavior",
+          "PRACTICE-PLAY-01.meaning_and_fit.not_applicable_behavior",
+          "PRACTICE-PRESENCE-01.meaning_and_fit.not_applicable_behavior"
+        ],
+        "normalized_sha256": "d49493e3c2f482770f213bce35078e847671ff84a2062b40b10c52c301229f3b"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.meaning_and_fit.claims[0].limitations",
+          "PRACTICE-EMOTIONAL-CUES-01.meaning_and_fit.claims[0].limitations",
+          "PRACTICE-FRIENDSHIP-01.meaning_and_fit.claims[0].limitations",
+          "PRACTICE-PLAY-01.meaning_and_fit.claims[0].limitations",
+          "PRACTICE-PRESENCE-01.meaning_and_fit.claims[0].limitations"
+        ],
+        "normalized_sha256": "0aff238eab0bb8fb5597830276f6941fac2d7d422d384427e05fa7ad2876491a"
+      }
+    ]
+  },
+  "field_duplicate_audit": {
+    "action_expected_times": [
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-PRESENCE-01-A1",
+          "PRACTICE-PRESENCE-01-A2",
+          "PRACTICE-PRESENCE-01-A3"
+        ],
+        "normalized_sha256": "2f18bc2a00e782d933b393e8b28adb86b81162d593dc4d307e70b38e8d6428cb"
+      },
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-BOUNDARY-01-A2",
+          "PRACTICE-BOUNDARY-01-A3",
+          "PRACTICE-EMOTIONAL-CUES-01-A3",
+          "PRACTICE-FRIENDSHIP-01-A2",
+          "PRACTICE-FRIENDSHIP-01-A3"
+        ],
+        "normalized_sha256": "6934985e72092969bc348ec3647918899c22417ce9c412f1d2bc92c8ef3476d6"
+      },
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-EMOTIONAL-CUES-01-A1",
+          "PRACTICE-EMOTIONAL-CUES-01-A2",
+          "PRACTICE-PLAY-01-A1"
+        ],
+        "normalized_sha256": "3170543ce47c2f0baa50254b13b82b58b0962675647c39a20643690168f572d7"
+      }
+    ],
+    "action_instructions": [],
+    "action_titles": [],
+    "all_content": [
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-PRESENCE-01-A1",
+          "PRACTICE-PRESENCE-01-A2",
+          "PRACTICE-PRESENCE-01-A3"
+        ],
+        "normalized_sha256": "2f18bc2a00e782d933b393e8b28adb86b81162d593dc4d307e70b38e8d6428cb"
+      },
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-BOUNDARY-01-A2",
+          "PRACTICE-BOUNDARY-01-A3",
+          "PRACTICE-EMOTIONAL-CUES-01-A3",
+          "PRACTICE-FRIENDSHIP-01-A2",
+          "PRACTICE-FRIENDSHIP-01-A3"
+        ],
+        "normalized_sha256": "6934985e72092969bc348ec3647918899c22417ce9c412f1d2bc92c8ef3476d6"
+      },
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-EMOTIONAL-CUES-01-A1",
+          "PRACTICE-EMOTIONAL-CUES-01-A2",
+          "PRACTICE-PLAY-01-A1"
+        ],
+        "normalized_sha256": "3170543ce47c2f0baa50254b13b82b58b0962675647c39a20643690168f572d7"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.withholding_conditions[0]",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.withholding_conditions[0]",
+          "PRACTICE-PLAY-01.evidence_and_scoring.withholding_conditions[0]",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.withholding_conditions[0]"
+        ],
+        "normalized_sha256": "7fa44656042c56606113d62c24c44592fbbab6c13a09f92dc46074c6fb67be87"
+      },
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.completion_and_review.completion_criteria[0]",
+          "PRACTICE-EMOTIONAL-CUES-01.completion_and_review.completion_criteria[0]",
+          "PRACTICE-FRIENDSHIP-01.completion_and_review.completion_criteria[0]",
+          "PRACTICE-PLAY-01.completion_and_review.completion_criteria[0]",
+          "PRACTICE-PRESENCE-01.completion_and_review.completion_criteria[0]"
+        ],
+        "normalized_sha256": "06ef437e5629a4cb0af4f12ea0353dee682e289967fd9e75a9c795d5856ea4e5"
+      },
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-EMOTIONAL-CUES-01.completion_and_review.completion_criteria[2]",
+          "PRACTICE-EMOTIONAL-CUES-01.presentation.setup_copy.completion_signal_label"
+        ],
+        "normalized_sha256": "3647fe9e4289c90a7c7c52a36e759f6f2560e7c84288c57785b95cb9c9edf481"
+      },
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-PLAY-01.completion_and_review.completion_criteria[2]",
+          "PRACTICE-PLAY-01.presentation.setup_copy.completion_signal_label"
+        ],
+        "normalized_sha256": "90d47bae8becc5a19fc70acc36d4dcff21151f598f311d6c913061e2921c2679"
+      },
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-FRIENDSHIP-01.completion_and_review.completion_criteria[2]",
+          "PRACTICE-FRIENDSHIP-01.presentation.setup_copy.completion_signal_label"
+        ],
+        "normalized_sha256": "51fbee3de00a9645d15ac0b2bcc72d87d30d6c8e917cafb5cf892f8dff404ee2"
+      },
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.completion_and_review.completion_criteria[1]",
+          "PRACTICE-EMOTIONAL-CUES-01.completion_and_review.completion_criteria[1]",
+          "PRACTICE-FRIENDSHIP-01.completion_and_review.completion_criteria[1]",
+          "PRACTICE-PLAY-01.completion_and_review.completion_criteria[1]",
+          "PRACTICE-PRESENCE-01.completion_and_review.completion_criteria[1]"
+        ],
+        "normalized_sha256": "3ffb18222b8fc3172fa8c56440d6fd4f76c1bf5dc73dff92fedd0b25b450fea1"
+      },
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.accepted_evidence_types[1]",
+          "PRACTICE-PLAY-01.evidence_and_scoring.accepted_evidence_types[1]"
+        ],
+        "normalized_sha256": "0180aeaa3ced6dbb6fccafaaa324fba66ff9b4cf4b8b24a0eb72260a9ac41f8f"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.completion_and_review.mastery_disclaimer",
+          "PRACTICE-EMOTIONAL-CUES-01.completion_and_review.mastery_disclaimer",
+          "PRACTICE-FRIENDSHIP-01.completion_and_review.mastery_disclaimer",
+          "PRACTICE-PLAY-01.completion_and_review.mastery_disclaimer",
+          "PRACTICE-PRESENCE-01.completion_and_review.mastery_disclaimer"
+        ],
+        "normalized_sha256": "7a4a41ff98c5e479f7acb9fc079ada0805408fd9bfc9d0aa2c451d93aba03733"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.context_transfer_rule",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.context_transfer_rule",
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.context_transfer_rule",
+          "PRACTICE-PLAY-01.evidence_and_scoring.context_transfer_rule",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.context_transfer_rule"
+        ],
+        "normalized_sha256": "8258dbb80d1b4d5fa6b02d6f59747d88f3046212b49f1ee4f411da20752ade64"
+      },
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.completion_and_review.completion_criteria[4]",
+          "PRACTICE-EMOTIONAL-CUES-01.completion_and_review.completion_criteria[3]",
+          "PRACTICE-FRIENDSHIP-01.completion_and_review.completion_criteria[3]",
+          "PRACTICE-PLAY-01.completion_and_review.completion_criteria[3]",
+          "PRACTICE-PRESENCE-01.completion_and_review.completion_criteria[4]"
+        ],
+        "normalized_sha256": "fd3da86823d7ff5110c4d259f8351d04bf631457d69c33c0a1e5e45557355c90"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.minimum_evidence_before_state_update",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.minimum_evidence_before_state_update",
+          "PRACTICE-PLAY-01.evidence_and_scoring.minimum_evidence_before_state_update",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.minimum_evidence_before_state_update"
+        ],
+        "normalized_sha256": "72a027c37eb5932c69a3265c6bfedf411cc7f067f7b0b987017deb66a31e9391"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.recency_rule",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.recency_rule",
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.recency_rule",
+          "PRACTICE-PLAY-01.evidence_and_scoring.recency_rule",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.recency_rule"
+        ],
+        "normalized_sha256": "d3eea9b5366c7cdb0640c017f26ba2761c10e8c5b8fb6015e976af9ac6f40503"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.canonical_lever_allocation",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.canonical_lever_allocation",
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.canonical_lever_allocation",
+          "PRACTICE-PLAY-01.evidence_and_scoring.canonical_lever_allocation",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.canonical_lever_allocation"
+        ],
+        "normalized_sha256": "756009e8e959f5c29d220eab22da4ef60f8df0bc4ea3af71a2fa51cd26ae9dc5"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.observation_contract_version",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.observation_contract_version",
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.observation_contract_version",
+          "PRACTICE-PLAY-01.evidence_and_scoring.observation_contract_version",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.observation_contract_version"
+        ],
+        "normalized_sha256": "46528627219119f4d50f4d19faf4787388c7445ad4d613b7ae63032241f8ff99"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.meaning_and_fit.not_applicable_behavior",
+          "PRACTICE-EMOTIONAL-CUES-01.meaning_and_fit.not_applicable_behavior",
+          "PRACTICE-FRIENDSHIP-01.meaning_and_fit.not_applicable_behavior",
+          "PRACTICE-PLAY-01.meaning_and_fit.not_applicable_behavior",
+          "PRACTICE-PRESENCE-01.meaning_and_fit.not_applicable_behavior"
+        ],
+        "normalized_sha256": "d49493e3c2f482770f213bce35078e847671ff84a2062b40b10c52c301229f3b"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.independence_rule",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.independence_rule",
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.independence_rule",
+          "PRACTICE-PLAY-01.evidence_and_scoring.independence_rule",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.independence_rule"
+        ],
+        "normalized_sha256": "96e9a839f297cf7587ce87b027ea57eb4e5abf99ec4af0942beb24457995ec81"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.repetition_rule",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.repetition_rule",
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.repetition_rule",
+          "PRACTICE-PLAY-01.evidence_and_scoring.repetition_rule",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.repetition_rule"
+        ],
+        "normalized_sha256": "10e4dfbc0bf1d22509137a1232d2f10792770076188ff51c1453a62bd4a8e084"
+      },
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.accepted_evidence_types[0]",
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.accepted_evidence_types[0]",
+          "PRACTICE-PLAY-01.evidence_and_scoring.accepted_evidence_types[0]",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.accepted_evidence_types[0]"
+        ],
+        "normalized_sha256": "7820700a3c836f9ba2521785d779279fb50b0b584c682fbb2f8dd2ecd4963aaa"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.meaning_and_fit.claims[0].limitations",
+          "PRACTICE-EMOTIONAL-CUES-01.meaning_and_fit.claims[0].limitations",
+          "PRACTICE-FRIENDSHIP-01.meaning_and_fit.claims[0].limitations",
+          "PRACTICE-PLAY-01.meaning_and_fit.claims[0].limitations",
+          "PRACTICE-PRESENCE-01.meaning_and_fit.claims[0].limitations"
+        ],
+        "normalized_sha256": "0aff238eab0bb8fb5597830276f6941fac2d7d422d384427e05fa7ad2876491a"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.competency_contribution",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.competency_contribution",
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.competency_contribution",
+          "PRACTICE-PLAY-01.evidence_and_scoring.competency_contribution",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.competency_contribution"
+        ],
+        "normalized_sha256": "a3d548fa28140697498e66612410f7bca386c186e2da34ebdc4b63d9c8f8400f"
+      }
+    ],
+    "completion_and_review": [
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.completion_and_review.completion_criteria[0]",
+          "PRACTICE-EMOTIONAL-CUES-01.completion_and_review.completion_criteria[0]",
+          "PRACTICE-FRIENDSHIP-01.completion_and_review.completion_criteria[0]",
+          "PRACTICE-PLAY-01.completion_and_review.completion_criteria[0]",
+          "PRACTICE-PRESENCE-01.completion_and_review.completion_criteria[0]"
+        ],
+        "normalized_sha256": "06ef437e5629a4cb0af4f12ea0353dee682e289967fd9e75a9c795d5856ea4e5"
+      },
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.completion_and_review.completion_criteria[1]",
+          "PRACTICE-EMOTIONAL-CUES-01.completion_and_review.completion_criteria[1]",
+          "PRACTICE-FRIENDSHIP-01.completion_and_review.completion_criteria[1]",
+          "PRACTICE-PLAY-01.completion_and_review.completion_criteria[1]",
+          "PRACTICE-PRESENCE-01.completion_and_review.completion_criteria[1]"
+        ],
+        "normalized_sha256": "3ffb18222b8fc3172fa8c56440d6fd4f76c1bf5dc73dff92fedd0b25b450fea1"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.completion_and_review.mastery_disclaimer",
+          "PRACTICE-EMOTIONAL-CUES-01.completion_and_review.mastery_disclaimer",
+          "PRACTICE-FRIENDSHIP-01.completion_and_review.mastery_disclaimer",
+          "PRACTICE-PLAY-01.completion_and_review.mastery_disclaimer",
+          "PRACTICE-PRESENCE-01.completion_and_review.mastery_disclaimer"
+        ],
+        "normalized_sha256": "7a4a41ff98c5e479f7acb9fc079ada0805408fd9bfc9d0aa2c451d93aba03733"
+      },
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.completion_and_review.completion_criteria[4]",
+          "PRACTICE-EMOTIONAL-CUES-01.completion_and_review.completion_criteria[3]",
+          "PRACTICE-FRIENDSHIP-01.completion_and_review.completion_criteria[3]",
+          "PRACTICE-PLAY-01.completion_and_review.completion_criteria[3]",
+          "PRACTICE-PRESENCE-01.completion_and_review.completion_criteria[4]"
+        ],
+        "normalized_sha256": "fd3da86823d7ff5110c4d259f8351d04bf631457d69c33c0a1e5e45557355c90"
+      }
+    ],
+    "evidence_and_scoring": [
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.withholding_conditions[0]",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.withholding_conditions[0]",
+          "PRACTICE-PLAY-01.evidence_and_scoring.withholding_conditions[0]",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.withholding_conditions[0]"
+        ],
+        "normalized_sha256": "7fa44656042c56606113d62c24c44592fbbab6c13a09f92dc46074c6fb67be87"
+      },
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.accepted_evidence_types[1]",
+          "PRACTICE-PLAY-01.evidence_and_scoring.accepted_evidence_types[1]"
+        ],
+        "normalized_sha256": "0180aeaa3ced6dbb6fccafaaa324fba66ff9b4cf4b8b24a0eb72260a9ac41f8f"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.context_transfer_rule",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.context_transfer_rule",
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.context_transfer_rule",
+          "PRACTICE-PLAY-01.evidence_and_scoring.context_transfer_rule",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.context_transfer_rule"
+        ],
+        "normalized_sha256": "8258dbb80d1b4d5fa6b02d6f59747d88f3046212b49f1ee4f411da20752ade64"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.minimum_evidence_before_state_update",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.minimum_evidence_before_state_update",
+          "PRACTICE-PLAY-01.evidence_and_scoring.minimum_evidence_before_state_update",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.minimum_evidence_before_state_update"
+        ],
+        "normalized_sha256": "72a027c37eb5932c69a3265c6bfedf411cc7f067f7b0b987017deb66a31e9391"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.recency_rule",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.recency_rule",
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.recency_rule",
+          "PRACTICE-PLAY-01.evidence_and_scoring.recency_rule",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.recency_rule"
+        ],
+        "normalized_sha256": "d3eea9b5366c7cdb0640c017f26ba2761c10e8c5b8fb6015e976af9ac6f40503"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.canonical_lever_allocation",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.canonical_lever_allocation",
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.canonical_lever_allocation",
+          "PRACTICE-PLAY-01.evidence_and_scoring.canonical_lever_allocation",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.canonical_lever_allocation"
+        ],
+        "normalized_sha256": "756009e8e959f5c29d220eab22da4ef60f8df0bc4ea3af71a2fa51cd26ae9dc5"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.observation_contract_version",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.observation_contract_version",
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.observation_contract_version",
+          "PRACTICE-PLAY-01.evidence_and_scoring.observation_contract_version",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.observation_contract_version"
+        ],
+        "normalized_sha256": "46528627219119f4d50f4d19faf4787388c7445ad4d613b7ae63032241f8ff99"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.independence_rule",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.independence_rule",
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.independence_rule",
+          "PRACTICE-PLAY-01.evidence_and_scoring.independence_rule",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.independence_rule"
+        ],
+        "normalized_sha256": "96e9a839f297cf7587ce87b027ea57eb4e5abf99ec4af0942beb24457995ec81"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.repetition_rule",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.repetition_rule",
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.repetition_rule",
+          "PRACTICE-PLAY-01.evidence_and_scoring.repetition_rule",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.repetition_rule"
+        ],
+        "normalized_sha256": "10e4dfbc0bf1d22509137a1232d2f10792770076188ff51c1453a62bd4a8e084"
+      },
+      {
+        "classification": "review_required",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.accepted_evidence_types[0]",
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.accepted_evidence_types[0]",
+          "PRACTICE-PLAY-01.evidence_and_scoring.accepted_evidence_types[0]",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.accepted_evidence_types[0]"
+        ],
+        "normalized_sha256": "7820700a3c836f9ba2521785d779279fb50b0b584c682fbb2f8dd2ecd4963aaa"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.evidence_and_scoring.competency_contribution",
+          "PRACTICE-EMOTIONAL-CUES-01.evidence_and_scoring.competency_contribution",
+          "PRACTICE-FRIENDSHIP-01.evidence_and_scoring.competency_contribution",
+          "PRACTICE-PLAY-01.evidence_and_scoring.competency_contribution",
+          "PRACTICE-PRESENCE-01.evidence_and_scoring.competency_contribution"
+        ],
+        "normalized_sha256": "a3d548fa28140697498e66612410f7bca386c186e2da34ebdc4b63d9c8f8400f"
+      }
+    ],
+    "intervention": [],
+    "meaning_and_fit": [
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.meaning_and_fit.not_applicable_behavior",
+          "PRACTICE-EMOTIONAL-CUES-01.meaning_and_fit.not_applicable_behavior",
+          "PRACTICE-FRIENDSHIP-01.meaning_and_fit.not_applicable_behavior",
+          "PRACTICE-PLAY-01.meaning_and_fit.not_applicable_behavior",
+          "PRACTICE-PRESENCE-01.meaning_and_fit.not_applicable_behavior"
+        ],
+        "normalized_sha256": "d49493e3c2f482770f213bce35078e847671ff84a2062b40b10c52c301229f3b"
+      },
+      {
+        "classification": "approved_shared_architecture",
+        "locations": [
+          "PRACTICE-BOUNDARY-01.meaning_and_fit.claims[0].limitations",
+          "PRACTICE-EMOTIONAL-CUES-01.meaning_and_fit.claims[0].limitations",
+          "PRACTICE-FRIENDSHIP-01.meaning_and_fit.claims[0].limitations",
+          "PRACTICE-PLAY-01.meaning_and_fit.claims[0].limitations",
+          "PRACTICE-PRESENCE-01.meaning_and_fit.claims[0].limitations"
+        ],
+        "normalized_sha256": "0aff238eab0bb8fb5597830276f6941fac2d7d422d384427e05fa7ad2876491a"
+      }
+    ],
+    "presentation": [],
+    "reflection": [],
+    "safety": []
+  },
+  "legacy_notion_source_audit": {
+    "disposition": "known_source_defect_do_not_propagate",
+    "most_repeated_journal_prompt_count": 383,
+    "most_repeated_journal_prompt_sha256": "ea6f71c126821391a94362253ac399b20fa27c23f77000173b7f1730058c6b8a",
+    "rows": 383,
+    "source_path": "data/notion/initial_mvp/02_development_tasks_ranked_import.csv",
+    "unique_evidence_of_progress": 383,
+    "unique_journal_prompts": 1,
+    "unique_scopes": 383,
+    "unique_task_names": 383
+  },
+  "near_duplicate_warnings": {
+    "action_instructions": [],
+    "action_instructions_threshold": 0.8,
+    "action_titles": [],
+    "action_titles_threshold": 0.8,
+    "generic_setup_candidates": [],
+    "generic_setup_threshold": 0.75,
+    "safety_copy_candidates": [],
+    "safety_copy_threshold": 0.8,
+    "substantive_fields": [
+      {
+        "left": "PRACTICE-BOUNDARY-01.meaning_and_fit.claims[0].limitations",
+        "right": "PRACTICE-EMOTIONAL-CUES-01.meaning_and_fit.claims[0].limitations",
+        "similarity": 1.0
+      },
+      {
+        "left": "PRACTICE-BOUNDARY-01.meaning_and_fit.claims[0].limitations",
+        "right": "PRACTICE-FRIENDSHIP-01.meaning_and_fit.claims[0].limitations",
+        "similarity": 1.0
+      },
+      {
+        "left": "PRACTICE-BOUNDARY-01.meaning_and_fit.claims[0].limitations",
+        "right": "PRACTICE-PLAY-01.meaning_and_fit.claims[0].limitations",
+        "similarity": 1.0
+      },
+      {
+        "left": "PRACTICE-BOUNDARY-01.meaning_and_fit.claims[0].limitations",
+        "right": "PRACTICE-PRESENCE-01.meaning_and_fit.claims[0].limitations",
+        "similarity": 1.0
+      },
+      {
+        "left": "PRACTICE-BOUNDARY-01.meaning_and_fit.not_applicable_behavior",
+        "right": "PRACTICE-EMOTIONAL-CUES-01.meaning_and_fit.not_applicable_behavior",
+        "similarity": 1.0
+      },
+      {
+        "left": "PRACTICE-BOUNDARY-01.meaning_and_fit.not_applicable_behavior",
+        "right": "PRACTICE-FRIENDSHIP-01.meaning_and_fit.not_applicable_behavior",
+        "similarity": 1.0
+      },
+      {
+        "left": "PRACTICE-BOUNDARY-01.meaning_and_fit.not_applicable_behavior",
+        "right": "PRACTICE-PLAY-01.meaning_and_fit.not_applicable_behavior",
+        "similarity": 1.0
+      },
+      {
+        "left": "PRACTICE-BOUNDARY-01.meaning_and_fit.not_applicable_behavior",
+        "right": "PRACTICE-PRESENCE-01.meaning_and_fit.not_applicable_behavior",
+        "similarity": 1.0
+      },
+      {
+        "left": "PRACTICE-BOUNDARY-01.meaning_and_fit.why_recommended",
+        "right": "PRACTICE-EMOTIONAL-CUES-01.meaning_and_fit.why_recommended",
+        "similarity": 0.8151
+      },
+      {
+        "left": "PRACTICE-EMOTIONAL-CUES-01.meaning_and_fit.claims[0].limitations",
+        "right": "PRACTICE-FRIENDSHIP-01.meaning_and_fit.claims[0].limitations",
+        "similarity": 1.0
+      },
+      {
+        "left": "PRACTICE-EMOTIONAL-CUES-01.meaning_and_fit.claims[0].limitations",
+        "right": "PRACTICE-PLAY-01.meaning_and_fit.claims[0].limitations",
+        "similarity": 1.0
+      },
+      {
+        "left": "PRACTICE-EMOTIONAL-CUES-01.meaning_and_fit.claims[0].limitations",
+        "right": "PRACTICE-PRESENCE-01.meaning_and_fit.claims[0].limitations",
+        "similarity": 1.0
+      },
+      {
+        "left": "PRACTICE-EMOTIONAL-CUES-01.meaning_and_fit.not_applicable_behavior",
+        "right": "PRACTICE-FRIENDSHIP-01.meaning_and_fit.not_applicable_behavior",
+        "similarity": 1.0
+      },
+      {
+        "left": "PRACTICE-EMOTIONAL-CUES-01.meaning_and_fit.not_applicable_behavior",
+        "right": "PRACTICE-PLAY-01.meaning_and_fit.not_applicable_behavior",
+        "similarity": 1.0
+      },
+      {
+        "left": "PRACTICE-EMOTIONAL-CUES-01.meaning_and_fit.not_applicable_behavior",
+        "right": "PRACTICE-PRESENCE-01.meaning_and_fit.not_applicable_behavior",
+        "similarity": 1.0
+      },
+      {
+        "left": "PRACTICE-FRIENDSHIP-01.meaning_and_fit.claims[0].limitations",
+        "right": "PRACTICE-PLAY-01.meaning_and_fit.claims[0].limitations",
+        "similarity": 1.0
+      },
+      {
+        "left": "PRACTICE-FRIENDSHIP-01.meaning_and_fit.claims[0].limitations",
+        "right": "PRACTICE-PRESENCE-01.meaning_and_fit.claims[0].limitations",
+        "similarity": 1.0
+      },
+      {
+        "left": "PRACTICE-FRIENDSHIP-01.meaning_and_fit.not_applicable_behavior",
+        "right": "PRACTICE-PLAY-01.meaning_and_fit.not_applicable_behavior",
+        "similarity": 1.0
+      },
+      {
+        "left": "PRACTICE-FRIENDSHIP-01.meaning_and_fit.not_applicable_behavior",
+        "right": "PRACTICE-PRESENCE-01.meaning_and_fit.not_applicable_behavior",
+        "similarity": 1.0
+      },
+      {
+        "left": "PRACTICE-PLAY-01.meaning_and_fit.claims[0].limitations",
+        "right": "PRACTICE-PRESENCE-01.meaning_and_fit.claims[0].limitations",
+        "similarity": 1.0
+      },
+      {
+        "left": "PRACTICE-PLAY-01.meaning_and_fit.not_applicable_behavior",
+        "right": "PRACTICE-PRESENCE-01.meaning_and_fit.not_applicable_behavior",
+        "similarity": 1.0
+      }
+    ],
+    "substantive_fields_threshold": 0.8
+  },
+  "parent_competency_operationalization_signals": [
+    {
+      "automated_signal": "lexical_overlap_present",
+      "human_review_status": "frozen_runtime_behavior",
+      "lexical_overlap_terms": [
+        "attention",
+        "distraction",
+        "drift"
+      ],
+      "originality_review_status": "legacy_exceptions_recorded_expansion_review_pending",
+      "parent_competency_id": "08.02",
+      "protocol_stable_id": "PRACTICE-PRESENCE-01",
+      "release_candidate_gate": "review_required"
+    },
+    {
+      "automated_signal": "review_candidate_no_lexical_overlap",
+      "human_review_status": "frozen_runtime_behavior",
+      "lexical_overlap_terms": [],
+      "originality_review_status": "legacy_exceptions_recorded_expansion_review_pending",
+      "parent_competency_id": "11.10",
+      "protocol_stable_id": "PRACTICE-BOUNDARY-01",
+      "release_candidate_gate": "review_required"
+    },
+    {
+      "automated_signal": "lexical_overlap_present",
+      "human_review_status": "frozen_runtime_behavior",
+      "lexical_overlap_terms": [
+        "distance",
+        "expression",
+        "gesture",
+        "posture"
+      ],
+      "originality_review_status": "legacy_exceptions_recorded_expansion_review_pending",
+      "parent_competency_id": "16.03",
+      "protocol_stable_id": "PRACTICE-EMOTIONAL-CUES-01",
+      "release_candidate_gate": "review_required"
+    },
+    {
+      "automated_signal": "review_candidate_no_lexical_overlap",
+      "human_review_status": "frozen_runtime_behavior",
+      "lexical_overlap_terms": [],
+      "originality_review_status": "legacy_exceptions_recorded_expansion_review_pending",
+      "parent_competency_id": "17.03",
+      "protocol_stable_id": "PRACTICE-FRIENDSHIP-01",
+      "release_candidate_gate": "review_required"
+    },
+    {
+      "automated_signal": "review_candidate_no_lexical_overlap",
+      "human_review_status": "frozen_runtime_behavior",
+      "lexical_overlap_terms": [],
+      "originality_review_status": "legacy_exceptions_recorded_expansion_review_pending",
+      "parent_competency_id": "26.01",
+      "protocol_stable_id": "PRACTICE-PLAY-01",
+      "release_candidate_gate": "review_required"
+    }
+  ],
+  "safety_copy_exact_duplicates": [],
+  "scope": {
+    "actions": 15,
+    "editorial_status": "projected_legacy_not_full_library_acceptance",
+    "protocols": 5
+  },
+  "semantic_review_boundary": "Text similarity cannot prove that actions operationalize a competency or that markers measure more than completion; the lexical and marker checks only route candidates and every package still requires recorded human review.",
+  "structure_warnings": {
+    "action_count_distribution": {
+      "3": 5
+    },
+    "all_current_protocols_have_three_actions": true,
+    "disposition": "Warnings are accepted for the frozen five-protocol slice and become anti-boilerplate review gates before later authoring batches.",
+    "duration_day_distribution": {
+      "10": 4,
+      "14": 1
+    },
+    "four_current_protocols_have_ten_days": true
+  }
+}

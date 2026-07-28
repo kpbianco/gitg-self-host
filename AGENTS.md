@@ -12,17 +12,31 @@ Build a self-hosted, evidence-oriented guided-development application. The produ
 - Dynamic score updates are limited to the reviewed M3A contract and the one
   explicitly activated friendship protocol. Do not generalize scoring to
   unreviewed protocols or invent missing priority inputs.
+- M6 is an owner-authorized, multi-PR expansion toward individually authored
+  packages for all 383 competencies. Coverage does not authorize boilerplate,
+  score activation, or a claim of universal, clinical, or psychometric
+  validity.
+- The product is becoming a guided life OS for people who may be highly
+  driven yet misdirected, fragmented, or running on autopilot. Assessment,
+  orientations, and archetypes are diagnostic and framing inputs—not the
+  headline, destiny, or measure of worth.
+- The intended path connects a concise Truth/Autopilot Audit with mission,
+  principles, anti-goals, current season and capacity, a priority stack,
+  twelve-month direction, weekly execution, and proof-based review. Ordinary
+  users should see a small context-fit set of next practices, never a
+  383-item encyclopedia or giant worksheet.
 
 ## Canonical source hierarchy
 Use these files in priority order:
 1. `docs/PROJECT_HANDOFF.md`
 2. `docs/PRODUCT_DECISIONS.md`
-3. `data/curriculum/ideal_person_curriculum_v2_pluralist_full_scope.yaml`
-4. `data/model/grounded_growth_model_v1.json`
-5. `data/model/competency_lever_mapping_v1.csv`
-6. `data/assessment/v1.1_bundle/`
-7. `docs/pilot/PILOT_002_FINDINGS.md`
-8. `legacy/` only for provenance and design research; do not treat it as canonical implementation data.
+3. `data/practices/release_manifest.yaml` and its explicitly listed content
+4. `data/curriculum/ideal_person_curriculum_v2_pluralist_full_scope.yaml`
+5. `data/model/grounded_growth_model_v1.json`
+6. `data/model/competency_lever_mapping_v1.csv`
+7. `data/assessment/v1.1_bundle/`
+8. `docs/pilot/PILOT_002_FINDINGS.md`
+9. `legacy/` only for provenance and design research; do not treat it as canonical implementation data.
 
 ## Implemented initial milestone
 Milestone 1 validates the UX with static scores:
@@ -110,6 +124,21 @@ The accepted rationale is recorded in
 - Do not add automatic timing, browser analytics, session recording, tracking
   pixels, or remote telemetry under the pilot-feedback contract.
 - Never infer missing task-to-lever links from display strings at runtime.
+- Practice packages, registries, schemas, and the activation ledger under
+  `data/practices/` are the canonical protocol source. Do not restore a
+  competing Python-dictionary catalog.
+- Validate a complete practice release and its curriculum mapping before
+  database writes. Keep its content hash separate from
+  `CurriculumVersion.source_hash`.
+- Runtime score activation derives only from the explicit activation ledger.
+  Availability, editorial completeness, evidence capture, and shadow testing
+  do not imply score mutation.
+- Preserve `practice-observation-v1` for historical replay. New Boolean,
+  count, ordinal, duration, artifact, conceptual, observer, objective, or
+  qualified evidence requires a new typed contract and exact fixtures.
+- Regenerate and review the 383-row coverage, domain/lever, risk, and
+  originality reports, plus the research-gap registry, whenever canonical
+  practice content changes.
 - Validate all imported weight sums and IDs.
 - Do not silently normalize malformed data; fail with actionable diagnostics.
 - Add tests before enabling any score mutation.
@@ -141,15 +170,18 @@ Before asking for review:
 1. Run Ruff formatting/linting, Django system checks, pytest, and relevant
    Playwright tests.
 2. Run `make pilot-check` against an isolated fresh database.
-3. Run `make compose-smoke` in a Docker-capable environment. It must exercise
+3. Run `make curriculum-check`; it must preserve the independent pilot gate,
+   exact five-protocol projection, deterministic generated reports, and
+   explicit 378-row unauthored baseline.
+4. Run `make compose-smoke` in a Docker-capable environment. It must exercise
    the mapped host port, health check, login, migrations, idempotent seed,
-   evidence/score/readiness replay, container recreation, volume persistence,
-   backup/restore, and clean shutdown.
-4. Require the aggregate GitHub **Pilot readiness gate**, then review its
+   evidence/score/readiness replay, both readiness contracts, container
+   recreation, volume persistence, backup/restore, and clean shutdown.
+5. Require the aggregate GitHub **Pilot readiness gate**, then review its
    desktop/mobile browser artifact for a pilot-bound merge.
-5. Audit changed files against this document and `docs/PROJECT_HANDOFF.md`.
-6. Report failed or unverified acceptance criteria plainly.
-7. Do not claim dynamic scoring works until score mutation is deliberately enabled and tested.
+6. Audit changed files against this document and `docs/PROJECT_HANDOFF.md`.
+7. Report failed or unverified acceptance criteria plainly.
+8. Do not claim dynamic scoring works until score mutation is deliberately enabled and tested.
 
 ## Current implementation boundary
 M1A established the runtime, persistent schema, authentication, canonical
@@ -214,8 +246,24 @@ and provides an explicit operator-only pilot-feedback purge. Existing
 feedback, check-ins, evidence, and score transitions remain immutable and
 replayable; no algorithm or activation boundary changes.
 
-Do not generalize from one session or begin another feature expansion without
-additional private-pilot findings or separate owner authorization. The next
-closeout should continue to prioritize observed usability, accessibility,
-privacy, safety, and participant-data lifecycle issues rather than inventing
-new developmental behavior.
+M6A establishes `GG-PRACTICE-CONTENT-1.0` and the additive
+`GG-CURRICULUM-EXPANSION-READINESS-1.0` foundation. Five `projected_legacy`
+packages reproduce the exact M4 runtime fingerprint from canonical YAML.
+Generated control reports explicitly show 5/383 package coverage and 378
+unauthored competencies. Risk, scoring-policy, source, protocol-family, expert
+review, research-gap, and activation registries are source-only governance;
+M6A adds no migration, protocol, action, UI, evidence mathematics, or score
+activation.
+
+M6B is the next proposed batch. It must resolve direct competency evidence
+versus protocol evidence and lever state, then introduce backward-compatible
+typed evidence through accepted ADRs, pure domain code, replayable golden
+fixtures, and property tests. Do not begin mass protocol authoring while major
+schema, evidence, safety, or UX questions remain open.
+
+M6C then establishes context-aware priority and the minimum Personal OS
+foundation: applicability, importance, readiness, urgency,
+opportunity/resources, season/capacity, defer/not-now, mission, principles,
+anti-goals, priority stack, and useful alternative recommendations. The
+representative 10–12 competency vertical slices begin only after M6C as
+Phase B.

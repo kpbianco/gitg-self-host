@@ -1,0 +1,38 @@
+lever_id,lever_name,canonical_competency_count,protocol_parent_count,recommendation_target_count,score_active_protocol_parent_count,m6a_status
+L01,Purpose and Direction,27,0,0,0,canonical_mapping_only
+L02,"Values, Integrity, and Moral Courage",55,0,0,0,canonical_mapping_only
+L03,"Spirituality, Reverence, and Transcendence",30,1,0,0,projected_parent_coverage
+L04,"Mortality, Suffering, Gratitude, and Hope",27,0,0,0,canonical_mapping_only
+L05,"Self-Knowledge, Identity, and Humility",53,2,0,0,projected_parent_coverage
+L06,Emotional Awareness and Literacy,10,0,0,0,canonical_mapping_only
+L07,Emotional Regulation and Resilience,37,0,0,0,canonical_mapping_only
+L08,Attention and Presence,15,1,1,0,projected_parent_coverage
+L09,Temperance and Desire Governance,21,0,0,0,canonical_mapping_only
+L10,"Discipline, Habits, and Follow-Through",76,2,0,1,projected_parent_coverage
+L11,"Adaptability, Uncertainty, and Learning from Failure",40,1,0,0,projected_parent_coverage
+L12,Critical Reasoning and Logic,18,0,0,0,canonical_mapping_only
+L13,"Evidence, Truth, and Epistemic Humility",57,0,0,0,canonical_mapping_only
+L14,"Systems Thinking, Judgment, and Decision-Making",56,0,0,0,canonical_mapping_only
+L15,"Learning Agility, Memory, and Teaching",44,0,0,0,canonical_mapping_only
+L16,"Creativity, Aesthetics, and Cultural Literacy",35,0,0,0,canonical_mapping_only
+L17,"Physical Health, Vitality, and Embodiment",52,1,0,0,projected_parent_coverage
+L18,Domestic Competence and Material Self-Sufficiency,25,0,0,0,canonical_mapping_only
+L19,"Digital Agency, Media Literacy, and Security",22,0,0,0,canonical_mapping_only
+L20,"Safety, Risk, and Preparedness",47,0,0,0,canonical_mapping_only
+L21,Financial Stewardship and Provision,27,0,0,0,canonical_mapping_only
+L22,"Economic Agency, Entrepreneurship, and Market Literacy",22,0,0,0,canonical_mapping_only
+L23,Communication and Listening,57,2,1,1,projected_parent_coverage
+L24,"Empathy, Social Perception, and Perspective-Taking",67,2,2,1,projected_parent_coverage
+L25,"Boundaries, Assertiveness, and Self-Respect",49,1,1,0,projected_parent_coverage
+L26,"Friendship, Belonging, and Hospitality",35,1,1,1,projected_parent_coverage
+L27,"Intimacy, Sexuality, and Partnership",17,0,0,0,canonical_mapping_only
+L28,"Family, Parenting, and Caregiving",42,0,0,0,canonical_mapping_only
+L29,"Conflict, Repair, Forgiveness, and Reconciliation",27,1,0,0,projected_parent_coverage
+L30,"Service, Citizenship, and Civic Agency",36,0,0,0,canonical_mapping_only
+L31,"Justice, Pluralism, and Social Responsibility",100,0,0,0,canonical_mapping_only
+L32,"Work, Craft, Professionalism, and Contribution",44,0,0,0,canonical_mapping_only
+L33,"Leadership, Power, Mentorship, and Institutions",39,0,0,0,canonical_mapping_only
+L34,"Play, Rest, Celebration, and Joy",22,1,1,0,projected_parent_coverage
+L35,"Nature, Exploration, and Adventure",17,0,0,0,canonical_mapping_only
+L36,"Life Design, Balance, and Seasonality",48,1,0,0,projected_parent_coverage
+L37,"Legacy, Generativity, and Transmission",7,0,0,0,canonical_mapping_only

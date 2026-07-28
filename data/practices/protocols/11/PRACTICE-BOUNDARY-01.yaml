@@ -1,0 +1,271 @@
+schema_version: GG-PRACTICE-CONTENT-1.0
+protocol_version: 1.0.0
+stable_id: PRACTICE-BOUNDARY-01
+slug: state-and-maintain-one-boundary
+name: State and Maintain One Boundary
+parent_competency_id: '11.10'
+domain_id: '11'
+governance:
+  availability: active
+  editorial_status: projected_legacy
+  runtime_projection: GG-PRACTICE-RUNTIME-PROJECTION-1.0
+  risk_class_id: RISK-MODERATE
+  scoring_policy_id: SP-SHADOW-ONLY
+  scoring_status: shadow_only
+  source_ids:
+  - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-PRODUCT-DECISIONS
+  - SRC-PROTOCOL-LIBRARY-M4
+  - SRC-CURRICULUM-SCOPE-AUDIT
+  authoring:
+    provenance: Exact projection of the reviewed M4 runtime protocol with additive M6A governance metadata.
+    content_review_status: frozen_runtime_behavior
+    research_review_status: internal_sources_only_external_review_required
+    safety_review_status: pending_specialist_expansion_review
+    accessibility_review_status: pilot_boundary_reviewed_expansion_review_pending
+    originality_review_status: legacy_exceptions_recorded_expansion_review_pending
+    ui_test_status: existing_runtime_coverage
+    last_reviewed: null
+    known_gap_ids:
+    - RG-M6A-001
+    - RG-M6A-002
+    - RG-M6A-006
+    expert_review_ids:
+    - ER-M6A-002
+    - ER-M6A-003
+  legacy_compatibility_exceptions:
+  - exception_id: LEGACY-DUPLICATE-BOUNDARY-A1-EMOTIONAL-CUES-A2
+    category: duplicate_evidence_rules
+    affected_action_ids:
+    - PRACTICE-BOUNDARY-01-A1
+    - PRACTICE-EMOTIONAL-CUES-01-A2
+    affected_markers: []
+    detail: The reviewed M4 actions share an identical practice-observation-v1 evidence-rule payload.
+    resolution_gate: M6B typed-evidence architecture and any later protocol revision.
+  deprecation:
+    deprecated: false
+    replaced_by: null
+meaning_and_fit:
+  purpose: Practice defining, stating, and proportionately following through on one low-stakes limit that
+    concerns the user's own participation.
+  why_recommended: Your current provisional profile identifies clear, proportionate limits as a useful
+    area for careful practice.
+  claims:
+  - statement: A boundary names what the user controls; this practice does not justify threats, punishment,
+      forced agreement, silent tests, or confrontation.
+    classification: product_design_judgment
+    source_ids:
+    - SRC-CANONICAL-CURRICULUM-V2
+    - SRC-PROTOCOL-LIBRARY-M4
+    limitations: The migrated five-protocol slice has not been validated as a psychometric instrument
+      or as proof of broad competency change.
+  applicability_question: Is there one low-stakes request, recurring expectation, or optional commitment
+    likely to arise in the next ten days where you can safely state a limit and choose your own follow-through?
+  not_applicable_behavior: Record not applicable or defer without penalty, do not infer a deficit, and
+    offer the listed safe alternative when useful.
+  readiness_considerations: Use only when direct communication is reasonably safe and the user can choose
+    a proportionate response within their own control.
+  opportunity_considerations: Requires one likely, low-stakes request or expectation during ten days;
+    abuse, coercive control, retaliation, or unsafe dependency excludes this protocol.
+  prerequisites:
+  - One specific low-stakes situation and a response the user can control.
+  dependencies: []
+  safe_alternatives:
+  - Draft the limit privately without communicating it when no safe opportunity exists.
+  - Use trusted, organizational, legal, clinical, or specialist support for unsafe or power-imbalanced
+    situations.
+  role_conditions:
+  - Employment, caregiving, housing, financial, institutional, and dependency roles may require specialist
+    or organizational guidance.
+  pathway_conditions:
+  - A written, spoken, signed, supported, or asynchronous statement may be used when reasonably safe.
+  worldview_conditions:
+  - Directness, obligation, hierarchy, and relational responsibility vary by culture and role; safety
+    and autonomy remain controlling limits.
+intervention:
+  protocol_class: PF-RELATIONAL-CONVERSATION
+  duration_days: 10
+  cadence: Define, state, and follow through once during ten days.
+  setup: Choose one specific request, expectation, or commitment—not a person to fix. Use this practice
+    only where direct communication is reasonably safe.
+  privacy_and_boundaries: A boundary states what you will or will not participate in and what you will
+    do; it does not force another person to agree. Do not use threats, punishment, withdrawal of care,
+    silent tests, or pressure to control someone. Do not use this protocol where abuse, coercive control,
+    stalking, discrimination, unsafe dependency, or retaliation is present or likely. Prioritize safety
+    planning and appropriate trusted, professional, legal, medical, or organizational support in those
+    situations.
+  expected_burden: About 20–40 minutes plus the naturally occurring low-stakes interaction.
+  action_count_rationale: null
+  foreseeable_misuse:
+  - Using a boundary label to justify threats, punishment, withdrawal of care, forced agreement, a silent test, or unsafe confrontation.
+  exclusions:
+  - Abuse, coercive control, stalking, discrimination, unsafe dependency, likely retaliation, legal jeopardy, or material danger.
+  actions:
+  - stable_id: PRACTICE-BOUNDARY-01-A1
+    sequence: 1
+    title: Define what you control
+    instructions: Identify one low-stakes limit. Write one sentence stating what you will or will not
+      participate in and the proportionate action you will take if the limit is crossed. Do not make another
+      person's compliance the intervention.
+    due_within_days: 3
+    evidence_rules:
+      schema_version: practice-observation-v1
+      primary_markers:
+      - user_initiated
+      supporting_markers:
+      - moved_beyond_transactional
+    expected_time: 10 minutes
+  - stable_id: PRACTICE-BOUNDARY-01-A2
+    sequence: 2
+    title: State the boundary directly
+    instructions: In a reasonably safe context, state the limit in plain, specific words. You may make
+      a request, but the boundary must not depend on forcing agreement. Do not threaten, punish, or set
+      a silent test.
+    due_within_days: null
+    evidence_rules:
+      schema_version: practice-observation-v1
+      primary_markers:
+      - moved_beyond_transactional
+      supporting_markers:
+      - follow_up_question_asked
+    expected_time: 5–10 minutes
+  - stable_id: PRACTICE-BOUNDARY-01-A3
+    sequence: 3
+    title: Follow through once
+    instructions: Within seven days, when the situation arises, carry out the proportionate action you
+      named or calmly restate the limit. Stop the protocol and seek appropriate support if safety or retaliation
+      becomes a concern.
+    due_within_days: 7
+    evidence_rules:
+      schema_version: practice-observation-v1
+      primary_markers:
+      - follow_up_within_seven_days
+      supporting_markers:
+      - user_initiated
+    expected_time: 5–10 minutes
+  adaptations:
+    low_resource:
+    - Use plain words and a response already within the user's control; no paid tool is required.
+    accessibility:
+    - Use written, augmentative, rehearsed, or supported communication and allow processing time.
+    cultural_context:
+    - Adapt wording and timing to role and community norms without turning the limit into coercion.
+    resource_variants:
+    - Privately draft or rehearse the boundary when safe direct use is not yet available.
+  pause_conditions:
+  - Pause when safety, power, dependency, retaliation, legal, employment, housing, or caregiving consequences are uncertain.
+  stop_conditions:
+  - Stop if retaliation, coercive control, abuse, stalking, discrimination, unsafe dependency, or material
+    danger is present or becomes likely.
+  escalation_conditions:
+  - Use appropriate trusted, professional, organizational, legal, medical, or emergency support for unsafe
+    or high-stakes circumstances.
+  professional_referral_conditions:
+  - Seek appropriate trauma-informed, organizational, legal, medical, or emergency support when the low-stakes safety boundary is not met.
+evidence_and_scoring:
+  accepted_evidence_types:
+  - structured firsthand observation
+  - boundary wording artifact
+  - behavioral follow-through record
+  observation_contract_version: practice-observation-v1
+  check_in_fields:
+  - user_initiated
+  - moved_beyond_transactional
+  - follow_up_question_asked
+  - follow_up_within_seven_days
+  - internal_resistance
+  adverse_or_contradictory_indicators:
+  - The statement used threats, punishment, withdrawal of care, pressure, or a silent test.
+  - The chosen action depended on forcing another person's compliance.
+  - Safety, retaliation, abuse, or dependency concerns emerged.
+  independence_rule: Record self-directed, planning-aid, or guided support under GG-EVIDENCE-1.0; support
+    changes evidence mass, not human worth.
+  context_transfer_rule: Evidence remains attached to the observed context; one context never establishes
+    broad competency transfer.
+  repetition_rule: Repeated observations use the frozen diminishing-return multipliers in GG-EVIDENCE-1.0
+    and remain independently replayable.
+  recency_rule: No new retention mathematics is introduced in M6A; later evidence remains dated and any
+    future recency rule requires a versioned contract.
+  performance_rubric: Performance concerns defining a controllable limit, communicating it directly where
+    safe, and following through proportionately; another person's agreement is not scored.
+  evidence_quality_rubric: Quality reflects specificity, firsthand observation, safety, and distinction
+    between the user's action and another person's response.
+  scoring_eligibility: M6A preserves the legacy observation contract for audit only. Moderate-risk specialist
+    review and typed evidence design are required before score activation.
+  competency_contribution: The runtime event is evidence about protocol performance only; direct competency
+    state is not implemented in M6A.
+  canonical_lever_allocation: parent_competency_mapping
+  recommendation_target_lever_ids:
+  - L25
+  minimum_evidence_before_state_update: No current-state update is permitted under the shadow-only policy.
+  withholding_conditions:
+  - All evidence is withheld from current score state.
+  - Unsafe, retaliatory, abusive, coercive, legal, or materially high-stakes contexts are excluded.
+  - Another person's compliance, distress, or disclosure is never evidence of user mastery.
+completion_and_review:
+  completion_criteria:
+  - All three actions attempted
+  - At least two actions completed
+  - One boundary stated directly
+  - One proportionate follow-through observed within seven days
+  - Final review submitted
+  completion_rules:
+    minimum_completed: 2
+    substantive_markers:
+    - moved_beyond_transactional
+    - follow_up_within_seven_days
+    marker_mode: all
+  mastery_disclaimer: Completing this practice does not establish mastery.
+  progression_criteria: Consider another low-stakes boundary only when the first remained safe, specific,
+    non-coercive, and within the user's control.
+  transfer_limit: One stated limit does not establish general assertiveness, relationship health, safety,
+    or competence across roles and power conditions.
+  reflection:
+    before: What limit and proportionate response are actually within your control?
+    during: Did your words state the limit directly without threat, punishment, bargaining, or a silent
+      test?
+    after: What happened when you followed through, including any evidence that the situation was unsafe
+      or the approach did not fit?
+  review_guidance:
+    repeat: Repeat only in another low-stakes, reasonably safe situation with a controllable response.
+    adapt: Change wording, medium, timing, support, or scope while preserving autonomy and non-coercion.
+    stop: Stop at any sign of abuse, retaliation, stalking, discrimination, unsafe dependency, or material
+      danger.
+    escalate: Use appropriate trusted, professional, organizational, legal, medical, or emergency support.
+  evidence_examples:
+    supportive: The user stated a specific low-stakes limit and carried out the named proportionate response
+      safely.
+    mixed: The limit was stated, but wording was unclear or the situation did not arise for follow-through.
+    contradictory: The response relied on threats, punishment, forced agreement, or an unsafe confrontation.
+    inconclusive: No suitable situation arose or safety uncertainty made direct use inappropriate.
+presentation:
+  setup_copy:
+    context_heading: Choose one low-stakes limit you can control.
+    boundary_heading: A boundary is not coercion or punishment.
+    timing_hint: Choose a date when this specific situation is likely to arise safely.
+    context_help: Use a short private label for the request, expectation, or commitment. Do not record
+      identifying or sensitive details.
+    applicability_heading: A specific, likely situation—not a test of another person
+    applicability_yes_label: Yes, one safe, low-stakes situation is likely to arise
+    completion_signal_label: One boundary stated directly and one proportionate follow-through within
+      seven days
+    history_marker_label: direct boundary statement
+    boundary_acknowledgement: I will use a low-stakes context where direct communication is reasonably
+      safe, state only what I control, and not use threats, punishment, silent tests, or pressure.
+    check_in_labels:
+      user_initiated: I chose a specific limit and a response that I control
+      moved_beyond_transactional: I stated the boundary directly in specific words
+      follow_up_question_asked: I checked understanding without bargaining or testing
+      follow_up_within_seven_days: I followed through proportionately or restated the boundary within
+        seven days
+  check_in_labels:
+    user_initiated: I chose a specific limit and a response that I control
+    moved_beyond_transactional: I stated the boundary directly in specific words
+    follow_up_question_asked: I checked understanding without bargaining or testing
+    follow_up_within_seven_days: I followed through proportionately or restated the boundary within seven days
+    internal_resistance: I noticed how difficult or unsafe the boundary felt
+  completion_copy: Review whether the limit stayed specific, controllable, safe, and non-coercive. One
+    boundary does not establish mastery or make another person responsible for the outcome.
+  plain_language_evidence: The record describes what limit you controlled, whether you stated it safely,
+    and whether your own proportionate follow-through occurred.
+  display_order: 4

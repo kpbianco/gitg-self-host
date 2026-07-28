@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grounded-growth.local/schema/scoring-policy-registry-v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "not_applicable_disposition", "policies"],
+  "properties": {
+    "schema_version": {"const": "GG-SCORING-POLICY-1.0"},
+    "not_applicable_disposition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["disposition_id", "state_effect", "explanation"],
+      "properties": {
+        "disposition_id": {"const": "N-A-NO-DEFICIT"},
+        "state_effect": {"const": "withhold_without_penalty"},
+        "explanation": {"type": "string", "minLength": 1}
+      }
+    },
+    "policies": {
+      "type": "array",
+      "minItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "policy_id",
+          "name",
+          "accepted_evidence",
+          "required_for_update",
+          "preferred_evidence",
+          "state_effect",
+          "withholding_behavior",
+          "free_text_policy",
+          "completion_mastery_boundary",
+          "not_applicable_disposition"
+        ],
+        "properties": {
+          "policy_id": {"type": "string", "pattern": "^SP-[A-Z0-9-]+$"},
+          "name": {"type": "string", "minLength": 1},
+          "accepted_evidence": {
+            "type": "array",
+            "minItems": 1,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "required_for_update": {"type": "string", "minLength": 1},
+          "preferred_evidence": {
+            "type": "array",
+            "minItems": 1,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "state_effect": {"enum": ["eligible_if_activated", "shadow_only", "qualified_update_only", "no_score_update"]},
+          "withholding_behavior": {"type": "string", "minLength": 1},
+          "free_text_policy": {"const": "never_an_opaque_score_input"},
+          "completion_mastery_boundary": {"const": "completion_never_establishes_mastery"},
+          "not_applicable_disposition": {"const": "N-A-NO-DEFICIT"}
+        }
+      }
+    }
+  }
+}

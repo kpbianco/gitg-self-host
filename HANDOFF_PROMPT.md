@@ -10,21 +10,25 @@ Start by reading, in order:
 1. `AGENTS.md`
 2. `docs/PROJECT_HANDOFF.md`
 3. `docs/PRODUCT_DECISIONS.md`
-4. `docs/pilot/PILOT_002_FINDINGS.md`
-5. `docs/SCORING_DESIGN.md`
-6. `MANIFEST.tsv`
+4. `docs/program/M6_CURRICULUM_EXPANSION.md`
+5. `docs/practice-content.md`
+6. `docs/pilot/PILOT_002_FINDINGS.md`
+7. `docs/SCORING_DESIGN.md`
+8. `MANIFEST.tsv`
 
 Then inspect the canonical data under:
 - `data/curriculum/`
 - `data/model/`
 - `data/assessment/`
 - `data/notion/`
+- `data/practices/`
 
 Treat `legacy/` as provenance only. Do not build implementation behavior from legacy notes when canonical files disagree.
 
 Work only on the milestone batch explicitly authorized by the repository
-owner. M1 through M3B, M4A–M4E, and M5A are reviewed and merged; Decisions 023–038
-are accepted.
+owner. M1 through M3B, M4A–M4E, M5A, and M5B are reviewed and merged;
+Decisions 023–045 are accepted and Decision 046 records the binding guided
+life-OS direction. M6A is implemented for owner review.
 M4A adds score-inactive non-instrumental play; M4B adds score-inactive
 emotional cue detection; M4C adds score-inactive boundary practice; M4D adds a
 score-inactive attention-presence experiment. M4E adds the read-only
@@ -93,7 +97,27 @@ markers, and requires a real attempt before a new evidence submission. It
 also adds a preview-first, exact-user operator purge for the optional
 pilot-feedback table. Existing feedback, check-ins, evidence, score
 transitions, and replay mathematics remain unchanged. Decisions 039–041 are
-proposed for M5B review.
+accepted.
+
+M6A replaces the hard-coded protocol tuple with the manifest-listed canonical
+source under `data/practices/`. Five `projected_legacy` packages preserve the
+exact five-protocol/fifteen-action runtime fingerprint and friendship-only
+score activation. Source, family, risk, scoring-policy, research-gap,
+expert-review, activation, coverage, and originality controls are source-only;
+M6A adds no migration, protocol, action, UI, evidence math, ranking math, or
+score activation. `make curriculum-check` is additive to the unchanged
+`make pilot-check`.
+
+The product direction is a guided life OS for people who may be driven but
+misdirected or operating on autopilot. Assessment/personality are framing,
+not headline or destiny. The eventual flow connects a concise
+Truth/Autopilot Audit, mission, principles, anti-goals, season/capacity,
+priority stack, weekly execution, and proof-based review while showing only a
+small context-fit set of practices.
+
+M6B is next: typed competency evidence and scoring architecture with no bulk
+activation. M6C follows with context-aware priority and the minimum Personal
+OS foundation. Representative vertical slices begin after M6C as Phase B.
 
 Acceptance criteria are in `docs/PROJECT_HANDOFF.md`. Add automated tests for
 every testable criterion. The app must pass `make compose-smoke` in a
@@ -108,6 +132,7 @@ Before changing code:
 Then implement in reviewable batches. For each batch:
 - run Ruff, Django checks, pytest, and applicable Playwright tests;
 - run `make pilot-check`;
+- run `make curriculum-check`;
 - audit against the product doctrine;
 - report exact passes/failures;
 - open a PR and ask me to approve it.

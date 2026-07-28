@@ -1,0 +1,580 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grounded-growth.local/schema/practice-content-v1",
+  "title": "Grounded Growth canonical practice content",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "protocol_version",
+    "stable_id",
+    "slug",
+    "name",
+    "parent_competency_id",
+    "domain_id",
+    "governance",
+    "meaning_and_fit",
+    "intervention",
+    "evidence_and_scoring",
+    "completion_and_review",
+    "presentation"
+  ],
+  "properties": {
+    "schema_version": {"const": "GG-PRACTICE-CONTENT-1.0"},
+    "protocol_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "stable_id": {"type": "string", "pattern": "^PRACTICE-[A-Z0-9-]+-[0-9]{2}$"},
+    "slug": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "name": {"type": "string", "minLength": 1},
+    "parent_competency_id": {"type": "string", "pattern": "^[0-9]{2}\\.[0-9]{2}$"},
+    "domain_id": {"type": "string", "pattern": "^[0-9]{2}$"},
+    "governance": {"$ref": "#/$defs/governance"},
+    "meaning_and_fit": {"$ref": "#/$defs/meaningAndFit"},
+    "intervention": {"$ref": "#/$defs/intervention"},
+    "evidence_and_scoring": {"$ref": "#/$defs/evidenceAndScoring"},
+    "completion_and_review": {"$ref": "#/$defs/completionAndReview"},
+    "presentation": {"$ref": "#/$defs/presentation"}
+  },
+  "$defs": {
+    "nonEmptyString": {"type": "string", "minLength": 1},
+    "stringList": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/nonEmptyString"},
+      "uniqueItems": true
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "availability",
+        "editorial_status",
+        "runtime_projection",
+        "risk_class_id",
+        "scoring_policy_id",
+        "scoring_status",
+        "source_ids",
+        "authoring",
+        "legacy_compatibility_exceptions",
+        "deprecation"
+      ],
+      "properties": {
+        "availability": {"enum": ["active", "inactive"]},
+        "editorial_status": {"enum": ["projected_legacy", "draft", "expert_review", "release_candidate"]},
+        "runtime_projection": {"enum": ["GG-PRACTICE-RUNTIME-PROJECTION-1.0", "none"]},
+        "risk_class_id": {"type": "string", "pattern": "^RISK-(LOW|MODERATE|HIGH)$"},
+        "scoring_policy_id": {"type": "string", "pattern": "^SP-[A-Z0-9-]+$"},
+        "scoring_status": {
+          "enum": [
+            "eligible_inactive",
+            "active",
+            "shadow_only",
+            "qualified_only",
+            "non_scored"
+          ]
+        },
+        "source_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^SRC-[A-Z0-9-]+$"}
+        },
+        "authoring": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "provenance",
+            "content_review_status",
+            "research_review_status",
+            "safety_review_status",
+            "accessibility_review_status",
+            "originality_review_status",
+            "ui_test_status",
+            "last_reviewed",
+            "known_gap_ids",
+            "expert_review_ids"
+          ],
+          "properties": {
+            "provenance": {"$ref": "#/$defs/nonEmptyString"},
+            "content_review_status": {
+              "enum": ["pending", "in_review", "complete", "frozen_runtime_behavior"]
+            },
+            "research_review_status": {
+              "enum": [
+                "pending",
+                "in_review",
+                "complete",
+                "internal_sources_only_external_review_required"
+              ]
+            },
+            "safety_review_status": {
+              "enum": [
+                "pending",
+                "in_review",
+                "complete",
+                "pilot_boundary_reviewed_expansion_review_pending",
+                "pending_specialist_expansion_review"
+              ]
+            },
+            "accessibility_review_status": {
+              "enum": [
+                "pending",
+                "in_review",
+                "complete",
+                "pilot_boundary_reviewed_expansion_review_pending"
+              ]
+            },
+            "originality_review_status": {
+              "enum": [
+                "pending",
+                "in_review",
+                "complete",
+                "legacy_exceptions_recorded_expansion_review_pending"
+              ]
+            },
+            "ui_test_status": {
+              "enum": [
+                "not_started",
+                "in_progress",
+                "complete",
+                "not_applicable",
+                "existing_runtime_coverage"
+              ]
+            },
+            "last_reviewed": {"type": ["string", "null"], "format": "date"},
+            "known_gap_ids": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {"type": "string", "pattern": "^RG-[A-Z0-9-]+-[0-9]{3}$"}
+            },
+            "expert_review_ids": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {"type": "string", "pattern": "^ER-[A-Z0-9-]+-[0-9]{3}$"}
+            }
+          }
+        },
+        "legacy_compatibility_exceptions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "exception_id",
+              "category",
+              "affected_action_ids",
+              "affected_markers",
+              "detail",
+              "resolution_gate"
+            ],
+            "properties": {
+              "exception_id": {
+                "type": "string",
+                "pattern": "^LEGACY-[A-Z0-9-]+$"
+              },
+              "category": {
+                "enum": [
+                  "duplicate_evidence_rules",
+                  "uncollectable_action_marker"
+                ]
+              },
+              "affected_action_ids": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "pattern": "^PRACTICE-[A-Z0-9-]+-[0-9]{2}-A[0-9]+$"
+                }
+              },
+              "affected_markers": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {"$ref": "#/$defs/nonEmptyString"}
+              },
+              "detail": {"$ref": "#/$defs/nonEmptyString"},
+              "resolution_gate": {"$ref": "#/$defs/nonEmptyString"}
+            }
+          }
+        },
+        "deprecation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["deprecated", "replaced_by"],
+          "properties": {
+            "deprecated": {"type": "boolean"},
+            "replaced_by": {
+              "type": ["string", "null"],
+              "pattern": "^PRACTICE-[A-Z0-9-]+-[0-9]{2}$"
+            }
+          }
+        }
+      }
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["statement", "classification", "source_ids", "limitations"],
+      "properties": {
+        "statement": {"$ref": "#/$defs/nonEmptyString"},
+        "classification": {
+          "enum": [
+            "empirical_finding",
+            "professional_or_public_standard",
+            "philosophical_or_normative_position",
+            "cross_tradition_synthesis",
+            "product_design_judgment",
+            "safety_precaution"
+          ]
+        },
+        "source_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^SRC-[A-Z0-9-]+$"}
+        },
+        "limitations": {"$ref": "#/$defs/nonEmptyString"}
+      }
+    },
+    "meaningAndFit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "purpose",
+        "why_recommended",
+        "claims",
+        "applicability_question",
+        "not_applicable_behavior",
+        "readiness_considerations",
+        "opportunity_considerations",
+        "prerequisites",
+        "dependencies",
+        "safe_alternatives",
+        "role_conditions",
+        "pathway_conditions",
+        "worldview_conditions"
+      ],
+      "properties": {
+        "purpose": {"$ref": "#/$defs/nonEmptyString"},
+        "why_recommended": {"$ref": "#/$defs/nonEmptyString"},
+        "claims": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/claim"}
+        },
+        "applicability_question": {"$ref": "#/$defs/nonEmptyString"},
+        "not_applicable_behavior": {"$ref": "#/$defs/nonEmptyString"},
+        "readiness_considerations": {"$ref": "#/$defs/nonEmptyString"},
+        "opportunity_considerations": {"$ref": "#/$defs/nonEmptyString"},
+        "prerequisites": {"$ref": "#/$defs/stringList"},
+        "dependencies": {"$ref": "#/$defs/stringList"},
+        "safe_alternatives": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        },
+        "role_conditions": {"$ref": "#/$defs/stringList"},
+        "pathway_conditions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        },
+        "worldview_conditions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        }
+      }
+    },
+    "evidenceRules": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "primary_markers", "supporting_markers"],
+      "properties": {
+        "schema_version": {"const": "practice-observation-v1"},
+        "primary_markers": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        },
+        "supporting_markers": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        }
+      }
+    },
+    "action": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "sequence",
+        "title",
+        "instructions",
+        "expected_time",
+        "due_within_days",
+        "evidence_rules"
+      ],
+      "properties": {
+        "stable_id": {"type": "string", "pattern": "^PRACTICE-[A-Z0-9-]+-[0-9]{2}-A[0-9]+$"},
+        "sequence": {"type": "integer", "minimum": 1},
+        "title": {"$ref": "#/$defs/nonEmptyString"},
+        "instructions": {"$ref": "#/$defs/nonEmptyString"},
+        "expected_time": {"$ref": "#/$defs/nonEmptyString"},
+        "due_within_days": {"type": ["integer", "null"], "minimum": 1},
+        "evidence_rules": {"$ref": "#/$defs/evidenceRules"}
+      }
+    },
+    "adaptations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["low_resource", "accessibility", "cultural_context", "resource_variants"],
+      "properties": {
+        "low_resource": {"$ref": "#/$defs/stringList"},
+        "accessibility": {"$ref": "#/$defs/stringList"},
+        "cultural_context": {"$ref": "#/$defs/stringList"},
+        "resource_variants": {"$ref": "#/$defs/stringList"}
+      }
+    },
+    "intervention": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "protocol_class",
+        "duration_days",
+        "cadence",
+        "setup",
+        "privacy_and_boundaries",
+        "expected_burden",
+        "action_count_rationale",
+        "foreseeable_misuse",
+        "exclusions",
+        "actions",
+        "adaptations",
+        "pause_conditions",
+        "stop_conditions",
+        "escalation_conditions",
+        "professional_referral_conditions"
+      ],
+      "properties": {
+        "protocol_class": {"type": "string", "pattern": "^PF-[A-Z0-9-]+$"},
+        "duration_days": {"type": "integer", "minimum": 1, "maximum": 365},
+        "cadence": {"$ref": "#/$defs/nonEmptyString"},
+        "setup": {"$ref": "#/$defs/nonEmptyString"},
+        "privacy_and_boundaries": {"$ref": "#/$defs/nonEmptyString"},
+        "expected_burden": {"$ref": "#/$defs/nonEmptyString"},
+        "action_count_rationale": {
+          "type": ["string", "null"],
+          "minLength": 1
+        },
+        "foreseeable_misuse": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        },
+        "exclusions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        },
+        "actions": {"type": "array", "minItems": 1, "maxItems": 12, "items": {"$ref": "#/$defs/action"}},
+        "adaptations": {"$ref": "#/$defs/adaptations"},
+        "pause_conditions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        },
+        "stop_conditions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        },
+        "escalation_conditions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        },
+        "professional_referral_conditions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        }
+      }
+    },
+    "evidenceAndScoring": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "accepted_evidence_types",
+        "observation_contract_version",
+        "check_in_fields",
+        "adverse_or_contradictory_indicators",
+        "independence_rule",
+        "context_transfer_rule",
+        "repetition_rule",
+        "recency_rule",
+        "performance_rubric",
+        "evidence_quality_rubric",
+        "scoring_eligibility",
+        "competency_contribution",
+        "canonical_lever_allocation",
+        "recommendation_target_lever_ids",
+        "minimum_evidence_before_state_update",
+        "withholding_conditions"
+      ],
+      "properties": {
+        "accepted_evidence_types": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        },
+        "observation_contract_version": {"const": "practice-observation-v1"},
+        "check_in_fields": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        },
+        "adverse_or_contradictory_indicators": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        },
+        "independence_rule": {"$ref": "#/$defs/nonEmptyString"},
+        "context_transfer_rule": {"$ref": "#/$defs/nonEmptyString"},
+        "repetition_rule": {"$ref": "#/$defs/nonEmptyString"},
+        "recency_rule": {"$ref": "#/$defs/nonEmptyString"},
+        "performance_rubric": {"$ref": "#/$defs/nonEmptyString"},
+        "evidence_quality_rubric": {"$ref": "#/$defs/nonEmptyString"},
+        "scoring_eligibility": {"$ref": "#/$defs/nonEmptyString"},
+        "competency_contribution": {"$ref": "#/$defs/nonEmptyString"},
+        "canonical_lever_allocation": {"const": "parent_competency_mapping"},
+        "recommendation_target_lever_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^L[0-9]{2}$"}
+        },
+        "minimum_evidence_before_state_update": {"$ref": "#/$defs/nonEmptyString"},
+        "withholding_conditions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        }
+      }
+    },
+    "completionRules": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["minimum_completed", "substantive_markers"],
+      "properties": {
+        "minimum_completed": {"type": "integer", "minimum": 1},
+        "substantive_markers": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        },
+        "marker_mode": {"enum": ["any", "all"]}
+      }
+    },
+    "reflection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["before", "during", "after"],
+      "properties": {
+        "before": {"$ref": "#/$defs/nonEmptyString"},
+        "during": {"$ref": "#/$defs/nonEmptyString"},
+        "after": {"$ref": "#/$defs/nonEmptyString"}
+      }
+    },
+    "reviewGuidance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repeat", "adapt", "stop", "escalate"],
+      "properties": {
+        "repeat": {"$ref": "#/$defs/nonEmptyString"},
+        "adapt": {"$ref": "#/$defs/nonEmptyString"},
+        "stop": {"$ref": "#/$defs/nonEmptyString"},
+        "escalate": {"$ref": "#/$defs/nonEmptyString"}
+      }
+    },
+    "evidenceExamples": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["supportive", "mixed", "contradictory", "inconclusive"],
+      "properties": {
+        "supportive": {"$ref": "#/$defs/nonEmptyString"},
+        "mixed": {"$ref": "#/$defs/nonEmptyString"},
+        "contradictory": {"$ref": "#/$defs/nonEmptyString"},
+        "inconclusive": {"$ref": "#/$defs/nonEmptyString"}
+      }
+    },
+    "completionAndReview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "completion_criteria",
+        "completion_rules",
+        "mastery_disclaimer",
+        "progression_criteria",
+        "transfer_limit",
+        "reflection",
+        "review_guidance",
+        "evidence_examples"
+      ],
+      "properties": {
+        "completion_criteria": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/nonEmptyString"}
+        },
+        "completion_rules": {"$ref": "#/$defs/completionRules"},
+        "mastery_disclaimer": {"const": "Completing this practice does not establish mastery."},
+        "progression_criteria": {"$ref": "#/$defs/nonEmptyString"},
+        "transfer_limit": {"$ref": "#/$defs/nonEmptyString"},
+        "reflection": {"$ref": "#/$defs/reflection"},
+        "review_guidance": {"$ref": "#/$defs/reviewGuidance"},
+        "evidence_examples": {"$ref": "#/$defs/evidenceExamples"}
+      }
+    },
+    "setupCopyValue": {
+      "oneOf": [
+        {"type": "string", "minLength": 1},
+        {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {"type": "string", "minLength": 1}
+        }
+      ]
+    },
+    "presentation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "setup_copy",
+        "check_in_labels",
+        "completion_copy",
+        "plain_language_evidence",
+        "display_order"
+      ],
+      "properties": {
+        "setup_copy": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {"$ref": "#/$defs/setupCopyValue"}
+        },
+        "check_in_labels": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {"type": "string", "minLength": 1}
+        },
+        "completion_copy": {"$ref": "#/$defs/nonEmptyString"},
+        "plain_language_evidence": {"$ref": "#/$defs/nonEmptyString"},
+        "display_order": {"type": "integer", "minimum": 1}
+      }
+    }
+  }
+}

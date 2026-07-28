@@ -1,0 +1,93 @@
+schema_version: GG-SCORING-POLICY-1.0
+not_applicable_disposition:
+  disposition_id: N-A-NO-DEFICIT
+  state_effect: withhold_without_penalty
+  explanation: A protocol that does not fit the person's context is withheld or deferred and never interpreted as a deficit.
+policies:
+  - policy_id: SP-SELF-REPORT-ELIGIBLE
+    name: Structured self-report eligible
+    accepted_evidence:
+      - versioned structured firsthand observation
+      - behavioral adherence record
+      - contradiction or adverse-outcome record
+    required_for_update: Replay-verified submitted evidence under a separately activated scoring contract.
+    preferred_evidence:
+      - repeated firsthand observations
+      - corroborated or longitudinal evidence where proportionate and consented
+    state_effect: eligible_if_activated
+    withholding_behavior: Withhold drafts, unattempted actions, inconclusive direction, unavailable baseline mass, and evidence outside the reviewed contract.
+    free_text_policy: never_an_opaque_score_input
+    completion_mastery_boundary: completion_never_establishes_mastery
+    not_applicable_disposition: N-A-NO-DEFICIT
+  - policy_id: SP-CORROBORATION-REQUIRED
+    name: Corroborated or multi-source evidence required
+    accepted_evidence:
+      - structured self-report
+      - consented observer evidence
+      - independent artifact or longitudinal record
+    required_for_update: At least two independent evidence types, including one source beyond immediate self-report.
+    preferred_evidence:
+      - consented observer evidence
+      - repeated evidence across contexts
+    state_effect: eligible_if_activated
+    withholding_behavior: Self-report alone remains visible but cannot update state.
+    free_text_policy: never_an_opaque_score_input
+    completion_mastery_boundary: completion_never_establishes_mastery
+    not_applicable_disposition: N-A-NO-DEFICIT
+  - policy_id: SP-ARTIFACT-OBJECTIVE-PREFERRED
+    name: Objective or artifact evidence preferred
+    accepted_evidence:
+      - reviewed artifact
+      - bounded objective indicator
+      - structured adherence observation
+    required_for_update: A versioned artifact or objective indicator plus sufficient provenance and review.
+    preferred_evidence:
+      - direct artifact criteria
+      - repeated objective indicator
+    state_effect: eligible_if_activated
+    withholding_behavior: Completion claims without an inspectable indicator do not update state.
+    free_text_policy: never_an_opaque_score_input
+    completion_mastery_boundary: completion_never_establishes_mastery
+    not_applicable_disposition: N-A-NO-DEFICIT
+  - policy_id: SP-QUALIFIED-EVIDENCE-REQUIRED
+    name: Qualified professional evidence required
+    accepted_evidence:
+      - minimal qualified-review attestation
+      - versioned safety or readiness disposition
+    required_for_update: Evidence from a qualified reviewer under an approved privacy-minimizing contract.
+    preferred_evidence:
+      - minimal attestation without sensitive narrative
+    state_effect: qualified_update_only
+    withholding_behavior: User check-ins and unverified external claims never update state.
+    free_text_policy: never_an_opaque_score_input
+    completion_mastery_boundary: completion_never_establishes_mastery
+    not_applicable_disposition: N-A-NO-DEFICIT
+  - policy_id: SP-SHADOW-ONLY
+    name: Shadow-only evidence
+    accepted_evidence:
+      - versioned structured observation
+      - contradiction or adverse-outcome record
+      - future typed evidence fixture
+    required_for_update: No production state update is permitted.
+    preferred_evidence:
+      - deterministic synthetic fixtures
+      - replayable pilot observations
+    state_effect: shadow_only
+    withholding_behavior: Evidence may support offline evaluation but is withheld from current score state.
+    free_text_policy: never_an_opaque_score_input
+    completion_mastery_boundary: completion_never_establishes_mastery
+    not_applicable_disposition: N-A-NO-DEFICIT
+  - policy_id: SP-NON-SCORED-REFLECTION
+    name: Non-scored reflection
+    accepted_evidence:
+      - private reflection
+      - completion record
+      - explicit not-applicable or defer decision
+    required_for_update: No score update is defined.
+    preferred_evidence:
+      - user-controlled private reflection
+    state_effect: no_score_update
+    withholding_behavior: Store only what is necessary for the experience; never convert reflection into a hidden score.
+    free_text_policy: never_an_opaque_score_input
+    completion_mastery_boundary: completion_never_establishes_mastery
+    not_applicable_disposition: N-A-NO-DEFICIT
