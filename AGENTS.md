@@ -136,6 +136,21 @@ The accepted rationale is recorded in
 - Preserve `practice-observation-v1` for historical replay. New Boolean,
   count, ordinal, duration, artifact, conceptual, observer, objective, or
   qualified evidence requires a new typed contract and exact fixtures.
+- `GG-TYPED-EVIDENCE-1.0` and `typed-evidence-rules-v1` are a parallel,
+  pure, shadow-only M6B path. Version dispatch must fail closed, typed values
+  require explicit normalization rules, and free text, artifact contents, and
+  sensitive observer/qualified-review narrative are never opaque score input.
+- Assessment v1.1 provides lever baselines, not competency baselines.
+  `GG-COMPETENCY-EVIDENCE-SHADOW-1.0` is evidence-only and unknown when no
+  eligible direct evidence exists. Never feed a lever-derived competency
+  summary back into direct competency state.
+- `GG-COMPETENCY-LEVER-SHADOW-1.0` may apply one designated competency
+  contribution per immutable event through the full canonical parent mapping.
+  Reject duplicate event keys; do not count protocol performance and direct
+  competency evidence twice; do not substitute recommendation-target levers.
+- `GG-PRODUCTION-SCORE-ELIGIBILITY-1.0` is separate from capture and shadow
+  output. Passing typed evidence or shadow fixtures never changes production
+  activation.
 - Regenerate and review the 383-row coverage, domain/lever, risk, and
   originality reports, plus the research-gap registry, whenever canonical
   practice content changes.
@@ -173,15 +188,18 @@ Before asking for review:
 3. Run `make curriculum-check`; it must preserve the independent pilot gate,
    exact five-protocol projection, deterministic generated reports, and
    explicit 378-row unauthored baseline.
-4. Run `make compose-smoke` in a Docker-capable environment. It must exercise
+4. For M6B and later, run `make competency-evidence-check`; it must preserve
+   exact v1 replay, validate the additive typed/shadow software contracts, and
+   report specialist acceptance separately from software readiness.
+5. Run `make compose-smoke` in a Docker-capable environment. It must exercise
    the mapped host port, health check, login, migrations, idempotent seed,
-   evidence/score/readiness replay, both readiness contracts, container
+   evidence/score/readiness replay, all applicable readiness contracts, container
    recreation, volume persistence, backup/restore, and clean shutdown.
-5. Require the aggregate GitHub **Pilot readiness gate**, then review its
+6. Require the aggregate GitHub **Pilot readiness gate**, then review its
    desktop/mobile browser artifact for a pilot-bound merge.
-6. Audit changed files against this document and `docs/PROJECT_HANDOFF.md`.
-7. Report failed or unverified acceptance criteria plainly.
-8. Do not claim dynamic scoring works until score mutation is deliberately enabled and tested.
+7. Audit changed files against this document and `docs/PROJECT_HANDOFF.md`.
+8. Report failed or unverified acceptance criteria plainly.
+9. Do not claim dynamic scoring works until score mutation is deliberately enabled and tested.
 
 ## Current implementation boundary
 M1A established the runtime, persistent schema, authentication, canonical
@@ -255,11 +273,19 @@ review, research-gap, and activation registries are source-only governance;
 M6A adds no migration, protocol, action, UI, evidence mathematics, or score
 activation.
 
-M6B is the next proposed batch. It must resolve direct competency evidence
-versus protocol evidence and lever state, then introduce backward-compatible
-typed evidence through accepted ADRs, pure domain code, replayable golden
-fixtures, and property tests. Do not begin mass protocol authoring while major
-schema, evidence, safety, or UX questions remain open.
+M6B is the current proposed batch. It introduces pure
+`GG-TYPED-EVIDENCE-1.0` evaluation,
+`GG-COMPETENCY-EVIDENCE-SHADOW-1.0`,
+`GG-COMPETENCY-LEVER-SHADOW-1.0`, and
+`GG-PRODUCTION-SCORE-ELIGIBILITY-1.0`, guarded by additive
+`GG-COMPETENCY-EVIDENCE-READINESS-1.0`. It adds no migration, UI, protocol,
+action, recommendation input, or score activation. Existing v1 evidence,
+scoring, state, ranking, and five-protocol runtime behavior remain exact.
+
+M6B implementation does not itself satisfy the pending measurement,
+accessibility, and privacy/safety review in `ER-M6A-003`. Keep
+`RG-M6A-002` open and do not claim M6B acceptance or begin mass authoring
+until that recorded review is truthfully complete.
 
 M6C then establishes context-aware priority and the minimum Personal OS
 foundation: applicability, importance, readiness, urgency,

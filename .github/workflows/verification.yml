@@ -30,6 +30,7 @@ jobs:
       - run: make test PYTHON=python
       - run: make pilot-check PYTHON=python
       - run: make curriculum-check PYTHON=python
+      - run: make competency-evidence-check PYTHON=python
 
   browser:
     name: Playwright core journeys

@@ -8,5 +8,6 @@
 - [ADR 0006 — Keep protocol evidence, competency evidence, and lever state distinct](0006-competency-evidence-and-lever-state.md)
 - [ADR 0007 — New evidence types require a versioned replay contract](0007-versioned-typed-evidence-boundary.md)
 - [ADR 0008 — Score activation is an explicit release decision](0008-explicit-score-activation-ledger.md)
+- [ADR 0009 — One-way competency shadow and separate production eligibility](0009-one-way-competency-shadow-and-production-eligibility.md)
 
 Accepted records are binding unless a later record explicitly supersedes them.

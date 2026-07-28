@@ -27,8 +27,8 @@ Treat `legacy/` as provenance only. Do not build implementation behavior from le
 
 Work only on the milestone batch explicitly authorized by the repository
 owner. M1 through M3B, M4A–M4E, M5A, and M5B are reviewed and merged;
-Decisions 023–045 are accepted and Decision 046 records the binding guided
-life-OS direction. M6A is implemented for owner review.
+M6A is reviewed and merged; Decisions 023–046 are accepted. Decisions 047–049
+describe the proposed M6B contracts and remain proposed until M6B review.
 M4A adds score-inactive non-instrumental play; M4B adds score-inactive
 emotional cue detection; M4C adds score-inactive boundary practice; M4D adds a
 score-inactive attention-presence experiment. M4E adds the read-only
@@ -115,9 +115,29 @@ Truth/Autopilot Audit, mission, principles, anti-goals, season/capacity,
 priority stack, weekly execution, and proof-based review while showing only a
 small context-fit set of practices.
 
-M6B is next: typed competency evidence and scoring architecture with no bulk
-activation. M6C follows with context-aware priority and the minimum Personal
-OS foundation. Representative vertical slices begin after M6C as Phase B.
+M6B is the current proposed batch. It adds pure
+`GG-TYPED-EVIDENCE-1.0` / `typed-evidence-rules-v1` evaluation,
+evidence-only `GG-COMPETENCY-EVIDENCE-SHADOW-1.0`, one-way
+`GG-COMPETENCY-LEVER-SHADOW-1.0`, separate
+`GG-PRODUCTION-SCORE-ELIGIBILITY-1.0`, and additive
+`GG-COMPETENCY-EVIDENCE-READINESS-1.0`. It must not add a migration, UI,
+protocol, action, context-priority input, or score activation.
+
+Assessment v1.1 creates lever baselines, not competency baselines. A
+lever-derived competency summary never feeds direct competency state.
+Typed events may contribute at most once through the complete canonical
+parent mapping, remain attached to their assessment epoch, and fail closed on
+unknown versions. Existing v1 replay and friendship-only production scoring
+remain exact.
+
+`ER-M6A-003` remains pending and `RG-M6A-002` remains open. Implementation and
+software readiness may complete, but M6B acceptance and mass authoring remain
+blocked until measurement, accessibility, and privacy/safety review is
+truthfully recorded. Do not fabricate completed reviewer roles or weaken that
+gate.
+
+M6C follows with context-aware priority and the minimum Personal OS
+foundation. Representative vertical slices begin after M6C as Phase B.
 
 Acceptance criteria are in `docs/PROJECT_HANDOFF.md`. Add automated tests for
 every testable criterion. The app must pass `make compose-smoke` in a
@@ -133,6 +153,7 @@ Then implement in reviewable batches. For each batch:
 - run Ruff, Django checks, pytest, and applicable Playwright tests;
 - run `make pilot-check`;
 - run `make curriculum-check`;
+- run `make competency-evidence-check` for M6B and later;
 - audit against the product doctrine;
 - report exact passes/failures;
 - open a PR and ask me to approve it.

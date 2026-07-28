@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grounded-growth.local/schema/typed-evidence-release-v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "release_id",
+    "algorithm_version",
+    "rules_schema_version",
+    "content_files",
+    "content_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "GG-TYPED-EVIDENCE-RELEASE-1.0"},
+    "release_id": {"const": "M6B-TYPED-EVIDENCE-FOUNDATION-1"},
+    "algorithm_version": {"const": "GG-TYPED-EVIDENCE-1.0"},
+    "rules_schema_version": {"const": "typed-evidence-rules-v1"},
+    "content_files": {
+      "type": "array",
+      "minItems": 3,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^(schema/[A-Za-z0-9_.-]+\\.schema\\.json|[A-Za-z0-9_.-]+\\.yaml)$"
+      }
+    },
+    "content_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  }
+}

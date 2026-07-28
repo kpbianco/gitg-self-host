@@ -114,8 +114,10 @@ test "$before_counts" = "$after_counts"
 test "$after_counts" = "$expected_counts"
 compose exec -T app python manage.py verify_evidence_events
 compose exec -T app python manage.py rebuild_score_state --verify-only
+compose exec -T app python manage.py generate_competency_evidence_reports --check
 compose exec -T app python manage.py verify_pilot_readiness
 compose exec -T app python manage.py verify_expansion_readiness
+compose exec -T app python manage.py verify_competency_evidence_readiness
 
 printf '\n==> Create and integrity-check an online SQLite backup\n'
 compose exec -T app python manage.py backup_database --output "$backup_path"
@@ -135,6 +137,7 @@ compose exec -T app python manage.py migrate --check
 compose exec -T app python manage.py rebuild_score_state --verify-only
 compose exec -T app python manage.py verify_pilot_readiness
 compose exec -T app python manage.py verify_expansion_readiness
+compose exec -T app python manage.py verify_competency_evidence_readiness
 
 printf '\n==> Restore the verified backup inside the isolated volume\n'
 compose down
@@ -148,6 +151,7 @@ test "$(canonical_counts)" = "$expected_counts"
 compose exec -T app python manage.py rebuild_score_state --verify-only
 compose exec -T app python manage.py verify_pilot_readiness
 compose exec -T app python manage.py verify_expansion_readiness
+compose exec -T app python manage.py verify_competency_evidence_readiness
 
 printf '\n==> Confirm clean Gunicorn shutdown\n'
 compose stop --timeout 30 app

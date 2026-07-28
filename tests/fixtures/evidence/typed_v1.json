@@ -1,0 +1,570 @@
+{
+  "schema_version": "grounded-growth-typed-evidence-fixture-v1",
+  "algorithm_version": "GG-TYPED-EVIDENCE-1.0",
+  "rules_schema_version": "typed-evidence-rules-v1",
+  "cases": [
+    {
+      "case_id": "TYPED-ALL-KINDS-01",
+      "rules": {
+        "schema_version": "typed-evidence-rules-v1",
+        "max_age_days": 90,
+        "competency_measurement_ids": [
+          "behavior",
+          "artifact_review",
+          "objective_indicator"
+        ],
+        "transfer_disposition": "cross_context_candidate",
+        "measurements": [
+          {
+            "measurement_id": "behavior",
+            "kind": "boolean",
+            "role": "primary",
+            "weight": "1",
+            "allowed_provenance": ["firsthand_self_report"],
+            "expected": true
+          },
+          {
+            "measurement_id": "attempt_count",
+            "kind": "count",
+            "role": "primary",
+            "weight": "1",
+            "allowed_provenance": ["firsthand_self_report"],
+            "direction": "at_least",
+            "minimum": "0",
+            "target": "3",
+            "maximum": "10"
+          },
+          {
+            "measurement_id": "bounded_frequency",
+            "kind": "bounded_frequency",
+            "role": "primary",
+            "weight": "1",
+            "allowed_provenance": ["firsthand_self_report"],
+            "direction": "at_least",
+            "minimum": "0",
+            "target": "0.75",
+            "maximum": "1"
+          },
+          {
+            "measurement_id": "rubric_level",
+            "kind": "ordinal",
+            "role": "primary",
+            "weight": "1",
+            "allowed_provenance": ["consented_observer"],
+            "levels": [
+              {"level_id": "emerging", "score": "0.25"},
+              {"level_id": "developing", "score": "0.50"},
+              {"level_id": "proficient", "score": "0.75"},
+              {"level_id": "consistent", "score": "1.00"}
+            ]
+          },
+          {
+            "measurement_id": "adherence_window",
+            "kind": "duration",
+            "role": "primary",
+            "weight": "1",
+            "allowed_provenance": ["firsthand_self_report"],
+            "direction": "at_least",
+            "minimum": "0",
+            "target": "20",
+            "maximum": "60",
+            "unit": "minutes"
+          },
+          {
+            "measurement_id": "artifact_review",
+            "kind": "artifact",
+            "role": "primary",
+            "weight": "1",
+            "allowed_provenance": ["reviewed_artifact"],
+            "criteria": ["criterion_a", "criterion_b", "criterion_c"]
+          },
+          {
+            "measurement_id": "conceptual_explanation",
+            "kind": "conceptual",
+            "role": "supporting",
+            "weight": "1",
+            "allowed_provenance": ["firsthand_self_report"],
+            "criteria": ["distinguishes_terms", "applies_limit"]
+          },
+          {
+            "measurement_id": "scenario_rehearsal",
+            "kind": "scenario",
+            "role": "supporting",
+            "weight": "1",
+            "allowed_provenance": ["consented_observer"],
+            "criteria": ["recognizes_signal", "chooses_response"]
+          },
+          {
+            "measurement_id": "objective_indicator",
+            "kind": "objective",
+            "role": "primary",
+            "weight": "1",
+            "allowed_provenance": ["objective_indicator"],
+            "direction": "at_least",
+            "minimum": "0",
+            "target": "80",
+            "maximum": "100",
+            "unit": "percent"
+          },
+          {
+            "measurement_id": "qualified_attestation",
+            "kind": "attestation",
+            "role": "supporting",
+            "weight": "1",
+            "allowed_provenance": ["qualified_attestation"],
+            "allowed_attestation_ids": ["scope_reviewed"],
+            "consent_required": true
+          },
+          {
+            "measurement_id": "state_unknown",
+            "kind": "boolean",
+            "role": "context",
+            "weight": "0",
+            "allowed_provenance": ["firsthand_self_report"],
+            "expected": true
+          },
+          {
+            "measurement_id": "state_not_observed",
+            "kind": "boolean",
+            "role": "context",
+            "weight": "0",
+            "allowed_provenance": ["firsthand_self_report"],
+            "expected": true
+          },
+          {
+            "measurement_id": "state_withheld",
+            "kind": "boolean",
+            "role": "context",
+            "weight": "0",
+            "allowed_provenance": ["firsthand_self_report"],
+            "expected": true
+          },
+          {
+            "measurement_id": "state_not_applicable",
+            "kind": "boolean",
+            "role": "context",
+            "weight": "0",
+            "allowed_provenance": ["firsthand_self_report"],
+            "expected": true
+          },
+          {
+            "measurement_id": "state_deferred",
+            "kind": "boolean",
+            "role": "context",
+            "weight": "0",
+            "allowed_provenance": ["firsthand_self_report"],
+            "expected": true
+          },
+          {
+            "measurement_id": "adverse_signal",
+            "kind": "boolean",
+            "role": "adverse",
+            "weight": "0",
+            "allowed_provenance": ["firsthand_self_report"],
+            "expected": true
+          }
+        ]
+      },
+      "input": {
+        "event_key": "EVENT-TYPED-001",
+        "origin_key": "ORIGIN-TYPED-001",
+        "assessment_epoch_id": "ASSESSMENT-EPOCH-001",
+        "protocol_stable_id": "PRACTICE-SYNTHETIC-01",
+        "action_stable_id": "PRACTICE-SYNTHETIC-01-A1",
+        "competency_stable_id": "01.01",
+        "scoring_policy_id": "SP-SHADOW-ONLY",
+        "action_attempted": true,
+        "action_completed": true,
+        "observations": [
+          {
+            "measurement_id": "behavior",
+            "kind": "boolean",
+            "state": "observed",
+            "provenance_kind": "firsthand_self_report",
+            "value": true
+          },
+          {
+            "measurement_id": "attempt_count",
+            "kind": "count",
+            "state": "observed",
+            "provenance_kind": "firsthand_self_report",
+            "value": 3
+          },
+          {
+            "measurement_id": "bounded_frequency",
+            "kind": "bounded_frequency",
+            "state": "observed",
+            "provenance_kind": "firsthand_self_report",
+            "value": {"numerator": 3, "denominator": 4}
+          },
+          {
+            "measurement_id": "rubric_level",
+            "kind": "ordinal",
+            "state": "observed",
+            "provenance_kind": "consented_observer",
+            "value": "proficient"
+          },
+          {
+            "measurement_id": "adherence_window",
+            "kind": "duration",
+            "state": "observed",
+            "provenance_kind": "firsthand_self_report",
+            "value": {"amount": "20", "unit": "minutes"}
+          },
+          {
+            "measurement_id": "artifact_review",
+            "kind": "artifact",
+            "state": "observed",
+            "provenance_kind": "reviewed_artifact",
+            "value": {"criteria_met": ["criterion_a", "criterion_b"]}
+          },
+          {
+            "measurement_id": "conceptual_explanation",
+            "kind": "conceptual",
+            "state": "observed",
+            "provenance_kind": "firsthand_self_report",
+            "value": {"criteria_met": ["distinguishes_terms", "applies_limit"]}
+          },
+          {
+            "measurement_id": "scenario_rehearsal",
+            "kind": "scenario",
+            "state": "observed",
+            "provenance_kind": "consented_observer",
+            "value": {"criteria_met": ["recognizes_signal"]}
+          },
+          {
+            "measurement_id": "objective_indicator",
+            "kind": "objective",
+            "state": "observed",
+            "provenance_kind": "objective_indicator",
+            "value": {"amount": "85", "unit": "percent"}
+          },
+          {
+            "measurement_id": "qualified_attestation",
+            "kind": "attestation",
+            "state": "observed",
+            "provenance_kind": "qualified_attestation",
+            "value": {"attestation_id": "scope_reviewed", "consent_confirmed": true}
+          },
+          {
+            "measurement_id": "state_unknown",
+            "kind": "boolean",
+            "state": "unknown",
+            "provenance_kind": "firsthand_self_report",
+            "value": null
+          },
+          {
+            "measurement_id": "state_not_observed",
+            "kind": "boolean",
+            "state": "not_observed",
+            "provenance_kind": "firsthand_self_report",
+            "value": null
+          },
+          {
+            "measurement_id": "state_withheld",
+            "kind": "boolean",
+            "state": "withheld",
+            "provenance_kind": "firsthand_self_report",
+            "value": null
+          },
+          {
+            "measurement_id": "state_not_applicable",
+            "kind": "boolean",
+            "state": "not_applicable",
+            "provenance_kind": "firsthand_self_report",
+            "value": null
+          },
+          {
+            "measurement_id": "state_deferred",
+            "kind": "boolean",
+            "state": "deferred",
+            "provenance_kind": "firsthand_self_report",
+            "value": null
+          },
+          {
+            "measurement_id": "adverse_signal",
+            "kind": "boolean",
+            "state": "not_observed",
+            "provenance_kind": "firsthand_self_report",
+            "value": null
+          }
+        ],
+        "support_level": "self_directed",
+        "context_comparison": "varied_context",
+        "context_key": "CONTEXT-A",
+        "evidence_direction": "supports",
+        "adverse_indicator_ids": [],
+        "repetition_index": 1,
+        "observed_on": "2026-06-15",
+        "as_of_date": "2026-07-01"
+      },
+      "expected": {
+        "performance": "0.9667",
+        "quality": "0.8500",
+        "independence": "1.0000",
+        "context_breadth": "0.7500",
+        "repetition_multiplier": "1.0000",
+        "contradiction_level": "0.0000",
+        "base_evidence_mass": "0.6375",
+        "direction": "supports",
+        "adverse": false,
+        "recency_status": "current",
+        "competency_performance": "0.8889",
+        "transfer_disposition": "cross_context_candidate",
+        "provenance_kinds": [
+          "consented_observer",
+          "firsthand_self_report",
+          "objective_indicator",
+          "qualified_attestation",
+          "reviewed_artifact"
+        ],
+        "withholding_reasons": [],
+        "materialized_spec_hash": "b114c625c40187cf725e6787aada385ad00d93d1d81f7c4e84c9f20c4186b498",
+        "materialized_rules_hash": "46bf25ed6510dd6b902cbee10c28ef280c13dc8ec1e6d960a5a2cbf9009552c8"
+      }
+    },
+    {
+      "case_id": "TYPED-CONTRADICTION-01",
+      "rules": {
+        "schema_version": "typed-evidence-rules-v1",
+        "max_age_days": null,
+        "competency_measurement_ids": ["behavior"],
+        "transfer_disposition": "context_bound",
+        "measurements": [
+          {
+            "measurement_id": "behavior",
+            "kind": "boolean",
+            "role": "primary",
+            "weight": "1",
+            "allowed_provenance": ["firsthand_self_report"],
+            "expected": true
+          },
+          {
+            "measurement_id": "adverse_signal",
+            "kind": "boolean",
+            "role": "adverse",
+            "weight": "0",
+            "allowed_provenance": ["firsthand_self_report"],
+            "expected": true
+          }
+        ]
+      },
+      "input": {
+        "event_key": "EVENT-TYPED-002",
+        "origin_key": "ORIGIN-TYPED-002",
+        "assessment_epoch_id": "ASSESSMENT-EPOCH-001",
+        "protocol_stable_id": "PRACTICE-SYNTHETIC-01",
+        "action_stable_id": "PRACTICE-SYNTHETIC-01-A2",
+        "competency_stable_id": "01.01",
+        "scoring_policy_id": "SP-SELF-REPORT-ELIGIBLE",
+        "action_attempted": true,
+        "action_completed": false,
+        "observations": [
+          {
+            "measurement_id": "behavior",
+            "kind": "boolean",
+            "state": "observed",
+            "provenance_kind": "firsthand_self_report",
+            "value": false
+          },
+          {
+            "measurement_id": "adverse_signal",
+            "kind": "boolean",
+            "state": "not_observed",
+            "provenance_kind": "firsthand_self_report",
+            "value": null
+          }
+        ],
+        "support_level": "planning_aid",
+        "context_comparison": "same_context",
+        "context_key": "CONTEXT-A",
+        "evidence_direction": "contradicts",
+        "adverse_indicator_ids": [],
+        "repetition_index": 2,
+        "observed_on": "2026-06-20",
+        "as_of_date": "2026-07-01"
+      },
+      "expected": {
+        "performance": "0.3500",
+        "quality": "0.8500",
+        "independence": "0.8500",
+        "context_breadth": "0.5500",
+        "repetition_multiplier": "0.6500",
+        "contradiction_level": "1.0000",
+        "base_evidence_mass": "0.2583",
+        "direction": "contradicts",
+        "adverse": false,
+        "recency_status": "current",
+        "competency_performance": "0.0000",
+        "transfer_disposition": "context_bound",
+        "provenance_kinds": ["firsthand_self_report"],
+        "withholding_reasons": [],
+        "materialized_spec_hash": "b114c625c40187cf725e6787aada385ad00d93d1d81f7c4e84c9f20c4186b498",
+        "materialized_rules_hash": "e50fffca1b59563108be8f6043dbfb7a1dc28db62a17b00ec53d69cc6e26eef1"
+      }
+    },
+    {
+      "case_id": "TYPED-ADVERSE-STALE-01",
+      "rules": {
+        "schema_version": "typed-evidence-rules-v1",
+        "max_age_days": 30,
+        "competency_measurement_ids": ["behavior"],
+        "transfer_disposition": "cross_context_candidate",
+        "measurements": [
+          {
+            "measurement_id": "behavior",
+            "kind": "boolean",
+            "role": "primary",
+            "weight": "1",
+            "allowed_provenance": ["firsthand_self_report"],
+            "expected": true
+          },
+          {
+            "measurement_id": "adverse_signal",
+            "kind": "boolean",
+            "role": "adverse",
+            "weight": "0",
+            "allowed_provenance": ["firsthand_self_report"],
+            "expected": true
+          }
+        ]
+      },
+      "input": {
+        "event_key": "EVENT-TYPED-003",
+        "origin_key": "ORIGIN-TYPED-003",
+        "assessment_epoch_id": "ASSESSMENT-EPOCH-001",
+        "protocol_stable_id": "PRACTICE-SYNTHETIC-01",
+        "action_stable_id": "PRACTICE-SYNTHETIC-01-A3",
+        "competency_stable_id": "01.01",
+        "scoring_policy_id": "SP-SHADOW-ONLY",
+        "action_attempted": true,
+        "action_completed": false,
+        "observations": [
+          {
+            "measurement_id": "behavior",
+            "kind": "boolean",
+            "state": "observed",
+            "provenance_kind": "firsthand_self_report",
+            "value": true
+          },
+          {
+            "measurement_id": "adverse_signal",
+            "kind": "boolean",
+            "state": "observed",
+            "provenance_kind": "firsthand_self_report",
+            "value": true
+          }
+        ],
+        "support_level": "guided",
+        "context_comparison": "first_record",
+        "context_key": "CONTEXT-B",
+        "evidence_direction": "supports",
+        "adverse_indicator_ids": ["ADVERSE-SAFETY-01"],
+        "repetition_index": 1,
+        "observed_on": "2026-01-01",
+        "as_of_date": "2026-07-01"
+      },
+      "expected": {
+        "performance": "0.5500",
+        "quality": "0.8500",
+        "independence": "0.6000",
+        "context_breadth": "0.5500",
+        "repetition_multiplier": "1.0000",
+        "contradiction_level": "0.0000",
+        "base_evidence_mass": "0.2805",
+        "direction": "supports",
+        "adverse": true,
+        "recency_status": "stale",
+        "competency_performance": "1.0000",
+        "transfer_disposition": "cross_context_candidate",
+        "provenance_kinds": ["firsthand_self_report"],
+        "withholding_reasons": [
+          "stale_at_explicit_as_of_date",
+          "adverse_outcome_requires_review"
+        ],
+        "materialized_spec_hash": "b114c625c40187cf725e6787aada385ad00d93d1d81f7c4e84c9f20c4186b498",
+        "materialized_rules_hash": "9f5768fd71e6eb4d0839d6edf0fdc56ebc17212854755b85db933f5c3c77bdae"
+      }
+    },
+    {
+      "case_id": "TYPED-DEFERRED-COMPETENCY-01",
+      "rules": {
+        "schema_version": "typed-evidence-rules-v1",
+        "max_age_days": null,
+        "competency_measurement_ids": ["behavior", "deferred_signal"],
+        "transfer_disposition": "context_bound",
+        "measurements": [
+          {
+            "measurement_id": "behavior",
+            "kind": "boolean",
+            "role": "primary",
+            "weight": "1",
+            "allowed_provenance": ["firsthand_self_report"],
+            "expected": true
+          },
+          {
+            "measurement_id": "deferred_signal",
+            "kind": "boolean",
+            "role": "supporting",
+            "weight": "1",
+            "allowed_provenance": ["firsthand_self_report"],
+            "expected": true
+          }
+        ]
+      },
+      "input": {
+        "event_key": "EVENT-TYPED-004",
+        "origin_key": "ORIGIN-TYPED-004",
+        "assessment_epoch_id": "ASSESSMENT-EPOCH-001",
+        "protocol_stable_id": "PRACTICE-SYNTHETIC-01",
+        "action_stable_id": "PRACTICE-SYNTHETIC-01-A4",
+        "competency_stable_id": "01.01",
+        "scoring_policy_id": "SP-SHADOW-ONLY",
+        "action_attempted": true,
+        "action_completed": false,
+        "observations": [
+          {
+            "measurement_id": "behavior",
+            "kind": "boolean",
+            "state": "observed",
+            "provenance_kind": "firsthand_self_report",
+            "value": true
+          },
+          {
+            "measurement_id": "deferred_signal",
+            "kind": "boolean",
+            "state": "deferred",
+            "provenance_kind": "firsthand_self_report",
+            "value": null
+          }
+        ],
+        "support_level": "self_directed",
+        "context_comparison": "first_record",
+        "context_key": "CONTEXT-C",
+        "evidence_direction": "supports",
+        "adverse_indicator_ids": [],
+        "repetition_index": 1,
+        "observed_on": "2026-06-30",
+        "as_of_date": "2026-07-01"
+      },
+      "expected": {
+        "performance": "0.5500",
+        "quality": "0.8500",
+        "independence": "1.0000",
+        "context_breadth": "0.5500",
+        "repetition_multiplier": "1.0000",
+        "contradiction_level": "0.0000",
+        "base_evidence_mass": "0.4675",
+        "direction": "supports",
+        "adverse": false,
+        "recency_status": "current",
+        "competency_performance": "1.0000",
+        "transfer_disposition": "context_bound",
+        "provenance_kinds": ["firsthand_self_report"],
+        "withholding_reasons": [],
+        "materialized_spec_hash": "b114c625c40187cf725e6787aada385ad00d93d1d81f7c4e84c9f20c4186b498",
+        "materialized_rules_hash": "f257e6373d7542ba339e0ebf36605281ac707929c0c44fa9449c12833e0dea02"
+      }
+    }
+  ]
+}

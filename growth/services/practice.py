@@ -22,6 +22,10 @@ from growth.models import (
 )
 from growth.services.evidence import EvidenceWorkflowError, create_evidence_event
 from growth.services.score_state import ScoreStateError, apply_evidence_event
+from growth.services.scoring import (
+    ScoringContractError,
+    protocol_requires_production_scoring,
+)
 
 
 class PracticeWorkflowError(ValueError):
@@ -272,9 +276,9 @@ def save_check_in(
     if submit:
         try:
             event = create_evidence_event(check_in)
-            if locked_sprint.protocol.score_active:
+            if protocol_requires_production_scoring(locked_sprint.protocol):
                 apply_evidence_event(event)
-        except (EvidenceWorkflowError, ScoreStateError) as exc:
+        except (EvidenceWorkflowError, ScoreStateError, ScoringContractError) as exc:
             raise PracticeWorkflowError(str(exc)) from exc
     return check_in
 

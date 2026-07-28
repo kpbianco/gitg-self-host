@@ -20,8 +20,8 @@ gaps:
       - mass_authoring
       - score_activation
     question: How should direct competency evidence remain distinct from immutable protocol evidence and lever score state?
-    current_evidence: The current runtime records protocol-performance evidence and projects only friendship evidence through frozen lever mathematics.
-    resolution_gate: Accepted ADR, typed evidence contract, deterministic fixtures, replay, reversal, and no-baseline-mutation tests.
+    current_evidence: M6B proposes GG-TYPED-EVIDENCE-1.0, evidence-only GG-COMPETENCY-EVIDENCE-SHADOW-1.0, one-way GG-COMPETENCY-LEVER-SHADOW-1.0, and separate GG-PRODUCTION-SCORE-ELIGIBILITY-1.0 while preserving the frozen v1 runtime.
+    resolution_gate: Passing GG-COMPETENCY-EVIDENCE-READINESS-1.0 plus accepted ADRs and completed ER-M6A-003 measurement, accessibility, and privacy/safety review. Software readiness alone does not resolve this gap.
   - gap_id: RG-M6A-003
     scope: PRACTICE-FRIENDSHIP-01
     status: open

@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grounded-growth.local/schema/typed-evidence-spec-v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "algorithm_version",
+    "rules_schema_version",
+    "measurement_kinds",
+    "observation_states",
+    "provenance_kinds",
+    "evidence_directions",
+    "support_factors",
+    "context_factors",
+    "repetition_multipliers",
+    "performance_weights",
+    "quality_weights"
+  ],
+  "properties": {
+    "schema_version": {"const": "GG-TYPED-EVIDENCE-SPEC-1.0"},
+    "algorithm_version": {"const": "GG-TYPED-EVIDENCE-1.0"},
+    "rules_schema_version": {"const": "typed-evidence-rules-v1"},
+    "measurement_kinds": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "boolean",
+          "count",
+          "bounded_frequency",
+          "ordinal",
+          "duration",
+          "artifact",
+          "conceptual",
+          "scenario",
+          "objective",
+          "attestation"
+        ]
+      }
+    },
+    "observation_states": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "observed",
+          "unknown",
+          "not_observed",
+          "withheld",
+          "not_applicable",
+          "deferred"
+        ]
+      }
+    },
+    "provenance_kinds": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "firsthand_self_report",
+          "reviewed_artifact",
+          "objective_indicator",
+          "consented_observer",
+          "qualified_attestation"
+        ]
+      }
+    },
+    "evidence_directions": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "uniqueItems": true,
+      "items": {
+        "enum": ["supports", "mixed", "contradicts", "inconclusive", "unknown"]
+      }
+    },
+    "support_factors": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["self_directed", "planning_aid", "guided", "not_recorded"],
+      "properties": {
+        "self_directed": {"$ref": "#/$defs/unitDecimal"},
+        "planning_aid": {"$ref": "#/$defs/unitDecimal"},
+        "guided": {"$ref": "#/$defs/unitDecimal"},
+        "not_recorded": {"$ref": "#/$defs/unitDecimal"}
+      }
+    },
+    "context_factors": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["first_record", "same_context", "varied_context"],
+      "properties": {
+        "first_record": {"$ref": "#/$defs/unitDecimal"},
+        "same_context": {"$ref": "#/$defs/unitDecimal"},
+        "varied_context": {"$ref": "#/$defs/unitDecimal"}
+      }
+    },
+    "repetition_multipliers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/unitDecimal"}
+    },
+    "performance_weights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["attempt", "completion", "primary", "supporting"],
+      "properties": {
+        "attempt": {"$ref": "#/$defs/unitDecimal"},
+        "completion": {"$ref": "#/$defs/unitDecimal"},
+        "primary": {"$ref": "#/$defs/unitDecimal"},
+        "supporting": {"$ref": "#/$defs/unitDecimal"}
+      }
+    },
+    "quality_weights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "base",
+        "attempt_bonus",
+        "direction_bonus",
+        "support_bonus",
+        "context_bonus",
+        "observed_bonus",
+        "cap"
+      ],
+      "properties": {
+        "base": {"$ref": "#/$defs/unitDecimal"},
+        "attempt_bonus": {"$ref": "#/$defs/unitDecimal"},
+        "direction_bonus": {"$ref": "#/$defs/unitDecimal"},
+        "support_bonus": {"$ref": "#/$defs/unitDecimal"},
+        "context_bonus": {"$ref": "#/$defs/unitDecimal"},
+        "observed_bonus": {"$ref": "#/$defs/unitDecimal"},
+        "cap": {"$ref": "#/$defs/unitDecimal"}
+      }
+    }
+  },
+  "$defs": {
+    "unitDecimal": {
+      "type": "string",
+      "pattern": "^(0(\\.\\d+)?|1(\\.0+)?)$"
+    }
+  }
+}

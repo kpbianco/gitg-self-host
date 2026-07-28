@@ -20,6 +20,7 @@ from growth.models import (
     EvidenceEvent,
     LeverBaseline,
     LeverState,
+    PracticeAction,
     PracticeCheckIn,
     PracticeProtocol,
     ScoreSnapshot,
@@ -91,6 +92,22 @@ def _state_values(user):
             "included_evidence_events",
             "current_need_score",
             "current_need_rank",
+        )
+    )
+
+
+def _score_history(run):
+    return list(
+        ScoreSnapshot.objects.filter(assessment_run=run)
+        .order_by("sequence")
+        .values(
+            "stable_id",
+            "sequence",
+            "operation",
+            "before_state",
+            "after_state",
+            "active_event_hash",
+            "contribution_snapshot",
         )
     )
 
@@ -236,6 +253,220 @@ def test_submitted_event_applies_atomically_once_and_keeps_baseline_immutable(us
         == archetypes_before
     )
     verify_score_state_for_run(sprint.assessment_run)
+
+
+@pytest.mark.django_db
+def test_toggling_another_protocol_score_active_cannot_mutate_state(user, seeded):
+    protocol = PracticeProtocol.objects.get(stable_id="PRACTICE-PLAY-01")
+    PracticeProtocol.objects.filter(pk=protocol.pk).update(score_active=True)
+    protocol.refresh_from_db()
+    sprint = start_practice(
+        user=user,
+        protocol=protocol,
+        person_or_context="Private play context",
+        start_date=date.today(),
+    )
+    action = protocol.actions.get(sequence=1)
+    before_state = _state_values(user)
+    before_snapshots = ScoreSnapshot.objects.count()
+
+    check_in = save_check_in(
+        sprint=sprint,
+        cleaned_data=_check_in_data(
+            action,
+            moved_beyond_transactional=False,
+            follow_up_question_asked=False,
+            meaningful_information_shared=False,
+            future_interaction_scheduled=True,
+            follow_up_within_seven_days=False,
+        ),
+        submit=True,
+    )
+
+    assert check_in.evidence_event.protocol_stable_id == protocol.stable_id
+    assert ScoreSnapshot.objects.count() == before_snapshots
+    assert _state_values(user) == before_state
+    with pytest.raises(ScoreStateError, match="unreviewed scoring protocol"):
+        apply_evidence_event(check_in.evidence_event)
+    assert ScoreSnapshot.objects.count() == before_snapshots
+    assert _state_values(user) == before_state
+
+
+@pytest.mark.django_db
+def test_disabling_friendship_fails_closed_without_reinterpreting_history(user, seeded):
+    sprint = _sprint(user)
+    check_in = save_check_in(
+        sprint=sprint,
+        cleaned_data=_check_in_data(sprint.protocol.actions.get(sequence=1)),
+        submit=True,
+    )
+    run = sprint.assessment_run
+    before_state = _state_values(user)
+    before_snapshots = list(
+        ScoreSnapshot.objects.filter(assessment_run=run)
+        .order_by("sequence")
+        .values(
+            "stable_id",
+            "sequence",
+            "operation",
+            "before_state",
+            "after_state",
+            "active_event_hash",
+        )
+    )
+
+    PracticeProtocol.objects.filter(pk=sprint.protocol_id).update(score_active=False)
+
+    with pytest.raises(PracticeWorkflowError, match="score activation is disabled"):
+        save_check_in(
+            sprint=sprint,
+            cleaned_data=_check_in_data(
+                sprint.protocol.actions.get(sequence=1),
+                context_comparison=PracticeCheckIn.ContextComparison.SAME_CONTEXT,
+            ),
+            submit=True,
+        )
+    with pytest.raises(ScoreStateError, match="score activation is disabled"):
+        synchronize_score_state_for_run(run)
+
+    assert PracticeCheckIn.objects.filter(sprint=sprint).count() == 1
+    assert EvidenceEvent.objects.filter(check_in__sprint=sprint).count() == 1
+    assert _state_values(user) == before_state
+    assert (
+        list(
+            ScoreSnapshot.objects.filter(assessment_run=run)
+            .order_by("sequence")
+            .values(
+                "stable_id",
+                "sequence",
+                "operation",
+                "before_state",
+                "after_state",
+                "active_event_hash",
+            )
+        )
+        == before_snapshots
+    )
+    assert ScoreSnapshot.objects.filter(
+        evidence_event=check_in.evidence_event,
+        operation=ScoreSnapshot.Operation.PROCESS,
+    ).exists()
+
+
+@pytest.mark.parametrize("drift", ["weight", "lever_total"])
+@pytest.mark.django_db
+def test_production_rebuild_fails_closed_on_mapping_or_lever_total_drift(
+    user,
+    seeded,
+    drift,
+):
+    run = user.assessment_runs.get()
+    protocol = PracticeProtocol.objects.get(stable_id="PRACTICE-FRIENDSHIP-01")
+    link = protocol.parent_competency.lever_links.get(lever_id="L10")
+    before_state = _state_values(user)
+    before_snapshots = ScoreSnapshot.objects.count()
+
+    if drift == "weight":
+        type(link).objects.filter(pk=link.pk).update(weight=Decimal("0.1600"))
+    else:
+        type(link.lever).objects.filter(pk=link.lever_id).update(
+            total_competency_weight=Decimal("18.0000")
+        )
+    with pytest.raises(ScoreStateError, match="allocation weights or lever totals"):
+        synchronize_score_state_for_run(run)
+
+    assert _state_values(user) == before_state
+    assert ScoreSnapshot.objects.count() == before_snapshots
+
+
+@pytest.mark.parametrize("drift", ["evidence_rules", "sequence", "new_action"])
+@pytest.mark.django_db
+def test_production_rebuild_fails_closed_on_action_contract_drift(
+    user,
+    seeded,
+    drift,
+):
+    sprint = _sprint(user)
+    check_in = save_check_in(
+        sprint=sprint,
+        cleaned_data=_check_in_data(sprint.protocol.actions.get(sequence=1)),
+        submit=True,
+    )
+    run = sprint.assessment_run
+    protocol = sprint.protocol
+    before_state = _state_values(user)
+    before_history = _score_history(run)
+
+    if drift == "evidence_rules":
+        action = protocol.actions.get(sequence=2)
+        evidence_rules = {
+            **action.evidence_rules,
+            "supporting_markers": [
+                *action.evidence_rules["supporting_markers"],
+                "follow_up_question_asked",
+            ],
+        }
+        PracticeAction.objects.filter(pk=action.pk).update(evidence_rules=evidence_rules)
+    elif drift == "sequence":
+        PracticeAction.objects.filter(
+            pk="PRACTICE-FRIENDSHIP-01-A3",
+        ).update(sequence=4)
+    else:
+        PracticeAction.objects.create(
+            stable_id="PRACTICE-FRIENDSHIP-01-A4",
+            protocol=protocol,
+            sequence=4,
+            title="Unreviewed action",
+            instructions="This action is deliberately outside the reviewed contract.",
+            evidence_rules={
+                "schema_version": "practice-observation-v1",
+                "primary_markers": ["user_initiated"],
+                "supporting_markers": [],
+            },
+        )
+
+    with pytest.raises(ScoreStateError, match="actions or evidence rules"):
+        synchronize_score_state_for_run(run)
+
+    assert _state_values(user) == before_state
+    assert _score_history(run) == before_history
+    assert ScoreSnapshot.objects.filter(
+        evidence_event=check_in.evidence_event,
+        operation=ScoreSnapshot.Operation.PROCESS,
+    ).exists()
+
+
+@pytest.mark.django_db
+def test_tampered_snapshotted_action_rules_fail_closed_without_changing_score_history(
+    user,
+    seeded,
+):
+    sprint = _sprint(user)
+    check_in = save_check_in(
+        sprint=sprint,
+        cleaned_data=_check_in_data(sprint.protocol.actions.get(sequence=1)),
+        submit=True,
+    )
+    run = sprint.assessment_run
+    event = check_in.evidence_event
+    before_state = _state_values(user)
+    before_history = _score_history(run)
+    tampered_snapshot = {
+        **event.input_snapshot,
+        "evidence_rules": {
+            **event.input_snapshot["evidence_rules"],
+            "supporting_markers": ["user_initiated"],
+        },
+    }
+    EvidenceEvent._base_manager.filter(pk=event.pk).update(
+        input_snapshot=tampered_snapshot,
+    )
+
+    with pytest.raises(ScoreStateError, match="snapshotted evidence rules"):
+        synchronize_score_state_for_run(run)
+
+    assert _state_values(user) == before_state
+    assert _score_history(run) == before_history
 
 
 @pytest.mark.django_db

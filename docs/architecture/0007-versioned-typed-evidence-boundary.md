@@ -2,7 +2,8 @@
 
 ## Status
 
-Accepted architectural boundary for M6A; typed execution is deferred to M6B.
+Accepted architectural boundary from M6A. The concrete M6B typed contract is
+proposed for owner and specialist review.
 
 ## Context
 
@@ -19,20 +20,41 @@ unknown/not-observed values, contradiction, and adverse outcomes.
 
 ## Decision
 
-M6A preserves `GG-EVIDENCE-1.0` and `practice-observation-v1` exactly for the
-five runtime projections. The rich packages describe accepted evidence and
-withholding intent, but those fields do not execute or mutate state.
+M6B preserves `GG-EVIDENCE-1.0` and `practice-observation-v1` exactly for the
+five runtime projections. The new parallel contract is
+`GG-TYPED-EVIDENCE-1.0`, with materialized rule snapshots under
+`typed-evidence-rules-v1`. It is pure and shadow-only in M6B.
 
-Any new evidence contract must:
+The typed contract:
 
-- use a new stable schema and algorithm version;
-- dispatch explicitly by the snapshotted version and fail closed on unknown
-  versions;
-- snapshot the rules and structured input needed for deterministic replay;
+- dispatches explicitly by event algorithm and rule-schema version and fails
+  closed on unknown versions;
+- snapshots the materialized rules, rule version and hash, stable
+  protocol/action/competency IDs, scoring policy, structured input, and
+  minimal provenance needed for deterministic replay;
 - treat free text as explanation, never an opaque score input;
-- preserve explicit unknown, contradiction, adverse outcome, support,
-  context, repetition, and provenance;
-- include migration policy and exact golden replay fixtures before activation.
+- represents Boolean observations, bounded counts/frequencies, ordinal
+  rubrics, durations, artifact criteria, conceptual/scenario performance,
+  bounded objective indicators, consented-observer evidence, and minimal
+  qualified attestations;
+- keeps `unknown`, `not_observed`, `inconclusive`, `not_applicable`, and
+  `deferred` distinct;
+- keeps evidence direction and adverse outcome orthogonal: adversity is
+  always retained and may require withholding or a safety stop, but does not
+  become contradiction unless the snapshotted rule says so;
+- represents support, independence, context, repetition, recency, transfer,
+  provenance, consent, and qualification without unnecessary sensitive
+  narrative;
+- requires an explicit rule to normalize a typed value. The engine never
+  assumes that a larger count, longer duration, or higher ordinal value is
+  better;
+- includes exact golden replay fixtures and a migration policy before any
+  activation.
+
+Existing v1 rows are never rewritten or up-converted. The v1 replay entry
+point remains available, while a version dispatcher selects v1 or the new
+typed evaluator from the immutable event version. A new assessment does not
+silently reassign old evidence to the new assessment epoch.
 
 ## Consequences
 
@@ -40,6 +62,7 @@ Historical events remain replayable and unchanged. Later protocol families
 can use evidence that fits their actual intervention instead of relabeling
 friendship checkboxes.
 
-The canonical package is intentionally ahead of the runtime evidence engine.
-Fields that describe future evidence design are governance commitments, not a
-claim that typed evidence is implemented in M6A.
+M6B proves a software contract using synthetic fixtures. It does not add a
+typed check-in UI, persist a new event type, convert the five legacy
+protocols, or establish measurement validity. Those integrations remain
+blocked until M6C and the representative Phase B content batch are reviewed.

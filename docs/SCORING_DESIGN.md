@@ -139,3 +139,47 @@ snapshots, atomic idempotent application, deterministic replay and repair,
 audited reversal, and dynamic recommendation tests. `LeverBaseline`,
 orientation, and archetype values remain unchanged. Only the reviewed
 friendship protocol is score-active.
+
+## Proposed M6B typed competency shadow
+
+M6B does not reinterpret the formulas above. Existing
+`GG-EVIDENCE-1.0`, `GG-SCORING-SHADOW-1.0`,
+`GG-SCORE-STATE-1.0`, and `GG-NEED-RANKING-1.0` remain exact.
+
+Assessment v1.1 produces lever baselines only. It does not provide a
+competency baseline. `GG-COMPETENCY-EVIDENCE-SHADOW-1.0` therefore begins in
+an explicit unknown state and aggregates only eligible, replay-verified
+`GG-TYPED-EVIDENCE-1.0` contributions for one competency and assessment
+epoch. A weighted summary of lever state is not direct competency evidence
+and cannot seed or update this shadow.
+
+`GG-COMPETENCY-LEVER-SHADOW-1.0` projects a designated competency
+contribution once through the parent competency's complete canonical mapping.
+It must reject duplicate immutable event keys and cannot also apply the
+protocol-performance view of the same event. Recommendation-target levers do
+not participate in allocation.
+
+Typed values have no default polarity or scale. Each materialized
+`typed-evidence-rules-v1` snapshot defines normalization, direction,
+withholding, and any minimum evidence. Unknown, not-observed, inconclusive,
+not-applicable, and deferred input contributes no success/failure mass.
+Contradiction may contribute failure only under its explicit rule. Adverse
+outcome is orthogonal and may withhold an event or trigger a safety stop
+without silently becoming a negative competency result.
+
+`GG-PRODUCTION-SCORE-ELIGIBILITY-1.0` is evaluated after evidence and shadow
+projection. It requires satisfied policy/provenance rules, valid canonical
+mapping, available lever baseline mass, cleared source/risk/specialist gates,
+and an approved activation-ledger entry. M6B makes every new typed path
+production-ineligible and writes no state.
+
+The production fingerprint
+`f7639a0c623f1baac9469f34fe49ca9e2eb0be8fc1c616ab662996b2e90bf2bf`
+pins friendship's protocol and competency IDs, evidence/scoring/state
+versions, recommendation targets, all three action IDs and sequences, exact
+v1 evidence rules, and full allocation weights and lever totals. It is
+separate from the legacy runtime projection and practice-catalog hashes.
+
+The synthetic M6B fixtures demonstrate deterministic software behavior, not
+psychometric calibration. Pending review `ER-M6A-003` blocks M6B acceptance
+and mass authoring.

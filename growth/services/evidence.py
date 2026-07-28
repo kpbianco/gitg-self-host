@@ -13,8 +13,8 @@ from growth.domain.evidence import (
     EvidenceContractError,
     EvidenceInput,
     evaluate_evidence,
-    replay_evidence,
 )
+from growth.domain.evidence_dispatch import replay_evidence_by_version
 from growth.models import EvidenceEvent, LeverState, PracticeCheckIn
 
 
@@ -108,7 +108,10 @@ def repetition_index_for(check_in: PracticeCheckIn) -> int:
 
 def verify_evidence_event(event: EvidenceEvent) -> None:
     try:
-        replayed = replay_evidence(event.input_snapshot)
+        replayed = replay_evidence_by_version(
+            event.algorithm_version,
+            event.input_snapshot,
+        )
     except EvidenceContractError as exc:
         raise EvidenceWorkflowError(f"{event.pk}: {exc}") from exc
     comparisons = {

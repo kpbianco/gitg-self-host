@@ -61,7 +61,7 @@ def test_canonical_practice_bundle_preserves_five_protocol_runtime_projection():
         == FROZEN_LEGACY_CONFIGURATION_HASH
     )
     assert bundle.content_hash == (
-        "77dfae7546824046045df919ff4970b28132e76a1580bba5b532fa185afb94b3"
+        "62a61f4440a030cd2b961f0bd56b832ad8102a1b37c05f9bdbdae00a03b3f247"
     )
     assert load_and_validate_bundle().source_hash == (
         "6958ccfbe0c0d80b7485ac866a8418578850284b58956f59168429819447dfc5"

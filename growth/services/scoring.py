@@ -1,12 +1,23 @@
 from __future__ import annotations
 
+import hashlib
+import json
 from collections.abc import Iterable
 from dataclasses import dataclass
 from decimal import Decimal
+from functools import lru_cache
+from typing import Any
 
+from django.conf import settings
 from django.contrib.auth import get_user_model
 
+from growth.domain.evidence import EVIDENCE_ALGORITHM_VERSION
+from growth.domain.practice_content import (
+    PracticeContentError,
+    load_practice_content_bundle,
+)
 from growth.domain.scoring import (
+    SCORING_ALGORITHM_VERSION,
     BaselineMass,
     LeverWeight,
     ProjectedLever,
@@ -23,8 +34,70 @@ from growth.services.evidence import (
     verify_evidence_event,
 )
 
+PRODUCTION_SCORE_ELIGIBILITY_CONTRACT_VERSION = "GG-PRODUCTION-SCORE-ELIGIBILITY-1.0"
+PRODUCTION_EVIDENCE_RULES_VERSION = "practice-observation-v1"
+PRODUCTION_SCORE_STATE_VERSION = "GG-SCORE-STATE-1.0"
 FRIENDSHIP_PROTOCOL_ID = "PRACTICE-FRIENDSHIP-01"
 FRIENDSHIP_COMPETENCY_ID = "17.03"
+FRIENDSHIP_TARGET_LEVER_IDS = frozenset({"L23", "L24", "L26"})
+FRIENDSHIP_ALLOCATION = {
+    "L10": (Decimal("0.1500"), Decimal("17.8000")),
+    "L23": (Decimal("0.1000"), Decimal("14.7500")),
+    "L24": (Decimal("0.1000"), Decimal("13.3500")),
+    "L26": (Decimal("0.6500"), Decimal("10.2500")),
+}
+PRODUCTION_SCORE_MAPPING_FINGERPRINT = (
+    "f7639a0c623f1baac9469f34fe49ca9e2eb0be8fc1c616ab662996b2e90bf2bf"
+)
+FRIENDSHIP_ACTIONS = (
+    {
+        "action_stable_id": "PRACTICE-FRIENDSHIP-01-A1",
+        "sequence": 1,
+        "evidence_rules": {
+            "schema_version": PRODUCTION_EVIDENCE_RULES_VERSION,
+            "primary_markers": [
+                "moved_beyond_transactional",
+                "meaningful_information_shared",
+            ],
+            "supporting_markers": [
+                "follow_up_question_asked",
+                "user_initiated",
+            ],
+        },
+    },
+    {
+        "action_stable_id": "PRACTICE-FRIENDSHIP-01-A2",
+        "sequence": 2,
+        "evidence_rules": {
+            "schema_version": PRODUCTION_EVIDENCE_RULES_VERSION,
+            "primary_markers": ["future_interaction_scheduled"],
+            "supporting_markers": ["user_initiated"],
+        },
+    },
+    {
+        "action_stable_id": "PRACTICE-FRIENDSHIP-01-A3",
+        "sequence": 3,
+        "evidence_rules": {
+            "schema_version": PRODUCTION_EVIDENCE_RULES_VERSION,
+            "primary_markers": [
+                "follow_up_within_seven_days",
+                "follow_up_question_asked",
+            ],
+            "supporting_markers": [
+                "meaningful_information_shared",
+                "user_initiated",
+            ],
+        },
+    },
+)
+_FRIENDSHIP_ACTIVATION_APPROVAL = (
+    "SP-SELF-REPORT-ELIGIBLE",
+    True,
+    "active",
+    PRODUCTION_SCORE_STATE_VERSION,
+    "docs/PRODUCT_DECISIONS.md#decision-035",
+    "accepted_and_activated",
+)
 
 
 @dataclass(frozen=True)
@@ -60,6 +133,187 @@ class AssessmentScoreProjection:
     projection: ScoreProjection
     baselines: tuple[LeverBaseline, ...]
     uses_reconstructed_baseline: bool
+
+
+def _canonical_hash(value: Any) -> str:
+    encoded = json.dumps(
+        value,
+        ensure_ascii=True,
+        separators=(",", ":"),
+        sort_keys=True,
+    ).encode()
+    return hashlib.sha256(encoded).hexdigest()
+
+
+@lru_cache(maxsize=1)
+def _verify_canonical_friendship_activation() -> None:
+    try:
+        bundle = load_practice_content_bundle(settings.BASE_DIR)
+    except PracticeContentError as exc:
+        raise ScoringContractError(
+            f"Canonical score activation could not be verified: {exc}"
+        ) from exc
+    try:
+        activation = bundle.activation_entries[FRIENDSHIP_PROTOCOL_ID]
+    except KeyError as exc:
+        raise ScoringContractError("Canonical friendship score activation is unavailable.") from exc
+    actual = (
+        activation["scoring_policy_id"],
+        activation["score_active"],
+        activation["activation_status"],
+        activation["approved_contract"],
+        activation["decision_reference"],
+        activation["shadow_test_status"],
+    )
+    if actual != _FRIENDSHIP_ACTIVATION_APPROVAL:
+        raise ScoringContractError(
+            "Canonical friendship score activation does not match the reviewed contract."
+        )
+
+
+def _production_contract_payload(
+    protocol: PracticeProtocol,
+    links,
+) -> dict[str, Any]:
+    actions = tuple(protocol.actions.order_by("sequence", "stable_id"))
+    return {
+        "contract_version": PRODUCTION_SCORE_ELIGIBILITY_CONTRACT_VERSION,
+        "protocol_stable_id": protocol.stable_id,
+        "competency_stable_id": protocol.parent_competency_id,
+        "evidence_algorithm_version": EVIDENCE_ALGORITHM_VERSION,
+        "evidence_schema_version": PRODUCTION_EVIDENCE_RULES_VERSION,
+        "scoring_algorithm_version": SCORING_ALGORITHM_VERSION,
+        "score_state_version": PRODUCTION_SCORE_STATE_VERSION,
+        "target_lever_ids": sorted(lever.stable_id for lever in protocol.target_levers.all()),
+        "actions": [
+            {
+                "action_stable_id": action.stable_id,
+                "sequence": action.sequence,
+                "evidence_rules": action.evidence_rules,
+            }
+            for action in actions
+        ],
+        "allocation": [
+            {
+                "lever_id": link.lever_id,
+                "weight": f"{link.weight:.4f}",
+                "total_competency_weight": (f"{link.lever.total_competency_weight:.4f}"),
+            }
+            for link in sorted(links, key=lambda item: item.lever_id)
+        ],
+    }
+
+
+def validate_production_scoring_protocol(
+    protocol: PracticeProtocol,
+):
+    """Return the exact reviewed friendship allocation or fail closed."""
+
+    if protocol.stable_id != FRIENDSHIP_PROTOCOL_ID:
+        raise ScoringContractError(
+            f"{protocol.stable_id}: protocol is not production score eligible."
+        )
+    if not protocol.score_active:
+        raise ScoringContractError(
+            "Friendship score activation is disabled; production scoring stopped."
+        )
+    if protocol.parent_competency_id != FRIENDSHIP_COMPETENCY_ID:
+        raise ScoringContractError(
+            "The reviewed practice-to-competency scoring link is unavailable."
+        )
+    _verify_canonical_friendship_activation()
+
+    target_ids = {lever.stable_id for lever in protocol.target_levers.all()}
+    if target_ids != FRIENDSHIP_TARGET_LEVER_IDS:
+        raise ScoringContractError(
+            "Friendship recommendation targets do not match the reviewed scoring contract."
+        )
+    actions = tuple(protocol.actions.order_by("sequence", "stable_id"))
+    actual_actions = tuple(
+        {
+            "action_stable_id": action.stable_id,
+            "sequence": action.sequence,
+            "evidence_rules": action.evidence_rules,
+        }
+        for action in actions
+    )
+    if actual_actions != FRIENDSHIP_ACTIONS:
+        raise ScoringContractError(
+            "Friendship actions or evidence rules do not match the reviewed scoring contract."
+        )
+    links = tuple(protocol.parent_competency.lever_links.all())
+    actual_allocation = {
+        link.lever_id: (link.weight, link.lever.total_competency_weight) for link in links
+    }
+    if actual_allocation != FRIENDSHIP_ALLOCATION:
+        raise ScoringContractError(
+            "Friendship allocation weights or lever totals do not match the reviewed contract."
+        )
+    fingerprint = _canonical_hash(_production_contract_payload(protocol, links))
+    if fingerprint != PRODUCTION_SCORE_MAPPING_FINGERPRINT:
+        raise ScoringContractError(
+            "Friendship production score-eligibility fingerprint does not verify."
+        )
+    return tuple(sorted(links, key=lambda item: item.lever_id))
+
+
+def protocol_requires_production_scoring(protocol: PracticeProtocol) -> bool:
+    """Return false for all unapproved protocols; validate friendship exactly."""
+
+    if protocol.stable_id != FRIENDSHIP_PROTOCOL_ID:
+        return False
+    validate_production_scoring_protocol(protocol)
+    return True
+
+
+def validate_production_scoring_event(
+    event: EvidenceEvent,
+    assessment_run: AssessmentRun,
+) -> None:
+    if event.algorithm_version != EVIDENCE_ALGORITHM_VERSION:
+        raise ScoringContractError(
+            f"{event.pk}: evidence algorithm is not production score eligible."
+        )
+    snapshot = event.input_snapshot
+    if not isinstance(snapshot, dict):
+        raise ScoringContractError(
+            f"{event.pk}: evidence snapshot is not production score eligible."
+        )
+    if event.protocol_stable_id != FRIENDSHIP_PROTOCOL_ID:
+        raise ScoringContractError(
+            f"{event.pk}: evidence belongs to an unreviewed scoring protocol."
+        )
+    if snapshot.get("protocol_stable_id") != FRIENDSHIP_PROTOCOL_ID:
+        raise ScoringContractError(
+            f"{event.pk}: snapshotted protocol is not production score eligible."
+        )
+    expected_by_id = {action["action_stable_id"]: action for action in FRIENDSHIP_ACTIONS}
+    expected_action = expected_by_id.get(event.action_stable_id)
+    if expected_action is None:
+        raise ScoringContractError(f"{event.pk}: evidence action is not production score eligible.")
+    if (
+        event.check_in.action_id != event.action_stable_id
+        or snapshot.get("action_stable_id") != event.action_stable_id
+    ):
+        raise ScoringContractError(f"{event.pk}: evidence action stable IDs do not match.")
+    action = event.check_in.action
+    actual_action = {
+        "action_stable_id": action.stable_id,
+        "sequence": action.sequence,
+        "evidence_rules": action.evidence_rules,
+    }
+    if actual_action != expected_action:
+        raise ScoringContractError(
+            f"{event.pk}: runtime action does not match the reviewed scoring contract."
+        )
+    if snapshot.get("evidence_rules") != expected_action["evidence_rules"]:
+        raise ScoringContractError(
+            f"{event.pk}: snapshotted evidence rules do not match the reviewed scoring contract."
+        )
+    if event.check_in.sprint.assessment_run_id != assessment_run.pk:
+        raise ScoringContractError(f"{event.pk}: evidence and assessment stable IDs do not match.")
+    if event.check_in.sprint.user_id != assessment_run.user_id:
+        raise ScoringContractError(f"{event.pk}: evidence and assessment users do not match.")
 
 
 def _baseline_mass(baseline: LeverBaseline) -> tuple[BaselineMass | None, bool]:
@@ -116,13 +370,8 @@ def project_assessment_events(
         raise ScoringContractError(
             "The reviewed practice-to-competency scoring link is unavailable."
         )
-    links = tuple(protocol.parent_competency.lever_links.all())
+    links = validate_production_scoring_protocol(protocol)
     link_ids = {link.lever_id for link in links}
-    target_ids = {lever.stable_id for lever in protocol.target_levers.all()}
-    if not target_ids or not target_ids.issubset(link_ids):
-        raise ScoringContractError(
-            "Recommendation targets do not match the reviewed scoring mapping."
-        )
 
     baseline_rows = {
         baseline.lever_id: baseline
@@ -147,16 +396,7 @@ def project_assessment_events(
 
     resolved_events = tuple(events)
     for event in resolved_events:
-        if event.protocol_stable_id != protocol.stable_id:
-            raise ScoringContractError(
-                f"{event.pk}: evidence belongs to an unreviewed scoring protocol."
-            )
-        if event.check_in.sprint.assessment_run_id != assessment_run.pk:
-            raise ScoringContractError(
-                f"{event.pk}: evidence and assessment stable IDs do not match."
-            )
-        if event.check_in.sprint.user_id != assessment_run.user_id:
-            raise ScoringContractError(f"{event.pk}: evidence and assessment users do not match.")
+        validate_production_scoring_event(event, assessment_run)
         try:
             verify_evidence_event(event)
         except EvidenceWorkflowError as exc:
@@ -218,10 +458,9 @@ def build_user_shadow_projection(
             False,
         )
 
-    links = tuple(protocol.parent_competency.lever_links.all())
-    link_ids = {link.lever_id for link in links}
-    target_ids = {lever.stable_id for lever in protocol.target_levers.all()}
-    if not target_ids or not target_ids.issubset(link_ids):
+    try:
+        links = validate_production_scoring_protocol(protocol)
+    except ScoringContractError:
         return UserShadowProjection(
             run,
             protocol,
@@ -230,6 +469,7 @@ def build_user_shadow_projection(
             "Scoring mapping verification must pass before a projection can be shown.",
             False,
         )
+    link_ids = {link.lever_id for link in links}
 
     baseline_rows = {
         baseline.lever_id: baseline

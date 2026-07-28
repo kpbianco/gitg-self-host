@@ -1,0 +1,60 @@
+schema_version: GG-TYPED-EVIDENCE-SPEC-1.0
+algorithm_version: GG-TYPED-EVIDENCE-1.0
+rules_schema_version: typed-evidence-rules-v1
+measurement_kinds:
+  - boolean
+  - count
+  - bounded_frequency
+  - ordinal
+  - duration
+  - artifact
+  - conceptual
+  - scenario
+  - objective
+  - attestation
+observation_states:
+  - observed
+  - unknown
+  - not_observed
+  - withheld
+  - not_applicable
+  - deferred
+provenance_kinds:
+  - firsthand_self_report
+  - reviewed_artifact
+  - objective_indicator
+  - consented_observer
+  - qualified_attestation
+evidence_directions:
+  - supports
+  - mixed
+  - contradicts
+  - inconclusive
+  - unknown
+support_factors:
+  self_directed: "1.00"
+  planning_aid: "0.85"
+  guided: "0.60"
+  not_recorded: "0.70"
+context_factors:
+  first_record: "0.55"
+  same_context: "0.55"
+  varied_context: "0.75"
+repetition_multipliers:
+  - "1.00"
+  - "0.65"
+  - "0.40"
+  - "0.25"
+performance_weights:
+  attempt: "0.35"
+  completion: "0.35"
+  primary: "0.20"
+  supporting: "0.10"
+quality_weights:
+  base: "0.45"
+  attempt_bonus: "0.10"
+  direction_bonus: "0.10"
+  support_bonus: "0.05"
+  context_bonus: "0.05"
+  observed_bonus: "0.10"
+  cap: "0.85"
