@@ -1,0 +1,102 @@
+schema_version: 1
+batch:
+  id: M6B-GOV
+  title: Record and accept the M6B measurement accessibility and privacy-safety governance review
+  goal: Integrate only actual completed specialist review for ER-M6A-003, resolve RG-M6A-002 from that decision, accept or constrain Decisions 047 through 049, and preserve M6B software readiness as distinct from specialist acceptance.
+sources:
+  product: products/gitg-self-host/product.yaml
+  requirements:
+    - products/gitg-self-host/acceptance.yaml#GG-GOV-M6B
+  milestone: products/gitg-self-host/roadmap.yaml#M6B
+  target_contracts:
+    - docs/PROJECT_HANDOFF.md
+    - docs/PRODUCT_DECISIONS.md
+    - docs/program/M6_CURRICULUM_EXPANSION.md
+    - docs/program/M6_VALIDATION_AND_PILOT_PLAN.md
+    - data/practices/expert_review_queue.yaml
+    - data/practices/research_gaps.yaml
+  baseline_commit: c551d5b14bb6812b3fddaeb09a9f3031b2ef2704
+  control_plane_repository: kpbianco/portfolio-control
+  control_plane_path: products/gitg-self-host/batches/M6B-GOV.yaml
+  control_plane_revision: 11a2e14ba9436655ec8ed6d75549ad8bfe6c5f84
+dependencies: []
+scope:
+  allowed_paths:
+    - contracts/active-batch.yaml
+    - contracts/repo-profile.yaml
+    - data/practices/expert_review_queue.yaml
+    - data/practices/research_gaps.yaml
+    - data/practices/release_manifest.yaml
+    - docs/PRODUCT_DECISIONS.md
+    - docs/PROJECT_HANDOFF.md
+    - docs/program/M6_CURRICULUM_EXPANSION.md
+    - docs/program/M6_VALIDATION_AND_PILOT_PLAN.md
+    - docs/CURRENT_STATE.md
+    - docs/HANDOFF.md
+    - docs/evidence/M6B-GOV-*.md
+    - MANIFEST.tsv
+  forbidden_paths:
+    - growth/**
+    - templates/**
+    - tests/**
+    - growth/migrations/**
+    - data/practices/protocols/**
+    - data/practices/registries/activation_ledger.yaml
+    - data/evidence/**
+    - LICENSE
+    - .github/workflows/**
+acceptance:
+  - ER-M6A-003 is completed by all required roles with nonempty completed_on and decision_reference fields; no role or decision is fabricated by the implementation agent.
+  - The retained review addresses separation of protocol adherence direct competency evidence lever state and production eligibility; accessibility and privacy minimization; circularity and double-counting; assessment-epoch isolation; reversal; and evidence dispositions requiring corroboration artifacts objective indicators qualified review reflection-only or shadow-only handling.
+  - RG-M6A-002 is resolved only from that review and the passing GG-COMPETENCY-EVIDENCE-READINESS-1.0 software evidence.
+  - Decisions 047 through 049 are accepted revised or rejected explicitly with rationale and consequences.
+  - M6B readiness remains software evidence and does not become clinical psychometric cultural longitudinal or universal validation.
+  - Friendship remains the only production score-active protocol and no package coverage runtime UI migration evidence event score state or recommendation behavior changes.
+  - Documentation and generated manifest remain internally consistent and the full repository gate passes.
+validation:
+  local:
+    - ./scripts/check-m6b-governance-gate.py
+    - ./scripts/agent-verify.sh contract
+    - ./scripts/agent-verify.sh quick
+    - ./scripts/agent-verify.sh full
+  focused_tests_to_add:
+    - pending specialist review and open research gap fail closed
+    - every required specialist role must be present in completed_roles
+    - completion date and decision reference are mandatory
+    - resolved research gap cites the accepted governance decision
+  required_ci:
+    - Ruff Django and pytest
+    - pilot readiness
+    - curriculum expansion readiness
+    - competency evidence readiness
+    - Playwright core journeys
+    - Docker Compose deployment drill
+    - aggregate Pilot readiness gate
+  manual:
+    - Required specialists provide and approve their own conclusions.
+    - Owner explicitly accepts the recorded governance decision.
+risk:
+  class: critical
+  hazards:
+    - fabricated specialist completion
+    - ambiguous review recorded as approval
+    - software fixtures represented as measurement validation
+    - premature mass authoring or score activation
+  stop_conditions:
+    - any required role has not completed review
+    - decision reference or review date is absent
+    - RG-M6A-002 cannot be resolved without additional work
+    - the accepted review requires M6B architecture or implementation changes
+    - a production activation or protocol change is proposed
+rollback:
+  strategy: Revert the governance-record commit; do not rewrite specialist records or proceed to M6C.
+  data_migration: none
+  release_action: No release or activation follows automatically.
+evidence:
+  output:
+    - docs/evidence/M6B-GOV-<date>.md
+    - exact role and decision references
+    - readiness command results
+    - accepted constraints and residual risks
+    - explicit non-validation claims
+  claim_boundary: Governance acceptance only; no clinical psychometric cultural longitudinal or production validation.

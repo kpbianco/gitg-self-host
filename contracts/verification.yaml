@@ -1,0 +1,52 @@
+schema_version: 1
+command_file: contracts/verification.commands
+runner: scripts/agent-verify.sh
+local_profiles:
+  contract:
+    purpose: Fast environment manifest formatting static Django and migration-drift validation.
+    includes:
+      - idempotent local virtual environment
+      - exact MANIFEST path and byte-size audit
+      - Ruff format and lint
+      - Django system check
+      - migration drift check
+  quick:
+    purpose: Contract checks plus all non-browser pytest tests.
+    includes:
+      - contract
+      - unit and integration tests excluding e2e
+  full:
+    purpose: Quick checks plus the three current independent readiness contracts.
+    includes:
+      - quick
+      - pilot readiness
+      - curriculum expansion readiness
+      - competency evidence readiness
+validation_levels:
+  static: automated
+  synthetic_fixture: automated
+  deterministic_replay: automated
+  browser: automated_ci
+  compose_deployment: automated_ci
+  owner_pilot: manual
+  specialist_review: manual
+  multicycle_participant: manual
+mandatory_github_ci:
+  - Ruff Django and pytest
+  - pilot readiness
+  - curriculum expansion readiness
+  - competency evidence readiness
+  - Playwright core journeys and retained diagnostics
+  - Docker Compose deployment backup restore recreation and shutdown drill
+  - aggregate Pilot readiness gate
+manual_gates:
+  - M6B measurement accessibility and privacy-safety review
+  - every target pull request merge
+  - content semantic and source review
+  - high-risk and qualified specialist review
+  - production score activation
+  - participant release and deployment
+known_limitations:
+  - Local full verification intentionally leaves Playwright and Docker Compose to required GitHub CI unless the operator runs those commands separately.
+  - Software fixtures and generated reports are not specialist user cultural clinical psychometric longitudinal or mastery validation.
+  - Web research can identify sources but does not clear a specialist gate.
