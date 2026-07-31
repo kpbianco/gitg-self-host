@@ -5,6 +5,8 @@ if [[ -n "${CONTROL_REPO:-}" ]]; then
   CONTROL_REPO="$(realpath "$CONTROL_REPO")"
 elif [[ -x "$ROOT/../portfolio-control/scripts/run-product-roadmap.sh" ]]; then
   CONTROL_REPO="$(realpath "$ROOT/../portfolio-control")"
+elif [[ -x "$ROOT/../../scripts/run-product-roadmap.sh" ]]; then
+  CONTROL_REPO="$(realpath "$ROOT/../..")"
 elif [[ -x "$ROOT/../../../scripts/run-product-roadmap.sh" ]]; then
   CONTROL_REPO="$(realpath "$ROOT/../../..")"
 else
