@@ -1,0 +1,40 @@
+schema_version: 1
+profile: product-data
+intent: Preserve doctrine canonical content scoring semantics migrations recoverability originality and participant-data boundaries.
+required_gates:
+  - schema-validation
+  - canonical-data-validation
+  - stable-id-uniqueness-and-completeness
+  - deterministic-generated-reports
+  - originality-and-source-review
+  - scoring-and-replay-invariants
+  - migration-and-rollback-tests
+  - pilot-readiness
+  - curriculum-expansion-readiness
+  - competency-evidence-readiness
+  - browser-journeys-and-artifact-review
+  - compose-backup-restore-smoke
+required_evidence:
+  - exact stable-id cohort
+  - source and risk registry changes
+  - dataset counts and hashes
+  - invariant and replay results
+  - migration and rollback results
+  - validation level and limitations
+  - residual research and specialist gaps
+prohibited_autonomy:
+  - destructive-data-migration
+  - production-participant-data-write
+  - target-pr-merge
+  - mass-score-activation
+  - fabricate-specialist-review
+  - waive-failing-gate
+review_focus:
+  - canonical-source violations
+  - placeholder generic or duplicated content
+  - context or scoring hidden defaults
+  - schema report and hash drift
+  - circularity double counting and epoch leakage
+  - privacy export backup and deletion
+  - backup restore and deployment recovery
+  - unsupported clinical psychometric cultural or mastery claims

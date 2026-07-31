@@ -1,0 +1,36 @@
+schema_version: 1
+repository: kpbianco/gitg-self-host
+product: gitg-self-host
+profile: product-data
+control_plane:
+  repository: kpbianco/portfolio-control
+  profile_path: profiles/product-data.yaml
+  product_path: products/gitg-self-host
+  source_revision: 11a2e14ba9436655ec8ed6d75549ad8bfe6c5f84
+audited_baseline: c551d5b14bb6812b3fddaeb09a9f3031b2ef2704
+autonomy:
+  level: 2
+  operator_invoked_autopilot:
+    control_contract_create_repair_merge: allowed_after_all_gates
+    target_branch_implementation_repair_draft_pr: allowed
+    target_ready_or_merge: forbidden
+  forbidden:
+    - merge target pull request
+    - force push
+    - publish release
+    - deploy
+    - change secrets or repository settings
+    - destructive participant-data migration
+    - claim specialist or participant validation without retained evidence
+    - expand score activation without explicit cohort approval
+source_of_truth:
+  portfolio_control:
+    - product outcomes and roadmap
+    - approved batch scope and fixed authoring cohort
+    - automation and manual gate policy
+  repository:
+    - doctrine and accepted decisions
+    - canonical curriculum model assessment and practice content
+    - evidence scoring ranking and runtime semantics
+    - participant data and operations
+    - actual current state and evidence
