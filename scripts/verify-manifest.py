@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Verify or regenerate MANIFEST.tsv from tracked and intended untracked files."""
+
 from __future__ import annotations
 
 import argparse
@@ -50,7 +51,8 @@ def main() -> int:
     missing = sorted(set(expected_map) - set(actual_map))
     stale = sorted(set(actual_map) - set(expected_map))
     changed = sorted(
-        name for name in set(actual_map) & set(expected_map)
+        name
+        for name in set(actual_map) & set(expected_map)
         if actual_map[name] != expected_map[name]
     )
     if missing:

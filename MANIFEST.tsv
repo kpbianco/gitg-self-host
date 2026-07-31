@@ -273,10 +273,10 @@ reports/practice-content/typed_evidence_capability_v1.csv	4034
 requirements-dev.txt	118
 requirements.txt	92
 scripts/agent-verify.sh	1363
-scripts/check-m6b-governance-gate.py	2037
-scripts/ensure-agent-env.py	1293
+scripts/check-m6b-governance-gate.py	2129
+scripts/ensure-agent-env.py	1389
 scripts/roadmap-autopilot.sh	942
-scripts/verify-manifest.py	2163
+scripts/verify-manifest.py	2172
 scripts/verify_assessment_golden.js	2068
 scripts/verify_competency_evidence_readiness.sh	2093
 scripts/verify_compose.sh	7050

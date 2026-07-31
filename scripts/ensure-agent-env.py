@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Create/update the ignored development venv only when requirements change."""
+
 from __future__ import annotations
 
 import hashlib
@@ -35,7 +36,15 @@ def main() -> int:
         run(sys.executable, "-m", "venv", str(VENV))
     current = STAMP.read_text().strip() if STAMP.exists() else ""
     if current != expected:
-        run(str(python), "-m", "pip", "install", "--disable-pip-version-check", "-r", str(ROOT / "requirements-dev.txt"))
+        run(
+            str(python),
+            "-m",
+            "pip",
+            "install",
+            "--disable-pip-version-check",
+            "-r",
+            str(ROOT / "requirements-dev.txt"),
+        )
         STAMP.write_text(expected + "\n")
     print(f"Development environment ready: {python}")
     return 0
