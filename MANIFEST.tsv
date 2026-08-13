@@ -297,7 +297,7 @@ requirements-dev.txt	118
 requirements.txt	92
 scripts/agent-verify.sh	1363
 scripts/check-m6b-governance-gate.py	2129
-scripts/ensure-agent-env.py	1389
+scripts/ensure-agent-env.py	2001
 scripts/roadmap-autopilot.sh	1050
 scripts/verify-manifest.py	2172
 scripts/verify_assessment_golden.js	2068

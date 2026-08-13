@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import hashlib
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -12,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 VENV = ROOT / ".venv"
 STAMP = VENV / ".agent-requirements.sha256"
 REQS = [ROOT / "requirements.txt", ROOT / "requirements-dev.txt"]
+MINIMUM_PYTHON = (3, 12)
 
 
 def digest() -> str:
@@ -29,11 +31,26 @@ def run(*args: str) -> None:
     subprocess.run(args, cwd=ROOT, check=True)
 
 
+def venv_interpreter() -> str:
+    """Return an interpreter compatible with the repository runtime."""
+    if sys.version_info >= MINIMUM_PYTHON:
+        return sys.executable
+    candidate = shutil.which("python3.12")
+    if candidate is not None:
+        return candidate
+    required = ".".join(str(part) for part in MINIMUM_PYTHON)
+    actual = f"{sys.version_info.major}.{sys.version_info.minor}"
+    raise RuntimeError(
+        f"Python {required} or newer is required; bootstrap is running on {actual} "
+        "and python3.12 is not available on PATH"
+    )
+
+
 def main() -> int:
     expected = digest()
     python = VENV / "bin" / "python"
     if not python.exists():
-        run(sys.executable, "-m", "venv", str(VENV))
+        run(venv_interpreter(), "-m", "venv", str(VENV))
     current = STAMP.read_text().strip() if STAMP.exists() else ""
     if current != expected:
         run(
