@@ -16,14 +16,14 @@
 .github/codex/pr-risk-review.md	1240
 .github/codex/prompts/repo-onboarding.md	1909
 .github/codex/release-readiness.md	593
-.github/codex/schemas/automation.schema.json	3875
+.github/codex/schemas/automation.schema.json	3903
 .github/codex/schemas/batch.schema.json	3810
 .github/codex/schemas/ci-diagnosis.schema.json	798
 .github/codex/schemas/evidence.schema.json	820
 .github/codex/schemas/intake-disposition.schema.json	1025
 .github/codex/schemas/intake.schema.json	1419
 .github/codex/schemas/planner-review.schema.json	1475
-.github/codex/schemas/product.schema.json	1120
+.github/codex/schemas/product.schema.json	1140
 .github/workflows/verification.yml	2338
 .gitignore	266
 .portfolio-harness.json	3559
