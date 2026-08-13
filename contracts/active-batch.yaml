@@ -1,69 +1,100 @@
 schema_version: 1
 batch:
-  id: M6B-GOV
-  title: Record and accept the M6B measurement accessibility and privacy-safety governance review
-  goal: Integrate only actual completed specialist review for ER-M6A-003, resolve RG-M6A-002 from that decision, accept or constrain Decisions 047 through 049, and preserve M6B software readiness as distinct from specialist acceptance.
+  id: M6C-01
+  title: Add versioned context and defer-state foundations without changing recommendations
+  goal: Add explicit versioned persistence and pure services for applicability, importance, readiness, urgency, opportunity/resources, season, capacity, burden, and defer/not-now while preserving existing assessment evidence scoring recommendation and five-protocol runtime behavior.
 sources:
   product: products/gitg-self-host/product.yaml
   requirements:
-    - products/gitg-self-host/acceptance.yaml#GG-GOV-M6B
-  milestone: products/gitg-self-host/roadmap.yaml#M6B
+    - products/gitg-self-host/PRD.md#M6C-context-and-Personal-OS
+    - products/gitg-self-host/acceptance.yaml#GG-CONTEXT
+  milestone: products/gitg-self-host/roadmap.yaml#M6C
+  prerequisites:
+    - M6B software implementation merged at c551d5b14bb6812b3fddaeb09a9f3031b2ef2704
+    - Owner-directed sequencing defers M6B-GOV until full competency authoring is complete
   target_contracts:
-    - docs/PROJECT_HANDOFF.md
     - docs/PRODUCT_DECISIONS.md
+    - docs/PROJECT_HANDOFF.md
     - docs/program/M6_CURRICULUM_EXPANSION.md
-    - docs/program/M6_VALIDATION_AND_PILOT_PLAN.md
-    - data/practices/expert_review_queue.yaml
-    - data/practices/research_gaps.yaml
+    - docs/SCORING_DESIGN.md
+    - docs/scoring-state.md
+    - docs/practice-workflow.md
   baseline_commit: c551d5b14bb6812b3fddaeb09a9f3031b2ef2704
   control_plane_repository: kpbianco/portfolio-control
-  control_plane_path: products/gitg-self-host/batches/M6B-GOV.yaml
-  control_plane_revision: 11a2e14ba9436655ec8ed6d75549ad8bfe6c5f84
+  control_plane_path: products/gitg-self-host/batches/M6C-01.yaml
+  control_plane_revision: c8aceba7e3d673b851d789f21b185d9a61bef66c  # pragma: allowlist secret
 dependencies: []
 scope:
   allowed_paths:
     - contracts/active-batch.yaml
     - contracts/repo-profile.yaml
-    - data/practices/expert_review_queue.yaml
-    - data/practices/research_gaps.yaml
-    - data/practices/release_manifest.yaml
+    - growth/models.py
+    - growth/migrations/**
+    - growth/domain/context.py
+    - growth/services/context.py
+    - growth/management/commands/verify_context_readiness.py
+    - tests/test_context_models.py
+    - tests/test_context_services.py
+    - tests/test_context_readiness.py
+    - tests/fixtures/context/**
+    - scripts/verify_context_readiness.sh
+    - Makefile
+    - README.md
     - docs/PRODUCT_DECISIONS.md
     - docs/PROJECT_HANDOFF.md
+    - docs/context-and-personal-os.md
     - docs/program/M6_CURRICULUM_EXPANSION.md
-    - docs/program/M6_VALIDATION_AND_PILOT_PLAN.md
     - docs/CURRENT_STATE.md
     - docs/HANDOFF.md
-    - docs/evidence/M6B-GOV-*.md
+    - docs/evidence/M6C-01-*.md
     - MANIFEST.tsv
   forbidden_paths:
-    - growth/**
-    - templates/**
-    - tests/**
-    - growth/migrations/**
+    - data/assessment/**
+    - data/curriculum/**
+    - data/model/**
     - data/practices/protocols/**
     - data/practices/registries/activation_ledger.yaml
     - data/evidence/**
-    - LICENSE
+    - growth/domain/evidence.py
+    - growth/domain/typed_evidence.py
+    - growth/domain/competency_scoring.py
+    - growth/domain/scoring.py
+    - growth/domain/ranking.py
+    - growth/services/evidence.py
+    - growth/services/scoring.py
+    - growth/services/score_state.py
+    - growth/services/profile.py
+    - growth/views*.py
+    - growth/forms.py
+    - templates/**
     - .github/workflows/**
+    - LICENSE
 acceptance:
-  - ER-M6A-003 is completed by all required roles with nonempty completed_on and decision_reference fields; no role or decision is fabricated by the implementation agent.
-  - The retained review addresses separation of protocol adherence direct competency evidence lever state and production eligibility; accessibility and privacy minimization; circularity and double-counting; assessment-epoch isolation; reversal; and evidence dispositions requiring corroboration artifacts objective indicators qualified review reflection-only or shadow-only handling.
-  - RG-M6A-002 is resolved only from that review and the passing GG-COMPETENCY-EVIDENCE-READINESS-1.0 software evidence.
-  - Decisions 047 through 049 are accepted revised or rejected explicitly with rationale and consequences.
-  - M6B readiness remains software evidence and does not become clinical psychometric cultural longitudinal or universal validation.
-  - Friendship remains the only production score-active protocol and no package coverage runtime UI migration evidence event score state or recommendation behavior changes.
-  - Documentation and generated manifest remain internally consistent and the full repository gate passes.
+  - Versioned models represent context-factor values as explicit unknown not_applicable deferred or provided states; missing data is never replaced by a hidden neutral or favorable value.
+  - Applicability importance readiness urgency opportunity/resources burden season and capacity have bounded typed contracts and plain-language definitions.
+  - Defer/not-now stores an explicit reason category and optional bounded review horizon without reducing a baseline current estimate confidence need rank or worth-related value.
+  - Records are user and assessment-epoch scoped where required; reassessment never silently transfers stale context.
+  - Pure services validate cross-field constraints and return deterministic canonical snapshots and hashes for unchanged input.
+  - Migrations are reversible where Django permits, idempotent through normal migrate operations, and do not rewrite existing assessment evidence score pilot-feedback practice or review records.
+  - Existing GG-EVIDENCE-1.0 typed evidence shadow score-state need-ranking pilot curriculum and competency-evidence readiness outputs remain exact.
+  - Existing recommendation order and all ordinary UI behavior remain unchanged in this batch.
+  - Friendship remains the only production score-active protocol; no protocol package action source registry or activation entry changes.
+  - Focused boundary migration epoch isolation hashing and no-mutation tests plus the full repository gate pass.
+  - Retained evidence distinguishes software contract readiness from user accessibility cultural or longitudinal validation.
+  - M6B specialist governance remains pending and is not represented as accepted; this software/content sequence cannot activate production scoring.
 validation:
   local:
-    - ./scripts/check-m6b-governance-gate.py
     - ./scripts/agent-verify.sh contract
     - ./scripts/agent-verify.sh quick
     - ./scripts/agent-verify.sh full
   focused_tests_to_add:
-    - pending specialist review and open research gap fail closed
-    - every required specialist role must be present in completed_roles
-    - completion date and decision reference are mandatory
-    - resolved research gap cites the accepted governance decision
+    - state enum and numeric boundary validation
+    - unknown N-A and defer remain distinct
+    - deterministic snapshot and content hash
+    - reassessment epoch isolation
+    - migration round trip and existing-row preservation
+    - no assessment evidence score recommendation or activation mutation
+    - context readiness fail-closed diagnostics
   required_ci:
     - Ruff Django and pytest
     - pilot readiness
@@ -73,30 +104,30 @@ validation:
     - Docker Compose deployment drill
     - aggregate Pilot readiness gate
   manual:
-    - Required specialists provide and approve their own conclusions.
-    - Owner explicitly accepts the recorded governance decision.
+    - Review factor definitions and language for non-judgmental semantics before merge.
 risk:
-  class: critical
+  class: high
   hazards:
-    - fabricated specialist completion
-    - ambiguous review recorded as approval
-    - software fixtures represented as measurement validation
-    - premature mass authoring or score activation
+    - hidden defaults create false priority precision
+    - N-A or defer becomes a deficit
+    - context silently carries across assessment epochs
+    - migration changes historical state
+    - future ranking is accidentally enabled before review
   stop_conditions:
-    - any required role has not completed review
-    - decision reference or review date is absent
-    - RG-M6A-002 cannot be resolved without additional work
-    - the accepted review requires M6B architecture or implementation changes
-    - a production activation or protocol change is proposed
+    - a recommendation or score algorithm change is required
+    - factor semantics require an unresolved product decision
+    - existing evidence or score snapshots must be rewritten
+    - ordinary UI changes become necessary
+    - source changes outside allowed paths are required
 rollback:
-  strategy: Revert the governance-record commit; do not rewrite specialist records or proceed to M6C.
-  data_migration: none
-  release_action: No release or activation follows automatically.
+  strategy: Revert the batch and migration before later M6C batches depend on it; retain a verified pre-migration backup.
+  data_migration: Use normal Django backward migration only after backup and only when no later schema depends on it.
+  release_action: No user-facing release claim from this foundation alone.
 evidence:
   output:
-    - docs/evidence/M6B-GOV-<date>.md
-    - exact role and decision references
-    - readiness command results
-    - accepted constraints and residual risks
-    - explicit non-validation claims
-  claim_boundary: Governance acceptance only; no clinical psychometric cultural longitudinal or production validation.
+    - docs/evidence/M6C-01-<date>.md
+    - acceptance and invariant mapping
+    - migration and replay results
+    - exact commands and environment
+    - residual factor-definition and validation risks
+  claim_boundary: Static migration unit replay package browser and deployment regression evidence only; no user or specialist validation.

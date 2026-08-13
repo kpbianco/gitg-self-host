@@ -43,7 +43,11 @@ M6B adds a parallel typed-evidence and competency-shadow architecture for
 software review. It keeps assessment lever baselines, historical v1 replay,
 the five-protocol runtime, and friendship-only production activation
 unchanged. Specialist measurement, accessibility, and privacy/safety review
-still blocks M6B acceptance and mass authoring.
+still blocks M6B acceptance. The owner-directed sequence permits later
+non-scored software/content work while keeping that governance pending.
+M6C-01 adds explicit, versioned context and defer-state persistence plus pure
+deterministic snapshot services. It does not yet change recommendations or
+ordinary UI.
 
 ## Deployment essentials
 
@@ -285,8 +289,36 @@ See [canonical practice content](docs/practice-content.md) and the
   score-activation expansion.
 
 M6B software completion is not measurement validation. `ER-M6A-003` remains
-pending and `RG-M6A-002` remains open, so M6B acceptance and mass authoring
-remain blocked.
+pending and `RG-M6A-002` remains open, so M6B acceptance and production use of
+the new typed paths remain blocked. The owner-directed sequence separately
+permits non-scored M6C and authoring work while retaining those gates.
+
+## What M6C-01 adds
+
+- Append-only `GG-CONTEXT-1.0` assessment-context revisions for season and
+  capacity, scoped to one user and immutable assessment epoch.
+- Append-only practice-candidate revisions for applicability, importance,
+  readiness, urgency, opportunity/resources, burden, and defer/not-now.
+- Explicit `unknown`, `not_applicable`, `deferred`, and `provided` states;
+  only provided values carry a bounded category or 0–4 ordinal.
+- Categorical defer reasons and an optional 1–366 day review horizon that do
+  not create a deficit or mutate any assessment, evidence, score, need, rank,
+  completion, or worth-related value.
+- Deterministic minimal snapshots and SHA-256 hashes, idempotent retries,
+  append-only changed revisions, transactional bundle validation, and strict
+  reassessment isolation.
+- Schema-only reversible migration and additive read-only
+  `GG-CONTEXT-READINESS-1.0`.
+- No ordinary form or screen, recommendation formula, protocol/action,
+  evidence/scoring change, or production activation.
+
+Run the isolated M6C-01 gate:
+
+```bash
+make context-check
+```
+
+See [context and Personal OS foundation](docs/context-and-personal-os.md).
 
 ## Product flow
 
@@ -396,6 +428,7 @@ docker compose up -d --build
 docker compose exec app python manage.py verify_pilot_readiness
 docker compose exec app python manage.py verify_expansion_readiness
 docker compose exec app python manage.py verify_competency_evidence_readiness
+docker compose exec app python manage.py verify_context_readiness
 ```
 
 Migrations and canonical seeding run safely on startup.
@@ -411,9 +444,9 @@ Migrations and canonical seeding run safely on startup.
   reconstructs 33 identifiable rows; L06, L15, L32, and L37 remain
   baseline-only. All four friendship-mapped rows are active.
 - Dynamic need remains provisional. M3B updates assessment v1.1's
-  gap-and-confidence need function but does not invent the uncollected
-  applicability, importance, readiness, urgency, or opportunity inputs from
-  the fuller context model.
+  gap-and-confidence need function. M6C-01 can persist explicit context in its
+  new service boundary, but ordinary UI does not collect it and recommendation
+  code does not consume it in this batch.
 - Event reversal is an instance-owner operation and is intentionally
   permanent in M3B. Restore a verified backup if the wrong event is reversed.
 - The minimized JSON export omits direct identity and free text, but its
@@ -441,6 +474,11 @@ Migrations and canonical seeding run safely on startup.
 - `ER-M6A-003` remains a real external governance gate. Passing
   `GG-COMPETENCY-EVIDENCE-READINESS-1.0` does not clear measurement,
   accessibility, or privacy/safety review.
+- M6C-01 factor categories and ordinal scales have software-contract coverage,
+  not participant accessibility, cultural, longitudinal, specialist,
+  psychometric, or clinical validation. Context-specific export, deletion,
+  and retention UX remains deferred; database backups contain these private
+  local records.
 - The canonical JavaScript scorer remains the browser reference. Node.js is
   used by a development golden test only; no Node.js server exists at runtime.
 - Direct local-network HTTP is supported. Add Caddy or another proxy later for
@@ -458,6 +496,7 @@ Migrations and canonical seeding run safely on startup.
 - [Protocol library](docs/protocol-library.md)
 - [Canonical practice content](docs/practice-content.md)
 - [M6 curriculum expansion charter](docs/program/M6_CURRICULUM_EXPANSION.md)
+- [Context and Personal OS foundation](docs/context-and-personal-os.md)
 - [M6 validation and pilot plan](docs/program/M6_VALIDATION_AND_PILOT_PLAN.md)
 - [M2 evidence contract](docs/evidence-contract.md)
 - [M2B evidence audit and calibration](docs/evidence-audit.md)

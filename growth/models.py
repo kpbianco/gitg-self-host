@@ -6,6 +6,18 @@ from django.core.validators import MaxLengthValidator, MaxValueValidator, MinVal
 from django.db import models
 from django.db.models import Q
 
+from growth.domain.context import (
+    CONTEXT_CONTRACT_VERSION,
+    REVIEW_HORIZON_DAYS_MAX,
+    REVIEW_HORIZON_DAYS_MIN,
+    ContextValueState,
+    DeferReason,
+    PracticeDisposition,
+    SeasonCode,
+    build_assessment_context_snapshot,
+    build_practice_context_snapshot,
+)
+
 MASTERY_DISCLAIMER = "Completing this practice does not establish mastery."
 PILOT_FEEDBACK_CONTRACT_VERSION = "GG-PILOT-FEEDBACK-1.0"
 
@@ -990,3 +1002,387 @@ class PilotFeedback(models.Model):
             )
         ):
             raise ValidationError("Provide at least one optional feedback response.")
+
+
+class ImmutableContextQuerySet(models.QuerySet):
+    def update(self, **kwargs):
+        raise ValidationError("Versioned context records are immutable.")
+
+    def bulk_update(self, objs, fields, batch_size=None):
+        raise ValidationError("Versioned context records are immutable.")
+
+    def delete(self):
+        raise ValidationError("Versioned context records are immutable.")
+
+
+class AssessmentContext(models.Model):
+    class ValueState(models.TextChoices):
+        UNKNOWN = ContextValueState.UNKNOWN.value, "Unknown"
+        NOT_APPLICABLE = ContextValueState.NOT_APPLICABLE.value, "Not applicable"
+        DEFERRED = ContextValueState.DEFERRED.value, "Deferred"
+        PROVIDED = ContextValueState.PROVIDED.value, "Provided"
+
+    stable_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="assessment_context_records",
+    )
+    assessment_run = models.ForeignKey(
+        AssessmentRun,
+        on_delete=models.PROTECT,
+        related_name="context_records",
+    )
+    contract_version = models.CharField(
+        max_length=40,
+        default=CONTEXT_CONTRACT_VERSION,
+        editable=False,
+    )
+    revision = models.PositiveIntegerField()
+    season_state = models.CharField(max_length=20, choices=ValueState.choices)
+    season_value = models.CharField(
+        max_length=20,
+        choices=[(item.value, item.value.replace("_", " ").title()) for item in SeasonCode],
+        blank=True,
+        default="",
+    )
+    capacity_state = models.CharField(max_length=20, choices=ValueState.choices)
+    capacity_value = models.PositiveSmallIntegerField(
+        null=True,
+        blank=True,
+        validators=[MinValueValidator(0), MaxValueValidator(4)],
+    )
+    canonical_snapshot = models.JSONField()
+    content_hash = models.CharField(max_length=64)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    objects = ImmutableContextQuerySet.as_manager()
+
+    class Meta:
+        ordering = ["assessment_run_id", "revision"]
+        constraints = [
+            models.UniqueConstraint(
+                fields=["assessment_run", "revision"],
+                name="unique_assessment_context_revision",
+            ),
+            models.CheckConstraint(
+                condition=Q(contract_version=CONTEXT_CONTRACT_VERSION),
+                name="assessment_context_contract_v1",
+            ),
+            models.CheckConstraint(
+                condition=Q(revision__gte=1),
+                name="assessment_context_revision_positive",
+            ),
+            models.CheckConstraint(
+                condition=Q(season_state__in=[item.value for item in ContextValueState]),
+                name="assessment_context_season_state_valid",
+            ),
+            models.CheckConstraint(
+                condition=Q(capacity_state__in=[item.value for item in ContextValueState]),
+                name="assessment_context_capacity_state_valid",
+            ),
+            models.CheckConstraint(
+                condition=(
+                    Q(season_state=ContextValueState.PROVIDED.value) & ~Q(season_value="")
+                    | ~Q(season_state=ContextValueState.PROVIDED.value) & Q(season_value="")
+                ),
+                name="assessment_context_season_value_matches_state",
+            ),
+            models.CheckConstraint(
+                condition=(
+                    Q(capacity_state=ContextValueState.PROVIDED.value)
+                    & Q(capacity_value__isnull=False)
+                    | ~Q(capacity_state=ContextValueState.PROVIDED.value)
+                    & Q(capacity_value__isnull=True)
+                ),
+                name="assessment_context_capacity_value_matches_state",
+            ),
+            models.CheckConstraint(
+                condition=(
+                    Q(capacity_value__isnull=True)
+                    | Q(capacity_value__gte=0) & Q(capacity_value__lte=4)
+                ),
+                name="assessment_context_capacity_in_range",
+            ),
+        ]
+
+    def __str__(self) -> str:
+        return f"{self.assessment_run_id}: context revision {self.revision}"
+
+    def save(self, *args, **kwargs):
+        if self.pk and type(self).objects.filter(pk=self.pk).exists():
+            raise ValidationError("Versioned context records are immutable.")
+        return super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        raise ValidationError("Versioned context records are immutable.")
+
+    def clean(self):
+        super().clean()
+        errors = {}
+        if self.contract_version != CONTEXT_CONTRACT_VERSION:
+            errors["contract_version"] = "Context contract version is not supported."
+        if self.assessment_run_id and self.user_id != self.assessment_run.user_id:
+            errors["user"] = "Context user must own the assessment epoch."
+        try:
+            expected = build_assessment_context_snapshot(
+                assessment_epoch_id=self.assessment_run_id,
+                contract_version=self.contract_version,
+                factors={
+                    "season": {"state": self.season_state, "value": self.season_value or None},
+                    "capacity": {"state": self.capacity_state, "value": self.capacity_value},
+                },
+            )
+        except (ValueError, TypeError) as exc:
+            errors["canonical_snapshot"] = str(exc)
+        else:
+            if self.canonical_snapshot != expected.payload:
+                errors["canonical_snapshot"] = "Canonical context snapshot does not match fields."
+            if self.content_hash != expected.content_hash:
+                errors["content_hash"] = "Context content hash does not verify."
+        if errors:
+            raise ValidationError(errors)
+
+
+class PracticeContext(models.Model):
+    class ValueState(models.TextChoices):
+        UNKNOWN = ContextValueState.UNKNOWN.value, "Unknown"
+        NOT_APPLICABLE = ContextValueState.NOT_APPLICABLE.value, "Not applicable"
+        DEFERRED = ContextValueState.DEFERRED.value, "Deferred"
+        PROVIDED = ContextValueState.PROVIDED.value, "Provided"
+
+    class Disposition(models.TextChoices):
+        CONSIDERING = PracticeDisposition.CONSIDERING.value, "Considering"
+        DEFERRED = PracticeDisposition.DEFERRED.value, "Deferred / not now"
+
+    class DeferReasonCategory(models.TextChoices):
+        CAPACITY = DeferReason.CAPACITY.value, "Capacity"
+        RESOURCES = DeferReason.RESOURCES.value, "Resources"
+        TIMING = DeferReason.TIMING.value, "Timing"
+        SAFETY_OR_ACCESS = DeferReason.SAFETY_OR_ACCESS.value, "Safety or access"
+        ROLE_OR_FIT = DeferReason.ROLE_OR_FIT.value, "Role or fit"
+        COMPETING_PRIORITY = DeferReason.COMPETING_PRIORITY.value, "Competing priority"
+        NEEDS_SUPPORT = DeferReason.NEEDS_SUPPORT.value, "Needs support"
+        USER_CHOICE = DeferReason.USER_CHOICE.value, "User choice"
+
+    stable_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="practice_context_records",
+    )
+    assessment_run = models.ForeignKey(
+        AssessmentRun,
+        on_delete=models.PROTECT,
+        related_name="practice_context_records",
+    )
+    protocol = models.ForeignKey(
+        PracticeProtocol,
+        on_delete=models.PROTECT,
+        related_name="context_records",
+    )
+    contract_version = models.CharField(
+        max_length=40,
+        default=CONTEXT_CONTRACT_VERSION,
+        editable=False,
+    )
+    revision = models.PositiveIntegerField()
+    applicability_state = models.CharField(max_length=20, choices=ValueState.choices)
+    applicability_value = models.PositiveSmallIntegerField(null=True, blank=True)
+    importance_state = models.CharField(max_length=20, choices=ValueState.choices)
+    importance_value = models.PositiveSmallIntegerField(null=True, blank=True)
+    readiness_state = models.CharField(max_length=20, choices=ValueState.choices)
+    readiness_value = models.PositiveSmallIntegerField(null=True, blank=True)
+    urgency_state = models.CharField(max_length=20, choices=ValueState.choices)
+    urgency_value = models.PositiveSmallIntegerField(null=True, blank=True)
+    opportunity_resources_state = models.CharField(max_length=20, choices=ValueState.choices)
+    opportunity_resources_value = models.PositiveSmallIntegerField(null=True, blank=True)
+    burden_state = models.CharField(max_length=20, choices=ValueState.choices)
+    burden_value = models.PositiveSmallIntegerField(null=True, blank=True)
+    disposition = models.CharField(
+        max_length=20,
+        choices=Disposition.choices,
+        default=Disposition.CONSIDERING,
+    )
+    defer_reason = models.CharField(
+        max_length=24,
+        choices=DeferReasonCategory.choices,
+        blank=True,
+        default="",
+    )
+    review_horizon_days = models.PositiveSmallIntegerField(
+        null=True,
+        blank=True,
+        validators=[
+            MinValueValidator(REVIEW_HORIZON_DAYS_MIN),
+            MaxValueValidator(REVIEW_HORIZON_DAYS_MAX),
+        ],
+    )
+    canonical_snapshot = models.JSONField()
+    content_hash = models.CharField(max_length=64)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    objects = ImmutableContextQuerySet.as_manager()
+
+    class Meta:
+        ordering = ["assessment_run_id", "protocol_id", "revision"]
+        constraints = [
+            models.UniqueConstraint(
+                fields=["assessment_run", "protocol", "revision"],
+                name="unique_practice_context_revision",
+            ),
+            models.CheckConstraint(
+                condition=Q(contract_version=CONTEXT_CONTRACT_VERSION),
+                name="practice_context_contract_v1",
+            ),
+            models.CheckConstraint(
+                condition=Q(revision__gte=1),
+                name="practice_context_revision_positive",
+            ),
+            models.CheckConstraint(
+                condition=Q(disposition__in=[item.value for item in PracticeDisposition]),
+                name="practice_context_disposition_valid",
+            ),
+            models.CheckConstraint(
+                condition=Q(defer_reason="")
+                | Q(defer_reason__in=[item.value for item in DeferReason]),
+                name="practice_context_defer_reason_valid",
+            ),
+            models.CheckConstraint(
+                condition=Q(review_horizon_days__isnull=True)
+                | Q(
+                    review_horizon_days__gte=REVIEW_HORIZON_DAYS_MIN,
+                    review_horizon_days__lte=REVIEW_HORIZON_DAYS_MAX,
+                ),
+                name="practice_context_review_horizon_in_range",
+            ),
+        ]
+        for field_name in (
+            "applicability",
+            "importance",
+            "readiness",
+            "urgency",
+            "opportunity_resources",
+            "burden",
+        ):
+            constraints.extend(
+                [
+                    models.CheckConstraint(
+                        condition=Q(
+                            **{
+                                f"{field_name}_state__in": [
+                                    item.value for item in ContextValueState
+                                ]
+                            }
+                        ),
+                        name=f"practice_context_{field_name}_state_valid",
+                    ),
+                    models.CheckConstraint(
+                        condition=(
+                            Q(**{f"{field_name}_state": ContextValueState.PROVIDED.value})
+                            & Q(**{f"{field_name}_value__isnull": False})
+                            | ~Q(**{f"{field_name}_state": ContextValueState.PROVIDED.value})
+                            & Q(**{f"{field_name}_value__isnull": True})
+                        ),
+                        name=f"practice_context_{field_name}_value_state",
+                    ),
+                    models.CheckConstraint(
+                        condition=Q(**{f"{field_name}_value__isnull": True})
+                        | Q(
+                            **{
+                                f"{field_name}_value__gte": 0,
+                                f"{field_name}_value__lte": 4,
+                            }
+                        ),
+                        name=f"practice_context_{field_name}_value_range",
+                    ),
+                ]
+            )
+        del field_name
+        constraints.append(
+            models.CheckConstraint(
+                condition=(
+                    Q(disposition=PracticeDisposition.DEFERRED.value)
+                    & ~Q(defer_reason="")
+                    & (
+                        Q(applicability_state=ContextValueState.DEFERRED.value)
+                        | Q(importance_state=ContextValueState.DEFERRED.value)
+                        | Q(readiness_state=ContextValueState.DEFERRED.value)
+                        | Q(urgency_state=ContextValueState.DEFERRED.value)
+                        | Q(opportunity_resources_state=ContextValueState.DEFERRED.value)
+                        | Q(burden_state=ContextValueState.DEFERRED.value)
+                    )
+                    | Q(disposition=PracticeDisposition.CONSIDERING.value)
+                    & Q(defer_reason="")
+                    & Q(review_horizon_days__isnull=True)
+                    & ~Q(applicability_state=ContextValueState.DEFERRED.value)
+                    & ~Q(importance_state=ContextValueState.DEFERRED.value)
+                    & ~Q(readiness_state=ContextValueState.DEFERRED.value)
+                    & ~Q(urgency_state=ContextValueState.DEFERRED.value)
+                    & ~Q(opportunity_resources_state=ContextValueState.DEFERRED.value)
+                    & ~Q(burden_state=ContextValueState.DEFERRED.value)
+                ),
+                name="practice_context_defer_metadata_consistent",
+            )
+        )
+
+    def __str__(self) -> str:
+        return f"{self.assessment_run_id}: {self.protocol_id} context revision {self.revision}"
+
+    def save(self, *args, **kwargs):
+        if self.pk and type(self).objects.filter(pk=self.pk).exists():
+            raise ValidationError("Versioned context records are immutable.")
+        return super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        raise ValidationError("Versioned context records are immutable.")
+
+    def clean(self):
+        super().clean()
+        errors = {}
+        if self.contract_version != CONTEXT_CONTRACT_VERSION:
+            errors["contract_version"] = "Context contract version is not supported."
+        if self.assessment_run_id and self.user_id != self.assessment_run.user_id:
+            errors["user"] = "Context user must own the assessment epoch."
+        if self.protocol_id and self.assessment_run_id:
+            parent = self.protocol.parent_competency
+            if (
+                parent is None
+                or parent.curriculum_version_id != self.assessment_run.curriculum_version_id
+            ):
+                errors["protocol"] = (
+                    "Context protocol must have a parent in the assessment epoch curriculum."
+                )
+        factors = {
+            factor_id: {
+                "state": getattr(self, f"{factor_id}_state"),
+                "value": getattr(self, f"{factor_id}_value"),
+            }
+            for factor_id in (
+                "applicability",
+                "importance",
+                "readiness",
+                "urgency",
+                "opportunity_resources",
+                "burden",
+            )
+        }
+        try:
+            expected = build_practice_context_snapshot(
+                assessment_epoch_id=self.assessment_run_id,
+                protocol_stable_id=self.protocol_id,
+                contract_version=self.contract_version,
+                factors=factors,
+                disposition=self.disposition,
+                defer_reason=self.defer_reason or None,
+                review_horizon_days=self.review_horizon_days,
+            )
+        except (ValueError, TypeError) as exc:
+            errors["canonical_snapshot"] = str(exc)
+        else:
+            if self.canonical_snapshot != expected.payload:
+                errors["canonical_snapshot"] = "Canonical context snapshot does not match fields."
+            if self.content_hash != expected.content_hash:
+                errors["content_hash"] = "Context content hash does not verify."
+        if errors:
+            raise ValidationError(errors)
