@@ -16,3 +16,5 @@ APP_DATA_DIR="$PWD/var/agent-test" .venv/bin/python -m pytest -m "not e2e"
 make pilot-check PYTHON=.venv/bin/python
 make curriculum-check PYTHON=.venv/bin/python
 make competency-evidence-check PYTHON=.venv/bin/python
+make context-check PYTHON=.venv/bin/python
+make personal-os-check PYTHON=.venv/bin/python

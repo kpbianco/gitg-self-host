@@ -96,6 +96,12 @@ canonical_counts() {
         | tail -n 1
 }
 
+personal_os_state() {
+    compose exec -T app python manage.py shell -c \
+        'from growth.models import PersonalOSRevision; rows=list(PersonalOSRevision.objects.order_by("assessment_run_id","revision").values_list("revision","content_hash")); print(f"{len(rows)}|" + ",".join(f"{revision}:{content_hash}" for revision,content_hash in rows))' \
+        | tail -n 1
+}
+
 printf '\n==> Build and start the isolated application stack\n'
 compose up -d --build --wait --wait-timeout 180
 container_id="$(compose ps -q app)"
@@ -118,6 +124,15 @@ compose exec -T app python manage.py generate_competency_evidence_reports --chec
 compose exec -T app python manage.py verify_pilot_readiness
 compose exec -T app python manage.py verify_expansion_readiness
 compose exec -T app python manage.py verify_competency_evidence_readiness
+compose exec -T app python manage.py verify_context_readiness
+compose exec -T app python manage.py verify_personal_os_readiness
+
+printf '\n==> Persist one synthetic Personal OS revision without logging authored values\n'
+compose exec -T app python manage.py shell -c \
+    'from growth.models import AssessmentRun; from growth.services.personal_os import record_personal_os_revision; run=AssessmentRun.objects.select_related("user").order_by("stable_id").first(); state={"state":"provided"}; identity={"mission":{**state,"value":"Synthetic Compose direction."},"principles":{**state,"value":["Synthetic bounded operation."]},"anti_goals":{**state,"value":["Synthetic unrecoverable state."]},"twelve_month_direction":{**state,"value":"Synthetic recovery remains exact."},"priority_stack":{**state,"value":["Synthetic backup proof."]}}; audit={key:{**state,"value":"Synthetic descriptive response."} for key in ("current_truth","autopilot_pattern","misalignment_or_fragmentation","deliberate_next_step")}; first=record_personal_os_revision(user=run.user,assessment_run=run,identity_sections=identity,audit_responses=audit); second=record_personal_os_revision(user=run.user,assessment_run=run,identity_sections=identity,audit_responses=audit); assert first.created and not second.created and first.revision.pk == second.revision.pk'
+compose exec -T app python manage.py verify_personal_os_readiness
+readonly expected_personal_os_state="$(personal_os_state)"
+test "$expected_personal_os_state" != "0|"
 
 printf '\n==> Create and integrity-check an online SQLite backup\n'
 compose exec -T app python manage.py backup_database --output "$backup_path"
@@ -138,6 +153,9 @@ compose exec -T app python manage.py rebuild_score_state --verify-only
 compose exec -T app python manage.py verify_pilot_readiness
 compose exec -T app python manage.py verify_expansion_readiness
 compose exec -T app python manage.py verify_competency_evidence_readiness
+compose exec -T app python manage.py verify_context_readiness
+compose exec -T app python manage.py verify_personal_os_readiness
+test "$(personal_os_state)" = "$expected_personal_os_state"
 
 printf '\n==> Restore the verified backup inside the isolated volume\n'
 compose down
@@ -152,6 +170,9 @@ compose exec -T app python manage.py rebuild_score_state --verify-only
 compose exec -T app python manage.py verify_pilot_readiness
 compose exec -T app python manage.py verify_expansion_readiness
 compose exec -T app python manage.py verify_competency_evidence_readiness
+compose exec -T app python manage.py verify_context_readiness
+compose exec -T app python manage.py verify_personal_os_readiness
+test "$(personal_os_state)" = "$expected_personal_os_state"
 
 printf '\n==> Confirm clean Gunicorn shutdown\n'
 compose stop --timeout 30 app

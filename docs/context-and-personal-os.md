@@ -1,15 +1,67 @@
-# Context and defer-state foundation
+# Context and Personal OS foundation
 
 ## Scope
 
-M6C-01 establishes `GG-CONTEXT-1.0` persistence and pure services. It does not
-add a form, change ordinary UI, rank recommendations, alter an assessment or
-score, author a protocol, or activate production scoring. Later M6C batches
-own the concise Personal OS experience and the separately versioned priority
-formula.
+M6C-01 establishes `GG-CONTEXT-1.0` persistence and pure services. M6C-02 adds
+the separate `GG-PERSONAL-OS-1.0` identity and Truth/Autopilot Audit
+foundation. Neither batch adds a form, changes ordinary UI, ranks
+recommendations, alters an assessment or score, authors a protocol, or
+activates production scoring. Later M6C batches own priority, alternatives,
+and the concise browser experience.
 
 The additive, read-only readiness contract is
 `GG-CONTEXT-READINESS-1.0`.
+
+## Personal OS identity and audit contract
+
+One `PersonalOSRevision` belongs to one authenticated user and one immutable
+`AssessmentRun`. Reads and writes require that exact assessment epoch. A new
+assessment has no Personal OS revision unless the user authors one; values are
+never copied from an earlier epoch or derived from assessment answers,
+orientations, archetypes, context, evidence, current lever state, or practice
+history.
+
+The five identity sections are `mission`, `principles`, `anti_goals`,
+`twelve_month_direction`, and `priority_stack`. The four audit prompts are
+`current_truth`, `autopilot_pattern`, `misalignment_or_fragmentation`, and
+`deliberate_next_step`.
+
+Each section uses the same four explicit states as context: `unknown`,
+`not_applicable`, `deferred`, or `provided`. A non-provided state contains no
+hidden value. Provided mission, direction, and audit responses are nonblank
+text of at most 500 characters. Provided principles, anti-goals, and priority
+stack are ordered lists of one to five unique nonblank items, each at most 160
+characters. Ordering is authored meaning and is preserved.
+
+Prompt and help definitions ask for minimal private detail and describe the
+audit as provisional, descriptive, and user-authored. They do not diagnose,
+assign personality destiny, shame, or rank morality. A mismatch is explicitly
+not evidence of failure, deficient character, or diminished worth. The
+contract computes no alignment, autopilot, personality, virtue, diagnostic,
+or worth score.
+
+## Personal OS snapshots and append-only writes
+
+The pure builder rejects unknown versions, missing or extra sections, wrong
+types, blank or over-bound values, duplicate list items, and hidden values
+before persistence. Canonical UTF-8 JSON uses fixed section order plus sorted
+object keys and compact separators; SHA-256 identifies unchanged semantic
+input. The 64 KiB resource ceiling admits the complete legal UTF-8 payload,
+including the worst-case JSON escaping permitted by the character/count bounds.
+
+The snapshot contains only its contract/scope, assessment epoch stable ID,
+and the nine private authored state/value entries. It excludes user identity,
+Personal OS record UUIDs, timestamps, assessment answers, orientations,
+archetypes, context, evidence, scores, practice history, feedback, and
+unrelated narrative.
+
+An unchanged retry returns the latest revision. Changed input appends the next
+contiguous revision. Existing rows reject model save, queryset update,
+bulk-update, and direct instance or queryset deletion; bulk creation is also
+disabled so validation cannot be bypassed. The database protects user and
+assessment foreign keys while revisions exist. A concurrent SQLite write
+either commits a valid contiguous revision or returns an explicit retryable
+conflict; it cannot leave a partial row.
 
 ## Ownership and revisions
 
@@ -109,6 +161,12 @@ Run the isolated readiness drill:
 make context-check
 ```
 
+Run the separate Personal OS readiness drill:
+
+```bash
+make personal-os-check
+```
+
 For a running instance, use the read-only verifier:
 
 ```bash
@@ -119,6 +177,12 @@ The verifier checks supported versions, ownership, scope, field/snapshot/hash
 agreement, bounds, and contiguous revisions. Empty tables pass because context
 is optional in this foundation.
 
+`GG-PERSONAL-OS-READINESS-1.0` applies the same fail-closed approach to every
+Personal OS row and accepts an empty optional table. Its summaries contain
+only contract metadata, field IDs, counts, limits, and non-mutation flags; its
+diagnostics do not print private authored values, snapshots, record IDs, or
+user identity.
+
 ## Privacy and validation boundary
 
 Context is private participant data stored in the local database and included
@@ -127,8 +191,22 @@ to existing minimized evidence or pilot-feedback exports. Context-specific UI,
 export, deletion, retention, and participant consent behavior remain for later
 reviewed batches.
 
+Personal OS values are also private local reflection data and enter normal
+database backups. M6C-02 does not add real participant or runtime-authored
+values to evidence, pilot-feedback exports, logs, generated reports, telemetry,
+recommendation inputs, score snapshots, or activation decisions. Synthetic
+golden test fixtures are the deliberate exception. It adds no Personal OS export,
+purge, deletion, or retention policy. Reverse migration requires a verified
+backup and a separate retention decision if any participant Personal OS data
+exists.
+
 Automated checks establish schema, migration, deterministic snapshot, hashing,
 transaction, isolation, and regression behavior. They do not establish that
 the factor language or scales are accessible, culturally appropriate,
 longitudinally useful, psychometric, clinical, specialist-approved, or
 production-validated.
+
+The same validation boundary applies to the Personal OS wording and audit.
+Owner review of exact prompts and privacy, and later participant,
+accessibility, cultural, safety, burden, longitudinal, clinical, and
+psychometric review remain manual and unperformed by M6C-02 software checks.

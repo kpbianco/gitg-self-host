@@ -1,7 +1,7 @@
 # Current state
 
 Last audited: 2026-08-13
-Implementation base: `main@4f5987f`
+Implementation base: `main@ff53b04`
 
 ## Completed implementation
 
@@ -13,9 +13,14 @@ Implementation base: `main@4f5987f`
 - Current canonical practice coverage remains five packages and fifteen actions
   across 383 competencies; 378 competencies are explicitly uncovered.
 - Friendship remains the only production score-active protocol.
-- M6C-01 is implemented on the current review branch. It adds versioned, assessment-
-  epoch-scoped context/defer persistence, deterministic snapshots and hashes,
-  and additive readiness without changing recommendations or ordinary UI.
+- M6C-01 is merged. It adds versioned, assessment-epoch-scoped context/defer
+  persistence, deterministic snapshots and hashes, and additive readiness
+  without changing recommendations or ordinary UI.
+- M6C-02 is implemented on the current review branch. It adds the exact five
+  identity sections and four descriptive Truth/Autopilot Audit responses as
+  private, append-only, assessment-epoch-scoped revisions with deterministic
+  snapshots and additive readiness. It adds no UI, recommendation, scoring,
+  activation, export, deletion, or retention behavior.
 
 ## Pending governance
 
@@ -34,7 +39,8 @@ Run the local gate check:
 
 ## Planned sequence
 
-1. Complete M6C context factors and concise Personal OS in bounded batches.
+1. Review M6C-02 wording/privacy and complete later M6C priority and browser
+   batches.
 2. Approximately 10–12 representative vertical-slice protocols.
 3. Stable report-derived domain cohorts of approximately 8–15 competencies per
    human-reviewed target PR.
@@ -42,9 +48,9 @@ Run the local gate check:
 5. Separately approved controlled activation cohorts.
 6. Full integration, operations hardening, and diverse multi-cycle validation.
 
-Run the M6C-01 isolated software gate with `make context-check`. Owner factor-
-language review and the required GitHub browser/Compose gates remain before
-merge.
+Run the independent M6C foundations with `make context-check` and
+`make personal-os-check`. Owner Personal OS wording/privacy review and the
+required GitHub browser/Compose gates remain before M6C-02 merge.
 
 ## Automation boundary
 

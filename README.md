@@ -320,6 +320,27 @@ make context-check
 
 See [context and Personal OS foundation](docs/context-and-personal-os.md).
 
+## What M6C-02 adds
+
+- Append-only `GG-PERSONAL-OS-1.0` revisions scoped to one authenticated user
+  and immutable assessment epoch.
+- Exactly five identity sections—mission, principles, anti-goals,
+  twelve-month direction, and an ordered priority stack—and exactly four
+  descriptive Truth/Autopilot Audit responses.
+- Explicit `unknown`, `not_applicable`, `deferred`, and `provided` states;
+  bounded private authored values; deterministic UTF-8 snapshots and hashes;
+  idempotent retries; and explicit retryable SQLite conflicts.
+- Read-only `GG-PERSONAL-OS-READINESS-1.0` with privacy-safe diagnostics.
+- No ordinary UI, audit or identity score, ranking, alternative
+  recommendation, weekly execution, existing export, deletion/retention,
+  evidence/scoring, protocol, or activation change.
+
+Run its isolated additive gate:
+
+```bash
+make personal-os-check
+```
+
 ## Product flow
 
 1. Sign in with the bootstrap account.
@@ -429,6 +450,7 @@ docker compose exec app python manage.py verify_pilot_readiness
 docker compose exec app python manage.py verify_expansion_readiness
 docker compose exec app python manage.py verify_competency_evidence_readiness
 docker compose exec app python manage.py verify_context_readiness
+docker compose exec app python manage.py verify_personal_os_readiness
 ```
 
 Migrations and canonical seeding run safely on startup.

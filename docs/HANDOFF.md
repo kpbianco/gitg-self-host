@@ -5,7 +5,8 @@
 Grounded Growth is a self-hosted Django guided-development application with
 canonical curriculum/practice data, deterministic evidence/scoring replay, and
 a friendship-only production score boundary. M6B software is merged but not
-governance-accepted. M6C-01 is implemented on the current review branch.
+governance-accepted. M6C-01 is merged and M6C-02 is implemented on the current
+review branch.
 
 ## Read first
 
@@ -21,16 +22,18 @@ governance-accepted. M6C-01 is implemented on the current review branch.
 
 ## Exact review objective
 
-Review M6C-01's explicit append-only context/defer-state models, pure
-deterministic snapshot services, epoch isolation, reversible schema-only
-migration, factor language, and additive readiness. Do not add a
-recommendation formula, UI, protocol, evidence/scoring change, or activation.
+Review M6C-02's exact identity/audit definitions, explicit states and bounds,
+private deterministic snapshots, authenticated epoch isolation, append-only
+conflict-safe revisions, reversible schema-only migration, no-mutation proofs,
+and additive readiness. Do not add a recommendation formula, UI, protocol,
+weekly execution, export/deletion/retention behavior, evidence/scoring change,
+or activation.
 
 The newest canonical control contract records owner-directed sequencing that
 defers M6B governance while this foundation proceeds. Keep `ER-M6A-003`
 pending, `RG-M6A-002` open, Decisions 047–049 proposed, and every new path
-non-scored. Local context and full repository contracts pass. Required GitHub
-browser/Compose gates and owner factor-language review remain unperformed.
+non-scored. Required GitHub gates plus owner prompt/privacy review remain
+manual before merge.
 
 ## Protected decisions
 
