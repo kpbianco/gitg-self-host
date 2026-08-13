@@ -24,6 +24,7 @@
     "profile": {
       "enum": [
         "assurance",
+        "asset-production",
         "product-data",
         "hardware-embedded",
         "rapid-prototype"
