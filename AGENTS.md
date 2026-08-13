@@ -295,31 +295,16 @@ representative 10–12 competency vertical slices begin only after M6C as
 Phase B.
 
 <!-- BEGIN PORTFOLIO-CONTROL MANAGED -->
-## Governed product-data delivery
+## Governed agentic delivery
 
-- Delivery profile: `product-data`; also read `contracts/repo-profile.yaml`,
-  `contracts/profile-requirements.yaml`, `contracts/active-batch.yaml`,
-  `docs/CURRENT_STATE.md`, `docs/HANDOFF.md`, and
-  `.agents/skills/grounded-growth-product-data/SKILL.md` before approved batch
-  work.
-- Canonical cross-milestone contracts live in sibling
-  `portfolio-control/products/gitg-self-host/`. This repository remains
-  authoritative for doctrine, canonical data, scoring semantics, runtime,
-  participant-data boundaries, and actual evidence.
-- `M6B-GOV` is a hard specialist/owner gate. Do not begin M6C, Phase B, or mass
-  authoring merely because software readiness passes.
-- Run `./scripts/agent-verify.sh full`, update `MANIFEST.tsv`, and retain
-  `docs/evidence/<batch>-<date>.md` before declaring a batch ready.
-- Exact stable-ID cohorts are binding. Do not substitute easier competencies,
-  generate noun-swapped packages, or convert coverage into a release/validity
-  claim.
-- Web research may discover current primary or authoritative sources, but it
-  cannot complete specialist, accessibility, cultural, clinical, psychometric,
-  privacy/safety, longitudinal, or owner review.
-- `./scripts/roadmap-autopilot.sh` may generate contracts, implement, verify,
-  repair bounded CI failures, and open a draft target PR. Grounded Growth target
-  PRs always stop for human owner review and are never merged by the autopilot.
-- No agent may expand production score activation, publish, deploy, change
-  secrets/settings, rewrite immutable participant history, or waive a failing
-  deterministic or manual gate.
+- Product: `gitg-self-host`; delivery profile: `product-data`.
+- Control revision: `3f7bea1217b0231ebb77e6cda6d18673425a1a21`; harness version: `2`.
+- Read `contracts/profile-requirements.yaml` and the approved
+  `contracts/active-batch.yaml` before implementation.
+- Stay inside active-batch allowed paths and preserve every forbidden path.
+- Run the repository-local verification contract before claiming completion.
+- Record exact evidence and distinguish static, simulated, protocol, bench,
+  field, playtest, staging, and production validation.
+- Do not claim physical, release, deployment, or production evidence that was
+  not actually produced.
 <!-- END PORTFOLIO-CONTROL MANAGED -->
