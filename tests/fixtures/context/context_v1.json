@@ -1,0 +1,37 @@
+{
+  "contract_version": "GG-CONTEXT-1.0",
+  "practice_case": {
+    "assessment_epoch_id": "ASSESSMENT-EPOCH-001",
+    "defer_reason": "capacity",
+    "disposition": "deferred",
+    "expected_hash": "c2c6ee6523f34b014fcdb8ce91f5a9df152bbc5d9fc54e62ba46f1176eb6645b",
+    "factors": {
+      "applicability": {
+        "state": "provided",
+        "value": 4
+      },
+      "burden": {
+        "state": "provided",
+        "value": 2
+      },
+      "importance": {
+        "state": "provided",
+        "value": 3
+      },
+      "opportunity_resources": {
+        "state": "unknown",
+        "value": null
+      },
+      "readiness": {
+        "state": "deferred",
+        "value": null
+      },
+      "urgency": {
+        "state": "not_applicable",
+        "value": null
+      }
+    },
+    "protocol_stable_id": "PRACTICE-FRIENDSHIP-01",
+    "review_horizon_days": 30
+  }
+}

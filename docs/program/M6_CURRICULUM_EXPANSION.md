@@ -103,6 +103,17 @@ authoring.
 - preserve concise home and practice flows, with setup under five minutes
   where possible and ordinary check-ins under two minutes.
 
+M6C-01 is the storage/service slice only. It adds append-only, user- and
+assessment-epoch-scoped records, explicit unknown/N/A/deferred/provided
+states, categorical defer reasons, a bounded review horizon, deterministic
+minimal snapshots/hashes, and additive readiness. It does not yet collect
+these values in ordinary UI or apply them to recommendation order.
+
+The newest owner-directed control sequence permits this non-scored foundation
+to proceed while M6B governance remains deferred. `ER-M6A-003` stays pending,
+`RG-M6A-002` stays open, Decisions 047–049 stay proposed, and the sequence does
+not authorize production score activation or a specialist-validation claim.
+
 ### Phase B — Representative vertical slices
 
 Author a deliberately varied set of approximately 10–12 competencies before

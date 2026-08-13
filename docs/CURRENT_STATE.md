@@ -1,7 +1,7 @@
 # Current state
 
-Last audited: 2026-07-29
-Audited default branch: `main@c551d5b14bb6812b3fddaeb09a9f3031b2ef2704`
+Last audited: 2026-08-13
+Implementation base: `main@4f5987f`
 
 ## Completed implementation
 
@@ -13,13 +13,17 @@ Audited default branch: `main@c551d5b14bb6812b3fddaeb09a9f3031b2ef2704`
 - Current canonical practice coverage remains five packages and fifteen actions
   across 383 competencies; 378 competencies are explicitly uncovered.
 - Friendship remains the only production score-active protocol.
+- M6C-01 is implemented on the current review branch. It adds versioned, assessment-
+  epoch-scoped context/defer persistence, deterministic snapshots and hashes,
+  and additive readiness without changing recommendations or ordinary UI.
 
-## Active gate
+## Pending governance
 
-M6B is not accepted for mass authoring. `ER-M6A-003` is pending and
-`RG-M6A-002` remains open. Required measurement, accessibility, and privacy/
-safety review plus explicit owner acceptance must be recorded before M6C, Phase
-B, or full authoring proceeds through the autopilot.
+M6B is not accepted. `ER-M6A-003` is pending, `RG-M6A-002` remains open, and
+Decisions 047–049 remain proposed. The owner-directed control contract defers
+that governance closeout while software/content sequencing continues. This
+does not authorize production scoring; all new paths remain non-scored and
+friendship remains the only score-active protocol.
 
 Run the local gate check:
 
@@ -28,15 +32,19 @@ Run the local gate check:
 .venv/bin/python scripts/check-m6b-governance-gate.py
 ```
 
-## Planned sequence after the gate
+## Planned sequence
 
-1. M6C context factors and concise Personal OS.
+1. Complete M6C context factors and concise Personal OS in bounded batches.
 2. Approximately 10–12 representative vertical-slice protocols.
 3. Stable report-derived domain cohorts of approximately 8–15 competencies per
    human-reviewed target PR.
 4. Whole-library scoring dispositions and shadow calibration.
 5. Separately approved controlled activation cohorts.
 6. Full integration, operations hardening, and diverse multi-cycle validation.
+
+Run the M6C-01 isolated software gate with `make context-check`. Owner factor-
+language review and the required GitHub browser/Compose gates remain before
+merge.
 
 ## Automation boundary
 

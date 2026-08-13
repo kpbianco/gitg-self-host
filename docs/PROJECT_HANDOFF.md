@@ -186,12 +186,21 @@ M1 is implemented as two reviewable batches:
   additive expansion-readiness contract preserve the exact five-protocol
   runtime and friendship-only scoring boundary. No ORM, UI, evidence, scoring,
   or ranking change is included.
-- **M6B competency-evidence architecture (proposed for review):** pure
+- **M6B competency-evidence architecture (software merged, governance
+  pending):** pure
   `GG-TYPED-EVIDENCE-1.0`, evidence-only competency shadow, one-way lever
   shadow, production-eligibility gate, synthetic fixtures, deterministic
   reports, and additive software readiness. It adds no migration, UI,
   protocol/action, recommendation input, or activation. Pending
-  `ER-M6A-003` review prevents an M6B-accepted or mass-authoring claim.
+  `ER-M6A-003` review prevents an M6B-accepted claim. The newest
+  owner-directed control contract defers governance while later software and
+  content sequencing proceeds, without authorizing production scoring.
+- **M6C-01 context/defer-state foundation:** append-only
+  `GG-CONTEXT-1.0` records scope season/capacity to a user and assessment epoch
+  and candidate factors to a user, epoch, and stable protocol. Explicit
+  unknown, N/A, deferred, and provided states, bounded defer metadata,
+  deterministic snapshots/hashes, schema-only migration, and additive
+  readiness do not yet change recommendations or ordinary UI.
 
 Only submitted check-ins count toward completion. A database constraint limits
 each user to one active or paused practice. Services—not templates—own state
@@ -465,15 +474,15 @@ and report mechanics are in `docs/practice-content.md`.
 - add additive `GG-COMPETENCY-EVIDENCE-READINESS-1.0`;
 - keep production score activation at friendship only.
 
-Status: implementation authorized for a focused M6B review branch. Decisions
-047–049 and ADR 0009 remain proposed until owner review. The batch adds no
-migration, UI, protocol/action, M6C context input, recommendation change, or
-production activation.
+Status: software implementation merged. Decisions 047–049 and ADR 0009 remain
+proposed pending the required governance review. The batch added no migration,
+UI, protocol/action, M6C context input, recommendation change, or production
+activation.
 
-`ER-M6A-003` remains pending and `RG-M6A-002` remains open. Software
-implementation can complete, but M6B acceptance and mass protocol authoring
-remain blocked until measurement, accessibility, and privacy/safety review is
-truthfully recorded.
+`ER-M6A-003` remains pending and `RG-M6A-002` remains open. M6B is not
+accepted. The latest owner-directed control sequence defers governance while
+M6C and later non-scored content work proceed; it does not permit a specialist,
+measurement, accessibility, privacy/safety, or production-score claim.
 
 #### M6C — Context-aware priority and Personal OS foundation
 
@@ -486,8 +495,29 @@ truthfully recorded.
   language;
 - preserve concise home and practice flows.
 
-Status: follows M6B. Representative 10–12 competency vertical slices are
-Phase B after M6C, not a replacement for the context foundation.
+M6C-01 adds only the versioned storage and pure-service foundation:
+
+- `AssessmentContext` stores append-only season/capacity revisions per user
+  and immutable assessment epoch;
+- `PracticeContext` stores append-only candidate factor/defer revisions per
+  user, epoch, and stable protocol;
+- every factor is explicitly unknown, N/A, deferred, or provided, and only a
+  provided factor carries a value;
+- deferred candidates require a categorical reason and may have a bounded
+  1–366 day review horizon;
+- canonical minimal snapshots and SHA-256 hashes are deterministic, retain the
+  assessment-epoch and protocol stable IDs needed for scope, and exclude user
+  identity, context-record UUIDs, timestamps, and narrative;
+- `GG-CONTEXT-READINESS-1.0` validates all present records without writing
+  state.
+
+Status: M6C-01 is implemented for review. Local focused, context-readiness,
+and full repository contracts pass; host browser system dependencies and
+Docker were unavailable for their separate gates. It adds no
+ordinary UI, recommendation formula, Personal OS worksheet, protocol, evidence
+or scoring path, activation, baseline/current-state mutation, or automatic
+context carry-forward. Representative vertical slices remain later Phase B
+work.
 
 ## M1 acceptance criteria
 1. User understands why a practice was recommended without seeing backend fields.
@@ -695,8 +725,39 @@ software-ready but not M6B-accepted.
     state write.
 14. `ER-M6A-003` is truthfully completed by the required measurement,
     accessibility, and privacy/safety roles with date and decision reference,
-    and `RG-M6A-002` is resolved. Until then, M6B acceptance and mass
-    authoring remain blocked even when software readiness passes.
+    and `RG-M6A-002` is resolved. Until then, M6B acceptance and production
+    use of the new typed paths remain blocked even when software readiness
+    passes. The later owner-directed sequencing of non-scored software/content
+    work does not satisfy or waive this criterion.
+
+## M6C-01 acceptance criteria
+
+1. Season, capacity, applicability, importance, readiness, urgency,
+   opportunity/resources, and burden use bounded typed definitions and
+   explicit unknown, not-applicable, deferred, or provided states.
+2. Missing factors and hidden values fail closed; unknown, N/A, and deferred
+   are never replaced with zero or another invented default.
+3. Candidate defer/not-now requires a reason category and permits only an
+   optional 1–366 day review horizon; it creates no developmental deficit.
+4. Every record belongs to one user and assessment epoch. Practice context
+   also belongs to one stable protocol in that epoch's curriculum.
+5. Reassessment never inherits context silently. All reads require the exact
+   assessment run.
+6. Pure canonical snapshots and SHA-256 hashes reproduce exactly for unchanged
+   semantic input and differ by assessment epoch.
+7. Changed context appends a revision; unchanged retry is idempotent; malformed
+   bundle input writes nothing.
+8. Migration 0008 creates only the two context tables and reverses without
+   rewriting any existing assessment, evidence, score, feedback, practice, or
+   review record.
+9. Existing evidence, typed evidence, score-state, need-ranking, pilot,
+   curriculum, and competency-evidence contracts remain independently exact.
+10. Recommendations, ordinary UI, canonical practice data, and friendship-only
+    production activation remain unchanged.
+11. `GG-CONTEXT-READINESS-1.0` is additive, read-only, and fails closed on
+    ownership, scope, version, bound, snapshot, hash, or revision drift.
+12. Software evidence is not accessibility, cultural, longitudinal,
+    specialist, clinical, psychometric, release, or production validation.
 
 ## Handoff audit notes
 
@@ -795,3 +856,7 @@ software-ready but not M6B-accepted.
 - Passing `GG-COMPETENCY-EVIDENCE-READINESS-1.0` demonstrates software
   determinism only. `ER-M6A-003` and `RG-M6A-002` remain the explicit
   specialist-review blockers for M6B acceptance and mass authoring.
+- M6C-01 context scales are explicit storage contracts only. No factor is read
+  by profile, recommendation, evidence, scoring, or ordinary UI code in this
+  batch. The context snapshot excludes identity and narrative, while the local
+  database and its backups remain sensitive participant data.
