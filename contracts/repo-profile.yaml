@@ -6,7 +6,7 @@ control_plane:
   repository: kpbianco/portfolio-control
   profile_path: profiles/product-data.yaml
   product_path: products/gitg-self-host
-  source_revision: 11a2e14ba9436655ec8ed6d75549ad8bfe6c5f84
+  source_revision: 3f7bea1217b0231ebb77e6cda6d18673425a1a21  # pragma: allowlist secret
 audited_baseline: c551d5b14bb6812b3fddaeb09a9f3031b2ef2704
 autonomy:
   level: 2
@@ -34,3 +34,4 @@ source_of_truth:
     - evidence scoring ranking and runtime semantics
     - participant data and operations
     - actual current state and evidence
+source: portfolio-control/products/gitg-self-host/profile-requirements.yaml

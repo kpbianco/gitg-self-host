@@ -12,3 +12,8 @@ __pycache__/
 /var/
 /playwright-report/
 /test-results/
+
+# BEGIN PORTFOLIO-CONTROL MANAGED
+.codex-tmp/
+.agent-logs/
+# END PORTFOLIO-CONTROL MANAGED
