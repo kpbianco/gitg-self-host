@@ -6,7 +6,7 @@ control_plane:
   repository: kpbianco/portfolio-control
   profile_path: profiles/product-data.yaml
   product_path: products/gitg-self-host
-  source_revision: 603c59634532e0c6ff9feff350d308eb50074130  # pragma: allowlist secret
+  source_revision: 7bf784cfafaed2f998bf8c6b3611a52bb6b767a9  # pragma: allowlist secret
 audited_baseline: c551d5b14bb6812b3fddaeb09a9f3031b2ef2704
 autonomy:
   level: 2
