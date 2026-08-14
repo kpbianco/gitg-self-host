@@ -117,6 +117,15 @@ snapshots and additive readiness add no identity or audit score, UI, priority
 formula, alternative recommendation, weekly execution, export, retention
 policy, protocol, evidence, scoring, or activation change.
 
+M6C-03 adds the pure `GG-CONTEXT-PRIORITY-1.0` backend engine and read-only
+`GG-CONTEXT-PRIORITY-READINESS-1.0`. It requires verified latest context and
+complete explicit factors, retains the existing need-ranking protocol value as
+its base, withholds N/A/deferred/missing context without deficit, and returns a
+deterministic distinct alternative within the supplied cohort. It does not add
+a migration, priority record, ordinary UI, Personal OS analysis, canonical
+content, evidence/scoring write, or production activation. M6C-04 owns browser
+collection and presentation.
+
 The newest owner-directed control sequence permits this non-scored foundation
 to proceed while M6B governance remains deferred. `ER-M6A-003` stays pending,
 `RG-M6A-002` stays open, Decisions 047–049 stay proposed, and the sequence does

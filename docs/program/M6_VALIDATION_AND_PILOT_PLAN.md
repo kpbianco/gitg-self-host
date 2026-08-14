@@ -102,6 +102,19 @@ owner review, and software fixtures do not establish accessibility, cultural,
 safety, clinical, psychometric, longitudinal, participant, release, or
 production validity.
 
+M6C-03 software validation covers exact Decimal normalization, inverse burden,
+multiplicative formula and half-up quantization; explicit-zero behavior;
+N/A/defer/missing-context precedence; stable ordering and distinct
+alternatives; active canonical mapping, epoch ownership, latest revision and
+hash validation; compact allowlisted result snapshots; synthetic golden
+replay; no mutation; and unchanged no-context profile/browser behavior.
+`GG-CONTEXT-PRIORITY-READINESS-1.0` accepts empty optional runtime context and
+fails closed with privacy-safe diagnostics when persisted context drifts.
+Owner formula/explanation/privacy review and later participant usefulness,
+accessibility, cultural, safety, clinical, psychometric, longitudinal,
+release, deployment, and production validation remain outside the software
+claim.
+
 After M6C, the Phase B representative vertical slices should exercise protocol
 families, risk classes, evidence policies, N/A paths, and accessibility
 variants. Review:

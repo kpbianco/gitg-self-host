@@ -129,8 +129,8 @@ and is the supported upgrade path.
 ## Dynamic provisional need and practice ordering
 
 The richer canonical priority design keeps applicability, importance,
-readiness, urgency, and opportunity separate. Those per-user inputs are not
-collected yet, so M3B does not invent defaults for them.
+readiness, urgency, and opportunity separate. The M3B production profile path
+does not collect or consume them, so it does not invent defaults for them.
 
 Instead, `GG-NEED-RANKING-1.0` deliberately reproduces the existing
 assessment v1.1 provisional need function using current estimate `M` and
@@ -152,6 +152,14 @@ Weights must sum to approximately 1.0, and recommendation targets must be a
 non-empty subset of that mapping. Orientation/archetype style does not alter
 M3B ranking. Only the friendship protocol is active in canonical production
 data; the dynamic ordering path is tested with synthetic competing protocols.
+
+M6C-03 leaves this state and ordering contract exact. Its separate
+`GG-CONTEXT-PRIORITY-1.0` backend result uses the unchanged `P_t` as a base,
+requires verified latest assessment/practice context for an explicit epoch,
+and withholds incomplete, N/A, or deferred candidates without writing
+`LeverState`, `ScoreSnapshot`, recommendation order, sprint, evidence,
+completion, or defer records. Ordinary browser recommendations remain the M3B
+path until M6C-04 deliberately integrates the reviewed result.
 
 ## Product meaning and exclusions
 

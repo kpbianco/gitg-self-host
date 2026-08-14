@@ -1,0 +1,74 @@
+{
+  "algorithm_version": "GG-CONTEXT-PRIORITY-1.0",
+  "alternative_request": {
+    "reason": "not_applicable",
+    "source_protocol_stable_id": "PRACTICE-PLAY-01"
+  },
+  "assessment_context_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "assessment_epoch_id": "ASSESSMENT-SYNTHETIC-CONTEXT-PRIORITY-001",
+  "assessment_factors": {
+    "capacity": {
+      "state": "provided",
+      "value": 2
+    },
+    "season": {
+      "state": "provided",
+      "value": "maintenance"
+    }
+  },
+  "candidates": [
+    {
+      "base_priority": "0.8000",
+      "context_contract_version": "GG-CONTEXT-1.0",
+      "disposition": "considering",
+      "factors": {
+        "applicability": {"state": "provided", "value": 4},
+        "burden": {"state": "provided", "value": 3},
+        "importance": {"state": "provided", "value": 3},
+        "opportunity_resources": {"state": "provided", "value": 2},
+        "readiness": {"state": "provided", "value": 2},
+        "urgency": {"state": "provided", "value": 1}
+      },
+      "practice_context_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "protocol_stable_id": "PRACTICE-FRIENDSHIP-01"
+    },
+    {
+      "base_priority": "0.9000",
+      "context_contract_version": "GG-CONTEXT-1.0",
+      "disposition": "considering",
+      "factors": {
+        "applicability": {"state": "not_applicable", "value": null},
+        "burden": {"state": "provided", "value": 0},
+        "importance": {"state": "provided", "value": 4},
+        "opportunity_resources": {"state": "provided", "value": 4},
+        "readiness": {"state": "provided", "value": 4},
+        "urgency": {"state": "provided", "value": 4}
+      },
+      "practice_context_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "protocol_stable_id": "PRACTICE-PLAY-01"
+    },
+    {
+      "base_priority": "0.6000",
+      "context_contract_version": "GG-CONTEXT-1.0",
+      "disposition": "considering",
+      "factors": {
+        "applicability": {"state": "provided", "value": 4},
+        "burden": {"state": "provided", "value": 0},
+        "importance": {"state": "provided", "value": 4},
+        "opportunity_resources": {"state": "provided", "value": 4},
+        "readiness": {"state": "provided", "value": 4},
+        "urgency": {"state": "provided", "value": 4}
+      },
+      "practice_context_hash": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "protocol_stable_id": "PRACTICE-PRESENCE-01"
+    }
+  ],
+  "context_contract_version": "GG-CONTEXT-1.0",
+  "expected_primary_protocol_stable_id": "PRACTICE-PRESENCE-01",
+  "expected_ranked_candidate_ids": [
+    "PRACTICE-PRESENCE-01",
+    "PRACTICE-FRIENDSHIP-01"
+  ],
+  "expected_result_hash": "520faea3b6d206367b29590d89ffb5266a0faade92ce0b40a8fa83b337991798",
+  "need_ranking_algorithm_version": "GG-NEED-RANKING-1.0"
+}
