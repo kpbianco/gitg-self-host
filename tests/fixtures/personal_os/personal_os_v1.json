@@ -1,0 +1,55 @@
+{
+  "audit_responses": {
+    "autopilot_pattern": {
+      "state": "provided",
+      "value": "Synthetic momentum has been selecting low-value tasks."
+    },
+    "current_truth": {
+      "state": "provided",
+      "value": "Synthetic commitments exceed the available week."
+    },
+    "deliberate_next_step": {
+      "state": "provided",
+      "value": "Remove one synthetic commitment before adding another."
+    },
+    "misalignment_or_fragmentation": {
+      "state": "provided",
+      "value": "Synthetic calendar choices do not match the stated direction."
+    }
+  },
+  "assessment_epoch_id": "ASSESSMENT-SYNTHETIC-PERSONAL-OS-001",
+  "contract_version": "GG-PERSONAL-OS-1.0",
+  "expected_hash": "3c14d82fb1e15e6d2f00f1567ba65fa698b97639008ee323b6a4dc73fc1729a0",
+  "identity_sections": {
+    "anti_goals": {
+      "state": "provided",
+      "value": [
+        "Synthetic status without useful contribution",
+        "Synthetic commitments without capacity"
+      ]
+    },
+    "mission": {
+      "state": "provided",
+      "value": "Build synthetic systems that make deliberate action easier."
+    },
+    "principles": {
+      "state": "provided",
+      "value": [
+        "Synthetic truth before appearance",
+        "Synthetic commitments stay bounded"
+      ]
+    },
+    "priority_stack": {
+      "state": "provided",
+      "value": [
+        "Synthetic health",
+        "Synthetic relationships",
+        "Synthetic focused work"
+      ]
+    },
+    "twelve_month_direction": {
+      "state": "provided",
+      "value": "Make one synthetic product dependable while protecting capacity."
+    }
+  }
+}

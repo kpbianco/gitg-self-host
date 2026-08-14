@@ -201,6 +201,13 @@ M1 is implemented as two reviewable batches:
   unknown, N/A, deferred, and provided states, bounded defer metadata,
   deterministic snapshots/hashes, schema-only migration, and additive
   readiness do not yet change recommendations or ordinary UI.
+- **M6C-02 Personal OS identity foundation:** append-only
+  `GG-PERSONAL-OS-1.0` revisions store exactly five identity sections and four
+  descriptive Truth/Autopilot Audit responses for one authenticated user and
+  assessment epoch. Explicit states, bounded authored values, deterministic
+  private snapshots, conflict-safe idempotent writes, reversible schema, and
+  additive readiness add no score, UI, recommendation, activation, export,
+  deletion, or retention behavior.
 
 Only submitted check-ins count toward completion. A database constraint limits
 each user to one active or paused practice. Services—not templates—own state
@@ -511,13 +518,31 @@ M6C-01 adds only the versioned storage and pure-service foundation:
 - `GG-CONTEXT-READINESS-1.0` validates all present records without writing
   state.
 
-Status: M6C-01 is implemented for review. Local focused, context-readiness,
-and full repository contracts pass; host browser system dependencies and
-Docker were unavailable for their separate gates. It adds no
+Status: M6C-01 is reviewed and merged at `8a1c937`. It adds no
 ordinary UI, recommendation formula, Personal OS worksheet, protocol, evidence
 or scoring path, activation, baseline/current-state mutation, or automatic
 context carry-forward. Representative vertical slices remain later Phase B
 work.
+
+M6C-02 adds only the separate Personal OS identity/audit foundation:
+
+- exact identity sections `mission`, `principles`, `anti_goals`,
+  `twelve_month_direction`, and ordered `priority_stack`;
+- exact audit prompts `current_truth`, `autopilot_pattern`,
+  `misalignment_or_fragmentation`, and `deliberate_next_step`;
+- explicit unknown, N/A, deferred, or provided states with no hidden value;
+- private user-authored scalar/list bounds and no diagnostic, alignment,
+  autopilot, personality, virtue, or worth score;
+- immutable assessment-epoch revisions with deterministic UTF-8 snapshots,
+  idempotent retries, explicit SQLite contention, and fail-closed privacy-safe
+  readiness;
+- no ordinary UI, priority formula, alternatives, weekly execution, existing
+  export, deletion/retention policy, protocol, evidence, scoring, or activation
+  change.
+
+Status: implemented on the M6C-02 review branch. Owner review of exact prompt
+wording and fixture/privacy boundaries, required GitHub browser/Compose gates,
+and target pull-request review remain before merge.
 
 ## M1 acceptance criteria
 1. User understands why a practice was recommended without seeing backend fields.
@@ -758,6 +783,40 @@ software-ready but not M6B-accepted.
     ownership, scope, version, bound, snapshot, hash, or revision drift.
 12. Software evidence is not accessibility, cultural, longitudinal,
     specialist, clinical, psychometric, release, or production validation.
+
+## M6C-02 acceptance criteria
+
+1. Exactly five identity sections and four audit prompts are fixed under
+   `GG-PERSONAL-OS-1.0`; no identity, audit, diagnostic, or worth score exists.
+2. Every section is explicitly unknown, N/A, deferred, or provided, with
+   scalar/list bounds and no hidden value.
+3. Prompt/help definitions are user-authored, minimal-detail,
+   non-diagnostic, non-shaming, and state that mismatch does not diminish
+   worth.
+4. Every revision belongs to one authenticated user and immutable assessment
+   epoch; no source domain or older epoch supplies inferred values.
+5. The pure builder rejects malformed input and produces deterministic compact
+   UTF-8 JSON and SHA-256 from the exact private snapshot allowlist.
+6. Changed input appends contiguously, unchanged retry is idempotent, direct
+   mutation/deletion is blocked, and concurrent SQLite writes succeed safely
+   or return a retryable conflict.
+7. Schema-only migration 0009 reverses to 0008 without rewriting any
+   pre-existing growth row.
+8. Private values do not enter existing exports, logs, reports, telemetry,
+   recommendations, score snapshots, or activation decisions.
+9. `GG-PERSONAL-OS-READINESS-1.0` accepts empty state and fails closed on
+   version, ownership, epoch, field, bound, snapshot, hash, or revision drift
+   without printing private values.
+10. Context and every existing assessment, evidence, scoring, recommendation,
+    pilot, curriculum, and activation boundary remains exact.
+11. M6C-02 adds no form, route, template, browser collection, ranking,
+    alternative recommendation, weekly execution, export, deletion, or
+    retention policy.
+12. Focused and complete repository checks plus unchanged browser/Compose
+    regressions are required before merge.
+13. Software evidence is not M6B governance, accessibility, cultural,
+    clinical, psychometric, longitudinal, participant, release, deployment,
+    or production validation.
 
 ## Handoff audit notes
 

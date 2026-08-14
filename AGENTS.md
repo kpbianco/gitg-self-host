@@ -273,7 +273,7 @@ review, research-gap, and activation registries are source-only governance;
 M6A adds no migration, protocol, action, UI, evidence mathematics, or score
 activation.
 
-M6B is the current proposed batch. It introduces pure
+M6B software introduces pure
 `GG-TYPED-EVIDENCE-1.0` evaluation,
 `GG-COMPETENCY-EVIDENCE-SHADOW-1.0`,
 `GG-COMPETENCY-LEVER-SHADOW-1.0`, and
@@ -285,14 +285,24 @@ scoring, state, ranking, and five-protocol runtime behavior remain exact.
 M6B implementation does not itself satisfy the pending measurement,
 accessibility, and privacy/safety review in `ER-M6A-003`. Keep
 `RG-M6A-002` open and do not claim M6B acceptance or begin mass authoring
-until that recorded review is truthfully complete.
+until that recorded review is truthfully complete. The owner-directed sequence
+permits later non-scored foundations while this governance remains pending;
+that sequence does not accept M6B or authorize typed production scoring.
 
-M6C then establishes context-aware priority and the minimum Personal OS
-foundation: applicability, importance, readiness, urgency,
-opportunity/resources, season/capacity, defer/not-now, mission, principles,
-anti-goals, priority stack, and useful alternative recommendations. The
-representative 10–12 competency vertical slices begin only after M6C as
-Phase B.
+M6C-01 is reviewed and merged. It adds append-only `GG-CONTEXT-1.0`
+assessment-epoch context and defer-state foundations plus additive readiness,
+without changing ordinary UI or recommendations.
+
+M6C-02 is the current implementation batch. It adds append-only
+`GG-PERSONAL-OS-1.0` mission, principles, anti-goals, twelve-month direction,
+priority-stack, and descriptive Truth/Autopilot Audit revisions plus additive
+readiness. It adds no identity or audit score, ordinary UI, priority formula,
+alternative recommendation, weekly execution, export, deletion/retention
+policy, evidence/scoring path, protocol, or activation.
+
+Later M6C batches establish context-aware priority, useful alternatives, and
+the concise browser experience. The representative 10–12 competency vertical
+slices begin only after M6C as Phase B.
 
 <!-- BEGIN PORTFOLIO-CONTROL MANAGED -->
 ## Governed agentic delivery

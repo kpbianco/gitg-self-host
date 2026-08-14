@@ -109,6 +109,14 @@ states, categorical defer reasons, a bounded review horizon, deterministic
 minimal snapshots/hashes, and additive readiness. It does not yet collect
 these values in ordinary UI or apply them to recommendation order.
 
+M6C-02 adds the separate append-only `GG-PERSONAL-OS-1.0` foundation for
+mission, principles, anti-goals, twelve-month direction, an ordered priority
+stack, and four descriptive Truth/Autopilot Audit responses. Values remain
+explicit, user-authored, private, and assessment-epoch scoped. Deterministic
+snapshots and additive readiness add no identity or audit score, UI, priority
+formula, alternative recommendation, weekly execution, export, retention
+policy, protocol, evidence, scoring, or activation change.
+
 The newest owner-directed control sequence permits this non-scored foundation
 to proceed while M6B governance remains deferred. `ER-M6A-003` stays pending,
 `RG-M6A-002` stays open, Decisions 047–049 stay proposed, and the sequence does

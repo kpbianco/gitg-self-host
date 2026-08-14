@@ -1,7 +1,7 @@
 PYTHON ?= .venv/bin/python
 APP_DATA_DIR ?= $(CURDIR)/var
 
-.PHONY: format lint test e2e migrate seed evidence-backfill evidence-verify score-rebuild score-verify pilot-check practice-reports practice-report-check curriculum-check competency-evidence-reports competency-evidence-report-check competency-evidence-check context-check run compose-up compose-down compose-smoke backup
+.PHONY: format lint test e2e migrate seed evidence-backfill evidence-verify score-rebuild score-verify pilot-check practice-reports practice-report-check curriculum-check competency-evidence-reports competency-evidence-report-check competency-evidence-check context-check personal-os-check run compose-up compose-down compose-smoke backup
 
 format:
 	$(PYTHON) -m ruff format .
@@ -12,6 +12,8 @@ lint:
 	$(PYTHON) -m ruff check .
 	APP_DATA_DIR="$(APP_DATA_DIR)" DJANGO_SECRET_KEY=local-check-secret APP_DEBUG=true \
 		$(PYTHON) manage.py check
+	APP_DATA_DIR="$(APP_DATA_DIR)" DJANGO_SECRET_KEY=local-check-secret APP_DEBUG=true \
+		$(PYTHON) manage.py makemigrations --check --dry-run
 
 test:
 	$(PYTHON) -m pytest -m "not e2e"
@@ -74,6 +76,9 @@ competency-evidence-check:
 
 context-check:
 	PYTHON_BIN="$(PYTHON)" ./scripts/verify_context_readiness.sh
+
+personal-os-check:
+	PYTHON_BIN="$(PYTHON)" ./scripts/verify_personal_os_readiness.sh
 
 run:
 	APP_DATA_DIR="$(APP_DATA_DIR)" DJANGO_SECRET_KEY=local-development-secret APP_DEBUG=true \

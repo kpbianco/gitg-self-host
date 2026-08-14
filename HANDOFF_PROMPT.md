@@ -136,8 +136,11 @@ blocked until measurement, accessibility, and privacy/safety review is
 truthfully recorded. Do not fabricate completed reviewer roles or weaken that
 gate.
 
-M6C follows with context-aware priority and the minimum Personal OS
-foundation. Representative vertical slices begin after M6C as Phase B.
+M6C-01 is merged with explicit context/defer foundations. M6C-02 adds the
+private append-only Personal OS identity and descriptive Truth/Autopilot Audit
+foundation without UI, ranking, exports, scoring, or activation. Later M6C
+batches own priority, alternatives, and browser collection. Representative
+vertical slices begin after M6C as Phase B.
 
 Acceptance criteria are in `docs/PROJECT_HANDOFF.md`. Add automated tests for
 every testable criterion. The app must pass `make compose-smoke` in a

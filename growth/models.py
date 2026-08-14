@@ -17,6 +17,15 @@ from growth.domain.context import (
     build_assessment_context_snapshot,
     build_practice_context_snapshot,
 )
+from growth.domain.personal_os import (
+    AUDIT_PROMPT_IDS,
+    IDENTITY_SECTION_IDS,
+    LIST_SECTION_IDS,
+    PERSONAL_OS_CONTRACT_VERSION,
+    SCALAR_SECTION_IDS,
+    PersonalOSValueState,
+    build_personal_os_snapshot,
+)
 
 MASTERY_DISCLAIMER = "Completing this practice does not establish mastery."
 PILOT_FEEDBACK_CONTRACT_VERSION = "GG-PILOT-FEEDBACK-1.0"
@@ -1386,3 +1395,213 @@ class PracticeContext(models.Model):
                 errors["content_hash"] = "Context content hash does not verify."
         if errors:
             raise ValidationError(errors)
+
+
+class ImmutablePersonalOSQuerySet(models.QuerySet):
+    def update(self, **kwargs):
+        raise ValidationError("Personal OS revisions are immutable.")
+
+    def bulk_update(self, objs, fields, batch_size=None):
+        raise ValidationError("Personal OS revisions are immutable.")
+
+    def bulk_create(
+        self,
+        objs,
+        batch_size=None,
+        ignore_conflicts=False,
+        update_conflicts=False,
+        update_fields=None,
+        unique_fields=None,
+    ):
+        raise ValidationError("Personal OS revisions require validated individual creation.")
+
+    def delete(self):
+        raise ValidationError("Personal OS revisions are immutable.")
+
+
+class PersonalOSRevision(models.Model):
+    class ValueState(models.TextChoices):
+        UNKNOWN = PersonalOSValueState.UNKNOWN.value, "Unknown"
+        NOT_APPLICABLE = PersonalOSValueState.NOT_APPLICABLE.value, "Not applicable"
+        DEFERRED = PersonalOSValueState.DEFERRED.value, "Deferred"
+        PROVIDED = PersonalOSValueState.PROVIDED.value, "Provided"
+
+    stable_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="personal_os_revisions",
+    )
+    assessment_run = models.ForeignKey(
+        AssessmentRun,
+        on_delete=models.CASCADE,
+        related_name="personal_os_revisions",
+    )
+    contract_version = models.CharField(
+        max_length=40,
+        default=PERSONAL_OS_CONTRACT_VERSION,
+        editable=False,
+    )
+    revision = models.PositiveIntegerField()
+
+    for _section_id in SCALAR_SECTION_IDS:
+        locals()[f"{_section_id}_state"] = models.CharField(
+            max_length=20,
+            choices=ValueState.choices,
+        )
+        locals()[f"{_section_id}_value"] = models.CharField(
+            max_length=500,
+            blank=True,
+            default="",
+        )
+    del _section_id
+
+    for _section_id in LIST_SECTION_IDS:
+        locals()[f"{_section_id}_state"] = models.CharField(
+            max_length=20,
+            choices=ValueState.choices,
+        )
+        locals()[f"{_section_id}_value"] = models.JSONField(
+            null=True,
+            blank=True,
+            default=None,
+        )
+    del _section_id
+
+    canonical_snapshot = models.JSONField()
+    content_hash = models.CharField(max_length=64)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    objects = ImmutablePersonalOSQuerySet.as_manager()
+
+    class Meta:
+        db_table = "personal_os_revision"
+        base_manager_name = "objects"
+        ordering = ["assessment_run_id", "revision"]
+        indexes = [
+            models.Index(
+                fields=["assessment_run", "-revision"],
+                name="personal_os_latest_idx",
+            )
+        ]
+        constraints = [
+            models.UniqueConstraint(
+                fields=["assessment_run", "revision"],
+                name="unique_personal_os_revision",
+            ),
+            models.CheckConstraint(
+                condition=Q(contract_version=PERSONAL_OS_CONTRACT_VERSION),
+                name="personal_os_contract_v1",
+            ),
+            models.CheckConstraint(
+                condition=Q(revision__gte=1),
+                name="personal_os_revision_positive",
+            ),
+        ]
+        constraints.extend(
+            [
+                models.CheckConstraint(
+                    condition=Q(
+                        **{
+                            f"{_field_name}_state__in": [
+                                item.value for item in PersonalOSValueState
+                            ]
+                        }
+                    ),
+                    name=f"personal_os_{_field_name}_state_valid",
+                )
+                for _field_name in (*SCALAR_SECTION_IDS, *LIST_SECTION_IDS)
+            ]
+        )
+        constraints.extend(
+            [
+                models.CheckConstraint(
+                    condition=(
+                        Q(**{f"{_field_name}_state": PersonalOSValueState.PROVIDED.value})
+                        & ~Q(**{f"{_field_name}_value": ""})
+                        | ~Q(**{f"{_field_name}_state": PersonalOSValueState.PROVIDED.value})
+                        & Q(**{f"{_field_name}_value": ""})
+                    ),
+                    name=f"personal_os_{_field_name}_value_state",
+                )
+                for _field_name in SCALAR_SECTION_IDS
+            ]
+        )
+        constraints.extend(
+            [
+                models.CheckConstraint(
+                    condition=(
+                        Q(**{f"{_field_name}_state": PersonalOSValueState.PROVIDED.value})
+                        & Q(**{f"{_field_name}_value__isnull": False})
+                        | ~Q(**{f"{_field_name}_state": PersonalOSValueState.PROVIDED.value})
+                        & Q(**{f"{_field_name}_value__isnull": True})
+                    ),
+                    name=f"personal_os_{_field_name}_value_state",
+                )
+                for _field_name in LIST_SECTION_IDS
+            ]
+        )
+
+    def __str__(self) -> str:
+        return f"Personal OS revision {self.revision}"
+
+    def save(self, *args, **kwargs):
+        if self.pk and type(self).objects.filter(pk=self.pk).exists():
+            raise ValidationError("Personal OS revisions are immutable.")
+        if kwargs.get("force_update"):
+            raise ValidationError("Personal OS revisions are immutable.")
+        self.full_clean()
+        return super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        raise ValidationError("Personal OS revisions are immutable.")
+
+    def clean(self):
+        super().clean()
+        errors = {}
+        if self.contract_version != PERSONAL_OS_CONTRACT_VERSION:
+            errors["contract_version"] = "Personal OS contract version is not supported."
+        if self.user_id and self.assessment_run_id and self.user_id != self.assessment_run.user_id:
+            errors["user"] = "Personal OS user must own the assessment epoch."
+        if self.assessment_run_id and self._state.adding:
+            latest_revision = (
+                type(self)
+                .objects.filter(assessment_run_id=self.assessment_run_id)
+                .order_by("-revision")
+                .values_list("revision", flat=True)
+                .first()
+            )
+            expected_revision = 1 if latest_revision is None else latest_revision + 1
+            if self.revision != expected_revision:
+                errors["revision"] = (
+                    f"Personal OS revision must be the next contiguous value: {expected_revision}."
+                )
+        try:
+            expected = build_personal_os_snapshot(
+                assessment_epoch_id=self.assessment_run_id,
+                contract_version=self.contract_version,
+                identity_sections=self._snapshot_values(IDENTITY_SECTION_IDS),
+                audit_responses=self._snapshot_values(AUDIT_PROMPT_IDS),
+            )
+        except (ValueError, TypeError):
+            errors["canonical_snapshot"] = "Personal OS fields fail the supported contract."
+        else:
+            if self.canonical_snapshot != expected.payload:
+                errors["canonical_snapshot"] = "Personal OS snapshot does not match fields."
+            if self.content_hash != expected.content_hash:
+                errors["content_hash"] = "Personal OS content hash does not verify."
+        if errors:
+            raise ValidationError(errors)
+
+    def _snapshot_values(self, section_ids):
+        return {
+            section_id: {
+                "state": getattr(self, f"{section_id}_state"),
+                "value": (
+                    getattr(self, f"{section_id}_value")
+                    if getattr(self, f"{section_id}_state") == PersonalOSValueState.PROVIDED.value
+                    else None
+                ),
+            }
+            for section_id in section_ids
+        }

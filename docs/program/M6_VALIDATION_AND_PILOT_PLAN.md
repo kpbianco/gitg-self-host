@@ -92,6 +92,16 @@ principles, anti-goals, priority stack, a concise Truth/Autopilot Audit, and
 useful alternatives after “not now.” Personality remains framing or a
 tie-break input, never hidden psychometrics.
 
+M6C-02 software validation covers the exact five identity sections and four
+audit prompts, four explicit value states, scalar/list bounds, deterministic
+UTF-8 snapshots and hashes, authenticated user/assessment-epoch isolation,
+append-only and idempotent revisions, explicit SQLite contention, reversible
+schema migration, privacy-safe readiness diagnostics, and unchanged prior
+exports/recommendations/scoring/activation. The audit wording still requires
+owner review, and software fixtures do not establish accessibility, cultural,
+safety, clinical, psychometric, longitudinal, participant, release, or
+production validity.
+
 After M6C, the Phase B representative vertical slices should exercise protocol
 families, risk classes, evidence policies, N/A paths, and accessibility
 variants. Review:
