@@ -308,7 +308,7 @@ slices begin only after M6C as Phase B.
 ## Governed agentic delivery
 
 - Product: `gitg-self-host`; delivery profile: `product-data`.
-- Control revision: `dd8101db6fb9fb82c6ba905fa6a04feb12d472b6`; harness version: `2`.
+- Control revision: `d929d292dcbda6881248d53d02476879eeaa1631`; harness version: `2`.
 - Read `contracts/profile-requirements.yaml` and the approved
   `contracts/active-batch.yaml` before implementation.
 - Stay inside active-batch allowed paths and preserve every forbidden path.

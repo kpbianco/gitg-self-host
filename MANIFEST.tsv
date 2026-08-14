@@ -16,7 +16,7 @@
 .github/codex/pr-risk-review.md	1240
 .github/codex/prompts/repo-onboarding.md	1909
 .github/codex/release-readiness.md	593
-.github/codex/schemas/automation.schema.json	3903
+.github/codex/schemas/automation.schema.json	4260
 .github/codex/schemas/batch.schema.json	3810
 .github/codex/schemas/ci-diagnosis.schema.json	798
 .github/codex/schemas/evidence.schema.json	820
