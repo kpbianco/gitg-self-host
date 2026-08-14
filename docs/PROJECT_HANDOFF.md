@@ -214,6 +214,16 @@ M1 is implemented as two reviewable batches:
   alternatives, and emits privacy-minimized canonical results. Additive
   readiness replays synthetic fixtures and validates current canonical mapping
   and activation without changing ordinary recommendations or stored state.
+- **M6C-04 concise browser and pilot-readiness closeout:** one authenticated
+  Personal OS entry point uses only the owner's latest assessment epoch,
+  presents exact staged Personal OS, season/capacity, and per-practice context
+  inputs, and applies the unchanged M6C-03 engine only to explicitly reviewed
+  current-epoch practices. Home and practice surfaces show a small,
+  honestly-labeled context-aware set or the unchanged legacy recommendation
+  behavior; N/A/defer alternatives remain distinct and cohort-bounded. The
+  additive `GG-M6C-PILOT-READINESS-1.0` contract and deployment drill verify
+  the browser slice without storing priority results, analyzing authored text,
+  changing scoring, or expanding friendship-only activation.
 
 Only submitted check-ins count toward completion. A database constraint limits
 each user to one active or paused practice. Services—not templates—own state
@@ -565,11 +575,51 @@ M6C-03 adds the backend-only context-priority and alternative contract:
   current canonical mapping/activation verification, optional empty context,
   and privacy-safe drift diagnostics.
 
-Status: implemented on the M6C-03 review branch. Owner review of the formula,
-factor directions, dispositions, explanation codes, stable-ID tie-break, and
-fixture/privacy boundary plus required GitHub browser/Compose gates and target
-pull-request review remain before merge. M6C-03 adds no migration, persistence,
-ordinary UI, protocol/content, evidence/scoring write, or activation.
+Status: reviewed and merged at `c7b51c1`. M6C-03 adds no migration,
+persistence, ordinary UI, protocol/content, evidence/scoring write, or
+activation.
+
+M6C-04 closes the concise browser and deployment-readiness slice:
+
+- one authenticated Personal OS entry point is scoped to the owner's latest
+  assessment run and redirects a user without an assessment to assessment;
+- a new assessment epoch begins with no copied or inferred Personal OS or
+  context values;
+- the five identity sections, four descriptive audit prompts, season/capacity,
+  and one active practice's context appear in short staged sections, with
+  unknown, N/A, and defer preserved and no preselected ordinal values;
+- Personal OS and assessment-context submissions call the unchanged append-only
+  services; valid changes append once, unchanged retries are idempotent, stale
+  or malformed input writes nothing, and SQLite contention is retryable without
+  echoing private values;
+- all six practice factors are either explicitly provided, applicability is
+  explicitly N/A, or one factor is explicitly deferred with a categorical
+  reason and optional 1–366-day horizon;
+- the browser supplies the unchanged context-priority engine only the active
+  canonical practices explicitly reviewed in that current epoch, never treats
+  an unreviewed practice as unfavorable, and never persists a priority result;
+- context-aware home, practice-list, and recommendation copy uses fixed
+  allowlisted explanations, distinguishes provisional need from current
+  context fit, and provides a distinct cohort-bounded alternative or an
+  explicit no-alternative state;
+- authored Personal OS text renders only on its owner's authenticated Personal
+  OS surface and never enters ranking, explanations, exports, reports,
+  evidence/score snapshots, logs, URLs, telemetry, or activation;
+- `GG-M6C-PILOT-READINESS-1.0` is an additive read-only aggregate over all six
+  prerequisite readiness contracts, exact definition IDs, registered
+  authenticated routes, the five-protocol projection, and friendship-only
+  activation; it does not replace `GG-PILOT-READINESS-1.0` or a human gate;
+- the Compose drill uses only conspicuously synthetic values to prove public
+  service creation, authenticated HTTP access, deterministic priority replay,
+  recreation, backup/restore, and unchanged activation.
+
+Status: implementation is on the M6C-04 review branch. Exact local, browser,
+Compose, hosted-CI, retained-artifact, and owner-review results must be recorded
+without turning software or deployment-drill evidence into participant,
+specialist, release, deployment, production, or recommendation-usefulness
+claims. M6C-04 adds no model, migration, backfill, protocol/action, dependency,
+external service, remote telemetry, weekly execution, dedicated Personal
+OS/context export or purge, score formula/write, or activation change.
 
 ## M1 acceptance criteria
 1. User understands why a practice was recommended without seeing backend fields.
@@ -881,6 +931,71 @@ software-ready but not M6B-accepted.
     clinical, psychometric, longitudinal, release, deployment, production, or
     mastery validation.
 
+## M6C-04 acceptance criteria
+
+1. The browser entry is authenticated, uses only the owner's latest
+   `AssessmentRun`, redirects no-assessment users to assessment, and never
+   carries Personal OS or context forward to a new assessment epoch.
+2. Exactly five identity sections, four descriptive Truth/Autopilot prompts,
+   season, and capacity are progressively disclosed. Every value may remain
+   unknown, N/A, or deferred; no completion, alignment, autopilot, diagnostic,
+   morality, or worth score is created.
+3. Personal OS and assessment-context POSTs use the unchanged services, CSRF,
+   and POST-redirect-GET. Changed input appends one revision, unchanged retries
+   are idempotent, stale/malformed input writes nothing, and retryable database
+   conflicts reveal no private value.
+4. One active manifest-projected practice is reviewed at a time. The user must
+   either provide all six explicit 0–4 factors, mark applicability N/A, or defer
+   a named factor with a categorical reason and optional 1–366-day horizon.
+   Ordinals have no preselected default and no factor is inferred.
+5. The browser presenter supplies only current-epoch, explicitly reviewed,
+   active canonical practices to the unchanged M6C-03 engine. Ranking is
+   labeled as partial-cohort ranking and is never persisted.
+6. No current-epoch context preserves exact legacy recommendation IDs,
+   priorities, order, reasons, and practice behavior. Missing capacity or no
+   eligible candidate is explicit and is not called context-aware fallback.
+7. With explicit capacity and an eligible reviewed cohort, home, practice
+   list, and recommendation surfaces use exact engine order plus fixed
+   allowlisted explanations that distinguish provisional need from current fit
+   without false precision or worth, obligation, diagnosis, or mastery claims.
+8. N/A/deferred candidates may request the highest-ranked distinct eligible
+   alternative from only that reviewed cohort, or receive an explicit
+   no-eligible-alternative state. The request does not invent context or mutate
+   practice, evidence, deficit, score, or activation state.
+9. Authored Personal OS text appears only on its owner's authenticated Personal
+   OS page and is excluded from ranking, other recommendation surfaces,
+   messages, logs, URLs, retained non-Personal-OS artifacts, reports, telemetry,
+   existing exports, evidence/score snapshots, and activation.
+10. The page gives a pre-collection privacy notice: values are private local
+    data included in normal backups, minimal detail is preferred, and this
+    slice adds no dedicated export, purge, automated retention, telemetry,
+    urgent-support monitoring, participant release, or new deletion guarantee.
+11. Authentication, CSRF, ownership, stale-epoch isolation, labels, semantic
+    headings, keyboard focus, 200-percent zoom, 390-by-844 layout, reduced
+    motion, and no-horizontal-overflow behavior fail closed without an external
+    asset or runtime service.
+12. Read-only `GG-M6C-PILOT-READINESS-1.0` verifies all six prerequisite
+    readiness contracts, exact Personal OS/context definition IDs, registered
+    authenticated routes, five active protocols, friendship-only activation,
+    and empty or valid optional state without writes or private output.
+13. The isolated Compose drill creates only synthetic Personal OS/context
+    revisions through public services, builds a deterministic priority result,
+    exercises authenticated HTTP, and proves state hashes and activation
+    survive recreation and verified backup/restore.
+14. Focused and full deterministic checks, browser journeys, Compose, required
+    hosted CI, retained-artifact review, and the aggregate Pilot readiness gate
+    must pass on the exact candidate commit before owner merge review; every
+    skipped, unavailable, or unperformed item is reported.
+15. Canonical content, assessment, evidence, typed/shadow paths, score state,
+    exports, practice workflow, five-protocol projection, and friendship-only
+    activation remain exact. No persistence schema, protocol/action,
+    dependency, external service, remote telemetry, weekly execution, or
+    production-score change is added.
+16. M6B governance remains pending. Software, browser, CI, or Compose evidence
+    is not specialist, participant, accessibility-population, cultural-safety,
+    clinical, psychometric, longitudinal, recommendation-usefulness, release,
+    deployment, production, or mastery validation.
+
 ## Handoff audit notes
 
 - Canonical curriculum counts remain 27 domains, 383 competencies, 37 levers,
@@ -934,9 +1049,10 @@ software-ready but not M6B-accepted.
 - M4E adds no migration or state-changing startup step. Its readiness command
   is strictly read-only; `make pilot-check` constructs disposable state before
   calling it.
-- The GitHub Pilot readiness gate combines quality, ten Playwright journeys,
-  and Compose. Its retained artifact supports, but does not replace, human
-  desktop/mobile review.
+- The GitHub Pilot readiness gate combines quality, the ten established
+  Playwright journeys plus the M6C-04 Personal OS/context journey, and Compose.
+  Its retained artifact supports, but does not replace, human desktop/mobile
+  review.
 - M5A adds one migration for a separate optional `PilotFeedback` table. No
   existing canonical, assessment, evidence, score, sprint, or review table is
   changed.

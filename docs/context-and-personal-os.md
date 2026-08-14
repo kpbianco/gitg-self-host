@@ -5,9 +5,10 @@
 M6C-01 establishes `GG-CONTEXT-1.0` persistence and pure services. M6C-02 adds
 the separate `GG-PERSONAL-OS-1.0` identity and Truth/Autopilot Audit
 foundation. M6C-03 adds backend-only `GG-CONTEXT-PRIORITY-1.0` ranking and
-alternatives. None adds an ordinary form, changes the existing browser/profile
-recommendation path, alters an assessment or score, authors a protocol, or
-activates production scoring. M6C-04 owns the concise browser experience.
+alternatives. M6C-04 exposes those unchanged contracts through one concise
+authenticated browser journey and an additive deployment/pilot-readiness gate.
+It alters no assessment or score, authors no protocol, persists no ranking
+result, analyzes no Personal OS text, and does not expand production scoring.
 
 The additive, read-only readiness contract is
 `GG-CONTEXT-READINESS-1.0`.
@@ -248,22 +249,93 @@ the reviewed friendship activation still present, and accepts empty optional
 context tables. When persisted context exists, drift fails with diagnostics
 that do not print values, snapshots, identity, or record IDs.
 
+M6C-04 adds the read-only aggregate `GG-M6C-PILOT-READINESS-1.0`. It invokes
+the six existing pilot, curriculum-expansion, competency-evidence, context,
+Personal OS, and context-priority readiness contracts; verifies exact
+definition IDs, five active canonical protocols, friendship-only activation,
+and registered authenticated browser routes; accepts empty or valid optional
+state; and writes nothing. Its summaries and failures never print authored
+values, private snapshots, user identity, or record IDs. This aggregate is
+additive and does not replace `GG-PILOT-READINESS-1.0` or any governance or
+human review gate.
+
+## Concise authenticated browser journey
+
+The `/personal-os/` entry point and
+`/personal-os/practices/<slug>/context/` practice-review route are
+authenticated and use only the signed-in owner's latest assessment run. A user
+without an assessment is redirected to the assessment journey. A new
+assessment epoch displays no copied or inferred Personal OS, season, capacity,
+or practice-context values from an earlier run.
+
+The page progressively discloses the exact five identity sections, exact four
+descriptive audit prompts, assessment season/capacity, and one active
+manifest-projected practice's context at a time. Each value can remain
+unknown, N/A, or deferred. Ordinal inputs have no preselected numeric default,
+and the page adds no completion percentage, alignment/autopilot score,
+diagnosis, moral rank, shame, streak, or pressure language.
+
+Personal OS and assessment-context submissions use the unchanged append-only
+services. Valid changes append one revision, unchanged retries are idempotent,
+and malformed or stale-epoch requests write nothing. POSTs use CSRF and
+POST-redirect-GET. A retryable SQLite contention response is bounded and does
+not echo a private value.
+
+Practice context has three explicit modes:
+
+1. provide all six 0–4 applicability, importance, readiness, urgency,
+   opportunity/resources, and burden factors;
+2. mark applicability not applicable; or
+3. defer by naming the deferred factor, categorical reason, and optional
+   1–366-day review horizon.
+
+Unknown values remain visibly unknown. No factor is inferred from Personal OS
+text, assessment answers, personality, orientation, archetype, pilot feedback,
+setup/check-in data, or another factor.
+
+The presenter calls `GG-CONTEXT-PRIORITY-1.0` with only active canonical
+practices that have a latest verified revision in the current assessment
+epoch. Any result is labeled as a ranking among those explicitly reviewed
+practices; an unreviewed practice is not treated as unfavorable and the cohort
+is never expanded silently. The reproducible result is not persisted.
+
+With no current-epoch context, the existing profile recommendation IDs, base
+priorities, display order, reasons, and practice behavior remain exact. Missing
+capacity or no eligible reviewed candidate is described as missing structured
+context, not presented as context-aware fallback, and never converted to zero.
+With complete capacity and at least one eligible reviewed candidate, home,
+practice-list, and recommendation surfaces display a small set in exact engine
+order. Fixed allowlisted plain-language explanations distinguish provisional
+need from current context fit without raw backend names or false precision.
+
+An explicitly N/A or deferred reviewed candidate may request an alternative
+through the unchanged M6C-03 contract. The response is the highest-ranked
+distinct eligible practice from only that reviewed cohort, or an explicit
+no-eligible-alternative state. It does not return the source practice, invent
+context, start a practice, author a protocol, or mutate evidence, completion,
+score, or activation state.
+
 ## Privacy and validation boundary
 
 Context is private participant data stored in the local database and included
-in normal database backups. M6C-01 adds no remote telemetry and does not add it
-to existing minimized evidence or pilot-feedback exports. Context-specific UI,
-export, deletion, retention, and participant consent behavior remain for later
-reviewed batches.
+in normal database backups. M6C-04 adds authenticated collection and
+privacy-minimized recommendation presentation, but no remote telemetry and no
+context data in existing minimized evidence or pilot-feedback exports. It adds
+no dedicated context export, purge, retention automation, urgent-support
+monitoring, participant-release approval, or new account/assessment deletion
+guarantee.
 
 Personal OS values are also private local reflection data and enter normal
-database backups. M6C-02 does not add real participant or runtime-authored
-values to evidence, pilot-feedback exports, logs, generated reports, telemetry,
-recommendation inputs, score snapshots, or activation decisions. Synthetic
-golden test fixtures are the deliberate exception. It adds no Personal OS export,
-purge, deletion, or retention policy. Reverse migration requires a verified
-backup and a separate retention decision if any participant Personal OS data
-exists.
+database backups. M6C-04 renders authored values only on the authenticated
+Personal OS surface for their owner. They do not enter context-priority inputs
+or explanations, other recommendation surfaces, messages, logs, URL/query
+data, generated reports, telemetry, existing exports, evidence/score
+snapshots, or activation decisions. Conspicuously synthetic fixtures and the
+Personal OS surface's own synthetic browser artifact are the deliberate test
+exceptions. The page asks for minimal detail and explains these boundaries
+before collection. The batch adds no Personal OS export, purge, deletion, or
+retention policy. Reverse migration still requires a verified backup and a
+separate retention decision if participant Personal OS data exists.
 
 Automated checks establish schema, migration, deterministic snapshot, hashing,
 transaction, isolation, and regression behavior. They do not establish that
@@ -271,7 +343,9 @@ the factor language or scales are accessible, culturally appropriate,
 longitudinally useful, psychometric, clinical, specialist-approved, or
 production-validated.
 
-The same validation boundary applies to the Personal OS wording and audit.
-Owner review of exact prompts and privacy, and later participant,
-accessibility, cultural, safety, burden, longitudinal, clinical, and
-psychometric review remain manual and unperformed by M6C-02 software checks.
+The same validation boundary applies to the Personal OS wording, audit,
+context factors, explanations, and browser flow. Owner review of exact prompts,
+privacy, partial-cohort language, and retained synthetic desktop/mobile
+artifacts remains required. Participant usefulness and accessibility-population,
+cultural, safety, burden, longitudinal, clinical, and psychometric validation
+are not established by M6C software, browser, hosted-CI, or Compose checks.

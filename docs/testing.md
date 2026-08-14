@@ -26,6 +26,10 @@ make pilot-check
 make practice-report-check
 make curriculum-check
 make competency-evidence-check
+make context-check
+make personal-os-check
+make context-priority-check
+make m6c-pilot-check
 make e2e
 make compose-smoke
 ```
@@ -64,6 +68,15 @@ The M6B report set is:
 The readiness JSON must distinguish software readiness from specialist review,
 record zero typed production protocols and zero typed score-active protocols,
 and keep M6B acceptance false while `ER-M6A-003` is pending.
+
+`make context-check`, `make personal-os-check`, and
+`make context-priority-check` independently exercise the M6C-01 through
+M6C-03 contracts from isolated state. `make m6c-pilot-check` is an additive
+isolated drill for read-only `GG-M6C-PILOT-READINESS-1.0`; it invokes all six
+prerequisite readiness contracts, checks exact definition IDs, five active
+canonical protocols, friendship-only activation, authenticated route
+registration, and empty or valid optional state, and must not print private
+authored values or write database state.
 
 `make test` covers:
 
@@ -175,9 +188,27 @@ and keep M6B acceptance false while `ER-M6A-003` is pending.
   review, orientation, archetype, recommendation priorities, and
   recommendation order after feedback submission and export.
 - preview-first, exact-user pilot-feedback deletion with other users and all
-  developmental state unchanged.
+  developmental state unchanged;
+- exact authenticated Personal OS staging, latest-assessment ownership,
+  no-assessment redirect, reassessment isolation, CSRF, POST-redirect-GET,
+  append-only/idempotent writes, and private-value-free contention handling;
+- exact assessment-context and one-practice-at-a-time provide/N/A/defer form
+  mappings with no inferred or preselected factor values;
+- explicit current-epoch reviewed-candidate cohorts, unchanged no-context
+  legacy recommendations, missing-capacity withholding, and exact
+  context-aware ordering;
+- distinct cohort-bounded alternatives and no-eligible-alternative behavior
+  without practice, evidence, score, completion, or activation mutation;
+- Personal OS authored-text isolation from ranking, non-Personal-OS pages,
+  messages, logs, existing exports, evidence/score snapshots, reports, and
+  activation;
+- stale, cross-user, cross-epoch, inactive-protocol, malformed-snapshot, and
+  service-failure requests failing closed;
+- deterministic read-only `GG-M6C-PILOT-READINESS-1.0` JSON, empty-state
+  acceptance, tamper diagnostics, privacy-safe output, and no database writes.
 
-`make e2e` uses Playwright Chromium for ten browser journeys:
+`make e2e` uses Playwright Chromium for the ten established browser journeys
+plus the M6C-04 Personal OS/context journey:
 
 1. login, Pilot 002 home, and developmental profile;
 2. mobile keyboard content access, five-protocol setup coverage, no horizontal
@@ -195,6 +226,12 @@ and keep M6B acceptance false while `ER-M6A-003` is pending.
 10. mobile/desktop optional pilot feedback, journey-stage progressive
     disclosure, explicit no-telemetry and non-developmental boundaries,
     categorical submission, confirmation, and privacy-minimized download.
+11. authenticated Personal OS progressive disclosure; exact private-data
+    notice; synthetic identity/audit, season/capacity, provide/N/A/defer
+    submissions; partial reviewed-cohort ranking; distinct alternative;
+    no-context/reassessment isolation; keyboard focus, error association,
+    200-percent zoom, reduced motion, 390-by-844 no-overflow behavior; and
+    synthetic desktop/mobile retained screenshots.
 
 The server-side golden test and browser flow complement each other: the first
 deep-compares every canonical output, while the second proves that the mounted
@@ -218,7 +255,11 @@ project. It proves the mapped-port health and CSRF login path, non-root user,
 migrations, repeated canonical seeding, evidence and score replay, named-volume
 persistence across forced recreation, one-time bootstrap behavior, online
 backup integrity, restore, all applicable readiness contracts, and graceful
-Gunicorn shutdown.
+Gunicorn shutdown. The M6C drill also creates conspicuously synthetic Personal
+OS/context revisions through public services, builds a deterministic priority
+result, opens the authenticated browser surface over the mapped port, and
+verifies revision/result hashes plus friendship-only activation across
+recreation and backup/restore.
 
 The command never uses the deployment `.env`. Its temporary credentials,
 Compose project, and volume are removed on exit. Set `SMOKE_APP_PORT` only

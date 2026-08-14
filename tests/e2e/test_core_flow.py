@@ -7,7 +7,14 @@ import pytest
 from django.contrib.auth import get_user_model
 from playwright.sync_api import Page, expect
 
-from growth.models import AssessmentRun, PilotFeedback, PracticeCheckIn, PracticeSprint
+from growth.models import (
+    AssessmentRun,
+    PersonalOSRevision,
+    PilotFeedback,
+    PracticeCheckIn,
+    PracticeContext,
+    PracticeSprint,
+)
 from growth.services.assessment import encode_share_code, load_assessment_assets
 from growth.services.canonical_import import seed_canonical_data
 from growth.services.score_state import synchronize_all_score_states
@@ -161,6 +168,101 @@ def test_mobile_keyboard_walkthrough_covers_all_five_protocols(live_server, page
         page.get_by_role("heading", name=name, exact=True).wait_for()
         assert_no_horizontal_overflow(page)
         save_walkthrough_screenshot(page, f"desktop-{slug}")
+
+
+@pytest.mark.e2e
+@pytest.mark.django_db(transaction=True)
+def test_personal_os_context_priority_alternative_private_accessible_journey(
+    live_server,
+    page: Page,
+):
+    page.set_viewport_size({"width": 390, "height": 844})
+    page.emulate_media(reduced_motion="reduce")
+    create_browser_user()
+    seed_browser_data()
+    log_in(live_server, page)
+    sentinel = "SYNTHETIC-PRIVATE-M6C04-BROWSER"
+
+    page.get_by_role("link", name="Personal OS", exact=True).click()
+    page.get_by_role("heading", name="Choose what guides this season.").wait_for()
+    page.get_by_text("included in normal database backups").wait_for()
+    assert_no_horizontal_overflow(page)
+    page.get_by_label(
+        "Response state for: What purpose or contribution do you choose to orient toward for now?"
+    ).select_option("provided")
+    page.get_by_label(
+        "What purpose or contribution do you choose to orient toward for now?",
+        exact=True,
+    ).fill(sentinel)
+    page.get_by_role("button", name="Save Personal OS revision").click()
+    page.get_by_text("Personal OS revision saved.").wait_for()
+    assert PersonalOSRevision.objects.count() == 1
+
+    page.get_by_label("Current season response state").select_option("provided")
+    page.get_by_label("Current season:", exact=True).select_option("transition")
+    page.get_by_label("Capacity response state").select_option("provided")
+    page.get_by_label("Room for one additional bounded practice").select_option("4")
+    page.get_by_role("button", name="Save season and capacity").click()
+    page.get_by_text("Season and capacity revision saved.").wait_for()
+    save_walkthrough_screenshot(page, "mobile-personal-os-synthetic")
+
+    first = "deepen-one-existing-friendship"
+    second = "schedule-non-instrumental-play"
+    page.goto(f"{live_server.url}/personal-os/practices/{first}/context/")
+    page.get_by_label("Mark this practice not applicable").check()
+    page.get_by_role("button", name="Save practice context").click()
+    page.get_by_text("Practice context revision saved.").wait_for()
+    page.get_by_role("button", name="Request alternative").click()
+    page.get_by_text("No other explicitly reviewed practice").wait_for()
+
+    page.goto(f"{live_server.url}/personal-os/practices/{second}/context/")
+    page.get_by_label("Provide all six context factors").check()
+    for label, value in (
+        ("Fit with your present role and situation", "4"),
+        ("Current importance among competing goods", "3"),
+        ("Readiness to attempt this bounded practice", "4"),
+        ("User-reported time sensitivity", "2"),
+        ("Available opportunity, support, access, and resources", "3"),
+        ("Expected time, access, effort, emotional, relational, or material load", "1"),
+    ):
+        page.get_by_label(label).select_option(value)
+    page.get_by_role("button", name="Save practice context").click()
+    assert PracticeContext.objects.count() == 2
+
+    page.goto(f"{live_server.url}/personal-os/practices/{first}/context/")
+    page.get_by_role("button", name="Request alternative").click()
+    page.get_by_text("Schedule Non-Instrumental Play", exact=True).wait_for()
+    assert_no_horizontal_overflow(page)
+    save_walkthrough_screenshot(page, "mobile-context-alternative-synthetic")
+
+    page.goto(f"{live_server.url}/personal-os/practices/{second}/context/")
+    page.get_by_label("Provide all six context factors").check()
+    for label in (
+        "Fit with your present role and situation",
+        "Current importance among competing goods",
+        "Readiness to attempt this bounded practice",
+        "User-reported time sensitivity",
+        "Available opportunity, support, access, and resources",
+        "Expected time, access, effort, emotional, relational, or material load",
+    ):
+        page.get_by_label(label).select_option("")
+    page.get_by_role("button", name="Save practice context").click()
+    expect(page.get_by_label("Fit with your present role and situation")).to_be_focused()
+
+    page.goto(f"{live_server.url}/")
+    assert sentinel not in page.locator("body").inner_text()
+    page.get_by_text("Current context fit is available.").wait_for()
+    assert_no_horizontal_overflow(page)
+    page.evaluate("document.body.style.zoom = '200%'")
+    assert_no_horizontal_overflow(page)
+    page.evaluate("document.body.style.zoom = ''")
+
+    page.set_viewport_size({"width": 1440, "height": 1000})
+    page.goto(f"{live_server.url}/practices/")
+    page.get_by_role("heading", name="Not ranked by current context").wait_for()
+    assert sentinel not in page.locator("body").inner_text()
+    assert_no_horizontal_overflow(page)
+    save_walkthrough_screenshot(page, "desktop-context-ranking-synthetic")
 
 
 @pytest.mark.e2e

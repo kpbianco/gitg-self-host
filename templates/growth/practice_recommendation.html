@@ -34,10 +34,19 @@
           </p>
         {% endif %}
         <p class="fine-print">
-          Recommendation priority is recalculated from the current provisional
-          capacity estimates and confidence. Orientations and archetypes are
-          never treated as mastery.
+          {% if priority.context_aware and context_candidate %}
+            Provisional need is considered separately from the current context you
+            explicitly supplied. This ordering covers only reviewed practices.
+          {% else %}
+            Recommendation priority is recalculated from the current provisional
+            capacity estimates and confidence. This is not labeled context-aware.
+          {% endif %}
+          Orientations and archetypes are never treated as mastery.
         </p>
+        {% if context_candidate %}
+          {% for explanation in context_candidate.explanation %}<p class="fine-print">{{ explanation }}</p>{% endfor %}
+        {% endif %}
+        <a class="text-link" href="{% url 'growth:practice-context' protocol.slug %}">Review current context <span aria-hidden="true">→</span></a>
       </section>
       <section class="panel">
         <p class="eyebrow">Applicability</p>

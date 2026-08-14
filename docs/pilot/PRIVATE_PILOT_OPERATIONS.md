@@ -18,6 +18,8 @@ later self-report.
 - [ ] Run `make compose-smoke` on a Docker-capable host.
 - [ ] Confirm the GitHub **Pilot readiness gate** passed on that commit.
 - [ ] Review the retained desktop/mobile walkthrough artifact.
+- [ ] Confirm `make m6c-pilot-check` passed and review the synthetic Personal
+      OS/context artifact for private-value leakage and partial-cohort wording.
 - [ ] Run `make backup` and record the backup filename.
 - [ ] Confirm `/health/` and an authenticated login through the configured LAN
       address.
@@ -36,6 +38,15 @@ Use this concise participant framing:
 > assessment, evidence, scores, recommendations, or practice completion. You
 > may skip a question or stop the session at any time.
 
+Before opening Personal OS, also explain:
+
+> Personal OS and context answers are optional private local data included in
+> normal database backups. Use minimal detail. Authored Personal OS text is not
+> analyzed or used in recommendations; only explicit structured context may
+> reorder the practices you have reviewed. This version has no dedicated
+> Personal OS/context export, purge, automatic retention, or urgent-support
+> monitoring.
+
 ## Session path
 
 The operator may note elapsed time outside the application for facilitation,
@@ -51,23 +62,31 @@ report it.
    - Ask what raw self-report, current estimate, and confidence appear to mean.
    - Confirm the participant does not interpret archetypes as diagnoses or
      scores as worth.
-3. **Recommendation and applicability — about 5 minutes**
+3. **Optional Personal OS and context review — about 5 minutes**
+   - Confirm the staged page can be understood without completing every field.
+   - Encourage minimal detail and permit unknown, N/A, or defer without
+     pressure; do not interpret or copy the participant's authored text.
+   - Review at most one active practice at a time. Do not preselect or suggest a
+     0–4 factor, and do not treat an unreviewed practice as unfavorable.
+   - Confirm any ranking is described as among explicitly reviewed practices,
+     and that an N/A/defer alternative is distinct or explicitly unavailable.
+4. **Recommendation and applicability — about 5 minutes**
    - Ask why the first practice appears to have been selected.
    - Let the participant decide whether it currently fits; do not pressure
      them to make a protocol applicable.
-4. **Guided setup — target under 5 minutes**
+5. **Guided setup — target under 5 minutes**
    - Let the participant move through setup without inventing a new
      intervention.
    - Stop if the privacy, relationship, accessibility, or safety boundary does
      not fit.
-5. **Compact check-in — target under 2 minutes**
+6. **Compact check-in — target under 2 minutes**
    - Use a real check-in only after an actual action. For an interface-only
      session, inspect the blank form without submitting fabricated evidence.
    - Confirm the page shows only prompts relevant to the selected action.
    - Before an action occurs, save a draft; the application must refuse a
      submitted evidence record without an attempt.
    - Confirm draft and submitted evidence are understood as different states.
-6. **Optional product feedback — about 3 minutes**
+7. **Optional product feedback — about 3 minutes**
    - Open **Account → Open feedback form**.
    - Choose one journey stage per record and confirm irrelevant practice or
      timing questions are not shown.
@@ -125,6 +144,9 @@ barrier.
       and handle any backups under the same agreement.
 - [ ] Run `docker compose exec app python manage.py
       verify_pilot_readiness`.
+- [ ] Run `docker compose exec app python manage.py
+      verify_m6c_pilot_readiness` and confirm its output contains no authored
+      Personal OS/context value.
 - [ ] Back up after the session if the instance state must be retained.
 
 ## Stop criteria
@@ -134,6 +156,10 @@ Stop or postpone the pilot when:
 - authentication, persistence, backup/restore, or the health check fails;
 - the **Pilot readiness gate** is not green for the deployed commit;
 - private data appears in a minimized export;
+- Personal OS authored text appears in recommendation copy, logs, messages,
+  URLs, a non-Personal-OS retained artifact, or readiness output;
+- a recommendation silently includes an unreviewed practice, treats unknown,
+  N/A, or defer as zero, or returns the source as its own alternative;
 - feedback changes evidence, score state, recommendations, or completion;
 - a critical keyboard, mobile, accessibility, privacy, or safety issue blocks
   the participant;

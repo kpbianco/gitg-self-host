@@ -1,26 +1,40 @@
 from datetime import date, timedelta
 
 from django.contrib import messages
-from django.http import Http404
+from django.core.exceptions import ValidationError
+from django.db import IntegrityError, OperationalError
+from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.utils import timezone
 from django.views.decorators.http import require_http_methods, require_POST
 
+from growth.domain.context_priority import AlternativeRequest
+from growth.domain.practice_content import PracticeContentError
 from growth.forms import (
     PracticeApplicabilityForm,
     PracticeBoundaryForm,
     PracticeCheckInForm,
     PracticeContextForm,
+    PracticePriorityContextForm,
     PracticeReviewForm,
     PracticeStartDateForm,
 )
 from growth.models import (
+    AssessmentContext,
     AssessmentRun,
     EvidenceEvent,
     PracticeCheckIn,
+    PracticeContext,
     PracticeProtocol,
     PracticeReview,
     PracticeSprint,
+)
+from growth.services.context import ContextServiceError, PracticeContextInput, record_context_bundle
+from growth.services.personal_os_browser import (
+    active_projected_protocol_ids,
+    assessment_factors_from_record,
+    build_browser_priority_presentation,
+    practice_context_initial,
 )
 from growth.services.practice import (
     PracticeWorkflowError,
@@ -53,17 +67,28 @@ def _sprint(user, sprint_id) -> PracticeSprint:
 
 def practice_list(request):
     summary = build_profile_summary(request.user)
-    recommended_ids = {protocol.pk for protocol in summary.recommendations}
+    priority = build_browser_priority_presentation(user=request.user, summary=summary)
+    recommended_ids = {protocol.pk for protocol in priority.recommendations}
     protocols = list(
         PracticeProtocol.objects.prefetch_related("target_levers").order_by("display_order")
+    )
+    ranked_protocols = list(priority.recommendations) if priority.context_aware else protocols
+    ranked_ids = {protocol.pk for protocol in ranked_protocols}
+    not_context_ranked = (
+        [protocol for protocol in protocols if protocol.pk not in ranked_ids]
+        if priority.context_aware
+        else []
     )
     return render(
         request,
         "growth/practice_list.html",
         {
             "protocols": protocols,
+            "ranked_protocols": ranked_protocols,
+            "not_context_ranked": not_context_ranked,
             "recommended_ids": recommended_ids,
             "current_sprint": current_sprint_for(request.user),
+            "priority": priority,
         },
     )
 
@@ -72,7 +97,12 @@ def practice_recommendation(request, slug):
     protocol = _protocol(slug)
     current = current_sprint_for(request.user)
     summary = build_profile_summary(request.user)
-    is_recommended = protocol.pk in {item.pk for item in summary.recommendations}
+    priority = build_browser_priority_presentation(user=request.user, summary=summary)
+    is_recommended = protocol.pk in {item.pk for item in priority.recommendations}
+    context_candidate = next(
+        (item for item in priority.candidates if item.protocol.pk == protocol.pk),
+        None,
+    )
     return render(
         request,
         "growth/practice_recommendation.html",
@@ -81,7 +111,165 @@ def practice_recommendation(request, slug):
             "current_sprint": current,
             "is_recommended": is_recommended,
             "has_profile": summary.assessment_run is not None,
+            "priority": priority,
+            "context_candidate": context_candidate,
         },
+    )
+
+
+def _practice_context_record(run, protocol):
+    rows = tuple(
+        PracticeContext.objects.filter(assessment_run=run, protocol=protocol).order_by("revision")
+    )
+    for record in rows:
+        record.full_clean()
+    if [record.revision for record in rows] != list(range(1, len(rows) + 1)):
+        raise ValidationError("Practice context revision sequence is invalid.")
+    return rows[-1] if rows else None
+
+
+def _assessment_context_record(run):
+    rows = tuple(AssessmentContext.objects.filter(assessment_run=run).order_by("revision"))
+    for record in rows:
+        record.full_clean()
+    if [record.revision for record in rows] != list(range(1, len(rows) + 1)):
+        raise ValidationError("Assessment context revision sequence is invalid.")
+    return rows[-1] if rows else None
+
+
+def _render_practice_context(
+    request,
+    *,
+    protocol,
+    summary,
+    form,
+    status=200,
+    alternative_request=None,
+):
+    priority = build_browser_priority_presentation(
+        user=request.user,
+        summary=summary,
+        alternative_request=alternative_request,
+    )
+    current = _practice_context_record(summary.assessment_run, protocol)
+    return render(
+        request,
+        "growth/practice_context.html",
+        {
+            "protocol": protocol,
+            "assessment_run": summary.assessment_run,
+            "form": form,
+            "current_context": current,
+            "priority": priority,
+        },
+        status=status,
+    )
+
+
+@require_http_methods(["GET", "POST"])
+def practice_priority_context(request, slug):
+    summary = build_profile_summary(request.user)
+    run = summary.assessment_run
+    if run is None:
+        messages.info(
+            request, "Complete or import an assessment before reviewing practice context."
+        )
+        return redirect("growth:assessment")
+    protocol = _protocol(slug)
+    try:
+        projected_ids = active_projected_protocol_ids()
+    except (PracticeContentError, ValueError):
+        raise Http404 from None
+    if (
+        protocol.stable_id not in projected_ids
+        or protocol.availability != PracticeProtocol.Availability.ACTIVE
+    ):
+        raise Http404
+    try:
+        current = _practice_context_record(run, protocol)
+    except (ValidationError, ValueError, TypeError):
+        return HttpResponse(
+            "Saved practice context could not be verified. No value is displayed.",
+            status=409,
+        )
+    form = PracticePriorityContextForm(
+        request.POST or None,
+        initial=practice_context_initial(current, assessment_epoch=run.pk),
+    )
+    if request.method == "POST" and request.POST.get("intent") == "request_alternative":
+        form = PracticePriorityContextForm(
+            initial=practice_context_initial(current, assessment_epoch=run.pk)
+        )
+        if current is None or (
+            current.applicability_state != "not_applicable" and current.disposition != "deferred"
+        ):
+            return HttpResponse(
+                "An alternative requires a saved not-applicable or deferred review.",
+                status=400,
+            )
+        reason = "not_applicable" if current.applicability_state == "not_applicable" else "deferred"
+        return _render_practice_context(
+            request,
+            protocol=protocol,
+            summary=summary,
+            form=form,
+            alternative_request=AlternativeRequest(protocol.stable_id, reason),
+        )
+    if request.method == "POST" and form.is_valid():
+        if form.cleaned_data["assessment_epoch"] != run.pk:
+            return HttpResponse(
+                "The assessment epoch changed. Reload before saving; no value is displayed.",
+                status=409,
+            )
+        try:
+            assessment_context = _assessment_context_record(run)
+        except (ValidationError, ValueError, TypeError):
+            return HttpResponse(
+                "Saved season and capacity context could not be verified. No value is displayed.",
+                status=409,
+            )
+        factors, disposition, defer_reason, review_horizon_days = form.context_input(protocol)
+        try:
+            result = record_context_bundle(
+                user=request.user,
+                assessment_run=run,
+                assessment_factors=assessment_factors_from_record(assessment_context),
+                practice_inputs=(
+                    PracticeContextInput(
+                        protocol=protocol,
+                        factors=factors,
+                        disposition=disposition,
+                        defer_reason=defer_reason,
+                        review_horizon_days=review_horizon_days,
+                    ),
+                ),
+            )
+        except (OperationalError, IntegrityError):
+            return HttpResponse(
+                "The local store is busy. Reload and retry; no value is displayed.",
+                status=409,
+            )
+        except (ContextServiceError, ValidationError, ValueError, TypeError):
+            form.add_error(None, "The practice context response could not be validated.")
+            return _render_practice_context(
+                request,
+                protocol=protocol,
+                summary=summary,
+                form=form,
+                status=400,
+            )
+        created = result.practice_created[0]
+        messages.success(
+            request,
+            "Practice context revision saved." if created else "Practice context was unchanged.",
+        )
+        return redirect("growth:practice-context", slug=protocol.slug)
+    return _render_practice_context(
+        request,
+        protocol=protocol,
+        summary=summary,
+        form=form,
+        status=400 if request.method == "POST" else 200,
     )
 
 

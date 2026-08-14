@@ -47,13 +47,27 @@ docker compose exec app python manage.py verify_pilot_readiness
 docker compose exec app python manage.py verify_pilot_readiness --json
 ```
 
+M6C-04 adds, but does not replace this contract, the read-only
+`GG-M6C-PILOT-READINESS-1.0` aggregate:
+
+```bash
+make m6c-pilot-check
+docker compose exec app python manage.py verify_m6c_pilot_readiness --json
+```
+
+It runs the six prerequisite readiness contracts and verifies the exact
+Personal OS/context definitions, registered authenticated browser routes, five
+active canonical practices, and friendship-only activation. Empty optional
+state is valid. Existing valid optional state is checked without writes or
+private-value output.
+
 ## Verification gate
 
 Pull requests and `main` have four GitHub Actions jobs:
 
 1. Ruff, Django checks, pytest, and the isolated readiness drill;
-2. ten Playwright journeys (the original nine closeout journeys plus the M5A
-   feedback boundary);
+2. the ten established Playwright journeys plus the M6C-04 authenticated
+   Personal OS/context desktop-mobile journey;
 3. the production Docker Compose deployment drill;
 4. one aggregate **Pilot readiness gate** that passes only when the other
    three jobs pass.
@@ -84,6 +98,7 @@ follow-up issue.
 | Boundary | Coercion, retaliation, and safety exclusions are visible | Setup says it is score-inactive |
 | Attention-presence | Accessibility and anti-surveillance boundary is visible | Setup says it is score-inactive |
 | Optional pilot feedback | Product data is visibly separate from evidence | No telemetry, local storage, journey-scoped questions, minimized export, and no overflow are visible |
+| Personal OS and context | Exact staged prompts, local-backup notice, partial reviewed-cohort label, and structured explanation copy are visible | Keyboard/error focus, reduced motion, 200-percent zoom, 390-by-844 no overflow, unknown/N/A/defer states, and synthetic-only artifacts are verified |
 
 For every protocol, confirm:
 
@@ -118,6 +133,11 @@ The private pilot gate is satisfied only when:
 - the retained desktop/mobile artifact has been visually reviewed;
 - the live one-service deployment passes `make compose-smoke`;
 - backup and restore have been exercised for the deployment;
+- `GG-M6C-PILOT-READINESS-1.0` passes without weakening any prerequisite
+  readiness result;
+- the owner accepts the exact staged prompts, factor mappings, explanation
+  copy, privacy notice, partial-cohort language, and conspicuously synthetic
+  retained Personal OS/context artifacts;
 - no unresolved critical safety, privacy, authentication, data-loss,
   keyboard-blocking, or horizontal-overflow finding remains;
 - the instance owner explicitly approves proceeding.
@@ -140,3 +160,22 @@ M5A did not activate another protocol for scoring, change posterior
 mathematics, add protocols, add remote telemetry, or send participant data to
 an external service. Any such expansion still requires its own reviewed
 batch.
+
+## Follow-on milestone: M6C-04 browser closeout
+
+M6C-04 connects the already reviewed context, Personal OS, and
+context-priority contracts through a concise authenticated journey. It ranks
+only explicitly reviewed current-epoch practices, preserves the unchanged
+legacy recommendation behavior when no context exists, provides a distinct
+cohort-bounded alternative after N/A/defer, and keeps authored Personal OS
+text on its owner's Personal OS surface. The Compose drill uses synthetic
+revisions and proves deterministic hashes, authenticated HTTP, recreation,
+backup/restore, and friendship-only activation.
+
+This evidence is software and isolated deployment-drill evidence only. M6C-04
+does not add a dedicated Personal OS/context export, purge, automated
+retention, urgent-support monitoring, participant release, weekly execution,
+protocol/action, score change, release, or deployment. M6B governance,
+participant usefulness, specialist review, accessibility-population,
+cultural-safety, clinical, psychometric, longitudinal, and production claims
+remain outside the gate.

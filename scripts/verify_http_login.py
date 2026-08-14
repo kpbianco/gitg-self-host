@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify the public health/auth boundary and a real CSRF-protected login."""
+"""Verify public/authenticated HTTP boundaries and a real CSRF-protected login."""
 
 from __future__ import annotations
 
@@ -40,18 +40,31 @@ def assert_health(base_url: str) -> None:
             raise RuntimeError(f"Unexpected health response: {response.status} {body!r}")
 
 
-def assert_anonymous_redirect(base_url: str) -> None:
+def validate_path(path: str) -> str:
+    if not path.startswith("/") or path.startswith("//"):
+        raise RuntimeError(f"Authenticated path must be a local absolute path: {path!r}")
+    parsed = urllib.parse.urlsplit(path)
+    if parsed.scheme or parsed.netloc or parsed.query or parsed.fragment:
+        raise RuntimeError(f"Authenticated path must not contain a URL or query: {path!r}")
+    decoded_segments = urllib.parse.unquote(parsed.path).split("/")
+    if any(segment in {".", ".."} for segment in decoded_segments):
+        raise RuntimeError(f"Authenticated path must not contain traversal: {path!r}")
+    return path
+
+
+def assert_anonymous_redirect(base_url: str, path: str = "/") -> None:
     opener = urllib.request.build_opener(NoRedirectHandler())
     try:
-        opener.open(f"{base_url}/", timeout=10)
+        opener.open(f"{base_url}{path}", timeout=10)
     except urllib.error.HTTPError as exc:
         location = exc.headers.get("Location", "")
-        if exc.code != 302 or not location.startswith("/accounts/login/?next="):
+        expected_location = f"/accounts/login/?next={urllib.parse.quote(path, safe='/')}"
+        if exc.code != 302 or location != expected_location:
             raise RuntimeError(
                 f"Unexpected anonymous response: {exc.code} Location={location!r}"
             ) from exc
         return
-    raise RuntimeError("Anonymous access to the authenticated home page was not redirected.")
+    raise RuntimeError(f"Anonymous access to authenticated path {path!r} was not redirected.")
 
 
 def login(base_url: str, username: str, password: str) -> tuple[str, str, http.cookiejar.CookieJar]:
@@ -89,6 +102,7 @@ def assert_login(
     password: str,
     *,
     expect_success: bool,
+    authenticated_paths: tuple[str, ...] = (),
 ) -> None:
     final_url, body, cookies = login(base_url, username, password)
     if expect_success:
@@ -99,6 +113,14 @@ def assert_login(
             raise RuntimeError("Successful login did not establish exactly one session cookie.")
         if not session_cookies[0].has_nonstandard_attr("HttpOnly"):
             raise RuntimeError("The session cookie was not marked HttpOnly.")
+        opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cookies))
+        for path in authenticated_paths:
+            with opener.open(f"{base_url}{path}", timeout=10) as response:
+                response.read()
+                if response.status != 200 or urllib.parse.urlsplit(response.geturl()).path != path:
+                    raise RuntimeError(
+                        f"Authenticated path did not return its expected page: {path!r}"
+                    )
         return
 
     stayed_on_login = "/accounts/login/" in final_url
@@ -122,20 +144,30 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Skip health and anonymous redirect checks on repeated login probes.",
     )
+    parser.add_argument(
+        "--authenticated-path",
+        action="append",
+        default=[],
+        help="Additional local path that must redirect anonymously and return 200 after login.",
+    )
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
     base_url = normalized_base_url(args.base_url)
+    authenticated_paths = tuple(validate_path(path) for path in args.authenticated_path)
     if not args.skip_public_boundary:
         assert_health(base_url)
         assert_anonymous_redirect(base_url)
+        for path in authenticated_paths:
+            assert_anonymous_redirect(base_url, path)
     assert_login(
         base_url,
         args.username,
         args.password,
         expect_success=args.expect == "success",
+        authenticated_paths=(authenticated_paths if args.expect == "success" else ()),
     )
     print(f"HTTP verification passed ({args.expect} login expected).")
 

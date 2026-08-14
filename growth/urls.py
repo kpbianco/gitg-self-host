@@ -1,12 +1,20 @@
 from django.urls import path
 
-from . import views, views_assessment, views_evidence, views_pilot, views_practice
+from . import (
+    views,
+    views_assessment,
+    views_evidence,
+    views_personal_os,
+    views_pilot,
+    views_practice,
+)
 
 app_name = "growth"
 
 urlpatterns = [
     path("", views.home, name="home"),
     path("profile/", views.profile, name="profile"),
+    path("personal-os/", views_personal_os.personal_os, name="personal-os"),
     path("evidence/", views_evidence.evidence_ledger, name="evidence-ledger"),
     path(
         "evidence/export.json",
@@ -35,6 +43,11 @@ urlpatterns = [
         name="assessment-save",
     ),
     path("practices/", views_practice.practice_list, name="practice-list"),
+    path(
+        "personal-os/practices/<slug:slug>/context/",
+        views_practice.practice_priority_context,
+        name="practice-context",
+    ),
     path(
         "practices/<slug:slug>/",
         views_practice.practice_recommendation,
