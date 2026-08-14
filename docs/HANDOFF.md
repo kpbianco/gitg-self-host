@@ -5,8 +5,8 @@
 Grounded Growth is a self-hosted Django guided-development application with
 canonical curriculum/practice data, deterministic evidence/scoring replay, and
 a friendship-only production score boundary. M6B software is merged but not
-governance-accepted. M6C-01 and M6C-02 are merged; M6C-03 is implemented on the
-current review branch.
+governance-accepted. M6C-01 through M6C-03 are reviewed and merged; M6C-04 is
+implemented on the current review branch.
 
 ## Read first
 
@@ -22,18 +22,22 @@ current review branch.
 
 ## Exact review objective
 
-Review M6C-03's exact multiplicative formula, explicit capacity requirement,
-N/A/defer/missing-context precedence, stable-ID ordering, distinct alternative
-selection, canonical privacy-minimized output, epoch isolation, no-mutation
-proofs, and additive readiness. Do not add ordinary UI, persistence, a model or
-migration, protocol/content, weekly execution, export/deletion/retention
-behavior, evidence/scoring change, or activation.
+Review M6C-04's latest-assessment ownership and reassessment isolation, concise
+exact Personal OS/context staging, explicit provide/N/A/defer mappings,
+append-only/idempotent service use, partial current-epoch reviewed cohort,
+unchanged no-context recommendation behavior, exact context-aware order,
+distinct alternative selection, authored-text isolation, accessibility checks,
+and additive `GG-M6C-PILOT-READINESS-1.0` plus Compose recovery evidence. Do
+not add priority persistence, a model or migration, protocol/content, weekly
+execution, dedicated Personal OS/context export/purge/retention automation,
+evidence/scoring change, or activation.
 
 The canonical control contract records owner-directed sequencing that defers
-M6B governance while this backend foundation proceeds. Keep `ER-M6A-003`
+M6B governance while this browser closeout proceeds. Keep `ER-M6A-003`
 pending, `RG-M6A-002` open, Decisions 047–049 proposed, and every new path
-non-scored. Required GitHub gates plus owner prompt/privacy review remain
-manual before merge.
+non-scored. Required exact-candidate hosted CI, retained synthetic artifact
+review, and owner prompt/factor/explanation/privacy/partial-cohort review remain
+manual before merge unless actually recorded in retained evidence.
 
 ## Protected decisions
 

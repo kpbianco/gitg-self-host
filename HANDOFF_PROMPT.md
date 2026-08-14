@@ -115,7 +115,7 @@ Truth/Autopilot Audit, mission, principles, anti-goals, season/capacity,
 priority stack, weekly execution, and proof-based review while showing only a
 small context-fit set of practices.
 
-M6B is the current proposed batch. It adds pure
+M6B software is merged but remains governance-pending. It adds pure
 `GG-TYPED-EVIDENCE-1.0` / `typed-evidence-rules-v1` evaluation,
 evidence-only `GG-COMPETENCY-EVIDENCE-SHADOW-1.0`, one-way
 `GG-COMPETENCY-LEVER-SHADOW-1.0`, separate
@@ -137,12 +137,18 @@ truthfully recorded. Do not fabricate completed reviewer roles or weaken that
 gate.
 
 M6C-01 and M6C-02 are merged with explicit context/defer and private append-only
-Personal OS identity/Truth-Autopilot foundations. M6C-03 adds the backend-only
+Personal OS identity/Truth-Autopilot foundations. M6C-03 is merged with the
+backend-only
 `GG-CONTEXT-PRIORITY-1.0` formula, withholding, deterministic alternatives,
 canonical privacy-minimized results, and additive readiness without migration,
-persistence, ordinary UI, scoring, or activation. M6C-04 owns browser
-collection and presentation. Representative vertical slices begin after M6C
-as Phase B.
+persistence, ordinary UI, scoring, or activation. M6C-04 is the current
+browser closeout: one authenticated concise journey collects exact structured
+context and private Personal OS revisions, presents deterministic rankings and
+distinct alternatives only among explicitly reviewed current-epoch practices,
+and adds an aggregate browser/deployment readiness contract. It must not infer
+context, analyze authored text, persist ranking results, add a dedicated
+export/purge/retention policy, change scoring, or expand friendship-only
+activation. Representative vertical slices begin after M6C as Phase B.
 
 Acceptance criteria are in `docs/PROJECT_HANDOFF.md`. Add automated tests for
 every testable criterion. The app must pass `make compose-smoke` in a

@@ -142,7 +142,11 @@ with the named volume. M3B current lever state and immutable hashed score
 snapshots live in that same database; assessment baselines remain separate.
 Optional M5A pilot-feedback records also persist in SQLite, but remain in a
 separate table and never enter assessment, evidence, score, recommendation, or
-completion services.
+completion services. Optional M6C assessment/practice context and Personal OS
+revisions are append-only, assessment-epoch-scoped private local data in the
+same database and backups. Context priority results are reproducible and are
+not stored. Authored Personal OS text is not a ranking, evidence, score,
+activation, telemetry, or existing-export input.
 
 ## Updating
 
@@ -174,6 +178,15 @@ After an update, sign in and verify:
     the exact reviewed five-protocol boundary and replay state.
 11. **Account → Open feedback form** explains that pilot feedback is optional,
     local, and separate from developmental state.
+12. `/personal-os/` and
+    `/personal-os/practices/<slug>/context/` require authentication, use the
+    signed-in user's latest assessment, show no carried-forward values after
+    reassessment, and state the local-backup and
+    no-dedicated-export/purge/retention boundaries before collection.
+13. `docker compose exec app python manage.py
+    verify_m6c_pilot_readiness` reports all six prerequisite readiness
+    contracts, the exact five-protocol projection, registered authenticated
+    browser routes, and friendship-only activation without writing data.
 
 The evidence verifier is intentionally not an automatic repair step. Startup
 backfill reconciles missing legacy events and verifies existing ones;
@@ -248,10 +261,16 @@ It verifies:
 - anonymous redirect plus a real CSRF-protected login over the mapped port;
 - the non-root runtime, applied migrations, exact canonical counts, repeated
   seed idempotency, evidence replay, score-state replay, and the read-only
-  `GG-PILOT-READINESS-1.0` contract;
+  `GG-PILOT-READINESS-1.0` and additive
+  `GG-M6C-PILOT-READINESS-1.0` contracts;
+- conspicuously synthetic Personal OS and context revisions created through
+  public services, a deterministic context-priority result, and authenticated
+  HTTP access to the Personal OS surface;
 - database and bootstrap-password persistence after forced container
-  recreation;
-- an online SQLite backup, `PRAGMA integrity_check`, and restore;
+  recreation, including synthetic revision/result hashes and unchanged
+  friendship-only activation;
+- an online SQLite backup, `PRAGMA integrity_check`, and restore that preserve
+  those synthetic hashes and the activation boundary;
 - clean Gunicorn shutdown.
 
 The script removes its isolated containers and volume on exit. It does not
@@ -263,6 +282,11 @@ GitHub Actions runs the same command in
 `.github/workflows/verification.yml`, alongside Ruff, Django, pytest,
 the isolated `make pilot-check`, and Playwright. The aggregate **Pilot
 readiness gate** succeeds only when quality, browser, and Compose all pass.
+
+The drill is isolated deployment-drill evidence. It does not release or deploy
+the application, approve a participant pilot, or establish recommendation
+usefulness, specialist review, accessibility-population, cultural-safety,
+clinical, psychometric, longitudinal, or production validity.
 
 ## Private-pilot feedback data
 

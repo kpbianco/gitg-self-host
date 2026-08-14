@@ -1,77 +1,97 @@
 schema_version: 1
 batch:
-  id: M6C-03
-  title: Add deterministic context-aware priority and alternative recommendations
-  goal: Add a pure versioned backend engine and read-only readiness contract that rank explicitly context-complete active practice candidates and return deterministic explainable alternatives after not-applicable or defer, while preserving the existing no-context recommendation path, private Personal OS boundaries, historical replay, and friendship-only production activation.
+  id: M6C-04
+  title: Close the concise Personal OS browser deployment and pilot-readiness slice
+  goal: Expose the reviewed M6C context, Personal OS, and context-priority contracts through one concise authenticated browser journey, deterministic alternatives, and deployment/pilot-readiness gates without adding persistence, changing the underlying formulas, analyzing private text, or expanding production scoring.
 sources:
   product: products/gitg-self-host/product.yaml
   requirements:
     - products/gitg-self-host/PRD.md#M6C-context-and-Personal-OS
+    - products/gitg-self-host/acceptance.yaml#GG-CONTEXT
+    - products/gitg-self-host/acceptance.yaml#GG-PERSONAL-OS
     - products/gitg-self-host/acceptance.yaml#GG-PRIORITY
+    - products/gitg-self-host/acceptance.yaml#GG-OPERATIONS
     - products/gitg-self-host/risk-register.yaml#GG-R-CONTEXT-001
+    - products/gitg-self-host/risk-register.yaml#GG-R-PRIVACY-001
   milestone: products/gitg-self-host/roadmap.yaml#M6C
-  baseline_commit: 1a20160080a772f1b8e59444d0427915522780a0
+  baseline_commit: 713d1a9a23f2102ca6e774f4921d56da5c8eb7b5
   prerequisites:
-    - M6C-01 is merged at 8a1c937872d1dca4c38a917484dc214bc91b8a2f and its append-only GG-CONTEXT-1.0 records and readiness behavior remain authoritative.
-    - M6C-02 is merged at 9ee7542f2155247ccb9b0ef4686535887f2b7403 and its private append-only GG-PERSONAL-OS-1.0 records remain outside numeric ranking.
+    - M6C-01 is merged at 8a1c937872d1dca4c38a917484dc214bc91b8a2f and its append-only GG-CONTEXT-1.0 records remain authoritative.
+    - M6C-02 is merged at 9ee7542f2155247ccb9b0ef4686535887f2b7403 and its private append-only GG-PERSONAL-OS-1.0 records remain authoritative.
+    - M6C-03 is merged at c7b51c1cd83c41c462c5c8685e80afbe39773d6b and its GG-CONTEXT-PRIORITY-1.0 formula, dispositions, alternatives, privacy-minimized output, and readiness contract remain unchanged.
+    - The pinned baseline adds only the later portfolio-harness synchronization at 713d1a9a23f2102ca6e774f4921d56da5c8eb7b5.
     - Owner-directed sequencing keeps M6B governance deferred; ER-M6A-003 remains pending, RG-M6A-002 remains open, and Decisions 047 through 049 remain proposed.
   target_contracts:
     - AGENTS.md
     - docs/PRODUCT_DECISIONS.md
     - docs/PROJECT_HANDOFF.md
     - docs/context-and-personal-os.md
-    - docs/SCORING_DESIGN.md
-    - docs/scoring-state.md
+    - docs/pilot/PILOT_READINESS_CLOSEOUT.md
+    - docs/pilot/PRIVATE_PILOT_OPERATIONS.md
     - docs/program/M6_CURRICULUM_EXPANSION.md
     - docs/program/M6_VALIDATION_AND_PILOT_PLAN.md
     - contracts/verification.yaml
   control_plane_repository: kpbianco/portfolio-control
-  control_plane_path: products/gitg-self-host/batches/M6C-03.yaml
-  control_plane_revision: 8d8b705bb7542391f63960e8b3811cd5c8c9e490  # pragma: allowlist secret
+  control_plane_path: products/gitg-self-host/batches/M6C-04.yaml
+  control_plane_revision: 603c59634532e0c6ff9feff350d308eb50074130  # pragma: allowlist secret
 dependencies:
   - M6C-01
   - M6C-02
+  - M6C-03
 scope:
   allowed_paths:
     - AGENTS.md
     - HANDOFF_PROMPT.md
+    - README.md
+    - Makefile
+    - MANIFEST.tsv
     - contracts/active-batch.yaml
     - contracts/repo-profile.yaml
+    - contracts/profile-requirements.yaml
     - contracts/verification.yaml
     - contracts/verification.commands
-    - growth/domain/context_priority.py
-    - growth/services/context_priority.py
-    - growth/management/commands/verify_context_priority_readiness.py
-    - tests/test_context_priority.py
-    - tests/test_context_priority_readiness.py
-    - tests/fixtures/context_priority/**
-    - scripts/verify_context_priority_readiness.sh
+    - growth/forms.py
+    - growth/urls.py
+    - growth/views.py
+    - growth/views_personal_os.py
+    - growth/views_practice.py
+    - growth/services/personal_os_browser.py
+    - growth/services/m6c_pilot_readiness.py
+    - growth/management/commands/verify_m6c_pilot_readiness.py
+    - growth/static/growth/app.css
+    - growth/static/growth/personal_os.js
+    - templates/base.html
+    - templates/growth/home.html
+    - templates/growth/personal_os.html
+    - templates/growth/practice_context.html
+    - templates/growth/practice_list.html
+    - templates/growth/practice_recommendation.html
+    - tests/test_personal_os_browser.py
+    - tests/test_m6c_pilot_readiness.py
+    - tests/e2e/test_core_flow.py
+    - scripts/verify_m6c_pilot_readiness.sh
+    - scripts/verify_http_login.py
     - scripts/verify_compose.sh
-    - Makefile
-    - README.md
-    - docs/PRODUCT_DECISIONS.md
+    - .github/workflows/verification.yml
     - docs/PROJECT_HANDOFF.md
     - docs/context-and-personal-os.md
-    - docs/SCORING_DESIGN.md
-    - docs/scoring-state.md
+    - docs/deployment.md
+    - docs/testing.md
+    - docs/pilot/PILOT_READINESS_CLOSEOUT.md
+    - docs/pilot/PRIVATE_PILOT_OPERATIONS.md
     - docs/program/M6_CURRICULUM_EXPANSION.md
     - docs/program/M6_VALIDATION_AND_PILOT_PLAN.md
     - docs/CURRENT_STATE.md
     - docs/HANDOFF.md
-    - docs/evidence/M6C-03-*.md
-    - .github/workflows/verification.yml
-    - MANIFEST.tsv
+    - docs/evidence/M6C-04-*.md
   forbidden_paths:
-    - data/assessment/**
-    - data/curriculum/**
-    - data/model/**
-    - data/practices/**
-    - data/evidence/**
+    - data/**
     - reports/**
     - growth/models.py
     - growth/migrations/**
     - growth/domain/context.py
     - growth/domain/personal_os.py
+    - growth/domain/context_priority.py
     - growth/domain/evidence.py
     - growth/domain/evidence_dispatch.py
     - growth/domain/typed_evidence.py
@@ -80,109 +100,124 @@ scope:
     - growth/domain/ranking.py
     - growth/services/context.py
     - growth/services/personal_os.py
+    - growth/services/context_priority.py
+    - growth/services/profile.py
     - growth/services/assessment.py
     - growth/services/evidence.py
     - growth/services/scoring.py
     - growth/services/score_state.py
-    - growth/services/profile.py
     - growth/services/practice.py
-    - growth/forms.py
-    - growth/urls.py
-    - growth/views*.py
-    - growth/static/**
-    - templates/**
-    - tests/e2e/**
+    - growth/services/pilot_feedback.py
+    - growth/views_assessment.py
+    - growth/views_evidence.py
+    - growth/views_pilot.py
+    - templates/growth/assessment.html
+    - templates/growth/evidence_*.html
+    - templates/growth/pilot_feedback.html
     - requirements*.txt
+    - pyproject.toml
     - Dockerfile
     - docker-compose.yml
+    - docker-entrypoint.sh
     - .github/codex/**
+    - docs/PRODUCT_DECISIONS.md
     - LICENSE
 acceptance:
-  - GG-CONTEXT-PRIORITY-1.0 is a pure immutable Decimal contract over one explicit assessment epoch, the existing GG-NEED-RANKING-1.0 protocol base priorities, the latest verified GG-CONTEXT-1.0 assessment revision, and exactly one latest verified context revision for each supplied active canonical protocol; mapping order and database query order cannot change its output.
-  - The engine validates stable IDs, one user-owned assessment epoch, active manifest-projected protocols, canonical parent weights and recommendation-target subsets, supported contract versions, snapshot hashes, contiguous/latest revisions, finite bounded need and context values, and unique candidate IDs before producing a result; malformed stale cross-user cross-epoch inactive or noncanonical input fails closed.
-  - A candidate is eligible only when its disposition is considering and applicability importance readiness urgency opportunity_resources and burden are all explicitly provided; applicability in not_applicable state yields the distinct not_applicable disposition, any deferred factor and deferred candidate disposition yield deferred, and any required unknown or other non-provided state yields missing_context rather than a numeric default.
-  - Assessment capacity must be explicitly provided before any context-aware priority is numeric. Season is retained as descriptive context but has no ordering or numeric effect. Missing or non-provided capacity yields missing_context for the ranking result and never falls back to an invented neutral or favorable value.
-  - For an eligible candidate, every ordinal x is normalized exactly as Decimal x divided by 4, burden is inverted exactly as 1 minus burden divided by 4, and context priority is quantized half-up to four places from base_priority multiplied by applicability importance readiness urgency opportunity_resources capacity and inverse burden. An explicitly supplied zero may produce zero priority; no floor offset imputation rescaling learned weight personality modifier or free-text analysis is permitted.
-  - Eligible candidates sort by descending context priority, then descending unchanged GG-NEED-RANKING-1.0 base priority, then stable protocol ID. Deferred not_applicable and missing_context candidates are withheld from the ranked recommendation set and never sort as zero-valued deficits.
-  - A primary recommendation is the first eligible candidate. An alternative request names one supplied candidate and a reason of not_applicable or deferred; it returns the highest-ranked distinct eligible candidate plus the source disposition and explanation codes, or an explicit no_eligible_alternative result. It never silently returns the withheld candidate, fabricates context, authors a protocol, or mutates a need, score, evidence event, sprint, completion, or defer record.
-  - The result includes the algorithm and dependency versions, assessment epoch stable ID, ordered candidate stable IDs, base and context priorities, factor-state and contribution breakdowns, disposition and explanation codes, alternative source and target stable IDs, exact input context hashes, canonical compact UTF-8 JSON, and SHA-256. It excludes user identity, database record IDs, timestamps, Personal OS or audit text, assessment answers, free text, private narrative, evidence payloads, and unrelated participant data.
-  - Personal OS mission principles anti-goals twelve-month direction priority-stack items and Truth/Autopilot Audit responses never enter eligibility priority alternatives tie-breaking hashes diagnostics fixtures retained evidence or logs. Orientation archetype and personality likewise have no numeric or eligibility effect; ties use the stable protocol ID in this batch and later UI may use reviewed framing without changing rank.
-  - Existing build_profile_summary and every ordinary form route view template and browser recommendation remain exactly GG-NEED-RANKING-1.0 behavior in M6C-03. The new service is an explicit backend result for M6C-04 to consume; an empty context state continues to pass existing readiness and cannot be represented as context-aware output.
-  - GG-CONTEXT-PRIORITY-READINESS-1.0 is deterministic and read-only. It replays a committed synthetic golden cohort, verifies the actual five-protocol canonical mapping and friendship-only activation boundary, accepts an empty optional runtime context store, and fails closed on persisted context/version/hash/scope/revision drift without printing private values or snapshots.
-  - M6C-03 adds no model migration persistence backfill browser collection recommendation display protocol package action canonical report export deletion retention telemetry score-state write or activation entry. Existing context Personal OS assessment evidence typed-evidence competency-shadow score-state pilot curriculum and recommendation replay remain exact.
-  - Focused formula eligibility ordering alternative epoch privacy hashing and no-mutation tests pass together with the complete deterministic repository verification contract and required CI browser and Compose regression gates.
-  - M6B specialist governance remains pending and is not represented as accepted. Static unit integration synthetic-fixture replay browser or Compose results do not establish recommendation usefulness participant accessibility cultural safety clinical psychometric longitudinal release deployment production or mastery validation.
+  - The implementation starts from exact target commit 713d1a9a23f2102ca6e774f4921d56da5c8eb7b5, recognizes M6C-03 as merged at c7b51c1cd83c41c462c5c8685e80afbe39773d6b, and updates stale target current-state and handoff prose without changing accepted product decisions or canonical source hashes.
+  - One authenticated Personal OS browser entry point uses only the latest AssessmentRun owned by the user, redirects a user with no assessment to the assessment journey, and shows a new assessment epoch with no inferred or copied Personal OS or context values.
+  - The journey presents the exact five GG-PERSONAL-OS-1.0 identity sections, exact four descriptive Truth/Autopilot Audit prompts, season, and capacity in short staged or progressively disclosed sections rather than one compulsory worksheet; every field may remain unknown, N/A, or deferred, and no completion percentage, alignment score, autopilot score, diagnosis, moral rank, shame, streak, or pressure language is added.
+  - Personal OS submissions call the unchanged record_personal_os_revision service and assessment-context submissions call the unchanged record_context_bundle service. Valid changed input appends one revision, an unchanged retry is idempotent, malformed or stale-epoch input writes nothing, POST uses CSRF and POST-redirect-GET, and a retryable SQLite conflict receives a bounded private-value-free response.
+  - "A user reviews context for one active manifest-projected practice at a time. The concise form has three explicit modes: provide all six 0-to-4 factors; mark applicability not applicable; or defer by explicitly naming the deferred factor, categorical reason, and optional 1-to-366-day horizon. Uncollected factors are visibly recorded as unknown, numeric values have no preselected default, and the form never derives a factor from Personal OS text, assessment answers, personality, orientation, archetype, pilot feedback, setup-session data, or another factor."
+  - The browser presenter supplies GG-CONTEXT-PRIORITY-1.0 only the active canonical practices for which the current assessment epoch has a latest verified PracticeContext revision, and states that its ranking is among those explicitly reviewed practices. It never treats an unreviewed practice as unfavorable, never expands a cohort silently, and never persists the reproducible priority result.
+  - With no current-epoch context, the existing build_profile_summary recommendation IDs, base priorities, display order, reasons, and practice behavior remain exact. With missing capacity or no eligible reviewed candidate, the UI says which structured context is missing and does not label the legacy fallback as context-aware or convert unknown, N/A, or defer into zero.
+  - When capacity and at least one reviewed candidate are explicitly complete, home, practice-list, and recommendation surfaces show a small context-aware set ordered exactly by the unchanged M6C-03 result. Explanations use a fixed plain-language mapping from allowlisted explanation codes and factor states, distinguish base provisional need from current context fit, avoid exposing raw backend names or false precision, and never imply worth, obligation, diagnosis, mastery, or validated recommendation usefulness.
+  - A not-applicable or deferred reviewed candidate can request an alternative through the unchanged AlternativeRequest contract. The browser shows the highest-ranked distinct eligible candidate from only the reviewed cohort, or the explicit no-eligible-alternative state; it does not return the source, invent context, mutate a deficit, start a practice, or author a protocol.
+  - Personal OS authored text appears only on the authenticated Personal OS surface for its owner. It is absent from context-priority inputs/results/explanations, home and practice recommendation copy, logs, messages, URL/query data, screenshots retained from non-Personal-OS surfaces, generated reports, telemetry, existing evidence and pilot-feedback exports, evidence/score snapshots, and activation decisions. Committed fixtures, retained evidence, and browser artifacts use conspicuously synthetic text only.
+  - The Personal OS page explains before collection that authored values and context are private local data included in normal database backups, asks for minimal detail, and says that this slice adds no dedicated Personal OS/context export, purge, retention automation, remote telemetry, urgent-support monitoring, or participant-release approval. Existing account/assessment lifecycle behavior is not changed or advertised as a new deletion guarantee.
+  - All new and changed application pages remain authenticated; keyboard focus, labels, error association, semantic headings, 200-percent zoom, 390-by-844 layout, reduced-motion behavior, and no-horizontal-overflow checks pass without adding an external browser asset or runtime service.
+  - A new read-only GG-M6C-PILOT-READINESS-1.0 aggregate verifies the six existing readiness contracts, exact Personal OS/context definition IDs, five active canonical protocols, friendship-only activation, registered authenticated browser routes, and empty or valid optional state without writing data or printing private values. It does not replace or weaken GG-PILOT-READINESS-1.0 or any governance gate.
+  - The Compose drill creates only synthetic Personal OS and context revisions through public services, builds a context-priority result, exercises authenticated HTTP access to the new surface, and proves revision/result hashes and friendship-only activation survive container recreation and verified backup/restore. These checks are deployment-drill evidence only, not a release or production deployment.
+  - Focused form/view/service/readiness tests, full deterministic validation, new desktop/mobile Playwright journeys, Compose backup/restore, required hosted CI, retained artifact review, and the aggregate Pilot readiness gate all pass on the exact candidate commit before owner merge review.
+  - Assessment, canonical content, evidence, typed evidence, competency shadow, score state, existing exports, practice workflow, five-protocol runtime projection, and friendship-only production activation remain exact. No model, migration, backfill, protocol/action, dependency, external service, remote telemetry, weekly execution, or production-score change is added.
+  - M6B governance remains pending and no software, browser, fixture, hosted CI, or Compose result is represented as ER-M6A-003 completion, RG-M6A-002 resolution, recommendation usefulness, participant validation, specialist review, accessibility-population validation, cultural safety, clinical or psychometric validity, longitudinal evidence, release, deployment, production, or mastery evidence.
 validation:
   local:
-    - .venv/bin/python -m pytest tests/test_context_priority.py tests/test_context_priority_readiness.py -q
+    - .venv/bin/python -m pytest tests/test_personal_os_browser.py tests/test_m6c_pilot_readiness.py tests/test_context_models.py tests/test_context_services.py tests/test_personal_os_models.py tests/test_personal_os_services.py tests/test_context_priority.py tests/test_context_priority_readiness.py -q
     - make context-check PYTHON=.venv/bin/python
     - make personal-os-check PYTHON=.venv/bin/python
     - make context-priority-check PYTHON=.venv/bin/python
+    - make m6c-pilot-check PYTHON=.venv/bin/python
     - ./scripts/agent-verify.sh contract
     - ./scripts/agent-verify.sh quick
     - ./scripts/agent-verify.sh full
     - make e2e PYTHON=.venv/bin/python
     - make compose-smoke
+    - .venv/bin/python scripts/verify-manifest.py
     - git diff --check
   focused_tests_to_add:
-    - exact Decimal normalization multiplicative formula half-up quantization bounds and stable tie-breaks
-    - unknown N-A deferred missing-context and explicit-zero dispositions remain distinct with no hidden defaults
-    - complete and partial candidate cohorts plus missing capacity fail-closed behavior
-    - deterministic primary and distinct alternative selection after N-A and defer including no-eligible-alternative
-    - canonical snapshot hash mapping-order and database-order independence with fixed golden fixture
-    - latest-revision user ownership assessment-epoch active-protocol canonical-mapping and stale-hash rejection
-    - explanation allowlist and sanitized error chains exclude Personal OS text private narrative user and database identifiers
-    - existing no-context profile recommendations priorities exports context Personal OS evidence score state and friendship-only activation remain byte-for-byte or value-for-value unchanged
-    - readiness empty-state pass actual five-protocol catalog replay tamper diagnostics and no database writes
+    - authentication CSRF latest-assessment ownership no-assessment redirect and no reassessment carry-forward
+    - exact staged Personal OS prompts states bounds initial values append-only idempotent POST-redirect-GET and private conflict errors
+    - assessment season and capacity plus per-practice provide N-A and defer form mappings with no preselected ordinals or inferred factors
+    - candidate cohort includes only current-epoch explicitly reviewed active canonical protocols and labels partial coverage honestly
+    - no-context legacy recommendation compatibility missing-capacity behavior and exact unchanged context-aware ordering
+    - distinct alternative after N-A and defer plus explicit no-eligible-alternative browser states and no score evidence sprint or activation mutation
+    - Personal OS sentinel isolation from ranking explanations pages messages logs existing exports reports evidence score snapshots and retained non-private artifacts
+    - stale cross-user cross-epoch inactive protocol malformed snapshot and service failure paths fail closed without private values
+    - keyboard labels error focus 200-percent zoom mobile overflow reduced-motion and synthetic desktop-mobile walkthrough screenshots
+    - M6C aggregate readiness deterministic JSON empty-state pass tamper diagnostics no private output and no database writes
+    - Compose synthetic context and Personal OS state priority hash authenticated HTTP recreation backup restore and clean shutdown
   required_ci:
-    - Ruff Django and pytest including focused context-priority tests and migration-drift confirmation
+    - Ruff Django pytest and migration-drift confirmation including focused M6C-04 tests
     - pilot readiness
     - curriculum expansion readiness
     - competency evidence readiness
     - context readiness
     - Personal OS readiness
-    - context-priority readiness on isolated migrated idempotently seeded state
-    - Playwright core journeys as unchanged-browser regression evidence
-    - Docker Compose migration seed evidence score and all six readiness replays backup restore recreation and clean-shutdown drill
+    - context-priority readiness
+    - M6C pilot readiness on isolated migrated idempotently seeded state
+    - Playwright legacy journeys plus authenticated Personal OS context ranking alternative privacy keyboard mobile and retained-artifact journeys
+    - Docker Compose migration seed all seven readiness contracts synthetic browser-slice state authenticated HTTP priority replay recreation backup restore and clean-shutdown drill
     - aggregate Pilot readiness gate
   manual:
-    - Owner reviews and accepts the exact multiplicative formula factor direction eligibility dispositions explanation codes and stable-ID tie-break before merge.
-    - Owner confirms that synthetic fixtures retained evidence and diagnostics contain no real participant context or Personal OS values.
-    - Owner reviews required CI and retained browser diagnostics, and the target pull request remains human-reviewed and is not merged by the implementation agent.
+    - Owner reviews and accepts the exact staged prompts factor labels state mappings explanation copy privacy notice and partial-cohort language before merge.
+    - Owner reviews retained synthetic desktop and mobile artifacts, confirms no real Personal OS or context value is committed or exposed, and records any accessibility privacy safety or critical UX finding.
+    - Owner confirms required CI and Compose evidence for the exact candidate commit and decides separately whether an owner-operated private pilot may proceed; batch completion does not release or deploy the application.
+    - Target pull request remains human-reviewed and is not marked ready or merged by the implementation agent.
 risk:
   class: high
   hazards:
-    - ordinal storage scales acquire opaque or unintended moral developmental or psychometric meaning
-    - unknown N-A or defer is coerced to zero or another hidden default and changes priority
-    - multiplicative factors create false precision or overstate recommendation fit
-    - a deferred or unsuitable candidate leaks back as its own alternative
-    - stale cross-user or cross-epoch context influences a recommendation
-    - private context or Personal OS text leaks through explanations hashes fixtures diagnostics logs or retained evidence
-    - the new engine silently replaces the reviewed legacy profile path before browser collection and explanation are ready
-    - recommendation work mutates score state evidence canonical content or friendship-only activation
-    - software fixtures are represented as recommendation usefulness specialist participant release deployment or production evidence
+    - a concise flow silently defaults private context or becomes a large compulsory self-optimization worksheet
+    - private mission audit context or third-party detail leaks through rendering errors logs artifacts exports backups or explanations
+    - ranking a partial reviewed cohort is presented as a comprehensive or validated best choice
+    - N-A or defer becomes zero a deficit pressure to answer or the same candidate returned as its own alternative
+    - stale cross-user or cross-epoch data influences the browser recommendation after reassessment or concurrent writes
+    - browser orchestration changes the frozen M6C-03 formula legacy recommendation semantics evidence score state practice workflow or activation
+    - deployment and hosted CI evidence is overstated as participant specialist release or production validation
   stop_conditions:
-    - owner review rejects or leaves unresolved the exact formula factor direction eligibility or alternative semantics
-    - implementation requires imputing a missing factor analyzing Personal OS or other free text or using personality as a numeric multiplier
-    - deterministic alternatives require a new or materially changed protocol package source risk safety or activation decision
-    - the existing GG-NEED-RANKING-1.0 algorithm or no-context profile recommendation output cannot remain exact
-    - persisted context cannot be verified and isolated to its authenticated user assessment epoch and latest contiguous revision without exposing private values
-    - a model migration persistence backfill ordinary UI export deletion retention telemetry score-state or production-activation change becomes necessary
-    - any assessment evidence score snapshot canonical content activation or historical replay would be rewritten reinterpreted or deleted
+    - the target checkout does not resolve exactly to baseline 713d1a9a23f2102ca6e774f4921d56da5c8eb7b5 before implementation
+    - owner review leaves the staged prompts explicit form-to-contract mapping explanation language privacy notice or partial-cohort semantics unresolved
+    - implementation requires a model migration backfill hidden factor default Personal OS text analysis personality modifier or change to an M6C-01 through M6C-03 contract
+    - the no-context recommendation IDs priorities reasons or existing practice workflow cannot remain exact
+    - a useful alternative cannot be produced through the unchanged M6C-03 contract from explicitly reviewed current-epoch candidates without inventing context or changing canonical content
+    - private authored values must enter a log URL retained evidence non-private screenshot existing export report score snapshot telemetry stream or activation decision
     - a required change falls outside allowed paths or touches a forbidden path
-    - M6B governance acceptance expanded production scoring recommendation usefulness or a higher validation level is asserted as a prerequisite or result
+    - focused or full deterministic validation required hosted CI Playwright artifact checks Compose recovery or the aggregate Pilot readiness gate fails on the candidate commit
+    - a critical authentication privacy data-loss keyboard accessibility or safety finding remains unresolved
+    - M6B governance acceptance expanded production score activation recommendation usefulness participant release deployment or a higher validation level is asserted as a prerequisite or result
 rollback:
-  strategy: Revert the M6C-03 code documentation verification and manifest changes. Because the batch adds no migration or persisted priority record, rollback restores the untouched GG-NEED-RANKING-1.0 path and discards only reproducible synthetic priority outputs; preserve all M6C-01 context and M6C-02 Personal OS revisions.
-  data_migration: None. Do not delete or rewrite context Personal OS assessment evidence score pilot or canonical-content data during rollback.
-  release_action: No release deployment score activation participant-data write or production change follows automatically from implementation completion or rollback.
+  strategy: Revert the M6C-04 browser presenter, forms, routes, templates, styles, tests, readiness/deployment wiring, documentation, evidence, and manifest changes. The legacy no-context profile and practice surfaces then become the only browser path; all M6C-01 context and M6C-02 Personal OS revisions remain append-only local data for a later corrected UI.
+  data_migration: None. Do not delete or rewrite Personal OS context assessment evidence score feedback sprint review or canonical-content data during rollback; any participant-data retention or deletion action requires a separate reviewed operator decision and verified backup handling.
+  release_action: No merge release deployment participant-data write score activation or production change follows automatically from implementation completion or rollback.
 evidence:
   output:
-    - docs/evidence/M6C-03-<date>.md
-    - acceptance criterion invariant and exact formula mapping
-    - exact changed-path audit and baseline commit
-    - synthetic golden cohort canonical snapshot hash and sanitized readiness summary
-    - focused disposition alternative ordering epoch privacy no-mutation and legacy-compatibility results
-    - preserved canonical release projection activation and pre-M6C-03 replay hashes
-    - exact local and CI commands results environment and retained artifact identifiers
-    - manual gate decisions residual risks and every failed skipped unavailable or unperformed validation
-  claim_boundary: Static unit integration synthetic-fixture deterministic-replay browser-regression and Compose evidence only when actually run; never physical hardware HIL field RT engine signing release deployment production recommendation-usefulness specialist accessibility cultural safety clinical psychometric longitudinal participant or mastery validation.
+    - docs/evidence/M6C-04-<date>.md
+    - acceptance criterion invariant and exact browser-state mapping
+    - exact baseline prerequisite commits changed-path audit and canonical hash comparison
+    - synthetic Personal OS context and context-priority revision and result hashes without authored values
+    - focused legacy-compatibility cohort alternative privacy ownership reassessment concurrency and no-mutation results
+    - M6C aggregate readiness summaries and all six prerequisite readiness results
+    - retained synthetic desktop mobile keyboard screenshot and trace artifact identifiers plus human visual-review disposition
+    - Compose authenticated HTTP recreation backup restore priority replay state digests and clean-shutdown result
+    - exact local and CI commands results environment commit and every failed skipped unavailable or unperformed validation
+    - owner manual-gate decisions residual risks and explicit non-validation claims
+  claim_boundary: Static unit integration synthetic-fixture deterministic-replay browser-journey and isolated Compose deployment-drill evidence only when actually run; never physical hardware HIL field RT engine signing release production recommendation-usefulness specialist accessibility-population cultural safety clinical psychometric longitudinal participant or mastery validation.

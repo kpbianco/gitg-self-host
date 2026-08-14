@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Context for {{ protocol.name }} · Grounded Growth{% endblock %}
+
+{% block content %}
+  <p class="back-link"><a href="{% url 'growth:practice-recommendation' protocol.slug %}">← {{ protocol.name }}</a></p>
+  <section class="page-heading">
+    <div>
+      <p class="eyebrow">One-practice context review</p>
+      <h1>{{ protocol.name }}</h1>
+      <p class="lede">
+        Review only this practice. Values are explicit current context—not assessment
+        answers, personality, orientation, archetype, private Personal OS text, or a
+        measure of worth.
+      </p>
+    </div>
+  </section>
+
+  <div class="status-note" role="note">
+    <strong>Uncollected factors stay unknown.</strong>
+    No numeric value is preselected, and unknown, not applicable, deferred, and 0 remain distinct.
+  </div>
+
+  <form method="post" class="panel staged-form" data-practice-context-form novalidate>
+    {% csrf_token %}
+    {{ form.assessment_epoch }}
+    {% if form.non_field_errors %}<div class="form-error" role="alert">{{ form.non_field_errors }}</div>{% endif %}
+    <fieldset>
+      <legend>{{ form.mode.label }}</legend>
+      {{ form.mode }}
+      {{ form.mode.errors }}
+    </fieldset>
+
+    <section data-context-mode="provide" aria-labelledby="factor-heading">
+      <h2 id="factor-heading">Provide all six factors</h2>
+      <p class="fine-print">0 is a valid explicit response. It is never a default.</p>
+      {% for field in form %}
+        {% if field.name == "applicability" or field.name == "importance" or field.name == "readiness" or field.name == "urgency" or field.name == "opportunity_resources" or field.name == "burden" %}
+          <div class="form-field">
+            {{ field.label_tag }}
+            {{ field }}
+            {{ field.errors }}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </section>
+
+    <section data-context-mode="not_applicable" class="inline-note">
+      <h2>Not applicable</h2>
+      <p>Applicability will be recorded as not applicable. The other five factors stay visibly unknown, and no deficit is created.</p>
+    </section>
+
+    <section data-context-mode="defer" aria-labelledby="defer-heading">
+      <h2 id="defer-heading">Defer for now</h2>
+      <p class="fine-print">Name one deferred factor and a categorical reason. Other factors stay unknown.</p>
+      <div class="form-field">
+        {{ form.deferred_factor.label_tag }}
+        {{ form.deferred_factor }}
+        {{ form.deferred_factor.errors }}
+      </div>
+      <div class="form-field">
+        {{ form.defer_reason.label_tag }}
+        {{ form.defer_reason }}
+        {{ form.defer_reason.errors }}
+      </div>
+      <div class="form-field">
+        {{ form.review_horizon_days.label_tag }}
+        {{ form.review_horizon_days }}
+        <small id="{{ form.review_horizon_days.id_for_label }}_helptext">{{ form.review_horizon_days.help_text }}</small>
+        {{ form.review_horizon_days.errors }}
+      </div>
+    </section>
+    <button class="button" type="submit" name="intent" value="save">Save practice context</button>
+  </form>
+
+  {% if current_context and current_context.applicability_state == "not_applicable" or current_context and current_context.disposition == "deferred" %}
+    <section class="section-block panel" aria-labelledby="alternative-heading">
+      <h2 id="alternative-heading">Ask for a distinct reviewed alternative</h2>
+      <p>The alternative can come only from the current-epoch practices you explicitly reviewed.</p>
+      <form method="post">
+        {% csrf_token %}
+        <button class="button button-secondary" type="submit" name="intent" value="request_alternative">Request alternative</button>
+      </form>
+      {% if priority.alternative_protocol %}
+        <p>
+          <strong>{{ priority.alternative_protocol.name }}</strong> — {{ priority.alternative_message }}
+          <a href="{% url 'growth:practice-recommendation' priority.alternative_protocol.slug %}">Review protocol</a>
+        </p>
+      {% elif priority.alternative_message %}
+        <p>{{ priority.alternative_message }}</p>
+      {% endif %}
+    </section>
+  {% endif %}
+
+  <section class="section-block" aria-labelledby="cohort-heading">
+    <h2 id="cohort-heading">Current reviewed cohort</h2>
+    <p>{{ priority.reviewed_count }} of {{ priority.active_count }} active canonical practices reviewed for this assessment epoch.</p>
+    {% if priority.partial_cohort %}<p class="fine-print">Any ordering is only among this partial reviewed cohort.</p>{% endif %}
+  </section>
+{% endblock %}
+
+{% block extra_scripts %}
+  <script src="{% static 'growth/personal_os.js' %}" defer></script>
+{% endblock %}

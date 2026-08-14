@@ -87,6 +87,7 @@ http_probe() {
         --username "$username" \
         --password "$password" \
         --expect "$expectation" \
+        --authenticated-path "/personal-os/" \
         "${boundary_option[@]}"
 }
 
@@ -96,9 +97,9 @@ canonical_counts() {
         | tail -n 1
 }
 
-personal_os_state() {
+browser_slice_state() {
     compose exec -T app python manage.py shell -c \
-        'from growth.models import PersonalOSRevision; rows=list(PersonalOSRevision.objects.order_by("assessment_run_id","revision").values_list("revision","content_hash")); print(f"{len(rows)}|" + ",".join(f"{revision}:{content_hash}" for revision,content_hash in rows))' \
+        'from growth.models import AssessmentContext, AssessmentRun, PersonalOSRevision, PracticeContext, PracticeProtocol; from growth.services.context_priority import build_context_priority_for_epoch; run=AssessmentRun.objects.select_related("user").order_by("stable_id").first(); personal=tuple(PersonalOSRevision.objects.order_by("assessment_run_id","revision").values_list("content_hash",flat=True)); assessment=tuple(AssessmentContext.objects.order_by("assessment_run_id","revision").values_list("content_hash",flat=True)); practice=tuple(PracticeContext.objects.order_by("assessment_run_id","protocol_id","revision").values_list("content_hash",flat=True)); priority=build_context_priority_for_epoch(user=run.user,assessment_run=run,protocol_stable_ids=("PRACTICE-FRIENDSHIP-01",)); active=tuple(PracticeProtocol.objects.filter(score_active=True).order_by("stable_id").values_list("stable_id",flat=True)); print("|".join((f"personal={len(personal)}:{chr(44).join(personal)}",f"assessment={len(assessment)}:{chr(44).join(assessment)}",f"practice={len(practice)}:{chr(44).join(practice)}",f"priority={priority.content_hash}",f"score_active={chr(44).join(active)}")))' \
         | tail -n 1
 }
 
@@ -127,14 +128,15 @@ compose exec -T app python manage.py verify_competency_evidence_readiness
 compose exec -T app python manage.py verify_context_readiness
 compose exec -T app python manage.py verify_personal_os_readiness
 compose exec -T app python manage.py verify_context_priority_readiness
+compose exec -T app python manage.py verify_m6c_pilot_readiness
 
-printf '\n==> Persist one synthetic Personal OS revision without logging authored values\n'
+printf '\n==> Persist synthetic Personal OS and context revisions through public services\n'
 compose exec -T app python manage.py shell -c \
-    'from growth.models import AssessmentRun; from growth.services.personal_os import record_personal_os_revision; run=AssessmentRun.objects.select_related("user").order_by("stable_id").first(); state={"state":"provided"}; identity={"mission":{**state,"value":"Synthetic Compose direction."},"principles":{**state,"value":["Synthetic bounded operation."]},"anti_goals":{**state,"value":["Synthetic unrecoverable state."]},"twelve_month_direction":{**state,"value":"Synthetic recovery remains exact."},"priority_stack":{**state,"value":["Synthetic backup proof."]}}; audit={key:{**state,"value":"Synthetic descriptive response."} for key in ("current_truth","autopilot_pattern","misalignment_or_fragmentation","deliberate_next_step")}; first=record_personal_os_revision(user=run.user,assessment_run=run,identity_sections=identity,audit_responses=audit); second=record_personal_os_revision(user=run.user,assessment_run=run,identity_sections=identity,audit_responses=audit); assert first.created and not second.created and first.revision.pk == second.revision.pk'
-compose exec -T app python manage.py verify_personal_os_readiness
-compose exec -T app python manage.py verify_context_priority_readiness
-readonly expected_personal_os_state="$(personal_os_state)"
-test "$expected_personal_os_state" != "0|"
+    'from growth.domain.context import ContextFactorValue; from growth.models import AssessmentRun, PracticeProtocol; from growth.services.context import PracticeContextInput, record_context_bundle; from growth.services.context_priority import build_context_priority_for_epoch; from growth.services.personal_os import record_personal_os_revision; run=AssessmentRun.objects.select_related("user").order_by("stable_id").first(); protocol=PracticeProtocol.objects.get(stable_id="PRACTICE-FRIENDSHIP-01"); state={"state":"provided"}; identity={"mission":{**state,"value":"Synthetic Compose direction."},"principles":{**state,"value":["Synthetic bounded operation."]},"anti_goals":{**state,"value":["Synthetic unrecoverable state."]},"twelve_month_direction":{**state,"value":"Synthetic recovery remains exact."},"priority_stack":{**state,"value":["Synthetic backup proof."]}}; audit={key:{**state,"value":"Synthetic descriptive response."} for key in ("current_truth","autopilot_pattern","misalignment_or_fragmentation","deliberate_next_step")}; first_personal=record_personal_os_revision(user=run.user,assessment_run=run,identity_sections=identity,audit_responses=audit); second_personal=record_personal_os_revision(user=run.user,assessment_run=run,identity_sections=identity,audit_responses=audit); provided=lambda value: ContextFactorValue("provided",value); assessment={"season":provided("foundation"),"capacity":provided(3)}; practice={key:provided(value) for key,value in (("applicability",4),("importance",3),("readiness",3),("urgency",2),("opportunity_resources",3),("burden",1))}; first_context=record_context_bundle(user=run.user,assessment_run=run,assessment_factors=assessment,practice_inputs=(PracticeContextInput(protocol=protocol,factors=practice),)); second_context=record_context_bundle(user=run.user,assessment_run=run,assessment_factors=assessment,practice_inputs=(PracticeContextInput(protocol=protocol,factors=practice),)); result=build_context_priority_for_epoch(user=run.user,assessment_run=run,protocol_stable_ids=(protocol.stable_id,)); assert first_personal.created and not second_personal.created and first_personal.revision.pk == second_personal.revision.pk; assert first_context.assessment_created and first_context.practice_created == (True,); assert not second_context.assessment_created and second_context.practice_created == (False,); assert result.primary_protocol_stable_id == protocol.stable_id and len(result.content_hash) == 64'
+compose exec -T app python manage.py verify_m6c_pilot_readiness
+readonly expected_browser_slice_state="$(browser_slice_state)"
+[[ "$expected_browser_slice_state" =~ ^personal=1:[0-9a-f]{64}\|assessment=1:[0-9a-f]{64}\|practice=1:[0-9a-f]{64}\|priority=[0-9a-f]{64}\|score_active=PRACTICE-FRIENDSHIP-01$ ]]
+test "${expected_browser_slice_state##*score_active=}" = "PRACTICE-FRIENDSHIP-01"
 
 printf '\n==> Create and integrity-check an online SQLite backup\n'
 compose exec -T app python manage.py backup_database --output "$backup_path"
@@ -158,7 +160,8 @@ compose exec -T app python manage.py verify_competency_evidence_readiness
 compose exec -T app python manage.py verify_context_readiness
 compose exec -T app python manage.py verify_personal_os_readiness
 compose exec -T app python manage.py verify_context_priority_readiness
-test "$(personal_os_state)" = "$expected_personal_os_state"
+compose exec -T app python manage.py verify_m6c_pilot_readiness
+test "$(browser_slice_state)" = "$expected_browser_slice_state"
 
 printf '\n==> Restore the verified backup inside the isolated volume\n'
 compose down
@@ -176,7 +179,8 @@ compose exec -T app python manage.py verify_competency_evidence_readiness
 compose exec -T app python manage.py verify_context_readiness
 compose exec -T app python manage.py verify_personal_os_readiness
 compose exec -T app python manage.py verify_context_priority_readiness
-test "$(personal_os_state)" = "$expected_personal_os_state"
+compose exec -T app python manage.py verify_m6c_pilot_readiness
+test "$(browser_slice_state)" = "$expected_browser_slice_state"
 
 printf '\n==> Confirm clean Gunicorn shutdown\n'
 compose stop --timeout 30 app

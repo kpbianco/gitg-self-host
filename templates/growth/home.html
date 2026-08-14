@@ -40,6 +40,19 @@
     </div>
   {% endif %}
 
+  {% if summary.assessment_run %}
+    <div class="context-summary" role="note">
+      <div>
+        <strong>{% if priority.context_aware %}Current context fit is available.{% else %}Context-aware ordering is not active.{% endif %}</strong>
+        <p>{{ priority.message }}</p>
+        {% if priority.reviewed_count %}
+          <small>{{ priority.reviewed_count }} of {{ priority.active_count }} active canonical practices explicitly reviewed for this assessment epoch.</small>
+        {% endif %}
+      </div>
+      <a class="text-link" href="{% url 'growth:personal-os' %}">Review Personal OS and context <span aria-hidden="true">→</span></a>
+    </div>
+  {% endif %}
+
   <div class="dashboard-grid">
     <section class="panel panel-prominent">
       <div class="panel-heading">
@@ -116,11 +129,15 @@
         <h2 id="recommendations-heading">Bounded practices, not open-ended homework</h2>
       </div>
       <p class="section-note">
-        Recommendation order reflects current provisional need; completion never implies mastery.
+        {% if priority.context_aware %}
+          Ordered only among explicitly reviewed practices by provisional need and current context fit.
+        {% else %}
+          Recommendation order reflects current provisional need; completion never implies mastery.
+        {% endif %}
       </p>
     </div>
     <div class="card-grid">
-      {% for protocol in summary.recommendations %}
+      {% for protocol in priority.recommendations %}
         <article class="practice-card">
           <div class="card-meta">
             <span>{{ protocol.duration_days|default:"—" }}{% if protocol.duration_days %} days{% endif %}</span>

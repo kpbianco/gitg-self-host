@@ -115,6 +115,34 @@ accessibility, cultural, safety, clinical, psychometric, longitudinal,
 release, deployment, and production validation remain outside the software
 claim.
 
+M6C-04 software validation covers latest-assessment ownership and reassessment
+isolation; staged exact Personal OS/context definitions; CSRF,
+POST-redirect-GET, append-only/idempotent service use, stale/malformed rollback,
+and private-value-free contention; provide/N/A/defer mappings with no ordinal
+default or inference; explicitly reviewed current-epoch candidate cohorts;
+unchanged no-context legacy behavior; exact context-aware order; distinct
+alternatives; and authored-text isolation from ranking, other recommendation
+surfaces, logs, URLs, reports, existing exports, evidence/score snapshots, and
+activation.
+
+Browser checks cover authentication, labels, semantic headings, error focus,
+keyboard access, 200-percent zoom, reduced motion, 390-by-844 layout, no
+horizontal overflow, and conspicuously synthetic retained desktop/mobile
+artifacts. `GG-M6C-PILOT-READINESS-1.0` aggregates the six prerequisite
+readiness contracts and verifies exact definitions, authenticated route
+registration, five active protocols, friendship-only activation, optional
+state validity, no writes, and privacy-safe output. The isolated Compose drill
+adds synthetic public-service revisions, deterministic priority replay,
+authenticated HTTP, recreation, backup/restore, and clean shutdown evidence.
+
+These checks do not approve the staged language or a participant pilot. Owner
+prompt/factor/explanation/privacy/partial-cohort and retained-artifact review,
+required hosted CI on the exact candidate commit, and a separate pilot
+decision remain mandatory. M6C-04 does not establish recommendation usefulness,
+M6B governance, specialist review, accessibility-population, cultural-safety,
+clinical, psychometric, longitudinal, participant, release, deployment,
+production, or mastery validation.
+
 After M6C, the Phase B representative vertical slices should exercise protocol
 families, risk classes, evidence policies, N/A paths, and accessibility
 variants. Review:

@@ -1,7 +1,7 @@
 # Current state
 
 Last audited: 2026-08-14
-Implementation base: `main@1a20160`
+Implementation base: `main@713d1a9`
 
 ## Completed implementation
 
@@ -21,12 +21,32 @@ Implementation base: `main@1a20160`
   private, append-only, assessment-epoch-scoped revisions with deterministic
   snapshots and additive readiness. It adds no UI, recommendation, scoring,
   activation, export, deletion, or retention behavior.
-- M6C-03 is implemented on the current review branch. It adds a pure,
+- M6C-03 is reviewed and merged at `c7b51c1`. It adds a pure,
   versioned Decimal engine over verified latest context and unchanged
   `GG-NEED-RANKING-1.0` base priorities, deterministic N/A/defer alternatives,
   privacy-minimized canonical results, and additive read-only readiness. It
   adds no migration, persistence, browser integration, scoring write, or
   activation.
+
+## Current implementation
+
+- M6C-04 is implemented on the current review branch. It adds one
+  authenticated latest-assessment Personal OS entry point with concise staged
+  identity/audit, season/capacity, and per-practice context forms.
+- The browser presenter supplies the unchanged M6C-03 engine only explicitly
+  reviewed active practices in the current epoch, preserves exact no-context
+  legacy recommendation behavior, and shows a deterministic distinct
+  cohort-bounded alternative or explicit no-alternative state.
+- Authored Personal OS text remains visible only on its owner's authenticated
+  Personal OS surface and is excluded from ranking, explanations, other
+  recommendation pages, existing exports, evidence/score state, and activation.
+- Additive read-only `GG-M6C-PILOT-READINESS-1.0` plus browser and Compose
+  wiring verify the six prerequisite contracts, route/authentication boundary,
+  five active protocols, friendship-only activation, synthetic state replay,
+  recreation, and backup/restore without persisting priority results.
+- M6C-04 adds no model, migration, protocol/action, dependency, external
+  service, remote telemetry, weekly execution, dedicated Personal OS/context
+  export or purge, evidence/scoring write, or activation change.
 
 ## Pending governance
 
@@ -45,9 +65,11 @@ Run the local gate check:
 
 ## Planned sequence
 
-1. Review M6C-03 formula/dispositions/privacy and complete the later M6C
-   browser batch.
-2. Approximately 10–12 representative vertical-slice protocols.
+1. Complete M6C-04 exact local/browser/Compose/hosted-CI validation, retained
+   synthetic artifact review, owner prompt/factor/explanation/privacy review,
+   and human-reviewed target PR disposition.
+2. Approximately 10–12 representative vertical-slice protocols after the
+   separately governed Phase B authorization.
 3. Stable report-derived domain cohorts of approximately 8–15 competencies per
    human-reviewed target PR.
 4. Whole-library scoring dispositions and shadow calibration.
@@ -55,9 +77,11 @@ Run the local gate check:
 6. Full integration, operations hardening, and diverse multi-cycle validation.
 
 Run the independent M6C foundations with `make context-check`,
-`make personal-os-check`, and `make context-priority-check`. Owner formula,
-factor-direction, explanation, and fixture/privacy review plus the required
-GitHub browser/Compose gates remain before M6C-03 merge.
+`make personal-os-check`, and `make context-priority-check`, then the additive
+browser/deployment aggregate with `make m6c-pilot-check`. Required hosted CI,
+Compose, retained synthetic desktop/mobile artifact review, and owner approval
+on the exact M6C-04 candidate commit remain manual merge gates unless the
+retained evidence file records them as actually completed.
 
 ## Automation boundary
 

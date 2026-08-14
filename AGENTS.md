@@ -300,7 +300,7 @@ readiness. It adds no identity or audit score, ordinary UI, priority formula,
 alternative recommendation, weekly execution, export, deletion/retention
 policy, evidence/scoring path, protocol, or activation.
 
-M6C-03 is the current implementation batch. It adds the pure backend-only
+M6C-03 is reviewed and merged. It adds the pure backend-only
 `GG-CONTEXT-PRIORITY-1.0` engine and read-only
 `GG-CONTEXT-PRIORITY-READINESS-1.0`. It multiplies the unchanged
 `GG-NEED-RANKING-1.0` protocol base priority only by explicitly provided
@@ -308,9 +308,19 @@ context factors and returns deterministic withheld, primary, and alternative
 results. It adds no migration, persistence, ordinary UI, Personal OS text
 analysis, evidence/scoring write, protocol, or activation.
 
-Later M6C batches establish context-aware priority, useful alternatives, and
-the concise browser experience. The representative 10–12 competency vertical
-slices begin only after M6C as Phase B.
+M6C-04 is the current implementation batch. It exposes those unchanged M6C
+contracts through one authenticated, concise Personal OS journey, explicit
+assessment and per-practice context forms, deterministic partial-cohort
+recommendations and alternatives, and additive
+`GG-M6C-PILOT-READINESS-1.0` browser/deployment verification. Personal OS text
+remains private to its owner-facing surface; recommendation inputs and
+explanations use only structured context. The batch adds no model, migration,
+priority persistence, protocol/action, Personal OS analysis, evidence/scoring
+write, activation, dedicated export/purge/retention automation, remote
+telemetry, weekly execution, release, or deployment.
+
+The representative 10–12 competency vertical slices begin only after M6C as
+Phase B.
 
 <!-- BEGIN PORTFOLIO-CONTROL MANAGED -->
 ## Governed agentic delivery

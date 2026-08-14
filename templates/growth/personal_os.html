@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Personal OS · Grounded Growth{% endblock %}
+
+{% block content %}
+  <section class="page-heading">
+    <div>
+      <p class="eyebrow">Personal OS</p>
+      <h1>Choose what guides this season.</h1>
+      <p class="lede">
+        These are provisional, user-authored reflections—not a diagnosis, identity score,
+        promise, or measure of worth. Every response may remain unknown, not applicable,
+        or deferred.
+      </p>
+    </div>
+  </section>
+
+  <section class="privacy-notice" aria-labelledby="privacy-heading">
+    <h2 id="privacy-heading">Private local reflection data</h2>
+    <p>
+      Authored values and context stay in this authenticated local application and are
+      included in normal database backups. Use the minimum private detail that is useful.
+    </p>
+    <p>
+      This slice adds no dedicated Personal OS or context export, purge, retention
+      automation, remote telemetry, urgent-support monitoring, or participant-release
+      approval. It does not change the existing account or assessment lifecycle.
+    </p>
+  </section>
+
+  <section class="section-block" aria-labelledby="season-heading">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Current context</p>
+        <h2 id="season-heading">Season and capacity</h2>
+      </div>
+      <p class="section-note">Capacity can shape context fit only when you explicitly provide it.</p>
+    </div>
+    <form method="post" class="panel staged-form" novalidate>
+      {% csrf_token %}
+      <input type="hidden" name="form_type" value="assessment_context">
+      {{ context_form.assessment_epoch }}
+      {% if context_form.non_field_errors %}<div class="form-error" role="alert">{{ context_form.non_field_errors }}</div>{% endif %}
+      <div class="form-field">
+        {{ context_form.season_state.label_tag }}
+        {{ context_form.season_state }}
+        {{ context_form.season_state.errors }}
+      </div>
+      <div class="form-field" data-state-value="season">
+        {{ context_form.season_value.label_tag }}
+        {{ context_form.season_value }}
+        <small id="{{ context_form.season_value.id_for_label }}_helptext">{{ context_form.season_value.help_text }}</small>
+        {{ context_form.season_value.errors }}
+      </div>
+      <div class="form-field">
+        {{ context_form.capacity_state.label_tag }}
+        {{ context_form.capacity_state }}
+        {{ context_form.capacity_state.errors }}
+      </div>
+      <div class="form-field" data-state-value="capacity">
+        {{ context_form.capacity_value.label_tag }}
+        {{ context_form.capacity_value }}
+        <small id="{{ context_form.capacity_value.id_for_label }}_helptext">{{ context_form.capacity_value.help_text }}</small>
+        {{ context_form.capacity_value.errors }}
+      </div>
+      <button class="button" type="submit">Save season and capacity</button>
+    </form>
+  </section>
+
+  <form method="post" class="personal-os-form" novalidate>
+    {% csrf_token %}
+    <input type="hidden" name="form_type" value="personal_os">
+    {{ personal_form.assessment_epoch }}
+    {% if personal_form.non_field_errors %}<div class="form-error" role="alert">{{ personal_form.non_field_errors }}</div>{% endif %}
+    <details class="stage-panel" open>
+      <summary>
+        <span class="eyebrow">Identity directions</span>
+        <strong>Mission, principles, anti-goals, direction, and priorities</strong>
+      </summary>
+      <div class="stage-panel-body">
+        {% for section in identity_sections %}
+          <fieldset class="reflection-fieldset">
+            <legend>{{ section.prompt }}</legend>
+            <p class="fine-print">{{ section.help_text }}</p>
+            <div class="form-field">
+              {{ section.state.label_tag }}
+              {{ section.state }}
+              {{ section.state.errors }}
+            </div>
+            <div class="form-field" data-personal-os-section="{{ section.stable_id }}">
+              {{ section.value.label_tag }}
+              {{ section.value }}
+              <small id="{{ section.value.id_for_label }}_helptext">{{ section.value.help_text }}</small>
+              {{ section.value.errors }}
+            </div>
+          </fieldset>
+        {% endfor %}
+      </div>
+    </details>
+
+    <details class="stage-panel">
+      <summary>
+        <span class="eyebrow">Truth / Autopilot Audit</span>
+        <strong>Four descriptive reflection prompts</strong>
+      </summary>
+      <div class="stage-panel-body">
+        <p class="status-note">
+          A mismatch is information for reflection—not evidence of failure, deficient
+          character, or diminished worth.
+        </p>
+        {% for section in audit_sections %}
+          <fieldset class="reflection-fieldset">
+            <legend>{{ section.prompt }}</legend>
+            <p class="fine-print">{{ section.help_text }}</p>
+            <div class="form-field">
+              {{ section.state.label_tag }}
+              {{ section.state }}
+              {{ section.state.errors }}
+            </div>
+            <div class="form-field" data-personal-os-section="{{ section.stable_id }}">
+              {{ section.value.label_tag }}
+              {{ section.value }}
+              <small id="{{ section.value.id_for_label }}_helptext">{{ section.value.help_text }}</small>
+              {{ section.value.errors }}
+            </div>
+          </fieldset>
+        {% endfor %}
+      </div>
+    </details>
+    <div class="button-row">
+      <button class="button" type="submit">Save Personal OS revision</button>
+    </div>
+  </form>
+
+  <section class="section-block" aria-labelledby="practice-context-heading">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Practice context</p>
+        <h2 id="practice-context-heading">Review one active practice at a time</h2>
+      </div>
+    </div>
+    <p>
+      Open an active practice and choose “Review current context.” Unreviewed practices
+      remain unjudged and are never silently treated as unfavorable.
+    </p>
+    <a class="button button-secondary" href="{% url 'growth:practice-list' %}">Choose a practice</a>
+  </section>
+{% endblock %}
+
+{% block extra_scripts %}
+  <script src="{% static 'growth/personal_os.js' %}" defer></script>
+{% endblock %}

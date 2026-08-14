@@ -126,6 +126,19 @@ a migration, priority record, ordinary UI, Personal OS analysis, canonical
 content, evidence/scoring write, or production activation. M6C-04 owns browser
 collection and presentation.
 
+M6C-04 closes the concise browser/deployment slice without changing those
+contracts. One authenticated latest-assessment journey progressively discloses
+the exact Personal OS, Truth/Autopilot, season/capacity, and per-practice
+context inputs. It ranks only active practices explicitly reviewed in that
+epoch, preserves exact legacy recommendations when no context exists, and
+provides a distinct eligible alternative from that reviewed cohort after N/A
+or defer. Authored Personal OS text remains private to the owner-facing
+Personal OS surface and is never analyzed for ranking. The additive
+`GG-M6C-PILOT-READINESS-1.0` and Compose/browser drills verify software and
+isolated deployment behavior without adding a model, migration, priority
+record, content, weekly execution, dedicated export/purge/retention automation,
+evidence/scoring write, activation, release, or deployment.
+
 The newest owner-directed control sequence permits this non-scored foundation
 to proceed while M6B governance remains deferred. `ER-M6A-003` stays pending,
 `RG-M6A-002` stays open, Decisions 047–049 stay proposed, and the sequence does

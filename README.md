@@ -51,7 +51,10 @@ ordinary UI.
 M6C-02 adds private append-only Personal OS identity and descriptive
 Truth/Autopilot Audit revisions without scoring or ordinary UI. M6C-03 adds a
 separate deterministic context-priority and alternative backend result while
-leaving the existing profile/browser recommendation path unchanged.
+leaving the existing profile/browser recommendation path unchanged. M6C-04
+exposes those reviewed contracts through one concise authenticated browser
+journey and an additive deployment/pilot-readiness gate; it adds no model,
+migration, score activation, remote telemetry, or release approval.
 
 ## Deployment essentials
 
@@ -372,6 +375,31 @@ Run its isolated additive gate:
 make context-priority-check
 ```
 
+## What M6C-04 adds
+
+- One authenticated Personal OS entry point for the latest user-owned assessment
+  epoch, with staged identity, descriptive audit, season, capacity, and
+  one-practice-at-a-time context collection.
+- Context-aware ordering and distinct alternatives only among explicitly reviewed
+  current-epoch candidates, while the legacy recommendation path stays exact when
+  context is absent or incomplete.
+- Read-only `GG-M6C-PILOT-READINESS-1.0`, which preserves all six prerequisite
+  readiness contracts and verifies exact definition IDs, the five baseline
+  protocols, friendship-only activation, authenticated routes, and empty or valid
+  optional state without printing authored values.
+- A Compose deployment drill that uses synthetic values through public services,
+  exercises authenticated HTTP, and replays revision/result hashes through
+  recreation and verified backup/restore.
+- Software and isolated deployment-drill evidence only. M6B governance, owner
+  artifact/copy review, participant release, deployment, and production approval
+  remain separate.
+
+Run the isolated additive gate:
+
+```bash
+make m6c-pilot-check
+```
+
 ## Product flow
 
 1. Sign in with the bootstrap account.
@@ -421,6 +449,10 @@ make practice-reports
 make practice-report-check
 make curriculum-check
 make competency-evidence-check
+make context-check
+make personal-os-check
+make context-priority-check
+make m6c-pilot-check
 make run
 make compose-up
 make compose-down
@@ -483,6 +515,7 @@ docker compose exec app python manage.py verify_competency_evidence_readiness
 docker compose exec app python manage.py verify_context_readiness
 docker compose exec app python manage.py verify_personal_os_readiness
 docker compose exec app python manage.py verify_context_priority_readiness
+docker compose exec app python manage.py verify_m6c_pilot_readiness
 ```
 
 Migrations and canonical seeding run safely on startup.

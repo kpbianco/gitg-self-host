@@ -4,15 +4,301 @@ from typing import ClassVar
 from django import forms
 from django.utils import timezone
 
+from growth.domain.context import (
+    PRACTICE_FACTOR_IDS,
+    DeferReason,
+    SeasonCode,
+)
 from growth.domain.evidence import (
     ALLOWED_OBSERVATION_FIELDS,
     observation_fields_for_rules,
+)
+from growth.domain.personal_os import (
+    AUDIT_PROMPT_DEFINITIONS,
+    AUDIT_PROMPT_IDS,
+    IDENTITY_SECTION_DEFINITIONS,
+    IDENTITY_SECTION_IDS,
+    LIST_ITEM_MAX_COUNT,
+    LIST_ITEM_MAX_LENGTH,
+    LIST_SECTION_IDS,
+    SCALAR_VALUE_MAX_LENGTH,
 )
 from growth.models import PilotFeedback, PracticeAction, PracticeCheckIn, PracticeProtocol
 from growth.services.pilot_feedback import (
     FEEDBACK_FIELD_STAGES,
     feedback_scope_errors,
 )
+
+EXPLICIT_STATE_CHOICES = (
+    ("unknown", "Unknown / not collected"),
+    ("not_applicable", "Not applicable"),
+    ("deferred", "Deferred for now"),
+    ("provided", "Provide a value"),
+)
+
+
+class PersonalOSForm(forms.Form):
+    assessment_epoch = forms.CharField(widget=forms.HiddenInput)
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        definitions = {
+            **IDENTITY_SECTION_DEFINITIONS,
+            **AUDIT_PROMPT_DEFINITIONS,
+        }
+        for section_id in (*IDENTITY_SECTION_IDS, *AUDIT_PROMPT_IDS):
+            definition = definitions[section_id]
+            self.fields[f"{section_id}_state"] = forms.ChoiceField(
+                label=f"Response state for: {definition.prompt}",
+                choices=EXPLICIT_STATE_CHOICES,
+                initial="unknown",
+            )
+            if section_id in LIST_SECTION_IDS:
+                help_text = (
+                    f"{definition.help_text} Put one item on each line; use one to "
+                    f"{LIST_ITEM_MAX_COUNT} items, up to {LIST_ITEM_MAX_LENGTH} characters each."
+                )
+            else:
+                help_text = (
+                    f"{definition.help_text} Use at most {SCALAR_VALUE_MAX_LENGTH} characters."
+                )
+            self.fields[f"{section_id}_value"] = forms.CharField(
+                label=definition.prompt,
+                help_text=help_text,
+                required=False,
+                strip=False,
+                max_length=(
+                    LIST_ITEM_MAX_COUNT * (LIST_ITEM_MAX_LENGTH + 1)
+                    if section_id in LIST_SECTION_IDS
+                    else SCALAR_VALUE_MAX_LENGTH
+                ),
+                widget=forms.Textarea(attrs={"rows": 3, "data-personal-os-value": section_id}),
+            )
+
+    def clean(self):
+        cleaned = super().clean()
+        for section_id in (*IDENTITY_SECTION_IDS, *AUDIT_PROMPT_IDS):
+            state = cleaned.get(f"{section_id}_state")
+            raw_value = cleaned.get(f"{section_id}_value", "")
+            if state == "provided":
+                if section_id in LIST_SECTION_IDS:
+                    items = raw_value.splitlines()
+                    if not 1 <= len(items) <= LIST_ITEM_MAX_COUNT:
+                        self.add_error(
+                            f"{section_id}_value",
+                            f"Provide one to {LIST_ITEM_MAX_COUNT} nonblank items.",
+                        )
+                    elif any(not item.strip() for item in items):
+                        self.add_error(
+                            f"{section_id}_value",
+                            "List items must not be blank.",
+                        )
+                    elif any(len(item) > LIST_ITEM_MAX_LENGTH for item in items):
+                        self.add_error(
+                            f"{section_id}_value",
+                            f"Each item must be at most {LIST_ITEM_MAX_LENGTH} characters.",
+                        )
+                    elif len(items) != len(set(items)):
+                        self.add_error(
+                            f"{section_id}_value",
+                            "Items must be unique while preserving your chosen order.",
+                        )
+                    cleaned[f"{section_id}_value"] = items
+                elif not raw_value.strip():
+                    self.add_error(
+                        f"{section_id}_value", "Provide a response or choose another state."
+                    )
+            elif raw_value:
+                self.add_error(
+                    f"{section_id}_value",
+                    "Clear the authored value when this response is not provided.",
+                )
+        return cleaned
+
+    def contract_values(self, section_ids):
+        return {
+            section_id: {
+                "state": self.cleaned_data[f"{section_id}_state"],
+                "value": (
+                    self.cleaned_data[f"{section_id}_value"]
+                    if self.cleaned_data[f"{section_id}_state"] == "provided"
+                    else None
+                ),
+            }
+            for section_id in section_ids
+        }
+
+
+class AssessmentPriorityContextForm(forms.Form):
+    assessment_epoch = forms.CharField(widget=forms.HiddenInput)
+    season_state = forms.ChoiceField(
+        label="Current season response state",
+        choices=(("", "Choose a state"), *EXPLICIT_STATE_CHOICES),
+    )
+    season_value = forms.ChoiceField(
+        label="Current season",
+        choices=(
+            ("", "Choose a season"),
+            *[(item.value, item.value.title()) for item in SeasonCode],
+        ),
+        required=False,
+        help_text="Descriptive context only; it does not change priority or measure performance.",
+    )
+    capacity_state = forms.ChoiceField(
+        label="Capacity response state",
+        choices=(("", "Choose a state"), *EXPLICIT_STATE_CHOICES),
+    )
+    capacity_value = forms.TypedChoiceField(
+        label="Room for one additional bounded practice",
+        choices=(("", "Choose 0 to 4"), *((str(value), str(value)) for value in range(5))),
+        coerce=int,
+        empty_value=None,
+        required=False,
+        help_text="0 to 4 is self-reported room right now, not effort, character, or potential.",
+    )
+
+    def clean(self):
+        cleaned = super().clean()
+        for factor_id in ("season", "capacity"):
+            state = cleaned.get(f"{factor_id}_state")
+            value = cleaned.get(f"{factor_id}_value")
+            empty = value in (None, "")
+            if state == "provided" and empty:
+                self.add_error(f"{factor_id}_value", "Choose a value or choose another state.")
+            elif state and state != "provided" and not empty:
+                self.add_error(
+                    f"{factor_id}_value",
+                    "Clear the value when this response is not provided.",
+                )
+        return cleaned
+
+    def contract_factors(self):
+        return {
+            factor_id: {
+                "state": self.cleaned_data[f"{factor_id}_state"],
+                "value": (
+                    self.cleaned_data[f"{factor_id}_value"]
+                    if self.cleaned_data[f"{factor_id}_state"] == "provided"
+                    else None
+                ),
+            }
+            for factor_id in ("season", "capacity")
+        }
+
+
+PRACTICE_FACTOR_LABELS = {
+    "applicability": "Fit with your present role and situation",
+    "importance": "Current importance among competing goods",
+    "readiness": "Readiness to attempt this bounded practice",
+    "urgency": "User-reported time sensitivity",
+    "opportunity_resources": "Available opportunity, support, access, and resources",
+    "burden": "Expected time, access, effort, emotional, relational, or material load",
+}
+
+
+class PracticePriorityContextForm(forms.Form):
+    assessment_epoch = forms.CharField(widget=forms.HiddenInput)
+    mode = forms.ChoiceField(
+        label="How do you want to review this practice?",
+        choices=(
+            ("", "Choose one"),
+            ("provide", "Provide all six context factors"),
+            ("not_applicable", "Mark this practice not applicable"),
+            ("defer", "Defer this practice for now"),
+        ),
+        widget=forms.RadioSelect,
+    )
+    deferred_factor = forms.ChoiceField(
+        label="Which factor is deferred?",
+        choices=(
+            ("", "Choose one"),
+            *((item, PRACTICE_FACTOR_LABELS[item]) for item in PRACTICE_FACTOR_IDS),
+        ),
+        required=False,
+    )
+    defer_reason = forms.ChoiceField(
+        label="Reason for deferring",
+        choices=(
+            ("", "Choose one"),
+            *((item.value, item.value.replace("_", " ").title()) for item in DeferReason),
+        ),
+        required=False,
+    )
+    review_horizon_days = forms.IntegerField(
+        label="Optional review horizon in days",
+        min_value=1,
+        max_value=366,
+        required=False,
+        help_text="A review prompt only; it creates no timer, expiration, or negative observation.",
+    )
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        choices = (("", "Choose 0 to 4"), *((str(value), str(value)) for value in range(5)))
+        for factor_id in PRACTICE_FACTOR_IDS:
+            self.fields[factor_id] = forms.TypedChoiceField(
+                label=PRACTICE_FACTOR_LABELS[factor_id],
+                choices=choices,
+                coerce=int,
+                empty_value=None,
+                required=False,
+            )
+
+    def clean(self):
+        cleaned = super().clean()
+        mode = cleaned.get("mode")
+        supplied = [
+            factor_id for factor_id in PRACTICE_FACTOR_IDS if cleaned.get(factor_id) is not None
+        ]
+        if mode == "provide":
+            for factor_id in PRACTICE_FACTOR_IDS:
+                if cleaned.get(factor_id) is None:
+                    self.add_error(factor_id, "Choose a value from 0 to 4.")
+            if (
+                cleaned.get("deferred_factor")
+                or cleaned.get("defer_reason")
+                or cleaned.get("review_horizon_days") is not None
+            ):
+                self.add_error("mode", "Clear defer details when providing all six factors.")
+        elif mode == "not_applicable":
+            if supplied:
+                self.add_error("mode", "Clear numeric factors when marking this not applicable.")
+            if (
+                cleaned.get("deferred_factor")
+                or cleaned.get("defer_reason")
+                or cleaned.get("review_horizon_days") is not None
+            ):
+                self.add_error("mode", "Clear defer details when marking this not applicable.")
+        elif mode == "defer":
+            if supplied:
+                self.add_error("mode", "Clear numeric factors when deferring this practice.")
+            if not cleaned.get("deferred_factor"):
+                self.add_error("deferred_factor", "Name the factor you are deferring.")
+            if not cleaned.get("defer_reason"):
+                self.add_error("defer_reason", "Choose a categorical reason for deferring.")
+        return cleaned
+
+    def context_input(self, protocol):
+        mode = self.cleaned_data["mode"]
+        if mode == "provide":
+            factors = {
+                factor_id: {"state": "provided", "value": self.cleaned_data[factor_id]}
+                for factor_id in PRACTICE_FACTOR_IDS
+            }
+            return factors, "considering", None, None
+        factors = {
+            factor_id: {"state": "unknown", "value": None} for factor_id in PRACTICE_FACTOR_IDS
+        }
+        if mode == "not_applicable":
+            factors["applicability"] = {"state": "not_applicable", "value": None}
+            return factors, "considering", None, None
+        factors[self.cleaned_data["deferred_factor"]] = {"state": "deferred", "value": None}
+        return (
+            factors,
+            "deferred",
+            self.cleaned_data["defer_reason"],
+            self.cleaned_data["review_horizon_days"],
+        )
 
 
 class PracticeApplicabilityForm(forms.Form):

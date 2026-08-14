@@ -19,3 +19,4 @@ make competency-evidence-check PYTHON=.venv/bin/python
 make context-check PYTHON=.venv/bin/python
 make personal-os-check PYTHON=.venv/bin/python
 make context-priority-check PYTHON=.venv/bin/python
+make m6c-pilot-check PYTHON=.venv/bin/python

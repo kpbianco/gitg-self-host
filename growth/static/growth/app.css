@@ -668,6 +668,126 @@ meter::-webkit-meter-optimum-value {
   gap: 10px;
 }
 
+.privacy-notice,
+.context-summary {
+  background: var(--accent-pale);
+  border: 1px solid #c6d8d0;
+  border-radius: var(--radius);
+  padding: 22px 24px;
+}
+
+.privacy-notice p:last-child,
+.context-summary p:last-child {
+  margin-bottom: 0;
+}
+
+.context-summary {
+  align-items: center;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.context-summary p {
+  color: var(--ink-soft);
+  margin: 4px 0;
+}
+
+.personal-os-form {
+  display: grid;
+  gap: 18px;
+  margin-top: 52px;
+}
+
+.stage-panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.stage-panel > summary {
+  cursor: pointer;
+  display: grid;
+  gap: 3px;
+  padding: 22px 26px;
+}
+
+.stage-panel-body {
+  border-top: 1px solid var(--line);
+  padding: 4px 26px 26px;
+}
+
+.reflection-fieldset,
+.staged-form fieldset {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 20px 0 0;
+  min-width: 0;
+  padding: 22px 0 0;
+}
+
+.reflection-fieldset legend,
+.staged-form legend {
+  font-weight: 750;
+  padding: 0;
+}
+
+.staged-form {
+  display: grid;
+  gap: 16px;
+}
+
+.form-field {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.form-field label {
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea,
+.staged-form select,
+.staged-form input[type="number"] {
+  background: white;
+  border: 1px solid #b9c0ba;
+  border-radius: 9px;
+  color: var(--ink);
+  max-width: 100%;
+  min-height: 44px;
+  padding: 9px 11px;
+  width: 100%;
+}
+
+.form-field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.form-field small {
+  color: var(--ink-soft);
+}
+
+.errorlist {
+  color: #79382e;
+  font-size: 0.84rem;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.staged-form section {
+  border-top: 1px solid var(--line);
+  margin-top: 8px;
+  padding-top: 20px;
+}
+
 .auth-form label,
 .stacked-form label {
   font-size: 0.82rem;
@@ -1460,6 +1580,11 @@ summary:focus-visible {
     align-items: start;
     flex-direction: column;
     gap: 12px;
+  }
+
+  .context-summary {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .feedback-boundary,

@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.views.decorators.cache import never_cache
 
 from growth.models import PracticeCheckIn
+from growth.services.personal_os_browser import build_browser_priority_presentation
 from growth.services.practice import completion_evidence, current_sprint_for
 from growth.services.profile import build_profile_summary
 
@@ -21,6 +22,7 @@ def health(request):
 
 def home(request):
     summary = build_profile_summary(request.user)
+    priority = build_browser_priority_presentation(user=request.user, summary=summary)
     active_sprint = current_sprint_for(request.user)
     recent_check_ins = (
         PracticeCheckIn.objects.filter(
@@ -48,6 +50,7 @@ def home(request):
         "growth/home.html",
         {
             "summary": summary,
+            "priority": priority,
             "active_sprint": active_sprint,
             "next_action": next_action,
             "practice_evidence": practice_evidence,
