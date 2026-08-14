@@ -208,6 +208,12 @@ M1 is implemented as two reviewable batches:
   private snapshots, conflict-safe idempotent writes, reversible schema, and
   additive readiness add no score, UI, recommendation, activation, export,
   deletion, or retention behavior.
+- **M6C-03 context-priority backend:** pure `GG-CONTEXT-PRIORITY-1.0`
+  multiplies unchanged protocol base need by seven explicitly provided context
+  terms, withholds N/A/defer/missing context, returns deterministic distinct
+  alternatives, and emits privacy-minimized canonical results. Additive
+  readiness replays synthetic fixtures and validates current canonical mapping
+  and activation without changing ordinary recommendations or stored state.
 
 Only submitted check-ins count toward completion. A database constraint limits
 each user to one active or paused practice. Services—not templates—own state
@@ -540,9 +546,30 @@ M6C-02 adds only the separate Personal OS identity/audit foundation:
   export, deletion/retention policy, protocol, evidence, scoring, or activation
   change.
 
-Status: implemented on the M6C-02 review branch. Owner review of exact prompt
-wording and fixture/privacy boundaries, required GitHub browser/Compose gates,
-and target pull-request review remain before merge.
+Status: M6C-02 is reviewed and merged at `9ee7542`.
+
+M6C-03 adds the backend-only context-priority and alternative contract:
+
+- an explicit assessment epoch, its latest verified assessment context, and
+  one latest verified context revision per supplied active canonical protocol;
+- the unchanged `GG-NEED-RANKING-1.0` protocol priority as base;
+- exact `x / 4` factor normalization, `1 - burden / 4`, seven-term Decimal
+  multiplication, and half-up four-place quantization;
+- N/A, defer, missing-context, and explicit-zero semantics without imputation;
+- deterministic ordering and distinct alternatives within the supplied
+  cohort;
+- compact allowlisted UTF-8 JSON, SHA-256, explanation codes, and context
+  hashes with no identity, Personal OS text, assessment answers, private
+  narrative, or evidence payload;
+- additive `GG-CONTEXT-PRIORITY-READINESS-1.0` with synthetic golden replay,
+  current canonical mapping/activation verification, optional empty context,
+  and privacy-safe drift diagnostics.
+
+Status: implemented on the M6C-03 review branch. Owner review of the formula,
+factor directions, dispositions, explanation codes, stable-ID tie-break, and
+fixture/privacy boundary plus required GitHub browser/Compose gates and target
+pull-request review remain before merge. M6C-03 adds no migration, persistence,
+ordinary UI, protocol/content, evidence/scoring write, or activation.
 
 ## M1 acceptance criteria
 1. User understands why a practice was recommended without seeing backend fields.
@@ -817,6 +844,42 @@ software-ready but not M6B-accepted.
 13. Software evidence is not M6B governance, accessibility, cultural,
     clinical, psychometric, longitudinal, participant, release, deployment,
     or production validation.
+
+## M6C-03 acceptance criteria
+
+1. `GG-CONTEXT-PRIORITY-1.0` is pure, deterministic, Decimal-based, and scoped
+   to one explicit user-owned assessment epoch with verified latest context.
+2. Supplied candidates are unique active manifest-projected protocols whose
+   canonical parents, full weights, and recommendation-target subsets verify.
+3. Applicability N/A, defer, missing context, and explicit zero remain
+   distinct; withheld candidates never sort as numeric deficits.
+4. Capacity must be explicitly provided for a numeric result; season is
+   descriptive and has no ordering or multiplier effect.
+5. Provided ordinals normalize as `x / 4`, burden as `1 - burden / 4`, and the
+   seven-term product is quantized half-up once to four decimal places.
+6. Eligible candidates order by context priority, unchanged base priority, and
+   stable protocol ID; no personality, Personal OS, or free-text modifier is
+   used.
+7. N/A/defer alternatives are distinct eligible members of only the supplied
+   cohort, or explicitly `no_eligible_alternative`.
+8. The canonical result includes versions, stable IDs, priorities, factor
+   states/contributions, explanations, exact context hashes, compact UTF-8 JSON,
+   and SHA-256 while excluding private and unrelated domains.
+9. `build_profile_summary`, forms, routes, views, templates, browser output,
+   exports, assessments, evidence, score state, protocols, and activation
+   remain exact and unchanged.
+10. `GG-CONTEXT-PRIORITY-READINESS-1.0` replays the synthetic golden cohort,
+    validates the canonical projection/activation and optional persisted
+    context, accepts empty state, writes nothing, and sanitizes drift errors.
+11. No model, migration, backfill, priority persistence, UI, telemetry,
+    deletion/retention policy, canonical report/content, or production write is
+    added.
+12. Focused and full deterministic gates plus unchanged browser and Compose
+    regressions are required before merge.
+13. Software evidence does not establish recommendation usefulness, M6B
+    governance, participant, specialist, accessibility, cultural, safety,
+    clinical, psychometric, longitudinal, release, deployment, production, or
+    mastery validation.
 
 ## Handoff audit notes
 

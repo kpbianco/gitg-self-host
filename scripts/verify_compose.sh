@@ -126,11 +126,13 @@ compose exec -T app python manage.py verify_expansion_readiness
 compose exec -T app python manage.py verify_competency_evidence_readiness
 compose exec -T app python manage.py verify_context_readiness
 compose exec -T app python manage.py verify_personal_os_readiness
+compose exec -T app python manage.py verify_context_priority_readiness
 
 printf '\n==> Persist one synthetic Personal OS revision without logging authored values\n'
 compose exec -T app python manage.py shell -c \
     'from growth.models import AssessmentRun; from growth.services.personal_os import record_personal_os_revision; run=AssessmentRun.objects.select_related("user").order_by("stable_id").first(); state={"state":"provided"}; identity={"mission":{**state,"value":"Synthetic Compose direction."},"principles":{**state,"value":["Synthetic bounded operation."]},"anti_goals":{**state,"value":["Synthetic unrecoverable state."]},"twelve_month_direction":{**state,"value":"Synthetic recovery remains exact."},"priority_stack":{**state,"value":["Synthetic backup proof."]}}; audit={key:{**state,"value":"Synthetic descriptive response."} for key in ("current_truth","autopilot_pattern","misalignment_or_fragmentation","deliberate_next_step")}; first=record_personal_os_revision(user=run.user,assessment_run=run,identity_sections=identity,audit_responses=audit); second=record_personal_os_revision(user=run.user,assessment_run=run,identity_sections=identity,audit_responses=audit); assert first.created and not second.created and first.revision.pk == second.revision.pk'
 compose exec -T app python manage.py verify_personal_os_readiness
+compose exec -T app python manage.py verify_context_priority_readiness
 readonly expected_personal_os_state="$(personal_os_state)"
 test "$expected_personal_os_state" != "0|"
 
@@ -155,6 +157,7 @@ compose exec -T app python manage.py verify_expansion_readiness
 compose exec -T app python manage.py verify_competency_evidence_readiness
 compose exec -T app python manage.py verify_context_readiness
 compose exec -T app python manage.py verify_personal_os_readiness
+compose exec -T app python manage.py verify_context_priority_readiness
 test "$(personal_os_state)" = "$expected_personal_os_state"
 
 printf '\n==> Restore the verified backup inside the isolated volume\n'
@@ -172,6 +175,7 @@ compose exec -T app python manage.py verify_expansion_readiness
 compose exec -T app python manage.py verify_competency_evidence_readiness
 compose exec -T app python manage.py verify_context_readiness
 compose exec -T app python manage.py verify_personal_os_readiness
+compose exec -T app python manage.py verify_context_priority_readiness
 test "$(personal_os_state)" = "$expected_personal_os_state"
 
 printf '\n==> Confirm clean Gunicorn shutdown\n'

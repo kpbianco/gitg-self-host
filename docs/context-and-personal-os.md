@@ -4,13 +4,65 @@
 
 M6C-01 establishes `GG-CONTEXT-1.0` persistence and pure services. M6C-02 adds
 the separate `GG-PERSONAL-OS-1.0` identity and Truth/Autopilot Audit
-foundation. Neither batch adds a form, changes ordinary UI, ranks
-recommendations, alters an assessment or score, authors a protocol, or
-activates production scoring. Later M6C batches own priority, alternatives,
-and the concise browser experience.
+foundation. M6C-03 adds backend-only `GG-CONTEXT-PRIORITY-1.0` ranking and
+alternatives. None adds an ordinary form, changes the existing browser/profile
+recommendation path, alters an assessment or score, authors a protocol, or
+activates production scoring. M6C-04 owns the concise browser experience.
 
 The additive, read-only readiness contract is
 `GG-CONTEXT-READINESS-1.0`.
+
+## Context-priority contract
+
+One result belongs to one explicit user-owned assessment epoch, its latest
+verified assessment-context revision, and exactly one latest verified
+practice-context revision for every supplied active canonical candidate. The
+service validates contiguous revisions, snapshot hashes, supported versions,
+canonical parents and full weights, recommendation-target subsets, active
+manifest projection, stable-ID uniqueness, and the unchanged
+`GG-NEED-RANKING-1.0` base priority before calling the pure engine.
+It reads mutable epoch inputs in one transaction, using the assessment-run row
+lock where supported and one SQLite read snapshot, so a concurrent context or
+score-state transition cannot create a mixed-time result.
+
+No assessment-context row means that a context-aware result cannot be built. A
+verified row with non-provided capacity instead yields a structured
+`missing_context` ranking. Season remains descriptive and appears in the
+structured result, but it has no multiplier, ordering, or tie effect.
+
+A candidate is numeric only when its disposition is `considering` and all six
+practice factors plus assessment capacity are explicitly `provided`. The
+precedence is `not_applicable`, then `deferred`, then `missing_context`, then
+eligible: applicability N/A therefore remains distinct even if another factor
+is deferred. N/A on another required factor is missing context. Withheld
+candidates have no context-priority value and are never treated as zero.
+
+For every provided ordinal `x`, the multiplier is exactly `Decimal(x) / 4`.
+Burden is inverted as `1 - Decimal(burden) / 4`. The final calculation is:
+
+```text
+context priority = base priority
+  × applicability × importance × readiness × urgency
+  × opportunity/resources × capacity × inverse burden
+```
+
+The product is quantized half-up once to four decimal places. Explicit zero is
+a valid supplied value and may produce an eligible zero priority. There is no
+floor, imputation, rescaling, learned weight, Personal OS/free-text analysis,
+or personality/orientation modifier. Eligible candidates sort by descending
+context priority, descending unchanged base priority, then stable protocol ID.
+
+An alternative request must identify one supplied N/A or deferred candidate
+and a matching reason. It returns the highest-ranked distinct eligible member
+of that supplied cohort, or `no_eligible_alternative`; it never expands the
+cohort or returns the withheld source.
+
+Canonical compact UTF-8 JSON contains algorithm and dependency versions,
+assessment/protocol stable IDs, base and context priorities, factor-state and
+multiplier breakdowns, dispositions, allowlisted explanation codes,
+alternative source/target IDs, and exact context hashes. It excludes identity,
+database record IDs, timestamps, Personal OS/audit text, assessment answers,
+private narrative, evidence payloads, and unrelated participant data.
 
 ## Personal OS identity and audit contract
 
@@ -167,6 +219,12 @@ Run the separate Personal OS readiness drill:
 make personal-os-check
 ```
 
+Run the context-priority readiness drill:
+
+```bash
+make context-priority-check
+```
+
 For a running instance, use the read-only verifier:
 
 ```bash
@@ -182,6 +240,13 @@ Personal OS row and accepts an empty optional table. Its summaries contain
 only contract metadata, field IDs, counts, limits, and non-mutation flags; its
 diagnostics do not print private authored values, snapshots, record IDs, or
 user identity.
+
+`GG-CONTEXT-PRIORITY-READINESS-1.0` replays a committed synthetic cohort,
+derives the current active projection and activation state from canonical
+source, verifies the M6C-03 five-protocol baseline remains represented with
+the reviewed friendship activation still present, and accepts empty optional
+context tables. When persisted context exists, drift fails with diagnostics
+that do not print values, snapshots, identity, or record IDs.
 
 ## Privacy and validation boundary
 

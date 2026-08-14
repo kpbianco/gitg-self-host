@@ -1,31 +1,36 @@
 schema_version: 1
 batch:
-  id: M6C-02
-  title: Add the concise Truth Autopilot Audit and Personal OS identity foundation
-  goal: Add one versioned append-only Personal OS revision contract for bounded mission principles anti-goals twelve-month direction priority stack and a concise Truth Autopilot Audit, without adding ordinary UI or changing assessment evidence scoring recommendations protocols or production activation.
+  id: M6C-03
+  title: Add deterministic context-aware priority and alternative recommendations
+  goal: Add a pure versioned backend engine and read-only readiness contract that rank explicitly context-complete active practice candidates and return deterministic explainable alternatives after not-applicable or defer, while preserving the existing no-context recommendation path, private Personal OS boundaries, historical replay, and friendship-only production activation.
 sources:
   product: products/gitg-self-host/product.yaml
   requirements:
     - products/gitg-self-host/PRD.md#M6C-context-and-Personal-OS
-    - products/gitg-self-host/acceptance.yaml#GG-PERSONAL-OS
+    - products/gitg-self-host/acceptance.yaml#GG-PRIORITY
+    - products/gitg-self-host/risk-register.yaml#GG-R-CONTEXT-001
   milestone: products/gitg-self-host/roadmap.yaml#M6C
-  baseline_commit: ff53b04fcacb0290bd68b470aaf60c5af5c29eab
-  control_plane_repository: kpbianco/portfolio-control
-  control_plane_path: products/gitg-self-host/batches/M6C-02.yaml
-  control_plane_revision: 2324b356ee39857f3c53257c0797b1054855d5d4  # pragma: allowlist secret
+  baseline_commit: 1a20160080a772f1b8e59444d0427915522780a0
   prerequisites:
-    - M6C-01 is merged at 8a1c937872d1dca4c38a917484dc214bc91b8a2f and its GG-CONTEXT-1.0 records remain unchanged.
-    - Owner-directed sequencing keeps M6B governance deferred; ER-M6A-003 remains pending and RG-M6A-002 remains open.
+    - M6C-01 is merged at 8a1c937872d1dca4c38a917484dc214bc91b8a2f and its append-only GG-CONTEXT-1.0 records and readiness behavior remain authoritative.
+    - M6C-02 is merged at 9ee7542f2155247ccb9b0ef4686535887f2b7403 and its private append-only GG-PERSONAL-OS-1.0 records remain outside numeric ranking.
+    - Owner-directed sequencing keeps M6B governance deferred; ER-M6A-003 remains pending, RG-M6A-002 remains open, and Decisions 047 through 049 remain proposed.
   target_contracts:
     - AGENTS.md
     - docs/PRODUCT_DECISIONS.md
     - docs/PROJECT_HANDOFF.md
     - docs/context-and-personal-os.md
+    - docs/SCORING_DESIGN.md
+    - docs/scoring-state.md
     - docs/program/M6_CURRICULUM_EXPANSION.md
     - docs/program/M6_VALIDATION_AND_PILOT_PLAN.md
     - contracts/verification.yaml
+  control_plane_repository: kpbianco/portfolio-control
+  control_plane_path: products/gitg-self-host/batches/M6C-03.yaml
+  control_plane_revision: 8d8b705bb7542391f63960e8b3811cd5c8c9e490  # pragma: allowlist secret
 dependencies:
   - M6C-01
+  - M6C-02
 scope:
   allowed_paths:
     - AGENTS.md
@@ -34,27 +39,26 @@ scope:
     - contracts/repo-profile.yaml
     - contracts/verification.yaml
     - contracts/verification.commands
-    - growth/models.py
-    - growth/migrations/0009_*.py
-    - growth/domain/personal_os.py
-    - growth/services/personal_os.py
-    - growth/management/commands/verify_personal_os_readiness.py
-    - tests/test_personal_os_models.py
-    - tests/test_personal_os_services.py
-    - tests/test_personal_os_readiness.py
-    - tests/fixtures/personal_os/**
-    - scripts/verify_personal_os_readiness.sh
+    - growth/domain/context_priority.py
+    - growth/services/context_priority.py
+    - growth/management/commands/verify_context_priority_readiness.py
+    - tests/test_context_priority.py
+    - tests/test_context_priority_readiness.py
+    - tests/fixtures/context_priority/**
+    - scripts/verify_context_priority_readiness.sh
     - scripts/verify_compose.sh
     - Makefile
     - README.md
     - docs/PRODUCT_DECISIONS.md
     - docs/PROJECT_HANDOFF.md
     - docs/context-and-personal-os.md
+    - docs/SCORING_DESIGN.md
+    - docs/scoring-state.md
     - docs/program/M6_CURRICULUM_EXPANSION.md
     - docs/program/M6_VALIDATION_AND_PILOT_PLAN.md
     - docs/CURRENT_STATE.md
     - docs/HANDOFF.md
-    - docs/evidence/M6C-02-*.md
+    - docs/evidence/M6C-03-*.md
     - .github/workflows/verification.yml
     - MANIFEST.tsv
   forbidden_paths:
@@ -64,20 +68,18 @@ scope:
     - data/practices/**
     - data/evidence/**
     - reports/**
-    - growth/migrations/0001_*.py
-    - growth/migrations/0002_*.py
-    - growth/migrations/0003_*.py
-    - growth/migrations/0004_*.py
-    - growth/migrations/0005_*.py
-    - growth/migrations/0006_*.py
-    - growth/migrations/0007_*.py
-    - growth/migrations/0008_*.py
+    - growth/models.py
+    - growth/migrations/**
+    - growth/domain/context.py
+    - growth/domain/personal_os.py
     - growth/domain/evidence.py
     - growth/domain/evidence_dispatch.py
     - growth/domain/typed_evidence.py
     - growth/domain/competency_scoring.py
     - growth/domain/scoring.py
     - growth/domain/ranking.py
+    - growth/services/context.py
+    - growth/services/personal_os.py
     - growth/services/assessment.py
     - growth/services/evidence.py
     - growth/services/scoring.py
@@ -96,24 +98,26 @@ scope:
     - .github/codex/**
     - LICENSE
 acceptance:
-  - GG-PERSONAL-OS-1.0 defines exactly five identity sections named mission principles anti_goals twelve_month_direction and priority_stack plus exactly four audit prompts named current_truth autopilot_pattern misalignment_or_fragmentation and deliberate_next_step; it computes no alignment autopilot personality virtue worth or diagnostic score.
-  - Every section has an explicit unknown not_applicable deferred or provided state. A non-provided state carries no hidden value; a provided scalar is nonempty and at most 500 characters; provided principles anti-goals and priority-stack values contain one to five ordered unique nonempty items of at most 160 characters each.
-  - Prompt definitions and help text keep the audit descriptive and user-authored, ask for minimal private detail, avoid diagnosis destiny shame and moral ranking, and make clear that a reported mismatch is not evidence of failure or diminished worth.
-  - One Personal OS revision is scoped to exactly one authenticated user and one immutable AssessmentRun. It does not derive values from answers orientations archetypes lever state evidence practice history or prior assessment epochs, and reassessment never silently carries a revision forward.
-  - A pure builder rejects missing extra unknown-version over-bound wrong-type blank duplicate and hidden-value inputs before persistence and emits deterministic canonical UTF-8 JSON and SHA-256 for semantically identical ordered input. The snapshot contains the assessment epoch ID and private user-authored values but excludes user identity database record IDs timestamps assessment answers evidence scores and unrelated narrative.
-  - Changed semantic input appends the next immutable contiguous revision; an unchanged retry returns the existing revision; direct save update bulk-update and delete cannot rewrite or remove an existing revision; a concurrent write either produces a valid contiguous result or an explicit retryable conflict without duplicates or partial data.
-  - Migration 0009 is schema-only and reversible before later dependencies. It creates only the Personal OS foundation table constraints indexes and foreign keys and does not backfill seed reinterpret delete or rewrite any existing assessment context evidence score pilot-feedback sprint review or canonical-content row.
-  - Mission principles anti-goals direction audit text and priority-stack order remain private reflection data only. They are not added to existing evidence or pilot-feedback exports logs generated reports fixtures telemetry recommendation inputs score snapshots or activation decisions in this batch; retained evidence records only synthetic values counts hashes and diagnostics.
-  - The existing GG-CONTEXT-1.0 and GG-CONTEXT-READINESS-1.0 behavior remains exact. M6C-02 adds a deterministic read-only GG-PERSONAL-OS-READINESS-1.0 verifier that accepts an empty optional table and fails closed on version ownership epoch bounds field snapshot hash or revision drift without printing private values.
-  - Existing assessment GG-EVIDENCE-1.0 typed-evidence competency-shadow score-state need-ranking pilot curriculum and competency-evidence outputs remain exact, recommendations and all ordinary UI remain unchanged, and friendship remains the only production score-active protocol.
-  - No form route template browser collection workflow external service remote telemetry protocol package action context-priority formula alternative recommendation weekly execution behavior export deletion or retention policy is added; M6C-03 owns ranking and alternatives and M6C-04 owns the reviewed browser experience.
-  - Focused contract model service migration concurrency privacy readiness and no-mutation tests pass together with the complete repository verification contract and required CI deployment regression gates.
-  - M6B specialist governance remains pending and is not represented as accepted; automated software migration fixture browser or Compose results do not establish specialist accessibility cultural clinical psychometric longitudinal participant release deployment or production validation.
+  - GG-CONTEXT-PRIORITY-1.0 is a pure immutable Decimal contract over one explicit assessment epoch, the existing GG-NEED-RANKING-1.0 protocol base priorities, the latest verified GG-CONTEXT-1.0 assessment revision, and exactly one latest verified context revision for each supplied active canonical protocol; mapping order and database query order cannot change its output.
+  - The engine validates stable IDs, one user-owned assessment epoch, active manifest-projected protocols, canonical parent weights and recommendation-target subsets, supported contract versions, snapshot hashes, contiguous/latest revisions, finite bounded need and context values, and unique candidate IDs before producing a result; malformed stale cross-user cross-epoch inactive or noncanonical input fails closed.
+  - A candidate is eligible only when its disposition is considering and applicability importance readiness urgency opportunity_resources and burden are all explicitly provided; applicability in not_applicable state yields the distinct not_applicable disposition, any deferred factor and deferred candidate disposition yield deferred, and any required unknown or other non-provided state yields missing_context rather than a numeric default.
+  - Assessment capacity must be explicitly provided before any context-aware priority is numeric. Season is retained as descriptive context but has no ordering or numeric effect. Missing or non-provided capacity yields missing_context for the ranking result and never falls back to an invented neutral or favorable value.
+  - For an eligible candidate, every ordinal x is normalized exactly as Decimal x divided by 4, burden is inverted exactly as 1 minus burden divided by 4, and context priority is quantized half-up to four places from base_priority multiplied by applicability importance readiness urgency opportunity_resources capacity and inverse burden. An explicitly supplied zero may produce zero priority; no floor offset imputation rescaling learned weight personality modifier or free-text analysis is permitted.
+  - Eligible candidates sort by descending context priority, then descending unchanged GG-NEED-RANKING-1.0 base priority, then stable protocol ID. Deferred not_applicable and missing_context candidates are withheld from the ranked recommendation set and never sort as zero-valued deficits.
+  - A primary recommendation is the first eligible candidate. An alternative request names one supplied candidate and a reason of not_applicable or deferred; it returns the highest-ranked distinct eligible candidate plus the source disposition and explanation codes, or an explicit no_eligible_alternative result. It never silently returns the withheld candidate, fabricates context, authors a protocol, or mutates a need, score, evidence event, sprint, completion, or defer record.
+  - The result includes the algorithm and dependency versions, assessment epoch stable ID, ordered candidate stable IDs, base and context priorities, factor-state and contribution breakdowns, disposition and explanation codes, alternative source and target stable IDs, exact input context hashes, canonical compact UTF-8 JSON, and SHA-256. It excludes user identity, database record IDs, timestamps, Personal OS or audit text, assessment answers, free text, private narrative, evidence payloads, and unrelated participant data.
+  - Personal OS mission principles anti-goals twelve-month direction priority-stack items and Truth/Autopilot Audit responses never enter eligibility priority alternatives tie-breaking hashes diagnostics fixtures retained evidence or logs. Orientation archetype and personality likewise have no numeric or eligibility effect; ties use the stable protocol ID in this batch and later UI may use reviewed framing without changing rank.
+  - Existing build_profile_summary and every ordinary form route view template and browser recommendation remain exactly GG-NEED-RANKING-1.0 behavior in M6C-03. The new service is an explicit backend result for M6C-04 to consume; an empty context state continues to pass existing readiness and cannot be represented as context-aware output.
+  - GG-CONTEXT-PRIORITY-READINESS-1.0 is deterministic and read-only. It replays a committed synthetic golden cohort, verifies the actual five-protocol canonical mapping and friendship-only activation boundary, accepts an empty optional runtime context store, and fails closed on persisted context/version/hash/scope/revision drift without printing private values or snapshots.
+  - M6C-03 adds no model migration persistence backfill browser collection recommendation display protocol package action canonical report export deletion retention telemetry score-state write or activation entry. Existing context Personal OS assessment evidence typed-evidence competency-shadow score-state pilot curriculum and recommendation replay remain exact.
+  - Focused formula eligibility ordering alternative epoch privacy hashing and no-mutation tests pass together with the complete deterministic repository verification contract and required CI browser and Compose regression gates.
+  - M6B specialist governance remains pending and is not represented as accepted. Static unit integration synthetic-fixture replay browser or Compose results do not establish recommendation usefulness participant accessibility cultural safety clinical psychometric longitudinal release deployment production or mastery validation.
 validation:
   local:
-    - .venv/bin/python -m pytest tests/test_personal_os_models.py tests/test_personal_os_services.py tests/test_personal_os_readiness.py -q
+    - .venv/bin/python -m pytest tests/test_context_priority.py tests/test_context_priority_readiness.py -q
     - make context-check PYTHON=.venv/bin/python
     - make personal-os-check PYTHON=.venv/bin/python
+    - make context-priority-check PYTHON=.venv/bin/python
     - ./scripts/agent-verify.sh contract
     - ./scripts/agent-verify.sh quick
     - ./scripts/agent-verify.sh full
@@ -121,61 +125,64 @@ validation:
     - make compose-smoke
     - git diff --check
   focused_tests_to_add:
-    - exact five identity sections and four audit prompts with non-judgmental no-score definitions
-    - explicit unknown N-A deferred and provided states with no hidden values
-    - scalar list count item length ordering uniqueness blank wrong-type and snapshot-size boundaries
-    - deterministic golden snapshot and hash with unknown-version missing-field and extra-field rejection
-    - user ownership assessment-epoch isolation and no automatic reassessment carry-forward
-    - append-only immutability idempotent retry contiguous revision and SQLite concurrent-write behavior
-    - migration 0008 to 0009 to 0008 round trip with digest equality for every pre-existing growth row
-    - readiness empty-state pass and fail-closed version ownership epoch bound field snapshot hash and revision diagnostics without private text output
-    - no mutation of context assessment evidence score recommendation activation feedback practice review canonical data or existing minimized exports
+    - exact Decimal normalization multiplicative formula half-up quantization bounds and stable tie-breaks
+    - unknown N-A deferred missing-context and explicit-zero dispositions remain distinct with no hidden defaults
+    - complete and partial candidate cohorts plus missing capacity fail-closed behavior
+    - deterministic primary and distinct alternative selection after N-A and defer including no-eligible-alternative
+    - canonical snapshot hash mapping-order and database-order independence with fixed golden fixture
+    - latest-revision user ownership assessment-epoch active-protocol canonical-mapping and stale-hash rejection
+    - explanation allowlist and sanitized error chains exclude Personal OS text private narrative user and database identifiers
+    - existing no-context profile recommendations priorities exports context Personal OS evidence score state and friendship-only activation remain byte-for-byte or value-for-value unchanged
+    - readiness empty-state pass actual five-protocol catalog replay tamper diagnostics and no database writes
   required_ci:
-    - Ruff Django and pytest including focused Personal OS tests and migration drift
-    - context readiness and Personal OS readiness on isolated migrated idempotently seeded state
+    - Ruff Django and pytest including focused context-priority tests and migration-drift confirmation
     - pilot readiness
     - curriculum expansion readiness
     - competency evidence readiness
-    - Playwright core journeys as unchanged-UI regression evidence
-    - Docker Compose migration Personal OS readiness backup restore recreation and clean-shutdown drill
+    - context readiness
+    - Personal OS readiness
+    - context-priority readiness on isolated migrated idempotently seeded state
+    - Playwright core journeys as unchanged-browser regression evidence
+    - Docker Compose migration seed evidence score and all six readiness replays backup restore recreation and clean-shutdown drill
     - aggregate Pilot readiness gate
   manual:
-    - Owner reviews and accepts the exact section names prompt wording bounds and non-judgmental identity language before merge.
-    - Owner confirms that no real participant Personal OS text appears in committed fixtures retained evidence logs or generated reports.
-    - Target pull request remains human-reviewed and is not merged by the implementation agent.
+    - Owner reviews and accepts the exact multiplicative formula factor direction eligibility dispositions explanation codes and stable-ID tie-break before merge.
+    - Owner confirms that synthetic fixtures retained evidence and diagnostics contain no real participant context or Personal OS values.
+    - Owner reviews required CI and retained browser diagnostics, and the target pull request remains human-reviewed and is not merged by the implementation agent.
 risk:
   class: high
   hazards:
-    - the audit becomes a diagnostic shame or worth instrument instead of a bounded reflection
-    - mission principles anti-goals or priority order become fixed identity destiny or hidden scoring inputs
-    - private user-authored or third-party detail leaks through fixtures logs diagnostics exports reports or retained evidence
-    - missing fields are normalized into invented identity or stale values carry across assessment epochs
-    - concurrent SQLite writes create duplicate or skipped revisions
-    - migration or rollback rewrites existing immutable context evidence or score history
-    - foundation work accidentally absorbs M6C-03 ranking or M6C-04 browser scope
-    - software checks are represented as M6B governance or participant specialist accessibility cultural clinical psychometric longitudinal deployment or production evidence
+    - ordinal storage scales acquire opaque or unintended moral developmental or psychometric meaning
+    - unknown N-A or defer is coerced to zero or another hidden default and changes priority
+    - multiplicative factors create false precision or overstate recommendation fit
+    - a deferred or unsuitable candidate leaks back as its own alternative
+    - stale cross-user or cross-epoch context influences a recommendation
+    - private context or Personal OS text leaks through explanations hashes fixtures diagnostics logs or retained evidence
+    - the new engine silently replaces the reviewed legacy profile path before browser collection and explanation are ready
+    - recommendation work mutates score state evidence canonical content or friendship-only activation
+    - software fixtures are represented as recommendation usefulness specialist participant release deployment or production evidence
   stop_conditions:
-    - exact audit prompts identity section semantics or bounds require an unresolved owner product decision
-    - implementation requires inferred values opaque automated text analysis personality classification or any worth diagnostic alignment or autopilot score
-    - a recommendation score activation protocol canonical-content form route template or ordinary-UI change is required
-    - real participant text must enter a fixture log report export telemetry stream or retained repository evidence
-    - existing assessment context evidence score pilot-feedback practice review or canonical rows would be backfilled rewritten reinterpreted or deleted
-    - migration reversal cannot preserve every pre-existing row or a later migration already depends on 0009 without a reviewed rollback plan
-    - append-only revision integrity cannot be made deterministic or explicitly conflict-safe on supported SQLite
+    - owner review rejects or leaves unresolved the exact formula factor direction eligibility or alternative semantics
+    - implementation requires imputing a missing factor analyzing Personal OS or other free text or using personality as a numeric multiplier
+    - deterministic alternatives require a new or materially changed protocol package source risk safety or activation decision
+    - the existing GG-NEED-RANKING-1.0 algorithm or no-context profile recommendation output cannot remain exact
+    - persisted context cannot be verified and isolated to its authenticated user assessment epoch and latest contiguous revision without exposing private values
+    - a model migration persistence backfill ordinary UI export deletion retention telemetry score-state or production-activation change becomes necessary
+    - any assessment evidence score snapshot canonical content activation or historical replay would be rewritten reinterpreted or deleted
     - a required change falls outside allowed paths or touches a forbidden path
-    - M6B governance acceptance or expanded production score activation is asserted as a prerequisite or result
+    - M6B governance acceptance expanded production scoring recommendation usefulness or a higher validation level is asserted as a prerequisite or result
 rollback:
-  strategy: Revert M6C-02 and, only after a verified backup and explicit operator approval, migrate growth from 0009 back to 0008 before any later migration depends on 0009; this removes only M6C-02 Personal OS revisions and must preserve all M6C-01 and earlier rows, canonical data, evidence, score history, and friendship-only activation.
-  data_migration: No forward data migration or backfill is permitted. Do not reverse a database containing participant Personal OS data or later dependent migrations without a separately reviewed retention and recovery decision.
-  release_action: No release deployment score activation or participant-data deletion follows automatically from rollback or batch completion.
+  strategy: Revert the M6C-03 code documentation verification and manifest changes. Because the batch adds no migration or persisted priority record, rollback restores the untouched GG-NEED-RANKING-1.0 path and discards only reproducible synthetic priority outputs; preserve all M6C-01 context and M6C-02 Personal OS revisions.
+  data_migration: None. Do not delete or rewrite context Personal OS assessment evidence score pilot or canonical-content data during rollback.
+  release_action: No release deployment score activation participant-data write or production change follows automatically from implementation completion or rollback.
 evidence:
   output:
-    - docs/evidence/M6C-02-<date>.md
-    - acceptance criterion and invariant mapping
+    - docs/evidence/M6C-03-<date>.md
+    - acceptance criterion invariant and exact formula mapping
     - exact changed-path audit and baseline commit
-    - synthetic fixture hashes and readiness summaries without private values
-    - migration forward reverse restoration row digests and backup prerequisite
-    - focused concurrency immutability epoch isolation privacy and no-mutation results
+    - synthetic golden cohort canonical snapshot hash and sanitized readiness summary
+    - focused disposition alternative ordering epoch privacy no-mutation and legacy-compatibility results
+    - preserved canonical release projection activation and pre-M6C-03 replay hashes
     - exact local and CI commands results environment and retained artifact identifiers
-    - manual gate decisions residual risks and every failed skipped or unperformed validation
-  claim_boundary: Static schema migration unit integration synthetic-fixture deterministic-replay browser-regression and Compose evidence only when actually run; never physical hardware HIL field RT engine signing release deployment production specialist accessibility cultural clinical psychometric longitudinal participant or mastery validation.
+    - manual gate decisions residual risks and every failed skipped unavailable or unperformed validation
+  claim_boundary: Static unit integration synthetic-fixture deterministic-replay browser-regression and Compose evidence only when actually run; never physical hardware HIL field RT engine signing release deployment production recommendation-usefulness specialist accessibility cultural safety clinical psychometric longitudinal participant or mastery validation.

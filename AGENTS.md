@@ -293,12 +293,20 @@ M6C-01 is reviewed and merged. It adds append-only `GG-CONTEXT-1.0`
 assessment-epoch context and defer-state foundations plus additive readiness,
 without changing ordinary UI or recommendations.
 
-M6C-02 is the current implementation batch. It adds append-only
+M6C-02 is reviewed and merged. It adds append-only
 `GG-PERSONAL-OS-1.0` mission, principles, anti-goals, twelve-month direction,
 priority-stack, and descriptive Truth/Autopilot Audit revisions plus additive
 readiness. It adds no identity or audit score, ordinary UI, priority formula,
 alternative recommendation, weekly execution, export, deletion/retention
 policy, evidence/scoring path, protocol, or activation.
+
+M6C-03 is the current implementation batch. It adds the pure backend-only
+`GG-CONTEXT-PRIORITY-1.0` engine and read-only
+`GG-CONTEXT-PRIORITY-READINESS-1.0`. It multiplies the unchanged
+`GG-NEED-RANKING-1.0` protocol base priority only by explicitly provided
+context factors and returns deterministic withheld, primary, and alternative
+results. It adds no migration, persistence, ordinary UI, Personal OS text
+analysis, evidence/scoring write, protocol, or activation.
 
 Later M6C batches establish context-aware priority, useful alternatives, and
 the concise browser experience. The representative 10–12 competency vertical

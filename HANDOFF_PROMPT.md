@@ -136,11 +136,13 @@ blocked until measurement, accessibility, and privacy/safety review is
 truthfully recorded. Do not fabricate completed reviewer roles or weaken that
 gate.
 
-M6C-01 is merged with explicit context/defer foundations. M6C-02 adds the
-private append-only Personal OS identity and descriptive Truth/Autopilot Audit
-foundation without UI, ranking, exports, scoring, or activation. Later M6C
-batches own priority, alternatives, and browser collection. Representative
-vertical slices begin after M6C as Phase B.
+M6C-01 and M6C-02 are merged with explicit context/defer and private append-only
+Personal OS identity/Truth-Autopilot foundations. M6C-03 adds the backend-only
+`GG-CONTEXT-PRIORITY-1.0` formula, withholding, deterministic alternatives,
+canonical privacy-minimized results, and additive readiness without migration,
+persistence, ordinary UI, scoring, or activation. M6C-04 owns browser
+collection and presentation. Representative vertical slices begin after M6C
+as Phase B.
 
 Acceptance criteria are in `docs/PROJECT_HANDOFF.md`. Add automated tests for
 every testable criterion. The app must pass `make compose-smoke` in a

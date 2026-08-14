@@ -104,15 +104,29 @@ Complete task priority remains:
 
 Personality/orientation style fit may only apply a narrow presentation/tie-breaking modifier, historically ±5%.
 
-M3B does not yet collect applicability, importance, readiness, urgency, and
-opportunity as separate per-user inputs. It therefore activates the existing
-assessment v1.1 provisional need function rather than inventing them:
+M3B did not collect applicability, importance, readiness, urgency, and
+opportunity as separate per-user inputs. Its production profile path therefore
+continues to use the existing assessment v1.1 provisional need function rather
+than inventing them:
 
 `N_l = (1 - M_l)^1.5 * (0.60 + 0.40 * C_l)`
 
 `GG-NEED-RANKING-1.0` reproduces every assessment baseline need/rank and then
 recalculates it from current estimate and confidence. Active protocol priority
 uses `P_t = sum_l(w_tl * N_l)`. M3B applies no personality modifier.
+
+M6C-03 adds a separate, backend-only `GG-CONTEXT-PRIORITY-1.0` result. It keeps
+that unchanged protocol priority as its base and multiplies it only by seven
+explicit context terms:
+
+`P_context = P_t × A × I × R × U × O × C × (1 - B)`
+
+Each provided 0–4 ordinal is divided by four before multiplication, and the
+final product is quantized half-up to four places. Missing, N/A, and deferred
+inputs are withheld rather than imputed. Season, Personal OS text,
+orientation, archetype, and personality have no numeric effect. This pure
+result does not replace `build_profile_summary`, write score state, or change
+production recommendations in M6C-03.
 
 ## Required implementation properties
 - pure function;

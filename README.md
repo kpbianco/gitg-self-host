@@ -48,6 +48,10 @@ non-scored software/content work while keeping that governance pending.
 M6C-01 adds explicit, versioned context and defer-state persistence plus pure
 deterministic snapshot services. It does not yet change recommendations or
 ordinary UI.
+M6C-02 adds private append-only Personal OS identity and descriptive
+Truth/Autopilot Audit revisions without scoring or ordinary UI. M6C-03 adds a
+separate deterministic context-priority and alternative backend result while
+leaving the existing profile/browser recommendation path unchanged.
 
 ## Deployment essentials
 
@@ -341,6 +345,33 @@ Run its isolated additive gate:
 make personal-os-check
 ```
 
+## What M6C-03 adds
+
+- Pure backend `GG-CONTEXT-PRIORITY-1.0` results for an explicit assessment
+  epoch and supplied active canonical candidates.
+- Exact Decimal multiplication of the unchanged `GG-NEED-RANKING-1.0` base
+  priority by explicitly provided applicability, importance, readiness,
+  urgency, opportunity/resources, capacity, and inverse burden factors.
+- Distinct `not_applicable`, `deferred`, and `missing_context` withholding;
+  deterministic primary selection and a distinct eligible alternative after
+  N/A or defer.
+- Compact canonical UTF-8 JSON and SHA-256 containing stable IDs, versions,
+  factor contributions, explanation codes, and context hashes without user
+  identity, record IDs, timestamps, Personal OS text, assessment answers, or
+  evidence payloads.
+- Read-only `GG-CONTEXT-PRIORITY-READINESS-1.0`, including synthetic golden
+  replay, canonical mapping and activation checks, and privacy-safe persisted
+  context validation.
+- No migration, priority persistence, ordinary UI or recommendation-path
+  replacement, Personal OS analysis, protocol/content change, score write, or
+  activation change. M6C-04 owns browser collection and display.
+
+Run its isolated additive gate:
+
+```bash
+make context-priority-check
+```
+
 ## Product flow
 
 1. Sign in with the bootstrap account.
@@ -451,6 +482,7 @@ docker compose exec app python manage.py verify_expansion_readiness
 docker compose exec app python manage.py verify_competency_evidence_readiness
 docker compose exec app python manage.py verify_context_readiness
 docker compose exec app python manage.py verify_personal_os_readiness
+docker compose exec app python manage.py verify_context_priority_readiness
 ```
 
 Migrations and canonical seeding run safely on startup.
@@ -466,9 +498,9 @@ Migrations and canonical seeding run safely on startup.
   reconstructs 33 identifiable rows; L06, L15, L32, and L37 remain
   baseline-only. All four friendship-mapped rows are active.
 - Dynamic need remains provisional. M3B updates assessment v1.1's
-  gap-and-confidence need function. M6C-01 can persist explicit context in its
-  new service boundary, but ordinary UI does not collect it and recommendation
-  code does not consume it in this batch.
+  gap-and-confidence need function. M6C-03 can produce an explicit backend
+  context-priority result, but ordinary UI does not collect or consume it and
+  `build_profile_summary` remains on the unchanged no-context path.
 - Event reversal is an instance-owner operation and is intentionally
   permanent in M3B. Restore a verified backup if the wrong event is reversed.
 - The minimized JSON export omits direct identity and free text, but its
