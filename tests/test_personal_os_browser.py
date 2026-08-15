@@ -282,7 +282,9 @@ def test_alternative_is_distinct_or_explicitly_unavailable(client, user, seeded)
     response = client.post(source_url, {"intent": "request_alternative"})
     assert response.status_code == 200
     assert target.name.encode() in response.content
-    assert b'data-context-mode="provide" aria-labelledby="factor-heading" hidden' in response.content
+    assert (
+        b'data-context-mode="provide" aria-labelledby="factor-heading" hidden' in response.content
+    )
     assert b'data-context-mode="not_applicable" class="inline-note" hidden' not in response.content
     assert b'data-context-mode="defer" aria-labelledby="defer-heading" hidden' in response.content
     assert response.context["priority"].alternative_protocol == target
