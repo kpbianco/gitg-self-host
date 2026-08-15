@@ -216,7 +216,7 @@ growth/services/practice_content_reports.py	36865
 growth/services/profile.py	6988
 growth/services/score_state.py	29064
 growth/services/scoring.py	20652
-growth/static/growth/app.css	26912
+growth/static/growth/app.css	26982
 growth/static/growth/assessment.js	16629
 growth/static/growth/contextual_forms.js	2145
 growth/static/growth/personal_os.js	1613
@@ -341,7 +341,7 @@ templates/growth/personal_os.html	6314
 templates/growth/pilot_feedback.html	3952
 templates/growth/practice_check_in.html	3051
 templates/growth/practice_check_in_detail.html	4627
-templates/growth/practice_context.html	4706
+templates/growth/practice_context.html	4876
 templates/growth/practice_list.html	4512
 templates/growth/practice_recommendation.html	4137
 templates/growth/practice_review.html	2679
@@ -388,7 +388,7 @@ tests/test_evidence_engine.py	14065
 tests/test_expansion_readiness.py	1863
 tests/test_m6c_pilot_readiness.py	10041
 tests/test_models.py	2057
-tests/test_personal_os_browser.py	26456
+tests/test_personal_os_browser.py	26773
 tests/test_personal_os_models.py	5683
 tests/test_personal_os_readiness.py	10091
 tests/test_personal_os_services.py	18098
