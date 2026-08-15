@@ -1626,6 +1626,10 @@ summary:focus-visible {
     width: 100%;
   }
 
+  .site-nav > * {
+    min-width: 0;
+  }
+
   .site-nav a,
   .nav-button {
     align-items: center;
@@ -1633,6 +1637,7 @@ summary:focus-visible {
     font-size: 0.78rem;
     justify-content: center;
     min-height: 42px;
+    overflow-wrap: anywhere;
     padding: 7px 5px;
     text-align: center;
     width: 100%;
