@@ -253,3 +253,12 @@ For every later batch:
   clinical, cross-cultural, psychometric, or longitudinal validity;
 - no fabricated specialist-review completion and no weakening of
   `ER-M6A-003`.
+
+## M6D-01 representative cohort
+
+The first Phase B batch is exactly four low-risk source-only drafts across
+domains 08, 09, 10, and 13. It expands coverage from five to nine packages and
+reduces the explicit unauthored ledger from 378 to 374 rows. Its fourteen typed
+action rules are synthetic shadow fixtures only. The batch does not project a
+new runtime protocol, persist typed evidence, change recommendations or score
+state, clear M6B governance, or authorize the next cohort.

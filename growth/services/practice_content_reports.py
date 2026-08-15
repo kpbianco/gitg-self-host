@@ -573,10 +573,18 @@ def _originality_report(
             evidence_rules[action_id] = json.dumps(
                 action["evidence_rules"], sort_keys=True, separators=(",", ":")
             )
-            all_markers = {
-                *action["evidence_rules"]["primary_markers"],
-                *action["evidence_rules"]["supporting_markers"],
-            }
+            rules = action["evidence_rules"]
+            if rules["schema_version"] == "practice-observation-v1":
+                all_markers = {
+                    *rules["primary_markers"],
+                    *rules["supporting_markers"],
+                }
+            else:
+                all_markers = {
+                    measurement["measurement_id"]
+                    for measurement in rules["measurements"]
+                    if measurement["role"] in {"primary", "supporting"}
+                }
             completion_only = sorted(
                 marker
                 for marker in all_markers
@@ -726,11 +734,11 @@ def _originality_report(
             "duration_day_distribution": {
                 str(key): value for key, value in sorted(durations.items())
             },
-            "all_current_protocols_have_three_actions": action_counts == Counter({3: 5}),
-            "four_current_protocols_have_ten_days": durations[10] == 4,
+            "single_action_count_for_all_protocols": len(action_counts) == 1,
+            "single_duration_for_all_protocols": len(durations) == 1,
             "disposition": (
-                "Warnings are accepted for the frozen five-protocol slice and become "
-                "anti-boilerplate review gates before later authoring batches."
+                "Structural repetition is reported as a human-review routing signal. "
+                "It is not automatically accepted and does not establish originality."
             ),
         },
         "semantic_review_boundary": (

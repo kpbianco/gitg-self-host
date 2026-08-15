@@ -1,0 +1,144 @@
+{
+  "boundary": "The cohort is individually authored source-only draft content with synthetic shadow replay. It adds no typed persistence, runtime projection, production activation, specialist acceptance, participant validation, or mastery claim.",
+  "catalog": {
+    "canonical_protocol_packages": 9,
+    "competencies": 383,
+    "practice_actions": 29,
+    "score_active_protocols": 1,
+    "uncovered_competencies": 374
+  },
+  "catalog_content_hash": "4b063f4e05f25548891697f42e697410563f57c1ae4fcff910e030b40b0ad7d6",
+  "cohort": [
+    {
+      "action_count": 3,
+      "availability": "inactive",
+      "competency_id": "08.06",
+      "domain_id": "08",
+      "editorial_status": "draft",
+      "protocol_family_id": "PF-BEHAVIORAL-EXPERIMENT",
+      "protocol_stable_id": "PRACTICE-MOTIVATION-INDEPENDENT-START-01",
+      "recommendation_target_lever_ids": [
+        "L10"
+      ],
+      "runtime_projection": "none",
+      "score_active": false,
+      "scoring_policy_id": "SP-SHADOW-ONLY"
+    },
+    {
+      "action_count": 3,
+      "availability": "inactive",
+      "competency_id": "09.12",
+      "domain_id": "09",
+      "editorial_status": "draft",
+      "protocol_family_id": "PF-ARTIFACT-PLAN",
+      "protocol_stable_id": "PRACTICE-DECISION-RECORD-01",
+      "recommendation_target_lever_ids": [
+        "L14"
+      ],
+      "runtime_projection": "none",
+      "score_active": false,
+      "scoring_policy_id": "SP-SHADOW-ONLY"
+    },
+    {
+      "action_count": 4,
+      "availability": "inactive",
+      "competency_id": "10.02",
+      "domain_id": "10",
+      "editorial_status": "draft",
+      "protocol_family_id": "PF-SKILL-REHEARSAL",
+      "protocol_stable_id": "PRACTICE-DELIBERATE-PRACTICE-01",
+      "recommendation_target_lever_ids": [
+        "L15"
+      ],
+      "runtime_projection": "none",
+      "score_active": false,
+      "scoring_policy_id": "SP-SHADOW-ONLY"
+    },
+    {
+      "action_count": 4,
+      "availability": "inactive",
+      "competency_id": "13.02",
+      "domain_id": "13",
+      "editorial_status": "draft",
+      "protocol_family_id": "PF-AUDIT-REDESIGN",
+      "protocol_stable_id": "PRACTICE-HOME-UPKEEP-SYSTEM-01",
+      "recommendation_target_lever_ids": [
+        "L18"
+      ],
+      "runtime_projection": "none",
+      "score_active": false,
+      "scoring_policy_id": "SP-SHADOW-ONLY"
+    }
+  ],
+  "contract_version": "GG-M6D-01-AUTHORING-READINESS-1.0",
+  "fixture": {
+    "action_count": 14,
+    "action_ids": [
+      "PRACTICE-DECISION-RECORD-01-A1",
+      "PRACTICE-DECISION-RECORD-01-A2",
+      "PRACTICE-DECISION-RECORD-01-A3",
+      "PRACTICE-DELIBERATE-PRACTICE-01-A1",
+      "PRACTICE-DELIBERATE-PRACTICE-01-A2",
+      "PRACTICE-DELIBERATE-PRACTICE-01-A3",
+      "PRACTICE-DELIBERATE-PRACTICE-01-A4",
+      "PRACTICE-HOME-UPKEEP-SYSTEM-01-A1",
+      "PRACTICE-HOME-UPKEEP-SYSTEM-01-A2",
+      "PRACTICE-HOME-UPKEEP-SYSTEM-01-A3",
+      "PRACTICE-HOME-UPKEEP-SYSTEM-01-A4",
+      "PRACTICE-MOTIVATION-INDEPENDENT-START-01-A1",
+      "PRACTICE-MOTIVATION-INDEPENDENT-START-01-A2",
+      "PRACTICE-MOTIVATION-INDEPENDENT-START-01-A3"
+    ],
+    "case_result_hashes": {
+      "M6D01-01-SUPPORTIVE": "ad497f13fc9cddd260c0005cbb2fcec1eb8832fea22cc4dbbf89ca47df624044",
+      "M6D01-02-MIXED": "d492f8bdffdba5eaa04f8dee4a33d7dc2a18f0585f252166408fbf323cb5f344",
+      "M6D01-03-CONTRADICTORY": "2cd2af1e264257b788dfa7025f63d3e2f57cdcb218e5d0e66cdf6c8c5448eaeb",
+      "M6D01-04-INCONCLUSIVE": "e3c47bf86da008affc07c21e968a8eff489b0e19d3a99d594837c3451fcb7cbe",
+      "M6D01-05-UNKNOWN": "498b9c77ec1cbf47838882f5f40966dbfd719f85885fdbd2948583cc218a0862",
+      "M6D01-06-NOT-OBSERVED": "af90e12d4210179527beb965fb51af2fb9bcd1b9181c32d40798ae52532ec24d",
+      "M6D01-07-NOT-APPLICABLE": "aabb5df0c476d4917d01440e294e5d09474dda87e891cb0d6a236c0bef9ac054",
+      "M6D01-08-DEFERRED": "18a7742343d7ff19ddfbcb30a1004206169327e9ff7e136fdc12790b05fdb0ae",
+      "M6D01-09-ADVERSE": "c1d6a9664173cd08e4bdd8e94f2c73ca48eb1394a89d744bb3f0e0d728657738",
+      "M6D01-10-STALE": "cb221873a6549c8b0ea357db9d53a7ce88d95496fb4fde3b33d1ecf3fbe7333d",
+      "M6D01-11-REPEATED": "46e7cac94c60bdaa03517beb632feea66a1b196ae668d2f91b8545e5cad49f7e",
+      "M6D01-12-SUPPORTIVE": "59587f87594258146f471dde07b5df5308a85be0529aafca34cceb8700e811fc",
+      "M6D01-13-SUPPORTIVE": "2598eaa2fdcd88c1a74f3376f2f0d3c9ce25f5c8702a7427120276289498327b",
+      "M6D01-14-DUPLICATE-ORIGIN": "c18de814890073e3acb108b0d603ad4c0b838966e3a44c186a54a1a7282d855b"
+    },
+    "cross_epoch_rejected": true,
+    "duplicate_event_rejected": true,
+    "duplicate_origin_rejected": true,
+    "modes": [
+      "adverse",
+      "contradictory",
+      "deferred",
+      "duplicate_origin",
+      "inconclusive",
+      "mixed",
+      "not_applicable",
+      "not_observed",
+      "repeated",
+      "stale",
+      "supportive",
+      "unknown"
+    ],
+    "path": "tests/fixtures/evidence/m6d_01_protocols_v1.json",
+    "sha256": "9ba902ead2ba077498f01de73b27d4a236fa2e152756f522b45a2535edfb82ab"
+  },
+  "fixture_sha256": "9ba902ead2ba077498f01de73b27d4a236fa2e152756f522b45a2535edfb82ab",
+  "governance": {
+    "expert_review_id": "ER-M6A-003",
+    "expert_review_status": "pending",
+    "m6b_accepted": false,
+    "release_candidates": 0,
+    "research_gap_id": "RG-M6A-002",
+    "research_gap_status": "open",
+    "source_complete_protocols": 0
+  },
+  "runtime": {
+    "actions": 15,
+    "protocols": 5,
+    "score_active_protocols": 1,
+    "typed_protocols": 0
+  }
+}

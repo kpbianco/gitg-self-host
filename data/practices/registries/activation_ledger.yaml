@@ -1,5 +1,26 @@
 schema_version: GG-SCORE-ACTIVATION-1.0
 activations:
+  - protocol_stable_id: PRACTICE-MOTIVATION-INDEPENDENT-START-01
+    scoring_policy_id: SP-SHADOW-ONLY
+    score_active: false
+    activation_status: inactive
+    approved_contract: null
+    decision_reference: docs/architecture/0010-source-only-representative-protocol-authoring.md
+    shadow_test_status: passed
+  - protocol_stable_id: PRACTICE-DECISION-RECORD-01
+    scoring_policy_id: SP-SHADOW-ONLY
+    score_active: false
+    activation_status: inactive
+    approved_contract: null
+    decision_reference: docs/architecture/0010-source-only-representative-protocol-authoring.md
+    shadow_test_status: passed
+  - protocol_stable_id: PRACTICE-DELIBERATE-PRACTICE-01
+    scoring_policy_id: SP-SHADOW-ONLY
+    score_active: false
+    activation_status: inactive
+    approved_contract: null
+    decision_reference: docs/architecture/0010-source-only-representative-protocol-authoring.md
+    shadow_test_status: passed
   - protocol_stable_id: PRACTICE-BOUNDARY-01
     scoring_policy_id: SP-SHADOW-ONLY
     score_active: false
@@ -21,6 +42,13 @@ activations:
     approved_contract: GG-SCORE-STATE-1.0
     decision_reference: docs/PRODUCT_DECISIONS.md#decision-035
     shadow_test_status: accepted_and_activated
+  - protocol_stable_id: PRACTICE-HOME-UPKEEP-SYSTEM-01
+    scoring_policy_id: SP-SHADOW-ONLY
+    score_active: false
+    activation_status: inactive
+    approved_contract: null
+    decision_reference: docs/architecture/0010-source-only-representative-protocol-authoring.md
+    shadow_test_status: passed
   - protocol_stable_id: PRACTICE-PLAY-01
     scoring_policy_id: SP-SHADOW-ONLY
     score_active: false

@@ -30,6 +30,7 @@ make context-check
 make personal-os-check
 make context-priority-check
 make m6c-pilot-check
+make m6d-01-check
 make e2e
 make compose-smoke
 ```
@@ -90,7 +91,8 @@ authored values or write database state.
 - exact five-protocol runtime projection parity with the post-M4 fingerprint;
 - canonical parent/domain and recommendation-target-subset validation before
   writes;
-- deterministic 383-row coverage with five projected and 378 unauthored rows,
+- deterministic 383-row coverage deriving the current source frontier while
+  preserving five projected runtime packages,
   27-domain and 37-lever matrices, and explicit risk/scoring/activation state;
 - exact/normalized/near-duplicate, reflection, action-shape, duration,
   evidence-rule, and known Notion journal-prompt originality reporting;
@@ -270,6 +272,17 @@ Playwright journeys, and this exact Docker Compose drill on pull requests and
 `main`. One aggregate **Pilot readiness gate** succeeds only when all three
 jobs succeed. Configure branch protection to require that aggregate check for
 pilot-bound merges.
+
+## M6D-01 authoring gate
+
+`make m6d-01-check` builds an isolated migrated and idempotently seeded
+database, checks report freshness, replays the fourteen synthetic typed cases,
+calls both prerequisite readiness contracts, and verifies the exact cohort and
+inactive ledger state without database writes. It is included in the full
+repository contract, hosted quality job, and each Compose initial,
+recreation, and restore phase. Its tests pin permanent cohort facts while
+shared report tests derive any later source-catalog frontier from canonical
+state.
 
 ## Current scoring boundary
 

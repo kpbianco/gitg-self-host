@@ -197,3 +197,11 @@ separate from the legacy runtime projection and practice-catalog hashes.
 The synthetic M6B fixtures demonstrate deterministic software behavior, not
 psychometric calibration. Pending review `ER-M6A-003` blocks M6B acceptance
 and mass authoring.
+
+## M6D-01 scoring boundary
+
+All four M6D-01 packages use `SP-SHADOW-ONLY`, remain inactive and unprojected,
+and have no approved production contract. Their typed fixtures distinguish
+protocol performance from a single direct competency contribution but write
+neither. The production runtime, need ranking, current lever state, snapshots,
+recommendations, and friendship-only activation remain unchanged.

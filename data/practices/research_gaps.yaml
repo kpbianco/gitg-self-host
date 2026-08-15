@@ -77,3 +77,47 @@ gaps:
     question: What evidence supports a condition-comparison attention experiment across disability, neurodiversity, pain, fatigue, stress, and varied tasks?
     current_evidence: Internal product and accessibility design only.
     resolution_gate: External research and disability-access review before content release claims or scoring.
+  - gap_id: RG-M6D-001
+    scope: PRACTICE-MOTIVATION-INDEPENDENT-START-01
+    status: open
+    priority: before_content_release_claim
+    blocking_gates:
+      - source_complete
+      - release_candidate
+      - score_activation
+    question: How does a bounded start comparison perform across disability, fatigue, depression, pain, caregiving load, resource scarcity, and culturally varied expectations without turning rest or support into deficit?
+    current_evidence: One implementation-intention meta-analysis plus bounded product-design and safety constraints; no specialist, accessibility-population, cultural, or participant review.
+    resolution_gate: Trained content and accessibility/privacy-safety review plus relevant population evidence before release-candidate or scoring status.
+  - gap_id: RG-M6D-002
+    scope: PRACTICE-DECISION-RECORD-01
+    status: open
+    priority: before_content_release_claim
+    blocking_gates:
+      - source_complete
+      - release_candidate
+      - score_activation
+    question: Which minimal prospective record and update criteria improve review without increasing surveillance, hindsight reconstruction, legal exposure, or sensitive third-party data?
+    current_evidence: Outcome-bias primary research plus a privacy-minimized product-design judgment; no intervention-effectiveness or cross-context validation.
+    resolution_gate: Decision-science, privacy, and context review of the exact artifact criteria before release-candidate or scoring status.
+  - gap_id: RG-M6D-003
+    scope: PRACTICE-DELIBERATE-PRACTICE-01
+    status: open
+    priority: before_content_release_claim
+    blocking_gates:
+      - source_complete
+      - release_candidate
+      - score_activation
+    question: Which feedback and retry designs are valid across low-stakes skills, access needs, teaching relationships, and domains where expert practice structures differ?
+    current_evidence: Foundational deliberate-practice research and a limiting meta-analysis; no validation of this short protocol or its typed rubric.
+    resolution_gate: Domain, accessibility, and measurement review of the exact practice loop before release-candidate or scoring status.
+  - gap_id: RG-M6D-004
+    scope: PRACTICE-HOME-UPKEEP-SYSTEM-01
+    status: open
+    priority: before_content_release_claim
+    blocking_gates:
+      - source_complete
+      - release_candidate
+      - score_activation
+    question: How should a home-upkeep audit adapt to disability, tenancy, household roles, scarcity, culture, and different housing types while reliably excluding hazardous work?
+    current_evidence: General NCHH healthy-home guidance plus a bounded non-hazardous product-design protocol; no participant or housing/accessibility specialist review.
+    resolution_gate: Housing-safety, tenancy/privacy, and accessibility review before release-candidate or scoring status.

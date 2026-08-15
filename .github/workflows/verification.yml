@@ -35,6 +35,7 @@ jobs:
       - run: make personal-os-check PYTHON=python
       - run: make context-priority-check PYTHON=python
       - run: make m6c-pilot-check PYTHON=python
+      - run: make m6d-01-check PYTHON=python
 
   browser:
     name: Playwright core journeys

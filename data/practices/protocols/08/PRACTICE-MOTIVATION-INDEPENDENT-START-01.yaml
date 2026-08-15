@@ -1,0 +1,296 @@
+schema_version: GG-PRACTICE-CONTENT-1.0
+protocol_version: 1.0.0
+stable_id: PRACTICE-MOTIVATION-INDEPENDENT-START-01
+slug: compare-two-motivation-independent-starts
+name: Compare Two Motivation-Independent Starts
+parent_competency_id: '08.06'
+domain_id: '08'
+governance:
+  availability: inactive
+  editorial_status: draft
+  runtime_projection: none
+  risk_class_id: RISK-LOW
+  scoring_policy_id: SP-SHADOW-ONLY
+  scoring_status: shadow_only
+  source_ids:
+  - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-M6D-MOTIVATION-IMPLEMENTATION-INTENTIONS
+  authoring:
+    provenance: Individually authored M6D-01 source package for competency 08.06; it is not projected into the runtime.
+    content_review_status: pending
+    research_review_status: pending
+    safety_review_status: pending_specialist_expansion_review
+    accessibility_review_status: pending
+    originality_review_status: pending
+    ui_test_status: not_applicable
+    last_reviewed: null
+    known_gap_ids:
+    - RG-M6A-001
+    - RG-M6A-002
+    - RG-M6D-001
+    expert_review_ids:
+    - ER-M6A-003
+  legacy_compatibility_exceptions: []
+  deprecation:
+    deprecated: false
+    replaced_by: null
+meaning_and_fit:
+  purpose: Compare two deliberately chosen, very small starts during low-motivation windows and identify whether a concrete start cue made beginning more workable.
+  why_recommended: The selected competency concerns beginning chosen necessary work without making inspiration, confidence, or energy a prerequisite.
+  claims:
+  - statement: Naming a specific situation and intended response is a reasonable design basis for this bounded start experiment.
+    classification: empirical_finding
+    source_ids:
+    - SRC-M6D-MOTIVATION-IMPLEMENTATION-INTENTIONS
+    limitations: Implementation-intention research does not establish that this exact protocol works for every person, task, disability, health state, or caregiving context.
+  - statement: Low energy, rest, fatigue, pain, disability, depression, sleep need, or caregiving load is context for scope and safety, not evidence of failure or reduced worth.
+    classification: product_design_judgment
+    source_ids:
+    - SRC-CANONICAL-CURRICULUM-V2
+    limitations: This is a dignity and safety boundary, not a clinical assessment or a claim that all starts should proceed.
+  applicability_question: Is there one safe, lawful, low-stakes, genuinely necessary task that can be reduced to a two-to-five-minute start in two chosen windows without sacrificing sleep, care, health, or recovery?
+  not_applicable_behavior: Record not applicable or defer without penalty when no safe or necessary task fits; do not infer avoidance, laziness, low discipline, or deficit.
+  readiness_considerations: Proceed only when the person can freely choose the task, two feasible windows, and a reduced start that respects current energy, pain, disability, care duties, and recovery needs.
+  opportunity_considerations: Requires two naturally occurring low-motivation windows within seven days; manufactured sleep loss, distress, deprivation, pressure, or withholding support is not an opportunity.
+  prerequisites:
+  - One user-chosen safe, lawful, low-stakes necessary task.
+  - A start step that can end after two to five minutes with no penalty.
+  dependencies: []
+  safe_alternatives:
+  - Defer the task, ask for support, or choose recovery when the window is unsafe or capacity is insufficient.
+  - Reduce the start to opening materials, naming the next physical step, or arranging a later supported start.
+  role_conditions:
+  - Caregiving, employment, study, and household roles do not override sleep, health, access, consent, or emergency responsibilities.
+  pathway_conditions:
+  - Prompts, body doubling, assistive technology, pacing, seated or remote options, and another person's practical help are valid supports and must be recorded without moral judgment.
+  worldview_conditions:
+  - The practice does not require a productivity ethic or belief that effort, output, self-denial, or constant action establishes worth.
+intervention:
+  protocol_class: PF-BEHAVIORAL-EXPERIMENT
+  duration_days: 7
+  cadence: Choose one baseline start and one cue-supported start in separate naturally occurring low-motivation windows, then compare only the act of beginning.
+  setup: Choose a necessary low-stakes task and define a reversible two-to-five-minute start. Choose two realistic windows. The second window adds one concrete cue, such as materials placed safely in view, a calendar prompt, or a support person's agreed reminder.
+  privacy_and_boundaries: Use a private task label and structured start indicators only. Do not store task contents, health information, diagnoses, employer or client information, another person's identity, or reasons for low motivation. Do not force action through fatigue, depression, disability, caregiving load, pain, illness, sleep need, fear, coercion, or lack of resources. This is not treatment, diagnosis, productivity monitoring, or proof of character.
+  expected_burden: About 20–30 minutes across setup, two starts, and comparison; either start may end after the planned two-to-five-minute step.
+  action_count_rationale: null
+  foreseeable_misuse:
+  - Treating every low-energy state as resistance to overcome or using the practice to demand unpaid, unsafe, coercive, or excessive work.
+  - Extending the start into an unplanned work session or ranking people by speed, output, persistence, or support needs.
+  exclusions:
+  - Unsafe, medically inappropriate, sleep-depriving, coercive, illegal, high-consequence, or crisis tasks.
+  - Tasks whose delay, attempt, or partial start could create a safety, employment, legal, financial, caregiving, or health hazard.
+  actions:
+  - stable_id: PRACTICE-MOTIVATION-INDEPENDENT-START-01-A1
+    sequence: 1
+    title: Observe one chosen start without adding a cue
+    instructions: In the first feasible low-motivation window, attempt only the pre-defined two-to-five-minute start under usual safe conditions. Record whether the chosen physical start occurred and whether the step stayed within its time boundary. Stop at the boundary unless continuing is freely chosen and safe; output after the start is not measured.
+    expected_time: 5 minutes
+    due_within_days: 3
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-MOTIVATION-INDEPENDENT-START-01
+      action_stable_id: PRACTICE-MOTIVATION-INDEPENDENT-START-01-A1
+      competency_stable_id: '08.06'
+      scoring_policy_id: SP-SHADOW-ONLY
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 30
+      competency_measurement_ids:
+      - baseline_start_occurred
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: baseline_start_occurred
+        kind: boolean
+        role: primary
+        weight: '1'
+        allowed_provenance: [firsthand_self_report]
+        expected: true
+      - measurement_id: baseline_scope_respected
+        kind: duration
+        role: supporting
+        weight: '0.5'
+        allowed_provenance: [firsthand_self_report]
+        direction: at_most
+        minimum: '0'
+        target: '5'
+        maximum: '15'
+        unit: minutes
+      - measurement_id: baseline_capacity_harm
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance: [firsthand_self_report]
+        expected: true
+  - stable_id: PRACTICE-MOTIVATION-INDEPENDENT-START-01-A2
+    sequence: 2
+    title: Try one cue-supported start
+    instructions: In a separate feasible low-motivation window, use the same sized start with exactly one chosen cue or support. Record whether the start occurred and which allowlisted support category was used, without recording private task content or another person's identity. Defer if capacity or safety has changed.
+    expected_time: 5 minutes
+    due_within_days: 6
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-MOTIVATION-INDEPENDENT-START-01
+      action_stable_id: PRACTICE-MOTIVATION-INDEPENDENT-START-01-A2
+      competency_stable_id: '08.06'
+      scoring_policy_id: SP-SHADOW-ONLY
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 30
+      competency_measurement_ids:
+      - cued_start_occurred
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: cued_start_occurred
+        kind: boolean
+        role: primary
+        weight: '1'
+        allowed_provenance: [firsthand_self_report]
+        expected: true
+      - measurement_id: cue_category_recorded
+        kind: artifact
+        role: supporting
+        weight: '0.5'
+        allowed_provenance: [reviewed_artifact]
+        criteria: [cue_selected, one_cue_only, no_private_content]
+      - measurement_id: cued_capacity_harm
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance: [firsthand_self_report]
+        expected: true
+  - stable_id: PRACTICE-MOTIVATION-INDEPENDENT-START-01-A3
+    sequence: 3
+    title: Compare starts without judging capacity
+    instructions: Review the two structured start records. Mark whether zero, one, or two chosen starts occurred and whether the cue was more workable, less workable, or indistinguishable. Keep differences in energy, pain, care duties, access, and timing as context; do not convert them into a character judgment or rewrite a deferred window as failure.
+    expected_time: 10 minutes
+    due_within_days: 7
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-MOTIVATION-INDEPENDENT-START-01
+      action_stable_id: PRACTICE-MOTIVATION-INDEPENDENT-START-01-A3
+      competency_stable_id: '08.06'
+      scoring_policy_id: SP-SHADOW-ONLY
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 30
+      competency_measurement_ids:
+      - chosen_start_count
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: chosen_start_count
+        kind: count
+        role: primary
+        weight: '1'
+        allowed_provenance: [firsthand_self_report]
+        direction: at_least
+        minimum: '0'
+        target: '2'
+        maximum: '2'
+      - measurement_id: comparison_boundaries_present
+        kind: artifact
+        role: supporting
+        weight: '0.5'
+        allowed_provenance: [reviewed_artifact]
+        criteria: [two_windows_distinguished, defer_preserved, capacity_not_scored]
+      - measurement_id: comparison_used_for_coercion
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance: [firsthand_self_report]
+        expected: true
+  adaptations:
+    low_resource:
+    - Use a free calendar cue, an existing object placed safely, or a self-written non-private task label; no app, purchase, reward, or accountability service is required.
+    accessibility:
+    - Reduce duration, change posture or medium, use assistive technology, use a planning aid or body double, and treat fluctuating capacity or a deferred start as valid context.
+    cultural_context:
+    - Choose a necessary task and support arrangement consistent with the person's roles, collective responsibilities, rest norms, and authority to decide.
+    resource_variants:
+    - If two comparable windows do not occur, retain the first observation as inconclusive and defer comparison rather than manufacturing low motivation.
+  pause_conditions:
+  - Pause when pain, fatigue, low energy, depression symptoms, distress, care duties, access needs, illness, sleep need, or changed circumstances make the chosen start unwise.
+  stop_conditions:
+  - Stop if the task becomes unsafe, coercive, medically inappropriate, sleep-depriving, high-consequence, or harmful, or if another person uses the record for surveillance or pressure.
+  escalation_conditions:
+  - Escalate an unsafe workplace, care, housing, or interpersonal demand to an appropriate support channel rather than using this practice to comply.
+  professional_referral_conditions:
+  - Seek appropriately qualified support when persistent low energy, depression, pain, sleep disruption, disability barriers, or functional difficulty is distressing or safety-affecting; this protocol is not diagnosis or treatment.
+evidence_and_scoring:
+  accepted_evidence_types:
+  - structured firsthand behavioral start
+  - privacy-minimized cue-criteria artifact
+  - bounded two-window comparison
+  observation_contract_version: typed-evidence-rules-v1
+  check_in_fields:
+  - baseline_start_occurred
+  - baseline_scope_respected
+  - baseline_capacity_harm
+  - cued_start_occurred
+  - cue_category_recorded
+  - cued_capacity_harm
+  - chosen_start_count
+  - comparison_boundaries_present
+  - comparison_used_for_coercion
+  adverse_or_contradictory_indicators:
+  - A start displaced needed sleep, care, recovery, access support, medical guidance, or safety.
+  - The record was used to pressure, surveil, rank, shame, or demand output from the participant.
+  - The start was not freely chosen or the task was not safe, lawful, necessary, and low stakes.
+  independence_rule: Record self-directed, planning-aid, or guided support explicitly; support can make a start accessible and never reduces dignity or silently changes a typed value.
+  context_transfer_rule: Evidence is limited to the chosen task, two windows, stated capacity, and cue; it does not establish motivation-independent action across roles or health states.
+  repetition_rule: Each start is a separate immutable origin and later repeats use the typed contract's explicit diminishing multipliers; duplicate origins are rejected.
+  recency_rule: Rules withhold observations older than the explicit 30-day bound; no unrecorded retention assumption applies.
+  performance_rubric: Performance concerns whether the bounded chosen start occurred, whether its scope was respected, and whether the two records could be compared—not output, endurance, speed, or suppression of need.
+  evidence_quality_rubric: Quality requires structured observations for separate windows, an explicit cue category, and preserved defer and capacity context; task prose, mood narrative, and productivity are excluded.
+  scoring_eligibility: This package is source-only and shadow-only; no typed result is persisted or eligible for production state.
+  competency_contribution: Designated typed primary measurements may produce context-bound direct competency shadow evidence only; protocol performance remains distinct and is never counted twice.
+  canonical_lever_allocation: parent_competency_mapping
+  recommendation_target_lever_ids: [L10]
+  minimum_evidence_before_state_update: No current-state update is permitted under SP-SHADOW-ONLY, regardless of completion or evidence quantity.
+  withholding_conditions:
+  - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin, or adverse evidence under the typed contract.
+  - Withhold any record that contains private task content, health narrative, another person's identity, implicit motivation judgment, or evidence outside its assessment epoch.
+completion_and_review:
+  completion_criteria:
+  - One usual-condition bounded start was attempted.
+  - One cue-supported bounded start was attempted; an explicit deferral closes the protocol without claiming completion.
+  - The two structured records were compared without scoring output, energy, disability, rest, care load, or worth.
+  completion_rules:
+    minimum_completed: 2
+    substantive_markers:
+    - baseline_start_occurred
+    - cued_start_occurred
+    - chosen_start_count
+    marker_mode: any
+  mastery_disclaimer: Completing this practice does not establish mastery.
+  progression_criteria: Repeat with the same task only if both windows were safe and the comparison identifies a freely chosen workable cue; otherwise adapt, defer, or stop.
+  transfer_limit: Two bounded starts do not establish reliability across tasks, seasons, disability states, care loads, workplaces, or other contexts.
+  reflection:
+    before: Is this task genuinely necessary, freely chosen, safely reducible, and compatible with sleep, care, health, disability, pain, energy, and recovery today?
+    during: Did the chosen start occur within its boundary, and did the cue or support make access more workable without pressure?
+    after: Were the two windows comparable, what remained unknown, and should this cue be repeated, adapted, deferred, or discarded?
+  review_guidance:
+    repeat: Repeat only the safer, more workable start design in another naturally occurring window.
+    adapt: Reduce scope, change the cue or medium, add support, or move the window without labeling capacity as failure.
+    stop: Stop when the task, timing, demand, health state, care obligation, or use of the record violates a boundary.
+    escalate: Use appropriate qualified, workplace, educational, disability, care, or safety support for barriers beyond a low-risk behavioral experiment.
+  evidence_examples:
+    supportive: Both chosen starts occurred within scope and the structured comparison preserved capacity and defer context.
+    mixed: One start occurred and one was safely deferred, or the cue helped access while adding another burden.
+    contradictory: The cue made beginning less workable, the start exceeded scope, or continuing displaced a needed support.
+    inconclusive: The windows were not comparable, no low-motivation window occurred, or the observation state was unknown or not observed.
+presentation:
+  setup_copy:
+    context_heading: Choose one safe two-to-five-minute start.
+    boundary_heading: Capacity, rest, support needs, and defer decisions are not failure.
+    timing_hint: Use two naturally occurring feasible windows within seven days.
+    applicability_heading: One necessary low-stakes task with a reversible start
+  check_in_labels:
+    baseline_start_occurred: The usual-condition physical start occurred
+    baseline_scope_respected: The usual-condition start stayed within the bounded window
+    baseline_capacity_harm: The usual-condition start harmed capacity, support, or safety
+    cued_start_occurred: The cue-supported physical start occurred
+    cue_category_recorded: The allowlisted cue criteria were recorded
+    cued_capacity_harm: The cue-supported start harmed capacity, support, or safety
+    chosen_start_count: Number of the two chosen starts that occurred
+    comparison_boundaries_present: The comparison preserved window, defer, and capacity boundaries
+    comparison_used_for_coercion: The comparison was used for pressure, surveillance, or coercion
+  completion_copy: Compare only the bounded starts and cue. Do not score output, endurance, health, energy, care load, support use, or worth.
+  plain_language_evidence: The structured record shows what happened in two chosen start windows and whether one cue was workable, including defer, no difference, or harm.
+  display_order: 6

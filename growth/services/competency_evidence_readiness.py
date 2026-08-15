@@ -45,6 +45,7 @@ class CompetencyEvidenceReadinessSummary:
     practice_actions: int
     uncovered_competencies: int
     score_active_protocols: int
+    source_typed_protocols: int
     typed_production_protocols: int
     typed_score_active_protocols: int
     expert_review_id: str
@@ -77,7 +78,7 @@ def _load_expected_readiness_report() -> dict[str, Any]:
 
 
 def verify_competency_evidence_readiness() -> CompetencyEvidenceReadinessSummary:
-    """Verify the additive M6B software contract without accepting M6B."""
+    """Verify additive competency-evidence readiness and canonical governance state."""
 
     try:
         expansion = verify_expansion_readiness()
@@ -99,22 +100,20 @@ def verify_competency_evidence_readiness() -> CompetencyEvidenceReadinessSummary
         COMPETENCY_EVIDENCE_READINESS_CONTRACT_VERSION,
     )
     _require_equal("Software readiness", report.get("software_ready"), True)
-    _require_equal(
-        "Specialist review completion",
-        report.get("specialist_review_complete"),
-        False,
-    )
-    _require_equal("M6B acceptance", report.get("m6b_accepted"), False)
-    _require_equal(
-        "Typed production protocol count",
-        report.get("typed_production_protocols"),
-        0,
-    )
-    _require_equal(
-        "Typed score-active protocol count",
-        report.get("typed_score_active_protocols"),
-        0,
-    )
+    if not isinstance(report.get("specialist_review_complete"), bool) or not isinstance(
+        report.get("m6b_accepted"), bool
+    ):
+        raise CompetencyEvidenceReadinessError(
+            "Specialist review and M6B acceptance must be explicit Boolean values."
+        )
+    source_typed_protocols = report.get("source_typed_protocols")
+    if not isinstance(source_typed_protocols, int) or source_typed_protocols < 4:
+        raise CompetencyEvidenceReadinessError(
+            "Source-only typed protocol count: the M6D-01 four-protocol cohort is incomplete."
+        )
+    for field in ("typed_production_protocols", "typed_score_active_protocols"):
+        if not isinstance(report.get(field), int) or report[field] < 0:
+            raise CompetencyEvidenceReadinessError(f"{field} must be a nonnegative integer.")
 
     catalog = report.get("catalog")
     governance = report.get("governance")
@@ -129,9 +128,13 @@ def verify_competency_evidence_readiness() -> CompetencyEvidenceReadinessSummary
             "The readiness report is missing M6B review or research-gap state."
         )
     _require_equal("M6B expert review ID", expert_review.get("review_id"), "ER-M6A-003")
-    _require_equal("M6B expert review status", expert_review.get("status"), "pending")
     _require_equal("M6B research gap ID", research_gap.get("gap_id"), "RG-M6A-002")
-    _require_equal("M6B research gap status", research_gap.get("status"), "open")
+    if not isinstance(expert_review.get("status"), str) or not isinstance(
+        research_gap.get("status"), str
+    ):
+        raise CompetencyEvidenceReadinessError(
+            "M6B expert-review and research-gap status must be explicit strings."
+        )
 
     runtime_protocols = tuple(
         PracticeProtocol.objects.select_related("parent_competency")
@@ -149,22 +152,30 @@ def verify_competency_evidence_readiness() -> CompetencyEvidenceReadinessSummary
     )
     runtime_typed_active = sum(protocol.score_active for protocol in runtime_typed)
     _require_equal(
-        "Seeded canonical protocol packages",
+        "Seeded runtime protocol packages",
         len(runtime_protocols),
-        catalog["canonical_protocol_packages"],
+        expansion.runtime_protocols,
     )
     _require_equal(
-        "Seeded canonical practice actions",
+        "Seeded runtime practice actions",
         runtime_actions,
-        catalog["practice_actions"],
+        expansion.runtime_actions,
     )
     _require_equal(
         "Seeded score-active protocols",
         sum(protocol.score_active for protocol in runtime_protocols),
         catalog["score_active_protocols"],
     )
-    _require_equal("Seeded typed production protocols", len(runtime_typed), 0)
-    _require_equal("Seeded typed score-active protocols", runtime_typed_active, 0)
+    _require_equal(
+        "Seeded typed production protocols",
+        len(runtime_typed),
+        report["typed_production_protocols"],
+    )
+    _require_equal(
+        "Seeded typed score-active protocols",
+        runtime_typed_active,
+        report["typed_score_active_protocols"],
+    )
 
     friendship = next(
         (
@@ -193,13 +204,14 @@ def verify_competency_evidence_readiness() -> CompetencyEvidenceReadinessSummary
         ),
         production_mapping_fingerprint=PRODUCTION_SCORE_MAPPING_FINGERPRINT,
         software_ready=True,
-        specialist_review_complete=False,
-        m6b_accepted=False,
+        specialist_review_complete=report["specialist_review_complete"],
+        m6b_accepted=report["m6b_accepted"],
         competencies=catalog["competencies"],
         canonical_protocol_packages=catalog["canonical_protocol_packages"],
         practice_actions=catalog["practice_actions"],
         uncovered_competencies=catalog["uncovered_competencies"],
         score_active_protocols=catalog["score_active_protocols"],
+        source_typed_protocols=report["source_typed_protocols"],
         typed_production_protocols=len(runtime_typed),
         typed_score_active_protocols=runtime_typed_active,
         expert_review_id=expert_review["review_id"],

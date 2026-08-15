@@ -2,15 +2,23 @@ schema_version: GG-PRACTICE-RELEASE-1.0
 release_id: M6A-CANONICAL-PRACTICE-FOUNDATION-1
 content_schema_version: GG-PRACTICE-CONTENT-1.0
 protocol_files:
+  - protocols/08/PRACTICE-MOTIVATION-INDEPENDENT-START-01.yaml
   - protocols/08/PRACTICE-PRESENCE-01.yaml
+  - protocols/09/PRACTICE-DECISION-RECORD-01.yaml
+  - protocols/10/PRACTICE-DELIBERATE-PRACTICE-01.yaml
   - protocols/11/PRACTICE-BOUNDARY-01.yaml
+  - protocols/13/PRACTICE-HOME-UPKEEP-SYSTEM-01.yaml
   - protocols/16/PRACTICE-EMOTIONAL-CUES-01.yaml
   - protocols/17/PRACTICE-FRIENDSHIP-01.yaml
   - protocols/26/PRACTICE-PLAY-01.yaml
 content_files:
   - expert_review_queue.yaml
+  - protocols/08/PRACTICE-MOTIVATION-INDEPENDENT-START-01.yaml
   - protocols/08/PRACTICE-PRESENCE-01.yaml
+  - protocols/09/PRACTICE-DECISION-RECORD-01.yaml
+  - protocols/10/PRACTICE-DELIBERATE-PRACTICE-01.yaml
   - protocols/11/PRACTICE-BOUNDARY-01.yaml
+  - protocols/13/PRACTICE-HOME-UPKEEP-SYSTEM-01.yaml
   - protocols/16/PRACTICE-EMOTIONAL-CUES-01.yaml
   - protocols/17/PRACTICE-FRIENDSHIP-01.yaml
   - protocols/26/PRACTICE-PLAY-01.yaml
@@ -29,6 +37,6 @@ content_files:
   - schema/risk_taxonomy_v1.schema.json
   - schema/scoring_policy_registry_v1.schema.json
   - schema/source_registry_v1.schema.json
-content_hash: 62a61f4440a030cd2b961f0bd56b832ad8102a1b37c05f9bdbdae00a03b3f247
+content_hash: 4b063f4e05f25548891697f42e697410563f57c1ae4fcff910e030b40b0ad7d6
 legacy_projection_version: GG-PRACTICE-RUNTIME-PROJECTION-1.0
 legacy_projection_hash: 274f7244630ed56d56a443a6a699399edade6c67fcf964237559e05b72368e35

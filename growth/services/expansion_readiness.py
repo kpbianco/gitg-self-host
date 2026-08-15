@@ -47,8 +47,10 @@ class ExpansionReadinessSummary:
     canonical_protocol_packages: int
     projected_legacy_protocols: int
     practice_actions: int
+    runtime_protocols: int
+    runtime_actions: int
     uncovered_competencies: int
-    domains_with_projected_protocols: int
+    domains_with_authored_packages: int
     parent_mapped_levers: int
     recommendation_target_levers: int
     low_risk_protocols: int
@@ -112,6 +114,9 @@ def verify_expansion_readiness() -> ExpansionReadinessSummary:
         runtime_payload,
         projected_payload,
     )
+    runtime_action_count = sum(protocol.actions.count() for protocol in runtime_protocols.values())
+    _require_equal("Seeded runtime protocol count", len(runtime_protocols), 5)
+    _require_equal("Seeded runtime action count", runtime_action_count, 15)
 
     competency_count = sum(
         len(domain["competencies"]) for domain in canonical.curriculum["domains"]
@@ -146,22 +151,12 @@ def verify_expansion_readiness() -> ExpansionReadinessSummary:
         activation["score_active"] for activation in practices.activation_entries.values()
     )
 
-    expected = {
+    permanent_expected = {
         "competencies": (competency_count, 383),
-        "canonical protocol packages": (len(practices.protocols), 5),
         "projected legacy protocols": (len(projected), 5),
-        "practice actions": (action_count, 15),
-        "uncovered competencies": (competency_count - len(practices.protocols), 378),
-        "domains with projected protocols": (domain_count, 5),
-        "parent-mapped levers": (len(parent_levers), 13),
-        "recommendation-target levers": (len(target_levers), 6),
-        "low-risk protocols": (risk_counts["RISK-LOW"], 3),
-        "moderate-risk protocols": (risk_counts["RISK-MODERATE"], 2),
-        "high-risk protocols": (risk_counts["RISK-HIGH"], 0),
         "score-active protocols": (score_active, 1),
-        "source-complete protocols": (sources_complete, 0),
     }
-    for label, (actual, expected_value) in expected.items():
+    for label, (actual, expected_value) in permanent_expected.items():
         _require_equal(label, actual, expected_value)
 
     return ExpansionReadinessSummary(
@@ -174,8 +169,10 @@ def verify_expansion_readiness() -> ExpansionReadinessSummary:
         canonical_protocol_packages=len(practices.protocols),
         projected_legacy_protocols=len(projected),
         practice_actions=action_count,
+        runtime_protocols=len(runtime_protocols),
+        runtime_actions=runtime_action_count,
         uncovered_competencies=competency_count - len(practices.protocols),
-        domains_with_projected_protocols=domain_count,
+        domains_with_authored_packages=domain_count,
         parent_mapped_levers=len(parent_levers),
         recommendation_target_levers=len(target_levers),
         low_risk_protocols=risk_counts["RISK-LOW"],

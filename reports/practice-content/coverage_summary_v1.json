@@ -1,36 +1,36 @@
 {
   "canonical_curriculum_source_hash": "6958ccfbe0c0d80b7485ac866a8418578850284b58956f59168429819447dfc5",
   "competencies": {
-    "authored_packages": 5,
+    "authored_packages": 9,
     "projected_legacy": 5,
     "total": 383,
-    "uncovered": 378
+    "uncovered": 374
   },
   "contract_version": "GG-CURRICULUM-EXPANSION-REPORTS-1.0",
   "domains": {
     "total": 27,
-    "with_authored_package": 5,
+    "with_authored_package": 8,
     "with_projected_protocol": 5,
-    "without_authored_package": 22
+    "without_authored_package": 19
   },
   "levers": {
-    "covered_through_parent_mapping": 13,
-    "recommendation_targets": 6,
+    "covered_through_parent_mapping": 21,
+    "recommendation_targets": 10,
     "total": 37
   },
-  "practice_catalog_content_hash": "62a61f4440a030cd2b961f0bd56b832ad8102a1b37c05f9bdbdae00a03b3f247",
+  "practice_catalog_content_hash": "4b063f4e05f25548891697f42e697410563f57c1ae4fcff910e030b40b0ad7d6",
   "protocols": {
-    "actions": 15,
+    "actions": 29,
     "risk_classes": {
-      "RISK-LOW": 3,
+      "RISK-LOW": 7,
       "RISK-MODERATE": 2
     },
     "score_active": 1,
     "scoring_policies": {
       "SP-SELF-REPORT-ELIGIBLE": 1,
-      "SP-SHADOW-ONLY": 4
+      "SP-SHADOW-ONLY": 8
     },
-    "total": 5
+    "total": 9
   },
   "release_candidates": 0,
   "sources_complete": 0

@@ -112,3 +112,14 @@ make curriculum-check
 `GG-CURRICULUM-EXPANSION-READINESS-1.0`. The additive verifier calls the
 unchanged `GG-PILOT-READINESS-1.0`, checks current reports, validates exact
 coverage counts, and compares canonical projections with the seeded runtime.
+
+## M6D-01 source-only cohort
+
+M6D-01 adds four draft packages for `08.06`, `09.12`, `10.02`, and `13.02`.
+The source catalog therefore has nine packages and twenty-nine actions while
+the projected ORM runtime stays at five protocols and fifteen actions. A typed
+package must use `typed-evidence-rules-v1` uniformly, remain unprojected, and
+give every action an exact sibling protocol/action/competency/policy identity.
+Unknown versions, mixed versions, malformed rules, identity drift, and runtime
+projection fail closed. Run `make m6d-01-check` for the additive read-only
+cohort contract.

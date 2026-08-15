@@ -557,3 +557,25 @@ as the only score-active protocol under the existing v1 contracts.
 fixtures, replay, reversal, and invariants, but it cannot clear
 `ER-M6A-003`. Measurement, accessibility, and privacy/safety review remains
 pending and blocks M6B acceptance and mass authoring.
+
+## Decision 050 — The first representative cohort is source-only
+**Status:** Accepted for M6D-01 implementation; human content/source review pending
+
+M6D-01 authors exactly competencies `08.06`, `09.12`, `10.02`, and `13.02`
+as four materially distinct low-risk draft packages. They use behavioral-start,
+prospective-decision-record, skill-feedback-retry, and bounded home-system
+audit/redesign interventions. Each is inactive, unprojected,
+`SP-SHADOW-ONLY`, and explicitly score-inactive.
+
+Canonical typed action rules require an adjacent exact protocol, action,
+competency, and policy identity and must pass the unchanged
+`typed-evidence-rules-v1` materializer. The identity wrapper does not modify
+`GG-TYPED-EVIDENCE-1.0`, historical evidence, or an ORM model. The source
+catalog may expand to nine packages and twenty-nine actions, while the runtime
+remains exactly five protocols, fifteen actions, and friendship-only score
+activation.
+
+Synthetic replay demonstrates deterministic software behavior only. The four
+drafts remain blocked from source-complete, release-candidate, M6B-accepted,
+specialist, participant, intervention-effectiveness, recommendation-usefulness,
+mastery, deployment, production, and score-eligibility claims.

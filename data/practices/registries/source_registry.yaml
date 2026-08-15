@@ -20,15 +20,23 @@ sources:
     claim_classification: product_design_judgment
     limitations: A product curriculum is not empirical intervention validation and does not establish moral worth, universality, or psychometric validity.
     applicable_competency_ids:
+      - "08.06"
       - "08.02"
+      - "09.12"
+      - "10.02"
       - "11.10"
+      - "13.02"
       - "16.03"
       - "17.03"
       - "26.01"
     applicable_protocol_ids:
       - PRACTICE-BOUNDARY-01
+      - PRACTICE-DECISION-RECORD-01
+      - PRACTICE-DELIBERATE-PRACTICE-01
       - PRACTICE-EMOTIONAL-CUES-01
       - PRACTICE-FRIENDSHIP-01
+      - PRACTICE-HOME-UPKEEP-SYSTEM-01
+      - PRACTICE-MOTIVATION-INDEPENDENT-START-01
       - PRACTICE-PLAY-01
       - PRACTICE-PRESENCE-01
     date_accessed: null
@@ -39,7 +47,7 @@ sources:
     publication_date: "2026-07-27"
     locator: docs/PRODUCT_DECISIONS.md
     locator_kind: repository_path
-    content_sha256: d5bbdd69e187518d37700bd50b058eaa711af26c39ba97dc19186991d5e82393
+    content_sha256: 72fc2dc140d8a1c44d0a507a00e2a9d0d96b3f99ef19dcbfc7ffdd9467bef126
     source_class: internal_decision_record
     evidence_strength: design_only
     supported_claim: Records accepted product boundaries for dignity, completion versus mastery, scoring activation, privacy, and protocol behavior.
@@ -65,7 +73,7 @@ sources:
     publication_date: "2026-07-27"
     locator: docs/protocol-library.md
     locator_kind: repository_path
-    content_sha256: 7d95b26721e8bff90be210d1628b603db84d44b69327b726b8c4f26b52425b6d
+    content_sha256: 7a97b161cae789e042baaef243584c38917608a0493e6dccd80939f1eab6c48e
     source_class: internal_decision_record
     evidence_strength: design_only
     supported_claim: Documents the five reviewed protocol identities, runtime availability, safety boundaries, and friendship-only scoring limit.
@@ -129,3 +137,93 @@ sources:
       - PRACTICE-FRIENDSHIP-01
     date_accessed: null
     license_or_quotation_constraints: User-test conclusions may be summarized without exposing participant identity or free text.
+  - source_id: SRC-M6D-MOTIVATION-IMPLEMENTATION-INTENTIONS
+    title: "Implementation intentions and goal achievement: A meta-analysis of effects and processes"
+    authors_or_issuing_body: Peter M. Gollwitzer and Paschal Sheeran
+    publication_date: "2006"
+    locator: https://doi.org/10.1016/S0065-2601(06)38002-1
+    locator_kind: external_url
+    content_sha256: null
+    source_class: systematic_review
+    evidence_strength: moderate
+    supported_claim: Pre-specifying when, where, and how to act can help translate an intended goal into initiation across the studies reviewed.
+    claim_classification: empirical_finding
+    limitations: The review spans varied goals and populations; it does not show that acting despite fatigue, illness, disability, pain, caregiving demands, unsafe conditions, or every low-motivation state is appropriate.
+    applicable_competency_ids:
+      - "08.06"
+    applicable_protocol_ids:
+      - PRACTICE-MOTIVATION-INDEPENDENT-START-01
+    date_accessed: "2026-08-15"
+    license_or_quotation_constraints: Bibliographic metadata and findings may be paraphrased; do not reproduce the copyrighted article.
+  - source_id: SRC-M6D-DECISION-OUTCOME-BIAS
+    title: Outcome Bias in Decision Evaluation
+    authors_or_issuing_body: Jonathan Baron and John C. Hershey
+    publication_date: "1988"
+    locator: https://doi.org/10.1037/0022-3514.54.4.569
+    locator_kind: external_url
+    content_sha256: null
+    source_class: primary_research
+    evidence_strength: moderate
+    supported_claim: In the reported experiments, outcome knowledge affected evaluations of decision quality even when the information available at decision time was held constant.
+    claim_classification: empirical_finding
+    limitations: Experimental judgments about hypothetical medical and monetary choices do not validate a personal decision-record protocol, guarantee improved judgment, or establish effects across cultures and real high-stakes decisions.
+    applicable_competency_ids:
+      - "09.12"
+    applicable_protocol_ids:
+      - PRACTICE-DECISION-RECORD-01
+    date_accessed: "2026-08-15"
+    license_or_quotation_constraints: Bibliographic metadata and findings may be paraphrased; do not reproduce the copyrighted article.
+  - source_id: SRC-M6D-DELIBERATE-PRACTICE
+    title: The Role of Deliberate Practice in the Acquisition of Expert Performance
+    authors_or_issuing_body: K. Anders Ericsson, Ralf T. Krampe, and Clemens Tesch-Römer
+    publication_date: "1993"
+    locator: https://doi.org/10.1037/0033-295X.100.3.363
+    locator_kind: external_url
+    content_sha256: null
+    source_class: primary_research
+    evidence_strength: moderate
+    supported_claim: Deliberate practice is structured to improve a specific aspect of performance through effortful work and informative feedback rather than mere accumulated time.
+    claim_classification: empirical_finding
+    limitations: The paper emphasizes expert-performance domains and long training histories; it does not guarantee improvement from this short protocol or justify unsafe, abusive, clinical, licensed, or high-consequence practice.
+    applicable_competency_ids:
+      - "10.02"
+    applicable_protocol_ids:
+      - PRACTICE-DELIBERATE-PRACTICE-01
+    date_accessed: "2026-08-15"
+    license_or_quotation_constraints: Bibliographic metadata and findings may be paraphrased; do not reproduce the copyrighted article.
+  - source_id: SRC-M6D-DELIBERATE-PRACTICE-LIMITS
+    title: "Deliberate Practice and Performance in Music, Games, Sports, Education, and Professions: A Meta-Analysis"
+    authors_or_issuing_body: Brooke N. Macnamara, David Z. Hambrick, and Frederick L. Oswald
+    publication_date: "2014"
+    locator: https://doi.org/10.1177/0956797614535810
+    locator_kind: external_url
+    content_sha256: null
+    source_class: systematic_review
+    evidence_strength: moderate
+    supported_claim: Practice-performance associations vary by domain and leave substantial performance variation unexplained.
+    claim_classification: empirical_finding
+    limitations: Definitions and measurement of deliberate practice are contested; the review does not estimate the effect of this bounded protocol or support mastery claims.
+    applicable_competency_ids:
+      - "10.02"
+    applicable_protocol_ids:
+      - PRACTICE-DELIBERATE-PRACTICE-01
+    date_accessed: "2026-08-15"
+    license_or_quotation_constraints: Bibliographic metadata and findings may be paraphrased; do not reproduce the copyrighted article.
+  - source_id: SRC-M6D-NCHH-HEALTHY-HOME
+    title: Healthy Homes Maintenance Checklist
+    authors_or_issuing_body: National Center for Healthy Housing
+    publication_date: "2018"
+    locator: https://nchh.org/resource-library/healthy-homes-maintenance-checklist_english.pdf
+    locator_kind: external_url
+    content_sha256: null
+    source_class: reputable_synthesis
+    evidence_strength: limited
+    supported_claim: A periodic home checklist can separate observable upkeep items by cadence and identify items needing professional attention.
+    claim_classification: professional_or_public_standard
+    limitations: The NCHH checklist is general U.S. healthy-housing guidance, not validation of this intervention, not a substitute for local tenancy rules or accessibility needs, and not authorization for hazardous inspection or repair.
+    applicable_competency_ids:
+      - "13.02"
+    applicable_protocol_ids:
+      - PRACTICE-HOME-UPKEEP-SYSTEM-01
+    date_accessed: "2026-08-15"
+    license_or_quotation_constraints: Guidance may be summarized with attribution; follow any notices in the source document.

@@ -182,3 +182,14 @@ Every PR report includes:
 
 Passing automation does not constitute clinical, psychometric,
 accessibility-population, cross-cultural, or longitudinal validation.
+
+## M6D-01 evidence level
+
+M6D-01 can establish static schema/content integrity, deterministic report
+freshness, synthetic typed-rule replay, source/runtime isolation, and an
+isolated deployment drill when those commands actually run. It cannot
+establish semantic originality, accessibility-population fit, privacy/safety
+acceptance, intervention effectiveness, recommendation usefulness, specialist
+acceptance, participant readiness, release, deployment, production, or
+mastery. A trained reviewer and owner must separately disposition the content,
+sources, similarity warnings, and exact candidate CI evidence.

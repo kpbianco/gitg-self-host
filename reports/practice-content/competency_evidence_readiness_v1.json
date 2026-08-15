@@ -1,11 +1,11 @@
 {
-  "boundary": "Software readiness is additive and shadow-only. Pending specialist review and the open research gap block M6B acceptance, mass authoring, and typed production score activation.",
+  "boundary": "Software readiness is additive. Specialist review and research-gap status are reported from canonical governance; production eligibility remains a separate explicit contract.",
   "catalog": {
-    "canonical_protocol_packages": 5,
+    "canonical_protocol_packages": 9,
     "competencies": 383,
-    "practice_actions": 15,
+    "practice_actions": 29,
     "score_active_protocols": 1,
-    "uncovered_competencies": 378
+    "uncovered_competencies": 374
   },
   "contract_version": "GG-COMPETENCY-EVIDENCE-READINESS-1.0",
   "contracts": {
@@ -65,6 +65,7 @@
     "synthetically_executed": 6
   },
   "software_ready": true,
+  "source_typed_protocols": 4,
   "specialist_review_complete": false,
   "typed_production_protocols": 0,
   "typed_score_active_protocols": 0

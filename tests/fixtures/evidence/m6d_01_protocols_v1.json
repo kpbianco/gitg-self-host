@@ -1,0 +1,1042 @@
+{
+  "algorithm_version": "GG-TYPED-EVIDENCE-1.0",
+  "cases": [
+    {
+      "case_id": "M6D01-01-SUPPORTIVE",
+      "expected": {
+        "adverse": false,
+        "base_evidence_mass": "0.4675",
+        "competency_performance": "1.0000",
+        "context_breadth": "0.5500",
+        "contradiction_level": "0.0000",
+        "direction": "supports",
+        "independence": "1.0000",
+        "materialized_rules_hash": "235ab0fbe51bed87596605222b234866ca981eec21dadcf4f857dcc41be26194",
+        "materialized_spec_hash": "b114c625c40187cf725e6787aada385ad00d93d1d81f7c4e84c9f20c4186b498",
+        "performance": "1.0000",
+        "provenance_kinds": [
+          "firsthand_self_report"
+        ],
+        "quality": "0.8500",
+        "recency_status": "current",
+        "repetition_multiplier": "1.0000",
+        "transfer_disposition": "context_bound",
+        "withholding_reasons": []
+      },
+      "input": {
+        "action_attempted": true,
+        "action_completed": true,
+        "action_stable_id": "PRACTICE-MOTIVATION-INDEPENDENT-START-01-A1",
+        "adverse_indicator_ids": [],
+        "as_of_date": "2026-08-15",
+        "assessment_epoch_id": "ASSESSMENT-EPOCH-M6D01-SYNTHETIC",
+        "competency_stable_id": "08.06",
+        "context_comparison": "first_record",
+        "context_key": "CONTEXT-M6D01-SYNTHETIC-2",
+        "event_key": "EVENT-M6D01-SYNTHETIC-01",
+        "evidence_direction": "supports",
+        "observations": [
+          {
+            "kind": "boolean",
+            "measurement_id": "baseline_start_occurred",
+            "provenance_kind": "firsthand_self_report",
+            "state": "observed",
+            "value": true
+          },
+          {
+            "kind": "duration",
+            "measurement_id": "baseline_scope_respected",
+            "provenance_kind": "firsthand_self_report",
+            "state": "observed",
+            "value": {
+              "amount": "5",
+              "unit": "minutes"
+            }
+          },
+          {
+            "kind": "boolean",
+            "measurement_id": "baseline_capacity_harm",
+            "provenance_kind": "firsthand_self_report",
+            "state": "not_observed",
+            "value": null
+          }
+        ],
+        "observed_on": "2026-08-10",
+        "origin_key": "ORIGIN-M6D01-SYNTHETIC-01",
+        "protocol_stable_id": "PRACTICE-MOTIVATION-INDEPENDENT-START-01",
+        "repetition_index": 1,
+        "scoring_policy_id": "SP-SHADOW-ONLY",
+        "support_level": "self_directed"
+      },
+      "mode": "supportive"
+    },
+    {
+      "case_id": "M6D01-02-MIXED",
+      "expected": {
+        "adverse": false,
+        "base_evidence_mass": "0.6375",
+        "competency_performance": "1.0000",
+        "context_breadth": "0.7500",
+        "contradiction_level": "0.5000",
+        "direction": "mixed",
+        "independence": "1.0000",
+        "materialized_rules_hash": "5b0d4edc23f7eb4d4702007aa929e17a6116a78e5f98872a3fa629d3bde682cb",
+        "materialized_spec_hash": "b114c625c40187cf725e6787aada385ad00d93d1d81f7c4e84c9f20c4186b498",
+        "performance": "1.0000",
+        "provenance_kinds": [
+          "firsthand_self_report",
+          "reviewed_artifact"
+        ],
+        "quality": "0.8500",
+        "recency_status": "current",
+        "repetition_multiplier": "1.0000",
+        "transfer_disposition": "context_bound",
+        "withholding_reasons": []
+      },
+      "input": {
+        "action_attempted": true,
+        "action_completed": true,
+        "action_stable_id": "PRACTICE-MOTIVATION-INDEPENDENT-START-01-A2",
+        "adverse_indicator_ids": [],
+        "as_of_date": "2026-08-15",
+        "assessment_epoch_id": "ASSESSMENT-EPOCH-M6D01-SYNTHETIC",
+        "competency_stable_id": "08.06",
+        "context_comparison": "varied_context",
+        "context_key": "CONTEXT-M6D01-SYNTHETIC-3",
+        "event_key": "EVENT-M6D01-SYNTHETIC-02",
+        "evidence_direction": "mixed",
+        "observations": [
+          {
+            "kind": "boolean",
+            "measurement_id": "cued_start_occurred",
+            "provenance_kind": "firsthand_self_report",
+            "state": "observed",
+            "value": true
+          },
+          {
+            "kind": "artifact",
+            "measurement_id": "cue_category_recorded",
+            "provenance_kind": "reviewed_artifact",
+            "state": "observed",
+            "value": {
+              "criteria_met": [
+                "cue_selected",
+                "one_cue_only",
+                "no_private_content"
+              ]
+            }
+          },
+          {
+            "kind": "boolean",
+            "measurement_id": "cued_capacity_harm",
+            "provenance_kind": "firsthand_self_report",
+            "state": "not_observed",
+            "value": null
+          }
+        ],
+        "observed_on": "2026-08-10",
+        "origin_key": "ORIGIN-M6D01-SYNTHETIC-02",
+        "protocol_stable_id": "PRACTICE-MOTIVATION-INDEPENDENT-START-01",
+        "repetition_index": 1,
+        "scoring_policy_id": "SP-SHADOW-ONLY",
+        "support_level": "self_directed"
+      },
+      "mode": "mixed"
+    },
+    {
+      "case_id": "M6D01-03-CONTRADICTORY",
+      "expected": {
+        "adverse": false,
+        "base_evidence_mass": "0.4675",
+        "competency_performance": "1.0000",
+        "context_breadth": "0.5500",
+        "contradiction_level": "1.0000",
+        "direction": "contradicts",
+        "independence": "1.0000",
+        "materialized_rules_hash": "2c7de222d284def4f2ad1d67aa40547d019cf1f001ddec8858e62b954dad806b",
+        "materialized_spec_hash": "b114c625c40187cf725e6787aada385ad00d93d1d81f7c4e84c9f20c4186b498",
+        "performance": "1.0000",
+        "provenance_kinds": [
+          "firsthand_self_report",
+          "reviewed_artifact"
+        ],
+        "quality": "0.8500",
+        "recency_status": "current",
+        "repetition_multiplier": "1.0000",
+        "transfer_disposition": "context_bound",
+        "withholding_reasons": []
+      },
+      "input": {
+        "action_attempted": true,
+        "action_completed": true,
+        "action_stable_id": "PRACTICE-MOTIVATION-INDEPENDENT-START-01-A3",
+        "adverse_indicator_ids": [],
+        "as_of_date": "2026-08-15",
+        "assessment_epoch_id": "ASSESSMENT-EPOCH-M6D01-SYNTHETIC",
+        "competency_stable_id": "08.06",
+        "context_comparison": "first_record",
+        "context_key": "CONTEXT-M6D01-SYNTHETIC-1",
+        "event_key": "EVENT-M6D01-SYNTHETIC-03",
+        "evidence_direction": "contradicts",
+        "observations": [
+          {
+            "kind": "count",
+            "measurement_id": "chosen_start_count",
+            "provenance_kind": "firsthand_self_report",
+            "state": "observed",
+            "value": 2
+          },
+          {
+            "kind": "artifact",
+            "measurement_id": "comparison_boundaries_present",
+            "provenance_kind": "reviewed_artifact",
+            "state": "observed",
+            "value": {
+              "criteria_met": [
+                "two_windows_distinguished",
+                "defer_preserved",
+                "capacity_not_scored"
+              ]
+            }
+          },
+          {
+            "kind": "boolean",
+            "measurement_id": "comparison_used_for_coercion",
+            "provenance_kind": "firsthand_self_report",
+            "state": "not_observed",
+            "value": null
+          }
+        ],
+        "observed_on": "2026-08-10",
+        "origin_key": "ORIGIN-M6D01-SYNTHETIC-03",
+        "protocol_stable_id": "PRACTICE-MOTIVATION-INDEPENDENT-START-01",
+        "repetition_index": 1,
+        "scoring_policy_id": "SP-SHADOW-ONLY",
+        "support_level": "self_directed"
+      },
+      "mode": "contradictory"
+    },
+    {
+      "case_id": "M6D01-04-INCONCLUSIVE",
+      "expected": {
+        "adverse": false,
+        "base_evidence_mass": "0.6375",
+        "competency_performance": "1.0000",
+        "context_breadth": "0.7500",
+        "contradiction_level": "0.0000",
+        "direction": "inconclusive",
+        "independence": "1.0000",
+        "materialized_rules_hash": "ddb4eac0469319a8bf4c7fb0573405a2d623bf5f76cd93d14ed827e7f6cf7dd5",
+        "materialized_spec_hash": "b114c625c40187cf725e6787aada385ad00d93d1d81f7c4e84c9f20c4186b498",
+        "performance": "0.6500",
+        "provenance_kinds": [
+          "reviewed_artifact"
+        ],
+        "quality": "0.8500",
+        "recency_status": "current",
+        "repetition_multiplier": "1.0000",
+        "transfer_disposition": "context_bound",
+        "withholding_reasons": [
+          "direction_inconclusive"
+        ]
+      },
+      "input": {
+        "action_attempted": true,
+        "action_completed": false,
+        "action_stable_id": "PRACTICE-DECISION-RECORD-01-A1",
+        "adverse_indicator_ids": [],
+        "as_of_date": "2026-08-15",
+        "assessment_epoch_id": "ASSESSMENT-EPOCH-M6D01-SYNTHETIC",
+        "competency_stable_id": "09.12",
+        "context_comparison": "varied_context",
+        "context_key": "CONTEXT-M6D01-SYNTHETIC-2",
+        "event_key": "EVENT-M6D01-SYNTHETIC-04",
+        "evidence_direction": "inconclusive",
+        "observations": [
+          {
+            "kind": "artifact",
+            "measurement_id": "prospective_record_criteria",
+            "provenance_kind": "reviewed_artifact",
+            "state": "observed",
+            "value": {
+              "criteria_met": [
+                "created_before_choice",
+                "option_codes_present",
+                "objective_present",
+                "assumptions_bounded",
+                "prediction_bounded",
+                "confidence_band_present",
+                "review_trigger_present"
+              ]
+            }
+          },
+          {
+            "kind": "artifact",
+            "measurement_id": "minimum_metadata_check",
+            "provenance_kind": "reviewed_artifact",
+            "state": "observed",
+            "value": {
+              "criteria_met": [
+                "neutral_category_only",
+                "no_names",
+                "no_secrets",
+                "no_sensitive_third_party_detail"
+              ]
+            }
+          },
+          {
+            "kind": "boolean",
+            "measurement_id": "sensitive_content_exposed",
+            "provenance_kind": "firsthand_self_report",
+            "state": "not_observed",
+            "value": null
+          }
+        ],
+        "observed_on": "2026-08-10",
+        "origin_key": "ORIGIN-M6D01-SYNTHETIC-04",
+        "protocol_stable_id": "PRACTICE-DECISION-RECORD-01",
+        "repetition_index": 1,
+        "scoring_policy_id": "SP-SHADOW-ONLY",
+        "support_level": "self_directed"
+      },
+      "mode": "inconclusive"
+    },
+    {
+      "case_id": "M6D01-05-UNKNOWN",
+      "expected": {
+        "adverse": false,
+        "base_evidence_mass": "0.4125",
+        "competency_performance": null,
+        "context_breadth": "0.5500",
+        "contradiction_level": null,
+        "direction": "unknown",
+        "independence": "1.0000",
+        "materialized_rules_hash": "c47c74acd4608399d445038ea7c77c24169be3a5bbb1c191b148e26c691636fd",
+        "materialized_spec_hash": "b114c625c40187cf725e6787aada385ad00d93d1d81f7c4e84c9f20c4186b498",
+        "performance": "0.4500",
+        "provenance_kinds": [
+          "firsthand_self_report"
+        ],
+        "quality": "0.7500",
+        "recency_status": "current",
+        "repetition_multiplier": "1.0000",
+        "transfer_disposition": "context_bound",
+        "withholding_reasons": [
+          "direction_unknown",
+          "no_observed_competency_measurement"
+        ]
+      },
+      "input": {
+        "action_attempted": true,
+        "action_completed": false,
+        "action_stable_id": "PRACTICE-DECISION-RECORD-01-A2",
+        "adverse_indicator_ids": [],
+        "as_of_date": "2026-08-15",
+        "assessment_epoch_id": "ASSESSMENT-EPOCH-M6D01-SYNTHETIC",
+        "competency_stable_id": "09.12",
+        "context_comparison": "first_record",
+        "context_key": "CONTEXT-M6D01-SYNTHETIC-3",
+        "event_key": "EVENT-M6D01-SYNTHETIC-05",
+        "evidence_direction": "unknown",
+        "observations": [
+          {
+            "kind": "artifact",
+            "measurement_id": "prospective_snapshot_preserved",
+            "provenance_kind": "reviewed_artifact",
+            "state": "unknown",
+            "value": null
+          },
+          {
+            "kind": "boolean",
+            "measurement_id": "review_trigger_scheduled",
+            "provenance_kind": "firsthand_self_report",
+            "state": "observed",
+            "value": true
+          },
+          {
+            "kind": "boolean",
+            "measurement_id": "hindsight_rewrite_detected",
+            "provenance_kind": "reviewed_artifact",
+            "state": "not_observed",
+            "value": null
+          }
+        ],
+        "observed_on": "2026-08-10",
+        "origin_key": "ORIGIN-M6D01-SYNTHETIC-05",
+        "protocol_stable_id": "PRACTICE-DECISION-RECORD-01",
+        "repetition_index": 1,
+        "scoring_policy_id": "SP-SHADOW-ONLY",
+        "support_level": "self_directed"
+      },
+      "mode": "unknown"
+    },
+    {
+      "case_id": "M6D01-06-NOT-OBSERVED",
+      "expected": {
+        "adverse": false,
+        "base_evidence_mass": "0.6375",
+        "competency_performance": null,
+        "context_breadth": "0.7500",
+        "contradiction_level": "0.0000",
+        "direction": "supports",
+        "independence": "1.0000",
+        "materialized_rules_hash": "edb13d87ca0fff5c6fc7bc440859dae445026255628fecbd11e907a0710c612e",
+        "materialized_spec_hash": "b114c625c40187cf725e6787aada385ad00d93d1d81f7c4e84c9f20c4186b498",
+        "performance": "0.8000",
+        "provenance_kinds": [
+          "firsthand_self_report"
+        ],
+        "quality": "0.8500",
+        "recency_status": "current",
+        "repetition_multiplier": "1.0000",
+        "transfer_disposition": "context_bound",
+        "withholding_reasons": [
+          "no_observed_competency_measurement"
+        ]
+      },
+      "input": {
+        "action_attempted": true,
+        "action_completed": true,
+        "action_stable_id": "PRACTICE-DECISION-RECORD-01-A3",
+        "adverse_indicator_ids": [],
+        "as_of_date": "2026-08-15",
+        "assessment_epoch_id": "ASSESSMENT-EPOCH-M6D01-SYNTHETIC",
+        "competency_stable_id": "09.12",
+        "context_comparison": "varied_context",
+        "context_key": "CONTEXT-M6D01-SYNTHETIC-1",
+        "event_key": "EVENT-M6D01-SYNTHETIC-06",
+        "evidence_direction": "supports",
+        "observations": [
+          {
+            "kind": "artifact",
+            "measurement_id": "decision_update_criteria",
+            "provenance_kind": "reviewed_artifact",
+            "state": "not_observed",
+            "value": null
+          },
+          {
+            "kind": "conceptual",
+            "measurement_id": "outcome_process_distinguished",
+            "provenance_kind": "firsthand_self_report",
+            "state": "observed",
+            "value": {
+              "criteria_met": [
+                "outcome_not_equated_with_process",
+                "hindsight_limit_acknowledged"
+              ]
+            }
+          },
+          {
+            "kind": "boolean",
+            "measurement_id": "update_used_to_target_person",
+            "provenance_kind": "firsthand_self_report",
+            "state": "not_observed",
+            "value": null
+          }
+        ],
+        "observed_on": "2026-08-10",
+        "origin_key": "ORIGIN-M6D01-SYNTHETIC-06",
+        "protocol_stable_id": "PRACTICE-DECISION-RECORD-01",
+        "repetition_index": 1,
+        "scoring_policy_id": "SP-SHADOW-ONLY",
+        "support_level": "self_directed"
+      },
+      "mode": "not_observed"
+    },
+    {
+      "case_id": "M6D01-07-NOT-APPLICABLE",
+      "expected": {
+        "adverse": false,
+        "base_evidence_mass": "0.4125",
+        "competency_performance": null,
+        "context_breadth": "0.5500",
+        "contradiction_level": "0.0000",
+        "direction": "supports",
+        "independence": "1.0000",
+        "materialized_rules_hash": "a8975c90501528cb722829f5d189cf8a1c3794cd477db1fbbc18d41d5e3e9853",
+        "materialized_spec_hash": "b114c625c40187cf725e6787aada385ad00d93d1d81f7c4e84c9f20c4186b498",
+        "performance": "0.7000",
+        "provenance_kinds": [],
+        "quality": "0.7500",
+        "recency_status": "current",
+        "repetition_multiplier": "1.0000",
+        "transfer_disposition": "context_bound",
+        "withholding_reasons": [
+          "no_observed_measurement",
+          "no_observed_competency_measurement"
+        ]
+      },
+      "input": {
+        "action_attempted": true,
+        "action_completed": true,
+        "action_stable_id": "PRACTICE-DELIBERATE-PRACTICE-01-A1",
+        "adverse_indicator_ids": [],
+        "as_of_date": "2026-08-15",
+        "assessment_epoch_id": "ASSESSMENT-EPOCH-M6D01-SYNTHETIC",
+        "competency_stable_id": "10.02",
+        "context_comparison": "first_record",
+        "context_key": "CONTEXT-M6D01-SYNTHETIC-2",
+        "event_key": "EVENT-M6D01-SYNTHETIC-07",
+        "evidence_direction": "supports",
+        "observations": [
+          {
+            "kind": "artifact",
+            "measurement_id": "component_plan_criteria",
+            "provenance_kind": "reviewed_artifact",
+            "state": "not_applicable",
+            "value": null
+          },
+          {
+            "kind": "boolean",
+            "measurement_id": "unsafe_component_selected",
+            "provenance_kind": "firsthand_self_report",
+            "state": "not_observed",
+            "value": null
+          }
+        ],
+        "observed_on": "2026-08-10",
+        "origin_key": "ORIGIN-M6D01-SYNTHETIC-07",
+        "protocol_stable_id": "PRACTICE-DELIBERATE-PRACTICE-01",
+        "repetition_index": 1,
+        "scoring_policy_id": "SP-SHADOW-ONLY",
+        "support_level": "self_directed"
+      },
+      "mode": "not_applicable"
+    },
+    {
+      "case_id": "M6D01-08-DEFERRED",
+      "expected": {
+        "adverse": false,
+        "base_evidence_mass": "0.6375",
+        "competency_performance": null,
+        "context_breadth": "0.7500",
+        "contradiction_level": "0.0000",
+        "direction": "supports",
+        "independence": "1.0000",
+        "materialized_rules_hash": "7bce288cfe31ad9f5d3efc22129f74c884472e632e0acfb8f499d84cf1b3d9d8",
+        "materialized_spec_hash": "b114c625c40187cf725e6787aada385ad00d93d1d81f7c4e84c9f20c4186b498",
+        "performance": "0.4500",
+        "provenance_kinds": [
+          "firsthand_self_report"
+        ],
+        "quality": "0.8500",
+        "recency_status": "current",
+        "repetition_multiplier": "1.0000",
+        "transfer_disposition": "context_bound",
+        "withholding_reasons": [
+          "no_observed_competency_measurement"
+        ]
+      },
+      "input": {
+        "action_attempted": true,
+        "action_completed": false,
+        "action_stable_id": "PRACTICE-DELIBERATE-PRACTICE-01-A2",
+        "adverse_indicator_ids": [],
+        "as_of_date": "2026-08-15",
+        "assessment_epoch_id": "ASSESSMENT-EPOCH-M6D01-SYNTHETIC",
+        "competency_stable_id": "10.02",
+        "context_comparison": "varied_context",
+        "context_key": "CONTEXT-M6D01-SYNTHETIC-3",
+        "event_key": "EVENT-M6D01-SYNTHETIC-08",
+        "evidence_direction": "supports",
+        "observations": [
+          {
+            "kind": "bounded_frequency",
+            "measurement_id": "baseline_component_criteria",
+            "provenance_kind": "firsthand_self_report",
+            "state": "deferred",
+            "value": null
+          },
+          {
+            "kind": "duration",
+            "measurement_id": "baseline_attempt_duration",
+            "provenance_kind": "firsthand_self_report",
+            "state": "observed",
+            "value": {
+              "amount": "15",
+              "unit": "minutes"
+            }
+          },
+          {
+            "kind": "boolean",
+            "measurement_id": "baseline_safety_boundary_breached",
+            "provenance_kind": "firsthand_self_report",
+            "state": "not_observed",
+            "value": null
+          }
+        ],
+        "observed_on": "2026-08-10",
+        "origin_key": "ORIGIN-M6D01-SYNTHETIC-08",
+        "protocol_stable_id": "PRACTICE-DELIBERATE-PRACTICE-01",
+        "repetition_index": 1,
+        "scoring_policy_id": "SP-SHADOW-ONLY",
+        "support_level": "self_directed"
+      },
+      "mode": "deferred"
+    },
+    {
+      "case_id": "M6D01-09-ADVERSE",
+      "expected": {
+        "adverse": true,
+        "base_evidence_mass": "0.4675",
+        "competency_performance": "1.0000",
+        "context_breadth": "0.5500",
+        "contradiction_level": "0.0000",
+        "direction": "supports",
+        "independence": "1.0000",
+        "materialized_rules_hash": "8840abc1c9653e70386b2a20673d6c7d2f442b11edbc1f6c0cc72503507a1bba",
+        "materialized_spec_hash": "b114c625c40187cf725e6787aada385ad00d93d1d81f7c4e84c9f20c4186b498",
+        "performance": "1.0000",
+        "provenance_kinds": [
+          "firsthand_self_report",
+          "reviewed_artifact"
+        ],
+        "quality": "0.8500",
+        "recency_status": "current",
+        "repetition_multiplier": "1.0000",
+        "transfer_disposition": "context_bound",
+        "withholding_reasons": [
+          "adverse_outcome_requires_review"
+        ]
+      },
+      "input": {
+        "action_attempted": true,
+        "action_completed": true,
+        "action_stable_id": "PRACTICE-DELIBERATE-PRACTICE-01-A3",
+        "adverse_indicator_ids": [
+          "ADVERSE-M6D01-SYNTHETIC"
+        ],
+        "as_of_date": "2026-08-15",
+        "assessment_epoch_id": "ASSESSMENT-EPOCH-M6D01-SYNTHETIC",
+        "competency_stable_id": "10.02",
+        "context_comparison": "first_record",
+        "context_key": "CONTEXT-M6D01-SYNTHETIC-1",
+        "event_key": "EVENT-M6D01-SYNTHETIC-09",
+        "evidence_direction": "supports",
+        "observations": [
+          {
+            "kind": "artifact",
+            "measurement_id": "feedback_correction_criteria",
+            "provenance_kind": "reviewed_artifact",
+            "state": "observed",
+            "value": {
+              "criteria_met": [
+                "fixed_criteria_used",
+                "one_component_selected",
+                "one_adjustment_selected",
+                "retry_condition_defined"
+              ]
+            }
+          },
+          {
+            "kind": "artifact",
+            "measurement_id": "feedback_consent_and_privacy",
+            "provenance_kind": "reviewed_artifact",
+            "state": "observed",
+            "value": {
+              "criteria_met": [
+                "self_review_or_consent_confirmed",
+                "no_observer_identity",
+                "no_feedback_narrative",
+                "no_public_artifact"
+              ]
+            }
+          },
+          {
+            "kind": "boolean",
+            "measurement_id": "abusive_or_coerced_feedback",
+            "provenance_kind": "firsthand_self_report",
+            "state": "observed",
+            "value": true
+          }
+        ],
+        "observed_on": "2026-08-10",
+        "origin_key": "ORIGIN-M6D01-SYNTHETIC-09",
+        "protocol_stable_id": "PRACTICE-DELIBERATE-PRACTICE-01",
+        "repetition_index": 1,
+        "scoring_policy_id": "SP-SHADOW-ONLY",
+        "support_level": "self_directed"
+      },
+      "mode": "adverse"
+    },
+    {
+      "case_id": "M6D01-10-STALE",
+      "expected": {
+        "adverse": false,
+        "base_evidence_mass": "0.6375",
+        "competency_performance": "1.0000",
+        "context_breadth": "0.7500",
+        "contradiction_level": "0.0000",
+        "direction": "supports",
+        "independence": "1.0000",
+        "materialized_rules_hash": "2aa04a9ba3a07eb21474cc3e23a13568cc6c7be4dd9ae958a31a74952076de7d",
+        "materialized_spec_hash": "b114c625c40187cf725e6787aada385ad00d93d1d81f7c4e84c9f20c4186b498",
+        "performance": "1.0000",
+        "provenance_kinds": [
+          "firsthand_self_report",
+          "reviewed_artifact"
+        ],
+        "quality": "0.8500",
+        "recency_status": "stale",
+        "repetition_multiplier": "1.0000",
+        "transfer_disposition": "context_bound",
+        "withholding_reasons": [
+          "stale_at_explicit_as_of_date"
+        ]
+      },
+      "input": {
+        "action_attempted": true,
+        "action_completed": true,
+        "action_stable_id": "PRACTICE-DELIBERATE-PRACTICE-01-A4",
+        "adverse_indicator_ids": [],
+        "as_of_date": "2026-08-15",
+        "assessment_epoch_id": "ASSESSMENT-EPOCH-M6D01-SYNTHETIC",
+        "competency_stable_id": "10.02",
+        "context_comparison": "varied_context",
+        "context_key": "CONTEXT-M6D01-SYNTHETIC-2",
+        "event_key": "EVENT-M6D01-SYNTHETIC-10",
+        "evidence_direction": "supports",
+        "observations": [
+          {
+            "kind": "bounded_frequency",
+            "measurement_id": "retry_component_criteria",
+            "provenance_kind": "firsthand_self_report",
+            "state": "observed",
+            "value": {
+              "numerator": 4,
+              "denominator": 4
+            }
+          },
+          {
+            "kind": "boolean",
+            "measurement_id": "correction_applied",
+            "provenance_kind": "firsthand_self_report",
+            "state": "observed",
+            "value": true
+          },
+          {
+            "kind": "artifact",
+            "measurement_id": "retry_comparability",
+            "provenance_kind": "reviewed_artifact",
+            "state": "observed",
+            "value": {
+              "criteria_met": [
+                "same_component",
+                "same_criteria",
+                "comparable_or_lower_difficulty",
+                "result_category_recorded"
+              ]
+            }
+          },
+          {
+            "kind": "boolean",
+            "measurement_id": "retry_harm_or_overpractice",
+            "provenance_kind": "firsthand_self_report",
+            "state": "not_observed",
+            "value": null
+          }
+        ],
+        "observed_on": "2025-01-01",
+        "origin_key": "ORIGIN-M6D01-SYNTHETIC-10",
+        "protocol_stable_id": "PRACTICE-DELIBERATE-PRACTICE-01",
+        "repetition_index": 1,
+        "scoring_policy_id": "SP-SHADOW-ONLY",
+        "support_level": "self_directed"
+      },
+      "mode": "stale"
+    },
+    {
+      "case_id": "M6D01-11-REPEATED",
+      "expected": {
+        "adverse": false,
+        "base_evidence_mass": "0.1590",
+        "competency_performance": "1.0000",
+        "context_breadth": "0.5500",
+        "contradiction_level": "0.0000",
+        "direction": "supports",
+        "independence": "0.8500",
+        "materialized_rules_hash": "65345bd4d35524315dbc26d14750f12be95378ab9d2468acfa7a85219cf712a2",
+        "materialized_spec_hash": "b114c625c40187cf725e6787aada385ad00d93d1d81f7c4e84c9f20c4186b498",
+        "performance": "0.9000",
+        "provenance_kinds": [
+          "reviewed_artifact"
+        ],
+        "quality": "0.8500",
+        "recency_status": "current",
+        "repetition_multiplier": "0.4000",
+        "transfer_disposition": "context_bound",
+        "withholding_reasons": []
+      },
+      "input": {
+        "action_attempted": true,
+        "action_completed": true,
+        "action_stable_id": "PRACTICE-HOME-UPKEEP-SYSTEM-01-A1",
+        "adverse_indicator_ids": [],
+        "as_of_date": "2026-08-15",
+        "assessment_epoch_id": "ASSESSMENT-EPOCH-M6D01-SYNTHETIC",
+        "competency_stable_id": "13.02",
+        "context_comparison": "first_record",
+        "context_key": "CONTEXT-M6D01-SYNTHETIC-3",
+        "event_key": "EVENT-M6D01-SYNTHETIC-11",
+        "evidence_direction": "supports",
+        "observations": [
+          {
+            "kind": "artifact",
+            "measurement_id": "home_system_audit_criteria",
+            "provenance_kind": "reviewed_artifact",
+            "state": "observed",
+            "value": {
+              "criteria_met": [
+                "function_defined",
+                "user_control_confirmed",
+                "non_hazard_confirmed",
+                "access_path_confirmed",
+                "upkeep_cue_defined",
+                "completion_condition_defined"
+              ]
+            }
+          },
+          {
+            "kind": "boolean",
+            "measurement_id": "excluded_home_hazard_found",
+            "provenance_kind": "firsthand_self_report",
+            "state": "not_observed",
+            "value": null
+          }
+        ],
+        "observed_on": "2026-08-10",
+        "origin_key": "ORIGIN-M6D01-SYNTHETIC-11",
+        "protocol_stable_id": "PRACTICE-HOME-UPKEEP-SYSTEM-01",
+        "repetition_index": 3,
+        "scoring_policy_id": "SP-SHADOW-ONLY",
+        "support_level": "planning_aid"
+      },
+      "mode": "repeated"
+    },
+    {
+      "case_id": "M6D01-12-SUPPORTIVE",
+      "expected": {
+        "adverse": false,
+        "base_evidence_mass": "0.6375",
+        "competency_performance": "1.0000",
+        "context_breadth": "0.7500",
+        "contradiction_level": "0.0000",
+        "direction": "supports",
+        "independence": "1.0000",
+        "materialized_rules_hash": "3da8c6818cb9749ba8427951bcf6490818ffafd5f0ca9b8150960cd0ce1d19f7",
+        "materialized_spec_hash": "b114c625c40187cf725e6787aada385ad00d93d1d81f7c4e84c9f20c4186b498",
+        "performance": "0.9000",
+        "provenance_kinds": [
+          "reviewed_artifact"
+        ],
+        "quality": "0.8500",
+        "recency_status": "current",
+        "repetition_multiplier": "1.0000",
+        "transfer_disposition": "context_bound",
+        "withholding_reasons": []
+      },
+      "input": {
+        "action_attempted": true,
+        "action_completed": true,
+        "action_stable_id": "PRACTICE-HOME-UPKEEP-SYSTEM-01-A2",
+        "adverse_indicator_ids": [],
+        "as_of_date": "2026-08-15",
+        "assessment_epoch_id": "ASSESSMENT-EPOCH-M6D01-SYNTHETIC",
+        "competency_stable_id": "13.02",
+        "context_comparison": "varied_context",
+        "context_key": "CONTEXT-M6D01-SYNTHETIC-1",
+        "event_key": "EVENT-M6D01-SYNTHETIC-12",
+        "evidence_direction": "supports",
+        "observations": [
+          {
+            "kind": "artifact",
+            "measurement_id": "home_redesign_plan_criteria",
+            "provenance_kind": "reviewed_artifact",
+            "state": "observed",
+            "value": {
+              "criteria_met": [
+                "one_change_only",
+                "friction_linked",
+                "reversible",
+                "user_controlled",
+                "accessible",
+                "no_hazardous_work",
+                "no_other_person_property"
+              ]
+            }
+          },
+          {
+            "kind": "boolean",
+            "measurement_id": "redesign_requires_excluded_work",
+            "provenance_kind": "firsthand_self_report",
+            "state": "not_observed",
+            "value": null
+          }
+        ],
+        "observed_on": "2026-08-10",
+        "origin_key": "ORIGIN-M6D01-SYNTHETIC-12",
+        "protocol_stable_id": "PRACTICE-HOME-UPKEEP-SYSTEM-01",
+        "repetition_index": 1,
+        "scoring_policy_id": "SP-SHADOW-ONLY",
+        "support_level": "self_directed"
+      },
+      "mode": "supportive"
+    },
+    {
+      "case_id": "M6D01-13-SUPPORTIVE",
+      "expected": {
+        "adverse": false,
+        "base_evidence_mass": "0.4675",
+        "competency_performance": "1.0000",
+        "context_breadth": "0.5500",
+        "contradiction_level": "0.0000",
+        "direction": "supports",
+        "independence": "1.0000",
+        "materialized_rules_hash": "d8f18eb1d98df748a4685b97f3d62b08f0b5f0a3a2d26c6aa822c58d16a69458",
+        "materialized_spec_hash": "b114c625c40187cf725e6787aada385ad00d93d1d81f7c4e84c9f20c4186b498",
+        "performance": "1.0000",
+        "provenance_kinds": [
+          "firsthand_self_report",
+          "reviewed_artifact"
+        ],
+        "quality": "0.8500",
+        "recency_status": "current",
+        "repetition_multiplier": "1.0000",
+        "transfer_disposition": "context_bound",
+        "withholding_reasons": []
+      },
+      "input": {
+        "action_attempted": true,
+        "action_completed": true,
+        "action_stable_id": "PRACTICE-HOME-UPKEEP-SYSTEM-01-A3",
+        "adverse_indicator_ids": [],
+        "as_of_date": "2026-08-15",
+        "assessment_epoch_id": "ASSESSMENT-EPOCH-M6D01-SYNTHETIC",
+        "competency_stable_id": "13.02",
+        "context_comparison": "first_record",
+        "context_key": "CONTEXT-M6D01-SYNTHETIC-2",
+        "event_key": "EVENT-M6D01-SYNTHETIC-13",
+        "evidence_direction": "supports",
+        "observations": [
+          {
+            "kind": "boolean",
+            "measurement_id": "safe_redesign_installed",
+            "provenance_kind": "firsthand_self_report",
+            "state": "observed",
+            "value": true
+          },
+          {
+            "kind": "artifact",
+            "measurement_id": "post_change_access_criteria",
+            "provenance_kind": "reviewed_artifact",
+            "state": "observed",
+            "value": {
+              "criteria_met": [
+                "safe_reach_preserved",
+                "movement_path_clear",
+                "exit_clear",
+                "supports_unblocked",
+                "shared_use_preserved"
+              ]
+            }
+          },
+          {
+            "kind": "boolean",
+            "measurement_id": "post_change_safety_problem",
+            "provenance_kind": "firsthand_self_report",
+            "state": "not_observed",
+            "value": null
+          }
+        ],
+        "observed_on": "2026-08-10",
+        "origin_key": "ORIGIN-M6D01-SYNTHETIC-13",
+        "protocol_stable_id": "PRACTICE-HOME-UPKEEP-SYSTEM-01",
+        "repetition_index": 1,
+        "scoring_policy_id": "SP-SHADOW-ONLY",
+        "support_level": "self_directed"
+      },
+      "mode": "supportive"
+    },
+    {
+      "case_id": "M6D01-14-DUPLICATE-ORIGIN",
+      "expected": {
+        "adverse": false,
+        "base_evidence_mass": "0.6375",
+        "competency_performance": "1.0000",
+        "context_breadth": "0.7500",
+        "contradiction_level": "0.0000",
+        "direction": "supports",
+        "independence": "1.0000",
+        "materialized_rules_hash": "a43fe28b1f354656b1f684692f43a1a0af38ee31a942243f98208f3a9cc7d36d",
+        "materialized_spec_hash": "b114c625c40187cf725e6787aada385ad00d93d1d81f7c4e84c9f20c4186b498",
+        "performance": "1.0000",
+        "provenance_kinds": [
+          "firsthand_self_report",
+          "reviewed_artifact"
+        ],
+        "quality": "0.8500",
+        "recency_status": "current",
+        "repetition_multiplier": "1.0000",
+        "transfer_disposition": "context_bound",
+        "withholding_reasons": []
+      },
+      "input": {
+        "action_attempted": true,
+        "action_completed": true,
+        "action_stable_id": "PRACTICE-HOME-UPKEEP-SYSTEM-01-A4",
+        "adverse_indicator_ids": [],
+        "as_of_date": "2026-08-15",
+        "assessment_epoch_id": "ASSESSMENT-EPOCH-M6D01-SYNTHETIC",
+        "competency_stable_id": "13.02",
+        "context_comparison": "varied_context",
+        "context_key": "CONTEXT-M6D01-SYNTHETIC-3",
+        "event_key": "EVENT-M6D01-SYNTHETIC-14",
+        "evidence_direction": "supports",
+        "observations": [
+          {
+            "kind": "bounded_frequency",
+            "measurement_id": "upkeep_observation_count",
+            "provenance_kind": "firsthand_self_report",
+            "state": "observed",
+            "value": {
+              "numerator": 1,
+              "denominator": 2
+            }
+          },
+          {
+            "kind": "artifact",
+            "measurement_id": "upkeep_observation_criteria",
+            "provenance_kind": "reviewed_artifact",
+            "state": "observed",
+            "value": {
+              "criteria_met": [
+                "two_opportunities_distinguished",
+                "cue_status_recorded",
+                "defer_preserved",
+                "no_home_contents_stored",
+                "access_rechecked"
+              ]
+            }
+          },
+          {
+            "kind": "boolean",
+            "measurement_id": "upkeep_change_caused_harm",
+            "provenance_kind": "firsthand_self_report",
+            "state": "not_observed",
+            "value": null
+          }
+        ],
+        "observed_on": "2026-08-10",
+        "origin_key": "ORIGIN-M6D01-SYNTHETIC-13",
+        "protocol_stable_id": "PRACTICE-HOME-UPKEEP-SYSTEM-01",
+        "repetition_index": 1,
+        "scoring_policy_id": "SP-SHADOW-ONLY",
+        "support_level": "self_directed"
+      },
+      "mode": "duplicate_origin"
+    }
+  ],
+  "rules_schema_version": "typed-evidence-rules-v1",
+  "schema_version": "grounded-growth-m6d-01-protocol-fixture-v1",
+  "synthetic_data_notice": "All identifiers, contexts, dates, and structured observations are synthetic and contain no participant or artifact content."
+}

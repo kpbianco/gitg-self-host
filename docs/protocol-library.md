@@ -158,3 +158,14 @@ keeps the other four false. The full projection must continue to hash to:
 `GG-CURRICULUM-EXPANSION-READINESS-1.0` calls the unchanged old verifier,
 checks the canonical packages and generated reports, and compares them with
 the seeded database. See `docs/practice-content.md`.
+
+## M6D-01 source-only drafts
+
+The canonical source catalog now also contains four individually authored
+drafts: Motivation-Independent Start (`08.06`), Decision Record and Update
+(`09.12`), Deliberate Practice Loop (`10.02`), and Home Upkeep System (`13.02`).
+They exercise behavioral experiment, artifact plan, skill rehearsal, and audit
+redesign families. None is available in the application runtime or eligible
+for production scoring. Their safety boundaries exclude coercive productivity,
+sensitive decision detail, dangerous or licensed practice, and hazardous or
+landlord/tradesperson home work.

@@ -308,7 +308,7 @@ context factors and returns deterministic withheld, primary, and alternative
 results. It adds no migration, persistence, ordinary UI, Personal OS text
 analysis, evidence/scoring write, protocol, or activation.
 
-M6C-04 is the current implementation batch. It exposes those unchanged M6C
+M6C-04 is reviewed and merged. It exposes those unchanged M6C
 contracts through one authenticated, concise Personal OS journey, explicit
 assessment and per-practice context forms, deterministic partial-cohort
 recommendations and alternatives, and additive
@@ -319,14 +319,23 @@ priority persistence, protocol/action, Personal OS analysis, evidence/scoring
 write, activation, dedicated export/purge/retention automation, remote
 telemetry, weekly execution, release, or deployment.
 
-The representative 10–12 competency vertical slices begin only after M6C as
-Phase B.
+M6D-01 is the current implementation batch. It authors exactly four low-risk,
+source-only draft packages for competencies `08.06`, `09.12`, `10.02`, and
+`13.02`, with fourteen pure typed-evidence fixture paths. The source catalog
+expands to nine packages and twenty-nine actions while the projected runtime
+remains five protocols and fifteen actions. The cohort is inactive,
+unprojected, shadow-only, and production-ineligible; it adds no model,
+migration, UI, persisted typed evidence, recommendation input, scoring write,
+or activation.
+
+Later representative vertical slices must remain separately authorized and
+human-reviewed Phase B batches.
 
 <!-- BEGIN PORTFOLIO-CONTROL MANAGED -->
 ## Governed agentic delivery
 
 - Product: `gitg-self-host`; delivery profile: `product-data`.
-- Control revision: `f55e9ab7e854bc0aef895edd1cc944607accc312`; harness version: `2`.
+- Control revision: `6ce49a933b33462fc1b0ad44749085c7f51b59f0`; harness version: `2`.
 - Read `contracts/profile-requirements.yaml` and the approved
   `contracts/active-batch.yaml` before implementation.
 - Stay inside active-batch allowed paths and preserve every forbidden path.

@@ -278,6 +278,20 @@ See [Private Pilot 001 findings](docs/pilot/PRIVATE_PILOT_001_FINDINGS.md).
 See [canonical practice content](docs/practice-content.md) and the
 [M6 program charter](docs/program/M6_CURRICULUM_EXPANSION.md).
 
+## What M6D-01 adds
+
+- Four individually authored low-risk draft packages for competencies
+  `08.06`, `09.12`, `10.02`, and `13.02` across distinct behavioral,
+  artifact, rehearsal, and audit/redesign families.
+- A source catalog frontier of nine packages and twenty-nine actions, with 374
+  competencies explicitly unauthored.
+- Fail-closed source-only typed rule validation and fourteen conspicuously
+  synthetic action fixtures.
+- Deterministic cohort reporting and read-only
+  `GG-M6D-01-AUTHORING-READINESS-1.0`, runnable with `make m6d-01-check`.
+- No runtime protocol/action, model, migration, UI, persistence, ranking,
+  scoring, or production-activation change.
+
 ## What M6B adds
 
 - Pure `GG-TYPED-EVIDENCE-1.0` evaluation from materialized
@@ -531,9 +545,9 @@ Migrations and canonical seeding run safely on startup.
   reconstructs 33 identifiable rows; L06, L15, L32, and L37 remain
   baseline-only. All four friendship-mapped rows are active.
 - Dynamic need remains provisional. M3B updates assessment v1.1's
-  gap-and-confidence need function. M6C-03 can produce an explicit backend
-  context-priority result, but ordinary UI does not collect or consume it and
-  `build_profile_summary` remains on the unchanged no-context path.
+  gap-and-confidence need function. M6C-04 exposes M6C-03 context priority only
+  for an explicitly reviewed current-epoch cohort; absent such context,
+  `build_profile_summary` preserves the unchanged no-context path.
 - Event reversal is an instance-owner operation and is intentionally
   permanent in M3B. Restore a verified backup if the wrong event is reversed.
 - The minimized JSON export omits direct identity and free text, but its
@@ -551,9 +565,10 @@ Migrations and canonical seeding run safely on startup.
 - Only **Deepen One Existing Friendship** is score-active. Play, emotional cue
   detection, boundary practice, and the attention-presence experiment are
   executable but score-inactive.
-- M6A covers only five of 383 competencies. The other 378 are explicit
-  unauthored ledger rows, not empty packages. None of the five migrated
-  packages is yet marked source-complete for full-library release.
+- The canonical source catalog covers nine of 383 competencies. The other 374
+  are explicit unauthored ledger rows, not empty packages. None of the nine
+  packages is yet marked source-complete for full-library release; only the
+  original five are projected into the runtime.
 - The five packages retain the friendship-oriented
   `practice-observation-v1` vocabulary for exact replay. M6B's typed evidence
   and direct competency projections are pure, parallel, and shadow-only; no

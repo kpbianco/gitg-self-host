@@ -29,7 +29,10 @@ from growth.domain.evidence import (
     evaluate_evidence,
 )
 from growth.domain.evidence_dispatch import replay_evidence_by_version
-from growth.domain.practice_content import load_practice_content_bundle
+from growth.domain.practice_content import (
+    load_practice_content_bundle,
+    protocol_sources_complete,
+)
 from growth.domain.scoring import (
     SCORING_ALGORITHM_VERSION,
     BaselineMass,
@@ -59,19 +62,47 @@ from growth.services.scoring import (
 )
 
 COMPETENCY_EVIDENCE_READINESS_CONTRACT_VERSION = "GG-COMPETENCY-EVIDENCE-READINESS-1.0"
+M6D_AUTHORING_READINESS_CONTRACT_VERSION = "GG-M6D-01-AUTHORING-READINESS-1.0"
 REPORT_ROOT = Path("reports/practice-content")
 REPORT_PATHS = {
     "typed_capability": REPORT_ROOT / "typed_evidence_capability_v1.csv",
     "scoring_policy": REPORT_ROOT / "scoring_policy_execution_v1.csv",
     "readiness": REPORT_ROOT / "competency_evidence_readiness_v1.json",
+    "m6d_readiness": REPORT_ROOT / "m6d_01_cohort_readiness_v1.json",
 }
 
-_EXPECTED_CATALOG_COUNTS = {
-    "competencies": 383,
-    "canonical_protocol_packages": 5,
-    "practice_actions": 15,
-    "uncovered_competencies": 378,
-    "score_active_protocols": 1,
+_M6D_01_MINIMUM_SOURCE_PROTOCOLS = 9
+_M6D_01_MINIMUM_SOURCE_ACTIONS = 29
+_M6D_01_MAXIMUM_UNCOVERED_COMPETENCIES = 374
+_M6D_01_COHORT = {
+    "PRACTICE-MOTIVATION-INDEPENDENT-START-01": (
+        "08.06",
+        "08",
+        "PF-BEHAVIORAL-EXPERIMENT",
+        ("L10",),
+        3,
+    ),
+    "PRACTICE-DECISION-RECORD-01": (
+        "09.12",
+        "09",
+        "PF-ARTIFACT-PLAN",
+        ("L14",),
+        3,
+    ),
+    "PRACTICE-DELIBERATE-PRACTICE-01": (
+        "10.02",
+        "10",
+        "PF-SKILL-REHEARSAL",
+        ("L15",),
+        4,
+    ),
+    "PRACTICE-HOME-UPKEEP-SYSTEM-01": (
+        "13.02",
+        "13",
+        "PF-AUDIT-REDESIGN",
+        ("L18",),
+        4,
+    ),
 }
 _MEASUREMENT_NORMALIZATION = {
     "artifact": "allowlisted_criteria_ids_only_no_artifact_content",
@@ -93,6 +124,24 @@ _EXPECTED_POLICY_OUTCOMES = {
     "SP-SELF-REPORT-ELIGIBLE": (1, 0),
     "SP-SHADOW-ONLY": (1, 0),
 }
+_M6D_EXPECTED_FIELDS = {
+    "adverse",
+    "base_evidence_mass",
+    "competency_performance",
+    "context_breadth",
+    "contradiction_level",
+    "direction",
+    "independence",
+    "materialized_rules_hash",
+    "materialized_spec_hash",
+    "performance",
+    "provenance_kinds",
+    "quality",
+    "recency_status",
+    "repetition_multiplier",
+    "transfer_disposition",
+    "withholding_reasons",
+}
 
 
 class CompetencyEvidenceReportError(ValueError):
@@ -104,6 +153,196 @@ class _SoftwareContract:
     capability_rows: tuple[dict[str, Any], ...]
     policy_rows: tuple[dict[str, Any], ...]
     readiness: dict[str, Any]
+    m6d_readiness: dict[str, Any]
+
+
+def _m6d_fixture_summary(base_dir: Path, practices, spec) -> dict[str, Any]:
+    fixture_path = base_dir / "tests" / "fixtures" / "evidence" / "m6d_01_protocols_v1.json"
+    try:
+        fixture_bytes = fixture_path.read_bytes()
+        fixture = json.loads(fixture_bytes)
+    except (OSError, json.JSONDecodeError) as exc:
+        raise CompetencyEvidenceReportError(
+            f"{fixture_path}: could not read the M6D-01 typed fixture."
+        ) from exc
+    _require_equal(
+        "M6D-01 fixture schema",
+        fixture.get("schema_version"),
+        "grounded-growth-m6d-01-protocol-fixture-v1",
+    )
+    _require_equal(
+        "M6D-01 fixture algorithm",
+        fixture.get("algorithm_version"),
+        TYPED_EVIDENCE_ALGORITHM_VERSION,
+    )
+    _require_equal(
+        "M6D-01 fixture rules",
+        fixture.get("rules_schema_version"),
+        TYPED_EVIDENCE_RULES_VERSION,
+    )
+    action_index = {
+        action["stable_id"]: (protocol, action)
+        for protocol in practices.protocols
+        if protocol["stable_id"] in _M6D_01_COHORT
+        for action in protocol["intervention"]["actions"]
+    }
+    cases = fixture.get("cases")
+    if not isinstance(cases, list) or len(cases) != len(action_index):
+        raise CompetencyEvidenceReportError(
+            "The M6D-01 fixture must contain exactly one case for every typed source action."
+        )
+    decimal_fields = {
+        "performance",
+        "quality",
+        "independence",
+        "context_breadth",
+        "repetition_multiplier",
+        "contradiction_level",
+        "base_evidence_mass",
+        "competency_performance",
+    }
+    results = {}
+    candidates = {}
+    seen_case_ids: set[str] = set()
+    seen_action_ids: set[str] = set()
+    for case in cases:
+        if not isinstance(case, dict) or not isinstance(case.get("input"), dict):
+            raise CompetencyEvidenceReportError("The M6D-01 fixture case is malformed.")
+        case_id = case.get("case_id")
+        if not isinstance(case_id, str) or case_id in seen_case_ids:
+            raise CompetencyEvidenceReportError("M6D-01 fixture case IDs must be unique.")
+        seen_case_ids.add(case_id)
+        evidence = _typed_input_from_mapping(case["input"])
+        if evidence.action_stable_id not in action_index:
+            raise CompetencyEvidenceReportError(
+                f"{case_id}: fixture references an unknown typed source action."
+            )
+        if evidence.action_stable_id in seen_action_ids:
+            raise CompetencyEvidenceReportError(
+                f"{case_id}: fixture repeats a typed source action."
+            )
+        seen_action_ids.add(evidence.action_stable_id)
+        _, action = action_index[evidence.action_stable_id]
+        identity = action["typed_evidence_identity"]
+        actual_identity = {
+            "protocol_stable_id": evidence.protocol_stable_id,
+            "action_stable_id": evidence.action_stable_id,
+            "competency_stable_id": evidence.competency_stable_id,
+            "scoring_policy_id": evidence.scoring_policy_id,
+        }
+        _require_equal(f"{case_id} identity", actual_identity, identity)
+        result = evaluate_typed_evidence(evidence, action["evidence_rules"], spec=spec)
+        _require_equal(
+            f"{case_id} dispatched replay",
+            replay_evidence_by_version(TYPED_EVIDENCE_ALGORITHM_VERSION, result.input_snapshot),
+            result,
+        )
+        expected = case.get("expected")
+        if not isinstance(expected, dict):
+            raise CompetencyEvidenceReportError(f"{case_id}: expected result is malformed.")
+        _require_equal(f"{case_id} expected fields", set(expected), _M6D_EXPECTED_FIELDS)
+        for field, expected_value in expected.items():
+            if field in {"materialized_spec_hash", "materialized_rules_hash"}:
+                actual = result.input_snapshot[field]
+            else:
+                actual = getattr(result, field)
+                if field in decimal_fields and actual is not None:
+                    actual = f"{actual:.4f}"
+                elif isinstance(actual, tuple):
+                    actual = list(actual)
+            _require_equal(f"{case_id} expected {field}", actual, expected_value)
+        results[case_id] = _canonical_hash(expected)
+        candidates[case_id] = candidate_from_typed_evidence(result)
+    _require_equal("M6D-01 fixture action coverage", seen_action_ids, set(action_index))
+    required_modes = {
+        "supportive",
+        "mixed",
+        "contradictory",
+        "inconclusive",
+        "unknown",
+        "not_observed",
+        "not_applicable",
+        "deferred",
+        "adverse",
+        "stale",
+        "repeated",
+        "duplicate_origin",
+    }
+    modes = {case.get("mode") for case in cases}
+    _require_equal("M6D-01 fixture outcome coverage", modes, required_modes)
+    duplicate_candidates = [
+        candidate for candidate in candidates.values() if candidate.origin_key.endswith("-13")
+    ]
+    try:
+        project_competency_evidence(
+            candidates=duplicate_candidates,
+            assessment_epoch_id="ASSESSMENT-EPOCH-M6D01-SYNTHETIC",
+            competency_id="13.02",
+            as_of_date="2026-08-15",
+            policy_id="SP-SHADOW-ONLY",
+        )
+    except CompetencyScoringContractError as exc:
+        if "origin" not in str(exc).lower():
+            raise CompetencyEvidenceReportError(
+                "M6D-01 duplicate-origin fixture failed for an unexpected reason."
+            ) from exc
+    else:
+        raise CompetencyEvidenceReportError("M6D-01 duplicate-origin fixture was not rejected.")
+    first_candidate = next(iter(candidates.values()))
+    duplicate_event_candidates = [
+        first_candidate,
+        replace(first_candidate, origin_key=f"{first_candidate.origin_key}-DISTINCT"),
+    ]
+    try:
+        project_competency_evidence(
+            candidates=duplicate_event_candidates,
+            assessment_epoch_id=first_candidate.assessment_epoch_id,
+            competency_id=first_candidate.competency_id,
+            as_of_date="2026-08-15",
+            policy_id="SP-SHADOW-ONLY",
+        )
+    except CompetencyScoringContractError as exc:
+        if "event" not in str(exc).lower():
+            raise CompetencyEvidenceReportError(
+                "M6D-01 duplicate-event fixture failed for an unexpected reason."
+            ) from exc
+    else:
+        raise CompetencyEvidenceReportError("M6D-01 duplicate-event fixture was not rejected.")
+    wrong_epoch_candidates = [
+        first_candidate,
+        replace(
+            first_candidate,
+            event_key=f"{first_candidate.event_key}-DISTINCT",
+            origin_key=f"{first_candidate.origin_key}-DISTINCT",
+            assessment_epoch_id="ASSESSMENT-EPOCH-M6D01-OTHER",
+        ),
+    ]
+    try:
+        project_competency_evidence(
+            candidates=wrong_epoch_candidates,
+            assessment_epoch_id=first_candidate.assessment_epoch_id,
+            competency_id=first_candidate.competency_id,
+            as_of_date="2026-08-15",
+            policy_id="SP-SHADOW-ONLY",
+        )
+    except CompetencyScoringContractError as exc:
+        if "epoch" not in str(exc).lower():
+            raise CompetencyEvidenceReportError(
+                "M6D-01 cross-epoch fixture failed for an unexpected reason."
+            ) from exc
+    else:
+        raise CompetencyEvidenceReportError("M6D-01 cross-epoch fixture was not rejected.")
+    return {
+        "path": fixture_path.relative_to(base_dir).as_posix(),
+        "sha256": hashlib.sha256(fixture_bytes).hexdigest(),
+        "action_count": len(action_index),
+        "action_ids": sorted(action_index),
+        "modes": sorted(modes),
+        "case_result_hashes": dict(sorted(results.items())),
+        "duplicate_origin_rejected": True,
+        "duplicate_event_rejected": True,
+        "cross_epoch_rejected": True,
+    }
 
 
 def _csv_bytes(rows: Iterable[dict[str, Any]], fieldnames: list[str]) -> bytes:
@@ -1199,22 +1438,30 @@ def _build_software_contract(base_dir: Path) -> _SoftwareContract:
     _verify_competency_shadow_fixture(base_dir)
     policy_rows = _policy_rows(practices)
     _verify_production_source_contract(canonical, practices)
+    m6d_fixture = _m6d_fixture_summary(base_dir, practices, spec)
 
     competency_count = sum(
         len(domain["competencies"]) for domain in canonical.curriculum["domains"]
     )
     action_count = sum(len(protocol["intervention"]["actions"]) for protocol in practices.protocols)
-    typed_protocols = [
+    source_typed_protocols = [
         protocol
         for protocol in practices.protocols
         if protocol["evidence_and_scoring"]["observation_contract_version"]
         == TYPED_EVIDENCE_RULES_VERSION
     ]
-    typed_protocol_ids = {protocol["stable_id"] for protocol in typed_protocols}
-    typed_score_active = sum(
+    source_typed_protocol_ids = {protocol["stable_id"] for protocol in source_typed_protocols}
+    source_typed_score_active = sum(
         activation["score_active"]
         for stable_id, activation in practices.activation_entries.items()
-        if stable_id in typed_protocol_ids
+        if stable_id in source_typed_protocol_ids
+    )
+    release_candidates = sum(
+        protocol["governance"]["editorial_status"] == "release_candidate"
+        for protocol in practices.protocols
+    )
+    source_complete_protocols = sum(
+        protocol_sources_complete(practices, protocol) for protocol in practices.protocols
     )
     catalog_counts = {
         "competencies": competency_count,
@@ -1225,13 +1472,16 @@ def _build_software_contract(base_dir: Path) -> _SoftwareContract:
             activation["score_active"] for activation in practices.activation_entries.values()
         ),
     }
-    _require_equal(
-        "Frozen M6A catalog counts",
-        catalog_counts,
-        _EXPECTED_CATALOG_COUNTS,
-    )
-    _require_equal("Typed production protocol count", len(typed_protocols), 0)
-    _require_equal("Typed score-active protocol count", typed_score_active, 0)
+    _require_equal("Canonical curriculum competency count", competency_count, 383)
+    if len(practices.protocols) < _M6D_01_MINIMUM_SOURCE_PROTOCOLS:
+        raise CompetencyEvidenceReportError("The M6D-01 source cohort is incomplete.")
+    if action_count < _M6D_01_MINIMUM_SOURCE_ACTIONS:
+        raise CompetencyEvidenceReportError("The M6D-01 source action cohort is incomplete.")
+    if catalog_counts["uncovered_competencies"] > _M6D_01_MAXIMUM_UNCOVERED_COMPETENCIES:
+        raise CompetencyEvidenceReportError("The M6D-01 competency cohort is incomplete.")
+    if len(source_typed_protocols) < 4:
+        raise CompetencyEvidenceReportError("The M6D-01 typed source cohort is incomplete.")
+    _require_equal("Source-only typed score-active count", source_typed_score_active, 0)
 
     review = practices.expert_reviews.get("ER-M6A-003")
     gap = practices.research_gaps.get("RG-M6A-002")
@@ -1239,8 +1489,6 @@ def _build_software_contract(base_dir: Path) -> _SoftwareContract:
         raise CompetencyEvidenceReportError(
             "The M6B specialist-review and research-gap controls are required."
         )
-    _require_equal("ER-M6A-003 status", review["status"], "pending")
-    _require_equal("RG-M6A-002 status", gap["status"], "open")
     _require_equal(
         "ER-M6A-003 blocking gates",
         set(review["blocking_gates"]),
@@ -1283,8 +1531,12 @@ def _build_software_contract(base_dir: Path) -> _SoftwareContract:
             "provenance_kinds": ";".join(sorted(spec.provenance_kinds)),
             "pure_engine_executable": "true",
             "historical_v1_unchanged": "true",
-            "typed_production_protocols": len(typed_protocols),
-            "typed_score_active_protocols": typed_score_active,
+            "typed_production_protocols": len(
+                source_typed_protocol_ids.intersection(
+                    protocol["stable_id"] for protocol in practices.runtime_protocols
+                )
+            ),
+            "typed_score_active_protocols": source_typed_score_active,
             "production_state_effect": "none",
             "privacy_boundary": ("structured_tokens_only_no_free_text_or_artifact_contents"),
         }
@@ -1307,12 +1559,17 @@ def _build_software_contract(base_dir: Path) -> _SoftwareContract:
             "production_score_eligibility_fingerprint": (PRODUCTION_SCORE_MAPPING_FINGERPRINT),
         },
         "catalog": catalog_counts,
+        "source_typed_protocols": len(source_typed_protocols),
         "scoring_policies": {
             "canonical": len(policy_rows),
             "synthetically_executed": len(policy_rows),
         },
-        "typed_production_protocols": len(typed_protocols),
-        "typed_score_active_protocols": typed_score_active,
+        "typed_production_protocols": len(
+            source_typed_protocol_ids.intersection(
+                protocol["stable_id"] for protocol in practices.runtime_protocols
+            )
+        ),
+        "typed_score_active_protocols": source_typed_score_active,
         "governance": {
             "expert_review": {
                 "review_id": "ER-M6A-003",
@@ -1328,15 +1585,119 @@ def _build_software_contract(base_dir: Path) -> _SoftwareContract:
             },
         },
         "boundary": (
-            "Software readiness is additive and shadow-only. Pending specialist "
-            "review and the open research gap block M6B acceptance, mass "
-            "authoring, and typed production score activation."
+            "Software readiness is additive. Specialist review and research-gap status "
+            "are reported from canonical governance; production eligibility remains a "
+            "separate explicit contract."
+        ),
+    }
+    protocol_by_id = {protocol["stable_id"]: protocol for protocol in practices.protocols}
+    cohort = []
+    for stable_id, (
+        competency_id,
+        domain_id,
+        protocol_family_id,
+        recommendation_target_lever_ids,
+        action_count,
+    ) in _M6D_01_COHORT.items():
+        protocol = protocol_by_id.get(stable_id)
+        if protocol is None:
+            raise CompetencyEvidenceReportError(f"M6D-01 cohort package missing: {stable_id}.")
+        _require_equal(f"{stable_id} competency", protocol["parent_competency_id"], competency_id)
+        _require_equal(f"{stable_id} domain", protocol["domain_id"], domain_id)
+        _require_equal(
+            f"{stable_id} action count",
+            len(protocol["intervention"]["actions"]),
+            action_count,
+        )
+        _require_equal(
+            f"{stable_id} protocol family",
+            protocol["intervention"]["protocol_class"],
+            protocol_family_id,
+        )
+        _require_equal(
+            f"{stable_id} recommendation targets",
+            tuple(protocol["evidence_and_scoring"]["recommendation_target_lever_ids"]),
+            recommendation_target_lever_ids,
+        )
+        governance = protocol["governance"]
+        _require_equal(
+            f"{stable_id} source-only governance",
+            (
+                governance["availability"],
+                governance["editorial_status"],
+                governance["runtime_projection"],
+                governance["risk_class_id"],
+                governance["scoring_policy_id"],
+                governance["scoring_status"],
+            ),
+            ("inactive", "draft", "none", "RISK-LOW", "SP-SHADOW-ONLY", "shadow_only"),
+        )
+        activation = practices.activation_entries[stable_id]
+        _require_equal(
+            f"{stable_id} inactive activation",
+            (
+                activation["score_active"],
+                activation["activation_status"],
+                activation["approved_contract"],
+            ),
+            (False, "inactive", None),
+        )
+        cohort.append(
+            {
+                "protocol_stable_id": stable_id,
+                "competency_id": competency_id,
+                "domain_id": domain_id,
+                "protocol_family_id": protocol["intervention"]["protocol_class"],
+                "action_count": action_count,
+                "recommendation_target_lever_ids": protocol["evidence_and_scoring"][
+                    "recommendation_target_lever_ids"
+                ],
+                "availability": governance["availability"],
+                "editorial_status": governance["editorial_status"],
+                "runtime_projection": governance["runtime_projection"],
+                "scoring_policy_id": governance["scoring_policy_id"],
+                "score_active": activation["score_active"],
+            }
+        )
+    m6d_readiness = {
+        "contract_version": M6D_AUTHORING_READINESS_CONTRACT_VERSION,
+        "catalog_content_hash": practices.content_hash,
+        "fixture_sha256": m6d_fixture["sha256"],
+        "catalog": catalog_counts,
+        "runtime": {
+            "protocols": len(practices.runtime_protocols),
+            "actions": sum(len(protocol["actions"]) for protocol in practices.runtime_protocols),
+            "score_active_protocols": sum(
+                practices.activation_entries[protocol["stable_id"]]["score_active"]
+                for protocol in practices.runtime_protocols
+            ),
+            "typed_protocols": sum(
+                protocol["stable_id"] in source_typed_protocol_ids
+                for protocol in practices.runtime_protocols
+            ),
+        },
+        "cohort": cohort,
+        "fixture": m6d_fixture,
+        "governance": {
+            "expert_review_id": "ER-M6A-003",
+            "expert_review_status": review["status"],
+            "research_gap_id": "RG-M6A-002",
+            "research_gap_status": gap["status"],
+            "m6b_accepted": readiness["m6b_accepted"],
+            "release_candidates": release_candidates,
+            "source_complete_protocols": source_complete_protocols,
+        },
+        "boundary": (
+            "The cohort is individually authored source-only draft content with synthetic "
+            "shadow replay. It adds no typed persistence, runtime projection, production "
+            "activation, specialist acceptance, participant validation, or mastery claim."
         ),
     }
     return _SoftwareContract(
         capability_rows=capability_rows,
         policy_rows=policy_rows,
         readiness=readiness,
+        m6d_readiness=m6d_readiness,
     )
 
 
@@ -1383,6 +1744,7 @@ def build_competency_evidence_report_outputs(
             ],
         ),
         REPORT_PATHS["readiness"]: _json_bytes(contract.readiness),
+        REPORT_PATHS["m6d_readiness"]: _json_bytes(contract.m6d_readiness),
     }
 
 

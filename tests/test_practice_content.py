@@ -1,11 +1,13 @@
 import copy
 import csv
+import hashlib
 import json
 import shutil
 from pathlib import Path
 
 import pytest
 import yaml
+from jsonschema import Draft202012Validator
 
 from growth.domain.practice_content import (
     FROZEN_LEGACY_CONFIGURATION_HASH,
@@ -15,6 +17,7 @@ from growth.domain.practice_content import (
     legacy_projection_payload,
     load_practice_content_bundle,
 )
+from growth.services import practice_content_reports
 from growth.services.canonical_import import (
     CanonicalDataError,
     load_and_validate_bundle,
@@ -51,7 +54,8 @@ def test_canonical_practice_bundle_preserves_five_protocol_runtime_projection():
     bundle = load_practice_content_bundle(ROOT)
     runtime = bundle.runtime_protocols
 
-    assert len(bundle.protocols) == len(runtime) == 5
+    assert len(runtime) == 5
+    assert len(bundle.protocols) == len(bundle.release_manifest["protocol_files"])
     assert sum(len(protocol["actions"]) for protocol in runtime) == 15
     assert {protocol["stable_id"] for protocol in runtime if protocol["score_active"]} == {
         "PRACTICE-FRIENDSHIP-01"
@@ -60,9 +64,7 @@ def test_canonical_practice_bundle_preserves_five_protocol_runtime_projection():
         configuration_hash([legacy_projection_payload(protocol) for protocol in runtime])
         == FROZEN_LEGACY_CONFIGURATION_HASH
     )
-    assert bundle.content_hash == (
-        "62a61f4440a030cd2b961f0bd56b832ad8102a1b37c05f9bdbdae00a03b3f247"
-    )
+    assert bundle.content_hash == bundle.release_manifest["content_hash"]
     assert load_and_validate_bundle().source_hash == (
         "6958ccfbe0c0d80b7485ac866a8418578850284b58956f59168429819447dfc5"
     )
@@ -85,7 +87,13 @@ def test_registries_cover_risk_scoring_source_family_and_activation_boundaries()
         "SP-NON-SCORED-REFLECTION",
     } <= set(bundle.scoring_policies)
     assert len(bundle.protocol_families) == 12
-    assert len(bundle.sources) == 5
+    assert {
+        "SRC-M6D-MOTIVATION-IMPLEMENTATION-INTENTIONS",
+        "SRC-M6D-DECISION-OUTCOME-BIAS",
+        "SRC-M6D-DELIBERATE-PRACTICE",
+        "SRC-M6D-DELIBERATE-PRACTICE-LIMITS",
+        "SRC-M6D-NCHH-HEALTHY-HOME",
+    } <= set(bundle.sources)
     assert sum(activation["score_active"] for activation in bundle.activation_entries.values()) == 1
 
 
@@ -106,6 +114,112 @@ def test_schema_rejects_unknown_protocol_fields_and_unknown_versions(tmp_path):
     registry_path.write_text(yaml.safe_dump(registry, sort_keys=False))
     with pytest.raises(PracticeContentError, match="schema validation failed"):
         load_practice_content_bundle(base)
+
+
+@pytest.mark.parametrize(
+    ("mutation", "error"),
+    [
+        ("mixed_version", "cannot mix evidence-rule versions"),
+        ("unknown_version", "schema validation failed"),
+        ("malformed_rule", "schema validation failed"),
+        ("missing_kind_field", "schema validation failed"),
+        ("cross_kind_field", "schema validation failed"),
+        ("undeclared_check_in", "typed fields must exactly match"),
+        ("identity_mismatch", "must exactly match"),
+        ("runtime_projection", "cannot be projected"),
+    ],
+)
+def test_source_only_typed_rules_fail_closed(tmp_path, mutation, error):
+    base = _copy_practice_tree(tmp_path)
+    protocol_path = (
+        base
+        / "data"
+        / "practices"
+        / "protocols"
+        / "08"
+        / "PRACTICE-MOTIVATION-INDEPENDENT-START-01.yaml"
+    )
+    protocol = yaml.safe_load(protocol_path.read_text())
+    action = protocol["intervention"]["actions"][0]
+    if mutation == "mixed_version":
+        action["evidence_rules"] = {
+            "schema_version": "practice-observation-v1",
+            "primary_markers": ["user_initiated"],
+            "supporting_markers": ["follow_up_question_asked"],
+        }
+        action.pop("typed_evidence_identity")
+    elif mutation == "unknown_version":
+        action["evidence_rules"]["schema_version"] = "typed-evidence-rules-v2"
+    elif mutation == "malformed_rule":
+        action["evidence_rules"]["measurements"][0]["implicit_more_is_better"] = True
+    elif mutation == "missing_kind_field":
+        action["evidence_rules"]["measurements"][0].pop("expected")
+    elif mutation == "cross_kind_field":
+        action["evidence_rules"]["measurements"][0]["unit"] = "minutes"
+    elif mutation == "undeclared_check_in":
+        protocol["evidence_and_scoring"]["check_in_fields"].append("private_narrative")
+        protocol["presentation"]["check_in_labels"]["private_narrative"] = "Private narrative"
+    elif mutation == "identity_mismatch":
+        action["typed_evidence_identity"]["competency_stable_id"] = "08.05"
+    else:
+        protocol["governance"]["runtime_projection"] = "GG-PRACTICE-RUNTIME-PROJECTION-1.0"
+        protocol["governance"]["availability"] = "active"
+    protocol_path.write_text(yaml.safe_dump(protocol, sort_keys=False))
+
+    with pytest.raises(PracticeContentError, match=error):
+        load_practice_content_bundle(base)
+
+
+def test_typed_measurement_schema_requires_exact_kind_fields():
+    schema = json.loads(
+        (ROOT / "data/practices/schema/practice_content_v1.schema.json").read_text()
+    )
+    validator = Draft202012Validator(schema)
+    protocol = yaml.safe_load(
+        (
+            ROOT / "data/practices/protocols/08/PRACTICE-MOTIVATION-INDEPENDENT-START-01.yaml"
+        ).read_text()
+    )
+    missing = copy.deepcopy(protocol)
+    missing["intervention"]["actions"][0]["evidence_rules"]["measurements"][0].pop("expected")
+    cross_kind = copy.deepcopy(protocol)
+    cross_kind["intervention"]["actions"][0]["evidence_rules"]["measurements"][0]["unit"] = (
+        "minutes"
+    )
+
+    assert list(validator.iter_errors(missing))
+    assert list(validator.iter_errors(cross_kind))
+
+
+def test_frozen_legacy_package_bytes_remain_exact():
+    expected = (
+        (
+            "protocols/08/PRACTICE-PRESENCE-01.yaml",
+            "5d0c39a9fb36d816253fb231cc7d132b1a72583b71e364339749af37a0bdf366",
+        ),
+        (
+            "protocols/11/PRACTICE-BOUNDARY-01.yaml",
+            "c008291dd82b300bc8e216b8c4fab4f33982f86e8ec3a3c0a90c26b85ef4b4fc",
+        ),
+        (
+            "protocols/16/PRACTICE-EMOTIONAL-CUES-01.yaml",
+            "bca089dfacd413719aa89b1863d05b317f6d85ef3faf49eb72c18b675b3d6793",
+        ),
+        (
+            "protocols/17/PRACTICE-FRIENDSHIP-01.yaml",
+            "a924ff732696468c5dd5305ce0145bdbd483ab3c66390dd216b0ac31fa5d789a",
+        ),
+        (
+            "protocols/26/PRACTICE-PLAY-01.yaml",
+            "48810b2dd8e66e9e7ec33a9a7000b2f5bbffb6289c74f36d73d1eb1a830fd7a8",
+        ),
+    )
+
+    for relative_path, digest in expected:
+        assert (
+            hashlib.sha256((ROOT / "data/practices" / relative_path).read_bytes()).hexdigest()
+            == digest
+        )
 
 
 def test_manifest_rejects_unlisted_protocol_files(tmp_path):
@@ -333,25 +447,38 @@ def test_generated_coverage_and_originality_reports_are_current_and_complete():
     coverage = list(csv.DictReader(coverage_bytes.decode().splitlines()))
     assert len(coverage) == 383
     assert sum(row["content_status"] == "projected_legacy" for row in coverage) == 5
-    assert sum(row["content_status"] == "uncovered" for row in coverage) == 378
+    authored_count = len(load_practice_content_bundle(ROOT).protocols)
+    assert sum(row["content_status"] == "uncovered" for row in coverage) == 383 - authored_count
     assert len({row["domain_id"] for row in coverage}) == 27
 
     summary = json.loads(outputs[Path("reports/practice-content/coverage_summary_v1.json")])
     assert summary["competencies"] == {
-        "authored_packages": 5,
+        "authored_packages": authored_count,
         "projected_legacy": 5,
         "total": 383,
-        "uncovered": 378,
+        "uncovered": 383 - authored_count,
     }
+    authored_rows = [row for row in coverage if row["protocol_stable_id"]]
     assert summary["levers"] == {
-        "covered_through_parent_mapping": 13,
-        "recommendation_targets": 6,
+        "covered_through_parent_mapping": len(
+            {
+                lever_id
+                for row in authored_rows
+                for lever_id in row["parent_mapping_lever_ids"].split(";")
+                if lever_id
+            }
+        ),
+        "recommendation_targets": len(
+            {
+                lever_id
+                for row in authored_rows
+                for lever_id in row["recommendation_target_lever_ids"].split(";")
+                if lever_id
+            }
+        ),
         "total": 37,
     }
-    assert summary["protocols"]["risk_classes"] == {
-        "RISK-LOW": 3,
-        "RISK-MODERATE": 2,
-    }
+    assert sum(summary["protocols"]["risk_classes"].values()) == authored_count
 
     lever_bytes = outputs[Path("reports/practice-content/lever_coverage_v1.csv")]
     lever_coverage = {
@@ -372,7 +499,67 @@ def test_generated_coverage_and_originality_reports_are_current_and_complete():
     assert originality["exact_or_normalized_duplicates"]["action_instructions"] == []
     assert len(originality["exact_or_normalized_duplicates"]["evidence_rule_payloads"]) == 2
     assert originality["evidence_markers_that_only_restate_completion"] == []
-    assert len(originality["parent_competency_operationalization_signals"]) == 5
+    assert len(originality["parent_competency_operationalization_signals"]) == authored_count
+    assert originality["structure_warnings"]["disposition"].startswith(
+        "Structural repetition is reported"
+    )
+
+
+def test_originality_report_routes_duplicate_and_structural_mutations():
+    catalog = copy.deepcopy(load_practice_content_bundle(ROOT))
+    canonical = load_and_validate_bundle()
+    baseline = practice_content_reports._originality_report(ROOT, catalog, canonical)
+    first = next(
+        protocol
+        for protocol in catalog.protocols
+        if protocol["stable_id"] == "PRACTICE-MOTIVATION-INDEPENDENT-START-01"
+    )
+    second = next(
+        protocol
+        for protocol in catalog.protocols
+        if protocol["stable_id"] == "PRACTICE-DECISION-RECORD-01"
+    )
+    first_action = first["intervention"]["actions"][0]
+    second_action = second["intervention"]["actions"][0]
+    second_action["title"] = first_action["title"]
+    second_action["instructions"] = first_action["instructions"]
+    second_action["evidence_rules"] = copy.deepcopy(first_action["evidence_rules"])
+    second["completion_and_review"]["reflection"] = copy.deepcopy(
+        first["completion_and_review"]["reflection"]
+    )
+    for field in (
+        "privacy_and_boundaries",
+        "foreseeable_misuse",
+        "exclusions",
+        "adaptations",
+        "pause_conditions",
+        "stop_conditions",
+        "escalation_conditions",
+        "professional_referral_conditions",
+    ):
+        second["intervention"][field] = copy.deepcopy(first["intervention"][field])
+    second["intervention"]["duration_days"] = first["intervention"]["duration_days"]
+    second["intervention"]["actions"].append(copy.deepcopy(second_action))
+
+    report = practice_content_reports._originality_report(
+        ROOT,
+        catalog,
+        canonical,
+    )
+
+    duplicates = report["exact_or_normalized_duplicates"]
+    assert duplicates["action_titles"]
+    assert duplicates["action_instructions"]
+    assert duplicates["reflection_sets"]
+    assert duplicates["safety"]
+    assert any(
+        group["classification"] == "review_required"
+        for group in duplicates["evidence_rule_payloads"]
+    )
+    assert (
+        report["structure_warnings"]["action_count_distribution"]
+        != baseline["structure_warnings"]["action_count_distribution"]
+    )
 
 
 def test_report_check_fails_closed_for_missing_output(tmp_path):

@@ -141,14 +141,22 @@ Personal OS identity/Truth-Autopilot foundations. M6C-03 is merged with the
 backend-only
 `GG-CONTEXT-PRIORITY-1.0` formula, withholding, deterministic alternatives,
 canonical privacy-minimized results, and additive readiness without migration,
-persistence, ordinary UI, scoring, or activation. M6C-04 is the current
-browser closeout: one authenticated concise journey collects exact structured
+persistence, ordinary UI, scoring, or activation. M6C-04 is reviewed and
+merged: one authenticated concise journey collects exact structured
 context and private Personal OS revisions, presents deterministic rankings and
 distinct alternatives only among explicitly reviewed current-epoch practices,
 and adds an aggregate browser/deployment readiness contract. It must not infer
 context, analyze authored text, persist ranking results, add a dedicated
 export/purge/retention policy, change scoring, or expand friendship-only
-activation. Representative vertical slices begin after M6C as Phase B.
+activation.
+
+M6D-01 is the current Phase B batch. It authors exactly competencies `08.06`,
+`09.12`, `10.02`, and `13.02` as four low-risk draft, inactive, unprojected,
+shadow-only packages with fourteen synthetic typed-action fixtures. The source
+catalog is nine packages and twenty-nine actions; the runtime remains five and
+fifteen. Run `make m6d-01-check`, preserve pending M6B governance, and do not
+represent source or synthetic evidence as specialist, participant, release,
+deployment, production, or effectiveness validation.
 
 Acceptance criteria are in `docs/PROJECT_HANDOFF.md`. Add automated tests for
 every testable criterion. The app must pass `make compose-smoke` in a
@@ -165,9 +173,11 @@ Then implement in reviewable batches. For each batch:
 - run `make pilot-check`;
 - run `make curriculum-check`;
 - run `make competency-evidence-check` for M6B and later;
+- run `make m6d-01-check` for M6D-01 and later;
 - audit against the product doctrine;
 - report exact passes/failures;
-- open a PR and ask me to approve it.
+- prepare a reviewable change and stop for owner approval; do not commit, push,
+  or open a PR unless the active request authorizes those actions.
 
 Do not generalize score activation merely because M4 adds a protocol. A newly
 score-active protocol requires its own reviewed canonical mapping, evidence

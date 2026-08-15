@@ -1,7 +1,7 @@
 # Current state
 
-Last audited: 2026-08-14
-Implementation base: `main@713d1a9`
+Last audited: 2026-08-15
+Implementation base: `main@a1bc792`
 
 ## Completed implementation
 
@@ -10,9 +10,8 @@ Implementation base: `main@713d1a9`
 - M6B typed evidence, evidence-only competency shadow, one-way lever shadow,
   production eligibility, deterministic reports, and additive readiness are
   merged as software.
-- Current canonical practice coverage remains five packages and fifteen actions
-  across 383 competencies; 378 competencies are explicitly uncovered.
-- Friendship remains the only production score-active protocol.
+- The projected runtime remains five packages and fifteen actions, with
+  friendship as the only production score-active protocol.
 - M6C-01 is merged. It adds versioned, assessment-epoch-scoped context/defer
   persistence, deterministic snapshots and hashes, and additive readiness
   without changing recommendations or ordinary UI.
@@ -27,26 +26,24 @@ Implementation base: `main@713d1a9`
   privacy-minimized canonical results, and additive read-only readiness. It
   adds no migration, persistence, browser integration, scoring write, or
   activation.
+- M6C-04 and its mobile/manifest corrections are reviewed and merged. The
+  authenticated Personal OS/context journey and additive browser/deployment
+  readiness preserve the unchanged scoring and recommendation contracts.
 
 ## Current implementation
 
-- M6C-04 is implemented on the current review branch. It adds one
-  authenticated latest-assessment Personal OS entry point with concise staged
-  identity/audit, season/capacity, and per-practice context forms.
-- The browser presenter supplies the unchanged M6C-03 engine only explicitly
-  reviewed active practices in the current epoch, preserves exact no-context
-  legacy recommendation behavior, and shows a deterministic distinct
-  cohort-bounded alternative or explicit no-alternative state.
-- Authored Personal OS text remains visible only on its owner's authenticated
-  Personal OS surface and is excluded from ranking, explanations, other
-  recommendation pages, existing exports, evidence/score state, and activation.
-- Additive read-only `GG-M6C-PILOT-READINESS-1.0` plus browser and Compose
-  wiring verify the six prerequisite contracts, route/authentication boundary,
-  five active protocols, friendship-only activation, synthetic state replay,
-  recreation, and backup/restore without persisting priority results.
-- M6C-04 adds no model, migration, protocol/action, dependency, external
-  service, remote telemetry, weekly execution, dedicated Personal OS/context
-  export or purge, evidence/scoring write, or activation change.
+- M6D-01 authors exactly four representative low-risk draft packages for
+  competencies `08.06`, `09.12`, `10.02`, and `13.02` across four domains and
+  four distinct intervention/evidence families.
+- The canonical source catalog is nine packages and twenty-nine actions; 374
+  competencies remain explicitly uncovered. The four new packages are
+  inactive, unprojected, `SP-SHADOW-ONLY`, and production-ineligible.
+- A fail-closed source-only typed-rule loader branch, fourteen synthetic action
+  fixtures, deterministic reports, and read-only
+  `GG-M6D-01-AUTHORING-READINESS-1.0` verify exact identities, hashes,
+  governance, and no database writes.
+- The five-protocol/fifteen-action runtime, historical replay, M6C behavior,
+  recommendation behavior, and friendship-only score activation remain exact.
 
 ## Pending governance
 
@@ -65,23 +62,20 @@ Run the local gate check:
 
 ## Planned sequence
 
-1. Complete M6C-04 exact local/browser/Compose/hosted-CI validation, retained
-   synthetic artifact review, owner prompt/factor/explanation/privacy review,
-   and human-reviewed target PR disposition.
-2. Approximately 10–12 representative vertical-slice protocols after the
-   separately governed Phase B authorization.
+1. Complete M6D-01 exact local/Compose/hosted-CI validation, trained content
+   and source review, retained evidence review, and owner PR disposition.
+2. Continue representative vertical-slice protocols only through separately
+   governed Phase B batches.
 3. Stable report-derived domain cohorts of approximately 8–15 competencies per
    human-reviewed target PR.
 4. Whole-library scoring dispositions and shadow calibration.
 5. Separately approved controlled activation cohorts.
 6. Full integration, operations hardening, and diverse multi-cycle validation.
 
-Run the independent M6C foundations with `make context-check`,
-`make personal-os-check`, and `make context-priority-check`, then the additive
-browser/deployment aggregate with `make m6c-pilot-check`. Required hosted CI,
-Compose, retained synthetic desktop/mobile artifact review, and owner approval
-on the exact M6C-04 candidate commit remain manual merge gates unless the
-retained evidence file records them as actually completed.
+Run the additive source cohort gate with `make m6d-01-check`. Required hosted
+CI, trained semantic/originality/accessibility/privacy/safety review, retained
+evidence review, and owner approval on the exact candidate commit remain
+manual merge gates unless retained evidence records them as actually completed.
 
 ## Automation boundary
 
