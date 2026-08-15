@@ -32,7 +32,7 @@
       {{ form.mode.errors }}
     </fieldset>
 
-    <section data-context-mode="provide" aria-labelledby="factor-heading">
+    <section data-context-mode="provide" aria-labelledby="factor-heading"{% if form.mode.value != "provide" %} hidden{% endif %}>
       <h2 id="factor-heading">Provide all six factors</h2>
       <p class="fine-print">0 is a valid explicit response. It is never a default.</p>
       {% for field in form %}
@@ -46,12 +46,12 @@
       {% endfor %}
     </section>
 
-    <section data-context-mode="not_applicable" class="inline-note">
+    <section data-context-mode="not_applicable" class="inline-note"{% if form.mode.value != "not_applicable" %} hidden{% endif %}>
       <h2>Not applicable</h2>
       <p>Applicability will be recorded as not applicable. The other five factors stay visibly unknown, and no deficit is created.</p>
     </section>
 
-    <section data-context-mode="defer" aria-labelledby="defer-heading">
+    <section data-context-mode="defer" aria-labelledby="defer-heading"{% if form.mode.value != "defer" %} hidden{% endif %}>
       <h2 id="defer-heading">Defer for now</h2>
       <p class="fine-print">Name one deferred factor and a categorical reason. Other factors stay unknown.</p>
       <div class="form-field">
