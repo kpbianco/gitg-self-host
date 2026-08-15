@@ -326,7 +326,7 @@ Phase B.
 ## Governed agentic delivery
 
 - Product: `gitg-self-host`; delivery profile: `product-data`.
-- Control revision: `2069c6f8235bf83403b342fbb20da03f273e21c2`; harness version: `2`.
+- Control revision: `b64611ea561b0d815ec9c5e427ac468e83b4b308`; harness version: `2`.
 - Read `contracts/profile-requirements.yaml` and the approved
   `contracts/active-batch.yaml` before implementation.
 - Stay inside active-batch allowed paths and preserve every forbidden path.
