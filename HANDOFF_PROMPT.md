@@ -131,10 +131,13 @@ unknown versions. Existing v1 replay and friendship-only production scoring
 remain exact.
 
 `ER-M6A-003` remains pending and `RG-M6A-002` remains open. Implementation and
-software readiness may complete, but M6B acceptance and mass authoring remain
+software readiness may complete, but M6B acceptance, runtime projection, score
+activation, participant release, deployment, and production validation remain
 blocked until measurement, accessibility, and privacy/safety review is
-truthfully recorded. Do not fabricate completed reviewer roles or weaken that
-gate.
+truthfully recorded. Decision 051 separately permits PFSPAM to merge exact-head,
+required-CI-green, inactive, unprojected, source-only draft cohorts until all
+383 competencies have a package or explicit non-protocol disposition. Do not
+fabricate completed reviewer roles or weaken the final gate.
 
 M6C-01 and M6C-02 are merged with explicit context/defer and private append-only
 Personal OS identity/Truth-Autopilot foundations. M6C-03 is merged with the
@@ -168,16 +171,24 @@ Before changing code:
 3. Identify data inconsistencies or missing canonical inputs.
 4. Do not ask me to restate background already in the repository.
 
-Then implement in reviewable batches. For each batch:
+Then implement in fixed, reviewable batches. For each source-only M6D/M6E batch:
 - run Ruff, Django checks, pytest, and applicable Playwright tests;
 - run `make pilot-check`;
 - run `make curriculum-check`;
 - run `make competency-evidence-check` for M6B and later;
-- run `make m6d-01-check` for M6D-01 and later;
+- run the batch-specific authoring-readiness gate;
 - audit against the product doctrine;
-- report exact passes/failures;
-- prepare a reviewable change and stop for owner approval; do not commit, push,
-  or open a PR unless the active request authorizes those actions.
+- report exact passes/failures and retain every automated warning;
+- commit, push, open or update the focused PR, run the bounded repair loop, and
+  merge only when the exact head has every required check green and no
+  unresolved review thread.
+
+Standing owner authorization covers only inactive, unprojected, source-only,
+production-ineligible, score-inactive drafts. Record human content/source/
+originality/accessibility/privacy/safety review as deferred until the final
+383/383 M6B-GOV gate. Stop for any runtime projection, score activation,
+participant exposure, release, deployment, production write, or validation
+claim.
 
 Do not generalize score activation merely because M4 adds a protocol. A newly
 score-active protocol requires its own reviewed canonical mapping, evidence
