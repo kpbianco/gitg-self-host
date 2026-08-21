@@ -284,10 +284,12 @@ scoring, state, ranking, and five-protocol runtime behavior remain exact.
 
 M6B implementation does not itself satisfy the pending measurement,
 accessibility, and privacy/safety review in `ER-M6A-003`. Keep
-`RG-M6A-002` open and do not claim M6B acceptance or begin mass authoring
-until that recorded review is truthfully complete. The owner-directed sequence
-permits later non-scored foundations while this governance remains pending;
-that sequence does not accept M6B or authorize typed production scoring.
+`RG-M6A-002` open and do not claim M6B acceptance, runtime projection, score
+activation, participant release, deployment, or production validation until
+that review is truthfully complete. Under Decision 051, PFSPAM may continue
+fixed, inactive, unprojected, source-only draft cohorts and merge only an exact
+head with every required check green. This sequencing does not accept M6B or
+authorize typed production scoring.
 
 M6C-01 is reviewed and merged. It adds append-only `GG-CONTEXT-1.0`
 assessment-epoch context and defer-state foundations plus additive readiness,
@@ -328,8 +330,13 @@ unprojected, shadow-only, and production-ineligible; it adds no model,
 migration, UI, persisted typed evidence, recommendation input, scoring write,
 or activation.
 
-Later representative vertical slices must remain separately authorized and
-human-reviewed Phase B batches.
+Later representative and generated cohorts remain separately contracted.
+Standing owner authorization permits PFSPAM to mark ready and merge only
+exact-head, required-CI-green, inactive, unprojected, source-only drafts.
+Human semantic/source/originality/accessibility/privacy/safety review is
+deferred, not passed, until the final 383/383 M6B-GOV gate. Runtime projection,
+score activation, participant exposure, release, deployment, and production
+claims always require separate human approval.
 
 <!-- BEGIN PORTFOLIO-CONTROL MANAGED -->
 ## Governed agentic delivery
