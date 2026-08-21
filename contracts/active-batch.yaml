@@ -20,7 +20,7 @@ sources:
     - M6C-01 through M6C-03 are merged at 8a1c937872d1dca4c38a917484dc214bc91b8a2f, 9ee7542f2155247ccb9b0ef4686535887f2b7403, and c7b51c1cd83c41c462c5c8685e80afbe39773d6b.
     - M6C-04 is merged at 58376c4b6aea1ebf173f3eaef6c6b2fabcf6dcca; its mobile correction and manifest repair are merged at d9b10e571325a8a3e77e64e4285c0b14fc979811 and 4fad711e24ca3b7539d0facb3c9bbbd3990d2d39.
     - The exact baseline then adds only portfolio-harness synchronization at a1bc79218a9397dcdbf699a1422c6f2881033675.
-    - Owner-directed sequencing permits bounded non-scored content authoring while M6B governance remains deferred; ER-M6A-003 stays pending, RG-M6A-002 stays open, and Decisions 047 through 049 stay proposed.
+    - Owner-directed sequencing permits PFSPAM to merge exact-head CI-green source-only draft cohorts while M6B governance remains deferred; ER-M6A-003 stays pending, RG-M6A-002 stays open, Decisions 047 through 049 stay proposed, and consolidated human review occurs only after the 383/383 draft frontier.
   target_contracts:
     - AGENTS.md
     - docs/PRODUCT_DECISIONS.md
@@ -34,7 +34,7 @@ sources:
     - contracts/verification.yaml
   control_plane_repository: kpbianco/portfolio-control
   control_plane_path: products/gitg-self-host/batches/M6D-01.yaml
-  control_plane_revision: 58545d46037bbc187ecda001422beab276515dfd  # pragma: allowlist secret
+  control_plane_revision: a2d2b687db32bc4ef49f7b45cb2b5ea4ed3e1461  # pragma: allowlist secret
 dependencies:
   - M6C-01
   - M6C-02
@@ -209,11 +209,11 @@ acceptance:
   - Conspicuously synthetic cohort fixtures replay every new action rule and cover supportive, mixed, contradictory, inconclusive, unknown, not-observed, N/A, deferred, and adverse paths; they demonstrate distinct protocol performance versus direct competency contribution, context and epoch bounds, provenance, recency, repetition, withholding, exact hashes, and no duplicate event application.
   - All new typed results remain pure source/fixture shadow evidence. No typed event is persisted, no legacy event is rewritten or up-converted, no LeverBaseline, LeverState, ScoreSnapshot, context, Personal OS, recommendation, sprint, review, or activation record is written, and no package becomes runtime-available.
   - Deterministic reports show exactly 383 competencies, 9 authored packages, 5 projected legacy packages, 4 M6D-01 draft typed source packages, 374 uncovered competencies, 29 source actions, 15 runtime actions, 8 domains with authored packages, 21 parent-mapped levers, 10 recommendation-target levers, 7 low-risk and 2 moderate-risk packages, 0 release candidates, 0 source-complete packages, 5 runtime protocols, and 1 score-active protocol.
-  - Originality output contains no unreviewed exact duplicate action instruction, action title, reflection set, evidence-rule payload, or safety block introduced by this cohort; every near-duplicate and structural warning has a recorded human disposition, and automated lexical overlap is not represented as semantic review.
+  - Originality output contains no exact duplicate action instruction, action title, reflection set, evidence-rule payload, or safety block introduced by this cohort; every near-duplicate and structural warning is retained for the final consolidated human disposition, and automated lexical overlap is not represented as semantic review.
   - GG-CURRICULUM-EXPANSION-READINESS-1.0 and GG-COMPETENCY-EVIDENCE-READINESS-1.0 are updated to distinguish the expanding source catalog from the frozen five-protocol runtime. A new read-only GG-M6D-01-AUTHORING-READINESS-1.0 verifies the exact cohort, hashes, reports, fixtures, inactive ledger state, pending governance, and no database writes without weakening any prerequisite readiness contract.
   - The frozen runtime projection hash 274f7244630ed56d56a443a6a699399edade6c67fcf964237559e05b72368e35, historical v1 evidence and score replay, M6C behavior, current recommendation outputs, five seeded protocols, fifteen seeded actions, and friendship-only activation remain exact.
   - "M6B governance remains unaccepted: ER-M6A-003 is pending, RG-M6A-002 is open, Decisions 047 through 049 remain proposed, and no content, source, schema, fixture, report, browser, hosted-CI, or Compose result is represented as specialist, accessibility-population, cultural, clinical, psychometric, longitudinal, participant, mastery, release, deployment, or production evidence."
-  - Focused tests, all deterministic reports and readiness gates, the complete repository verification contract, unchanged browser journeys, Compose backup/restore/recreation, required hosted CI, retained evidence review, and target owner review pass on the exact candidate commit before merge.
+  - Focused tests, all deterministic reports and readiness gates, the complete repository verification contract, unchanged browser journeys, Compose backup/restore/recreation, and required hosted CI pass on the exact candidate commit before merge; retained evidence and target-owner content review are explicitly recorded as deferred to the final 383/383 gate.
 validation:
   local:
     - .venv/bin/python -m pytest tests/test_practice_content.py tests/test_expansion_readiness.py tests/test_competency_evidence_reports.py tests/test_competency_evidence_readiness.py tests/test_m6d_authoring_readiness.py -q
@@ -235,7 +235,7 @@ validation:
     - supportive mixed contradictory inconclusive unknown not-observed N-A deferred adverse stale repeated and duplicate-origin fixture outcomes with deterministic materialized hashes
     - draft low-risk governance, open source/review gaps, inactive ledger entries, zero typed persistence, zero new score activation, and release-candidate fail-closed behavior
     - exact 9-package 29-source-action 374-uncovered report counts plus frozen 5-protocol 15-runtime-action projection and friendship-only activation
-    - originality detection and reviewed disposition for duplicate action, reflection, evidence-rule, safety, duration, and action-shape candidates
+    - originality detection and retained final-review inventory for duplicate action, reflection, evidence-rule, safety, duration, and action-shape candidates
     - M6D-01 readiness deterministic JSON, tamper diagnostics, catalog/runtime distinction, prerequisite readiness preservation, and no database writes
     - legacy practice-observation-v1 fixtures, evidence replay, score state, recommendations, M6C context and Personal OS, existing exports, and five package files remain exact
   required_ci:
@@ -250,10 +250,10 @@ validation:
     - Docker Compose migration seed all prerequisite and M6D readiness contracts evidence replay recreation backup restore and clean-shutdown drill
     - aggregate Pilot readiness gate
   manual:
-    - Owner reviews and accepts the exact four competency and protocol stable IDs, family assignments, target-lever subsets, intervention boundaries, and source-only inactive disposition.
-    - A trained content reviewer records semantic, originality, accessibility, privacy, and low-risk safety disposition for every package and every automated similarity warning; no specialist completion is inferred.
-    - Owner reviews source classifications, claim fit, limitations, retrieval metadata, and unresolved research gaps without treating discovery or citation as intervention validation.
-    - Owner reviews required CI and retained synthetic evidence for the exact candidate commit; the target pull request remains human-reviewed and is not marked ready or merged by the implementation agent.
+    - Final M6B-GOV owner and trained-reviewer disposition is required after all 383 competencies have an individually authored package or explicit non-protocol disposition.
+    - Until that final gate, every cohort records semantic, originality, accessibility, privacy, safety, source, retained-evidence, and owner review as deferred rather than passed.
+    - Runtime projection, score activation, participant exposure, release, deployment, production writes, and specialist or validation claims always require separate human approval.
+    - Standing owner authorization permits PFSPAM to mark ready and merge this exact source-only cohort only after exact-head required CI succeeds, no unresolved review thread remains, and every inactive/unprojected/score-inactive boundary stays exact.
 risk:
   class: high
   hazards:
@@ -274,23 +274,23 @@ risk:
     - any evidence design requires free-text analysis, artifact contents, sensitive third-party detail, observer identity, implicit polarity, completion-equals-competence, or lever-to-competency feedback
     - the exact legacy projection, historical replay, no-context or context-aware recommendation behavior, five seeded protocols, fifteen seeded actions, or friendship-only score activation cannot remain exact
     - a required implementation change falls outside allowed paths or touches a forbidden path
-    - an unreviewed exact duplicate or material originality, accessibility, privacy, source, safety, mapping, or schema defect remains in the cohort
+    - an exact duplicate or deterministic originality, privacy-boundary, safety-boundary, source-record, mapping, schema, forbidden-claim, or retained-warning-inventory gate fails; non-machine-verifiable concerns remain explicit for final review
     - focused or full deterministic validation, report freshness, required hosted CI, Playwright regression, Compose recovery, aggregate Pilot readiness, or M6D-01 readiness fails on the candidate commit
     - M6B governance acceptance, source completeness, score eligibility, participant release, deployment, or a higher evidence level is asserted without its separate retained decision
 rollback:
   strategy: Revert the four packages, their inactive activation and source/gap entries, additive typed-package schema/loader branch, fixtures, cohort readiness, reports, documentation, evidence, manifest, and verification wiring as one batch; regenerate all deterministic reports from the restored five-package canonical release and verify the frozen runtime and historical replay hashes.
   data_migration: None. The batch may not add an ORM migration, persist typed evidence, seed the four source-only packages, or rewrite participant, assessment, context, Personal OS, practice, evidence, score, feedback, sprint, or review data.
-  release_action: No merge, release, deployment, score activation, participant-data write, or production change follows automatically from implementation completion or rollback.
+  release_action: PFSPAM may merge the exact source-only target PR after all required CI succeeds and the merge head is unchanged. No release, deployment, runtime projection, score activation, participant-data write, production change, or validation claim follows from that merge.
 evidence:
   output:
     - docs/evidence/M6D-01-<date>.md
     - exact baseline cohort protocol action family mapping target-lever and changed-path audit
     - before-after canonical and runtime counts hashes release manifest source registry activation ledger and generated report digests
-    - claim-to-source mapping retrieval metadata limitations open research gaps and manual review dispositions
+    - claim-to-source mapping retrieval metadata limitations open research gaps and explicit deferred-review status
     - per-protocol typed rule and synthetic fixture hashes plus supportive mixed contradictory inconclusive neutral adverse repetition recency and withholding results
     - legacy projection historical replay recommendation M6C no-mutation and friendship-only activation comparisons
-    - originality duplicate near-duplicate structural warning and human disposition output
+    - originality duplicate near-duplicate structural warning and final-review inventory output
     - M6D-01 and prerequisite readiness summaries with database before-after digests
     - exact local and CI commands results environment candidate commit and every failed skipped unavailable or unperformed validation
-    - owner and trained-reviewer manual gate decisions residual risks and explicit non-validation claims
+    - deferred owner and trained-reviewer gate status residual risks and explicit non-validation claims
   claim_boundary: Individually authored draft content, static schema, source classification, unit/integration, synthetic typed-fixture, deterministic shadow replay, browser-regression, and isolated Compose deployment-drill evidence only when actually run; never physical hardware HIL field RT engine signing release production intervention-effectiveness recommendation-usefulness specialist accessibility-population cultural clinical psychometric longitudinal participant or mastery validation.
