@@ -63,7 +63,10 @@ readiness contracts. It must verify:
 Passing this software gate does not mean that M6B is accepted.
 `ER-M6A-003` remains pending and `RG-M6A-002` remains open. Measurement,
 accessibility, and privacy/safety review must be truthfully recorded before
-M6B acceptance or mass authoring.
+M6B acceptance, runtime projection, production scoring, participant release,
+deployment, or validation claims. Decision 051 permits only CI-gated,
+inactive, unprojected, source-only draft authoring while those reviews are
+deferred.
 
 ## Content review layers
 
@@ -79,9 +82,12 @@ M6B acceptance or mass authoring.
 | Scoring | Explicit policy and activation-ledger state; deterministic fixtures before any mutation |
 | Experience | Ordinary UI language, burden, setup under five minutes where possible, check-in under two minutes, and completion/mastery distinction |
 
-Moderate and high-risk content needs the specialist role specified by the risk
-taxonomy. High-risk content remains qualified-only or non-scored unless a
-separate decision establishes a safer boundary.
+For intermediate M6D/M6E source-only merges, the table above defines the final
+consolidated review scope rather than a per-PR human merge gate. Each cohort
+must retain its unresolved review inventory and remain inactive, unprojected,
+production-ineligible, and score-inactive. Moderate and high-risk content keeps
+the specialist role specified by the risk taxonomy and remains qualified-only
+or non-scored unless a separate human decision establishes a safer boundary.
 
 ## Context foundation and representative-batch pilot
 
@@ -191,5 +197,7 @@ isolated deployment drill when those commands actually run. It cannot
 establish semantic originality, accessibility-population fit, privacy/safety
 acceptance, intervention effectiveness, recommendation usefulness, specialist
 acceptance, participant readiness, release, deployment, production, or
-mastery. A trained reviewer and owner must separately disposition the content,
-sources, similarity warnings, and exact candidate CI evidence.
+mastery. Under Decision 051, trained-reviewer and owner disposition of content,
+sources, and similarity warnings is deferred until the final 383/383 M6B-GOV
+gate. Exact candidate CI remains mandatory before each source-only merge and
+does not substitute for that later human disposition.
