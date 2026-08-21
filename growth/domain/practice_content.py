@@ -16,6 +16,12 @@ from growth.domain.evidence import (
     EvidenceContractError,
     validate_evidence_rules,
 )
+from growth.domain.typed_evidence import (
+    TYPED_EVIDENCE_RULES_VERSION,
+    TypedEvidenceContractError,
+    load_typed_evidence_spec,
+    materialize_typed_evidence_rules,
+)
 
 PRACTICE_CONTENT_SCHEMA_VERSION = "GG-PRACTICE-CONTENT-1.0"
 SOURCE_REGISTRY_VERSION = "GG-PRACTICE-SOURCES-1.0"
@@ -503,6 +509,8 @@ def _validate_protocol_shape(protocol: dict[str, Any], path: Path) -> None:
         )
     action_ids: set[str] = set()
     action_markers: set[str] = set()
+    substantive_action_markers: set[str] = set()
+    action_rule_versions: set[str] = set()
     sequences: list[int] = []
     for index, raw_action in enumerate(actions):
         action_path = f"{path}.intervention.actions[{index}]"
@@ -536,14 +544,71 @@ def _validate_protocol_shape(protocol: dict[str, Any], path: Path) -> None:
         due = action["due_within_days"]
         if due is not None and (not isinstance(due, int) or not 1 <= due <= duration_days):
             raise PracticeContentError(f"{action_path}.due_within_days: invalid due window.")
-        try:
-            validate_evidence_rules(action["evidence_rules"])
-        except (EvidenceContractError, KeyError, TypeError) as exc:
-            raise PracticeContentError(f"{action_path}.evidence_rules: {exc}") from exc
-        action_markers.update(action["evidence_rules"]["primary_markers"])
-        action_markers.update(action["evidence_rules"]["supporting_markers"])
+        rules = _require_mapping(action["evidence_rules"], f"{action_path}.evidence_rules")
+        rule_version = rules.get("schema_version")
+        action_rule_versions.add(rule_version)
+        typed_identity = action.get("typed_evidence_identity")
+        if rule_version == "practice-observation-v1":
+            if typed_identity is not None:
+                raise PracticeContentError(
+                    f"{action_path}.typed_evidence_identity: legacy actions must not declare "
+                    "a typed identity."
+                )
+            try:
+                validate_evidence_rules(rules)
+            except (EvidenceContractError, KeyError, TypeError) as exc:
+                raise PracticeContentError(f"{action_path}.evidence_rules: {exc}") from exc
+            action_markers.update(rules["primary_markers"])
+            action_markers.update(rules["supporting_markers"])
+            substantive_action_markers.update(rules["primary_markers"])
+            substantive_action_markers.update(rules["supporting_markers"])
+        elif rule_version == TYPED_EVIDENCE_RULES_VERSION:
+            if (
+                governance["runtime_projection"] != "none"
+                or governance["availability"] != "inactive"
+            ):
+                raise PracticeContentError(
+                    f"{action_path}.evidence_rules: typed source rules cannot be projected "
+                    "into the runtime."
+                )
+            identity = _require_mapping(
+                typed_identity,
+                f"{action_path}.typed_evidence_identity",
+            )
+            expected_identity = {
+                "protocol_stable_id": stable_id,
+                "action_stable_id": action_id,
+                "competency_stable_id": protocol["parent_competency_id"],
+                "scoring_policy_id": governance["scoring_policy_id"],
+            }
+            if identity != expected_identity:
+                raise PracticeContentError(
+                    f"{action_path}.typed_evidence_identity: must exactly match "
+                    f"{expected_identity}."
+                )
+            try:
+                materialized = materialize_typed_evidence_rules(
+                    rules,
+                    load_typed_evidence_spec(),
+                )
+            except (TypedEvidenceContractError, KeyError, TypeError) as exc:
+                raise PracticeContentError(f"{action_path}.evidence_rules: {exc}") from exc
+            action_markers.update(
+                measurement["measurement_id"] for measurement in materialized["measurements"]
+            )
+            substantive_action_markers.update(
+                measurement["measurement_id"]
+                for measurement in materialized["measurements"]
+                if measurement["role"] in {"primary", "supporting"}
+            )
+        else:
+            raise PracticeContentError(
+                f"{action_path}.evidence_rules: unsupported schema version {rule_version!r}."
+            )
     if sequences != list(range(1, len(actions) + 1)):
         raise PracticeContentError(f"{path}: action sequences must be contiguous from 1.")
+    if len(action_rule_versions) != 1:
+        raise PracticeContentError(f"{path}: one package cannot mix evidence-rule versions.")
 
     evidence = _require_mapping(protocol["evidence_and_scoring"], f"{path}.evidence_and_scoring")
     _require_keys(
@@ -568,19 +633,43 @@ def _validate_protocol_shape(protocol: dict[str, Any], path: Path) -> None:
         },
         f"{path}.evidence_and_scoring",
     )
-    if evidence["observation_contract_version"] != "practice-observation-v1":
+    observation_contract = evidence["observation_contract_version"]
+    if observation_contract not in {"practice-observation-v1", TYPED_EVIDENCE_RULES_VERSION}:
         raise PracticeContentError(
             f"{path}.evidence_and_scoring.observation_contract_version: "
-            "M6A legacy projections must remain practice-observation-v1."
+            "unsupported evidence-rule version."
+        )
+    if action_rule_versions != {observation_contract}:
+        raise PracticeContentError(
+            f"{path}: action evidence-rule version must match observation_contract_version."
+        )
+    if observation_contract == TYPED_EVIDENCE_RULES_VERSION and (
+        governance["runtime_projection"] != "none" or governance["availability"] != "inactive"
+    ):
+        raise PracticeContentError(
+            f"{path}: typed evidence is source-only and cannot be runtime-projected or active."
         )
     check_in_fields = _require_list(
         evidence["check_in_fields"], f"{path}.evidence_and_scoring.check_in_fields"
     )
-    invalid_fields = sorted(set(check_in_fields) - ALLOWED_CHECK_IN_FIELDS)
+    invalid_fields = (
+        sorted(set(check_in_fields) - ALLOWED_CHECK_IN_FIELDS)
+        if observation_contract == "practice-observation-v1"
+        else []
+    )
     if invalid_fields:
         raise PracticeContentError(
             f"{path}.evidence_and_scoring.check_in_fields: "
             f"unknown observation fields {invalid_fields}."
+        )
+    if (
+        observation_contract == TYPED_EVIDENCE_RULES_VERSION
+        and set(check_in_fields) != action_markers
+    ):
+        raise PracticeContentError(
+            f"{path}.evidence_and_scoring.check_in_fields: typed fields must exactly "
+            f"match action evidence markers; fields={sorted(check_in_fields)}, "
+            f"markers={sorted(action_markers)}."
         )
     uncollectable_markers = action_markers - set(check_in_fields)
     declared_uncollectable: set[str] = set()
@@ -643,11 +732,14 @@ def _validate_protocol_shape(protocol: dict[str, Any], path: Path) -> None:
         or not 1 <= minimum_completed <= len(actions)
         or not isinstance(markers, list)
         or not markers
-        or set(markers) - ALLOWED_OBSERVATION_FIELDS
+        or (
+            observation_contract == "practice-observation-v1"
+            and set(markers) - ALLOWED_OBSERVATION_FIELDS
+        )
         or marker_mode not in {"any", "all"}
     ):
         raise PracticeContentError(f"{path}.completion_and_review.completion_rules: invalid.")
-    if not set(markers).issubset(action_markers):
+    if not set(markers).issubset(substantive_action_markers):
         raise PracticeContentError(
             f"{path}.completion_and_review.completion_rules: substantive markers must "
             "appear in at least one action evidence rule."

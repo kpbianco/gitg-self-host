@@ -195,5 +195,15 @@ v1 evidence rules, and full allocation weights and lever totals. It is
 separate from the legacy runtime projection and practice-catalog hashes.
 
 The synthetic M6B fixtures demonstrate deterministic software behavior, not
-psychometric calibration. Pending review `ER-M6A-003` blocks M6B acceptance
-and mass authoring.
+psychometric calibration. Pending review `ER-M6A-003` blocks M6B acceptance,
+runtime projection, production scoring, participant release, deployment, and
+validation claims. Decision 051 permits only inactive, unprojected,
+source-only draft authoring while that review remains pending.
+
+## M6D-01 scoring boundary
+
+All four M6D-01 packages use `SP-SHADOW-ONLY`, remain inactive and unprojected,
+and have no approved production contract. Their typed fixtures distinguish
+protocol performance from a single direct competency contribution but write
+neither. The production runtime, need ranking, current lever state, snapshots,
+recommendations, and friendship-only activation remain unchanged.

@@ -6,12 +6,12 @@ domain_id,domain_name,competencies,authored_packages,projected_legacy,uncovered,
 05,"Self-Knowledge, Identity, and Humility",12,0,0,12,0,0,0,0,0
 06,"Vulnerability, Trauma, Disability, Neurodiversity, and Dependency",14,0,0,14,0,0,0,0,0
 07,"Emotional Maturity, Resilience, and Mental Well-Being",14,0,0,14,0,0,0,0,0
-08,"Attention, Desire, Temperance, and Discipline",11,1,1,10,1,0,0,0,1
-09,"Reasoning, Science, Truth, and Decision-Making",17,0,0,17,0,0,0,0,0
-10,"Learning, Memory, Curiosity, Apprenticeship, and Teaching",14,0,0,14,0,0,0,0,0
+08,"Attention, Desire, Temperance, and Discipline",11,2,1,9,2,0,0,0,2
+09,"Reasoning, Science, Truth, and Decision-Making",17,1,0,16,1,0,0,0,1
+10,"Learning, Memory, Curiosity, Apprenticeship, and Teaching",14,1,0,13,1,0,0,0,1
 11,"Time, Priorities, Goals, and Execution",10,1,1,9,0,1,0,0,1
 12,"Physical Health, Fitness, and Embodiment",16,0,0,16,0,0,0,0,0
-13,"Domestic Competence, Infrastructure, and Material Life",16,0,0,16,0,0,0,0,0
+13,"Domestic Competence, Infrastructure, and Material Life",16,1,0,15,1,0,0,0,1
 14,"Digital Life, Media, AI, and Information Security",13,0,0,13,0,0,0,0,0
 15,"Safety, Preparedness, Risk, and Mutual Aid",14,0,0,14,0,0,0,0,0
 16,"Communication, Rhetoric, and Social Intelligence",18,1,1,17,0,1,0,0,1

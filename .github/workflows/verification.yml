@@ -17,7 +17,9 @@ jobs:
   quality:
     name: Ruff, Django, and pytest
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    # The complete 343-test suite takes about 20 minutes on GitHub-hosted
+    # runners before the governed readiness checks run.
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
@@ -35,6 +37,7 @@ jobs:
       - run: make personal-os-check PYTHON=python
       - run: make context-priority-check PYTHON=python
       - run: make m6c-pilot-check PYTHON=python
+      - run: make m6d-01-check PYTHON=python
 
   browser:
     name: Playwright core journeys

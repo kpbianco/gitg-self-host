@@ -88,8 +88,10 @@ evidence attached to its original assessment epoch.
 
 Software implementation and readiness do not clear specialist review.
 `ER-M6A-003` remains pending and `RG-M6A-002` remains open; measurement,
-accessibility, and privacy/safety review blocks M6B acceptance and mass
-authoring.
+accessibility, and privacy/safety review blocks M6B acceptance, runtime
+projection, production scoring, participant release, deployment, and validation
+claims. Decision 051 permits CI-gated source-only draft authoring while those
+gates remain open.
 
 ### M6C — Context-aware priority and Personal OS foundation
 
@@ -161,7 +163,11 @@ are multiplied. Do not proceed to mass authoring while material defects remain.
 Process the curriculum domain by domain. Prefer 8–15 individually authored
 packages per PR and split large domains into coherent sub-batches. Each batch
 updates canonical content, claim-level sources, coverage and risk reports,
-fixtures, and UI coverage together. Stop for owner review after every PR.
+fixtures, and applicable frozen-runtime/UI regression evidence together.
+PFSPAM may merge only the exact head after every required check succeeds and no
+unresolved review thread remains. Human semantic/source/originality/
+accessibility/privacy/safety review is deferred to the final 383/383 M6B-GOV
+gate.
 
 ### Phase D — Whole-library scoring calibration
 
@@ -211,18 +217,24 @@ operationalization; that remains a recorded human-review decision.
 
 ## Batch operating rule
 
-For every later batch:
+For every later source-only batch:
 
-1. start from current reviewed `main`;
+1. start from current exact, CI-green `main`;
 2. select only the next approved ledger rows;
 3. audit the exact competency and existing runtime boundary;
 4. research and inspect sources rather than relying on snippets;
 5. state the batch exclusions and acceptance criteria;
-6. update packages, registries, reports, tests, and UI fixtures together;
+6. update packages, registries, reports, tests, and applicable frozen-runtime
+   fixtures together;
 7. run all relevant deterministic, replay, browser, image, and Compose checks;
-8. report failures, skips, and unverified criteria plainly;
-9. open a focused draft PR and stop for owner approval;
-10. never merge the agent's own PR.
+8. report failures, skips, unverified criteria, and retained review warnings
+   plainly;
+9. open or update the focused PR and perform only the bounded repair loop;
+10. under Decision 051, mark ready and merge only the unchanged exact head with
+    every required check green and no unresolved review thread.
+
+Human review remains required at final draft completion and for any runtime,
+activation, release, deployment, production, or validation action.
 
 ## Explicit non-goals for M6A
 
@@ -253,3 +265,14 @@ For every later batch:
   clinical, cross-cultural, psychometric, or longitudinal validity;
 - no fabricated specialist-review completion and no weakening of
   `ER-M6A-003`.
+
+## M6D-01 representative cohort
+
+The first Phase B batch is exactly four low-risk source-only drafts across
+domains 08, 09, 10, and 13. It expands coverage from five to nine packages and
+reduces the explicit unauthored ledger from 378 to 374 rows. Its fourteen typed
+action rules are synthetic shadow fixtures only. The batch does not project a
+new runtime protocol, persist typed evidence, change recommendations or score
+state or clear M6B governance. Decision 051 separately authorizes the next
+fixed source-only cohort after this PR merges and its reports become the new
+exact baseline.

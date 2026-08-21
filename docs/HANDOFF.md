@@ -5,8 +5,8 @@
 Grounded Growth is a self-hosted Django guided-development application with
 canonical curriculum/practice data, deterministic evidence/scoring replay, and
 a friendship-only production score boundary. M6B software is merged but not
-governance-accepted. M6C-01 through M6C-03 are reviewed and merged; M6C-04 is
-implemented on the current review branch.
+governance-accepted. M6C-01 through M6C-04 are reviewed and merged. M6D-01 is
+the current source-only protocol-authoring batch.
 
 ## Read first
 
@@ -22,22 +22,20 @@ implemented on the current review branch.
 
 ## Exact review objective
 
-Review M6C-04's latest-assessment ownership and reassessment isolation, concise
-exact Personal OS/context staging, explicit provide/N/A/defer mappings,
-append-only/idempotent service use, partial current-epoch reviewed cohort,
-unchanged no-context recommendation behavior, exact context-aware order,
-distinct alternative selection, authored-text isolation, accessibility checks,
-and additive `GG-M6C-PILOT-READINESS-1.0` plus Compose recovery evidence. Do
-not add priority persistence, a model or migration, protocol/content, weekly
-execution, dedicated Personal OS/context export/purge/retention automation,
-evidence/scoring change, or activation.
+Review M6D-01's exact competencies (`08.06`, `09.12`, `10.02`, `13.02`),
+four materially distinct packages, claim-level sources, open research gaps,
+typed-rule identity binding, fourteen-action synthetic replay, deterministic
+reports, originality output, and additive
+`GG-M6D-01-AUTHORING-READINESS-1.0`. Confirm that all four packages remain
+inactive, unprojected, shadow-only, and absent from the ORM runtime.
 
 The canonical control contract records owner-directed sequencing that defers
-M6B governance while this browser closeout proceeds. Keep `ER-M6A-003`
+M6B governance while bounded source authoring proceeds. Keep `ER-M6A-003`
 pending, `RG-M6A-002` open, Decisions 047–049 proposed, and every new path
-non-scored. Required exact-candidate hosted CI, retained synthetic artifact
-review, and owner prompt/factor/explanation/privacy/partial-cohort review remain
-manual before merge unless actually recorded in retained evidence.
+non-scored. Exact-candidate hosted CI remains required before each merge.
+Decision 051 defers trained content/source/originality/accessibility/privacy/
+safety, retained-evidence, and owner disposition until the final 383/383
+M6B-GOV gate; record those reviews as deferred, never passed.
 
 ## Protected decisions
 
@@ -46,5 +44,5 @@ manual before merge unless actually recorded in retained evidence.
 - Historical evidence and score replay remain exact.
 - Unknown, N/A, defer, missing context, contradiction, and adverse states remain distinct.
 - Friendship is the only production score-active protocol.
-- Target PRs stop for owner review; the autopilot does not merge them.
+- PFSPAM may merge only exact-head, required-CI-green, inactive, unprojected, source-only draft PRs under standing owner authorization; all runtime, activation, release, deployment, production, and validation gates remain human.
 - Coverage and software readiness are not specialist or external validity.

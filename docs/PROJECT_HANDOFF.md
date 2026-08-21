@@ -613,13 +613,31 @@ M6C-04 closes the concise browser and deployment-readiness slice:
   service creation, authenticated HTTP access, deterministic priority replay,
   recreation, backup/restore, and unchanged activation.
 
-Status: implementation is on the M6C-04 review branch. Exact local, browser,
-Compose, hosted-CI, retained-artifact, and owner-review results must be recorded
-without turning software or deployment-drill evidence into participant,
-specialist, release, deployment, production, or recommendation-usefulness
-claims. M6C-04 adds no model, migration, backfill, protocol/action, dependency,
-external service, remote telemetry, weekly execution, dedicated Personal
-OS/context export or purge, score formula/write, or activation change.
+Status: reviewed and merged. M6C-04 adds no model, migration, backfill,
+protocol/action, dependency, external service, remote telemetry, weekly
+execution, dedicated Personal OS/context export or purge, score formula/write,
+or activation change.
+
+#### M6D-01 — First representative low-risk source cohort
+
+- author exactly competencies `08.06`, `09.12`, `10.02`, and `13.02` as four
+  individually authored, low-risk draft packages;
+- use distinct behavioral-start, prospective decision-record,
+  practice-feedback-retry, and bounded home-system audit/redesign families;
+- add claim-level sources, explicit research gaps, and fourteen action-specific
+  `typed-evidence-rules-v1` fixture replays;
+- require exact adjacent protocol/action/competency/policy identity and reject
+  mixed, unknown, malformed, or runtime-projected typed packages;
+- expand the source catalog to nine packages and twenty-nine actions while the
+  runtime remains five protocols and fifteen actions;
+- keep all four new packages inactive, unprojected, shadow-only, and absent
+  from persisted evidence, score state, recommendations, and activation.
+
+Status: implementation is on the M6D-01 candidate branch. Hosted CI remains an
+exact-head merge gate. Under Decision 051, trained content/source/originality/
+accessibility/privacy/safety, retained-evidence, and owner review are deferred
+to the final 383/383 M6B-GOV gate. `ER-M6A-003` stays pending,
+`RG-M6A-002` stays open, and Decisions 047–049 stay proposed.
 
 ## M1 acceptance criteria
 1. User understands why a practice was recommended without seeing backend fields.
@@ -996,6 +1014,38 @@ software-ready but not M6B-accepted.
     clinical, psychometric, longitudinal, recommendation-usefulness, release,
     deployment, production, or mastery validation.
 
+## M6D-01 acceptance criteria
+
+1. Exactly competencies `08.06`, `09.12`, `10.02`, and `13.02` have new
+   canonical packages under their contracted stable IDs, domains, families,
+   target-lever subsets, and action counts.
+2. Each package is low-risk, draft, inactive, unprojected, shadow-only, and
+   score-inactive, with explicit applicability, adaptations, privacy, safety,
+   completion, transfer, and mastery boundaries.
+3. Claim-level sources and unresolved research gaps are explicit; source
+   discovery is not represented as source completeness or validation.
+4. The source-only typed loader validates exact sibling identities and rejects
+   mixed, unknown, malformed, or runtime-projected typed rules without changing
+   legacy `practice-observation-v1` behavior.
+5. Fourteen conspicuously synthetic action fixtures replay deterministic
+   supportive, contradictory, inconclusive, unavailable, adverse, recency,
+   repetition, and duplicate-origin paths without private prose or artifacts.
+6. Generated reports show the M6D-01 frontier of 383 competencies, nine source
+   packages, twenty-nine source actions, and 374 uncovered competencies while
+   distinguishing the frozen five-protocol/fifteen-action runtime.
+7. `GG-M6D-01-AUTHORING-READINESS-1.0` verifies cohort identities, hashes,
+   fixtures, inactive governance, prerequisite readiness, and no database
+   writes. Persisted batch tests assert the owned cohort while shared tests
+   derive any later catalog frontier from canonical state.
+8. Historical evidence/score replay, M6C behavior, the frozen runtime
+   projection hash, and friendship-only activation remain exact.
+9. Hosted CI is required before the source-only merge. Trained content/source/
+   originality/accessibility/privacy/safety, retained-evidence, and owner review
+   are explicitly deferred to the final 383/383 M6B-GOV gate; software and
+   synthetic evidence do not establish specialist, participant, clinical,
+   psychometric, longitudinal, effectiveness, release, deployment, production,
+   or mastery validation.
+
 ## Handoff audit notes
 
 - Canonical curriculum counts remain 27 domains, 383 competencies, 37 levers,
@@ -1093,7 +1143,9 @@ software-ready but not M6B-accepted.
   M6B contracts define no automatic carry-forward after reassessment.
 - Passing `GG-COMPETENCY-EVIDENCE-READINESS-1.0` demonstrates software
   determinism only. `ER-M6A-003` and `RG-M6A-002` remain the explicit
-  specialist-review blockers for M6B acceptance and mass authoring.
+  specialist-review blockers for M6B acceptance, runtime projection, score
+  activation, participant release, deployment, and validation claims. Under
+  Decision 051 they do not block CI-gated source-only draft authoring.
 - M6C-01 context scales are explicit storage contracts only. No factor is read
   by profile, recommendation, evidence, scoring, or ordinary UI code in this
   batch. The context snapshot excludes identity and narrative, while the local

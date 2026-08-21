@@ -285,7 +285,7 @@
         }
       }
     },
-    "evidenceRules": {
+    "legacyEvidenceRules": {
       "type": "object",
       "additionalProperties": false,
       "required": ["schema_version", "primary_markers", "supporting_markers"],
@@ -303,6 +303,113 @@
           "uniqueItems": true,
           "items": {"$ref": "#/$defs/nonEmptyString"}
         }
+      }
+    },
+    "typedMeasurementRule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["measurement_id", "kind", "role", "weight", "allowed_provenance"],
+      "properties": {
+        "measurement_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"},
+        "kind": {"enum": ["boolean", "count", "bounded_frequency", "ordinal", "duration", "artifact", "conceptual", "scenario", "objective", "attestation"]},
+        "role": {"enum": ["primary", "supporting", "adverse", "context"]},
+        "weight": {"type": ["string", "number", "integer"]},
+        "allowed_provenance": {"$ref": "#/$defs/stringList"},
+        "expected": {"type": "boolean"},
+        "direction": {"enum": ["at_least", "at_most"]},
+        "minimum": {"type": ["string", "number", "integer"]},
+        "target": {"type": ["string", "number", "integer"]},
+        "maximum": {"type": ["string", "number", "integer"]},
+        "unit": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"},
+        "levels": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["level_id", "score"],
+            "properties": {
+              "level_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"},
+              "score": {"type": ["string", "number", "integer"]}
+            }
+          }
+        },
+        "criteria": {"$ref": "#/$defs/stringList"},
+        "allowed_attestation_ids": {"$ref": "#/$defs/stringList"},
+        "consent_required": {"type": "boolean"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"kind": {"const": "boolean"}}, "required": ["kind"]},
+          "then": {
+            "required": ["expected"],
+            "not": {"anyOf": [{"required": ["direction"]}, {"required": ["minimum"]}, {"required": ["target"]}, {"required": ["maximum"]}, {"required": ["unit"]}, {"required": ["levels"]}, {"required": ["criteria"]}, {"required": ["allowed_attestation_ids"]}, {"required": ["consent_required"]}]}
+          }
+        },
+        {
+          "if": {"properties": {"kind": {"enum": ["count", "bounded_frequency"]}}, "required": ["kind"]},
+          "then": {
+            "required": ["direction", "minimum", "target", "maximum"],
+            "not": {"anyOf": [{"required": ["expected"]}, {"required": ["unit"]}, {"required": ["levels"]}, {"required": ["criteria"]}, {"required": ["allowed_attestation_ids"]}, {"required": ["consent_required"]}]}
+          }
+        },
+        {
+          "if": {"properties": {"kind": {"enum": ["duration", "objective"]}}, "required": ["kind"]},
+          "then": {
+            "required": ["direction", "minimum", "target", "maximum", "unit"],
+            "not": {"anyOf": [{"required": ["expected"]}, {"required": ["levels"]}, {"required": ["criteria"]}, {"required": ["allowed_attestation_ids"]}, {"required": ["consent_required"]}]}
+          }
+        },
+        {
+          "if": {"properties": {"kind": {"const": "ordinal"}}, "required": ["kind"]},
+          "then": {
+            "required": ["levels"],
+            "not": {"anyOf": [{"required": ["expected"]}, {"required": ["direction"]}, {"required": ["minimum"]}, {"required": ["target"]}, {"required": ["maximum"]}, {"required": ["unit"]}, {"required": ["criteria"]}, {"required": ["allowed_attestation_ids"]}, {"required": ["consent_required"]}]}
+          }
+        },
+        {
+          "if": {"properties": {"kind": {"enum": ["artifact", "conceptual", "scenario"]}}, "required": ["kind"]},
+          "then": {
+            "required": ["criteria"],
+            "not": {"anyOf": [{"required": ["expected"]}, {"required": ["direction"]}, {"required": ["minimum"]}, {"required": ["target"]}, {"required": ["maximum"]}, {"required": ["unit"]}, {"required": ["levels"]}, {"required": ["allowed_attestation_ids"]}, {"required": ["consent_required"]}]}
+          }
+        },
+        {
+          "if": {"properties": {"kind": {"const": "attestation"}}, "required": ["kind"]},
+          "then": {
+            "required": ["allowed_attestation_ids", "consent_required"],
+            "not": {"anyOf": [{"required": ["expected"]}, {"required": ["direction"]}, {"required": ["minimum"]}, {"required": ["target"]}, {"required": ["maximum"]}, {"required": ["unit"]}, {"required": ["levels"]}, {"required": ["criteria"]}]}
+          }
+        }
+      ]
+    },
+    "typedEvidenceRules": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "max_age_days", "measurements", "competency_measurement_ids", "transfer_disposition"],
+      "properties": {
+        "schema_version": {"const": "typed-evidence-rules-v1"},
+        "max_age_days": {"type": ["integer", "null"], "minimum": 1, "maximum": 3650},
+        "measurements": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/typedMeasurementRule"}},
+        "competency_measurement_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"}},
+        "transfer_disposition": {"enum": ["protocol_only", "context_bound", "cross_context_candidate"]}
+      }
+    },
+    "evidenceRules": {
+      "oneOf": [
+        {"$ref": "#/$defs/legacyEvidenceRules"},
+        {"$ref": "#/$defs/typedEvidenceRules"}
+      ]
+    },
+    "typedEvidenceIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["protocol_stable_id", "action_stable_id", "competency_stable_id", "scoring_policy_id"],
+      "properties": {
+        "protocol_stable_id": {"type": "string", "pattern": "^PRACTICE-[A-Z0-9-]+-[0-9]{2}$"},
+        "action_stable_id": {"type": "string", "pattern": "^PRACTICE-[A-Z0-9-]+-[0-9]{2}-A[0-9]+$"},
+        "competency_stable_id": {"type": "string", "pattern": "^[0-9]{2}\\.[0-9]{2}$"},
+        "scoring_policy_id": {"type": "string", "pattern": "^SP-[A-Z0-9-]+$"}
       }
     },
     "action": {
@@ -324,7 +431,8 @@
         "instructions": {"$ref": "#/$defs/nonEmptyString"},
         "expected_time": {"$ref": "#/$defs/nonEmptyString"},
         "due_within_days": {"type": ["integer", "null"], "minimum": 1},
-        "evidence_rules": {"$ref": "#/$defs/evidenceRules"}
+        "evidence_rules": {"$ref": "#/$defs/evidenceRules"},
+        "typed_evidence_identity": {"$ref": "#/$defs/typedEvidenceIdentity"}
       }
     },
     "adaptations": {
@@ -430,7 +538,7 @@
           "minItems": 1,
           "items": {"$ref": "#/$defs/nonEmptyString"}
         },
-        "observation_contract_version": {"const": "practice-observation-v1"},
+        "observation_contract_version": {"enum": ["practice-observation-v1", "typed-evidence-rules-v1"]},
         "check_in_fields": {
           "type": "array",
           "minItems": 1,

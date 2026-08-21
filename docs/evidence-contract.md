@@ -279,3 +279,13 @@ base mass, and exact withholding reasons. Free text remains explanation only.
 M6B uses typed results only in pure competency and lever shadows. It adds no
 new persistence, check-in UI, backfill, or production score path. Existing v1
 verification remains independently callable and exact.
+
+## M6D-01 typed source fixtures
+
+The four M6D-01 packages use the unchanged `typed-evidence-rules-v1`
+materializer only in canonical source validation and conspicuously synthetic
+fixtures. The fourteen fixtures cover every new action and preserve structured
+state, direction, adversity, context/epoch provenance, recency, repetition,
+withholding, and exact rule/result hashes. They do not create an evidence event
+or other ORM record, ingest artifact contents or private narrative, or confer
+production score eligibility.

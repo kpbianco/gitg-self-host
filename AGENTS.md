@@ -284,10 +284,12 @@ scoring, state, ranking, and five-protocol runtime behavior remain exact.
 
 M6B implementation does not itself satisfy the pending measurement,
 accessibility, and privacy/safety review in `ER-M6A-003`. Keep
-`RG-M6A-002` open and do not claim M6B acceptance or begin mass authoring
-until that recorded review is truthfully complete. The owner-directed sequence
-permits later non-scored foundations while this governance remains pending;
-that sequence does not accept M6B or authorize typed production scoring.
+`RG-M6A-002` open and do not claim M6B acceptance, runtime projection, score
+activation, participant release, deployment, or production validation until
+that review is truthfully complete. Under Decision 051, PFSPAM may continue
+fixed, inactive, unprojected, source-only draft cohorts and merge only an exact
+head with every required check green. This sequencing does not accept M6B or
+authorize typed production scoring.
 
 M6C-01 is reviewed and merged. It adds append-only `GG-CONTEXT-1.0`
 assessment-epoch context and defer-state foundations plus additive readiness,
@@ -308,7 +310,7 @@ context factors and returns deterministic withheld, primary, and alternative
 results. It adds no migration, persistence, ordinary UI, Personal OS text
 analysis, evidence/scoring write, protocol, or activation.
 
-M6C-04 is the current implementation batch. It exposes those unchanged M6C
+M6C-04 is reviewed and merged. It exposes those unchanged M6C
 contracts through one authenticated, concise Personal OS journey, explicit
 assessment and per-practice context forms, deterministic partial-cohort
 recommendations and alternatives, and additive
@@ -319,14 +321,28 @@ priority persistence, protocol/action, Personal OS analysis, evidence/scoring
 write, activation, dedicated export/purge/retention automation, remote
 telemetry, weekly execution, release, or deployment.
 
-The representative 10–12 competency vertical slices begin only after M6C as
-Phase B.
+M6D-01 is the current implementation batch. It authors exactly four low-risk,
+source-only draft packages for competencies `08.06`, `09.12`, `10.02`, and
+`13.02`, with fourteen pure typed-evidence fixture paths. The source catalog
+expands to nine packages and twenty-nine actions while the projected runtime
+remains five protocols and fifteen actions. The cohort is inactive,
+unprojected, shadow-only, and production-ineligible; it adds no model,
+migration, UI, persisted typed evidence, recommendation input, scoring write,
+or activation.
+
+Later representative and generated cohorts remain separately contracted.
+Standing owner authorization permits PFSPAM to mark ready and merge only
+exact-head, required-CI-green, inactive, unprojected, source-only drafts.
+Human semantic/source/originality/accessibility/privacy/safety review is
+deferred, not passed, until the final 383/383 M6B-GOV gate. Runtime projection,
+score activation, participant exposure, release, deployment, and production
+claims always require separate human approval.
 
 <!-- BEGIN PORTFOLIO-CONTROL MANAGED -->
 ## Governed agentic delivery
 
 - Product: `gitg-self-host`; delivery profile: `product-data`.
-- Control revision: `f55e9ab7e854bc0aef895edd1cc944607accc312`; harness version: `2`.
+- Control revision: `6ce49a933b33462fc1b0ad44749085c7f51b59f0`; harness version: `2`.
 - Read `contracts/profile-requirements.yaml` and the approved
   `contracts/active-batch.yaml` before implementation.
 - Stay inside active-batch allowed paths and preserve every forbidden path.

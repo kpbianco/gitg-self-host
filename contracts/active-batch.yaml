@@ -1,152 +1,226 @@
 schema_version: 1
 batch:
-  id: M6C-04
-  title: Close the concise Personal OS browser deployment and pilot-readiness slice
-  goal: Expose the reviewed M6C context, Personal OS, and context-priority contracts through one concise authenticated browser journey, deterministic alternatives, and deployment/pilot-readiness gates without adding persistence, changing the underlying formulas, analyzing private text, or expanding production scoring.
+  id: M6D-01
+  title: Author the first representative low-risk behavioral and artifact protocol cohort
+  goal: Author four exact low-risk canonical protocol packages across four domains, prove behavioral, artifact, rehearsal, and audit evidence rules through deterministic source-only typed fixtures, and preserve the five-protocol runtime, all historical replay, and friendship-only production scoring.
 sources:
   product: products/gitg-self-host/product.yaml
   requirements:
-    - products/gitg-self-host/PRD.md#M6C-context-and-Personal-OS
-    - products/gitg-self-host/acceptance.yaml#GG-CONTEXT
-    - products/gitg-self-host/acceptance.yaml#GG-PERSONAL-OS
-    - products/gitg-self-host/acceptance.yaml#GG-PRIORITY
-    - products/gitg-self-host/acceptance.yaml#GG-OPERATIONS
-    - products/gitg-self-host/risk-register.yaml#GG-R-CONTEXT-001
-    - products/gitg-self-host/risk-register.yaml#GG-R-PRIVACY-001
-  milestone: products/gitg-self-host/roadmap.yaml#M6C
-  baseline_commit: 713d1a9a23f2102ca6e774f4921d56da5c8eb7b5
+    - products/gitg-self-host/PRD.md#Phase-B-representative-protocols
+    - products/gitg-self-host/acceptance.yaml#GG-PHASE-B
+    - products/gitg-self-host/acceptance.yaml#GG-SCORING-DISPOSITION
+    - products/gitg-self-host/risk-register.yaml#GG-R-CONTENT-001
+    - products/gitg-self-host/risk-register.yaml#GG-R-MEASURE-001
+    - products/gitg-self-host/risk-register.yaml#GG-R-SAFETY-001
+    - products/gitg-self-host/risk-register.yaml#GG-R-CLAIMS-001
+  milestone: products/gitg-self-host/roadmap.yaml#M6D
+  baseline_commit: a1bc79218a9397dcdbf699a1422c6f2881033675
   prerequisites:
-    - M6C-01 is merged at 8a1c937872d1dca4c38a917484dc214bc91b8a2f and its append-only GG-CONTEXT-1.0 records remain authoritative.
-    - M6C-02 is merged at 9ee7542f2155247ccb9b0ef4686535887f2b7403 and its private append-only GG-PERSONAL-OS-1.0 records remain authoritative.
-    - M6C-03 is merged at c7b51c1cd83c41c462c5c8685e80afbe39773d6b and its GG-CONTEXT-PRIORITY-1.0 formula, dispositions, alternatives, privacy-minimized output, and readiness contract remain unchanged.
-    - The pinned baseline adds only the later portfolio-harness synchronization at 713d1a9a23f2102ca6e774f4921d56da5c8eb7b5.
-    - Owner-directed sequencing keeps M6B governance deferred; ER-M6A-003 remains pending, RG-M6A-002 remains open, and Decisions 047 through 049 remain proposed.
+    - M6B software is merged at c551d5b14bb6812b3fddaeb09a9f3031b2ef2704; its typed evaluator and evidence-only competency shadow remain pure, additive, and production-ineligible.
+    - M6C-01 through M6C-03 are merged at 8a1c937872d1dca4c38a917484dc214bc91b8a2f, 9ee7542f2155247ccb9b0ef4686535887f2b7403, and c7b51c1cd83c41c462c5c8685e80afbe39773d6b.
+    - M6C-04 is merged at 58376c4b6aea1ebf173f3eaef6c6b2fabcf6dcca; its mobile correction and manifest repair are merged at d9b10e571325a8a3e77e64e4285c0b14fc979811 and 4fad711e24ca3b7539d0facb3c9bbbd3990d2d39.
+    - The exact baseline then adds only portfolio-harness synchronization at a1bc79218a9397dcdbf699a1422c6f2881033675.
+    - Owner-directed sequencing permits PFSPAM to merge exact-head CI-green source-only draft cohorts while M6B governance remains deferred; ER-M6A-003 stays pending, RG-M6A-002 stays open, Decisions 047 through 049 stay proposed, and consolidated human review occurs only after the 383/383 draft frontier.
   target_contracts:
     - AGENTS.md
     - docs/PRODUCT_DECISIONS.md
     - docs/PROJECT_HANDOFF.md
-    - docs/context-and-personal-os.md
-    - docs/pilot/PILOT_READINESS_CLOSEOUT.md
-    - docs/pilot/PRIVATE_PILOT_OPERATIONS.md
+    - docs/practice-content.md
+    - docs/evidence-contract.md
+    - docs/SCORING_DESIGN.md
     - docs/program/M6_CURRICULUM_EXPANSION.md
     - docs/program/M6_VALIDATION_AND_PILOT_PLAN.md
+    - contracts/profile-requirements.yaml
     - contracts/verification.yaml
   control_plane_repository: kpbianco/portfolio-control
-  control_plane_path: products/gitg-self-host/batches/M6C-04.yaml
-  control_plane_revision: 603c59634532e0c6ff9feff350d308eb50074130  # pragma: allowlist secret
+  control_plane_path: products/gitg-self-host/batches/M6D-01.yaml
+  control_plane_revision: a2d2b687db32bc4ef49f7b45cb2b5ea4ed3e1461  # pragma: allowlist secret
 dependencies:
   - M6C-01
   - M6C-02
   - M6C-03
+  - M6C-04
 scope:
+  cohort:
+    - competency_id: "08.06"
+      competency_name: Action independent of motivation
+      domain_id: "08"
+      protocol_stable_id: PRACTICE-MOTIVATION-INDEPENDENT-START-01
+      protocol_family_id: PF-BEHAVIORAL-EXPERIMENT
+      evidence_family: bounded behavioral starts across explicitly chosen low-motivation windows
+      recommendation_target_lever_ids: [L10]
+      action_count: 3
+    - competency_id: "09.12"
+      competency_name: Decision records and updating
+      domain_id: "09"
+      protocol_stable_id: PRACTICE-DECISION-RECORD-01
+      protocol_family_id: PF-ARTIFACT-PLAN
+      evidence_family: privacy-minimized reviewed decision-record criteria and later update
+      recommendation_target_lever_ids: [L14]
+      action_count: 3
+    - competency_id: "10.02"
+      competency_name: Deliberate practice
+      domain_id: "10"
+      protocol_stable_id: PRACTICE-DELIBERATE-PRACTICE-01
+      protocol_family_id: PF-SKILL-REHEARSAL
+      evidence_family: bounded skill attempts, feedback criteria, and before-after performance evidence
+      recommendation_target_lever_ids: [L15]
+      action_count: 4
+    - competency_id: "13.02"
+      competency_name: Home organization and maintenance systems
+      domain_id: "13"
+      protocol_stable_id: PRACTICE-HOME-UPKEEP-SYSTEM-01
+      protocol_family_id: PF-AUDIT-REDESIGN
+      evidence_family: bounded home-system audit artifact, one safe redesign, and observable upkeep result
+      recommendation_target_lever_ids: [L18]
+      action_count: 4
   allowed_paths:
     - AGENTS.md
     - HANDOFF_PROMPT.md
     - README.md
-    - Makefile
     - MANIFEST.tsv
     - contracts/active-batch.yaml
     - contracts/repo-profile.yaml
-    - contracts/profile-requirements.yaml
     - contracts/verification.yaml
     - contracts/verification.commands
-    - growth/forms.py
-    - growth/urls.py
-    - growth/views.py
-    - growth/views_personal_os.py
-    - growth/views_practice.py
-    - growth/services/personal_os_browser.py
-    - growth/services/m6c_pilot_readiness.py
-    - growth/management/commands/verify_m6c_pilot_readiness.py
-    - growth/static/growth/app.css
-    - growth/static/growth/personal_os.js
-    - templates/base.html
-    - templates/growth/home.html
-    - templates/growth/personal_os.html
-    - templates/growth/practice_context.html
-    - templates/growth/practice_list.html
-    - templates/growth/practice_recommendation.html
-    - tests/test_personal_os_browser.py
-    - tests/test_m6c_pilot_readiness.py
-    - tests/e2e/test_core_flow.py
-    - scripts/verify_m6c_pilot_readiness.sh
-    - scripts/verify_http_login.py
+    - data/practices/protocols/08/PRACTICE-MOTIVATION-INDEPENDENT-START-01.yaml
+    - data/practices/protocols/09/PRACTICE-DECISION-RECORD-01.yaml
+    - data/practices/protocols/10/PRACTICE-DELIBERATE-PRACTICE-01.yaml
+    - data/practices/protocols/13/PRACTICE-HOME-UPKEEP-SYSTEM-01.yaml
+    - data/practices/registries/activation_ledger.yaml
+    - data/practices/registries/source_registry.yaml
+    - data/practices/research_gaps.yaml
+    - data/practices/release_manifest.yaml
+    - data/practices/schema/practice_content_v1.schema.json
+    - growth/domain/practice_content.py
+    - growth/services/practice_content_reports.py
+    - growth/services/expansion_readiness.py
+    - growth/services/competency_evidence_reports.py
+    - growth/services/competency_evidence_readiness.py
+    - growth/services/m6d_authoring_readiness.py
+    - growth/management/commands/verify_m6d_authoring_readiness.py
+    - reports/practice-content/competency_coverage_v1.csv
+    - reports/practice-content/domain_coverage_v1.csv
+    - reports/practice-content/lever_coverage_v1.csv
+    - reports/practice-content/risk_register_v1.csv
+    - reports/practice-content/coverage_summary_v1.json
+    - reports/practice-content/content_originality_v1.json
+    - reports/practice-content/typed_evidence_capability_v1.csv
+    - reports/practice-content/scoring_policy_execution_v1.csv
+    - reports/practice-content/competency_evidence_readiness_v1.json
+    - reports/practice-content/m6d_01_cohort_readiness_v1.json
+    - tests/fixtures/evidence/m6d_01_protocols_v1.json
+    - tests/test_practice_content.py
+    - tests/test_expansion_readiness.py
+    - tests/test_competency_evidence_reports.py
+    - tests/test_competency_evidence_readiness.py
+    - tests/test_m6d_authoring_readiness.py
+    - scripts/verify_expansion_readiness.sh
+    - scripts/verify_competency_evidence_readiness.sh
+    - scripts/verify_m6d_authoring_readiness.sh
     - scripts/verify_compose.sh
+    - Makefile
     - .github/workflows/verification.yml
+    - docs/PRODUCT_DECISIONS.md
     - docs/PROJECT_HANDOFF.md
-    - docs/context-and-personal-os.md
-    - docs/deployment.md
+    - docs/SCORING_DESIGN.md
+    - docs/architecture/README.md
+    - docs/architecture/0010-*.md
+    - docs/evidence-contract.md
+    - docs/practice-content.md
+    - docs/protocol-library.md
     - docs/testing.md
-    - docs/pilot/PILOT_READINESS_CLOSEOUT.md
-    - docs/pilot/PRIVATE_PILOT_OPERATIONS.md
     - docs/program/M6_CURRICULUM_EXPANSION.md
     - docs/program/M6_VALIDATION_AND_PILOT_PLAN.md
     - docs/CURRENT_STATE.md
     - docs/HANDOFF.md
-    - docs/evidence/M6C-04-*.md
+    - docs/evidence/M6D-01-*.md
   forbidden_paths:
-    - data/**
-    - reports/**
+    - data/assessment/**
+    - data/curriculum/**
+    - data/model/**
+    - data/notion/**
+    - data/evidence/**
+    - data/practices/protocols/08/PRACTICE-PRESENCE-01.yaml
+    - data/practices/protocols/11/PRACTICE-BOUNDARY-01.yaml
+    - data/practices/protocols/16/PRACTICE-EMOTIONAL-CUES-01.yaml
+    - data/practices/protocols/17/PRACTICE-FRIENDSHIP-01.yaml
+    - data/practices/protocols/26/PRACTICE-PLAY-01.yaml
+    - data/practices/expert_review_queue.yaml
+    - data/practices/registries/protocol_families.yaml
+    - data/practices/registries/risk_taxonomy.yaml
+    - data/practices/registries/scoring_policy_registry.yaml
+    - data/practices/schema/activation_ledger_v1.schema.json
+    - data/practices/schema/expert_review_queue_v1.schema.json
+    - data/practices/schema/protocol_family_registry_v1.schema.json
+    - data/practices/schema/research_gaps_v1.schema.json
+    - data/practices/schema/risk_taxonomy_v1.schema.json
+    - data/practices/schema/scoring_policy_registry_v1.schema.json
+    - data/practices/schema/source_registry_v1.schema.json
+    - legacy/**
     - growth/models.py
     - growth/migrations/**
-    - growth/domain/context.py
-    - growth/domain/personal_os.py
-    - growth/domain/context_priority.py
     - growth/domain/evidence.py
     - growth/domain/evidence_dispatch.py
     - growth/domain/typed_evidence.py
     - growth/domain/competency_scoring.py
     - growth/domain/scoring.py
     - growth/domain/ranking.py
-    - growth/services/context.py
-    - growth/services/personal_os.py
-    - growth/services/context_priority.py
-    - growth/services/profile.py
-    - growth/services/assessment.py
+    - growth/domain/context.py
+    - growth/domain/context_priority.py
+    - growth/domain/personal_os.py
+    - growth/services/canonical_import.py
     - growth/services/evidence.py
     - growth/services/scoring.py
     - growth/services/score_state.py
+    - growth/services/profile.py
     - growth/services/practice.py
-    - growth/services/pilot_feedback.py
-    - growth/views_assessment.py
-    - growth/views_evidence.py
-    - growth/views_pilot.py
-    - templates/growth/assessment.html
-    - templates/growth/evidence_*.html
-    - templates/growth/pilot_feedback.html
+    - growth/services/context.py
+    - growth/services/context_priority.py
+    - growth/services/personal_os.py
+    - growth/forms.py
+    - growth/views*.py
+    - growth/urls.py
+    - growth/static/**
+    - templates/**
+    - tests/e2e/**
     - requirements*.txt
     - pyproject.toml
     - Dockerfile
     - docker-compose.yml
     - docker-entrypoint.sh
     - .github/codex/**
-    - docs/PRODUCT_DECISIONS.md
+    - docs/evidence/M6C-*.md
     - LICENSE
 acceptance:
-  - The implementation starts from exact target commit 713d1a9a23f2102ca6e774f4921d56da5c8eb7b5, recognizes M6C-03 as merged at c7b51c1cd83c41c462c5c8685e80afbe39773d6b, and updates stale target current-state and handoff prose without changing accepted product decisions or canonical source hashes.
-  - One authenticated Personal OS browser entry point uses only the latest AssessmentRun owned by the user, redirects a user with no assessment to the assessment journey, and shows a new assessment epoch with no inferred or copied Personal OS or context values.
-  - The journey presents the exact five GG-PERSONAL-OS-1.0 identity sections, exact four descriptive Truth/Autopilot Audit prompts, season, and capacity in short staged or progressively disclosed sections rather than one compulsory worksheet; every field may remain unknown, N/A, or deferred, and no completion percentage, alignment score, autopilot score, diagnosis, moral rank, shame, streak, or pressure language is added.
-  - Personal OS submissions call the unchanged record_personal_os_revision service and assessment-context submissions call the unchanged record_context_bundle service. Valid changed input appends one revision, an unchanged retry is idempotent, malformed or stale-epoch input writes nothing, POST uses CSRF and POST-redirect-GET, and a retryable SQLite conflict receives a bounded private-value-free response.
-  - "A user reviews context for one active manifest-projected practice at a time. The concise form has three explicit modes: provide all six 0-to-4 factors; mark applicability not applicable; or defer by explicitly naming the deferred factor, categorical reason, and optional 1-to-366-day horizon. Uncollected factors are visibly recorded as unknown, numeric values have no preselected default, and the form never derives a factor from Personal OS text, assessment answers, personality, orientation, archetype, pilot feedback, setup-session data, or another factor."
-  - The browser presenter supplies GG-CONTEXT-PRIORITY-1.0 only the active canonical practices for which the current assessment epoch has a latest verified PracticeContext revision, and states that its ranking is among those explicitly reviewed practices. It never treats an unreviewed practice as unfavorable, never expands a cohort silently, and never persists the reproducible priority result.
-  - With no current-epoch context, the existing build_profile_summary recommendation IDs, base priorities, display order, reasons, and practice behavior remain exact. With missing capacity or no eligible reviewed candidate, the UI says which structured context is missing and does not label the legacy fallback as context-aware or convert unknown, N/A, or defer into zero.
-  - When capacity and at least one reviewed candidate are explicitly complete, home, practice-list, and recommendation surfaces show a small context-aware set ordered exactly by the unchanged M6C-03 result. Explanations use a fixed plain-language mapping from allowlisted explanation codes and factor states, distinguish base provisional need from current context fit, avoid exposing raw backend names or false precision, and never imply worth, obligation, diagnosis, mastery, or validated recommendation usefulness.
-  - A not-applicable or deferred reviewed candidate can request an alternative through the unchanged AlternativeRequest contract. The browser shows the highest-ranked distinct eligible candidate from only the reviewed cohort, or the explicit no-eligible-alternative state; it does not return the source, invent context, mutate a deficit, start a practice, or author a protocol.
-  - Personal OS authored text appears only on the authenticated Personal OS surface for its owner. It is absent from context-priority inputs/results/explanations, home and practice recommendation copy, logs, messages, URL/query data, screenshots retained from non-Personal-OS surfaces, generated reports, telemetry, existing evidence and pilot-feedback exports, evidence/score snapshots, and activation decisions. Committed fixtures, retained evidence, and browser artifacts use conspicuously synthetic text only.
-  - The Personal OS page explains before collection that authored values and context are private local data included in normal database backups, asks for minimal detail, and says that this slice adds no dedicated Personal OS/context export, purge, retention automation, remote telemetry, urgent-support monitoring, or participant-release approval. Existing account/assessment lifecycle behavior is not changed or advertised as a new deletion guarantee.
-  - All new and changed application pages remain authenticated; keyboard focus, labels, error association, semantic headings, 200-percent zoom, 390-by-844 layout, reduced-motion behavior, and no-horizontal-overflow checks pass without adding an external browser asset or runtime service.
-  - A new read-only GG-M6C-PILOT-READINESS-1.0 aggregate verifies the six existing readiness contracts, exact Personal OS/context definition IDs, five active canonical protocols, friendship-only activation, registered authenticated browser routes, and empty or valid optional state without writing data or printing private values. It does not replace or weaken GG-PILOT-READINESS-1.0 or any governance gate.
-  - The Compose drill creates only synthetic Personal OS and context revisions through public services, builds a context-priority result, exercises authenticated HTTP access to the new surface, and proves revision/result hashes and friendship-only activation survive container recreation and verified backup/restore. These checks are deployment-drill evidence only, not a release or production deployment.
-  - Focused form/view/service/readiness tests, full deterministic validation, new desktop/mobile Playwright journeys, Compose backup/restore, required hosted CI, retained artifact review, and the aggregate Pilot readiness gate all pass on the exact candidate commit before owner merge review.
-  - Assessment, canonical content, evidence, typed evidence, competency shadow, score state, existing exports, practice workflow, five-protocol runtime projection, and friendship-only production activation remain exact. No model, migration, backfill, protocol/action, dependency, external service, remote telemetry, weekly execution, or production-score change is added.
-  - M6B governance remains pending and no software, browser, fixture, hosted CI, or Compose result is represented as ER-M6A-003 completion, RG-M6A-002 resolution, recommendation usefulness, participant validation, specialist review, accessibility-population validation, cultural safety, clinical or psychometric validity, longitudinal evidence, release, deployment, production, or mastery evidence.
+  - The implementation starts from exact target default-branch commit a1bc79218a9397dcdbf699a1422c6f2881033675 and treats M6C-04 plus its mobile correction as merged; stale target prose describing M6C-04 as a current review branch is corrected only in allowed governance, current-state, and handoff artifacts.
+  - Exactly the four competency IDs 08.06, 09.12, 10.02, and 13.02 move from uncovered to individually authored draft packages under the exact protocol stable IDs, domains, families, recommendation-target subsets, and action counts recorded in scope.cohort; no fifth competency is authored, renamed, or silently substituted.
+  - Every selected competency is still uncovered at the baseline, every protocol parent and domain match the canonical curriculum, every target lever is a non-empty subset of the complete parent mapping, current protocol display orders remain unique, and all new source, gap, action, protocol, and activation stable IDs are unique and manifest-listed.
+  - Each package is RISK-LOW, inactive, editorial draft, runtime_projection none, SP-SHADOW-ONLY, scoring_status shadow_only, and ledgered score_active false with no approved production contract; friendship remains the only score-active protocol.
+  - "The four interventions are materially different and competency-specific: a bounded motivation-independent start comparison, a prospective decision record and scheduled update, a weak-component practice-feedback-retry loop, and a bounded non-hazardous home-system audit/redesign. Generic noun substitution, repeated journal prompts, cloned actions, uniform three-action templates, and completion-only evidence fail review."
+  - Action independent of motivation does not equate fatigue, depression, disability, caregiving load, pain, rest, or low energy with failure; it excludes unsafe, medically inappropriate, sleep-depriving, or coercive productivity demands and permits defer, reduced scope, support, and recovery without deficit.
+  - Decision records store only minimum private decision metadata and allow omission of names, secrets, allegations, credentials, legal privilege, protected work information, and sensitive third-party detail; outcome knowledge does not rewrite the original prediction or assumptions.
+  - Deliberate practice is limited to one safe, lawful, low-stakes skill with an observable component; it excludes physical danger, clinical rehabilitation, licensed work, abusive instruction, and high-consequence performance, and feedback never requires a coerced observer or public artifact.
+  - Home upkeep is limited to one user-controlled, non-hazardous area or routine; it excludes electrical, gas, structural, fire, mold, biohazard, pest-control, chemical, tenancy, accessibility, or repair work needing an owner, landlord, tradesperson, emergency service, or qualified professional.
+  - Each package supplies specific applicability, N/A/defer behavior, readiness, opportunity, prerequisites, burden, low-resource/accessibility/cultural/resource adaptations, privacy, foreseeable misuse, exclusions, pause, stop, escalation, referral, completion, transfer, and mastery boundaries without clinical, psychometric, universal, moral, productivity-worth, or guaranteed-effect claims.
+  - Claim-level sources are added to the canonical source registry with stable IDs, authorship or issuing body, date, locator, source class, evidence strength, supported claim, limitations, applicability, retrieval date, and quotation constraints. Primary research, systematic review, official guidance, or professional standards are preferred; snippets and generated prose are not sources, and unresolved review limits remain explicit research gaps.
+  - The canonical practice schema and loader add a fail-closed source-only typed-evidence branch for typed-evidence-rules-v1 while preserving practice-observation-v1 byte-for-byte for all five projected legacy packages. A package cannot mix rule versions, project typed rules into the ORM, or use a typed rule without matching protocol/action/competency/policy identities.
+  - Typed rules use only explicit bounded normalization. Behavioral rules may use Boolean, count, bounded-frequency, or duration observations; artifact, scenario, and objective rules use allowlisted criteria or bounded indicators without artifact contents, prose length, sentiment, private narrative, observer identity, or a hidden more-is-better assumption.
+  - Conspicuously synthetic cohort fixtures replay every new action rule and cover supportive, mixed, contradictory, inconclusive, unknown, not-observed, N/A, deferred, and adverse paths; they demonstrate distinct protocol performance versus direct competency contribution, context and epoch bounds, provenance, recency, repetition, withholding, exact hashes, and no duplicate event application.
+  - All new typed results remain pure source/fixture shadow evidence. No typed event is persisted, no legacy event is rewritten or up-converted, no LeverBaseline, LeverState, ScoreSnapshot, context, Personal OS, recommendation, sprint, review, or activation record is written, and no package becomes runtime-available.
+  - Deterministic reports show exactly 383 competencies, 9 authored packages, 5 projected legacy packages, 4 M6D-01 draft typed source packages, 374 uncovered competencies, 29 source actions, 15 runtime actions, 8 domains with authored packages, 21 parent-mapped levers, 10 recommendation-target levers, 7 low-risk and 2 moderate-risk packages, 0 release candidates, 0 source-complete packages, 5 runtime protocols, and 1 score-active protocol.
+  - Originality output contains no exact duplicate action instruction, action title, reflection set, evidence-rule payload, or safety block introduced by this cohort; every near-duplicate and structural warning is retained for the final consolidated human disposition, and automated lexical overlap is not represented as semantic review.
+  - GG-CURRICULUM-EXPANSION-READINESS-1.0 and GG-COMPETENCY-EVIDENCE-READINESS-1.0 are updated to distinguish the expanding source catalog from the frozen five-protocol runtime. A new read-only GG-M6D-01-AUTHORING-READINESS-1.0 verifies the exact cohort, hashes, reports, fixtures, inactive ledger state, pending governance, and no database writes without weakening any prerequisite readiness contract.
+  - The frozen runtime projection hash 274f7244630ed56d56a443a6a699399edade6c67fcf964237559e05b72368e35, historical v1 evidence and score replay, M6C behavior, current recommendation outputs, five seeded protocols, fifteen seeded actions, and friendship-only activation remain exact.
+  - "M6B governance remains unaccepted: ER-M6A-003 is pending, RG-M6A-002 is open, Decisions 047 through 049 remain proposed, and no content, source, schema, fixture, report, browser, hosted-CI, or Compose result is represented as specialist, accessibility-population, cultural, clinical, psychometric, longitudinal, participant, mastery, release, deployment, or production evidence."
+  - Focused tests, all deterministic reports and readiness gates, the complete repository verification contract, unchanged browser journeys, Compose backup/restore/recreation, and required hosted CI pass on the exact candidate commit before merge; retained evidence and target-owner content review are explicitly recorded as deferred to the final 383/383 gate.
 validation:
   local:
-    - .venv/bin/python -m pytest tests/test_personal_os_browser.py tests/test_m6c_pilot_readiness.py tests/test_context_models.py tests/test_context_services.py tests/test_personal_os_models.py tests/test_personal_os_services.py tests/test_context_priority.py tests/test_context_priority_readiness.py -q
-    - make context-check PYTHON=.venv/bin/python
-    - make personal-os-check PYTHON=.venv/bin/python
-    - make context-priority-check PYTHON=.venv/bin/python
-    - make m6c-pilot-check PYTHON=.venv/bin/python
+    - .venv/bin/python -m pytest tests/test_practice_content.py tests/test_expansion_readiness.py tests/test_competency_evidence_reports.py tests/test_competency_evidence_readiness.py tests/test_m6d_authoring_readiness.py -q
+    - make practice-report-check PYTHON=.venv/bin/python
+    - make curriculum-check PYTHON=.venv/bin/python
+    - make competency-evidence-check PYTHON=.venv/bin/python
+    - make m6d-01-check PYTHON=.venv/bin/python
     - ./scripts/agent-verify.sh contract
     - ./scripts/agent-verify.sh quick
     - ./scripts/agent-verify.sh full
@@ -155,69 +229,68 @@ validation:
     - .venv/bin/python scripts/verify-manifest.py
     - git diff --check
   focused_tests_to_add:
-    - authentication CSRF latest-assessment ownership no-assessment redirect and no reassessment carry-forward
-    - exact staged Personal OS prompts states bounds initial values append-only idempotent POST-redirect-GET and private conflict errors
-    - assessment season and capacity plus per-practice provide N-A and defer form mappings with no preselected ordinals or inferred factors
-    - candidate cohort includes only current-epoch explicitly reviewed active canonical protocols and labels partial coverage honestly
-    - no-context legacy recommendation compatibility missing-capacity behavior and exact unchanged context-aware ordering
-    - distinct alternative after N-A and defer plus explicit no-eligible-alternative browser states and no score evidence sprint or activation mutation
-    - Personal OS sentinel isolation from ranking explanations pages messages logs existing exports reports evidence score snapshots and retained non-private artifacts
-    - stale cross-user cross-epoch inactive protocol malformed snapshot and service failure paths fail closed without private values
-    - keyboard labels error focus 200-percent zoom mobile overflow reduced-motion and synthetic desktop-mobile walkthrough screenshots
-    - M6C aggregate readiness deterministic JSON empty-state pass tamper diagnostics no private output and no database writes
-    - Compose synthetic context and Personal OS state priority hash authenticated HTTP recreation backup restore and clean shutdown
+    - exact four-competency cohort, protocol IDs, domains, families, action counts, parent mappings, target subsets, display orders, and manifest coverage
+    - schema and loader dispatch for source-only typed rules with mixed-version, unknown-version, malformed-rule, identity-mismatch, and attempted-runtime-projection rejection
+    - exact per-protocol typed rule replay for behavioral, artifact, skill-rehearsal, and audit/redesign evidence without free text, artifact contents, observer identity, or implicit polarity
+    - supportive mixed contradictory inconclusive unknown not-observed N-A deferred adverse stale repeated and duplicate-origin fixture outcomes with deterministic materialized hashes
+    - draft low-risk governance, open source/review gaps, inactive ledger entries, zero typed persistence, zero new score activation, and release-candidate fail-closed behavior
+    - exact 9-package 29-source-action 374-uncovered report counts plus frozen 5-protocol 15-runtime-action projection and friendship-only activation
+    - originality detection and retained final-review inventory for duplicate action, reflection, evidence-rule, safety, duration, and action-shape candidates
+    - M6D-01 readiness deterministic JSON, tamper diagnostics, catalog/runtime distinction, prerequisite readiness preservation, and no database writes
+    - legacy practice-observation-v1 fixtures, evidence replay, score state, recommendations, M6C context and Personal OS, existing exports, and five package files remain exact
   required_ci:
-    - Ruff Django pytest and migration-drift confirmation including focused M6C-04 tests
-    - pilot readiness
-    - curriculum expansion readiness
-    - competency evidence readiness
-    - context readiness
-    - Personal OS readiness
-    - context-priority readiness
-    - M6C pilot readiness on isolated migrated idempotently seeded state
-    - Playwright legacy journeys plus authenticated Personal OS context ranking alternative privacy keyboard mobile and retained-artifact journeys
-    - Docker Compose migration seed all seven readiness contracts synthetic browser-slice state authenticated HTTP priority replay recreation backup restore and clean-shutdown drill
+    - Ruff Django pytest and migration-drift confirmation including focused M6D-01 schema content fixture report and readiness tests
+    - practice report freshness and exact cohort coverage
+    - pilot readiness with the unchanged five-protocol runtime
+    - curriculum expansion readiness with nine source packages and the frozen five-protocol projection
+    - competency evidence readiness with four source-only typed packages and zero typed runtime or production activation
+    - context Personal OS context-priority and M6C pilot readiness regression gates
+    - M6D-01 authoring readiness on isolated migrated idempotently seeded state
+    - Playwright core and M6C journeys as unchanged-runtime browser regression evidence
+    - Docker Compose migration seed all prerequisite and M6D readiness contracts evidence replay recreation backup restore and clean-shutdown drill
     - aggregate Pilot readiness gate
   manual:
-    - Owner reviews and accepts the exact staged prompts factor labels state mappings explanation copy privacy notice and partial-cohort language before merge.
-    - Owner reviews retained synthetic desktop and mobile artifacts, confirms no real Personal OS or context value is committed or exposed, and records any accessibility privacy safety or critical UX finding.
-    - Owner confirms required CI and Compose evidence for the exact candidate commit and decides separately whether an owner-operated private pilot may proceed; batch completion does not release or deploy the application.
-    - Target pull request remains human-reviewed and is not marked ready or merged by the implementation agent.
+    - Final M6B-GOV owner and trained-reviewer disposition is required after all 383 competencies have an individually authored package or explicit non-protocol disposition.
+    - Until that final gate, every cohort records semantic, originality, accessibility, privacy, safety, source, retained-evidence, and owner review as deferred rather than passed.
+    - Runtime projection, score activation, participant exposure, release, deployment, production writes, and specialist or validation claims always require separate human approval.
+    - Standing owner authorization permits PFSPAM to mark ready and merge this exact source-only cohort only after exact-head required CI succeeds, no unresolved review thread remains, and every inactive/unprojected/score-inactive boundary stays exact.
 risk:
   class: high
   hazards:
-    - a concise flow silently defaults private context or becomes a large compulsory self-optimization worksheet
-    - private mission audit context or third-party detail leaks through rendering errors logs artifacts exports backups or explanations
-    - ranking a partial reviewed cohort is presented as a comprehensive or validated best choice
-    - N-A or defer becomes zero a deficit pressure to answer or the same candidate returned as its own alternative
-    - stale cross-user or cross-epoch data influences the browser recommendation after reassessment or concurrent writes
-    - browser orchestration changes the frozen M6C-03 formula legacy recommendation semantics evidence score state practice workflow or activation
-    - deployment and hosted CI evidence is overstated as participant specialist release or production validation
+    - polished but generic packages multiply noun-swapped actions, prompts, or evidence rules
+    - low-risk labeling hides disability, fatigue, productivity-pressure, privacy, household-hazard, or high-consequence skill contexts
+    - outcome knowledge rewrites a decision artifact or artifact prose and completion are treated as proof
+    - typed source rules leak into the frozen runtime or are mislabeled as persisted production evidence
+    - protocol performance and direct competency evidence are double counted or projected through recommendation targets instead of the complete parent mapping
+    - source discovery is overstated as source completeness, specialist review, effectiveness, or validation
+    - hard-coded M6A counts are loosened so far that missing or extra packages no longer fail closed
+    - content expansion changes legacy hashes, runtime recommendations, historical replay, or friendship-only activation
   stop_conditions:
-    - the target checkout does not resolve exactly to baseline 713d1a9a23f2102ca6e774f4921d56da5c8eb7b5 before implementation
-    - owner review leaves the staged prompts explicit form-to-contract mapping explanation language privacy notice or partial-cohort semantics unresolved
-    - implementation requires a model migration backfill hidden factor default Personal OS text analysis personality modifier or change to an M6C-01 through M6C-03 contract
-    - the no-context recommendation IDs priorities reasons or existing practice workflow cannot remain exact
-    - a useful alternative cannot be produced through the unchanged M6C-03 contract from explicitly reviewed current-epoch candidates without inventing context or changing canonical content
-    - private authored values must enter a log URL retained evidence non-private screenshot existing export report score snapshot telemetry stream or activation decision
-    - a required change falls outside allowed paths or touches a forbidden path
-    - focused or full deterministic validation required hosted CI Playwright artifact checks Compose recovery or the aggregate Pilot readiness gate fails on the candidate commit
-    - a critical authentication privacy data-loss keyboard accessibility or safety finding remains unresolved
-    - M6B governance acceptance expanded production score activation recommendation usefulness participant release deployment or a higher validation level is asserted as a prerequisite or result
+    - the target checkout does not resolve exactly to a1bc79218a9397dcdbf699a1422c6f2881033675 before implementation
+    - any selected competency is no longer uncovered or its canonical identity, domain, or parent mapping differs from scope.cohort
+    - a package cannot remain RISK-LOW after its actual intervention, exclusions, and foreseeable consequences are reviewed
+    - source support is insufficient for a material claim and the claim cannot be narrowed to an explicitly limited product-design judgment
+    - typed rules require changing GG-TYPED-EVIDENCE-1.0, practice-observation-v1, historical snapshots, ORM persistence, forms, views, templates, or the five-protocol runtime projection
+    - any evidence design requires free-text analysis, artifact contents, sensitive third-party detail, observer identity, implicit polarity, completion-equals-competence, or lever-to-competency feedback
+    - the exact legacy projection, historical replay, no-context or context-aware recommendation behavior, five seeded protocols, fifteen seeded actions, or friendship-only score activation cannot remain exact
+    - a required implementation change falls outside allowed paths or touches a forbidden path
+    - an exact duplicate or deterministic originality, privacy-boundary, safety-boundary, source-record, mapping, schema, forbidden-claim, or retained-warning-inventory gate fails; non-machine-verifiable concerns remain explicit for final review
+    - focused or full deterministic validation, report freshness, required hosted CI, Playwright regression, Compose recovery, aggregate Pilot readiness, or M6D-01 readiness fails on the candidate commit
+    - M6B governance acceptance, source completeness, score eligibility, participant release, deployment, or a higher evidence level is asserted without its separate retained decision
 rollback:
-  strategy: Revert the M6C-04 browser presenter, forms, routes, templates, styles, tests, readiness/deployment wiring, documentation, evidence, and manifest changes. The legacy no-context profile and practice surfaces then become the only browser path; all M6C-01 context and M6C-02 Personal OS revisions remain append-only local data for a later corrected UI.
-  data_migration: None. Do not delete or rewrite Personal OS context assessment evidence score feedback sprint review or canonical-content data during rollback; any participant-data retention or deletion action requires a separate reviewed operator decision and verified backup handling.
-  release_action: No merge release deployment participant-data write score activation or production change follows automatically from implementation completion or rollback.
+  strategy: Revert the four packages, their inactive activation and source/gap entries, additive typed-package schema/loader branch, fixtures, cohort readiness, reports, documentation, evidence, manifest, and verification wiring as one batch; regenerate all deterministic reports from the restored five-package canonical release and verify the frozen runtime and historical replay hashes.
+  data_migration: None. The batch may not add an ORM migration, persist typed evidence, seed the four source-only packages, or rewrite participant, assessment, context, Personal OS, practice, evidence, score, feedback, sprint, or review data.
+  release_action: PFSPAM may merge the exact source-only target PR after all required CI succeeds and the merge head is unchanged. No release, deployment, runtime projection, score activation, participant-data write, production change, or validation claim follows from that merge.
 evidence:
   output:
-    - docs/evidence/M6C-04-<date>.md
-    - acceptance criterion invariant and exact browser-state mapping
-    - exact baseline prerequisite commits changed-path audit and canonical hash comparison
-    - synthetic Personal OS context and context-priority revision and result hashes without authored values
-    - focused legacy-compatibility cohort alternative privacy ownership reassessment concurrency and no-mutation results
-    - M6C aggregate readiness summaries and all six prerequisite readiness results
-    - retained synthetic desktop mobile keyboard screenshot and trace artifact identifiers plus human visual-review disposition
-    - Compose authenticated HTTP recreation backup restore priority replay state digests and clean-shutdown result
-    - exact local and CI commands results environment commit and every failed skipped unavailable or unperformed validation
-    - owner manual-gate decisions residual risks and explicit non-validation claims
-  claim_boundary: Static unit integration synthetic-fixture deterministic-replay browser-journey and isolated Compose deployment-drill evidence only when actually run; never physical hardware HIL field RT engine signing release production recommendation-usefulness specialist accessibility-population cultural safety clinical psychometric longitudinal participant or mastery validation.
+    - docs/evidence/M6D-01-<date>.md
+    - exact baseline cohort protocol action family mapping target-lever and changed-path audit
+    - before-after canonical and runtime counts hashes release manifest source registry activation ledger and generated report digests
+    - claim-to-source mapping retrieval metadata limitations open research gaps and explicit deferred-review status
+    - per-protocol typed rule and synthetic fixture hashes plus supportive mixed contradictory inconclusive neutral adverse repetition recency and withholding results
+    - legacy projection historical replay recommendation M6C no-mutation and friendship-only activation comparisons
+    - originality duplicate near-duplicate structural warning and final-review inventory output
+    - M6D-01 and prerequisite readiness summaries with database before-after digests
+    - exact local and CI commands results environment candidate commit and every failed skipped unavailable or unperformed validation
+    - deferred owner and trained-reviewer gate status residual risks and explicit non-validation claims
+  claim_boundary: Individually authored draft content, static schema, source classification, unit/integration, synthetic typed-fixture, deterministic shadow replay, browser-regression, and isolated Compose deployment-drill evidence only when actually run; never physical hardware HIL field RT engine signing release production intervention-effectiveness recommendation-usefulness specialist accessibility-population cultural clinical psychometric longitudinal participant or mastery validation.
