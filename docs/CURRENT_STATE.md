@@ -62,24 +62,29 @@ Run the local gate check:
 
 ## Planned sequence
 
-1. Complete M6D-01 exact local/Compose/hosted-CI validation, trained content
-   and source review, retained evidence review, and owner PR disposition.
-2. Continue representative vertical-slice protocols only through separately
-   governed Phase B batches.
-3. Stable report-derived domain cohorts of approximately 8–15 competencies per
-   human-reviewed target PR.
-4. Whole-library scoring dispositions and shadow calibration.
-5. Separately approved controlled activation cohorts.
-6. Full integration, operations hardening, and diverse multi-cycle validation.
+1. Complete M6D-01 exact local/Compose/hosted-CI validation and merge the
+   source-only cohort under standing owner authorization.
+2. Continue M6D representative vertical slices through separately contracted,
+   exact-head, required-CI-green source-only PRs.
+3. Run stable report-derived M6E domain cohorts of approximately 8–15
+   competencies per PFSPAM-merged PR until 383/383 drafts or explicit
+   non-protocol dispositions are present.
+4. Perform the consolidated owner/trained content, source, originality,
+   accessibility, privacy, and safety review at M6B-GOV.
+5. Complete whole-library scoring dispositions and shadow calibration.
+6. Use separately approved controlled activation cohorts, then full integration,
+   operations hardening, and diverse multi-cycle validation.
 
 Run the additive source cohort gate with `make m6d-01-check`. Required hosted
-CI, trained semantic/originality/accessibility/privacy/safety review, retained
-evidence review, and owner approval on the exact candidate commit remain
-manual merge gates unless retained evidence records them as actually completed.
+CI is an intermediate merge gate. Human semantic/originality/accessibility/
+privacy/safety, retained-evidence, and owner review remain required but are
+recorded as deferred until the final 383/383 M6B-GOV gate.
 
 ## Automation boundary
 
-The target autopilot creates and repairs draft PRs but never merges Grounded
-Growth target PRs. Control-plane batch-contract PRs may auto-merge after schema
-and CI pass. Generated content, source research, fixtures, and CI do not replace
-specialist or participant validation.
+PFSPAM may create, repair, mark ready, and merge an exact-head source-only
+M6D/M6E PR when every required check is green and no unresolved review thread
+remains. This standing approval never covers runtime projection, score
+activation, participant exposure, release, deployment, production writes,
+repository settings, or validation claims. Generated content, source research,
+fixtures, and CI do not replace specialist or participant validation.
