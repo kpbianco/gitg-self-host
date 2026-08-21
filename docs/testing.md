@@ -58,7 +58,7 @@ projection with the seeded runtime.
 fail-closed typed dispatch, golden typed evidence and shadow projections,
 property/invariant coverage, deterministic reports, and unchanged production
 state. A pass means software-ready, not M6B-accepted:
-`ER-M6A-003` and `RG-M6A-002` remain external governance blockers.
+`ER-M6A-003` and `RG-M6A-002` remain external governance blockers for M6B acceptance, runtime projection, scoring, participant release, deployment, and validation claims; Decision 051 permits CI-gated source-only draft authoring while they remain open.
 
 The M6B report set is:
 
