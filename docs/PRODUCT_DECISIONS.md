@@ -496,7 +496,8 @@ M6B first resolves typed competency evidence and scoring architecture. M6C
 then establishes applicability, importance, readiness, urgency,
 opportunity/resources, defer/not-now behavior, and the minimum Personal OS
 foundation. Representative 10–12 competency vertical slices follow as
-Phase B; mass authoring does not begin before those foundations are reviewed.
+Phase B; generated full authoring begins only after those foundations pass their
+exact deterministic and hosted-CI gates.
 
 ## Decision 047 — Typed evidence is parallel, explicit, and replay-first
 **Status:** Proposed for M6B review
@@ -556,10 +557,13 @@ as the only score-active protocol under the existing v1 contracts.
 `GG-COMPETENCY-EVIDENCE-READINESS-1.0` may prove the software inventory,
 fixtures, replay, reversal, and invariants, but it cannot clear
 `ER-M6A-003`. Measurement, accessibility, and privacy/safety review remains
-pending and blocks M6B acceptance and mass authoring.
+pending and blocks M6B acceptance, runtime projection, production scoring,
+participant release, deployment, and validation claims. Decision 051 permits
+only inactive, unprojected, source-only draft authoring while those gates remain
+open.
 
 ## Decision 050 — The first representative cohort is source-only
-**Status:** Accepted for M6D-01 implementation; human content/source review pending
+**Status:** Accepted for M6D-01 implementation; human content/source review deferred under Decision 051
 
 M6D-01 authors exactly competencies `08.06`, `09.12`, `10.02`, and `13.02`
 as four materially distinct low-risk draft packages. They use behavioral-start,
@@ -579,3 +583,33 @@ Synthetic replay demonstrates deterministic software behavior only. The four
 drafts remain blocked from source-complete, release-candidate, M6B-accepted,
 specialist, participant, intervention-effectiveness, recommendation-usefulness,
 mastery, deployment, production, and score-eligibility claims.
+
+## Decision 051 — PFSPAM defers human review until draft coverage is complete
+**Status:** Accepted by owner on 2026-08-21
+
+PFSPAM may author fixed M6D and generated M6E competency cohorts, commit and
+push the change, open or update the focused target PR, perform the bounded CI
+repair loop, mark the exact head ready, and merge it when every required check
+passes and no unresolved review thread remains.
+
+This standing authorization applies only to individually authored packages or
+explicit non-protocol dispositions that remain inactive, unprojected,
+source-only, production-ineligible, and score-inactive. Every cohort must retain
+claim-level sources and limitations, risk and policy assignments, deterministic
+coverage/originality/replay reports, synthetic fixtures, frozen legacy replay,
+the five-protocol runtime, and friendship-only score activation. Exact
+duplicates, schema or mapping defects, failed CI, scope violations, forbidden
+claims, runtime changes, persistence changes, or activation drift still stop
+the batch.
+
+Semantic, source, originality, accessibility, privacy, safety, retained-
+evidence, and owner review of intermediate cohorts is deliberately recorded as
+deferred rather than passed. After all 383 competencies have an individually
+authored draft package or explicit non-protocol disposition, M6B-GOV performs
+the consolidated human review and resolves, revises, or rejects the library.
+
+This authorization does not cover runtime projection, production score
+activation, participant exposure, release, deployment, production writes,
+repository-settings mutation, or specialist, clinical, psychometric,
+accessibility-population, cultural, longitudinal, effectiveness, mastery, or
+validation claims. Those remain separate human gates.
