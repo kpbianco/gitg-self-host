@@ -633,10 +633,11 @@ or activation change.
 - keep all four new packages inactive, unprojected, shadow-only, and absent
   from persisted evidence, score state, recommendations, and activation.
 
-Status: implementation is on the M6D-01 review branch. Trained content/source
-review, hosted CI, owner review, and any claimed deployment evidence remain
-manual gates. `ER-M6A-003` stays pending, `RG-M6A-002` stays open, and
-Decisions 047–049 stay proposed.
+Status: implementation is on the M6D-01 candidate branch. Hosted CI remains an
+exact-head merge gate. Under Decision 051, trained content/source/originality/
+accessibility/privacy/safety, retained-evidence, and owner review are deferred
+to the final 383/383 M6B-GOV gate. `ER-M6A-003` stays pending,
+`RG-M6A-002` stays open, and Decisions 047–049 stay proposed.
 
 ## M1 acceptance criteria
 1. User understands why a practice was recommended without seeing backend fields.
@@ -1038,10 +1039,12 @@ software-ready but not M6B-accepted.
    derive any later catalog frontier from canonical state.
 8. Historical evidence/score replay, M6C behavior, the frozen runtime
    projection hash, and friendship-only activation remain exact.
-9. Trained content/source review, hosted CI, and owner approval remain manual;
-   software and synthetic evidence do not establish specialist, participant,
-   clinical, psychometric, longitudinal, effectiveness, release, deployment,
-   production, or mastery validation.
+9. Hosted CI is required before the source-only merge. Trained content/source/
+   originality/accessibility/privacy/safety, retained-evidence, and owner review
+   are explicitly deferred to the final 383/383 M6B-GOV gate; software and
+   synthetic evidence do not establish specialist, participant, clinical,
+   psychometric, longitudinal, effectiveness, release, deployment, production,
+   or mastery validation.
 
 ## Handoff audit notes
 
@@ -1140,7 +1143,9 @@ software-ready but not M6B-accepted.
   M6B contracts define no automatic carry-forward after reassessment.
 - Passing `GG-COMPETENCY-EVIDENCE-READINESS-1.0` demonstrates software
   determinism only. `ER-M6A-003` and `RG-M6A-002` remain the explicit
-  specialist-review blockers for M6B acceptance and mass authoring.
+  specialist-review blockers for M6B acceptance, runtime projection, score
+  activation, participant release, deployment, and validation claims. Under
+  Decision 051 they do not block CI-gated source-only draft authoring.
 - M6C-01 context scales are explicit storage contracts only. No factor is read
   by profile, recommendation, evidence, scoring, or ordinary UI code in this
   batch. The context snapshot excludes identity and narrative, while the local
