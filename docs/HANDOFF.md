@@ -32,9 +32,10 @@ inactive, unprojected, shadow-only, and absent from the ORM runtime.
 The canonical control contract records owner-directed sequencing that defers
 M6B governance while bounded source authoring proceeds. Keep `ER-M6A-003`
 pending, `RG-M6A-002` open, Decisions 047–049 proposed, and every new path
-non-scored. Required exact-candidate hosted CI, trained content/source review,
-retained evidence review, and owner disposition remain manual before merge
-unless actually recorded in retained evidence.
+non-scored. Exact-candidate hosted CI remains required before each merge.
+Decision 051 defers trained content/source/originality/accessibility/privacy/
+safety, retained-evidence, and owner disposition until the final 383/383
+M6B-GOV gate; record those reviews as deferred, never passed.
 
 ## Protected decisions
 
@@ -43,5 +44,5 @@ unless actually recorded in retained evidence.
 - Historical evidence and score replay remain exact.
 - Unknown, N/A, defer, missing context, contradiction, and adverse states remain distinct.
 - Friendship is the only production score-active protocol.
-- Target PRs stop for owner review; the autopilot does not merge them.
+- PFSPAM may merge only exact-head, required-CI-green, inactive, unprojected, source-only draft PRs under standing owner authorization; all runtime, activation, release, deployment, production, and validation gates remain human.
 - Coverage and software readiness are not specialist or external validity.
