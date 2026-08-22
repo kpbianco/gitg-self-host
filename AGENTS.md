@@ -321,14 +321,22 @@ priority persistence, protocol/action, Personal OS analysis, evidence/scoring
 write, activation, dedicated export/purge/retention automation, remote
 telemetry, weekly execution, release, or deployment.
 
-M6D-01 is the current implementation batch. It authors exactly four low-risk,
-source-only draft packages for competencies `08.06`, `09.12`, `10.02`, and
-`13.02`, with fourteen pure typed-evidence fixture paths. The source catalog
-expands to nine packages and twenty-nine actions while the projected runtime
-remains five protocols and fifteen actions. The cohort is inactive,
-unprojected, shadow-only, and production-ineligible; it adds no model,
-migration, UI, persisted typed evidence, recommendation input, scoring write,
-or activation.
+M6D-01 is reviewed and merged. It authors exactly four low-risk, source-only
+draft packages for competencies `08.06`, `09.12`, `10.02`, and `13.02`, with
+fourteen pure typed-evidence fixture paths. The source catalog expands to nine
+packages and twenty-nine actions while the projected runtime remains five
+protocols and fifteen actions. The cohort is inactive, unprojected,
+shadow-only, and production-ineligible; it adds no model, migration, UI,
+persisted typed evidence, recommendation input, scoring write, or activation.
+
+M6D-02 is the current implementation batch. It is scoped to exactly four
+moderate-risk, source-only draft packages for competencies `16.07`, `18.07`,
+`20.07`, and `22.03`, with fifteen pure typed-evidence fixture paths. The
+contracted frontier is thirteen packages and forty-four source actions while
+the projected runtime must remain five protocols and fifteen actions. The
+cohort must remain inactive, unprojected, shadow-only, and production-
+ineligible, with no model, migration, UI, persisted typed evidence,
+recommendation input, scoring write, or activation.
 
 Later representative and generated cohorts remain separately contracted.
 Standing owner authorization permits PFSPAM to mark ready and merge only
@@ -342,7 +350,7 @@ claims always require separate human approval.
 ## Governed agentic delivery
 
 - Product: `gitg-self-host`; delivery profile: `product-data`.
-- Control revision: `cf2e9a27aa9cb71142cfccbd90fcf1d24c5df5c0`; harness version: `2`.
+- Control revision: `79882857b535899ac5fd64ea78119b90fe75ad2a`; harness version: `2`.
 - Read `contracts/profile-requirements.yaml` and the approved
   `contracts/active-batch.yaml` before implementation.
 - Stay inside active-batch allowed paths and preserve every forbidden path.

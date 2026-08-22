@@ -1,8 +1,8 @@
 schema_version: 1
 batch:
-  id: M6D-01
-  title: Author the first representative low-risk behavioral and artifact protocol cohort
-  goal: Author four exact low-risk canonical protocol packages across four domains, prove behavioral, artifact, rehearsal, and audit evidence rules through deterministic source-only typed fixtures, and preserve the five-protocol runtime, all historical replay, and friendship-only production scoring.
+  id: M6D-02
+  title: Author the representative relational moderate-risk and role-conditional cohort
+  goal: Author four exact moderate-risk source-only protocol packages that exercise consent, relational and community interaction, role and power conditions, safe alternative paths, and pending specialist review while preserving the frozen five-protocol runtime, historical replay, M6C behavior, and friendship-only production scoring.
 sources:
   product: products/gitg-self-host/product.yaml
   requirements:
@@ -12,15 +12,14 @@ sources:
     - products/gitg-self-host/risk-register.yaml#GG-R-CONTENT-001
     - products/gitg-self-host/risk-register.yaml#GG-R-MEASURE-001
     - products/gitg-self-host/risk-register.yaml#GG-R-SAFETY-001
+    - products/gitg-self-host/risk-register.yaml#GG-R-PRIVACY-001
     - products/gitg-self-host/risk-register.yaml#GG-R-CLAIMS-001
   milestone: products/gitg-self-host/roadmap.yaml#M6D
-  baseline_commit: a1bc79218a9397dcdbf699a1422c6f2881033675
+  baseline_commit: 5a120ddac38db68e0a529b5a687836d61bee4889
   prerequisites:
-    - M6B software is merged at c551d5b14bb6812b3fddaeb09a9f3031b2ef2704; its typed evaluator and evidence-only competency shadow remain pure, additive, and production-ineligible.
-    - M6C-01 through M6C-03 are merged at 8a1c937872d1dca4c38a917484dc214bc91b8a2f, 9ee7542f2155247ccb9b0ef4686535887f2b7403, and c7b51c1cd83c41c462c5c8685e80afbe39773d6b.
-    - M6C-04 is merged at 58376c4b6aea1ebf173f3eaef6c6b2fabcf6dcca; its mobile correction and manifest repair are merged at d9b10e571325a8a3e77e64e4285c0b14fc979811 and 4fad711e24ca3b7539d0facb3c9bbbd3990d2d39.
-    - The exact baseline then adds only portfolio-harness synchronization at a1bc79218a9397dcdbf699a1422c6f2881033675.
-    - Owner-directed sequencing permits PFSPAM to merge exact-head CI-green source-only draft cohorts while M6B governance remains deferred; ER-M6A-003 stays pending, RG-M6A-002 stays open, Decisions 047 through 049 stay proposed, and consolidated human review occurs only after the 383/383 draft frontier.
+    - M6D-01 is merged at e8fcd168c391ee3c6c51cc53946af834eedbf378 with four inactive source-only drafts, and the pinned baseline adds only portfolio-harness synchronization at 5a120ddac38db68e0a529b5a687836d61bee4889.
+    - M6B software and M6C-01 through M6C-04 remain merged and unchanged; the typed evaluator, evidence-only competency shadow, context contracts, browser journey, and frozen legacy runtime remain authoritative.
+    - Owner Decision 051 permits exact-head CI-green source-only cohort merges while M6B governance remains deferred; ER-M6A-003 stays pending, RG-M6A-002 stays open, Decisions 047 through 049 stay proposed, and consolidated human review occurs only after the 383/383 draft frontier.
   target_contracts:
     - AGENTS.md
     - docs/PRODUCT_DECISIONS.md
@@ -28,51 +27,49 @@ sources:
     - docs/practice-content.md
     - docs/evidence-contract.md
     - docs/SCORING_DESIGN.md
+    - docs/architecture/0010-source-only-representative-protocol-authoring.md
     - docs/program/M6_CURRICULUM_EXPANSION.md
     - docs/program/M6_VALIDATION_AND_PILOT_PLAN.md
     - contracts/profile-requirements.yaml
     - contracts/verification.yaml
   control_plane_repository: kpbianco/portfolio-control
-  control_plane_path: products/gitg-self-host/batches/M6D-01.yaml
-  control_plane_revision: a2d2b687db32bc4ef49f7b45cb2b5ea4ed3e1461  # pragma: allowlist secret
+  control_plane_path: products/gitg-self-host/batches/M6D-02.yaml
+  control_plane_revision: 79882857b535899ac5fd64ea78119b90fe75ad2a  # pragma: allowlist secret
 dependencies:
-  - M6C-01
-  - M6C-02
-  - M6C-03
-  - M6C-04
+  - M6D-01
 scope:
   cohort:
-    - competency_id: "08.06"
-      competency_name: Action independent of motivation
-      domain_id: "08"
-      protocol_stable_id: PRACTICE-MOTIVATION-INDEPENDENT-START-01
-      protocol_family_id: PF-BEHAVIORAL-EXPERIMENT
-      evidence_family: bounded behavioral starts across explicitly chosen low-motivation windows
-      recommendation_target_lever_ids: [L10]
-      action_count: 3
-    - competency_id: "09.12"
-      competency_name: Decision records and updating
-      domain_id: "09"
-      protocol_stable_id: PRACTICE-DECISION-RECORD-01
-      protocol_family_id: PF-ARTIFACT-PLAN
-      evidence_family: privacy-minimized reviewed decision-record criteria and later update
-      recommendation_target_lever_ids: [L14]
-      action_count: 3
-    - competency_id: "10.02"
-      competency_name: Deliberate practice
-      domain_id: "10"
-      protocol_stable_id: PRACTICE-DELIBERATE-PRACTICE-01
-      protocol_family_id: PF-SKILL-REHEARSAL
-      evidence_family: bounded skill attempts, feedback criteria, and before-after performance evidence
-      recommendation_target_lever_ids: [L15]
+    - competency_id: "16.07"
+      competency_name: Feedback and developmental conversation
+      domain_id: "16"
+      protocol_stable_id: PRACTICE-CONSENTED-FEEDBACK-CONVERSATION-01
+      protocol_family_id: PF-RELATIONAL-CONVERSATION
+      evidence_family: consent-confirmed low-stakes feedback rehearsal and bounded conversation criteria without recording either person's words or identity
+      recommendation_target_lever_ids: [L23]
       action_count: 4
-    - competency_id: "13.02"
-      competency_name: Home organization and maintenance systems
-      domain_id: "13"
-      protocol_stable_id: PRACTICE-HOME-UPKEEP-SYSTEM-01
+    - competency_id: "18.07"
+      competency_name: Shared expectations, roles, and labor
+      domain_id: "18"
+      protocol_stable_id: PRACTICE-SHARED-ROLE-LABOR-01
+      protocol_family_id: PF-RELATIONAL-CONVERSATION
+      evidence_family: voluntary low-stakes shared-responsibility agreement criteria and revisability check without scoring another person's labor or agreement
+      recommendation_target_lever_ids: [L27]
+      action_count: 4
+    - competency_id: "20.07"
+      competency_name: Helping without paternalism
+      domain_id: "20"
+      protocol_stable_id: PRACTICE-AGENCY-PRESERVING-HELP-01
+      protocol_family_id: PF-COMMUNITY-CONTRIBUTION
+      evidence_family: recipient- or community-defined consent, bounded contribution criteria, and explicit decline or redirection path without claiming another person's outcome
+      recommendation_target_lever_ids: [L30]
+      action_count: 3
+    - competency_id: "22.03"
+      competency_name: Authority and ethical use of power
+      domain_id: "22"
+      protocol_stable_id: PRACTICE-ETHICAL-POWER-AUDIT-01
       protocol_family_id: PF-AUDIT-REDESIGN
-      evidence_family: bounded home-system audit artifact, one safe redesign, and observable upkeep result
-      recommendation_target_lever_ids: [L18]
+      evidence_family: role-authority and dependency audit, one reversible accountability redesign, and consent-safe feedback criteria
+      recommendation_target_lever_ids: [L33]
       action_count: 4
   allowed_paths:
     - AGENTS.md
@@ -83,41 +80,34 @@ scope:
     - contracts/repo-profile.yaml
     - contracts/verification.yaml
     - contracts/verification.commands
-    - data/practices/protocols/08/PRACTICE-MOTIVATION-INDEPENDENT-START-01.yaml
-    - data/practices/protocols/09/PRACTICE-DECISION-RECORD-01.yaml
-    - data/practices/protocols/10/PRACTICE-DELIBERATE-PRACTICE-01.yaml
-    - data/practices/protocols/13/PRACTICE-HOME-UPKEEP-SYSTEM-01.yaml
+    - data/practices/protocols/16/PRACTICE-CONSENTED-FEEDBACK-CONVERSATION-01.yaml
+    - data/practices/protocols/18/PRACTICE-SHARED-ROLE-LABOR-01.yaml
+    - data/practices/protocols/20/PRACTICE-AGENCY-PRESERVING-HELP-01.yaml
+    - data/practices/protocols/22/PRACTICE-ETHICAL-POWER-AUDIT-01.yaml
+    - data/practices/expert_review_queue.yaml
     - data/practices/registries/activation_ledger.yaml
     - data/practices/registries/source_registry.yaml
     - data/practices/research_gaps.yaml
     - data/practices/release_manifest.yaml
-    - data/practices/schema/practice_content_v1.schema.json
-    - growth/domain/practice_content.py
-    - growth/services/practice_content_reports.py
-    - growth/services/expansion_readiness.py
     - growth/services/competency_evidence_reports.py
-    - growth/services/competency_evidence_readiness.py
-    - growth/services/m6d_authoring_readiness.py
-    - growth/management/commands/verify_m6d_authoring_readiness.py
+    - growth/services/m6d_02_authoring_readiness.py
+    - growth/management/commands/verify_m6d_02_authoring_readiness.py
     - reports/practice-content/competency_coverage_v1.csv
     - reports/practice-content/domain_coverage_v1.csv
     - reports/practice-content/lever_coverage_v1.csv
     - reports/practice-content/risk_register_v1.csv
     - reports/practice-content/coverage_summary_v1.json
     - reports/practice-content/content_originality_v1.json
-    - reports/practice-content/typed_evidence_capability_v1.csv
-    - reports/practice-content/scoring_policy_execution_v1.csv
     - reports/practice-content/competency_evidence_readiness_v1.json
     - reports/practice-content/m6d_01_cohort_readiness_v1.json
-    - tests/fixtures/evidence/m6d_01_protocols_v1.json
+    - reports/practice-content/m6d_02_cohort_readiness_v1.json
+    - tests/fixtures/evidence/m6d_02_protocols_v1.json
     - tests/test_practice_content.py
     - tests/test_expansion_readiness.py
     - tests/test_competency_evidence_reports.py
     - tests/test_competency_evidence_readiness.py
-    - tests/test_m6d_authoring_readiness.py
-    - scripts/verify_expansion_readiness.sh
-    - scripts/verify_competency_evidence_readiness.sh
-    - scripts/verify_m6d_authoring_readiness.sh
+    - tests/test_m6d_02_authoring_readiness.py
+    - scripts/verify_m6d_02_authoring_readiness.sh
     - scripts/verify_compose.sh
     - Makefile
     - .github/workflows/verification.yml
@@ -125,7 +115,7 @@ scope:
     - docs/PROJECT_HANDOFF.md
     - docs/SCORING_DESIGN.md
     - docs/architecture/README.md
-    - docs/architecture/0010-*.md
+    - docs/architecture/0011-*.md
     - docs/evidence-contract.md
     - docs/practice-content.md
     - docs/protocol-library.md
@@ -134,32 +124,30 @@ scope:
     - docs/program/M6_VALIDATION_AND_PILOT_PLAN.md
     - docs/CURRENT_STATE.md
     - docs/HANDOFF.md
-    - docs/evidence/M6D-01-*.md
+    - docs/evidence/M6D-02-*.md
   forbidden_paths:
     - data/assessment/**
     - data/curriculum/**
     - data/model/**
     - data/notion/**
     - data/evidence/**
+    - data/practices/protocols/08/PRACTICE-MOTIVATION-INDEPENDENT-START-01.yaml
     - data/practices/protocols/08/PRACTICE-PRESENCE-01.yaml
+    - data/practices/protocols/09/PRACTICE-DECISION-RECORD-01.yaml
+    - data/practices/protocols/10/PRACTICE-DELIBERATE-PRACTICE-01.yaml
     - data/practices/protocols/11/PRACTICE-BOUNDARY-01.yaml
+    - data/practices/protocols/13/PRACTICE-HOME-UPKEEP-SYSTEM-01.yaml
     - data/practices/protocols/16/PRACTICE-EMOTIONAL-CUES-01.yaml
     - data/practices/protocols/17/PRACTICE-FRIENDSHIP-01.yaml
     - data/practices/protocols/26/PRACTICE-PLAY-01.yaml
-    - data/practices/expert_review_queue.yaml
     - data/practices/registries/protocol_families.yaml
     - data/practices/registries/risk_taxonomy.yaml
     - data/practices/registries/scoring_policy_registry.yaml
-    - data/practices/schema/activation_ledger_v1.schema.json
-    - data/practices/schema/expert_review_queue_v1.schema.json
-    - data/practices/schema/protocol_family_registry_v1.schema.json
-    - data/practices/schema/research_gaps_v1.schema.json
-    - data/practices/schema/risk_taxonomy_v1.schema.json
-    - data/practices/schema/scoring_policy_registry_v1.schema.json
-    - data/practices/schema/source_registry_v1.schema.json
+    - data/practices/schema/**
     - legacy/**
     - growth/models.py
     - growth/migrations/**
+    - growth/domain/practice_content.py
     - growth/domain/evidence.py
     - growth/domain/evidence_dispatch.py
     - growth/domain/typed_evidence.py
@@ -178,6 +166,11 @@ scope:
     - growth/services/context.py
     - growth/services/context_priority.py
     - growth/services/personal_os.py
+    - growth/services/m6d_authoring_readiness.py
+    - growth/management/commands/verify_m6d_authoring_readiness.py
+    - tests/fixtures/evidence/m6d_01_protocols_v1.json
+    - tests/test_m6d_authoring_readiness.py
+    - scripts/verify_m6d_authoring_readiness.sh
     - growth/forms.py
     - growth/views*.py
     - growth/urls.py
@@ -191,36 +184,39 @@ scope:
     - docker-entrypoint.sh
     - .github/codex/**
     - docs/evidence/M6C-*.md
+    - docs/evidence/M6D-01-*.md
     - LICENSE
 acceptance:
-  - The implementation starts from exact target default-branch commit a1bc79218a9397dcdbf699a1422c6f2881033675 and treats M6C-04 plus its mobile correction as merged; stale target prose describing M6C-04 as a current review branch is corrected only in allowed governance, current-state, and handoff artifacts.
-  - Exactly the four competency IDs 08.06, 09.12, 10.02, and 13.02 move from uncovered to individually authored draft packages under the exact protocol stable IDs, domains, families, recommendation-target subsets, and action counts recorded in scope.cohort; no fifth competency is authored, renamed, or silently substituted.
-  - Every selected competency is still uncovered at the baseline, every protocol parent and domain match the canonical curriculum, every target lever is a non-empty subset of the complete parent mapping, current protocol display orders remain unique, and all new source, gap, action, protocol, and activation stable IDs are unique and manifest-listed.
-  - Each package is RISK-LOW, inactive, editorial draft, runtime_projection none, SP-SHADOW-ONLY, scoring_status shadow_only, and ledgered score_active false with no approved production contract; friendship remains the only score-active protocol.
-  - "The four interventions are materially different and competency-specific: a bounded motivation-independent start comparison, a prospective decision record and scheduled update, a weak-component practice-feedback-retry loop, and a bounded non-hazardous home-system audit/redesign. Generic noun substitution, repeated journal prompts, cloned actions, uniform three-action templates, and completion-only evidence fail review."
-  - Action independent of motivation does not equate fatigue, depression, disability, caregiving load, pain, rest, or low energy with failure; it excludes unsafe, medically inappropriate, sleep-depriving, or coercive productivity demands and permits defer, reduced scope, support, and recovery without deficit.
-  - Decision records store only minimum private decision metadata and allow omission of names, secrets, allegations, credentials, legal privilege, protected work information, and sensitive third-party detail; outcome knowledge does not rewrite the original prediction or assumptions.
-  - Deliberate practice is limited to one safe, lawful, low-stakes skill with an observable component; it excludes physical danger, clinical rehabilitation, licensed work, abusive instruction, and high-consequence performance, and feedback never requires a coerced observer or public artifact.
-  - Home upkeep is limited to one user-controlled, non-hazardous area or routine; it excludes electrical, gas, structural, fire, mold, biohazard, pest-control, chemical, tenancy, accessibility, or repair work needing an owner, landlord, tradesperson, emergency service, or qualified professional.
-  - Each package supplies specific applicability, N/A/defer behavior, readiness, opportunity, prerequisites, burden, low-resource/accessibility/cultural/resource adaptations, privacy, foreseeable misuse, exclusions, pause, stop, escalation, referral, completion, transfer, and mastery boundaries without clinical, psychometric, universal, moral, productivity-worth, or guaranteed-effect claims.
-  - Claim-level sources are added to the canonical source registry with stable IDs, authorship or issuing body, date, locator, source class, evidence strength, supported claim, limitations, applicability, retrieval date, and quotation constraints. Primary research, systematic review, official guidance, or professional standards are preferred; snippets and generated prose are not sources, and unresolved review limits remain explicit research gaps.
-  - The canonical practice schema and loader add a fail-closed source-only typed-evidence branch for typed-evidence-rules-v1 while preserving practice-observation-v1 byte-for-byte for all five projected legacy packages. A package cannot mix rule versions, project typed rules into the ORM, or use a typed rule without matching protocol/action/competency/policy identities.
-  - Typed rules use only explicit bounded normalization. Behavioral rules may use Boolean, count, bounded-frequency, or duration observations; artifact, scenario, and objective rules use allowlisted criteria or bounded indicators without artifact contents, prose length, sentiment, private narrative, observer identity, or a hidden more-is-better assumption.
-  - Conspicuously synthetic cohort fixtures replay every new action rule and cover supportive, mixed, contradictory, inconclusive, unknown, not-observed, N/A, deferred, and adverse paths; they demonstrate distinct protocol performance versus direct competency contribution, context and epoch bounds, provenance, recency, repetition, withholding, exact hashes, and no duplicate event application.
-  - All new typed results remain pure source/fixture shadow evidence. No typed event is persisted, no legacy event is rewritten or up-converted, no LeverBaseline, LeverState, ScoreSnapshot, context, Personal OS, recommendation, sprint, review, or activation record is written, and no package becomes runtime-available.
-  - Deterministic reports show exactly 383 competencies, 9 authored packages, 5 projected legacy packages, 4 M6D-01 draft typed source packages, 374 uncovered competencies, 29 source actions, 15 runtime actions, 8 domains with authored packages, 21 parent-mapped levers, 10 recommendation-target levers, 7 low-risk and 2 moderate-risk packages, 0 release candidates, 0 source-complete packages, 5 runtime protocols, and 1 score-active protocol.
-  - Originality output contains no exact duplicate action instruction, action title, reflection set, evidence-rule payload, or safety block introduced by this cohort; every near-duplicate and structural warning is retained for the final consolidated human disposition, and automated lexical overlap is not represented as semantic review.
-  - GG-CURRICULUM-EXPANSION-READINESS-1.0 and GG-COMPETENCY-EVIDENCE-READINESS-1.0 are updated to distinguish the expanding source catalog from the frozen five-protocol runtime. A new read-only GG-M6D-01-AUTHORING-READINESS-1.0 verifies the exact cohort, hashes, reports, fixtures, inactive ledger state, pending governance, and no database writes without weakening any prerequisite readiness contract.
-  - The frozen runtime projection hash 274f7244630ed56d56a443a6a699399edade6c67fcf964237559e05b72368e35, historical v1 evidence and score replay, M6C behavior, current recommendation outputs, five seeded protocols, fifteen seeded actions, and friendship-only activation remain exact.
-  - "M6B governance remains unaccepted: ER-M6A-003 is pending, RG-M6A-002 is open, Decisions 047 through 049 remain proposed, and no content, source, schema, fixture, report, browser, hosted-CI, or Compose result is represented as specialist, accessibility-population, cultural, clinical, psychometric, longitudinal, participant, mastery, release, deployment, or production evidence."
-  - Focused tests, all deterministic reports and readiness gates, the complete repository verification contract, unchanged browser journeys, Compose backup/restore/recreation, and required hosted CI pass on the exact candidate commit before merge; retained evidence and target-owner content review are explicitly recorded as deferred to the final 383/383 gate.
+  - The implementation starts from exact target default-branch commit 5a120ddac38db68e0a529b5a687836d61bee4889, recognizes M6D-01 as merged at e8fcd168c391ee3c6c51cc53946af834eedbf378, and treats the later baseline commit as portfolio-harness synchronization only; stale target prose calling M6D-01 current or unmerged is corrected only in allowed governance, current-state, and handoff artifacts.
+  - Exactly competency IDs 16.07, 18.07, 20.07, and 22.03 move from uncovered to individually authored draft packages under the exact protocol stable IDs, domains, families, recommendation-target subsets, and 4, 4, 3, and 4 action counts in scope.cohort; no fifth competency is authored, renamed, or substituted.
+  - Every selected competency is uncovered at the baseline; the curriculum classifies 18.07 and 22.03 as role-conditional; every package parent and domain match canonical curriculum; each target lever is a non-empty subset of the full canonical parent mapping; all new source, gap, review, action, protocol, and activation IDs are unique and manifest-listed.
+  - Every new package is RISK-MODERATE, inactive, editorial draft, runtime_projection none, SP-SHADOW-ONLY, scoring_status shadow_only, and ledgered score_active false with no approved production contract; friendship remains the only score-active protocol.
+  - Each package links a new package-scoped pending specialist review plus ER-M6A-003 and a new open package-scoped research gap. Required specialist roles, questions, release effects, and blocking gates are recorded, but no completed role, review date, decision reference, source-complete status, or specialist conclusion is fabricated.
+  - "The interventions are materially distinct: a consented low-stakes feedback exchange, a voluntary shared-responsibility agreement and revisability check, a recipient- or community-defined bounded contribution, and a role-authority/dependency audit with one reversible accountability redesign. Generic conversation prompts, noun substitution, cloned consent blocks, uniform action shapes, another person's compliance, and completion-only evidence fail review."
+  - The feedback package requires a welcome low-stakes developmental conversation with a freely revocable invitation and a defined participant role; it excludes disciplinary, evaluative, complaint, abuse, retaliation, clinical, legal, safeguarding, compelled-disclosure, and unsafe power contexts. Declined or uncertain consent leads to private rehearsal, a neutral planning artifact, or an appropriate organizational/specialist path without deficit.
+  - The shared-role/labor package is limited to one low-stakes, revisable responsibility among consenting adults who can safely disagree; it does not score fairness from another person's labor, agreement, emotion, or disclosure. Sex, reproduction, money, health, care of a dependent, housing security, legal rights, abuse, coercive control, and material dependency use defer, private own-contribution review, or qualified support instead of direct negotiation.
+  - The helping-without-paternalism package requires a welcome request or community-defined need, a bounded offer, an explicit right to decline or revise, and a clean exit. It excludes emergencies, medical/legal/financial advice, minors or vulnerable-person safeguarding, surveillance, eligibility decisions, proselytizing, quid-pro-quo help, coercive charity, and claims that the user's action improved another person's safety, capacity, gratitude, or dependence.
+  - The ethical-power package is applicable only when the user holds a legitimate, bounded, low-stakes role with a reversible action inside their authority. It inventories formal and informal influence, dependency, affected-party voice, conflict of interest, recourse, and accountability without naming people. Hiring, firing, pay, discipline, grading, clinical or caregiving authority, housing, immigration, policing, complaints, protected disclosure, abuse response, emergency action, and likely retaliation require N/A, defer, policy/ombuds review, or qualified support.
+  - All packages make consent state, role authority, power asymmetry, refusal, N/A, defer, pause, stop, escalation, and useful alternatives first-class. Consent cannot be inferred from silence, participation under authority, prior agreement, a role label, or completion, and withdrawing consent or declining a path never creates adverse competency evidence or a deficit.
+  - Claim-level sources enter the source registry with authorship or issuing body, date, locator, source class, evidence strength, supported claim, limitations, applicability, retrieval date, and quotation constraints. Use primary research, systematic reviews, official guidance, professional standards, or authoritative participatory/community sources; snippets and generated prose are not sources, and source discovery remains incomplete pending trained and specialist review.
+  - The existing practice-content schema, source-only typed-rule loader, GG-TYPED-EVIDENCE-1.0 evaluator, and historical practice-observation-v1 path remain unchanged. Every action uses typed-evidence-rules-v1 with exact sibling protocol, action, competency, and SP-SHADOW-ONLY identities; no mixed or new rule version, evaluator feature, schema relaxation, ORM projection, or runtime field is added.
+  - Typed rules use only explicit structured observations and allowlisted criteria. Where consented-observer or attestation provenance is used, the fixture records only an allowlisted attestation ID and explicit consent Boolean; it stores no observer or third-party identity, words, feedback content, relationship label, protected characteristic, allegation, sensitive narrative, artifact contents, sentiment, or covert proxy for agreement or compliance.
+  - Fifteen conspicuously synthetic action fixtures replay every new action and cover supportive, mixed, contradictory, inconclusive, unknown, not-observed, N/A, deferred, adverse, stale, repeated, duplicate-origin, role-inapplicable, consent-declined, and unconsented-attestation paths. They preserve context/epoch scope, provenance, recency, repetition, withholding, deterministic hashes, and duplicate-event rejection while keeping protocol performance separate from direct competency contribution.
+  - All new typed results remain pure fixture/shadow evidence. No typed event is persisted; no legacy event is rewritten; no LeverBaseline, LeverState, ScoreSnapshot, context, Personal OS, recommendation, sprint, review, participant, or activation record is written; and no new package appears in the ORM runtime or ordinary browser cohort.
+  - Deterministic reports show exactly 383 competencies, 13 canonical packages, 44 source actions, 370 uncovered competencies, 12 domains with authored packages, 27 parent-mapped levers, 13 recommendation-target levers, 7 low-risk and 6 moderate-risk packages, 12 SP-SHADOW-ONLY packages, 0 high-risk packages, 0 release candidates, 0 source-complete packages, 5 runtime protocols, 15 runtime actions, and 1 score-active protocol.
+  - Originality output contains no exact duplicate action title, instruction, reflection set, evidence-rule payload, consent block, safety block, alternative path, or role-condition block introduced by this cohort. Every near-duplicate and structural warning is retained for final consolidated human disposition; lexical checks are not semantic, consent, cultural, accessibility, power, or specialist review.
+  - Existing GG-M6D-01-AUTHORING-READINESS-1.0 remains byte- and behavior-compatible at the advanced catalog frontier. A new read-only GG-M6D-02-AUTHORING-READINESS-1.0 verifies the exact cohort, mappings, package and fixture hashes, pending package-scoped specialist reviews, open gaps, inactive ledger entries, deterministic reports, prerequisite readiness, and zero database writes.
+  - The frozen runtime projection hash 274f7244630ed56d56a443a6a699399edade6c67fcf964237559e05b72368e35, five projected legacy package bytes, the four M6D-01 package and fixture bytes, historical v1 evidence and score replay, M6C behavior, existing exports, current recommendations, five seeded protocols, fifteen seeded actions, and friendship-only activation remain exact.
+  - "M6B governance remains unaccepted: ER-M6A-003 is pending, RG-M6A-002 is open, Decisions 047 through 049 remain proposed, and all four new package reviews remain pending. No package, source, schema, fixture, report, browser, hosted-CI, or Compose result is represented as semantic approval, consent validation, power-safety review, specialist acceptance, accessibility-population, cultural, clinical, psychometric, longitudinal, participant, mastery, release, deployment, or production evidence."
+  - Focused tests, report freshness, both M6D authoring gates, all prerequisite readiness contracts, the complete repository verification contract, unchanged browser journeys, Compose backup/restore/recreation, and required hosted CI pass on the exact candidate commit before merge; retained evidence records every warning and all trained-reviewer and owner dispositions as deferred until the final 383/383 M6B-GOV gate.
 validation:
   local:
-    - .venv/bin/python -m pytest tests/test_practice_content.py tests/test_expansion_readiness.py tests/test_competency_evidence_reports.py tests/test_competency_evidence_readiness.py tests/test_m6d_authoring_readiness.py -q
+    - .venv/bin/python -m pytest tests/test_practice_content.py tests/test_expansion_readiness.py tests/test_competency_evidence_reports.py tests/test_competency_evidence_readiness.py tests/test_m6d_authoring_readiness.py tests/test_m6d_02_authoring_readiness.py -q
     - make practice-report-check PYTHON=.venv/bin/python
     - make curriculum-check PYTHON=.venv/bin/python
     - make competency-evidence-check PYTHON=.venv/bin/python
     - make m6d-01-check PYTHON=.venv/bin/python
+    - make m6d-02-check PYTHON=.venv/bin/python
     - ./scripts/agent-verify.sh contract
     - ./scripts/agent-verify.sh quick
     - ./scripts/agent-verify.sh full
@@ -229,68 +225,73 @@ validation:
     - .venv/bin/python scripts/verify-manifest.py
     - git diff --check
   focused_tests_to_add:
-    - exact four-competency cohort, protocol IDs, domains, families, action counts, parent mappings, target subsets, display orders, and manifest coverage
-    - schema and loader dispatch for source-only typed rules with mixed-version, unknown-version, malformed-rule, identity-mismatch, and attempted-runtime-projection rejection
-    - exact per-protocol typed rule replay for behavioral, artifact, skill-rehearsal, and audit/redesign evidence without free text, artifact contents, observer identity, or implicit polarity
-    - supportive mixed contradictory inconclusive unknown not-observed N-A deferred adverse stale repeated and duplicate-origin fixture outcomes with deterministic materialized hashes
-    - draft low-risk governance, open source/review gaps, inactive ledger entries, zero typed persistence, zero new score activation, and release-candidate fail-closed behavior
-    - exact 9-package 29-source-action 374-uncovered report counts plus frozen 5-protocol 15-runtime-action projection and friendship-only activation
-    - originality detection and retained final-review inventory for duplicate action, reflection, evidence-rule, safety, duration, and action-shape candidates
-    - M6D-01 readiness deterministic JSON, tamper diagnostics, catalog/runtime distinction, prerequisite readiness preservation, and no database writes
-    - legacy practice-observation-v1 fixtures, evidence replay, score state, recommendations, M6C context and Personal OS, existing exports, and five package files remain exact
+    - exact four-competency cohort, protocol IDs, domains, families, 4-4-3-4 action counts, canonical role classifications, parent mappings, target subsets, display orders, and manifest coverage
+    - moderate-risk draft governance, one pending package-scoped specialist review and open research gap per package, inactive ledger entries, zero release candidates, zero source-complete packages, and no fabricated review completion
+    - package-specific consent, role, power, refusal, N/A, defer, safe-alternative, privacy, misuse, exclusion, stop, escalation, referral, transfer, and mastery boundary terms
+    - exact typed identity and action replay using the unchanged source-only loader and evaluator, including consented-observer or attestation minimization without identity, prose, artifact content, or implicit polarity
+    - supportive mixed contradictory inconclusive unknown not-observed N-A deferred adverse stale repeated duplicate-origin role-inapplicable consent-declined and unconsented-attestation outcomes with deterministic materialized hashes
+    - exact 13-package 44-source-action 370-uncovered report counts, 12 authored domains, 27 parent levers, 13 targets, 7-low and 6-moderate risk, 12 shadow-only packages, frozen 5-protocol 15-action runtime, and friendship-only activation
+    - originality detection and retained final-review inventory for duplicate action, reflection, evidence-rule, consent, safety, alternative, role-condition, duration, and action-shape candidates
+    - M6D-02 readiness deterministic JSON, tamper diagnostics, pending-review enforcement, catalog/runtime distinction, both prerequisite authoring gates, and behavioral SQL no-write verification
+    - legacy practice-observation-v1 fixtures, M6D-01 packages and fixture, evidence replay, score state, recommendations, M6C context and Personal OS, existing exports, and all five projected package files remain exact
   required_ci:
-    - Ruff Django pytest and migration-drift confirmation including focused M6D-01 schema content fixture report and readiness tests
+    - Ruff Django pytest and migration-drift confirmation including focused M6D-02 content governance fixture report and readiness tests
     - practice report freshness and exact cohort coverage
     - pilot readiness with the unchanged five-protocol runtime
-    - curriculum expansion readiness with nine source packages and the frozen five-protocol projection
-    - competency evidence readiness with four source-only typed packages and zero typed runtime or production activation
+    - curriculum expansion readiness with thirteen source packages and the frozen five-protocol projection
+    - competency evidence readiness with eight source-only typed packages and zero typed runtime or production activation
     - context Personal OS context-priority and M6C pilot readiness regression gates
-    - M6D-01 authoring readiness on isolated migrated idempotently seeded state
+    - M6D-01 authoring readiness at the advanced source-catalog frontier
+    - M6D-02 authoring readiness on isolated migrated idempotently seeded state
     - Playwright core and M6C journeys as unchanged-runtime browser regression evidence
-    - Docker Compose migration seed all prerequisite and M6D readiness contracts evidence replay recreation backup restore and clean-shutdown drill
+    - Docker Compose migration seed all prerequisite and both M6D readiness contracts evidence replay recreation backup restore and clean-shutdown drill
     - aggregate Pilot readiness gate
   manual:
     - Final M6B-GOV owner and trained-reviewer disposition is required after all 383 competencies have an individually authored package or explicit non-protocol disposition.
-    - Until that final gate, every cohort records semantic, originality, accessibility, privacy, safety, source, retained-evidence, and owner review as deferred rather than passed.
+    - The four named package-scoped specialist reviews remain pending and block release-candidate status, runtime projection, and score activation; Decision 051 defers their disposition, it does not satisfy or waive them.
+    - Until the final gate, semantic, originality, accessibility, privacy, consent, role/power safety, source, retained-evidence, specialist, and owner review are recorded as deferred rather than passed.
     - Runtime projection, score activation, participant exposure, release, deployment, production writes, and specialist or validation claims always require separate human approval.
-    - Standing owner authorization permits PFSPAM to mark ready and merge this exact source-only cohort only after exact-head required CI succeeds, no unresolved review thread remains, and every inactive/unprojected/score-inactive boundary stays exact.
+    - Standing owner authorization permits PFSPAM to mark ready and merge this exact source-only cohort only after exact-head required CI succeeds, no unresolved review thread remains, and every inactive, unprojected, score-inactive boundary stays exact.
 risk:
   class: high
   hazards:
-    - polished but generic packages multiply noun-swapped actions, prompts, or evidence rules
-    - low-risk labeling hides disability, fatigue, productivity-pressure, privacy, household-hazard, or high-consequence skill contexts
-    - outcome knowledge rewrites a decision artifact or artifact prose and completion are treated as proof
-    - typed source rules leak into the frozen runtime or are mislabeled as persisted production evidence
-    - protocol performance and direct competency evidence are double counted or projected through recommendation targets instead of the complete parent mapping
-    - source discovery is overstated as source completeness, specialist review, effectiveness, or validation
-    - hard-coded M6A counts are loosened so far that missing or extra packages no longer fail closed
-    - content expansion changes legacy hashes, runtime recommendations, historical replay, or friendship-only activation
+    - consent language becomes a checkbox that ignores role pressure, dependency, coercion, retaliation, or the right to withdraw
+    - feedback, shared labor, helping, or authority practices reward compliance, emotional disclosure, gratitude, agreement, productivity, obedience, or another person's behavior
+    - moderate-risk boundaries omit abuse, discrimination, safeguarding, legal, employment, clinical, caregiving, housing, financial, or emergency escalation paths
+    - role-conditional content treats having no qualifying relationship, community role, or authority as a deficit
+    - artifacts, observer identity, third-party narrative, allegations, protected data, or relationship details enter fixtures, reports, hashes, logs, or evidence inputs
+    - pending specialist records or source discovery are overstated as consent, safety, cultural, accessibility, effectiveness, or release review
+    - relational typed rules leak into runtime, create a second evidence path, or double count protocol performance and competency contribution
+    - catalog expansion changes M6D-01 evidence, legacy hashes, runtime recommendations, historical replay, or friendship-only activation
   stop_conditions:
-    - the target checkout does not resolve exactly to a1bc79218a9397dcdbf699a1422c6f2881033675 before implementation
-    - any selected competency is no longer uncovered or its canonical identity, domain, or parent mapping differs from scope.cohort
-    - a package cannot remain RISK-LOW after its actual intervention, exclusions, and foreseeable consequences are reviewed
-    - source support is insufficient for a material claim and the claim cannot be narrowed to an explicitly limited product-design judgment
-    - typed rules require changing GG-TYPED-EVIDENCE-1.0, practice-observation-v1, historical snapshots, ORM persistence, forms, views, templates, or the five-protocol runtime projection
-    - any evidence design requires free-text analysis, artifact contents, sensitive third-party detail, observer identity, implicit polarity, completion-equals-competence, or lever-to-competency feedback
-    - the exact legacy projection, historical replay, no-context or context-aware recommendation behavior, five seeded protocols, fifteen seeded actions, or friendship-only score activation cannot remain exact
+    - the target checkout does not resolve exactly to 5a120ddac38db68e0a529b5a687836d61bee4889 before implementation
+    - any selected competency is no longer uncovered or its canonical identity, domain, role classification, or parent mapping differs from scope.cohort
+    - an intervention cannot remain RISK-MODERATE after actual role, power, dependency, consent, exclusion, and foreseeable-consequence review
+    - source support is insufficient for a material claim and the claim cannot be narrowed to an explicitly limited product-design judgment with an open gap
+    - direct use cannot provide a voluntary refusal and safe alternative without recording a deficit or encouraging unsafe confrontation, negotiation, helping, disclosure, or exercise of authority
+    - any evidence design requires another person's compliance, outcome, emotion, gratitude, disclosure, labor, identity, exact words, sensitive narrative, artifact contents, implicit consent, hidden polarity, completion-equals-competence, or lever-to-competency feedback
+    - implementation requires changing the practice-content schema, GG-TYPED-EVIDENCE-1.0, practice-observation-v1, historical snapshots, ORM persistence, forms, views, templates, or the five-protocol runtime projection
+    - any package-scoped review is marked complete without the named qualified roles, completed date, retained decision reference, and owner-accepted disposition
+    - the legacy projection, M6D-01 package or fixture bytes, historical replay, no-context or context-aware recommendation behavior, five seeded protocols, fifteen seeded actions, or friendship-only score activation cannot remain exact
     - a required implementation change falls outside allowed paths or touches a forbidden path
-    - an exact duplicate or deterministic originality, privacy-boundary, safety-boundary, source-record, mapping, schema, forbidden-claim, or retained-warning-inventory gate fails; non-machine-verifiable concerns remain explicit for final review
-    - focused or full deterministic validation, report freshness, required hosted CI, Playwright regression, Compose recovery, aggregate Pilot readiness, or M6D-01 readiness fails on the candidate commit
-    - M6B governance acceptance, source completeness, score eligibility, participant release, deployment, or a higher evidence level is asserted without its separate retained decision
+    - an exact duplicate or deterministic originality, consent, privacy, safety, source-record, mapping, schema, forbidden-claim, pending-review, or retained-warning-inventory gate fails; non-machine-verifiable concerns remain explicit for final review
+    - focused or full deterministic validation, report freshness, required hosted CI, Playwright regression, Compose recovery, aggregate Pilot readiness, M6D-01 readiness, or M6D-02 readiness fails on the candidate commit
+    - M6B governance acceptance, specialist review completion, source completeness, score eligibility, participant release, deployment, or a higher evidence level is asserted without its separate retained decision
 rollback:
-  strategy: Revert the four packages, their inactive activation and source/gap entries, additive typed-package schema/loader branch, fixtures, cohort readiness, reports, documentation, evidence, manifest, and verification wiring as one batch; regenerate all deterministic reports from the restored five-package canonical release and verify the frozen runtime and historical replay hashes.
+  strategy: Revert the four M6D-02 packages, their pending review, open gap, source, inactive activation, and manifest entries, the fifteen synthetic fixtures, additive M6D-02 report/readiness/test/verification wiring, regenerated reports, documentation, evidence, and manifest as one batch; regenerate reports from the restored nine-package M6D-01 catalog and rerun both the permanent M6D-01 gate and the frozen runtime and historical replay checks.
   data_migration: None. The batch may not add an ORM migration, persist typed evidence, seed the four source-only packages, or rewrite participant, assessment, context, Personal OS, practice, evidence, score, feedback, sprint, or review data.
-  release_action: PFSPAM may merge the exact source-only target PR after all required CI succeeds and the merge head is unchanged. No release, deployment, runtime projection, score activation, participant-data write, production change, or validation claim follows from that merge.
+  release_action: PFSPAM may merge the exact source-only target PR after all required CI succeeds and the merge head is unchanged. No release, deployment, runtime projection, score activation, participant-data write, production change, specialist acceptance, or validation claim follows from that merge.
 evidence:
   output:
-    - docs/evidence/M6D-01-<date>.md
-    - exact baseline cohort protocol action family mapping target-lever and changed-path audit
-    - before-after canonical and runtime counts hashes release manifest source registry activation ledger and generated report digests
-    - claim-to-source mapping retrieval metadata limitations open research gaps and explicit deferred-review status
-    - per-protocol typed rule and synthetic fixture hashes plus supportive mixed contradictory inconclusive neutral adverse repetition recency and withholding results
-    - legacy projection historical replay recommendation M6C no-mutation and friendship-only activation comparisons
-    - originality duplicate near-duplicate structural warning and final-review inventory output
-    - M6D-01 and prerequisite readiness summaries with database before-after digests
+    - docs/evidence/M6D-02-<date>.md
+    - exact baseline cohort protocol action family role-classification mapping target-lever and changed-path audit
+    - before-after canonical and runtime counts hashes release manifest source registry expert review queue research gaps activation ledger and generated report digests
+    - claim-to-source mapping retrieval metadata limitations open research gaps named specialist roles and explicit deferred-review status
+    - per-protocol typed rule and fifteen-case synthetic fixture hashes plus consent role N-A defer alternative supportive mixed contradictory inconclusive adverse repetition recency and withholding results
+    - privacy audit proving no observer identity third-party words sensitive narrative artifact contents compliance or other-person outcome enters typed inputs reports logs or retained evidence
+    - legacy projection M6D-01 package-and-fixture historical replay recommendation M6C no-mutation and friendship-only activation comparisons
+    - originality duplicate near-duplicate structural consent safety alternative role-condition warning and final-review inventory output
+    - M6D-01 M6D-02 and prerequisite readiness summaries with database before-after digests and write-query audit
     - exact local and CI commands results environment candidate commit and every failed skipped unavailable or unperformed validation
-    - deferred owner and trained-reviewer gate status residual risks and explicit non-validation claims
-  claim_boundary: Individually authored draft content, static schema, source classification, unit/integration, synthetic typed-fixture, deterministic shadow replay, browser-regression, and isolated Compose deployment-drill evidence only when actually run; never physical hardware HIL field RT engine signing release production intervention-effectiveness recommendation-usefulness specialist accessibility-population cultural clinical psychometric longitudinal participant or mastery validation.
+    - deferred owner trained-reviewer and specialist gate status residual risks and explicit non-validation claims
+  claim_boundary: Individually authored draft content, static schema validation, source classification, pending-review governance, unit/integration, synthetic typed-fixture, deterministic shadow replay, browser-regression, and isolated Compose deployment-drill evidence only when actually run; never physical hardware HIL field RT engine signing release production consent-validity intervention-effectiveness recommendation-usefulness specialist accessibility-population cultural clinical psychometric longitudinal participant or mastery validation.
