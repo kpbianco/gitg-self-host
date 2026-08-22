@@ -342,7 +342,7 @@ claims always require separate human approval.
 ## Governed agentic delivery
 
 - Product: `gitg-self-host`; delivery profile: `product-data`.
-- Control revision: `6ce49a933b33462fc1b0ad44749085c7f51b59f0`; harness version: `2`.
+- Control revision: `cf2e9a27aa9cb71142cfccbd90fcf1d24c5df5c0`; harness version: `2`.
 - Read `contracts/profile-requirements.yaml` and the approved
   `contracts/active-batch.yaml` before implementation.
 - Stay inside active-batch allowed paths and preserve every forbidden path.
