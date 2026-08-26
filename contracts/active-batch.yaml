@@ -28,6 +28,8 @@ scope:
     - growth/services/practice_content_reports.py
     - reports/practice-content/*
     - scripts/author_full_competency_frontier.py
+    - scripts/verify_http_login.py
+    - tests/test_deployment_contract.py
     - tests/test_full_competency_frontier.py
     - tests/test_practice_content.py
     - docs/CURRENT_STATE.md

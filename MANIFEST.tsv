@@ -32,7 +32,7 @@ Dockerfile	556
 HANDOFF_PROMPT.md	10438
 Makefile	3960
 README.md	30044
-contracts/active-batch.yaml	6907
+contracts/active-batch.yaml	6982
 contracts/profile-requirements.yaml	1395
 contracts/repo-profile.yaml	1413
 contracts/verification.commands	1030
@@ -712,7 +712,7 @@ scripts/verify_compose.sh	12552
 scripts/verify_context_priority_readiness.sh	2197
 scripts/verify_context_readiness.sh	1935
 scripts/verify_expansion_readiness.sh	1740
-scripts/verify_http_login.py	6695
+scripts/verify_http_login.py	6812
 scripts/verify_m6c_pilot_readiness.sh	4500
 scripts/verify_m6d_authoring_readiness.sh	2088
 scripts/verify_personal_os_readiness.sh	3190
@@ -768,7 +768,7 @@ tests/test_context_priority_readiness.py	16215
 tests/test_context_readiness.py	3736
 tests/test_context_services.py	13403
 tests/test_database_and_backup.py	1307
-tests/test_deployment_contract.py	4250
+tests/test_deployment_contract.py	4304
 tests/test_evidence_audit.py	16896
 tests/test_evidence_dispatch.py	5190
 tests/test_evidence_engine.py	14065

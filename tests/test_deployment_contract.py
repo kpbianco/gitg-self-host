@@ -78,6 +78,7 @@ def test_repeatable_compose_acceptance_is_wired_into_make_and_ci():
     assert "verify_http_login.py" in smoke_script
     assert "csrfmiddlewaretoken" in login_probe
     assert "HttpOnly" in login_probe
+    assert "HTTP_TIMEOUT_SECONDS = 30" in login_probe
     assert "make compose-smoke" in workflow
     assert "pilot-check:" in makefile
     assert "verify_pilot_readiness.sh" in makefile

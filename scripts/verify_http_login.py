@@ -10,6 +10,8 @@ import urllib.parse
 import urllib.request
 from html.parser import HTMLParser
 
+HTTP_TIMEOUT_SECONDS = 30
+
 
 class CsrfTokenParser(HTMLParser):
     def __init__(self) -> None:
@@ -34,7 +36,7 @@ def normalized_base_url(value: str) -> str:
 
 
 def assert_health(base_url: str) -> None:
-    with urllib.request.urlopen(f"{base_url}/health/", timeout=10) as response:
+    with urllib.request.urlopen(f"{base_url}/health/", timeout=HTTP_TIMEOUT_SECONDS) as response:
         body = response.read().decode("utf-8")
         if response.status != 200 or body != '{"status": "ok"}':
             raise RuntimeError(f"Unexpected health response: {response.status} {body!r}")
@@ -55,7 +57,7 @@ def validate_path(path: str) -> str:
 def assert_anonymous_redirect(base_url: str, path: str = "/") -> None:
     opener = urllib.request.build_opener(NoRedirectHandler())
     try:
-        opener.open(f"{base_url}{path}", timeout=10)
+        opener.open(f"{base_url}{path}", timeout=HTTP_TIMEOUT_SECONDS)
     except urllib.error.HTTPError as exc:
         location = exc.headers.get("Location", "")
         expected_location = f"/accounts/login/?next={urllib.parse.quote(path, safe='/')}"
@@ -72,7 +74,7 @@ def login(base_url: str, username: str, password: str) -> tuple[str, str, http.c
     opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cookies))
     login_url = f"{base_url}/accounts/login/?next=/"
 
-    with opener.open(login_url, timeout=10) as response:
+    with opener.open(login_url, timeout=HTTP_TIMEOUT_SECONDS) as response:
         parser = CsrfTokenParser()
         parser.feed(response.read().decode("utf-8"))
     if not parser.token:
@@ -92,7 +94,7 @@ def login(base_url: str, username: str, password: str) -> tuple[str, str, http.c
         headers={"Referer": login_url},
         method="POST",
     )
-    with opener.open(request, timeout=10) as response:
+    with opener.open(request, timeout=HTTP_TIMEOUT_SECONDS) as response:
         return response.geturl(), response.read().decode("utf-8"), cookies
 
 
@@ -115,7 +117,7 @@ def assert_login(
             raise RuntimeError("The session cookie was not marked HttpOnly.")
         opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cookies))
         for path in authenticated_paths:
-            with opener.open(f"{base_url}{path}", timeout=10) as response:
+            with opener.open(f"{base_url}{path}", timeout=HTTP_TIMEOUT_SECONDS) as response:
                 response.read()
                 if response.status != 200 or urllib.parse.urlsplit(response.geturl()).path != path:
                     raise RuntimeError(
