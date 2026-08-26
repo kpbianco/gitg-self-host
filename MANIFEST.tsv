@@ -24,7 +24,7 @@
 .github/codex/schemas/intake.schema.json	1419
 .github/codex/schemas/planner-review.schema.json	1475
 .github/codex/schemas/product.schema.json	1140
-.github/workflows/verification.yml	2712
+.github/workflows/verification.yml	2737
 .gitignore	266
 .portfolio-harness.json	3559
 AGENTS.md	20509
@@ -32,7 +32,7 @@ Dockerfile	556
 HANDOFF_PROMPT.md	10438
 Makefile	3960
 README.md	30044
-contracts/active-batch.yaml	6982
+contracts/active-batch.yaml	7023
 contracts/profile-requirements.yaml	1395
 contracts/repo-profile.yaml	1413
 contracts/verification.commands	1030
@@ -768,7 +768,7 @@ tests/test_context_priority_readiness.py	16215
 tests/test_context_readiness.py	3736
 tests/test_context_services.py	13403
 tests/test_database_and_backup.py	1307
-tests/test_deployment_contract.py	4304
+tests/test_deployment_contract.py	4349
 tests/test_evidence_audit.py	16896
 tests/test_evidence_dispatch.py	5190
 tests/test_evidence_engine.py	14065

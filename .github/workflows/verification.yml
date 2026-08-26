@@ -17,9 +17,9 @@ jobs:
   quality:
     name: Ruff, Django, and pytest
     runs-on: ubuntu-24.04
-    # The complete 343-test suite takes about 20 minutes on GitHub-hosted
-    # runners before the governed readiness checks run.
-    timeout-minutes: 45
+    # The complete 346-test suite takes about 31-33 minutes on GitHub-hosted
+    # runners before the governed readiness checks recompute the full corpus.
+    timeout-minutes: 75
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6

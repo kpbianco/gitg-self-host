@@ -80,6 +80,7 @@ def test_repeatable_compose_acceptance_is_wired_into_make_and_ci():
     assert "HttpOnly" in login_probe
     assert "HTTP_TIMEOUT_SECONDS = 30" in login_probe
     assert "make compose-smoke" in workflow
+    assert "timeout-minutes: 75" in workflow
     assert "pilot-check:" in makefile
     assert "verify_pilot_readiness.sh" in makefile
     assert "verify_pilot_readiness" in pilot_script

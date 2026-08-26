@@ -19,6 +19,7 @@ scope:
     - README.md
     - Makefile
     - MANIFEST.tsv
+    - .github/workflows/verification.yml
     - contracts/active-batch.yaml
     - data/practices/protocols/**/*.yaml
     - data/practices/registries/activation_ledger.yaml
