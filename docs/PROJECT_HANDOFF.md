@@ -633,11 +633,35 @@ or activation change.
 - keep all four new packages inactive, unprojected, shadow-only, and absent
   from persisted evidence, score state, recommendations, and activation.
 
-Status: implementation is on the M6D-01 candidate branch. Hosted CI remains an
-exact-head merge gate. Under Decision 051, trained content/source/originality/
-accessibility/privacy/safety, retained-evidence, and owner review are deferred
-to the final 383/383 M6B-GOV gate. `ER-M6A-003` stays pending,
-`RG-M6A-002` stays open, and Decisions 047–049 stay proposed.
+Status: reviewed and merged. Under Decision 051, trained
+content/source/originality/accessibility/privacy/safety, retained-evidence, and
+owner review remain deferred to the final 383/383 M6B-GOV gate.
+`ER-M6A-003` stays pending, `RG-M6A-002` stays open, and Decisions 047–049
+stay proposed.
+
+#### M6E-FULL-FRONTIER — Complete source-only competency catalog
+
+- preserve the nine previously authored packages and their merged M6D-01
+  cohort behavior;
+- deterministically materialize one source-only package for each of the 374
+  remaining canonical competencies, yielding 383 packages and 1,151 actions;
+- cover all 27 domains and all 37 levers through canonical parent mappings and
+  valid non-empty recommendation-target subsets;
+- give every generated package three stable typed actions, scoped reflections,
+  explicit applicability/N/A behavior, and privacy, safety, completion,
+  transfer, and mastery boundaries;
+- keep every generated package draft, inactive, unprojected, and without an
+  approved production contract; high-risk packages are non-scored and all
+  other generated packages are shadow-only;
+- preserve the exact five-protocol/fifteen-action runtime, historical replay,
+  M6C behavior, recommendation behavior, and friendship-only score activation.
+
+Status: the complete 383/383 source frontier is materialized on the
+M6E-FULL-FRONTIER candidate branch. Automated structure, mapping, schema,
+originality, and regression checks do not close the consolidated trained
+content/source/originality/accessibility/privacy/safety/cultural/specialist
+review. `ER-M6A-003` remains pending, `RG-M6A-002` remains open, and Decisions
+047–049 remain proposed.
 
 ## M1 acceptance criteria
 1. User understands why a practice was recommended without seeing backend fields.
@@ -1045,6 +1069,34 @@ software-ready but not M6B-accepted.
    synthetic evidence do not establish specialist, participant, clinical,
    psychometric, longitudinal, effectiveness, release, deployment, production,
    or mastery validation.
+
+## Full competency source frontier acceptance criteria
+
+1. The catalog contains exactly 383 packages with a one-to-one match to all
+   383 canonical competency IDs across all 27 domains and no uncovered row.
+2. The nine previously authored packages remain authoritative. The 374
+   generated packages have deterministic stable IDs and exactly 1,122 unique
+   generated action IDs, titles, and instructions.
+3. Every generated action has typed evidence rules and a stable measurement
+   identity; each package retains competency-specific scope, evidence target,
+   applicability, N/A/defer behavior, adaptations, privacy, safety, completion,
+   transfer, and mastery boundaries.
+4. All 37 levers are covered through canonical parent mappings and through
+   recommendation targets that are non-empty subsets of those mappings.
+5. Every generated package is a draft, inactive, unprojected, and has no
+   approved activation contract. High-risk generated packages use
+   `SP-NON-SCORED-REFLECTION`; all others use `SP-SHADOW-ONLY`.
+6. Originality reports contain zero exact duplicate action titles,
+   instructions, or reflection sets. Bounded near-duplicate warnings remain
+   retained for consolidated human disposition.
+7. The source registry, activation ledger, release manifest, generated YAML,
+   and deterministic reports agree on one catalog hash and fail closed on
+   drift.
+8. The runtime remains exactly five protocols and fifteen actions, with the
+   frozen projection hash and friendship-only score activation unchanged.
+9. No source package is represented as source-complete, release-ready,
+   specialist-approved, participant-validated, or effective until the
+   consolidated audit and separately authorized validation are complete.
 
 ## Handoff audit notes
 

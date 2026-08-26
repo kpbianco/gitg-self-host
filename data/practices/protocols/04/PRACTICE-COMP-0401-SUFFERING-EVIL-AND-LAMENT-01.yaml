@@ -1,0 +1,394 @@
+schema_version: GG-PRACTICE-CONTENT-1.0
+protocol_version: 0.1.0
+stable_id: PRACTICE-COMP-0401-SUFFERING-EVIL-AND-LAMENT-01
+slug: c0401-suffering-evil-and-lament-practice
+name: Bounded Suffering, evil, and lament Practice
+parent_competency_id: '04.01'
+domain_id: '04'
+governance:
+  availability: inactive
+  editorial_status: draft
+  runtime_projection: none
+  risk_class_id: RISK-MODERATE
+  scoring_policy_id: SP-SHADOW-ONLY
+  scoring_status: shadow_only
+  source_ids:
+  - SRC-CANONICAL-CURRICULUM-V2
+  authoring:
+    provenance: Individually materialized source-only frontier package for canonical competency 04.01
+      (Suffering, evil, and lament); canonical scope, evidence target, classification, domain boundary,
+      and parent mapping remain explicit and reviewable.
+    content_review_status: pending
+    research_review_status: internal_sources_only_external_review_required
+    safety_review_status: pending
+    accessibility_review_status: pending
+    originality_review_status: pending
+    ui_test_status: not_applicable
+    last_reviewed: null
+    known_gap_ids:
+    - RG-M6A-001
+    - RG-M6A-002
+    expert_review_ids:
+    - ER-M6A-003
+  legacy_compatibility_exceptions: []
+  deprecation:
+    deprecated: false
+    replaced_by: null
+meaning_and_fit:
+  purpose: 'Practice Suffering, evil, and lament through a pluralist meaning practice bounded by the canonical
+    scope: Develop an honest response to pain, injustice, tragedy, apparent meaninglessness, and unanswered
+    prayer.'
+  why_recommended: 'The parent competency identifies this limited evidence target: Can lament without
+    denial and continue acting without requiring a simplistic explanation. The protocol creates a small
+    opportunity to examine that target without treating completion as broad capability.'
+  claims:
+  - statement: Using the canonical scope and evidence target for Suffering, evil, and lament is a traceable
+      product-design basis for a source-only draft protocol.
+    classification: product_design_judgment
+    source_ids:
+    - SRC-CANONICAL-CURRICULUM-V2
+    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
+      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+  applicability_question: Does a voluntary, bounded Suffering, evil, and lament practice fit the person's
+    current role, pathway, capacity, authority, resources, and safety conditions?
+  not_applicable_behavior: Record Suffering, evil, and lament as not applicable, consciously unchosen,
+    or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
+    is absent.
+  readiness_considerations: Proceed only when the person can freely choose a limited Suffering, evil,
+    and lament context, understand the source-only status, and stop without losing safety, care, employment,
+    housing, services, relationship access, or dignity.
+  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Suffering,
+    evil, and lament; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
+    or dependence for evidence.
+  prerequisites:
+  - One user-chosen context that genuinely fits the canonical scope of Suffering, evil, and lament.
+  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  dependencies: []
+  safe_alternatives:
+  - Use a fictional, public, retrospective, or category-level case for Suffering, evil, and lament instead
+    of a live situation.
+  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  role_conditions:
+  - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
+    held before the practice applies.
+  pathway_conditions:
+  - Religious, secular, cultural, disability-adapted, collective, and individual pathways may express
+    Suffering, evil, and lament differently while preserving consent, evidence limits, safety, and equal
+    dignity.
+  worldview_conditions:
+  - The practice does not require one worldview or treat disagreement about Suffering, evil, and lament
+    as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
+intervention:
+  protocol_class: PF-CONTEMPLATIVE-MEANING
+  duration_days: 10
+  cadence: Complete three bounded Suffering, evil, and lament actions over ten days, preserving explicit
+    not-applicable, defer, interruption, adverse, and unknown outcomes.
+  setup: Choose one context for Suffering, evil, and lament; copy the canonical scope and evidence target
+    into a private working note; define the action boundary, valid supports, privacy limit, and stop condition
+    before beginning.
+  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Suffering,
+    evil, and lament. Do not store private prose, names, identities, diagnoses, allegations, credentials,
+    account data, protected work information, intimate detail, artifact contents, observer narrative,
+    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
+    certification, or proof of character.
+  expected_burden: About 45-75 minutes total across setup, three Suffering, evil, and lament actions,
+    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
+    reasons.
+  action_count_rationale: null
+  foreseeable_misuse:
+  - Using the Suffering, evil, and lament protocol to rank worth, coerce participation, demand disclosure,
+    override rest or care, certify competence, or justify decisions beyond the recorded context.
+  - Treating a completed Suffering, evil, and lament action, a polished artifact, agreement, confidence,
+    speed, independence, or output as mastery or universal transfer.
+  exclusions:
+  - Any Suffering, evil, and lament situation involving emergency response, abuse, retaliation, illegal
+    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
+    equipment, or other consequences beyond a reversible source-only exercise.
+  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
+    practice.
+  actions:
+  - stable_id: PRACTICE-COMP-0401-SUFFERING-EVIL-AND-LAMENT-01-A1
+    sequence: 1
+    title: Choose a declared frame for Suffering, evil, and lament
+    instructions: 'Select a religious, spiritual, philosophical, cultural, or secular frame through which
+      to explore Suffering, evil, and lament. State the frame, one alternative, and the limits of personal
+      authority using this canonical scope: Develop an honest response to pain, injustice, tragedy, apparent
+      meaninglessness, and unanswered prayer.'
+    expected_time: 15-25 minutes
+    due_within_days: 3
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-0401-SUFFERING-EVIL-AND-LAMENT-01
+      action_stable_id: PRACTICE-COMP-0401-SUFFERING-EVIL-AND-LAMENT-01-A1
+      competency_stable_id: '04.01'
+      scoring_policy_id: SP-SHADOW-ONLY
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c0401_a1_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c0401_a1_primary
+        kind: conceptual
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - c0401_a1_frame_declared
+        - c0401_a1_alternative_acknowledged
+        - c0401_a1_authority_limited
+      - measurement_id: c0401_a1_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c0401_a1_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  - stable_id: PRACTICE-COMP-0401-SUFFERING-EVIL-AND-LAMENT-01-A2
+    sequence: 2
+    title: Complete two bounded Suffering, evil, and lament practices
+    instructions: Complete two short, freely chosen Suffering, evil, and lament practices appropriate
+      to the declared frame, such as reading, silence, prayer, observation, ritual, dialogue, or reflection.
+      Stop for distress, coercion, altered-state risk, conscience conflict, or pressure from an authority
+      or group.
+    expected_time: 15-25 minutes
+    due_within_days: 7
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-0401-SUFFERING-EVIL-AND-LAMENT-01
+      action_stable_id: PRACTICE-COMP-0401-SUFFERING-EVIL-AND-LAMENT-01-A2
+      competency_stable_id: '04.01'
+      scoring_policy_id: SP-SHADOW-ONLY
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c0401_a2_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c0401_a2_primary
+        kind: count
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - firsthand_self_report
+        direction: at_least
+        minimum: '0'
+        target: '1'
+        maximum: '3'
+      - measurement_id: c0401_a2_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c0401_a2_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  - stable_id: PRACTICE-COMP-0401-SUFFERING-EVIL-AND-LAMENT-01-A3
+    sequence: 3
+    title: Interpret the Suffering, evil, and lament experience modestly
+    instructions: 'Review what was noticed without treating intensity, calm, certainty, group agreement,
+      or unusual experience as automatic truth. Compare the limited record with this evidence target:
+      Can lament without denial and continue acting without requiring a simplistic explanation.'
+    expected_time: 15-25 minutes
+    due_within_days: 10
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-0401-SUFFERING-EVIL-AND-LAMENT-01
+      action_stable_id: PRACTICE-COMP-0401-SUFFERING-EVIL-AND-LAMENT-01-A3
+      competency_stable_id: '04.01'
+      scoring_policy_id: SP-SHADOW-ONLY
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c0401_a3_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c0401_a3_primary
+        kind: artifact
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - c0401_a3_experience_and_interpretation_separated
+        - c0401_a3_alternative_explanation_retained
+        - c0401_a3_target_evidence_compared
+      - measurement_id: c0401_a3_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c0401_a3_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  adaptations:
+    low_resource:
+    - Use paper, an offline note, a library resource, a public example, or a no-cost conversation for
+      Suffering, evil, and lament; no purchase, subscription, travel, credential, or public artifact is
+      required.
+    accessibility:
+    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
+      level for Suffering, evil, and lament; assistive technology, interpretation, a support person, and
+      a deferred action are valid without penalty.
+    cultural_context:
+    - Adapt the expression of Suffering, evil, and lament to direct or indirect communication, collective
+      or individual decision structures, local norms, faith or secular commitments, and role obligations
+      while preserving consent and dignity.
+    resource_variants:
+    - When a real Suffering, evil, and lament opportunity is unavailable or inappropriate, use a fictional,
+      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+  pause_conditions:
+  - Pause Suffering, evil, and lament when capacity, consent, authority, privacy, access, care duties,
+    uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
+    unwise.
+  stop_conditions:
+  - Stop the Suffering, evil, and lament practice for harm, coercion, retaliation risk, emergency conditions,
+    unsafe exposure, worsening symptoms, protected information, legal or policy conflict, or pressure
+    to exceed the stated boundary.
+  escalation_conditions:
+  - Use the appropriate local safeguarding, emergency, organizational, legal, medical, financial, accessibility,
+    or other qualified channel when a Suffering, evil, and lament situation exceeds a voluntary low-stakes
+    practice.
+  professional_referral_conditions:
+  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
+    practice.
+evidence_and_scoring:
+  accepted_evidence_types:
+  - structured criteria observations for the bounded Suffering, evil, and lament actions
+  - explicit contradiction, adverse, defer, not-applicable, and unknown states
+  observation_contract_version: typed-evidence-rules-v1
+  check_in_fields:
+  - c0401_a1_primary
+  - c0401_a1_boundary
+  - c0401_a1_adverse
+  - c0401_a2_primary
+  - c0401_a2_boundary
+  - c0401_a2_adverse
+  - c0401_a3_primary
+  - c0401_a3_boundary
+  - c0401_a3_adverse
+  adverse_or_contradictory_indicators:
+  - The Suffering, evil, and lament action exceeded consent, authority, privacy, qualification, role,
+    burden, or safety boundaries.
+  - The evidence contradicted the intended Suffering, evil, and lament criterion, depended on coercion
+    or hidden private content, or could not distinguish the protocol from contextual change.
+  independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
+    for Suffering, evil, and lament explicitly; support can enable access and never reduces dignity or
+    silently changes the typed value.
+  context_transfer_rule: Evidence remains limited to the chosen Suffering, evil, and lament context, action,
+    role, pathway, and assessment epoch; it does not establish cross-context reliability.
+  repetition_rule: Each Suffering, evil, and lament observation requires a distinct immutable origin;
+    duplicate origins are rejected and later repetitions use the typed contract's explicit diminishing
+    multipliers.
+  recency_rule: Generated Suffering, evil, and lament rules withhold observations older than 90 days;
+    no unrecorded retention or carry-forward assumption applies.
+  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
+    target—Can lament without denial and continue acting without requiring a simplistic explanation.—not
+    completion, confidence, conformity, output, independence, or worth.
+  evidence_quality_rubric: Quality for Suffering, evil, and lament requires a bounded context, allowlisted
+    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
+    and artifact contents are excluded.
+  scoring_eligibility: This package is source-only, shadow-only, and production-ineligible.
+  competency_contribution: Designated primary measurements may produce context-bound direct Suffering,
+    evil, and lament evidence only under offline typed evaluation; protocol performance remains distinct
+    and is never counted twice.
+  canonical_lever_allocation: parent_competency_mapping
+  recommendation_target_lever_ids:
+  - L03
+  - L04
+  - L06
+  minimum_evidence_before_state_update: No current-state update is permitted for this Suffering, evil,
+    and lament draft under SP-SHADOW-ONLY, regardless of completion or evidence quantity.
+  withholding_conditions:
+  - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
+    or adverse Suffering, evil, and lament evidence.
+  - Withhold any record containing private narrative, artifact contents, another person's identity, unsupported
+    inference, or evidence outside its assessment epoch.
+completion_and_review:
+  completion_criteria:
+  - The choose a declared frame for suffering, evil, and lament action was attempted or explicitly deferred.
+  - The complete two bounded suffering, evil, and lament practices action was attempted or explicitly
+    deferred.
+  - The interpret the suffering, evil, and lament experience modestly action preserved a limited conclusion,
+    contradiction, or inconclusive result.
+  completion_rules:
+    minimum_completed: 2
+    substantive_markers:
+    - c0401_a1_primary
+    - c0401_a2_primary
+    - c0401_a3_primary
+    marker_mode: any
+  mastery_disclaimer: Completing this practice does not establish mastery.
+  progression_criteria: Repeat or broaden Suffering, evil, and lament only when the initial context remained
+    safe, the evidence criteria were usable, burden was acceptable, and a new context can be named without
+    assuming transfer.
+  transfer_limit: Three bounded actions do not establish Suffering, evil, and lament across roles, cultures,
+    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  reflection:
+    before: What does Suffering, evil, and lament require in this exact context, what remains outside
+      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
+    during: Which observable Suffering, evil, and lament criterion is present, absent, mixed, or unknown,
+      and are consent, privacy, access, burden, and stop conditions still intact?
+    after: How did the result compare with 'Can lament without denial and continue acting without requiring
+      a simplistic explanation.', what contradiction or missing context matters most, and should this
+      Suffering, evil, and lament design be repeated, adapted, deferred, stopped, or referred?
+  review_guidance:
+    repeat: Repeat the same bounded Suffering, evil, and lament design only when the context and burden
+      remain appropriate.
+    adapt: Change the Suffering, evil, and lament medium, scope, support, timing, criteria, or context
+      while preserving provenance and the narrower evidence claim.
+    stop: Stop Suffering, evil, and lament when the practice becomes coercive, unsafe, privacy-invasive,
+      role-inappropriate, professionally restricted, or harmful.
+    escalate: Use appropriate qualified or emergency support for Suffering, evil, and lament questions
+      beyond this educational source-only boundary.
+  evidence_examples:
+    supportive: The bounded Suffering, evil, and lament criteria were observed with provenance and no
+      adverse boundary signal in the selected context.
+    mixed: Some Suffering, evil, and lament criteria were observed while burden, support, contextual change,
+      or a contradiction limited the conclusion.
+    contradictory: The observed result opposed the intended Suffering, evil, and lament criterion, introduced
+      harm or coercion, or showed the design was not workable.
+    inconclusive: The Suffering, evil, and lament action was deferred, not observed, not applicable, stale,
+      insufficiently bounded, or too confounded to interpret.
+presentation:
+  setup_copy:
+    context_heading: Choose one bounded context for Suffering, evil, and lament.
+    boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
+    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Suffering,
+      evil, and lament.
+  check_in_labels:
+    c0401_a1_primary: The bounded Suffering, evil, and lament criterion for action 1 was observed
+    c0401_a1_boundary: Action 1 stayed inside its stated Suffering, evil, and lament boundary
+    c0401_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
+    c0401_a2_primary: The bounded Suffering, evil, and lament criterion for action 2 was observed
+    c0401_a2_boundary: Action 2 stayed inside its stated Suffering, evil, and lament boundary
+    c0401_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
+    c0401_a3_primary: The bounded Suffering, evil, and lament criterion for action 3 was observed
+    c0401_a3_boundary: Action 3 stayed inside its stated Suffering, evil, and lament boundary
+    c0401_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
+  completion_copy: Complete the bounded Suffering, evil, and lament review without claiming mastery, broad
+    transfer, professional validation, or score activation.
+  plain_language_evidence: The structured record shows what happened in one limited Suffering, evil, and
+    lament practice, including support, contradiction, defer, no result, or harm.
+  display_order: 49

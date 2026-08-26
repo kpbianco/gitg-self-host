@@ -292,6 +292,20 @@ See [canonical practice content](docs/practice-content.md) and the
 - No runtime protocol/action, model, migration, UI, persistence, ranking,
   scoring, or production-activation change.
 
+## What M6E-FULL-FRONTIER adds
+
+- One deterministic source package for every canonical competency: 383/383
+  packages across all 27 domains, with zero uncovered ledger rows.
+- 374 generated inactive draft packages with 1,122 stable actions, preserving
+  the nine previously authored packages byte-for-byte.
+- Complete 37/37 parent-mapped and recommendation-target lever coverage,
+  unique generated action IDs/titles/instructions, and deterministic drift
+  detection via `make full-frontier-check`.
+- Explicit risk and scoring dispositions: high-risk generated packages are
+  non-scored; all other generated packages are shadow-only.
+- No runtime, model, migration, UI, persistence, recommendation, scoring,
+  participant-exposure, release, deployment, or production-activation change.
+
 ## What M6B adds
 
 - Pure `GG-TYPED-EVIDENCE-1.0` evaluation from materialized
@@ -565,10 +579,11 @@ Migrations and canonical seeding run safely on startup.
 - Only **Deepen One Existing Friendship** is score-active. Play, emotional cue
   detection, boundary practice, and the attention-presence experiment are
   executable but score-inactive.
-- The canonical source catalog covers nine of 383 competencies. The other 374
-  are explicit unauthored ledger rows, not empty packages. None of the nine
-  packages is yet marked source-complete for full-library release; only the
-  original five are projected into the runtime.
+- The canonical source catalog now covers all 383 competencies, but none of
+  the 374 generated additions is marked source-complete or release-ready.
+  Their semantic, source, originality, accessibility, privacy, safety,
+  cultural, and specialist dispositions remain pending for consolidated owner
+  review; only the original five packages are projected into the runtime.
 - The five packages retain the friendship-oriented
   `practice-observation-v1` vocabulary for exact replay. M6B's typed evidence
   and direct competency projections are pure, parallel, and shadow-only; no

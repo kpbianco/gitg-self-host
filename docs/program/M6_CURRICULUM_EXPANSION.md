@@ -276,3 +276,34 @@ new runtime protocol, persist typed evidence, change recommendations or score
 state or clear M6B governance. Decision 051 separately authorizes the next
 fixed source-only cohort after this PR merges and its reports become the new
 exact baseline.
+
+## M6E full competency source frontier
+
+M6E-FULL-FRONTIER uses the merged M6D-01 catalog as its preserved baseline and
+materializes one deterministic source package for every remaining canonical
+competency. The resulting catalog contains 383 packages and 1,151 actions
+across all 27 domains; the coverage ledger has zero unauthored rows, all 37
+levers appear through canonical parent mappings, and all 37 appear through
+non-empty recommendation-target subsets of those mappings.
+
+The 374 generated additions each contain three stable actions with typed
+measurement IDs, competency-scoped instructions, unique reflection fields,
+explicit canonical scope and evidence-target traceability, N/A/defer paths,
+privacy and safety boundaries, and completion/transfer/mastery limits. Their
+stable IDs and authored YAML are reproducible with
+`scripts/author_full_competency_frontier.py`; `--check` fails on drift.
+
+This is a source-authoring frontier, not a release or activation cohort. Every
+generated package is an inactive editorial draft with no runtime projection
+or approved activation contract. High-risk packages use
+`SP-NON-SCORED-REFLECTION`; all other generated packages use
+`SP-SHADOW-ONLY`. The exact five-protocol/fifteen-action runtime, historical
+replay, M6C behavior, recommendations, and friendship-only score activation
+remain frozen.
+
+Automated checks establish deterministic structure, one-to-one coverage,
+mapping validity, duplicate detection, schema validity, and regression safety.
+They do not establish semantic quality, source completeness, cultural or
+accessibility adequacy, specialist approval, intervention effectiveness, or
+participant validation. Those dispositions remain pending for the owner's
+consolidated 383/383 audit.

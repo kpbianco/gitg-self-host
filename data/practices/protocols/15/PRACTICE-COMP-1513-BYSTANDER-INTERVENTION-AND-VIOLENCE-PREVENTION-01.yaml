@@ -1,0 +1,411 @@
+schema_version: GG-PRACTICE-CONTENT-1.0
+protocol_version: 0.1.0
+stable_id: PRACTICE-COMP-1513-BYSTANDER-INTERVENTION-AND-VIOLENCE-PREVENTION-01
+slug: c1513-bystander-intervention-and-violence-prevention-practice
+name: Bounded Bystander intervention and violence prevention Practice
+parent_competency_id: '15.13'
+domain_id: '15'
+governance:
+  availability: inactive
+  editorial_status: draft
+  runtime_projection: none
+  risk_class_id: RISK-HIGH
+  scoring_policy_id: SP-NON-SCORED-REFLECTION
+  scoring_status: non_scored
+  source_ids:
+  - SRC-CANONICAL-CURRICULUM-V2
+  authoring:
+    provenance: Individually materialized source-only frontier package for canonical competency 15.13
+      (Bystander intervention and violence prevention); canonical scope, evidence target, classification,
+      domain boundary, and parent mapping remain explicit and reviewable.
+    content_review_status: pending
+    research_review_status: internal_sources_only_external_review_required
+    safety_review_status: pending_specialist_expansion_review
+    accessibility_review_status: pending
+    originality_review_status: pending
+    ui_test_status: not_applicable
+    last_reviewed: null
+    known_gap_ids:
+    - RG-M6A-001
+    - RG-M6A-002
+    expert_review_ids:
+    - ER-M6A-003
+  legacy_compatibility_exceptions: []
+  deprecation:
+    deprecated: false
+    replaced_by: null
+meaning_and_fit:
+  purpose: 'Practice Bystander intervention and violence prevention through a non-confrontational safety
+    preparation bounded by the canonical scope: Recognize harassment, abuse, escalating conflict, and
+    unsafe conditions; use direct, distract, delegate, document, or delay strategies.'
+  why_recommended: 'The parent competency identifies this limited evidence target: Can choose a safe intervention
+    and obtain support without escalating beyond competence. The protocol creates a small opportunity
+    to examine that target without treating completion as broad capability.'
+  claims:
+  - statement: Using the canonical scope and evidence target for Bystander intervention and violence prevention
+      is a traceable product-design basis for a source-only draft protocol.
+    classification: product_design_judgment
+    source_ids:
+    - SRC-CANONICAL-CURRICULUM-V2
+    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
+      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+  applicability_question: Does a voluntary, bounded Bystander intervention and violence prevention practice
+    fit the person's current role, pathway, capacity, authority, resources, and safety conditions?
+  not_applicable_behavior: Record Bystander intervention and violence prevention as not applicable, consciously
+    unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
+    safe context is absent.
+  readiness_considerations: Proceed only when the person can freely choose a limited Bystander intervention
+    and violence prevention context, understand the source-only status, and stop without losing safety,
+    care, employment, housing, services, relationship access, or dignity.
+  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Bystander
+    intervention and violence prevention; do not manufacture conflict, deprivation, exposure, disclosure,
+    danger, urgency, or dependence for evidence.
+  prerequisites:
+  - One user-chosen context that genuinely fits the canonical scope of Bystander intervention and violence
+    prevention.
+  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  dependencies: []
+  safe_alternatives:
+  - Use a fictional, public, retrospective, or category-level case for Bystander intervention and violence
+    prevention instead of a live situation.
+  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  role_conditions:
+  - This competency is context contingent; roles, duties, and authority must be explicitly chosen or actually
+    held before the practice applies.
+  pathway_conditions:
+  - Religious, secular, cultural, disability-adapted, collective, and individual pathways may express
+    Bystander intervention and violence prevention differently while preserving consent, evidence limits,
+    safety, and equal dignity.
+  worldview_conditions:
+  - The practice does not require one worldview or treat disagreement about Bystander intervention and
+    violence prevention as inferiority; competing reasonable interpretations and conscientious refusal
+    remain visible.
+intervention:
+  protocol_class: PF-SAFETY-PREPARATION
+  duration_days: 10
+  cadence: Complete three bounded Bystander intervention and violence prevention actions over ten days,
+    preserving explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
+  setup: Choose one context for Bystander intervention and violence prevention; copy the canonical scope
+    and evidence target into a private working note; define the action boundary, valid supports, privacy
+    limit, and stop condition before beginning.
+  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Bystander
+    intervention and violence prevention. Do not store private prose, names, identities, diagnoses, allegations,
+    credentials, account data, protected work information, intimate detail, artifact contents, observer
+    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
+    treatment, certification, or proof of character.
+  expected_burden: About 45-75 minutes total across setup, three Bystander intervention and violence prevention
+    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
+    or resource reasons.
+  action_count_rationale: null
+  foreseeable_misuse:
+  - Using the Bystander intervention and violence prevention protocol to rank worth, coerce participation,
+    demand disclosure, override rest or care, certify competence, or justify decisions beyond the recorded
+    context.
+  - Treating a completed Bystander intervention and violence prevention action, a polished artifact, agreement,
+    confidence, speed, independence, or output as mastery or universal transfer.
+  exclusions:
+  - Any Bystander intervention and violence prevention situation involving emergency response, abuse,
+    retaliation, illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
+    hazardous equipment, or other consequences beyond a reversible source-only exercise.
+  - Hands-on safety, medical, aquatic, survival, and defensive skills require qualified instruction and
+    compliance with local law.
+  actions:
+  - stable_id: PRACTICE-COMP-1513-BYSTANDER-INTERVENTION-AND-VIOLENCE-PREVENTION-01-A1
+    sequence: 1
+    title: Identify the non-emergency boundary for Bystander intervention and violence prevention
+    instructions: 'Define one planning-only question for Bystander intervention and violence prevention,
+      the hazards that must not be rehearsed, and the local qualified or emergency authority that supersedes
+      this source-only protocol. Do not create, approach, or simulate danger: Recognize harassment, abuse,
+      escalating conflict, and unsafe conditions; use direct, distract, delegate, document, or delay strategies.'
+    expected_time: 15-25 minutes
+    due_within_days: 3
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-1513-BYSTANDER-INTERVENTION-AND-VIOLENCE-PREVENTION-01
+      action_stable_id: PRACTICE-COMP-1513-BYSTANDER-INTERVENTION-AND-VIOLENCE-PREVENTION-01-A1
+      competency_stable_id: '15.13'
+      scoring_policy_id: SP-NON-SCORED-REFLECTION
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c1513_a1_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c1513_a1_primary
+        kind: artifact
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - c1513_a1_planning_scope_bounded
+        - c1513_a1_hazards_excluded
+        - c1513_a1_authority_identified
+      - measurement_id: c1513_a1_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c1513_a1_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  - stable_id: PRACTICE-COMP-1513-BYSTANDER-INTERVENTION-AND-VIOLENCE-PREVENTION-01-A2
+    sequence: 2
+    title: Prepare one safe Bystander intervention and violence prevention support step
+    instructions: Create one non-confrontational Bystander intervention and violence prevention step such
+      as locating official guidance, checking accessible contact information, assembling a category-level
+      checklist, or scheduling qualified instruction. Do not test emergency response, weapons, rescue,
+      medical treatment, confrontation, evasion, or hazardous equipment.
+    expected_time: 15-25 minutes
+    due_within_days: 7
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-1513-BYSTANDER-INTERVENTION-AND-VIOLENCE-PREVENTION-01
+      action_stable_id: PRACTICE-COMP-1513-BYSTANDER-INTERVENTION-AND-VIOLENCE-PREVENTION-01-A2
+      competency_stable_id: '15.13'
+      scoring_policy_id: SP-NON-SCORED-REFLECTION
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c1513_a2_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c1513_a2_primary
+        kind: artifact
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - c1513_a2_step_is_preparatory
+        - c1513_a2_official_or_qualified_path_used
+        - c1513_a2_no_hazard_rehearsed
+      - measurement_id: c1513_a2_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c1513_a2_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  - stable_id: PRACTICE-COMP-1513-BYSTANDER-INTERVENTION-AND-VIOLENCE-PREVENTION-01-A3
+    sequence: 3
+    title: Review the Bystander intervention and violence prevention plan against stop conditions
+    instructions: 'Check whether the plan identifies when to stop, leave, call emergency services, contact
+      a qualified professional, or follow local authority. Mark unknown requirements rather than inventing
+      them and compare only with: Can choose a safe intervention and obtain support without escalating
+      beyond competence.'
+    expected_time: 15-25 minutes
+    due_within_days: 10
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-1513-BYSTANDER-INTERVENTION-AND-VIOLENCE-PREVENTION-01
+      action_stable_id: PRACTICE-COMP-1513-BYSTANDER-INTERVENTION-AND-VIOLENCE-PREVENTION-01-A3
+      competency_stable_id: '15.13'
+      scoring_policy_id: SP-NON-SCORED-REFLECTION
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c1513_a3_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c1513_a3_primary
+        kind: scenario
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - c1513_a3_stop_conditions_present
+        - c1513_a3_escalation_path_present
+        - c1513_a3_unknowns_retained
+      - measurement_id: c1513_a3_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c1513_a3_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  adaptations:
+    low_resource:
+    - Use paper, an offline note, a library resource, a public example, or a no-cost conversation for
+      Bystander intervention and violence prevention; no purchase, subscription, travel, credential, or
+      public artifact is required.
+    accessibility:
+    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
+      level for Bystander intervention and violence prevention; assistive technology, interpretation,
+      a support person, and a deferred action are valid without penalty.
+    cultural_context:
+    - Adapt the expression of Bystander intervention and violence prevention to direct or indirect communication,
+      collective or individual decision structures, local norms, faith or secular commitments, and role
+      obligations while preserving consent and dignity.
+    resource_variants:
+    - When a real Bystander intervention and violence prevention opportunity is unavailable or inappropriate,
+      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
+      evidence classification.
+  pause_conditions:
+  - Pause Bystander intervention and violence prevention when capacity, consent, authority, privacy, access,
+    care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make
+    the next action unwise.
+  stop_conditions:
+  - Stop the Bystander intervention and violence prevention practice for harm, coercion, retaliation risk,
+    emergency conditions, unsafe exposure, worsening symptoms, protected information, legal or policy
+    conflict, or pressure to exceed the stated boundary.
+  escalation_conditions:
+  - Use the appropriate local safeguarding, emergency, organizational, legal, medical, financial, accessibility,
+    or other qualified channel when a Bystander intervention and violence prevention situation exceeds
+    a voluntary low-stakes practice.
+  professional_referral_conditions:
+  - Hands-on safety, medical, aquatic, survival, and defensive skills require qualified instruction and
+    compliance with local law.
+evidence_and_scoring:
+  accepted_evidence_types:
+  - structured criteria observations for the bounded Bystander intervention and violence prevention actions
+  - explicit contradiction, adverse, defer, not-applicable, and unknown states
+  observation_contract_version: typed-evidence-rules-v1
+  check_in_fields:
+  - c1513_a1_primary
+  - c1513_a1_boundary
+  - c1513_a1_adverse
+  - c1513_a2_primary
+  - c1513_a2_boundary
+  - c1513_a2_adverse
+  - c1513_a3_primary
+  - c1513_a3_boundary
+  - c1513_a3_adverse
+  adverse_or_contradictory_indicators:
+  - The Bystander intervention and violence prevention action exceeded consent, authority, privacy, qualification,
+    role, burden, or safety boundaries.
+  - The evidence contradicted the intended Bystander intervention and violence prevention criterion, depended
+    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
+    for Bystander intervention and violence prevention explicitly; support can enable access and never
+    reduces dignity or silently changes the typed value.
+  context_transfer_rule: Evidence remains limited to the chosen Bystander intervention and violence prevention
+    context, action, role, pathway, and assessment epoch; it does not establish cross-context reliability.
+  repetition_rule: Each Bystander intervention and violence prevention observation requires a distinct
+    immutable origin; duplicate origins are rejected and later repetitions use the typed contract's explicit
+    diminishing multipliers.
+  recency_rule: Generated Bystander intervention and violence prevention rules withhold observations older
+    than 90 days; no unrecorded retention or carry-forward assumption applies.
+  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
+    target—Can choose a safe intervention and obtain support without escalating beyond competence.—not
+    completion, confidence, conformity, output, independence, or worth.
+  evidence_quality_rubric: Quality for Bystander intervention and violence prevention requires a bounded
+    context, allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
+    free text and artifact contents are excluded.
+  scoring_eligibility: This package is non-scored and production-ineligible.
+  competency_contribution: Designated primary measurements may produce context-bound direct Bystander
+    intervention and violence prevention evidence only under offline typed evaluation; protocol performance
+    remains distinct and is never counted twice.
+  canonical_lever_allocation: parent_competency_mapping
+  recommendation_target_lever_ids:
+  - L20
+  - L25
+  - L30
+  - L31
+  minimum_evidence_before_state_update: No current-state update is permitted for this Bystander intervention
+    and violence prevention draft under SP-NON-SCORED-REFLECTION, regardless of completion or evidence
+    quantity.
+  withholding_conditions:
+  - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
+    or adverse Bystander intervention and violence prevention evidence.
+  - Withhold any record containing private narrative, artifact contents, another person's identity, unsupported
+    inference, or evidence outside its assessment epoch.
+completion_and_review:
+  completion_criteria:
+  - The identify the non-emergency boundary for bystander intervention and violence prevention action
+    was attempted or explicitly deferred.
+  - The prepare one safe bystander intervention and violence prevention support step action was attempted
+    or explicitly deferred.
+  - The review the bystander intervention and violence prevention plan against stop conditions action
+    preserved a limited conclusion, contradiction, or inconclusive result.
+  completion_rules:
+    minimum_completed: 2
+    substantive_markers:
+    - c1513_a1_primary
+    - c1513_a2_primary
+    - c1513_a3_primary
+    marker_mode: any
+  mastery_disclaimer: Completing this practice does not establish mastery.
+  progression_criteria: Repeat or broaden Bystander intervention and violence prevention only when the
+    initial context remained safe, the evidence criteria were usable, burden was acceptable, and a new
+    context can be named without assuming transfer.
+  transfer_limit: Three bounded actions do not establish Bystander intervention and violence prevention
+    across roles, cultures, relationships, seasons, stress levels, disability states, institutions, or
+    high-consequence settings.
+  reflection:
+    before: What does Bystander intervention and violence prevention require in this exact context, what
+      remains outside my role or authority, and which scope sentence or evidence criterion will keep the
+      practice honest?
+    during: Which observable Bystander intervention and violence prevention criterion is present, absent,
+      mixed, or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
+    after: How did the result compare with 'Can choose a safe intervention and obtain support without
+      escalating beyond competence.', what contradiction or missing context matters most, and should this
+      Bystander intervention and violence prevention design be repeated, adapted, deferred, stopped, or
+      referred?
+  review_guidance:
+    repeat: Repeat the same bounded Bystander intervention and violence prevention design only when the
+      context and burden remain appropriate.
+    adapt: Change the Bystander intervention and violence prevention medium, scope, support, timing, criteria,
+      or context while preserving provenance and the narrower evidence claim.
+    stop: Stop Bystander intervention and violence prevention when the practice becomes coercive, unsafe,
+      privacy-invasive, role-inappropriate, professionally restricted, or harmful.
+    escalate: Use appropriate qualified or emergency support for Bystander intervention and violence prevention
+      questions beyond this educational source-only boundary.
+  evidence_examples:
+    supportive: The bounded Bystander intervention and violence prevention criteria were observed with
+      provenance and no adverse boundary signal in the selected context.
+    mixed: Some Bystander intervention and violence prevention criteria were observed while burden, support,
+      contextual change, or a contradiction limited the conclusion.
+    contradictory: The observed result opposed the intended Bystander intervention and violence prevention
+      criterion, introduced harm or coercion, or showed the design was not workable.
+    inconclusive: The Bystander intervention and violence prevention action was deferred, not observed,
+      not applicable, stale, insufficiently bounded, or too confounded to interpret.
+presentation:
+  setup_copy:
+    context_heading: Choose one bounded context for Bystander intervention and violence prevention.
+    boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
+    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Bystander
+      intervention and violence prevention.
+  check_in_labels:
+    c1513_a1_primary: The bounded Bystander intervention and violence prevention criterion for action
+      1 was observed
+    c1513_a1_boundary: Action 1 stayed inside its stated Bystander intervention and violence prevention
+      boundary
+    c1513_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
+    c1513_a2_primary: The bounded Bystander intervention and violence prevention criterion for action
+      2 was observed
+    c1513_a2_boundary: Action 2 stayed inside its stated Bystander intervention and violence prevention
+      boundary
+    c1513_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
+    c1513_a3_primary: The bounded Bystander intervention and violence prevention criterion for action
+      3 was observed
+    c1513_a3_boundary: Action 3 stayed inside its stated Bystander intervention and violence prevention
+      boundary
+    c1513_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
+  completion_copy: Complete the bounded Bystander intervention and violence prevention review without
+    claiming mastery, broad transfer, professional validation, or score activation.
+  plain_language_evidence: The structured record shows what happened in one limited Bystander intervention
+    and violence prevention practice, including support, contradiction, defer, no result, or harm.
+  display_order: 202

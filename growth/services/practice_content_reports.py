@@ -33,6 +33,7 @@ REPORT_PATHS = {
     "content_originality": REPORT_ROOT / "content_originality_v1.json",
 }
 LEGACY_TASK_PATH = Path("data/notion/initial_mvp/02_development_tasks_ranked_import.csv")
+NEAR_DUPLICATE_WARNING_LIMIT = 50
 
 
 class PracticeReportError(ValueError):
@@ -412,14 +413,38 @@ def _duplicate_groups(values: dict[str, str]) -> list[dict[str, Any]]:
 def _near_duplicate_pairs(
     values: dict[str, str], *, threshold: float = 0.8
 ) -> list[dict[str, Any]]:
+    """Return a bounded deterministic review queue for similar authored copy.
+
+    Exact duplicates are audited separately. Near-duplicate comparison is a
+    reviewer-routing heuristic, so compare structurally equivalent locations,
+    normalize each value once, and cap the queue. This keeps the report
+    practical at the 383-package frontier instead of performing an unbounded
+    all-fields Cartesian scan.
+    """
+
+    def bucket(key: str) -> str:
+        field_path = _field_path(key)
+        if field_path:
+            return field_path
+        action_match = re.search(r"-A([0-9]+)$", key)
+        return f"action-{action_match.group(1)}" if action_match else "root"
+
     pairs: list[dict[str, Any]] = []
-    items = sorted(values.items())
-    for index, (left_key, left_value) in enumerate(items):
-        for right_key, right_value in items[index + 1 :]:
-            ratio = SequenceMatcher(
-                None, _normalize_text(left_value), _normalize_text(right_value)
-            ).ratio()
-            if ratio >= threshold:
+    grouped: dict[str, list[tuple[str, str]]] = defaultdict(list)
+    for key, value in values.items():
+        grouped[bucket(key)].append((key, _normalize_text(value)))
+    for group_key in sorted(grouped):
+        items = sorted(grouped[group_key])
+        for index, (left_key, left_value) in enumerate(items):
+            for right_key, right_value in items[index + 1 :]:
+                matcher = SequenceMatcher(None, left_value, right_value)
+                if matcher.real_quick_ratio() < threshold:
+                    continue
+                if matcher.quick_ratio() < threshold:
+                    continue
+                ratio = matcher.ratio()
+                if ratio < threshold:
+                    continue
                 pairs.append(
                     {
                         "left": left_key,
@@ -427,6 +452,8 @@ def _near_duplicate_pairs(
                         "similarity": round(ratio, 4),
                     }
                 )
+                if len(pairs) >= NEAR_DUPLICATE_WARNING_LIMIT:
+                    return pairs
     return pairs
 
 
@@ -713,6 +740,7 @@ def _originality_report(
             "evidence_rule_payloads": duplicated_evidence_rules,
         },
         "near_duplicate_warnings": {
+            "warning_limit_per_category": NEAR_DUPLICATE_WARNING_LIMIT,
             "substantive_fields_threshold": 0.8,
             "substantive_fields": _near_duplicate_pairs(meaning_fields),
             "action_titles_threshold": 0.8,

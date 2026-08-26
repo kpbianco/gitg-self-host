@@ -1,0 +1,394 @@
+schema_version: GG-PRACTICE-CONTENT-1.0
+protocol_version: 0.1.0
+stable_id: PRACTICE-COMP-1012-APPRENTICESHIP-AND-TACIT-KNOWLEDGE-01
+slug: c1012-apprenticeship-and-tacit-knowledge-practice
+name: Bounded Apprenticeship and tacit knowledge Practice
+parent_competency_id: '10.12'
+domain_id: '10'
+governance:
+  availability: inactive
+  editorial_status: draft
+  runtime_projection: none
+  risk_class_id: RISK-LOW
+  scoring_policy_id: SP-SHADOW-ONLY
+  scoring_status: shadow_only
+  source_ids:
+  - SRC-CANONICAL-CURRICULUM-V2
+  authoring:
+    provenance: Individually materialized source-only frontier package for canonical competency 10.12
+      (Apprenticeship and tacit knowledge); canonical scope, evidence target, classification, domain boundary,
+      and parent mapping remain explicit and reviewable.
+    content_review_status: pending
+    research_review_status: internal_sources_only_external_review_required
+    safety_review_status: pending
+    accessibility_review_status: pending
+    originality_review_status: pending
+    ui_test_status: not_applicable
+    last_reviewed: null
+    known_gap_ids:
+    - RG-M6A-001
+    - RG-M6A-002
+    expert_review_ids:
+    - ER-M6A-003
+  legacy_compatibility_exceptions: []
+  deprecation:
+    deprecated: false
+    replaced_by: null
+meaning_and_fit:
+  purpose: 'Practice Apprenticeship and tacit knowledge through a consent-based community contribution
+    bounded by the canonical scope: Learn through observation, imitation, guided participation, correction,
+    and immersion in a community of practice.'
+  why_recommended: 'The parent competency identifies this limited evidence target: Can perform a skill
+    whose crucial judgment could not be learned from written instructions alone. The protocol creates
+    a small opportunity to examine that target without treating completion as broad capability.'
+  claims:
+  - statement: Using the canonical scope and evidence target for Apprenticeship and tacit knowledge is
+      a traceable product-design basis for a source-only draft protocol.
+    classification: product_design_judgment
+    source_ids:
+    - SRC-CANONICAL-CURRICULUM-V2
+    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
+      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+  applicability_question: Does a voluntary, bounded Apprenticeship and tacit knowledge practice fit the
+    person's current role, pathway, capacity, authority, resources, and safety conditions?
+  not_applicable_behavior: Record Apprenticeship and tacit knowledge as not applicable, consciously unchosen,
+    or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
+    is absent.
+  readiness_considerations: Proceed only when the person can freely choose a limited Apprenticeship and
+    tacit knowledge context, understand the source-only status, and stop without losing safety, care,
+    employment, housing, services, relationship access, or dignity.
+  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Apprenticeship
+    and tacit knowledge; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
+    or dependence for evidence.
+  prerequisites:
+  - One user-chosen context that genuinely fits the canonical scope of Apprenticeship and tacit knowledge.
+  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  dependencies: []
+  safe_alternatives:
+  - Use a fictional, public, retrospective, or category-level case for Apprenticeship and tacit knowledge
+    instead of a live situation.
+  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  role_conditions:
+  - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
+    held before the practice applies.
+  pathway_conditions:
+  - Religious, secular, cultural, disability-adapted, collective, and individual pathways may express
+    Apprenticeship and tacit knowledge differently while preserving consent, evidence limits, safety,
+    and equal dignity.
+  worldview_conditions:
+  - The practice does not require one worldview or treat disagreement about Apprenticeship and tacit knowledge
+    as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
+intervention:
+  protocol_class: PF-COMMUNITY-CONTRIBUTION
+  duration_days: 10
+  cadence: Complete three bounded Apprenticeship and tacit knowledge actions over ten days, preserving
+    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
+  setup: Choose one context for Apprenticeship and tacit knowledge; copy the canonical scope and evidence
+    target into a private working note; define the action boundary, valid supports, privacy limit, and
+    stop condition before beginning.
+  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Apprenticeship
+    and tacit knowledge. Do not store private prose, names, identities, diagnoses, allegations, credentials,
+    account data, protected work information, intimate detail, artifact contents, observer narrative,
+    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
+    certification, or proof of character.
+  expected_burden: About 45-75 minutes total across setup, three Apprenticeship and tacit knowledge actions,
+    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
+    reasons.
+  action_count_rationale: null
+  foreseeable_misuse:
+  - Using the Apprenticeship and tacit knowledge protocol to rank worth, coerce participation, demand
+    disclosure, override rest or care, certify competence, or justify decisions beyond the recorded context.
+  - Treating a completed Apprenticeship and tacit knowledge action, a polished artifact, agreement, confidence,
+    speed, independence, or output as mastery or universal transfer.
+  exclusions:
+  - Any Apprenticeship and tacit knowledge situation involving emergency response, abuse, retaliation,
+    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
+    hazardous equipment, or other consequences beyond a reversible source-only exercise.
+  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
+    practice.
+  actions:
+  - stable_id: PRACTICE-COMP-1012-APPRENTICESHIP-AND-TACIT-KNOWLEDGE-01-A1
+    sequence: 1
+    title: Listen for a bounded Apprenticeship and tacit knowledge need
+    instructions: 'Identify one need related to Apprenticeship and tacit knowledge through a public request,
+      authorized contact, or community-defined priority. Verify who has authority to set scope and avoid
+      extracting private stories or assuming outsiders know the need: Learn through observation, imitation,
+      guided participation, correction, and immersion in a community of practice.'
+    expected_time: 15-25 minutes
+    due_within_days: 3
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-1012-APPRENTICESHIP-AND-TACIT-KNOWLEDGE-01
+      action_stable_id: PRACTICE-COMP-1012-APPRENTICESHIP-AND-TACIT-KNOWLEDGE-01-A1
+      competency_stable_id: '10.12'
+      scoring_policy_id: SP-SHADOW-ONLY
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c1012_a1_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c1012_a1_primary
+        kind: artifact
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - c1012_a1_need_community_defined
+        - c1012_a1_authority_identified
+        - c1012_a1_private_story_not_required
+      - measurement_id: c1012_a1_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c1012_a1_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  - stable_id: PRACTICE-COMP-1012-APPRENTICESHIP-AND-TACIT-KNOWLEDGE-01-A2
+    sequence: 2
+    title: Agree and complete one Apprenticeship and tacit knowledge contribution
+    instructions: Agree on one limited Apprenticeship and tacit knowledge contribution, its owner, time
+      boundary, access needs, and exit condition. Complete only the agreed scope without replacing local
+      leadership, creating dependency, claiming representation, or escalating conflict.
+    expected_time: 15-25 minutes
+    due_within_days: 7
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-1012-APPRENTICESHIP-AND-TACIT-KNOWLEDGE-01
+      action_stable_id: PRACTICE-COMP-1012-APPRENTICESHIP-AND-TACIT-KNOWLEDGE-01-A2
+      competency_stable_id: '10.12'
+      scoring_policy_id: SP-SHADOW-ONLY
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c1012_a2_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c1012_a2_primary
+        kind: boolean
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c1012_a2_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c1012_a2_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  - stable_id: PRACTICE-COMP-1012-APPRENTICESHIP-AND-TACIT-KNOWLEDGE-01-A3
+    sequence: 3
+    title: Review the Apprenticeship and tacit knowledge contribution with proportionate feedback
+    instructions: 'Obtain minimal, freely given feedback from an authorized recipient or use an objective
+      completion indicator. Record benefit, burden, no effect, harm, or unknown and compare only with:
+      Can perform a skill whose crucial judgment could not be learned from written instructions alone.'
+    expected_time: 15-25 minutes
+    due_within_days: 10
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-1012-APPRENTICESHIP-AND-TACIT-KNOWLEDGE-01
+      action_stable_id: PRACTICE-COMP-1012-APPRENTICESHIP-AND-TACIT-KNOWLEDGE-01-A3
+      competency_stable_id: '10.12'
+      scoring_policy_id: SP-SHADOW-ONLY
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c1012_a3_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c1012_a3_primary
+        kind: artifact
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - c1012_a3_feedback_proportionate
+        - c1012_a3_burden_or_harm_recorded
+        - c1012_a3_community_ownership_preserved
+      - measurement_id: c1012_a3_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c1012_a3_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  adaptations:
+    low_resource:
+    - Use paper, an offline note, a library resource, a public example, or a no-cost conversation for
+      Apprenticeship and tacit knowledge; no purchase, subscription, travel, credential, or public artifact
+      is required.
+    accessibility:
+    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
+      level for Apprenticeship and tacit knowledge; assistive technology, interpretation, a support person,
+      and a deferred action are valid without penalty.
+    cultural_context:
+    - Adapt the expression of Apprenticeship and tacit knowledge to direct or indirect communication,
+      collective or individual decision structures, local norms, faith or secular commitments, and role
+      obligations while preserving consent and dignity.
+    resource_variants:
+    - When a real Apprenticeship and tacit knowledge opportunity is unavailable or inappropriate, use
+      a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
+      evidence classification.
+  pause_conditions:
+  - Pause Apprenticeship and tacit knowledge when capacity, consent, authority, privacy, access, care
+    duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the
+    next action unwise.
+  stop_conditions:
+  - Stop the Apprenticeship and tacit knowledge practice for harm, coercion, retaliation risk, emergency
+    conditions, unsafe exposure, worsening symptoms, protected information, legal or policy conflict,
+    or pressure to exceed the stated boundary.
+  escalation_conditions:
+  - Use the appropriate local safeguarding, emergency, organizational, legal, medical, financial, accessibility,
+    or other qualified channel when a Apprenticeship and tacit knowledge situation exceeds a voluntary
+    low-stakes practice.
+  professional_referral_conditions:
+  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
+    practice.
+evidence_and_scoring:
+  accepted_evidence_types:
+  - structured criteria observations for the bounded Apprenticeship and tacit knowledge actions
+  - explicit contradiction, adverse, defer, not-applicable, and unknown states
+  observation_contract_version: typed-evidence-rules-v1
+  check_in_fields:
+  - c1012_a1_primary
+  - c1012_a1_boundary
+  - c1012_a1_adverse
+  - c1012_a2_primary
+  - c1012_a2_boundary
+  - c1012_a2_adverse
+  - c1012_a3_primary
+  - c1012_a3_boundary
+  - c1012_a3_adverse
+  adverse_or_contradictory_indicators:
+  - The Apprenticeship and tacit knowledge action exceeded consent, authority, privacy, qualification,
+    role, burden, or safety boundaries.
+  - The evidence contradicted the intended Apprenticeship and tacit knowledge criterion, depended on coercion
+    or hidden private content, or could not distinguish the protocol from contextual change.
+  independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
+    for Apprenticeship and tacit knowledge explicitly; support can enable access and never reduces dignity
+    or silently changes the typed value.
+  context_transfer_rule: Evidence remains limited to the chosen Apprenticeship and tacit knowledge context,
+    action, role, pathway, and assessment epoch; it does not establish cross-context reliability.
+  repetition_rule: Each Apprenticeship and tacit knowledge observation requires a distinct immutable origin;
+    duplicate origins are rejected and later repetitions use the typed contract's explicit diminishing
+    multipliers.
+  recency_rule: Generated Apprenticeship and tacit knowledge rules withhold observations older than 90
+    days; no unrecorded retention or carry-forward assumption applies.
+  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
+    target—Can perform a skill whose crucial judgment could not be learned from written instructions alone.—not
+    completion, confidence, conformity, output, independence, or worth.
+  evidence_quality_rubric: Quality for Apprenticeship and tacit knowledge requires a bounded context,
+    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
+    free text and artifact contents are excluded.
+  scoring_eligibility: This package is source-only, shadow-only, and production-ineligible.
+  competency_contribution: Designated primary measurements may produce context-bound direct Apprenticeship
+    and tacit knowledge evidence only under offline typed evaluation; protocol performance remains distinct
+    and is never counted twice.
+  canonical_lever_allocation: parent_competency_mapping
+  recommendation_target_lever_ids:
+  - L15
+  - L23
+  - L26
+  - L32
+  minimum_evidence_before_state_update: No current-state update is permitted for this Apprenticeship and
+    tacit knowledge draft under SP-SHADOW-ONLY, regardless of completion or evidence quantity.
+  withholding_conditions:
+  - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
+    or adverse Apprenticeship and tacit knowledge evidence.
+  - Withhold any record containing private narrative, artifact contents, another person's identity, unsupported
+    inference, or evidence outside its assessment epoch.
+completion_and_review:
+  completion_criteria:
+  - The listen for a bounded apprenticeship and tacit knowledge need action was attempted or explicitly
+    deferred.
+  - The agree and complete one apprenticeship and tacit knowledge contribution action was attempted or
+    explicitly deferred.
+  - The review the apprenticeship and tacit knowledge contribution with proportionate feedback action
+    preserved a limited conclusion, contradiction, or inconclusive result.
+  completion_rules:
+    minimum_completed: 2
+    substantive_markers:
+    - c1012_a1_primary
+    - c1012_a2_primary
+    - c1012_a3_primary
+    marker_mode: any
+  mastery_disclaimer: Completing this practice does not establish mastery.
+  progression_criteria: Repeat or broaden Apprenticeship and tacit knowledge only when the initial context
+    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
+    named without assuming transfer.
+  transfer_limit: Three bounded actions do not establish Apprenticeship and tacit knowledge across roles,
+    cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
+    settings.
+  reflection:
+    before: What does Apprenticeship and tacit knowledge require in this exact context, what remains outside
+      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
+    during: Which observable Apprenticeship and tacit knowledge criterion is present, absent, mixed, or
+      unknown, and are consent, privacy, access, burden, and stop conditions still intact?
+    after: How did the result compare with 'Can perform a skill whose crucial judgment could not be learned
+      from written instructions alone.', what contradiction or missing context matters most, and should
+      this Apprenticeship and tacit knowledge design be repeated, adapted, deferred, stopped, or referred?
+  review_guidance:
+    repeat: Repeat the same bounded Apprenticeship and tacit knowledge design only when the context and
+      burden remain appropriate.
+    adapt: Change the Apprenticeship and tacit knowledge medium, scope, support, timing, criteria, or
+      context while preserving provenance and the narrower evidence claim.
+    stop: Stop Apprenticeship and tacit knowledge when the practice becomes coercive, unsafe, privacy-invasive,
+      role-inappropriate, professionally restricted, or harmful.
+    escalate: Use appropriate qualified or emergency support for Apprenticeship and tacit knowledge questions
+      beyond this educational source-only boundary.
+  evidence_examples:
+    supportive: The bounded Apprenticeship and tacit knowledge criteria were observed with provenance
+      and no adverse boundary signal in the selected context.
+    mixed: Some Apprenticeship and tacit knowledge criteria were observed while burden, support, contextual
+      change, or a contradiction limited the conclusion.
+    contradictory: The observed result opposed the intended Apprenticeship and tacit knowledge criterion,
+      introduced harm or coercion, or showed the design was not workable.
+    inconclusive: The Apprenticeship and tacit knowledge action was deferred, not observed, not applicable,
+      stale, insufficiently bounded, or too confounded to interpret.
+presentation:
+  setup_copy:
+    context_heading: Choose one bounded context for Apprenticeship and tacit knowledge.
+    boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
+    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Apprenticeship
+      and tacit knowledge.
+  check_in_labels:
+    c1012_a1_primary: The bounded Apprenticeship and tacit knowledge criterion for action 1 was observed
+    c1012_a1_boundary: Action 1 stayed inside its stated Apprenticeship and tacit knowledge boundary
+    c1012_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
+    c1012_a2_primary: The bounded Apprenticeship and tacit knowledge criterion for action 2 was observed
+    c1012_a2_boundary: Action 2 stayed inside its stated Apprenticeship and tacit knowledge boundary
+    c1012_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
+    c1012_a3_primary: The bounded Apprenticeship and tacit knowledge criterion for action 3 was observed
+    c1012_a3_boundary: Action 3 stayed inside its stated Apprenticeship and tacit knowledge boundary
+    c1012_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
+  completion_copy: Complete the bounded Apprenticeship and tacit knowledge review without claiming mastery,
+    broad transfer, professional validation, or score activation.
+  plain_language_evidence: The structured record shows what happened in one limited Apprenticeship and
+    tacit knowledge practice, including support, contradiction, defer, no result, or harm.
+  display_order: 134

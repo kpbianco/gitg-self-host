@@ -1,13 +1,13 @@
 {
   "boundary": "The cohort is individually authored source-only draft content with synthetic shadow replay. It adds no typed persistence, runtime projection, production activation, specialist acceptance, participant validation, or mastery claim.",
   "catalog": {
-    "canonical_protocol_packages": 9,
+    "canonical_protocol_packages": 383,
     "competencies": 383,
-    "practice_actions": 29,
+    "practice_actions": 1151,
     "score_active_protocols": 1,
-    "uncovered_competencies": 374
+    "uncovered_competencies": 0
   },
-  "catalog_content_hash": "fa0cf81c0d1e3d32ff5d0268d78410740c0be314761debdbc3a0f86cafb280d8",
+  "catalog_content_hash": "fb4b29d447232034b069b24871cc4eca77b951b9440e6ed1a2994283db5c04b7",
   "cohort": [
     {
       "action_count": 3,

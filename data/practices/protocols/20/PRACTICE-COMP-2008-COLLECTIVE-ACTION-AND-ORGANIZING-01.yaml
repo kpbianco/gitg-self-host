@@ -1,0 +1,396 @@
+schema_version: GG-PRACTICE-CONTENT-1.0
+protocol_version: 0.1.0
+stable_id: PRACTICE-COMP-2008-COLLECTIVE-ACTION-AND-ORGANIZING-01
+slug: c2008-collective-action-and-organizing-practice
+name: Bounded Collective action and organizing Practice
+parent_competency_id: '20.08'
+domain_id: '20'
+governance:
+  availability: inactive
+  editorial_status: draft
+  runtime_projection: none
+  risk_class_id: RISK-MODERATE
+  scoring_policy_id: SP-SHADOW-ONLY
+  scoring_status: shadow_only
+  source_ids:
+  - SRC-CANONICAL-CURRICULUM-V2
+  authoring:
+    provenance: Individually materialized source-only frontier package for canonical competency 20.08
+      (Collective action and organizing); canonical scope, evidence target, classification, domain boundary,
+      and parent mapping remain explicit and reviewable.
+    content_review_status: pending
+    research_review_status: internal_sources_only_external_review_required
+    safety_review_status: pending
+    accessibility_review_status: pending
+    originality_review_status: pending
+    ui_test_status: not_applicable
+    last_reviewed: null
+    known_gap_ids:
+    - RG-M6A-001
+    - RG-M6A-002
+    expert_review_ids:
+    - ER-M6A-003
+  legacy_compatibility_exceptions: []
+  deprecation:
+    deprecated: false
+    replaced_by: null
+meaning_and_fit:
+  purpose: 'Practice Collective action and organizing through a artifact-and-review practice bounded by
+    the canonical scope: Define a shared problem, recruit stakeholders, assign roles, coordinate work,
+    and measure outcomes.'
+  why_recommended: 'The parent competency identifies this limited evidence target: A community effort
+    reaches a concrete result and captures lessons. The protocol creates a small opportunity to examine
+    that target without treating completion as broad capability.'
+  claims:
+  - statement: Using the canonical scope and evidence target for Collective action and organizing is a
+      traceable product-design basis for a source-only draft protocol.
+    classification: product_design_judgment
+    source_ids:
+    - SRC-CANONICAL-CURRICULUM-V2
+    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
+      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+  applicability_question: Does a voluntary, bounded Collective action and organizing practice fit the
+    person's current role, pathway, capacity, authority, resources, and safety conditions?
+  not_applicable_behavior: Record Collective action and organizing as not applicable, consciously unchosen,
+    or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
+    is absent.
+  readiness_considerations: Proceed only when the person can freely choose a limited Collective action
+    and organizing context, understand the source-only status, and stop without losing safety, care, employment,
+    housing, services, relationship access, or dignity.
+  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Collective
+    action and organizing; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
+    or dependence for evidence.
+  prerequisites:
+  - One user-chosen context that genuinely fits the canonical scope of Collective action and organizing.
+  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  dependencies: []
+  safe_alternatives:
+  - Use a fictional, public, retrospective, or category-level case for Collective action and organizing
+    instead of a live situation.
+  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  role_conditions:
+  - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
+    held before the practice applies.
+  pathway_conditions:
+  - Religious, secular, cultural, disability-adapted, collective, and individual pathways may express
+    Collective action and organizing differently while preserving consent, evidence limits, safety, and
+    equal dignity.
+  worldview_conditions:
+  - The practice does not require one worldview or treat disagreement about Collective action and organizing
+    as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
+intervention:
+  protocol_class: PF-ARTIFACT-PLAN
+  duration_days: 10
+  cadence: Complete three bounded Collective action and organizing actions over ten days, preserving explicit
+    not-applicable, defer, interruption, adverse, and unknown outcomes.
+  setup: Choose one context for Collective action and organizing; copy the canonical scope and evidence
+    target into a private working note; define the action boundary, valid supports, privacy limit, and
+    stop condition before beginning.
+  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Collective
+    action and organizing. Do not store private prose, names, identities, diagnoses, allegations, credentials,
+    account data, protected work information, intimate detail, artifact contents, observer narrative,
+    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
+    certification, or proof of character.
+  expected_burden: About 45-75 minutes total across setup, three Collective action and organizing actions,
+    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
+    reasons.
+  action_count_rationale: null
+  foreseeable_misuse:
+  - Using the Collective action and organizing protocol to rank worth, coerce participation, demand disclosure,
+    override rest or care, certify competence, or justify decisions beyond the recorded context.
+  - Treating a completed Collective action and organizing action, a polished artifact, agreement, confidence,
+    speed, independence, or output as mastery or universal transfer.
+  exclusions:
+  - Any Collective action and organizing situation involving emergency response, abuse, retaliation, illegal
+    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
+    equipment, or other consequences beyond a reversible source-only exercise.
+  - Political and civic education only; protest, civil disobedience, and legal rights are jurisdiction-specific
+    and can involve serious risk.
+  actions:
+  - stable_id: PRACTICE-COMP-2008-COLLECTIVE-ACTION-AND-ORGANIZING-01-A1
+    sequence: 1
+    title: Define a rubric for Collective action and organizing
+    instructions: 'Turn the canonical scope for Collective action and organizing into three to five inspectable
+      criteria: Define a shared problem, recruit stakeholders, assign roles, coordinate work, and measure
+      outcomes. Keep the rubric bounded to one current context and include one criterion for uncertainty,
+      access, or competing obligations.'
+    expected_time: 15-25 minutes
+    due_within_days: 3
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-2008-COLLECTIVE-ACTION-AND-ORGANIZING-01
+      action_stable_id: PRACTICE-COMP-2008-COLLECTIVE-ACTION-AND-ORGANIZING-01-A1
+      competency_stable_id: '20.08'
+      scoring_policy_id: SP-SHADOW-ONLY
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c2008_a1_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c2008_a1_primary
+        kind: artifact
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - c2008_a1_criteria_trace_to_scope
+        - c2008_a1_context_bounded
+        - c2008_a1_constraint_included
+      - measurement_id: c2008_a1_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c2008_a1_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  - stable_id: PRACTICE-COMP-2008-COLLECTIVE-ACTION-AND-ORGANIZING-01-A2
+    sequence: 2
+    title: Build one Collective action and organizing artifact
+    instructions: Create the smallest useful plan, checklist, diagram, record, or other artifact that
+      applies the rubric for Collective action and organizing. Store only category-level information and
+      omit names, secrets, credentials, diagnoses, protected work detail, and unnecessary third-party
+      information.
+    expected_time: 15-25 minutes
+    due_within_days: 7
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-2008-COLLECTIVE-ACTION-AND-ORGANIZING-01
+      action_stable_id: PRACTICE-COMP-2008-COLLECTIVE-ACTION-AND-ORGANIZING-01-A2
+      competency_stable_id: '20.08'
+      scoring_policy_id: SP-SHADOW-ONLY
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c2008_a2_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c2008_a2_primary
+        kind: artifact
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - c2008_a2_artifact_matches_rubric
+        - c2008_a2_minimum_private_detail
+        - c2008_a2_usable_next_step_present
+      - measurement_id: c2008_a2_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c2008_a2_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  - stable_id: PRACTICE-COMP-2008-COLLECTIVE-ACTION-AND-ORGANIZING-01-A3
+    sequence: 3
+    title: Stress-test and revise the Collective action and organizing artifact
+    instructions: 'Test the artifact against one realistic variation, counterexample, or changed constraint.
+      Revise it only where the test exposes a gap, then compare the result with this evidence target:
+      A community effort reaches a concrete result and captures lessons.'
+    expected_time: 15-25 minutes
+    due_within_days: 10
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-2008-COLLECTIVE-ACTION-AND-ORGANIZING-01
+      action_stable_id: PRACTICE-COMP-2008-COLLECTIVE-ACTION-AND-ORGANIZING-01-A3
+      competency_stable_id: '20.08'
+      scoring_policy_id: SP-SHADOW-ONLY
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c2008_a3_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c2008_a3_primary
+        kind: scenario
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - c2008_a3_variation_tested
+        - c2008_a3_revision_traceable
+        - c2008_a3_target_evidence_compared
+      - measurement_id: c2008_a3_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c2008_a3_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  adaptations:
+    low_resource:
+    - Use paper, an offline note, a library resource, a public example, or a no-cost conversation for
+      Collective action and organizing; no purchase, subscription, travel, credential, or public artifact
+      is required.
+    accessibility:
+    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
+      level for Collective action and organizing; assistive technology, interpretation, a support person,
+      and a deferred action are valid without penalty.
+    cultural_context:
+    - Adapt the expression of Collective action and organizing to direct or indirect communication, collective
+      or individual decision structures, local norms, faith or secular commitments, and role obligations
+      while preserving consent and dignity.
+    resource_variants:
+    - When a real Collective action and organizing opportunity is unavailable or inappropriate, use a
+      fictional, historical, public, simulated, or planning-only equivalent and retain the narrower evidence
+      classification.
+  pause_conditions:
+  - Pause Collective action and organizing when capacity, consent, authority, privacy, access, care duties,
+    uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
+    unwise.
+  stop_conditions:
+  - Stop the Collective action and organizing practice for harm, coercion, retaliation risk, emergency
+    conditions, unsafe exposure, worsening symptoms, protected information, legal or policy conflict,
+    or pressure to exceed the stated boundary.
+  escalation_conditions:
+  - Use the appropriate local safeguarding, emergency, organizational, legal, medical, financial, accessibility,
+    or other qualified channel when a Collective action and organizing situation exceeds a voluntary low-stakes
+    practice.
+  professional_referral_conditions:
+  - Political and civic education only; protest, civil disobedience, and legal rights are jurisdiction-specific
+    and can involve serious risk.
+evidence_and_scoring:
+  accepted_evidence_types:
+  - structured criteria observations for the bounded Collective action and organizing actions
+  - explicit contradiction, adverse, defer, not-applicable, and unknown states
+  observation_contract_version: typed-evidence-rules-v1
+  check_in_fields:
+  - c2008_a1_primary
+  - c2008_a1_boundary
+  - c2008_a1_adverse
+  - c2008_a2_primary
+  - c2008_a2_boundary
+  - c2008_a2_adverse
+  - c2008_a3_primary
+  - c2008_a3_boundary
+  - c2008_a3_adverse
+  adverse_or_contradictory_indicators:
+  - The Collective action and organizing action exceeded consent, authority, privacy, qualification, role,
+    burden, or safety boundaries.
+  - The evidence contradicted the intended Collective action and organizing criterion, depended on coercion
+    or hidden private content, or could not distinguish the protocol from contextual change.
+  independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
+    for Collective action and organizing explicitly; support can enable access and never reduces dignity
+    or silently changes the typed value.
+  context_transfer_rule: Evidence remains limited to the chosen Collective action and organizing context,
+    action, role, pathway, and assessment epoch; it does not establish cross-context reliability.
+  repetition_rule: Each Collective action and organizing observation requires a distinct immutable origin;
+    duplicate origins are rejected and later repetitions use the typed contract's explicit diminishing
+    multipliers.
+  recency_rule: Generated Collective action and organizing rules withhold observations older than 90 days;
+    no unrecorded retention or carry-forward assumption applies.
+  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
+    target—A community effort reaches a concrete result and captures lessons.—not completion, confidence,
+    conformity, output, independence, or worth.
+  evidence_quality_rubric: Quality for Collective action and organizing requires a bounded context, allowlisted
+    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
+    and artifact contents are excluded.
+  scoring_eligibility: This package is source-only, shadow-only, and production-ineligible.
+  competency_contribution: Designated primary measurements may produce context-bound direct Collective
+    action and organizing evidence only under offline typed evaluation; protocol performance remains distinct
+    and is never counted twice.
+  canonical_lever_allocation: parent_competency_mapping
+  recommendation_target_lever_ids:
+  - L10
+  - L23
+  - L30
+  - L33
+  minimum_evidence_before_state_update: No current-state update is permitted for this Collective action
+    and organizing draft under SP-SHADOW-ONLY, regardless of completion or evidence quantity.
+  withholding_conditions:
+  - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
+    or adverse Collective action and organizing evidence.
+  - Withhold any record containing private narrative, artifact contents, another person's identity, unsupported
+    inference, or evidence outside its assessment epoch.
+completion_and_review:
+  completion_criteria:
+  - The define a rubric for collective action and organizing action was attempted or explicitly deferred.
+  - The build one collective action and organizing artifact action was attempted or explicitly deferred.
+  - The stress-test and revise the collective action and organizing artifact action preserved a limited
+    conclusion, contradiction, or inconclusive result.
+  completion_rules:
+    minimum_completed: 2
+    substantive_markers:
+    - c2008_a1_primary
+    - c2008_a2_primary
+    - c2008_a3_primary
+    marker_mode: any
+  mastery_disclaimer: Completing this practice does not establish mastery.
+  progression_criteria: Repeat or broaden Collective action and organizing only when the initial context
+    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
+    named without assuming transfer.
+  transfer_limit: Three bounded actions do not establish Collective action and organizing across roles,
+    cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
+    settings.
+  reflection:
+    before: What does Collective action and organizing require in this exact context, what remains outside
+      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
+    during: Which observable Collective action and organizing criterion is present, absent, mixed, or
+      unknown, and are consent, privacy, access, burden, and stop conditions still intact?
+    after: How did the result compare with 'A community effort reaches a concrete result and captures
+      lessons.', what contradiction or missing context matters most, and should this Collective action
+      and organizing design be repeated, adapted, deferred, stopped, or referred?
+  review_guidance:
+    repeat: Repeat the same bounded Collective action and organizing design only when the context and
+      burden remain appropriate.
+    adapt: Change the Collective action and organizing medium, scope, support, timing, criteria, or context
+      while preserving provenance and the narrower evidence claim.
+    stop: Stop Collective action and organizing when the practice becomes coercive, unsafe, privacy-invasive,
+      role-inappropriate, professionally restricted, or harmful.
+    escalate: Use appropriate qualified or emergency support for Collective action and organizing questions
+      beyond this educational source-only boundary.
+  evidence_examples:
+    supportive: The bounded Collective action and organizing criteria were observed with provenance and
+      no adverse boundary signal in the selected context.
+    mixed: Some Collective action and organizing criteria were observed while burden, support, contextual
+      change, or a contradiction limited the conclusion.
+    contradictory: The observed result opposed the intended Collective action and organizing criterion,
+      introduced harm or coercion, or showed the design was not workable.
+    inconclusive: The Collective action and organizing action was deferred, not observed, not applicable,
+      stale, insufficiently bounded, or too confounded to interpret.
+presentation:
+  setup_copy:
+    context_heading: Choose one bounded context for Collective action and organizing.
+    boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
+    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Collective
+      action and organizing.
+  check_in_labels:
+    c2008_a1_primary: The bounded Collective action and organizing criterion for action 1 was observed
+    c2008_a1_boundary: Action 1 stayed inside its stated Collective action and organizing boundary
+    c2008_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
+    c2008_a2_primary: The bounded Collective action and organizing criterion for action 2 was observed
+    c2008_a2_boundary: Action 2 stayed inside its stated Collective action and organizing boundary
+    c2008_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
+    c2008_a3_primary: The bounded Collective action and organizing criterion for action 3 was observed
+    c2008_a3_boundary: Action 3 stayed inside its stated Collective action and organizing boundary
+    c2008_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
+  completion_copy: Complete the bounded Collective action and organizing review without claiming mastery,
+    broad transfer, professional validation, or score activation.
+  plain_language_evidence: The structured record shows what happened in one limited Collective action
+    and organizing practice, including support, contradiction, defer, no result, or harm.
+  display_order: 270

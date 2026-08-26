@@ -1,0 +1,398 @@
+schema_version: GG-PRACTICE-CONTENT-1.0
+protocol_version: 0.1.0
+stable_id: PRACTICE-COMP-0708-ENVY-JEALOUSY-AND-COMPARISON-01
+slug: c0708-envy-jealousy-and-comparison-practice
+name: Bounded Envy, jealousy, and comparison Practice
+parent_competency_id: '07.08'
+domain_id: '07'
+governance:
+  availability: inactive
+  editorial_status: draft
+  runtime_projection: none
+  risk_class_id: RISK-HIGH
+  scoring_policy_id: SP-NON-SCORED-REFLECTION
+  scoring_status: non_scored
+  source_ids:
+  - SRC-CANONICAL-CURRICULUM-V2
+  authoring:
+    provenance: Individually materialized source-only frontier package for canonical competency 07.08
+      (Envy, jealousy, and comparison); canonical scope, evidence target, classification, domain boundary,
+      and parent mapping remain explicit and reviewable.
+    content_review_status: pending
+    research_review_status: internal_sources_only_external_review_required
+    safety_review_status: pending_specialist_expansion_review
+    accessibility_review_status: pending
+    originality_review_status: pending
+    ui_test_status: not_applicable
+    last_reviewed: null
+    known_gap_ids:
+    - RG-M6A-001
+    - RG-M6A-002
+    expert_review_ids:
+    - ER-M6A-003
+  legacy_compatibility_exceptions: []
+  deprecation:
+    deprecated: false
+    replaced_by: null
+meaning_and_fit:
+  purpose: 'Practice Envy, jealousy, and comparison through a non-confrontational safety preparation bounded
+    by the canonical scope: Identify threatened needs, insecurity, admiration, scarcity beliefs, and possessiveness
+    beneath comparison.'
+  why_recommended: 'The parent competency identifies this limited evidence target: Converts comparison
+    into gratitude, boundary setting, learning, or a chosen goal. The protocol creates a small opportunity
+    to examine that target without treating completion as broad capability.'
+  claims:
+  - statement: Using the canonical scope and evidence target for Envy, jealousy, and comparison is a traceable
+      product-design basis for a source-only draft protocol.
+    classification: product_design_judgment
+    source_ids:
+    - SRC-CANONICAL-CURRICULUM-V2
+    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
+      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+  applicability_question: Does a voluntary, bounded Envy, jealousy, and comparison practice fit the person's
+    current role, pathway, capacity, authority, resources, and safety conditions?
+  not_applicable_behavior: Record Envy, jealousy, and comparison as not applicable, consciously unchosen,
+    or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
+    is absent.
+  readiness_considerations: Proceed only when the person can freely choose a limited Envy, jealousy, and
+    comparison context, understand the source-only status, and stop without losing safety, care, employment,
+    housing, services, relationship access, or dignity.
+  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Envy, jealousy,
+    and comparison; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency, or
+    dependence for evidence.
+  prerequisites:
+  - One user-chosen context that genuinely fits the canonical scope of Envy, jealousy, and comparison.
+  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  dependencies: []
+  safe_alternatives:
+  - Use a fictional, public, retrospective, or category-level case for Envy, jealousy, and comparison
+    instead of a live situation.
+  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  role_conditions:
+  - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
+    held before the practice applies.
+  pathway_conditions:
+  - Religious, secular, cultural, disability-adapted, collective, and individual pathways may express
+    Envy, jealousy, and comparison differently while preserving consent, evidence limits, safety, and
+    equal dignity.
+  worldview_conditions:
+  - The practice does not require one worldview or treat disagreement about Envy, jealousy, and comparison
+    as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
+intervention:
+  protocol_class: PF-SAFETY-PREPARATION
+  duration_days: 10
+  cadence: Complete three bounded Envy, jealousy, and comparison actions over ten days, preserving explicit
+    not-applicable, defer, interruption, adverse, and unknown outcomes.
+  setup: Choose one context for Envy, jealousy, and comparison; copy the canonical scope and evidence
+    target into a private working note; define the action boundary, valid supports, privacy limit, and
+    stop condition before beginning.
+  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Envy, jealousy,
+    and comparison. Do not store private prose, names, identities, diagnoses, allegations, credentials,
+    account data, protected work information, intimate detail, artifact contents, observer narrative,
+    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
+    certification, or proof of character.
+  expected_burden: About 45-75 minutes total across setup, three Envy, jealousy, and comparison actions,
+    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
+    reasons.
+  action_count_rationale: null
+  foreseeable_misuse:
+  - Using the Envy, jealousy, and comparison protocol to rank worth, coerce participation, demand disclosure,
+    override rest or care, certify competence, or justify decisions beyond the recorded context.
+  - Treating a completed Envy, jealousy, and comparison action, a polished artifact, agreement, confidence,
+    speed, independence, or output as mastery or universal transfer.
+  exclusions:
+  - Any Envy, jealousy, and comparison situation involving emergency response, abuse, retaliation, illegal
+    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
+    equipment, or other consequences beyond a reversible source-only exercise.
+  - Not therapy or diagnosis; severe or persistent symptoms require qualified mental-health or medical
+    care.
+  actions:
+  - stable_id: PRACTICE-COMP-0708-ENVY-JEALOUSY-AND-COMPARISON-01-A1
+    sequence: 1
+    title: Identify the non-emergency boundary for Envy, jealousy, and comparison
+    instructions: 'Define one planning-only question for Envy, jealousy, and comparison, the hazards that
+      must not be rehearsed, and the local qualified or emergency authority that supersedes this source-only
+      protocol. Do not create, approach, or simulate danger: Identify threatened needs, insecurity, admiration,
+      scarcity beliefs, and possessiveness beneath comparison.'
+    expected_time: 15-25 minutes
+    due_within_days: 3
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-0708-ENVY-JEALOUSY-AND-COMPARISON-01
+      action_stable_id: PRACTICE-COMP-0708-ENVY-JEALOUSY-AND-COMPARISON-01-A1
+      competency_stable_id: '07.08'
+      scoring_policy_id: SP-NON-SCORED-REFLECTION
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c0708_a1_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c0708_a1_primary
+        kind: artifact
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - c0708_a1_planning_scope_bounded
+        - c0708_a1_hazards_excluded
+        - c0708_a1_authority_identified
+      - measurement_id: c0708_a1_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c0708_a1_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  - stable_id: PRACTICE-COMP-0708-ENVY-JEALOUSY-AND-COMPARISON-01-A2
+    sequence: 2
+    title: Prepare one safe Envy, jealousy, and comparison support step
+    instructions: Create one non-confrontational Envy, jealousy, and comparison step such as locating
+      official guidance, checking accessible contact information, assembling a category-level checklist,
+      or scheduling qualified instruction. Do not test emergency response, weapons, rescue, medical treatment,
+      confrontation, evasion, or hazardous equipment.
+    expected_time: 15-25 minutes
+    due_within_days: 7
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-0708-ENVY-JEALOUSY-AND-COMPARISON-01
+      action_stable_id: PRACTICE-COMP-0708-ENVY-JEALOUSY-AND-COMPARISON-01-A2
+      competency_stable_id: '07.08'
+      scoring_policy_id: SP-NON-SCORED-REFLECTION
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c0708_a2_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c0708_a2_primary
+        kind: artifact
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - c0708_a2_step_is_preparatory
+        - c0708_a2_official_or_qualified_path_used
+        - c0708_a2_no_hazard_rehearsed
+      - measurement_id: c0708_a2_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c0708_a2_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  - stable_id: PRACTICE-COMP-0708-ENVY-JEALOUSY-AND-COMPARISON-01-A3
+    sequence: 3
+    title: Review the Envy, jealousy, and comparison plan against stop conditions
+    instructions: 'Check whether the plan identifies when to stop, leave, call emergency services, contact
+      a qualified professional, or follow local authority. Mark unknown requirements rather than inventing
+      them and compare only with: Converts comparison into gratitude, boundary setting, learning, or a
+      chosen goal.'
+    expected_time: 15-25 minutes
+    due_within_days: 10
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-0708-ENVY-JEALOUSY-AND-COMPARISON-01
+      action_stable_id: PRACTICE-COMP-0708-ENVY-JEALOUSY-AND-COMPARISON-01-A3
+      competency_stable_id: '07.08'
+      scoring_policy_id: SP-NON-SCORED-REFLECTION
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c0708_a3_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c0708_a3_primary
+        kind: scenario
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - c0708_a3_stop_conditions_present
+        - c0708_a3_escalation_path_present
+        - c0708_a3_unknowns_retained
+      - measurement_id: c0708_a3_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c0708_a3_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  adaptations:
+    low_resource:
+    - Use paper, an offline note, a library resource, a public example, or a no-cost conversation for
+      Envy, jealousy, and comparison; no purchase, subscription, travel, credential, or public artifact
+      is required.
+    accessibility:
+    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
+      level for Envy, jealousy, and comparison; assistive technology, interpretation, a support person,
+      and a deferred action are valid without penalty.
+    cultural_context:
+    - Adapt the expression of Envy, jealousy, and comparison to direct or indirect communication, collective
+      or individual decision structures, local norms, faith or secular commitments, and role obligations
+      while preserving consent and dignity.
+    resource_variants:
+    - When a real Envy, jealousy, and comparison opportunity is unavailable or inappropriate, use a fictional,
+      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+  pause_conditions:
+  - Pause Envy, jealousy, and comparison when capacity, consent, authority, privacy, access, care duties,
+    uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
+    unwise.
+  stop_conditions:
+  - Stop the Envy, jealousy, and comparison practice for harm, coercion, retaliation risk, emergency conditions,
+    unsafe exposure, worsening symptoms, protected information, legal or policy conflict, or pressure
+    to exceed the stated boundary.
+  escalation_conditions:
+  - Use the appropriate local safeguarding, emergency, organizational, legal, medical, financial, accessibility,
+    or other qualified channel when a Envy, jealousy, and comparison situation exceeds a voluntary low-stakes
+    practice.
+  professional_referral_conditions:
+  - Not therapy or diagnosis; severe or persistent symptoms require qualified mental-health or medical
+    care.
+evidence_and_scoring:
+  accepted_evidence_types:
+  - structured criteria observations for the bounded Envy, jealousy, and comparison actions
+  - explicit contradiction, adverse, defer, not-applicable, and unknown states
+  observation_contract_version: typed-evidence-rules-v1
+  check_in_fields:
+  - c0708_a1_primary
+  - c0708_a1_boundary
+  - c0708_a1_adverse
+  - c0708_a2_primary
+  - c0708_a2_boundary
+  - c0708_a2_adverse
+  - c0708_a3_primary
+  - c0708_a3_boundary
+  - c0708_a3_adverse
+  adverse_or_contradictory_indicators:
+  - The Envy, jealousy, and comparison action exceeded consent, authority, privacy, qualification, role,
+    burden, or safety boundaries.
+  - The evidence contradicted the intended Envy, jealousy, and comparison criterion, depended on coercion
+    or hidden private content, or could not distinguish the protocol from contextual change.
+  independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
+    for Envy, jealousy, and comparison explicitly; support can enable access and never reduces dignity
+    or silently changes the typed value.
+  context_transfer_rule: Evidence remains limited to the chosen Envy, jealousy, and comparison context,
+    action, role, pathway, and assessment epoch; it does not establish cross-context reliability.
+  repetition_rule: Each Envy, jealousy, and comparison observation requires a distinct immutable origin;
+    duplicate origins are rejected and later repetitions use the typed contract's explicit diminishing
+    multipliers.
+  recency_rule: Generated Envy, jealousy, and comparison rules withhold observations older than 90 days;
+    no unrecorded retention or carry-forward assumption applies.
+  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
+    target—Converts comparison into gratitude, boundary setting, learning, or a chosen goal.—not completion,
+    confidence, conformity, output, independence, or worth.
+  evidence_quality_rubric: Quality for Envy, jealousy, and comparison requires a bounded context, allowlisted
+    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
+    and artifact contents are excluded.
+  scoring_eligibility: This package is non-scored and production-ineligible.
+  competency_contribution: Designated primary measurements may produce context-bound direct Envy, jealousy,
+    and comparison evidence only under offline typed evaluation; protocol performance remains distinct
+    and is never counted twice.
+  canonical_lever_allocation: parent_competency_mapping
+  recommendation_target_lever_ids:
+  - L05
+  - L06
+  - L07
+  - L09
+  minimum_evidence_before_state_update: No current-state update is permitted for this Envy, jealousy,
+    and comparison draft under SP-NON-SCORED-REFLECTION, regardless of completion or evidence quantity.
+  withholding_conditions:
+  - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
+    or adverse Envy, jealousy, and comparison evidence.
+  - Withhold any record containing private narrative, artifact contents, another person's identity, unsupported
+    inference, or evidence outside its assessment epoch.
+completion_and_review:
+  completion_criteria:
+  - The identify the non-emergency boundary for envy, jealousy, and comparison action was attempted or
+    explicitly deferred.
+  - The prepare one safe envy, jealousy, and comparison support step action was attempted or explicitly
+    deferred.
+  - The review the envy, jealousy, and comparison plan against stop conditions action preserved a limited
+    conclusion, contradiction, or inconclusive result.
+  completion_rules:
+    minimum_completed: 2
+    substantive_markers:
+    - c0708_a1_primary
+    - c0708_a2_primary
+    - c0708_a3_primary
+    marker_mode: any
+  mastery_disclaimer: Completing this practice does not establish mastery.
+  progression_criteria: Repeat or broaden Envy, jealousy, and comparison only when the initial context
+    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
+    named without assuming transfer.
+  transfer_limit: Three bounded actions do not establish Envy, jealousy, and comparison across roles,
+    cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
+    settings.
+  reflection:
+    before: What does Envy, jealousy, and comparison require in this exact context, what remains outside
+      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
+    during: Which observable Envy, jealousy, and comparison criterion is present, absent, mixed, or unknown,
+      and are consent, privacy, access, burden, and stop conditions still intact?
+    after: How did the result compare with 'Converts comparison into gratitude, boundary setting, learning,
+      or a chosen goal.', what contradiction or missing context matters most, and should this Envy, jealousy,
+      and comparison design be repeated, adapted, deferred, stopped, or referred?
+  review_guidance:
+    repeat: Repeat the same bounded Envy, jealousy, and comparison design only when the context and burden
+      remain appropriate.
+    adapt: Change the Envy, jealousy, and comparison medium, scope, support, timing, criteria, or context
+      while preserving provenance and the narrower evidence claim.
+    stop: Stop Envy, jealousy, and comparison when the practice becomes coercive, unsafe, privacy-invasive,
+      role-inappropriate, professionally restricted, or harmful.
+    escalate: Use appropriate qualified or emergency support for Envy, jealousy, and comparison questions
+      beyond this educational source-only boundary.
+  evidence_examples:
+    supportive: The bounded Envy, jealousy, and comparison criteria were observed with provenance and
+      no adverse boundary signal in the selected context.
+    mixed: Some Envy, jealousy, and comparison criteria were observed while burden, support, contextual
+      change, or a contradiction limited the conclusion.
+    contradictory: The observed result opposed the intended Envy, jealousy, and comparison criterion,
+      introduced harm or coercion, or showed the design was not workable.
+    inconclusive: The Envy, jealousy, and comparison action was deferred, not observed, not applicable,
+      stale, insufficiently bounded, or too confounded to interpret.
+presentation:
+  setup_copy:
+    context_heading: Choose one bounded context for Envy, jealousy, and comparison.
+    boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
+    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Envy, jealousy,
+      and comparison.
+  check_in_labels:
+    c0708_a1_primary: The bounded Envy, jealousy, and comparison criterion for action 1 was observed
+    c0708_a1_boundary: Action 1 stayed inside its stated Envy, jealousy, and comparison boundary
+    c0708_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
+    c0708_a2_primary: The bounded Envy, jealousy, and comparison criterion for action 2 was observed
+    c0708_a2_boundary: Action 2 stayed inside its stated Envy, jealousy, and comparison boundary
+    c0708_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
+    c0708_a3_primary: The bounded Envy, jealousy, and comparison criterion for action 3 was observed
+    c0708_a3_boundary: Action 3 stayed inside its stated Envy, jealousy, and comparison boundary
+    c0708_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
+  completion_copy: Complete the bounded Envy, jealousy, and comparison review without claiming mastery,
+    broad transfer, professional validation, or score activation.
+  plain_language_evidence: The structured record shows what happened in one limited Envy, jealousy, and
+    comparison practice, including support, contradiction, defer, no result, or harm.
+  display_order: 92

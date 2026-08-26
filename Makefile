@@ -1,7 +1,7 @@
 PYTHON ?= .venv/bin/python
 APP_DATA_DIR ?= $(CURDIR)/var
 
-.PHONY: format lint test e2e migrate seed evidence-backfill evidence-verify score-rebuild score-verify pilot-check practice-reports practice-report-check curriculum-check competency-evidence-reports competency-evidence-report-check competency-evidence-check context-check personal-os-check context-priority-check m6c-pilot-check m6d-01-check run compose-up compose-down compose-smoke backup
+.PHONY: format lint test e2e migrate seed evidence-backfill evidence-verify score-rebuild score-verify pilot-check practice-reports practice-report-check curriculum-check full-frontier-check competency-evidence-reports competency-evidence-report-check competency-evidence-check context-check personal-os-check context-priority-check m6c-pilot-check m6d-01-check run compose-up compose-down compose-smoke backup
 
 format:
 	$(PYTHON) -m ruff format .
@@ -62,6 +62,10 @@ practice-report-check:
 
 curriculum-check:
 	PYTHON_BIN="$(PYTHON)" ./scripts/verify_expansion_readiness.sh
+
+full-frontier-check:
+	$(PYTHON) scripts/author_full_competency_frontier.py --check
+	$(PYTHON) -m pytest tests/test_full_competency_frontier.py tests/test_practice_content.py::test_generated_coverage_and_originality_reports_are_current_and_complete
 
 competency-evidence-reports:
 	APP_DATA_DIR="$(APP_DATA_DIR)" DJANGO_SECRET_KEY=local-development-secret APP_DEBUG=true \

@@ -1,11 +1,11 @@
 {
   "boundary": "Software readiness is additive. Specialist review and research-gap status are reported from canonical governance; production eligibility remains a separate explicit contract.",
   "catalog": {
-    "canonical_protocol_packages": 9,
+    "canonical_protocol_packages": 383,
     "competencies": 383,
-    "practice_actions": 29,
+    "practice_actions": 1151,
     "score_active_protocols": 1,
-    "uncovered_competencies": 374
+    "uncovered_competencies": 0
   },
   "contract_version": "GG-COMPETENCY-EVIDENCE-READINESS-1.0",
   "contracts": {
@@ -65,7 +65,7 @@
     "synthetically_executed": 6
   },
   "software_ready": true,
-  "source_typed_protocols": 4,
+  "source_typed_protocols": 378,
   "specialist_review_complete": false,
   "typed_production_protocols": 0,
   "typed_score_active_protocols": 0

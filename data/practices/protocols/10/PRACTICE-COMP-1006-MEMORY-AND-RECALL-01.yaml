@@ -1,0 +1,384 @@
+schema_version: GG-PRACTICE-CONTENT-1.0
+protocol_version: 0.1.0
+stable_id: PRACTICE-COMP-1006-MEMORY-AND-RECALL-01
+slug: c1006-memory-and-recall-practice
+name: Bounded Memory and recall Practice
+parent_competency_id: '10.06'
+domain_id: '10'
+governance:
+  availability: inactive
+  editorial_status: draft
+  runtime_projection: none
+  risk_class_id: RISK-LOW
+  scoring_policy_id: SP-SHADOW-ONLY
+  scoring_status: shadow_only
+  source_ids:
+  - SRC-CANONICAL-CURRICULUM-V2
+  authoring:
+    provenance: Individually materialized source-only frontier package for canonical competency 10.06
+      (Memory and recall); canonical scope, evidence target, classification, domain boundary, and parent
+      mapping remain explicit and reviewable.
+    content_review_status: pending
+    research_review_status: internal_sources_only_external_review_required
+    safety_review_status: pending
+    accessibility_review_status: pending
+    originality_review_status: pending
+    ui_test_status: not_applicable
+    last_reviewed: null
+    known_gap_ids:
+    - RG-M6A-001
+    - RG-M6A-002
+    expert_review_ids:
+    - ER-M6A-003
+  legacy_compatibility_exceptions: []
+  deprecation:
+    deprecated: false
+    replaced_by: null
+meaning_and_fit:
+  purpose: 'Practice Memory and recall through a bounded longitudinal review bounded by the canonical
+    scope: Train working memory appropriately and use mnemonics, retrieval cues, stories, and spaced review
+    for long-term memory.'
+  why_recommended: 'The parent competency identifies this limited evidence target: Recalls relevant knowledge
+    without depending entirely on recognition or external lookup. The protocol creates a small opportunity
+    to examine that target without treating completion as broad capability.'
+  claims:
+  - statement: Using the canonical scope and evidence target for Memory and recall is a traceable product-design
+      basis for a source-only draft protocol.
+    classification: product_design_judgment
+    source_ids:
+    - SRC-CANONICAL-CURRICULUM-V2
+    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
+      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+  applicability_question: Does a voluntary, bounded Memory and recall practice fit the person's current
+    role, pathway, capacity, authority, resources, and safety conditions?
+  not_applicable_behavior: Record Memory and recall as not applicable, consciously unchosen, or deferred
+    without penalty when the role, pathway, capacity, authority, opportunity, or safe context is absent.
+  readiness_considerations: Proceed only when the person can freely choose a limited Memory and recall
+    context, understand the source-only status, and stop without losing safety, care, employment, housing,
+    services, relationship access, or dignity.
+  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Memory and
+    recall; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency, or dependence
+    for evidence.
+  prerequisites:
+  - One user-chosen context that genuinely fits the canonical scope of Memory and recall.
+  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  dependencies: []
+  safe_alternatives:
+  - Use a fictional, public, retrospective, or category-level case for Memory and recall instead of a
+    live situation.
+  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  role_conditions:
+  - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
+    held before the practice applies.
+  pathway_conditions:
+  - Religious, secular, cultural, disability-adapted, collective, and individual pathways may express
+    Memory and recall differently while preserving consent, evidence limits, safety, and equal dignity.
+  worldview_conditions:
+  - The practice does not require one worldview or treat disagreement about Memory and recall as inferiority;
+    competing reasonable interpretations and conscientious refusal remain visible.
+intervention:
+  protocol_class: PF-LONGITUDINAL-REVIEW
+  duration_days: 10
+  cadence: Complete three bounded Memory and recall actions over ten days, preserving explicit not-applicable,
+    defer, interruption, adverse, and unknown outcomes.
+  setup: Choose one context for Memory and recall; copy the canonical scope and evidence target into a
+    private working note; define the action boundary, valid supports, privacy limit, and stop condition
+    before beginning.
+  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Memory and
+    recall. Do not store private prose, names, identities, diagnoses, allegations, credentials, account
+    data, protected work information, intimate detail, artifact contents, observer narrative, or another
+    person's secrets. This source-only draft is not surveillance, professional advice, treatment, certification,
+    or proof of character.
+  expected_burden: About 45-75 minutes total across setup, three Memory and recall actions, and review;
+    scope may be reduced or deferred for access, care, health, workload, conscience, or resource reasons.
+  action_count_rationale: null
+  foreseeable_misuse:
+  - Using the Memory and recall protocol to rank worth, coerce participation, demand disclosure, override
+    rest or care, certify competence, or justify decisions beyond the recorded context.
+  - Treating a completed Memory and recall action, a polished artifact, agreement, confidence, speed,
+    independence, or output as mastery or universal transfer.
+  exclusions:
+  - Any Memory and recall situation involving emergency response, abuse, retaliation, illegal conduct,
+    medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous equipment,
+    or other consequences beyond a reversible source-only exercise.
+  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
+    practice.
+  actions:
+  - stable_id: PRACTICE-COMP-1006-MEMORY-AND-RECALL-01-A1
+    sequence: 1
+    title: Define indicators for Memory and recall
+    instructions: 'Choose two to four observable, privacy-minimized indicators for Memory and recall,
+      plus a missing-data rule and one contradiction indicator. Bound the review to one role or context
+      using this scope: Train working memory appropriately and use mnemonics, retrieval cues, stories,
+      and spaced review for long-term memory.'
+    expected_time: 15-25 minutes
+    due_within_days: 3
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-1006-MEMORY-AND-RECALL-01
+      action_stable_id: PRACTICE-COMP-1006-MEMORY-AND-RECALL-01-A1
+      competency_stable_id: '10.06'
+      scoring_policy_id: SP-SHADOW-ONLY
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c1006_a1_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c1006_a1_primary
+        kind: artifact
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - c1006_a1_indicators_observable
+        - c1006_a1_missing_data_rule_present
+        - c1006_a1_contradiction_indicator_present
+      - measurement_id: c1006_a1_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c1006_a1_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  - stable_id: PRACTICE-COMP-1006-MEMORY-AND-RECALL-01-A2
+    sequence: 2
+    title: Observe Memory and recall across three checkpoints
+    instructions: Collect up to three brief Memory and recall checkpoints across the selected period or
+      contexts. Record unknown, not observed, not applicable, defer, and adverse outcomes as valid states;
+      do not infer a trend from prose length, mood, or one unusually good or bad event.
+    expected_time: 15-25 minutes
+    due_within_days: 7
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-1006-MEMORY-AND-RECALL-01
+      action_stable_id: PRACTICE-COMP-1006-MEMORY-AND-RECALL-01-A2
+      competency_stable_id: '10.06'
+      scoring_policy_id: SP-SHADOW-ONLY
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c1006_a2_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c1006_a2_primary
+        kind: count
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - firsthand_self_report
+        direction: at_least
+        minimum: '0'
+        target: '1'
+        maximum: '3'
+      - measurement_id: c1006_a2_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c1006_a2_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  - stable_id: PRACTICE-COMP-1006-MEMORY-AND-RECALL-01-A3
+    sequence: 3
+    title: Review the limited Memory and recall pattern
+    instructions: 'Compare the checkpoints, name the strongest contradiction or missing context, and choose
+      repeat, adapt, stop, or seek support. Treat this target as a review criterion rather than proof
+      of transfer: Recalls relevant knowledge without depending entirely on recognition or external lookup.'
+    expected_time: 15-25 minutes
+    due_within_days: 10
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-1006-MEMORY-AND-RECALL-01
+      action_stable_id: PRACTICE-COMP-1006-MEMORY-AND-RECALL-01-A3
+      competency_stable_id: '10.06'
+      scoring_policy_id: SP-SHADOW-ONLY
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c1006_a3_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c1006_a3_primary
+        kind: artifact
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - c1006_a3_checkpoints_compared
+        - c1006_a3_contradiction_or_gap_named
+        - c1006_a3_transfer_limit_preserved
+      - measurement_id: c1006_a3_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c1006_a3_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  adaptations:
+    low_resource:
+    - Use paper, an offline note, a library resource, a public example, or a no-cost conversation for
+      Memory and recall; no purchase, subscription, travel, credential, or public artifact is required.
+    accessibility:
+    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
+      level for Memory and recall; assistive technology, interpretation, a support person, and a deferred
+      action are valid without penalty.
+    cultural_context:
+    - Adapt the expression of Memory and recall to direct or indirect communication, collective or individual
+      decision structures, local norms, faith or secular commitments, and role obligations while preserving
+      consent and dignity.
+    resource_variants:
+    - When a real Memory and recall opportunity is unavailable or inappropriate, use a fictional, historical,
+      public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+  pause_conditions:
+  - Pause Memory and recall when capacity, consent, authority, privacy, access, care duties, uncertainty,
+    distress, fatigue, pain, resource scarcity, or changed circumstances make the next action unwise.
+  stop_conditions:
+  - Stop the Memory and recall practice for harm, coercion, retaliation risk, emergency conditions, unsafe
+    exposure, worsening symptoms, protected information, legal or policy conflict, or pressure to exceed
+    the stated boundary.
+  escalation_conditions:
+  - Use the appropriate local safeguarding, emergency, organizational, legal, medical, financial, accessibility,
+    or other qualified channel when a Memory and recall situation exceeds a voluntary low-stakes practice.
+  professional_referral_conditions:
+  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
+    practice.
+evidence_and_scoring:
+  accepted_evidence_types:
+  - structured criteria observations for the bounded Memory and recall actions
+  - explicit contradiction, adverse, defer, not-applicable, and unknown states
+  observation_contract_version: typed-evidence-rules-v1
+  check_in_fields:
+  - c1006_a1_primary
+  - c1006_a1_boundary
+  - c1006_a1_adverse
+  - c1006_a2_primary
+  - c1006_a2_boundary
+  - c1006_a2_adverse
+  - c1006_a3_primary
+  - c1006_a3_boundary
+  - c1006_a3_adverse
+  adverse_or_contradictory_indicators:
+  - The Memory and recall action exceeded consent, authority, privacy, qualification, role, burden, or
+    safety boundaries.
+  - The evidence contradicted the intended Memory and recall criterion, depended on coercion or hidden
+    private content, or could not distinguish the protocol from contextual change.
+  independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
+    for Memory and recall explicitly; support can enable access and never reduces dignity or silently
+    changes the typed value.
+  context_transfer_rule: Evidence remains limited to the chosen Memory and recall context, action, role,
+    pathway, and assessment epoch; it does not establish cross-context reliability.
+  repetition_rule: Each Memory and recall observation requires a distinct immutable origin; duplicate
+    origins are rejected and later repetitions use the typed contract's explicit diminishing multipliers.
+  recency_rule: Generated Memory and recall rules withhold observations older than 90 days; no unrecorded
+    retention or carry-forward assumption applies.
+  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
+    target—Recalls relevant knowledge without depending entirely on recognition or external lookup.—not
+    completion, confidence, conformity, output, independence, or worth.
+  evidence_quality_rubric: Quality for Memory and recall requires a bounded context, allowlisted observations,
+    provenance, contradiction and adverse handling, and preserved uncertainty; free text and artifact
+    contents are excluded.
+  scoring_eligibility: This package is source-only, shadow-only, and production-ineligible.
+  competency_contribution: Designated primary measurements may produce context-bound direct Memory and
+    recall evidence only under offline typed evaluation; protocol performance remains distinct and is
+    never counted twice.
+  canonical_lever_allocation: parent_competency_mapping
+  recommendation_target_lever_ids:
+  - L08
+  - L10
+  - L15
+  minimum_evidence_before_state_update: No current-state update is permitted for this Memory and recall
+    draft under SP-SHADOW-ONLY, regardless of completion or evidence quantity.
+  withholding_conditions:
+  - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
+    or adverse Memory and recall evidence.
+  - Withhold any record containing private narrative, artifact contents, another person's identity, unsupported
+    inference, or evidence outside its assessment epoch.
+completion_and_review:
+  completion_criteria:
+  - The define indicators for memory and recall action was attempted or explicitly deferred.
+  - The observe memory and recall across three checkpoints action was attempted or explicitly deferred.
+  - The review the limited memory and recall pattern action preserved a limited conclusion, contradiction,
+    or inconclusive result.
+  completion_rules:
+    minimum_completed: 2
+    substantive_markers:
+    - c1006_a1_primary
+    - c1006_a2_primary
+    - c1006_a3_primary
+    marker_mode: any
+  mastery_disclaimer: Completing this practice does not establish mastery.
+  progression_criteria: Repeat or broaden Memory and recall only when the initial context remained safe,
+    the evidence criteria were usable, burden was acceptable, and a new context can be named without assuming
+    transfer.
+  transfer_limit: Three bounded actions do not establish Memory and recall across roles, cultures, relationships,
+    seasons, stress levels, disability states, institutions, or high-consequence settings.
+  reflection:
+    before: What does Memory and recall require in this exact context, what remains outside my role or
+      authority, and which scope sentence or evidence criterion will keep the practice honest?
+    during: Which observable Memory and recall criterion is present, absent, mixed, or unknown, and are
+      consent, privacy, access, burden, and stop conditions still intact?
+    after: How did the result compare with 'Recalls relevant knowledge without depending entirely on recognition
+      or external lookup.', what contradiction or missing context matters most, and should this Memory
+      and recall design be repeated, adapted, deferred, stopped, or referred?
+  review_guidance:
+    repeat: Repeat the same bounded Memory and recall design only when the context and burden remain appropriate.
+    adapt: Change the Memory and recall medium, scope, support, timing, criteria, or context while preserving
+      provenance and the narrower evidence claim.
+    stop: Stop Memory and recall when the practice becomes coercive, unsafe, privacy-invasive, role-inappropriate,
+      professionally restricted, or harmful.
+    escalate: Use appropriate qualified or emergency support for Memory and recall questions beyond this
+      educational source-only boundary.
+  evidence_examples:
+    supportive: The bounded Memory and recall criteria were observed with provenance and no adverse boundary
+      signal in the selected context.
+    mixed: Some Memory and recall criteria were observed while burden, support, contextual change, or
+      a contradiction limited the conclusion.
+    contradictory: The observed result opposed the intended Memory and recall criterion, introduced harm
+      or coercion, or showed the design was not workable.
+    inconclusive: The Memory and recall action was deferred, not observed, not applicable, stale, insufficiently
+      bounded, or too confounded to interpret.
+presentation:
+  setup_copy:
+    context_heading: Choose one bounded context for Memory and recall.
+    boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
+    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Memory and
+      recall.
+  check_in_labels:
+    c1006_a1_primary: The bounded Memory and recall criterion for action 1 was observed
+    c1006_a1_boundary: Action 1 stayed inside its stated Memory and recall boundary
+    c1006_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
+    c1006_a2_primary: The bounded Memory and recall criterion for action 2 was observed
+    c1006_a2_boundary: Action 2 stayed inside its stated Memory and recall boundary
+    c1006_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
+    c1006_a3_primary: The bounded Memory and recall criterion for action 3 was observed
+    c1006_a3_boundary: Action 3 stayed inside its stated Memory and recall boundary
+    c1006_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
+  completion_copy: Complete the bounded Memory and recall review without claiming mastery, broad transfer,
+    professional validation, or score activation.
+  plain_language_evidence: The structured record shows what happened in one limited Memory and recall
+    practice, including support, contradiction, defer, no result, or harm.
+  display_order: 128
