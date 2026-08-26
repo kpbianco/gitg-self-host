@@ -67,7 +67,9 @@ jobs:
   compose:
     name: Docker Compose deployment drill
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    # The full backup/recreation/restore drill validates the complete source
+    # corpus repeatedly and can exceed 20 minutes under runner variance.
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v6
       - run: make compose-smoke
