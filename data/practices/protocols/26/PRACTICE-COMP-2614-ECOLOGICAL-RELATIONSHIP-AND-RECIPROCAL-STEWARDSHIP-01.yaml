@@ -1,0 +1,411 @@
+schema_version: GG-PRACTICE-CONTENT-1.0
+protocol_version: 0.1.0
+stable_id: PRACTICE-COMP-2614-ECOLOGICAL-RELATIONSHIP-AND-RECIPROCAL-STEWARDSHIP-01
+slug: c2614-ecological-relationship-and-reciprocal-stewardship-practice
+name: Bounded Ecological relationship and reciprocal stewardship Practice
+parent_competency_id: '26.14'
+domain_id: '26'
+governance:
+  availability: inactive
+  editorial_status: draft
+  runtime_projection: none
+  risk_class_id: RISK-MODERATE
+  scoring_policy_id: SP-SHADOW-ONLY
+  scoring_status: shadow_only
+  source_ids:
+  - SRC-CANONICAL-CURRICULUM-V2
+  authoring:
+    provenance: Individually materialized source-only frontier package for canonical competency 26.14
+      (Ecological relationship and reciprocal stewardship); canonical scope, evidence target, classification,
+      domain boundary, and parent mapping remain explicit and reviewable.
+    content_review_status: pending
+    research_review_status: internal_sources_only_external_review_required
+    safety_review_status: pending
+    accessibility_review_status: pending
+    originality_review_status: pending
+    ui_test_status: not_applicable
+    last_reviewed: null
+    known_gap_ids:
+    - RG-M6A-001
+    - RG-M6A-002
+    expert_review_ids:
+    - ER-M6A-003
+  legacy_compatibility_exceptions: []
+  deprecation:
+    deprecated: false
+    replaced_by: null
+meaning_and_fit:
+  purpose: 'Practice Ecological relationship and reciprocal stewardship through a artifact-and-review
+    practice bounded by the canonical scope: Move beyond nature as scenery by learning local ecology,
+    limits, restoration, and reciprocal responsibilities.'
+  why_recommended: 'The parent competency identifies this limited evidence target: Contributes to the
+    health or understanding of a specific place over time. The protocol creates a small opportunity to
+    examine that target without treating completion as broad capability.'
+  claims:
+  - statement: Using the canonical scope and evidence target for Ecological relationship and reciprocal
+      stewardship is a traceable product-design basis for a source-only draft protocol.
+    classification: product_design_judgment
+    source_ids:
+    - SRC-CANONICAL-CURRICULUM-V2
+    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
+      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+  applicability_question: Does a voluntary, bounded Ecological relationship and reciprocal stewardship
+    practice fit the person's current role, pathway, capacity, authority, resources, and safety conditions?
+  not_applicable_behavior: Record Ecological relationship and reciprocal stewardship as not applicable,
+    consciously unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity,
+    or safe context is absent.
+  readiness_considerations: Proceed only when the person can freely choose a limited Ecological relationship
+    and reciprocal stewardship context, understand the source-only status, and stop without losing safety,
+    care, employment, housing, services, relationship access, or dignity.
+  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Ecological
+    relationship and reciprocal stewardship; do not manufacture conflict, deprivation, exposure, disclosure,
+    danger, urgency, or dependence for evidence.
+  prerequisites:
+  - One user-chosen context that genuinely fits the canonical scope of Ecological relationship and reciprocal
+    stewardship.
+  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  dependencies: []
+  safe_alternatives:
+  - Use a fictional, public, retrospective, or category-level case for Ecological relationship and reciprocal
+    stewardship instead of a live situation.
+  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  role_conditions:
+  - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
+    held before the practice applies.
+  pathway_conditions:
+  - Religious, secular, cultural, disability-adapted, collective, and individual pathways may express
+    Ecological relationship and reciprocal stewardship differently while preserving consent, evidence
+    limits, safety, and equal dignity.
+  worldview_conditions:
+  - The practice does not require one worldview or treat disagreement about Ecological relationship and
+    reciprocal stewardship as inferiority; competing reasonable interpretations and conscientious refusal
+    remain visible.
+intervention:
+  protocol_class: PF-ARTIFACT-PLAN
+  duration_days: 10
+  cadence: Complete three bounded Ecological relationship and reciprocal stewardship actions over ten
+    days, preserving explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
+  setup: Choose one context for Ecological relationship and reciprocal stewardship; copy the canonical
+    scope and evidence target into a private working note; define the action boundary, valid supports,
+    privacy limit, and stop condition before beginning.
+  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Ecological
+    relationship and reciprocal stewardship. Do not store private prose, names, identities, diagnoses,
+    allegations, credentials, account data, protected work information, intimate detail, artifact contents,
+    observer narrative, or another person's secrets. This source-only draft is not surveillance, professional
+    advice, treatment, certification, or proof of character.
+  expected_burden: About 45-75 minutes total across setup, three Ecological relationship and reciprocal
+    stewardship actions, and review; scope may be reduced or deferred for access, care, health, workload,
+    conscience, or resource reasons.
+  action_count_rationale: null
+  foreseeable_misuse:
+  - Using the Ecological relationship and reciprocal stewardship protocol to rank worth, coerce participation,
+    demand disclosure, override rest or care, certify competence, or justify decisions beyond the recorded
+    context.
+  - Treating a completed Ecological relationship and reciprocal stewardship action, a polished artifact,
+    agreement, confidence, speed, independence, or output as mastery or universal transfer.
+  exclusions:
+  - Any Ecological relationship and reciprocal stewardship situation involving emergency response, abuse,
+    retaliation, illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
+    hazardous equipment, or other consequences beyond a reversible source-only exercise.
+  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
+    practice.
+  actions:
+  - stable_id: PRACTICE-COMP-2614-ECOLOGICAL-RELATIONSHIP-AND-RECIPROCAL-STEWARDSHIP-01-A1
+    sequence: 1
+    title: Define a rubric for Ecological relationship and reciprocal stewardship
+    instructions: 'Turn the canonical scope for Ecological relationship and reciprocal stewardship into
+      three to five inspectable criteria: Move beyond nature as scenery by learning local ecology, limits,
+      restoration, and reciprocal responsibilities. Keep the rubric bounded to one current context and
+      include one criterion for uncertainty, access, or competing obligations.'
+    expected_time: 15-25 minutes
+    due_within_days: 3
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-2614-ECOLOGICAL-RELATIONSHIP-AND-RECIPROCAL-STEWARDSHIP-01
+      action_stable_id: PRACTICE-COMP-2614-ECOLOGICAL-RELATIONSHIP-AND-RECIPROCAL-STEWARDSHIP-01-A1
+      competency_stable_id: '26.14'
+      scoring_policy_id: SP-SHADOW-ONLY
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c2614_a1_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c2614_a1_primary
+        kind: artifact
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - c2614_a1_criteria_trace_to_scope
+        - c2614_a1_context_bounded
+        - c2614_a1_constraint_included
+      - measurement_id: c2614_a1_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c2614_a1_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  - stable_id: PRACTICE-COMP-2614-ECOLOGICAL-RELATIONSHIP-AND-RECIPROCAL-STEWARDSHIP-01-A2
+    sequence: 2
+    title: Build one Ecological relationship and reciprocal stewardship artifact
+    instructions: Create the smallest useful plan, checklist, diagram, record, or other artifact that
+      applies the rubric for Ecological relationship and reciprocal stewardship. Store only category-level
+      information and omit names, secrets, credentials, diagnoses, protected work detail, and unnecessary
+      third-party information.
+    expected_time: 15-25 minutes
+    due_within_days: 7
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-2614-ECOLOGICAL-RELATIONSHIP-AND-RECIPROCAL-STEWARDSHIP-01
+      action_stable_id: PRACTICE-COMP-2614-ECOLOGICAL-RELATIONSHIP-AND-RECIPROCAL-STEWARDSHIP-01-A2
+      competency_stable_id: '26.14'
+      scoring_policy_id: SP-SHADOW-ONLY
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c2614_a2_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c2614_a2_primary
+        kind: artifact
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - c2614_a2_artifact_matches_rubric
+        - c2614_a2_minimum_private_detail
+        - c2614_a2_usable_next_step_present
+      - measurement_id: c2614_a2_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c2614_a2_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  - stable_id: PRACTICE-COMP-2614-ECOLOGICAL-RELATIONSHIP-AND-RECIPROCAL-STEWARDSHIP-01-A3
+    sequence: 3
+    title: Stress-test and revise the Ecological relationship and reciprocal stewardship artifact
+    instructions: 'Test the artifact against one realistic variation, counterexample, or changed constraint.
+      Revise it only where the test exposes a gap, then compare the result with this evidence target:
+      Contributes to the health or understanding of a specific place over time.'
+    expected_time: 15-25 minutes
+    due_within_days: 10
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-2614-ECOLOGICAL-RELATIONSHIP-AND-RECIPROCAL-STEWARDSHIP-01
+      action_stable_id: PRACTICE-COMP-2614-ECOLOGICAL-RELATIONSHIP-AND-RECIPROCAL-STEWARDSHIP-01-A3
+      competency_stable_id: '26.14'
+      scoring_policy_id: SP-SHADOW-ONLY
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c2614_a3_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c2614_a3_primary
+        kind: scenario
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - c2614_a3_variation_tested
+        - c2614_a3_revision_traceable
+        - c2614_a3_target_evidence_compared
+      - measurement_id: c2614_a3_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c2614_a3_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  adaptations:
+    low_resource:
+    - Use paper, an offline note, a library resource, a public example, or a no-cost conversation for
+      Ecological relationship and reciprocal stewardship; no purchase, subscription, travel, credential,
+      or public artifact is required.
+    accessibility:
+    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
+      level for Ecological relationship and reciprocal stewardship; assistive technology, interpretation,
+      a support person, and a deferred action are valid without penalty.
+    cultural_context:
+    - Adapt the expression of Ecological relationship and reciprocal stewardship to direct or indirect
+      communication, collective or individual decision structures, local norms, faith or secular commitments,
+      and role obligations while preserving consent and dignity.
+    resource_variants:
+    - When a real Ecological relationship and reciprocal stewardship opportunity is unavailable or inappropriate,
+      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
+      evidence classification.
+  pause_conditions:
+  - Pause Ecological relationship and reciprocal stewardship when capacity, consent, authority, privacy,
+    access, care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances
+    make the next action unwise.
+  stop_conditions:
+  - Stop the Ecological relationship and reciprocal stewardship practice for harm, coercion, retaliation
+    risk, emergency conditions, unsafe exposure, worsening symptoms, protected information, legal or policy
+    conflict, or pressure to exceed the stated boundary.
+  escalation_conditions:
+  - Use the appropriate local safeguarding, emergency, organizational, legal, medical, financial, accessibility,
+    or other qualified channel when a Ecological relationship and reciprocal stewardship situation exceeds
+    a voluntary low-stakes practice.
+  professional_referral_conditions:
+  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
+    practice.
+evidence_and_scoring:
+  accepted_evidence_types:
+  - structured criteria observations for the bounded Ecological relationship and reciprocal stewardship
+    actions
+  - explicit contradiction, adverse, defer, not-applicable, and unknown states
+  observation_contract_version: typed-evidence-rules-v1
+  check_in_fields:
+  - c2614_a1_primary
+  - c2614_a1_boundary
+  - c2614_a1_adverse
+  - c2614_a2_primary
+  - c2614_a2_boundary
+  - c2614_a2_adverse
+  - c2614_a3_primary
+  - c2614_a3_boundary
+  - c2614_a3_adverse
+  adverse_or_contradictory_indicators:
+  - The Ecological relationship and reciprocal stewardship action exceeded consent, authority, privacy,
+    qualification, role, burden, or safety boundaries.
+  - The evidence contradicted the intended Ecological relationship and reciprocal stewardship criterion,
+    depended on coercion or hidden private content, or could not distinguish the protocol from contextual
+    change.
+  independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
+    for Ecological relationship and reciprocal stewardship explicitly; support can enable access and never
+    reduces dignity or silently changes the typed value.
+  context_transfer_rule: Evidence remains limited to the chosen Ecological relationship and reciprocal
+    stewardship context, action, role, pathway, and assessment epoch; it does not establish cross-context
+    reliability.
+  repetition_rule: Each Ecological relationship and reciprocal stewardship observation requires a distinct
+    immutable origin; duplicate origins are rejected and later repetitions use the typed contract's explicit
+    diminishing multipliers.
+  recency_rule: Generated Ecological relationship and reciprocal stewardship rules withhold observations
+    older than 90 days; no unrecorded retention or carry-forward assumption applies.
+  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
+    target—Contributes to the health or understanding of a specific place over time.—not completion, confidence,
+    conformity, output, independence, or worth.
+  evidence_quality_rubric: Quality for Ecological relationship and reciprocal stewardship requires a bounded
+    context, allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
+    free text and artifact contents are excluded.
+  scoring_eligibility: This package is source-only, shadow-only, and production-ineligible.
+  competency_contribution: Designated primary measurements may produce context-bound direct Ecological
+    relationship and reciprocal stewardship evidence only under offline typed evaluation; protocol performance
+    remains distinct and is never counted twice.
+  canonical_lever_allocation: parent_competency_mapping
+  recommendation_target_lever_ids:
+  - L03
+  - L30
+  - L31
+  - L35
+  minimum_evidence_before_state_update: No current-state update is permitted for this Ecological relationship
+    and reciprocal stewardship draft under SP-SHADOW-ONLY, regardless of completion or evidence quantity.
+  withholding_conditions:
+  - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
+    or adverse Ecological relationship and reciprocal stewardship evidence.
+  - Withhold any record containing private narrative, artifact contents, another person's identity, unsupported
+    inference, or evidence outside its assessment epoch.
+completion_and_review:
+  completion_criteria:
+  - The define a rubric for ecological relationship and reciprocal stewardship action was attempted or
+    explicitly deferred.
+  - The build one ecological relationship and reciprocal stewardship artifact action was attempted or
+    explicitly deferred.
+  - The stress-test and revise the ecological relationship and reciprocal stewardship artifact action
+    preserved a limited conclusion, contradiction, or inconclusive result.
+  completion_rules:
+    minimum_completed: 2
+    substantive_markers:
+    - c2614_a1_primary
+    - c2614_a2_primary
+    - c2614_a3_primary
+    marker_mode: any
+  mastery_disclaimer: Completing this practice does not establish mastery.
+  progression_criteria: Repeat or broaden Ecological relationship and reciprocal stewardship only when
+    the initial context remained safe, the evidence criteria were usable, burden was acceptable, and a
+    new context can be named without assuming transfer.
+  transfer_limit: Three bounded actions do not establish Ecological relationship and reciprocal stewardship
+    across roles, cultures, relationships, seasons, stress levels, disability states, institutions, or
+    high-consequence settings.
+  reflection:
+    before: What does Ecological relationship and reciprocal stewardship require in this exact context,
+      what remains outside my role or authority, and which scope sentence or evidence criterion will keep
+      the practice honest?
+    during: Which observable Ecological relationship and reciprocal stewardship criterion is present,
+      absent, mixed, or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
+    after: How did the result compare with 'Contributes to the health or understanding of a specific place
+      over time.', what contradiction or missing context matters most, and should this Ecological relationship
+      and reciprocal stewardship design be repeated, adapted, deferred, stopped, or referred?
+  review_guidance:
+    repeat: Repeat the same bounded Ecological relationship and reciprocal stewardship design only when
+      the context and burden remain appropriate.
+    adapt: Change the Ecological relationship and reciprocal stewardship medium, scope, support, timing,
+      criteria, or context while preserving provenance and the narrower evidence claim.
+    stop: Stop Ecological relationship and reciprocal stewardship when the practice becomes coercive,
+      unsafe, privacy-invasive, role-inappropriate, professionally restricted, or harmful.
+    escalate: Use appropriate qualified or emergency support for Ecological relationship and reciprocal
+      stewardship questions beyond this educational source-only boundary.
+  evidence_examples:
+    supportive: The bounded Ecological relationship and reciprocal stewardship criteria were observed
+      with provenance and no adverse boundary signal in the selected context.
+    mixed: Some Ecological relationship and reciprocal stewardship criteria were observed while burden,
+      support, contextual change, or a contradiction limited the conclusion.
+    contradictory: The observed result opposed the intended Ecological relationship and reciprocal stewardship
+      criterion, introduced harm or coercion, or showed the design was not workable.
+    inconclusive: The Ecological relationship and reciprocal stewardship action was deferred, not observed,
+      not applicable, stale, insufficiently bounded, or too confounded to interpret.
+presentation:
+  setup_copy:
+    context_heading: Choose one bounded context for Ecological relationship and reciprocal stewardship.
+    boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
+    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Ecological
+      relationship and reciprocal stewardship.
+  check_in_labels:
+    c2614_a1_primary: The bounded Ecological relationship and reciprocal stewardship criterion for action
+      1 was observed
+    c2614_a1_boundary: Action 1 stayed inside its stated Ecological relationship and reciprocal stewardship
+      boundary
+    c2614_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
+    c2614_a2_primary: The bounded Ecological relationship and reciprocal stewardship criterion for action
+      2 was observed
+    c2614_a2_boundary: Action 2 stayed inside its stated Ecological relationship and reciprocal stewardship
+      boundary
+    c2614_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
+    c2614_a3_primary: The bounded Ecological relationship and reciprocal stewardship criterion for action
+      3 was observed
+    c2614_a3_boundary: Action 3 stayed inside its stated Ecological relationship and reciprocal stewardship
+      boundary
+    c2614_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
+  completion_copy: Complete the bounded Ecological relationship and reciprocal stewardship review without
+    claiming mastery, broad transfer, professional validation, or score activation.
+  plain_language_evidence: The structured record shows what happened in one limited Ecological relationship
+    and reciprocal stewardship practice, including support, contradiction, defer, no result, or harm.
+  display_order: 368

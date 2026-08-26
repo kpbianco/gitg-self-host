@@ -1,0 +1,388 @@
+schema_version: GG-PRACTICE-CONTENT-1.0
+protocol_version: 0.1.0
+stable_id: PRACTICE-COMP-2006-SERVICE-AND-VOLUNTEERING-01
+slug: c2006-service-and-volunteering-practice
+name: Bounded Service and volunteering Practice
+parent_competency_id: '20.06'
+domain_id: '20'
+governance:
+  availability: inactive
+  editorial_status: draft
+  runtime_projection: none
+  risk_class_id: RISK-MODERATE
+  scoring_policy_id: SP-SHADOW-ONLY
+  scoring_status: shadow_only
+  source_ids:
+  - SRC-CANONICAL-CURRICULUM-V2
+  authoring:
+    provenance: Individually materialized source-only frontier package for canonical competency 20.06
+      (Service and volunteering); canonical scope, evidence target, classification, domain boundary, and
+      parent mapping remain explicit and reviewable.
+    content_review_status: pending
+    research_review_status: internal_sources_only_external_review_required
+    safety_review_status: pending
+    accessibility_review_status: pending
+    originality_review_status: pending
+    ui_test_status: not_applicable
+    last_reviewed: null
+    known_gap_ids:
+    - RG-M6A-001
+    - RG-M6A-002
+    expert_review_ids:
+    - ER-M6A-003
+  legacy_compatibility_exceptions: []
+  deprecation:
+    deprecated: false
+    replaced_by: null
+meaning_and_fit:
+  purpose: 'Practice Service and volunteering through a consent-based community contribution bounded by
+    the canonical scope: Choose recurring work based on real community need, personal capacity, and sustainable
+    contribution.'
+  why_recommended: 'The parent competency identifies this limited evidence target: Service produces tangible
+    benefit and is maintained beyond initial enthusiasm. The protocol creates a small opportunity to examine
+    that target without treating completion as broad capability.'
+  claims:
+  - statement: Using the canonical scope and evidence target for Service and volunteering is a traceable
+      product-design basis for a source-only draft protocol.
+    classification: product_design_judgment
+    source_ids:
+    - SRC-CANONICAL-CURRICULUM-V2
+    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
+      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+  applicability_question: Does a voluntary, bounded Service and volunteering practice fit the person's
+    current role, pathway, capacity, authority, resources, and safety conditions?
+  not_applicable_behavior: Record Service and volunteering as not applicable, consciously unchosen, or
+    deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
+    is absent.
+  readiness_considerations: Proceed only when the person can freely choose a limited Service and volunteering
+    context, understand the source-only status, and stop without losing safety, care, employment, housing,
+    services, relationship access, or dignity.
+  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Service and
+    volunteering; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency, or
+    dependence for evidence.
+  prerequisites:
+  - One user-chosen context that genuinely fits the canonical scope of Service and volunteering.
+  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  dependencies: []
+  safe_alternatives:
+  - Use a fictional, public, retrospective, or category-level case for Service and volunteering instead
+    of a live situation.
+  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  role_conditions:
+  - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
+    held before the practice applies.
+  pathway_conditions:
+  - Religious, secular, cultural, disability-adapted, collective, and individual pathways may express
+    Service and volunteering differently while preserving consent, evidence limits, safety, and equal
+    dignity.
+  worldview_conditions:
+  - The practice does not require one worldview or treat disagreement about Service and volunteering as
+    inferiority; competing reasonable interpretations and conscientious refusal remain visible.
+intervention:
+  protocol_class: PF-COMMUNITY-CONTRIBUTION
+  duration_days: 10
+  cadence: Complete three bounded Service and volunteering actions over ten days, preserving explicit
+    not-applicable, defer, interruption, adverse, and unknown outcomes.
+  setup: Choose one context for Service and volunteering; copy the canonical scope and evidence target
+    into a private working note; define the action boundary, valid supports, privacy limit, and stop condition
+    before beginning.
+  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Service
+    and volunteering. Do not store private prose, names, identities, diagnoses, allegations, credentials,
+    account data, protected work information, intimate detail, artifact contents, observer narrative,
+    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
+    certification, or proof of character.
+  expected_burden: About 45-75 minutes total across setup, three Service and volunteering actions, and
+    review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
+    reasons.
+  action_count_rationale: null
+  foreseeable_misuse:
+  - Using the Service and volunteering protocol to rank worth, coerce participation, demand disclosure,
+    override rest or care, certify competence, or justify decisions beyond the recorded context.
+  - Treating a completed Service and volunteering action, a polished artifact, agreement, confidence,
+    speed, independence, or output as mastery or universal transfer.
+  exclusions:
+  - Any Service and volunteering situation involving emergency response, abuse, retaliation, illegal conduct,
+    medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous equipment,
+    or other consequences beyond a reversible source-only exercise.
+  - Political and civic education only; protest, civil disobedience, and legal rights are jurisdiction-specific
+    and can involve serious risk.
+  actions:
+  - stable_id: PRACTICE-COMP-2006-SERVICE-AND-VOLUNTEERING-01-A1
+    sequence: 1
+    title: Listen for a bounded Service and volunteering need
+    instructions: 'Identify one need related to Service and volunteering through a public request, authorized
+      contact, or community-defined priority. Verify who has authority to set scope and avoid extracting
+      private stories or assuming outsiders know the need: Choose recurring work based on real community
+      need, personal capacity, and sustainable contribution.'
+    expected_time: 15-25 minutes
+    due_within_days: 3
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-2006-SERVICE-AND-VOLUNTEERING-01
+      action_stable_id: PRACTICE-COMP-2006-SERVICE-AND-VOLUNTEERING-01-A1
+      competency_stable_id: '20.06'
+      scoring_policy_id: SP-SHADOW-ONLY
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c2006_a1_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c2006_a1_primary
+        kind: artifact
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - c2006_a1_need_community_defined
+        - c2006_a1_authority_identified
+        - c2006_a1_private_story_not_required
+      - measurement_id: c2006_a1_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c2006_a1_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  - stable_id: PRACTICE-COMP-2006-SERVICE-AND-VOLUNTEERING-01-A2
+    sequence: 2
+    title: Agree and complete one Service and volunteering contribution
+    instructions: Agree on one limited Service and volunteering contribution, its owner, time boundary,
+      access needs, and exit condition. Complete only the agreed scope without replacing local leadership,
+      creating dependency, claiming representation, or escalating conflict.
+    expected_time: 15-25 minutes
+    due_within_days: 7
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-2006-SERVICE-AND-VOLUNTEERING-01
+      action_stable_id: PRACTICE-COMP-2006-SERVICE-AND-VOLUNTEERING-01-A2
+      competency_stable_id: '20.06'
+      scoring_policy_id: SP-SHADOW-ONLY
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c2006_a2_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c2006_a2_primary
+        kind: boolean
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c2006_a2_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c2006_a2_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  - stable_id: PRACTICE-COMP-2006-SERVICE-AND-VOLUNTEERING-01-A3
+    sequence: 3
+    title: Review the Service and volunteering contribution with proportionate feedback
+    instructions: 'Obtain minimal, freely given feedback from an authorized recipient or use an objective
+      completion indicator. Record benefit, burden, no effect, harm, or unknown and compare only with:
+      Service produces tangible benefit and is maintained beyond initial enthusiasm.'
+    expected_time: 15-25 minutes
+    due_within_days: 10
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-2006-SERVICE-AND-VOLUNTEERING-01
+      action_stable_id: PRACTICE-COMP-2006-SERVICE-AND-VOLUNTEERING-01-A3
+      competency_stable_id: '20.06'
+      scoring_policy_id: SP-SHADOW-ONLY
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c2006_a3_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c2006_a3_primary
+        kind: artifact
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - c2006_a3_feedback_proportionate
+        - c2006_a3_burden_or_harm_recorded
+        - c2006_a3_community_ownership_preserved
+      - measurement_id: c2006_a3_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c2006_a3_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  adaptations:
+    low_resource:
+    - Use paper, an offline note, a library resource, a public example, or a no-cost conversation for
+      Service and volunteering; no purchase, subscription, travel, credential, or public artifact is required.
+    accessibility:
+    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
+      level for Service and volunteering; assistive technology, interpretation, a support person, and
+      a deferred action are valid without penalty.
+    cultural_context:
+    - Adapt the expression of Service and volunteering to direct or indirect communication, collective
+      or individual decision structures, local norms, faith or secular commitments, and role obligations
+      while preserving consent and dignity.
+    resource_variants:
+    - When a real Service and volunteering opportunity is unavailable or inappropriate, use a fictional,
+      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+  pause_conditions:
+  - Pause Service and volunteering when capacity, consent, authority, privacy, access, care duties, uncertainty,
+    distress, fatigue, pain, resource scarcity, or changed circumstances make the next action unwise.
+  stop_conditions:
+  - Stop the Service and volunteering practice for harm, coercion, retaliation risk, emergency conditions,
+    unsafe exposure, worsening symptoms, protected information, legal or policy conflict, or pressure
+    to exceed the stated boundary.
+  escalation_conditions:
+  - Use the appropriate local safeguarding, emergency, organizational, legal, medical, financial, accessibility,
+    or other qualified channel when a Service and volunteering situation exceeds a voluntary low-stakes
+    practice.
+  professional_referral_conditions:
+  - Political and civic education only; protest, civil disobedience, and legal rights are jurisdiction-specific
+    and can involve serious risk.
+evidence_and_scoring:
+  accepted_evidence_types:
+  - structured criteria observations for the bounded Service and volunteering actions
+  - explicit contradiction, adverse, defer, not-applicable, and unknown states
+  observation_contract_version: typed-evidence-rules-v1
+  check_in_fields:
+  - c2006_a1_primary
+  - c2006_a1_boundary
+  - c2006_a1_adverse
+  - c2006_a2_primary
+  - c2006_a2_boundary
+  - c2006_a2_adverse
+  - c2006_a3_primary
+  - c2006_a3_boundary
+  - c2006_a3_adverse
+  adverse_or_contradictory_indicators:
+  - The Service and volunteering action exceeded consent, authority, privacy, qualification, role, burden,
+    or safety boundaries.
+  - The evidence contradicted the intended Service and volunteering criterion, depended on coercion or
+    hidden private content, or could not distinguish the protocol from contextual change.
+  independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
+    for Service and volunteering explicitly; support can enable access and never reduces dignity or silently
+    changes the typed value.
+  context_transfer_rule: Evidence remains limited to the chosen Service and volunteering context, action,
+    role, pathway, and assessment epoch; it does not establish cross-context reliability.
+  repetition_rule: Each Service and volunteering observation requires a distinct immutable origin; duplicate
+    origins are rejected and later repetitions use the typed contract's explicit diminishing multipliers.
+  recency_rule: Generated Service and volunteering rules withhold observations older than 90 days; no
+    unrecorded retention or carry-forward assumption applies.
+  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
+    target—Service produces tangible benefit and is maintained beyond initial enthusiasm.—not completion,
+    confidence, conformity, output, independence, or worth.
+  evidence_quality_rubric: Quality for Service and volunteering requires a bounded context, allowlisted
+    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
+    and artifact contents are excluded.
+  scoring_eligibility: This package is source-only, shadow-only, and production-ineligible.
+  competency_contribution: Designated primary measurements may produce context-bound direct Service and
+    volunteering evidence only under offline typed evaluation; protocol performance remains distinct and
+    is never counted twice.
+  canonical_lever_allocation: parent_competency_mapping
+  recommendation_target_lever_ids:
+  - L10
+  - L24
+  - L26
+  - L30
+  minimum_evidence_before_state_update: No current-state update is permitted for this Service and volunteering
+    draft under SP-SHADOW-ONLY, regardless of completion or evidence quantity.
+  withholding_conditions:
+  - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
+    or adverse Service and volunteering evidence.
+  - Withhold any record containing private narrative, artifact contents, another person's identity, unsupported
+    inference, or evidence outside its assessment epoch.
+completion_and_review:
+  completion_criteria:
+  - The listen for a bounded service and volunteering need action was attempted or explicitly deferred.
+  - The agree and complete one service and volunteering contribution action was attempted or explicitly
+    deferred.
+  - The review the service and volunteering contribution with proportionate feedback action preserved
+    a limited conclusion, contradiction, or inconclusive result.
+  completion_rules:
+    minimum_completed: 2
+    substantive_markers:
+    - c2006_a1_primary
+    - c2006_a2_primary
+    - c2006_a3_primary
+    marker_mode: any
+  mastery_disclaimer: Completing this practice does not establish mastery.
+  progression_criteria: Repeat or broaden Service and volunteering only when the initial context remained
+    safe, the evidence criteria were usable, burden was acceptable, and a new context can be named without
+    assuming transfer.
+  transfer_limit: Three bounded actions do not establish Service and volunteering across roles, cultures,
+    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  reflection:
+    before: What does Service and volunteering require in this exact context, what remains outside my
+      role or authority, and which scope sentence or evidence criterion will keep the practice honest?
+    during: Which observable Service and volunteering criterion is present, absent, mixed, or unknown,
+      and are consent, privacy, access, burden, and stop conditions still intact?
+    after: How did the result compare with 'Service produces tangible benefit and is maintained beyond
+      initial enthusiasm.', what contradiction or missing context matters most, and should this Service
+      and volunteering design be repeated, adapted, deferred, stopped, or referred?
+  review_guidance:
+    repeat: Repeat the same bounded Service and volunteering design only when the context and burden remain
+      appropriate.
+    adapt: Change the Service and volunteering medium, scope, support, timing, criteria, or context while
+      preserving provenance and the narrower evidence claim.
+    stop: Stop Service and volunteering when the practice becomes coercive, unsafe, privacy-invasive,
+      role-inappropriate, professionally restricted, or harmful.
+    escalate: Use appropriate qualified or emergency support for Service and volunteering questions beyond
+      this educational source-only boundary.
+  evidence_examples:
+    supportive: The bounded Service and volunteering criteria were observed with provenance and no adverse
+      boundary signal in the selected context.
+    mixed: Some Service and volunteering criteria were observed while burden, support, contextual change,
+      or a contradiction limited the conclusion.
+    contradictory: The observed result opposed the intended Service and volunteering criterion, introduced
+      harm or coercion, or showed the design was not workable.
+    inconclusive: The Service and volunteering action was deferred, not observed, not applicable, stale,
+      insufficiently bounded, or too confounded to interpret.
+presentation:
+  setup_copy:
+    context_heading: Choose one bounded context for Service and volunteering.
+    boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
+    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Service and
+      volunteering.
+  check_in_labels:
+    c2006_a1_primary: The bounded Service and volunteering criterion for action 1 was observed
+    c2006_a1_boundary: Action 1 stayed inside its stated Service and volunteering boundary
+    c2006_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
+    c2006_a2_primary: The bounded Service and volunteering criterion for action 2 was observed
+    c2006_a2_boundary: Action 2 stayed inside its stated Service and volunteering boundary
+    c2006_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
+    c2006_a3_primary: The bounded Service and volunteering criterion for action 3 was observed
+    c2006_a3_boundary: Action 3 stayed inside its stated Service and volunteering boundary
+    c2006_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
+  completion_copy: Complete the bounded Service and volunteering review without claiming mastery, broad
+    transfer, professional validation, or score activation.
+  plain_language_evidence: The structured record shows what happened in one limited Service and volunteering
+    practice, including support, contradiction, defer, no result, or harm.
+  display_order: 268

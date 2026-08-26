@@ -1,7 +1,7 @@
 # Current state
 
-Last audited: 2026-08-15
-Implementation base: `main@a1bc792`
+Last audited: 2026-08-26
+Implementation base: `main@5a120dd`
 
 ## Completed implementation
 
@@ -10,81 +10,72 @@ Implementation base: `main@a1bc792`
 - M6B typed evidence, evidence-only competency shadow, one-way lever shadow,
   production eligibility, deterministic reports, and additive readiness are
   merged as software.
-- The projected runtime remains five packages and fifteen actions, with
-  friendship as the only production score-active protocol.
-- M6C-01 is merged. It adds versioned, assessment-epoch-scoped context/defer
-  persistence, deterministic snapshots and hashes, and additive readiness
-  without changing recommendations or ordinary UI.
-- M6C-02 is reviewed and merged. It adds the exact five
-  identity sections and four descriptive Truth/Autopilot Audit responses as
-  private, append-only, assessment-epoch-scoped revisions with deterministic
-  snapshots and additive readiness. It adds no UI, recommendation, scoring,
-  activation, export, deletion, or retention behavior.
-- M6C-03 is reviewed and merged at `c7b51c1`. It adds a pure,
-  versioned Decimal engine over verified latest context and unchanged
-  `GG-NEED-RANKING-1.0` base priorities, deterministic N/A/defer alternatives,
-  privacy-minimized canonical results, and additive read-only readiness. It
-  adds no migration, persistence, browser integration, scoring write, or
-  activation.
-- M6C-04 and its mobile/manifest corrections are reviewed and merged. The
-  authenticated Personal OS/context journey and additive browser/deployment
-  readiness preserve the unchanged scoring and recommendation contracts.
+- M6C-01 through M6C-04 are merged. Their context, Personal OS, pure
+  context-priority engine, authenticated journey, and browser/deployment
+  readiness remain unchanged.
+- M6D-01 is merged. Its four representative source-only typed packages and
+  synthetic readiness fixtures remain the exact reviewed cohort baseline.
 
 ## Current implementation
 
-- M6D-01 authors exactly four representative low-risk draft packages for
-  competencies `08.06`, `09.12`, `10.02`, and `13.02` across four domains and
-  four distinct intervention/evidence families.
-- The canonical source catalog is nine packages and twenty-nine actions; 374
-  competencies remain explicitly uncovered. The four new packages are
-  inactive, unprojected, `SP-SHADOW-ONLY`, and production-ineligible.
-- A fail-closed source-only typed-rule loader branch, fourteen synthetic action
-  fixtures, deterministic reports, and read-only
-  `GG-M6D-01-AUTHORING-READINESS-1.0` verify exact identities, hashes,
-  governance, and no database writes.
-- The five-protocol/fifteen-action runtime, historical replay, M6C behavior,
-  recommendation behavior, and friendship-only score activation remain exact.
+- M6E-FULL-FRONTIER materializes exactly one source package for each of the
+  383 canonical competencies across all 27 domains. It preserves the nine
+  previously authored packages and deterministically adds 374 packages with
+  1,122 actions, for a 383-package, 1,151-action source catalog.
+- Every generated package has three stable, competency-specific actions,
+  typed measurement IDs, scoped reflections, explicit canonical scope and
+  evidence-target traceability, a risk disposition, and a non-production
+  scoring disposition.
+- The generated additions are inactive editorial drafts with
+  `runtime_projection: none`. The 132 high-risk packages use
+  `SP-NON-SCORED-REFLECTION`; the other 242 generated packages use
+  `SP-SHADOW-ONLY`.
+- Deterministic reports show 383 authored packages, zero uncovered
+  competencies, all 27 domains represented, and all 37 levers covered through
+  both parent mappings and valid recommendation-target subsets.
+- Exact duplicate action titles, action instructions, and reflection sets are
+  zero. Bounded near-duplicate warning inventories remain available for the
+  owner's consolidated content review.
+- The runtime remains exactly five protocols and fifteen actions, with
+  friendship as the only score-active protocol. Historical replay, M6C
+  behavior, recommendation behavior, and the frozen runtime projection remain
+  unchanged.
 
-## Pending governance
-
-M6B is not accepted. `ER-M6A-003` is pending, `RG-M6A-002` remains open, and
-Decisions 047–049 remain proposed. The owner-directed control contract defers
-that governance closeout while software/content sequencing continues. This
-does not authorize production scoring; all new paths remain non-scored and
-friendship remains the only score-active protocol.
-
-Run the local gate check:
+Run the full-frontier gate with:
 
 ```bash
-./scripts/ensure-agent-env.py
-.venv/bin/python scripts/check-m6b-governance-gate.py
+make full-frontier-check PYTHON=.venv/bin/python
 ```
+
+## Pending governance and audit
+
+The complete source frontier is authored, but its packages are not represented
+as source-complete or release candidates. `ER-M6A-003` remains pending,
+`RG-M6A-002` remains open, and Decisions 047–049 remain proposed. Human
+semantic, source, originality, accessibility, privacy, safety, cultural, and
+specialist review is deferred to the owner's consolidated 383/383 audit.
+
+That deferred audit does not authorize runtime projection, score activation,
+participant exposure, release, deployment, or production writes. Friendship
+remains the only score-active protocol.
 
 ## Planned sequence
 
-1. Complete M6D-01 exact local/Compose/hosted-CI validation and merge the
-   source-only cohort under standing owner authorization.
-2. Continue M6D representative vertical slices through separately contracted,
-   exact-head, required-CI-green source-only PRs.
-3. Run stable report-derived M6E domain cohorts of approximately 8–15
-   competencies per PFSPAM-merged PR until 383/383 drafts or explicit
-   non-protocol dispositions are present.
-4. Perform the consolidated owner/trained content, source, originality,
-   accessibility, privacy, and safety review at M6B-GOV.
-5. Complete whole-library scoring dispositions and shadow calibration.
-6. Use separately approved controlled activation cohorts, then full integration,
-   operations hardening, and diverse multi-cycle validation.
-
-Run the additive source cohort gate with `make m6d-01-check`. Required hosted
-CI is an intermediate merge gate. Human semantic/originality/accessibility/
-privacy/safety, retained-evidence, and owner review remain required but are
-recorded as deferred until the final 383/383 M6B-GOV gate.
+1. Complete full local and hosted-CI verification of the deterministic
+   383/383 source frontier and merge the source-only batch.
+2. Conduct the consolidated owner/trained content, source, originality,
+   accessibility, privacy, safety, cultural, and specialist review.
+3. Record package-level audit dispositions and resolve or explicitly retain
+   research and expert-review gaps.
+4. Complete whole-library scoring dispositions and shadow calibration.
+5. Use separately approved controlled activation cohorts, followed by full
+   integration, operations hardening, and diverse multi-cycle validation.
 
 ## Automation boundary
 
-PFSPAM may create, repair, mark ready, and merge an exact-head source-only
-M6D/M6E PR when every required check is green and no unresolved review thread
-remains. This standing approval never covers runtime projection, score
-activation, participant exposure, release, deployment, production writes,
-repository settings, or validation claims. Generated content, source research,
-fixtures, and CI do not replace specialist or participant validation.
+Automation may verify, repair, mark ready, and merge an exact-head source-only
+candidate when every required check is green and no unresolved review thread
+remains. This does not cover runtime projection, score activation, participant
+exposure, release, deployment, production writes, repository settings, or
+validation claims. Generated content and synthetic evidence do not replace
+specialist or participant validation.

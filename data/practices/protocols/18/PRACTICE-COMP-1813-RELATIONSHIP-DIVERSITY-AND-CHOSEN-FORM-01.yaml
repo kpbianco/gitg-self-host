@@ -1,0 +1,404 @@
+schema_version: GG-PRACTICE-CONTENT-1.0
+protocol_version: 0.1.0
+stable_id: PRACTICE-COMP-1813-RELATIONSHIP-DIVERSITY-AND-CHOSEN-FORM-01
+slug: c1813-relationship-diversity-and-chosen-form-practice
+name: Bounded Relationship diversity and chosen form Practice
+parent_competency_id: '18.13'
+domain_id: '18'
+governance:
+  availability: inactive
+  editorial_status: draft
+  runtime_projection: none
+  risk_class_id: RISK-HIGH
+  scoring_policy_id: SP-NON-SCORED-REFLECTION
+  scoring_status: non_scored
+  source_ids:
+  - SRC-CANONICAL-CURRICULUM-V2
+  authoring:
+    provenance: Individually materialized source-only frontier package for canonical competency 18.13
+      (Relationship diversity and chosen form); canonical scope, evidence target, classification, domain
+      boundary, and parent mapping remain explicit and reviewable.
+    content_review_status: pending
+    research_review_status: internal_sources_only_external_review_required
+    safety_review_status: pending_specialist_expansion_review
+    accessibility_review_status: pending
+    originality_review_status: pending
+    ui_test_status: not_applicable
+    last_reviewed: null
+    known_gap_ids:
+    - RG-M6A-001
+    - RG-M6A-002
+    expert_review_ids:
+    - ER-M6A-003
+  legacy_compatibility_exceptions: []
+  deprecation:
+    deprecated: false
+    replaced_by: null
+meaning_and_fit:
+  purpose: 'Practice Relationship diversity and chosen form through a qualified-support preparation bounded
+    by the canonical scope: Understand that people may live in different lawful and consensual relationship
+    structures, orientations, or single lives while still owing honesty and dignity.'
+  why_recommended: 'The parent competency identifies this limited evidence target: Can state personal
+    commitments without dehumanizing people whose consensual arrangements differ. The protocol creates
+    a small opportunity to examine that target without treating completion as broad capability.'
+  claims:
+  - statement: Using the canonical scope and evidence target for Relationship diversity and chosen form
+      is a traceable product-design basis for a source-only draft protocol.
+    classification: product_design_judgment
+    source_ids:
+    - SRC-CANONICAL-CURRICULUM-V2
+    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
+      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+  applicability_question: Does a voluntary, bounded Relationship diversity and chosen form practice fit
+    the person's current role, pathway, capacity, authority, resources, and safety conditions?
+  not_applicable_behavior: Record Relationship diversity and chosen form as not applicable, consciously
+    unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
+    safe context is absent.
+  readiness_considerations: Proceed only when the person can freely choose a limited Relationship diversity
+    and chosen form context, understand the source-only status, and stop without losing safety, care,
+    employment, housing, services, relationship access, or dignity.
+  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Relationship
+    diversity and chosen form; do not manufacture conflict, deprivation, exposure, disclosure, danger,
+    urgency, or dependence for evidence.
+  prerequisites:
+  - One user-chosen context that genuinely fits the canonical scope of Relationship diversity and chosen
+    form.
+  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  dependencies: []
+  safe_alternatives:
+  - Use a fictional, public, retrospective, or category-level case for Relationship diversity and chosen
+    form instead of a live situation.
+  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  role_conditions:
+  - This competency is role conditional; roles, duties, and authority must be explicitly chosen or actually
+    held before the practice applies.
+  pathway_conditions:
+  - Religious, secular, cultural, disability-adapted, collective, and individual pathways may express
+    Relationship diversity and chosen form differently while preserving consent, evidence limits, safety,
+    and equal dignity.
+  worldview_conditions:
+  - The practice does not require one worldview or treat disagreement about Relationship diversity and
+    chosen form as inferiority; competing reasonable interpretations and conscientious refusal remain
+    visible.
+intervention:
+  protocol_class: PF-QUALIFIED-CONSULTATION
+  duration_days: 10
+  cadence: Complete three bounded Relationship diversity and chosen form actions over ten days, preserving
+    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
+  setup: Choose one context for Relationship diversity and chosen form; copy the canonical scope and evidence
+    target into a private working note; define the action boundary, valid supports, privacy limit, and
+    stop condition before beginning.
+  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Relationship
+    diversity and chosen form. Do not store private prose, names, identities, diagnoses, allegations,
+    credentials, account data, protected work information, intimate detail, artifact contents, observer
+    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
+    treatment, certification, or proof of character.
+  expected_burden: About 45-75 minutes total across setup, three Relationship diversity and chosen form
+    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
+    or resource reasons.
+  action_count_rationale: null
+  foreseeable_misuse:
+  - Using the Relationship diversity and chosen form protocol to rank worth, coerce participation, demand
+    disclosure, override rest or care, certify competence, or justify decisions beyond the recorded context.
+  - Treating a completed Relationship diversity and chosen form action, a polished artifact, agreement,
+    confidence, speed, independence, or output as mastery or universal transfer.
+  exclusions:
+  - Any Relationship diversity and chosen form situation involving emergency response, abuse, retaliation,
+    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
+    hazardous equipment, or other consequences beyond a reversible source-only exercise.
+  - Consent, health, abuse, and legal concerns require appropriate medical, legal, or safeguarding resources.
+  actions:
+  - stable_id: PRACTICE-COMP-1813-RELATIONSHIP-DIVERSITY-AND-CHOSEN-FORM-01-A1
+    sequence: 1
+    title: Bound the qualified question for Relationship diversity and chosen form
+    instructions: 'Turn Relationship diversity and chosen form into one educational or planning question
+      and identify the qualification and jurisdiction needed to answer it. Use the canonical scope to
+      separate general learning from diagnosis, treatment, legal advice, financial advice, safeguarding
+      decisions, or other professional judgment: Understand that people may live in different lawful and
+      consensual relationship structures, orientations, or single lives while still owing honesty and
+      dignity.'
+    expected_time: 15-25 minutes
+    due_within_days: 3
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-1813-RELATIONSHIP-DIVERSITY-AND-CHOSEN-FORM-01
+      action_stable_id: PRACTICE-COMP-1813-RELATIONSHIP-DIVERSITY-AND-CHOSEN-FORM-01-A1
+      competency_stable_id: '18.13'
+      scoring_policy_id: SP-NON-SCORED-REFLECTION
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c1813_a1_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c1813_a1_primary
+        kind: artifact
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - c1813_a1_question_bounded
+        - c1813_a1_qualification_named
+        - c1813_a1_professional_boundary_explicit
+      - measurement_id: c1813_a1_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c1813_a1_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  - stable_id: PRACTICE-COMP-1813-RELATIONSHIP-DIVERSITY-AND-CHOSEN-FORM-01-A2
+    sequence: 2
+    title: Prepare minimum information for Relationship diversity and chosen form
+    instructions: Create a privacy-minimized Relationship diversity and chosen form consultation note
+      containing only the question, relevant category-level facts, current constraints, and desired decision.
+      Omit diagnoses, allegations, account numbers, credentials, protected work information, intimate
+      detail, and third-party identity unless a qualified professional lawfully requires it through an
+      appropriate channel.
+    expected_time: 15-25 minutes
+    due_within_days: 7
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-1813-RELATIONSHIP-DIVERSITY-AND-CHOSEN-FORM-01
+      action_stable_id: PRACTICE-COMP-1813-RELATIONSHIP-DIVERSITY-AND-CHOSEN-FORM-01-A2
+      competency_stable_id: '18.13'
+      scoring_policy_id: SP-NON-SCORED-REFLECTION
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c1813_a2_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c1813_a2_primary
+        kind: artifact
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - c1813_a2_minimum_information_only
+        - c1813_a2_sensitive_detail_excluded
+        - c1813_a2_decision_need_named
+      - measurement_id: c1813_a2_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c1813_a2_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  - stable_id: PRACTICE-COMP-1813-RELATIONSHIP-DIVERSITY-AND-CHOSEN-FORM-01-A3
+    sequence: 3
+    title: Record a bounded Relationship diversity and chosen form disposition
+    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
+      proceed within stated limits, seek a different qualification, gather missing information, defer,
+      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
+      Target evidence remains: Can state personal commitments without dehumanizing people whose consensual
+      arrangements differ.'
+    expected_time: 15-25 minutes
+    due_within_days: 10
+    typed_evidence_identity:
+      protocol_stable_id: PRACTICE-COMP-1813-RELATIONSHIP-DIVERSITY-AND-CHOSEN-FORM-01
+      action_stable_id: PRACTICE-COMP-1813-RELATIONSHIP-DIVERSITY-AND-CHOSEN-FORM-01-A3
+      competency_stable_id: '18.13'
+      scoring_policy_id: SP-NON-SCORED-REFLECTION
+    evidence_rules:
+      schema_version: typed-evidence-rules-v1
+      max_age_days: 90
+      competency_measurement_ids:
+      - c1813_a3_primary
+      transfer_disposition: context_bound
+      measurements:
+      - measurement_id: c1813_a3_primary
+        kind: attestation
+        role: primary
+        weight: '1'
+        allowed_provenance:
+        - qualified_attestation
+        allowed_attestation_ids:
+        - c1813_a3_qualified_disposition
+        consent_required: true
+      - measurement_id: c1813_a3_boundary
+        kind: boolean
+        role: supporting
+        weight: '0.5'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+      - measurement_id: c1813_a3_adverse
+        kind: boolean
+        role: adverse
+        weight: '0'
+        allowed_provenance:
+        - firsthand_self_report
+        expected: true
+  adaptations:
+    low_resource:
+    - Use paper, an offline note, a library resource, a public example, or a no-cost conversation for
+      Relationship diversity and chosen form; no purchase, subscription, travel, credential, or public
+      artifact is required.
+    accessibility:
+    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
+      level for Relationship diversity and chosen form; assistive technology, interpretation, a support
+      person, and a deferred action are valid without penalty.
+    cultural_context:
+    - Adapt the expression of Relationship diversity and chosen form to direct or indirect communication,
+      collective or individual decision structures, local norms, faith or secular commitments, and role
+      obligations while preserving consent and dignity.
+    resource_variants:
+    - When a real Relationship diversity and chosen form opportunity is unavailable or inappropriate,
+      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
+      evidence classification.
+  pause_conditions:
+  - Pause Relationship diversity and chosen form when capacity, consent, authority, privacy, access, care
+    duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the
+    next action unwise.
+  stop_conditions:
+  - Stop the Relationship diversity and chosen form practice for harm, coercion, retaliation risk, emergency
+    conditions, unsafe exposure, worsening symptoms, protected information, legal or policy conflict,
+    or pressure to exceed the stated boundary.
+  escalation_conditions:
+  - Use the appropriate local safeguarding, emergency, organizational, legal, medical, financial, accessibility,
+    or other qualified channel when a Relationship diversity and chosen form situation exceeds a voluntary
+    low-stakes practice.
+  professional_referral_conditions:
+  - Consent, health, abuse, and legal concerns require appropriate medical, legal, or safeguarding resources.
+evidence_and_scoring:
+  accepted_evidence_types:
+  - structured criteria observations for the bounded Relationship diversity and chosen form actions
+  - explicit contradiction, adverse, defer, not-applicable, and unknown states
+  observation_contract_version: typed-evidence-rules-v1
+  check_in_fields:
+  - c1813_a1_primary
+  - c1813_a1_boundary
+  - c1813_a1_adverse
+  - c1813_a2_primary
+  - c1813_a2_boundary
+  - c1813_a2_adverse
+  - c1813_a3_primary
+  - c1813_a3_boundary
+  - c1813_a3_adverse
+  adverse_or_contradictory_indicators:
+  - The Relationship diversity and chosen form action exceeded consent, authority, privacy, qualification,
+    role, burden, or safety boundaries.
+  - The evidence contradicted the intended Relationship diversity and chosen form criterion, depended
+    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
+    for Relationship diversity and chosen form explicitly; support can enable access and never reduces
+    dignity or silently changes the typed value.
+  context_transfer_rule: Evidence remains limited to the chosen Relationship diversity and chosen form
+    context, action, role, pathway, and assessment epoch; it does not establish cross-context reliability.
+  repetition_rule: Each Relationship diversity and chosen form observation requires a distinct immutable
+    origin; duplicate origins are rejected and later repetitions use the typed contract's explicit diminishing
+    multipliers.
+  recency_rule: Generated Relationship diversity and chosen form rules withhold observations older than
+    90 days; no unrecorded retention or carry-forward assumption applies.
+  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
+    target—Can state personal commitments without dehumanizing people whose consensual arrangements differ.—not
+    completion, confidence, conformity, output, independence, or worth.
+  evidence_quality_rubric: Quality for Relationship diversity and chosen form requires a bounded context,
+    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
+    free text and artifact contents are excluded.
+  scoring_eligibility: This package is non-scored and production-ineligible.
+  competency_contribution: Designated primary measurements may produce context-bound direct Relationship
+    diversity and chosen form evidence only under offline typed evaluation; protocol performance remains
+    distinct and is never counted twice.
+  canonical_lever_allocation: parent_competency_mapping
+  recommendation_target_lever_ids:
+  - L05
+  - L25
+  - L27
+  - L31
+  minimum_evidence_before_state_update: No current-state update is permitted for this Relationship diversity
+    and chosen form draft under SP-NON-SCORED-REFLECTION, regardless of completion or evidence quantity.
+  withholding_conditions:
+  - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
+    or adverse Relationship diversity and chosen form evidence.
+  - Withhold any record containing private narrative, artifact contents, another person's identity, unsupported
+    inference, or evidence outside its assessment epoch.
+completion_and_review:
+  completion_criteria:
+  - The bound the qualified question for relationship diversity and chosen form action was attempted or
+    explicitly deferred.
+  - The prepare minimum information for relationship diversity and chosen form action was attempted or
+    explicitly deferred.
+  - The record a bounded relationship diversity and chosen form disposition action preserved a limited
+    conclusion, contradiction, or inconclusive result.
+  completion_rules:
+    minimum_completed: 2
+    substantive_markers:
+    - c1813_a1_primary
+    - c1813_a2_primary
+    - c1813_a3_primary
+    marker_mode: any
+  mastery_disclaimer: Completing this practice does not establish mastery.
+  progression_criteria: Repeat or broaden Relationship diversity and chosen form only when the initial
+    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
+    can be named without assuming transfer.
+  transfer_limit: Three bounded actions do not establish Relationship diversity and chosen form across
+    roles, cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
+    settings.
+  reflection:
+    before: What does Relationship diversity and chosen form require in this exact context, what remains
+      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
+      honest?
+    during: Which observable Relationship diversity and chosen form criterion is present, absent, mixed,
+      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
+    after: How did the result compare with 'Can state personal commitments without dehumanizing people
+      whose consensual arrangements differ.', what contradiction or missing context matters most, and
+      should this Relationship diversity and chosen form design be repeated, adapted, deferred, stopped,
+      or referred?
+  review_guidance:
+    repeat: Repeat the same bounded Relationship diversity and chosen form design only when the context
+      and burden remain appropriate.
+    adapt: Change the Relationship diversity and chosen form medium, scope, support, timing, criteria,
+      or context while preserving provenance and the narrower evidence claim.
+    stop: Stop Relationship diversity and chosen form when the practice becomes coercive, unsafe, privacy-invasive,
+      role-inappropriate, professionally restricted, or harmful.
+    escalate: Use appropriate qualified or emergency support for Relationship diversity and chosen form
+      questions beyond this educational source-only boundary.
+  evidence_examples:
+    supportive: The bounded Relationship diversity and chosen form criteria were observed with provenance
+      and no adverse boundary signal in the selected context.
+    mixed: Some Relationship diversity and chosen form criteria were observed while burden, support, contextual
+      change, or a contradiction limited the conclusion.
+    contradictory: The observed result opposed the intended Relationship diversity and chosen form criterion,
+      introduced harm or coercion, or showed the design was not workable.
+    inconclusive: The Relationship diversity and chosen form action was deferred, not observed, not applicable,
+      stale, insufficiently bounded, or too confounded to interpret.
+presentation:
+  setup_copy:
+    context_heading: Choose one bounded context for Relationship diversity and chosen form.
+    boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
+    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Relationship
+      diversity and chosen form.
+  check_in_labels:
+    c1813_a1_primary: The bounded Relationship diversity and chosen form criterion for action 1 was observed
+    c1813_a1_boundary: Action 1 stayed inside its stated Relationship diversity and chosen form boundary
+    c1813_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
+    c1813_a2_primary: The bounded Relationship diversity and chosen form criterion for action 2 was observed
+    c1813_a2_boundary: Action 2 stayed inside its stated Relationship diversity and chosen form boundary
+    c1813_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
+    c1813_a3_primary: The bounded Relationship diversity and chosen form criterion for action 3 was observed
+    c1813_a3_boundary: Action 3 stayed inside its stated Relationship diversity and chosen form boundary
+    c1813_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
+  completion_copy: Complete the bounded Relationship diversity and chosen form review without claiming
+    mastery, broad transfer, professional validation, or score activation.
+  plain_language_evidence: The structured record shows what happened in one limited Relationship diversity
+    and chosen form practice, including support, contradiction, defer, no result, or harm.
+  display_order: 246

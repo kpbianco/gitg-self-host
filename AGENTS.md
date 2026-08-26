@@ -321,22 +321,27 @@ priority persistence, protocol/action, Personal OS analysis, evidence/scoring
 write, activation, dedicated export/purge/retention automation, remote
 telemetry, weekly execution, release, or deployment.
 
-M6D-01 is the current implementation batch. It authors exactly four low-risk,
-source-only draft packages for competencies `08.06`, `09.12`, `10.02`, and
-`13.02`, with fourteen pure typed-evidence fixture paths. The source catalog
-expands to nine packages and twenty-nine actions while the projected runtime
-remains five protocols and fifteen actions. The cohort is inactive,
-unprojected, shadow-only, and production-ineligible; it adds no model,
-migration, UI, persisted typed evidence, recommendation input, scoring write,
-or activation.
+M6D-01 is reviewed and merged. M6E-FULL-FRONTIER is the current source-only
+implementation batch. It preserves the nine previously authored packages and
+deterministically materializes one package for every remaining competency: 383
+packages and 1,151 source actions across all 27 domains, with zero uncovered
+competencies and all 37 levers represented through valid parent mappings and
+recommendation-target subsets.
 
-Later representative and generated cohorts remain separately contracted.
-Standing owner authorization permits PFSPAM to mark ready and merge only
-exact-head, required-CI-green, inactive, unprojected, source-only drafts.
+All 374 generated additions are inactive editorial drafts with
+`runtime_projection: none`. High-risk additions are explicitly non-scored;
+the rest are shadow-only. The projected runtime remains exactly five protocols
+and fifteen actions, historical replay and recommendations remain exact, and
+friendship remains the only score-active protocol. The batch adds no model,
+migration, UI, persisted typed evidence, recommendation input, scoring write,
+participant exposure, release, or deployment.
+
+Standing owner authorization permits automation to mark ready and merge only
+an exact-head, required-CI-green, inactive, unprojected, source-only candidate.
 Human semantic/source/originality/accessibility/privacy/safety review is
-deferred, not passed, until the final 383/383 M6B-GOV gate. Runtime projection,
-score activation, participant exposure, release, deployment, and production
-claims always require separate human approval.
+deferred, not passed, for the owner's consolidated 383/383 M6B-GOV audit.
+Runtime projection, score activation, participant exposure, release,
+deployment, and production claims always require separate human approval.
 
 <!-- BEGIN PORTFOLIO-CONTROL MANAGED -->
 ## Governed agentic delivery

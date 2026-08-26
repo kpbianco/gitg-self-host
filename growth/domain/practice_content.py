@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import hashlib
 import json
+from copy import deepcopy
 from dataclasses import dataclass
+from functools import cache
 from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
@@ -199,15 +201,36 @@ def _read_json(path: Path) -> dict[str, Any]:
     return document
 
 
-def _validate_schema(document: dict[str, Any], schema_path: Path, document_path: Path) -> None:
+@cache
+def _compiled_schema_validator(
+    schema_path: Path,
+    _mtime_ns: int,
+    _size: int,
+) -> Draft202012Validator:
     schema = _read_json(schema_path)
     try:
         Draft202012Validator.check_schema(schema)
-        Draft202012Validator(schema, format_checker=Draft202012Validator.FORMAT_CHECKER).validate(
-            document
+        return Draft202012Validator(
+            schema,
+            format_checker=Draft202012Validator.FORMAT_CHECKER,
         )
     except SchemaError as exc:
         raise PracticeContentError(f"{schema_path}: invalid JSON Schema: {exc.message}") from exc
+
+
+def _validate_schema(document: dict[str, Any], schema_path: Path, document_path: Path) -> None:
+    resolved_schema_path = schema_path.resolve()
+    try:
+        stat = resolved_schema_path.stat()
+    except OSError as exc:
+        raise PracticeContentError(f"{schema_path}: could not inspect JSON Schema: {exc}") from exc
+    validator = _compiled_schema_validator(
+        resolved_schema_path,
+        stat.st_mtime_ns,
+        stat.st_size,
+    )
+    try:
+        validator.validate(document)
     except ValidationError as exc:
         location = ".".join(str(part) for part in exc.absolute_path)
         suffix = f".{location}" if location else ""
@@ -1422,7 +1445,7 @@ def _manifest_relative_path(root: Path, raw_path: Any, *, expected_prefix: str) 
     return path
 
 
-def load_practice_content_bundle(base_dir: Path) -> PracticeContentBundle:
+def _load_practice_content_bundle(base_dir: Path) -> PracticeContentBundle:
     root = base_dir / "data" / "practices"
     manifest_path = root / "release_manifest.yaml"
     manifest = _read_yaml(manifest_path)
@@ -1642,6 +1665,51 @@ def load_practice_content_bundle(base_dir: Path) -> PracticeContentBundle:
     if manifest.get("legacy_projection_hash") != projection_hash:
         raise PracticeContentError(f"{manifest_path}: legacy projection hash is inconsistent.")
     return bundle
+
+
+def _practice_content_fingerprint(base_dir: Path) -> str:
+    practice_root = base_dir / "data" / "practices"
+    paths = {
+        path.resolve()
+        for path in practice_root.rglob("*")
+        if path.is_file() and path.suffix in {".json", ".yaml"}
+    }
+    source_registry_path = practice_root / "registries" / "source_registry.yaml"
+    source_registry = _read_yaml(source_registry_path)
+    raw_sources = source_registry.get("sources")
+    sources = raw_sources if isinstance(raw_sources, list) else []
+    for source in sources:
+        if isinstance(source, dict) and source.get("locator_kind") == "repository_path":
+            paths.add((base_dir / source["locator"]).resolve())
+
+    digest = hashlib.sha256()
+    for path in sorted(paths):
+        try:
+            relative = path.relative_to(base_dir)
+            content = path.read_bytes()
+        except (OSError, ValueError) as exc:
+            raise PracticeContentError(
+                f"{path}: could not fingerprint canonical practice input: {exc}"
+            ) from exc
+        digest.update(relative.as_posix().encode())
+        digest.update(b"\0")
+        digest.update(content)
+        digest.update(b"\0")
+    return digest.hexdigest()
+
+
+@cache
+def _cached_practice_content_bundle(
+    base_dir: Path,
+    _fingerprint: str,
+) -> PracticeContentBundle:
+    return _load_practice_content_bundle(base_dir)
+
+
+def load_practice_content_bundle(base_dir: Path) -> PracticeContentBundle:
+    resolved_base_dir = base_dir.resolve()
+    fingerprint = _practice_content_fingerprint(resolved_base_dir)
+    return deepcopy(_cached_practice_content_bundle(resolved_base_dir, fingerprint))
 
 
 def compile_runtime_protocol(

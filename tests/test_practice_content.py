@@ -285,6 +285,20 @@ def test_repository_source_hash_drift_fails_closed(tmp_path):
         load_practice_content_bundle(base)
 
 
+def test_validated_bundle_cache_is_defensive_and_invalidates_on_source_drift(tmp_path):
+    first = load_practice_content_bundle(ROOT)
+    first.protocols[0]["domain_id"] = "99"
+    second = load_practice_content_bundle(ROOT)
+    assert second.protocols[0]["domain_id"] != "99"
+
+    base = _copy_practice_tree(tmp_path)
+    load_practice_content_bundle(base)
+    source_path = base / "docs" / "protocol-library.md"
+    source_path.write_text(source_path.read_text() + "\nPost-cache drift.\n")
+    with pytest.raises(PracticeContentError, match="repository source hash drift"):
+        load_practice_content_bundle(base)
+
+
 def test_release_candidate_cannot_self_certify_over_open_controls(tmp_path):
     base = _copy_practice_tree(tmp_path)
     protocol_path = base / "data" / "practices" / "protocols" / "11" / "PRACTICE-BOUNDARY-01.yaml"
