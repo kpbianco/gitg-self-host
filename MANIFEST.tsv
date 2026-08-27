@@ -509,7 +509,7 @@ docs/evidence/M6C-04-2026-08-14.md	14587
 docs/evidence/M6D-01-2026-08-15.md	18932
 docs/evidence/M6E-FULL-FRONTIER-2026-08-26.md	5009
 docs/evidence/M6F-ALL-ACTIVE-2026-08-26.md	5431
-docs/evidence/M6H-01-2026-08-27.md	2901
+docs/evidence/M6H-01-2026-08-27.md	3336
 docs/evidence/local/.gitignore	14
 docs/ideal_person_curriculum_scope_audit.md	4060
 docs/ideal_person_curriculum_v2_revision_report.md	5987
@@ -608,7 +608,7 @@ growth/services/profile.py	6988
 growth/services/score_state.py	29147
 growth/services/scoring.py	24842
 growth/services/weekly_execution.py	17931
-growth/static/growth/app.css	26982
+growth/static/growth/app.css	27009
 growth/static/growth/assessment.js	16629
 growth/static/growth/contextual_forms.js	2145
 growth/static/growth/personal_os.js	1613
@@ -753,7 +753,7 @@ templates/registration/password_change_form.html	992
 tests/__init__.py	1
 tests/conftest.py	866
 tests/e2e/conftest.py	233
-tests/e2e/test_core_flow.py	34139
+tests/e2e/test_core_flow.py	35016
 tests/fixtures/assessment/README.md	878
 tests/fixtures/assessment/manifest.json	415
 tests/fixtures/context/context_v1.json	871

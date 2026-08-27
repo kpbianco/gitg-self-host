@@ -98,8 +98,27 @@ def open_assessment(live_server, page):
 
 
 def assert_no_horizontal_overflow(page):
-    assert page.evaluate("document.documentElement.scrollWidth <= window.innerWidth"), (
-        f"Page has horizontal overflow at {page.viewport_size}"
+    overflow = page.evaluate(
+        """() => ({
+            documentFits: document.documentElement.scrollWidth <= window.innerWidth,
+            offenders: [...document.querySelectorAll('body *')]
+                .filter((element) => {
+                    const rect = element.getBoundingClientRect();
+                    return rect.right > window.innerWidth + 1 || rect.left < -1;
+                })
+                .slice(0, 8)
+                .map((element) => ({
+                    tag: element.tagName.toLowerCase(),
+                    id: element.id,
+                    className: String(element.className || ''),
+                    text: String(element.textContent || '').trim().slice(0, 80),
+                    left: Math.round(element.getBoundingClientRect().left),
+                    right: Math.round(element.getBoundingClientRect().right),
+                })),
+        })"""
+    )
+    assert overflow["documentFits"], (
+        f"Page has horizontal overflow at {page.viewport_size}: {overflow['offenders']}"
     )
 
 

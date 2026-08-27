@@ -1092,6 +1092,7 @@ meter::-webkit-meter-optimum-value {
   border: 1px solid #b9c0ba;
   border-radius: 9px;
   color: var(--ink);
+  min-width: 0;
   min-height: 44px;
   padding: 10px 11px;
   width: 100%;
@@ -1565,7 +1566,7 @@ summary:focus-visible {
   .profile-grid,
   .card-grid,
   .definition-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .ledger-summary {
