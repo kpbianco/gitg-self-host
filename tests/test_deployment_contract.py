@@ -72,6 +72,10 @@ def test_repeatable_compose_acceptance_is_wired_into_make_and_ci():
     assert "up -d --build --wait" in smoke_script
     assert "seed_canonical" in smoke_script
     assert "migrate --check" in smoke_script
+    assert 'expected_counts="37,383,1403,383,383,383,37"' in smoke_script
+    assert "availability=PracticeProtocol.Availability.ACTIVE" in smoke_script
+    assert "PracticeProtocol.objects.filter(score_active=True).count()" in smoke_script
+    assert "score_active=383:[0-9a-f]{64}" in smoke_script
     assert "backup_database" in smoke_script
     assert "--force-recreate" in smoke_script
     assert "shutil.copy2" in smoke_script

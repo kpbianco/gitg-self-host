@@ -21,7 +21,7 @@ readonly original_password="Original-probe-password-47!"
 readonly persisted_password="Persisted-probe-password-58!"
 readonly changed_env_password="Changed-env-password-69!"
 readonly backup_path="/data/backups/compose-smoke.sqlite3"
-readonly expected_counts="37,383,1403,5,37"
+readonly expected_counts="37,383,1403,383,383,383,37"
 
 if [[ -n "${SMOKE_APP_PORT:-}" ]]; then
     readonly app_port="$SMOKE_APP_PORT"
@@ -93,13 +93,13 @@ http_probe() {
 
 canonical_counts() {
     compose exec -T app python manage.py shell -c \
-        'from growth.models import Competency, CompetencyLeverLink, Lever, LeverBaseline, PracticeProtocol; print(",".join(str(value) for value in (Lever.objects.count(), Competency.objects.count(), CompetencyLeverLink.objects.count(), PracticeProtocol.objects.count(), LeverBaseline.objects.count())))' \
+        'from growth.models import Competency, CompetencyLeverLink, Lever, LeverBaseline, PracticeProtocol; print(",".join(str(value) for value in (Lever.objects.count(), Competency.objects.count(), CompetencyLeverLink.objects.count(), PracticeProtocol.objects.count(), PracticeProtocol.objects.filter(availability=PracticeProtocol.Availability.ACTIVE).count(), PracticeProtocol.objects.filter(score_active=True).count(), LeverBaseline.objects.count())))' \
         | tail -n 1
 }
 
 browser_slice_state() {
     compose exec -T app python manage.py shell -c \
-        'from growth.models import AssessmentContext, AssessmentRun, PersonalOSRevision, PracticeContext, PracticeProtocol; from growth.services.context_priority import build_context_priority_for_epoch; run=AssessmentRun.objects.select_related("user").order_by("stable_id").first(); personal=tuple(PersonalOSRevision.objects.order_by("assessment_run_id","revision").values_list("content_hash",flat=True)); assessment=tuple(AssessmentContext.objects.order_by("assessment_run_id","revision").values_list("content_hash",flat=True)); practice=tuple(PracticeContext.objects.order_by("assessment_run_id","protocol_id","revision").values_list("content_hash",flat=True)); priority=build_context_priority_for_epoch(user=run.user,assessment_run=run,protocol_stable_ids=("PRACTICE-FRIENDSHIP-01",)); active=tuple(PracticeProtocol.objects.filter(score_active=True).order_by("stable_id").values_list("stable_id",flat=True)); print("|".join((f"personal={len(personal)}:{chr(44).join(personal)}",f"assessment={len(assessment)}:{chr(44).join(assessment)}",f"practice={len(practice)}:{chr(44).join(practice)}",f"priority={priority.content_hash}",f"score_active={chr(44).join(active)}")))' \
+        'import hashlib; from growth.models import AssessmentContext, AssessmentRun, PersonalOSRevision, PracticeContext, PracticeProtocol; from growth.services.context_priority import build_context_priority_for_epoch; run=AssessmentRun.objects.select_related("user").order_by("stable_id").first(); personal=tuple(PersonalOSRevision.objects.order_by("assessment_run_id","revision").values_list("content_hash",flat=True)); assessment=tuple(AssessmentContext.objects.order_by("assessment_run_id","revision").values_list("content_hash",flat=True)); practice=tuple(PracticeContext.objects.order_by("assessment_run_id","protocol_id","revision").values_list("content_hash",flat=True)); priority=build_context_priority_for_epoch(user=run.user,assessment_run=run,protocol_stable_ids=("PRACTICE-FRIENDSHIP-01",)); active=tuple(PracticeProtocol.objects.filter(score_active=True).order_by("stable_id").values_list("stable_id",flat=True)); active_hash=hashlib.sha256(chr(44).join(active).encode()).hexdigest(); print("|".join((f"personal={len(personal)}:{chr(44).join(personal)}",f"assessment={len(assessment)}:{chr(44).join(assessment)}",f"practice={len(practice)}:{chr(44).join(practice)}",f"priority={priority.content_hash}",f"score_active={len(active)}:{active_hash}")))' \
         | tail -n 1
 }
 
@@ -137,8 +137,7 @@ compose exec -T app python manage.py shell -c \
 compose exec -T app python manage.py verify_m6c_pilot_readiness
 compose exec -T app python manage.py verify_m6d_authoring_readiness
 readonly expected_browser_slice_state="$(browser_slice_state)"
-[[ "$expected_browser_slice_state" =~ ^personal=1:[0-9a-f]{64}\|assessment=1:[0-9a-f]{64}\|practice=1:[0-9a-f]{64}\|priority=[0-9a-f]{64}\|score_active=PRACTICE-FRIENDSHIP-01$ ]]
-test "${expected_browser_slice_state##*score_active=}" = "PRACTICE-FRIENDSHIP-01"
+[[ "$expected_browser_slice_state" =~ ^personal=1:[0-9a-f]{64}\|assessment=1:[0-9a-f]{64}\|practice=1:[0-9a-f]{64}\|priority=[0-9a-f]{64}\|score_active=383:[0-9a-f]{64}$ ]]
 
 printf '\n==> Create and integrity-check an online SQLite backup\n'
 compose exec -T app python manage.py backup_database --output "$backup_path"

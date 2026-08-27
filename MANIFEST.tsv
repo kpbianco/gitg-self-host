@@ -711,7 +711,7 @@ scripts/roadmap-autopilot.sh	1050
 scripts/verify-manifest.py	2172
 scripts/verify_assessment_golden.js	2068
 scripts/verify_competency_evidence_readiness.sh	2093
-scripts/verify_compose.sh	12552
+scripts/verify_compose.sh	12718
 scripts/verify_context_priority_readiness.sh	2197
 scripts/verify_context_readiness.sh	1935
 scripts/verify_expansion_readiness.sh	1740
@@ -772,7 +772,7 @@ tests/test_context_priority_readiness.py	16277
 tests/test_context_readiness.py	3741
 tests/test_context_services.py	13403
 tests/test_database_and_backup.py	1307
-tests/test_deployment_contract.py	4394
+tests/test_deployment_contract.py	4694
 tests/test_evidence_audit.py	16896
 tests/test_evidence_dispatch.py	5190
 tests/test_evidence_engine.py	14065
