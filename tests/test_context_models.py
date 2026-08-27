@@ -204,7 +204,12 @@ def test_migration_round_trip_preserves_all_preexisting_growth_rows():
     synchronize_all_score_states()
     executor = MigrationExecutor(connection)
     original_leaves = executor.loader.graph.leaf_nodes()
-    excluded = {"growth_assessmentcontext", "growth_practicecontext"}
+    excluded = {
+        "growth_assessmentcontext",
+        "growth_practicecontext",
+        "growth_weeklyexecutionplan",
+        "growth_weeklyexecutionreview",
+    }
     added_columns = {("growth_practicecheckin", "typed_observations")}
     before = _growth_row_digest(excluded, added_columns)
     try:

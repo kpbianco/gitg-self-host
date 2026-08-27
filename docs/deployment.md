@@ -147,6 +147,10 @@ revisions are append-only, assessment-epoch-scoped private local data in the
 same database and backups. Context priority results are reproducible and are
 not stored. Authored Personal OS text is not a ranking, evidence, score,
 activation, telemetry, or existing-export input.
+M6H weekly plans and proof reviews also persist in SQLite and backups. They
+contain stable linkage, schedule, categorical review state, and replayable
+proof references, but no Personal OS prose. They do not create evidence or
+score state.
 
 ## Updating
 
@@ -175,7 +179,7 @@ After an update, sign in and verify:
    evidence-updated estimates;
 9. `/health/` returns `{"status":"ok"}`.
 10. `docker compose exec app python manage.py verify_pilot_readiness` reports
-    the exact reviewed five-protocol boundary and replay state.
+    the exact 383-protocol runtime boundary and replay state.
 11. **Account → Open feedback form** explains that pilot feedback is optional,
     local, and separate from developmental state.
 12. `/personal-os/` and
@@ -185,8 +189,12 @@ After an update, sign in and verify:
     no-dedicated-export/purge/retention boundaries before collection.
 13. `docker compose exec app python manage.py
     verify_m6c_pilot_readiness` reports all six prerequisite readiness
-    contracts, the exact five-protocol projection, registered authenticated
-    browser routes, and friendship-only activation without writing data.
+    contracts, the exact 383-protocol projection, registered authenticated
+    browser routes, and all-catalog activation without writing data.
+14. `/weekly/` shows one current-practice action and an explicit proof state;
+    `docker compose exec app python manage.py
+    verify_weekly_execution_readiness` replays plans and reviews without
+    writing data or printing private values.
 
 The evidence verifier is intentionally not an automatic repair step. Startup
 backfill reconciles missing legacy events and verifies existing ones;

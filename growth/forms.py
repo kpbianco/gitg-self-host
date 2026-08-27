@@ -28,6 +28,11 @@ from growth.domain.typed_evidence import (
     load_typed_evidence_spec,
     materialize_typed_evidence_rules,
 )
+from growth.domain.weekly_execution import (
+    WeeklyAdjustment,
+    WeeklyNextStep,
+    week_end,
+)
 from growth.models import PilotFeedback, PracticeAction, PracticeCheckIn, PracticeProtocol
 from growth.services.pilot_feedback import (
     FEEDBACK_FIELD_STAGES,
@@ -306,6 +311,76 @@ class PracticePriorityContextForm(forms.Form):
         )
 
 
+class PracticeActionChoiceField(forms.ModelChoiceField):
+    def label_from_instance(self, obj):
+        return f"Action {obj.sequence}: {obj.title}"
+
+
+class WeeklyExecutionPlanForm(forms.Form):
+    assessment_epoch = forms.CharField(widget=forms.HiddenInput)
+    sprint_id = forms.UUIDField(widget=forms.HiddenInput)
+    week_start = forms.DateField(widget=forms.HiddenInput)
+    action = PracticeActionChoiceField(
+        label="One action to make concrete this week",
+        queryset=PracticeAction.objects.none(),
+        help_text="Choose one action from the current practice. Planning it is not evidence.",
+    )
+    intended_on = forms.DateField(
+        label="Intended day",
+        widget=forms.DateInput(attrs={"type": "date"}),
+        help_text="Choose a day inside this Monday-to-Sunday window.",
+    )
+
+    def __init__(self, *args, sprint=None, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.sprint = sprint
+        if sprint is not None:
+            self.fields["action"].queryset = sprint.protocol.actions.order_by("sequence")
+
+    def clean(self):
+        cleaned = super().clean()
+        if self.sprint is None:
+            raise forms.ValidationError("An active practice is required for weekly planning.")
+        if cleaned.get("sprint_id") != self.sprint.pk:
+            raise forms.ValidationError("The active practice changed. Reload before saving.")
+        action = cleaned.get("action")
+        if action is not None and action.protocol_id != self.sprint.protocol_id:
+            self.add_error("action", "Choose an action from the current practice.")
+        start = cleaned.get("week_start")
+        intended = cleaned.get("intended_on")
+        if start is not None and intended is not None and not start <= intended <= week_end(start):
+            self.add_error("intended_on", "Choose a day inside this weekly window.")
+        return cleaned
+
+
+class WeeklyExecutionReviewForm(forms.Form):
+    plan_id = forms.UUIDField(widget=forms.HiddenInput)
+    next_step = forms.ChoiceField(
+        label="What should happen next?",
+        choices=(
+            (WeeklyNextStep.CONTINUE_CURRENT.value, "Continue the current action"),
+            (WeeklyNextStep.PLAN_NEXT_ACTION.value, "Plan the next action"),
+            (WeeklyNextStep.PAUSE_RECONSIDER.value, "Pause and reconsider"),
+            (
+                WeeklyNextStep.CHOOSE_DIFFERENT_PRACTICE.value,
+                "Choose a different practice",
+            ),
+        ),
+        widget=forms.RadioSelect,
+    )
+    adjustment = forms.ChoiceField(
+        label="What adjustment, if any, would make the next attempt more workable?",
+        choices=(
+            (WeeklyAdjustment.NONE.value, "No adjustment"),
+            (WeeklyAdjustment.TIMING.value, "Change timing"),
+            (WeeklyAdjustment.SCOPE.value, "Reduce or clarify scope"),
+            (WeeklyAdjustment.SUPPORT.value, "Change support"),
+            (WeeklyAdjustment.CONTEXT.value, "Change context"),
+            (WeeklyAdjustment.RECOVERY.value, "Protect recovery or capacity"),
+        ),
+    )
+
+
 class PracticeApplicabilityForm(forms.Form):
     applicable = forms.ChoiceField(
         label="Is this practice currently applicable?",
@@ -407,11 +482,6 @@ TYPED_PROVENANCE_LABELS = {
 
 def _typed_field_name(measurement_id: str, part: str) -> str:
     return f"typed_{measurement_id}_{part}"
-
-
-class PracticeActionChoiceField(forms.ModelChoiceField):
-    def label_from_instance(self, obj):
-        return f"Action {obj.sequence}: {obj.title}"
 
 
 class PracticeCheckInForm(forms.ModelForm):

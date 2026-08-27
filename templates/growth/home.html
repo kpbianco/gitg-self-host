@@ -53,6 +53,26 @@
     </div>
   {% endif %}
 
+  {% if summary.assessment_run %}
+    <div class="context-summary" role="note">
+      <div>
+        <strong>
+          {% if weekly_review_pending %}A weekly proof review is ready.
+          {% elif weekly_plan %}This week has one concrete action.
+          {% else %}This week is not planned yet.{% endif %}
+        </strong>
+        {% if weekly_review_pending %}
+          <p>Review only the submitted evidence attached to {{ weekly_review_pending.action.title }}.</p>
+        {% elif weekly_plan %}
+          <p>{{ weekly_plan.action.title }} is planned for {{ weekly_plan.intended_on|date:"l, M j" }}.</p>
+        {% else %}
+          <p>Connect the current Personal OS direction to one action from the active practice.</p>
+        {% endif %}
+      </div>
+      <a class="text-link" href="{% url 'growth:weekly-execution' %}">Open weekly execution <span aria-hidden="true">→</span></a>
+    </div>
+  {% endif %}
+
   <div class="dashboard-grid">
     <section class="panel panel-prominent">
       <div class="panel-heading">

@@ -1,7 +1,7 @@
 # Current state
 
-Last updated: 2026-08-26
-Implementation branch: `codex/m6e-full-competency-frontier`
+Last updated: 2026-08-27
+Implementation branch: `codex/m6h-01-weekly-execution`
 
 ## M6F all-active implementation
 
@@ -39,7 +39,23 @@ make full-frontier-check PYTHON=.venv/bin/python
 make pilot-check PYTHON=.venv/bin/python
 make curriculum-check PYTHON=.venv/bin/python
 make competency-evidence-check PYTHON=.venv/bin/python
+make m6h-weekly-check PYTHON=.venv/bin/python
 ```
+
+## M6H-01 weekly execution implementation
+
+- The authenticated weekly surface connects verified Personal OS direction,
+  existing context priority, one current practice, and one exact action.
+- Plans are immutable, append-only, assessment-epoch scoped, and limited to
+  the current Monday-to-Sunday window.
+- Proof reviews replay only submitted evidence for the exact plan action after
+  plan creation and no later than the frozen review cutoff.
+- Planning and review create no evidence event, score snapshot, recommendation
+  factor, sprint transition, final practice review, or mastery state.
+- Compose verifies plan and review hashes through recreation and
+  backup/restore; readiness output is private-value free.
+- This is the next software-only timeline item. Manual audit and human-gate
+  work are not part of M6H-01.
 
 ## Pending owner audit
 

@@ -7,6 +7,7 @@ from . import (
     views_personal_os,
     views_pilot,
     views_practice,
+    views_weekly,
 )
 
 app_name = "growth"
@@ -15,6 +16,7 @@ urlpatterns = [
     path("", views.home, name="home"),
     path("profile/", views.profile, name="profile"),
     path("personal-os/", views_personal_os.personal_os, name="personal-os"),
+    path("weekly/", views_weekly.weekly_execution, name="weekly-execution"),
     path("evidence/", views_evidence.evidence_ledger, name="evidence-ledger"),
     path(
         "evidence/export.json",

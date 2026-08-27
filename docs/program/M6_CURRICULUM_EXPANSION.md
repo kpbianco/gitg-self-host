@@ -190,6 +190,13 @@ support, prove export/deletion/retention and backup/restore/upgrade behavior,
 and conduct diverse multi-cycle accessibility, cultural-bias, safety, burden,
 abandonment, and recommendation-fit review. Maintain modest claims.
 
+M6H-01 takes the software-only first slice of Phase F: connect verified
+Personal OS direction and existing context priority to one weekly action and
+an immutable proof-based review. It deliberately skips M6G governance and the
+human accessibility, cultural, safety, and participant portions of Phase F.
+Those remain pending; they are neither prerequisites for this software slice
+nor represented as passed by it.
+
 ## Per-package release gate
 
 A package is not a release candidate until:

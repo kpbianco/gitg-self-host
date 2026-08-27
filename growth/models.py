@@ -26,6 +26,14 @@ from growth.domain.personal_os import (
     PersonalOSValueState,
     build_personal_os_snapshot,
 )
+from growth.domain.weekly_execution import (
+    WEEKLY_EXECUTION_CONTRACT_VERSION,
+    WeeklyAdjustment,
+    WeeklyNextStep,
+    WeeklyProofOutcome,
+    build_weekly_plan_snapshot,
+    build_weekly_review_snapshot,
+)
 
 MASTERY_DISCLAIMER = "Completing this practice does not establish mastery."
 PILOT_FEEDBACK_CONTRACT_VERSION = "GG-PILOT-FEEDBACK-1.0"
@@ -1606,3 +1614,273 @@ class PersonalOSRevision(models.Model):
             }
             for section_id in section_ids
         }
+
+
+class ImmutableWeeklyExecutionQuerySet(models.QuerySet):
+    def update(self, **kwargs):
+        raise ValidationError("Weekly execution records are immutable.")
+
+    def bulk_update(self, objs, fields, batch_size=None):
+        raise ValidationError("Weekly execution records are immutable.")
+
+    def bulk_create(
+        self,
+        objs,
+        batch_size=None,
+        ignore_conflicts=False,
+        update_conflicts=False,
+        update_fields=None,
+        unique_fields=None,
+    ):
+        raise ValidationError("Weekly execution records require validated individual creation.")
+
+    def delete(self):
+        raise ValidationError("Weekly execution records are immutable.")
+
+
+class WeeklyExecutionPlan(models.Model):
+    stable_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="weekly_execution_plans",
+    )
+    assessment_run = models.ForeignKey(
+        AssessmentRun,
+        on_delete=models.CASCADE,
+        related_name="weekly_execution_plans",
+    )
+    sprint = models.ForeignKey(
+        PracticeSprint,
+        on_delete=models.CASCADE,
+        related_name="weekly_execution_plans",
+    )
+    action = models.ForeignKey(
+        PracticeAction,
+        on_delete=models.PROTECT,
+        related_name="weekly_execution_plans",
+    )
+    contract_version = models.CharField(
+        max_length=40,
+        default=WEEKLY_EXECUTION_CONTRACT_VERSION,
+        editable=False,
+    )
+    week_start = models.DateField()
+    revision = models.PositiveIntegerField()
+    intended_on = models.DateField()
+    canonical_snapshot = models.JSONField()
+    content_hash = models.CharField(max_length=64)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    objects = ImmutableWeeklyExecutionQuerySet.as_manager()
+
+    class Meta:
+        ordering = ["assessment_run_id", "week_start", "revision"]
+        indexes = [
+            models.Index(
+                fields=["user", "-week_start", "-revision"],
+                name="weekly_plan_latest_idx",
+            )
+        ]
+        constraints = [
+            models.UniqueConstraint(
+                fields=["assessment_run", "week_start", "revision"],
+                name="unique_weekly_plan_revision",
+            ),
+            models.CheckConstraint(
+                condition=Q(contract_version=WEEKLY_EXECUTION_CONTRACT_VERSION),
+                name="weekly_plan_contract_v1",
+            ),
+            models.CheckConstraint(
+                condition=Q(revision__gte=1),
+                name="weekly_plan_revision_positive",
+            ),
+        ]
+
+    def __str__(self) -> str:
+        return f"{self.week_start}: plan revision {self.revision}"
+
+    def save(self, *args, **kwargs):
+        if self.pk and type(self).objects.filter(pk=self.pk).exists():
+            raise ValidationError("Weekly execution plans are immutable.")
+        if kwargs.get("force_update"):
+            raise ValidationError("Weekly execution plans are immutable.")
+        self.full_clean()
+        return super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        raise ValidationError("Weekly execution plans are immutable.")
+
+    def clean(self):
+        super().clean()
+        errors = {}
+        if self.contract_version != WEEKLY_EXECUTION_CONTRACT_VERSION:
+            errors["contract_version"] = "Weekly execution contract version is not supported."
+        if self.user_id and self.assessment_run_id and self.user_id != self.assessment_run.user_id:
+            errors["user"] = "Weekly plan user must own the assessment epoch."
+        if self.user_id and self.sprint_id and self.user_id != self.sprint.user_id:
+            errors["sprint"] = "Weekly plan user must own the practice sprint."
+        if (
+            self.assessment_run_id
+            and self.sprint_id
+            and self.sprint.assessment_run_id != self.assessment_run_id
+        ):
+            errors["sprint"] = "Weekly plan sprint must belong to the assessment epoch."
+        if self.action_id and self.sprint_id and self.action.protocol_id != self.sprint.protocol_id:
+            errors["action"] = "Weekly plan action must belong to the sprint protocol."
+        if self.assessment_run_id and self.week_start and self._state.adding:
+            latest_revision = (
+                type(self)
+                .objects.filter(
+                    assessment_run_id=self.assessment_run_id,
+                    week_start=self.week_start,
+                )
+                .order_by("-revision")
+                .values_list("revision", flat=True)
+                .first()
+            )
+            expected_revision = 1 if latest_revision is None else latest_revision + 1
+            if self.revision != expected_revision:
+                errors["revision"] = (
+                    f"Weekly plan revision must be the next contiguous value: {expected_revision}."
+                )
+        try:
+            expected = build_weekly_plan_snapshot(
+                assessment_epoch_id=self.assessment_run_id,
+                sprint_id=str(self.sprint_id),
+                protocol_stable_id=self.sprint.protocol_id,
+                action_stable_id=self.action_id,
+                week_start=self.week_start,
+                intended_on=self.intended_on,
+                contract_version=self.contract_version,
+            )
+        except (ValueError, TypeError):
+            errors["canonical_snapshot"] = "Weekly plan fields fail the supported contract."
+        else:
+            if self.canonical_snapshot != expected.payload:
+                errors["canonical_snapshot"] = "Weekly plan snapshot does not match fields."
+            if self.content_hash != expected.content_hash:
+                errors["content_hash"] = "Weekly plan content hash does not verify."
+        if errors:
+            raise ValidationError(errors)
+
+
+class WeeklyExecutionReview(models.Model):
+    class NextStep(models.TextChoices):
+        CONTINUE_CURRENT = WeeklyNextStep.CONTINUE_CURRENT.value, "Continue the current action"
+        PLAN_NEXT_ACTION = WeeklyNextStep.PLAN_NEXT_ACTION.value, "Plan the next action"
+        PAUSE_RECONSIDER = WeeklyNextStep.PAUSE_RECONSIDER.value, "Pause and reconsider"
+        CHOOSE_DIFFERENT_PRACTICE = (
+            WeeklyNextStep.CHOOSE_DIFFERENT_PRACTICE.value,
+            "Choose a different practice",
+        )
+
+    class Adjustment(models.TextChoices):
+        NONE = WeeklyAdjustment.NONE.value, "No adjustment"
+        TIMING = WeeklyAdjustment.TIMING.value, "Change timing"
+        SCOPE = WeeklyAdjustment.SCOPE.value, "Reduce or clarify scope"
+        SUPPORT = WeeklyAdjustment.SUPPORT.value, "Change support"
+        CONTEXT = WeeklyAdjustment.CONTEXT.value, "Change context"
+        RECOVERY = WeeklyAdjustment.RECOVERY.value, "Protect recovery or capacity"
+
+    class Outcome(models.TextChoices):
+        NO_SUBMITTED_EVIDENCE = (
+            WeeklyProofOutcome.NO_SUBMITTED_EVIDENCE.value,
+            "No submitted evidence",
+        )
+        ATTEMPTED = WeeklyProofOutcome.ATTEMPTED.value, "Attempted"
+        COMPLETED = WeeklyProofOutcome.COMPLETED.value, "Completed"
+
+    stable_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="weekly_execution_reviews",
+    )
+    plan = models.OneToOneField(
+        WeeklyExecutionPlan,
+        on_delete=models.CASCADE,
+        related_name="review",
+    )
+    contract_version = models.CharField(
+        max_length=40,
+        default=WEEKLY_EXECUTION_CONTRACT_VERSION,
+        editable=False,
+    )
+    outcome = models.CharField(max_length=32, choices=Outcome.choices)
+    next_step = models.CharField(max_length=32, choices=NextStep.choices)
+    adjustment = models.CharField(max_length=20, choices=Adjustment.choices)
+    canonical_snapshot = models.JSONField()
+    content_hash = models.CharField(max_length=64)
+    submitted_at = models.DateTimeField()
+
+    objects = ImmutableWeeklyExecutionQuerySet.as_manager()
+
+    class Meta:
+        ordering = ["plan__week_start", "plan__revision"]
+        constraints = [
+            models.CheckConstraint(
+                condition=Q(contract_version=WEEKLY_EXECUTION_CONTRACT_VERSION),
+                name="weekly_review_contract_v1",
+            ),
+            models.CheckConstraint(
+                condition=Q(outcome__in=[item.value for item in WeeklyProofOutcome]),
+                name="weekly_review_outcome_valid",
+            ),
+            models.CheckConstraint(
+                condition=Q(next_step__in=[item.value for item in WeeklyNextStep]),
+                name="weekly_review_next_step_valid",
+            ),
+            models.CheckConstraint(
+                condition=Q(adjustment__in=[item.value for item in WeeklyAdjustment]),
+                name="weekly_review_adjustment_valid",
+            ),
+        ]
+
+    def __str__(self) -> str:
+        return f"Review for weekly plan {self.plan_id}"
+
+    def save(self, *args, **kwargs):
+        if self.pk and type(self).objects.filter(pk=self.pk).exists():
+            raise ValidationError("Weekly execution reviews are immutable.")
+        if kwargs.get("force_update"):
+            raise ValidationError("Weekly execution reviews are immutable.")
+        self.full_clean()
+        return super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        raise ValidationError("Weekly execution reviews are immutable.")
+
+    def clean(self):
+        super().clean()
+        errors = {}
+        if self.contract_version != WEEKLY_EXECUTION_CONTRACT_VERSION:
+            errors["contract_version"] = "Weekly execution contract version is not supported."
+        if self.user_id and self.plan_id and self.user_id != self.plan.user_id:
+            errors["user"] = "Weekly review user must own the weekly plan."
+        proof_events = (
+            self.canonical_snapshot.get("proof_events", [])
+            if isinstance(self.canonical_snapshot, dict)
+            else []
+        )
+        try:
+            expected = build_weekly_review_snapshot(
+                plan_stable_id=str(self.plan_id),
+                plan_content_hash=self.plan.content_hash,
+                proof_events=proof_events,
+                reviewed_at=self.submitted_at,
+                next_step=self.next_step,
+                adjustment=self.adjustment,
+                contract_version=self.contract_version,
+            )
+        except (ValueError, TypeError):
+            errors["canonical_snapshot"] = "Weekly review fields fail the supported contract."
+        else:
+            if self.outcome != expected.payload["outcome"]:
+                errors["outcome"] = "Weekly review outcome does not match submitted proof."
+            if self.canonical_snapshot != expected.payload:
+                errors["canonical_snapshot"] = "Weekly review snapshot does not match fields."
+            if self.content_hash != expected.content_hash:
+                errors["content_hash"] = "Weekly review content hash does not verify."
+        if errors:
+            raise ValidationError(errors)

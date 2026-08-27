@@ -17,6 +17,16 @@
     </span>
   </section>
 
+  {% if sprint.status == "active" %}
+    <div class="context-summary" role="note">
+      <div>
+        <strong>Make one action concrete for this week.</strong>
+        <p>The weekly plan references this practice but creates no evidence by itself.</p>
+      </div>
+      <a class="text-link" href="{% url 'growth:weekly-execution' %}">Plan weekly execution <span aria-hidden="true">→</span></a>
+    </div>
+  {% endif %}
+
   {% if sprint.status == "completed" %}
     <div class="mastery-notice" role="note">
       <strong>Completing this practice does not establish mastery.</strong>

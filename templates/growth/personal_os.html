@@ -144,7 +144,10 @@
       Open an active practice and choose “Review current context.” Unreviewed practices
       remain unjudged and are never silently treated as unfavorable.
     </p>
-    <a class="button button-secondary" href="{% url 'growth:practice-list' %}">Choose a practice</a>
+    <div class="button-row">
+      <a class="button button-secondary" href="{% url 'growth:practice-list' %}">Choose a practice</a>
+      <a class="button button-secondary" href="{% url 'growth:weekly-execution' %}">Plan weekly execution</a>
+    </div>
   </section>
 {% endblock %}
 

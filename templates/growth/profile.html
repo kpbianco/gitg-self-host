@@ -248,6 +248,25 @@
         evidence, and completing this practice does not establish mastery.
       </p>
     </aside>
+
+    <section class="panel" aria-labelledby="weekly-profile-heading">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">Operating loop</p>
+          <h2 id="weekly-profile-heading">Weekly execution and proof review</h2>
+        </div>
+      </div>
+      <div class="shadow-summary">
+        <div><strong>{{ weekly_plan_count }}</strong><span>immutable plan revision{{ weekly_plan_count|pluralize }}</span></div>
+        <div><strong>{{ weekly_review_count }}</strong><span>proof review{{ weekly_review_count|pluralize }}</span></div>
+        <div><strong>0</strong><span>scores created by planning or review</span></div>
+      </div>
+      <p class="fine-print">
+        Weekly records organize existing practices and evidence. They do not create a competency
+        score, rewrite Personal OS text, or convert completion into mastery.
+      </p>
+      <a class="button button-secondary" href="{% url 'growth:weekly-execution' %}">Open weekly execution</a>
+    </section>
   {% else %}
     <div class="empty-state">
       <h2>No assessment profile is available</h2>

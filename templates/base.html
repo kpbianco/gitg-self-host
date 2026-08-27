@@ -20,6 +20,7 @@
           <a href="{% url 'growth:home' %}" {% if request.path == '/' %}aria-current="page"{% endif %}>Home</a>
           <a href="{% url 'growth:assessment' %}" {% if '/assessment/' in request.path %}aria-current="page"{% endif %}>Assessment</a>
           <a href="{% url 'growth:personal-os' %}" {% if '/personal-os/' in request.path %}aria-current="page"{% endif %}>Personal OS</a>
+          <a href="{% url 'growth:weekly-execution' %}" {% if '/weekly/' in request.path %}aria-current="page"{% endif %}>Weekly</a>
           <a href="{% url 'growth:practice-list' %}" {% if '/practice' in request.path %}aria-current="page"{% endif %}>Practices</a>
           <a href="{% url 'growth:evidence-ledger' %}" {% if '/evidence/' in request.path %}aria-current="page"{% endif %}>Evidence</a>
           <a href="{% url 'growth:profile' %}" {% if request.path == '/profile/' %}aria-current="page"{% endif %}>Profile</a>

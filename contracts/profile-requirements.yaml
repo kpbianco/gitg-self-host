@@ -31,6 +31,7 @@ prohibited_autonomy:
 owner_authorized_operations:
   - exact-383-protocol-runtime-projection
   - exact-383-protocol-score-activation
+  - m6h-01-weekly-execution-integration
 review_focus:
   - canonical-source violations
   - placeholder generic or duplicated content
