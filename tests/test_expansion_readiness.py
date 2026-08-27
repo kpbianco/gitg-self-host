@@ -39,7 +39,7 @@ def test_expansion_readiness_is_additive_read_only_and_preserves_runtime(user):
     assert summary.runtime_protocols == before["protocols"]
     assert summary.runtime_actions == before["actions"]
     assert summary.uncovered_competencies == 383 - len(catalog.protocols)
-    assert summary.score_active_protocols == 1
+    assert summary.score_active_protocols == 383
 
 
 @pytest.mark.django_db
@@ -49,6 +49,9 @@ def test_expansion_readiness_command_emits_deterministic_json(user, capsys):
     call_command("verify_expansion_readiness", "--json")
     payload = json.loads(capsys.readouterr().out)
     assert payload["contract_version"] == "GG-CURRICULUM-EXPANSION-READINESS-1.0"
-    assert payload["legacy_projection_hash"] == (
-        "274f7244630ed56d56a443a6a699399edade6c67fcf964237559e05b72368e35"
+    assert (
+        payload["legacy_projection_hash"]
+        == load_practice_content_bundle(Path(__file__).resolve().parents[1]).release_manifest[
+            "legacy_projection_hash"
+        ]
     )

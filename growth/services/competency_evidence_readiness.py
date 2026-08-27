@@ -20,7 +20,6 @@ from growth.services.expansion_readiness import (
     verify_expansion_readiness,
 )
 from growth.services.scoring import (
-    FRIENDSHIP_PROTOCOL_ID,
     PRODUCTION_SCORE_ELIGIBILITY_CONTRACT_VERSION,
     PRODUCTION_SCORE_MAPPING_FINGERPRINT,
     validate_production_scoring_protocol,
@@ -177,24 +176,13 @@ def verify_competency_evidence_readiness() -> CompetencyEvidenceReadinessSummary
         report["typed_score_active_protocols"],
     )
 
-    friendship = next(
-        (
-            protocol
-            for protocol in runtime_protocols
-            if protocol.stable_id == FRIENDSHIP_PROTOCOL_ID
-        ),
-        None,
-    )
-    if friendship is None:
-        raise CompetencyEvidenceReadinessError(
-            "The seeded friendship production protocol is unavailable."
-        )
-    try:
-        validate_production_scoring_protocol(friendship)
-    except ScoringContractError as exc:
-        raise CompetencyEvidenceReadinessError(
-            f"Production score-eligibility verification failed: {exc}"
-        ) from exc
+    for protocol in runtime_protocols:
+        try:
+            validate_production_scoring_protocol(protocol)
+        except ScoringContractError as exc:
+            raise CompetencyEvidenceReadinessError(
+                f"{protocol.stable_id}: production score-eligibility verification failed: {exc}"
+            ) from exc
 
     return CompetencyEvidenceReadinessSummary(
         contract_version=COMPETENCY_EVIDENCE_READINESS_CONTRACT_VERSION,

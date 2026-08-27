@@ -35,6 +35,7 @@ SUPPORTED_POLICY_IDS = frozenset(
         "SP-QUALIFIED-EVIDENCE-REQUIRED",
         "SP-SHADOW-ONLY",
         "SP-NON-SCORED-REFLECTION",
+        "SP-STRUCTURED-EVIDENCE-ELIGIBLE",
     }
 )
 SUPPORTED_DIRECTIONS = frozenset({"supports", "mixed", "contradicts", "inconclusive", "unknown"})

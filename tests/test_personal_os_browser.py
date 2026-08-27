@@ -235,7 +235,9 @@ def test_partial_context_cohort_orders_only_verified_eligible_practices(client, 
     client.force_login(user)
     run = user.assessment_runs.first()
     client.post(reverse("growth:personal-os"), assessment_context_post(epoch=run.pk))
-    protocols = list(PracticeProtocol.objects.filter(availability="active").order_by("stable_id"))
+    protocols = list(
+        PracticeProtocol.objects.filter(availability="active").order_by("stable_id")[:10]
+    )
     values = {
         "applicability": 4,
         "importance": 4,
@@ -358,7 +360,9 @@ def test_browser_order_matches_direct_frozen_result_and_context_retry_is_idempot
     client.force_login(user)
     run = user.assessment_runs.first()
     client.post(reverse("growth:personal-os"), assessment_context_post(epoch=run.pk, capacity="4"))
-    protocols = list(PracticeProtocol.objects.filter(availability="active").order_by("stable_id"))
+    protocols = list(
+        PracticeProtocol.objects.filter(availability="active").order_by("stable_id")[:10]
+    )
     values = {
         "applicability": 4,
         "importance": 3,

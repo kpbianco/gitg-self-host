@@ -10,8 +10,8 @@ from growth.services.competency_evidence_readiness import (
 
 class Command(BaseCommand):
     help = (
-        "Verify additive M6B software readiness while retaining specialist "
-        "acceptance as a separate gate."
+        "Verify all-catalog competency evidence readiness while retaining "
+        "specialist acceptance as a separate audit."
     )
 
     def add_arguments(self, parser):
@@ -38,8 +38,13 @@ class Command(BaseCommand):
                 f"{summary.canonical_protocol_packages} canonical packages, "
                 f"{summary.practice_actions} actions, "
                 f"{summary.uncovered_competencies} explicitly unauthored "
-                "competencies, 0 typed production protocols, and 0 typed "
-                "score-active protocols. ER-M6A-003 remains pending and "
-                "RG-M6A-002 remains open, so M6B is not accepted."
+                f"competencies, {summary.typed_production_protocols} typed "
+                f"production protocols, {summary.typed_score_active_protocols} "
+                f"typed score-active protocols, and "
+                f"{summary.score_active_protocols} total score-active protocols. "
+                "Owner-directed M6F software activation is effective; the "
+                f"separate M6B specialist audit remains tracked as "
+                f"{summary.expert_review_id}={summary.expert_review_status} and "
+                f"{summary.research_gap_id}={summary.research_gap_status}."
             )
         )

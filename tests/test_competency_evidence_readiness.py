@@ -38,15 +38,17 @@ def test_competency_evidence_readiness_is_additive_read_only_and_not_acceptance(
     assert summary.preserved_expansion_contract_version == "GG-CURRICULUM-EXPANSION-READINESS-1.0"
     assert (
         summary.production_score_eligibility_contract_version
-        == "GG-PRODUCTION-SCORE-ELIGIBILITY-1.0"
+        == "GG-PRODUCTION-SCORE-ELIGIBILITY-2.0"
     )
     assert summary.software_ready is True
     assert summary.competencies == 383
-    assert summary.canonical_protocol_packages >= 9
-    assert summary.practice_actions >= 29
-    assert summary.uncovered_competencies <= 374
-    assert summary.source_typed_protocols >= 4
-    assert summary.score_active_protocols == 1
+    assert summary.canonical_protocol_packages == 383
+    assert summary.practice_actions == 1151
+    assert summary.uncovered_competencies == 0
+    assert summary.source_typed_protocols == 378
+    assert summary.typed_production_protocols == 378
+    assert summary.typed_score_active_protocols == 378
+    assert summary.score_active_protocols == 383
     catalog = load_practice_content_bundle(settings.BASE_DIR)
     assert summary.expert_review_id == "ER-M6A-003"
     assert summary.expert_review_status == catalog.expert_reviews["ER-M6A-003"]["status"]

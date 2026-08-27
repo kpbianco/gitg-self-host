@@ -54,6 +54,12 @@ class ScoringEvidence:
 
 
 @dataclass(frozen=True)
+class MappedScoringEvidence:
+    evidence: ScoringEvidence
+    weights: tuple[LeverWeight, ...]
+
+
+@dataclass(frozen=True)
 class LeverContribution:
     event_key: str
     action_stable_id: str
@@ -356,6 +362,74 @@ def project_scores(
         )
 
     scored_events = sum(event.direction in DIRECTION_MULTIPLIERS for event in resolved_events)
+    return ScoreProjection(
+        algorithm_version=SCORING_ALGORITHM_VERSION,
+        event_count=len(resolved_events),
+        scored_event_count=scored_events,
+        withheld_event_count=len(resolved_events) - scored_events,
+        levers=tuple(projected),
+    )
+
+
+def project_mapped_scores(
+    *,
+    baselines: Mapping[str, BaselineMass],
+    events: Iterable[MappedScoringEvidence],
+) -> ScoreProjection:
+    """Project events that each carry their own canonical competency mapping."""
+
+    resolved_events = tuple(events)
+    event_keys = [item.evidence.event_key for item in resolved_events]
+    if len(event_keys) != len(set(event_keys)):
+        raise ScoringContractError("A projection cannot include the same evidence event twice.")
+    contributions_by_lever: dict[str, list[LeverContribution]] = {}
+    for mapped in resolved_events:
+        _validate_event(mapped.evidence)
+        for weight in _validated_weights(mapped.weights):
+            baseline = baselines.get(weight.lever_id)
+            if baseline is None:
+                raise ScoringContractError(
+                    f"{weight.lever_id}: scoring baseline mass is unavailable."
+                )
+            validate_baseline_mass(baseline)
+            if baseline.lever_id != weight.lever_id:
+                raise ScoringContractError(
+                    f"{weight.lever_id}: baseline stable ID does not match its mapping."
+                )
+            contributions_by_lever.setdefault(weight.lever_id, []).append(
+                _contribution(mapped.evidence, weight)
+            )
+
+    projected: list[ProjectedLever] = []
+    for lever_id in sorted(contributions_by_lever):
+        baseline = baselines[lever_id]
+        contributions = tuple(contributions_by_lever[lever_id])
+        evidence_mass = _quantize(sum((item.evidence_mass for item in contributions), Decimal("0")))
+        success_mass = _quantize(sum((item.success_mass for item in contributions), Decimal("0")))
+        failure_mass = _quantize(sum((item.failure_mass for item in contributions), Decimal("0")))
+        projected_alpha = _quantize(baseline.alpha + success_mass)
+        projected_beta = _quantize(baseline.beta + failure_mass)
+        projected.append(
+            ProjectedLever(
+                lever_id=lever_id,
+                baseline_alpha=_quantize(baseline.alpha),
+                baseline_beta=_quantize(baseline.beta),
+                baseline_estimate=_estimate(baseline.alpha, baseline.beta),
+                baseline_confidence=_quantize(baseline.confidence, FOUR_PLACES),
+                evidence_mass=evidence_mass,
+                success_mass=success_mass,
+                failure_mass=failure_mass,
+                projected_alpha=projected_alpha,
+                projected_beta=projected_beta,
+                projected_estimate=_estimate(projected_alpha, projected_beta),
+                projected_confidence=_project_confidence(baseline.confidence, evidence_mass),
+                contributions=contributions,
+            )
+        )
+
+    scored_events = sum(
+        item.evidence.direction in DIRECTION_MULTIPLIERS for item in resolved_events
+    )
     return ScoreProjection(
         algorithm_version=SCORING_ALGORITHM_VERSION,
         event_count=len(resolved_events),

@@ -127,8 +127,8 @@ def test_repeated_seed_is_idempotent_and_imports_pilot_profile(user):
             "orientations": 6,
             "archetypes": 3,
             "baselines": 37,
-            "protocols": 5,
-            "actions": 15,
+            "protocols": 383,
+            "actions": 1151,
         }
     )
     assert AssessmentRun.objects.get().assessment_version == "1.1"
@@ -151,26 +151,26 @@ def test_repeated_seed_is_idempotent_and_imports_pilot_profile(user):
     play = PracticeProtocol.objects.get(stable_id="PRACTICE-PLAY-01")
     assert play.availability == PracticeProtocol.Availability.ACTIVE
     assert play.parent_competency_id == "26.01"
-    assert play.score_active is False
+    assert play.score_active is True
     assert play.actions.count() == 3
     emotional_cues = PracticeProtocol.objects.get(stable_id="PRACTICE-EMOTIONAL-CUES-01")
     assert emotional_cues.availability == PracticeProtocol.Availability.ACTIVE
     assert emotional_cues.parent_competency_id == "16.03"
     assert set(emotional_cues.target_levers.values_list("stable_id", flat=True)) == {"L24"}
-    assert emotional_cues.score_active is False
+    assert emotional_cues.score_active is True
     assert emotional_cues.actions.count() == 3
     boundary = PracticeProtocol.objects.get(stable_id="PRACTICE-BOUNDARY-01")
     assert boundary.availability == PracticeProtocol.Availability.ACTIVE
     assert boundary.parent_competency_id == "11.10"
     assert set(boundary.target_levers.values_list("stable_id", flat=True)) == {"L25"}
-    assert boundary.score_active is False
+    assert boundary.score_active is True
     assert boundary.actions.count() == 3
     assert boundary.completion_rules["marker_mode"] == "all"
     presence = PracticeProtocol.objects.get(stable_id="PRACTICE-PRESENCE-01")
     assert presence.availability == PracticeProtocol.Availability.ACTIVE
     assert presence.parent_competency_id == "08.02"
     assert set(presence.target_levers.values_list("stable_id", flat=True)) == {"L08"}
-    assert presence.score_active is False
+    assert presence.score_active is True
     assert presence.actions.count() == 3
     assert presence.completion_rules["marker_mode"] == "all"
 

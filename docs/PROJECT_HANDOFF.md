@@ -1202,3 +1202,13 @@ software-ready but not M6B-accepted.
   by profile, recommendation, evidence, scoring, or ordinary UI code in this
   batch. The context snapshot excludes identity and narrative, while the local
   database and its backups remain sensitive participant data.
+# Current M6F override — 2026-08-26
+
+Decision 052 and ADR 0011 supersede every five-runtime, friendship-only,
+inactive, unprojected, source-only, or shadow-only activation ceiling in the
+historical milestone record below. The current owner-directed contract is
+exactly 383 runtime protocols, 1,151 actions, and 383 score-active protocols.
+The five original protocols retain legacy v1 replay; 378 protocols use typed
+structured evidence. Assessment baselines and completion/mastery and
+human-worth boundaries remain unchanged. Deferred content and specialist audit
+status remains visible and is not converted into a validation claim.

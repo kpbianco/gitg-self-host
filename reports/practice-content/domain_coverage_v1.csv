@@ -1,28 +1,28 @@
 domain_id,domain_name,competencies,authored_packages,projected_legacy,uncovered,low_risk,moderate_risk,high_risk,score_active,shadow_only
-01,"Meaning, Worldview, and Purpose",11,11,0,0,11,0,0,0,11
-02,"Ethics, Virtue, and Integrity",15,15,0,0,0,13,2,0,13
-03,"Spirituality, Religion, Ritual, and Transcendence",13,13,0,0,10,0,3,0,10
-04,"Mortality, Suffering, Tragedy, and Hope",10,10,0,0,0,5,5,0,5
-05,"Self-Knowledge, Identity, and Humility",12,12,0,0,12,0,0,0,12
-06,"Vulnerability, Trauma, Disability, Neurodiversity, and Dependency",14,14,0,0,0,0,14,0,0
-07,"Emotional Maturity, Resilience, and Mental Well-Being",14,14,0,0,0,0,14,0,0
-08,"Attention, Desire, Temperance, and Discipline",11,11,1,0,11,0,0,0,11
-09,"Reasoning, Science, Truth, and Decision-Making",17,17,0,0,17,0,0,0,17
-10,"Learning, Memory, Curiosity, Apprenticeship, and Teaching",14,14,0,0,14,0,0,0,14
-11,"Time, Priorities, Goals, and Execution",10,10,1,0,9,1,0,0,10
-12,"Physical Health, Fitness, and Embodiment",16,16,0,0,0,0,16,0,0
-13,"Domestic Competence, Infrastructure, and Material Life",16,16,0,0,1,15,0,0,16
-14,"Digital Life, Media, AI, and Information Security",13,13,0,0,0,11,2,0,11
-15,"Safety, Preparedness, Risk, and Mutual Aid",14,14,0,0,0,0,14,0,0
-16,"Communication, Rhetoric, and Social Intelligence",18,18,1,0,0,18,0,0,18
-17,"Friendship, Belonging, Hospitality, and Social Networks",14,14,1,0,1,12,1,1,12
-18,"Intimacy, Sexuality, and Partnership",14,14,0,0,0,0,14,0,0
-19,"Family, Parenting, Reproduction, and Caregiving",15,15,0,0,0,0,15,0,0
-20,"Community, Citizenship, Justice, and Nonviolent Action",18,18,0,0,0,15,3,0,15
-21,"Work, Craft, Professionalism, and Labor Ethics",19,19,0,0,0,19,0,0,19
-22,"Leadership, Power, Mentorship, and Institutions",17,17,0,0,0,15,2,0,15
-23,"Personal Finance, Provision, and Material Stewardship",12,12,0,0,0,0,12,0,0
-24,"Entrepreneurship, Markets, Economics, and Social Systems",14,14,0,0,0,0,14,0,0
-25,"Creativity, Beauty, and Culture",13,13,0,0,13,0,0,0,13
-26,"Play, Celebration, Leisure, Nature, and Exploration",14,14,1,0,1,13,0,0,14
-27,"Integration, Life Design, Seasons, and Legacy",15,15,0,0,14,0,1,0,14
+01,"Meaning, Worldview, and Purpose",11,11,0,0,11,0,0,11,0
+02,"Ethics, Virtue, and Integrity",15,15,0,0,0,13,2,15,0
+03,"Spirituality, Religion, Ritual, and Transcendence",13,13,0,0,10,0,3,13,0
+04,"Mortality, Suffering, Tragedy, and Hope",10,10,0,0,0,5,5,10,0
+05,"Self-Knowledge, Identity, and Humility",12,12,0,0,12,0,0,12,0
+06,"Vulnerability, Trauma, Disability, Neurodiversity, and Dependency",14,14,0,0,0,0,14,14,0
+07,"Emotional Maturity, Resilience, and Mental Well-Being",14,14,0,0,0,0,14,14,0
+08,"Attention, Desire, Temperance, and Discipline",11,11,1,0,11,0,0,11,0
+09,"Reasoning, Science, Truth, and Decision-Making",17,17,0,0,17,0,0,17,0
+10,"Learning, Memory, Curiosity, Apprenticeship, and Teaching",14,14,0,0,14,0,0,14,0
+11,"Time, Priorities, Goals, and Execution",10,10,1,0,9,1,0,10,0
+12,"Physical Health, Fitness, and Embodiment",16,16,0,0,0,0,16,16,0
+13,"Domestic Competence, Infrastructure, and Material Life",16,16,0,0,1,15,0,16,0
+14,"Digital Life, Media, AI, and Information Security",13,13,0,0,0,11,2,13,0
+15,"Safety, Preparedness, Risk, and Mutual Aid",14,14,0,0,0,0,14,14,0
+16,"Communication, Rhetoric, and Social Intelligence",18,18,1,0,0,18,0,18,0
+17,"Friendship, Belonging, Hospitality, and Social Networks",14,14,1,0,1,12,1,14,0
+18,"Intimacy, Sexuality, and Partnership",14,14,0,0,0,0,14,14,0
+19,"Family, Parenting, Reproduction, and Caregiving",15,15,0,0,0,0,15,15,0
+20,"Community, Citizenship, Justice, and Nonviolent Action",18,18,0,0,0,15,3,18,0
+21,"Work, Craft, Professionalism, and Labor Ethics",19,19,0,0,0,19,0,19,0
+22,"Leadership, Power, Mentorship, and Institutions",17,17,0,0,0,15,2,17,0
+23,"Personal Finance, Provision, and Material Stewardship",12,12,0,0,0,0,12,12,0
+24,"Entrepreneurship, Markets, Economics, and Social Systems",14,14,0,0,0,0,14,14,0
+25,"Creativity, Beauty, and Culture",13,13,0,0,13,0,0,13,0
+26,"Play, Celebration, Leisure, Nature, and Exploration",14,14,1,0,1,13,0,14,0
+27,"Integration, Life Design, Seasons, and Legacy",15,15,0,0,14,0,1,15,0

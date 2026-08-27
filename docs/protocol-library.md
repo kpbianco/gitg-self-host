@@ -1,5 +1,23 @@
 # Protocol library
 
+## Current M6F runtime and scoring boundary
+
+The canonical library now contains one runtime protocol for each of the 383
+competencies and 1,151 stable actions. All 383 protocols are available and
+score active under the explicit M6F activation ledger. The five original
+protocols keep their version-1 observation snapshots for historical replay;
+the remaining 378 protocols use typed structured evidence.
+
+Score activity means an eligible, replay-verified event may update the separate
+current working lever state through the protocol's canonical parent competency
+mapping. It does not modify the published assessment baseline and does not
+establish mastery, identity, dignity, worth, clinical status, or broad transfer.
+Unknown, withheld, adverse, contradictory, and inconclusive states retain their
+explicit fail-closed or withholding behavior.
+
+The M4, M6A, and M6D sections below document how the library evolved. Their
+former activation ceilings are historical and are superseded by M6F.
+
 ## M4A boundary
 
 M4A activates `PRACTICE-PLAY-01`, **Schedule Non-Instrumental Play**, as the
@@ -34,10 +52,9 @@ every action rule before writing.
 
 ## Scoring boundary
 
-Availability and scoring are independent. The friendship protocol is
-`score_active=true`; the other executable protocols are `score_active=false`.
-Their submissions create immutable evidence events but no score snapshot and
-no change to current lever state, confidence, need, or recommendation order.
+Availability and scoring remain independent fields. At M4, friendship alone
+was `score_active=true`; M6F supersedes that historical boundary and activates
+all canonical runtime protocols through one machine-validated contract.
 
 M4A deliberately reuses the existing v1 structured observation vocabulary
 with protocol-specific user-facing labels. Adding fields to the v1 snapshot
@@ -64,7 +81,7 @@ and universal interpretations of eye contact or body language. Culture,
 disability, neurotype, stress, and habit are named sources of variation.
 
 The stable parent maps canonically to L23, L24, and L05. The protocol targets
-only L24 for recommendation and remains score-inactive. The placeholder's
+only L24 for recommendation. It was score-inactive at M4. The placeholder's
 earlier L06 target is not inferred into the canonical parent mapping.
 
 ## M4C boundary
@@ -92,7 +109,7 @@ appropriate trusted, professional, legal, medical, or organizational support,
 not a guided confrontation.
 
 Canonical parent `11.10` maps to L25, L36, L10, and L29. The protocol targets
-only L25 for recommendation and remains score-inactive. M4C does not bind the
+only L25 for recommendation. It was score-inactive at M4. M4C does not bind the
 generic practice to the higher-risk bodily-autonomy or harmful-relationship
 competencies.
 
@@ -121,16 +138,16 @@ or caregiving alerts. It requires no surveillance or recording of another
 person.
 
 Canonical parent `08.02` maps to L08, L03, and L17. The protocol targets only
-L08 for recommendation and remains score-inactive.
+L08 for recommendation. It was score-inactive at M4.
 
-All five seeded protocols are now executable. Friendship remains the only
-score-active protocol; availability alone never authorizes scoring.
+All five original protocols were executable by M4. Availability alone still
+does not authorize scoring; M6F provides the explicit all-383 activation ledger.
 
 ## Post-M4 freeze
 
-`GG-PILOT-READINESS-1.0` treats these five protocols, their fifteen stable
-actions, canonical parents, recommendation targets, and friendship-only score
-activation as the reviewed private-pilot inventory. Run:
+`GG-PILOT-READINESS-1.0` originally treated these five protocols and fifteen
+stable actions as the private-pilot inventory. Its implementation now preserves
+those legacy contracts while also requiring the M6F 383/1,151/383 boundary. Run:
 
 ```bash
 make pilot-check
@@ -148,12 +165,9 @@ manifest-listed, schema-validated packages under `data/practices/protocols/`.
 The ORM and ordinary user experience are unchanged. Rich source, risk,
 adaptation, reflection, and evidence-design metadata remains source-only.
 
-The activation ledger derives friendship's existing `score_active=true` and
-keeps the other four false. The full projection must continue to hash to:
-
-```text
-274f7244630ed56d56a443a6a699399edade6c67fcf964237559e05b72368e35
-```
+The original activation ledger kept only friendship active. M6F replaces it
+with exact all-catalog activation while retaining a compatibility hash over the
+five legacy projections in the release manifest.
 
 `GG-CURRICULUM-EXPANSION-READINESS-1.0` calls the unchanged old verifier,
 checks the canonical packages and generated reports, and compares them with
@@ -165,7 +179,7 @@ The canonical source catalog now also contains four individually authored
 drafts: Motivation-Independent Start (`08.06`), Decision Record and Update
 (`09.12`), Deliberate Practice Loop (`10.02`), and Home Upkeep System (`13.02`).
 They exercise behavioral experiment, artifact plan, skill rehearsal, and audit
-redesign families. None is available in the application runtime or eligible
-for production scoring. Their safety boundaries exclude coercive productivity,
+redesign families. M6F makes all four available and score active using typed
+structured evidence. Their safety boundaries exclude coercive productivity,
 sensitive decision detail, dangerous or licensed practice, and hazardous or
 landlord/tradesperson home work.

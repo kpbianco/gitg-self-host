@@ -1,18 +1,18 @@
 schema_version: 1
 batch:
-  id: M6E-FULL-FRONTIER
-  title: Materialize the complete source-only competency frontier
-  goal: Author one deterministic source package for every canonical competency while preserving the exact five-protocol runtime, historical replay, recommendation behavior, and friendship-only production scoring.
+  id: M6F-ALL-ACTIVE
+  title: Activate the complete competency runtime
+  goal: Project and score-activate all 383 canonical competency protocols under one deterministic, replayable, reversible structured-evidence contract.
 sources:
   product: products/gitg-self-host/product.yaml
   requirements:
-    - docs/program/M6_CURRICULUM_EXPANSION.md#phase-c--full-curriculum-authoring
-    - docs/PROJECT_HANDOFF.md#full-competency-source-frontier
+    - owner-direction-2026-08-26
+    - docs/program/M6_CURRICULUM_EXPANSION.md
     - AGENTS.md#product-boundary
-  milestone: products/gitg-self-host/roadmap.yaml#M6E
-  baseline_commit: 5a120ddac38db68e0a529b5a687836d61bee4889
+  milestone: products/gitg-self-host/roadmap.yaml#M6F
+  baseline_commit: c0fcabde4ce71a616b1c90d604e521b8d76146e5
 dependencies:
-  - M6D-01
+  - M6E-FULL-FRONTIER
 scope:
   allowed_paths:
     - AGENTS.md
@@ -20,98 +20,75 @@ scope:
     - Makefile
     - MANIFEST.tsv
     - .github/workflows/verification.yml
-    - contracts/active-batch.yaml
-    - data/practices/protocols/**/*.yaml
-    - data/practices/registries/activation_ledger.yaml
-    - data/practices/registries/source_registry.yaml
-    - data/practices/release_manifest.yaml
-    - growth/domain/practice_content.py
-    - growth/services/practice_content_reports.py
-    - reports/practice-content/*
-    - scripts/author_full_competency_frontier.py
-    - scripts/verify_http_login.py
-    - tests/test_deployment_contract.py
-    - tests/test_full_competency_frontier.py
-    - tests/test_practice_content.py
-    - docs/CURRENT_STATE.md
-    - docs/PROJECT_HANDOFF.md
-    - docs/program/M6_CURRICULUM_EXPANSION.md
-    - docs/evidence/M6E-FULL-FRONTIER-2026-08-26.md
+    - contracts/**
+    - data/practices/**
+    - growth/**
+    - templates/**
+    - reports/practice-content/**
+    - scripts/**
+    - tests/**
+    - docs/**
   forbidden_paths:
     - data/assessment/**
     - data/curriculum/**
     - data/model/**
     - data/notion/**
     - data/evidence/**
-    - data/practices/protocols/08/PRACTICE-PRESENCE-01.yaml
-    - data/practices/protocols/11/PRACTICE-BOUNDARY-01.yaml
-    - data/practices/protocols/16/PRACTICE-EMOTIONAL-CUES-01.yaml
-    - data/practices/protocols/17/PRACTICE-FRIENDSHIP-01.yaml
-    - data/practices/protocols/26/PRACTICE-PLAY-01.yaml
-    - growth/models.py
-    - growth/migrations/**
-    - growth/forms.py
-    - growth/views*.py
-    - growth/urls.py
-    - templates/**
-    - tests/e2e/**
     - requirements*.txt
     - pyproject.toml
     - Dockerfile
     - docker-compose.yml
 acceptance:
-  - Exactly 383 canonical competencies have exactly one source package; the 374 generated additions use deterministic stable IDs and preserve the nine previously authored packages byte-for-byte.
-  - Every generated package has three competency-specific actions with unique action IDs, titles, instructions, typed measurement IDs, reflection fields, and explicit canonical scope and evidence-target traceability.
-  - Every generated package is an inactive editorial draft with runtime_projection none and no approved activation contract. High-risk packages are explicitly non-scored; all other generated packages are shadow-only.
-  - Coverage reports show 383 authored packages, zero uncovered competencies, all 27 domains covered, all 37 parent-mapped levers covered, and all 37 levers reached by valid recommendation-target subsets.
-  - Exact duplicate action titles, instructions, and reflection sets are absent. Near-duplicate warnings remain bounded and retained for the user's consolidated content audit.
-  - The release manifest, canonical source registry, activation ledger, reports, and authored files share one deterministic catalog content hash and fail closed on drift.
-  - The runtime remains exactly five protocols and fifteen actions, only PRACTICE-FRIENDSHIP-01 is score-active, and the frozen legacy projection hash remains unchanged.
-  - No model, migration, UI, persistence, typed-event write, recommendation input, score-state change, participant exposure, release, deployment, or production activation is added.
-  - Human semantic, source, originality, accessibility, privacy, safety, and specialist review remains pending for the user's consolidated audit; software checks do not claim those reviews passed.
+  - Exactly 383 canonical competencies have exactly one runtime-projected, available, score-active protocol and complete activation-ledger coverage.
+  - All 1,151 actions remain stable-ID-addressable; legacy actions replay under practice-observation-v1 and typed actions write and replay under GG-TYPED-EVIDENCE-1.0.
+  - Typed check-ins collect explicit measurement state, provenance, and kind-specific structured values without using free text or artifact contents as score input.
+  - Every eligible event allocates one competency contribution through the complete canonical parent competency mapping; recommendation-target subsets never replace scoring allocation.
+  - Mixed-protocol score projection is deterministic across shared levers, assessment baselines remain immutable, and state writes remain atomic, idempotent, reversible, rebuildable, and hash-audited.
+  - Inconclusive, unknown, stale, adverse, unattempted, unobserved, or contract-invalid evidence remains visible but is withheld from score mass without penalty.
+  - Completion never establishes mastery and no score represents identity, dignity, clinical status, professional qualification, or human worth.
+  - Editorial, semantic, source, originality, accessibility, privacy, safety, specialist, psychometric, clinical, cultural, participant, and longitudinal review remain pending for the owner's consolidated audit and are not represented as passed.
 validation:
   local:
     - make full-frontier-check PYTHON=.venv/bin/python
     - make practice-report-check PYTHON=.venv/bin/python
     - make curriculum-check PYTHON=.venv/bin/python
     - make competency-evidence-check PYTHON=.venv/bin/python
-    - make m6d-01-check PYTHON=.venv/bin/python
     - ./scripts/agent-verify.sh quick
     - ./scripts/agent-verify.sh full
+    - .venv/bin/python manage.py makemigrations --check --dry-run
     - .venv/bin/python scripts/verify-manifest.py
     - git diff --check
   focused_tests_to_add:
-    - exact 383-package competency identity and one-to-one parent coverage
-    - deterministic 374-package generated frontier and 1,122 unique generated actions
-    - risk-to-scoring disposition and inactive activation-ledger boundaries
-    - all 37 recommendation targets remain non-empty subsets of canonical parent mappings
-    - exact five-protocol fifteen-action runtime and friendship-only score activation
+    - exact 383 runtime and 383 score-active activation projection
+    - typed runtime form and immutable evidence-event persistence across every measurement kind
+    - mixed-protocol shared-lever aggregation and canonical parent mapping
+    - typed withholding, replay, reversal, repair, and privacy-safe export
+    - migration forward and rollback coverage for typed check-in observations
   required_ci:
     - Ruff Django pytest and migration-drift verification
     - fresh practice and competency-evidence reports
-    - curriculum expansion and M6D source-cohort readiness
-    - unchanged pilot context Personal OS context-priority and M6C readiness
-    - unchanged Playwright and Compose runtime regression suites
+    - curriculum and full-frontier readiness
+    - context Personal OS priority and pilot regression suites
+    - Playwright and Compose runtime regression suites
 risk:
   class: high
   hazards:
-    - template structure obscures competency-specific semantics or creates repeated prose
-    - high-risk material is mistaken for clinical legal financial safeguarding or emergency guidance
-    - source-only typed rules leak into persisted evidence runtime recommendations or production scoring
-    - recommendation targets substitute for the complete canonical parent mapping
-    - generated coverage is overstated as content review effectiveness or participant validation
+    - a runtime action is scored against recommendation targets instead of its complete parent mapping
+    - a typed value, provenance requirement, or withholding condition is silently defaulted
+    - free text, artifact contents, identity, dignity, or completion is treated as opaque score input
+    - shared-lever contributions are double counted or cross assessment epochs
+    - activation is mistaken for specialist, psychometric, clinical, cultural, or intervention validation
   stop_conditions:
-    - any canonical competency lacks exactly one package or any generated stable ID is non-deterministic
-    - an exact duplicate action title instruction or reflection set is introduced
-    - a generated package becomes runtime-projected score-active or production-eligible
-    - the frozen runtime projection hash historical replay recommendations or friendship-only activation changes
-    - the catalog cannot validate deterministically or generated reports are stale
+    - canonical, runtime, or activation coverage is not exactly 383
+    - any submitted event cannot replay exactly or any score transition cannot reverse and rebuild exactly
+    - any required assessment baseline is mutated or a malformed mapping is normalized silently
+    - any score input includes private narrative or artifact contents
+    - a failing required gate is waived
 rollback:
-  strategy: Revert the generated packages, full-frontier authoring script, registry and manifest expansion, reports, focused tests, and documentation as one source-only batch; then regenerate the prior nine-package reports and reverify the frozen runtime.
+  strategy: Revert the M6F batch as one commit, migrate the additive typed-observation field backward, reseed the prior five-protocol runtime, and rebuild score state from immutable baselines and replayable events.
 evidence:
   output:
-    - docs/evidence/M6E-FULL-FRONTIER-2026-08-26.md
+    - docs/evidence/M6F-ALL-ACTIVE-2026-08-26.md
     - reports/practice-content/coverage_summary_v1.json
-    - reports/practice-content/content_originality_v1.json
     - exact local and hosted-CI command results for the candidate commit
-  claim_boundary: Deterministic source authoring, schema, mapping, static safety-boundary, report, and regression evidence only; never specialist, participant, accessibility-population, cultural, clinical, psychometric, longitudinal, intervention-effectiveness, release, deployment, production, or mastery validation.
+  claim_boundary: Owner-directed software activation with deterministic structured evidence, mapping, replay, withholding, migration, score-state, browser, and deployment regression evidence only; never specialist, psychometric, clinical, cultural, longitudinal, participant-effectiveness, mastery, or human-worth validation.

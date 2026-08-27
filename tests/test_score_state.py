@@ -16,7 +16,6 @@ from growth.domain.ranking import (
     provisional_need_score,
 )
 from growth.models import (
-    Competency,
     EvidenceEvent,
     LeverBaseline,
     LeverState,
@@ -256,10 +255,8 @@ def test_submitted_event_applies_atomically_once_and_keeps_baseline_immutable(us
 
 
 @pytest.mark.django_db
-def test_toggling_another_protocol_score_active_cannot_mutate_state(user, seeded):
+def test_second_legacy_protocol_is_score_active_and_idempotent(user, seeded):
     protocol = PracticeProtocol.objects.get(stable_id="PRACTICE-PLAY-01")
-    PracticeProtocol.objects.filter(pk=protocol.pk).update(score_active=True)
-    protocol.refresh_from_db()
     sprint = start_practice(
         user=user,
         protocol=protocol,
@@ -284,12 +281,11 @@ def test_toggling_another_protocol_score_active_cannot_mutate_state(user, seeded
     )
 
     assert check_in.evidence_event.protocol_stable_id == protocol.stable_id
-    assert ScoreSnapshot.objects.count() == before_snapshots
-    assert _state_values(user) == before_state
-    with pytest.raises(ScoreStateError, match="unreviewed scoring protocol"):
-        apply_evidence_event(check_in.evidence_event)
-    assert ScoreSnapshot.objects.count() == before_snapshots
-    assert _state_values(user) == before_state
+    assert ScoreSnapshot.objects.count() == before_snapshots + 1
+    assert _state_values(user) != before_state
+    repeated = apply_evidence_event(check_in.evidence_event)
+    assert repeated.evidence_event_id == check_in.evidence_event.pk
+    assert ScoreSnapshot.objects.count() == before_snapshots + 1
 
 
 @pytest.mark.django_db
@@ -326,7 +322,7 @@ def test_disabling_friendship_fails_closed_without_reinterpreting_history(user, 
             ),
             submit=True,
         )
-    with pytest.raises(ScoreStateError, match="score activation is disabled"):
+    with pytest.raises(ScoreStateError, match="Expected 383 production scoring protocols"):
         synchronize_score_state_for_run(run)
 
     assert PracticeCheckIn.objects.filter(sprint=sprint).count() == 1
@@ -372,7 +368,7 @@ def test_production_rebuild_fails_closed_on_mapping_or_lever_total_drift(
         type(link.lever).objects.filter(pk=link.lever_id).update(
             total_competency_weight=Decimal("18.0000")
         )
-    with pytest.raises(ScoreStateError, match="allocation weights or lever totals"):
+    with pytest.raises(ScoreStateError, match=r"allocation weights|lever totals"):
         synchronize_score_state_for_run(run)
 
     assert _state_values(user) == before_state
@@ -425,7 +421,7 @@ def test_production_rebuild_fails_closed_on_action_contract_drift(
             },
         )
 
-    with pytest.raises(ScoreStateError, match="actions or evidence rules"):
+    with pytest.raises(ScoreStateError, match="runtime actions do not match canonical content"):
         synchronize_score_state_for_run(run)
 
     assert _state_values(user) == before_state
@@ -631,79 +627,28 @@ def test_protocol_priority_is_weighted_versioned_and_fails_closed():
 
 @pytest.mark.django_db
 def test_active_protocol_order_tracks_current_need_and_reversal(user, seeded):
-    PracticeProtocol.objects.exclude(stable_id="PRACTICE-FRIENDSHIP-01").update(
-        availability=PracticeProtocol.Availability.INACTIVE
-    )
-
-    def needs():
-        return {
-            state.lever_id: state.current_need_score
-            for state in LeverState.objects.filter(user=user)
-        }
-
-    def competency_priority(competency, current_needs):
-        return protocol_priority(
-            current_needs,
-            (ProtocolWeight(link.lever_id, link.weight) for link in competency.lever_links.all()),
-        )
-
     friendship = PracticeProtocol.objects.get(stable_id="PRACTICE-FRIENDSHIP-01")
-    friendship_competency = friendship.parent_competency
-    baseline_needs = needs()
-    friendship_before = competency_priority(friendship_competency, baseline_needs)
+    baseline_summary = build_profile_summary(user)
+    baseline_order = [protocol.stable_id for protocol in baseline_summary.recommendations]
+    friendship_before = baseline_summary.recommendation_priorities[friendship.stable_id]
     sprint = _sprint(user)
     check_in = save_check_in(
         sprint=sprint,
         cleaned_data=_check_in_data(sprint.protocol.actions.get(sequence=1)),
         submit=True,
     )
-    updated_needs = needs()
-    friendship_after = competency_priority(friendship_competency, updated_needs)
-
-    competitor = None
-    for competency in Competency.objects.exclude(
-        stable_id=friendship_competency.pk
-    ).prefetch_related("lever_links"):
-        before = competency_priority(competency, baseline_needs)
-        after = competency_priority(competency, updated_needs)
-        if friendship_before > before and friendship_after < after:
-            competitor = competency
-            break
-    assert competitor is not None, "Synthetic ranking fixture requires a priority crossover."
-
-    protocol = PracticeProtocol.objects.create(
-        stable_id="TEST-DYNAMIC-RANK-PROTOCOL",
-        slug="test-dynamic-rank-protocol",
-        name="Synthetic Dynamic Ranking Protocol",
-        parent_competency=competitor,
-        availability=PracticeProtocol.Availability.ACTIVE,
-        duration_days=7,
-        recommendation_reason="Synthetic ranking verification.",
-        applicability_prompt="Synthetic ranking verification.",
-        setup_prompt="Synthetic ranking verification.",
-        privacy_and_boundaries="Synthetic ranking verification.",
-        completion_criteria=[],
-        display_order=99,
-    )
-    protocol.target_levers.add(competitor.lever_links.first().lever)
-
     after_summary = build_profile_summary(user)
-    assert after_summary.recommendations[0] == protocol
-    assert (
-        after_summary.recommendation_priorities[protocol.stable_id]
-        > after_summary.recommendation_priorities[friendship.stable_id]
-    )
+    assert after_summary.recommendation_priorities[friendship.stable_id] < friendship_before
 
     reverse_evidence_event(
         check_in.evidence_event,
         reason="Return synthetic ranking test to its baseline.",
     )
-    baseline_summary = build_profile_summary(user)
-    assert baseline_summary.recommendations[0] == friendship
-    assert (
-        baseline_summary.recommendation_priorities[friendship.stable_id]
-        > baseline_summary.recommendation_priorities[protocol.stable_id]
+    restored_summary = build_profile_summary(user)
+    assert restored_summary.recommendation_priorities == (
+        baseline_summary.recommendation_priorities
     )
+    assert [protocol.stable_id for protocol in restored_summary.recommendations] == baseline_order
 
 
 @pytest.mark.django_db

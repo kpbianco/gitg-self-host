@@ -10,5 +10,6 @@
 - [ADR 0008 — Score activation is an explicit release decision](0008-explicit-score-activation-ledger.md)
 - [ADR 0009 — One-way competency shadow and separate production eligibility](0009-one-way-competency-shadow-and-production-eligibility.md)
 - [ADR 0010 — Representative typed protocols remain source-only](0010-source-only-representative-protocol-authoring.md)
+- [ADR 0011 — All-catalog runtime and score activation](0011-all-catalog-runtime-and-score-activation.md)
 
 Accepted records are binding unless a later record explicitly supersedes them.

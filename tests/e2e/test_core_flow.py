@@ -37,22 +37,22 @@ PROTOCOL_WALKTHROUGH = (
     (
         "schedule-non-instrumental-play",
         "Schedule Non-Instrumental Play",
-        "This protocol records evidence but is not score-active",
+        "Eligible submitted observations may adjust provisional capacity estimates.",
     ),
     (
         "practice-emotional-cue-detection",
         "Practice Emotional Cue Detection",
-        "This protocol records evidence but is not score-active",
+        "Eligible submitted observations may adjust provisional capacity estimates.",
     ),
     (
         "state-and-maintain-one-boundary",
         "State and Maintain One Boundary",
-        "This protocol records evidence but is not score-active",
+        "Eligible submitted observations may adjust provisional capacity estimates.",
     ),
     (
         "complete-an-attention-presence-experiment",
         "Complete an Attention-Presence Experiment",
-        "This protocol records evidence but is not score-active",
+        "Eligible submitted observations may adjust provisional capacity estimates.",
     ),
 )
 
@@ -98,10 +98,10 @@ def assert_no_horizontal_overflow(page):
     )
 
 
-def save_walkthrough_screenshot(page, name):
+def save_walkthrough_screenshot(page, name, *, full_page=True):
     path = ROOT / "test-results" / "pilot-walkthrough" / f"{name}.png"
     path.parent.mkdir(parents=True, exist_ok=True)
-    page.screenshot(path=path, full_page=True)
+    page.screenshot(path=path, full_page=full_page)
 
 
 @pytest.mark.e2e
@@ -126,7 +126,7 @@ def test_login_home_and_profile_core_flow(live_server, page: Page):
 
 @pytest.mark.e2e
 @pytest.mark.django_db(transaction=True)
-def test_mobile_keyboard_walkthrough_covers_all_five_protocols(live_server, page: Page):
+def test_mobile_keyboard_walkthrough_covers_all_active_protocols(live_server, page: Page):
     page.set_viewport_size({"width": 390, "height": 844})
     create_browser_user()
     seed_browser_data()
@@ -141,9 +141,10 @@ def test_mobile_keyboard_walkthrough_covers_all_five_protocols(live_server, page
     save_walkthrough_screenshot(page, "mobile-home")
 
     page.get_by_role("link", name="Practices", exact=True).click()
-    expect(page.locator(".practice-card")).to_have_count(5)
+    expect(page.locator(".practice-card")).to_have_count(383)
+    expect(page.locator(".practice-card .status-pill", has_text="Available")).to_have_count(383)
     assert_no_horizontal_overflow(page)
-    save_walkthrough_screenshot(page, "mobile-practice-library")
+    save_walkthrough_screenshot(page, "mobile-practice-library", full_page=False)
 
     for slug, name, score_boundary in PROTOCOL_WALKTHROUGH:
         page.goto(f"{live_server.url}/practices/{slug}/")
@@ -330,7 +331,7 @@ def test_optional_pilot_feedback_is_local_minimized_and_score_separate(
 
 @pytest.mark.e2e
 @pytest.mark.django_db(transaction=True)
-def test_play_protocol_setup_is_specific_and_score_inactive(live_server, page: Page):
+def test_play_protocol_setup_is_specific_and_score_active(live_server, page: Page):
     create_browser_user()
     seed_browser_data()
     log_in(live_server, page)
@@ -339,7 +340,7 @@ def test_play_protocol_setup_is_specific_and_score_inactive(live_server, page: P
     page.get_by_role("heading", name="Schedule Non-Instrumental Play").wait_for()
     page.get_by_text("You will not need to invent the practice.").wait_for()
     page.get_by_role("link", name="Start guided setup").click()
-    page.get_by_text("will not change your profile or recommendation").wait_for()
+    page.get_by_text("Eligible submitted observations may adjust").wait_for()
     page.get_by_role("button", name="Continue").click()
     page.get_by_label("Yes, this activity or context is available").check()
     page.get_by_role("button", name="Continue").click()
@@ -375,7 +376,7 @@ def test_emotional_cue_setup_and_check_in_are_bounded(live_server, page: Page):
     page.get_by_role("heading", name="Practice Emotional Cue Detection").wait_for()
     page.get_by_text("Notice before interpreting").wait_for()
     page.get_by_role("link", name="Start guided setup").click()
-    page.get_by_text("will not change your profile or recommendation").wait_for()
+    page.get_by_text("Eligible submitted observations may adjust").wait_for()
     page.get_by_role("button", name="Continue").click()
     page.get_by_label("Yes, this activity or context is available").check()
     page.get_by_role("button", name="Continue").click()
@@ -411,7 +412,7 @@ def test_boundary_setup_and_check_in_are_safe_and_specific(live_server, page: Pa
     page.get_by_role("heading", name="State and Maintain One Boundary").wait_for()
     page.get_by_text("Define what you control").wait_for()
     page.get_by_role("link", name="Start guided setup").click()
-    page.get_by_text("will not change your profile or recommendation").wait_for()
+    page.get_by_text("Eligible submitted observations may adjust").wait_for()
     page.get_by_role("button", name="Continue").click()
     page.get_by_label("Yes, one safe, low-stakes situation is likely to arise").check()
     page.get_by_role("button", name="Continue").click()
@@ -457,7 +458,7 @@ def test_presence_setup_and_check_in_are_accessible_and_specific(live_server, pa
     page.get_by_role("heading", name="Complete an Attention-Presence Experiment").wait_for()
     page.get_by_text("Run the usual-condition window").wait_for()
     page.get_by_role("link", name="Start guided setup").click()
-    page.get_by_text("will not change your profile or recommendation").wait_for()
+    page.get_by_text("Eligible submitted observations may adjust").wait_for()
     page.get_by_role("button", name="Continue").click()
     page.get_by_label("Yes, I have a safe 15-minute activity I can repeat").check()
     page.get_by_role("button", name="Continue").click()

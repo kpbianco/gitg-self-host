@@ -170,7 +170,7 @@ local-network access, shutdown behavior, and the future HTTPS boundary.
 - No assessment-baseline, raw self-report, orientation, archetype, completion,
   dignity, or human-worth mutation.
 
-## What M4 adds
+## What M4 added
 
 - Score-inactive **Schedule Non-Instrumental Play**, with a defined 10-day
   setup, three actions, compact observations, and completion rules.
@@ -187,8 +187,8 @@ local-network access, shutdown behavior, and the future HTTPS boundary.
   completion-marker modes, and an explicit score-activation flag.
 - Stable canonical parents `26.01`, `16.03`, `11.10`, and `08.02` with
   validated recommendation targets.
-- All five seeded protocols are executable; friendship remains the only
-  score-active protocol.
+- All five original protocols became executable. Their historical
+  friendship-only score boundary is superseded by M6F.
 
 ## Post-M4 pilot readiness
 
@@ -204,9 +204,9 @@ For a running instance, use the read-only verifier:
 docker compose exec app python manage.py verify_pilot_readiness
 ```
 
-It checks exact canonical counts, the five reviewed protocol/action/link
-contracts, Pilot 002 completeness, evidence replay, score-state replay, and
-friendship-only score activation. GitHub's **Pilot readiness gate**
+It checks exact canonical counts, every protocol/action/link contract, Pilot
+002 completeness, evidence replay, score-state replay, and all-383 score
+activation. GitHub's **Pilot readiness gate**
 additionally requires Playwright and the production Compose drill on the same
 commit.
 
@@ -303,6 +303,18 @@ See [canonical practice content](docs/practice-content.md) and the
   detection via `make full-frontier-check`.
 - Explicit risk and scoring dispositions: high-risk generated packages are
   non-scored; all other generated packages are shadow-only.
+
+## What M6F-ALL-ACTIVE adds
+
+- Runtime projection and score activation for all 383 canonical protocols and
+  all 1,151 actions under one exact activation contract.
+- Persisted structured typed check-ins for 378 protocols, while preserving the
+  five original v1 evidence formats for historical replay.
+- Mixed-protocol deterministic scoring through each canonical parent
+  competency mapping, including shared-lever aggregation, event withholding,
+  immutable snapshots, reversal, and rebuild.
+- Exact readiness validation that every runtime protocol, action, target,
+  evidence rule, parent mapping weight, and lever total matches canonical data.
 - No runtime, model, migration, UI, persistence, recommendation, scoring,
   participant-exposure, release, deployment, or production-activation change.
 
@@ -552,9 +564,9 @@ Migrations and canonical seeding run safely on startup.
 
 - Pilot 002 source files publish only the top three archetypes and do not
   include original answers or a share code; the seed does not invent them.
-- Dynamic scoring is activated only for **Deepen One Existing Friendship**.
-  A reviewed parent mapping does not activate scoring; every additional
-  score-active protocol requires a separate reviewed activation decision.
+- Dynamic scoring is activated for all 383 canonical protocols under Decision
+  052. A database flag alone cannot activate scoring; canonical activation,
+  evidence replay, parent mapping, and score-state validation must all agree.
 - Pilot 002 does not publish original alpha/beta mass. Canonical seeding
   reconstructs 33 identifiable rows; L06, L15, L32, and L37 remain
   baseline-only. All four friendship-mapped rows are active.
@@ -576,18 +588,16 @@ Migrations and canonical seeding run safely on startup.
 - Pilot feedback has no automatic retention timer. The operator may explicitly
   purge one exact user's feedback, but backups may retain prior copies and must
   be handled under the same participant agreement.
-- Only **Deepen One Existing Friendship** is score-active. Play, emotional cue
-  detection, boundary practice, and the attention-presence experiment are
-  executable but score-inactive.
 - The canonical source catalog now covers all 383 competencies, but none of
   the 374 generated additions is marked source-complete or release-ready.
   Their semantic, source, originality, accessibility, privacy, safety,
   cultural, and specialist dispositions remain pending for consolidated owner
-  review; only the original five packages are projected into the runtime.
+  review even though all 383 are runtime and score active by explicit owner
+  direction.
 - The five packages retain the friendship-oriented
-  `practice-observation-v1` vocabulary for exact replay. M6B's typed evidence
-  and direct competency projections are pure, parallel, and shadow-only; no
-  existing package is converted and no new typed event is persisted.
+  `practice-observation-v1` vocabulary for exact replay. The other 378
+  protocols persist typed structured evidence; private notes and artifact
+  contents do not enter score events.
 - `ER-M6A-003` remains a real external governance gate. Passing
   `GG-COMPETENCY-EVIDENCE-READINESS-1.0` does not clear measurement,
   accessibility, or privacy/safety review.

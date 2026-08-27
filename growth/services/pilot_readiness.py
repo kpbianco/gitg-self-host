@@ -6,9 +6,15 @@ from dataclasses import asdict, dataclass
 from decimal import Decimal
 from typing import Any
 
+from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.db.models import Sum
 
+from growth.domain.practice_content import (
+    configuration_hash,
+    legacy_projection_payload,
+    load_practice_content_bundle,
+)
 from growth.models import (
     ArchetypeResult,
     AssessmentRun,
@@ -40,7 +46,7 @@ class ProtocolExpectation:
     parent_competency_id: str
     target_lever_ids: tuple[str, ...]
     action_ids: tuple[str, ...]
-    score_active: bool = False
+    score_active: bool = True
 
 
 REVIEWED_PROTOCOLS = {
@@ -277,6 +283,8 @@ def _verify_seeded_curriculum(counts: dict[str, int], bundle: CanonicalBundle) -
 
 
 def _verify_protocol_inventory() -> tuple[int, int, int, int]:
+    canonical_runtime = load_practice_content_bundle(settings.BASE_DIR).runtime_protocols
+    canonical_by_id = {protocol["stable_id"]: protocol for protocol in canonical_runtime}
     protocols = {
         protocol.stable_id: protocol
         for protocol in PracticeProtocol.objects.select_related(
@@ -290,7 +298,7 @@ def _verify_protocol_inventory() -> tuple[int, int, int, int]:
     _require_equal(
         "Reviewed protocol stable IDs",
         set(protocols),
-        set(REVIEWED_PROTOCOLS),
+        set(canonical_by_id),
     )
 
     for stable_id, expected in REVIEWED_PROTOCOLS.items():
@@ -346,14 +354,19 @@ def _verify_protocol_inventory() -> tuple[int, int, int, int]:
     _require_equal(
         "Score-active protocol boundary",
         score_active_ids,
-        ("PRACTICE-FRIENDSHIP-01",),
+        tuple(sorted(canonical_by_id)),
     )
     _require_equal(
-        "Reviewed protocol configuration fingerprint",
+        "Canonical runtime configuration fingerprint",
         _configuration_hash(
             [_protocol_payload(protocols[stable_id]) for stable_id in sorted(protocols)]
         ),
-        REVIEWED_PROTOCOL_CONFIGURATION_HASH,
+        configuration_hash(
+            [
+                legacy_projection_payload(canonical_by_id[stable_id])
+                for stable_id in sorted(canonical_by_id)
+            ]
+        ),
     )
     return (
         len(protocols),

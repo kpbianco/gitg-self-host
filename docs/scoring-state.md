@@ -1,11 +1,12 @@
-# M3B score-state activation contract
+# Score-state activation contract
 
 ## Scope
 
-M3B activates the reviewed M3A mathematics for the one complete protocol,
-`PRACTICE-FRIENDSHIP-01`. It does not change the assessment scorer, evidence
-classifier, canonical task weights, direction semantics, posterior equation,
-or confidence equation.
+M3B first activated the reviewed mathematics for
+`PRACTICE-FRIENDSHIP-01`. M6F retains that versioned state architecture and
+activates all 383 canonical protocols, including mixed legacy and typed
+evidence. It does not change the assessment scorer, canonical task weights,
+direction semantics, posterior equation, or confidence equation.
 
 Three versions remain explicit:
 
@@ -13,6 +14,7 @@ Three versions remain explicit:
 GG-SCORING-SHADOW-1.0  posterior and confidence mathematics
 GG-SCORE-STATE-1.0     persisted state and transition schema
 GG-NEED-RANKING-1.0    provisional need and practice ordering
+GG-PRODUCTION-SCORE-ELIGIBILITY-2.0  all-catalog production eligibility
 ```
 
 The word `SHADOW` remains in the scoring algorithm ID because M3B activates
@@ -42,7 +44,7 @@ baseline need values never change.
 Submitting a check-in performs these operations in one database transaction:
 
 1. validate and save the submitted check-in;
-2. create and replay-verify its immutable `GG-EVIDENCE-1.0` event;
+2. create and replay-verify its immutable legacy or `GG-TYPED-EVIDENCE-1.0` event;
 3. initialize the assessment's current state if needed;
 4. process any pending events in submission order;
 5. rebuild the current state from the baseline plus every active event;
@@ -150,8 +152,8 @@ P_t = sum(w_tl × N_l)
 
 Weights must sum to approximately 1.0, and recommendation targets must be a
 non-empty subset of that mapping. Orientation/archetype style does not alter
-M3B ranking. Only the friendship protocol is active in canonical production
-data; the dynamic ordering path is tested with synthetic competing protocols.
+ranking. All 383 canonical protocols are active in production scoring data;
+mixed-protocol and shared-lever ordering paths are tested directly.
 
 M6C-03 leaves this state and ordering contract exact. Its separate
 `GG-CONTEXT-PRIORITY-1.0` backend result uses the unchanged `P_t` as a base,
@@ -173,5 +175,6 @@ practice order. It cannot change:
 - practice completion state by itself;
 - any score of dignity, worth, virtue, or perfection.
 
-Completing this practice does not establish mastery. M3B is software
-activation of a reviewed contract, not psychometric validation.
+Completing a practice does not establish mastery. M6F is software activation
+of a versioned contract, not psychometric or intervention-effectiveness
+validation.

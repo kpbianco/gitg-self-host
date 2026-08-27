@@ -6,7 +6,7 @@ from typing import Any
 from django.conf import settings
 
 from growth.domain.practice_content import (
-    FROZEN_LEGACY_CONFIGURATION_HASH,
+    FROZEN_LEGACY_PROTOCOL_IDS,
     PracticeContentError,
     configuration_hash,
     legacy_projection_payload,
@@ -92,12 +92,15 @@ def verify_expansion_readiness() -> ExpansionReadinessSummary:
         raise ExpansionReadinessError(f"M6A source validation failed: {exc}") from exc
 
     projected = practices.runtime_protocols
-    projected_payload = [legacy_projection_payload(protocol) for protocol in projected]
+    legacy_projected = tuple(
+        protocol for protocol in projected if protocol["stable_id"] in FROZEN_LEGACY_PROTOCOL_IDS
+    )
+    projected_payload = [legacy_projection_payload(protocol) for protocol in legacy_projected]
     projection_hash = configuration_hash(projected_payload)
     _require_equal(
         "Frozen legacy runtime projection",
         projection_hash,
-        FROZEN_LEGACY_CONFIGURATION_HASH,
+        practices.release_manifest["legacy_projection_hash"],
     )
 
     runtime_protocols = {
@@ -109,14 +112,15 @@ def verify_expansion_readiness() -> ExpansionReadinessSummary:
     runtime_payload = [
         _protocol_payload(runtime_protocols[protocol["stable_id"]]) for protocol in projected
     ]
+    canonical_runtime_payload = [legacy_projection_payload(protocol) for protocol in projected]
     _require_equal(
         "Seeded runtime projection",
         runtime_payload,
-        projected_payload,
+        canonical_runtime_payload,
     )
     runtime_action_count = sum(protocol.actions.count() for protocol in runtime_protocols.values())
-    _require_equal("Seeded runtime protocol count", len(runtime_protocols), 5)
-    _require_equal("Seeded runtime action count", runtime_action_count, 15)
+    _require_equal("Seeded runtime protocol count", len(runtime_protocols), 383)
+    _require_equal("Seeded runtime action count", runtime_action_count, 1151)
 
     competency_count = sum(
         len(domain["competencies"]) for domain in canonical.curriculum["domains"]
@@ -153,8 +157,9 @@ def verify_expansion_readiness() -> ExpansionReadinessSummary:
 
     permanent_expected = {
         "competencies": (competency_count, 383),
-        "projected legacy protocols": (len(projected), 5),
-        "score-active protocols": (score_active, 1),
+        "runtime protocols": (len(projected), 383),
+        "projected legacy protocols": (len(legacy_projected), 5),
+        "score-active protocols": (score_active, 383),
     }
     for label, (actual, expected_value) in permanent_expected.items():
         _require_equal(label, actual, expected_value)
@@ -167,7 +172,7 @@ def verify_expansion_readiness() -> ExpansionReadinessSummary:
         legacy_projection_hash=projection_hash,
         competencies=competency_count,
         canonical_protocol_packages=len(practices.protocols),
-        projected_legacy_protocols=len(projected),
+        projected_legacy_protocols=len(legacy_projected),
         practice_actions=action_count,
         runtime_protocols=len(runtime_protocols),
         runtime_actions=runtime_action_count,

@@ -47,14 +47,14 @@ def test_m6d_authoring_readiness_is_exact_additive_and_read_only(seeded):
     assert summary.source_practice_actions == sum(
         len(protocol["intervention"]["actions"]) for protocol in catalog.protocols
     )
-    assert summary.source_protocol_packages >= 9
-    assert summary.source_practice_actions >= 29
-    assert summary.uncovered_competencies <= 374
-    assert summary.runtime_protocols >= 5
-    assert summary.runtime_actions >= 15
-    assert summary.source_typed_protocols >= 4
-    assert summary.typed_production_protocols == 0
-    assert summary.score_active_protocols >= 1
+    assert summary.source_protocol_packages == 383
+    assert summary.source_practice_actions == 1151
+    assert summary.uncovered_competencies == 0
+    assert summary.runtime_protocols == 383
+    assert summary.runtime_actions == 1151
+    assert summary.source_typed_protocols == 378
+    assert summary.typed_production_protocols == 4
+    assert summary.score_active_protocols == 383
     assert summary.expert_review_id == "ER-M6A-003"
     assert summary.expert_review_status
     assert summary.research_gap_id == "RG-M6A-002"
@@ -81,7 +81,7 @@ def test_m6d_authoring_readiness_executes_no_database_writes(seeded):
 
 
 @pytest.mark.django_db
-def test_m6d_authoring_readiness_accepts_additive_catalog_frontier(seeded, monkeypatch):
+def test_m6d_authoring_readiness_rejects_incomplete_catalog_frontier(seeded, monkeypatch):
     from growth.services import m6d_authoring_readiness as readiness
 
     expansion = readiness.verify_expansion_readiness()
@@ -102,11 +102,8 @@ def test_m6d_authoring_readiness_accepts_additive_catalog_frontier(seeded, monke
         lambda: competency,
     )
 
-    summary = readiness.verify_m6d_authoring_readiness()
-
-    assert summary.source_protocol_packages == 10
-    assert summary.source_practice_actions == 30
-    assert summary.uncovered_competencies == 373
+    with pytest.raises(M6DAuthoringReadinessError, match="M6F source protocol packages"):
+        readiness.verify_m6d_authoring_readiness()
 
 
 @pytest.mark.django_db
@@ -126,7 +123,7 @@ def test_m6d_authoring_readiness_rejects_missing_typed_cohort_member(seeded, mon
 
     with pytest.raises(
         M6DAuthoringReadinessError,
-        match="source-only typed protocol IDs are missing",
+        match="typed protocol IDs are missing",
     ):
         readiness.verify_m6d_authoring_readiness()
 
@@ -162,9 +159,9 @@ def test_m6d_authoring_readiness_command_emits_deterministic_json(seeded, capsys
     payload = json.loads(output)
     assert output.rstrip("\n") == json.dumps(payload, sort_keys=True)
     assert payload["contract_version"] == "GG-M6D-01-AUTHORING-READINESS-1.0"
-    assert payload["source_protocol_packages"] >= 9
-    assert payload["runtime_protocols"] >= 5
-    assert payload["typed_production_protocols"] == 0
+    assert payload["source_protocol_packages"] == 383
+    assert payload["runtime_protocols"] == 383
+    assert payload["typed_production_protocols"] == 4
     assert payload["database_writes"] == 0
 
 

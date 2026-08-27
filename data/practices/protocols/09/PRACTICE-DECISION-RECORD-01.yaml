@@ -4,19 +4,20 @@ stable_id: PRACTICE-DECISION-RECORD-01
 slug: make-and-update-one-private-decision-record
 name: Make and Update One Private Decision Record
 parent_competency_id: '09.12'
-domain_id: '09'
+domain_id: 09
 governance:
-  availability: inactive
+  availability: active
   editorial_status: draft
-  runtime_projection: none
+  runtime_projection: GG-PRACTICE-RUNTIME-PROJECTION-2.0
   risk_class_id: RISK-LOW
-  scoring_policy_id: SP-SHADOW-ONLY
-  scoring_status: shadow_only
+  scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
+  scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   - SRC-M6D-DECISION-OUTCOME-BIAS
   authoring:
-    provenance: Individually authored M6D-01 source package for competency 09.12; it is not projected into the runtime.
+    provenance: Individually authored M6D-01 source package for competency 09.12; it is not projected
+      into the runtime.
     content_review_status: pending
     research_review_status: pending
     safety_review_status: pending_specialist_expansion_review
@@ -24,28 +25,45 @@ governance:
     originality_review_status: pending
     ui_test_status: not_applicable
     last_reviewed: null
-    known_gap_ids: [RG-M6A-001, RG-M6A-002, RG-M6D-002]
-    expert_review_ids: [ER-M6A-003]
+    known_gap_ids:
+    - RG-M6A-001
+    - RG-M6A-002
+    - RG-M6D-002
+    expert_review_ids:
+    - ER-M6A-003
   legacy_compatibility_exceptions: []
   deprecation:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: Create one prospective, privacy-minimized decision record before a low-stakes choice resolves, then update it without rewriting the original prediction or assumptions.
-  why_recommended: The selected competency concerns preserving what was known and expected when a choice was made so later outcomes can inform judgment without replacing memory.
+  purpose: Create one prospective, privacy-minimized decision record before a low-stakes choice resolves,
+    then update it without rewriting the original prediction or assumptions.
+  why_recommended: The selected competency concerns preserving what was known and expected when a choice
+    was made so later outcomes can inform judgment without replacing memory.
   claims:
-  - statement: Knowing an outcome can distort evaluation of what was foreseeable before the outcome, so preserving a prospective record can support a more bounded review.
+  - statement: Knowing an outcome can distort evaluation of what was foreseeable before the outcome, so
+      preserving a prospective record can support a more bounded review.
     classification: empirical_finding
-    source_ids: [SRC-M6D-DECISION-OUTCOME-BIAS]
-    limitations: Outcome-bias research does not prove that a single record improves judgment, remove bias, or fit high-stakes, privileged, regulated, or collective decisions.
-  - statement: A decision record should contain the minimum structured metadata needed for review and no secret, credential, allegation, privileged information, protected work information, or sensitive third-party detail.
+    source_ids:
+    - SRC-M6D-DECISION-OUTCOME-BIAS
+    limitations: Outcome-bias research does not prove that a single record improves judgment, remove bias,
+      or fit high-stakes, privileged, regulated, or collective decisions.
+  - statement: A decision record should contain the minimum structured metadata needed for review and
+      no secret, credential, allegation, privileged information, protected work information, or sensitive
+      third-party detail.
     classification: product_design_judgment
-    source_ids: [SRC-CANONICAL-CURRICULUM-V2]
-    limitations: This privacy-minimization boundary is not legal, records-management, security, or professional advice.
-  applicability_question: Is there one freely chosen, reversible, low-stakes decision due soon enough to record beforehand and review within 30 days without storing sensitive or third-party information?
-  not_applicable_behavior: Mark not applicable or defer without penalty when no suitable prospective decision exists or recording it would create privacy, legal, employment, relational, or safety risk.
-  readiness_considerations: Use only when the participant has authority to make or document the choice and can retain a private minimum-metadata record under their setting's rules.
-  opportunity_considerations: Requires a decision that has not yet resolved and a realistic review date; a completed decision reconstructed from memory is not a substitute.
+    source_ids:
+    - SRC-CANONICAL-CURRICULUM-V2
+    limitations: This privacy-minimization boundary is not legal, records-management, security, or professional
+      advice.
+  applicability_question: Is there one freely chosen, reversible, low-stakes decision due soon enough
+    to record beforehand and review within 30 days without storing sensitive or third-party information?
+  not_applicable_behavior: Mark not applicable or defer without penalty when no suitable prospective decision
+    exists or recording it would create privacy, legal, employment, relational, or safety risk.
+  readiness_considerations: Use only when the participant has authority to make or document the choice
+    and can retain a private minimum-metadata record under their setting's rules.
+  opportunity_considerations: Requires a decision that has not yet resolved and a realistic review date;
+    a completed decision reconstructed from memory is not a substitute.
   prerequisites:
   - One reversible low-stakes decision with at least two live options.
   - A private storage method controlled by the participant and permitted in the context.
@@ -54,148 +72,213 @@ meaning_and_fit:
   - Use a wholly synthetic decision when no real decision can be recorded safely.
   - Record only a neutral category code and structured criteria, or defer the practice.
   role_conditions:
-  - Workplace, fiduciary, legal, clinical, safeguarding, and collective decisions must follow applicable authority, documentation, retention, privilege, and professional requirements instead of this protocol.
+  - Workplace, fiduciary, legal, clinical, safeguarding, and collective decisions must follow applicable
+    authority, documentation, retention, privilege, and professional requirements instead of this protocol.
   pathway_conditions:
-  - Voice input, symbols, checkboxes, a screen reader, a trusted planning aid, or a paper template may be used if privacy and user control are preserved.
+  - Voice input, symbols, checkboxes, a screen reader, a trusted planning aid, or a paper template may
+    be used if privacy and user control are preserved.
   worldview_conditions:
-  - The review may include duties, relationships, tradition, collective consequences, uncertainty, and practical constraints; it does not require maximizing one numeric utility.
+  - The review may include duties, relationships, tradition, collective consequences, uncertainty, and
+    practical constraints; it does not require maximizing one numeric utility.
 intervention:
   protocol_class: PF-ARTIFACT-PLAN
   duration_days: 30
-  cadence: Create the record before choosing, preserve a sealed prospective snapshot, and add one dated update after the review trigger.
-  setup: Choose one reversible low-stakes decision. Use only a neutral decision category, option codes, a chosen objective, up to three assumptions, an outcome prediction expressed in a bounded category, confidence band, decision date, and review trigger.
-  privacy_and_boundaries: Omit names, contact details, secrets, credentials, allegations, legal privilege, health details, protected work information, financial account data, sensitive third-party detail, and the substantive contents of the decision. Store only allowlisted criterion IDs and neutral codes in typed evidence; artifact contents never enter evidence. Do not use the record to monitor another person, justify predetermined harm, or substitute for qualified advice.
+  cadence: Create the record before choosing, preserve a sealed prospective snapshot, and add one dated
+    update after the review trigger.
+  setup: Choose one reversible low-stakes decision. Use only a neutral decision category, option codes,
+    a chosen objective, up to three assumptions, an outcome prediction expressed in a bounded category,
+    confidence band, decision date, and review trigger.
+  privacy_and_boundaries: Omit names, contact details, secrets, credentials, allegations, legal privilege,
+    health details, protected work information, financial account data, sensitive third-party detail,
+    and the substantive contents of the decision. Store only allowlisted criterion IDs and neutral codes
+    in typed evidence; artifact contents never enter evidence. Do not use the record to monitor another
+    person, justify predetermined harm, or substitute for qualified advice.
   expected_burden: About 30–45 minutes across prospective drafting, integrity check, and later update.
   action_count_rationale: null
   foreseeable_misuse:
-  - Reconstructing an original prediction after learning the result, or treating a good outcome as proof that the process was sound.
-  - Recording sensitive content, using the template for surveillance, or applying it to a decision requiring qualified, collective, or emergency judgment.
+  - Reconstructing an original prediction after learning the result, or treating a good outcome as proof
+    that the process was sound.
+  - Recording sensitive content, using the template for surveillance, or applying it to a decision requiring
+    qualified, collective, or emergency judgment.
   exclusions:
-  - Legal, clinical, safeguarding, emergency, high-consequence financial, credential, privileged, regulated, or protected-employment decisions.
-  - Decisions controlled by another person or decisions whose documentation could create retaliation, discovery, security, or confidentiality risk.
+  - Legal, clinical, safeguarding, emergency, high-consequence financial, credential, privileged, regulated,
+    or protected-employment decisions.
+  - Decisions controlled by another person or decisions whose documentation could create retaliation,
+    discovery, security, or confidentiality risk.
   actions:
   - stable_id: PRACTICE-DECISION-RECORD-01-A1
     sequence: 1
     title: Draft the prospective decision snapshot
-    instructions: Before choosing, create a private minimum-metadata record with a neutral category, option codes, chosen objective, up to three current assumptions, one bounded outcome prediction, a confidence band, and a review trigger. Do not include names, narrative, secrets, allegations, protected information, or third-party detail.
+    instructions: Before choosing, create a private minimum-metadata record with a neutral category, option
+      codes, chosen objective, up to three current assumptions, one bounded outcome prediction, a confidence
+      band, and a review trigger. Do not include names, narrative, secrets, allegations, protected information,
+      or third-party detail.
     expected_time: 15 minutes
     due_within_days: 5
     typed_evidence_identity:
       protocol_stable_id: PRACTICE-DECISION-RECORD-01
       action_stable_id: PRACTICE-DECISION-RECORD-01-A1
       competency_stable_id: '09.12'
-      scoring_policy_id: SP-SHADOW-ONLY
+      scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
     evidence_rules:
       schema_version: typed-evidence-rules-v1
       max_age_days: 60
-      competency_measurement_ids: [prospective_record_criteria]
+      competency_measurement_ids:
+      - prospective_record_criteria
       transfer_disposition: context_bound
       measurements:
       - measurement_id: prospective_record_criteria
         kind: artifact
         role: primary
         weight: '1'
-        allowed_provenance: [reviewed_artifact]
-        criteria: [created_before_choice, option_codes_present, objective_present, assumptions_bounded, prediction_bounded, confidence_band_present, review_trigger_present]
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - created_before_choice
+        - option_codes_present
+        - objective_present
+        - assumptions_bounded
+        - prediction_bounded
+        - confidence_band_present
+        - review_trigger_present
       - measurement_id: minimum_metadata_check
         kind: artifact
         role: supporting
         weight: '0.5'
-        allowed_provenance: [reviewed_artifact]
-        criteria: [neutral_category_only, no_names, no_secrets, no_sensitive_third_party_detail]
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - neutral_category_only
+        - no_names
+        - no_secrets
+        - no_sensitive_third_party_detail
       - measurement_id: sensitive_content_exposed
         kind: boolean
         role: adverse
         weight: '0'
-        allowed_provenance: [firsthand_self_report]
+        allowed_provenance:
+        - firsthand_self_report
         expected: true
   - stable_id: PRACTICE-DECISION-RECORD-01-A2
     sequence: 2
     title: Preserve the choice-time record
-    instructions: When the choice is made, add only the selected option code and decision date. Mark the prospective section read-only by the chosen storage method and schedule the review trigger. Correct only a clearly labeled mechanical error; never replace the original prediction, assumptions, confidence, or dissent after outcome information appears.
+    instructions: When the choice is made, add only the selected option code and decision date. Mark the
+      prospective section read-only by the chosen storage method and schedule the review trigger. Correct
+      only a clearly labeled mechanical error; never replace the original prediction, assumptions, confidence,
+      or dissent after outcome information appears.
     expected_time: 5 minutes
     due_within_days: 7
     typed_evidence_identity:
       protocol_stable_id: PRACTICE-DECISION-RECORD-01
       action_stable_id: PRACTICE-DECISION-RECORD-01-A2
       competency_stable_id: '09.12'
-      scoring_policy_id: SP-SHADOW-ONLY
+      scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
     evidence_rules:
       schema_version: typed-evidence-rules-v1
       max_age_days: 60
-      competency_measurement_ids: [prospective_snapshot_preserved]
+      competency_measurement_ids:
+      - prospective_snapshot_preserved
       transfer_disposition: context_bound
       measurements:
       - measurement_id: prospective_snapshot_preserved
         kind: artifact
         role: primary
         weight: '1'
-        allowed_provenance: [reviewed_artifact]
-        criteria: [choice_code_added, decision_date_added, original_prediction_preserved, original_assumptions_preserved]
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - choice_code_added
+        - decision_date_added
+        - original_prediction_preserved
+        - original_assumptions_preserved
       - measurement_id: review_trigger_scheduled
         kind: boolean
         role: supporting
         weight: '0.5'
-        allowed_provenance: [firsthand_self_report]
+        allowed_provenance:
+        - firsthand_self_report
         expected: true
       - measurement_id: hindsight_rewrite_detected
         kind: boolean
         role: adverse
         weight: '0'
-        allowed_provenance: [reviewed_artifact]
+        allowed_provenance:
+        - reviewed_artifact
         expected: true
   - stable_id: PRACTICE-DECISION-RECORD-01-A3
     sequence: 3
     title: Add an outcome-and-update layer
-    instructions: At the scheduled trigger, append a separate update using structured categories for outcome status, which assumptions were supported, contradicted, or still unknown, and one process change to test next time. Preserve the prospective layer exactly. A favorable outcome may coexist with weak process and an unfavorable outcome with reasonable process.
+    instructions: At the scheduled trigger, append a separate update using structured categories for outcome
+      status, which assumptions were supported, contradicted, or still unknown, and one process change
+      to test next time. Preserve the prospective layer exactly. A favorable outcome may coexist with
+      weak process and an unfavorable outcome with reasonable process.
     expected_time: 15 minutes
     due_within_days: 30
     typed_evidence_identity:
       protocol_stable_id: PRACTICE-DECISION-RECORD-01
       action_stable_id: PRACTICE-DECISION-RECORD-01-A3
       competency_stable_id: '09.12'
-      scoring_policy_id: SP-SHADOW-ONLY
+      scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
     evidence_rules:
       schema_version: typed-evidence-rules-v1
       max_age_days: 60
-      competency_measurement_ids: [decision_update_criteria]
+      competency_measurement_ids:
+      - decision_update_criteria
       transfer_disposition: context_bound
       measurements:
       - measurement_id: decision_update_criteria
         kind: artifact
         role: primary
         weight: '1'
-        allowed_provenance: [reviewed_artifact]
-        criteria: [outcome_status_added, assumptions_revisited, unknowns_preserved, one_process_update_selected, prospective_layer_unchanged]
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - outcome_status_added
+        - assumptions_revisited
+        - unknowns_preserved
+        - one_process_update_selected
+        - prospective_layer_unchanged
       - measurement_id: outcome_process_distinguished
         kind: conceptual
         role: supporting
         weight: '0.5'
-        allowed_provenance: [firsthand_self_report]
-        criteria: [outcome_not_equated_with_process, hindsight_limit_acknowledged]
+        allowed_provenance:
+        - firsthand_self_report
+        criteria:
+        - outcome_not_equated_with_process
+        - hindsight_limit_acknowledged
       - measurement_id: update_used_to_target_person
         kind: boolean
         role: adverse
         weight: '0'
-        allowed_provenance: [firsthand_self_report]
+        allowed_provenance:
+        - firsthand_self_report
         expected: true
   adaptations:
     low_resource:
-    - Use a paper card kept privately or an offline file; no paid decision tool, cloud account, or data sharing is required.
+    - Use a paper card kept privately or an offline file; no paid decision tool, cloud account, or data
+      sharing is required.
     accessibility:
-    - Use checkboxes, option codes, dictation that remains private, enlarged text, a screen reader, or a user-chosen planning aid without storing helper identity.
+    - Use checkboxes, option codes, dictation that remains private, enlarged text, a screen reader, or
+      a user-chosen planning aid without storing helper identity.
     cultural_context:
-    - Include collective duties and relational consequences in the chosen objective while recording only the participant's authorized portion of the decision.
+    - Include collective duties and relational consequences in the chosen objective while recording only
+      the participant's authorized portion of the decision.
     resource_variants:
-    - Use a synthetic case when retention, privilege, workplace policy, shared-device privacy, or safe storage cannot be assured.
+    - Use a synthetic case when retention, privilege, workplace policy, shared-device privacy, or safe
+      storage cannot be assured.
   pause_conditions:
-  - Pause if the decision becomes urgent, high stakes, contested, privileged, regulated, emotionally unsafe, or no longer controlled by the participant.
+  - Pause if the decision becomes urgent, high stakes, contested, privileged, regulated, emotionally unsafe,
+    or no longer controlled by the participant.
   stop_conditions:
-  - Stop and delete the draft through the participant's normal safe method if it contains sensitive information or creates retaliation, discovery, confidentiality, or security risk.
+  - Stop and delete the draft through the participant's normal safe method if it contains sensitive information
+    or creates retaliation, discovery, confidentiality, or security risk.
   escalation_conditions:
-  - Use the responsible organizational, safeguarding, security, legal, financial, or emergency channel when the choice exceeds a private low-stakes record.
+  - Use the responsible organizational, safeguarding, security, legal, financial, or emergency channel
+    when the choice exceeds a private low-stakes record.
   professional_referral_conditions:
-  - Obtain appropriately qualified advice for legal, clinical, financial, fiduciary, regulated, or other high-consequence decisions; this protocol is not a substitute.
+  - Obtain appropriately qualified advice for legal, clinical, financial, fiduciary, regulated, or other
+    high-consequence decisions; this protocol is not a substitute.
 evidence_and_scoring:
   accepted_evidence_types:
   - allowlisted prospective decision-record criteria
@@ -216,46 +299,72 @@ evidence_and_scoring:
   - The prospective section was created or rewritten after material outcome information became known.
   - The artifact exposed protected, privileged, secret, credential, or sensitive third-party information.
   - The record was used to monitor, blame, retaliate against, or make claims about another person.
-  independence_rule: Planning aids may help structure the record, but evidence stores no helper identity and distinguishes self-directed, planning-aid, and guided support.
-  context_transfer_rule: Evidence concerns one decision and its review trigger; it does not establish judgment quality across domains or show that the resulting choice was correct.
-  repetition_rule: Each decision record has one immutable origin; later updates append to that origin and duplicate event application is rejected.
-  recency_rule: The action rules use an explicit 60-day bound; an update outside that bound is stale rather than silently treated as retained skill.
-  performance_rubric: Performance requires prospective criteria, preservation of the choice-time snapshot, and a separate later update; the decision's substantive content and outcome valence are not scored.
-  evidence_quality_rubric: Quality depends on timestamps or sequence criteria, minimum metadata, structured allowlisted fields, and an unchanged prospective layer—not prose detail or apparent confidence.
-  scoring_eligibility: This source-only package and all its typed rules remain shadow-only, non-persisted, and production-ineligible.
-  competency_contribution: Selected artifact criteria may form context-bound direct competency shadow evidence while protocol completion remains separate and cannot be counted again.
+  independence_rule: Planning aids may help structure the record, but evidence stores no helper identity
+    and distinguishes self-directed, planning-aid, and guided support.
+  context_transfer_rule: Evidence concerns one decision and its review trigger; it does not establish
+    judgment quality across domains or show that the resulting choice was correct.
+  repetition_rule: Each decision record has one immutable origin; later updates append to that origin
+    and duplicate event application is rejected.
+  recency_rule: The action rules use an explicit 60-day bound; an update outside that bound is stale rather
+    than silently treated as retained skill.
+  performance_rubric: Performance requires prospective criteria, preservation of the choice-time snapshot,
+    and a separate later update; the decision's substantive content and outcome valence are not scored.
+  evidence_quality_rubric: Quality depends on timestamps or sequence criteria, minimum metadata, structured
+    allowlisted fields, and an unchanged prospective layer—not prose detail or apparent confidence.
+  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
+    ledger; action-specific provenance and withholding rules still apply.
+  competency_contribution: Selected artifact criteria may form context-bound direct competency shadow
+    evidence while protocol completion remains separate and cannot be counted again.
   canonical_lever_allocation: parent_competency_mapping
-  recommendation_target_lever_ids: [L14]
-  minimum_evidence_before_state_update: No current-state update is permitted under SP-SHADOW-ONLY.
+  recommendation_target_lever_ids:
+  - L14
+  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
+    measurement and no applicable withholding condition may update current state; completion alone never
+    does.
   withholding_conditions:
-  - Withhold records made retrospectively, missing a preserved prospective layer, stale, adverse, duplicate, cross-epoch, unknown, not observed, not applicable, deferred, or inconclusive.
-  - Withhold any artifact content or private narrative; only allowlisted criterion IDs and minimal provenance can enter typed evaluation.
+  - Withhold records made retrospectively, missing a preserved prospective layer, stale, adverse, duplicate,
+    cross-epoch, unknown, not observed, not applicable, deferred, or inconclusive.
+  - Withhold any artifact content or private narrative; only allowlisted criterion IDs and minimal provenance
+    can enter typed evaluation.
 completion_and_review:
   completion_criteria:
   - A minimum-metadata prospective record was created before the decision resolved.
   - The original prediction and assumptions were preserved at choice time.
-  - A separate update was appended at the review trigger; an explicit deferral closes the protocol without claiming completion.
+  - A separate update was appended at the review trigger; an explicit deferral closes the protocol without
+    claiming completion.
   completion_rules:
     minimum_completed: 2
-    substantive_markers: [prospective_record_criteria, prospective_snapshot_preserved, decision_update_criteria]
+    substantive_markers:
+    - prospective_record_criteria
+    - prospective_snapshot_preserved
+    - decision_update_criteria
     marker_mode: all
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Use the revised process criterion on another low-stakes decision only after privacy, authority, and prospective timing remain suitable.
-  transfer_limit: One preserved record cannot establish unbiased judgment, calibration, decision quality, or transfer to high-stakes or differently governed choices.
+  progression_criteria: Use the revised process criterion on another low-stakes decision only after privacy,
+    authority, and prospective timing remain suitable.
+  transfer_limit: One preserved record cannot establish unbiased judgment, calibration, decision quality,
+    or transfer to high-stakes or differently governed choices.
   reflection:
-    before: What minimum structured fields will preserve this choice-time view without exposing sensitive content?
+    before: What minimum structured fields will preserve this choice-time view without exposing sensitive
+      content?
     during: Has any outcome information appeared, and is the original layer still visibly unchanged?
-    after: Which assumption status and process update can be recorded without declaring the outcome proof of good or bad judgment?
+    after: Which assumption status and process update can be recorded without declaring the outcome proof
+      of good or bad judgment?
   review_guidance:
-    repeat: Repeat with a new low-stakes prospective decision only when safe storage and an honest review trigger are available.
+    repeat: Repeat with a new low-stakes prospective decision only when safe storage and an honest review
+      trigger are available.
     adapt: Use fewer assumptions, neutral codes, a synthetic case, or a more accessible private format.
     stop: Stop if privacy, authority, privilege, safety, or record-retention boundaries become uncertain.
     escalate: Seek qualified or organizational guidance for a decision outside this low-risk scope.
   evidence_examples:
-    supportive: The prospective criteria were present, the original layer remained unchanged, and the later update distinguished outcome from process.
-    mixed: The prospective record was preserved but the update remained partial or the review trigger was delayed.
-    contradictory: Outcome knowledge altered the original prediction or assumptions, or the outcome was treated as conclusive proof of process quality.
-    inconclusive: The record timing could not be established, the decision never resolved, or required observations were unknown or withheld.
+    supportive: The prospective criteria were present, the original layer remained unchanged, and the
+      later update distinguished outcome from process.
+    mixed: The prospective record was preserved but the update remained partial or the review trigger
+      was delayed.
+    contradictory: Outcome knowledge altered the original prediction or assumptions, or the outcome was
+      treated as conclusive proof of process quality.
+    inconclusive: The record timing could not be established, the decision never resolved, or required
+      observations were unknown or withheld.
 presentation:
   setup_copy:
     context_heading: Choose one reversible low-stakes decision.
@@ -272,6 +381,8 @@ presentation:
     decision_update_criteria: Separate update criteria present
     outcome_process_distinguished: Outcome and process were distinguished
     update_used_to_target_person: The update was used to monitor, blame, or target a person
-  completion_copy: Review the preserved before-and-after layers. A result does not prove that the original process was good or bad.
-  plain_language_evidence: The record checks whether a prospective decision snapshot and later update meet allowlisted criteria without storing their contents.
+  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
+    validation, identity, dignity, or human worth.
+  plain_language_evidence: The record checks whether a prospective decision snapshot and later update
+    meet allowlisted criteria without storing their contents.
   display_order: 7

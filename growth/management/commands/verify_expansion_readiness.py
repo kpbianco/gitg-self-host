@@ -34,11 +34,12 @@ class Command(BaseCommand):
             self.style.SUCCESS(
                 f"Expansion readiness verified ({summary.contract_version}): "
                 f"{summary.canonical_protocol_packages} canonical packages and "
-                f"{summary.practice_actions} actions preserve "
-                f"{summary.projected_legacy_protocols} runtime protocols; "
+                f"{summary.practice_actions} actions project "
+                f"{summary.runtime_protocols} runtime protocols; "
                 f"{summary.uncovered_competencies} of {summary.competencies} "
                 "competencies remain explicitly unauthored; "
-                f"{summary.score_active_protocols} score-active protocol; "
-                f"legacy projection {summary.legacy_projection_hash}."
+                f"{summary.score_active_protocols} score-active protocols; "
+                f"{summary.projected_legacy_protocols} legacy-compatible projections; "
+                f"legacy projection hash {summary.legacy_projection_hash}."
             )
         )

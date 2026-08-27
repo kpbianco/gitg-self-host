@@ -53,12 +53,13 @@ state, invokes the unchanged pilot verifier through the additive
 `GG-CURRICULUM-EXPANSION-READINESS-1.0` contract, and compares the canonical
 projection with the seeded runtime.
 
-`make competency-evidence-check` runs additive
+`make competency-evidence-check` runs
 `GG-COMPETENCY-EVIDENCE-READINESS-1.0`. It verifies exact v1 replay,
-fail-closed typed dispatch, golden typed evidence and shadow projections,
-property/invariant coverage, deterministic reports, and unchanged production
-state. A pass means software-ready, not M6B-accepted:
-`ER-M6A-003` and `RG-M6A-002` remain external governance blockers for M6B acceptance, runtime projection, scoring, participant release, deployment, and validation claims; Decision 051 permits CI-gated source-only draft authoring while they remain open.
+fail-closed typed dispatch, persisted typed evidence, mixed production scoring,
+golden shadow projections, property/invariant coverage, deterministic reports,
+and immutable baselines. A pass means software-ready, not content-validated:
+`ER-M6A-003` and `RG-M6A-002` remain visible review gaps even though Decision
+052 explicitly authorizes runtime and score activation.
 
 The M6B report set is:
 
@@ -67,15 +68,16 @@ The M6B report set is:
 - `reports/practice-content/competency_evidence_readiness_v1.json`.
 
 The readiness JSON must distinguish software readiness from specialist review,
-record zero typed production protocols and zero typed score-active protocols,
-and keep M6B acceptance false while `ER-M6A-003` is pending.
+record 378 typed production and typed score-active protocols, record five
+legacy v1 score-active protocols, and keep M6B acceptance false while
+`ER-M6A-003` is pending.
 
 `make context-check`, `make personal-os-check`, and
 `make context-priority-check` independently exercise the M6C-01 through
 M6C-03 contracts from isolated state. `make m6c-pilot-check` is an additive
 isolated drill for read-only `GG-M6C-PILOT-READINESS-1.0`; it invokes all six
-prerequisite readiness contracts, checks exact definition IDs, five active
-canonical protocols, friendship-only activation, authenticated route
+prerequisite readiness contracts, checks exact definition IDs, 383 active
+canonical protocols, exact all-383 activation, authenticated route
 registration, and empty or valid optional state, and must not print private
 authored values or write database state.
 
@@ -166,8 +168,8 @@ authored values or write database state.
 - read-only readiness verification and fail-closed score-activation,
   profile-completeness, and availability drift behavior;
 - protocol-specific compact check-in fields and boundary language;
-- immutable evidence with zero score snapshots or lever-state movement for
-  score-inactive protocols;
+- score snapshots and lever-state movement for every eligible canonical
+  protocol, with event-level withholding for ineligible observations;
 - direct clarification required for emotional-cue completion;
 - both a direct statement and follow-through required for boundary completion;
 - both a condition comparison and repeat required for attention-presence
@@ -213,8 +215,9 @@ authored values or write database state.
 plus the M6C-04 Personal OS/context journey:
 
 1. login, Pilot 002 home, and developmental profile;
-2. mobile keyboard content access, five-protocol setup coverage, no horizontal
-   overflow, score-boundary copy, and desktop/mobile walkthrough screenshots;
+2. mobile keyboard content access, exact all-383 library coverage, representative
+   legacy/typed setup coverage, no horizontal overflow, score-boundary copy, and
+   bounded desktop/mobile walkthrough screenshots;
 3. non-instrumental-play setup and action-specific compact check-in;
 4. emotional-cue setup, anti-mind-reading boundary, and action-specific check-in;
 5. boundary setup, anti-coercion and retaliation exclusions, and action-specific check-in;

@@ -9,7 +9,6 @@ from typing import Any
 from django.conf import settings
 
 from growth.domain.practice_content import (
-    FROZEN_LEGACY_CONFIGURATION_HASH,
     FROZEN_LEGACY_PROTOCOL_IDS,
     PracticeContentError,
     load_practice_content_bundle,
@@ -33,7 +32,6 @@ from growth.services.expansion_readiness import (
     ExpansionReadinessError,
     verify_expansion_readiness,
 )
-from growth.services.scoring import FRIENDSHIP_PROTOCOL_ID
 
 M6D_AUTHORING_READINESS_CONTRACT_VERSION = "GG-M6D-01-AUTHORING-READINESS-1.0"
 M6D_FIXTURE_SCHEMA_VERSION = "grounded-growth-m6d-01-protocol-fixture-v1"
@@ -280,9 +278,7 @@ def _verify_cohort(practices) -> None:
     missing_typed_ids = expected_ids - typed_protocol_ids
     if missing_typed_ids:
         raise M6DAuthoringReadinessError(
-            "M6D-01 source-only typed protocol IDs are missing: "
-            + ", ".join(sorted(missing_typed_ids))
-            + "."
+            "M6D-01 typed protocol IDs are missing: " + ", ".join(sorted(missing_typed_ids)) + "."
         )
     for member in M6D_COHORT:
         protocol = protocols.get(member.protocol_stable_id)
@@ -329,7 +325,7 @@ def _verify_cohort(practices) -> None:
             "RISK-LOW",
         )
         _require_equal(
-            f"{member.protocol_stable_id} source-only governance",
+            f"{member.protocol_stable_id} owner-directed runtime governance",
             (
                 governance["availability"],
                 governance["editorial_status"],
@@ -337,21 +333,32 @@ def _verify_cohort(practices) -> None:
                 governance["scoring_policy_id"],
                 governance["scoring_status"],
             ),
-            ("inactive", "draft", "none", "SP-SHADOW-ONLY", "shadow_only"),
+            (
+                "active",
+                "draft",
+                "GG-PRACTICE-RUNTIME-PROJECTION-2.0",
+                "SP-STRUCTURED-EVIDENCE-ELIGIBLE",
+                "active",
+            ),
         )
         if activation is None:
             raise M6DAuthoringReadinessError(
                 f"M6D-01 activation entry is missing: {member.protocol_stable_id}."
             )
         _require_equal(
-            f"{member.protocol_stable_id} inactive activation",
+            f"{member.protocol_stable_id} active activation",
             (
                 activation["scoring_policy_id"],
                 activation["score_active"],
                 activation["activation_status"],
                 activation["approved_contract"],
             ),
-            ("SP-SHADOW-ONLY", False, "inactive", None),
+            (
+                "SP-STRUCTURED-EVIDENCE-ELIGIBLE",
+                True,
+                "active",
+                "GG-SCORE-STATE-1.0",
+            ),
         )
         serialized_protocol = json.dumps(protocol, ensure_ascii=False).lower()
         missing_boundary_terms = sorted(
@@ -431,25 +438,18 @@ def verify_m6d_authoring_readiness() -> M6DAuthoringReadinessSummary:
     )
 
     _require_equal("M6D-01 curriculum competency count", expansion.competencies, 383)
-    if expansion.canonical_protocol_packages < 9:
-        raise M6DAuthoringReadinessError("M6D-01 requires at least 9 source protocol packages.")
-    if expansion.practice_actions < 29:
-        raise M6DAuthoringReadinessError("M6D-01 requires at least 29 source actions.")
-    if expansion.uncovered_competencies > 374:
-        raise M6DAuthoringReadinessError("M6D-01 permits at most 374 uncovered competencies.")
-    if competency.source_typed_protocols < 4:
-        raise M6DAuthoringReadinessError("M6D-01 requires at least 4 source typed protocols.")
-    if expansion.runtime_protocols < 5:
-        raise M6DAuthoringReadinessError("M6D-01 requires at least 5 runtime protocols.")
-    if expansion.runtime_actions < 15:
-        raise M6DAuthoringReadinessError("M6D-01 requires at least 15 runtime actions.")
-    if expansion.score_active_protocols < 1:
-        raise M6DAuthoringReadinessError("M6D-01 requires at least one score-active protocol.")
+    _require_equal("M6F source protocol packages", expansion.canonical_protocol_packages, 383)
+    _require_equal("M6F source actions", expansion.practice_actions, 1151)
+    _require_equal("M6F uncovered competencies", expansion.uncovered_competencies, 0)
+    _require_equal("M6F typed protocols", competency.source_typed_protocols, 378)
+    _require_equal("M6F runtime protocols", expansion.runtime_protocols, 383)
+    _require_equal("M6F runtime actions", expansion.runtime_actions, 1151)
+    _require_equal("M6F score-active protocols", expansion.score_active_protocols, 383)
     _require_equal("M6D-01 fixture action count", len(fixture_action_ids), 14)
     _require_equal(
-        "Frozen legacy runtime projection hash",
+        "Legacy compatibility projection hash",
         expansion.legacy_projection_hash,
-        FROZEN_LEGACY_CONFIGURATION_HASH,
+        practices.release_manifest["legacy_projection_hash"],
     )
     _require_equal("M6B specialist review ID", competency.expert_review_id, "ER-M6A-003")
     _require_equal("M6B research gap ID", competency.research_gap_id, "RG-M6A-002")
@@ -468,16 +468,17 @@ def verify_m6d_authoring_readiness() -> M6DAuthoringReadinessSummary:
     score_active_protocol_ids = {
         protocol.stable_id for protocol in runtime_protocols if protocol.score_active
     }
-    if FRIENDSHIP_PROTOCOL_ID not in score_active_protocol_ids:
-        raise M6DAuthoringReadinessError(
-            "M6D-01 requires the friendship protocol to remain score-active."
-        )
+    _require_equal(
+        "M6F exact score-active protocol IDs",
+        score_active_protocol_ids,
+        runtime_protocol_ids,
+    )
     cohort_protocol_ids = {member.protocol_stable_id for member in M6D_COHORT}
     cohort_typed_production_protocols = len(cohort_protocol_ids & runtime_protocol_ids)
     _require_equal(
         "M6D-01 cohort typed production protocols",
         cohort_typed_production_protocols,
-        0,
+        4,
     )
 
     return M6DAuthoringReadinessSummary(

@@ -26,9 +26,11 @@ prohibited_autonomy:
   - destructive-data-migration
   - production-participant-data-write
   - target-pr-merge
-  - mass-score-activation
   - fabricate-specialist-review
   - waive-failing-gate
+owner_authorized_operations:
+  - exact-383-protocol-runtime-projection
+  - exact-383-protocol-score-activation
 review_focus:
   - canonical-source violations
   - placeholder generic or duplicated content
