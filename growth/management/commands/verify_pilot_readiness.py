@@ -9,7 +9,7 @@ from growth.services.pilot_readiness import (
 
 
 class Command(BaseCommand):
-    help = "Verify the reviewed five-protocol pilot boundary without writing application state."
+    help = "Verify the current canonical runtime and Pilot 002 boundary without writing state."
 
     def add_arguments(self, parser):
         parser.add_argument(
@@ -37,7 +37,7 @@ class Command(BaseCommand):
                 f"{summary.competency_lever_links} weighted links; "
                 f"{summary.practice_protocols} active protocols with "
                 f"{summary.practice_actions} actions and "
-                f"{summary.score_active_protocols} score-active protocol; "
+                f"{summary.score_active_protocols} score-active protocols; "
                 f"{summary.pilot_assessment_runs} Pilot 002 profile; "
                 f"{summary.evidence_events} evidence events and "
                 f"{summary.score_state_runs} score-state runs replayed."

@@ -798,7 +798,7 @@ sources:
   publication_date: '2026-07-27'
   locator: docs/PRODUCT_DECISIONS.md
   locator_kind: repository_path
-  content_sha256: c0428622bb5b0d8f11ac2818c9c3c9a0cea503f7fd5a0dd3fab010d70fa34bd7
+  content_sha256: c48809d7ab118ffb4a18a07cd2d395594bb70dee33a238055651b97b4f42cbf6
   source_class: internal_decision_record
   evidence_strength: design_only
   supported_claim: Records accepted product boundaries for dignity, completion versus mastery, scoring
@@ -827,7 +827,7 @@ sources:
   publication_date: '2026-07-27'
   locator: docs/protocol-library.md
   locator_kind: repository_path
-  content_sha256: 7a97b161cae789e042baaef243584c38917608a0493e6dccd80939f1eab6c48e
+  content_sha256: dde1da72150271a2dacd0ad2072548b54f44bb12d864861d7d4f34c8a1129a33
   source_class: internal_decision_record
   evidence_strength: design_only
   supported_claim: Documents the five reviewed protocol identities, runtime availability, safety boundaries,

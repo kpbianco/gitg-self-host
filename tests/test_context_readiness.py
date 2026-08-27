@@ -85,9 +85,8 @@ def test_context_capture_and_readiness_do_not_mutate_existing_domains(user, seed
     assert summary.changes_recommendations is False
     assert summary.changes_score_state is False
     assert summary.ordinary_ui_changes is False
-    assert list(
-        PracticeProtocol.objects.filter(score_active=True).values_list("stable_id", flat=True)
-    ) == ["PRACTICE-FRIENDSHIP-01"]
+    assert PracticeProtocol.objects.filter(score_active=True).count() == 383
+    assert not PracticeProtocol.objects.filter(score_active=False).exists()
 
 
 @pytest.mark.django_db

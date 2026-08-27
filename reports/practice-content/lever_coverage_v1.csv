@@ -1,38 +1,38 @@
 lever_id,lever_name,canonical_competency_count,protocol_parent_count,recommendation_target_count,score_active_protocol_parent_count,m6a_status
-L01,Purpose and Direction,27,27,26,0,projected_parent_coverage
-L02,"Values, Integrity, and Moral Courage",55,55,55,0,projected_parent_coverage
-L03,"Spirituality, Reverence, and Transcendence",30,30,29,0,projected_parent_coverage
-L04,"Mortality, Suffering, Gratitude, and Hope",27,27,27,0,projected_parent_coverage
-L05,"Self-Knowledge, Identity, and Humility",53,53,51,0,projected_parent_coverage
-L06,Emotional Awareness and Literacy,10,10,10,0,projected_parent_coverage
-L07,Emotional Regulation and Resilience,37,37,36,0,projected_parent_coverage
-L08,Attention and Presence,15,15,15,0,projected_parent_coverage
-L09,Temperance and Desire Governance,21,21,20,0,projected_parent_coverage
-L10,"Discipline, Habits, and Follow-Through",76,76,71,1,projected_parent_coverage
-L11,"Adaptability, Uncertainty, and Learning from Failure",40,40,39,0,projected_parent_coverage
-L12,Critical Reasoning and Logic,18,18,18,0,projected_parent_coverage
-L13,"Evidence, Truth, and Epistemic Humility",57,57,56,0,projected_parent_coverage
-L14,"Systems Thinking, Judgment, and Decision-Making",56,56,56,0,projected_parent_coverage
-L15,"Learning Agility, Memory, and Teaching",44,44,44,0,projected_parent_coverage
-L16,"Creativity, Aesthetics, and Cultural Literacy",35,35,35,0,projected_parent_coverage
-L17,"Physical Health, Vitality, and Embodiment",52,52,51,0,projected_parent_coverage
-L18,Domestic Competence and Material Self-Sufficiency,25,25,25,0,projected_parent_coverage
-L19,"Digital Agency, Media Literacy, and Security",22,22,22,0,projected_parent_coverage
-L20,"Safety, Risk, and Preparedness",47,47,47,0,projected_parent_coverage
-L21,Financial Stewardship and Provision,27,27,27,0,projected_parent_coverage
-L22,"Economic Agency, Entrepreneurship, and Market Literacy",22,22,22,0,projected_parent_coverage
-L23,Communication and Listening,57,57,56,1,projected_parent_coverage
-L24,"Empathy, Social Perception, and Perspective-Taking",67,67,67,1,projected_parent_coverage
-L25,"Boundaries, Assertiveness, and Self-Respect",49,49,49,0,projected_parent_coverage
-L26,"Friendship, Belonging, and Hospitality",35,35,35,1,projected_parent_coverage
-L27,"Intimacy, Sexuality, and Partnership",17,17,17,0,projected_parent_coverage
-L28,"Family, Parenting, and Caregiving",42,42,42,0,projected_parent_coverage
-L29,"Conflict, Repair, Forgiveness, and Reconciliation",27,27,26,0,projected_parent_coverage
-L30,"Service, Citizenship, and Civic Agency",36,36,36,0,projected_parent_coverage
-L31,"Justice, Pluralism, and Social Responsibility",100,100,100,0,projected_parent_coverage
-L32,"Work, Craft, Professionalism, and Contribution",44,44,43,0,projected_parent_coverage
-L33,"Leadership, Power, Mentorship, and Institutions",39,39,39,0,projected_parent_coverage
-L34,"Play, Rest, Celebration, and Joy",22,22,22,0,projected_parent_coverage
-L35,"Nature, Exploration, and Adventure",17,17,17,0,projected_parent_coverage
-L36,"Life Design, Balance, and Seasonality",48,48,46,0,projected_parent_coverage
-L37,"Legacy, Generativity, and Transmission",7,7,7,0,projected_parent_coverage
+L01,Purpose and Direction,27,27,26,27,projected_parent_coverage
+L02,"Values, Integrity, and Moral Courage",55,55,55,55,projected_parent_coverage
+L03,"Spirituality, Reverence, and Transcendence",30,30,29,30,projected_parent_coverage
+L04,"Mortality, Suffering, Gratitude, and Hope",27,27,27,27,projected_parent_coverage
+L05,"Self-Knowledge, Identity, and Humility",53,53,51,53,projected_parent_coverage
+L06,Emotional Awareness and Literacy,10,10,10,10,projected_parent_coverage
+L07,Emotional Regulation and Resilience,37,37,36,37,projected_parent_coverage
+L08,Attention and Presence,15,15,15,15,projected_parent_coverage
+L09,Temperance and Desire Governance,21,21,20,21,projected_parent_coverage
+L10,"Discipline, Habits, and Follow-Through",76,76,71,76,projected_parent_coverage
+L11,"Adaptability, Uncertainty, and Learning from Failure",40,40,39,40,projected_parent_coverage
+L12,Critical Reasoning and Logic,18,18,18,18,projected_parent_coverage
+L13,"Evidence, Truth, and Epistemic Humility",57,57,56,57,projected_parent_coverage
+L14,"Systems Thinking, Judgment, and Decision-Making",56,56,56,56,projected_parent_coverage
+L15,"Learning Agility, Memory, and Teaching",44,44,44,44,projected_parent_coverage
+L16,"Creativity, Aesthetics, and Cultural Literacy",35,35,35,35,projected_parent_coverage
+L17,"Physical Health, Vitality, and Embodiment",52,52,51,52,projected_parent_coverage
+L18,Domestic Competence and Material Self-Sufficiency,25,25,25,25,projected_parent_coverage
+L19,"Digital Agency, Media Literacy, and Security",22,22,22,22,projected_parent_coverage
+L20,"Safety, Risk, and Preparedness",47,47,47,47,projected_parent_coverage
+L21,Financial Stewardship and Provision,27,27,27,27,projected_parent_coverage
+L22,"Economic Agency, Entrepreneurship, and Market Literacy",22,22,22,22,projected_parent_coverage
+L23,Communication and Listening,57,57,56,57,projected_parent_coverage
+L24,"Empathy, Social Perception, and Perspective-Taking",67,67,67,67,projected_parent_coverage
+L25,"Boundaries, Assertiveness, and Self-Respect",49,49,49,49,projected_parent_coverage
+L26,"Friendship, Belonging, and Hospitality",35,35,35,35,projected_parent_coverage
+L27,"Intimacy, Sexuality, and Partnership",17,17,17,17,projected_parent_coverage
+L28,"Family, Parenting, and Caregiving",42,42,42,42,projected_parent_coverage
+L29,"Conflict, Repair, Forgiveness, and Reconciliation",27,27,26,27,projected_parent_coverage
+L30,"Service, Citizenship, and Civic Agency",36,36,36,36,projected_parent_coverage
+L31,"Justice, Pluralism, and Social Responsibility",100,100,100,100,projected_parent_coverage
+L32,"Work, Craft, Professionalism, and Contribution",44,44,43,44,projected_parent_coverage
+L33,"Leadership, Power, Mentorship, and Institutions",39,39,39,39,projected_parent_coverage
+L34,"Play, Rest, Celebration, and Joy",22,22,22,22,projected_parent_coverage
+L35,"Nature, Exploration, and Adventure",17,17,17,17,projected_parent_coverage
+L36,"Life Design, Balance, and Seasonality",48,48,46,48,projected_parent_coverage
+L37,"Legacy, Generativity, and Transmission",7,7,7,7,projected_parent_coverage

@@ -6,12 +6,12 @@ name: Bounded Civil disobedience and principled lawbreaking Practice
 parent_competency_id: '20.15'
 domain_id: '20'
 governance:
-  availability: inactive
+  availability: active
   editorial_status: draft
-  runtime_projection: none
+  runtime_projection: GG-PRACTICE-RUNTIME-PROJECTION-2.0
   risk_class_id: RISK-HIGH
-  scoring_policy_id: SP-NON-SCORED-REFLECTION
-  scoring_status: non_scored
+  scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
+  scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
@@ -124,7 +124,7 @@ intervention:
       protocol_stable_id: PRACTICE-COMP-2015-CIVIL-DISOBEDIENCE-AND-PRINCIPLED-LAWBREAKING-01
       action_stable_id: PRACTICE-COMP-2015-CIVIL-DISOBEDIENCE-AND-PRINCIPLED-LAWBREAKING-01-A1
       competency_stable_id: '20.15'
-      scoring_policy_id: SP-NON-SCORED-REFLECTION
+      scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
     evidence_rules:
       schema_version: typed-evidence-rules-v1
       max_age_days: 90
@@ -169,7 +169,7 @@ intervention:
       protocol_stable_id: PRACTICE-COMP-2015-CIVIL-DISOBEDIENCE-AND-PRINCIPLED-LAWBREAKING-01
       action_stable_id: PRACTICE-COMP-2015-CIVIL-DISOBEDIENCE-AND-PRINCIPLED-LAWBREAKING-01-A2
       competency_stable_id: '20.15'
-      scoring_policy_id: SP-NON-SCORED-REFLECTION
+      scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
     evidence_rules:
       schema_version: typed-evidence-rules-v1
       max_age_days: 90
@@ -214,7 +214,7 @@ intervention:
       protocol_stable_id: PRACTICE-COMP-2015-CIVIL-DISOBEDIENCE-AND-PRINCIPLED-LAWBREAKING-01
       action_stable_id: PRACTICE-COMP-2015-CIVIL-DISOBEDIENCE-AND-PRINCIPLED-LAWBREAKING-01-A3
       competency_stable_id: '20.15'
-      scoring_policy_id: SP-NON-SCORED-REFLECTION
+      scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
     evidence_rules:
       schema_version: typed-evidence-rules-v1
       max_age_days: 90
@@ -314,19 +314,20 @@ evidence_and_scoring:
   evidence_quality_rubric: Quality for Civil disobedience and principled lawbreaking requires a bounded
     context, allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
     free text and artifact contents are excluded.
-  scoring_eligibility: This package is non-scored and production-ineligible.
-  competency_contribution: Designated primary measurements may produce context-bound direct Civil disobedience
-    and principled lawbreaking evidence only under offline typed evaluation; protocol performance remains
-    distinct and is never counted twice.
+  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
+    ledger; action-specific provenance and withholding rules still apply.
+  competency_contribution: Designated primary measurements may produce one context-bound direct Civil
+    disobedience and principled lawbreaking contribution under typed evaluation; protocol performance
+    remains distinct and is never counted twice.
   canonical_lever_allocation: parent_competency_mapping
   recommendation_target_lever_ids:
   - L02
   - L20
   - L30
   - L31
-  minimum_evidence_before_state_update: No current-state update is permitted for this Civil disobedience
-    and principled lawbreaking draft under SP-NON-SCORED-REFLECTION, regardless of completion or evidence
-    quantity.
+  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
+    measurement and no applicable withholding condition may update current state; completion alone never
+    does.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Civil disobedience and principled lawbreaking evidence.
@@ -405,8 +406,8 @@ presentation:
     c2015_a3_boundary: Action 3 stayed inside its stated Civil disobedience and principled lawbreaking
       boundary
     c2015_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Complete the bounded Civil disobedience and principled lawbreaking review without claiming
-    mastery, broad transfer, professional validation, or score activation.
+  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
+    validation, identity, dignity, or human worth.
   plain_language_evidence: The structured record shows what happened in one limited Civil disobedience
     and principled lawbreaking practice, including support, contradiction, defer, no result, or harm.
   display_order: 277

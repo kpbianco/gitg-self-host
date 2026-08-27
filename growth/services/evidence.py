@@ -5,6 +5,7 @@ from dataclasses import dataclass
 from decimal import Decimal
 from typing import Any
 
+from django.conf import settings
 from django.core.exceptions import ValidationError
 from django.db import transaction
 
@@ -15,6 +16,14 @@ from growth.domain.evidence import (
     evaluate_evidence,
 )
 from growth.domain.evidence_dispatch import replay_evidence_by_version
+from growth.domain.practice_content import load_practice_content_bundle
+from growth.domain.typed_evidence import (
+    TYPED_EVIDENCE_RULES_VERSION,
+    TypedEvidenceContractError,
+    TypedEvidenceInput,
+    TypedObservationInput,
+    evaluate_typed_evidence,
+)
 from growth.models import EvidenceEvent, LeverState, PracticeCheckIn
 
 
@@ -87,6 +96,46 @@ def _input_for(check_in: PracticeCheckIn, repetition_index: int) -> EvidenceInpu
         evidence_direction=check_in.evidence_direction,
         contradiction_text_present=bool(check_in.contradictory_evidence.strip()),
         repetition_index=repetition_index,
+    )
+
+
+def _typed_input_for(
+    check_in: PracticeCheckIn,
+    repetition_index: int,
+) -> TypedEvidenceInput:
+    assessment_run = check_in.sprint.assessment_run
+    if assessment_run is None:
+        raise EvidenceWorkflowError("Typed evidence requires an assessment epoch.")
+    activation = load_practice_content_bundle(settings.BASE_DIR).activation_entries[
+        check_in.sprint.protocol_id
+    ]
+    observed_on = check_in.submitted_at.date().isoformat()
+    return TypedEvidenceInput(
+        event_key=f"EVENT-{check_in.pk}",
+        origin_key=f"CHECKIN-{check_in.pk}",
+        assessment_epoch_id=f"ASSESSMENT-{assessment_run.pk}",
+        protocol_stable_id=check_in.sprint.protocol_id,
+        action_stable_id=check_in.action_id,
+        competency_stable_id=check_in.sprint.protocol.parent_competency_id,
+        scoring_policy_id=activation["scoring_policy_id"],
+        action_attempted=check_in.action_attempted,
+        action_completed=check_in.action_completed,
+        observations=tuple(
+            TypedObservationInput(**observation) for observation in check_in.typed_observations
+        ),
+        support_level={
+            PracticeCheckIn.SupportLevel.INDEPENDENT: "self_directed",
+            PracticeCheckIn.SupportLevel.PLANNING_AID: "planning_aid",
+            PracticeCheckIn.SupportLevel.GUIDED: "guided",
+            "": "not_recorded",
+        }[check_in.support_level],
+        context_comparison=check_in.context_comparison,
+        context_key=f"SPRINT-{check_in.sprint_id}",
+        evidence_direction=check_in.evidence_direction or "unknown",
+        adverse_indicator_ids=(),
+        repetition_index=repetition_index,
+        observed_on=observed_on,
+        as_of_date=observed_on,
     )
 
 
@@ -172,11 +221,17 @@ def create_evidence_event(
 
     resolved_index = repetition_index or repetition_index_for(source)
     try:
-        result = evaluate_evidence(
-            _input_for(source, resolved_index),
-            source.action.evidence_rules,
-        )
-    except EvidenceContractError as exc:
+        if source.action.evidence_rules.get("schema_version") == TYPED_EVIDENCE_RULES_VERSION:
+            result = evaluate_typed_evidence(
+                _typed_input_for(source, resolved_index),
+                source.action.evidence_rules,
+            )
+        else:
+            result = evaluate_evidence(
+                _input_for(source, resolved_index),
+                source.action.evidence_rules,
+            )
+    except (EvidenceContractError, TypedEvidenceContractError) as exc:
         raise EvidenceWorkflowError(str(exc)) from exc
 
     event = EvidenceEvent(
@@ -358,6 +413,22 @@ def _decimal_string(value: Decimal | None) -> str | None:
 
 def _privacy_safe_input(snapshot: dict[str, Any]) -> dict[str, Any]:
     """Allowlist replay inputs that contain no user-authored text or identifiers."""
+
+    if snapshot.get("algorithm_version") == "GG-TYPED-EVIDENCE-1.0":
+        return {
+            "competency_stable_id": snapshot["competency_stable_id"],
+            "scoring_policy_id": snapshot["scoring_policy_id"],
+            "action_attempted": snapshot["action_attempted"],
+            "action_completed": snapshot["action_completed"],
+            "observations": snapshot["observations"],
+            "support_level": snapshot["support_level"],
+            "context_comparison": snapshot["context_comparison"],
+            "evidence_direction": snapshot["evidence_direction"],
+            "adverse_indicator_ids": snapshot["adverse_indicator_ids"],
+            "repetition_index": snapshot["repetition_index"],
+            "materialized_spec_hash": snapshot["materialized_spec_hash"],
+            "materialized_rules_hash": snapshot["materialized_rules_hash"],
+        }
 
     rules = snapshot["evidence_rules"]
     observations = snapshot["observations"]

@@ -50,10 +50,10 @@ def test_readiness_contract_verifies_reviewed_inventory_without_writes(seeded):
     assert summary.archetypes == 15
     assert summary.archetype_lever_affinities == 555
     assert summary.competency_lever_links == 1403
-    assert summary.practice_protocols == 5
-    assert summary.practice_actions == 15
-    assert summary.active_protocols == 5
-    assert summary.score_active_protocols == 1
+    assert summary.practice_protocols == 383
+    assert summary.practice_actions == 1151
+    assert summary.active_protocols == 383
+    assert summary.score_active_protocols == 383
     assert summary.pilot_assessment_runs == 1
     assert summary.evidence_events == 0
     assert database_inventory() == before
@@ -67,14 +67,14 @@ def test_readiness_management_command_has_deterministic_json_output(seeded):
 
     payload = json.loads(output.getvalue())
     assert payload["contract_version"] == PILOT_READINESS_CONTRACT_VERSION
-    assert payload["practice_protocols"] == 5
-    assert payload["practice_actions"] == 15
-    assert payload["score_active_protocols"] == 1
+    assert payload["practice_protocols"] == 383
+    assert payload["practice_actions"] == 1151
+    assert payload["score_active_protocols"] == 383
 
 
 @pytest.mark.django_db
-def test_readiness_fails_closed_if_score_activation_expands(seeded):
-    PracticeProtocol.objects.filter(stable_id="PRACTICE-PLAY-01").update(score_active=True)
+def test_readiness_fails_closed_if_any_score_activation_is_removed(seeded):
+    PracticeProtocol.objects.filter(stable_id="PRACTICE-PLAY-01").update(score_active=False)
 
     with pytest.raises(PilotReadinessError, match="PRACTICE-PLAY-01 score activation"):
         verify_pilot_readiness()

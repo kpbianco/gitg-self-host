@@ -22,7 +22,7 @@ def _canonical_competency_ids() -> set[str]:
     }
 
 
-def test_full_frontier_materializes_every_competency_without_runtime_expansion():
+def test_full_frontier_materializes_every_competency_in_the_active_runtime():
     bundle = load_practice_content_bundle(ROOT)
     canonical_ids = _canonical_competency_ids()
     protocol_ids = {protocol["stable_id"] for protocol in bundle.protocols}
@@ -34,11 +34,10 @@ def test_full_frontier_materializes_every_competency_without_runtime_expansion()
     assert len(bundle.activation_entries) == 383
 
     runtime = bundle.runtime_protocols
-    assert {protocol["stable_id"] for protocol in runtime} == set(FROZEN_LEGACY_PROTOCOL_IDS)
-    assert sum(len(protocol["actions"]) for protocol in runtime) == 15
-    assert {protocol["stable_id"] for protocol in runtime if protocol["score_active"]} == {
-        "PRACTICE-FRIENDSHIP-01"
-    }
+    assert {protocol["stable_id"] for protocol in runtime} == protocol_ids
+    assert sum(len(protocol["actions"]) for protocol in runtime) == 1151
+    assert all(protocol["score_active"] for protocol in runtime)
+    assert set(FROZEN_LEGACY_PROTOCOL_IDS) <= protocol_ids
 
     generated = [
         protocol
@@ -46,9 +45,11 @@ def test_full_frontier_materializes_every_competency_without_runtime_expansion()
         if protocol["stable_id"].startswith("PRACTICE-COMP-")
     ]
     assert len(generated) == 374
-    assert {protocol["governance"]["availability"] for protocol in generated} == {"inactive"}
+    assert {protocol["governance"]["availability"] for protocol in generated} == {"active"}
     assert {protocol["governance"]["editorial_status"] for protocol in generated} == {"draft"}
-    assert {protocol["governance"]["runtime_projection"] for protocol in generated} == {"none"}
+    assert {protocol["governance"]["runtime_projection"] for protocol in generated} == {
+        "GG-PRACTICE-RUNTIME-PROJECTION-2.0"
+    }
     assert {len(protocol["intervention"]["actions"]) for protocol in generated} == {3}
 
     generated_actions = [
@@ -62,15 +63,11 @@ def test_full_frontier_materializes_every_competency_without_runtime_expansion()
     for protocol in generated:
         governance = protocol["governance"]
         activation = bundle.activation_entries[protocol["stable_id"]]
-        if governance["risk_class_id"] == "RISK-HIGH":
-            assert governance["scoring_policy_id"] == "SP-NON-SCORED-REFLECTION"
-            assert governance["scoring_status"] == "non_scored"
-        else:
-            assert governance["scoring_policy_id"] == "SP-SHADOW-ONLY"
-            assert governance["scoring_status"] == "shadow_only"
-        assert activation["score_active"] is False
-        assert activation["activation_status"] == "inactive"
-        assert activation["approved_contract"] is None
+        assert governance["scoring_policy_id"] == "SP-STRUCTURED-EVIDENCE-ELIGIBLE"
+        assert governance["scoring_status"] == "active"
+        assert activation["score_active"] is True
+        assert activation["activation_status"] == "active"
+        assert activation["approved_contract"] == "GG-SCORE-STATE-1.0"
 
 
 def test_full_frontier_covers_every_grounded_growth_lever():

@@ -18,6 +18,7 @@ from growth.services.competency_evidence_reports import (
     build_competency_evidence_report_outputs,
     write_or_check_competency_evidence_reports,
 )
+from growth.services.scoring import PRODUCTION_SCORE_MAPPING_FINGERPRINT
 
 
 def test_competency_evidence_reports_are_deterministic_and_current(capsys):
@@ -29,8 +30,9 @@ def test_competency_evidence_reports_are_deterministic_and_current(capsys):
     readiness = json.loads(first[REPORT_PATHS["readiness"]])
     assert readiness["contract_version"] == COMPETENCY_EVIDENCE_READINESS_CONTRACT_VERSION
     assert readiness["software_ready"] is True
-    assert readiness["contracts"]["production_score_eligibility_fingerprint"] == (
-        "f7639a0c623f1baac9469f34fe49ca9e2eb0be8fc1c616ab662996b2e90bf2bf"
+    assert (
+        readiness["contracts"]["production_score_eligibility_fingerprint"]
+        == PRODUCTION_SCORE_MAPPING_FINGERPRINT
     )
     catalog = load_practice_content_bundle(Path(__file__).resolve().parents[1])
     assert readiness["catalog"] == {
@@ -39,10 +41,12 @@ def test_competency_evidence_reports_are_deterministic_and_current(capsys):
         "practice_actions": sum(
             len(protocol["intervention"]["actions"]) for protocol in catalog.protocols
         ),
-        "score_active_protocols": 1,
+        "score_active_protocols": 383,
         "uncovered_competencies": 383 - len(catalog.protocols),
     }
-    assert readiness["source_typed_protocols"] >= 4
+    assert readiness["source_typed_protocols"] == 378
+    assert readiness["typed_production_protocols"] == 378
+    assert readiness["typed_score_active_protocols"] == 378
     assert readiness["governance"]["expert_review"]["review_id"] == "ER-M6A-003"
     assert (
         readiness["governance"]["expert_review"]["status"]
@@ -88,7 +92,7 @@ def test_competency_evidence_reports_are_deterministic_and_current(capsys):
         "score_active_protocols": sum(
             protocol["score_active"] for protocol in catalog.runtime_protocols
         ),
-        "typed_protocols": 0,
+        "typed_protocols": 378,
     }
 
     capability_rows = list(
@@ -115,12 +119,14 @@ def test_competency_evidence_reports_are_deterministic_and_current(capsys):
     }
 
     policy_rows = list(csv.DictReader(io.StringIO(first[REPORT_PATHS["scoring_policy"]].decode())))
-    assert len(policy_rows) == 6
+    assert len(policy_rows) == 7
     assert {row["synthetic_execution"] for row in policy_rows} == {"passed"}
-    assert {row["typed_execution_boundary"] for row in policy_rows} == {"pure_shadow_only"}
-    assert {
-        row["policy_id"] for row in policy_rows if row["production_status"] == "legacy_v1_only"
-    } == {"SP-SELF-REPORT-ELIGIBLE"}
+    assert {row["typed_execution_boundary"] for row in policy_rows} == {
+        "runtime_replay_with_event_withholding"
+    }
+    assert {row["policy_id"] for row in policy_rows if row["production_status"] == "active"} == {
+        "SP-STRUCTURED-EVIDENCE-ELIGIBLE"
+    }
 
     assert write_or_check_competency_evidence_reports(check=True) == ()
     call_command("generate_competency_evidence_reports", "--check")

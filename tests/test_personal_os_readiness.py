@@ -151,9 +151,8 @@ def test_capture_and_readiness_preserve_context_exports_and_every_existing_domai
     assert summary.changes_score_state is False
     assert summary.changes_production_activation is False
     assert summary.ordinary_ui_changes is False
-    assert list(
-        PracticeProtocol.objects.filter(score_active=True).values_list("stable_id", flat=True)
-    ) == ["PRACTICE-FRIENDSHIP-01"]
+    assert PracticeProtocol.objects.filter(score_active=True).count() == 383
+    assert not PracticeProtocol.objects.filter(score_active=False).exists()
     exported = after_evidence_export + after_feedback_export
     assert PRIVATE_SENTINEL.encode() not in exported
     assert str(record.pk).encode() not in exported

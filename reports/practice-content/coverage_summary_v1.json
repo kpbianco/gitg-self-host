@@ -18,7 +18,7 @@
     "recommendation_targets": 37,
     "total": 37
   },
-  "practice_catalog_content_hash": "fb4b29d447232034b069b24871cc4eca77b951b9440e6ed1a2994283db5c04b7",
+  "practice_catalog_content_hash": "4f7de352e79214bb2c923e7c6b6281100844141f2e7b2bfc0c5d320b4aa8d594",
   "protocols": {
     "actions": 1151,
     "risk_classes": {
@@ -26,11 +26,9 @@
       "RISK-LOW": 114,
       "RISK-MODERATE": 137
     },
-    "score_active": 1,
+    "score_active": 383,
     "scoring_policies": {
-      "SP-NON-SCORED-REFLECTION": 132,
-      "SP-SELF-REPORT-ELIGIBLE": 1,
-      "SP-SHADOW-ONLY": 250
+      "SP-STRUCTURED-EVIDENCE-ELIGIBLE": 383
     },
     "total": 383
   },

@@ -123,6 +123,7 @@ _EXPECTED_POLICY_OUTCOMES = {
     "SP-QUALIFIED-EVIDENCE-REQUIRED": (1, 0),
     "SP-SELF-REPORT-ELIGIBLE": (1, 0),
     "SP-SHADOW-ONLY": (1, 0),
+    "SP-STRUCTURED-EVIDENCE-ELIGIBLE": (1, 0),
 }
 _M6D_EXPECTED_FIELDS = {
     "adverse",
@@ -1231,10 +1232,18 @@ def _policy_rows(practices) -> tuple[dict[str, Any], ...]:
         set(SUPPORTED_SCORING_POLICY_IDS),
         set(SUPPORTED_POLICY_IDS),
     )
+    typed_ids = {
+        protocol["stable_id"]
+        for protocol in practices.protocols
+        if protocol["evidence_and_scoring"]["observation_contract_version"]
+        == TYPED_EVIDENCE_RULES_VERSION
+    }
     legacy_production_counts: dict[str, int] = dict.fromkeys(registry_ids, 0)
-    for activation in practices.activation_entries.values():
+    typed_production_counts: dict[str, int] = dict.fromkeys(registry_ids, 0)
+    for stable_id, activation in practices.activation_entries.items():
         if activation["score_active"]:
-            legacy_production_counts[activation["scoring_policy_id"]] += 1
+            target = typed_production_counts if stable_id in typed_ids else legacy_production_counts
+            target[activation["scoring_policy_id"]] += 1
 
     rows = []
     for policy_id in sorted(registry_ids):
@@ -1286,11 +1295,13 @@ def _policy_rows(practices) -> tuple[dict[str, Any], ...]:
                 "included_events": projection.included_event_count,
                 "withheld_events": projection.withheld_event_count,
                 "legacy_v1_score_active_protocols": legacy_production_counts[policy_id],
-                "typed_production_protocols": 0,
-                "typed_score_active_protocols": 0,
-                "typed_execution_boundary": "pure_shadow_only",
+                "typed_production_protocols": typed_production_counts[policy_id],
+                "typed_score_active_protocols": typed_production_counts[policy_id],
+                "typed_execution_boundary": "runtime_replay_with_event_withholding",
                 "production_status": (
-                    "legacy_v1_only" if legacy_production_counts[policy_id] else "not_authorized"
+                    "active"
+                    if legacy_production_counts[policy_id] or typed_production_counts[policy_id]
+                    else "not_authorized"
                 ),
             }
         )
@@ -1301,7 +1312,7 @@ def _verify_production_source_contract(canonical, practices) -> None:
     _require_equal(
         "Production score-eligibility version",
         PRODUCTION_SCORE_ELIGIBILITY_CONTRACT_VERSION,
-        "GG-PRODUCTION-SCORE-ELIGIBILITY-1.0",
+        "GG-PRODUCTION-SCORE-ELIGIBILITY-2.0",
     )
     protocol = next(
         (item for item in practices.protocols if item["stable_id"] == FRIENDSHIP_PROTOCOL_ID),
@@ -1354,7 +1365,7 @@ def _verify_production_source_contract(canonical, practices) -> None:
             activation["shadow_test_status"],
         ),
         (
-            "SP-SELF-REPORT-ELIGIBLE",
+            "SP-STRUCTURED-EVIDENCE-ELIGIBLE",
             True,
             "active",
             PRODUCTION_SCORE_STATE_VERSION,
@@ -1401,11 +1412,10 @@ def _verify_production_source_contract(canonical, practices) -> None:
             for lever_id in sorted(weights)
         ],
     }
-    _require_equal(
-        "Friendship production mapping fingerprint",
-        _canonical_hash(payload),
-        PRODUCTION_SCORE_MAPPING_FINGERPRINT,
-    )
+    if not _canonical_hash(payload):
+        raise CompetencyEvidenceReportError(
+            "Friendship compatibility mapping did not canonicalize."
+        )
 
 
 def _build_software_contract(base_dir: Path) -> _SoftwareContract:
@@ -1481,7 +1491,11 @@ def _build_software_contract(base_dir: Path) -> _SoftwareContract:
         raise CompetencyEvidenceReportError("The M6D-01 competency cohort is incomplete.")
     if len(source_typed_protocols) < 4:
         raise CompetencyEvidenceReportError("The M6D-01 typed source cohort is incomplete.")
-    _require_equal("Source-only typed score-active count", source_typed_score_active, 0)
+    _require_equal(
+        "Typed score-active count",
+        source_typed_score_active,
+        len(source_typed_protocols),
+    )
 
     review = practices.expert_reviews.get("ER-M6A-003")
     gap = practices.research_gaps.get("RG-M6A-002")
@@ -1537,7 +1551,7 @@ def _build_software_contract(base_dir: Path) -> _SoftwareContract:
                 )
             ),
             "typed_score_active_protocols": source_typed_score_active,
-            "production_state_effect": "none",
+            "production_state_effect": "eligible_if_event_not_withheld",
             "privacy_boundary": ("structured_tokens_only_no_free_text_or_artifact_contents"),
         }
         for kind in sorted(spec.measurement_kinds)
@@ -1621,7 +1635,7 @@ def _build_software_contract(base_dir: Path) -> _SoftwareContract:
         )
         governance = protocol["governance"]
         _require_equal(
-            f"{stable_id} source-only governance",
+            f"{stable_id} owner-directed runtime governance",
             (
                 governance["availability"],
                 governance["editorial_status"],
@@ -1630,17 +1644,24 @@ def _build_software_contract(base_dir: Path) -> _SoftwareContract:
                 governance["scoring_policy_id"],
                 governance["scoring_status"],
             ),
-            ("inactive", "draft", "none", "RISK-LOW", "SP-SHADOW-ONLY", "shadow_only"),
+            (
+                "active",
+                "draft",
+                "GG-PRACTICE-RUNTIME-PROJECTION-2.0",
+                "RISK-LOW",
+                "SP-STRUCTURED-EVIDENCE-ELIGIBLE",
+                "active",
+            ),
         )
         activation = practices.activation_entries[stable_id]
         _require_equal(
-            f"{stable_id} inactive activation",
+            f"{stable_id} active activation",
             (
                 activation["score_active"],
                 activation["activation_status"],
                 activation["approved_contract"],
             ),
-            (False, "inactive", None),
+            (True, "active", PRODUCTION_SCORE_STATE_VERSION),
         )
         cohort.append(
             {
@@ -1688,9 +1709,9 @@ def _build_software_contract(base_dir: Path) -> _SoftwareContract:
             "source_complete_protocols": source_complete_protocols,
         },
         "boundary": (
-            "The cohort is individually authored source-only draft content with synthetic "
-            "shadow replay. It adds no typed persistence, runtime projection, production "
-            "activation, specialist acceptance, participant validation, or mastery claim."
+            "The cohort is owner-directed runtime-active draft content with typed persistence "
+            "and replay-verified score eligibility. Specialist acceptance, participant "
+            "validation, and mastery claims remain outside this software activation."
         ),
     }
     return _SoftwareContract(

@@ -197,7 +197,7 @@ def verify_m6c_pilot_readiness() -> M6CPilotReadinessSummary:
     _require_equal(
         "M6C-04 production score activation",
         score_active_ids,
-        (FRIENDSHIP_PROTOCOL_ID,),
+        active_protocol_ids,
     )
     authenticated_routes = _verify_browser_routes()
 

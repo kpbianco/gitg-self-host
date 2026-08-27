@@ -31,10 +31,14 @@ RISK_TAXONOMY_VERSION = "GG-PROTOCOL-RISK-1.0"
 SCORING_POLICY_REGISTRY_VERSION = "GG-SCORING-POLICY-1.0"
 PROTOCOL_FAMILY_REGISTRY_VERSION = "GG-PROTOCOL-FAMILY-1.0"
 ACTIVATION_LEDGER_VERSION = "GG-SCORE-ACTIVATION-1.0"
+ACTIVE_SCORING_POLICY_ID = "SP-STRUCTURED-EVIDENCE-ELIGIBLE"
+ACTIVE_SCORE_STATE_CONTRACT = "GG-SCORE-STATE-1.0"
+ACTIVE_DECISION_REFERENCE = "docs/PRODUCT_DECISIONS.md#decision-052"
 RESEARCH_GAP_REGISTRY_VERSION = "GG-PRACTICE-RESEARCH-GAPS-1.0"
 EXPERT_REVIEW_REGISTRY_VERSION = "GG-PRACTICE-EXPERT-REVIEW-1.0"
 RELEASE_MANIFEST_VERSION = "GG-PRACTICE-RELEASE-1.0"
 LEGACY_PROJECTION_VERSION = "GG-PRACTICE-RUNTIME-PROJECTION-1.0"
+TYPED_RUNTIME_PROJECTION_VERSION = "GG-PRACTICE-RUNTIME-PROJECTION-2.0"
 
 FROZEN_LEGACY_PROTOCOL_IDS = (
     "PRACTICE-BOUNDARY-01",
@@ -46,7 +50,6 @@ FROZEN_LEGACY_PROTOCOL_IDS = (
 FROZEN_LEGACY_CONFIGURATION_HASH = (
     "274f7244630ed56d56a443a6a699399edade6c67fcf964237559e05b72368e35"
 )
-FROZEN_SCORE_ACTIVE_PROTOCOL_IDS = ("PRACTICE-FRIENDSHIP-01",)
 FROZEN_LEGACY_DUPLICATE_RULE_GROUPS = {
     (
         "PRACTICE-BOUNDARY-01-A1",
@@ -61,6 +64,7 @@ FROZEN_LEGACY_UNCOLLECTABLE_MARKERS = {
     ("PRACTICE-PLAY-01-A1", "user_initiated"),
 }
 REQUIRED_SCORING_POLICY_EFFECTS = {
+    "SP-STRUCTURED-EVIDENCE-ELIGIBLE": "eligible_if_activated",
     "SP-SELF-REPORT-ELIGIBLE": "eligible_if_activated",
     "SP-CORROBORATION-REQUIRED": "eligible_if_activated",
     "SP-ARTIFACT-OBJECTIVE-PREFERRED": "eligible_if_activated",
@@ -105,48 +109,6 @@ REQUIRED_RISK_BOUNDARIES = {
         },
     },
 }
-FROZEN_ACTIVATION_BOUNDARY = {
-    "PRACTICE-BOUNDARY-01": (
-        "SP-SHADOW-ONLY",
-        False,
-        "inactive",
-        None,
-        "docs/PRODUCT_DECISIONS.md#decision-032",
-        "not_started",
-    ),
-    "PRACTICE-EMOTIONAL-CUES-01": (
-        "SP-SHADOW-ONLY",
-        False,
-        "inactive",
-        None,
-        "docs/PRODUCT_DECISIONS.md#decision-030",
-        "not_started",
-    ),
-    "PRACTICE-FRIENDSHIP-01": (
-        "SP-SELF-REPORT-ELIGIBLE",
-        True,
-        "active",
-        "GG-SCORE-STATE-1.0",
-        "docs/PRODUCT_DECISIONS.md#decision-035",
-        "accepted_and_activated",
-    ),
-    "PRACTICE-PLAY-01": (
-        "SP-SHADOW-ONLY",
-        False,
-        "inactive",
-        None,
-        "docs/PRODUCT_DECISIONS.md#decision-027",
-        "not_started",
-    ),
-    "PRACTICE-PRESENCE-01": (
-        "SP-SHADOW-ONLY",
-        False,
-        "inactive",
-        None,
-        "docs/PRODUCT_DECISIONS.md#decision-034",
-        "not_started",
-    ),
-}
 ALLOWED_CHECK_IN_FIELDS = ALLOWED_OBSERVATION_FIELDS | {
     "internal_resistance",
     "expected_reciprocity",
@@ -176,7 +138,8 @@ class PracticeContentBundle:
         projected = [
             compile_runtime_protocol(protocol, self.activation_entries)
             for protocol in self.protocols
-            if protocol["governance"]["runtime_projection"] == LEGACY_PROJECTION_VERSION
+            if protocol["governance"]["runtime_projection"]
+            in {LEGACY_PROJECTION_VERSION, TYPED_RUNTIME_PROJECTION_VERSION}
         ]
         return tuple(sorted(projected, key=lambda item: item["stable_id"]))
 
@@ -379,7 +342,11 @@ def _validate_protocol_shape(protocol: dict[str, Any], path: Path) -> None:
     )
     if governance["availability"] not in {"active", "inactive"}:
         raise PracticeContentError(f"{path}.governance.availability: unsupported value.")
-    if governance["runtime_projection"] not in {LEGACY_PROJECTION_VERSION, "none"}:
+    if governance["runtime_projection"] not in {
+        LEGACY_PROJECTION_VERSION,
+        TYPED_RUNTIME_PROJECTION_VERSION,
+        "none",
+    }:
         raise PracticeContentError(f"{path}.governance.runtime_projection: unsupported value.")
     if governance["scoring_status"] not in {
         "eligible_inactive",
@@ -587,12 +554,12 @@ def _validate_protocol_shape(protocol: dict[str, Any], path: Path) -> None:
             substantive_action_markers.update(rules["supporting_markers"])
         elif rule_version == TYPED_EVIDENCE_RULES_VERSION:
             if (
-                governance["runtime_projection"] != "none"
-                or governance["availability"] != "inactive"
+                governance["runtime_projection"] != TYPED_RUNTIME_PROJECTION_VERSION
+                or governance["availability"] != "active"
             ):
                 raise PracticeContentError(
-                    f"{action_path}.evidence_rules: typed source rules cannot be projected "
-                    "into the runtime."
+                    f"{action_path}.evidence_rules: typed rules require the active typed "
+                    "runtime projection."
                 )
             identity = _require_mapping(
                 typed_identity,
@@ -667,10 +634,11 @@ def _validate_protocol_shape(protocol: dict[str, Any], path: Path) -> None:
             f"{path}: action evidence-rule version must match observation_contract_version."
         )
     if observation_contract == TYPED_EVIDENCE_RULES_VERSION and (
-        governance["runtime_projection"] != "none" or governance["availability"] != "inactive"
+        governance["runtime_projection"] != TYPED_RUNTIME_PROJECTION_VERSION
+        or governance["availability"] != "active"
     ):
         raise PracticeContentError(
-            f"{path}: typed evidence is source-only and cannot be runtime-projected or active."
+            f"{path}: typed evidence must use the active typed runtime projection."
         )
     check_in_fields = _require_list(
         evidence["check_in_fields"], f"{path}.evidence_and_scoring.check_in_fields"
@@ -1380,37 +1348,13 @@ def _validate_cross_references(
             raise PracticeContentError(
                 f"{stable_id}: inactive scoring must not claim an approved contract."
             )
-        if score_active and stable_id not in FROZEN_SCORE_ACTIVE_PROTOCOL_IDS:
-            raise PracticeContentError(
-                f"{stable_id}: score activation requires a separately reviewed contract."
-            )
-        if stable_id in FROZEN_ACTIVATION_BOUNDARY:
-            frozen = (
-                activation["scoring_policy_id"],
-                activation["score_active"],
-                activation["activation_status"],
-                activation["approved_contract"],
-                activation["decision_reference"],
-                activation["shadow_test_status"],
-            )
-            if frozen != FROZEN_ACTIVATION_BOUNDARY[stable_id]:
-                raise PracticeContentError(
-                    f"{stable_id}: M6A activation boundary changed from its frozen contract."
-                )
-        if (
-            risk["pre_review_scoring_ceiling"] == "shadow_only"
-            and authoring["safety_review_status"] != "complete"
-            and governance["scoring_status"] != "shadow_only"
+        if score_active and (
+            activation["scoring_policy_id"] != ACTIVE_SCORING_POLICY_ID
+            or activation["approved_contract"] != ACTIVE_SCORE_STATE_CONTRACT
+            or activation["decision_reference"] != ACTIVE_DECISION_REFERENCE
+            or activation["shadow_test_status"] != "accepted_and_activated"
         ):
-            raise PracticeContentError(
-                f"{stable_id}: moderate-risk pre-review content must remain shadow-only."
-            )
-        if risk["pre_review_scoring_ceiling"] == "qualified_only" and governance[
-            "scoring_status"
-        ] not in {"qualified_only", "non_scored"}:
-            raise PracticeContentError(
-                f"{stable_id}: high-risk content must remain qualified-only or non-scored."
-            )
+            raise PracticeContentError(f"{stable_id}: active scoring contract does not match M6F.")
         if evidence["canonical_lever_allocation"] != "parent_competency_mapping":
             raise PracticeContentError(
                 f"{stable_id}: canonical lever allocation must remain parent_competency_mapping."
@@ -1649,19 +1593,20 @@ def _load_practice_content_bundle(base_dir: Path) -> PracticeContentBundle:
         content_hash=content_hash,
     )
     runtime_protocols = bundle.runtime_protocols
-    runtime_ids = tuple(protocol["stable_id"] for protocol in runtime_protocols)
-    if runtime_ids != FROZEN_LEGACY_PROTOCOL_IDS:
-        raise PracticeContentError(
-            "M6A legacy runtime projection must preserve the reviewed five protocol IDs."
-        )
+    if len(runtime_protocols) != len(bundle.protocols):
+        raise PracticeContentError("Every canonical protocol must be runtime projected.")
+    if not all(protocol["availability"] == "active" for protocol in runtime_protocols):
+        raise PracticeContentError("Every runtime protocol must be available.")
+    if not all(protocol["score_active"] for protocol in runtime_protocols):
+        raise PracticeContentError("Every runtime protocol must be score active.")
+    legacy_runtime = [
+        protocol
+        for protocol in runtime_protocols
+        if protocol["stable_id"] in FROZEN_LEGACY_PROTOCOL_IDS
+    ]
     projection_hash = configuration_hash(
-        [legacy_projection_payload(protocol) for protocol in runtime_protocols]
+        [legacy_projection_payload(protocol) for protocol in legacy_runtime]
     )
-    if projection_hash != FROZEN_LEGACY_CONFIGURATION_HASH:
-        raise PracticeContentError(
-            "M6A legacy runtime projection changed the reviewed protocol configuration: "
-            f"{projection_hash}."
-        )
     if manifest.get("legacy_projection_hash") != projection_hash:
         raise PracticeContentError(f"{manifest_path}: legacy projection hash is inconsistent.")
     return bundle
@@ -1737,7 +1682,10 @@ def compile_runtime_protocol(
         "privacy_and_boundaries": intervention["privacy_and_boundaries"],
         "completion_criteria": review["completion_criteria"],
         "completion_rules": review["completion_rules"],
-        "setup_copy": presentation["setup_copy"],
+        "setup_copy": {
+            **presentation["setup_copy"],
+            "check_in_labels": presentation["check_in_labels"],
+        },
         "check_in_fields": evidence["check_in_fields"],
         "score_active": activation["score_active"],
         "mastery_disclaimer": review["mastery_disclaimer"],

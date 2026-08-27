@@ -6,12 +6,12 @@ name: Bounded Online fraud, scams, and social engineering Practice
 parent_competency_id: '14.05'
 domain_id: '14'
 governance:
-  availability: inactive
+  availability: active
   editorial_status: draft
-  runtime_projection: none
+  runtime_projection: GG-PRACTICE-RUNTIME-PROJECTION-2.0
   risk_class_id: RISK-MODERATE
-  scoring_policy_id: SP-SHADOW-ONLY
-  scoring_status: shadow_only
+  scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
+  scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
@@ -123,7 +123,7 @@ intervention:
       protocol_stable_id: PRACTICE-COMP-1405-ONLINE-FRAUD-SCAMS-AND-SOCIAL-ENGINEERING-01
       action_stable_id: PRACTICE-COMP-1405-ONLINE-FRAUD-SCAMS-AND-SOCIAL-ENGINEERING-01-A1
       competency_stable_id: '14.05'
-      scoring_policy_id: SP-SHADOW-ONLY
+      scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
     evidence_rules:
       schema_version: typed-evidence-rules-v1
       max_age_days: 90
@@ -167,7 +167,7 @@ intervention:
       protocol_stable_id: PRACTICE-COMP-1405-ONLINE-FRAUD-SCAMS-AND-SOCIAL-ENGINEERING-01
       action_stable_id: PRACTICE-COMP-1405-ONLINE-FRAUD-SCAMS-AND-SOCIAL-ENGINEERING-01-A2
       competency_stable_id: '14.05'
-      scoring_policy_id: SP-SHADOW-ONLY
+      scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
     evidence_rules:
       schema_version: typed-evidence-rules-v1
       max_age_days: 90
@@ -211,7 +211,7 @@ intervention:
       protocol_stable_id: PRACTICE-COMP-1405-ONLINE-FRAUD-SCAMS-AND-SOCIAL-ENGINEERING-01
       action_stable_id: PRACTICE-COMP-1405-ONLINE-FRAUD-SCAMS-AND-SOCIAL-ENGINEERING-01-A3
       competency_stable_id: '14.05'
-      scoring_policy_id: SP-SHADOW-ONLY
+      scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
     evidence_rules:
       schema_version: typed-evidence-rules-v1
       max_age_days: 90
@@ -311,9 +311,10 @@ evidence_and_scoring:
   evidence_quality_rubric: Quality for Online fraud, scams, and social engineering requires a bounded
     context, allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
     free text and artifact contents are excluded.
-  scoring_eligibility: This package is source-only, shadow-only, and production-ineligible.
-  competency_contribution: Designated primary measurements may produce context-bound direct Online fraud,
-    scams, and social engineering evidence only under offline typed evaluation; protocol performance remains
+  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
+    ledger; action-specific provenance and withholding rules still apply.
+  competency_contribution: Designated primary measurements may produce one context-bound direct Online
+    fraud, scams, and social engineering contribution under typed evaluation; protocol performance remains
     distinct and is never counted twice.
   canonical_lever_allocation: parent_competency_mapping
   recommendation_target_lever_ids:
@@ -321,8 +322,9 @@ evidence_and_scoring:
   - L19
   - L20
   - L24
-  minimum_evidence_before_state_update: No current-state update is permitted for this Online fraud, scams,
-    and social engineering draft under SP-SHADOW-ONLY, regardless of completion or evidence quantity.
+  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
+    measurement and no applicable withholding condition may update current state; completion alone never
+    does.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Online fraud, scams, and social engineering evidence.
@@ -398,8 +400,8 @@ presentation:
       observed
     c1405_a3_boundary: Action 3 stayed inside its stated Online fraud, scams, and social engineering boundary
     c1405_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Complete the bounded Online fraud, scams, and social engineering review without claiming
-    mastery, broad transfer, professional validation, or score activation.
+  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
+    validation, identity, dignity, or human worth.
   plain_language_evidence: The structured record shows what happened in one limited Online fraud, scams,
     and social engineering practice, including support, contradiction, defer, no result, or harm.
   display_order: 181

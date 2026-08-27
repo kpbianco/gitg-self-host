@@ -26,6 +26,12 @@ from growth.domain.scoring import (
     ScoringContractError,
     reconstruct_published_baseline_mass,
 )
+from growth.domain.typed_evidence import (
+    TYPED_EVIDENCE_RULES_VERSION,
+    TypedEvidenceContractError,
+    load_typed_evidence_spec,
+    materialize_typed_evidence_rules,
+)
 from growth.models import (
     ArchetypeResult,
     AssessmentRun,
@@ -305,19 +311,19 @@ def _seed_protocols(protocols: tuple[dict, ...]) -> None:
             raise CanonicalDataError(
                 f"{item['stable_id']}: completion minimum is invalid for its actions."
             )
+        typed_protocol = any(
+            action.get("evidence_rules", {}).get("schema_version") == TYPED_EVIDENCE_RULES_VERSION
+            for action in item.get("actions", [])
+        )
         if completion_rules and (
             not isinstance(substantive_markers, list)
             or not substantive_markers
-            or set(substantive_markers) - ALLOWED_OBSERVATION_FIELDS
+            or (not typed_protocol and set(substantive_markers) - ALLOWED_OBSERVATION_FIELDS)
             or marker_mode not in {"any", "all"}
         ):
             raise CanonicalDataError(
                 f"{item['stable_id']}: completion markers must use the reviewed "
                 "evidence observation vocabulary and a supported marker mode."
-            )
-        if item.get("score_active", False) and item["stable_id"] != "PRACTICE-FRIENDSHIP-01":
-            raise CanonicalDataError(
-                f"{item['stable_id']}: score activation requires a separate reviewed contract."
             )
         parent_competency = None
         parent_competency_id = item.get("parent_competency_id")
@@ -370,8 +376,13 @@ def _seed_protocols(protocols: tuple[dict, ...]) -> None:
         desired_actions: set[str] = set()
         for action in item.get("actions", []):
             try:
-                validate_evidence_rules(action["evidence_rules"])
-            except (KeyError, EvidenceContractError) as exc:
+                if action["evidence_rules"].get("schema_version") == TYPED_EVIDENCE_RULES_VERSION:
+                    materialize_typed_evidence_rules(
+                        action["evidence_rules"], load_typed_evidence_spec()
+                    )
+                else:
+                    validate_evidence_rules(action["evidence_rules"])
+            except (KeyError, EvidenceContractError, TypedEvidenceContractError) as exc:
                 raise CanonicalDataError(
                     f"{action['stable_id']}: invalid evidence rules: {exc}"
                 ) from exc

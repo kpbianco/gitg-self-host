@@ -285,7 +285,7 @@ def build_practice_context_snapshot(
     if contract_version != CONTEXT_CONTRACT_VERSION:
         raise ContextContractError(f"Unsupported context contract version: {contract_version!r}.")
     epoch_id = _validate_stable_id(assessment_epoch_id, label="assessment epoch ID", maximum=80)
-    protocol_id = _validate_stable_id(protocol_stable_id, label="protocol stable ID", maximum=80)
+    protocol_id = _validate_stable_id(protocol_stable_id, label="protocol stable ID", maximum=120)
     normalized_factors = _normalize_factors(ContextScope.PRACTICE, factors)
     disposition_value = _enum_value(PracticeDisposition, disposition, label="practice disposition")
     any_factor_deferred = any(

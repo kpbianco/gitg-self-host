@@ -59,7 +59,7 @@
       "properties": {
         "availability": {"enum": ["active", "inactive"]},
         "editorial_status": {"enum": ["projected_legacy", "draft", "expert_review", "release_candidate"]},
-        "runtime_projection": {"enum": ["GG-PRACTICE-RUNTIME-PROJECTION-1.0", "none"]},
+        "runtime_projection": {"enum": ["GG-PRACTICE-RUNTIME-PROJECTION-1.0", "GG-PRACTICE-RUNTIME-PROJECTION-2.0", "none"]},
         "risk_class_id": {"type": "string", "pattern": "^RISK-(LOW|MODERATE|HIGH)$"},
         "scoring_policy_id": {"type": "string", "pattern": "^SP-[A-Z0-9-]+$"},
         "scoring_status": {

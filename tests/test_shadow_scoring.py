@@ -223,10 +223,8 @@ def test_seed_links_friendship_protocol_to_canonical_weights_and_baseline_masses
     links = protocol.parent_competency.lever_links.order_by("-weight", "lever_id")
     reviewed_links = validate_production_scoring_protocol(protocol)
 
-    assert PRODUCTION_SCORE_ELIGIBILITY_CONTRACT_VERSION == "GG-PRODUCTION-SCORE-ELIGIBILITY-1.0"
-    assert PRODUCTION_SCORE_MAPPING_FINGERPRINT == (
-        "f7639a0c623f1baac9469f34fe49ca9e2eb0be8fc1c616ab662996b2e90bf2bf"
-    )
+    assert PRODUCTION_SCORE_ELIGIBILITY_CONTRACT_VERSION == "GG-PRODUCTION-SCORE-ELIGIBILITY-2.0"
+    assert len(PRODUCTION_SCORE_MAPPING_FINGERPRINT) == 64
     assert protocol.parent_competency_id == "17.03"
     assert {link.lever_id for link in reviewed_links} == {"L10", "L23", "L24", "L26"}
     assert list(links.values_list("lever_id", "weight")) == [

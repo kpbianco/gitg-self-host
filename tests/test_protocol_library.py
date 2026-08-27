@@ -78,7 +78,7 @@ def test_play_protocol_has_specific_setup_and_compact_check_in(user, seeded):
 
 
 @pytest.mark.django_db
-def test_play_pages_render_specific_score_inactive_guidance(client, user, seeded):
+def test_play_pages_render_specific_score_active_guidance(client, user, seeded):
     client.force_login(user)
     protocol = PracticeProtocol.objects.get(stable_id="PRACTICE-PLAY-01")
 
@@ -91,11 +91,13 @@ def test_play_pages_render_specific_score_inactive_guidance(client, user, seeded
     assert "A real activity, not an abstract intention" in recommendation.content.decode()
     assert "Reserve a play window" in recommendation.content.decode()
     assert setup.status_code == 200
-    assert "will not change your profile or recommendation" in setup.content.decode()
+    assert "Eligible submitted observations may adjust provisional capacity estimates" in (
+        setup.content.decode()
+    )
 
 
 @pytest.mark.django_db
-def test_play_evidence_and_completion_never_change_score_state(user, seeded):
+def test_play_evidence_and_completion_update_score_state(user, seeded):
     protocol = PracticeProtocol.objects.get(stable_id="PRACTICE-PLAY-01")
     sprint = start_practice(
         user=user,
@@ -137,9 +139,9 @@ def test_play_evidence_and_completion_never_change_score_state(user, seeded):
     assert completion.ready_for_review
     assert EvidenceEvent.objects.filter(check_in__sprint=sprint).count() == 3
     assert ScoreSnapshot.objects.filter(assessment_run=sprint.assessment_run).count() == (
-        snapshots_before
+        snapshots_before + 3
     )
-    assert _state(user) == before
+    assert _state(user) != before
 
 
 @pytest.mark.django_db
@@ -159,7 +161,7 @@ def test_emotional_cues_protocol_is_specific_and_rejects_mind_reading(client, us
     form = PracticeCheckInForm(sprint=sprint)
 
     assert protocol.parent_competency_id == "16.03"
-    assert protocol.score_active is False
+    assert protocol.score_active is True
     assert protocol.actions.count() == 3
     assert "Observation is not mind-reading" in protocol.setup_copy["boundary_heading"]
     assert "Culture, disability, neurotype" in protocol.privacy_and_boundaries
@@ -167,7 +169,9 @@ def test_emotional_cues_protocol_is_specific_and_rejects_mind_reading(client, us
         recommendation.content.decode()
     )
     assert "Notice before interpreting" in recommendation.content.decode()
-    assert "will not change your profile or recommendation" in setup.content.decode()
+    assert "Eligible submitted observations may adjust provisional capacity estimates" in (
+        setup.content.decode()
+    )
     assert form.fields["follow_up_question_asked"].label == (
         "I asked a neutral question to check my impression"
     )
@@ -176,7 +180,7 @@ def test_emotional_cues_protocol_is_specific_and_rejects_mind_reading(client, us
 
 
 @pytest.mark.django_db
-def test_emotional_cues_evidence_completes_without_score_mutation(user, seeded):
+def test_emotional_cues_evidence_completes_with_score_updates(user, seeded):
     protocol = PracticeProtocol.objects.get(stable_id="PRACTICE-EMOTIONAL-CUES-01")
     sprint = start_practice(
         user=user,
@@ -244,13 +248,13 @@ def test_emotional_cues_evidence_completes_without_score_mutation(user, seeded):
         "Completing this practice does not establish mastery."
     )
     assert ScoreSnapshot.objects.filter(assessment_run=sprint.assessment_run).count() == (
-        snapshots_before
+        snapshots_before + 4
     )
-    assert _state(user) == before
+    assert _state(user) != before
 
 
 @pytest.mark.django_db
-def test_boundary_protocol_is_specific_safe_and_score_inactive(client, user, seeded):
+def test_boundary_protocol_is_specific_safe_and_score_active(client, user, seeded):
     client.force_login(user)
     protocol = PracticeProtocol.objects.get(stable_id="PRACTICE-BOUNDARY-01")
     recommendation = client.get(
@@ -277,7 +281,7 @@ def test_boundary_protocol_is_specific_safe_and_score_inactive(client, user, see
         "L29": Decimal("0.1500"),
     }
     assert set(protocol.target_levers.values_list("stable_id", flat=True)) == {"L25"}
-    assert protocol.score_active is False
+    assert protocol.score_active is True
     assert protocol.actions.count() == 3
     assert protocol.completion_rules == {
         "minimum_completed": 2,
@@ -293,7 +297,9 @@ def test_boundary_protocol_is_specific_safe_and_score_inactive(client, user, see
         recommendation.content.decode()
     )
     assert "Define what you control" in recommendation.content.decode()
-    assert "will not change your profile or recommendation" in setup.content.decode()
+    assert "Eligible submitted observations may adjust provisional capacity estimates" in (
+        setup.content.decode()
+    )
     assert applicability_form.fields["applicable"].choices[0][1] == (
         "Yes, one safe, low-stakes situation is likely to arise"
     )
@@ -309,7 +315,7 @@ def test_boundary_protocol_is_specific_safe_and_score_inactive(client, user, see
 
 
 @pytest.mark.django_db
-def test_boundary_requires_statement_and_follow_through_without_score_mutation(user, seeded):
+def test_boundary_requires_statement_and_follow_through_with_score_updates(user, seeded):
     protocol = PracticeProtocol.objects.get(stable_id="PRACTICE-BOUNDARY-01")
     sprint = start_practice(
         user=user,
@@ -373,13 +379,13 @@ def test_boundary_requires_statement_and_follow_through_without_score_mutation(u
         "Completing this practice does not establish mastery."
     )
     assert ScoreSnapshot.objects.filter(assessment_run=sprint.assessment_run).count() == (
-        snapshots_before
+        snapshots_before + 4
     )
-    assert _state(user) == before
+    assert _state(user) != before
 
 
 @pytest.mark.django_db
-def test_presence_protocol_is_accessible_specific_and_score_inactive(client, user, seeded):
+def test_presence_protocol_is_accessible_specific_and_score_active(client, user, seeded):
     client.force_login(user)
     protocol = PracticeProtocol.objects.get(stable_id="PRACTICE-PRESENCE-01")
     recommendation = client.get(
@@ -405,7 +411,7 @@ def test_presence_protocol_is_accessible_specific_and_score_inactive(client, use
         "L17": Decimal("0.1000"),
     }
     assert set(protocol.target_levers.values_list("stable_id", flat=True)) == {"L08"}
-    assert protocol.score_active is False
+    assert protocol.score_active is True
     assert protocol.actions.count() == 3
     assert protocol.completion_rules == {
         "minimum_completed": 2,
@@ -424,7 +430,9 @@ def test_presence_protocol_is_accessible_specific_and_score_inactive(client, use
         recommendation.content.decode()
     )
     assert "Run the usual-condition window" in recommendation.content.decode()
-    assert "will not change your profile or recommendation" in setup.content.decode()
+    assert "Eligible submitted observations may adjust provisional capacity estimates" in (
+        setup.content.decode()
+    )
     assert applicability_form.fields["applicable"].choices[0][1] == (
         "Yes, I have a safe 15-minute activity I can repeat"
     )
@@ -440,7 +448,7 @@ def test_presence_protocol_is_accessible_specific_and_score_inactive(client, use
 
 
 @pytest.mark.django_db
-def test_presence_requires_comparison_and_repeat_without_score_mutation(user, seeded):
+def test_presence_requires_comparison_and_repeat_with_score_updates(user, seeded):
     protocol = PracticeProtocol.objects.get(stable_id="PRACTICE-PRESENCE-01")
     sprint = start_practice(
         user=user,
@@ -509,6 +517,6 @@ def test_presence_requires_comparison_and_repeat_without_score_mutation(user, se
         "Completing this practice does not establish mastery."
     )
     assert ScoreSnapshot.objects.filter(assessment_run=sprint.assessment_run).count() == (
-        snapshots_before
+        snapshots_before + 4
     )
-    assert _state(user) == before
+    assert _state(user) != before
