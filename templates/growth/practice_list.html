@@ -34,7 +34,7 @@
 
   <div class="card-grid">
     {% for protocol in ranked_protocols %}
-      <article class="practice-card">
+      <article class="practice-card" data-availability="{{ protocol.availability }}">
         <div class="card-meta">
           {% if protocol.duration_days %}
             <span>{{ protocol.duration_days }} days</span>
@@ -76,7 +76,7 @@
       </div>
       <div class="card-grid">
         {% for protocol in not_context_ranked %}
-          <article class="practice-card">
+          <article class="practice-card" data-availability="{{ protocol.availability }}">
             <div class="card-meta">
               {% if protocol.duration_days %}<span>{{ protocol.duration_days }} days</span>{% else %}<span>Duration pending</span>{% endif %}
               {% if protocol.availability == "active" %}<span class="status-pill">Available</span>{% else %}<span class="status-pill status-pill-muted">Inactive</span>{% endif %}

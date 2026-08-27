@@ -142,7 +142,7 @@ def test_mobile_keyboard_walkthrough_covers_all_active_protocols(live_server, pa
 
     page.get_by_role("link", name="Practices", exact=True).click()
     expect(page.locator(".practice-card")).to_have_count(383)
-    expect(page.locator(".practice-card .status-pill", has_text="Available")).to_have_count(383)
+    expect(page.locator('.practice-card[data-availability="active"]')).to_have_count(383)
     assert_no_horizontal_overflow(page)
     save_walkthrough_screenshot(page, "mobile-practice-library", full_page=False)
 
@@ -393,9 +393,7 @@ def test_emotional_cue_setup_and_check_in_are_bounded(live_server, page: Page):
     page.get_by_role("button", name="Begin practice").click()
     page.get_by_role("link", name="Add compact check-in").click()
     page.get_by_label("I deliberately paused to observe before interpreting").wait_for()
-    page.get_by_label(
-        "I noticed a change in tone, pace, posture, expression, or distance"
-    ).wait_for()
+    page.get_by_label("I noticed an observable change without assigning a motive").wait_for()
     expect(page.get_by_label("I asked a neutral question to check my impression")).to_be_hidden()
     assert page.get_by_label("Expected reciprocity").count() == 0
     assert page.get_by_label("A specific future interaction was scheduled").count() == 0
@@ -597,8 +595,8 @@ def test_guided_practice_draft_pause_and_completion_flow(live_server, page: Page
     )
     page.get_by_label("Action attempted").check()
     page.get_by_label("Action completed").check()
-    page.get_by_label("The interaction moved beyond transactional content").check()
-    page.get_by_label("Personally meaningful information was voluntarily shared").check()
+    page.get_by_label("The interaction moved beyond logistics or small talk").check()
+    page.get_by_label("Meaningful information was freely shared").check()
     page.get_by_role("button", name="Save draft").click()
     page.get_by_role("heading", name="Draft check-ins").wait_for()
     assert PracticeCheckIn.objects.filter(status=PracticeCheckIn.Status.SUBMITTED).count() == 0

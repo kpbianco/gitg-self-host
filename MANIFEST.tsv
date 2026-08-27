@@ -731,7 +731,7 @@ templates/growth/pilot_feedback.html	3952
 templates/growth/practice_check_in.html	3051
 templates/growth/practice_check_in_detail.html	4627
 templates/growth/practice_context.html	4876
-templates/growth/practice_list.html	4512
+templates/growth/practice_list.html	4608
 templates/growth/practice_recommendation.html	4137
 templates/growth/practice_review.html	2679
 templates/growth/practice_review_complete.html	2046
@@ -744,7 +744,7 @@ templates/registration/password_change_form.html	992
 tests/__init__.py	1
 tests/conftest.py	866
 tests/e2e/conftest.py	233
-tests/e2e/test_core_flow.py	31846
+tests/e2e/test_core_flow.py	31802
 tests/fixtures/assessment/README.md	878
 tests/fixtures/assessment/manifest.json	415
 tests/fixtures/context/context_v1.json	871
