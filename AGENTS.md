@@ -9,9 +9,9 @@ Build a self-hosted, evidence-oriented guided-development application. The produ
 - Completion is never equivalent to mastery.
 - Human dignity is never scored.
 - Personality/orientation changes framing and tie-breaking only; it does not determine worth or obligation.
-- Dynamic score updates are limited to the reviewed M3A contract and the one
-  explicitly activated friendship protocol. Do not generalize scoring to
-  unreviewed protocols or invent missing priority inputs.
+- Dynamic score updates use the reviewed M3A/M3B mathematics and the explicit
+  activation ledger. M6F owner direction activates the complete 383-protocol
+  catalog while retaining replay, baseline, withholding, and audit safeguards.
 - M6 is an owner-authorized, multi-PR expansion toward individually authored
   packages for all 383 competencies. Coverage does not authorize boilerplate,
   score activation, or a claim of universal, clinical, or psychometric
@@ -116,8 +116,9 @@ The accepted rationale is recorded in
   hashed before/after state and a versioned active-event set.
 - `LeverBaseline` remains the assessment record. Never overwrite it with
   current evidence-informed state.
-- Only `PRACTICE-FRIENDSHIP-01` is score-activated. A required baseline with
-  unavailable mass fails closed and requires reassessment.
+- Every canonical protocol is score-activated by the M6F activation ledger. A
+  required baseline with unavailable mass still fails closed and requires
+  reassessment.
 - `GG-PILOT-FEEDBACK-1.0` is product-usability data only. Never route it into
   assessment, evidence, scoring, ranking, completion, orientation, or
   archetype logic.
@@ -136,8 +137,8 @@ The accepted rationale is recorded in
 - Preserve `practice-observation-v1` for historical replay. New Boolean,
   count, ordinal, duration, artifact, conceptual, observer, objective, or
   qualified evidence requires a new typed contract and exact fixtures.
-- `GG-TYPED-EVIDENCE-1.0` and `typed-evidence-rules-v1` are a parallel,
-  pure, shadow-only M6B path. Version dispatch must fail closed, typed values
+- `GG-TYPED-EVIDENCE-1.0` and `typed-evidence-rules-v1` are the production
+  typed evidence path for the M6F catalog. Version dispatch must fail closed, typed values
   require explicit normalization rules, and free text, artifact contents, and
   sensitive observer/qualified-review narrative are never opaque score input.
 - Assessment v1.1 provides lever baselines, not competency baselines.
@@ -186,8 +187,8 @@ Before asking for review:
    Playwright tests.
 2. Run `make pilot-check` against an isolated fresh database.
 3. Run `make curriculum-check`; it must preserve the independent pilot gate,
-   exact five-protocol projection, deterministic generated reports, and
-   explicit 378-row unauthored baseline.
+   exact 383-protocol/1,151-action projection, deterministic generated reports,
+   and zero uncovered competencies.
 4. For M6B and later, run `make competency-evidence-check`; it must preserve
    exact v1 replay, validate the additive typed/shadow software contracts, and
    report specialist acceptance separately from software readiness.
@@ -199,7 +200,8 @@ Before asking for review:
    desktop/mobile browser artifact for a pilot-bound merge.
 7. Audit changed files against this document and `docs/PROJECT_HANDOFF.md`.
 8. Report failed or unverified acceptance criteria plainly.
-9. Do not claim dynamic scoring works until score mutation is deliberately enabled and tested.
+9. Do not claim all-catalog dynamic scoring works until legacy, typed, mixed,
+   reversal, rebuild, withholding, and baseline-immutability paths pass.
 
 ## Current implementation boundary
 M1A established the runtime, persistent schema, authentication, canonical
@@ -214,23 +216,23 @@ M3B may update only separate current lever state from replay-verified
 friendship evidence. Baselines, raw self-report, orientations, archetypes,
 completion, and human worth remain unchanged.
 
-M4A activates **Schedule Non-Instrumental Play** as the second complete
+M4A activated **Schedule Non-Instrumental Play** as the second complete
 protocol and establishes protocol-configured setup, check-in, and completion
-copy. It records immutable evidence but remains explicitly score-inactive.
-M4B activates **Practice Emotional Cue Detection** as the third complete
+copy. It was score-inactive at that historical milestone.
+M4B activated **Practice Emotional Cue Detection** as the third complete
 protocol. It is anchored to canonical nonverbal communication competency
 `16.03`, treats cues as uncertain hypotheses, requires direct clarification,
-and remains score-inactive.
-M4C activates **State and Maintain One Boundary** as the fourth complete
+and was score-inactive at that historical milestone.
+M4C activated **State and Maintain One Boundary** as the fourth complete
 protocol. It is anchored to canonical competency `11.10`, limits the
 intervention to a safely stateable low-stakes situation, distinguishes a
 boundary from coercion or punishment, requires both a direct statement and
-proportionate follow-through, and remains score-inactive.
-M4D activates **Complete an Attention-Presence Experiment** as the fifth
+proportionate follow-through, and was score-inactive at that milestone.
+M4D activated **Complete an Attention-Presence Experiment** as the fifth
 complete protocol. It is anchored to canonical competency `08.02`, compares
 one usual and one changed condition without productivity scoring or
 surveillance, preserves accessibility supports, requires a repeat within seven
-days, and remains score-inactive.
+days, and was score-inactive at that milestone.
 The initial five-protocol library is now complete. Further protocol-library
 expansion must proceed in separately authorized, reviewable batches. Adding a protocol to the library
 does not authorize score activation. Any newly score-active protocol requires
@@ -321,27 +323,36 @@ priority persistence, protocol/action, Personal OS analysis, evidence/scoring
 write, activation, dedicated export/purge/retention automation, remote
 telemetry, weekly execution, release, or deployment.
 
-M6D-01 is reviewed and merged. M6E-FULL-FRONTIER is the current source-only
+M6D-01 is reviewed and merged. M6E-FULL-FRONTIER materialized the source-only
 implementation batch. It preserves the nine previously authored packages and
 deterministically materializes one package for every remaining competency: 383
 packages and 1,151 source actions across all 27 domains, with zero uncovered
 competencies and all 37 levers represented through valid parent mappings and
 recommendation-target subsets.
 
-All 374 generated additions are inactive editorial drafts with
-`runtime_projection: none`. High-risk additions are explicitly non-scored;
-the rest are shadow-only. The projected runtime remains exactly five protocols
-and fifteen actions, historical replay and recommendations remain exact, and
-friendship remains the only score-active protocol. The batch adds no model,
-migration, UI, persisted typed evidence, recommendation input, scoring write,
-participant exposure, release, or deployment.
+M6E originally materialized all 374 additions as inactive editorial drafts.
+M6F supersedes that source-only boundary: all 383 packages are runtime
+projected and score active, while the five legacy protocols retain their v1
+evidence snapshot compatibility and the other 378 use typed evidence.
 
-Standing owner authorization permits automation to mark ready and merge only
-an exact-head, required-CI-green, inactive, unprojected, source-only candidate.
-Human semantic/source/originality/accessibility/privacy/safety review is
-deferred, not passed, for the owner's consolidated 383/383 M6B-GOV audit.
-Runtime projection, score activation, participant exposure, release,
-deployment, and production claims always require separate human approval.
+Decision 051 historically permitted exact-head, required-CI-green source-only
+draft delivery. Decision 052 supersedes its runtime and activation ceiling for
+the current M6F batch. Human semantic/source/originality/accessibility/privacy/
+safety review remains deferred, not passed, for the owner's consolidated
+383/383 audit.
+M6F-ALL-ACTIVE is the current owner-directed batch. It supersedes the prior
+five-runtime/friendship-only activation boundary and projects all 383 canonical
+protocols into runtime with score activation. Content and specialist review
+remain explicitly pending for the owner's consolidated audit; activation must
+not be described as clinical, psychometric, cultural, accessibility, or
+intervention-effectiveness validation. Existing immutable baselines, exact
+stable IDs, typed/legacy replay, structured provenance, adverse and
+inconclusive withholding, append-only score snapshots, reversal, rebuild, and
+the completion/mastery and human-dignity boundaries remain mandatory.
+
+Decision 052 supplies the owner approval for this batch's runtime projection
+and score activation. Participant exposure, release, deployment, and broader
+production or validation claims still require separate human approval.
 
 <!-- BEGIN PORTFOLIO-CONTROL MANAGED -->
 ## Governed agentic delivery

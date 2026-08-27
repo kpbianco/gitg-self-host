@@ -171,7 +171,7 @@ def test_all_four_states_are_persisted_without_hidden_values(user, seeded):
         )
 
 
-def _growth_row_digest(excluded_tables=()):
+def _growth_row_digest(excluded_tables=(), excluded_columns=()):
     with connection.cursor() as cursor:
         tables = sorted(
             table
@@ -182,8 +182,19 @@ def _growth_row_digest(excluded_tables=()):
         for table in tables:
             cursor.execute(f'SELECT * FROM "{table}"')
             columns = [item[0] for item in cursor.description]
-            rows = sorted(repr(tuple(row)) for row in cursor.fetchall())
-            payload.append((table, columns, rows))
+            retained_indexes = sorted(
+                (
+                    index
+                    for index, column in enumerate(columns)
+                    if (table, column) not in excluded_columns
+                ),
+                key=columns.__getitem__,
+            )
+            retained_columns = [columns[index] for index in retained_indexes]
+            rows = sorted(
+                repr(tuple(row[index] for index in retained_indexes)) for row in cursor.fetchall()
+            )
+            payload.append((table, retained_columns, rows))
     return hashlib.sha256(json.dumps(payload, sort_keys=True).encode()).hexdigest()
 
 
@@ -194,15 +205,16 @@ def test_migration_round_trip_preserves_all_preexisting_growth_rows():
     executor = MigrationExecutor(connection)
     original_leaves = executor.loader.graph.leaf_nodes()
     excluded = {"growth_assessmentcontext", "growth_practicecontext"}
-    before = _growth_row_digest(excluded)
+    added_columns = {("growth_practicecheckin", "typed_observations")}
+    before = _growth_row_digest(excluded, added_columns)
     try:
         executor.migrate([("growth", "0007_pilotfeedback")])
-        assert _growth_row_digest(excluded) == before
+        assert _growth_row_digest(excluded, added_columns) == before
         executor = MigrationExecutor(connection)
         executor.migrate([("growth", "0008_assessmentcontext_practicecontext")])
-        assert _growth_row_digest(excluded) == before
+        assert _growth_row_digest(excluded, added_columns) == before
         executor = MigrationExecutor(connection)
         executor.migrate([("growth", "0007_pilotfeedback")])
-        assert _growth_row_digest(excluded) == before
+        assert _growth_row_digest(excluded, added_columns) == before
     finally:
         MigrationExecutor(connection).migrate(original_leaves)

@@ -112,8 +112,11 @@ def test_readiness_is_deterministic_read_only_and_accepts_empty_optional_state(s
         "burden",
     )
     assert len(first.baseline_protocol_ids) == 5
-    assert first.active_protocols >= 5
-    assert first.score_active_protocol_ids == ("PRACTICE-FRIENDSHIP-01",)
+    assert first.active_protocols == 383
+    assert len(first.score_active_protocol_ids) == 383
+    assert set(first.score_active_protocol_ids) == set(
+        PracticeProtocol.objects.values_list("stable_id", flat=True)
+    )
     assert first.authenticated_route_names == (
         "growth:personal-os",
         "growth:practice-context",
@@ -200,7 +203,7 @@ def test_readiness_fails_closed_on_baseline_protocol_or_activation_drift(seeded)
 
     PracticeProtocol.objects.filter(stable_id="PRACTICE-PRESENCE-01").update(
         availability=PracticeProtocol.Availability.ACTIVE,
-        score_active=True,
+        score_active=False,
     )
     with pytest.raises(M6CPilotReadinessError):
         verify_m6c_pilot_readiness()

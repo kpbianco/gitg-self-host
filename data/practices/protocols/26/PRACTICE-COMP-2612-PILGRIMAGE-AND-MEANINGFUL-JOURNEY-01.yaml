@@ -6,12 +6,12 @@ name: Bounded Pilgrimage and meaningful journey Practice
 parent_competency_id: '26.12'
 domain_id: '26'
 governance:
-  availability: inactive
+  availability: active
   editorial_status: draft
-  runtime_projection: none
+  runtime_projection: GG-PRACTICE-RUNTIME-PROJECTION-2.0
   risk_class_id: RISK-MODERATE
-  scoring_policy_id: SP-SHADOW-ONLY
-  scoring_status: shadow_only
+  scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
+  scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
@@ -120,7 +120,7 @@ intervention:
       protocol_stable_id: PRACTICE-COMP-2612-PILGRIMAGE-AND-MEANINGFUL-JOURNEY-01
       action_stable_id: PRACTICE-COMP-2612-PILGRIMAGE-AND-MEANINGFUL-JOURNEY-01-A1
       competency_stable_id: '26.12'
-      scoring_policy_id: SP-SHADOW-ONLY
+      scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
     evidence_rules:
       schema_version: typed-evidence-rules-v1
       max_age_days: 90
@@ -165,7 +165,7 @@ intervention:
       protocol_stable_id: PRACTICE-COMP-2612-PILGRIMAGE-AND-MEANINGFUL-JOURNEY-01
       action_stable_id: PRACTICE-COMP-2612-PILGRIMAGE-AND-MEANINGFUL-JOURNEY-01-A2
       competency_stable_id: '26.12'
-      scoring_policy_id: SP-SHADOW-ONLY
+      scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
     evidence_rules:
       schema_version: typed-evidence-rules-v1
       max_age_days: 90
@@ -210,7 +210,7 @@ intervention:
       protocol_stable_id: PRACTICE-COMP-2612-PILGRIMAGE-AND-MEANINGFUL-JOURNEY-01
       action_stable_id: PRACTICE-COMP-2612-PILGRIMAGE-AND-MEANINGFUL-JOURNEY-01-A3
       competency_stable_id: '26.12'
-      scoring_policy_id: SP-SHADOW-ONLY
+      scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
     evidence_rules:
       schema_version: typed-evidence-rules-v1
       max_age_days: 90
@@ -310,18 +310,20 @@ evidence_and_scoring:
   evidence_quality_rubric: Quality for Pilgrimage and meaningful journey requires a bounded context, allowlisted
     observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
     and artifact contents are excluded.
-  scoring_eligibility: This package is source-only, shadow-only, and production-ineligible.
-  competency_contribution: Designated primary measurements may produce context-bound direct Pilgrimage
-    and meaningful journey evidence only under offline typed evaluation; protocol performance remains
-    distinct and is never counted twice.
+  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
+    ledger; action-specific provenance and withholding rules still apply.
+  competency_contribution: Designated primary measurements may produce one context-bound direct Pilgrimage
+    and meaningful journey contribution under typed evaluation; protocol performance remains distinct
+    and is never counted twice.
   canonical_lever_allocation: parent_competency_mapping
   recommendation_target_lever_ids:
   - L01
   - L03
   - L34
   - L35
-  minimum_evidence_before_state_update: No current-state update is permitted for this Pilgrimage and meaningful
-    journey draft under SP-SHADOW-ONLY, regardless of completion or evidence quantity.
+  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
+    measurement and no applicable withholding condition may update current state; completion alone never
+    does.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Pilgrimage and meaningful journey evidence.
@@ -393,8 +395,8 @@ presentation:
     c2612_a3_primary: The bounded Pilgrimage and meaningful journey criterion for action 3 was observed
     c2612_a3_boundary: Action 3 stayed inside its stated Pilgrimage and meaningful journey boundary
     c2612_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Complete the bounded Pilgrimage and meaningful journey review without claiming mastery,
-    broad transfer, professional validation, or score activation.
+  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
+    validation, identity, dignity, or human worth.
   plain_language_evidence: The structured record shows what happened in one limited Pilgrimage and meaningful
     journey practice, including support, contradiction, defer, no result, or harm.
   display_order: 366

@@ -6,12 +6,12 @@ name: Bounded Power, speed, coordination, and agility Practice
 parent_competency_id: '12.08'
 domain_id: '12'
 governance:
-  availability: inactive
+  availability: active
   editorial_status: draft
-  runtime_projection: none
+  runtime_projection: GG-PRACTICE-RUNTIME-PROJECTION-2.0
   risk_class_id: RISK-HIGH
-  scoring_policy_id: SP-NON-SCORED-REFLECTION
-  scoring_status: non_scored
+  scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
+  scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
@@ -121,7 +121,7 @@ intervention:
       protocol_stable_id: PRACTICE-COMP-1208-POWER-SPEED-COORDINATION-AND-AGILITY-01
       action_stable_id: PRACTICE-COMP-1208-POWER-SPEED-COORDINATION-AND-AGILITY-01-A1
       competency_stable_id: '12.08'
-      scoring_policy_id: SP-NON-SCORED-REFLECTION
+      scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
     evidence_rules:
       schema_version: typed-evidence-rules-v1
       max_age_days: 90
@@ -167,7 +167,7 @@ intervention:
       protocol_stable_id: PRACTICE-COMP-1208-POWER-SPEED-COORDINATION-AND-AGILITY-01
       action_stable_id: PRACTICE-COMP-1208-POWER-SPEED-COORDINATION-AND-AGILITY-01-A2
       competency_stable_id: '12.08'
-      scoring_policy_id: SP-NON-SCORED-REFLECTION
+      scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
     evidence_rules:
       schema_version: typed-evidence-rules-v1
       max_age_days: 90
@@ -213,7 +213,7 @@ intervention:
       protocol_stable_id: PRACTICE-COMP-1208-POWER-SPEED-COORDINATION-AND-AGILITY-01
       action_stable_id: PRACTICE-COMP-1208-POWER-SPEED-COORDINATION-AND-AGILITY-01-A3
       competency_stable_id: '12.08'
-      scoring_policy_id: SP-NON-SCORED-REFLECTION
+      scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
     evidence_rules:
       schema_version: typed-evidence-rules-v1
       max_age_days: 90
@@ -311,16 +311,18 @@ evidence_and_scoring:
   evidence_quality_rubric: Quality for Power, speed, coordination, and agility requires a bounded context,
     allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
     free text and artifact contents are excluded.
-  scoring_eligibility: This package is non-scored and production-ineligible.
-  competency_contribution: Designated primary measurements may produce context-bound direct Power, speed,
-    coordination, and agility evidence only under offline typed evaluation; protocol performance remains
+  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
+    ledger; action-specific provenance and withholding rules still apply.
+  competency_contribution: Designated primary measurements may produce one context-bound direct Power,
+    speed, coordination, and agility contribution under typed evaluation; protocol performance remains
     distinct and is never counted twice.
   canonical_lever_allocation: parent_competency_mapping
   recommendation_target_lever_ids:
   - L17
   - L35
-  minimum_evidence_before_state_update: No current-state update is permitted for this Power, speed, coordination,
-    and agility draft under SP-NON-SCORED-REFLECTION, regardless of completion or evidence quantity.
+  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
+    measurement and no applicable withholding condition may update current state; completion alone never
+    does.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Power, speed, coordination, and agility evidence.
@@ -392,8 +394,8 @@ presentation:
     c1208_a3_primary: The bounded Power, speed, coordination, and agility criterion for action 3 was observed
     c1208_a3_boundary: Action 3 stayed inside its stated Power, speed, coordination, and agility boundary
     c1208_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Complete the bounded Power, speed, coordination, and agility review without claiming
-    mastery, broad transfer, professional validation, or score activation.
+  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
+    validation, identity, dignity, or human worth.
   plain_language_evidence: The structured record shows what happened in one limited Power, speed, coordination,
     and agility practice, including support, contradiction, defer, no result, or harm.
   display_order: 153

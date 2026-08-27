@@ -418,7 +418,7 @@ def test_all_deferred_direct_evidence_is_retained_but_protocol_only_is_rejected(
         candidate_from_typed_evidence(observed)
 
 
-def test_all_six_scoring_policy_gates_are_executable():
+def test_all_seven_scoring_policy_gates_are_executable():
     assert {
         "SP-SELF-REPORT-ELIGIBLE",
         "SP-CORROBORATION-REQUIRED",
@@ -426,6 +426,7 @@ def test_all_six_scoring_policy_gates_are_executable():
         "SP-QUALIFIED-EVIDENCE-REQUIRED",
         "SP-SHADOW-ONLY",
         "SP-NON-SCORED-REFLECTION",
+        "SP-STRUCTURED-EVIDENCE-ELIGIBLE",
     } == SUPPORTED_POLICY_IDS
     for policy_id in ("SP-SELF-REPORT-ELIGIBLE", "SP-SHADOW-ONLY"):
         projection = _project_manual(

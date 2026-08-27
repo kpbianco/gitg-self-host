@@ -415,7 +415,9 @@ def test_readiness_is_deterministic_empty_state_read_only_and_source_derived(see
     assert _protected_state() == before
     assert first.contract_version == "GG-CONTEXT-PRIORITY-READINESS-1.0"
     assert first.algorithm_version == "GG-CONTEXT-PRIORITY-1.0"
-    assert first.projected_protocols >= first.m6c03_baseline_protocols_present == 5
+    assert first.projected_protocols == 383
+    assert first.m6c03_baseline_protocols_present == 5
+    assert first.score_active_protocols == 383
     assert first.friendship_score_active is True
     assert first.assessment_context_records == 0
     assert first.practice_context_records == 0

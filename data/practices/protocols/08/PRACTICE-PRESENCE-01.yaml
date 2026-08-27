@@ -10,8 +10,8 @@ governance:
   editorial_status: projected_legacy
   runtime_projection: GG-PRACTICE-RUNTIME-PROJECTION-1.0
   risk_class_id: RISK-LOW
-  scoring_policy_id: SP-SHADOW-ONLY
-  scoring_status: shadow_only
+  scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
+  scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   - SRC-PRODUCT-DECISIONS
@@ -88,9 +88,11 @@ intervention:
   expected_burden: About 50–60 minutes including setup and comparison.
   action_count_rationale: null
   foreseeable_misuse:
-  - Disabling necessary supports, surveilling another person, or scoring stillness, distraction, or productivity as personal worth.
+  - Disabling necessary supports, surveilling another person, or scoring stillness, distraction, or productivity
+    as personal worth.
   exclusions:
-  - Driving, equipment operation, hazard supervision, surveillance, or removal of emergency, accessibility, or caregiving alerts.
+  - Driving, equipment operation, hazard supervision, surveillance, or removal of emergency, accessibility,
+    or caregiving alerts.
   actions:
   - stable_id: PRACTICE-PRESENCE-01-A1
     sequence: 1
@@ -148,7 +150,8 @@ intervention:
     resource_variants:
     - Shorten windows consistently when fifteen minutes is not workable, and record that limitation.
   pause_conditions:
-  - Pause when pain, fatigue, distress, supervision, alerts, or changing conditions make the comparison unsafe or non-comparable.
+  - Pause when pain, fatigue, distress, supervision, alerts, or changing conditions make the comparison
+    unsafe or non-comparable.
   stop_conditions:
   - Stop if the experiment affects driving, equipment, supervision, essential alerts, pain, fatigue, or
     safety.
@@ -156,7 +159,8 @@ intervention:
   - Use qualified support when attention difficulty is persistent, distressing, or safety-affecting; this
     protocol is not diagnosis or treatment.
   professional_referral_conditions:
-  - Seek appropriate qualified support for persistent, distressing, or safety-affecting attention difficulty rather than treating this experiment as diagnosis or treatment.
+  - Seek appropriate qualified support for persistent, distressing, or safety-affecting attention difficulty
+    rather than treating this experiment as diagnosis or treatment.
 evidence_and_scoring:
   accepted_evidence_types:
   - structured firsthand observation
@@ -186,14 +190,16 @@ evidence_and_scoring:
     comparing one condition, and repeating what was more workable.
   evidence_quality_rubric: Quality requires a clear activity and one identifiable changed condition; output
     quantity, stillness, and free-text claims are not evidence of presence.
-  scoring_eligibility: M6A preserves legacy observations for audit only. Objective or artifact evidence
-    and typed competency contribution require M6B review before activation.
+  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
+    ledger; action-specific provenance and withholding rules still apply.
   competency_contribution: The runtime event is evidence about protocol performance only; direct competency
     state is not implemented in M6A.
   canonical_lever_allocation: parent_competency_mapping
   recommendation_target_lever_ids:
   - L08
-  minimum_evidence_before_state_update: No current-state update is permitted under the shadow-only policy.
+  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
+    measurement and no applicable withholding condition may update current state; completion alone never
+    does.
   withholding_conditions:
   - All evidence is withheld from current score state.
   - Unsafe windows, surveillance, and removal of essential supports are excluded.
@@ -262,8 +268,8 @@ presentation:
     meaningful_information_shared: I compared the usual and changed condition
     follow_up_within_seven_days: I repeated the more workable condition within seven days
     internal_resistance: I noticed how workable or effortful the condition felt
-  completion_copy: Review the condition comparison without scoring productivity, stillness, or distraction.
-    One experiment does not establish broad attention mastery.
+  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
+    validation, identity, dignity, or human worth.
   plain_language_evidence: The record compares how noticing and returning attention worked in one activity
     under two conditions, including no difference or a worse result.
   display_order: 5

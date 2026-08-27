@@ -4,7 +4,7 @@
     "canonical_protocol_packages": 383,
     "competencies": 383,
     "practice_actions": 1151,
-    "score_active_protocols": 1,
+    "score_active_protocols": 383,
     "uncovered_competencies": 0
   },
   "contract_version": "GG-COMPETENCY-EVIDENCE-READINESS-1.0",
@@ -13,8 +13,8 @@
     "competency_lever_shadow": "GG-COMPETENCY-LEVER-SHADOW-1.0",
     "preserved_curriculum_expansion": "GG-CURRICULUM-EXPANSION-READINESS-1.0",
     "preserved_evidence": "GG-EVIDENCE-1.0",
-    "production_score_eligibility": "GG-PRODUCTION-SCORE-ELIGIBILITY-1.0",
-    "production_score_eligibility_fingerprint": "f7639a0c623f1baac9469f34fe49ca9e2eb0be8fc1c616ab662996b2e90bf2bf",
+    "production_score_eligibility": "GG-PRODUCTION-SCORE-ELIGIBILITY-2.0",
+    "production_score_eligibility_fingerprint": "154728224f5e355d1a91d259dc7a37ee5dc136bae3158ceb8553881360df74ec",
     "typed_evidence": "GG-TYPED-EVIDENCE-1.0",
     "typed_evidence_rules": "typed-evidence-rules-v1"
   },
@@ -61,12 +61,12 @@
   },
   "m6b_accepted": false,
   "scoring_policies": {
-    "canonical": 6,
-    "synthetically_executed": 6
+    "canonical": 7,
+    "synthetically_executed": 7
   },
   "software_ready": true,
   "source_typed_protocols": 378,
   "specialist_review_complete": false,
-  "typed_production_protocols": 0,
-  "typed_score_active_protocols": 0
+  "typed_production_protocols": 378,
+  "typed_score_active_protocols": 378
 }

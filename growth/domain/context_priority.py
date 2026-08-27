@@ -211,9 +211,9 @@ class ContextPriorityResult:
 
 
 def _stable_id(value: object, *, label: str) -> str:
-    if not isinstance(value, str) or not value or len(value) > 80:
+    if not isinstance(value, str) or not value or len(value) > 120:
         raise ContextPriorityContractError(
-            f"{label} must be a non-empty string of at most 80 characters."
+            f"{label} must be a non-empty string of at most 120 characters."
         )
     return value
 

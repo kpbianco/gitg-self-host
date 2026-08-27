@@ -1,17 +1,17 @@
 {
-  "boundary": "The cohort is individually authored source-only draft content with synthetic shadow replay. It adds no typed persistence, runtime projection, production activation, specialist acceptance, participant validation, or mastery claim.",
+  "boundary": "The cohort is owner-directed runtime-active draft content with typed persistence and replay-verified score eligibility. Specialist acceptance, participant validation, and mastery claims remain outside this software activation.",
   "catalog": {
     "canonical_protocol_packages": 383,
     "competencies": 383,
     "practice_actions": 1151,
-    "score_active_protocols": 1,
+    "score_active_protocols": 383,
     "uncovered_competencies": 0
   },
-  "catalog_content_hash": "fb4b29d447232034b069b24871cc4eca77b951b9440e6ed1a2994283db5c04b7",
+  "catalog_content_hash": "4f7de352e79214bb2c923e7c6b6281100844141f2e7b2bfc0c5d320b4aa8d594",
   "cohort": [
     {
       "action_count": 3,
-      "availability": "inactive",
+      "availability": "active",
       "competency_id": "08.06",
       "domain_id": "08",
       "editorial_status": "draft",
@@ -20,13 +20,13 @@
       "recommendation_target_lever_ids": [
         "L10"
       ],
-      "runtime_projection": "none",
-      "score_active": false,
-      "scoring_policy_id": "SP-SHADOW-ONLY"
+      "runtime_projection": "GG-PRACTICE-RUNTIME-PROJECTION-2.0",
+      "score_active": true,
+      "scoring_policy_id": "SP-STRUCTURED-EVIDENCE-ELIGIBLE"
     },
     {
       "action_count": 3,
-      "availability": "inactive",
+      "availability": "active",
       "competency_id": "09.12",
       "domain_id": "09",
       "editorial_status": "draft",
@@ -35,13 +35,13 @@
       "recommendation_target_lever_ids": [
         "L14"
       ],
-      "runtime_projection": "none",
-      "score_active": false,
-      "scoring_policy_id": "SP-SHADOW-ONLY"
+      "runtime_projection": "GG-PRACTICE-RUNTIME-PROJECTION-2.0",
+      "score_active": true,
+      "scoring_policy_id": "SP-STRUCTURED-EVIDENCE-ELIGIBLE"
     },
     {
       "action_count": 4,
-      "availability": "inactive",
+      "availability": "active",
       "competency_id": "10.02",
       "domain_id": "10",
       "editorial_status": "draft",
@@ -50,13 +50,13 @@
       "recommendation_target_lever_ids": [
         "L15"
       ],
-      "runtime_projection": "none",
-      "score_active": false,
-      "scoring_policy_id": "SP-SHADOW-ONLY"
+      "runtime_projection": "GG-PRACTICE-RUNTIME-PROJECTION-2.0",
+      "score_active": true,
+      "scoring_policy_id": "SP-STRUCTURED-EVIDENCE-ELIGIBLE"
     },
     {
       "action_count": 4,
-      "availability": "inactive",
+      "availability": "active",
       "competency_id": "13.02",
       "domain_id": "13",
       "editorial_status": "draft",
@@ -65,9 +65,9 @@
       "recommendation_target_lever_ids": [
         "L18"
       ],
-      "runtime_projection": "none",
-      "score_active": false,
-      "scoring_policy_id": "SP-SHADOW-ONLY"
+      "runtime_projection": "GG-PRACTICE-RUNTIME-PROJECTION-2.0",
+      "score_active": true,
+      "scoring_policy_id": "SP-STRUCTURED-EVIDENCE-ELIGIBLE"
     }
   ],
   "contract_version": "GG-M6D-01-AUTHORING-READINESS-1.0",
@@ -123,9 +123,9 @@
       "unknown"
     ],
     "path": "tests/fixtures/evidence/m6d_01_protocols_v1.json",
-    "sha256": "9ba902ead2ba077498f01de73b27d4a236fa2e152756f522b45a2535edfb82ab"
+    "sha256": "f774c73b0a7e49d840523f7a9f191f38d54702a2601d8f4af21621633ab747dc"
   },
-  "fixture_sha256": "9ba902ead2ba077498f01de73b27d4a236fa2e152756f522b45a2535edfb82ab",
+  "fixture_sha256": "f774c73b0a7e49d840523f7a9f191f38d54702a2601d8f4af21621633ab747dc",
   "governance": {
     "expert_review_id": "ER-M6A-003",
     "expert_review_status": "pending",
@@ -136,9 +136,9 @@
     "source_complete_protocols": 0
   },
   "runtime": {
-    "actions": 15,
-    "protocols": 5,
-    "score_active_protocols": 1,
-    "typed_protocols": 0
+    "actions": 1151,
+    "protocols": 383,
+    "score_active_protocols": 383,
+    "typed_protocols": 378
   }
 }

@@ -613,3 +613,27 @@ activation, participant exposure, release, deployment, production writes,
 repository-settings mutation, or specialist, clinical, psychometric,
 accessibility-population, cultural, longitudinal, effectiveness, mastery, or
 validation claims. Those remain separate human gates.
+
+## Decision 052 — Activate the complete canonical protocol catalog
+**Status:** Owner-directed implementation on 2026-08-26; consolidated content audit pending
+
+The owner explicitly supersedes the five-runtime/friendship-only boundary for
+this batch and directs all 383 canonical protocols to become runtime available
+and score active. `SP-STRUCTURED-EVIDENCE-ELIGIBLE` is the common activation
+policy. Legacy actions retain `practice-observation-v1`; typed actions retain
+`GG-TYPED-EVIDENCE-1.0` and action-specific measurement and provenance rules.
+
+An active protocol is eligible to update the separate current lever state; an
+individual check-in is not guaranteed to do so. Unattempted, unknown,
+inconclusive, stale, adverse, unobserved, invalid, unconsented, and cross-epoch
+evidence is withheld without penalty. Each eligible event contributes once
+through its complete canonical parent-competency mapping. Recommendation target
+subsets never replace that allocation. Immutable assessment baselines,
+replayable evidence, hashed score snapshots, reversal, rebuild, and
+completion-not-mastery remain binding.
+
+This software activation does not mark the deferred semantic, source,
+originality, accessibility, privacy, safety, specialist, cultural,
+psychometric, clinical, participant, longitudinal, or intervention-
+effectiveness audits complete. It never authorizes scoring identity, dignity,
+qualification, clinical status, or human worth.

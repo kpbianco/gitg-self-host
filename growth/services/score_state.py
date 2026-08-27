@@ -23,7 +23,6 @@ from growth.models import (
     ScoreSnapshot,
 )
 from growth.services.scoring import (
-    FRIENDSHIP_PROTOCOL_ID,
     PRODUCTION_SCORE_STATE_VERSION,
     project_assessment_events,
     validate_production_scoring_event,
@@ -170,19 +169,20 @@ def _baseline_values(
 
 
 def _events_for_run(assessment_run: AssessmentRun) -> list[EvidenceEvent]:
-    protocol = (
-        PracticeProtocol.objects.filter(stable_id=FRIENDSHIP_PROTOCOL_ID)
+    eligible_protocols = tuple(
+        PracticeProtocol.objects.filter(score_active=True)
         .select_related("parent_competency")
-        .prefetch_related(
-            "target_levers",
-            "parent_competency__lever_links__lever",
-        )
-        .first()
+        .prefetch_related("actions", "target_levers", "parent_competency__lever_links__lever")
+        .order_by("stable_id")
     )
-    if protocol is None:
-        raise ScoreStateError("The reviewed friendship scoring protocol is unavailable.")
+    eligible_ids = {protocol.stable_id for protocol in eligible_protocols}
+    if len(eligible_ids) != 383:
+        raise ScoreStateError(
+            f"Expected 383 production scoring protocols, found {len(eligible_ids)}."
+        )
     try:
-        validate_production_scoring_protocol(protocol)
+        for protocol in eligible_protocols:
+            validate_production_scoring_protocol(protocol)
     except ScoringContractError as exc:
         raise ScoreStateError(str(exc)) from exc
 
@@ -205,20 +205,18 @@ def _events_for_run(assessment_run: AssessmentRun) -> list[EvidenceEvent]:
     events = [
         event
         for event in all_events
-        if event.protocol_stable_id == FRIENDSHIP_PROTOCOL_ID or event.pk in processed_ids
+        if event.protocol_stable_id in eligible_ids or event.pk in processed_ids
     ]
     submitted_count = PracticeCheckIn.objects.filter(
         sprint__assessment_run=assessment_run,
-        sprint__protocol_id=FRIENDSHIP_PROTOCOL_ID,
+        sprint__protocol_id__in=eligible_ids,
         status=PracticeCheckIn.Status.SUBMITTED,
     ).count()
-    friendship_event_count = sum(
-        event.protocol_stable_id == FRIENDSHIP_PROTOCOL_ID for event in events
-    )
-    if friendship_event_count != submitted_count:
+    eligible_event_count = sum(event.protocol_stable_id in eligible_ids for event in events)
+    if eligible_event_count != submitted_count:
         raise ScoreStateError(
             f"{assessment_run.pk}: {submitted_count} submitted check-ins have "
-            f"{friendship_event_count} production-eligible evidence events."
+            f"{eligible_event_count} production-eligible evidence events."
         )
     return events
 

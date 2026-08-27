@@ -378,7 +378,7 @@ class PracticeProtocol(models.Model):
         ACTIVE = "active", "Active"
         INACTIVE = "inactive", "Inactive"
 
-    stable_id = models.CharField(max_length=80, primary_key=True)
+    stable_id = models.CharField(max_length=120, primary_key=True)
     slug = models.SlugField(max_length=120, unique=True)
     name = models.CharField(max_length=180)
     parent_competency = models.ForeignKey(
@@ -538,6 +538,7 @@ class PracticeCheckIn(models.Model):
     observed_reciprocity = models.PositiveSmallIntegerField(
         null=True, blank=True, validators=[MinValueValidator(0), MaxValueValidator(4)]
     )
+    typed_observations = models.JSONField(default=list, blank=True)
     support_level = models.CharField(
         max_length=20,
         choices=SupportLevel.choices,
@@ -616,7 +617,7 @@ class EvidenceEvent(models.Model):
         related_name="evidence_event",
     )
     algorithm_version = models.CharField(max_length=40)
-    protocol_stable_id = models.CharField(max_length=80)
+    protocol_stable_id = models.CharField(max_length=120)
     action_stable_id = models.CharField(max_length=100)
     input_snapshot = models.JSONField()
     performance = models.DecimalField(

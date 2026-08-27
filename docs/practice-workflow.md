@@ -1,5 +1,24 @@
 # Practice workflow
 
+## Current M6F workflow
+
+All 383 canonical protocols are available and score active. The five original
+protocols use the legacy compact Boolean/scale check-in vocabulary; the other
+378 render action-specific typed fields for explicit observation state,
+provenance, and Boolean, count, frequency, ordinal, duration, objective,
+artifact-criteria, conceptual-criteria, scenario-criteria, or attestation
+values as required by each action.
+
+Submission persists the check-in, creates and replay-verifies either a legacy
+or typed evidence event, projects it through the protocol's canonical parent
+competency mapping, updates the separate current working lever state, and
+appends an immutable score snapshot in one transaction. Ineligible or withheld
+evidence receives an auditable transition without a score contribution. Notes,
+private labels, and artifact contents are not score inputs.
+
+The milestone sections below describe how the workflow evolved; their former
+friendship-only and score-inactive boundaries are historical.
+
 ## Implemented protocol
 
 M1 activates one protocol: **Deepen One Existing Friendship**. It runs for 14
@@ -76,8 +95,8 @@ history links to a plain-language evidence reading; technical values remain in
 a collapsed audit section. M2B adds a private cross-practice ledger and
 minimized calibration export without exposing draft or free-text content.
 
-In M3B, submission also processes the event against the reviewed friendship
-mapping and appends an immutable score snapshot in that same transaction.
+Starting in M3B, submission also processed eligible events against a canonical
+mapping and appended an immutable score snapshot in that same transaction.
 Drafts create neither event nor snapshot. Inconclusive observations receive an
 auditable process transition but do not move current state.
 
@@ -115,9 +134,10 @@ through competency-to-lever mappings, calculate success/failure contributions,
 mutate mastery/confidence/need, or change recommendations. See
 `docs/evidence-contract.md` and `docs/evidence-audit.md`.
 
-M3A reviewed the task allocation and posterior contract. M3B activates that
-exact contract only for the friendship protocol, stores current state
-separately from baselines, and recalculates provisional recommendation order.
+M3A reviewed the task allocation and posterior contract. M3B first activated
+that contract for friendship; M6F extends the same separate-current-state
+architecture to all canonical protocols and recalculates provisional
+recommendation order.
 See `docs/scoring-shadow.md` and `docs/scoring-state.md`.
 
 M4A makes protocol setup copy, compact observation labels, and completion

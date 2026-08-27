@@ -105,7 +105,7 @@ def _candidate_ids(protocol_stable_ids: Sequence[str]) -> tuple[str, ...]:
     resolved = tuple(protocol_stable_ids)
     if not resolved:
         raise ContextPriorityServiceError("Context-aware priority requires supplied candidates.")
-    if any(not isinstance(item, str) or not item or len(item) > 80 for item in resolved):
+    if any(not isinstance(item, str) or not item or len(item) > 120 for item in resolved):
         raise ContextPriorityServiceError("Candidate protocol stable IDs are malformed.")
     if len(resolved) != len(set(resolved)):
         raise ContextPriorityServiceError("Candidate protocol stable IDs must be unique.")

@@ -23,6 +23,11 @@ from growth.domain.personal_os import (
     LIST_SECTION_IDS,
     SCALAR_VALUE_MAX_LENGTH,
 )
+from growth.domain.typed_evidence import (
+    TYPED_EVIDENCE_RULES_VERSION,
+    load_typed_evidence_spec,
+    materialize_typed_evidence_rules,
+)
 from growth.models import PilotFeedback, PracticeAction, PracticeCheckIn, PracticeProtocol
 from growth.services.pilot_feedback import (
     FEEDBACK_FIELD_STAGES,
@@ -383,6 +388,26 @@ SCALE_CHOICES = (
     ("4", "4 — Very high"),
 )
 
+TYPED_OBSERVATION_STATE_CHOICES = (
+    ("unknown", "Unknown / not collected"),
+    ("observed", "Observed — provide a structured value"),
+    ("not_observed", "Not observed"),
+    ("withheld", "Withheld for privacy or safety"),
+    ("not_applicable", "Not applicable"),
+    ("deferred", "Deferred for now"),
+)
+TYPED_PROVENANCE_LABELS = {
+    "firsthand_self_report": "Firsthand self-report",
+    "reviewed_artifact": "Reviewed artifact criteria (no contents stored)",
+    "objective_indicator": "Bounded objective indicator",
+    "consented_observer": "Consented observer",
+    "qualified_attestation": "Qualified attestation",
+}
+
+
+def _typed_field_name(measurement_id: str, part: str) -> str:
+    return f"typed_{measurement_id}_{part}"
+
 
 class PracticeActionChoiceField(forms.ModelChoiceField):
     def label_from_instance(self, obj):
@@ -506,12 +531,41 @@ class PracticeCheckInForm(forms.ModelForm):
         self.fields["action"].widget.attrs["data-check-in-action-control"] = "true"
         for field_name in ALLOWED_OBSERVATION_FIELDS & self.fields.keys():
             self.fields[field_name].widget.attrs["data-check-in-observation"] = field_name
-        self.action_observation_map = {
-            str(action.pk): sorted(
-                observation_fields_for_rules(action.evidence_rules) & self.fields.keys()
-            )
+        self.typed_measurement_rules: dict[str, dict] = {}
+        self.typed_action_measurements: dict[str, tuple[str, ...]] = {}
+        typed_actions = [
+            action
             for action in self.fields["action"].queryset
-        }
+            if action.evidence_rules.get("schema_version") == TYPED_EVIDENCE_RULES_VERSION
+        ]
+        if typed_actions:
+            spec = load_typed_evidence_spec()
+            for action in typed_actions:
+                materialized = materialize_typed_evidence_rules(action.evidence_rules, spec)
+                measurement_ids = []
+                for rule in materialized["measurements"]:
+                    measurement_id = rule["measurement_id"]
+                    self.typed_measurement_rules[measurement_id] = rule
+                    measurement_ids.append(measurement_id)
+                    self._add_typed_measurement_fields(rule)
+                self.typed_action_measurements[str(action.pk)] = tuple(measurement_ids)
+            if not self.is_bound and self.instance.pk:
+                self._set_typed_observation_initials(self.instance.typed_observations)
+        self.action_observation_map = {}
+        for action in self.fields["action"].queryset:
+            if action.evidence_rules.get("schema_version") == TYPED_EVIDENCE_RULES_VERSION:
+                field_names = [
+                    field_name
+                    for measurement_id in self.typed_action_measurements[str(action.pk)]
+                    for field_name in self._typed_fields_for_rule(
+                        self.typed_measurement_rules[measurement_id]
+                    )
+                ]
+            else:
+                field_names = sorted(
+                    observation_fields_for_rules(action.evidence_rules) & self.fields.keys()
+                )
+            self.action_observation_map[str(action.pk)] = field_names
         self.fields[
             "context_comparison"
         ].help_text = "This describes context variation within the same practice."
@@ -539,6 +593,199 @@ class PracticeCheckInForm(forms.ModelForm):
                 self.initial["context_comparison"] = PracticeCheckIn.ContextComparison.FIRST_RECORD
         self.fields["context_comparison"].choices = context_choices
 
+    def _set_typed_observation_initials(self, observations: list[dict]) -> None:
+        """Restore every structured value when an existing draft is reopened."""
+
+        for observation in observations:
+            measurement_id = observation.get("measurement_id")
+            rule = self.typed_measurement_rules.get(measurement_id)
+            if rule is None:
+                continue
+            self.initial[_typed_field_name(measurement_id, "state")] = observation.get(
+                "state", "unknown"
+            )
+            self.initial[_typed_field_name(measurement_id, "provenance")] = observation.get(
+                "provenance_kind", rule["allowed_provenance"][0]
+            )
+            value = observation.get("value")
+            if value is None:
+                continue
+            kind = rule["kind"]
+            if kind == "bounded_frequency":
+                self.initial[_typed_field_name(measurement_id, "numerator")] = value.get(
+                    "numerator"
+                )
+                self.initial[_typed_field_name(measurement_id, "denominator")] = value.get(
+                    "denominator"
+                )
+            elif kind in {"duration", "objective"}:
+                self.initial[_typed_field_name(measurement_id, "value")] = value.get("amount")
+            elif kind in {"artifact", "conceptual", "scenario"}:
+                self.initial[_typed_field_name(measurement_id, "value")] = value.get(
+                    "criteria_met", []
+                )
+            elif kind == "attestation":
+                self.initial[_typed_field_name(measurement_id, "value")] = value.get(
+                    "attestation_id"
+                )
+                self.initial[_typed_field_name(measurement_id, "consent")] = value.get(
+                    "consent_confirmed", False
+                )
+            else:
+                self.initial[_typed_field_name(measurement_id, "value")] = value
+
+    def _typed_fields_for_rule(self, rule: dict) -> tuple[str, ...]:
+        measurement_id = rule["measurement_id"]
+        names = [
+            _typed_field_name(measurement_id, "state"),
+            _typed_field_name(measurement_id, "provenance"),
+        ]
+        kind = rule["kind"]
+        if kind == "bounded_frequency":
+            names.extend(
+                [
+                    _typed_field_name(measurement_id, "numerator"),
+                    _typed_field_name(measurement_id, "denominator"),
+                ]
+            )
+        elif kind == "attestation":
+            names.extend(
+                [
+                    _typed_field_name(measurement_id, "value"),
+                    _typed_field_name(measurement_id, "consent"),
+                ]
+            )
+        else:
+            names.append(_typed_field_name(measurement_id, "value"))
+        return tuple(names)
+
+    def _add_typed_measurement_fields(self, rule: dict) -> None:
+        measurement_id = rule["measurement_id"]
+        label = self.sprint.protocol.setup_copy.get("check_in_labels", {}).get(
+            measurement_id,
+            measurement_id.replace("_", " ").capitalize(),
+        )
+        state_name = _typed_field_name(measurement_id, "state")
+        provenance_name = _typed_field_name(measurement_id, "provenance")
+        self.fields[state_name] = forms.ChoiceField(
+            label=f"{label} — observation state",
+            choices=TYPED_OBSERVATION_STATE_CHOICES,
+            initial="unknown",
+            required=False,
+        )
+        allowed_provenance = tuple(rule["allowed_provenance"])
+        self.fields[provenance_name] = forms.ChoiceField(
+            label=f"{label} — provenance",
+            choices=tuple(
+                (value, TYPED_PROVENANCE_LABELS.get(value, value.replace("_", " ").title()))
+                for value in allowed_provenance
+            ),
+            initial=allowed_provenance[0],
+            required=False,
+            help_text="Record the evidence source category; private narrative is never scored.",
+        )
+        kind = rule["kind"]
+        value_name = _typed_field_name(measurement_id, "value")
+        if kind == "boolean":
+            self.fields[value_name] = forms.TypedChoiceField(
+                label=label,
+                choices=(("", "Choose one"), ("true", "Yes"), ("false", "No")),
+                coerce=lambda value: value == "true",
+                empty_value=None,
+                required=False,
+            )
+        elif kind == "count":
+            self.fields[value_name] = forms.IntegerField(label=label, min_value=0, required=False)
+        elif kind == "bounded_frequency":
+            self.fields[_typed_field_name(measurement_id, "numerator")] = forms.IntegerField(
+                label=f"{label} — times observed", min_value=0, required=False
+            )
+            self.fields[_typed_field_name(measurement_id, "denominator")] = forms.IntegerField(
+                label=f"{label} — opportunities", min_value=1, required=False
+            )
+        elif kind == "ordinal":
+            self.fields[value_name] = forms.ChoiceField(
+                label=label,
+                choices=(
+                    ("", "Choose one"),
+                    *((item["level_id"], item["label"]) for item in rule["levels"]),
+                ),
+                required=False,
+            )
+        elif kind in {"duration", "objective"}:
+            self.fields[value_name] = forms.DecimalField(
+                label=f"{label} ({rule['unit']})", min_value=0, required=False
+            )
+        elif kind in {"artifact", "conceptual", "scenario"}:
+            self.fields[value_name] = forms.MultipleChoiceField(
+                label=label,
+                choices=tuple(
+                    (criterion, criterion.replace("_", " ").capitalize())
+                    for criterion in rule["criteria"]
+                ),
+                widget=forms.CheckboxSelectMultiple,
+                required=False,
+                help_text="Store only which criteria were met; do not paste artifact contents.",
+            )
+        elif kind == "attestation":
+            self.fields[value_name] = forms.ChoiceField(
+                label=label,
+                choices=(
+                    ("", "Choose one"),
+                    *(
+                        (value, value.replace("_", " ").title())
+                        for value in rule["allowed_attestation_ids"]
+                    ),
+                ),
+                required=False,
+            )
+            self.fields[_typed_field_name(measurement_id, "consent")] = forms.BooleanField(
+                label="Required consent was confirmed", required=False
+            )
+        else:
+            raise ValueError(f"Unsupported typed measurement kind: {kind}")
+        for field_name in self._typed_fields_for_rule(rule):
+            self.fields[field_name].widget.attrs["data-check-in-observation"] = field_name
+
+    def _typed_value(self, cleaned_data: dict, rule: dict):
+        measurement_id = rule["measurement_id"]
+        kind = rule["kind"]
+        value_name = _typed_field_name(measurement_id, "value")
+        if kind == "bounded_frequency":
+            numerator_name = _typed_field_name(measurement_id, "numerator")
+            denominator_name = _typed_field_name(measurement_id, "denominator")
+            numerator = cleaned_data.get(numerator_name)
+            denominator = cleaned_data.get(denominator_name)
+            if numerator is None or denominator is None:
+                self.add_error(numerator_name, "Observed frequency requires both values.")
+                return None
+            if numerator > denominator:
+                self.add_error(numerator_name, "Times observed cannot exceed opportunities.")
+                return None
+            return {"numerator": numerator, "denominator": denominator}
+        value = cleaned_data.get(value_name)
+        if kind in {"artifact", "conceptual", "scenario"}:
+            return {"criteria_met": list(value or [])}
+        if kind in {"duration", "objective"}:
+            if value is None:
+                self.add_error(value_name, "An observed measurement requires a value.")
+                return None
+            return {"amount": format(value, "f"), "unit": rule["unit"]}
+        if kind == "attestation":
+            if not value:
+                self.add_error(value_name, "An observed attestation requires an identifier.")
+                return None
+            return {
+                "attestation_id": value,
+                "consent_confirmed": bool(
+                    cleaned_data.get(_typed_field_name(measurement_id, "consent"))
+                ),
+            }
+        if value is None or value == "":
+            self.add_error(value_name, "An observed measurement requires a value.")
+            return None
+        return value
+
     def clean(self):
         cleaned_data = super().clean()
         if cleaned_data.get("action_completed") and not cleaned_data.get("action_attempted"):
@@ -553,16 +800,37 @@ class PracticeCheckInForm(forms.ModelForm):
             )
         action = cleaned_data.get("action")
         if action is not None:
-            relevant_fields = observation_fields_for_rules(action.evidence_rules)
-            for field_name in ALLOWED_OBSERVATION_FIELDS:
-                if cleaned_data.get(field_name) and field_name not in relevant_fields:
-                    self.add_error(
-                        field_name,
-                        (
-                            "This observation belongs to another action. Choose the "
-                            "matching action or clear this response."
-                        ),
+            if action.evidence_rules.get("schema_version") == TYPED_EVIDENCE_RULES_VERSION:
+                observations = []
+                for measurement_id in self.typed_action_measurements[str(action.pk)]:
+                    rule = self.typed_measurement_rules[measurement_id]
+                    state = cleaned_data.get(_typed_field_name(measurement_id, "state"), "unknown")
+                    value = self._typed_value(cleaned_data, rule) if state == "observed" else None
+                    observations.append(
+                        {
+                            "measurement_id": measurement_id,
+                            "kind": rule["kind"],
+                            "state": state,
+                            "provenance_kind": cleaned_data.get(
+                                _typed_field_name(measurement_id, "provenance")
+                            )
+                            or rule["allowed_provenance"][0],
+                            "value": value,
+                        }
                     )
+                cleaned_data["typed_observations"] = observations
+            else:
+                cleaned_data["typed_observations"] = []
+                relevant_fields = observation_fields_for_rules(action.evidence_rules)
+                for field_name in ALLOWED_OBSERVATION_FIELDS:
+                    if cleaned_data.get(field_name) and field_name not in relevant_fields:
+                        self.add_error(
+                            field_name,
+                            (
+                                "This observation belongs to another action. Choose the "
+                                "matching action or clear this response."
+                            ),
+                        )
         if self.require_evidence_metadata:
             for field in ("support_level", "context_comparison", "evidence_direction"):
                 if not cleaned_data.get(field):

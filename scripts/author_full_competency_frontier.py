@@ -1,12 +1,6 @@
 #!/usr/bin/env python3
 # ruff: noqa: E501
-"""Materialize the source-only 383/383 competency authoring frontier.
-
-The script deliberately leaves the reviewed five-protocol runtime projection
-unchanged. Generated packages are inactive editorial drafts. Low- and
-moderate-risk packages use the shadow-only policy; high-risk packages are
-explicitly non-scored and direct the user toward qualified support.
-"""
+"""Materialize and activate the complete 383/383 competency runtime."""
 
 from __future__ import annotations
 
@@ -33,6 +27,11 @@ SOURCE_PATH = PRACTICE_ROOT / "registries" / "source_registry.yaml"
 CANONICAL_SOURCE_ID = "SRC-CANONICAL-CURRICULUM-V2"
 GLOBAL_GAP_IDS = ["RG-M6A-001", "RG-M6A-002"]
 GLOBAL_REVIEW_IDS = ["ER-M6A-003"]
+ACTIVE_SCORING_POLICY_ID = "SP-STRUCTURED-EVIDENCE-ELIGIBLE"
+SCORE_STATE_CONTRACT = "GG-SCORE-STATE-1.0"
+TYPED_RUNTIME_PROJECTION = "GG-PRACTICE-RUNTIME-PROJECTION-2.0"
+LEGACY_RUNTIME_PROJECTION = "GG-PRACTICE-RUNTIME-PROJECTION-1.0"
+ACTIVATION_DECISION = "docs/PRODUCT_DECISIONS.md#decision-052"
 
 # These packages predate the full-frontier batch and remain byte-for-byte
 # authoritative. Every other canonical competency is materialized by this
@@ -648,8 +647,8 @@ def _build_protocol(
     risk_class = _risk_class(domain["id"], competency)
     family_id = _protocol_family(domain["id"], competency, risk_class)
     stable_id = f"PRACTICE-COMP-{compact_id}-{_slug(name).upper()}-01"
-    policy_id = "SP-NON-SCORED-REFLECTION" if risk_class == "RISK-HIGH" else "SP-SHADOW-ONLY"
-    scoring_status = "non_scored" if risk_class == "RISK-HIGH" else "shadow_only"
+    policy_id = ACTIVE_SCORING_POLICY_ID
+    scoring_status = "active"
     actions, fields, labels, primary_ids = _build_actions(
         stable_id=stable_id,
         competency_id=competency_id,
@@ -677,9 +676,9 @@ def _build_protocol(
         "parent_competency_id": competency_id,
         "domain_id": domain["id"],
         "governance": {
-            "availability": "inactive",
+            "availability": "active",
             "editorial_status": "draft",
-            "runtime_projection": "none",
+            "runtime_projection": TYPED_RUNTIME_PROJECTION,
             "risk_class_id": risk_class,
             "scoring_policy_id": policy_id,
             "scoring_status": scoring_status,
@@ -831,17 +830,15 @@ def _build_protocol(
                 f"Quality for {name} requires a bounded context, allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text and artifact contents are excluded."
             ),
             "scoring_eligibility": (
-                "This package is non-scored and production-ineligible."
-                if high_risk
-                else "This package is source-only, shadow-only, and production-ineligible."
+                "Replay-verified structured evidence is score eligible under the explicit activation ledger; withholding rules still apply to each event."
             ),
             "competency_contribution": (
-                f"Designated primary measurements may produce context-bound direct {name} evidence only under offline typed evaluation; protocol performance remains distinct and is never counted twice."
+                f"Designated primary measurements may produce one context-bound direct {name} contribution under typed evaluation; protocol performance remains distinct and is never counted twice."
             ),
             "canonical_lever_allocation": "parent_competency_mapping",
             "recommendation_target_lever_ids": lever_ids,
             "minimum_evidence_before_state_update": (
-                f"No current-state update is permitted for this {name} draft under {policy_id}, regardless of completion or evidence quantity."
+                f"A current-state update requires a submitted replay-verified {name} event with an observed competency measurement and no applicable withholding condition."
             ),
             "withholding_conditions": [
                 f"Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin, or adverse {name} evidence.",
@@ -907,7 +904,7 @@ def _build_protocol(
             },
             "check_in_labels": labels,
             "completion_copy": (
-                f"Complete the bounded {name} review without claiming mastery, broad transfer, professional validation, or score activation."
+                f"Complete the bounded {name} review without claiming mastery, broad transfer, professional validation, or human-worth measurement."
             ),
             "plain_language_evidence": (
                 f"The structured record shows what happened in one limited {name} practice, including support, contradiction, defer, no result, or harm."
@@ -921,6 +918,104 @@ def _canonical_protocol_paths(protocols: list[dict[str, Any]]) -> list[str]:
     return sorted(
         f"protocols/{protocol['domain_id']}/{protocol['stable_id']}.yaml" for protocol in protocols
     )
+
+
+def _activate_protocol(protocol: dict[str, Any]) -> dict[str, Any]:
+    """Apply the owner-directed runtime and score contract without claiming review."""
+
+    governance = protocol["governance"]
+    evidence = protocol["evidence_and_scoring"]
+    governance["availability"] = "active"
+    governance["runtime_projection"] = (
+        LEGACY_RUNTIME_PROJECTION
+        if evidence["observation_contract_version"] == "practice-observation-v1"
+        else TYPED_RUNTIME_PROJECTION
+    )
+    governance["scoring_policy_id"] = ACTIVE_SCORING_POLICY_ID
+    governance["scoring_status"] = "active"
+    evidence["scoring_eligibility"] = (
+        "Replay-verified structured evidence is score eligible under the explicit "
+        "activation ledger; action-specific provenance and withholding rules still apply."
+    )
+    evidence["minimum_evidence_before_state_update"] = (
+        "One submitted replay-verified event with an observed competency measurement and "
+        "no applicable withholding condition may update current state; completion alone never does."
+    )
+    protocol["presentation"]["completion_copy"] = (
+        "Review the bounded evidence without claiming mastery, broad transfer, professional "
+        "validation, identity, dignity, or human worth."
+    )
+    for action in protocol["intervention"]["actions"]:
+        identity = action.get("typed_evidence_identity")
+        if identity is not None:
+            identity["scoring_policy_id"] = ACTIVE_SCORING_POLICY_ID
+    return protocol
+
+
+def _runtime_projection_hash(
+    protocols: list[dict[str, Any]],
+    activation: dict[str, Any],
+) -> str:
+    activation_by_id = {item["protocol_stable_id"]: item for item in activation["activations"]}
+    payload = []
+    for protocol in sorted(
+        (
+            item
+            for item in protocols
+            if item["stable_id"]
+            in {
+                "PRACTICE-BOUNDARY-01",
+                "PRACTICE-EMOTIONAL-CUES-01",
+                "PRACTICE-FRIENDSHIP-01",
+                "PRACTICE-PLAY-01",
+                "PRACTICE-PRESENCE-01",
+            }
+        ),
+        key=lambda item: item["stable_id"],
+    ):
+        evidence = protocol["evidence_and_scoring"]
+        review = protocol["completion_and_review"]
+        presentation = protocol["presentation"]
+        intervention = protocol["intervention"]
+        governance = protocol["governance"]
+        payload.append(
+            {
+                "stable_id": protocol["stable_id"],
+                "slug": protocol["slug"],
+                "name": protocol["name"],
+                "parent_competency_id": protocol["parent_competency_id"],
+                "availability": governance["availability"],
+                "duration_days": intervention["duration_days"],
+                "recommendation_reason": protocol["meaning_and_fit"]["why_recommended"],
+                "applicability_prompt": protocol["meaning_and_fit"]["applicability_question"],
+                "setup_prompt": intervention["setup"],
+                "privacy_and_boundaries": intervention["privacy_and_boundaries"],
+                "completion_criteria": review["completion_criteria"],
+                "completion_rules": review["completion_rules"],
+                "setup_copy": {
+                    **presentation["setup_copy"],
+                    "check_in_labels": presentation["check_in_labels"],
+                },
+                "check_in_fields": evidence["check_in_fields"],
+                "score_active": activation_by_id[protocol["stable_id"]]["score_active"],
+                "mastery_disclaimer": review["mastery_disclaimer"],
+                "target_lever_ids": sorted(evidence["recommendation_target_lever_ids"]),
+                "display_order": presentation["display_order"],
+                "actions": [
+                    {
+                        "stable_id": action["stable_id"],
+                        "sequence": action["sequence"],
+                        "title": action["title"],
+                        "instructions": action["instructions"],
+                        "due_within_days": action["due_within_days"],
+                        "evidence_rules": action["evidence_rules"],
+                    }
+                    for action in intervention["actions"]
+                ],
+            }
+        )
+    encoded = json.dumps(payload, ensure_ascii=True, separators=(",", ":"), sort_keys=True)
+    return hashlib.sha256(encoded.encode()).hexdigest()
 
 
 def _content_hash(manifest: dict[str, Any]) -> str:
@@ -986,7 +1081,7 @@ def _expected_documents() -> tuple[
         display_order += 1
 
     all_protocols = sorted(
-        preserved_protocols + generated_protocols,
+        [_activate_protocol(protocol) for protocol in preserved_protocols + generated_protocols],
         key=lambda item: item["parent_competency_id"],
     )
     if len(all_protocols) != 383:
@@ -996,10 +1091,15 @@ def _expected_documents() -> tuple[
             PRACTICE_ROOT / "protocols" / protocol["domain_id"] / f"{protocol['stable_id']}.yaml",
             _yaml_bytes(protocol),
         )
-        for protocol in generated_protocols
+        for protocol in all_protocols
     ]
 
     source_registry = _load_yaml(SOURCE_PATH)
+    for source in source_registry["sources"]:
+        if source["locator_kind"] == "repository_path":
+            source["content_sha256"] = hashlib.sha256(
+                (ROOT / source["locator"]).read_bytes()
+            ).hexdigest()
     canonical_source = next(
         source
         for source in source_registry["sources"]
@@ -1013,25 +1113,18 @@ def _expected_documents() -> tuple[
     )
 
     activation = _load_yaml(ACTIVATION_PATH)
-    preserved_activation = {item["protocol_stable_id"]: item for item in activation["activations"]}
     activation_entries = []
     for protocol in all_protocols:
         stable_id = protocol["stable_id"]
-        if protocol["parent_competency_id"] in PRESERVED_PARENT_IDS:
-            activation_entries.append(preserved_activation[stable_id])
-            continue
-        high_risk = protocol["governance"]["risk_class_id"] == "RISK-HIGH"
         activation_entries.append(
             {
                 "protocol_stable_id": stable_id,
-                "scoring_policy_id": protocol["governance"]["scoring_policy_id"],
-                "score_active": False,
-                "activation_status": "inactive",
-                "approved_contract": None,
-                "decision_reference": (
-                    "docs/program/M6_CURRICULUM_EXPANSION.md#phase-c--full-curriculum-authoring"
-                ),
-                "shadow_test_status": "not_applicable" if high_risk else "not_started",
+                "scoring_policy_id": ACTIVE_SCORING_POLICY_ID,
+                "score_active": True,
+                "activation_status": "active",
+                "approved_contract": SCORE_STATE_CONTRACT,
+                "decision_reference": ACTIVATION_DECISION,
+                "shadow_test_status": "accepted_and_activated",
             }
         )
     activation["activations"] = sorted(
@@ -1047,6 +1140,7 @@ def _expected_documents() -> tuple[
         value for value in manifest["content_files"] if not value.startswith("protocols/")
     ]
     manifest["content_files"] = sorted(set(static_content + manifest["protocol_files"]))
+    manifest["legacy_projection_hash"] = _runtime_projection_hash(all_protocols, activation)
     manifest["content_hash"] = "PENDING"
     return generated_files, source_registry, activation, all_protocols
 
@@ -1064,6 +1158,7 @@ def _write_or_check(check: bool) -> int:
         value for value in manifest["content_files"] if not value.startswith("protocols/")
     ]
     manifest["content_files"] = sorted(set(static_content + manifest["protocol_files"]))
+    manifest["legacy_projection_hash"] = _runtime_projection_hash(all_protocols, activation)
     manifest["content_hash"] = "PENDING"
 
     if not check:
@@ -1075,7 +1170,7 @@ def _write_or_check(check: bool) -> int:
         MANIFEST_PATH.write_bytes(_yaml_bytes(manifest))
         print(
             "Authored 383/383 source packages: "
-            f"{len(generated_files)} generated, {len(PRESERVED_PARENT_IDS)} preserved; "
+            f"{len(generated_files)} runtime and score active; "
             f"content hash {manifest['content_hash']}."
         )
         return 0

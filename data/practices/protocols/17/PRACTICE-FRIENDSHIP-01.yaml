@@ -10,7 +10,7 @@ governance:
   editorial_status: projected_legacy
   runtime_projection: GG-PRACTICE-RUNTIME-PROJECTION-1.0
   risk_class_id: RISK-LOW
-  scoring_policy_id: SP-SELF-REPORT-ELIGIBLE
+  scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
@@ -146,14 +146,16 @@ intervention:
     resource_variants:
     - A short message or accessible remote activity can substitute for travel.
   pause_conditions:
-  - Pause when welcome, timing, privacy, or capacity is uncertain; resume only when contact is freely chosen.
+  - Pause when welcome, timing, privacy, or capacity is uncertain; resume only when contact is freely
+    chosen.
   stop_conditions:
   - Stop if contact is unwelcome, privacy cannot be respected, or the interaction becomes coercive.
   escalation_conditions:
   - Use trusted or qualified support rather than this protocol for abuse, stalking, crisis, or unsafe
     dependency.
   professional_referral_conditions:
-  - Seek appropriate qualified or emergency support for crisis, abuse, stalking, or unsafe dependency rather than continuing the protocol.
+  - Seek appropriate qualified or emergency support for crisis, abuse, stalking, or unsafe dependency
+    rather than continuing the protocol.
 evidence_and_scoring:
   accepted_evidence_types:
   - structured firsthand observation
@@ -186,8 +188,8 @@ evidence_and_scoring:
     action-specific markers; it is not a rating of the friendship.
   evidence_quality_rubric: Quality reflects structured, firsthand detail, independence, and context; free-text
     length and emotional intensity do not increase evidence mass.
-  scoring_eligibility: Only replay-verified evidence under GG-EVIDENCE-1.0 and the separately activated
-    GG-SCORE-STATE-1.0 contract may update current lever state.
+  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
+    ledger; action-specific provenance and withholding rules still apply.
   competency_contribution: The runtime event is evidence about protocol performance only; direct competency
     state is not implemented in M6A.
   canonical_lever_allocation: parent_competency_mapping
@@ -195,8 +197,9 @@ evidence_and_scoring:
   - L26
   - L23
   - L24
-  minimum_evidence_before_state_update: A submitted, attempted action with contract-valid structured observations
-    and available baseline mass; drafts and inconclusive evidence are withheld.
+  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
+    measurement and no applicable withholding condition may update current state; completion alone never
+    does.
   withholding_conditions:
   - No real action was attempted.
   - Evidence direction is inconclusive or legacy-unknown.
@@ -259,8 +262,8 @@ presentation:
     internal_resistance: I noticed how difficult or vulnerable the action felt
     expected_reciprocity: I recorded my expectation without treating reciprocity as owed
     observed_reciprocity: I recorded only what was observable about reciprocity
-  completion_copy: Review what happened in this relationship without turning one cycle into a judgment
-    about either person's worth or the friendship as a whole.
+  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
+    validation, identity, dignity, or human worth.
   plain_language_evidence: The record describes what you attempted, what was observable, how much support
     or context was involved, and what remains uncertain.
   display_order: 1

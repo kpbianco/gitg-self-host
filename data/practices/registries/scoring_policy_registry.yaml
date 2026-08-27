@@ -4,6 +4,22 @@ not_applicable_disposition:
   state_effect: withhold_without_penalty
   explanation: A protocol that does not fit the person's context is withheld or deferred and never interpreted as a deficit.
 policies:
+  - policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
+    name: Structured replay-verified evidence eligible
+    accepted_evidence:
+      - versioned structured firsthand observation
+      - reviewed artifact criteria without artifact contents
+      - bounded objective indicator
+      - consented observer or qualified attestation when required by the action rule
+    required_for_update: A replay-verified submitted event whose action-specific provenance, recency, adverse-outcome, and withholding rules permit an update.
+    preferred_evidence:
+      - repeated bounded observations across explicitly recorded contexts
+      - the strongest privacy-minimizing provenance permitted by the action rule
+    state_effect: eligible_if_activated
+    withholding_behavior: Withhold unattempted, unknown, inconclusive, stale, adverse, unobserved, invalid, unconsented, or cross-epoch evidence without penalty.
+    free_text_policy: never_an_opaque_score_input
+    completion_mastery_boundary: completion_never_establishes_mastery
+    not_applicable_disposition: N-A-NO-DEFICIT
   - policy_id: SP-SELF-REPORT-ELIGIBLE
     name: Structured self-report eligible
     accepted_evidence:

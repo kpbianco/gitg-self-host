@@ -1,6 +1,5 @@
 import copy
 import csv
-import hashlib
 import json
 import shutil
 from pathlib import Path
@@ -10,7 +9,7 @@ import yaml
 from jsonschema import Draft202012Validator
 
 from growth.domain.practice_content import (
-    FROZEN_LEGACY_CONFIGURATION_HASH,
+    FROZEN_LEGACY_PROTOCOL_IDS,
     PracticeContentError,
     allowed_scoring_statuses_for_effect,
     configuration_hash,
@@ -50,19 +49,22 @@ def _copy_practice_tree(tmp_path: Path) -> Path:
     return base
 
 
-def test_canonical_practice_bundle_preserves_five_protocol_runtime_projection():
+def test_canonical_practice_bundle_projects_and_activates_all_protocols():
     bundle = load_practice_content_bundle(ROOT)
     runtime = bundle.runtime_protocols
 
-    assert len(runtime) == 5
+    assert len(runtime) == 383
     assert len(bundle.protocols) == len(bundle.release_manifest["protocol_files"])
-    assert sum(len(protocol["actions"]) for protocol in runtime) == 15
+    assert sum(len(protocol["actions"]) for protocol in runtime) == 1151
     assert {protocol["stable_id"] for protocol in runtime if protocol["score_active"]} == {
-        "PRACTICE-FRIENDSHIP-01"
+        protocol["stable_id"] for protocol in runtime
     }
+    legacy_runtime = [
+        protocol for protocol in runtime if protocol["stable_id"] in FROZEN_LEGACY_PROTOCOL_IDS
+    ]
     assert (
-        configuration_hash([legacy_projection_payload(protocol) for protocol in runtime])
-        == FROZEN_LEGACY_CONFIGURATION_HASH
+        configuration_hash([legacy_projection_payload(protocol) for protocol in legacy_runtime])
+        == bundle.release_manifest["legacy_projection_hash"]
     )
     assert bundle.content_hash == bundle.release_manifest["content_hash"]
     assert load_and_validate_bundle().source_hash == (
@@ -85,6 +87,7 @@ def test_registries_cover_risk_scoring_source_family_and_activation_boundaries()
         "SP-QUALIFIED-EVIDENCE-REQUIRED",
         "SP-SHADOW-ONLY",
         "SP-NON-SCORED-REFLECTION",
+        "SP-STRUCTURED-EVIDENCE-ELIGIBLE",
     } <= set(bundle.scoring_policies)
     assert len(bundle.protocol_families) == 12
     assert {
@@ -94,7 +97,9 @@ def test_registries_cover_risk_scoring_source_family_and_activation_boundaries()
         "SRC-M6D-DELIBERATE-PRACTICE-LIMITS",
         "SRC-M6D-NCHH-HEALTHY-HOME",
     } <= set(bundle.sources)
-    assert sum(activation["score_active"] for activation in bundle.activation_entries.values()) == 1
+    assert (
+        sum(activation["score_active"] for activation in bundle.activation_entries.values()) == 383
+    )
 
 
 def test_schema_rejects_unknown_protocol_fields_and_unknown_versions(tmp_path):
@@ -126,7 +131,7 @@ def test_schema_rejects_unknown_protocol_fields_and_unknown_versions(tmp_path):
         ("cross_kind_field", "schema validation failed"),
         ("undeclared_check_in", "typed fields must exactly match"),
         ("identity_mismatch", "must exactly match"),
-        ("runtime_projection", "cannot be projected"),
+        ("runtime_projection", "active typed runtime projection"),
     ],
 )
 def test_source_only_typed_rules_fail_closed(tmp_path, mutation, error):
@@ -191,35 +196,23 @@ def test_typed_measurement_schema_requires_exact_kind_fields():
     assert list(validator.iter_errors(cross_kind))
 
 
-def test_frozen_legacy_package_bytes_remain_exact():
-    expected = (
-        (
-            "protocols/08/PRACTICE-PRESENCE-01.yaml",
-            "5d0c39a9fb36d816253fb231cc7d132b1a72583b71e364339749af37a0bdf366",
-        ),
-        (
-            "protocols/11/PRACTICE-BOUNDARY-01.yaml",
-            "c008291dd82b300bc8e216b8c4fab4f33982f86e8ec3a3c0a90c26b85ef4b4fc",
-        ),
-        (
-            "protocols/16/PRACTICE-EMOTIONAL-CUES-01.yaml",
-            "bca089dfacd413719aa89b1863d05b317f6d85ef3faf49eb72c18b675b3d6793",
-        ),
-        (
-            "protocols/17/PRACTICE-FRIENDSHIP-01.yaml",
-            "a924ff732696468c5dd5305ce0145bdbd483ab3c66390dd216b0ac31fa5d789a",
-        ),
-        (
-            "protocols/26/PRACTICE-PLAY-01.yaml",
-            "48810b2dd8e66e9e7ec33a9a7000b2f5bbffb6289c74f36d73d1eb1a830fd7a8",
-        ),
-    )
+def test_legacy_protocols_keep_the_v1_evidence_contract_inside_the_all_active_runtime():
+    bundle = load_practice_content_bundle(ROOT)
+    legacy = {
+        protocol["stable_id"]: protocol
+        for protocol in bundle.protocols
+        if protocol["stable_id"] in FROZEN_LEGACY_PROTOCOL_IDS
+    }
 
-    for relative_path, digest in expected:
-        assert (
-            hashlib.sha256((ROOT / "data/practices" / relative_path).read_bytes()).hexdigest()
-            == digest
-        )
+    assert set(legacy) == set(FROZEN_LEGACY_PROTOCOL_IDS)
+    assert {protocol["governance"]["runtime_projection"] for protocol in legacy.values()} == {
+        "GG-PRACTICE-RUNTIME-PROJECTION-1.0"
+    }
+    assert {
+        action["evidence_rules"]["schema_version"]
+        for protocol in legacy.values()
+        for action in protocol["intervention"]["actions"]
+    } == {"practice-observation-v1"}
 
 
 def test_manifest_rejects_unlisted_protocol_files(tmp_path):
@@ -233,25 +226,17 @@ def test_manifest_rejects_unlisted_protocol_files(tmp_path):
         load_practice_content_bundle(base)
 
 
-def test_activation_ledger_rejects_second_score_active_protocol(tmp_path):
+def test_activation_ledger_rejects_any_protocol_removed_from_all_active_contract(tmp_path):
     base = _copy_practice_tree(tmp_path)
-    play_path = base / "data" / "practices" / "protocols" / "26" / "PRACTICE-PLAY-01.yaml"
-    play_protocol = yaml.safe_load(play_path.read_text())
-    play_protocol["governance"]["scoring_policy_id"] = "SP-SELF-REPORT-ELIGIBLE"
-    play_protocol["governance"]["scoring_status"] = "active"
-    play_path.write_text(yaml.safe_dump(play_protocol, sort_keys=False))
     activation_path = base / "data" / "practices" / "registries" / "activation_ledger.yaml"
     ledger = yaml.safe_load(activation_path.read_text())
     play = next(
         item for item in ledger["activations"] if item["protocol_stable_id"] == "PRACTICE-PLAY-01"
     )
-    play["score_active"] = True
-    play["activation_status"] = "active"
-    play["scoring_policy_id"] = "SP-SELF-REPORT-ELIGIBLE"
-    play["approved_contract"] = "UNREVIEWED"
+    play["score_active"] = False
     activation_path.write_text(yaml.safe_dump(ledger, sort_keys=False))
 
-    with pytest.raises(PracticeContentError, match="separately reviewed contract"):
+    with pytest.raises(PracticeContentError, match="unledgered score activation"):
         load_practice_content_bundle(base)
 
 
@@ -272,7 +257,7 @@ def test_frozen_active_contract_rejects_contract_substitution(tmp_path):
     friendship["approved_contract"] = "FAKE"
     activation_path.write_text(yaml.safe_dump(ledger, sort_keys=False))
 
-    with pytest.raises(PracticeContentError, match="activation boundary changed"):
+    with pytest.raises(PracticeContentError, match="active scoring contract does not match M6F"):
         load_practice_content_bundle(base)
 
 

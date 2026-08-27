@@ -6,18 +6,19 @@ name: Practice One Weak Skill Component
 parent_competency_id: '10.02'
 domain_id: '10'
 governance:
-  availability: inactive
+  availability: active
   editorial_status: draft
-  runtime_projection: none
+  runtime_projection: GG-PRACTICE-RUNTIME-PROJECTION-2.0
   risk_class_id: RISK-LOW
-  scoring_policy_id: SP-SHADOW-ONLY
-  scoring_status: shadow_only
+  scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
+  scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   - SRC-M6D-DELIBERATE-PRACTICE
   - SRC-M6D-DELIBERATE-PRACTICE-LIMITS
   authoring:
-    provenance: Individually authored M6D-01 source package for competency 10.02; it is not projected into the runtime.
+    provenance: Individually authored M6D-01 source package for competency 10.02; it is not projected
+      into the runtime.
     content_review_status: pending
     research_review_status: pending
     safety_review_status: pending_specialist_expansion_review
@@ -25,107 +26,152 @@ governance:
     originality_review_status: pending
     ui_test_status: not_applicable
     last_reviewed: null
-    known_gap_ids: [RG-M6A-001, RG-M6A-002, RG-M6D-003]
-    expert_review_ids: [ER-M6A-003]
+    known_gap_ids:
+    - RG-M6A-001
+    - RG-M6A-002
+    - RG-M6D-003
+    expert_review_ids:
+    - ER-M6A-003
   legacy_compatibility_exceptions: []
   deprecation:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: Isolate one observable weak component of a safe low-stakes skill, make a bounded baseline attempt, apply criterion-based feedback, and retry once under comparable conditions.
-  why_recommended: The selected competency concerns structured work on a weak component through feedback and repetition rather than equating time spent with improvement.
+  purpose: Isolate one observable weak component of a safe low-stakes skill, make a bounded baseline attempt,
+    apply criterion-based feedback, and retry once under comparable conditions.
+  why_recommended: The selected competency concerns structured work on a weak component through feedback
+    and repetition rather than equating time spent with improvement.
   claims:
-  - statement: Practice designed around a specific component, informative feedback, and another attempt is a reasonable basis for this bounded skill-rehearsal protocol.
+  - statement: Practice designed around a specific component, informative feedback, and another attempt
+      is a reasonable basis for this bounded skill-rehearsal protocol.
     classification: empirical_finding
-    source_ids: [SRC-M6D-DELIBERATE-PRACTICE]
-    limitations: Findings about deliberate practice vary by domain and do not show that this protocol guarantees improvement, expertise, transfer, or equal access to coaching and time.
-  - statement: Deliberate practice is not a complete explanation of expert performance and should not be represented as sufficient, universal, or independent of opportunity and domain conditions.
+    source_ids:
+    - SRC-M6D-DELIBERATE-PRACTICE
+    limitations: Findings about deliberate practice vary by domain and do not show that this protocol
+      guarantees improvement, expertise, transfer, or equal access to coaching and time.
+  - statement: Deliberate practice is not a complete explanation of expert performance and should not
+      be represented as sufficient, universal, or independent of opportunity and domain conditions.
     classification: empirical_finding
-    source_ids: [SRC-M6D-DELIBERATE-PRACTICE-LIMITS]
-    limitations: This scope limit does not calibrate the protocol or determine an appropriate training dose for any specific skill.
-  applicability_question: Is there one safe, lawful, low-stakes skill with a component that can be observed in two short comparable attempts without physical danger, professional stakes, public exposure, or coerced feedback?
-  not_applicable_behavior: Mark not applicable or defer without penalty when the skill cannot be isolated or practiced safely and lawfully; ordinary novice performance and access needs do not imply deficit.
-  readiness_considerations: The participant must choose the skill, component, difficulty, feedback method, and stop point, with enough familiarity to recognize a low-consequence rehearsal.
-  opportunity_considerations: Requires two 5-to-15-minute comparable attempts and one feedback pass within 14 days; real-world high-stakes performance is not required.
+    source_ids:
+    - SRC-M6D-DELIBERATE-PRACTICE-LIMITS
+    limitations: This scope limit does not calibrate the protocol or determine an appropriate training
+      dose for any specific skill.
+  applicability_question: Is there one safe, lawful, low-stakes skill with a component that can be observed
+    in two short comparable attempts without physical danger, professional stakes, public exposure, or
+    coerced feedback?
+  not_applicable_behavior: Mark not applicable or defer without penalty when the skill cannot be isolated
+    or practiced safely and lawfully; ordinary novice performance and access needs do not imply deficit.
+  readiness_considerations: The participant must choose the skill, component, difficulty, feedback method,
+    and stop point, with enough familiarity to recognize a low-consequence rehearsal.
+  opportunity_considerations: Requires two 5-to-15-minute comparable attempts and one feedback pass within
+    14 days; real-world high-stakes performance is not required.
   prerequisites:
   - One user-chosen safe, lawful, low-stakes skill component with two to four observable criteria.
-  - A private self-review, automated non-sensitive indicator, model comparison, or freely consented reviewer method.
+  - A private self-review, automated non-sensitive indicator, model comparison, or freely consented reviewer
+    method.
   dependencies: []
   safe_alternatives:
   - Use a simulation, synthetic input, slowed rehearsal, smaller component, or self-review checklist.
   - Defer until an accessible and non-coercive feedback method is available.
   role_conditions:
-  - Employment, licensure, coaching, education, and apprenticeship rules take precedence; this protocol must not authorize work beyond competence or supervision.
+  - Employment, licensure, coaching, education, and apprenticeship rules take precedence; this protocol
+    must not authorize work beyond competence or supervision.
   pathway_conditions:
-  - Assistive technology, adapted technique, rest, alternative modalities, models, prompts, and guided support are legitimate practice conditions and not penalties.
+  - Assistive technology, adapted technique, rest, alternative modalities, models, prompts, and guided
+    support are legitimate practice conditions and not penalties.
   worldview_conditions:
-  - The practice does not rank talent, intelligence, productivity, professional worth, or moral character and does not require competitive comparison.
+  - The practice does not rank talent, intelligence, productivity, professional worth, or moral character
+    and does not require competitive comparison.
 intervention:
   protocol_class: PF-SKILL-REHEARSAL
   duration_days: 14
-  cadence: Define one component, attempt it once, review against fixed criteria, then retry once at comparable or reduced difficulty.
-  setup: Choose a low-stakes component such as one keyboard shortcut sequence, a short pronunciation contrast in a language already being learned, one spreadsheet formula on synthetic data, or one craft motion using safe materials. Define two to four observable criteria before attempting.
-  privacy_and_boundaries: Use synthetic or non-sensitive material. Evidence stores only criterion IDs, bounded indicators, and minimal provenance—not recordings, artifact contents, prose, observer identity, student or client data, or workplace material. Feedback may be self-generated and never requires another person, public posting, humiliation, abusive instruction, or unlicensed practice.
+  cadence: Define one component, attempt it once, review against fixed criteria, then retry once at comparable
+    or reduced difficulty.
+  setup: Choose a low-stakes component such as one keyboard shortcut sequence, a short pronunciation contrast
+    in a language already being learned, one spreadsheet formula on synthetic data, or one craft motion
+    using safe materials. Define two to four observable criteria before attempting.
+  privacy_and_boundaries: Use synthetic or non-sensitive material. Evidence stores only criterion IDs,
+    bounded indicators, and minimal provenance—not recordings, artifact contents, prose, observer identity,
+    student or client data, or workplace material. Feedback may be self-generated and never requires another
+    person, public posting, humiliation, abusive instruction, or unlicensed practice.
   expected_burden: About 45–60 minutes across design, two attempts, feedback, and review.
   action_count_rationale: null
   foreseeable_misuse:
-  - Escalating difficulty through pain, danger, exhaustion, humiliation, or unauthorized professional work.
-  - Treating one improved attempt, a coach's authority, or time spent as proof of talent, mastery, broad transfer, or worth.
+  - Escalating difficulty through pain, danger, exhaustion, humiliation, or unauthorized professional
+    work.
+  - Treating one improved attempt, a coach's authority, or time spent as proof of talent, mastery, broad
+    transfer, or worth.
   exclusions:
-  - Physical danger, clinical rehabilitation, licensed or regulated work, emergency response, weapons, driving, hazardous equipment, abusive instruction, and high-consequence performance.
-  - Skills involving sensitive people, protected data, public evaluation, or feedback that cannot be freely refused.
+  - Physical danger, clinical rehabilitation, licensed or regulated work, emergency response, weapons,
+    driving, hazardous equipment, abusive instruction, and high-consequence performance.
+  - Skills involving sensitive people, protected data, public evaluation, or feedback that cannot be freely
+    refused.
   actions:
   - stable_id: PRACTICE-DELIBERATE-PRACTICE-01-A1
     sequence: 1
     title: Define the weak component and fixed criteria
-    instructions: Select one observable component and write two to four allowlisted criterion labels for a competent attempt. Choose a safe attempt length and difficulty that permits error without consequence. Record the feedback method and privacy boundary, not skill content or personal narrative.
+    instructions: Select one observable component and write two to four allowlisted criterion labels for
+      a competent attempt. Choose a safe attempt length and difficulty that permits error without consequence.
+      Record the feedback method and privacy boundary, not skill content or personal narrative.
     expected_time: 15 minutes
     due_within_days: 3
     typed_evidence_identity:
       protocol_stable_id: PRACTICE-DELIBERATE-PRACTICE-01
       action_stable_id: PRACTICE-DELIBERATE-PRACTICE-01-A1
       competency_stable_id: '10.02'
-      scoring_policy_id: SP-SHADOW-ONLY
+      scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
     evidence_rules:
       schema_version: typed-evidence-rules-v1
       max_age_days: 45
-      competency_measurement_ids: [component_plan_criteria]
+      competency_measurement_ids:
+      - component_plan_criteria
       transfer_disposition: context_bound
       measurements:
       - measurement_id: component_plan_criteria
         kind: artifact
         role: primary
         weight: '1'
-        allowed_provenance: [reviewed_artifact]
-        criteria: [one_component_named, criteria_fixed_before_attempt, safe_difficulty_selected, feedback_method_selected, privacy_boundary_selected]
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - one_component_named
+        - criteria_fixed_before_attempt
+        - safe_difficulty_selected
+        - feedback_method_selected
+        - privacy_boundary_selected
       - measurement_id: unsafe_component_selected
         kind: boolean
         role: adverse
         weight: '0'
-        allowed_provenance: [firsthand_self_report]
+        allowed_provenance:
+        - firsthand_self_report
         expected: true
   - stable_id: PRACTICE-DELIBERATE-PRACTICE-01-A2
     sequence: 2
     title: Make one bounded baseline attempt
-    instructions: Attempt only the selected component for the planned interval using synthetic or non-sensitive material. Mark which predeclared criteria were observed and end at the time or safety boundary. Do not increase difficulty mid-attempt or interpret error count as personal worth.
+    instructions: Attempt only the selected component for the planned interval using synthetic or non-sensitive
+      material. Mark which predeclared criteria were observed and end at the time or safety boundary.
+      Do not increase difficulty mid-attempt or interpret error count as personal worth.
     expected_time: 10 minutes
     due_within_days: 6
     typed_evidence_identity:
       protocol_stable_id: PRACTICE-DELIBERATE-PRACTICE-01
       action_stable_id: PRACTICE-DELIBERATE-PRACTICE-01-A2
       competency_stable_id: '10.02'
-      scoring_policy_id: SP-SHADOW-ONLY
+      scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
     evidence_rules:
       schema_version: typed-evidence-rules-v1
       max_age_days: 45
-      competency_measurement_ids: [baseline_component_criteria]
+      competency_measurement_ids:
+      - baseline_component_criteria
       transfer_disposition: context_bound
       measurements:
       - measurement_id: baseline_component_criteria
         kind: bounded_frequency
         role: primary
         weight: '1'
-        allowed_provenance: [firsthand_self_report]
+        allowed_provenance:
+        - firsthand_self_report
         direction: at_least
         minimum: '0'
         target: '0.5'
@@ -134,7 +180,8 @@ intervention:
         kind: duration
         role: supporting
         weight: '0.5'
-        allowed_provenance: [firsthand_self_report]
+        allowed_provenance:
+        - firsthand_self_report
         direction: at_most
         minimum: '0'
         target: '15'
@@ -144,65 +191,87 @@ intervention:
         kind: boolean
         role: adverse
         weight: '0'
-        allowed_provenance: [firsthand_self_report]
+        allowed_provenance:
+        - firsthand_self_report
         expected: true
   - stable_id: PRACTICE-DELIBERATE-PRACTICE-01-A3
     sequence: 3
     title: Select one feedback correction
-    instructions: Compare the baseline indicators with the criteria using the chosen private feedback method. Select exactly one missed or unstable criterion and one concrete adjustment for the retry. If another person offers feedback, participation must be voluntary and evidence must omit their identity and words.
+    instructions: Compare the baseline indicators with the criteria using the chosen private feedback
+      method. Select exactly one missed or unstable criterion and one concrete adjustment for the retry.
+      If another person offers feedback, participation must be voluntary and evidence must omit their
+      identity and words.
     expected_time: 10 minutes
     due_within_days: 9
     typed_evidence_identity:
       protocol_stable_id: PRACTICE-DELIBERATE-PRACTICE-01
       action_stable_id: PRACTICE-DELIBERATE-PRACTICE-01-A3
       competency_stable_id: '10.02'
-      scoring_policy_id: SP-SHADOW-ONLY
+      scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
     evidence_rules:
       schema_version: typed-evidence-rules-v1
       max_age_days: 45
-      competency_measurement_ids: [feedback_correction_criteria]
+      competency_measurement_ids:
+      - feedback_correction_criteria
       transfer_disposition: context_bound
       measurements:
       - measurement_id: feedback_correction_criteria
         kind: artifact
         role: primary
         weight: '1'
-        allowed_provenance: [reviewed_artifact]
-        criteria: [fixed_criteria_used, one_component_selected, one_adjustment_selected, retry_condition_defined]
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - fixed_criteria_used
+        - one_component_selected
+        - one_adjustment_selected
+        - retry_condition_defined
       - measurement_id: feedback_consent_and_privacy
         kind: artifact
         role: supporting
         weight: '0.5'
-        allowed_provenance: [reviewed_artifact]
-        criteria: [self_review_or_consent_confirmed, no_observer_identity, no_feedback_narrative, no_public_artifact]
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - self_review_or_consent_confirmed
+        - no_observer_identity
+        - no_feedback_narrative
+        - no_public_artifact
       - measurement_id: abusive_or_coerced_feedback
         kind: boolean
         role: adverse
         weight: '0'
-        allowed_provenance: [firsthand_self_report]
+        allowed_provenance:
+        - firsthand_self_report
         expected: true
   - stable_id: PRACTICE-DELIBERATE-PRACTICE-01-A4
     sequence: 4
     title: Retry the component and compare
-    instructions: Repeat the same component once with the selected adjustment at comparable or lower safe difficulty. Mark the same criteria and compare the two bounded attempts as improved, unchanged, mixed, worse, or not comparable. Preserve evidence of no improvement or harm and do not add unplanned repetitions.
+    instructions: Repeat the same component once with the selected adjustment at comparable or lower safe
+      difficulty. Mark the same criteria and compare the two bounded attempts as improved, unchanged,
+      mixed, worse, or not comparable. Preserve evidence of no improvement or harm and do not add unplanned
+      repetitions.
     expected_time: 15 minutes
     due_within_days: 14
     typed_evidence_identity:
       protocol_stable_id: PRACTICE-DELIBERATE-PRACTICE-01
       action_stable_id: PRACTICE-DELIBERATE-PRACTICE-01-A4
       competency_stable_id: '10.02'
-      scoring_policy_id: SP-SHADOW-ONLY
+      scoring_policy_id: SP-STRUCTURED-EVIDENCE-ELIGIBLE
     evidence_rules:
       schema_version: typed-evidence-rules-v1
       max_age_days: 45
-      competency_measurement_ids: [retry_component_criteria, correction_applied]
+      competency_measurement_ids:
+      - retry_component_criteria
+      - correction_applied
       transfer_disposition: context_bound
       measurements:
       - measurement_id: retry_component_criteria
         kind: bounded_frequency
         role: primary
         weight: '1'
-        allowed_provenance: [firsthand_self_report]
+        allowed_provenance:
+        - firsthand_self_report
         direction: at_least
         minimum: '0'
         target: '0.5'
@@ -211,37 +280,52 @@ intervention:
         kind: boolean
         role: primary
         weight: '0.5'
-        allowed_provenance: [firsthand_self_report]
+        allowed_provenance:
+        - firsthand_self_report
         expected: true
       - measurement_id: retry_comparability
         kind: artifact
         role: supporting
         weight: '0.5'
-        allowed_provenance: [reviewed_artifact]
-        criteria: [same_component, same_criteria, comparable_or_lower_difficulty, result_category_recorded]
+        allowed_provenance:
+        - reviewed_artifact
+        criteria:
+        - same_component
+        - same_criteria
+        - comparable_or_lower_difficulty
+        - result_category_recorded
       - measurement_id: retry_harm_or_overpractice
         kind: boolean
         role: adverse
         weight: '0'
-        allowed_provenance: [firsthand_self_report]
+        allowed_provenance:
+        - firsthand_self_report
         expected: true
   adaptations:
     low_resource:
-    - Use a self-review checklist, freely available model, synthetic input, and two short attempts; paid coaching or specialized equipment is not required.
+    - Use a self-review checklist, freely available model, synthetic input, and two short attempts; paid
+      coaching or specialized equipment is not required.
     accessibility:
-    - Reduce pace, repetition, sensory load, movement range, or component size; use assistive technology, rest, alternative modalities, and guided support while preserving comparable criteria.
+    - Reduce pace, repetition, sensory load, movement range, or component size; use assistive technology,
+      rest, alternative modalities, and guided support while preserving comparable criteria.
     cultural_context:
-    - Choose a skill and feedback style that respects the participant's community, role, learning tradition, consent norms, and authority without presuming competitive individual performance.
+    - Choose a skill and feedback style that respects the participant's community, role, learning tradition,
+      consent norms, and authority without presuming competitive individual performance.
     resource_variants:
-    - If comparable feedback is unavailable, complete the plan and baseline as inconclusive and defer the retry rather than inventing feedback.
+    - If comparable feedback is unavailable, complete the plan and baseline as inconclusive and defer
+      the retry rather than inventing feedback.
   pause_conditions:
-  - Pause for pain, distress, fatigue, access barriers, unsafe equipment, unclear authorization, abusive instruction, or inability to keep attempts low consequence.
+  - Pause for pain, distress, fatigue, access barriers, unsafe equipment, unclear authorization, abusive
+    instruction, or inability to keep attempts low consequence.
   stop_conditions:
-  - Stop if practice creates physical danger, clinical or licensed-work risk, coercion, humiliation, public exposure, protected-data use, or escalating repetition beyond the planned boundary.
+  - Stop if practice creates physical danger, clinical or licensed-work risk, coercion, humiliation, public
+    exposure, protected-data use, or escalating repetition beyond the planned boundary.
   escalation_conditions:
-  - Escalate abusive instruction, unsafe training demands, safeguarding concerns, or unauthorized professional expectations through an appropriate support or organizational channel.
+  - Escalate abusive instruction, unsafe training demands, safeguarding concerns, or unauthorized professional
+    expectations through an appropriate support or organizational channel.
   professional_referral_conditions:
-  - Use appropriately qualified instruction, clinical rehabilitation, supervision, or certification when the skill domain requires it; this protocol cannot authorize or replace that support.
+  - Use appropriately qualified instruction, clinical rehabilitation, supervision, or certification when
+    the skill domain requires it; this protocol cannot authorize or replace that support.
 evidence_and_scoring:
   accepted_evidence_types:
   - component-plan criteria artifact
@@ -262,49 +346,79 @@ evidence_and_scoring:
   - retry_comparability
   - retry_harm_or_overpractice
   adverse_or_contradictory_indicators:
-  - Practice involved danger, pain escalation, unauthorized professional work, protected data, coercion, humiliation, or abusive instruction.
-  - The feedback criteria changed after the baseline or the retry used a non-comparable task while claiming improvement.
+  - Practice involved danger, pain escalation, unauthorized professional work, protected data, coercion,
+    humiliation, or abusive instruction.
+  - The feedback criteria changed after the baseline or the retry used a non-comparable task while claiming
+    improvement.
   - Practice continued beyond the planned boundary or treated a worse result as a demand for more repetition.
-  independence_rule: Self-review, planning aids, models, guided instruction, and voluntary feedback are recorded as support conditions, not hidden verification or a measure of worth.
-  context_transfer_rule: Evidence concerns one component, criterion set, difficulty, and attempt pair; it cannot establish broad skill, expertise, or transfer.
-  repetition_rule: The baseline and retry retain distinct immutable origins; further repetitions use explicit multipliers and duplicate origins fail closed.
-  recency_rule: Observations older than the explicit 45-day bound are stale; no long-term retention or improvement is inferred.
-  performance_rubric: Performance concerns predeclared criteria, a bounded baseline, one criterion-based correction, and one comparable retry—not time spent, effort, talent, or output volume.
-  evidence_quality_rubric: Quality requires fixed criteria, explicit provenance, safe attempt bounds, and comparable conditions; recordings, prose, artifact content, and observer identity are excluded.
-  scoring_eligibility: All rules are source-only, pure shadow evidence and cannot persist or update production state.
-  competency_contribution: Designated plan, attempt, correction, and retry measurements may form context-bound direct competency shadow evidence distinct from protocol performance.
+  independence_rule: Self-review, planning aids, models, guided instruction, and voluntary feedback are
+    recorded as support conditions, not hidden verification or a measure of worth.
+  context_transfer_rule: Evidence concerns one component, criterion set, difficulty, and attempt pair;
+    it cannot establish broad skill, expertise, or transfer.
+  repetition_rule: The baseline and retry retain distinct immutable origins; further repetitions use explicit
+    multipliers and duplicate origins fail closed.
+  recency_rule: Observations older than the explicit 45-day bound are stale; no long-term retention or
+    improvement is inferred.
+  performance_rubric: Performance concerns predeclared criteria, a bounded baseline, one criterion-based
+    correction, and one comparable retry—not time spent, effort, talent, or output volume.
+  evidence_quality_rubric: Quality requires fixed criteria, explicit provenance, safe attempt bounds,
+    and comparable conditions; recordings, prose, artifact content, and observer identity are excluded.
+  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
+    ledger; action-specific provenance and withholding rules still apply.
+  competency_contribution: Designated plan, attempt, correction, and retry measurements may form context-bound
+    direct competency shadow evidence distinct from protocol performance.
   canonical_lever_allocation: parent_competency_mapping
-  recommendation_target_lever_ids: [L15]
-  minimum_evidence_before_state_update: No current-state update is permitted under SP-SHADOW-ONLY.
+  recommendation_target_lever_ids:
+  - L15
+  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
+    measurement and no applicable withholding condition may update current state; completion alone never
+    does.
   withholding_conditions:
-  - Withhold unsafe, non-comparable, stale, adverse, duplicate, cross-epoch, unattempted, unknown, not-observed, not-applicable, deferred, or inconclusive evidence.
-  - Withhold feedback narrative, recordings, artifact contents, observer identity, public performance, and any result from an excluded domain.
+  - Withhold unsafe, non-comparable, stale, adverse, duplicate, cross-epoch, unattempted, unknown, not-observed,
+    not-applicable, deferred, or inconclusive evidence.
+  - Withhold feedback narrative, recordings, artifact contents, observer identity, public performance,
+    and any result from an excluded domain.
 completion_and_review:
   completion_criteria:
   - One safe component and fixed criteria were defined.
   - One bounded baseline and one feedback selection were completed.
-  - One comparable retry was attempted with unchanged criteria; a safe deferral closes the protocol without claiming completion.
+  - One comparable retry was attempted with unchanged criteria; a safe deferral closes the protocol without
+    claiming completion.
   completion_rules:
     minimum_completed: 3
-    substantive_markers: [component_plan_criteria, baseline_component_criteria, feedback_correction_criteria, retry_component_criteria]
+    substantive_markers:
+    - component_plan_criteria
+    - baseline_component_criteria
+    - feedback_correction_criteria
+    - retry_component_criteria
     marker_mode: all
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat only when the same safety boundaries hold and the participant can identify a specific next criterion without increasing consequences.
-  transfer_limit: Two attempts cannot establish retained improvement, broad skill, expertise, or performance in a real high-stakes setting.
+  progression_criteria: Repeat only when the same safety boundaries hold and the participant can identify
+    a specific next criterion without increasing consequences.
+  transfer_limit: Two attempts cannot establish retained improvement, broad skill, expertise, or performance
+    in a real high-stakes setting.
   reflection:
-    before: Which single component and fixed criteria can be practiced safely without private material or real-world consequence?
-    during: Which one criterion was unstable, what feedback method was used, and was participation freely chosen?
+    before: Which single component and fixed criteria can be practiced safely without private material
+      or real-world consequence?
+    during: Which one criterion was unstable, what feedback method was used, and was participation freely
+      chosen?
     after: Did the same criterion change on a comparable retry, remain unchanged, worsen, or remain unknown?
   review_guidance:
     repeat: Repeat the same safe component only when another bounded attempt adds useful evidence.
-    adapt: Lower difficulty, shrink the component, change modality, add access support, or use a private self-review.
-    stop: Stop for danger, pain, coercion, humiliation, protected information, scope drift, or unplanned overpractice.
-    escalate: Use qualified instruction or support when domain safety, rehabilitation, licensing, or supervision matters.
+    adapt: Lower difficulty, shrink the component, change modality, add access support, or use a private
+      self-review.
+    stop: Stop for danger, pain, coercion, humiliation, protected information, scope drift, or unplanned
+      overpractice.
+    escalate: Use qualified instruction or support when domain safety, rehabilitation, licensing, or supervision
+      matters.
   evidence_examples:
-    supportive: Fixed criteria identified one weak component, one correction was applied, and the comparable retry met more of the same criteria.
+    supportive: Fixed criteria identified one weak component, one correction was applied, and the comparable
+      retry met more of the same criteria.
     mixed: The correction improved one criterion while another was unchanged or less stable.
-    contradictory: The retry met fewer fixed criteria, the correction was not applied, or practice exceeded a safe boundary.
-    inconclusive: The attempts differed materially, feedback was unavailable, or the observations were unknown, deferred, or not observed.
+    contradictory: The retry met fewer fixed criteria, the correction was not applied, or practice exceeded
+      a safe boundary.
+    inconclusive: The attempts differed materially, feedback was unavailable, or the observations were
+      unknown, deferred, or not observed.
 presentation:
   setup_copy:
     context_heading: Isolate one safe low-stakes skill component.
@@ -324,6 +438,8 @@ presentation:
     correction_applied: The selected correction was applied
     retry_comparability: Retry comparability criteria present
     retry_harm_or_overpractice: The retry caused harm or exceeded its practice boundary
-  completion_copy: Compare the same component and criteria across two bounded attempts. One result does not establish expertise or transfer.
-  plain_language_evidence: The structured record checks whether a weak component, feedback correction, and comparable retry were completed without storing performance contents or identities.
+  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
+    validation, identity, dignity, or human worth.
+  plain_language_evidence: The structured record checks whether a weak component, feedback correction,
+    and comparable retry were completed without storing performance contents or identities.
   display_order: 8

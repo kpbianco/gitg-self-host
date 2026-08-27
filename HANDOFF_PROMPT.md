@@ -1,5 +1,12 @@
 # Codex / Work Tab Handoff Prompt
 
+> Current override (2026-08-26): Decision 052 and M6F supersede every
+> five-runtime, friendship-only, inactive, unprojected, or source-only
+> activation statement later in this historical prompt. The current contract
+> is exactly 383 runtime protocols, 1,151 actions, and 383 score-active
+> protocols, with five legacy v1 evidence protocols and 378 typed protocols.
+> Read `docs/CURRENT_STATE.md` and ADR 0011 before relying on milestone history.
+
 Use the following prompt in the new GitHub-connected Work/Codex session:
 
 ---

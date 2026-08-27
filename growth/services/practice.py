@@ -6,13 +6,13 @@ from typing import Any
 
 from django.core.exceptions import ValidationError
 from django.db import IntegrityError, transaction
-from django.db.models import Q
 from django.utils import timezone
 
 from growth.domain.evidence import (
     ALLOWED_OBSERVATION_FIELDS,
     observation_fields_for_rules,
 )
+from growth.domain.typed_evidence import TYPED_EVIDENCE_RULES_VERSION
 from growth.models import (
     AssessmentRun,
     PracticeCheckIn,
@@ -137,17 +137,28 @@ def completion_evidence(sprint: PracticeSprint) -> CompletionEvidence:
         "substantive_markers",
         ["moved_beyond_transactional", "meaningful_information_shared"],
     )
-    attempted = submitted.filter(action_attempted=True)
+    attempted = list(submitted.filter(action_attempted=True))
     marker_mode = sprint.protocol.completion_rules.get("marker_mode", "any")
+
+    def marker_observed(check_in: PracticeCheckIn, marker: str) -> bool:
+        if marker in ALLOWED_OBSERVATION_FIELDS:
+            return bool(getattr(check_in, marker))
+        return any(
+            observation.get("measurement_id") == marker and observation.get("state") == "observed"
+            for observation in check_in.typed_observations
+        )
+
     if marker_mode == "all":
         substantive = all(
-            attempted.filter(**{marker: True}).exists() for marker in substantive_markers
+            any(marker_observed(check_in, marker) for check_in in attempted)
+            for marker in substantive_markers
         )
     else:
-        substantive_query = Q()
-        for marker in substantive_markers:
-            substantive_query |= Q(**{marker: True})
-        substantive = attempted.filter(substantive_query).exists()
+        substantive = any(
+            marker_observed(check_in, marker)
+            for check_in in attempted
+            for marker in substantive_markers
+        )
     all_attempted = bool(action_ids) and action_ids.issubset(attempted_ids)
     enough_completed = len(completed_ids) >= int(
         sprint.protocol.completion_rules.get("minimum_completed", 2)
@@ -185,6 +196,13 @@ def save_check_in(
     else:
         check_in = PracticeCheckIn(sprint=locked_sprint)
 
+    typed_rules = action.evidence_rules.get("schema_version") == TYPED_EVIDENCE_RULES_VERSION
+    if typed_rules:
+        for field_name in ALLOWED_OBSERVATION_FIELDS:
+            setattr(check_in, field_name, False)
+    else:
+        check_in.typed_observations = []
+
     editable_fields = (
         "action",
         "action_attempted",
@@ -198,6 +216,7 @@ def save_check_in(
         "internal_resistance",
         "expected_reciprocity",
         "observed_reciprocity",
+        "typed_observations",
         "support_level",
         "context_comparison",
         "evidence_direction",
@@ -215,7 +234,9 @@ def save_check_in(
                 "Submit evidence only after a real attempt. Save a draft if the action "
                 "has not occurred."
             )
-        relevant_fields = observation_fields_for_rules(action.evidence_rules)
+        relevant_fields = (
+            set() if typed_rules else observation_fields_for_rules(action.evidence_rules)
+        )
         unexpected_fields = sorted(
             field_name
             for field_name in ALLOWED_OBSERVATION_FIELDS
@@ -230,6 +251,11 @@ def save_check_in(
             raise PracticeWorkflowError(
                 "These observations belong to another action: "
                 f"{', '.join(unexpected_labels)}. Choose the matching action or clear them."
+            )
+        if not typed_rules and check_in.typed_observations:
+            raise PracticeWorkflowError(
+                "Structured observations belong to a typed action. Choose the matching action "
+                "or clear them."
             )
         missing = [
             label

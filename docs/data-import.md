@@ -35,10 +35,10 @@ The importer never uses `legacy/` and never parses the human-readable Notion
 | Pilot 002 lever baselines | 37 |
 | Pilot 002 orientation results | 6 |
 | Pilot 002 published archetype results | 3 |
-| Seeded practice protocols | 5 |
-| Seeded practice actions | 15 |
-| Canonical practice packages | 5 |
-| Explicit unauthored competency rows | 378 |
+| Seeded practice protocols | 383 |
+| Seeded practice actions | 1,151 |
+| Canonical practice packages | 383 |
+| Explicit unauthored competency rows | 0 |
 
 ## Validation before writes
 
@@ -61,9 +61,10 @@ The command opens one transaction and fails before model writes when it finds:
   broken cross-references;
 - a practice package whose domain differs from its canonical parent or whose
   recommendation targets fall outside the parent's structured mapping;
-- a package/content hash mismatch or a runtime projection that differs from
-  the reviewed five-protocol fingerprint;
-- an activation-ledger mismatch or score activation beyond friendship;
+- a package/content hash mismatch, incomplete all-catalog runtime projection,
+  or legacy compatibility hash mismatch;
+- an activation-ledger mismatch or anything other than exact all-383 score
+  activation;
 - a release candidate with unresolved global or protocol-scoped research,
   specialist, accessibility, originality, source, or UI/test gates;
 - a scoreable protocol whose stable parent competency is missing, whose
@@ -73,9 +74,8 @@ The command opens one transaction and fails before model writes when it finds:
   due window beyond its protocol duration, unknown/uncollectable observation
   field without the one frozen exception, duplicate marker, or overlapping
   primary/supporting evidence marker;
-- an invalid completion minimum, completion marker outside the reviewed
-  observation vocabulary, unsupported completion-marker mode, or score
-  activation beyond the reviewed friendship protocol.
+- an invalid completion minimum, completion marker outside the action's
+  observation vocabulary, or unsupported completion-marker mode.
 
 No malformed value is silently normalized.
 
@@ -101,14 +101,12 @@ A successful command reports the imported counts. Repeated runs update
 canonical rows by stable ID, remove stale weighted links, and do not duplicate
 entities, assessment runs, baselines, protocols, or actions.
 
-Every executable action receives validated `practice-observation-v1` evidence
-rules keyed by stable action IDs. Seeding links friendship to `17.03`, play to
-`26.01`, emotional cue detection to `16.03`, and boundary practice to `11.10`,
-and attention-presence practice to `08.02`, then validates each
-recommendation-target subset against canonical structured weights. Completion
-rules may require any configured marker or all configured markers; every
-marker must remain in the reviewed observation vocabulary. Seeding does not
-create evidence events.
+Every executable action receives validated legacy or typed evidence rules
+keyed by stable action IDs. Seeding links all 383 protocols to their canonical
+parent competencies, validates each recommendation-target subset, and retains
+the complete parent mapping for score allocation. Completion rules may require
+any configured marker or all configured markers; every marker must remain in
+the action's observation vocabulary. Seeding does not create evidence events.
 `backfill_evidence_events` runs afterward and creates events only for submitted
 check-ins that do not already have one. `rebuild_score_state` then initializes
 or reconciles current state from those events; canonical seeding itself does
@@ -142,9 +140,9 @@ not an assessment curriculum version. The additive
 checks the manifest/packages/reports, and compares the exact canonical
 projection with the seeded database.
 
-The five packages are `projected_legacy`. Rich research, safety, adaptation,
-reflection, and evidence-design metadata remains source-only in M6A; it does
-not expand the ORM or execute a new evidence algorithm.
+Five packages remain `projected_legacy` for replay compatibility. M6F projects
+the other 378 packages through the typed runtime and persists typed structured
+observations without storing private artifact contents in score events.
 
 ## Pilot 002 boundary
 

@@ -9,7 +9,7 @@ practice content. It declares:
 - the exact package paths included in the release;
 - every schema, registry, and governance input covered by the content hash;
 - the independent catalog content hash;
-- the frozen `GG-PRACTICE-RUNTIME-PROJECTION-1.0` hash.
+- the legacy compatibility projection hash and the full catalog content hash.
 
 The loader rejects missing, duplicate, unlisted, absolute, traversing, or
 misplaced package paths. All schemas are local Draft 2020-12 JSON Schemas; no
@@ -40,7 +40,8 @@ five reviewed protocols while additive metadata makes gaps explicit.
   claim classifications and applicability validate in both directions.
 - `risk_taxonomy.yaml` defines low, moderate, and high-risk release gates,
   reviewer roles, sensitive-data limits, and pre-review scoring ceilings.
-- `scoring_policy_registry.yaml` defines structured-self-report eligibility,
+- `scoring_policy_registry.yaml` defines M6F structured evidence eligibility,
+  structured-self-report eligibility,
   corroboration, artifact/objective, qualified-evidence, shadow-only, and
   non-scored reflection policies. N/A uses the cross-cutting
   `N-A-NO-DEFICIT` disposition.
@@ -63,18 +64,16 @@ The old curriculum source hash remains:
 6958ccfbe0c0d80b7485ac866a8418578850284b58956f59168429819447dfc5
 ```
 
-The frozen runtime projection remains:
-
-```text
-274f7244630ed56d56a443a6a699399edade6c67fcf964237559e05b72368e35
-```
+The release manifest retains a compatibility hash over the five legacy
+runtime projections. All 383 package files participate in the separate catalog
+content hash.
 
 The catalog has a separate release hash because adding editorial metadata must
 not make an existing assessment curriculum version appear to change.
 
-M6A does not execute the richer future evidence fields. All five projections
-retain `practice-observation-v1`; a typed contract and direct competency
-evidence belong to M6B.
+The five legacy projections retain `practice-observation-v1`. The other 378
+packages use `GG-PRACTICE-RUNTIME-PROJECTION-2.0` and
+`typed-evidence-rules-v1` at runtime.
 
 ## Generated control reports
 
@@ -113,13 +112,13 @@ make curriculum-check
 unchanged `GG-PILOT-READINESS-1.0`, checks current reports, validates exact
 coverage counts, and compares canonical projections with the seeded runtime.
 
-## M6D-01 source-only cohort
+## M6D-01 cohort history
 
 M6D-01 adds four draft packages for `08.06`, `09.12`, `10.02`, and `13.02`.
-The source catalog therefore has nine packages and twenty-nine actions while
-the projected ORM runtime stays at five protocols and fifteen actions. A typed
-package must use `typed-evidence-rules-v1` uniformly, remain unprojected, and
-give every action an exact sibling protocol/action/competency/policy identity.
-Unknown versions, mixed versions, malformed rules, identity drift, and runtime
-projection fail closed. Run `make m6d-01-check` for the additive read-only
-cohort contract.
+This originally produced nine packages and twenty-nine actions. M6F now
+projects and score-activates this cohort as part of the exact 383-protocol,
+1,151-action runtime. A typed package must use `typed-evidence-rules-v1`
+uniformly and give every action an exact sibling
+protocol/action/competency/policy identity. Unknown versions, mixed versions,
+malformed rules, identity drift, and projection drift fail closed. Run
+`make m6d-01-check` for the retained cohort compatibility contract.
