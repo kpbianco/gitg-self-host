@@ -31,6 +31,7 @@ make personal-os-check
 make context-priority-check
 make m6c-pilot-check
 make m6d-01-check
+make m6h-weekly-check
 make e2e
 make compose-smoke
 ```
@@ -80,6 +81,11 @@ prerequisite readiness contracts, checks exact definition IDs, 383 active
 canonical protocols, exact all-383 activation, authenticated route
 registration, and empty or valid optional state, and must not print private
 authored values or write database state.
+
+`make m6h-weekly-check` builds isolated state, proves idempotent weekly plan
+and review writes, replays the frozen proof cutoff, and reruns evidence,
+score-state, migration, and M6F readiness. Its privacy-safe summary reports
+only counts and contract boundaries.
 
 `make test` covers:
 
@@ -210,9 +216,20 @@ authored values or write database state.
   service-failure requests failing closed;
 - deterministic read-only `GG-M6C-PILOT-READINESS-1.0` JSON, empty-state
   acceptance, tamper diagnostics, privacy-safe output, and no database writes.
+- exact Monday-to-Sunday weekly windows, stable action/sprint/assessment
+  linkage, append-only revisions, idempotent retries, and latest-revision-only
+  review targeting;
+- immutable proof snapshots limited to exact post-plan evidence and frozen at
+  review time so later evidence cannot rewrite the review;
+- explicit no-proof, attempted, and completed weekly outcomes with unchanged
+  evidence, score state, recommendation order, sprint completion, final review,
+  pilot feedback, and mastery boundaries;
+- weekly authentication, stale/cross-user rejection, Personal OS value
+  isolation, migration rollback, deterministic readiness, and corruption
+  failure without private diagnostics.
 
-`make e2e` uses Playwright Chromium for the ten established browser journeys
-plus the M6C-04 Personal OS/context journey:
+`make e2e` uses Playwright Chromium for the established browser journeys,
+including the M6C-04 Personal OS/context and M6H-01 weekly journeys:
 
 1. login, Pilot 002 home, and developmental profile;
 2. mobile keyboard content access, exact all-383 library coverage, representative
@@ -237,6 +254,9 @@ plus the M6C-04 Personal OS/context journey:
     no-context/reassessment isolation; keyboard focus, error association,
     200-percent zoom, reduced motion, 390-by-844 no-overflow behavior; and
     synthetic desktop/mobile retained screenshots.
+12. authenticated weekly planning and no-proof review; exact current action,
+    no evidence creation, desktop/mobile layout, 200-percent zoom, and retained
+    synthetic screenshots.
 
 The server-side golden test and browser flow complement each other: the first
 deep-compares every canonical output, while the second proves that the mounted

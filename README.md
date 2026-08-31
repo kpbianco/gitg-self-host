@@ -315,8 +315,28 @@ See [canonical practice content](docs/practice-content.md) and the
   immutable snapshots, reversal, and rebuild.
 - Exact readiness validation that every runtime protocol, action, target,
   evidence rule, parent mapping weight, and lever total matches canonical data.
-- No runtime, model, migration, UI, persistence, recommendation, scoring,
-  participant-exposure, release, deployment, or production-activation change.
+- Software activation does not complete the pending human audits or establish
+  participant exposure, release, deployment, clinical, psychometric, cultural,
+  accessibility, or intervention-effectiveness validation.
+
+## What M6H-01 adds
+
+- One authenticated **Weekly** surface connecting the latest verified
+  Personal OS direction, existing context-ranked candidates, the current
+  practice, and one concrete action inside a Monday-to-Sunday window.
+- Append-only plan revisions with stable assessment, sprint, protocol, and
+  action linkage; identical retries are idempotent.
+- A structured proof review derived only from submitted evidence for that
+  exact action after plan creation and before the immutable review cutoff.
+- Explicit no-proof, attempted, and completed outcomes. Planning and review
+  create no evidence, score change, recommendation factor, practice
+  completion, mastery claim, telemetry, or human gate.
+
+Run the isolated software gate:
+
+```bash
+make m6h-weekly-check
+```
 
 ## What M6B adds
 
@@ -453,8 +473,10 @@ make m6c-pilot-check
 7. Review the versioned evidence-updated working state on the developmental
    profile.
 8. Pause/resume when needed, or stop the practice.
-9. Submit a final review after the bounded completion criteria are met.
-10. During an authorized private pilot, optionally report product friction
+9. Use **Weekly** to make one current-practice action concrete and review only
+   proof already submitted through check-ins.
+10. Submit a final review after the bounded completion criteria are met.
+11. During an authorized private pilot, optionally report product friction
     under **Account** without changing any developmental record.
 
 Draft check-ins never appear as submitted evidence. Eligible directional
@@ -493,6 +515,7 @@ make context-check
 make personal-os-check
 make context-priority-check
 make m6c-pilot-check
+make m6h-weekly-check
 make run
 make compose-up
 make compose-down

@@ -1,18 +1,18 @@
 schema_version: 1
 batch:
-  id: M6F-ALL-ACTIVE
-  title: Activate the complete competency runtime
-  goal: Project and score-activate all 383 canonical competency protocols under one deterministic, replayable, reversible structured-evidence contract.
+  id: M6H-01
+  title: Integrate weekly execution and proof-based review
+  goal: Connect the existing Personal OS, context-priority, active-practice, evidence, and review surfaces into one deterministic seven-day execution loop without adding a human or specialist gate.
 sources:
   product: products/gitg-self-host/product.yaml
   requirements:
-    - owner-direction-2026-08-26
-    - docs/program/M6_CURRICULUM_EXPANSION.md
+    - owner-direction-2026-08-27
+    - docs/program/M6_CURRICULUM_EXPANSION.md#phase-f--full-product-integration-and-validation
     - AGENTS.md#product-boundary
-  milestone: products/gitg-self-host/roadmap.yaml#M6F
-  baseline_commit: c0fcabde4ce71a616b1c90d604e521b8d76146e5
+  milestone: products/gitg-self-host/roadmap.yaml#M6H-01
+  baseline_commit: 4301b4f2ac8010dd4a25a85e9143bc5b726937c3
 dependencies:
-  - M6E-FULL-FRONTIER
+  - M6F-ALL-ACTIVE
 scope:
   allowed_paths:
     - AGENTS.md
@@ -21,10 +21,8 @@ scope:
     - MANIFEST.tsv
     - .github/workflows/verification.yml
     - contracts/**
-    - data/practices/**
     - growth/**
     - templates/**
-    - reports/practice-content/**
     - scripts/**
     - tests/**
     - docs/**
@@ -34,23 +32,24 @@ scope:
     - data/model/**
     - data/notion/**
     - data/evidence/**
+    - data/practices/**
     - requirements*.txt
     - pyproject.toml
     - Dockerfile
     - docker-compose.yml
 acceptance:
-  - Exactly 383 canonical competencies have exactly one runtime-projected, available, score-active protocol and complete activation-ledger coverage.
-  - All 1,151 actions remain stable-ID-addressable; legacy actions replay under practice-observation-v1 and typed actions write and replay under GG-TYPED-EVIDENCE-1.0.
-  - Typed check-ins collect explicit measurement state, provenance, and kind-specific structured values without using free text or artifact contents as score input.
-  - Every eligible event allocates one competency contribution through the complete canonical parent competency mapping; recommendation-target subsets never replace scoring allocation.
-  - Mixed-protocol score projection is deterministic across shared levers, assessment baselines remain immutable, and state writes remain atomic, idempotent, reversible, rebuildable, and hash-audited.
-  - Inconclusive, unknown, stale, adverse, unattempted, unobserved, or contract-invalid evidence remains visible but is withheld from score mass without penalty.
-  - Completion never establishes mastery and no score represents identity, dignity, clinical status, professional qualification, or human worth.
-  - Editorial, semantic, source, originality, accessibility, privacy, safety, specialist, psychometric, clinical, cultural, participant, and longitudinal review remain pending for the owner's consolidated audit and are not represented as passed.
+  - An authenticated user with a current assessment and active practice can create an append-only weekly plan for one exact stable action and one intended date inside the current seven-day window.
+  - Replanning appends a contiguous immutable revision; identical retries are idempotent; stale epochs, cross-user objects, malformed snapshots, and concurrent conflicts fail closed without exposing private state.
+  - The weekly surface shows only the latest verified Personal OS direction and priority stack, the existing context-ranked recommendations, the current practice, and one upcoming action; authored Personal OS text is not analyzed or copied into scoring, logs, URLs, or readiness output.
+  - A weekly review derives its proof only from immutable submitted evidence events for the planned sprint and action after the plan was created and inside its seven-day window.
+  - No-proof, supportive, mixed, contradictory, adverse, withheld, and completed evidence remain explicit. The weekly review creates no evidence event, score contribution, mastery claim, completion shortcut, recommendation factor, or pilot-feedback record.
+  - Home, Personal OS, practice, weekly, and profile surfaces expose a concise loop without showing a 383-item checklist, adding coercive streak mechanics, or requiring private narrative.
+  - The weekly contract is deterministically replayed, migration-forward/rollback tested, browser exercised at desktop/mobile/keyboard/zoom boundaries, and included in the isolated Compose backup/recreate/restore drill.
+  - Editorial, semantic, source, accessibility, privacy, safety, specialist, psychometric, clinical, cultural, participant, longitudinal, and intervention-effectiveness review remain pending and are not represented as passed.
 validation:
   local:
-    - make full-frontier-check PYTHON=.venv/bin/python
-    - make practice-report-check PYTHON=.venv/bin/python
+    - make m6h-weekly-check PYTHON=.venv/bin/python
+    - make pilot-check PYTHON=.venv/bin/python
     - make curriculum-check PYTHON=.venv/bin/python
     - make competency-evidence-check PYTHON=.venv/bin/python
     - ./scripts/agent-verify.sh quick
@@ -59,36 +58,35 @@ validation:
     - .venv/bin/python scripts/verify-manifest.py
     - git diff --check
   focused_tests_to_add:
-    - exact 383 runtime and 383 score-active activation projection
-    - typed runtime form and immutable evidence-event persistence across every measurement kind
-    - mixed-protocol shared-lever aggregation and canonical parent mapping
-    - typed withholding, replay, reversal, repair, and privacy-safe export
-    - migration forward and rollback coverage for typed check-in observations
+    - exact weekly-window and stable action linkage
+    - append-only idempotent revision and concurrent-write behavior
+    - privacy-safe Personal OS integration and cross-user/epoch rejection
+    - proof snapshot replay across no-proof supportive mixed contradictory adverse and withheld evidence
+    - no scoring evidence ranking completion or mastery side effects
+    - migration forward rollback and restored-state readiness
   required_ci:
     - Ruff Django pytest and migration-drift verification
-    - fresh practice and competency-evidence reports
-    - curriculum and full-frontier readiness
-    - context Personal OS priority and pilot regression suites
-    - Playwright and Compose runtime regression suites
+    - all existing M6F readiness and report gates
+    - M6H weekly execution readiness
+    - Playwright core and weekly journeys
+    - Compose runtime backup restore and weekly replay
 risk:
-  class: high
+  class: moderate
   hazards:
-    - a runtime action is scored against recommendation targets instead of its complete parent mapping
-    - a typed value, provenance requirement, or withholding condition is silently defaulted
-    - free text, artifact contents, identity, dignity, or completion is treated as opaque score input
-    - shared-lever contributions are double counted or cross assessment epochs
-    - activation is mistaken for specialist, psychometric, clinical, cultural, or intervention validation
+    - weekly planning silently becomes a second recommendation or scoring algorithm
+    - a review treats intention completion or authored narrative as evidence
+    - proof is attached across users assessment epochs sprints actions or time windows
+    - mutable weekly state breaks replay or backup restore
+    - private Personal OS text leaks outside its authenticated owner-facing surfaces
   stop_conditions:
-    - canonical, runtime, or activation coverage is not exactly 383
-    - any submitted event cannot replay exactly or any score transition cannot reverse and rebuild exactly
-    - any required assessment baseline is mutated or a malformed mapping is normalized silently
-    - any score input includes private narrative or artifact contents
-    - a failing required gate is waived
+    - any weekly write changes evidence score state assessment baseline recommendation order or practice completion
+    - any proof snapshot cannot replay exactly from immutable submitted evidence
+    - any user can reference another user's assessment sprint action plan or evidence
+    - a failing required software gate is waived
 rollback:
-  strategy: Revert the M6F batch as one commit, migrate the additive typed-observation field backward, reseed the prior five-protocol runtime, and rebuild score state from immutable baselines and replayable events.
+  strategy: Revert M6H-01, migrate its additive weekly tables backward, and retain all pre-existing Personal OS, context, practice, evidence, and score records byte-for-byte.
 evidence:
   output:
-    - docs/evidence/M6F-ALL-ACTIVE-2026-08-26.md
-    - reports/practice-content/coverage_summary_v1.json
+    - docs/evidence/M6H-01-2026-08-27.md
     - exact local and hosted-CI command results for the candidate commit
-  claim_boundary: Owner-directed software activation with deterministic structured evidence, mapping, replay, withholding, migration, score-state, browser, and deployment regression evidence only; never specialist, psychometric, clinical, cultural, longitudinal, participant-effectiveness, mastery, or human-worth validation.
+  claim_boundary: Software-only weekly execution integration with deterministic persistence, proof replay, privacy isolation, browser, and deployment-regression evidence; never specialist, participant, psychometric, clinical, cultural, longitudinal, mastery, or intervention-effectiveness validation.

@@ -354,6 +354,16 @@ Decision 052 supplies the owner approval for this batch's runtime projection
 and score activation. Participant exposure, release, deployment, and broader
 production or validation claims still require separate human approval.
 
+M6H-01 is the next software-only integration slice. It adds an authenticated
+seven-day loop over the latest verified Personal OS direction, existing
+context priority, one current-practice action, submitted evidence, and a
+structured proof review. Plans and reviews are append-only and
+assessment-epoch scoped. Planning, elapsed time, and review choices create no
+evidence, score contribution, recommendation factor, practice completion, or
+mastery claim. Proof freezes at the review timestamp so later evidence cannot
+rewrite an immutable review. This slice intentionally performs no human,
+specialist, participant, release, or deployment-gate work.
+
 <!-- BEGIN PORTFOLIO-CONTROL MANAGED -->
 ## Governed agentic delivery
 

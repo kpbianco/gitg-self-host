@@ -9,14 +9,19 @@ from playwright.sync_api import Page, expect
 
 from growth.models import (
     AssessmentRun,
+    EvidenceEvent,
     PersonalOSRevision,
     PilotFeedback,
     PracticeCheckIn,
     PracticeContext,
+    PracticeProtocol,
     PracticeSprint,
+    WeeklyExecutionPlan,
+    WeeklyExecutionReview,
 )
 from growth.services.assessment import encode_share_code, load_assessment_assets
 from growth.services.canonical_import import seed_canonical_data
+from growth.services.practice import start_practice
 from growth.services.score_state import synchronize_all_score_states
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -93,8 +98,27 @@ def open_assessment(live_server, page):
 
 
 def assert_no_horizontal_overflow(page):
-    assert page.evaluate("document.documentElement.scrollWidth <= window.innerWidth"), (
-        f"Page has horizontal overflow at {page.viewport_size}"
+    overflow = page.evaluate(
+        """() => ({
+            documentFits: document.documentElement.scrollWidth <= window.innerWidth,
+            offenders: [...document.querySelectorAll('body *')]
+                .filter((element) => {
+                    const rect = element.getBoundingClientRect();
+                    return rect.right > window.innerWidth + 1 || rect.left < -1;
+                })
+                .slice(0, 8)
+                .map((element) => ({
+                    tag: element.tagName.toLowerCase(),
+                    id: element.id,
+                    className: String(element.className || ''),
+                    text: String(element.textContent || '').trim().slice(0, 80),
+                    left: Math.round(element.getBoundingClientRect().left),
+                    right: Math.round(element.getBoundingClientRect().right),
+                })),
+        })"""
+    )
+    assert overflow["documentFits"], (
+        f"Page has horizontal overflow at {page.viewport_size}: {overflow['offenders']}"
     )
 
 
@@ -264,6 +288,54 @@ def test_personal_os_context_priority_alternative_private_accessible_journey(
     assert sentinel not in page.locator("body").inner_text()
     assert_no_horizontal_overflow(page)
     save_walkthrough_screenshot(page, "desktop-context-ranking-synthetic")
+
+
+@pytest.mark.e2e
+@pytest.mark.django_db(transaction=True)
+def test_weekly_execution_plans_one_action_and_reviews_only_existing_proof(
+    live_server,
+    page: Page,
+):
+    page.set_viewport_size({"width": 390, "height": 844})
+    user = create_browser_user()
+    seed_browser_data()
+    sprint = start_practice(
+        user=user,
+        protocol=PracticeProtocol.objects.get(stable_id="PRACTICE-FRIENDSHIP-01"),
+        person_or_context="Synthetic browser weekly context",
+        start_date=date.today(),
+    )
+    action = sprint.protocol.actions.order_by("sequence").first()
+    log_in(live_server, page)
+
+    page.get_by_role("link", name="Weekly", exact=True).click()
+    page.get_by_role("heading", name="Turn one direction into one concrete action.").wait_for()
+    page.get_by_text("One operating loop, no hidden analysis.").wait_for()
+    page.get_by_label("One action to make concrete this week").select_option(action.pk)
+    page.get_by_role("button", name="Save weekly plan").click()
+    page.get_by_text("Weekly plan revision saved.").wait_for()
+    page.get_by_text("No submitted proof for this plan").wait_for()
+    assert WeeklyExecutionPlan.objects.count() == 1
+    assert_no_horizontal_overflow(page)
+    save_walkthrough_screenshot(page, "mobile-weekly-plan")
+
+    page.get_by_label("Continue the current action").check()
+    page.get_by_label(
+        "What adjustment, if any, would make the next attempt more workable?"
+    ).select_option("none")
+    page.get_by_role("button", name="Save proof-based weekly review").click()
+    page.get_by_text("Weekly proof review saved.").wait_for()
+    page.get_by_text("The review created no new evidence or score contribution.").wait_for()
+    assert WeeklyExecutionReview.objects.get().outcome == "no_submitted_evidence"
+    assert EvidenceEvent.objects.count() == 0
+
+    page.evaluate("document.body.style.zoom = '200%'")
+    assert_no_horizontal_overflow(page)
+    page.evaluate("document.body.style.zoom = ''")
+    page.set_viewport_size({"width": 1440, "height": 1000})
+    page.goto(f"{live_server.url}/weekly/")
+    assert_no_horizontal_overflow(page)
+    save_walkthrough_screenshot(page, "desktop-weekly-review")
 
 
 @pytest.mark.e2e

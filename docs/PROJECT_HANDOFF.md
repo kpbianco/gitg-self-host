@@ -1212,3 +1212,15 @@ The five original protocols retain legacy v1 replay; 378 protocols use typed
 structured evidence. Assessment baselines and completion/mastery and
 human-worth boundaries remain unchanged. Deferred content and specialist audit
 status remains visible and is not converted into a validation claim.
+
+# Current M6H-01 integration — 2026-08-27
+
+M6H-01 is the current software-only full-product integration slice. It adds an
+authenticated weekly loop over the latest verified Personal OS direction, the
+existing context-priority presentation, one current-practice action, and an
+immutable proof review. Plan revisions are append-only. Review proof is
+limited to exact submitted evidence after plan creation and before a frozen
+review cutoff. The weekly layer creates no evidence, score state,
+recommendation factor, practice completion, or mastery claim. Manual audit,
+specialist review, participant work, release, and deployment approval remain
+outside this slice.
