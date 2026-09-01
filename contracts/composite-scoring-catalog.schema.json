@@ -1,0 +1,219 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grounded-growth.local/contracts/composite-scoring-catalog.schema.json",
+  "title": "Grounded Growth composite scoring catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scoring_contract_version",
+    "source_hashes",
+    "counts",
+    "formulas",
+    "distributions",
+    "lever_coverage",
+    "family_coverage",
+    "domain_coverage",
+    "competencies",
+    "disposition_summary",
+    "governance",
+    "claim_boundary",
+    "report_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "GG-COMPOSITE-SCORING-CATALOG-1.0"},
+    "scoring_contract_version": {"const": "GG-COMPOSITE-CLOSEOUT-SCORING-1.0"},
+    "source_hashes": {"$ref": "#/$defs/sourceHashes"},
+    "counts": {"$ref": "#/$defs/counts"},
+    "formulas": {"type": "object"},
+    "distributions": {"type": "object"},
+    "lever_coverage": {
+      "type": "array",
+      "minItems": 37,
+      "maxItems": 37,
+      "items": {"$ref": "#/$defs/leverCoverage"}
+    },
+    "family_coverage": {
+      "type": "array",
+      "minItems": 7,
+      "maxItems": 7,
+      "items": {"$ref": "#/$defs/familyCoverage"}
+    },
+    "domain_coverage": {
+      "type": "array",
+      "minItems": 27,
+      "maxItems": 27,
+      "items": {"$ref": "#/$defs/domainCoverage"}
+    },
+    "competencies": {
+      "type": "array",
+      "minItems": 383,
+      "maxItems": 383,
+      "items": {"$ref": "#/$defs/competency"}
+    },
+    "disposition_summary": {"$ref": "#/$defs/dispositionSummary"},
+    "governance": {"$ref": "#/$defs/governance"},
+    "claim_boundary": {"type": "string", "minLength": 1},
+    "report_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "unitDecimal": {"type": "string", "pattern": "^(0|1)\\.[0-9]{12}$"},
+    "positiveDecimal": {"type": "string", "pattern": "^[0-9]+\\.[0-9]{12}$"},
+    "sourceHashes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["canonical_model", "practice_content", "scoring_contract", "scoring_schema"],
+      "properties": {
+        "canonical_model": {"$ref": "#/$defs/hash"},
+        "practice_content": {"$ref": "#/$defs/hash"},
+        "scoring_contract": {"$ref": "#/$defs/hash"},
+        "scoring_schema": {"$ref": "#/$defs/hash"}
+      }
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["families", "levers", "domains", "competencies", "practices", "actions", "relationship_allocations"],
+      "properties": {
+        "families": {"const": 7},
+        "levers": {"const": 37},
+        "domains": {"const": 27},
+        "competencies": {"const": 383},
+        "practices": {"const": 383},
+        "actions": {"const": 1151},
+        "relationship_allocations": {"type": "integer", "minimum": 383}
+      }
+    },
+    "relationship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lever_id", "family_id", "canonical_weight", "equal_share_weight", "blended_weight", "relationship_role"],
+      "properties": {
+        "lever_id": {"type": "string", "pattern": "^L[0-9]{2}$"},
+        "family_id": {"type": "string", "pattern": "^F[0-9]{2}$"},
+        "canonical_weight": {"$ref": "#/$defs/unitDecimal"},
+        "equal_share_weight": {"$ref": "#/$defs/unitDecimal"},
+        "blended_weight": {"$ref": "#/$defs/unitDecimal"},
+        "relationship_role": {"enum": ["primary", "secondary"]}
+      }
+    },
+    "componentWeights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mapped_lever", "mapped_family", "parent_domain"],
+      "properties": {
+        "mapped_lever": {"const": "0.500000000000"},
+        "mapped_family": {"const": "0.250000000000"},
+        "parent_domain": {"const": "0.250000000000"}
+      }
+    },
+    "creditStep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["completed_actions", "completion_credit"],
+      "properties": {
+        "completed_actions": {"type": "integer", "minimum": 1},
+        "completion_credit": {"$ref": "#/$defs/unitDecimal"}
+      }
+    },
+    "actionDisposition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["action_id", "completion_units", "score_effect_before_closeout"],
+      "properties": {
+        "action_id": {"type": "string", "minLength": 1},
+        "completion_units": {"const": 1},
+        "score_effect_before_closeout": {"const": "none"}
+      }
+    },
+    "competency": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "competency_id", "competency_name", "domain_id", "protocol_id", "action_ids", "action_dispositions",
+        "total_actions", "minimum_completed", "relationships", "family_allocation",
+        "assessment_component_weights", "priority_component_weights", "credit_schedule",
+        "score_trigger", "check_in_score_effect", "repeated_closeout_aggregation", "completion_claim"
+      ],
+      "properties": {
+        "competency_id": {"type": "string", "pattern": "^[0-9]{2}\\.[0-9]{2}$"},
+        "competency_name": {"type": "string", "minLength": 1},
+        "domain_id": {"type": "string", "pattern": "^[0-9]{2}$"},
+        "protocol_id": {"type": "string", "minLength": 1},
+        "action_ids": {"type": "array", "minItems": 3, "maxItems": 4, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "action_dispositions": {"type": "array", "minItems": 3, "maxItems": 4, "items": {"$ref": "#/$defs/actionDisposition"}},
+        "total_actions": {"type": "integer", "minimum": 3, "maximum": 4},
+        "minimum_completed": {"type": "integer", "minimum": 2, "maximum": 3},
+        "relationships": {"type": "array", "minItems": 2, "maxItems": 5, "items": {"$ref": "#/$defs/relationship"}},
+        "family_allocation": {"type": "object", "minProperties": 1, "additionalProperties": {"$ref": "#/$defs/unitDecimal"}},
+        "assessment_component_weights": {"$ref": "#/$defs/componentWeights"},
+        "priority_component_weights": {"$ref": "#/$defs/componentWeights"},
+        "credit_schedule": {"type": "array", "minItems": 2, "items": {"$ref": "#/$defs/creditStep"}},
+        "score_trigger": {"const": "explicit_human_final_closeout"},
+        "check_in_score_effect": {"const": "none"},
+        "repeated_closeout_aggregation": {"const": "maximum_active_credit"},
+        "completion_claim": {"const": "bounded_completion_credit_not_mastery"}
+      }
+    },
+    "leverCoverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lever_id", "family_id", "competency_count", "catalog_relationship_mass"],
+      "properties": {
+        "lever_id": {"type": "string"},
+        "family_id": {"type": "string"},
+        "competency_count": {"type": "integer", "minimum": 1},
+        "catalog_relationship_mass": {"$ref": "#/$defs/positiveDecimal"}
+      }
+    },
+    "familyCoverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["family_id", "competency_count", "catalog_relationship_mass"],
+      "properties": {
+        "family_id": {"type": "string"},
+        "competency_count": {"type": "integer", "minimum": 1},
+        "catalog_relationship_mass": {"$ref": "#/$defs/positiveDecimal"}
+      }
+    },
+    "domainCoverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["domain_id", "competency_count", "coverage_rollup"],
+      "properties": {
+        "domain_id": {"type": "string"},
+        "competency_count": {"type": "integer", "minimum": 1},
+        "coverage_rollup": {"const": "equal_member_mean"}
+      }
+    },
+    "dispositionSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assessment_initializes_priority_only", "check_ins_without_score_effect", "human_closeout_scored_practices", "maximum_not_sum_repetition_rule", "actions_with_equal_completion_units", "actions_with_pre_closeout_score_effect", "missing_score_dispositions", "mastery_claims"],
+      "properties": {
+        "assessment_initializes_priority_only": {"const": 383},
+        "check_ins_without_score_effect": {"const": 383},
+        "human_closeout_scored_practices": {"const": 383},
+        "maximum_not_sum_repetition_rule": {"const": 383},
+        "actions_with_equal_completion_units": {"const": 1151},
+        "actions_with_pre_closeout_score_effect": {"const": 0},
+        "missing_score_dispositions": {"const": 0},
+        "mastery_claims": {"const": 0}
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["specialist_review_id", "specialist_review_status", "specialist_review_complete", "research_gap_id", "research_gap_status", "m6b_accepted"],
+      "properties": {
+        "specialist_review_id": {"const": "ER-M6A-003"},
+        "specialist_review_status": {"const": "pending"},
+        "specialist_review_complete": {"const": false},
+        "research_gap_id": {"const": "RG-M6A-002"},
+        "research_gap_status": {"const": "open"},
+        "m6b_accepted": {"const": false}
+      }
+    }
+  }
+}

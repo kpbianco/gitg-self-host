@@ -31,8 +31,12 @@
     <div class="mastery-notice" role="note">
       <strong>Completing this practice does not establish mastery.</strong>
       <p>
-        The final review created no score evidence. Earlier eligible submitted
-        observations retain their separate, versioned effect.
+        {% if sprint.completion_credit_event %}
+          The explicit final closeout recorded bounded completion credit;
+          check-ins did not update that credit on their own.
+        {% else %}
+          This historical sprint retains its original score contract.
+        {% endif %}
       </p>
     </div>
   {% endif %}
@@ -52,6 +56,18 @@
         <a class="button button-secondary" href="{% url 'growth:practice-review-complete' sprint.pk %}">
           Read practice review
         </a>
+      {% elif evidence.ready_for_review and next_action %}
+        <h2>Close now or complete the remaining action.</h2>
+        <p>
+          The minimum is satisfied. Closing now records partial credit; completing
+          every action before the review records full credit.
+        </p>
+        <div class="button-row">
+          <a class="button" href="{% url 'growth:practice-review' sprint.pk %}">Review and close</a>
+          <a class="button button-secondary" href="{% url 'growth:practice-check-in-new' sprint.pk %}?action={{ next_action.pk }}">
+            Complete {{ next_action.title }}
+          </a>
+        </div>
       {% elif next_action %}
         <h2>{{ next_action.title }}</h2>
         <p>{{ next_action.instructions }}</p>
@@ -67,7 +83,7 @@
       {% else %}
         <h2>Add the remaining evidence.</h2>
         <p>
-          All actions have an attempt, but completion still needs two completed
+          Completion still needs {{ evidence.minimum_completed }} completed
           actions and
           {{ sprint.protocol.setup_copy.completion_signal_label|default:"one meaningful attempt" }}.
         </p>
@@ -101,9 +117,9 @@
     <div class="panel-heading">
       <div>
         <p class="eyebrow">Protocol progress</p>
-        <h2>Three defined actions</h2>
+        <h2>{{ evidence.total_actions }} defined action{{ evidence.total_actions|pluralize }}</h2>
       </div>
-      <span>{{ evidence.actions_completed }} of 3 completed</span>
+      <span>{{ evidence.actions_completed }} of {{ evidence.total_actions }} completed</span>
     </div>
     <ol class="protocol-actions action-progress">
       {% for row in action_rows %}

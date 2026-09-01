@@ -448,6 +448,13 @@ class PracticeSprint(models.Model):
         STOPPED = "stopped", "Stopped"
         COMPLETED = "completed", "Completed"
 
+    class ScoringContract(models.TextChoices):
+        LEGACY = "GG-SCORE-STATE-1.0", "Historical event-level score state"
+        COMPOSITE = (
+            "GG-COMPOSITE-CLOSEOUT-SCORING-1.0",
+            "Assessment composite and human closeout credit",
+        )
+
     stable_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="practice_sprints"
@@ -459,6 +466,11 @@ class PracticeSprint(models.Model):
         related_name="practice_sprints",
         null=True,
         blank=True,
+    )
+    scoring_contract_version = models.CharField(
+        max_length=64,
+        choices=ScoringContract.choices,
+        default=ScoringContract.COMPOSITE,
     )
     person_or_context = models.CharField(max_length=200)
     start_date = models.DateField()
@@ -477,7 +489,16 @@ class PracticeSprint(models.Model):
                 fields=["user"],
                 condition=Q(status__in=["active", "paused"]),
                 name="one_current_practice_per_user",
-            )
+            ),
+            models.CheckConstraint(
+                condition=Q(
+                    scoring_contract_version__in=[
+                        "GG-SCORE-STATE-1.0",
+                        "GG-COMPOSITE-CLOSEOUT-SCORING-1.0",
+                    ]
+                ),
+                name="practice_sprint_scoring_contract_supported",
+            ),
         ]
 
     def __str__(self) -> str:
@@ -853,6 +874,229 @@ class PracticeReview(models.Model):
         if self.pk and type(self).objects.filter(pk=self.pk).exists():
             raise ValidationError("Submitted practice reviews are immutable.")
         return super().save(*args, **kwargs)
+
+
+class ImmutableCompositeRecordQuerySet(models.QuerySet):
+    def update(self, **kwargs):
+        raise ValidationError("Composite scoring history is immutable after creation.")
+
+    def bulk_update(self, objs, fields, batch_size=None):
+        raise ValidationError("Composite scoring history is immutable after creation.")
+
+    def delete(self):
+        raise ValidationError("Composite scoring history is immutable after creation.")
+
+
+class CompositeAssessmentSnapshot(models.Model):
+    stable_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    assessment_run = models.OneToOneField(
+        AssessmentRun,
+        on_delete=models.PROTECT,
+        related_name="composite_assessment_snapshot",
+    )
+    algorithm_version = models.CharField(max_length=64)
+    state_schema_version = models.CharField(max_length=64)
+    projection = models.JSONField(default=dict)
+    projection_hash = models.CharField(max_length=64)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    objects = ImmutableCompositeRecordQuerySet.as_manager()
+
+    class Meta:
+        ordering = ["assessment_run_id"]
+
+    def __str__(self) -> str:
+        return f"{self.assessment_run_id}: composite assessment"
+
+    def save(self, *args, **kwargs):
+        if self.pk and type(self).objects.filter(pk=self.pk).exists():
+            raise ValidationError("Composite assessment snapshots are immutable.")
+        return super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        raise ValidationError("Composite assessment snapshots are immutable.")
+
+
+class CompletionCreditEvent(models.Model):
+    stable_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    assessment_run = models.ForeignKey(
+        AssessmentRun,
+        on_delete=models.PROTECT,
+        related_name="completion_credit_events",
+    )
+    sprint = models.OneToOneField(
+        PracticeSprint,
+        on_delete=models.PROTECT,
+        related_name="completion_credit_event",
+    )
+    review = models.OneToOneField(
+        PracticeReview,
+        on_delete=models.PROTECT,
+        related_name="completion_credit_event",
+    )
+    protocol = models.ForeignKey(
+        PracticeProtocol,
+        on_delete=models.PROTECT,
+        related_name="completion_credit_events",
+    )
+    competency = models.ForeignKey(
+        Competency,
+        on_delete=models.PROTECT,
+        related_name="completion_credit_events",
+    )
+    algorithm_version = models.CharField(max_length=64)
+    completed_action_ids = models.JSONField(default=list)
+    total_actions = models.PositiveSmallIntegerField()
+    minimum_completed = models.PositiveSmallIntegerField()
+    completion_credit = models.DecimalField(
+        max_digits=6,
+        decimal_places=4,
+        validators=[MinValueValidator(0), MaxValueValidator(1)],
+    )
+    source_snapshot = models.JSONField(default=dict)
+    source_hash = models.CharField(max_length=64)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    objects = ImmutableCompositeRecordQuerySet.as_manager()
+
+    class Meta:
+        ordering = ["assessment_run_id", "created_at", "stable_id"]
+        constraints = [
+            models.CheckConstraint(
+                condition=Q(minimum_completed__gt=0)
+                & Q(total_actions__gte=models.F("minimum_completed")),
+                name="completion_credit_threshold_valid",
+            ),
+            models.CheckConstraint(
+                condition=Q(completion_credit__gte=0) & Q(completion_credit__lte=1),
+                name="completion_credit_in_range",
+            ),
+        ]
+
+    def __str__(self) -> str:
+        return f"{self.competency_id}: {self.completion_credit}"
+
+    def save(self, *args, **kwargs):
+        if self.pk and type(self).objects.filter(pk=self.pk).exists():
+            raise ValidationError("Completion credit events are immutable.")
+        return super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        raise ValidationError("Completion credit events are immutable.")
+
+
+class CompositeScoreState(models.Model):
+    assessment_run = models.OneToOneField(
+        AssessmentRun,
+        on_delete=models.CASCADE,
+        related_name="composite_score_state",
+    )
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="composite_score_states",
+    )
+    algorithm_version = models.CharField(max_length=64)
+    state_schema_version = models.CharField(max_length=64)
+    state = models.JSONField(default=dict)
+    state_hash = models.CharField(max_length=64)
+    active_event_count = models.PositiveIntegerField(default=0)
+    active_event_hash = models.CharField(max_length=64)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ["assessment_run_id"]
+
+    def __str__(self) -> str:
+        return f"{self.assessment_run_id}: composite state"
+
+
+class CompositeScoreSnapshot(models.Model):
+    class Operation(models.TextChoices):
+        INITIALIZE = "initialize", "Initialize composite state"
+        PROCESS = "process", "Process completion closeout"
+        REVERSE = "reverse", "Reverse completion closeout"
+        REBUILD = "rebuild", "Repair composite state"
+
+    stable_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    assessment_run = models.ForeignKey(
+        AssessmentRun,
+        on_delete=models.PROTECT,
+        related_name="composite_score_snapshots",
+    )
+    completion_credit_event = models.ForeignKey(
+        CompletionCreditEvent,
+        on_delete=models.PROTECT,
+        related_name="score_snapshots",
+        null=True,
+        blank=True,
+    )
+    operation = models.CharField(max_length=12, choices=Operation.choices)
+    sequence = models.PositiveIntegerField()
+    algorithm_version = models.CharField(max_length=64)
+    state_schema_version = models.CharField(max_length=64)
+    before_state = models.JSONField(default=dict, blank=True)
+    after_state = models.JSONField(default=dict, blank=True)
+    active_event_count = models.PositiveIntegerField(default=0)
+    active_event_hash = models.CharField(max_length=64)
+    before_state_hash = models.CharField(max_length=64)
+    after_state_hash = models.CharField(max_length=64)
+    reason = models.TextField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    objects = ImmutableCompositeRecordQuerySet.as_manager()
+
+    class Meta:
+        ordering = ["assessment_run_id", "sequence"]
+        constraints = [
+            models.UniqueConstraint(
+                fields=["assessment_run", "sequence"],
+                name="unique_composite_snapshot_sequence",
+            ),
+            models.UniqueConstraint(
+                fields=["assessment_run"],
+                condition=Q(operation="initialize"),
+                name="unique_composite_state_initialization",
+            ),
+            models.UniqueConstraint(
+                fields=["completion_credit_event"],
+                condition=Q(operation="process"),
+                name="unique_completion_credit_processing",
+            ),
+            models.UniqueConstraint(
+                fields=["completion_credit_event"],
+                condition=Q(operation="reverse"),
+                name="unique_completion_credit_reversal",
+            ),
+            models.CheckConstraint(
+                condition=(
+                    Q(
+                        operation__in=["process", "reverse"],
+                        completion_credit_event__isnull=False,
+                    )
+                    | Q(
+                        operation__in=["initialize", "rebuild"],
+                        completion_credit_event__isnull=True,
+                    )
+                ),
+                name="composite_snapshot_event_matches_operation",
+            ),
+            models.CheckConstraint(
+                condition=~Q(operation="reverse") | ~Q(reason=""),
+                name="composite_reversal_requires_reason",
+            ),
+        ]
+
+    def __str__(self) -> str:
+        return f"{self.assessment_run_id}: {self.sequence} {self.operation}"
+
+    def save(self, *args, **kwargs):
+        if self.pk and type(self).objects.filter(pk=self.pk).exists():
+            raise ValidationError("Composite score snapshots are immutable.")
+        return super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        raise ValidationError("Composite score snapshots are immutable.")
 
 
 class ImmutablePilotFeedbackQuerySet(models.QuerySet):

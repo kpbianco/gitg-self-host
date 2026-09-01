@@ -18,6 +18,10 @@ from growth.models import (
     ArchetypeResult,
     AssessmentContext,
     AssessmentRun,
+    CompletionCreditEvent,
+    CompositeAssessmentSnapshot,
+    CompositeScoreSnapshot,
+    CompositeScoreState,
     EvidenceEvent,
     LeverBaseline,
     LeverState,
@@ -34,7 +38,7 @@ from growth.models import (
 )
 from growth.services.evidence import build_privacy_safe_evidence_export
 
-OWNER_ARCHIVE_SCHEMA_VERSION = "grounded-growth-owner-private-archive-v1"
+OWNER_ARCHIVE_SCHEMA_VERSION = "grounded-growth-owner-private-archive-v2"
 DELETION_POLICY_VERSION = "GG-OWNER-DELETION-1.0"
 RETENTION_POLICY_VERSION = "GG-OWNER-RETENTION-1.0"
 
@@ -110,6 +114,9 @@ def _replace_internal_references(value: Any, references: dict[str, str]) -> Any:
 def _owned_querysets(user) -> dict[str, models.QuerySet]:
     return {
         "assessment_runs": AssessmentRun.objects.filter(user=user),
+        "composite_assessment_snapshots": CompositeAssessmentSnapshot.objects.filter(
+            assessment_run__user=user
+        ),
         "orientation_results": OrientationResult.objects.filter(assessment_run__user=user),
         "archetype_results": ArchetypeResult.objects.filter(assessment_run__user=user),
         "lever_baselines": LeverBaseline.objects.filter(user=user),
@@ -118,6 +125,11 @@ def _owned_querysets(user) -> dict[str, models.QuerySet]:
         "practice_check_ins": PracticeCheckIn.objects.filter(sprint__user=user),
         "evidence_events": EvidenceEvent.objects.filter(check_in__sprint__user=user),
         "score_snapshots": ScoreSnapshot.objects.filter(assessment_run__user=user),
+        "completion_credit_events": CompletionCreditEvent.objects.filter(assessment_run__user=user),
+        "composite_score_states": CompositeScoreState.objects.filter(user=user),
+        "composite_score_snapshots": CompositeScoreSnapshot.objects.filter(
+            assessment_run__user=user
+        ),
         "practice_reviews": PracticeReview.objects.filter(sprint__user=user),
         "pilot_feedback": PilotFeedback.objects.filter(user=user),
         "assessment_context": AssessmentContext.objects.filter(user=user),
@@ -156,6 +168,14 @@ def build_owner_archive(user) -> dict[str, Any]:
             "created_at", "stable_id"
         )
     )
+    practice_reviews = list(
+        PracticeReview.objects.filter(sprint__user=user).order_by("submitted_at", "stable_id")
+    )
+    completion_credit_events = list(
+        CompletionCreditEvent.objects.filter(assessment_run__user=user).order_by(
+            "assessment_run__created_at", "assessment_run_id", "created_at", "stable_id"
+        )
+    )
     weekly_plans = list(
         WeeklyExecutionPlan.objects.filter(user=user).order_by(
             "week_start", "revision", "stable_id"
@@ -166,6 +186,8 @@ def build_owner_archive(user) -> dict[str, Any]:
     sprint_refs = _references(sprints, "sprint")
     check_in_refs = _references(check_ins, "check-in")
     evidence_refs = _references(evidence_events, "evidence")
+    practice_review_refs = _references(practice_reviews, "practice-review")
+    completion_credit_refs = _references(completion_credit_events, "completion-credit")
     weekly_plan_refs = _references(weekly_plans, "weekly-plan")
     internal_references = {
         str(key): value
@@ -174,6 +196,8 @@ def build_owner_archive(user) -> dict[str, Any]:
             sprint_refs,
             check_in_refs,
             evidence_refs,
+            practice_review_refs,
+            completion_credit_refs,
             weekly_plan_refs,
         )
         for key, value in mapping.items()
@@ -202,6 +226,22 @@ def build_owner_archive(user) -> dict[str, Any]:
                 curriculum_version_stable_id=item.curriculum_version_id,
             )
             for item in assessments
+        ],
+        "composite_assessment_snapshots": [
+            _record(
+                item,
+                (
+                    "algorithm_version",
+                    "state_schema_version",
+                    "projection",
+                    "projection_hash",
+                    "created_at",
+                ),
+                assessment_ref=assessment_refs[item.assessment_run_id],
+            )
+            for item in CompositeAssessmentSnapshot.objects.filter(
+                assessment_run__user=user
+            ).order_by("assessment_run__created_at", "assessment_run_id")
         ],
         "orientation_results": [
             _record(
@@ -273,6 +313,7 @@ def build_owner_archive(user) -> dict[str, Any]:
                 item,
                 (
                     "person_or_context",
+                    "scoring_contract_version",
                     "start_date",
                     "status",
                     "created_at",
@@ -377,6 +418,74 @@ def build_owner_archive(user) -> dict[str, Any]:
                 "assessment_run__created_at", "assessment_run_id", "sequence"
             )
         ],
+        "completion_credit_events": [
+            _record(
+                item,
+                (
+                    "algorithm_version",
+                    "completed_action_ids",
+                    "total_actions",
+                    "minimum_completed",
+                    "completion_credit",
+                    "source_snapshot",
+                    "source_hash",
+                    "created_at",
+                ),
+                archive_ref=completion_credit_refs[item.pk],
+                assessment_ref=assessment_refs[item.assessment_run_id],
+                sprint_ref=sprint_refs[item.sprint_id],
+                review_ref=practice_review_refs[item.review_id],
+                protocol_stable_id=item.protocol_id,
+                competency_stable_id=item.competency_id,
+            )
+            for item in completion_credit_events
+        ],
+        "composite_score_states": [
+            _record(
+                item,
+                (
+                    "algorithm_version",
+                    "state_schema_version",
+                    "state",
+                    "state_hash",
+                    "active_event_count",
+                    "active_event_hash",
+                    "updated_at",
+                ),
+                assessment_ref=assessment_refs[item.assessment_run_id],
+            )
+            for item in CompositeScoreState.objects.filter(user=user).order_by(
+                "assessment_run__created_at", "assessment_run_id"
+            )
+        ],
+        "composite_score_snapshots": [
+            _record(
+                item,
+                (
+                    "operation",
+                    "sequence",
+                    "algorithm_version",
+                    "state_schema_version",
+                    "before_state",
+                    "after_state",
+                    "active_event_count",
+                    "active_event_hash",
+                    "before_state_hash",
+                    "after_state_hash",
+                    "reason",
+                    "created_at",
+                ),
+                assessment_ref=assessment_refs[item.assessment_run_id],
+                completion_credit_ref=(
+                    completion_credit_refs[item.completion_credit_event_id]
+                    if item.completion_credit_event_id is not None
+                    else None
+                ),
+            )
+            for item in CompositeScoreSnapshot.objects.filter(assessment_run__user=user).order_by(
+                "assessment_run__created_at", "assessment_run_id", "sequence"
+            )
+        ],
         "practice_reviews": [
             _record(
                 item,
@@ -390,11 +499,10 @@ def build_owner_archive(user) -> dict[str, Any]:
                     "mastery_disclaimer",
                     "submitted_at",
                 ),
+                archive_ref=practice_review_refs[item.pk],
                 sprint_ref=sprint_refs[item.sprint_id],
             )
-            for item in PracticeReview.objects.filter(sprint__user=user).order_by(
-                "submitted_at", "stable_id"
-            )
+            for item in practice_reviews
         ],
         "pilot_feedback": [
             _record(
@@ -606,6 +714,10 @@ def delete_owner_account(*, user, expected_preview_hash: str) -> int:
         raise DataLifecycleError("The deletion preview changed. Review the current counts again.")
 
     ordered = (
+        CompositeScoreSnapshot.objects.filter(assessment_run__user=locked_user),
+        CompletionCreditEvent.objects.filter(assessment_run__user=locked_user),
+        CompositeAssessmentSnapshot.objects.filter(assessment_run__user=locked_user),
+        CompositeScoreState.objects.filter(user=locked_user),
         ScoreSnapshot.objects.filter(assessment_run__user=locked_user),
         WeeklyExecutionReview.objects.filter(user=locked_user),
         WeeklyExecutionPlan.objects.filter(user=locked_user),

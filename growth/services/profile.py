@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from decimal import Decimal
+from typing import Any
 
 from django.contrib.auth import get_user_model
 
@@ -12,10 +13,16 @@ from growth.domain.ranking import (
 )
 from growth.models import (
     AssessmentRun,
+    CompositeScoreSnapshot,
+    CompositeScoreState,
     LeverBaseline,
     LeverState,
     PracticeProtocol,
     ScoreSnapshot,
+)
+from growth.services.composite_score_state import (
+    CompositeScoreStateError,
+    verify_composite_score_state_for_run,
 )
 from growth.services.score_state import ScoreStateError, verify_score_state_for_run
 
@@ -28,6 +35,8 @@ class ProfileSummaryError(ValueError):
 class ProfileLever:
     baseline: LeverBaseline
     state: LeverState | None
+    composite_row: dict[str, Any] | None = None
+    composite_need_rank: int | None = None
 
     @property
     def lever(self):
@@ -39,14 +48,20 @@ class ProfileLever:
 
     @property
     def starting_estimate(self) -> Decimal | None:
+        if self.composite_row is not None:
+            return Decimal(self.composite_row["assessment_estimate"])
         return self.baseline.calibrated_estimate
 
     @property
     def starting_confidence(self) -> Decimal:
+        if self.composite_row is not None:
+            return Decimal(self.composite_row["assessment_confidence"])
         return self.baseline.evidence_confidence
 
     @property
     def estimate(self) -> Decimal | None:
+        if self.composite_row is not None:
+            return Decimal(self.composite_row["assessment_estimate"])
         return (
             self.state.current_estimate
             if self.state is not None
@@ -55,6 +70,8 @@ class ProfileLever:
 
     @property
     def confidence(self) -> Decimal:
+        if self.composite_row is not None:
+            return Decimal(self.composite_row["assessment_confidence"])
         return (
             self.state.current_confidence
             if self.state is not None
@@ -63,10 +80,14 @@ class ProfileLever:
 
     @property
     def need_score(self) -> Decimal | None:
+        if self.composite_row is not None:
+            return Decimal(self.composite_row["remaining_need"])
         return self.state.current_need_score if self.state is not None else self.baseline.need_score
 
     @property
     def need_rank(self) -> int:
+        if self.composite_need_rank is not None:
+            return self.composite_need_rank
         return self.state.current_need_rank if self.state is not None else self.baseline.need_rank
 
     @property
@@ -75,7 +96,21 @@ class ProfileLever:
 
     @property
     def has_evidence_update(self) -> bool:
+        if self.composite_row is not None:
+            return Decimal(self.composite_row["coverage"]) > 0
         return bool(self.state is not None and self.state.cumulative_evidence_mass > 0)
+
+    @property
+    def completion_coverage(self) -> Decimal:
+        if self.composite_row is None:
+            return Decimal("0")
+        return Decimal(self.composite_row["coverage"])
+
+    @property
+    def assessment_source(self) -> str:
+        if self.composite_row is None:
+            return "legacy"
+        return str(self.composite_row["assessment_source"])
 
 
 @dataclass(frozen=True)
@@ -89,6 +124,11 @@ class ProfileSummary:
     dynamic_state_active: bool
     score_snapshot_count: int
     state_verification_error: str
+    composite_state_active: bool = False
+    canonical_completion_coverage: Decimal = Decimal("0")
+    full_credit_competencies: int = 0
+    partial_credit_competencies: int = 0
+    composite_snapshot_count: int = 0
 
 
 def _rank_recommendations(
@@ -145,6 +185,30 @@ def _rank_recommendations(
     )
 
 
+def _rank_composite_recommendations(
+    state: dict[str, Any],
+) -> tuple[list[PracticeProtocol], dict[str, Decimal]]:
+    protocols = list(
+        PracticeProtocol.objects.filter(availability=PracticeProtocol.Availability.ACTIVE)
+        .select_related("parent_competency")
+        .order_by("display_order", "stable_id")
+    )
+    competency_rows = state.get("competencies") or {}
+    ranked: list[tuple[PracticeProtocol, Decimal]] = []
+    for protocol in protocols:
+        if protocol.parent_competency_id not in competency_rows:
+            raise ProfileSummaryError(
+                f"{protocol.stable_id}: composite priority is unavailable for its competency."
+            )
+        priority = Decimal(competency_rows[protocol.parent_competency_id]["remaining_priority"])
+        ranked.append((protocol, priority))
+    ranked.sort(key=lambda item: (-item[1], item[0].display_order, item[0].stable_id))
+    return (
+        [protocol for protocol, priority in ranked if priority > 0][:3],
+        {protocol.stable_id: priority for protocol, priority in ranked},
+    )
+
+
 def build_profile_summary(user: get_user_model()) -> ProfileSummary:
     run = (
         AssessmentRun.objects.filter(user=user)
@@ -173,20 +237,59 @@ def build_profile_summary(user: get_user_model()) -> ProfileSummary:
     if states and not dynamic_state_active:
         raise ProfileSummaryError("Current lever-state coverage is incomplete.")
     state_verification_error = ""
+    verification_failed = False
     if dynamic_state_active:
         try:
             verify_score_state_for_run(run)
         except ScoreStateError:
             dynamic_state_active = False
+            verification_failed = True
             state_verification_error = (
                 "Evidence and score-state verification must pass before current "
                 "updates can be trusted."
             )
             states = {}
+
+    composite_state = CompositeScoreState.objects.filter(
+        user=user,
+        assessment_run=run,
+    ).first()
+    composite_state_active = composite_state is not None
+    if composite_state is not None:
+        try:
+            verify_composite_score_state_for_run(run)
+        except CompositeScoreStateError:
+            composite_state_active = False
+            composite_state = None
+            dynamic_state_active = False
+            verification_failed = True
+            states = {}
+            state_verification_error = (
+                "Composite completion-credit verification must pass before current "
+                "priorities can be trusted."
+            )
+    if verification_failed:
+        dynamic_state_active = False
+        composite_state_active = False
+        states = {}
+        composite_state = None
+    composite_levers = composite_state.state["levers"] if composite_state is not None else {}
+    composite_lever_ranks = {
+        lever_id: rank
+        for rank, (lever_id, _row) in enumerate(
+            sorted(
+                composite_levers.items(),
+                key=lambda item: (-Decimal(item[1]["remaining_need"]), item[0]),
+            ),
+            start=1,
+        )
+    }
     rows = [
         ProfileLever(
             baseline=baseline,
             state=states.get(baseline.lever_id),
+            composite_row=composite_levers.get(baseline.lever_id),
+            composite_need_rank=composite_lever_ranks.get(baseline.lever_id),
         )
         for baseline in baselines
     ]
@@ -201,11 +304,34 @@ def build_profile_summary(user: get_user_model()) -> ProfileSummary:
     )[:5]
     evidence_updated = sorted(
         (row for row in rows if row.has_evidence_update),
-        key=lambda item: (-item.included_evidence_events, item.lever.stable_id),
+        key=(
+            (lambda item: (-item.completion_coverage, item.lever.stable_id))
+            if composite_state is not None
+            else (lambda item: (-item.included_evidence_events, item.lever.stable_id))
+        ),
     )
-    recommendations, priorities = _rank_recommendations(
-        {row.lever.stable_id: row.need_score for row in rows}
-    )
+    if verification_failed:
+        recommendations, priorities = [], {}
+        full_credit_competencies = 0
+        partial_credit_competencies = 0
+        canonical_completion_coverage = Decimal("0")
+    elif composite_state is not None:
+        recommendations, priorities = _rank_composite_recommendations(composite_state.state)
+        competency_rows = composite_state.state["competencies"]
+        full_credit_competencies = sum(
+            Decimal(row["completion_credit"]) == 1 for row in competency_rows.values()
+        )
+        partial_credit_competencies = sum(
+            Decimal("0") < Decimal(row["completion_credit"]) < 1 for row in competency_rows.values()
+        )
+        canonical_completion_coverage = Decimal(composite_state.state["canonical_coverage"])
+    else:
+        recommendations, priorities = _rank_recommendations(
+            {row.lever.stable_id: row.need_score for row in rows}
+        )
+        full_credit_competencies = 0
+        partial_credit_competencies = 0
+        canonical_completion_coverage = Decimal("0")
     return ProfileSummary(
         assessment_run=run,
         highest_needs=highest_needs,
@@ -216,4 +342,9 @@ def build_profile_summary(user: get_user_model()) -> ProfileSummary:
         dynamic_state_active=dynamic_state_active,
         score_snapshot_count=ScoreSnapshot.objects.filter(assessment_run=run).count(),
         state_verification_error=state_verification_error,
+        composite_state_active=composite_state_active,
+        canonical_completion_coverage=canonical_completion_coverage,
+        full_credit_competencies=full_credit_competencies,
+        partial_credit_competencies=partial_credit_competencies,
+        composite_snapshot_count=CompositeScoreSnapshot.objects.filter(assessment_run=run).count(),
     )

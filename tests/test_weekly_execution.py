@@ -470,7 +470,7 @@ def test_weekly_readiness_is_private_deterministic_and_fails_closed(user, seeded
         verify_weekly_execution_readiness()
 
 
-def _growth_digest(excluded_tables=()):
+def _growth_digest(excluded_tables=(), excluded_columns=()):
     with connection.cursor() as cursor:
         tables = sorted(
             table
@@ -481,8 +481,19 @@ def _growth_digest(excluded_tables=()):
         for table in tables:
             cursor.execute(f'SELECT * FROM "{table}"')
             columns = [item[0] for item in cursor.description]
-            rows = sorted(repr(tuple(row)) for row in cursor.fetchall())
-            payload.append((table, columns, rows))
+            retained_indexes = sorted(
+                (
+                    index
+                    for index, column in enumerate(columns)
+                    if (table, column) not in excluded_columns
+                ),
+                key=columns.__getitem__,
+            )
+            retained_columns = [columns[index] for index in retained_indexes]
+            rows = sorted(
+                repr(tuple(row[index] for index in retained_indexes)) for row in cursor.fetchall()
+            )
+            payload.append((table, retained_columns, rows))
     return hashlib.sha256(json.dumps(payload, sort_keys=True).encode()).hexdigest()
 
 
@@ -490,16 +501,24 @@ def _growth_digest(excluded_tables=()):
 def test_weekly_migration_round_trip_preserves_preexisting_growth_state(seeded):
     executor = MigrationExecutor(connection)
     original_leaves = executor.loader.graph.leaf_nodes()
-    excluded = {"growth_weeklyexecutionplan", "growth_weeklyexecutionreview"}
-    before = _growth_digest(excluded)
+    excluded = {
+        "growth_completioncreditevent",
+        "growth_compositeassessmentsnapshot",
+        "growth_compositescoresnapshot",
+        "growth_compositescorestate",
+        "growth_weeklyexecutionplan",
+        "growth_weeklyexecutionreview",
+    }
+    added_columns = {("growth_practicesprint", "scoring_contract_version")}
+    before = _growth_digest(excluded, added_columns)
     try:
         executor.migrate([("growth", "0010_practicecheckin_typed_observations")])
-        assert _growth_digest(excluded) == before
+        assert _growth_digest(excluded, added_columns) == before
         executor = MigrationExecutor(connection)
         executor.migrate([("growth", "0011_weeklyexecutionplan_weeklyexecutionreview_and_more")])
-        assert _growth_digest(excluded) == before
+        assert _growth_digest(excluded, added_columns) == before
         executor = MigrationExecutor(connection)
         executor.migrate([("growth", "0010_practicecheckin_typed_observations")])
-        assert _growth_digest(excluded) == before
+        assert _growth_digest(excluded, added_columns) == before
     finally:
         MigrationExecutor(connection).migrate(original_leaves)

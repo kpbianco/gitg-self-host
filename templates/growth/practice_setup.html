@@ -19,10 +19,11 @@
         <h1>A focused response to a provisional need.</h1>
         <p class="lede">{{ protocol.recommendation_reason }}</p>
         <div class="status-note" role="note">
-          <strong>Evidence, not completion.</strong>
-          This recommendation does not diagnose you.
-          {% if protocol.score_active %}Eligible submitted observations may adjust provisional capacity estimates.{% else %}This protocol records evidence but is not score-active, so it will not change your profile or recommendation.{% endif %}
-          Completing the practice itself does not establish mastery or change orientations.
+          <strong>Assessment priority, then human closeout.</strong>
+          This recommendation does not diagnose you. Check-ins preserve evidence
+          but do not update completion credit. If you explicitly close the whole
+          practice, its bounded credit updates coverage and recommendation order.
+          Completion does not establish mastery or change orientations.
         </div>
         <form method="post">
           {% csrf_token %}
@@ -58,7 +59,7 @@
         {% include "growth/partials/setup_form.html" with submit_label="Continue" %}
       {% elif step == 6 %}
         <p class="eyebrow">Review the intervention</p>
-        <h1>Three actions, already defined.</h1>
+        <h1>{{ protocol.actions.count }} actions, already defined.</h1>
         <p class="lede">
           The protocol is specific on purpose. Adapt timing to consent and
           circumstance, but do not turn it into an open-ended worksheet.
@@ -76,7 +77,7 @@
         </ol>
         <form method="post">
           {% csrf_token %}
-          <button class="button" type="submit">I have reviewed the three actions</button>
+          <button class="button" type="submit">I have reviewed the defined actions</button>
         </form>
       {% else %}
         <p class="eyebrow">Ready to begin</p>

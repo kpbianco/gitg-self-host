@@ -123,6 +123,9 @@ test "$before_counts" = "$after_counts"
 test "$after_counts" = "$expected_counts"
 compose exec -T app python manage.py verify_evidence_events
 compose exec -T app python manage.py rebuild_score_state --verify-only
+compose exec -T app python manage.py rebuild_composite_score_state --verify-only
+compose exec -T app python scripts/composite_scoring_catalog.py --check
+compose exec -T app python manage.py verify_composite_scoring_readiness
 compose exec -T app python manage.py generate_competency_evidence_reports --check
 compose exec -T app python manage.py verify_pilot_readiness
 compose exec -T app python manage.py verify_expansion_readiness
@@ -162,6 +165,8 @@ http_probe "$changed_env_password" failure
 test "$(canonical_counts)" = "$expected_counts"
 compose exec -T app python manage.py migrate --check
 compose exec -T app python manage.py rebuild_score_state --verify-only
+compose exec -T app python manage.py rebuild_composite_score_state --verify-only
+compose exec -T app python manage.py verify_composite_scoring_readiness
 compose exec -T app python manage.py verify_pilot_readiness
 compose exec -T app python manage.py verify_expansion_readiness
 compose exec -T app python manage.py verify_competency_evidence_readiness
@@ -186,6 +191,8 @@ http_probe "$persisted_password" failure
 http_probe "$changed_env_password" failure
 test "$(canonical_counts)" = "$expected_counts"
 compose exec -T app python manage.py rebuild_score_state --verify-only
+compose exec -T app python manage.py rebuild_composite_score_state --verify-only
+compose exec -T app python manage.py verify_composite_scoring_readiness
 compose exec -T app python manage.py verify_pilot_readiness
 compose exec -T app python manage.py verify_expansion_readiness
 compose exec -T app python manage.py verify_competency_evidence_readiness

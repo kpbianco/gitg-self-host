@@ -9,6 +9,7 @@ from growth.domain.typed_evidence import (
 )
 from growth.forms import PracticeCheckInForm, _typed_field_name
 from growth.models import (
+    CompositeScoreState,
     LeverBaseline,
     LeverState,
     PracticeCheckIn,
@@ -17,7 +18,7 @@ from growth.models import (
 )
 from growth.services.evidence import build_privacy_safe_evidence_export, verify_evidence_event
 from growth.services.practice import save_check_in, start_practice, transition_sprint
-from growth.services.score_state import reverse_evidence_event, verify_score_state_for_run
+from growth.services.score_state import verify_score_state_for_run
 
 
 def _observed_value(rule):
@@ -151,7 +152,7 @@ def test_typed_draft_restores_structured_observations(user, seeded):
 
 
 @pytest.mark.django_db
-def test_typed_submission_replays_scores_reverses_and_preserves_baselines(user, seeded):
+def test_typed_submission_is_replayable_but_does_not_score_before_closeout(user, seeded):
     protocol = PracticeProtocol.objects.get(
         stable_id=(
             "PRACTICE-COMP-2713-APPLICABILITY-ROLE-CHOICE-AND-THE-RIGHT-TO-LEAVE-"
@@ -170,6 +171,20 @@ def test_typed_submission_replays_scores_reverses_and_preserves_baselines(user, 
         .order_by("lever_id")
         .values_list("lever_id", "baseline_alpha", "baseline_beta", "calibrated_estimate")
     )
+    legacy_state_before = list(
+        LeverState.objects.filter(assessment_run=sprint.assessment_run)
+        .order_by("lever_id")
+        .values_list(
+            "lever_id",
+            "current_estimate",
+            "current_confidence",
+            "cumulative_evidence_mass",
+            "included_evidence_events",
+        )
+    )
+    composite_hash_before = CompositeScoreState.objects.get(
+        assessment_run=sprint.assessment_run
+    ).state_hash
     check_in = save_check_in(
         sprint=sprint,
         cleaned_data={
@@ -191,27 +206,34 @@ def test_typed_submission_replays_scores_reverses_and_preserves_baselines(user, 
     assert event.protocol_stable_id == protocol.stable_id
     assert "private narrative" not in str(event.input_snapshot)
     verify_evidence_event(event)
-    mapped_ids = set(protocol.parent_competency.lever_links.values_list("lever_id", flat=True))
-    assert (
-        set(
-            LeverState.objects.filter(
-                assessment_run=sprint.assessment_run,
-                cumulative_evidence_mass__gt=0,
-            ).values_list("lever_id", flat=True)
-        )
-        == mapped_ids
-    )
-    verify_score_state_for_run(sprint.assessment_run)
-    exported = build_privacy_safe_evidence_export(user)
-    assert exported["event_count"] == 1
-    assert "observed_on" not in exported["events"][0]["input"]
-    assert "as_of_date" not in exported["events"][0]["input"]
-    reverse_evidence_event(event, reason="test reversal")
     assert not LeverState.objects.filter(
         assessment_run=sprint.assessment_run,
         cumulative_evidence_mass__gt=0,
     ).exists()
     verify_score_state_for_run(sprint.assessment_run)
+    exported = build_privacy_safe_evidence_export(user)
+    assert exported["event_count"] == 1
+    assert exported["profile_scores_modified"] is False
+    assert "observed_on" not in exported["events"][0]["input"]
+    assert "as_of_date" not in exported["events"][0]["input"]
+    assert (
+        CompositeScoreState.objects.get(assessment_run=sprint.assessment_run).state_hash
+        == composite_hash_before
+    )
+    assert (
+        list(
+            LeverState.objects.filter(assessment_run=sprint.assessment_run)
+            .order_by("lever_id")
+            .values_list(
+                "lever_id",
+                "current_estimate",
+                "current_confidence",
+                "cumulative_evidence_mass",
+                "included_evidence_events",
+            )
+        )
+        == legacy_state_before
+    )
     assert baseline_before == list(
         LeverBaseline.objects.filter(assessment_run=sprint.assessment_run)
         .order_by("lever_id")
@@ -220,13 +242,14 @@ def test_typed_submission_replays_scores_reverses_and_preserves_baselines(user, 
 
 
 @pytest.mark.django_db
-def test_mixed_protocol_events_aggregate_once_through_each_parent_mapping(user, seeded):
+def test_mixed_protocol_check_ins_remain_unscored_before_closeout(user, seeded):
     protocols = [
         PracticeProtocol.objects.get(stable_id="PRACTICE-COMP-0101-CONCEPTIONS-OF-FLOURISHING-01"),
         PracticeProtocol.objects.get(stable_id="PRACTICE-COMP-0102-A-PROVISIONAL-WORLDVIEW-01"),
     ]
     events = []
     assessment_run = None
+    composite_hash_before = None
     for index, protocol in enumerate(protocols):
         sprint = start_practice(
             user=user,
@@ -235,6 +258,10 @@ def test_mixed_protocol_events_aggregate_once_through_each_parent_mapping(user, 
             start_date=date.today(),
         )
         assessment_run = sprint.assessment_run
+        if composite_hash_before is None:
+            composite_hash_before = CompositeScoreState.objects.get(
+                assessment_run=assessment_run
+            ).state_hash
         action = protocol.actions.get(sequence=1)
         check_in = save_check_in(
             sprint=sprint,
@@ -255,7 +282,11 @@ def test_mixed_protocol_events_aggregate_once_through_each_parent_mapping(user, 
         transition_sprint(sprint, PracticeSprint.Status.STOPPED)
 
     shared = LeverState.objects.get(assessment_run=assessment_run, lever_id="L01")
-    assert shared.included_evidence_events == 2
-    assert shared.cumulative_evidence_mass > 0
+    assert shared.included_evidence_events == 0
+    assert shared.cumulative_evidence_mass == 0
     verify_score_state_for_run(assessment_run)
     assert len({event.pk for event in events}) == 2
+    assert (
+        CompositeScoreState.objects.get(assessment_run=assessment_run).state_hash
+        == composite_hash_before
+    )

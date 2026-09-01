@@ -2,12 +2,20 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from datetime import date, timedelta
+from decimal import Decimal
 from typing import Any
 
 from django.core.exceptions import ValidationError
 from django.db import IntegrityError, transaction
 from django.utils import timezone
 
+from growth.domain.composite_scoring import (
+    ALGORITHM_VERSION as COMPOSITE_SCORE_VERSION,
+)
+from growth.domain.composite_scoring import (
+    CompositeScoringError,
+    closeout_credit,
+)
 from growth.domain.evidence import (
     ALLOWED_OBSERVATION_FIELDS,
     observation_fields_for_rules,
@@ -19,6 +27,12 @@ from growth.models import (
     PracticeProtocol,
     PracticeReview,
     PracticeSprint,
+)
+from growth.services.composite_score_state import (
+    CompositeScoreStateError,
+    create_completion_credit_event,
+    load_composite_scoring_policy,
+    synchronize_composite_score_state_for_run,
 )
 from growth.services.evidence import EvidenceWorkflowError, create_evidence_event
 from growth.services.score_state import ScoreStateError, apply_evidence_event
@@ -34,12 +48,16 @@ class PracticeWorkflowError(ValueError):
 
 @dataclass(frozen=True)
 class CompletionEvidence:
+    total_actions: int
+    minimum_completed: int
     actions_attempted: int
     actions_completed: int
     substantive_interaction_occurred: bool
     all_actions_attempted: bool
     enough_actions_completed: bool
     ready_for_review: bool
+    uses_composite_closeout: bool
+    projected_closeout_credit: Decimal | None
 
 
 def current_sprint_for(user) -> PracticeSprint | None:
@@ -74,6 +92,10 @@ def start_practice(
     assessment_run = AssessmentRun.objects.filter(user=user).first()
     if assessment_run is None:
         raise PracticeWorkflowError("Complete or import an assessment before starting a practice.")
+    try:
+        synchronize_composite_score_state_for_run(assessment_run)
+    except CompositeScoreStateError as exc:
+        raise PracticeWorkflowError(str(exc)) from exc
     try:
         return PracticeSprint.objects.create(
             user=user,
@@ -160,16 +182,32 @@ def completion_evidence(sprint: PracticeSprint) -> CompletionEvidence:
             for marker in substantive_markers
         )
     all_attempted = bool(action_ids) and action_ids.issubset(attempted_ids)
-    enough_completed = len(completed_ids) >= int(
-        sprint.protocol.completion_rules.get("minimum_completed", 2)
-    )
+    minimum_completed = int(sprint.protocol.completion_rules.get("minimum_completed", 2))
+    completed_count = len(completed_ids & action_ids)
+    enough_completed = completed_count >= minimum_completed
+    closeout_only = sprint.scoring_contract_version == COMPOSITE_SCORE_VERSION
+    projected_credit = None
+    if closeout_only and enough_completed:
+        try:
+            projected_credit = closeout_credit(
+                completed_actions=completed_count,
+                total_actions=len(action_ids),
+                minimum_completed=minimum_completed,
+                policy=load_composite_scoring_policy(),
+            )
+        except CompositeScoringError as exc:
+            raise PracticeWorkflowError(str(exc)) from exc
     return CompletionEvidence(
+        total_actions=len(action_ids),
+        minimum_completed=minimum_completed,
         actions_attempted=len(attempted_ids & action_ids),
-        actions_completed=len(completed_ids & action_ids),
+        actions_completed=completed_count,
         substantive_interaction_occurred=substantive,
         all_actions_attempted=all_attempted,
         enough_actions_completed=enough_completed,
-        ready_for_review=all_attempted and enough_completed and substantive,
+        ready_for_review=(closeout_only or all_attempted) and enough_completed and substantive,
+        uses_composite_closeout=closeout_only,
+        projected_closeout_credit=projected_credit,
     )
 
 
@@ -302,7 +340,10 @@ def save_check_in(
     if submit:
         try:
             event = create_evidence_event(check_in)
-            if protocol_requires_production_scoring(locked_sprint.protocol):
+            if (
+                locked_sprint.scoring_contract_version == PracticeSprint.ScoringContract.LEGACY
+                and protocol_requires_production_scoring(locked_sprint.protocol)
+            ):
                 apply_evidence_event(event)
         except (EvidenceWorkflowError, ScoreStateError, ScoringContractError) as exc:
             raise PracticeWorkflowError(str(exc)) from exc
@@ -323,9 +364,10 @@ def complete_with_review(
         raise PracticeWorkflowError("This practice already has a final review.")
     evidence = completion_evidence(locked)
     if not evidence.ready_for_review:
+        minimum = int(locked.protocol.completion_rules.get("minimum_completed", 2))
         raise PracticeWorkflowError(
-            "Completion requires all three actions attempted, at least two completed, "
-            "and the protocol's meaningful-attempt criterion."
+            f"Completion requires at least {minimum} actions completed and the "
+            "protocol's meaningful-attempt criterion."
         )
     review = PracticeReview.objects.create(
         sprint=locked,
@@ -341,4 +383,9 @@ def complete_with_review(
     locked.completed_at = timezone.now()
     locked.paused_at = None
     locked.save()
+    if locked.scoring_contract_version == COMPOSITE_SCORE_VERSION:
+        try:
+            create_completion_credit_event(review)
+        except CompositeScoreStateError as exc:
+            raise PracticeWorkflowError(str(exc)) from exc
     return review

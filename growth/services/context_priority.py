@@ -11,6 +11,7 @@ from django.conf import settings
 from django.core.exceptions import ValidationError
 from django.db import transaction
 
+from growth.domain.composite_scoring import ALGORITHM_VERSION as COMPOSITE_SCORING_VERSION
 from growth.domain.context import CONTEXT_CONTRACT_VERSION
 from growth.domain.context_priority import (
     CONTEXT_PRIORITY_ALGORITHM_VERSION,
@@ -27,6 +28,7 @@ from growth.domain.ranking import ProtocolWeight, RankingContractError, protocol
 from growth.models import (
     AssessmentContext,
     AssessmentRun,
+    CompositeScoreState,
     LeverBaseline,
     LeverState,
     PracticeContext,
@@ -36,6 +38,10 @@ from growth.services.canonical_import import (
     CanonicalDataError,
     load_and_validate_bundle,
     validate_practice_content_mapping,
+)
+from growth.services.composite_score_state import (
+    CompositeScoreStateError,
+    verify_composite_score_state_for_run,
 )
 from growth.services.context import ContextReadinessError, verify_context_readiness
 from growth.services.score_state import ScoreStateError, verify_score_state_for_run
@@ -84,6 +90,12 @@ class ContextPriorityReadinessSummary:
 
     def as_dict(self) -> dict[str, Any]:
         return asdict(self)
+
+
+@dataclass(frozen=True)
+class EpochPriorityState:
+    lever_needs: dict[str, Decimal | None]
+    competency_priorities: dict[str, Decimal] | None
 
 
 def _validate_scope(*, user, assessment_run: AssessmentRun) -> None:
@@ -189,7 +201,7 @@ def _runtime_protocols(
     return protocols
 
 
-def _needs_for_epoch(*, user, assessment_run: AssessmentRun) -> dict[str, Decimal | None]:
+def _needs_for_epoch(*, user, assessment_run: AssessmentRun) -> EpochPriorityState:
     baselines = tuple(
         LeverBaseline.objects.filter(assessment_run=assessment_run).order_by("lever_id")
     )
@@ -201,8 +213,32 @@ def _needs_for_epoch(*, user, assessment_run: AssessmentRun) -> dict[str, Decima
         raise ContextPriorityServiceError(
             "Context-aware priority requires user-owned assessment need baselines."
         )
-    states = tuple(LeverState.objects.filter(assessment_run=assessment_run).order_by("lever_id"))
-    if states:
+    composite_state = CompositeScoreState.objects.filter(assessment_run=assessment_run).first()
+    if composite_state is not None:
+        if composite_state.user_id != user.pk:
+            raise ContextPriorityServiceError(
+                "Context-aware priority requires user-owned composite score state."
+            )
+        try:
+            verify_composite_score_state_for_run(assessment_run)
+        except CompositeScoreStateError:
+            raise ContextPriorityServiceError(
+                "Context-aware priority requires verified composite score state."
+            ) from None
+        needs = {
+            lever_id: Decimal(row["remaining_need"])
+            for lever_id, row in composite_state.state["levers"].items()
+        }
+        competency_priorities = {
+            competency_id: Decimal(row["remaining_priority"])
+            for competency_id, row in composite_state.state["competencies"].items()
+        }
+    else:
+        states = tuple(
+            LeverState.objects.filter(assessment_run=assessment_run).order_by("lever_id")
+        )
+        competency_priorities = None
+    if composite_state is None and states:
         if any(state.user_id != user.pk for state in states):
             raise ContextPriorityServiceError(
                 "Context-aware priority requires user-owned current lever state."
@@ -218,7 +254,7 @@ def _needs_for_epoch(*, user, assessment_run: AssessmentRun) -> dict[str, Decima
                 "Context-aware priority requires verified current score state."
             ) from None
         needs = {state.lever_id: state.current_need_score for state in states}
-    else:
+    elif composite_state is None:
         needs = {baseline.lever_id: baseline.need_score for baseline in baselines}
     for value in needs.values():
         if value is not None and (
@@ -227,7 +263,15 @@ def _needs_for_epoch(*, user, assessment_run: AssessmentRun) -> dict[str, Decima
             raise ContextPriorityServiceError(
                 "Context-aware priority requires finite bounded need values."
             )
-    return needs
+    for value in (competency_priorities or {}).values():
+        if not value.is_finite() or value < 0 or value > 1:
+            raise ContextPriorityServiceError(
+                "Context-aware priority requires finite bounded competency priorities."
+            )
+    return EpochPriorityState(
+        lever_needs=needs,
+        competency_priorities=competency_priorities,
+    )
 
 
 def _verified_latest_assessment_context(
@@ -288,10 +332,17 @@ def _verified_latest_practice_context(
     return records[-1]
 
 
-def _base_priority(protocol: PracticeProtocol, needs: dict[str, Decimal | None]) -> Decimal:
+def _base_priority(protocol: PracticeProtocol, priority_state: EpochPriorityState) -> Decimal:
+    if priority_state.competency_priorities is not None:
+        try:
+            return priority_state.competency_priorities[protocol.parent_competency_id]
+        except KeyError:
+            raise ContextPriorityServiceError(
+                "A context-priority candidate has no composite competency priority."
+            ) from None
     try:
         return protocol_priority(
-            needs,
+            priority_state.lever_needs,
             tuple(
                 ProtocolWeight(lever_id=link.lever_id, weight=link.weight)
                 for link in protocol.parent_competency.lever_links.all()
@@ -327,7 +378,7 @@ def build_context_priority_for_epoch(
             active_source=active_source,
             mapping_rows=mapping_rows,
         )
-        needs = _needs_for_epoch(user=user, assessment_run=locked_run)
+        priority_state = _needs_for_epoch(user=user, assessment_run=locked_run)
         assessment_context = _verified_latest_assessment_context(
             user=user,
             assessment_run=locked_run,
@@ -342,7 +393,7 @@ def build_context_priority_for_epoch(
             candidates.append(
                 ContextPriorityCandidateInput(
                     protocol_stable_id=protocol.stable_id,
-                    base_priority=_base_priority(protocol, needs),
+                    base_priority=_base_priority(protocol, priority_state),
                     practice_context_hash=practice_context.content_hash,
                     factors={
                         factor_id: PriorityFactorValue(
@@ -379,6 +430,11 @@ def build_context_priority_for_epoch(
                 candidates=tuple(candidates),
                 alternative_request=alternative_request,
                 context_contract_version=assessment_context.contract_version,
+                need_ranking_algorithm_version=(
+                    COMPOSITE_SCORING_VERSION
+                    if priority_state.competency_priorities is not None
+                    else "GG-NEED-RANKING-1.0"
+                ),
             )
         except ContextPriorityContractError:
             raise ContextPriorityServiceError(

@@ -55,6 +55,14 @@ leaving the existing profile/browser recommendation path unchanged. M6C-04
 exposes those reviewed contracts through one concise authenticated browser
 journey and an additive deployment/pilot-readiness gate; it adds no model,
 migration, score activation, remote telemetry, or release approval.
+M6H adds the bounded weekly execution loop and owner-private archive,
+deletion, retention, backup, restore, and rollback operations. M6B-GOV-AUDIT
+adds the deterministic 383-package/1,151-action manual-review packet while
+keeping specialist acceptance pending.
+M6I replaces event-level score mutation prospectively: the concise assessment
+projects starting priorities across all 383 competencies, check-ins remain
+immutable evidence, and only an explicit whole-practice closeout records 75%
+or 100% completion credit. Completion is not mastery.
 
 ## Deployment essentials
 
@@ -63,7 +71,8 @@ migration, score activation, remote telemetry, or release approval.
 - The SQLite database is `/data/grounded_growth.sqlite3` inside the container.
 - Startup applies migrations, creates the bootstrap user only when no user
   exists, idempotently seeds canonical data, and backfills missing evidence
-  events, then deterministically reconciles current score state.
+  events, then deterministically reconciles historical and composite score
+  state.
 - Health is available without authentication at `/health/`.
 - Every other application page requires login; static assets are bundled
   locally.
@@ -318,6 +327,32 @@ See [canonical practice content](docs/practice-content.md) and the
 - Software activation does not complete the pending human audits or establish
   participant exposure, release, deployment, clinical, psychometric, cultural,
   accessibility, or intervention-effectiveness validation.
+
+## What M6I-01 adds
+
+- Assessment-derived starting estimates for 7 families, 37 levers, 27
+  domains, and all 383 competencies without adding hundreds of assessment
+  questions.
+- A 50/50 blend of canonical relationship relevance and equal mapped-lever
+  share, followed by a 50/25/25 lever/family/domain competency composite.
+- Equal completion units for all 1,151 actions; action attempts and check-ins
+  create evidence but no global completion update.
+- Explicit human final closeout at each practice's configured threshold: 75%
+  credit at the minimum and 100% after every defined action.
+- Maximum active credit across repeated practices, deterministic shared
+  lever/family/domain coverage, remaining-priority reranking, and immutable
+  hashed process/reversal/rebuild history.
+- Frozen `GG-SCORE-STATE-1.0` history and explicit scoring-version retention
+  for pre-migration sprints.
+- `ER-M6A-003` remains pending, `RG-M6A-002` remains open, and M6B specialist
+  acceptance remains false.
+
+Run the whole-catalog disposition and isolated replay gate with:
+
+```bash
+make composite-scoring-catalog-check
+make composite-scoring-check
+```
 
 ## What M6H-01 adds
 

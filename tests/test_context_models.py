@@ -206,11 +206,18 @@ def test_migration_round_trip_preserves_all_preexisting_growth_rows():
     original_leaves = executor.loader.graph.leaf_nodes()
     excluded = {
         "growth_assessmentcontext",
+        "growth_completioncreditevent",
+        "growth_compositeassessmentsnapshot",
+        "growth_compositescoresnapshot",
+        "growth_compositescorestate",
         "growth_practicecontext",
         "growth_weeklyexecutionplan",
         "growth_weeklyexecutionreview",
     }
-    added_columns = {("growth_practicecheckin", "typed_observations")}
+    added_columns = {
+        ("growth_practicecheckin", "typed_observations"),
+        ("growth_practicesprint", "scoring_contract_version"),
+    }
     before = _growth_row_digest(excluded, added_columns)
     try:
         executor.migrate([("growth", "0007_pilotfeedback")])

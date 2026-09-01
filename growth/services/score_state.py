@@ -9,6 +9,7 @@ from typing import Any
 
 from django.core.exceptions import ValidationError
 from django.db import transaction
+from django.db.models import Q
 from django.utils import timezone
 
 from growth.domain.ranking import RANKING_ALGORITHM_VERSION, rank_needs
@@ -189,7 +190,11 @@ def _events_for_run(assessment_run: AssessmentRun) -> list[EvidenceEvent]:
     processed_ids = _processed_event_ids(assessment_run)
     all_events = list(
         EvidenceEvent.objects.filter(
-            check_in__sprint__assessment_run=assessment_run,
+            Q(
+                check_in__sprint__assessment_run=assessment_run,
+                check_in__sprint__scoring_contract_version=PRODUCTION_SCORE_STATE_VERSION,
+            )
+            | Q(pk__in=processed_ids),
         )
         .select_related(
             "check_in__action",
@@ -210,9 +215,14 @@ def _events_for_run(assessment_run: AssessmentRun) -> list[EvidenceEvent]:
     submitted_count = PracticeCheckIn.objects.filter(
         sprint__assessment_run=assessment_run,
         sprint__protocol_id__in=eligible_ids,
+        sprint__scoring_contract_version=PRODUCTION_SCORE_STATE_VERSION,
         status=PracticeCheckIn.Status.SUBMITTED,
     ).count()
-    eligible_event_count = sum(event.protocol_stable_id in eligible_ids for event in events)
+    eligible_event_count = sum(
+        event.protocol_stable_id in eligible_ids
+        and event.check_in.sprint.scoring_contract_version == PRODUCTION_SCORE_STATE_VERSION
+        for event in events
+    )
     if eligible_event_count != submitted_count:
         raise ScoreStateError(
             f"{assessment_run.pk}: {submitted_count} submitted check-ins have "

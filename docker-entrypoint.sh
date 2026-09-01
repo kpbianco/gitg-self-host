@@ -7,6 +7,7 @@ python manage.py bootstrap_user
 python manage.py seed_canonical
 python manage.py backfill_evidence_events
 python manage.py rebuild_score_state
+python manage.py rebuild_composite_score_state
 python manage.py collectstatic --noinput
 
 exec gunicorn grounded_growth.wsgi:application \

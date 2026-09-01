@@ -32,8 +32,18 @@ def test_container_runs_nonroot_gunicorn_and_safe_startup_sequence():
     seed = entrypoint.index("manage.py seed_canonical")
     evidence_backfill = entrypoint.index("manage.py backfill_evidence_events")
     score_rebuild = entrypoint.index("manage.py rebuild_score_state")
+    composite_rebuild = entrypoint.index("manage.py rebuild_composite_score_state")
     gunicorn = entrypoint.index("exec gunicorn")
-    assert validate < migrate < bootstrap < seed < evidence_backfill < score_rebuild < gunicorn
+    assert (
+        validate
+        < migrate
+        < bootstrap
+        < seed
+        < evidence_backfill
+        < score_rebuild
+        < composite_rebuild
+        < gunicorn
+    )
     assert "--bind 0.0.0.0:8000" in entrypoint
     assert "--access-logfile -" in entrypoint
     assert "--error-logfile -" in entrypoint
@@ -111,6 +121,10 @@ def test_repeatable_compose_acceptance_is_wired_into_make_and_ci():
     assert "verify_m6h_operations_readiness" in operations_script
     assert smoke_script.count("verify_m6h_operations_readiness") == 4
     assert "make m6h-operations-check PYTHON=python" in workflow
+    assert "composite-scoring-check:" in makefile
+    assert "verify_composite_scoring_readiness.sh" in makefile
+    assert smoke_script.count("verify_composite_scoring_readiness") == 3
+    assert "make composite-scoring-check PYTHON=python" in workflow
     assert "Pilot readiness gate" in workflow
     assert set(workflow_data["jobs"]["pilot-ready"]["needs"]) == {
         "quality",

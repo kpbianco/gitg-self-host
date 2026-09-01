@@ -6,6 +6,8 @@ from django.urls import reverse
 
 from growth.forms import PracticeApplicabilityForm, PracticeCheckInForm
 from growth.models import (
+    CompletionCreditEvent,
+    CompositeScoreState,
     EvidenceEvent,
     LeverState,
     PracticeProtocol,
@@ -91,13 +93,11 @@ def test_play_pages_render_specific_score_active_guidance(client, user, seeded):
     assert "A real activity, not an abstract intention" in recommendation.content.decode()
     assert "Reserve a play window" in recommendation.content.decode()
     assert setup.status_code == 200
-    assert "Eligible submitted observations may adjust provisional capacity estimates" in (
-        setup.content.decode()
-    )
+    assert "Check-ins preserve evidence" in setup.content.decode()
 
 
 @pytest.mark.django_db
-def test_play_evidence_and_completion_update_score_state(user, seeded):
+def test_play_check_ins_do_not_score_before_human_closeout(user, seeded):
     protocol = PracticeProtocol.objects.get(stable_id="PRACTICE-PLAY-01")
     sprint = start_practice(
         user=user,
@@ -107,6 +107,9 @@ def test_play_evidence_and_completion_update_score_state(user, seeded):
     )
     before = _state(user)
     snapshots_before = ScoreSnapshot.objects.filter(assessment_run=sprint.assessment_run).count()
+    composite_before = CompositeScoreState.objects.get(
+        assessment_run=sprint.assessment_run
+    ).state_hash
     actions = list(protocol.actions.all())
 
     save_check_in(
@@ -139,9 +142,13 @@ def test_play_evidence_and_completion_update_score_state(user, seeded):
     assert completion.ready_for_review
     assert EvidenceEvent.objects.filter(check_in__sprint=sprint).count() == 3
     assert ScoreSnapshot.objects.filter(assessment_run=sprint.assessment_run).count() == (
-        snapshots_before + 3
+        snapshots_before
     )
-    assert _state(user) != before
+    assert (
+        CompositeScoreState.objects.get(assessment_run=sprint.assessment_run).state_hash
+        == composite_before
+    )
+    assert _state(user) == before
 
 
 @pytest.mark.django_db
@@ -169,9 +176,7 @@ def test_emotional_cues_protocol_is_specific_and_rejects_mind_reading(client, us
         recommendation.content.decode()
     )
     assert "Notice before interpreting" in recommendation.content.decode()
-    assert "Eligible submitted observations may adjust provisional capacity estimates" in (
-        setup.content.decode()
-    )
+    assert "Check-ins preserve evidence" in setup.content.decode()
     assert form.fields["follow_up_question_asked"].label == (
         "I asked a neutral question to check my impression"
     )
@@ -180,7 +185,7 @@ def test_emotional_cues_protocol_is_specific_and_rejects_mind_reading(client, us
 
 
 @pytest.mark.django_db
-def test_emotional_cues_evidence_completes_with_score_updates(user, seeded):
+def test_emotional_cues_human_closeout_records_partial_credit(user, seeded):
     protocol = PracticeProtocol.objects.get(stable_id="PRACTICE-EMOTIONAL-CUES-01")
     sprint = start_practice(
         user=user,
@@ -190,6 +195,9 @@ def test_emotional_cues_evidence_completes_with_score_updates(user, seeded):
     )
     before = _state(user)
     snapshots_before = ScoreSnapshot.objects.filter(assessment_run=sprint.assessment_run).count()
+    composite_before = CompositeScoreState.objects.get(
+        assessment_run=sprint.assessment_run
+    ).state_hash
     actions = list(protocol.actions.all())
 
     save_check_in(
@@ -248,9 +256,14 @@ def test_emotional_cues_evidence_completes_with_score_updates(user, seeded):
         "Completing this practice does not establish mastery."
     )
     assert ScoreSnapshot.objects.filter(assessment_run=sprint.assessment_run).count() == (
-        snapshots_before + 4
+        snapshots_before
     )
-    assert _state(user) != before
+    assert CompletionCreditEvent.objects.get(sprint=sprint).completion_credit == Decimal("0.7500")
+    assert (
+        CompositeScoreState.objects.get(assessment_run=sprint.assessment_run).state_hash
+        != composite_before
+    )
+    assert _state(user) == before
 
 
 @pytest.mark.django_db
@@ -297,9 +310,7 @@ def test_boundary_protocol_is_specific_safe_and_score_active(client, user, seede
         recommendation.content.decode()
     )
     assert "Define what you control" in recommendation.content.decode()
-    assert "Eligible submitted observations may adjust provisional capacity estimates" in (
-        setup.content.decode()
-    )
+    assert "Check-ins preserve evidence" in setup.content.decode()
     assert applicability_form.fields["applicable"].choices[0][1] == (
         "Yes, one safe, low-stakes situation is likely to arise"
     )
@@ -315,7 +326,7 @@ def test_boundary_protocol_is_specific_safe_and_score_active(client, user, seede
 
 
 @pytest.mark.django_db
-def test_boundary_requires_statement_and_follow_through_with_score_updates(user, seeded):
+def test_boundary_requires_statement_and_follow_through_for_closeout_credit(user, seeded):
     protocol = PracticeProtocol.objects.get(stable_id="PRACTICE-BOUNDARY-01")
     sprint = start_practice(
         user=user,
@@ -325,6 +336,9 @@ def test_boundary_requires_statement_and_follow_through_with_score_updates(user,
     )
     before = _state(user)
     snapshots_before = ScoreSnapshot.objects.filter(assessment_run=sprint.assessment_run).count()
+    composite_before = CompositeScoreState.objects.get(
+        assessment_run=sprint.assessment_run
+    ).state_hash
     actions = list(protocol.actions.all())
 
     save_check_in(
@@ -379,9 +393,14 @@ def test_boundary_requires_statement_and_follow_through_with_score_updates(user,
         "Completing this practice does not establish mastery."
     )
     assert ScoreSnapshot.objects.filter(assessment_run=sprint.assessment_run).count() == (
-        snapshots_before + 4
+        snapshots_before
     )
-    assert _state(user) != before
+    assert CompletionCreditEvent.objects.get(sprint=sprint).completion_credit == Decimal("0.7500")
+    assert (
+        CompositeScoreState.objects.get(assessment_run=sprint.assessment_run).state_hash
+        != composite_before
+    )
+    assert _state(user) == before
 
 
 @pytest.mark.django_db
@@ -430,9 +449,7 @@ def test_presence_protocol_is_accessible_specific_and_score_active(client, user,
         recommendation.content.decode()
     )
     assert "Run the usual-condition window" in recommendation.content.decode()
-    assert "Eligible submitted observations may adjust provisional capacity estimates" in (
-        setup.content.decode()
-    )
+    assert "Check-ins preserve evidence" in setup.content.decode()
     assert applicability_form.fields["applicable"].choices[0][1] == (
         "Yes, I have a safe 15-minute activity I can repeat"
     )
@@ -448,7 +465,7 @@ def test_presence_protocol_is_accessible_specific_and_score_active(client, user,
 
 
 @pytest.mark.django_db
-def test_presence_requires_comparison_and_repeat_with_score_updates(user, seeded):
+def test_presence_requires_comparison_and_repeat_for_closeout_credit(user, seeded):
     protocol = PracticeProtocol.objects.get(stable_id="PRACTICE-PRESENCE-01")
     sprint = start_practice(
         user=user,
@@ -458,6 +475,9 @@ def test_presence_requires_comparison_and_repeat_with_score_updates(user, seeded
     )
     before = _state(user)
     snapshots_before = ScoreSnapshot.objects.filter(assessment_run=sprint.assessment_run).count()
+    composite_before = CompositeScoreState.objects.get(
+        assessment_run=sprint.assessment_run
+    ).state_hash
     actions = list(protocol.actions.all())
 
     save_check_in(
@@ -517,6 +537,11 @@ def test_presence_requires_comparison_and_repeat_with_score_updates(user, seeded
         "Completing this practice does not establish mastery."
     )
     assert ScoreSnapshot.objects.filter(assessment_run=sprint.assessment_run).count() == (
-        snapshots_before + 4
+        snapshots_before
     )
-    assert _state(user) != before
+    assert CompletionCreditEvent.objects.get(sprint=sprint).completion_credit == Decimal("0.7500")
+    assert (
+        CompositeScoreState.objects.get(assessment_run=sprint.assessment_run).state_hash
+        != composite_before
+    )
+    assert _state(user) == before

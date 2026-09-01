@@ -54,6 +54,7 @@ def _deletion_groups(counts: dict[str, int]) -> tuple[tuple[str, int], ...]:
             "Assessment and profile",
             (
                 "assessment_runs",
+                "composite_assessment_snapshots",
                 "orientation_results",
                 "archetype_results",
                 "lever_baselines",
@@ -67,6 +68,9 @@ def _deletion_groups(counts: dict[str, int]) -> tuple[tuple[str, int], ...]:
                 "practice_check_ins",
                 "evidence_events",
                 "score_snapshots",
+                "completion_credit_events",
+                "composite_score_states",
+                "composite_score_snapshots",
                 "practice_reviews",
             ),
         ),
@@ -97,7 +101,7 @@ def owner_archive(request):
         )
     response = HttpResponse(content, content_type="application/json; charset=utf-8")
     response["Content-Disposition"] = (
-        'attachment; filename="grounded-growth-owner-private-archive-v1.json"'
+        'attachment; filename="grounded-growth-owner-private-archive-v2.json"'
     )
     response["Cache-Control"] = "no-store, private"
     response["X-Content-Type-Options"] = "nosniff"

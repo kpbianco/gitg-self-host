@@ -34,8 +34,9 @@
         until the instance owner repairs the audit state.
       {% else %}
         <strong>Your assessment baseline remains fixed.</strong>
-        Eligible submitted evidence can update provisional capacity estimates,
-        confidence, and recommendation order. Orientations and archetypes do not change.
+        Check-ins preserve evidence but do not change completion credit. An
+        explicit final practice closeout updates coverage and recommendation
+        order. Orientations and archetypes do not change.
       {% endif %}
     </div>
   {% endif %}
@@ -89,10 +90,17 @@
       {% if active_sprint %}
         {% if active_sprint.status == "paused" %}
           <p>This practice is paused. Resume it when the relationship and timing fit.</p>
+        {% elif practice_evidence.ready_for_review %}
+          <p>
+            {% if practice_evidence.actions_completed == practice_evidence.total_actions %}
+              Every action is complete. You may close the practice for full credit.
+            {% else %}
+              The minimum activity criteria are complete. You may close now for
+              partial credit or finish every action for full credit.
+            {% endif %}
+          </p>
         {% elif next_action %}
           <p><strong>{{ next_action.title }}:</strong> {{ next_action.instructions }}</p>
-        {% elif practice_evidence.ready_for_review %}
-          <p>The submitted activity criteria are complete. The final review is next.</p>
         {% else %}
           <p>Add a compact check-in for the remaining completion evidence.</p>
         {% endif %}
@@ -101,8 +109,8 @@
         </a>
       {% elif summary.assessment_run %}
         <p>
-          Your first complete protocol is ready. Guided setup will help you
-          confirm fit, boundaries, timing, and the three defined actions.
+          A recommended practice is ready. Guided setup will help you confirm
+          fit, boundaries, timing, and its defined actions.
         </p>
         <a class="button button-secondary" href="{% url 'growth:practice-list' %}">
           Review recommendations
@@ -152,7 +160,7 @@
         {% if priority.context_aware %}
           Ordered only among explicitly reviewed practices by provisional need and current context fit.
         {% else %}
-          Recommendation order reflects current provisional need; completion never implies mastery.
+          Recommendation order combines assessment need with human-closeout completion coverage; completion never implies mastery.
         {% endif %}
       </p>
     </div>

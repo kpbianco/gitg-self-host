@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load growth_extras %}
 
 {% block title %}Practice review · Grounded Growth{% endblock %}
 
@@ -17,28 +18,51 @@
 
   <div class="mastery-notice" role="note">
     <strong>Completing this practice does not establish mastery.</strong>
-    <p>
-      This final review creates no new score evidence. Eligible observations
-      were processed when their check-ins were submitted; orientations and
-      archetypes remain unchanged.
-    </p>
+    {% if evidence.uses_composite_closeout %}
+      <p>
+        Check-ins have not changed your completion score. Submitting this final
+        review is the human closeout that records
+        {{ evidence.projected_closeout_credit|percentage }} completion credit.
+        Assessment answers, orientations, and archetypes remain unchanged.
+      </p>
+    {% else %}
+      <p>
+        This historical sprint retains its original event-level scoring contract.
+        The final review itself creates no additional evidence event.
+      </p>
+    {% endif %}
   </div>
 
   <section class="panel completion-criteria">
     <p class="eyebrow">Completion evidence</p>
     <h2>Submitted check-ins only</h2>
     <ul>
-      <li class="{% if evidence.all_actions_attempted %}met{% endif %}">
-        All three actions attempted — {{ evidence.actions_attempted }} of 3
+      <li>
+        Actions attempted — {{ evidence.actions_attempted }} of {{ evidence.total_actions }}
       </li>
       <li class="{% if evidence.enough_actions_completed %}met{% endif %}">
-        At least two actions completed — {{ evidence.actions_completed }} of 3
+        At least {{ evidence.minimum_completed }} actions completed —
+        {{ evidence.actions_completed }} of {{ evidence.total_actions }}
       </li>
       <li class="{% if evidence.substantive_interaction_occurred %}met{% endif %}">
         {{ sprint.protocol.setup_copy.completion_signal_label|default:"At least one meaningful attempt" }}
       </li>
       <li>Final review submitted — this step</li>
     </ul>
+    {% if evidence.uses_composite_closeout and evidence.ready_for_review %}
+      <div class="inline-note">
+        <strong>Closeout credit: {{ evidence.projected_closeout_credit|percentage }}</strong>
+        <p>
+          {% if evidence.actions_completed == evidence.total_actions %}
+            Every action is complete, so this closeout receives full credit.
+          {% else %}
+            You can close now for partial credit, or return and complete every
+            action before closing for full credit. A later stronger practice can
+            improve the competency; repeated partial attempts do not add together.
+          {% endif %}
+        </p>
+      </div>
+    {% endif %}
   </section>
 
   {% if evidence.ready_for_review %}
@@ -53,7 +77,13 @@
           {% for error in field.errors %}<p class="form-error">{{ error }}</p>{% endfor %}
         </div>
       {% endfor %}
-      <button class="button" type="submit">Submit final review and complete practice</button>
+      <button class="button" type="submit">
+        {% if evidence.uses_composite_closeout %}
+          Submit final review and record {{ evidence.projected_closeout_credit|percentage }} credit
+        {% else %}
+          Submit final review and complete practice
+        {% endif %}
+      </button>
     </form>
   {% else %}
     <div class="empty-state compact">

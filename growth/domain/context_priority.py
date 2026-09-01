@@ -8,6 +8,7 @@ from decimal import ROUND_HALF_UP, Decimal, localcontext
 from enum import StrEnum
 from typing import Any
 
+from growth.domain.composite_scoring import ALGORITHM_VERSION as COMPOSITE_SCORING_VERSION
 from growth.domain.context import (
     CONTEXT_CONTRACT_VERSION,
     ContextValueState,
@@ -177,6 +178,7 @@ class ContextPriorityResult:
     ranked_candidate_ids: tuple[str, ...]
     primary_protocol_stable_id: str | None
     alternative: AlternativeResult
+    need_ranking_algorithm_version: str
     canonical_json: str
     content_hash: str
 
@@ -189,7 +191,7 @@ class ContextPriorityResult:
             "candidates": [item.as_dict() for item in self.candidates],
             "dependencies": {
                 "context_contract_version": CONTEXT_CONTRACT_VERSION,
-                "need_ranking_algorithm_version": RANKING_ALGORITHM_VERSION,
+                "need_ranking_algorithm_version": self.need_ranking_algorithm_version,
             },
             "primary_protocol_stable_id": self.primary_protocol_stable_id,
             "ranked_candidate_ids": list(self.ranked_candidate_ids),
@@ -481,7 +483,10 @@ def build_context_priority_result(
         raise ContextPriorityContractError("Context-priority algorithm version is unsupported.")
     if context_contract_version != CONTEXT_CONTRACT_VERSION:
         raise ContextPriorityContractError("Assessment context contract version is unsupported.")
-    if need_ranking_algorithm_version != RANKING_ALGORITHM_VERSION:
+    if need_ranking_algorithm_version not in {
+        RANKING_ALGORITHM_VERSION,
+        COMPOSITE_SCORING_VERSION,
+    }:
         raise ContextPriorityContractError("Need-ranking dependency version is unsupported.")
     epoch_id = _stable_id(assessment_epoch_id, label="assessment epoch ID")
     context_hash = _context_hash(assessment_context_hash, label="assessment context hash")
@@ -549,6 +554,7 @@ def build_context_priority_result(
         ranked_candidate_ids=tuple(item.protocol_stable_id for item in ranked),
         primary_protocol_stable_id=(ranked[0].protocol_stable_id if ranked else None),
         alternative=alternative,
+        need_ranking_algorithm_version=need_ranking_algorithm_version,
         canonical_json="",
         content_hash="",
     )

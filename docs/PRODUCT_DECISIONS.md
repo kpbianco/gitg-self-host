@@ -500,7 +500,7 @@ Phase B; generated full authoring begins only after those foundations pass their
 exact deterministic and hosted-CI gates.
 
 ## Decision 047 — Typed evidence is parallel, explicit, and replay-first
-**Status:** Proposed for M6B review
+**Status:** Not approved by owner; evidence-capture portions retained, production-scoring proposal superseded by Decision 053
 
 M6B introduces pure `GG-TYPED-EVIDENCE-1.0` evaluation with
 `typed-evidence-rules-v1` snapshots. It does not modify
@@ -522,7 +522,7 @@ and minimal provenance. Free text, observer identity, sensitive narrative,
 and artifact contents are not opaque score inputs.
 
 ## Decision 048 — Competency evidence is evidence-only and flows one way
-**Status:** Proposed for M6B review
+**Status:** Rejected by owner for production scoring; superseded by Decision 053
 
 Assessment v1.1 creates immutable lever baselines; it does not create a
 competency baseline. `GG-COMPETENCY-EVIDENCE-SHADOW-1.0` therefore represents
@@ -544,7 +544,7 @@ They do not write assessment baselines, current lever state, score snapshots,
 need/rank, recommendations, or activation.
 
 ## Decision 049 — Shadow capability does not grant production eligibility
-**Status:** Proposed for M6B review
+**Status:** Not approved by owner; event-level production eligibility superseded by Decision 053
 
 `GG-PRODUCTION-SCORE-ELIGIBILITY-1.0` evaluates production eligibility
 separately from evidence capture and shadow projection. Eligibility requires a
@@ -615,7 +615,7 @@ accessibility-population, cultural, longitudinal, effectiveness, mastery, or
 validation claims. Those remain separate human gates.
 
 ## Decision 052 — Activate the complete canonical protocol catalog
-**Status:** Owner-directed implementation on 2026-08-26; consolidated content audit pending
+**Status:** Owner-directed runtime activation on 2026-08-26; event-level score trigger superseded prospectively by Decision 053; consolidated content audit pending
 
 The owner explicitly supersedes the five-runtime/friendship-only boundary for
 this batch and directs all 383 canonical protocols to become runtime available
@@ -637,3 +637,73 @@ originality, accessibility, privacy, safety, specialist, cultural,
 psychometric, clinical, participant, longitudinal, or intervention-
 effectiveness audits complete. It never authorizes scoring identity, dignity,
 qualification, clinical status, or human worth.
+
+## Decision 053 — Composite assessment priority and human-closeout completion credit
+**Status:** Accepted by owner on 2026-09-01 for M6I-01 implementation
+
+The owner rejects Decisions 047–049 as the production scoring architecture.
+Typed check-ins remain immutable, structured proof, but a new check-in does not
+change the additive score state. Production completion credit changes only
+when the user explicitly closes a practice after satisfying its configured
+minimum and substantive criterion. Assessment v1.1 data, historical
+`GG-SCORE-STATE-1.0` rows, evidence events, and score snapshots remain frozen
+and replayable.
+
+Assessment remains a concise starting-priority input rather than an earned
+competency credit. It supplies 37 lever estimates and seven family rollups.
+The 27 domains and 383 competency starting estimates are deterministic
+projections from those results and the canonical ontology; they are labeled
+assessment-derived rather than directly measured.
+
+For competency `c` with `k` mapped levers, canonical normalized relationship
+weight `r(c,l)`, and blended relationship weight `w(c,l)`:
+
+`w(c,l) = 0.50 * r(c,l) + 0.50 * (1 / k)`
+
+Every positive canonical relationship remains represented, stronger mappings
+remain stronger, and the weights for each competency sum to one. Family
+projection uses the mapped levers' family membership. A preliminary
+lever-mapped competency estimate is calculated before its domain rollup, so
+the following final assessment composite is acyclic:
+
+`estimate(c) = 0.50 * mapped_lever(c) + 0.25 * mapped_family(c) + 0.25 * parent_domain(c)`
+
+The same weights produce a confidence value. Existing assessment v1.1 gap and
+confidence mathematics initialize need; they do not award completion credit.
+This structure deliberately lets the concise assessment bias weak areas
+without pretending the user answered hundreds of competency questions.
+
+Actions are equal credit units for this version. Check-ins and repetitions may
+stage proof for an action, and the user explicitly marks whether the action was
+completed. No action or check-in changes global coverage before final closeout.
+At the configured minimum, closeout credit is `0.75`; when every defined
+action is completed, it is `1.00`. For future protocols with intermediate
+counts, credit is linearly interpolated between those endpoints. A repeated
+practice uses the maximum active closeout credit for its competency, never a
+sum, so repetition cannot farm credit and a later stronger closeout applies
+only the positive difference.
+
+Lever and family coverage are normalized by `w(c,l)` relationship mass.
+Domain coverage treats its member competencies equally. Canonical coverage is
+`1.00` only when every contributing competency has `1.00` credit. Personally
+not-applicable coverage may use an explicitly separate denominator, but it may
+not be labeled full canonical coverage.
+
+For assessment starting need `A` and earned coverage `G`, remaining need is:
+
+`R = A * (1 - G) ^ 0.5`
+
+Candidate priority combines 50 percent mapped-lever, 25 percent mapped-family,
+and 25 percent parent-domain remaining need, applies the candidate
+competency's own remaining-credit factor, and then enters the unchanged
+explicit M6C context layer. Full-credit competencies therefore leave the next
+action queue; partial-credit competencies may return later when still
+relevant. Completion is called completion credit, not mastery.
+
+Decision 052 continues to authorize all 383 protocols as runtime available.
+This decision supersedes only its prospective event-level score trigger.
+`ER-M6A-003` remains pending, `RG-M6A-002` remains open, and M6B specialist
+acceptance remains false. Owner approval authorizes deterministic software
+implementation; it is not psychometric, clinical, cultural, accessibility,
+privacy/safety-specialist, participant, longitudinal, or intervention-
+effectiveness validation.

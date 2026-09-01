@@ -22,6 +22,7 @@ from growth.forms import (
 from growth.models import (
     AssessmentContext,
     AssessmentRun,
+    CompletionCreditEvent,
     EvidenceEvent,
     PracticeCheckIn,
     PracticeContext,
@@ -423,7 +424,7 @@ def practice_sprint(request, sprint_id):
         for action in sprint.protocol.actions.all()
     ]
     next_action = next(
-        (row["action"] for row in action_rows if not row["attempted"]),
+        (row["action"] for row in action_rows if not row["completed"]),
         None,
     )
     return render(
@@ -572,11 +573,13 @@ def practice_review_complete(request, sprint_id):
         review = PracticeReview.objects.get(sprint=sprint)
     except PracticeReview.DoesNotExist:
         return redirect("growth:practice-review", sprint_id=sprint.pk)
+    credit_event = CompletionCreditEvent.objects.filter(review=review).first()
     return render(
         request,
         "growth/practice_review_complete.html",
         {
             "sprint": sprint,
             "review": review,
+            "credit_event": credit_event,
         },
     )

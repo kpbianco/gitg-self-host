@@ -592,6 +592,11 @@ def seed_canonical_data() -> ImportSummary:
 
     _seed_protocols(practice_bundle.runtime_protocols)
     pilot_runs, pilot_baselines = _seed_pilot(version, model)
+    from growth.services.composite_score_state import (
+        synchronize_all_composite_score_states,
+    )
+
+    synchronize_all_composite_score_states()
 
     return ImportSummary(
         curriculum_versions=CurriculumVersion.objects.count(),

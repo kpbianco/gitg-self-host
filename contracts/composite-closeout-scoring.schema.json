@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "GG-COMPOSITE-CLOSEOUT-SCORING-1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "algorithm_version",
+    "state_schema_version",
+    "catalog",
+    "relationship_blend",
+    "assessment_projection",
+    "completion_credit",
+    "coverage",
+    "recommendation_priority",
+    "language",
+    "governance"
+  ],
+  "properties": {
+    "schema_version": {"const": "GG-COMPOSITE-CLOSEOUT-SCORING-1.0"},
+    "algorithm_version": {"const": "GG-COMPOSITE-CLOSEOUT-SCORING-1.0"},
+    "state_schema_version": {"const": "composite-closeout-state-v1"},
+    "catalog": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["families", "levers", "domains", "competencies", "practices", "actions"],
+      "properties": {
+        "families": {"const": 7},
+        "levers": {"const": 37},
+        "domains": {"const": 27},
+        "competencies": {"const": 383},
+        "practices": {"const": 383},
+        "actions": {"const": 1151}
+      }
+    },
+    "relationship_blend": {"$ref": "#/$defs/relationshipBlend"},
+    "assessment_projection": {"$ref": "#/$defs/assessmentProjection"},
+    "completion_credit": {"$ref": "#/$defs/completionCredit"},
+    "coverage": {"$ref": "#/$defs/coverage"},
+    "recommendation_priority": {"$ref": "#/$defs/recommendationPriority"},
+    "language": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assessment_value", "earned_value", "queue_value", "prohibited_labels"],
+      "properties": {
+        "assessment_value": {"const": "assessment-derived starting estimate"},
+        "earned_value": {"const": "completion credit"},
+        "queue_value": {"const": "remaining priority"},
+        "prohibited_labels": {
+          "const": ["mastery", "human worth", "clinical status", "qualification"]
+        }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["owner_decision", "specialist_review", "specialist_review_status", "research_gap", "research_gap_status"],
+      "properties": {
+        "owner_decision": {"const": "Decision 053"},
+        "specialist_review": {"const": "ER-M6A-003"},
+        "specialist_review_status": {"const": "pending"},
+        "research_gap": {"const": "RG-M6A-002"},
+        "research_gap_status": {"const": "open"}
+      }
+    }
+  },
+  "$defs": {
+    "unitDecimalString": {"type": "string", "pattern": "^(0(\\.[0-9]+)?|1(\\.0+)?)$"},
+    "relationshipBlend": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["canonical_weight", "equal_share_weight"],
+      "properties": {
+        "canonical_weight": {"$ref": "#/$defs/unitDecimalString"},
+        "equal_share_weight": {"$ref": "#/$defs/unitDecimalString"}
+      }
+    },
+    "assessmentProjection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mapped_lever_weight", "mapped_family_weight", "parent_domain_weight", "unassessed_lever_source", "unassessed_lever_confidence_multiplier", "domain_rollup", "family_rollup", "need_exponent", "confidence_floor", "confidence_weight"],
+      "properties": {
+        "mapped_lever_weight": {"const": "0.50"},
+        "mapped_family_weight": {"const": "0.25"},
+        "parent_domain_weight": {"const": "0.25"},
+        "unassessed_lever_source": {"const": "family_estimate"},
+        "unassessed_lever_confidence_multiplier": {"const": "0.50"},
+        "domain_rollup": {"const": "equal_member_mean"},
+        "family_rollup": {"const": "confidence_weighted_lever_mean"},
+        "need_exponent": {"const": "1.50"},
+        "confidence_floor": {"const": "0.60"},
+        "confidence_weight": {"const": "0.40"}
+      }
+    },
+    "completionCredit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["trigger", "action_weighting", "minimum_closeout_credit", "full_closeout_credit", "between_minimum_and_full", "repeated_closeout_aggregation", "check_in_score_effect"],
+      "properties": {
+        "trigger": {"const": "explicit_human_final_closeout"},
+        "action_weighting": {"const": "equal"},
+        "minimum_closeout_credit": {"const": "0.75"},
+        "full_closeout_credit": {"const": "1.00"},
+        "between_minimum_and_full": {"const": "linear"},
+        "repeated_closeout_aggregation": {"const": "maximum_active_credit"},
+        "check_in_score_effect": {"const": "none"}
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lever_rollup", "family_rollup", "domain_rollup", "competency_rollup", "remaining_need_exponent"],
+      "properties": {
+        "lever_rollup": {"const": "normalized_blended_relationship_mass"},
+        "family_rollup": {"const": "normalized_blended_relationship_mass"},
+        "domain_rollup": {"const": "equal_member_mean"},
+        "competency_rollup": {"const": "maximum_active_closeout_credit"},
+        "remaining_need_exponent": {"const": "0.50"}
+      }
+    },
+    "recommendationPriority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mapped_lever_weight", "mapped_family_weight", "parent_domain_weight", "own_remaining_credit_exponent", "context_layer"],
+      "properties": {
+        "mapped_lever_weight": {"const": "0.50"},
+        "mapped_family_weight": {"const": "0.25"},
+        "parent_domain_weight": {"const": "0.25"},
+        "own_remaining_credit_exponent": {"const": "0.50"},
+        "context_layer": {"const": "GG-CONTEXT-PRIORITY-1.0"}
+      }
+    }
+  }
+}

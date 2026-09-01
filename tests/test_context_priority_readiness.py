@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import traceback
+from datetime import date
 from unittest.mock import patch
 
 import pytest
@@ -15,6 +16,7 @@ from growth.models import (
     ArchetypeResult,
     AssessmentContext,
     AssessmentRun,
+    CompositeScoreState,
     EvidenceEvent,
     LeverBaseline,
     LeverState,
@@ -39,6 +41,7 @@ from growth.services.context_priority import (
 from growth.services.evidence import build_privacy_safe_evidence_export
 from growth.services.personal_os import record_personal_os_revision
 from growth.services.pilot_feedback import build_privacy_safe_pilot_export
+from growth.services.practice import complete_with_review, save_check_in, start_practice
 from growth.services.profile import build_profile_summary
 from tests.test_context_services import assessment_factors, practice_factors
 from tests.test_personal_os_services import audit_values, identity_values
@@ -112,8 +115,36 @@ def _profile_priorities(user):
     }
 
 
+def _submit_friendship_action(sprint, action, *, first, **observations):
+    values = {
+        "action": action,
+        "action_attempted": True,
+        "action_completed": True,
+        "user_initiated": False,
+        "moved_beyond_transactional": False,
+        "follow_up_question_asked": False,
+        "meaningful_information_shared": False,
+        "future_interaction_scheduled": False,
+        "follow_up_within_seven_days": False,
+        "internal_resistance": None,
+        "expected_reciprocity": None,
+        "observed_reciprocity": None,
+        "support_level": PracticeCheckIn.SupportLevel.INDEPENDENT,
+        "context_comparison": (
+            PracticeCheckIn.ContextComparison.FIRST_RECORD
+            if first
+            else PracticeCheckIn.ContextComparison.SAME_CONTEXT
+        ),
+        "evidence_direction": PracticeCheckIn.EvidenceDirection.SUPPORTS,
+        "contradictory_evidence": "",
+        "note": "",
+    }
+    values.update(observations)
+    return save_check_in(sprint=sprint, cleaned_data=values, submit=True)
+
+
 @pytest.mark.django_db
-def test_service_uses_exact_legacy_base_priorities_and_does_not_mutate_or_replace_profile_path(
+def test_service_uses_exact_composite_base_priorities_and_does_not_mutate_profile_path(
     user, seeded
 ):
     run = AssessmentRun.objects.get(user=user)
@@ -142,8 +173,12 @@ def test_service_uses_exact_legacy_base_priorities_and_does_not_mutate_or_replac
     assert _protected_state() == before_state
     assert _profile_priorities(user) == before_profile
     assert {
-        item.protocol_stable_id: format(item.base_priority, ".4f") for item in result.candidates
+        item.protocol_stable_id: format(item.base_priority, "f") for item in result.candidates
     } == before_profile
+    assert (
+        result.canonical_payload()["dependencies"]["need_ranking_algorithm_version"]
+        == "GG-COMPOSITE-CLOSEOUT-SCORING-1.0"
+    )
     assert json.dumps(build_privacy_safe_evidence_export(user), sort_keys=True).encode() == (
         before_evidence_export
     )
@@ -159,6 +194,67 @@ def test_service_uses_exact_legacy_base_priorities_and_does_not_mutate_or_replac
         == before_activation
     )
     assert "PRACTICE-FRIENDSHIP-01" in before_activation
+
+
+@pytest.mark.django_db
+def test_human_closeout_changes_the_base_priority_before_context_is_applied(user, seeded):
+    run = AssessmentRun.objects.get(user=user)
+    protocol = PracticeProtocol.objects.get(stable_id="PRACTICE-FRIENDSHIP-01")
+    record_context_bundle(
+        user=user,
+        assessment_run=run,
+        assessment_factors=assessment_factors(),
+        practice_inputs=(PracticeContextInput(protocol=protocol, factors=practice_factors()),),
+    )
+    before = (
+        build_context_priority_for_epoch(
+            user=user,
+            assessment_run=run,
+            protocol_stable_ids=(protocol.stable_id,),
+        )
+        .candidates[0]
+        .base_priority
+    )
+    sprint = start_practice(
+        user=user,
+        protocol=protocol,
+        person_or_context="Private context",
+        start_date=date.today(),
+    )
+    actions = list(protocol.actions.order_by("sequence"))
+    _submit_friendship_action(
+        sprint,
+        actions[0],
+        first=True,
+        user_initiated=True,
+        moved_beyond_transactional=True,
+        meaningful_information_shared=True,
+    )
+    _submit_friendship_action(
+        sprint,
+        actions[1],
+        first=False,
+        future_interaction_scheduled=True,
+    )
+    complete_with_review(
+        sprint=sprint,
+        reflection="The bounded practice was enough to close this run.",
+        contradictory_evidence="",
+    )
+
+    after = (
+        build_context_priority_for_epoch(
+            user=user,
+            assessment_run=run,
+            protocol_stable_ids=(protocol.stable_id,),
+        )
+        .candidates[0]
+        .base_priority
+    )
+    profile = build_profile_summary(user)
+
+    assert after < before
+    assert after == profile.recommendation_priorities[protocol.stable_id]
 
 
 @pytest.mark.django_db
@@ -337,17 +433,13 @@ def test_hash_and_revision_tampering_fail_with_sanitized_error_chains(user, seed
 
 
 @pytest.mark.django_db
-def test_cross_owned_current_state_fails_closed_instead_of_falling_back_to_baselines(user, seeded):
+def test_cross_owned_composite_state_fails_closed_instead_of_falling_back(user, seeded):
     run = AssessmentRun.objects.get(user=user)
     _record_complete_context(user, run)
     other = get_user_model().objects.create_user(username="context-priority-state-other")
-    with connection.cursor() as cursor:
-        cursor.execute(
-            'UPDATE "growth_leverstate" SET user_id = %s WHERE assessment_run_id = %s',
-            [other.pk, run.pk],
-        )
+    CompositeScoreState.objects.filter(assessment_run=run).update(user=other)
 
-    with pytest.raises(ContextPriorityServiceError, match="user-owned current lever state"):
+    with pytest.raises(ContextPriorityServiceError, match="user-owned composite score state"):
         build_context_priority_for_epoch(
             user=user,
             assessment_run=run,

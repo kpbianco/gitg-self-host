@@ -1262,3 +1262,28 @@ The audit is intentionally unable to accept M6B. `ER-M6A-003` remains pending
 with no completed roles, date, or decision reference, `RG-M6A-002` remains
 open, and the separate manual M6B-GOV specialist and owner records remain
 required.
+
+# Current M6I-01 composite closeout scoring — 2026-09-01
+
+Decision 053 prospectively supersedes Decision 052's event-level production
+score trigger while retaining all 383 runtime protocols and all historical
+`GG-SCORE-STATE-1.0` history. A concise assessment now projects labeled
+starting estimates across 7 families, 37 levers, 27 domains, and 383
+competencies. Relationships blend canonical relevance and equal mapped-lever
+share 50/50; competency and priority composites use 50% lever, 25% family,
+and 25% parent domain components.
+
+New check-ins remain immutable evidence and do not change global coverage.
+The user must explicitly close the whole practice after its substantive and
+minimum-action criteria are satisfied. The minimum earns 0.75 completion
+credit and all defined actions earn 1.00; repeated practices use the
+maximum active credit rather than a sum. Shared lever, family, and domain
+coverage then reduces remaining priority and reranks the next-practice queue.
+Completion is not mastery.
+
+The deterministic catalog covers 383 practices and all 1,151 equal action
+units. `ER-M6A-003` remains pending, `RG-M6A-002` remains open, and M6B
+specialist acceptance remains false. This is owner-approved software
+architecture, not psychometric, clinical, cultural, accessibility,
+privacy/safety-specialist, participant, longitudinal, or intervention-
+effectiveness validation.
