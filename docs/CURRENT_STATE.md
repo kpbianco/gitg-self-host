@@ -1,7 +1,7 @@
 # Current state
 
-Last updated: 2026-08-27
-Implementation branch: `codex/m6h-01-weekly-execution`
+Last updated: 2026-09-01
+Implementation branch: `codex/m6b-gov-audit`
 
 ## M6F all-active implementation
 
@@ -40,6 +40,8 @@ make pilot-check PYTHON=.venv/bin/python
 make curriculum-check PYTHON=.venv/bin/python
 make competency-evidence-check PYTHON=.venv/bin/python
 make m6h-weekly-check PYTHON=.venv/bin/python
+make m6h-operations-check PYTHON=.venv/bin/python
+make catalog-governance-audit-check PYTHON=.venv/bin/python
 ```
 
 ## M6H-01 weekly execution implementation
@@ -54,8 +56,23 @@ make m6h-weekly-check PYTHON=.venv/bin/python
   factor, sprint transition, final practice review, or mastery state.
 - Compose verifies plan and review hashes through recreation and
   backup/restore; readiness output is private-value free.
-- This is the next software-only timeline item. Manual audit and human-gate
-  work are not part of M6H-01.
+- M6H-01 and M6H-02 are merged. Manual acceptance and participant work remain
+  separate.
+
+## M6B-GOV-AUDIT implementation
+
+- The static audit covers exactly 383 packages and 1,151 actions, with one
+  deterministic row for each stable ID.
+- It inventories all 27 domains, 37 mapped levers, used protocol families,
+  all risk classes, used evidence kinds, sources, gaps, reviews, and every
+  active package.
+- It retains stable objective findings and creates a prioritized review queue
+  without reading participant or owner-private records.
+- Every package is score active by owner direction, while zero packages are
+  source complete. Activation is explicitly not treated as governance
+  acceptance.
+- `ER-M6A-003` remains pending with no completed role, date, or decision;
+  `RG-M6A-002` remains open; M6B acceptance remains false.
 
 ## Pending owner audit
 

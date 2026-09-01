@@ -33,6 +33,7 @@ jobs:
       - run: make pilot-check PYTHON=python
       - run: make curriculum-check PYTHON=python
       - run: make competency-evidence-check PYTHON=python
+      - run: make catalog-governance-audit-check PYTHON=python
       - run: make context-check PYTHON=python
       - run: make personal-os-check PYTHON=python
       - run: make context-priority-check PYTHON=python

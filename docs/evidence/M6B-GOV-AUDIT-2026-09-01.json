@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "batch_id": "M6B-GOV-AUDIT",
+  "status": "partial",
+  "commands": [
+    {
+      "command": ".venv/bin/python scripts/catalog_governance_audit.py",
+      "status": "pass",
+      "result": "Generated four deterministic catalog-governance artifacts."
+    },
+    {
+      "command": ".venv/bin/python scripts/catalog_governance_audit.py --check",
+      "status": "pass",
+      "result": "All generated artifacts matched exact expected bytes."
+    },
+    {
+      "command": ".venv/bin/python -m pytest tests/test_catalog_governance_audit.py -q",
+      "status": "pass",
+      "result": "Focused schema, coverage, inventory, finding, governance, privacy, determinism, and wiring tests passed during implementation."
+    },
+    {
+      "command": ".venv/bin/python -m ruff check scripts/catalog_governance_audit.py tests/test_catalog_governance_audit.py",
+      "status": "pass",
+      "result": "Focused static checks passed."
+    },
+    {
+      "command": "./scripts/agent-verify.sh contract",
+      "status": "pass",
+      "result": "Manifest, formatting, Ruff, Django configuration, and migration-drift checks passed."
+    },
+    {
+      "command": "./scripts/agent-verify.sh quick",
+      "status": "pass",
+      "result": "375 tests passed and 13 end-to-end tests were deselected in 32 minutes 19 seconds."
+    },
+    {
+      "command": "./scripts/agent-verify.sh full",
+      "status": "pass",
+      "result": "375 tests passed and 13 were deselected, then every configured audit and milestone readiness gate passed."
+    },
+    {
+      "command": "make full-frontier-check",
+      "status": "pass",
+      "result": "Deterministic 383-of-383 authored coverage was current and 3 focused tests passed."
+    },
+    {
+      "command": "make practice-report-check",
+      "status": "pass",
+      "result": "Practice-content reports were current."
+    },
+    {
+      "command": "make e2e",
+      "status": "blocked",
+      "result": "No application test executed: the pinned Chromium executable was absent and Playwright CDN installation exhausted retries with timeouts and a proxy 502."
+    },
+    {
+      "command": "make compose-smoke",
+      "status": "blocked",
+      "result": "No repository command executed because this runner has no docker executable."
+    }
+  ],
+  "acceptance": [
+    {
+      "criterion": "Objective structural defects are automated without changing scoring or activation semantics.",
+      "status": "pass",
+      "evidence": "Schema validation, stable-ID checks, mappings, evidence rules, source metadata, privacy allowlists, and activation-review consistency are explicit per package."
+    },
+    {
+      "criterion": "Human judgment findings remain open and routed to named roles.",
+      "status": "pass",
+      "evidence": "All 3369 findings remain open with required roles and remediation dependencies."
+    },
+    {
+      "criterion": "Exactly 383 packages and 1151 actions receive deterministic rows.",
+      "status": "pass",
+      "evidence": "Schema-enforced counts and unique stable IDs are present in catalog_governance_audit_v1.json."
+    },
+    {
+      "criterion": "All required automated dispositions are recorded per package.",
+      "status": "pass",
+      "evidence": "Every package has eleven named dispositions with objective evidence and linked finding IDs."
+    },
+    {
+      "criterion": "Every finding has a stable ID, severity, objective evidence, affected IDs, remediation, and status.",
+      "status": "pass",
+      "evidence": "The finding schema and focused tests enforce every required field and unique deterministic ID."
+    },
+    {
+      "criterion": "Critical and high objective structural defects are repaired or remain blockers.",
+      "status": "pass",
+      "evidence": "No critical objective structural defect remains; high findings are explicit manual governance items rather than silently accepted defects."
+    },
+    {
+      "criterion": "Legacy, typed, generated, risk, evidence, domain, lever, and activation cohorts are separately reported.",
+      "status": "pass",
+      "evidence": "The audit records 5 legacy, 378 typed, 374 generated additions, 27 domains, 37 levers, all used families/evidence kinds/risk classes, and all 383 active packages."
+    },
+    {
+      "criterion": "Activation is not represented as governance acceptance.",
+      "status": "pass",
+      "evidence": "The activation_review_boundary records 383 active, zero source complete, specialist review false, and software_activation_is_not_governance_acceptance true."
+    },
+    {
+      "criterion": "ER-M6A-003 remains pending and RG-M6A-002 remains open.",
+      "status": "pass",
+      "evidence": "The source registries and generated audit retain the unchanged manual-gate states and no completion evidence."
+    },
+    {
+      "criterion": "The owner and specialist packet is prioritized without participant data.",
+      "status": "pass",
+      "evidence": "The queue groups every finding by role, risk, domain, family, evidence kind, and dependency from static catalog inputs only."
+    },
+    {
+      "criterion": "JSON CSV and Markdown reports are byte stable and manifest listed.",
+      "status": "pass",
+      "evidence": "Second-run byte stability and the contract manifest audit pass; final post-evidence regeneration is repeated before handoff."
+    },
+    {
+      "criterion": "Complete runtime scoring replay browser and Compose regression chain remains green.",
+      "status": "partial",
+      "evidence": "Contract, quick, full, replay, and all readiness gates pass. Local Playwright and Compose could not execute because Chromium and docker are unavailable; hosted exact-head jobs remain required."
+    }
+  ],
+  "changed_invariants": [],
+  "residual_risks": [
+    "Lexical and structural automation cannot establish semantic originality or specialist acceptance.",
+    "All 383 packages remain source incomplete and require role-specific review.",
+    "All 383 packages remain active before consolidated governance acceptance under the owner-directed boundary.",
+    "A large review queue must not be bulk-accepted without actual reviewer records."
+  ],
+  "unperformed_validation": [
+    "Successful Playwright regression on the exact branch head; local execution was attempted but Chromium installation was blocked by the restricted CDN",
+    "Successful Docker Compose backup restore and replay drill on the exact branch head; local execution was attempted but docker is unavailable",
+    "Hosted GitHub CI on the exact branch head",
+    "Manual M6B-GOV specialist and owner acceptance"
+  ]
+}

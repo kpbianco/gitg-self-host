@@ -1,104 +1,102 @@
 schema_version: 1
 batch:
-  id: M6H-02
-  title: Harden owner data lifecycle and upgrade operations
-  goal: Add deterministic owner export, explicit deletion and retention controls, and verified backup restore upgrade rollback operations without changing curriculum evidence scoring recommendation completion or mastery semantics.
+  id: M6B-GOV-AUDIT
+  title: Audit the complete 383-package catalog for governance review
+  goal: Produce a deterministic finding-complete audit and prioritized review packet for every canonical package without fabricating specialist acceptance resolving human gates or silently changing activation.
 sources:
   product: products/gitg-self-host/product.yaml
   requirements:
-    - products/gitg-self-host/acceptance.yaml#GG-OPERATIONS
+    - products/gitg-self-host/acceptance.yaml#GG-GOV-M6B
     - owner-direction-2026-08-31
-  milestone: products/gitg-self-host/roadmap.yaml#M6H
+  milestone: products/gitg-self-host/roadmap.yaml#M6B-GOV
   baseline_commit: 85eb9e4da0a34704ddb194c1fca7b32317cd9fb8
 dependencies:
-  - M6H-01
+  - M6H-02
 scope:
   allowed_paths:
     - AGENTS.md
     - README.md
     - Makefile
     - MANIFEST.tsv
-    - .env.example
     - .github/workflows/**
     - contracts/**
-    - growth/**
-    - templates/**
+    - data/practices/**
+    - reports/practice-content/**
     - scripts/**
     - tests/**
     - docs/**
-    - Dockerfile
-    - docker-compose.yml
-    - docker-entrypoint.sh
   forbidden_paths:
     - data/assessment/**
     - data/curriculum/**
     - data/model/**
     - data/notion/**
     - data/evidence/**
-    - data/practices/**
+    - growth/**
+    - templates/**
     - requirements*.txt
     - pyproject.toml
+    - Dockerfile
+    - docker-compose.yml
 acceptance:
-  - An authenticated owner can download one versioned deterministic archive of all and only that user-owned assessment profile context Personal OS practice check-in evidence score pilot-feedback and weekly-execution records.
-  - The owner archive excludes password hashes secrets session data other users internal database keys and undeclared server metadata; private narrative is included only in the explicitly labeled owner-private payload and never in minimized sharing exports logs URLs or readiness output.
-  - Account deletion has authenticated preview explicit irreversible confirmation and transactional execution; it removes exactly the selected user and every user-owned record while preserving canonical seeded content other users migrations and deployment state.
-  - Deletion and retention surfaces explain that existing backup copies are separate private artifacts and are not silently rewritten or claimed erased.
-  - Retention policy is explicit versioned disabled by default and previewable before application; no hidden timer mutates append-only evidence score context Personal OS weekly or review history.
-  - Pre-upgrade backup integrity migration health readiness rollback and restored-state verification are deterministic and exercised through an isolated Compose drill.
-  - Backup restore and upgrade replay preserve exact assessment baselines evidence snapshots score hashes Personal OS and context hashes and M6H-01 weekly plan and proof-review hashes.
-  - Export deletion retention backup restore and upgrade operations do not change recommendation order evidence eligibility score mathematics activation practice completion archetypes orientations mastery or human-worth boundaries.
-  - Desktop mobile keyboard and zoom browser journeys cover owner data management without exposing the 383-item catalog or private values to another user.
-  - Editorial specialist participant release deployment psychometric clinical cultural longitudinal and intervention-effectiveness review remain pending and are not represented as passed.
+  - Objective schema registry source-reference exact-duplicate mapping and deterministic-report defects may be repaired in this batch.
+  - Findings requiring semantic cultural accessibility privacy safety measurement legal clinical or intervention judgment remain open and are routed to named reviewers.
+  - Exactly 383 canonical packages and 1,151 stable actions receive one deterministic audit row covering identity parent mapping recommendation targets family risk evidence kinds scoring policy activation status sources research gaps expert reviews and content hash.
+  - Every package receives explicit automated dispositions for schema completeness stable-ID uniqueness mapping validity evidence-rule executability privacy-field allowlists source metadata exact and near-duplicate candidates accessibility adaptation fields safety stop and escalation fields and activation-review consistency.
+  - Every finding has a stable finding ID severity objective evidence affected stable IDs remediation class and status; no finding is dropped because the catalog is runtime active.
+  - Objective critical and high structural defects are repaired or remain explicit blockers with regression tests; semantic or specialist findings are never auto-closed.
+  - The audit separately reports the five legacy packages 378 typed packages 374 generated additions all risk classes all evidence kinds every domain every lever and every score-active package.
+  - The report explicitly identifies the owner-directed all-active versus pending-review boundary and never equates software activation with source completeness safety accessibility cultural fit effectiveness or validation.
+  - ER-M6A-003 remains pending and RG-M6A-002 remains open unless actual named reviewers separately complete the manual M6B-GOV contract.
+  - A prioritized owner and specialist packet groups findings by required role risk domain protocol family evidence kind and remediation dependency without exposing participant data.
+  - Generated JSON CSV and Markdown reports are deterministic manifest-listed and byte-stable on a second run.
+  - The complete existing canonical runtime scoring replay browser and Compose regression chain remains green.
 validation:
   local:
-    - make m6h-operations-check PYTHON=.venv/bin/python
-    - make m6h-weekly-check PYTHON=.venv/bin/python
-    - make pilot-check PYTHON=.venv/bin/python
+    - make catalog-governance-audit-check PYTHON=.venv/bin/python
+    - make full-frontier-check PYTHON=.venv/bin/python
+    - make practice-report-check PYTHON=.venv/bin/python
     - make curriculum-check PYTHON=.venv/bin/python
     - make competency-evidence-check PYTHON=.venv/bin/python
     - ./scripts/agent-verify.sh contract
     - ./scripts/agent-verify.sh quick
     - ./scripts/agent-verify.sh full
-    - .venv/bin/python manage.py makemigrations --check --dry-run
     - .venv/bin/python scripts/verify-manifest.py
     - git diff --check
   focused_tests_to_add:
-    - complete same-user owner archive and cross-user privacy isolation
-    - export version dispatch determinism private versus minimized field allowlists and hash replay
-    - deletion preview explicit confirmation atomic rollback canonical preservation and cross-user preservation
-    - disabled-by-default retention preview application and immutable-history boundaries
-    - pre-upgrade backup integrity forward migration health readiness rollback and exact restored-state replay
-    - browser desktop mobile keyboard zoom and authorization boundaries
+    - exact 383 package and 1,151 action audit coverage with stable finding IDs
+    - complete domain lever family risk evidence source review gap and activation inventories
+    - exact duplicate near-duplicate source metadata privacy safety accessibility and activation-review findings
+    - deterministic second-run reports and manifest integrity
+    - automated findings never complete specialist roles close ER-M6A-003 or resolve RG-M6A-002
   required_ci:
     - Ruff Django pytest migration drift and manifest verification
-    - all M6F and M6H-01 readiness and replay gates
-    - M6H-02 isolated operations readiness
-    - Playwright owner data-management journeys
-    - Compose pre-upgrade backup restore rollback and persistence drill
+    - full frontier practice curriculum and competency-evidence readiness
+    - deterministic consolidated audit report regeneration
+    - Playwright regression journeys
+    - Compose backup restore and replay drill
     - aggregate Pilot readiness gate
 risk:
-  class: critical
+  class: high
   hazards:
-    - deletion targets the wrong user or canonical content
-    - an export leaks credentials internal identifiers another user or private values into a minimized payload
-    - retention silently rewrites append-only evidence or score history
-    - upgrade failure leaves the SQLite database or backup unrecoverable
-    - restored data passes health checks but fails deterministic replay
+    - automated lexical checks are represented as semantic or specialist approval
+    - active packages receive lighter review than inactive packages
+    - findings are lost through unstable IDs grouping or regeneration
+    - objective repairs change evidence scoring or activation semantics
+    - participant or owner-private data enters an audit artifact
   stop_conditions:
-    - any destructive operation lacks exact target preview and explicit confirmation
-    - another user's record or canonical seeded content changes
-    - an owner-private value appears in logs URLs readiness or minimized export
-    - backup integrity rollback or restored-state replay cannot be proven
-    - any existing scoring evidence recommendation completion or mastery invariant changes
-    - a failing required gate is waived
+    - coverage is not exactly 383 packages and 1,151 actions
+    - any package action domain lever family risk or evidence kind is omitted
+    - a specialist role review date or decision is fabricated
+    - a finding lacks reproducible objective evidence
+    - an objective repair changes runtime scoring activation or participant state
+    - deterministic report regeneration or a required gate fails
 rollback:
-  strategy: Revert M6H-02 code and migrations, restore the verified pre-upgrade database backup, and rerun the complete readiness and replay chain before reopening access.
+  strategy: Revert the audit batch as one commit; generated findings do not mutate participant state specialist records research-gap decisions or activation.
 evidence:
   output:
-    - docs/evidence/M6H-02-<date>.md
-    - exact export field inventories and privacy allowlists
-    - deletion and retention preview and rollback results
-    - pre-upgrade backup restore migration rollback and replay results
-    - desktop and mobile artifact review
+    - docs/evidence/M6B-GOV-AUDIT-<date>.md
+    - reports/practice-content/catalog_governance_audit_v1.json
+    - reports/practice-content/catalog_governance_findings_v1.csv
+    - reports/practice-content/catalog_governance_review_queue_v1.csv
     - exact local and hosted CI results
-  claim_boundary: Deterministic private-instance owner data lifecycle and upgrade operations only; never specialist participant release deployment psychometric clinical cultural longitudinal mastery or intervention-effectiveness validation.
+  claim_boundary: Deterministic static and software governance audit only; no specialist owner participant accessibility-population cultural clinical psychometric longitudinal release deployment mastery or intervention-effectiveness acceptance.

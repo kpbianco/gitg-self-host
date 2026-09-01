@@ -368,6 +368,32 @@ make m6h-operations-check
 See [backup and restore](docs/backup-and-restore.md) for the exact upgrade and
 rollback runbook.
 
+## What M6B-GOV-AUDIT adds
+
+- One deterministic JSON audit with exactly 383 package rows and 1,151 action
+  rows, including content hashes, canonical mappings, targets, family, risk,
+  evidence kinds, scoring, activation, sources, gaps, reviews, and explicit
+  automated dispositions.
+- Stable finding IDs for every retained structural, source, similarity, and
+  pending-review signal. Runtime-active packages receive the same audit depth
+  as every other package.
+- A prioritized CSV owner/specialist queue grouped by required role, risk,
+  domain, protocol family, evidence kind, and remediation dependency.
+- A concise Markdown review packet that preserves the owner-directed
+  all-active versus pending-review boundary without exposing participant or
+  owner-private data.
+
+Generate or verify the byte-stable packet with:
+
+```bash
+make catalog-governance-audit
+make catalog-governance-audit-check
+```
+
+Automation does not complete a reviewer role. `ER-M6A-003` remains pending,
+`RG-M6A-002` remains open, and the separate manual `M6B-GOV` contract remains
+required.
+
 ## What M6B adds
 
 - Pure `GG-TYPED-EVIDENCE-1.0` evaluation from materialized

@@ -364,13 +364,24 @@ mastery claim. Proof freezes at the review timestamp so later evidence cannot
 rewrite an immutable review. This slice intentionally performs no human,
 specialist, participant, release, or deployment-gate work.
 
-M6H-02 is the current software-only operations slice. It adds a deterministic
+M6H-02 is reviewed and merged. It adds a deterministic
 owner-private archive, preview-first account deletion, explicit retention that
 is disabled by default, and verified pre-upgrade backup, restore, rollback, and
 replay operations. It must not change curriculum, evidence eligibility,
 scoring mathematics, activation, recommendation order, completion, mastery,
 or human-worth boundaries. Existing backup copies remain separate private
 artifacts and are never silently rewritten or claimed erased.
+
+M6B-GOV-AUDIT is the current automated governance slice. It produces one
+deterministic row for every one of the 383 packages and 1,151 actions, stable
+finding IDs, complete inventory coverage, and a prioritized owner/specialist
+review packet. Automated structural checks may pass or identify objective
+defects, but semantic, source, originality, accessibility, safety,
+measurement, cultural, legal, clinical, and intervention judgments remain
+open for named humans. The audit must keep `ER-M6A-003` pending,
+`RG-M6A-002` open, all 383 owner-directed activation records unchanged, and
+M6B acceptance false until the separate manual `M6B-GOV` contract is
+truthfully completed.
 
 <!-- BEGIN PORTFOLIO-CONTROL MANAGED -->
 ## Governed agentic delivery

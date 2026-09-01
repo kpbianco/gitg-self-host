@@ -16,7 +16,7 @@ local_profiles:
       - contract
       - unit and integration tests excluding e2e
   full:
-    purpose: Quick checks plus the prerequisite readiness contracts, the additive M6C browser aggregate, the source-only M6D-01 cohort gate, and M6H owner operations.
+    purpose: Quick checks plus the deterministic M6B catalog audit, prerequisite readiness contracts, the additive M6C browser aggregate, the source-only M6D-01 cohort gate, and M6H owner operations.
     includes:
       - quick
       - pilot readiness
@@ -29,6 +29,7 @@ local_profiles:
       - M6D-01 authoring readiness
       - M6H-01 weekly execution readiness
       - M6H-02 owner operations readiness
+      - M6B deterministic catalog governance audit
 validation_levels:
   static: automated
   synthetic_fixture: automated
@@ -50,6 +51,7 @@ mandatory_github_ci:
   - M6D-01 authoring readiness
   - M6H-01 weekly execution readiness
   - M6H-02 owner operations readiness
+  - M6B deterministic catalog governance audit
   - Playwright core journeys and retained diagnostics
   - Docker Compose deployment backup restore recreation and shutdown drill
   - aggregate Pilot readiness gate

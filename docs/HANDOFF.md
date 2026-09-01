@@ -6,26 +6,26 @@ Grounded Growth is a self-hosted Django guided-development application with a
 383-competency canonical practice catalog, deterministic legacy and typed
 evidence replay, and append-only score state.
 
-M6F is the current owner-directed implementation batch. It projects all 383
-protocols and 1,151 actions into runtime and makes all 383 score active under
-`SP-STRUCTURED-EVIDENCE-ELIGIBLE`, `GG-PRODUCTION-SCORE-ELIGIBILITY-2.0`, and
-`GG-SCORE-STATE-1.0`.
+M6B-GOV-AUDIT is the current automated batch. M6F still supplies the
+owner-directed 383/1,151/383 runtime boundary, while this batch produces the
+complete deterministic audit and human-review routing packet without changing
+that activation state.
 
 ## Read first
 
 1. `AGENTS.md`
 2. `contracts/active-batch.yaml`
 3. `docs/CURRENT_STATE.md`
-4. `docs/PRODUCT_DECISIONS.md#decision-052`
-5. `docs/architecture/0011-all-catalog-runtime-and-score-activation.md`
+4. `reports/practice-content/catalog_governance_review_packet_v1.md`
+5. `docs/PRODUCT_DECISIONS.md#decision-052`
 6. canonical practice release, registries, reports, and tests
 
 ## Exact review objective
 
-Verify exact 383/1,151/383 runtime agreement; five legacy v1 protocols; 378
-typed protocols; persisted action-specific typed observations; mixed-protocol
-canonical mapping; deterministic replay, withholding, snapshots, reversal,
-and rebuild; and immutable assessment baselines.
+Verify exact 383-package and 1,151-action audit coverage; stable finding IDs;
+complete domain, lever, family, risk, evidence, source, review, gap, and
+activation inventories; byte-stable JSON/CSV/Markdown output; and truthful
+manual-gate preservation.
 
 ## Protected decisions
 

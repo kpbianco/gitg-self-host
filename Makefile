@@ -1,7 +1,7 @@
 PYTHON ?= .venv/bin/python
 APP_DATA_DIR ?= $(CURDIR)/var
 
-.PHONY: format lint test e2e migrate seed evidence-backfill evidence-verify score-rebuild score-verify pilot-check practice-reports practice-report-check curriculum-check full-frontier-check competency-evidence-reports competency-evidence-report-check competency-evidence-check context-check personal-os-check context-priority-check m6c-pilot-check m6d-01-check m6h-weekly-check m6h-operations-check run compose-up compose-down compose-smoke backup
+.PHONY: format lint test e2e migrate seed evidence-backfill evidence-verify score-rebuild score-verify pilot-check practice-reports practice-report-check catalog-governance-audit catalog-governance-audit-check curriculum-check full-frontier-check competency-evidence-reports competency-evidence-report-check competency-evidence-check context-check personal-os-check context-priority-check m6c-pilot-check m6d-01-check m6h-weekly-check m6h-operations-check run compose-up compose-down compose-smoke backup
 
 format:
 	$(PYTHON) -m ruff format .
@@ -59,6 +59,12 @@ practice-reports:
 practice-report-check:
 	APP_DATA_DIR="$(APP_DATA_DIR)" DJANGO_SECRET_KEY=local-development-secret APP_DEBUG=true \
 		$(PYTHON) manage.py generate_practice_reports --check
+
+catalog-governance-audit:
+	$(PYTHON) scripts/catalog_governance_audit.py
+
+catalog-governance-audit-check:
+	$(PYTHON) scripts/catalog_governance_audit.py --check
 
 curriculum-check:
 	PYTHON_BIN="$(PYTHON)" ./scripts/verify_expansion_readiness.sh

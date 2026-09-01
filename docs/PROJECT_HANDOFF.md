@@ -1244,3 +1244,21 @@ backup copies remain separate private artifacts.
 sidecar. `verify_database_backup --compare-live` proves integrity, migrations,
 and exact critical state before upgrade or after rollback. These operations do
 not change evidence, scoring, recommendation, completion, or mastery semantics.
+
+# Current M6B governance audit — 2026-09-01
+
+M6B-GOV-AUDIT is the deterministic software precursor to the manual M6B-GOV
+gate. It produces one schema-validated row for every canonical package and
+stable action, retains every objective or pending-review finding under a
+stable ID, and routes the resulting queue by role, risk, domain, protocol
+family, evidence kind, and dependency.
+
+The current packet records exactly 383 packages, 1,151 actions, five legacy
+packages, 378 typed packages, 374 generated additions, 383 score-active
+packages, and zero source-complete packages. This is a static catalog audit;
+it reads no participant or owner-private data and writes no runtime state.
+
+The audit is intentionally unable to accept M6B. `ER-M6A-003` remains pending
+with no completed roles, date, or decision reference, `RG-M6A-002` remains
+open, and the separate manual M6B-GOV specialist and owner records remain
+required.
