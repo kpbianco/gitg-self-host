@@ -179,12 +179,12 @@ compose down
 compose run --rm --no-deps --entrypoint python app -c \
     'from pathlib import Path; import shutil; source = Path("/data/backups/compose-smoke.sqlite3"); target = Path("/data/grounded_growth.sqlite3"); shutil.copy2(source, target); target.with_name(target.name + "-wal").unlink(missing_ok=True); target.with_name(target.name + "-shm").unlink(missing_ok=True)'
 compose up -d --wait --wait-timeout 180
+compose exec -T app python manage.py migrate --check
+compose exec -T app python manage.py verify_database_backup "$backup_path" --compare-live
 http_probe "$original_password" success
 http_probe "$persisted_password" failure
 http_probe "$changed_env_password" failure
 test "$(canonical_counts)" = "$expected_counts"
-compose exec -T app python manage.py migrate --check
-compose exec -T app python manage.py verify_database_backup "$backup_path" --compare-live
 compose exec -T app python manage.py rebuild_score_state --verify-only
 compose exec -T app python manage.py verify_pilot_readiness
 compose exec -T app python manage.py verify_expansion_readiness
