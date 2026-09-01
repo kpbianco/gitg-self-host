@@ -13,6 +13,16 @@ def env_bool(name: str, default: bool = False) -> bool:
     return value.strip().lower() in {"1", "true", "yes", "on"}
 
 
+def env_int(name: str, default: int) -> int:
+    value = os.getenv(name)
+    if value is None:
+        return default
+    try:
+        return int(value)
+    except ValueError as exc:
+        raise ImproperlyConfigured(f"{name} must be an integer.") from exc
+
+
 DEBUG = env_bool("APP_DEBUG")
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "")
 if not SECRET_KEY:
@@ -131,6 +141,13 @@ SESSION_COOKIE_SECURE = SECURE_COOKIES
 CSRF_COOKIE_SECURE = SECURE_COOKIES
 SECURE_CONTENT_TYPE_NOSNIFF = True
 X_FRAME_OPTIONS = "DENY"
+
+# Retention is never scheduled automatically. When explicitly enabled, the
+# authenticated owner must still preview and confirm each application.
+OWNER_RETENTION_ENABLED = env_bool("APP_OWNER_RETENTION_ENABLED", False)
+OWNER_RETENTION_DAYS = env_int("APP_OWNER_RETENTION_DAYS", 365)
+if not 30 <= OWNER_RETENTION_DAYS <= 3650:
+    raise ImproperlyConfigured("APP_OWNER_RETENTION_DAYS must be between 30 and 3650.")
 
 LOGGING = {
     "version": 1,

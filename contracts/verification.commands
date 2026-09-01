@@ -22,3 +22,4 @@ make context-priority-check PYTHON=.venv/bin/python
 make m6c-pilot-check PYTHON=.venv/bin/python
 make m6d-01-check PYTHON=.venv/bin/python
 make m6h-weekly-check PYTHON=.venv/bin/python
+make m6h-operations-check PYTHON=.venv/bin/python

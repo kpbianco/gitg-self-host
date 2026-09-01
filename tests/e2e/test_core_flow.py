@@ -340,6 +340,56 @@ def test_weekly_execution_plans_one_action_and_reviews_only_existing_proof(
 
 @pytest.mark.e2e
 @pytest.mark.django_db(transaction=True)
+def test_owner_data_management_is_private_accessible_and_requires_exact_confirmation(
+    live_server,
+    page: Page,
+):
+    page.set_viewport_size({"width": 390, "height": 844})
+    user = create_browser_user()
+    seed_browser_data()
+    log_in(live_server, page)
+
+    page.get_by_role("link", name="Account", exact=True).click()
+    page.get_by_role("heading", name="Keep control of your private record.").wait_for()
+    page.get_by_text("Retention is disabled by default.").wait_for()
+    page.get_by_text("Existing backups may still contain prior copies").wait_for()
+    expect(page.locator(".practice-card")).to_have_count(0)
+    assert "383-item" not in page.locator("body").inner_text()
+    assert_no_horizontal_overflow(page)
+    save_walkthrough_screenshot(page, "mobile-owner-data-management")
+
+    with page.expect_download() as download_info:
+        page.get_by_role("link", name="Download owner-private archive").click()
+    payload = json.loads(Path(download_info.value.path()).read_text())
+    assert payload["privacy_class"] == "owner-private"
+    assert payload["privacy"]["safe_for_sharing"] is False
+    assert payload["account"]["username"] == "grounded"
+    assert user.password not in json.dumps(payload)
+
+    page.get_by_label("Current password").fill("Browser-Test-Password-2047!")
+    page.get_by_label(re.compile(r'Type "DELETE MY ACCOUNT"')).fill("DO NOT DELETE")
+    page.get_by_role("button", name="Permanently delete account").click()
+    page.get_by_text("The account-deletion confirmation text does not match.").wait_for()
+    assert get_user_model().objects.filter(pk=user.pk).exists()
+
+    page.keyboard.press("Control+Home")
+    page.keyboard.press("Tab")
+    expect(page.get_by_role("link", name="Skip to main content")).to_be_focused()
+    page.keyboard.press("Enter")
+    expect(page.locator("#main-content")).to_be_focused()
+    page.evaluate("document.body.style.zoom = '200%'")
+    assert_no_horizontal_overflow(page)
+    page.evaluate("document.body.style.zoom = ''")
+
+    page.set_viewport_size({"width": 1440, "height": 1000})
+    page.goto(f"{live_server.url}/account/data/")
+    page.get_by_role("heading", name="Keep control of your private record.").wait_for()
+    assert_no_horizontal_overflow(page)
+    save_walkthrough_screenshot(page, "desktop-owner-data-management")
+
+
+@pytest.mark.e2e
+@pytest.mark.django_db(transaction=True)
 def test_optional_pilot_feedback_is_local_minimized_and_score_separate(
     live_server,
     page: Page,

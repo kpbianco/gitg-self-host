@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block title %}Data management · Grounded Growth{% endblock %}
+
+{% block content %}
+  <section class="page-heading">
+    <div>
+      <p class="eyebrow">Account and data</p>
+      <h1>Keep control of your private record.</h1>
+      <p class="lede">
+        Download the complete owner-private archive, review the explicit retention
+        policy, or permanently delete this account. Existing backup files are
+        separate private artifacts and are never silently rewritten by these actions.
+      </p>
+    </div>
+  </section>
+
+  <section class="panel" aria-labelledby="archive-heading">
+    <p class="eyebrow">Owner-private export</p>
+    <h2 id="archive-heading">Download the complete account archive</h2>
+    <p>
+      This deterministic JSON archive includes private narrative and all owned
+      assessment, profile, context, Personal OS, practice, evidence, score,
+      pilot-feedback, and weekly-execution records. It excludes passwords,
+      sessions, secrets, server metadata, database keys, and every other user.
+    </p>
+    <p><strong>Do not share this file.</strong> The minimized evidence and feedback exports remain separate.</p>
+    <a class="button" href="{% url 'growth:owner-archive' %}">Download owner-private archive</a>
+  </section>
+
+  <section class="panel" aria-labelledby="retention-heading">
+    <p class="eyebrow">{{ retention_preview.policy_version }}</p>
+    <h2 id="retention-heading">Explicit retention</h2>
+    {% if retention_preview.enabled %}
+      <p>
+        The configured window is {{ retention_preview.retention_days }} days.
+        Nothing runs automatically; applying this preview removes only old drafts
+        and optional pilot feedback before {{ retention_preview.cutoff_date }}.
+      </p>
+      <dl class="data-counts">
+        <div><dt>Old draft check-ins</dt><dd>{{ retention_preview.record_counts.draft_check_ins }}</dd></div>
+        <div><dt>Old optional pilot feedback</dt><dd>{{ retention_preview.record_counts.pilot_feedback }}</dd></div>
+        <div><dt>Total eligible now</dt><dd>{{ retention_preview.total_records }}</dd></div>
+      </dl>
+      <p class="fine-print">
+        Assessment, submitted evidence, score history, context, Personal OS,
+        weekly plans/reviews, and practice reviews are never retention targets.
+      </p>
+      {% if retention_preview.total_records %}
+        <form method="post" class="stacked-form">
+          {% csrf_token %}
+          <input type="hidden" name="action" value="apply_retention">
+          {{ retention_form.as_p }}
+          <button class="button button-secondary" type="submit">Apply this retention preview</button>
+        </form>
+      {% endif %}
+    {% else %}
+      <p>
+        Retention is disabled by default. No timer, background task, or startup
+        action deletes records. An operator may explicitly enable the policy in
+        the local environment, after which this page still requires a preview and confirmation.
+      </p>
+    {% endif %}
+  </section>
+
+  <section class="panel">
+    <p class="eyebrow">Account access</p>
+    <h2>Change the sign-in password</h2>
+    <p>Password changes do not alter developmental records.</p>
+    <a class="button button-secondary" href="{% url 'password_change' %}">Change password</a>
+    <a class="button button-secondary" href="{% url 'growth:pilot-feedback' %}">Open feedback form</a>
+  </section>
+
+  <section class="panel danger-panel" aria-labelledby="deletion-heading">
+    <p class="eyebrow">{{ deletion_preview.policy_version }}</p>
+    <h2 id="deletion-heading">Permanently delete this account</h2>
+    <p>
+      This authenticated preview currently targets {{ deletion_preview.total_records }}
+      account and owned record(s). It preserves canonical curriculum content,
+      migrations, deployment state, and every other user.
+    </p>
+    <dl class="data-counts">
+      {% for label, count in deletion_groups %}
+        <div><dt>{{ label }}</dt><dd>{{ count }}</dd></div>
+      {% endfor %}
+    </dl>
+    <p>
+      This cannot be undone from the live application. Existing backups may still
+      contain prior copies and must be rotated or deleted separately by the operator.
+    </p>
+    <form method="post" class="stacked-form">
+      {% csrf_token %}
+      <input type="hidden" name="action" value="delete_account">
+      {{ deletion_form.as_p }}
+      <button class="button button-danger" type="submit">Permanently delete account</button>
+    </form>
+  </section>
+{% endblock %}

@@ -3,6 +3,7 @@ from django.urls import path
 from . import (
     views,
     views_assessment,
+    views_data,
     views_evidence,
     views_personal_os,
     views_pilot,
@@ -15,6 +16,12 @@ app_name = "growth"
 urlpatterns = [
     path("", views.home, name="home"),
     path("profile/", views.profile, name="profile"),
+    path("account/data/", views_data.data_management, name="data-management"),
+    path(
+        "account/data/archive-v1.json",
+        views_data.owner_archive,
+        name="owner-archive",
+    ),
     path("personal-os/", views_personal_os.personal_os, name="personal-os"),
     path("weekly/", views_weekly.weekly_execution, name="weekly-execution"),
     path("evidence/", views_evidence.evidence_ledger, name="evidence-ledger"),

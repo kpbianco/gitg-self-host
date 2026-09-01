@@ -338,6 +338,36 @@ Run the isolated software gate:
 make m6h-weekly-check
 ```
 
+## What M6H-02 adds
+
+- One authenticated **Account** surface for a versioned deterministic
+  owner-private archive, explicit retention status, password changes, and an
+  authenticated deletion preview.
+- The complete archive contains only the signed-in owner's records, labels
+  private narrative as unsafe to share, and excludes credentials, sessions,
+  other users, opaque database keys, server metadata, and secrets.
+- Account deletion requires the current password, the exact irreversible
+  phrase, and an unchanged signed preview. It runs transactionally, removes
+  that owner's sessions and owned records, and preserves canonical content,
+  migrations, deployment state, and other users.
+- `GG-OWNER-RETENTION-1.0` is disabled by default and has no timer. When an
+  operator explicitly enables it, only old draft check-ins and optional pilot
+  feedback can be previewed and confirmed for removal.
+- SQLite backups receive a private `0600` sidecar manifest containing only
+  counts and hashes. Verification proves file integrity, applied migrations,
+  and exact critical-state replay before upgrade and after rollback.
+- Existing backup copies are separate private artifacts; owner deletion and
+  retention never claim to rewrite or erase them.
+
+Run the isolated operations gate:
+
+```bash
+make m6h-operations-check
+```
+
+See [backup and restore](docs/backup-and-restore.md) for the exact upgrade and
+rollback runbook.
+
 ## What M6B adds
 
 - Pure `GG-TYPED-EVIDENCE-1.0` evaluation from materialized

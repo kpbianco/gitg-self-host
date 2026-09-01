@@ -54,6 +54,8 @@ def test_environment_example_covers_deployment_and_cookie_contract():
         "APP_TIME_ZONE",
         "APP_DEBUG",
         "APP_SECURE_COOKIES",
+        "APP_OWNER_RETENTION_ENABLED",
+        "APP_OWNER_RETENTION_DAYS",
     } <= keys
 
 
@@ -62,6 +64,7 @@ def test_repeatable_compose_acceptance_is_wired_into_make_and_ci():
     smoke_script = (ROOT / "scripts" / "verify_compose.sh").read_text()
     pilot_script = (ROOT / "scripts" / "verify_pilot_readiness.sh").read_text()
     expansion_script = (ROOT / "scripts" / "verify_expansion_readiness.sh").read_text()
+    operations_script = (ROOT / "scripts" / "verify_m6h_operations_readiness.sh").read_text()
     login_probe = (ROOT / "scripts" / "verify_http_login.py").read_text()
     workflow = (ROOT / ".github" / "workflows" / "verification.yml").read_text()
     workflow_data = yaml.safe_load(workflow)
@@ -77,6 +80,8 @@ def test_repeatable_compose_acceptance_is_wired_into_make_and_ci():
     assert "PracticeProtocol.objects.filter(score_active=True).count()" in smoke_script
     assert "score_active=383:[0-9a-f]{64}" in smoke_script
     assert "backup_database" in smoke_script
+    assert "verify_database_backup" in smoke_script
+    assert "--compare-live" in smoke_script
     assert "--force-recreate" in smoke_script
     assert "shutil.copy2" in smoke_script
     assert "verify_http_login.py" in smoke_script
@@ -97,6 +102,11 @@ def test_repeatable_compose_acceptance_is_wired_into_make_and_ci():
     assert "verify_expansion_readiness" in expansion_script
     assert smoke_script.count("verify_expansion_readiness") == 3
     assert "make curriculum-check PYTHON=python" in workflow
+    assert "m6h-operations-check:" in makefile
+    assert "verify_m6h_operations_readiness.sh" in makefile
+    assert "verify_m6h_operations_readiness" in operations_script
+    assert smoke_script.count("verify_m6h_operations_readiness") == 4
+    assert "make m6h-operations-check PYTHON=python" in workflow
     assert "Pilot readiness gate" in workflow
     assert set(workflow_data["jobs"]["pilot-ready"]["needs"]) == {
         "quality",
