@@ -1,4 +1,5 @@
 from datetime import date
+from decimal import Decimal
 
 import pytest
 from django.contrib.auth import get_user_model
@@ -6,6 +7,8 @@ from django.core.exceptions import ValidationError
 from django.urls import reverse
 
 from growth.models import (
+    CompletionCreditEvent,
+    CompositeScoreState,
     LeverBaseline,
     LeverState,
     PracticeCheckIn,
@@ -20,6 +23,7 @@ from growth.services.practice import (
     transition_sprint,
 )
 from growth.services.scoring import build_user_shadow_projection
+from growth.views_weekly import _next_action as weekly_next_action
 
 
 def friendship_protocol():
@@ -86,7 +90,7 @@ def test_seven_step_setup_starts_practice_without_inventing_intervention(client,
     first = client.get(setup_url(1))
     assert first.status_code == 200
     assert b"Why this practice" in first.content
-    assert b"Evidence, not completion" in first.content
+    assert b"Assessment priority, then human closeout" in first.content
     assert client.post(setup_url(1)).status_code == 302
 
     applicable = client.get(setup_url(2))
@@ -103,7 +107,7 @@ def test_seven_step_setup_starts_practice_without_inventing_intervention(client,
 
     assert client.post(setup_url(5), {"start_date": date.today().isoformat()}).status_code == 302
     actions = client.get(setup_url(6))
-    assert b"Three actions, already defined" in actions.content
+    assert b"3 actions, already defined" in actions.content
     assert b"Spend at least ten minutes primarily listening" in actions.content
     assert client.post(setup_url(6)).status_code == 302
 
@@ -171,6 +175,35 @@ def test_draft_remains_outside_evidence_and_submission_appears_in_history(client
     submitted.note = "cannot edit"
     with pytest.raises(ValidationError, match="immutable"):
         submitted.save()
+
+
+@pytest.mark.django_db
+def test_an_attempted_action_remains_next_until_the_user_marks_it_complete(client, user, seeded):
+    client.force_login(user)
+    sprint = create_sprint(user)
+    actions = list(sprint.protocol.actions.all())
+    new_url = reverse("growth:practice-check-in-new", kwargs={"sprint_id": sprint.pk})
+    sprint_url = reverse("growth:practice-sprint", kwargs={"sprint_id": sprint.pk})
+
+    attempted = check_in_post(actions[0], action_completed="")
+    attempted["intent"] = "submit"
+    assert client.post(new_url, attempted).status_code == 302
+
+    assert client.get(reverse("growth:home")).context["next_action"] == actions[0]
+    assert client.get(sprint_url).context["next_action"] == actions[0]
+    assert weekly_next_action(sprint) == actions[0]
+
+    completed = check_in_post(
+        actions[0],
+        action_completed="on",
+        context_comparison="same_context",
+    )
+    completed["intent"] = "submit"
+    assert client.post(new_url, completed).status_code == 302
+
+    assert client.get(reverse("growth:home")).context["next_action"] == actions[1]
+    assert client.get(sprint_url).context["next_action"] == actions[1]
+    assert weekly_next_action(sprint) == actions[1]
 
 
 @pytest.mark.django_db
@@ -259,11 +292,15 @@ def test_completion_and_review_do_not_mutate_static_scores(client, user, seeded)
     snapshot_count_before_review = ScoreSnapshot.objects.filter(
         assessment_run=sprint.assessment_run
     ).count()
+    composite_hash_before_review = CompositeScoreState.objects.get(
+        assessment_run=sprint.assessment_run
+    ).state_hash
     review_url = reverse("growth:practice-review", kwargs={"sprint_id": sprint.pk})
     review_page = client.get(review_url)
     assert review_page.status_code == 200
     assert b"Completing this practice does not establish mastery." in review_page.content
-    assert b"All three actions attempted" in review_page.content
+    assert b"Actions attempted" in review_page.content
+    assert b"75% completion credit" in review_page.content
 
     completed = client.post(
         review_url,
@@ -276,8 +313,8 @@ def test_completion_and_review_do_not_mutate_static_scores(client, user, seeded)
     assert completed.status_code == 200
     assert b"The experiment is closed" in completed.content
     assert b"Completing this practice does not establish mastery." in completed.content
-    assert b"Review-only score impact" in completed.content
-    assert b"None" in completed.content
+    assert b"Completion credit" in completed.content
+    assert b"75%" in completed.content
 
     sprint.refresh_from_db()
     assert sprint.status == PracticeSprint.Status.COMPLETED
@@ -286,6 +323,12 @@ def test_completion_and_review_do_not_mutate_static_scores(client, user, seeded)
     assert sprint.review.actions_completed == 2
     assert sprint.review.substantive_interaction_occurred is True
     assert sprint.review.static_score_impact_preview == {}
+    credit_event = CompletionCreditEvent.objects.get(sprint=sprint)
+    assert credit_event.completion_credit == Decimal("0.7500")
+    assert (
+        CompositeScoreState.objects.get(assessment_run=sprint.assessment_run).state_hash
+        != composite_hash_before_review
+    )
     after = list(
         LeverBaseline.objects.filter(user=user)
         .order_by("lever_id")

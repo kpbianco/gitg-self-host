@@ -17,6 +17,10 @@ from growth.domain.personal_os import AUDIT_PROMPT_IDS, IDENTITY_SECTION_IDS
 from growth.models import (
     AssessmentRun,
     Competency,
+    CompletionCreditEvent,
+    CompositeAssessmentSnapshot,
+    CompositeScoreSnapshot,
+    CompositeScoreState,
     EvidenceEvent,
     Lever,
     LeverBaseline,
@@ -44,7 +48,7 @@ from growth.services.evidence import build_privacy_safe_evidence_export
 from growth.services.operations_readiness import verify_operations_readiness
 from growth.services.personal_os import record_personal_os_revision
 from growth.services.pilot_feedback import build_privacy_safe_pilot_export, submit_pilot_feedback
-from growth.services.practice import save_check_in, start_practice
+from growth.services.practice import complete_with_review, save_check_in, start_practice
 from growth.services.weekly_execution import (
     current_window,
     record_weekly_plan,
@@ -154,12 +158,53 @@ def _create_private_state(user):
     }
 
 
+def _close_private_sprint(records):
+    sprint = records["sprint"]
+    actions = list(sprint.protocol.actions.order_by("sequence"))
+    save_check_in(
+        sprint=sprint,
+        cleaned_data={
+            "action": actions[0],
+            "action_attempted": True,
+            "action_completed": True,
+            "user_initiated": True,
+            "moved_beyond_transactional": True,
+            "meaningful_information_shared": True,
+            "support_level": PracticeCheckIn.SupportLevel.INDEPENDENT,
+            "context_comparison": PracticeCheckIn.ContextComparison.SAME_CONTEXT,
+            "evidence_direction": PracticeCheckIn.EvidenceDirection.SUPPORTS,
+        },
+        submit=True,
+    )
+    save_check_in(
+        sprint=sprint,
+        cleaned_data={
+            "action": actions[1],
+            "action_attempted": True,
+            "action_completed": True,
+            "future_interaction_scheduled": True,
+            "support_level": PracticeCheckIn.SupportLevel.INDEPENDENT,
+            "context_comparison": PracticeCheckIn.ContextComparison.SAME_CONTEXT,
+            "evidence_direction": PracticeCheckIn.EvidenceDirection.SUPPORTS,
+        },
+        submit=True,
+    )
+    review = complete_with_review(
+        sprint=sprint,
+        reflection="Private final reflection for the owner archive.",
+        contradictory_evidence="",
+    )
+    records["practice_review"] = review
+    records["completion_credit"] = CompletionCreditEvent.objects.get(sprint=sprint)
+    return records
+
+
 @pytest.mark.django_db
 def test_owner_archive_is_complete_deterministic_private_and_cross_user_isolated(user, seeded):
     user.email = "kian-private@example.test"
     user.first_name = "Kian"
     user.save(update_fields=["email", "first_name"])
-    records = _create_private_state(user)
+    records = _close_private_sprint(_create_private_state(user))
     other = get_user_model().objects.create_user(
         username="other-owner", email="other-private@example.test", password="other-password-47!"
     )
@@ -179,6 +224,10 @@ def test_owner_archive_is_complete_deterministic_private_and_cross_user_isolated
         "archetype_results",
         "assessment_context",
         "assessment_runs",
+        "composite_assessment_snapshots",
+        "composite_score_snapshots",
+        "composite_score_states",
+        "completion_credit_events",
         "evidence_events",
         "lever_baselines",
         "lever_states",
@@ -201,6 +250,7 @@ def test_owner_archive_is_complete_deterministic_private_and_cross_user_isolated
         other.username,
         other.email,
         "Other owner's private narrative",
+        str(records["run"].pk),
         str(records["sprint"].pk),
         str(records["draft"].pk),
         str(records["submitted"].pk),
@@ -209,6 +259,8 @@ def test_owner_archive_is_complete_deterministic_private_and_cross_user_isolated
         str(records["review"].pk),
         str(records["feedback"].pk),
         str(records["personal"].pk),
+        str(records["practice_review"].pk),
+        str(records["completion_credit"].pk),
     ):
         assert forbidden not in text
     minimized = json.dumps(build_privacy_safe_evidence_export(user), sort_keys=True)
@@ -216,6 +268,27 @@ def test_owner_archive_is_complete_deterministic_private_and_cross_user_isolated
     for private_value in (PRIVATE_CONTEXT, PRIVATE_DRAFT, PRIVATE_FEEDBACK, PRIVATE_MISSION):
         assert private_value not in minimized
         assert private_value not in pilot_minimized
+
+
+@pytest.mark.django_db
+def test_owner_archive_download_and_deletion_groups_include_composite_state(client, user, seeded):
+    client.force_login(user)
+    _close_private_sprint(_create_private_state(user))
+
+    archive = client.get(reverse("growth:owner-archive"))
+    assert archive.status_code == 200
+    assert archive["Content-Disposition"] == (
+        'attachment; filename="grounded-growth-owner-private-archive-v2.json"'
+    )
+    assert json.loads(archive.content)["schema_version"] == (
+        "grounded-growth-owner-private-archive-v2"
+    )
+
+    management = client.get(reverse("growth:data-management"))
+    assert management.status_code == 200
+    assert sum(count for _label, count in management.context["deletion_groups"]) == (
+        management.context["deletion_preview"].total_records
+    )
 
 
 @pytest.mark.django_db
@@ -305,7 +378,7 @@ def test_deletion_form_executes_exact_preview_and_signs_owner_out(client, user, 
 
 @pytest.mark.django_db
 def test_account_deletion_removes_exact_owner_and_preserves_canonical_and_other_user(user, seeded):
-    _create_private_state(user)
+    _close_private_sprint(_create_private_state(user))
     other = get_user_model().objects.create_user(username="preserved-owner")
     other_feedback = submit_pilot_feedback(
         user=other,
@@ -341,6 +414,10 @@ def test_account_deletion_removes_exact_owner_and_preserves_canonical_and_other_
         PersonalOSRevision.objects.filter(user_id=user.pk),
         WeeklyExecutionPlan.objects.filter(user_id=user.pk),
         WeeklyExecutionReview.objects.filter(user_id=user.pk),
+        CompositeAssessmentSnapshot.objects.filter(assessment_run__user_id=user.pk),
+        CompletionCreditEvent.objects.filter(assessment_run__user_id=user.pk),
+        CompositeScoreState.objects.filter(user_id=user.pk),
+        CompositeScoreSnapshot.objects.filter(assessment_run__user_id=user.pk),
     ):
         assert not queryset.exists()
 

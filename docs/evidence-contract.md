@@ -185,9 +185,10 @@ Numeric internals and the algorithm version are available only in a collapsed
 technical audit section.
 
 Every evidence page states that one observation does not establish mastery.
-Under M3B, it also explains that eligible directional evidence may contribute
-to the separate current working profile while inconclusive or unknown
-direction is withheld.
+Historical `GG-SCORE-STATE-1.0` sprints retain their reviewed event-level
+effects. Under `GG-COMPOSITE-CLOSEOUT-SCORING-1.0`, a check-in remains
+replayable evidence but never changes global completion coverage by itself;
+only an explicit human final closeout records bounded completion credit.
 
 ## M2B audit boundary
 

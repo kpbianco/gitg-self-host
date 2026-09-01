@@ -28,13 +28,13 @@ from growth.services.weekly_execution import (
 def _next_action(sprint):
     if sprint is None:
         return None
-    attempted = set(
+    completed = set(
         sprint.check_ins.filter(
             status=PracticeCheckIn.Status.SUBMITTED,
-            action_attempted=True,
+            action_completed=True,
         ).values_list("action_id", flat=True)
     )
-    return sprint.protocol.actions.exclude(pk__in=attempted).order_by("sequence").first()
+    return sprint.protocol.actions.exclude(pk__in=completed).order_by("sequence").first()
 
 
 def _latest_personal_os(run):

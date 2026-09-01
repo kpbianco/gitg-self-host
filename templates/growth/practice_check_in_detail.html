@@ -20,12 +20,18 @@
   </section>
 
   <div class="mastery-notice" role="note">
-    {% if sprint.protocol.score_active %}
+    {% if sprint.scoring_contract_version == "GG-COMPOSITE-CLOSEOUT-SCORING-1.0" %}
+      <strong>This observation is proof, not a global score update.</strong>
+      <p>
+        It remains immutable and can support the action-completion record. Only
+        an explicit final closeout updates bounded completion credit, coverage,
+        and recommendation priority.
+      </p>
+    {% elif sprint.protocol.score_active %}
       <strong>This observation has a versioned score disposition.</strong>
       <p>
-        Eligible directional evidence is allocated only through the reviewed
-        practice mapping. Inconclusive evidence is withheld. One observation
-        remains provisional and does not establish mastery.
+        This historical sprint retains its original event-level scoring
+        disposition. One observation remains provisional and does not establish mastery.
       </p>
     {% else %}
       <strong>This protocol is not score-active.</strong>

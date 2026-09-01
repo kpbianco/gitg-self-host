@@ -338,7 +338,7 @@ def test_ledger_is_authenticated_filtered_user_scoped_and_score_static(client, u
     assert response.context["ledger"].summary.supports == 1
     assert response.context["ledger"].summary.contradicts == 1
     assert len(response.context["page"].object_list) == 2
-    assert "Directional evidence may contribute to your working profile." in content
+    assert "Check-ins are evidence; closeout credit is separate." in content
     assert "PRIVATE-CONTEXT-TOKEN" not in content
     assert "PRIVATE-NOTE-TOKEN" not in content
     assert "PRIVATE-CONTRADICTION-TOKEN" not in content
@@ -428,7 +428,7 @@ def test_privacy_safe_export_is_deterministic_allowlisted_and_user_scoped(client
     assert first.content == second.content
     assert payload["schema_version"] == EVIDENCE_EXPORT_SCHEMA_VERSION
     assert payload["event_count"] == 1
-    assert payload["profile_scores_modified"] is True
+    assert payload["profile_scores_modified"] is False
     assert payload["profile_scores_modified_by_export"] is False
     assert payload["events"][0]["protocol_stable_id"] == sprint.protocol_id
     assert payload["events"][0]["action_stable_id"] == action.pk

@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load growth_extras %}
 
 {% block title %}Practice complete · Grounded Growth{% endblock %}
 
@@ -17,12 +18,16 @@
 
   <div class="mastery-notice" role="note">
     <strong>Completing this practice does not establish mastery.</strong>
-    <p>
-      Completion records protocol participation. The final review created no
-      score evidence; any current estimate change came from earlier eligible
-      submitted observations. Assessment baselines, archetypes, and
-      orientations remain unchanged.
-    </p>
+    {% if credit_event %}
+      <p>
+        Human closeout recorded {{ credit_event.completion_credit|percentage }}
+        completion credit for this bounded competency practice. It did not alter
+        the assessment baseline, personality orientations, archetypes, identity,
+        worth, or any claim of mastery.
+      </p>
+    {% else %}
+      <p>This historical review retains its original scoring contract.</p>
+    {% endif %}
   </div>
 
   <div class="profile-grid">
@@ -39,10 +44,13 @@
       <p class="eyebrow">Completion record</p>
       <h2>Bounded evidence</h2>
       <dl class="metric-list">
-        <div><dt>Actions attempted</dt><dd>{{ review.actions_attempted }} of 3</dd></div>
-        <div><dt>Actions completed</dt><dd>{{ review.actions_completed }} of 3</dd></div>
+        <div><dt>Actions attempted</dt><dd>{{ review.actions_attempted }} of {{ sprint.protocol.actions.count }}</dd></div>
+        <div><dt>Actions completed</dt><dd>{{ review.actions_completed }} of {{ sprint.protocol.actions.count }}</dd></div>
         <div><dt>Substantive interaction</dt><dd>Recorded</dd></div>
-        <div><dt>Review-only score impact</dt><dd>None</dd></div>
+        <div>
+          <dt>Completion credit</dt>
+          <dd>{% if credit_event %}{{ credit_event.completion_credit|percentage }}{% else %}Historical contract{% endif %}</dd>
+        </div>
       </dl>
     </section>
   </div>

@@ -1,7 +1,7 @@
 PYTHON ?= .venv/bin/python
 APP_DATA_DIR ?= $(CURDIR)/var
 
-.PHONY: format lint test e2e migrate seed evidence-backfill evidence-verify score-rebuild score-verify pilot-check practice-reports practice-report-check catalog-governance-audit catalog-governance-audit-check curriculum-check full-frontier-check competency-evidence-reports competency-evidence-report-check competency-evidence-check context-check personal-os-check context-priority-check m6c-pilot-check m6d-01-check m6h-weekly-check m6h-operations-check run compose-up compose-down compose-smoke backup
+.PHONY: format lint test e2e migrate seed evidence-backfill evidence-verify score-rebuild score-verify composite-score-rebuild composite-score-verify composite-scoring-check pilot-check practice-reports practice-report-check catalog-governance-audit catalog-governance-audit-check composite-scoring-catalog composite-scoring-catalog-check curriculum-check full-frontier-check competency-evidence-reports competency-evidence-report-check competency-evidence-check context-check personal-os-check context-priority-check m6c-pilot-check m6d-01-check m6h-weekly-check m6h-operations-check run compose-up compose-down compose-smoke backup
 
 format:
 	$(PYTHON) -m ruff format .
@@ -49,6 +49,14 @@ score-verify:
 	APP_DATA_DIR="$(APP_DATA_DIR)" DJANGO_SECRET_KEY=local-development-secret APP_DEBUG=true \
 		$(PYTHON) manage.py rebuild_score_state --verify-only
 
+composite-score-rebuild:
+	APP_DATA_DIR="$(APP_DATA_DIR)" DJANGO_SECRET_KEY=local-development-secret APP_DEBUG=true \
+		$(PYTHON) manage.py rebuild_composite_score_state
+
+composite-score-verify:
+	APP_DATA_DIR="$(APP_DATA_DIR)" DJANGO_SECRET_KEY=local-development-secret APP_DEBUG=true \
+		$(PYTHON) manage.py rebuild_composite_score_state --verify-only
+
 pilot-check:
 	PYTHON_BIN="$(PYTHON)" ./scripts/verify_pilot_readiness.sh
 
@@ -65,6 +73,15 @@ catalog-governance-audit:
 
 catalog-governance-audit-check:
 	$(PYTHON) scripts/catalog_governance_audit.py --check
+
+composite-scoring-catalog:
+	$(PYTHON) scripts/composite_scoring_catalog.py
+
+composite-scoring-catalog-check:
+	$(PYTHON) scripts/composite_scoring_catalog.py --check
+
+composite-scoring-check:
+	PYTHON_BIN="$(PYTHON)" ./scripts/verify_composite_scoring_readiness.sh
 
 curriculum-check:
 	PYTHON_BIN="$(PYTHON)" ./scripts/verify_expansion_readiness.sh

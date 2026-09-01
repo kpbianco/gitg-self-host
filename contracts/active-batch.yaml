@@ -1,58 +1,70 @@
 schema_version: 1
 batch:
-  id: M6B-GOV-AUDIT
-  title: Audit the complete 383-package catalog for governance review
-  goal: Produce a deterministic finding-complete audit and prioritized review packet for every canonical package without fabricating specialist acceptance resolving human gates or silently changing activation.
+  id: M6I-01-COMPOSITE-CLOSEOUT-SCORING
+  title: Replace event-level scoring with assessment-composite closeout credit
+  goal: Apply one deterministic owner-approved scoring design across all 383 competencies, 383 practices, 1,151 actions, 37 levers, 27 domains, and 7 lever families without treating completion as mastery or fabricating deferred specialist acceptance.
 sources:
   product: products/gitg-self-host/product.yaml
   requirements:
-    - products/gitg-self-host/acceptance.yaml#GG-GOV-M6B
-    - owner-direction-2026-08-31
-  milestone: products/gitg-self-host/roadmap.yaml#M6B-GOV
-  baseline_commit: 85eb9e4da0a34704ddb194c1fca7b32317cd9fb8
+    - products/gitg-self-host/acceptance.yaml#GG-SCORING-DISPOSITION
+    - owner-direction-2026-09-01-composite-closeout-scoring
+  milestone: owner-directed-successor-to-M6B-GOV-AUDIT
+  baseline_commit: 0665d35b3c446c27deb1747dc271b14e6ff6e3ab
 dependencies:
-  - M6H-02
+  - M6B-GOV-AUDIT
 scope:
   allowed_paths:
     - AGENTS.md
     - README.md
     - Makefile
     - MANIFEST.tsv
+    - docker-entrypoint.sh
     - .github/workflows/**
     - contracts/**
+    - data/assessment/**
+    - data/model/**
     - data/practices/**
+    - growth/**
+    - templates/**
+    - static/**
     - reports/practice-content/**
     - scripts/**
     - tests/**
     - docs/**
   forbidden_paths:
-    - data/assessment/**
-    - data/curriculum/**
-    - data/model/**
     - data/notion/**
-    - data/evidence/**
-    - growth/**
-    - templates/**
+    - legacy/**
     - requirements*.txt
     - pyproject.toml
     - Dockerfile
     - docker-compose.yml
 acceptance:
-  - Objective schema registry source-reference exact-duplicate mapping and deterministic-report defects may be repaired in this batch.
-  - Findings requiring semantic cultural accessibility privacy safety measurement legal clinical or intervention judgment remain open and are routed to named reviewers.
-  - Exactly 383 canonical packages and 1,151 stable actions receive one deterministic audit row covering identity parent mapping recommendation targets family risk evidence kinds scoring policy activation status sources research gaps expert reviews and content hash.
-  - Every package receives explicit automated dispositions for schema completeness stable-ID uniqueness mapping validity evidence-rule executability privacy-field allowlists source metadata exact and near-duplicate candidates accessibility adaptation fields safety stop and escalation fields and activation-review consistency.
-  - Every finding has a stable finding ID severity objective evidence affected stable IDs remediation class and status; no finding is dropped because the catalog is runtime active.
-  - Objective critical and high structural defects are repaired or remain explicit blockers with regression tests; semantic or specialist findings are never auto-closed.
-  - The audit separately reports the five legacy packages 378 typed packages 374 generated additions all risk classes all evidence kinds every domain every lever and every score-active package.
-  - The report explicitly identifies the owner-directed all-active versus pending-review boundary and never equates software activation with source completeness safety accessibility cultural fit effectiveness or validation.
-  - ER-M6A-003 remains pending and RG-M6A-002 remains open unless actual named reviewers separately complete the manual M6B-GOV contract.
-  - A prioritized owner and specialist packet groups findings by required role risk domain protocol family evidence kind and remediation dependency without exposing participant data.
-  - Generated JSON CSV and Markdown reports are deterministic manifest-listed and byte-stable on a second run.
-  - The complete existing canonical runtime scoring replay browser and Compose regression chain remains green.
+  - Decision 053 and ADR 0013 record the owner's accepted replacement architecture; Decisions 047, 048, and 049 remain unapproved and are explicitly rejected or superseded rather than silently reinterpreted.
+  - Decision 052 continues to authorize all 383 runtime protocols, while Decision 053 supersedes its event-level production score trigger for new scoring epochs.
+  - Assessment v1.1 answers, lever baselines, historical LeverState rows, EvidenceEvents, and ScoreSnapshots remain immutable and replay-verifiable.
+  - The additive composite contract projects exactly 7 family, 37 lever, 27 domain, and 383 competency assessment-derived rows for every supported assessment epoch without asking 383 competency questions.
+  - A competency's relationship allocation is exactly one half its canonical competency-to-lever mapping and one half equal share across every mapped lever; every allocation remains positive and sums exactly to one.
+  - A competency's assessment composite is exactly one half its blended mapped-lever estimate, one quarter its blended mapped-family estimate, and one quarter its parent-domain estimate; the domain estimate is an equal-member rollup derived before the domain term is applied, so the calculation is acyclic.
+  - Assessment-derived estimates initialize priority only and never award earned completion credit.
+  - New check-ins continue to create immutable replayable evidence but do not mutate the additive completion-credit score state.
+  - A production update occurs only in the same transaction as an explicit human final closeout that satisfies the practice's completion threshold and substantive criterion.
+  - Equal action units produce 0.75 competency completion credit at the configured minimum and 1.00 when every defined action is completed; the general interpolation is deterministic for any future action count.
+  - Repeated closeouts use the maximum active credit for a competency rather than summing attempts; a later stronger closeout applies only the positive difference and a reversal rebuilds from remaining active closeouts.
+  - Lever and family completion coverage use normalized blended relationship mass; domain coverage uses equal competency membership. Canonical coverage reaches 1.00 only when every contributing competency reaches 1.00.
+  - Remaining need equals immutable assessment starting need multiplied by the square root of one minus earned coverage. Recommendation priority combines 50 percent lever, 25 percent family, and 25 percent domain remaining need, then applies the competency's own remaining-credit factor and the unchanged explicit context layer.
+  - Ordinary UI uses assessment-derived starting estimate, earned completion credit, coverage, and remaining priority language; it never labels completion as mastery or scores dignity, identity, clinical status, qualification, or worth.
+  - The complete catalog receives a deterministic relationship and credit-policy report proving exact entity counts, allocations, action thresholds, family/domain coverage, and no missing score disposition.
+  - ER-M6A-003 remains pending, RG-M6A-002 remains open, and M6B specialist acceptance remains false; owner implementation approval is not represented as measurement, accessibility, privacy/safety, psychometric, clinical, cultural, participant, longitudinal, or intervention-effectiveness validation.
 validation:
   local:
+    - .venv/bin/python manage.py makemigrations --check --dry-run
+    - .venv/bin/python manage.py check
+    - .venv/bin/python -m ruff check .
+    - .venv/bin/python -m ruff format --check .
+    - .venv/bin/pytest
     - make catalog-governance-audit-check PYTHON=.venv/bin/python
+    - make composite-scoring-catalog-check PYTHON=.venv/bin/python
+    - make composite-scoring-check PYTHON=.venv/bin/python
     - make full-frontier-check PYTHON=.venv/bin/python
     - make practice-report-check PYTHON=.venv/bin/python
     - make curriculum-check PYTHON=.venv/bin/python
@@ -63,40 +75,44 @@ validation:
     - .venv/bin/python scripts/verify-manifest.py
     - git diff --check
   focused_tests_to_add:
-    - exact 383 package and 1,151 action audit coverage with stable finding IDs
-    - complete domain lever family risk evidence source review gap and activation inventories
-    - exact duplicate near-duplicate source metadata privacy safety accessibility and activation-review findings
-    - deterministic second-run reports and manifest integrity
-    - automated findings never complete specialist roles close ER-M6A-003 or resolve RG-M6A-002
+    - golden pure-math fixtures for family lever domain competency and relationship composites
+    - exact 7 37 27 383 and 1,151 whole-catalog score-disposition coverage
+    - two-of-three and three-of-four human closeout yield 0.75 while all actions yield 1.00
+    - submitted check-ins leave additive score state byte-for-byte unchanged
+    - duplicate and weaker repeated closeouts cannot farm credit while a stronger closeout applies only its delta
+    - initialization process reversal rebuild hashing idempotence assessment-epoch isolation and immutable baseline regression
+    - ordinary recommendation and context-priority journeys consume composite remaining priority
+    - historical GG-SCORE-STATE-1.0 replay remains exact and new closeout epochs are excluded from event-level synchronization
   required_ci:
     - Ruff Django pytest migration drift and manifest verification
-    - full frontier practice curriculum and competency-evidence readiness
-    - deterministic consolidated audit report regeneration
-    - Playwright regression journeys
-    - Compose backup restore and replay drill
+    - composite scoring whole-catalog report and deterministic replay
+    - full frontier practice curriculum competency-evidence and catalog-governance readiness
+    - Playwright assessment recommendation check-in and closeout journeys
+    - Compose backup restore migration and mixed-version replay drill
     - aggregate Pilot readiness gate
 risk:
   class: high
   hazards:
-    - automated lexical checks are represented as semantic or specialist approval
-    - active packages receive lighter review than inactive packages
-    - findings are lost through unstable IDs grouping or regeneration
-    - objective repairs change evidence scoring or activation semantics
-    - participant or owner-private data enters an audit artifact
+    - assessment-derived inference is mislabeled as direct competency measurement or mastery
+    - family lever and domain projections count the same assessment signal as independent evidence
+    - check-ins continue to mutate legacy score state for a new closeout-version sprint
+    - repeated practices sum beyond one or score the same closeout twice
+    - rounding causes relationship weights or completion coverage to drift from exact bounds
+    - canonical or personally not-applicable denominators are confused in UI or reports
+    - historical score snapshots are rewritten or made unreplayable
   stop_conditions:
-    - coverage is not exactly 383 packages and 1,151 actions
-    - any package action domain lever family risk or evidence kind is omitted
-    - a specialist role review date or decision is fabricated
-    - a finding lacks reproducible objective evidence
-    - an objective repair changes runtime scoring activation or participant state
-    - deterministic report regeneration or a required gate fails
+    - entity coverage is not exactly 7 families 37 levers 27 domains 383 competencies 383 practices and 1,151 actions
+    - an assessment baseline evidence event historical score snapshot or submitted review is mutated
+    - a new check-in changes additive completion-credit state before human closeout
+    - any relationship allocation or score leaves the closed unit interval or fails deterministic replay
+    - a full canonical coverage score is reachable while a contributing competency has less than full credit
+    - an automated result closes ER-M6A-003 resolves RG-M6A-002 or claims specialist or participant validation
+    - a required local or hosted gate fails
 rollback:
-  strategy: Revert the audit batch as one commit; generated findings do not mutate participant state specialist records research-gap decisions or activation.
+  strategy: Revert the additive contract migration services and UI as one batch; retain all immutable assessment evidence legacy score and review history, and rebuild additive state only from versioned closeout events if the batch is restored.
 evidence:
   output:
-    - docs/evidence/M6B-GOV-AUDIT-<date>.md
-    - reports/practice-content/catalog_governance_audit_v1.json
-    - reports/practice-content/catalog_governance_findings_v1.csv
-    - reports/practice-content/catalog_governance_review_queue_v1.csv
+    - docs/evidence/M6I-01-COMPOSITE-CLOSEOUT-SCORING-<date>.md
+    - reports/practice-content/composite_scoring_catalog_v1.json
     - exact local and hosted CI results
-  claim_boundary: Deterministic static and software governance audit only; no specialist owner participant accessibility-population cultural clinical psychometric longitudinal release deployment mastery or intervention-effectiveness acceptance.
+  claim_boundary: Deterministic owner-directed software architecture and catalog implementation only; no specialist psychometric clinical cultural accessibility-population participant longitudinal release deployment mastery or intervention-effectiveness acceptance.

@@ -56,20 +56,23 @@ For example, with server IP `192.168.1.20` and the default port:
 
 The non-root container user runs these steps on every start:
 
-1. `manage.py migrate --noinput`
-2. `manage.py bootstrap_user`
-3. `manage.py seed_canonical`
-4. `manage.py backfill_evidence_events`
-5. `manage.py rebuild_score_state`
-6. `manage.py collectstatic --noinput`
-7. `gunicorn grounded_growth.wsgi:application`
+1. `manage.py validate_canonical_content`
+2. `manage.py migrate --noinput`
+3. `manage.py bootstrap_user`
+4. `manage.py seed_canonical`
+5. `manage.py backfill_evidence_events`
+6. `manage.py rebuild_score_state`
+7. `manage.py rebuild_composite_score_state`
+8. `manage.py collectstatic --noinput`
+9. `gunicorn grounded_growth.wsgi:application`
 
-Migrations, seeding, evidence backfill, and score-state reconciliation are
-idempotent. Score-state startup initializes missing current rows, processes
-pending versioned events once, verifies replay, and appends a rebuild snapshot
-only if current state actually drifted. Bootstrap creation occurs only when
-the auth user table is empty. An existing user prevents password creation or
-reset, even if bootstrap environment values change.
+Migrations, seeding, evidence backfill, and both score-state reconciliations
+are idempotent. Historical state processes only explicitly legacy-version
+events. Composite state processes only immutable human-closeout credit events,
+verifies replay, and appends a rebuild snapshot only when current state or its
+audit metadata actually drifted. Bootstrap creation occurs only when the auth
+user table is empty. An existing user prevents password creation or reset,
+even if bootstrap environment values change.
 
 ## Authentication hardening
 
@@ -182,23 +185,25 @@ After an update, sign in and verify:
 5. `/evidence/` shows only the signed-in user's submitted events;
 6. `make evidence-verify` reports complete replay coverage;
 7. `make score-verify` reports deterministic score-state coverage;
-8. `/profile/` distinguishes the assessment baseline from current
-   evidence-updated estimates;
-9. `/health/` returns `{"status":"ok"}`.
-10. `docker compose exec app python manage.py verify_pilot_readiness` reports
+8. `make composite-score-verify` reports deterministic assessment-composite
+   and human-closeout replay coverage;
+9. `/profile/` distinguishes assessment-derived starting estimates from
+   completion credit, coverage, and remaining priority;
+10. `/health/` returns `{"status":"ok"}`.
+11. `docker compose exec app python manage.py verify_pilot_readiness` reports
     the exact 383-protocol runtime boundary and replay state.
-11. **Account → Open feedback form** explains that pilot feedback is optional,
+12. **Account → Open feedback form** explains that pilot feedback is optional,
     local, and separate from developmental state.
-12. `/personal-os/` and
+13. `/personal-os/` and
     `/personal-os/practices/<slug>/context/` require authentication, use the
     signed-in user's latest assessment, show no carried-forward values after
     reassessment, and state the local-backup and
     no-dedicated-export/purge/retention boundaries before collection.
-13. `docker compose exec app python manage.py
+14. `docker compose exec app python manage.py
     verify_m6c_pilot_readiness` reports all six prerequisite readiness
     contracts, the exact 383-protocol projection, registered authenticated
     browser routes, and all-catalog activation without writing data.
-14. `/weekly/` shows one current-practice action and an explicit proof state;
+15. `/weekly/` shows one current-practice action and an explicit proof state;
     `docker compose exec app python manage.py
     verify_weekly_execution_readiness` replays plans and reviews without
     writing data or printing private values.
@@ -213,12 +218,15 @@ Score-state operations are:
 ```bash
 docker compose exec app python manage.py rebuild_score_state --verify-only
 docker compose exec app python manage.py rebuild_score_state
+docker compose exec app python manage.py rebuild_composite_score_state --verify-only
+docker compose exec app python manage.py rebuild_composite_score_state
 ```
 
-The first command is read-only. The second initializes pending state and
-repairs drift from immutable baselines/events with an audit snapshot. To
-permanently exclude one processed event from current state without deleting
-it from the evidence ledger:
+The two `--verify-only` commands are read-only. The write variants initialize
+pending state and repair drift from immutable legacy evidence or composite
+closeout events with audit snapshots. To permanently exclude one processed
+historical event from current state without deleting it from the evidence
+ledger:
 
 ```bash
 docker compose exec app python manage.py rebuild_score_state \
@@ -275,7 +283,8 @@ It verifies:
 - the Compose health check and public `/health/` response;
 - anonymous redirect plus a real CSRF-protected login over the mapped port;
 - the non-root runtime, applied migrations, exact canonical counts, repeated
-  seed idempotency, evidence replay, score-state replay, and the read-only
+  seed idempotency, evidence replay, legacy and composite score-state replay,
+  the exact 383-practice/1,151-action scoring disposition, and the read-only
   `GG-PILOT-READINESS-1.0` and additive
   `GG-M6C-PILOT-READINESS-1.0` contracts;
 - conspicuously synthetic Personal OS and context revisions created through

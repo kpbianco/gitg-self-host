@@ -1,0 +1,59 @@
+schema_version: GG-COMPOSITE-CLOSEOUT-SCORING-1.0
+algorithm_version: GG-COMPOSITE-CLOSEOUT-SCORING-1.0
+state_schema_version: composite-closeout-state-v1
+catalog:
+  families: 7
+  levers: 37
+  domains: 27
+  competencies: 383
+  practices: 383
+  actions: 1151
+relationship_blend:
+  canonical_weight: '0.50'
+  equal_share_weight: '0.50'
+assessment_projection:
+  mapped_lever_weight: '0.50'
+  mapped_family_weight: '0.25'
+  parent_domain_weight: '0.25'
+  unassessed_lever_source: family_estimate
+  unassessed_lever_confidence_multiplier: '0.50'
+  domain_rollup: equal_member_mean
+  family_rollup: confidence_weighted_lever_mean
+  need_exponent: '1.50'
+  confidence_floor: '0.60'
+  confidence_weight: '0.40'
+completion_credit:
+  trigger: explicit_human_final_closeout
+  action_weighting: equal
+  minimum_closeout_credit: '0.75'
+  full_closeout_credit: '1.00'
+  between_minimum_and_full: linear
+  repeated_closeout_aggregation: maximum_active_credit
+  check_in_score_effect: none
+coverage:
+  lever_rollup: normalized_blended_relationship_mass
+  family_rollup: normalized_blended_relationship_mass
+  domain_rollup: equal_member_mean
+  competency_rollup: maximum_active_closeout_credit
+  remaining_need_exponent: '0.50'
+recommendation_priority:
+  mapped_lever_weight: '0.50'
+  mapped_family_weight: '0.25'
+  parent_domain_weight: '0.25'
+  own_remaining_credit_exponent: '0.50'
+  context_layer: GG-CONTEXT-PRIORITY-1.0
+language:
+  assessment_value: assessment-derived starting estimate
+  earned_value: completion credit
+  queue_value: remaining priority
+  prohibited_labels:
+    - mastery
+    - human worth
+    - clinical status
+    - qualification
+governance:
+  owner_decision: Decision 053
+  specialist_review: ER-M6A-003
+  specialist_review_status: pending
+  research_gap: RG-M6A-002
+  research_gap_status: open

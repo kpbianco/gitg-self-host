@@ -1,6 +1,7 @@
 import json
 import re
 from datetime import date
+from decimal import Decimal
 from pathlib import Path
 
 import pytest
@@ -9,6 +10,7 @@ from playwright.sync_api import Page, expect
 
 from growth.models import (
     AssessmentRun,
+    CompletionCreditEvent,
     EvidenceEvent,
     PersonalOSRevision,
     PilotFeedback,
@@ -37,27 +39,27 @@ PROTOCOL_WALKTHROUGH = (
     (
         "deepen-one-existing-friendship",
         "Deepen One Existing Friendship",
-        "Eligible submitted observations may adjust provisional capacity estimates.",
+        "Check-ins preserve evidence but do not update completion credit.",
     ),
     (
         "schedule-non-instrumental-play",
         "Schedule Non-Instrumental Play",
-        "Eligible submitted observations may adjust provisional capacity estimates.",
+        "Check-ins preserve evidence but do not update completion credit.",
     ),
     (
         "practice-emotional-cue-detection",
         "Practice Emotional Cue Detection",
-        "Eligible submitted observations may adjust provisional capacity estimates.",
+        "Check-ins preserve evidence but do not update completion credit.",
     ),
     (
         "state-and-maintain-one-boundary",
         "State and Maintain One Boundary",
-        "Eligible submitted observations may adjust provisional capacity estimates.",
+        "Check-ins preserve evidence but do not update completion credit.",
     ),
     (
         "complete-an-attention-presence-experiment",
         "Complete an Attention-Presence Experiment",
-        "Eligible submitted observations may adjust provisional capacity estimates.",
+        "Check-ins preserve evidence but do not update completion credit.",
     ),
 )
 
@@ -462,7 +464,7 @@ def test_play_protocol_setup_is_specific_and_score_active(live_server, page: Pag
     page.get_by_role("heading", name="Schedule Non-Instrumental Play").wait_for()
     page.get_by_text("You will not need to invent the practice.").wait_for()
     page.get_by_role("link", name="Start guided setup").click()
-    page.get_by_text("Eligible submitted observations may adjust").wait_for()
+    page.get_by_text("Check-ins preserve evidence but do not update completion credit").wait_for()
     page.get_by_role("button", name="Continue").click()
     page.get_by_label("Yes, this activity or context is available").check()
     page.get_by_role("button", name="Continue").click()
@@ -473,7 +475,7 @@ def test_play_protocol_setup_is_specific_and_score_active(live_server, page: Pag
     ).check()
     page.get_by_role("button", name=re.compile(r"I understand")).click()
     page.get_by_role("button", name="Continue").click()
-    page.get_by_role("button", name="I have reviewed the three actions").click()
+    page.get_by_role("button", name="I have reviewed the defined actions").click()
     page.get_by_role("button", name="Begin practice").click()
     page.get_by_role("link", name="Add compact check-in").click()
     page.get_by_label("A specific play window was reserved").wait_for()
@@ -498,7 +500,7 @@ def test_emotional_cue_setup_and_check_in_are_bounded(live_server, page: Page):
     page.get_by_role("heading", name="Practice Emotional Cue Detection").wait_for()
     page.get_by_text("Notice before interpreting").wait_for()
     page.get_by_role("link", name="Start guided setup").click()
-    page.get_by_text("Eligible submitted observations may adjust").wait_for()
+    page.get_by_text("Check-ins preserve evidence but do not update completion credit").wait_for()
     page.get_by_role("button", name="Continue").click()
     page.get_by_label("Yes, this activity or context is available").check()
     page.get_by_role("button", name="Continue").click()
@@ -511,7 +513,7 @@ def test_emotional_cue_setup_and_check_in_are_bounded(live_server, page: Page):
     ).check()
     page.get_by_role("button", name=re.compile(r"I understand")).click()
     page.get_by_role("button", name="Continue").click()
-    page.get_by_role("button", name="I have reviewed the three actions").click()
+    page.get_by_role("button", name="I have reviewed the defined actions").click()
     page.get_by_role("button", name="Begin practice").click()
     page.get_by_role("link", name="Add compact check-in").click()
     page.get_by_label("I deliberately paused to observe before interpreting").wait_for()
@@ -532,7 +534,7 @@ def test_boundary_setup_and_check_in_are_safe_and_specific(live_server, page: Pa
     page.get_by_role("heading", name="State and Maintain One Boundary").wait_for()
     page.get_by_text("Define what you control").wait_for()
     page.get_by_role("link", name="Start guided setup").click()
-    page.get_by_text("Eligible submitted observations may adjust").wait_for()
+    page.get_by_text("Check-ins preserve evidence but do not update completion credit").wait_for()
     page.get_by_role("button", name="Continue").click()
     page.get_by_label("Yes, one safe, low-stakes situation is likely to arise").check()
     page.get_by_role("button", name="Continue").click()
@@ -547,7 +549,7 @@ def test_boundary_setup_and_check_in_are_safe_and_specific(live_server, page: Pa
     ).check()
     page.get_by_role("button", name=re.compile(r"I understand")).click()
     page.get_by_role("button", name="Continue").click()
-    page.get_by_role("button", name="I have reviewed the three actions").click()
+    page.get_by_role("button", name="I have reviewed the defined actions").click()
     page.get_by_role("button", name="Begin practice").click()
     page.get_by_role("link", name="Add compact check-in").click()
     page.get_by_label("I chose a specific limit and a response that I control").wait_for()
@@ -578,7 +580,7 @@ def test_presence_setup_and_check_in_are_accessible_and_specific(live_server, pa
     page.get_by_role("heading", name="Complete an Attention-Presence Experiment").wait_for()
     page.get_by_text("Run the usual-condition window").wait_for()
     page.get_by_role("link", name="Start guided setup").click()
-    page.get_by_text("Eligible submitted observations may adjust").wait_for()
+    page.get_by_text("Check-ins preserve evidence but do not update completion credit").wait_for()
     page.get_by_role("button", name="Continue").click()
     page.get_by_label("Yes, I have a safe 15-minute activity I can repeat").check()
     page.get_by_role("button", name="Continue").click()
@@ -592,7 +594,7 @@ def test_presence_setup_and_check_in_are_accessible_and_specific(live_server, pa
     ).check()
     page.get_by_role("button", name=re.compile(r"I understand")).click()
     page.get_by_role("button", name="Continue").click()
-    page.get_by_role("button", name="I have reviewed the three actions").click()
+    page.get_by_role("button", name="I have reviewed the defined actions").click()
     page.get_by_role("button", name="Begin practice").click()
     page.get_by_role("link", name="Add compact check-in").click()
     page.get_by_label("I noticed attention drift and deliberately returned").wait_for()
@@ -705,7 +707,7 @@ def test_guided_practice_draft_pause_and_completion_flow(live_server, page: Page
     ).click()
     page.get_by_label("Start date").fill(date.today().isoformat())
     page.get_by_role("button", name="Continue").click()
-    page.get_by_role("button", name="I have reviewed the three actions").click()
+    page.get_by_role("button", name="I have reviewed the defined actions").click()
     page.get_by_role("button", name="Begin practice").click()
     page.get_by_role("heading", name="Deepen One Existing Friendship").wait_for()
 
@@ -730,7 +732,7 @@ def test_guided_practice_draft_pause_and_completion_flow(live_server, page: Page
     page.get_by_text("Check-in submitted and added to evidence history.").wait_for()
     page.get_by_role("link", name="Listen to what matters now").click()
     page.get_by_role("heading", name="Listen to what matters now").wait_for()
-    page.get_by_text("This observation has a versioned score disposition.").wait_for()
+    page.get_by_text("This observation is proof, not a global score update.").wait_for()
     page.get_by_text("Technical audit details").click()
     page.get_by_text("GG-EVIDENCE-1.0").wait_for()
     page.get_by_role("link", name="Evidence", exact=True).click()
@@ -742,15 +744,15 @@ def test_guided_practice_draft_pause_and_completion_flow(live_server, page: Page
         page.get_by_role("link", name="Download privacy-safe JSON").click()
     exported = json.loads(Path(download_info.value.path()).read_text())
     assert exported["event_count"] == 1
-    assert exported["profile_scores_modified"] is True
+    assert exported["profile_scores_modified"] is False
     assert exported["profile_scores_modified_by_export"] is False
     page.get_by_role("link", name="Read evidence explanation").click()
     page.get_by_role("heading", name="Listen to what matters now").wait_for()
     page.get_by_role("link", name="Profile", exact=True).click()
-    page.get_by_role("heading", name="What submitted evidence has changed").wait_for()
-    page.get_by_text("Current · versioned").wait_for()
+    page.get_by_role("heading", name="What completed practices have changed").wait_for()
+    page.get_by_text("Closeout contract · versioned").wait_for()
     page.get_by_text(
-        re.compile(r"Every transition keeps an immutable before-and-after"),
+        re.compile(r"Check-ins remain immutable proof but do not change this state"),
     ).wait_for()
     page.go_back()
     page.get_by_role("heading", name="Listen to what matters now").wait_for()
@@ -779,8 +781,9 @@ def test_guided_practice_draft_pause_and_completion_flow(live_server, page: Page
     )
     page.get_by_role(
         "button",
-        name="Submit final review and complete practice",
+        name="Submit final review and record 75% credit",
     ).click()
     page.get_by_role("heading", name="The experiment is closed.").wait_for()
     page.get_by_text("Completing this practice does not establish mastery.").wait_for()
     assert PracticeSprint.objects.get().status == PracticeSprint.Status.COMPLETED
+    assert CompletionCreditEvent.objects.get().completion_credit == Decimal("0.7500")

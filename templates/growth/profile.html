@@ -9,9 +9,9 @@
       <p class="eyebrow">Developmental profile</p>
       <h1>A provisional map, not an identity.</h1>
       <p class="lede">
-        This profile begins with self-report and can incorporate reviewed,
-        structured practice evidence. It remains provisional; it does not
-        establish mastery or measure worth.
+        A concise assessment initializes family, lever, domain, and competency
+        priorities. Explicit practice closeouts add bounded completion credit.
+        Neither is a claim of mastery or a measure of worth.
       </p>
     </div>
     {% if summary.assessment_run %}
@@ -34,20 +34,20 @@
   {% if summary.assessment_run %}
     <section class="definition-grid" aria-label="How to read this profile">
       <article>
-        <h2>Raw self-report</h2>
-        <p>What your answers directly imply before conservative calibration.</p>
+        <h2>Starting estimate</h2>
+        <p>The immutable assessment-derived estimate used to bias weaker areas.</p>
       </article>
       <article>
-        <h2>Calibrated estimate</h2>
-        <p>The cautious assessment estimate retained as an immutable starting point.</p>
+        <h2>Completion credit</h2>
+        <p>Credit recorded only when you explicitly close a whole practice.</p>
       </article>
       <article>
-        <h2>Evidence confidence</h2>
-        <p>How much support the current estimate has. It is not another judgment of ability.</p>
+        <h2>Coverage</h2>
+        <p>How completed competencies propagate through their mapped levers, families, and domains.</p>
       </article>
       <article>
-        <h2>Current estimate</h2>
-        <p>The starting estimate plus eligible submitted evidence, rebuilt from an audit trail.</p>
+        <h2>Remaining priority</h2>
+        <p>Starting need reduced by earned coverage, then combined with explicit current context.</p>
       </article>
     </section>
 
@@ -126,7 +126,7 @@
                   confidence {{ capacity.confidence|percentage }}
                 </span>
               </div>
-              <b>{{ capacity.estimate|percentage }}</b>
+              <b>{{ capacity.starting_estimate|percentage }}</b>
             </li>
           {% endfor %}
         </ol>
@@ -146,8 +146,8 @@
               <div>
                 <strong>{{ capacity.lever.name }}</strong>
                 <span>
-                  Estimate {{ capacity.estimate|percentage }} ·
-                  confidence {{ capacity.confidence|percentage }}
+                  Starting estimate {{ capacity.starting_estimate|percentage }} ·
+                  confidence {{ capacity.starting_confidence|percentage }}
                 </span>
               </div>
             </li>
@@ -159,53 +159,57 @@
     <section class="panel shadow-projection" aria-labelledby="current-state-heading">
       <div class="panel-heading">
         <div>
-          <p class="eyebrow">Evidence-updated working state</p>
-          <h2 id="current-state-heading">What submitted evidence has changed</h2>
+          <p class="eyebrow">Human-closeout working state</p>
+          <h2 id="current-state-heading">What completed practices have changed</h2>
         </div>
-        {% if summary.dynamic_state_active %}
-          <span class="status-pill">Current · versioned</span>
+        {% if summary.composite_state_active %}
+          <span class="status-pill">Closeout contract · versioned</span>
         {% else %}
           <span class="status-pill">Baseline only</span>
         {% endif %}
       </div>
       <p class="panel-intro">
-        Eligible directional observations update only the capacities linked to
-        the reviewed practice. Every transition keeps an immutable before-and-after
-        record and can be rebuilt from the original assessment and evidence events.
+        Check-ins remain immutable proof but do not change this state. A final
+        human closeout records 75% credit at the configured minimum or 100% when
+        every action is complete. Every transition is hashed and replayable.
       </p>
 
-      {% if not summary.dynamic_state_active %}
+      {% if not summary.composite_state_active %}
         <div class="inline-note">
-          <strong>Current state verification is required</strong>
+          <strong>Completion-credit verification is required</strong>
           <p>
             {% if summary.state_verification_error %}
               {{ summary.state_verification_error }}
             {% else %}
-              The assessment baseline remains available, but evidence updates are not active.
+              The assessment baseline remains available, but closeout updates are not active.
             {% endif %}
           </p>
         </div>
       {% elif not summary.evidence_updated_capacities %}
         <div class="inline-note">
-          <strong>No directional evidence has changed the profile yet</strong>
+          <strong>No practice closeout has changed coverage yet</strong>
           <p>
-            Drafts, inconclusive observations, practice completion, and the final
-            review alone do not change current estimates.
+            Drafts, check-ins, attempts, and action checkmarks do not update global
+            coverage before the whole practice is explicitly closed.
           </p>
         </div>
       {% else %}
-        <div class="shadow-summary" aria-label="Projection event summary">
+        <div class="shadow-summary" aria-label="Completion credit summary">
           <div>
-            <strong>{{ summary.evidence_updated_capacities|length }}</strong>
-            <span>capacity signal{{ summary.evidence_updated_capacities|length|pluralize }} updated</span>
+            <strong>{{ summary.canonical_completion_coverage|percentage }}</strong>
+            <span>canonical competency coverage</span>
           </div>
           <div>
-            <strong>{{ summary.score_snapshot_count }}</strong>
-            <span>immutable audit snapshot{{ summary.score_snapshot_count|pluralize }}</span>
+            <strong>{{ summary.full_credit_competencies }}</strong>
+            <span>full-credit competenc{{ summary.full_credit_competencies|pluralize:"y,ies" }}</span>
           </div>
           <div>
-            <strong>State contract v1</strong>
-            <span>deterministic calculation</span>
+            <strong>{{ summary.partial_credit_competencies }}</strong>
+            <span>partial-credit competenc{{ summary.partial_credit_competencies|pluralize:"y,ies" }}</span>
+          </div>
+          <div>
+            <strong>{{ summary.composite_snapshot_count }}</strong>
+            <span>immutable closeout snapshot{{ summary.composite_snapshot_count|pluralize }}</span>
           </div>
         </div>
 
@@ -215,27 +219,21 @@
               <div>
                 <strong>{{ capacity.lever.name }}</strong>
                 <span>
-                  Started {{ capacity.starting_estimate|percentage }}
-                  → current {{ capacity.estimate|percentage }}
+                  {{ capacity.completion_coverage|percentage }} mapped completion coverage
                 </span>
               </div>
               <div class="projection-confidence">
-                <span>Evidence confidence</span>
-                <strong>
-                  {{ capacity.starting_confidence|percentage }}
-                  → {{ capacity.confidence|percentage }}
-                </strong>
+                <span>Remaining priority</span>
+                <strong>{{ capacity.need_score|percentage }}</strong>
               </div>
             </article>
           {% endfor %}
         </div>
 
         <p class="fine-print">
-          Supportive observations use recorded protocol performance; mixed observations
-          receive half directional credit; contradictory observations allocate no success
-          mass. Inconclusive and legacy direction-unknown observations are withheld.
-          Recommendation order uses the same provisional need function as assessment
-          v1.1 and does not invent uncollected context ratings.
+          Relationship allocation is half canonical relevance weight and half
+          equal mapped-lever share. Repeated practice uses the highest active
+          closeout credit rather than adding attempts together.
         </p>
       {% endif %}
     </section>
@@ -243,9 +241,9 @@
     <aside class="mastery-notice">
       <strong>Completion remains separate from mastery</strong>
       <p>
-        A submitted directional observation can adjust a provisional working estimate.
-        Completing a practice or submitting its final review creates no additional score
-        evidence, and completing this practice does not establish mastery.
+        The assessment-derived estimate and earned completion credit are separate.
+        Closing a bounded practice updates coverage and priority; it does not prove
+        broad transfer, identity, worth, qualification, or mastery.
       </p>
     </aside>
 

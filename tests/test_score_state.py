@@ -22,6 +22,7 @@ from growth.models import (
     PracticeAction,
     PracticeCheckIn,
     PracticeProtocol,
+    PracticeSprint,
     ScoreSnapshot,
 )
 from growth.services.canonical_import import seed_canonical_data
@@ -67,12 +68,17 @@ def _check_in_data(action, **overrides):
 
 def _sprint(user):
     protocol = PracticeProtocol.objects.get(stable_id="PRACTICE-FRIENDSHIP-01")
-    return start_practice(
+    sprint = start_practice(
         user=user,
         protocol=protocol,
         person_or_context="Private context",
         start_date=date.today(),
     )
+    PracticeSprint.objects.filter(pk=sprint.pk).update(
+        scoring_contract_version="GG-SCORE-STATE-1.0"
+    )
+    sprint.refresh_from_db()
+    return sprint
 
 
 def _state_values(user):
@@ -263,6 +269,10 @@ def test_second_legacy_protocol_is_score_active_and_idempotent(user, seeded):
         person_or_context="Private play context",
         start_date=date.today(),
     )
+    PracticeSprint.objects.filter(pk=sprint.pk).update(
+        scoring_contract_version="GG-SCORE-STATE-1.0"
+    )
+    sprint.refresh_from_db()
     action = protocol.actions.get(sequence=1)
     before_state = _state_values(user)
     before_snapshots = ScoreSnapshot.objects.count()
@@ -626,7 +636,7 @@ def test_protocol_priority_is_weighted_versioned_and_fails_closed():
 
 
 @pytest.mark.django_db
-def test_active_protocol_order_tracks_current_need_and_reversal(user, seeded):
+def test_legacy_event_does_not_change_composite_protocol_order(user, seeded):
     friendship = PracticeProtocol.objects.get(stable_id="PRACTICE-FRIENDSHIP-01")
     baseline_summary = build_profile_summary(user)
     baseline_order = [protocol.stable_id for protocol in baseline_summary.recommendations]
@@ -638,7 +648,8 @@ def test_active_protocol_order_tracks_current_need_and_reversal(user, seeded):
         submit=True,
     )
     after_summary = build_profile_summary(user)
-    assert after_summary.recommendation_priorities[friendship.stable_id] < friendship_before
+    assert after_summary.recommendation_priorities[friendship.stable_id] == friendship_before
+    assert [protocol.stable_id for protocol in after_summary.recommendations] == baseline_order
 
     reverse_evidence_event(
         check_in.evidence_event,
@@ -680,6 +691,10 @@ def test_upgrade_rebuild_initializes_and_processes_existing_event(user):
         person_or_context="Pre-M3B context",
         start_date=date.today(),
     )
+    PracticeSprint.objects.filter(pk=sprint.pk).update(
+        scoring_contract_version="GG-SCORE-STATE-1.0"
+    )
+    sprint.refresh_from_db()
     check_in = PracticeCheckIn.objects.create(
         sprint=sprint,
         action=protocol.actions.get(sequence=1),

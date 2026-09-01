@@ -54,14 +54,14 @@ def home(request):
         )
     if active_sprint is not None:
         practice_evidence = completion_evidence(active_sprint)
-        attempted_action_ids = set(
+        completed_action_ids = set(
             active_sprint.check_ins.filter(
                 status=PracticeCheckIn.Status.SUBMITTED,
-                action_attempted=True,
+                action_completed=True,
             ).values_list("action_id", flat=True)
         )
         next_action = active_sprint.protocol.actions.exclude(
-            stable_id__in=attempted_action_ids
+            stable_id__in=completed_action_ids
         ).first()
     return render(
         request,

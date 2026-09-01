@@ -9,9 +9,11 @@ Build a self-hosted, evidence-oriented guided-development application. The produ
 - Completion is never equivalent to mastery.
 - Human dignity is never scored.
 - Personality/orientation changes framing and tie-breaking only; it does not determine worth or obligation.
-- Dynamic score updates use the reviewed M3A/M3B mathematics and the explicit
-  activation ledger. M6F owner direction activates the complete 383-protocol
-  catalog while retaining replay, baseline, withholding, and audit safeguards.
+- Historical dynamic score updates use the reviewed M3A/M3B mathematics and
+  remain immutable. Decision 053 prospectively replaces event-level mutation
+  with assessment-composite priority and explicit human-closeout completion
+  credit for new scoring-version sprints. The activation ledger still makes
+  the complete 383-protocol catalog available.
 - M6 is an owner-authorized, multi-PR expansion toward individually authored
   packages for all 383 competencies. Coverage does not authorize boilerplate,
   score activation, or a claim of universal, clinical, or psychometric
@@ -116,6 +118,20 @@ The accepted rationale is recorded in
   hashed before/after state and a versioned active-event set.
 - `LeverBaseline` remains the assessment record. Never overwrite it with
   current evidence-informed state.
+- `GG-COMPOSITE-CLOSEOUT-SCORING-1.0` is additive and prospective. It derives
+  family, domain, and competency starting estimates from immutable assessment
+  data, but those projections award no completion credit and must be labeled
+  assessment-derived rather than directly measured.
+- New composite-version check-ins create replayable evidence but no production
+  completion-credit update. Only an explicit human final closeout may create a
+  closeout credit event and composite state transition.
+- Composite relationship allocation is exactly 50 percent canonical mapping
+  plus 50 percent equal mapped-lever share. Action units are equal in v1;
+  minimum closeout earns 0.75 and all defined actions earn 1.00. Repeated
+  attempts aggregate by maximum active credit, never by sum.
+- Preserve `GG-SCORE-STATE-1.0`, historical `LeverState`, `EvidenceEvent`, and
+  `ScoreSnapshot` replay exactly. Do not migrate old event mass into closeout
+  credit or silently convert an in-flight legacy sprint.
 - Every canonical protocol is score-activated by the M6F activation ledger. A
   required baseline with unavailable mass still fails closed and requires
   reassessment.
@@ -382,6 +398,16 @@ open for named humans. The audit must keep `ER-M6A-003` pending,
 `RG-M6A-002` open, all 383 owner-directed activation records unchanged, and
 M6B acceptance false until the separate manual `M6B-GOV` contract is
 truthfully completed.
+
+M6I-01-COMPOSITE-CLOSEOUT-SCORING is the current owner-directed software
+slice. Decision 053 rejects Decisions 047–049 as the production scoring
+architecture and prospectively supersedes Decision 052's event-level score
+trigger without deactivating any protocol. It projects assessment-derived
+scores across 7 families, 37 levers, 27 domains, and 383 competencies; uses a
+50/50 canonical/equal relationship blend; and awards 0.75 or 1.00 completion
+credit only at explicit human closeout. Completion is not mastery. The batch
+must keep `ER-M6A-003` pending, `RG-M6A-002` open, and all historical scoring
+history immutable and replayable.
 
 <!-- BEGIN PORTFOLIO-CONTROL MANAGED -->
 ## Governed agentic delivery

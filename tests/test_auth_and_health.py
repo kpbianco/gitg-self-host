@@ -45,10 +45,10 @@ def test_authenticated_home_and_profile_render_pilot_seed(client, user, seeded):
 
     profile = client.get(reverse("growth:profile"))
     assert profile.status_code == 200
-    assert b"Raw self-report" in profile.content
-    assert b"Calibrated estimate" in profile.content
-    assert b"Evidence confidence" in profile.content
-    assert b"Current estimate" in profile.content
+    assert b"Starting estimate" in profile.content
+    assert b"Completion credit" in profile.content
+    assert b"Coverage" in profile.content
+    assert b"Remaining priority" in profile.content
     assert b"The Seeker" in profile.content
     assert b"Friendship, Belonging, and Hospitality" in profile.content
     assert b"human worth" in profile.content

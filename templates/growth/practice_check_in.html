@@ -29,7 +29,15 @@
     <strong>Evidence reading, not a mastery judgment.</strong>
     The support, context, and direction choices make this observation
     explainable.
-    {% if sprint.protocol.score_active %}Eligible directional evidence may adjust your separate current working profile.{% else %}This protocol is score-inactive, so submitting it will not change your profile or recommendation.{% endif %}
+    {% if sprint.scoring_contract_version == "GG-COMPOSITE-CLOSEOUT-SCORING-1.0" %}
+      Submitting this check-in does not change global scores. Marking an action
+      complete is staged here; completion credit is calculated only if you later
+      choose to close the whole practice.
+    {% elif sprint.protocol.score_active %}
+      This historical sprint retains its original event-level score contract.
+    {% else %}
+      This protocol is score-inactive.
+    {% endif %}
   </div>
 
   <form class="workflow-form check-in-form" method="post">
