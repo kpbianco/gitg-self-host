@@ -614,7 +614,7 @@ growth/services/profile.py	6988
 growth/services/score_state.py	29147
 growth/services/scoring.py	24842
 growth/services/weekly_execution.py	17931
-growth/static/growth/app.css	27474
+growth/static/growth/app.css	27843
 growth/static/growth/assessment.js	16629
 growth/static/growth/contextual_forms.js	2145
 growth/static/growth/personal_os.js	1613
@@ -738,7 +738,7 @@ scripts/verify_pilot_readiness.sh	1549
 scripts/verify_weekly_execution_readiness.sh	3634
 templates/base.html	2603
 templates/growth/assessment.html	6925
-templates/growth/data_management.html	4502
+templates/growth/data_management.html	4546
 templates/growth/evidence_audit_error.html	900
 templates/growth/evidence_ledger.html	5368
 templates/growth/home.html	9980

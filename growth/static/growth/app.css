@@ -1687,6 +1687,22 @@ summary:focus-visible {
     padding: 22px;
   }
 
+  .data-management-panel .stacked-form {
+    background: transparent;
+    border: 0;
+    min-width: 0;
+    padding: 0;
+  }
+
+  .data-management-panel .stacked-form p,
+  .data-management-panel .stacked-form label,
+  .data-management-panel .stacked-form input,
+  .data-management-panel .errorlist {
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
   .section-heading {
     align-items: start;
     flex-direction: column;

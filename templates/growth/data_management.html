@@ -28,7 +28,7 @@
     <a class="button" href="{% url 'growth:owner-archive' %}">Download owner-private archive</a>
   </section>
 
-  <section class="panel" aria-labelledby="retention-heading">
+  <section class="panel data-management-panel" aria-labelledby="retention-heading">
     <p class="eyebrow">{{ retention_preview.policy_version }}</p>
     <h2 id="retention-heading">Explicit retention</h2>
     {% if retention_preview.enabled %}
@@ -71,7 +71,7 @@
     <a class="button button-secondary" href="{% url 'growth:pilot-feedback' %}">Open feedback form</a>
   </section>
 
-  <section class="panel danger-panel" aria-labelledby="deletion-heading">
+  <section class="panel danger-panel data-management-panel" aria-labelledby="deletion-heading">
     <p class="eyebrow">{{ deletion_preview.policy_version }}</p>
     <h2 id="deletion-heading">Permanently delete this account</h2>
     <p>
