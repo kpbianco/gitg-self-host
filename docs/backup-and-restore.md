@@ -1,110 +1,115 @@
-# Backup and restore
+# Backup, upgrade, restore, and rollback
 
-## Consistent database backup
+## What the backup contains
 
-Grounded Growth uses SQLite's online backup API rather than copying a live WAL
-database file directly.
+Grounded Growth uses SQLite's online backup API instead of copying a live WAL
+database file. A database snapshot includes account, assessment, profile,
+context, Personal OS, practice, draft/submitted check-in, evidence, score,
+review, weekly-execution, and optional pilot-feedback data. Treat the database
+and every copy as sensitive private data.
 
-```bash
-make backup
-```
+The downloadable owner archive is not a restorable database backup. The
+minimized evidence and pilot-feedback JSON files are analysis exports and also
+cannot restore the application.
 
-Equivalent command:
+## Create and verify a pre-upgrade backup
 
-```bash
-docker compose exec app python manage.py backup_database
-```
-
-The command writes a timestamped snapshot under:
-
-```text
-/data/backups/grounded_growth-YYYYMMDDTHHMMSSZ.sqlite3
-```
-
-Choose an explicit destination inside the volume when needed:
+Choose a stable path so the restore command cannot select the wrong file:
 
 ```bash
 docker compose exec app python manage.py backup_database \
-  --output /data/backups/before-update.sqlite3
+  --output /data/backups/pre-upgrade.sqlite3
+docker compose exec app python manage.py verify_database_backup \
+  /data/backups/pre-upgrade.sqlite3 --compare-live
 ```
 
-Keep independent copies of important backups outside the Docker host. The
-database backup does not include future files under `/data/uploads`; copy that
-directory separately when uploads are introduced.
+The command writes both files atomically with mode `0600`:
 
-The SQLite snapshot includes users, assessment answers/results/share codes,
-practice state, drafts, submitted check-ins, evidence events, current lever
-state, immutable score snapshots, reversals, reviews, and optional local pilot
-feedback including its free text. Treat it as sensitive personal data and
-protect both the file and any off-host copies accordingly.
+```text
+/data/backups/pre-upgrade.sqlite3
+/data/backups/pre-upgrade.sqlite3.manifest.json
+```
 
-If optional pilot feedback is deleted under a participant retention or
-withdrawal agreement, existing backup files may still contain those rows.
-Rotate or delete affected backups deliberately; `purge_pilot_feedback` changes
-only the live database and never edits backup files.
+It refuses to overwrite either an existing snapshot or sidecar. Move the
+previous pair to its dated archive location or choose a new explicit filename.
 
-The downloadable evidence JSON is not a database backup. It omits identity,
-record IDs, dates, free text, assessment state, and workflow state by design
-and cannot restore the application.
-The minimized pilot-feedback JSON is likewise an analysis export rather than a
-backup; it excludes comment text, identifiers, timestamps, and every
-developmental record.
+The sidecar manifest contains no row values or database identifiers. It records
+only the backup byte length and hash, SQLite integrity result, applied-migration
+count/hash, and counts/hashes for critical owner state. `--compare-live`
+requires the snapshot migrations and critical-state fingerprint to match the
+live database exactly.
 
-## Verify a backup
+For a timestamped snapshot under `/data/backups`, use `make backup`. Keep an
+independent encrypted copy outside the Docker host. Future files under
+`/data/uploads` are not part of the SQLite snapshot.
+
+## Upgrade and verify
+
+Do not continue if backup verification fails.
 
 ```bash
-docker compose exec app python -c \
-  'import sqlite3; db=sqlite3.connect("/data/backups/before-update.sqlite3"); print(db.execute("PRAGMA integrity_check").fetchone()[0])'
+git rev-parse HEAD
+docker compose exec app python manage.py verify_m6h_operations_readiness
+git pull --ff-only
+docker compose up -d --build --wait
+docker compose exec app python manage.py migrate --check
+docker compose exec app python manage.py verify_evidence_events
+docker compose exec app python manage.py rebuild_score_state --verify-only
+docker compose exec app python manage.py verify_weekly_execution_readiness
+docker compose exec app python manage.py verify_m6h_operations_readiness
+curl --fail http://127.0.0.1:${APP_PORT:-3000}/health/
 ```
 
-Expected output is `ok`.
+Also sign in and verify the profile, a current practice, evidence history,
+Personal OS, weekly execution, and **Account** data management.
 
-## Restore
+## Roll back a failed upgrade
 
-1. Stop every application container that can access the volume:
+Use the exact pre-upgrade source revision printed before the upgrade. Stop all
+containers before replacing SQLite, and never copy over a running WAL database.
 
-   ```bash
-   docker compose down
-   ```
+```bash
+docker compose down
+git switch --detach <pre-upgrade-commit>
+docker compose build app
+docker compose run --rm --no-deps --entrypoint python app -c \
+  'from pathlib import Path; import shutil; source=Path("/data/backups/pre-upgrade.sqlite3"); target=Path("/data/grounded_growth.sqlite3"); shutil.copy2(source, target); target.chmod(0o600); target.with_name(target.name + "-wal").unlink(missing_ok=True); target.with_name(target.name + "-shm").unlink(missing_ok=True)'
+docker compose up -d --wait
+docker compose exec app python manage.py verify_database_backup \
+  /data/backups/pre-upgrade.sqlite3 --compare-live
+docker compose exec app python manage.py migrate --check
+docker compose exec app python manage.py verify_evidence_events
+docker compose exec app python manage.py rebuild_score_state --verify-only
+docker compose exec app python manage.py verify_weekly_execution_readiness
+docker compose exec app python manage.py verify_m6h_operations_readiness
+curl --fail http://127.0.0.1:${APP_PORT:-3000}/health/
+```
 
-2. Preserve the current database as an additional recovery point:
+If `--compare-live` fails after restoration, keep the application stopped and
+do not waive the mismatch. Preserve both files and investigate which source,
+volume, or backup path was selected.
 
-   ```bash
-   docker compose run --rm --no-deps --entrypoint sh app -c \
-     'cp /data/grounded_growth.sqlite3 /data/backups/pre-restore.sqlite3'
-   ```
+## Isolated restore drill
 
-3. Replace it with the selected verified snapshot:
+`make compose-smoke` uses a throwaway Compose project and named volume. It
+creates synthetic owner state, verifies a pre-upgrade backup, changes account
+state across recreation, restores while stopped, and proves exact critical-
+state replay plus every established readiness contract.
 
-   ```bash
-   docker compose run --rm --no-deps --entrypoint sh app -c \
-     'cp /data/backups/before-update.sqlite3 /data/grounded_growth.sqlite3'
-   ```
+## Deletion and retention copies
 
-4. Start and verify:
+Live account deletion and retention do not edit existing backups. A backup may
+still contain a deleted account, drafts, feedback, and private narrative. Apply
+the operator's agreed lifecycle separately to backup and encrypted off-host
+copies; never claim erasure until that lifecycle is completed and documented.
 
-   ```bash
-   docker compose up -d
-   docker compose ps
-   curl --fail http://127.0.0.1:${APP_PORT:-3000}/health/
-   docker compose exec app python manage.py verify_evidence_events
-   docker compose exec app python manage.py rebuild_score_state --verify-only
-   ```
-
-Startup applies any migrations required by the currently checked-out
-application version.
-
-## Automated restore drill
-
-`make compose-smoke` performs the backup, integrity check, and restore
-procedure against an isolated throwaway named volume. It changes the probe
-user's password after the snapshot, proves that change survives container
-recreation, restores the snapshot while the app is stopped, and proves the
-original password returns. This is the release-level restore check; it never
-touches the normal deployment volume.
+`APP_OWNER_RETENTION_ENABLED=false` is the default. Enabling it creates no
+timer, startup mutation, or background task. The authenticated owner must still
+preview and confirm each application. Only old draft check-ins and optional
+pilot feedback are eligible; immutable developmental history is never targeted.
 
 ## Volume deletion warning
 
 `docker compose down` preserves data. `docker compose down --volumes` deletes
-the named volume and should be treated as permanent data destruction unless a
-tested external backup exists.
+the named volume and should be treated as permanent destruction unless an
+independent, verified backup exists.

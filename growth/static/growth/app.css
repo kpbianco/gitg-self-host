@@ -193,6 +193,40 @@ h3 {
   line-height: 1.3;
 }
 
+.danger-panel {
+  border-color: #b74634;
+}
+
+.button-danger {
+  background: #8d2e23;
+  border-color: #8d2e23;
+  color: #fff;
+}
+
+.button-danger:hover,
+.button-danger:focus-visible {
+  background: #6f2119;
+  border-color: #6f2119;
+}
+
+.data-counts {
+  display: grid;
+  gap: 0.65rem;
+  margin: 1rem 0;
+}
+
+.data-counts div {
+  align-items: baseline;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.data-counts dd {
+  font-weight: 700;
+  margin: 0;
+}
+
 .lede {
   color: var(--ink-soft);
   font-size: 1.05rem;
@@ -1651,6 +1685,22 @@ summary:focus-visible {
   .panel,
   .auth-card {
     padding: 22px;
+  }
+
+  .data-management-panel .stacked-form {
+    background: transparent;
+    border: 0;
+    min-width: 0;
+    padding: 0;
+  }
+
+  .data-management-panel .stacked-form p,
+  .data-management-panel .stacked-form label,
+  .data-management-panel .stacked-form input,
+  .data-management-panel .errorlist {
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
   }
 
   .section-heading {

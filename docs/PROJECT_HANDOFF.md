@@ -1224,3 +1224,23 @@ review cutoff. The weekly layer creates no evidence, score state,
 recommendation factor, practice completion, or mastery claim. Manual audit,
 specialist review, participant work, release, and deployment approval remain
 outside this slice.
+
+# Current M6H-02 operations — 2026-08-31
+
+M6H-02 adds an authenticated owner-data surface and deterministic operations
+gate. The owner-private archive includes all and only the signed-in owner's
+application records and explicitly includes private narrative; it is not a
+sharing export. Password hashes, sessions, opaque database keys, other users,
+secrets, and server metadata are excluded.
+
+Deletion requires the current password, an exact phrase, and an unchanged
+signed preview. It removes the selected account, sessions, and owned rows in
+one transaction while preserving canonical content and other users. Retention
+is disabled by default, has no scheduler, and can target only old drafts and
+optional pilot feedback after a separate preview and confirmation. Existing
+backup copies remain separate private artifacts.
+
+`backup_database` now creates a `0600` SQLite snapshot and counts-and-hashes
+sidecar. `verify_database_backup --compare-live` proves integrity, migrations,
+and exact critical state before upgrade or after rollback. These operations do
+not change evidence, scoring, recommendation, completion, or mastery semantics.

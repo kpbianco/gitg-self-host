@@ -1,13 +1,13 @@
 schema_version: 1
-repository: kpbianco/gitg-self-host
+repository: tranquilWorks/gitg-self-host
 product: gitg-self-host
 profile: product-data
 control_plane:
-  repository: kpbianco/portfolio-control
+  repository: tranquilWorks/portfolio-control
   profile_path: profiles/product-data.yaml
   product_path: products/gitg-self-host
-  source_revision: cf2e9a27aa9cb71142cfccbd90fcf1d24c5df5c0  # pragma: allowlist secret
-audited_baseline: c551d5b14bb6812b3fddaeb09a9f3031b2ef2704
+  source_revision: 2e6d817ee4e0db4e4efc82b21fa9ad1735fb96d9  # pragma: allowlist secret
+audited_baseline: 85eb9e4da0a34704ddb194c1fca7b32317cd9fb8
 autonomy:
   level: 2
   operator_invoked_autopilot:

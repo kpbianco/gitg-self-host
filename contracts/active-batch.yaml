@@ -1,31 +1,34 @@
 schema_version: 1
 batch:
-  id: M6H-01
-  title: Integrate weekly execution and proof-based review
-  goal: Connect the existing Personal OS, context-priority, active-practice, evidence, and review surfaces into one deterministic seven-day execution loop without adding a human or specialist gate.
+  id: M6H-02
+  title: Harden owner data lifecycle and upgrade operations
+  goal: Add deterministic owner export, explicit deletion and retention controls, and verified backup restore upgrade rollback operations without changing curriculum evidence scoring recommendation completion or mastery semantics.
 sources:
   product: products/gitg-self-host/product.yaml
   requirements:
-    - owner-direction-2026-08-27
-    - docs/program/M6_CURRICULUM_EXPANSION.md#phase-f--full-product-integration-and-validation
-    - AGENTS.md#product-boundary
-  milestone: products/gitg-self-host/roadmap.yaml#M6H-01
-  baseline_commit: 4301b4f2ac8010dd4a25a85e9143bc5b726937c3
+    - products/gitg-self-host/acceptance.yaml#GG-OPERATIONS
+    - owner-direction-2026-08-31
+  milestone: products/gitg-self-host/roadmap.yaml#M6H
+  baseline_commit: 85eb9e4da0a34704ddb194c1fca7b32317cd9fb8
 dependencies:
-  - M6F-ALL-ACTIVE
+  - M6H-01
 scope:
   allowed_paths:
     - AGENTS.md
     - README.md
     - Makefile
     - MANIFEST.tsv
-    - .github/workflows/verification.yml
+    - .env.example
+    - .github/workflows/**
     - contracts/**
     - growth/**
     - templates/**
     - scripts/**
     - tests/**
     - docs/**
+    - Dockerfile
+    - docker-compose.yml
+    - docker-entrypoint.sh
   forbidden_paths:
     - data/assessment/**
     - data/curriculum/**
@@ -35,58 +38,67 @@ scope:
     - data/practices/**
     - requirements*.txt
     - pyproject.toml
-    - Dockerfile
-    - docker-compose.yml
 acceptance:
-  - An authenticated user with a current assessment and active practice can create an append-only weekly plan for one exact stable action and one intended date inside the current seven-day window.
-  - Replanning appends a contiguous immutable revision; identical retries are idempotent; stale epochs, cross-user objects, malformed snapshots, and concurrent conflicts fail closed without exposing private state.
-  - The weekly surface shows only the latest verified Personal OS direction and priority stack, the existing context-ranked recommendations, the current practice, and one upcoming action; authored Personal OS text is not analyzed or copied into scoring, logs, URLs, or readiness output.
-  - A weekly review derives its proof only from immutable submitted evidence events for the planned sprint and action after the plan was created and inside its seven-day window.
-  - No-proof, supportive, mixed, contradictory, adverse, withheld, and completed evidence remain explicit. The weekly review creates no evidence event, score contribution, mastery claim, completion shortcut, recommendation factor, or pilot-feedback record.
-  - Home, Personal OS, practice, weekly, and profile surfaces expose a concise loop without showing a 383-item checklist, adding coercive streak mechanics, or requiring private narrative.
-  - The weekly contract is deterministically replayed, migration-forward/rollback tested, browser exercised at desktop/mobile/keyboard/zoom boundaries, and included in the isolated Compose backup/recreate/restore drill.
-  - Editorial, semantic, source, accessibility, privacy, safety, specialist, psychometric, clinical, cultural, participant, longitudinal, and intervention-effectiveness review remain pending and are not represented as passed.
+  - An authenticated owner can download one versioned deterministic archive of all and only that user-owned assessment profile context Personal OS practice check-in evidence score pilot-feedback and weekly-execution records.
+  - The owner archive excludes password hashes secrets session data other users internal database keys and undeclared server metadata; private narrative is included only in the explicitly labeled owner-private payload and never in minimized sharing exports logs URLs or readiness output.
+  - Account deletion has authenticated preview explicit irreversible confirmation and transactional execution; it removes exactly the selected user and every user-owned record while preserving canonical seeded content other users migrations and deployment state.
+  - Deletion and retention surfaces explain that existing backup copies are separate private artifacts and are not silently rewritten or claimed erased.
+  - Retention policy is explicit versioned disabled by default and previewable before application; no hidden timer mutates append-only evidence score context Personal OS weekly or review history.
+  - Pre-upgrade backup integrity migration health readiness rollback and restored-state verification are deterministic and exercised through an isolated Compose drill.
+  - Backup restore and upgrade replay preserve exact assessment baselines evidence snapshots score hashes Personal OS and context hashes and M6H-01 weekly plan and proof-review hashes.
+  - Export deletion retention backup restore and upgrade operations do not change recommendation order evidence eligibility score mathematics activation practice completion archetypes orientations mastery or human-worth boundaries.
+  - Desktop mobile keyboard and zoom browser journeys cover owner data management without exposing the 383-item catalog or private values to another user.
+  - Editorial specialist participant release deployment psychometric clinical cultural longitudinal and intervention-effectiveness review remain pending and are not represented as passed.
 validation:
   local:
+    - make m6h-operations-check PYTHON=.venv/bin/python
     - make m6h-weekly-check PYTHON=.venv/bin/python
     - make pilot-check PYTHON=.venv/bin/python
     - make curriculum-check PYTHON=.venv/bin/python
     - make competency-evidence-check PYTHON=.venv/bin/python
+    - ./scripts/agent-verify.sh contract
     - ./scripts/agent-verify.sh quick
     - ./scripts/agent-verify.sh full
     - .venv/bin/python manage.py makemigrations --check --dry-run
     - .venv/bin/python scripts/verify-manifest.py
     - git diff --check
   focused_tests_to_add:
-    - exact weekly-window and stable action linkage
-    - append-only idempotent revision and concurrent-write behavior
-    - privacy-safe Personal OS integration and cross-user/epoch rejection
-    - proof snapshot replay across no-proof supportive mixed contradictory adverse and withheld evidence
-    - no scoring evidence ranking completion or mastery side effects
-    - migration forward rollback and restored-state readiness
+    - complete same-user owner archive and cross-user privacy isolation
+    - export version dispatch determinism private versus minimized field allowlists and hash replay
+    - deletion preview explicit confirmation atomic rollback canonical preservation and cross-user preservation
+    - disabled-by-default retention preview application and immutable-history boundaries
+    - pre-upgrade backup integrity forward migration health readiness rollback and exact restored-state replay
+    - browser desktop mobile keyboard zoom and authorization boundaries
   required_ci:
-    - Ruff Django pytest and migration-drift verification
-    - all existing M6F readiness and report gates
-    - M6H weekly execution readiness
-    - Playwright core and weekly journeys
-    - Compose runtime backup restore and weekly replay
+    - Ruff Django pytest migration drift and manifest verification
+    - all M6F and M6H-01 readiness and replay gates
+    - M6H-02 isolated operations readiness
+    - Playwright owner data-management journeys
+    - Compose pre-upgrade backup restore rollback and persistence drill
+    - aggregate Pilot readiness gate
 risk:
-  class: moderate
+  class: critical
   hazards:
-    - weekly planning silently becomes a second recommendation or scoring algorithm
-    - a review treats intention completion or authored narrative as evidence
-    - proof is attached across users assessment epochs sprints actions or time windows
-    - mutable weekly state breaks replay or backup restore
-    - private Personal OS text leaks outside its authenticated owner-facing surfaces
+    - deletion targets the wrong user or canonical content
+    - an export leaks credentials internal identifiers another user or private values into a minimized payload
+    - retention silently rewrites append-only evidence or score history
+    - upgrade failure leaves the SQLite database or backup unrecoverable
+    - restored data passes health checks but fails deterministic replay
   stop_conditions:
-    - any weekly write changes evidence score state assessment baseline recommendation order or practice completion
-    - any proof snapshot cannot replay exactly from immutable submitted evidence
-    - any user can reference another user's assessment sprint action plan or evidence
-    - a failing required software gate is waived
+    - any destructive operation lacks exact target preview and explicit confirmation
+    - another user's record or canonical seeded content changes
+    - an owner-private value appears in logs URLs readiness or minimized export
+    - backup integrity rollback or restored-state replay cannot be proven
+    - any existing scoring evidence recommendation completion or mastery invariant changes
+    - a failing required gate is waived
 rollback:
-  strategy: Revert M6H-01, migrate its additive weekly tables backward, and retain all pre-existing Personal OS, context, practice, evidence, and score records byte-for-byte.
+  strategy: Revert M6H-02 code and migrations, restore the verified pre-upgrade database backup, and rerun the complete readiness and replay chain before reopening access.
 evidence:
   output:
-    - docs/evidence/M6H-01-2026-08-27.md
-    - exact local and hosted-CI command results for the candidate commit
-  claim_boundary: Software-only weekly execution integration with deterministic persistence, proof replay, privacy isolation, browser, and deployment-regression evidence; never specialist, participant, psychometric, clinical, cultural, longitudinal, mastery, or intervention-effectiveness validation.
+    - docs/evidence/M6H-02-<date>.md
+    - exact export field inventories and privacy allowlists
+    - deletion and retention preview and rollback results
+    - pre-upgrade backup restore migration rollback and replay results
+    - desktop and mobile artifact review
+    - exact local and hosted CI results
+  claim_boundary: Deterministic private-instance owner data lifecycle and upgrade operations only; never specialist participant release deployment psychometric clinical cultural longitudinal mastery or intervention-effectiveness validation.

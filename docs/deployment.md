@@ -26,6 +26,8 @@ Edit `.env` before starting:
 | `APP_TIME_ZONE` | IANA zone such as `America/Los_Angeles`; defaults to `UTC`. |
 | `APP_DEBUG` | Keep `false` in deployment. |
 | `APP_SECURE_COOKIES` | Keep `false` for direct HTTP; set `true` behind HTTPS. |
+| `APP_OWNER_RETENTION_ENABLED` | Keep `false` unless the owner deliberately enables previewable draft/feedback retention. |
+| `APP_OWNER_RETENTION_DAYS` | Explicit window from 30 to 3,650 days; defaults to `365`. |
 
 Generate a secret key:
 
@@ -154,13 +156,18 @@ score state.
 
 ## Updating
 
-Back up first, then rebuild:
+Use the verified pre-upgrade workflow rather than an unverified file copy:
 
 ```bash
-make backup
+docker compose exec app python manage.py backup_database \
+  --output /data/backups/pre-upgrade.sqlite3
+docker compose exec app python manage.py verify_database_backup \
+  /data/backups/pre-upgrade.sqlite3 --compare-live
 git pull --ff-only
 docker compose up -d --build
 docker compose ps
+docker compose exec app python manage.py migrate --check
+docker compose exec app python manage.py verify_m6h_operations_readiness
 ```
 
 Startup applies new migrations and reconciles canonical seed data by stable

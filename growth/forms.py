@@ -39,6 +39,53 @@ from growth.services.pilot_feedback import (
     feedback_scope_errors,
 )
 
+DELETE_ACCOUNT_CONFIRMATION = "DELETE MY ACCOUNT"
+APPLY_RETENTION_CONFIRMATION = "APPLY RETENTION"
+
+
+class RetentionConfirmationForm(forms.Form):
+    preview_token = forms.CharField(widget=forms.HiddenInput)
+    confirmation = forms.CharField(
+        label=f'Type "{APPLY_RETENTION_CONFIRMATION}" to apply this preview',
+        max_length=len(APPLY_RETENTION_CONFIRMATION),
+    )
+
+    def clean_confirmation(self):
+        value = self.cleaned_data["confirmation"].strip()
+        if value != APPLY_RETENTION_CONFIRMATION:
+            raise forms.ValidationError("The retention confirmation text does not match.")
+        return value
+
+
+class AccountDeletionForm(forms.Form):
+    preview_token = forms.CharField(widget=forms.HiddenInput)
+    current_password = forms.CharField(
+        label="Current password",
+        strip=False,
+        widget=forms.PasswordInput(attrs={"autocomplete": "current-password"}),
+    )
+    confirmation = forms.CharField(
+        label=f'Type "{DELETE_ACCOUNT_CONFIRMATION}" to permanently delete this account',
+        max_length=len(DELETE_ACCOUNT_CONFIRMATION),
+    )
+
+    def __init__(self, *args, user, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.user = user
+
+    def clean_current_password(self):
+        password = self.cleaned_data["current_password"]
+        if not self.user.check_password(password):
+            raise forms.ValidationError("The current password is incorrect.")
+        return password
+
+    def clean_confirmation(self):
+        value = self.cleaned_data["confirmation"].strip()
+        if value != DELETE_ACCOUNT_CONFIRMATION:
+            raise forms.ValidationError("The account-deletion confirmation text does not match.")
+        return value
+
+
 EXPLICIT_STATE_CHOICES = (
     ("unknown", "Unknown / not collected"),
     ("not_applicable", "Not applicable"),

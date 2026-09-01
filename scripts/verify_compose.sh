@@ -45,6 +45,8 @@ write_env() {
         printf 'APP_TIME_ZONE=UTC\n'
         printf 'APP_DEBUG=false\n'
         printf 'APP_SECURE_COOKIES=false\n'
+        printf 'APP_OWNER_RETENTION_ENABLED=false\n'
+        printf 'APP_OWNER_RETENTION_DAYS=365\n'
         printf 'GUNICORN_WORKERS=1\n'
     } >"$path"
 }
@@ -131,6 +133,7 @@ compose exec -T app python manage.py verify_context_priority_readiness
 compose exec -T app python manage.py verify_m6c_pilot_readiness
 compose exec -T app python manage.py verify_m6d_authoring_readiness
 compose exec -T app python manage.py verify_weekly_execution_readiness
+compose exec -T app python manage.py verify_m6h_operations_readiness
 
 printf '\n==> Persist synthetic Personal OS and context revisions through public services\n'
 compose exec -T app python manage.py shell -c \
@@ -140,13 +143,13 @@ compose exec -T app python manage.py shell -c \
 compose exec -T app python manage.py verify_m6c_pilot_readiness
 compose exec -T app python manage.py verify_m6d_authoring_readiness
 compose exec -T app python manage.py verify_weekly_execution_readiness
+compose exec -T app python manage.py verify_m6h_operations_readiness
 readonly expected_browser_slice_state="$(browser_slice_state)"
 [[ "$expected_browser_slice_state" =~ ^personal=1:[0-9a-f]{64}\|assessment=1:[0-9a-f]{64}\|practice=1:[0-9a-f]{64}\|weekly_plans=1:[0-9a-f]{64}\|weekly_reviews=1:[0-9a-f]{64}\|priority=[0-9a-f]{64}\|score_active=383:[0-9a-f]{64}$ ]]
 
 printf '\n==> Create and integrity-check an online SQLite backup\n'
 compose exec -T app python manage.py backup_database --output "$backup_path"
-compose exec -T app python -c \
-    'import sqlite3; connection = sqlite3.connect("/data/backups/compose-smoke.sqlite3"); result = connection.execute("PRAGMA integrity_check").fetchone()[0]; connection.close(); assert result == "ok", result; print(result)'
+compose exec -T app python manage.py verify_database_backup "$backup_path" --compare-live
 
 printf '\n==> Prove volume and one-time bootstrap persistence across recreation\n'
 compose exec -T -e DEPLOYMENT_PROBE_PASSWORD="$persisted_password" app \
@@ -168,6 +171,7 @@ compose exec -T app python manage.py verify_context_priority_readiness
 compose exec -T app python manage.py verify_m6c_pilot_readiness
 compose exec -T app python manage.py verify_m6d_authoring_readiness
 compose exec -T app python manage.py verify_weekly_execution_readiness
+compose exec -T app python manage.py verify_m6h_operations_readiness
 test "$(browser_slice_state)" = "$expected_browser_slice_state"
 
 printf '\n==> Restore the verified backup inside the isolated volume\n'
@@ -175,6 +179,8 @@ compose down
 compose run --rm --no-deps --entrypoint python app -c \
     'from pathlib import Path; import shutil; source = Path("/data/backups/compose-smoke.sqlite3"); target = Path("/data/grounded_growth.sqlite3"); shutil.copy2(source, target); target.with_name(target.name + "-wal").unlink(missing_ok=True); target.with_name(target.name + "-shm").unlink(missing_ok=True)'
 compose up -d --wait --wait-timeout 180
+compose exec -T app python manage.py migrate --check
+compose exec -T app python manage.py verify_database_backup "$backup_path" --compare-live
 http_probe "$original_password" success
 http_probe "$persisted_password" failure
 http_probe "$changed_env_password" failure
@@ -189,6 +195,7 @@ compose exec -T app python manage.py verify_context_priority_readiness
 compose exec -T app python manage.py verify_m6c_pilot_readiness
 compose exec -T app python manage.py verify_m6d_authoring_readiness
 compose exec -T app python manage.py verify_weekly_execution_readiness
+compose exec -T app python manage.py verify_m6h_operations_readiness
 test "$(browser_slice_state)" = "$expected_browser_slice_state"
 
 printf '\n==> Confirm clean Gunicorn shutdown\n'

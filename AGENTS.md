@@ -354,7 +354,7 @@ Decision 052 supplies the owner approval for this batch's runtime projection
 and score activation. Participant exposure, release, deployment, and broader
 production or validation claims still require separate human approval.
 
-M6H-01 is the next software-only integration slice. It adds an authenticated
+M6H-01 is reviewed and merged. It adds an authenticated
 seven-day loop over the latest verified Personal OS direction, existing
 context priority, one current-practice action, submitted evidence, and a
 structured proof review. Plans and reviews are append-only and
@@ -364,11 +364,19 @@ mastery claim. Proof freezes at the review timestamp so later evidence cannot
 rewrite an immutable review. This slice intentionally performs no human,
 specialist, participant, release, or deployment-gate work.
 
+M6H-02 is the current software-only operations slice. It adds a deterministic
+owner-private archive, preview-first account deletion, explicit retention that
+is disabled by default, and verified pre-upgrade backup, restore, rollback, and
+replay operations. It must not change curriculum, evidence eligibility,
+scoring mathematics, activation, recommendation order, completion, mastery,
+or human-worth boundaries. Existing backup copies remain separate private
+artifacts and are never silently rewritten or claimed erased.
+
 <!-- BEGIN PORTFOLIO-CONTROL MANAGED -->
 ## Governed agentic delivery
 
 - Product: `gitg-self-host`; delivery profile: `product-data`.
-- Control revision: `cf2e9a27aa9cb71142cfccbd90fcf1d24c5df5c0`; harness version: `2`.
+- Control revision: `2e6d817ee4e0db4e4efc82b21fa9ad1735fb96d9`; harness version: `2`.
 - Read `contracts/profile-requirements.yaml` and the approved
   `contracts/active-batch.yaml` before implementation.
 - Stay inside active-batch allowed paths and preserve every forbidden path.

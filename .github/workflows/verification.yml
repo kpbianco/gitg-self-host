@@ -17,7 +17,7 @@ jobs:
   quality:
     name: Ruff, Django, and pytest
     runs-on: ubuntu-24.04
-    # The complete 357-test non-browser suite plus nine isolated readiness gates
+    # The complete non-browser suite plus isolated readiness gates
     # repeatedly recomputes the full corpus. Preserve headroom for runner variance.
     timeout-minutes: 90
     steps:
@@ -39,6 +39,7 @@ jobs:
       - run: make m6c-pilot-check PYTHON=python
       - run: make m6d-01-check PYTHON=python
       - run: make m6h-weekly-check PYTHON=python
+      - run: make m6h-operations-check PYTHON=python
 
   browser:
     name: Playwright core journeys
