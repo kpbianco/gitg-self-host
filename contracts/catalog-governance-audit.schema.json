@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grounded-growth.local/contracts/catalog-governance-audit.schema.json",
+  "title": "Grounded Growth catalog governance audit v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "catalog_content_hash",
+    "canonical_source_hash",
+    "counts",
+    "inventories",
+    "governance_gates",
+    "activation_review_boundary",
+    "package_rows",
+    "action_rows",
+    "findings",
+    "privacy",
+    "claim_boundary"
+  ],
+  "properties": {
+    "contract_version": {"const": "GG-CATALOG-GOVERNANCE-AUDIT-1.0"},
+    "catalog_content_hash": {"$ref": "#/$defs/sha256"},
+    "canonical_source_hash": {"$ref": "#/$defs/sha256"},
+    "counts": {
+      "type": "object",
+      "required": ["packages", "actions", "legacy_packages", "typed_packages", "generated_additions", "score_active_packages", "findings", "open_findings"],
+      "properties": {
+        "packages": {"const": 383},
+        "actions": {"const": 1151},
+        "legacy_packages": {"const": 5},
+        "typed_packages": {"const": 378},
+        "generated_additions": {"const": 374},
+        "score_active_packages": {"const": 383},
+        "findings": {"type": "integer", "minimum": 1},
+        "open_findings": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    },
+    "inventories": {"type": "object"},
+    "governance_gates": {
+      "type": "object",
+      "required": ["expert_review", "research_gap", "m6b_accepted", "manual_contract"],
+      "properties": {
+        "expert_review": {
+          "type": "object",
+          "required": ["review_id", "status", "required_roles", "completed_roles", "completed_on", "decision_reference"],
+          "properties": {
+            "review_id": {"const": "ER-M6A-003"},
+            "status": {"const": "pending"},
+            "required_roles": {"type": "array", "minItems": 3},
+            "completed_roles": {"const": []},
+            "completed_on": {"type": "null"},
+            "decision_reference": {"type": "null"}
+          }
+        },
+        "research_gap": {
+          "type": "object",
+          "properties": {
+            "gap_id": {"const": "RG-M6A-002"},
+            "status": {"const": "open"}
+          },
+          "required": ["gap_id", "status"]
+        },
+        "m6b_accepted": {"const": false},
+        "manual_contract": {"const": "M6B-GOV"}
+      }
+    },
+    "activation_review_boundary": {"type": "object"},
+    "package_rows": {
+      "type": "array",
+      "minItems": 383,
+      "maxItems": 383,
+      "items": {"$ref": "#/$defs/packageRow"}
+    },
+    "action_rows": {
+      "type": "array",
+      "minItems": 1151,
+      "maxItems": 1151,
+      "items": {"$ref": "#/$defs/actionRow"}
+    },
+    "findings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/finding"}
+    },
+    "privacy": {
+      "type": "object",
+      "properties": {
+        "catalog_static_inputs_only": {"const": true},
+        "participant_data_read": {"const": false},
+        "owner_private_data_read": {"const": false},
+        "participant_or_owner_values_in_reports": {"const": false}
+      },
+      "required": ["catalog_static_inputs_only", "participant_data_read", "owner_private_data_read", "participant_or_owner_values_in_reports"]
+    },
+    "claim_boundary": {"type": "string", "minLength": 100}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "stableId": {"type": "string", "minLength": 1, "maxLength": 256},
+    "disposition": {
+      "type": "object",
+      "required": ["status", "objective_evidence", "finding_ids"],
+      "properties": {
+        "status": {"type": "string", "minLength": 1},
+        "objective_evidence": {"type": "object"},
+        "finding_ids": {"type": "array", "items": {"type": "string", "pattern": "^CGA-"}}
+      },
+      "additionalProperties": false
+    },
+    "packageRow": {
+      "type": "object",
+      "required": ["protocol_stable_id", "parent_competency_id", "domain_id", "protocol_path", "content_sha256", "cohort", "runtime_projection", "protocol_family_id", "risk_class_id", "evidence_kinds", "scoring_policy_id", "activation_status", "score_active", "source_ids", "research_gap_ids", "expert_review_ids", "parent_mapping_lever_ids", "recommendation_target_lever_ids", "action_ids", "dispositions"],
+      "properties": {
+        "protocol_stable_id": {"$ref": "#/$defs/stableId"},
+        "parent_competency_id": {"$ref": "#/$defs/stableId"},
+        "domain_id": {"$ref": "#/$defs/stableId"},
+        "protocol_path": {"type": "string"},
+        "content_sha256": {"$ref": "#/$defs/sha256"},
+        "cohort": {"enum": ["legacy", "representative_typed", "generated_addition"]},
+        "runtime_projection": {"type": "string"},
+        "protocol_family_id": {"$ref": "#/$defs/stableId"},
+        "risk_class_id": {"$ref": "#/$defs/stableId"},
+        "evidence_kinds": {"type": "array", "minItems": 1, "uniqueItems": true},
+        "scoring_policy_id": {"$ref": "#/$defs/stableId"},
+        "activation_status": {"type": "string"},
+        "score_active": {"const": true},
+        "source_ids": {"type": "array", "minItems": 1, "uniqueItems": true},
+        "research_gap_ids": {"type": "array", "minItems": 1, "uniqueItems": true},
+        "expert_review_ids": {"type": "array", "minItems": 1, "uniqueItems": true},
+        "parent_mapping_lever_ids": {"type": "array", "minItems": 1, "uniqueItems": true},
+        "recommendation_target_lever_ids": {"type": "array", "minItems": 1, "uniqueItems": true},
+        "action_ids": {"type": "array", "minItems": 1, "uniqueItems": true},
+        "dispositions": {
+          "type": "object",
+          "minProperties": 11,
+          "additionalProperties": {"$ref": "#/$defs/disposition"}
+        }
+      },
+      "additionalProperties": false
+    },
+    "actionRow": {
+      "type": "object",
+      "required": ["action_stable_id", "protocol_stable_id", "parent_competency_id", "domain_id", "sequence", "evidence_schema_version", "evidence_kinds", "measurement_ids", "scoring_policy_id", "score_active", "content_sha256", "schema_completeness", "stable_id_uniqueness", "evidence_rule_executability", "privacy_field_allowlist"],
+      "properties": {
+        "action_stable_id": {"$ref": "#/$defs/stableId"},
+        "protocol_stable_id": {"$ref": "#/$defs/stableId"},
+        "parent_competency_id": {"$ref": "#/$defs/stableId"},
+        "domain_id": {"$ref": "#/$defs/stableId"},
+        "sequence": {"type": "integer", "minimum": 1},
+        "evidence_schema_version": {"type": "string"},
+        "evidence_kinds": {"type": "array", "minItems": 1, "uniqueItems": true},
+        "measurement_ids": {"type": "array", "minItems": 1, "uniqueItems": true},
+        "scoring_policy_id": {"$ref": "#/$defs/stableId"},
+        "score_active": {"const": true},
+        "content_sha256": {"$ref": "#/$defs/sha256"},
+        "schema_completeness": {"const": "pass"},
+        "stable_id_uniqueness": {"const": "pass"},
+        "evidence_rule_executability": {"const": "pass"},
+        "privacy_field_allowlist": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "finding": {
+      "type": "object",
+      "required": ["finding_id", "category", "severity", "status", "summary", "objective_evidence", "affected_stable_ids", "remediation_class", "remediation_dependency", "required_roles"],
+      "properties": {
+        "finding_id": {"type": "string", "pattern": "^CGA-[A-Z0-9-]+-[0-9A-F]{16}$"},
+        "category": {"type": "string"},
+        "severity": {"enum": ["critical", "high", "moderate", "low"]},
+        "status": {"const": "open"},
+        "summary": {"type": "string", "minLength": 1},
+        "objective_evidence": {"type": "object", "minProperties": 1},
+        "affected_stable_ids": {"type": "array", "minItems": 1, "uniqueItems": true},
+        "remediation_class": {"type": "string", "minLength": 1},
+        "remediation_dependency": {"type": "string", "minLength": 1},
+        "required_roles": {"type": "array", "minItems": 1, "uniqueItems": true}
+      },
+      "additionalProperties": false
+    }
+  }
+}

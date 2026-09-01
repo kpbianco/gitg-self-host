@@ -48,6 +48,14 @@ and never touches `./var`, `.env`, or the deployed volume.
 and lever matrices, risk register, summary, and originality report as exact
 bytes. It fails on missing or stale committed output.
 
+`make catalog-governance-audit-check` recomputes the complete M6B governance
+packet as exact bytes: a JSON audit containing 383 package rows and 1,151
+action rows, a stable finding CSV, a prioritized reviewer queue CSV, and a
+concise Markdown packet. It verifies schema validity, full inventory coverage,
+stable finding identities, static-input privacy, and the unchanged pending
+state of `ER-M6A-003` and `RG-M6A-002`. A pass is automated audit readiness,
+not specialist or owner acceptance.
+
 `make curriculum-check` creates another disposable database, validates the
 manifest-listed practice release, seeds twice, reconciles evidence and score
 state, invokes the unchanged pilot verifier through the additive
@@ -67,6 +75,10 @@ The M6B report set is:
 - `reports/practice-content/typed_evidence_capability_v1.csv`;
 - `reports/practice-content/scoring_policy_execution_v1.csv`;
 - `reports/practice-content/competency_evidence_readiness_v1.json`.
+- `reports/practice-content/catalog_governance_audit_v1.json`;
+- `reports/practice-content/catalog_governance_findings_v1.csv`;
+- `reports/practice-content/catalog_governance_review_queue_v1.csv`;
+- `reports/practice-content/catalog_governance_review_packet_v1.md`.
 
 The readiness JSON must distinguish software readiness from specialist review,
 record 378 typed production and typed score-active protocols, record five

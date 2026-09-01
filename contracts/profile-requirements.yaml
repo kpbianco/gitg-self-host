@@ -6,6 +6,7 @@ required_gates:
   - canonical-data-validation
   - stable-id-uniqueness-and-completeness
   - deterministic-generated-reports
+  - deterministic-catalog-governance-audit
   - originality-and-source-review
   - scoring-and-replay-invariants
   - migration-and-rollback-tests
@@ -22,6 +23,7 @@ required_evidence:
   - migration and rollback results
   - validation level and limitations
   - residual research and specialist gaps
+  - stable catalog-governance finding and review-routing records
 prohibited_autonomy:
   - destructive-data-migration
   - production-participant-data-write
