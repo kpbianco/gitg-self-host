@@ -36,14 +36,28 @@ Branch: `codex/m6i-04-consented-calibration-data`
   passed; 37 lever rows verified, zero participant axes completed, eight open.
 - M6I-04 fresh-database migration, bootstrap, canonical seed, empty-consent
   readiness, JSON privacy check, and migration consistency drill: passed.
-- Ruff format/lint, Django system check, migration drift, manifest, and complete
-  non-browser repository verification: pending final closeout run.
+- Contract, protected-path, manifest, Ruff, Django system, and migration-drift
+  checks: passed. The local non-browser run reached 423 passing tests before a
+  latent programmatic string-path backup regression failed; the correction's
+  exact xdist regression passed. A subsequent full local rerun was externally
+  aborted, so the hosted serial result below is the definitive complete-suite
+  closeout.
 
 ## Hosted verification
 
-Pending draft PR publication. Required jobs are Ruff/Django/pytest/readiness,
-Playwright core journeys, Docker Compose migration/backup/restore/recreation,
-and aggregate Pilot readiness.
+- Draft PR: [#50](https://github.com/tranquilWorks/gitg-self-host/pull/50),
+  initial feature head `b3d01b7c1524afa8eb426e63ebe20aba289ee393`.
+- Verification run [#112](https://github.com/tranquilWorks/gitg-self-host/actions/runs/33687786442):
+  Ruff, Django, and pytest passed, including 424 tests with 13 browser tests
+  deselected in 2,429.27 seconds and every readiness check, including both
+  assessment-calibration gates.
+- Docker Compose migration 0013, bootstrap, backup/restore, container
+  recreation, and readiness drill: passed.
+- The first Playwright attempt had one horizontal-overflow failure in an
+  unchanged Personal OS journey. Its isolated same-commit rerun passed all 13
+  browser journeys with 424 non-browser tests deselected in 169.21 seconds;
+  no product or test change was made in response to the transient failure.
+- Aggregate Pilot readiness gate: passed after the successful browser rerun.
 
 ## Claim boundary
 
