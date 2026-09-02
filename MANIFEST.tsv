@@ -825,7 +825,7 @@ tests/test_context_readiness.py	3741
 tests/test_context_services.py	13403
 tests/test_data_lifecycle.py	18758
 tests/test_database_and_backup.py	3589
-tests/test_deployment_contract.py	5913
+tests/test_deployment_contract.py	5914
 tests/test_evidence_audit.py	16889
 tests/test_evidence_dispatch.py	5190
 tests/test_evidence_engine.py	14027
