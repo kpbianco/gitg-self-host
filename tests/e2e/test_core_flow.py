@@ -146,7 +146,7 @@ def test_login_home_and_profile_core_flow(live_server, page: Page):
     page.get_by_role("heading", name="A provisional map, not an identity.").wait_for()
     page.get_by_text("The Seeker", exact=True).wait_for()
     page.get_by_text(
-        re.compile(r"completing this practice does not establish mastery"),
+        re.compile(r"completion remains separate from mastery", re.IGNORECASE),
     ).wait_for()
 
 
@@ -774,7 +774,7 @@ def test_guided_practice_draft_pause_and_completion_flow(live_server, page: Page
         page.get_by_label("What direction did the observation point?").select_option("supports")
         page.get_by_role("button", name="Submit check-in").click()
 
-    page.get_by_role("link", name="Review and complete").click()
+    page.get_by_role("link", name="Review and close").click()
     page.get_by_text("Completing this practice does not establish mastery.").wait_for()
     page.get_by_label("What did this practice show you?").fill(
         "Specific invitations made the next step clearer."
