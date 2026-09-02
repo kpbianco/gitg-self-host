@@ -17,6 +17,7 @@ make catalog-governance-audit-check PYTHON=.venv/bin/python
 make composite-scoring-catalog-check PYTHON=.venv/bin/python
 make composite-scoring-check PYTHON=.venv/bin/python
 make applicability-coverage-check PYTHON=.venv/bin/python
+make assessment-calibration-check PYTHON=.venv/bin/python
 make pilot-check PYTHON=.venv/bin/python
 make curriculum-check PYTHON=.venv/bin/python
 make competency-evidence-check PYTHON=.venv/bin/python

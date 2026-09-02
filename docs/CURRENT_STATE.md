@@ -1,8 +1,8 @@
 # Current state
 
 Last updated: 2026-09-02
-Implementation branch: `codex/m6i-02-applicability-personal-coverage`
-Baseline: `d7b07e732cee34bffdb1e9c64520573e92d85414`
+Implementation branch: `codex/m6i-03-assessment-calibration-readiness`
+Baseline: `e20daf5058220322918775b37816073e3bc7892e`
 
 ## Canonical runtime and scoring
 
@@ -38,13 +38,30 @@ Baseline: `d7b07e732cee34bffdb1e9c64520573e92d85414`
 - Invalid owner, epoch, revision, snapshot, or hash data fails only the personal
   projection closed; verified canonical coverage remains visible.
 
+## M6I-03 assessment calibration readiness
+
+- Decision 055 and ADR 0015 define
+  `GG-ASSESSMENT-CALIBRATION-READINESS-1.0` as a deterministic source-only
+  audit.
+- The audit freezes exact hashes for the assessment v1.1 spec, model, browser
+  scorer, and coverage artifact and recomputes the complete item-to-lever
+  coverage inventory.
+- The structural inventory contains 50 core items, 37 capability clarifiers,
+  six orientation clarifiers, 37 levers, seven families, and six orientations.
+  Every lever has one direct core item and one adaptive clarifier.
+- Eight empirical evidence axes remain `data_collection_required`; none is
+  represented as complete. The report does not read runtime assessment runs or
+  any participant or owner-private data.
+- This batch changes no assessment source, scoring constant, database, UI,
+  recommendation, completion, evidence, or replay behavior.
+
 ## Verification
 
-The bounded M6I-02 gate is:
+The bounded M6I-03 gate is:
 
 ```bash
-make applicability-coverage-check PYTHON=.venv/bin/python
-.venv/bin/python -m pytest tests/test_applicability_coverage.py tests/test_personal_os_browser.py
+make assessment-calibration-check PYTHON=.venv/bin/python
+.venv/bin/python -m pytest tests/test_assessment_calibration_readiness.py tests/test_assessment_golden.py tests/test_assessment_integration.py
 ./scripts/agent-verify.sh contract
 ./scripts/agent-verify.sh quick
 ```

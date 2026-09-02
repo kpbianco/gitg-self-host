@@ -742,3 +742,41 @@ This is deterministic software and UX authorization only. `ER-M6A-003`,
 the deferred accessibility, privacy/safety, psychometric, cultural,
 participant, longitudinal, release, deployment, mastery, and intervention-
 effectiveness gates remain open.
+
+## Decision 055 — Assessment calibration readiness is not validation
+**Status:** Accepted as the bounded M6I-03 successor to Decision 054
+
+Assessment v1.1 remains the immutable concise starting-priority instrument for
+the current runtime. Its deterministic scorer, golden replay, item inventory,
+and lever coverage can be verified by software, but those checks cannot
+establish reliability, construct validity, fairness, participant burden,
+recommendation fit, or longitudinal effectiveness.
+
+`GG-ASSESSMENT-CALIBRATION-READINESS-1.0` is therefore a source-only audit. It
+hashes the frozen v1.1 specification, model, JavaScript scorer, and coverage
+artifact; verifies all item IDs and scoring references; and recomputes the
+direct-item, cross-signal, weight-sum, and effective-item-count coverage for
+all 37 levers. The existing Pilot 001 golden replay remains a software
+regression fixture rather than participant calibration evidence.
+
+The report must keep eight participant evidence axes explicit and open: item
+response distribution, missingness and N/A behavior, test-retest reliability,
+convergent and discriminant validity, differential-item functioning and
+fairness, completion burden and abandonment, recommendation fit, and
+longitudinal outcome association. Until retained consented evidence and
+qualified analysis exist, the only valid status is `data_collection_required`
+with zero completed axes.
+
+The generator reads committed source artifacts only. It does not open the
+application database or export assessment runs, answers, timings, share codes,
+identity, context, Personal OS, evidence, scores, or pilot feedback. This
+decision changes no question, weight, scoring constant, baseline,
+recommendation, completion credit, runtime state, UI, migration, or replay
+behavior.
+
+Structural readiness is not psychometric, clinical, cultural,
+accessibility-population, fairness, participant, longitudinal, release,
+mastery, or intervention-effectiveness validation. `ER-M6A-003` remains
+pending, `RG-M6A-002` remains open, M6B specialist acceptance remains false,
+and later calibration claims require a separately reviewed data-collection
+and analysis milestone.

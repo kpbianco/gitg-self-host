@@ -1,0 +1,39 @@
+contract_version: GG-ASSESSMENT-CALIBRATION-READINESS-1.0
+assessment_version: '1.1'
+source_boundary:
+  immutable_inputs:
+    - assessment_spec_v1_1.json
+    - grounded_growth_model_v1.json
+    - assessment_scoring_v1_1.js
+    - assessment_coverage_v1_1.csv
+  database_access: forbidden
+  participant_or_owner_private_data: forbidden
+structural_expectations:
+  core_items: 50
+  capability_core_items: 37
+  orientation_core_items: 12
+  response_quality_core_items: 1
+  capability_clarifiers: 37
+  orientation_clarifiers: 6
+  levers: 37
+  lever_families: 7
+  orientations: 6
+  direct_capability_items_per_lever: 1
+  capability_clarifiers_per_lever: 1
+participant_evidence_axes:
+  - item_response_distribution
+  - item_missingness_and_not_applicable
+  - test_retest_reliability
+  - convergent_and_discriminant_validity
+  - differential_item_functioning_and_fairness
+  - completion_burden_and_abandonment
+  - recommendation_fit
+  - longitudinal_outcome_association
+status_semantics:
+  structural_readiness: pass
+  calibration_status: data_collection_required
+  completed_participant_evidence_axes: 0
+  psychometric_validation: false
+  participant_validation: false
+  release_authorized: false
+claim_boundary: Structural and deterministic scorer readiness is not psychometric calibration, participant validation, fairness evidence, clinical validation, or intervention-effectiveness evidence.

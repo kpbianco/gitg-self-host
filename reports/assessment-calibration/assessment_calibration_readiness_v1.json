@@ -1,0 +1,672 @@
+{
+  "assessment_version": "1.1",
+  "claim_boundary": "Deterministic source-only structural and scorer readiness for assessment v1.1; this report is not psychometric calibration, clinical or cultural validation, accessibility-population or fairness evidence, participant or longitudinal validation, release authorization, mastery evidence, or intervention-effectiveness evidence. All eight participant evidence axes remain open.",
+  "contract_version": "GG-ASSESSMENT-CALIBRATION-READINESS-1.0",
+  "coverage": {
+    "capability_clarifier_coverage_complete": true,
+    "coverage_artifact_matches": true,
+    "direct_capability_coverage_complete": true,
+    "lever_rows": [
+      {
+        "all_core_signal_ids": [
+          "Q13",
+          "Q15",
+          "Q48"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L01",
+        "core_weight_sum": 1.5,
+        "direct_core_item_ids": [
+          "Q13"
+        ],
+        "effective_core_item_count": 2.0,
+        "lever_id": "L01"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q13",
+          "Q14",
+          "Q37",
+          "Q43",
+          "Q45"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L02",
+        "core_weight_sum": 1.85,
+        "direct_core_item_ids": [
+          "Q14"
+        ],
+        "effective_core_item_count": 2.894,
+        "lever_id": "L02"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q15",
+          "Q16"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L03",
+        "core_weight_sum": 1.15,
+        "direct_core_item_ids": [
+          "Q15"
+        ],
+        "effective_core_item_count": 1.293,
+        "lever_id": "L03"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q15",
+          "Q16",
+          "Q41"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L04",
+        "core_weight_sum": 1.3,
+        "direct_core_item_ids": [
+          "Q16"
+        ],
+        "effective_core_item_count": 1.617,
+        "lever_id": "L04"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q14",
+          "Q17",
+          "Q25"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L05",
+        "core_weight_sum": 1.4,
+        "direct_core_item_ids": [
+          "Q17"
+        ],
+        "effective_core_item_count": 1.815,
+        "lever_id": "L05"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q17",
+          "Q18"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L06",
+        "core_weight_sum": 1.2,
+        "direct_core_item_ids": [
+          "Q18"
+        ],
+        "effective_core_item_count": 1.385,
+        "lever_id": "L06"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q16",
+          "Q18",
+          "Q19",
+          "Q23",
+          "Q46"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L07",
+        "core_weight_sum": 1.85,
+        "direct_core_item_ids": [
+          "Q19"
+        ],
+        "effective_core_item_count": 2.894,
+        "lever_id": "L07"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q20",
+          "Q21",
+          "Q31"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L08",
+        "core_weight_sum": 1.4,
+        "direct_core_item_ids": [
+          "Q20"
+        ],
+        "effective_core_item_count": 1.815,
+        "lever_id": "L08"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q19",
+          "Q21"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L09",
+        "core_weight_sum": 1.2,
+        "direct_core_item_ids": [
+          "Q21"
+        ],
+        "effective_core_item_count": 1.385,
+        "lever_id": "L09"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q20",
+          "Q22",
+          "Q29",
+          "Q44",
+          "Q48"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L10",
+        "core_weight_sum": 1.85,
+        "direct_core_item_ids": [
+          "Q22"
+        ],
+        "effective_core_item_count": 2.894,
+        "lever_id": "L10"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q19",
+          "Q23",
+          "Q27"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L11",
+        "core_weight_sum": 1.4,
+        "direct_core_item_ids": [
+          "Q23"
+        ],
+        "effective_core_item_count": 1.815,
+        "lever_id": "L11"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q24",
+          "Q25"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L12",
+        "core_weight_sum": 1.3,
+        "direct_core_item_ids": [
+          "Q24"
+        ],
+        "effective_core_item_count": 1.55,
+        "lever_id": "L12"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q17",
+          "Q24",
+          "Q25",
+          "Q31"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L13",
+        "core_weight_sum": 1.75,
+        "direct_core_item_ids": [
+          "Q25"
+        ],
+        "effective_core_item_count": 2.568,
+        "lever_id": "L13"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q23",
+          "Q24",
+          "Q26",
+          "Q32",
+          "Q34"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L14",
+        "core_weight_sum": 1.95,
+        "direct_core_item_ids": [
+          "Q26"
+        ],
+        "effective_core_item_count": 3.098,
+        "lever_id": "L14"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q27",
+          "Q44"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L15",
+        "core_weight_sum": 1.2,
+        "direct_core_item_ids": [
+          "Q27"
+        ],
+        "effective_core_item_count": 1.385,
+        "lever_id": "L15"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q28",
+          "Q47"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L16",
+        "core_weight_sum": 1.2,
+        "direct_core_item_ids": [
+          "Q28"
+        ],
+        "effective_core_item_count": 1.385,
+        "lever_id": "L16"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q29",
+          "Q32",
+          "Q46",
+          "Q48"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L17",
+        "core_weight_sum": 1.4,
+        "direct_core_item_ids": [
+          "Q29"
+        ],
+        "effective_core_item_count": 1.858,
+        "lever_id": "L17"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q30",
+          "Q32"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L18",
+        "core_weight_sum": 1.2,
+        "direct_core_item_ids": [
+          "Q30"
+        ],
+        "effective_core_item_count": 1.385,
+        "lever_id": "L18"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q20",
+          "Q31"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L19",
+        "core_weight_sum": 1.2,
+        "direct_core_item_ids": [
+          "Q31"
+        ],
+        "effective_core_item_count": 1.385,
+        "lever_id": "L19"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q26",
+          "Q30",
+          "Q32",
+          "Q47"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L20",
+        "core_weight_sum": 1.6,
+        "direct_core_item_ids": [
+          "Q32"
+        ],
+        "effective_core_item_count": 2.286,
+        "lever_id": "L20"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q30",
+          "Q33"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L21",
+        "core_weight_sum": 1.2,
+        "direct_core_item_ids": [
+          "Q33"
+        ],
+        "effective_core_item_count": 1.385,
+        "lever_id": "L21"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q26",
+          "Q33",
+          "Q34",
+          "Q44"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L22",
+        "core_weight_sum": 1.4,
+        "direct_core_item_ids": [
+          "Q34"
+        ],
+        "effective_core_item_count": 1.858,
+        "lever_id": "L22"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q27",
+          "Q35",
+          "Q36",
+          "Q41",
+          "Q45"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L23",
+        "core_weight_sum": 1.85,
+        "direct_core_item_ids": [
+          "Q35"
+        ],
+        "effective_core_item_count": 2.882,
+        "lever_id": "L23"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q18",
+          "Q35",
+          "Q36",
+          "Q38",
+          "Q43"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L24",
+        "core_weight_sum": 1.9,
+        "direct_core_item_ids": [
+          "Q36"
+        ],
+        "effective_core_item_count": 2.996,
+        "lever_id": "L24"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q21",
+          "Q37",
+          "Q39"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L25",
+        "core_weight_sum": 1.45,
+        "direct_core_item_ids": [
+          "Q37"
+        ],
+        "effective_core_item_count": 1.907,
+        "lever_id": "L25"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q38",
+          "Q40"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L26",
+        "core_weight_sum": 1.2,
+        "direct_core_item_ids": [
+          "Q38"
+        ],
+        "effective_core_item_count": 1.385,
+        "lever_id": "L26"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q37",
+          "Q38",
+          "Q39",
+          "Q40",
+          "Q41"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L27",
+        "core_weight_sum": 1.6,
+        "direct_core_item_ids": [
+          "Q39"
+        ],
+        "effective_core_item_count": 2.338,
+        "lever_id": "L27"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q33",
+          "Q40",
+          "Q49"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L28",
+        "core_weight_sum": 1.35,
+        "direct_core_item_ids": [
+          "Q40"
+        ],
+        "effective_core_item_count": 1.715,
+        "lever_id": "L28"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q35",
+          "Q37",
+          "Q39",
+          "Q41"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L29",
+        "core_weight_sum": 1.65,
+        "direct_core_item_ids": [
+          "Q41"
+        ],
+        "effective_core_item_count": 2.383,
+        "lever_id": "L29"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q42",
+          "Q43",
+          "Q45",
+          "Q49"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L30",
+        "core_weight_sum": 1.5,
+        "direct_core_item_ids": [
+          "Q42"
+        ],
+        "effective_core_item_count": 2.055,
+        "lever_id": "L30"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q14",
+          "Q36",
+          "Q42",
+          "Q43"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L31",
+        "core_weight_sum": 1.7,
+        "direct_core_item_ids": [
+          "Q43"
+        ],
+        "effective_core_item_count": 2.47,
+        "lever_id": "L31"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q22",
+          "Q34",
+          "Q44",
+          "Q49"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L32",
+        "core_weight_sum": 1.6,
+        "direct_core_item_ids": [
+          "Q44"
+        ],
+        "effective_core_item_count": 2.286,
+        "lever_id": "L32"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q42",
+          "Q45"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L33",
+        "core_weight_sum": 1.2,
+        "direct_core_item_ids": [
+          "Q45"
+        ],
+        "effective_core_item_count": 1.385,
+        "lever_id": "L33"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q28",
+          "Q38",
+          "Q46"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L34",
+        "core_weight_sum": 1.4,
+        "direct_core_item_ids": [
+          "Q46"
+        ],
+        "effective_core_item_count": 1.815,
+        "lever_id": "L34"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q28",
+          "Q46",
+          "Q47"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L35",
+        "core_weight_sum": 1.4,
+        "direct_core_item_ids": [
+          "Q47"
+        ],
+        "effective_core_item_count": 1.815,
+        "lever_id": "L35"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q13",
+          "Q22",
+          "Q26",
+          "Q29",
+          "Q33",
+          "Q48"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L36",
+        "core_weight_sum": 2.15,
+        "direct_core_item_ids": [
+          "Q48"
+        ],
+        "effective_core_item_count": 3.633,
+        "lever_id": "L36"
+      },
+      {
+        "all_core_signal_ids": [
+          "Q40",
+          "Q49"
+        ],
+        "allows_not_applicable": true,
+        "capability_clarifier_id": "C_L37",
+        "core_weight_sum": 1.2,
+        "direct_core_item_ids": [
+          "Q49"
+        ],
+        "effective_core_item_count": 1.385,
+        "lever_id": "L37"
+      }
+    ],
+    "positive_scoring_weights": true,
+    "valid_references": true
+  },
+  "inventory": {
+    "capability_clarifiers": 37,
+    "capability_core_items": 37,
+    "core_items": 50,
+    "lever_families": 7,
+    "levers": 37,
+    "orientation_clarifiers": 6,
+    "orientation_core_items": 12,
+    "orientations": 6,
+    "response_quality_core_items": 1,
+    "unique_item_ids": true
+  },
+  "participant_evidence": {
+    "axis_rows": [
+      {
+        "axis_id": "item_response_distribution",
+        "claim_blocked": "item calibration",
+        "required_evidence": "A consented multi-participant cohort with per-item response frequencies and enough observations to detect floor, ceiling, and sparse-category behavior.",
+        "status": "data_collection_required"
+      },
+      {
+        "axis_id": "item_missingness_and_not_applicable",
+        "claim_blocked": "missingness and applicability validity",
+        "required_evidence": "Consented completion records that distinguish skipped, explicit not-applicable, and answered items across relevant roles and pathways.",
+        "status": "data_collection_required"
+      },
+      {
+        "axis_id": "test_retest_reliability",
+        "claim_blocked": "temporal reliability",
+        "required_evidence": "Paired assessment administrations from the same consenting participants at a predeclared interval with stable matching and attrition accounting.",
+        "status": "data_collection_required"
+      },
+      {
+        "axis_id": "convergent_and_discriminant_validity",
+        "claim_blocked": "construct validity",
+        "required_evidence": "Consented comparison measures selected and interpreted by a qualified measurement specialist before examining outcome correlations.",
+        "status": "data_collection_required"
+      },
+      {
+        "axis_id": "differential_item_functioning_and_fairness",
+        "claim_blocked": "cross-population fairness",
+        "required_evidence": "A sufficiently diverse consented cohort, protected-attribute governance, subgroup power analysis, and specialist-reviewed fairness methods.",
+        "status": "data_collection_required"
+      },
+      {
+        "axis_id": "completion_burden_and_abandonment",
+        "claim_blocked": "assessment burden and accessibility",
+        "required_evidence": "Consented pilot completion, abandonment, estimated burden, accessibility-friction, and missing-data records collected without covert telemetry.",
+        "status": "data_collection_required"
+      },
+      {
+        "axis_id": "recommendation_fit",
+        "claim_blocked": "recommendation-fit validity",
+        "required_evidence": "Consented participant ratings and qualitative review of whether initial recommended practices were understandable, applicable, safe, and useful.",
+        "status": "data_collection_required"
+      },
+      {
+        "axis_id": "longitudinal_outcome_association",
+        "claim_blocked": "longitudinal and intervention-effectiveness claims",
+        "required_evidence": "Multi-cycle consented follow-up with predeclared outcomes, attrition handling, adverse event review, and no completion-equals-mastery assumption.",
+        "status": "data_collection_required"
+      }
+    ],
+    "completed_axes": 0,
+    "open_axes": 8,
+    "required_axes": 8
+  },
+  "privacy": {
+    "assessment_run_data_read": false,
+    "database_read": false,
+    "database_write": false,
+    "owner_private_data_read": false,
+    "participant_data_read": false,
+    "private_values_in_report": false,
+    "source_only": true
+  },
+  "source_hashes": {
+    "assessment_coverage": "5eb3a385278bd3f866000f5dd8dbd4d17a154c38268e269dd1fd658dc1fe5895",
+    "assessment_model": "9d5745560b419fedba9eff645b10ef8693f48fff5b886bd80e54a20c58304774",
+    "assessment_scorer": "d47b74231f212c7695c7e798424ea52c42b304eb546d132cc09a8aaf6a26a1e5",
+    "assessment_spec": "442067342a6ab56ae4de140a5af3f0bdd2521514ef4684a044af2ce3192ee5b2"
+  },
+  "validation_state": {
+    "calibration_status": "data_collection_required",
+    "golden_replay_required": true,
+    "participant_validation": false,
+    "psychometric_validation": false,
+    "release_authorized": false,
+    "structural_readiness": "pass"
+  }
+}
