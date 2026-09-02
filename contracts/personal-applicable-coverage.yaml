@@ -1,0 +1,24 @@
+schema_version: GG-PERSONAL-APPLICABLE-COVERAGE-1.0
+scope:
+  epoch: current_assessment_run
+  source: latest_verified_practice_context_revision
+  mapping: active_protocol_parent_competency
+states:
+  excludes_from_personal_denominator:
+    - not_applicable
+  remains_in_personal_denominator:
+    - unknown
+    - provided
+    - deferred
+    - explicit_zero
+coverage:
+  numerator: sum_existing_completion_credit_for_personally_applicable_competencies
+  denominator: personally_applicable_competency_count
+  empty_denominator: unavailable
+invariants:
+  writes_score_state: false
+  awards_completion_credit: false
+  changes_canonical_coverage: false
+  changes_recommendation_math: false
+  completion_is_mastery: false
+  cross_epoch_carryover: false

@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-24.04
     # The complete non-browser suite plus isolated readiness gates
     # repeatedly recomputes the full corpus. Preserve headroom for runner variance.
-    timeout-minutes: 90
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
@@ -36,6 +36,7 @@ jobs:
       - run: make catalog-governance-audit-check PYTHON=python
       - run: make composite-scoring-catalog-check PYTHON=python
       - run: make composite-scoring-check PYTHON=python
+      - run: make applicability-coverage-check PYTHON=python
       - run: make context-check PYTHON=python
       - run: make personal-os-check PYTHON=python
       - run: make context-priority-check PYTHON=python

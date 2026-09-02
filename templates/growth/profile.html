@@ -236,6 +236,40 @@
           closeout credit rather than adding attempts together.
         </p>
       {% endif %}
+
+      {% if summary.personal_coverage_error %}
+        <div class="inline-note" role="status">
+          <strong>Personal-applicable coverage is unavailable</strong>
+          <p>{{ summary.personal_coverage_error }}</p>
+        </div>
+      {% elif summary.personal_applicability_active and summary.personally_not_applicable_competencies %}
+        <div class="inline-note" aria-labelledby="personal-coverage-heading">
+          <strong id="personal-coverage-heading">Personal-applicable coverage view</strong>
+          <div class="shadow-summary" aria-label="Personal applicability coverage summary">
+            <div>
+              <strong>{{ summary.personal_applicable_completion_coverage|percentage }}</strong>
+              <span>coverage among currently applicable competencies</span>
+            </div>
+            <div>
+              <strong>{{ summary.personal_applicable_competency_count }}</strong>
+              <span>competencies in the personal denominator</span>
+            </div>
+            <div>
+              <strong>{{ summary.personally_not_applicable_competencies }}</strong>
+              <span>explicitly not applicable right now</span>
+            </div>
+            <div>
+              <strong>{{ summary.canonical_completion_coverage|percentage }}</strong>
+              <span>canonical all-competency coverage, unchanged</span>
+            </div>
+          </div>
+          <p class="fine-print">
+            “Not applicable” removes a competency only from this separately labeled personal
+            denominator for the current assessment. It creates no deficit or completion credit,
+            and never changes canonical coverage, score history, or mastery claims.
+          </p>
+        </div>
+      {% endif %}
     </section>
 
     <aside class="mastery-notice">

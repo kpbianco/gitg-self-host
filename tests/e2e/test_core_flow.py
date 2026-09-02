@@ -235,10 +235,16 @@ def test_personal_os_context_priority_alternative_private_accessible_journey(
 
     first = "deepen-one-existing-friendship"
     second = "schedule-non-instrumental-play"
-    page.goto(f"{live_server.url}/personal-os/practices/{first}/context/")
-    page.get_by_label("Mark this practice not applicable").check()
-    page.get_by_role("button", name="Save practice context").click()
+    page.goto(f"{live_server.url}/practices/{first}/")
+    page.get_by_role("button", name="Not applicable to me — show an alternative").click()
     page.get_by_text("Practice context revision saved.").wait_for()
+    page.get_by_role("heading", name="Ask for a distinct reviewed alternative").wait_for()
+    page.goto(f"{live_server.url}/profile/")
+    page.get_by_text("Personal-applicable coverage view").wait_for()
+    page.get_by_text("382", exact=True).wait_for()
+    page.get_by_text("canonical all-competency coverage, unchanged").wait_for()
+    assert_no_horizontal_overflow(page)
+    page.goto(f"{live_server.url}/personal-os/practices/{first}/context/")
     page.get_by_role("button", name="Request alternative").click()
     page.get_by_text("No other explicitly reviewed practice").wait_for()
 

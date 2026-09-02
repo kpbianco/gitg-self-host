@@ -1,84 +1,66 @@
 # Current state
 
-Last updated: 2026-09-01
-Implementation branch: `codex/m6b-gov-audit`
+Last updated: 2026-09-02
+Implementation branch: `codex/m6i-02-applicability-personal-coverage`
+Baseline: `d7b07e732cee34bffdb1e9c64520573e92d85414`
 
-## M6F all-active implementation
+## Canonical runtime and scoring
 
-- The canonical catalog contains exactly 383 competency protocols and 1,151
-  stable actions across all 27 domains, with zero uncovered competencies.
-- All 383 protocols are runtime available and score active under
-  `SP-STRUCTURED-EVIDENCE-ELIGIBLE` and `GG-SCORE-STATE-1.0`.
-- The five original protocols retain `practice-observation-v1` replay
-  compatibility. The other 378 protocols use the typed runtime projection and
-  `GG-TYPED-EVIDENCE-1.0` structured observations.
-- Typed check-ins persist explicit observation state, provenance, and
-  kind-specific structured values. Notes and private artifact contents are not
-  score inputs.
-- Mixed legacy and typed evidence projects through each protocol's canonical
-  parent competency mapping. Shared lever contributions aggregate once per
-  event with deterministic replay, snapshots, reversal, and rebuild.
-- Unknown, withheld, deferred, not-applicable, inconclusive, adverse, or
-  otherwise ineligible evidence remains represented and fails closed or is
-  withheld according to the evidence contract.
-- Published baselines, raw self-report, orientation results, archetype results,
-  stable IDs, completion/mastery separation, and human-worth boundaries remain
-  immutable.
+- The catalog contains exactly 7 families, 37 levers, 27 domains, 383
+  competencies/practices, 1,151 actions, and 1,403 competency-lever
+  relationships. All 383 protocols are runtime available under Decision 052.
+- Decision 053 prospectively replaces event-level score mutation for new
+  sprints with `GG-COMPOSITE-CLOSEOUT-SCORING-1.0`.
+- The concise assessment initializes priority; it neither awards completion
+  credit nor directly measures all 383 competencies.
+- Check-ins are immutable evidence only. Composite state changes only after an
+  explicit final human closeout: the configured minimum earns 0.75 and every
+  action earns 1.00. Repeats use maximum active credit, never a sum.
+- Historical `GG-SCORE-STATE-1.0`, assessment data, evidence events, and score
+  snapshots remain immutable and replayable. Completion is not mastery.
+
+## M6I-02 applicability and personal coverage
+
+- Decision 054 and ADR 0014 define
+  `GG-PERSONAL-APPLICABLE-COVERAGE-1.0` as a read-only projection.
+- An active recommendation has a direct, CSRF-protected “not applicable to me”
+  action. It records the existing immutable current-epoch `PracticeContext`
+  state and opens the distinct-alternative flow.
+- Only a latest verified explicit N/A removes the protocol's parent competency
+  from the separately labeled personal-applicable denominator. Unknown,
+  deferred, provided, and explicit zero remain distinct.
+- The profile shows personal coverage, included count, excluded count, and
+  unchanged canonical coverage together. An empty personal denominator is
+  unavailable, not 100 percent.
+- Context input awards no credit and does not change composite state, state
+  hashes, snapshots, canonical coverage, recommendation mathematics, or legacy
+  replay. Reassessment begins with a fresh denominator.
+- Invalid owner, epoch, revision, snapshot, or hash data fails only the personal
+  projection closed; verified canonical coverage remains visible.
 
 ## Verification
 
-The readiness chain requires exact agreement between canonical content and the
-seeded database: 383 protocols, 1,151 actions, 383 active protocols, and 383
-score-active protocols. It validates every protocol's parent, recommendation
-targets, actions, evidence rules, canonical mapping weights, and lever totals.
-
-Run the complete local gates with:
+The bounded M6I-02 gate is:
 
 ```bash
-make full-frontier-check PYTHON=.venv/bin/python
-make pilot-check PYTHON=.venv/bin/python
-make curriculum-check PYTHON=.venv/bin/python
-make competency-evidence-check PYTHON=.venv/bin/python
-make m6h-weekly-check PYTHON=.venv/bin/python
-make m6h-operations-check PYTHON=.venv/bin/python
-make catalog-governance-audit-check PYTHON=.venv/bin/python
+make applicability-coverage-check PYTHON=.venv/bin/python
+.venv/bin/python -m pytest tests/test_applicability_coverage.py tests/test_personal_os_browser.py
+./scripts/agent-verify.sh contract
+./scripts/agent-verify.sh quick
 ```
 
-## M6H-01 weekly execution implementation
+Hosted verification must also pass the Playwright core journeys and the Docker
+Compose deployment drill. Local Chromium and Docker availability do not replace
+those hosted gates.
 
-- The authenticated weekly surface connects verified Personal OS direction,
-  existing context priority, one current practice, and one exact action.
-- Plans are immutable, append-only, assessment-epoch scoped, and limited to
-  the current Monday-to-Sunday window.
-- Proof reviews replay only submitted evidence for the exact plan action after
-  plan creation and no later than the frozen review cutoff.
-- Planning and review create no evidence event, score snapshot, recommendation
-  factor, sprint transition, final practice review, or mastery state.
-- Compose verifies plan and review hashes through recreation and
-  backup/restore; readiness output is private-value free.
-- M6H-01 and M6H-02 are merged. Manual acceptance and participant work remain
-  separate.
+## Open non-software gates
 
-## M6B-GOV-AUDIT implementation
-
-- The static audit covers exactly 383 packages and 1,151 actions, with one
-  deterministic row for each stable ID.
-- It inventories all 27 domains, 37 mapped levers, used protocol families,
-  all risk classes, used evidence kinds, sources, gaps, reviews, and every
-  active package.
-- It retains stable objective findings and creates a prioritized review queue
-  without reading participant or owner-private records.
-- Every package is score active by owner direction, while zero packages are
-  source complete. Activation is explicitly not treated as governance
-  acceptance.
-- `ER-M6A-003` remains pending with no completed role, date, or decision;
-  `RG-M6A-002` remains open; M6B acceptance remains false.
-
-## Pending owner audit
-
-M6F implements the owner's explicit all-active direction before the consolidated
-383/383 content audit. Pending semantic, source, originality, accessibility,
-privacy, safety, cultural, specialist, and participant review must remain
-visible and must not be represented as clinical, psychometric, cultural, or
-intervention-effectiveness validation. Runtime and scoring activation do not
-authorize release, deployment, or broader production claims.
+- `ER-M6A-003` remains pending and `RG-M6A-002` remains open.
+- M6B specialist acceptance remains false.
+- The M6B audit retains 3,369 review signals: 1,045 high, 2,073 moderate, and
+  251 low. Formal claim-level source completeness is unfinished for all 383
+  packages.
+- Specialist, accessibility, privacy/safety, psychometric, cultural,
+  participant, longitudinal, release, deployment, mastery, and intervention-
+  effectiveness acceptance must not be fabricated. Required changes become
+  versioned follow-on scope rather than rewritten historical evidence.

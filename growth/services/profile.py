@@ -20,6 +20,10 @@ from growth.models import (
     PracticeProtocol,
     ScoreSnapshot,
 )
+from growth.services.applicability_coverage import (
+    ApplicabilityCoverageError,
+    build_applicability_coverage_projection,
+)
 from growth.services.composite_score_state import (
     CompositeScoreStateError,
     verify_composite_score_state_for_run,
@@ -129,6 +133,11 @@ class ProfileSummary:
     full_credit_competencies: int = 0
     partial_credit_competencies: int = 0
     composite_snapshot_count: int = 0
+    personal_applicability_active: bool = False
+    personally_not_applicable_competencies: int = 0
+    personal_applicable_competency_count: int = 0
+    personal_applicable_completion_coverage: Decimal | None = None
+    personal_coverage_error: str = ""
 
 
 def _rank_recommendations(
@@ -332,6 +341,34 @@ def build_profile_summary(user: get_user_model()) -> ProfileSummary:
         full_credit_competencies = 0
         partial_credit_competencies = 0
         canonical_completion_coverage = Decimal("0")
+    personal_applicability_active = False
+    personally_not_applicable_competencies = 0
+    personal_applicable_competency_count = 0
+    personal_applicable_completion_coverage = None
+    personal_coverage_error = ""
+    if composite_state is not None:
+        try:
+            applicability = build_applicability_coverage_projection(
+                user=user,
+                assessment_run=run,
+                composite_state=composite_state.state,
+            )
+        except ApplicabilityCoverageError:
+            personal_coverage_error = (
+                "Personal applicability history must verify before a personal-applicable "
+                "coverage view can be shown. Canonical coverage is unchanged."
+            )
+        else:
+            personal_applicability_active = True
+            personally_not_applicable_competencies = (
+                applicability.personally_not_applicable_competency_count
+            )
+            personal_applicable_competency_count = (
+                applicability.personal_applicable_competency_count
+            )
+            personal_applicable_completion_coverage = (
+                applicability.personal_applicable_completion_coverage
+            )
     return ProfileSummary(
         assessment_run=run,
         highest_needs=highest_needs,
@@ -347,4 +384,9 @@ def build_profile_summary(user: get_user_model()) -> ProfileSummary:
         full_credit_competencies=full_credit_competencies,
         partial_credit_competencies=partial_credit_competencies,
         composite_snapshot_count=CompositeScoreSnapshot.objects.filter(assessment_run=run).count(),
+        personal_applicability_active=personal_applicability_active,
+        personally_not_applicable_competencies=personally_not_applicable_competencies,
+        personal_applicable_competency_count=personal_applicable_competency_count,
+        personal_applicable_completion_coverage=personal_applicable_completion_coverage,
+        personal_coverage_error=personal_coverage_error,
     )

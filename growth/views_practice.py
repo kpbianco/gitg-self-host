@@ -112,6 +112,7 @@ def practice_recommendation(request, slug):
             "current_sprint": current,
             "is_recommended": is_recommended,
             "has_profile": summary.assessment_run is not None,
+            "assessment_run": summary.assessment_run,
             "priority": priority,
             "context_candidate": context_candidate,
         },
@@ -222,6 +223,21 @@ def practice_priority_context(request, slug):
                 "The assessment epoch changed. Reload before saving; no value is displayed.",
                 status=409,
             )
+        if (
+            request.POST.get("intent") == "save_and_request_alternative"
+            and form.cleaned_data["mode"] != "not_applicable"
+        ):
+            form.add_error(
+                "mode",
+                "The direct alternative action requires an explicit not-applicable response.",
+            )
+            return _render_practice_context(
+                request,
+                protocol=protocol,
+                summary=summary,
+                form=form,
+                status=400,
+            )
         try:
             assessment_context = _assessment_context_record(run)
         except (ValidationError, ValueError, TypeError):
@@ -264,6 +280,18 @@ def practice_priority_context(request, slug):
             request,
             "Practice context revision saved." if created else "Practice context was unchanged.",
         )
+        if request.POST.get("intent") == "save_and_request_alternative":
+            current = _practice_context_record(run, protocol)
+            refreshed_form = PracticePriorityContextForm(
+                initial=practice_context_initial(current, assessment_epoch=run.pk)
+            )
+            return _render_practice_context(
+                request,
+                protocol=protocol,
+                summary=summary,
+                form=refreshed_form,
+                alternative_request=AlternativeRequest(protocol.stable_id, "not_applicable"),
+            )
         return redirect("growth:practice-context", slug=protocol.slug)
     return _render_practice_context(
         request,
