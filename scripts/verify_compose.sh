@@ -137,6 +137,7 @@ compose exec -T app python manage.py verify_m6c_pilot_readiness
 compose exec -T app python manage.py verify_m6d_authoring_readiness
 compose exec -T app python manage.py verify_weekly_execution_readiness
 compose exec -T app python manage.py verify_m6h_operations_readiness
+compose exec -T app python manage.py verify_assessment_calibration_collection
 
 printf '\n==> Persist synthetic Personal OS and context revisions through public services\n'
 compose exec -T app python manage.py shell -c \
@@ -147,6 +148,7 @@ compose exec -T app python manage.py verify_m6c_pilot_readiness
 compose exec -T app python manage.py verify_m6d_authoring_readiness
 compose exec -T app python manage.py verify_weekly_execution_readiness
 compose exec -T app python manage.py verify_m6h_operations_readiness
+compose exec -T app python manage.py verify_assessment_calibration_collection
 readonly expected_browser_slice_state="$(browser_slice_state)"
 [[ "$expected_browser_slice_state" =~ ^personal=1:[0-9a-f]{64}\|assessment=1:[0-9a-f]{64}\|practice=1:[0-9a-f]{64}\|weekly_plans=1:[0-9a-f]{64}\|weekly_reviews=1:[0-9a-f]{64}\|priority=[0-9a-f]{64}\|score_active=383:[0-9a-f]{64}$ ]]
 
@@ -177,6 +179,7 @@ compose exec -T app python manage.py verify_m6c_pilot_readiness
 compose exec -T app python manage.py verify_m6d_authoring_readiness
 compose exec -T app python manage.py verify_weekly_execution_readiness
 compose exec -T app python manage.py verify_m6h_operations_readiness
+compose exec -T app python manage.py verify_assessment_calibration_collection
 test "$(browser_slice_state)" = "$expected_browser_slice_state"
 
 printf '\n==> Restore the verified backup inside the isolated volume\n'
@@ -203,6 +206,7 @@ compose exec -T app python manage.py verify_m6c_pilot_readiness
 compose exec -T app python manage.py verify_m6d_authoring_readiness
 compose exec -T app python manage.py verify_weekly_execution_readiness
 compose exec -T app python manage.py verify_m6h_operations_readiness
+compose exec -T app python manage.py verify_assessment_calibration_collection
 test "$(browser_slice_state)" = "$expected_browser_slice_state"
 
 printf '\n==> Confirm clean Gunicorn shutdown\n'

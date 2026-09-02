@@ -6,6 +6,11 @@ from django.core.validators import MaxLengthValidator, MaxValueValidator, MinVal
 from django.db import models
 from django.db.models import Q
 
+from growth.domain.assessment_calibration import (
+    ASSESSMENT_CALIBRATION_CONSENT_VERSION,
+    CalibrationConsentState,
+    build_calibration_consent_snapshot,
+)
 from growth.domain.context import (
     CONTEXT_CONTRACT_VERSION,
     REVIEW_HORIZON_DAYS_MAX,
@@ -168,6 +173,98 @@ class AssessmentRun(models.Model):
         if self.pk and type(self).objects.filter(pk=self.pk).exists():
             raise ValidationError("Assessment runs are immutable after creation.")
         return super().save(*args, **kwargs)
+
+
+class ImmutableAssessmentCalibrationConsentQuerySet(models.QuerySet):
+    def update(self, **kwargs):
+        raise ValidationError("Assessment calibration consent records are immutable.")
+
+    def bulk_update(self, objs, fields, batch_size=None):
+        raise ValidationError("Assessment calibration consent records are immutable.")
+
+    def delete(self):
+        raise ValidationError("Assessment calibration consent records are immutable.")
+
+
+class AssessmentCalibrationConsent(models.Model):
+    class State(models.TextChoices):
+        CONSENTED = CalibrationConsentState.CONSENTED.value, "Consented"
+        WITHDRAWN = CalibrationConsentState.WITHDRAWN.value, "Withdrawn"
+
+    stable_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="assessment_calibration_consents",
+    )
+    assessment_run = models.ForeignKey(
+        AssessmentRun,
+        on_delete=models.CASCADE,
+        related_name="calibration_consents",
+    )
+    contract_version = models.CharField(
+        max_length=64,
+        default=ASSESSMENT_CALIBRATION_CONSENT_VERSION,
+        editable=False,
+    )
+    participant_token = models.UUIDField(editable=False)
+    revision = models.PositiveIntegerField()
+    state = models.CharField(max_length=16, choices=State.choices)
+    canonical_snapshot = models.JSONField(default=dict)
+    content_hash = models.CharField(max_length=64)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    objects = ImmutableAssessmentCalibrationConsentQuerySet.as_manager()
+
+    class Meta:
+        ordering = ["user_id", "assessment_run_id", "revision"]
+        constraints = [
+            models.UniqueConstraint(
+                fields=["user", "assessment_run", "revision"],
+                name="unique_assessment_calibration_consent_revision",
+            ),
+            models.CheckConstraint(
+                condition=Q(contract_version=ASSESSMENT_CALIBRATION_CONSENT_VERSION),
+                name="assessment_calibration_consent_contract_v1",
+            ),
+            models.CheckConstraint(
+                condition=Q(revision__gt=0),
+                name="assessment_calibration_consent_revision_positive",
+            ),
+        ]
+
+    def __str__(self) -> str:
+        return f"{self.assessment_run_id}: {self.revision} {self.state}"
+
+    def save(self, *args, **kwargs):
+        if self.pk and type(self).objects.filter(pk=self.pk).exists():
+            raise ValidationError("Assessment calibration consent records are immutable.")
+        return super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        raise ValidationError("Assessment calibration consent records are immutable.")
+
+    def clean(self):
+        super().clean()
+        if self.contract_version != ASSESSMENT_CALIBRATION_CONSENT_VERSION:
+            raise ValidationError("Assessment calibration consent version is unsupported.")
+        if self.assessment_run_id and self.user_id != self.assessment_run.user_id:
+            raise ValidationError("Assessment calibration consent ownership does not match.")
+        try:
+            expected = build_calibration_consent_snapshot(
+                assessment_epoch_id=str(self.assessment_run_id),
+                assessment_version=self.assessment_run.assessment_version,
+                participant_token=str(self.participant_token),
+                revision=self.revision,
+                state=self.state,
+            )
+        except (ValueError, TypeError) as exc:
+            raise ValidationError("Assessment calibration consent snapshot is invalid.") from exc
+        if (
+            self.canonical_snapshot != expected.payload
+            or self.content_hash != expected.content_hash
+        ):
+            raise ValidationError("Assessment calibration consent snapshot or hash does not match.")
 
 
 class OrientationResult(models.Model):

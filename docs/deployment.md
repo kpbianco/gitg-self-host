@@ -156,6 +156,9 @@ M6H weekly plans and proof reviews also persist in SQLite and backups. They
 contain stable linkage, schedule, categorical review state, and replayable
 proof references, but no Personal OS prose. They do not create evidence or
 score state.
+M6I assessment-calibration consent revisions also persist in SQLite and
+backups. Ordinary assessment storage is never implicit calibration consent;
+only the latest explicit per-run choice controls future local exports.
 
 ## Updating
 
@@ -171,6 +174,7 @@ docker compose up -d --build
 docker compose ps
 docker compose exec app python manage.py migrate --check
 docker compose exec app python manage.py verify_m6h_operations_readiness
+docker compose exec app python manage.py verify_assessment_calibration_collection
 ```
 
 Startup applies new migrations and reconciles canonical seed data by stable
@@ -207,6 +211,9 @@ After an update, sign in and verify:
     `docker compose exec app python manage.py
     verify_weekly_execution_readiness` replays plans and reviews without
     writing data or printing private values.
+16. **Account → Data management** labels calibration contribution as optional
+    sensitive pseudonymous data, excludes the demonstration seed, and permits
+    inspecting and withdrawing the signed-in owner's current contribution.
 
 The evidence verifier is intentionally not an automatic repair step. Startup
 backfill reconciles missing legacy events and verifies existing ones;
@@ -255,6 +262,20 @@ docker compose exec app python manage.py purge_pilot_feedback \
 
 This command does not touch developmental state. It also does not remove rows
 from existing backups; apply the same retention decision to backup copies.
+
+An operator may write the current explicitly consented calibration dataset to
+a new private file only after reviewing its sensitive-data boundary:
+
+```bash
+docker compose exec app python manage.py export_assessment_calibration_dataset \
+  --output /data/backups/assessment-calibration.json \
+  --confirm-sensitive-export
+```
+
+The command creates mode `0600`, refuses overwrite, performs no upload, and
+fails closed if consent or included assessment data does not replay. Withdrawal
+removes a run from future exports but cannot recall a previously downloaded
+copy; handle every copy under the agreed private-data lifecycle.
 
 ## HTTPS or remote access later
 

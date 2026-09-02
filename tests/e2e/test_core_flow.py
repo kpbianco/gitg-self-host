@@ -9,6 +9,7 @@ from django.contrib.auth import get_user_model
 from playwright.sync_api import Page, expect
 
 from growth.models import (
+    AssessmentCalibrationConsent,
     AssessmentRun,
     CompletionCreditEvent,
     EvidenceEvent,
@@ -359,6 +360,8 @@ def test_owner_data_management_is_private_accessible_and_requires_exact_confirma
 
     page.get_by_role("link", name="Account", exact=True).click()
     page.get_by_role("heading", name="Keep control of your private record.").wait_for()
+    page.get_by_role("heading", name="Optional assessment calibration contribution").wait_for()
+    page.get_by_text("The demonstration seed is never eligible.").wait_for()
     page.get_by_text("Retention is disabled by default.").wait_for()
     page.get_by_text("Existing backups may still contain prior copies").wait_for()
     expect(page.locator(".practice-card")).to_have_count(0)
@@ -654,6 +657,31 @@ def test_complete_assessment_and_save_canonical_outputs(live_server, page: Page)
     assert not run.lever_baselines.filter(
         baseline_alpha__isnull=True,
     ).exists()
+
+    page.get_by_role("link", name="Account", exact=True).click()
+    page.get_by_role("heading", name="Optional assessment calibration contribution").wait_for()
+    page.get_by_label(re.compile(r"I understand the calibration contribution")).check()
+    page.get_by_label(re.compile(r"I consent to this completed assessment")).check()
+    page.get_by_role("button", name="Include this assessment").click()
+    page.get_by_text("Assessment calibration consent recorded.").wait_for()
+    assert (
+        AssessmentCalibrationConsent.objects.filter(
+            assessment_run=run,
+            state=AssessmentCalibrationConsent.State.CONSENTED,
+        ).count()
+        == 1
+    )
+
+    with page.expect_download() as download_info:
+        page.get_by_role("link", name="Inspect my exact contribution").click()
+    contribution = json.loads(Path(download_info.value.path()).read_text())
+    assert contribution["assessment_run_count"] == 1
+    assert contribution["participant_evidence_axes_completed"] == 0
+    assert run.original_share_code not in json.dumps(contribution)
+
+    page.get_by_role("button", name="Withdraw from future exports").click()
+    page.get_by_text("Assessment calibration consent withdrawn").wait_for()
+    assert AssessmentCalibrationConsent.objects.filter(assessment_run=run).count() == 2
 
 
 @pytest.mark.e2e

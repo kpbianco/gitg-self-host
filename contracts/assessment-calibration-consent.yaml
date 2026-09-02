@@ -1,0 +1,49 @@
+contract_version: GG-ASSESSMENT-CALIBRATION-CONSENT-1.0
+export_schema_version: grounded-growth-assessment-calibration-export-v1
+purpose: Permit explicit per-run reuse of already-stored completed assessment data for a manual local calibration export.
+eligible_runs:
+  - application
+  - share_code
+excluded_runs:
+  - pilot_seed
+consent:
+  granularity: one completed assessment run
+  default: not_consented
+  withdrawal: append_only_and_effective_for_future_exports
+  reconsent: explicit
+export:
+  classification: sensitive_pseudonymous_assessment_data
+  delivery: explicit_local_management_command_or_owner_preview
+  overwrite: forbidden
+  file_mode: "0600"
+  included:
+    - item IDs and item-level responses
+    - answered clarifier IDs and responses
+    - item-level and total timing when available
+    - allowlisted response-quality flags and summary values
+    - random cross-run participant token
+    - within-participant run sequence and whole-day interval
+  excluded:
+    - account identity and database keys
+    - exact dates and timestamps
+    - share codes
+    - free text and private context
+    - evidence practice history completion and scores
+    - orientation archetype lever domain and competency outputs
+invariants:
+  automatic_enrollment: false
+  changes_assessment: false
+  changes_recommendations: false
+  changes_score_state: false
+  exports_exact_timestamps: false
+  exports_identity: false
+  exports_share_codes: false
+  remote_telemetry: false
+claim_boundary:
+  status: data_collection_required
+  participant_evidence_axes_completed: 0
+  notes:
+    - Software creates a consent and export path; it does not create a representative sample or qualified analysis.
+    - Completed-run export cannot measure abandonment.
+    - A pseudonym is linkable data and must not be described as anonymous.
+    - Withdrawal cannot recall an already downloaded operator copy.

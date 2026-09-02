@@ -16,6 +16,7 @@ from django.utils import timezone
 
 from growth.models import (
     ArchetypeResult,
+    AssessmentCalibrationConsent,
     AssessmentContext,
     AssessmentRun,
     CompletionCreditEvent,
@@ -36,9 +37,10 @@ from growth.models import (
     WeeklyExecutionPlan,
     WeeklyExecutionReview,
 )
+from growth.services.assessment_calibration import build_assessment_calibration_export
 from growth.services.evidence import build_privacy_safe_evidence_export
 
-OWNER_ARCHIVE_SCHEMA_VERSION = "grounded-growth-owner-private-archive-v2"
+OWNER_ARCHIVE_SCHEMA_VERSION = "grounded-growth-owner-private-archive-v3"
 DELETION_POLICY_VERSION = "GG-OWNER-DELETION-1.0"
 RETENTION_POLICY_VERSION = "GG-OWNER-RETENTION-1.0"
 
@@ -114,6 +116,7 @@ def _replace_internal_references(value: Any, references: dict[str, str]) -> Any:
 def _owned_querysets(user) -> dict[str, models.QuerySet]:
     return {
         "assessment_runs": AssessmentRun.objects.filter(user=user),
+        "assessment_calibration_consents": AssessmentCalibrationConsent.objects.filter(user=user),
         "composite_assessment_snapshots": CompositeAssessmentSnapshot.objects.filter(
             assessment_run__user=user
         ),
@@ -157,6 +160,7 @@ def build_owner_archive(user) -> dict[str, Any]:
     """Build one deterministic, explicit, owner-private archive without database keys."""
 
     build_privacy_safe_evidence_export(user)
+    build_assessment_calibration_export(users=[user])
 
     assessments = list(AssessmentRun.objects.filter(user=user).order_by("created_at", "stable_id"))
     sprints = list(PracticeSprint.objects.filter(user=user).order_by("created_at", "stable_id"))
@@ -226,6 +230,24 @@ def build_owner_archive(user) -> dict[str, Any]:
                 curriculum_version_stable_id=item.curriculum_version_id,
             )
             for item in assessments
+        ],
+        "assessment_calibration_consents": [
+            _record(
+                item,
+                (
+                    "contract_version",
+                    "participant_token",
+                    "revision",
+                    "state",
+                    "canonical_snapshot",
+                    "content_hash",
+                    "created_at",
+                ),
+                assessment_ref=assessment_refs[item.assessment_run_id],
+            )
+            for item in AssessmentCalibrationConsent.objects.filter(user=user).order_by(
+                "assessment_run__created_at", "assessment_run_id", "revision"
+            )
         ],
         "composite_assessment_snapshots": [
             _record(
@@ -663,6 +685,7 @@ def build_owner_archive(user) -> dict[str, Any]:
         },
         "privacy": {
             "contains_private_narrative": True,
+            "contains_calibration_participant_token": True,
             "safe_for_sharing": False,
             "contains_other_users": False,
             "contains_internal_database_keys": False,
@@ -717,6 +740,7 @@ def delete_owner_account(*, user, expected_preview_hash: str) -> int:
         CompositeScoreSnapshot.objects.filter(assessment_run__user=locked_user),
         CompletionCreditEvent.objects.filter(assessment_run__user=locked_user),
         CompositeAssessmentSnapshot.objects.filter(assessment_run__user=locked_user),
+        AssessmentCalibrationConsent.objects.filter(user=locked_user),
         CompositeScoreState.objects.filter(user=locked_user),
         ScoreSnapshot.objects.filter(assessment_run__user=locked_user),
         WeeklyExecutionReview.objects.filter(user=locked_user),

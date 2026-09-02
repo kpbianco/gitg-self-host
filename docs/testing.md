@@ -239,6 +239,13 @@ only counts and contract boundaries.
 - weekly authentication, stale/cross-user rejection, Personal OS value
   isolation, migration rollback, deterministic readiness, and corruption
   failure without private diagnostics.
+- assessment-calibration non-enrollment, Pilot seed exclusion, explicit
+  per-run consent/withdrawal/reconsent, CSRF and ownership isolation;
+- deterministic pseudonymous multi-run export, exact response/timing allowlist,
+  identifier/share-code/free-text/profile-output exclusion, and tamper failure;
+- explicit sensitive-export acknowledgement, no overwrite, mode-0600 output,
+  owner preview, archive/deletion inclusion, migration rollback, and zero
+  participant evidence axes completed.
 
 `make e2e` uses Playwright Chromium for the established browser journeys,
 including the M6C-04 Personal OS/context and M6H-01 weekly journeys:

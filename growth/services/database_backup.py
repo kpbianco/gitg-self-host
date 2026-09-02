@@ -13,6 +13,7 @@ BACKUP_MANIFEST_SCHEMA_VERSION = "grounded-growth-sqlite-backup-v1"
 CRITICAL_STATE_TABLES = (
     "auth_user",
     "growth_assessmentrun",
+    "growth_assessmentcalibrationconsent",
     "growth_orientationresult",
     "growth_archetyperesult",
     "growth_leverbaseline",

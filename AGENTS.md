@@ -140,6 +140,14 @@ The accepted rationale is recorded in
   archetype logic.
 - Do not add automatic timing, browser analytics, session recording, tracking
   pixels, or remote telemetry under the pilot-feedback contract.
+- Assessment calibration reuse requires the latest explicit per-run
+  `GG-ASSESSMENT-CALIBRATION-CONSENT-1.0` revision. Ordinary assessment use and
+  the Pilot 002 seed never imply participation. Withdrawal excludes a run from
+  future exports without changing the owner's private assessment history.
+- The calibration export is sensitive pseudonymous data, not anonymous data.
+  Keep identity, exact timestamps, share codes, free text, private context,
+  developmental history, and derived profile outputs outside its allowlist;
+  never upload it automatically or silently overwrite an existing copy.
 - Never infer missing task-to-lever links from display strings at runtime.
 - Practice packages, registries, schemas, and the activation ledger under
   `data/practices/` are the canonical protocol source. Do not restore a
@@ -414,7 +422,7 @@ direct explicit N/A route and a separately labeled personal-applicable
 coverage denominator while preserving canonical coverage, score state,
 recommendation mathematics, and reassessment isolation.
 
-M6I-03-ASSESSMENT-CALIBRATION-READINESS is the current source-only software
+M6I-03-ASSESSMENT-CALIBRATION-READINESS is reviewed and merged. It is a source-only software
 slice. It verifies the frozen assessment v1.1 item, clarifier, lever, family,
 orientation, coverage, hash, and golden-replay inventory and enumerates eight
 open participant evidence axes. It reads no application database or private
@@ -422,6 +430,15 @@ runtime data and changes no assessment, score, recommendation, UI, migration,
 or production behavior. Structural readiness must not be described as
 psychometric, fairness, participant, longitudinal, or effectiveness
 validation.
+
+M6I-04-CONSENTED-ASSESSMENT-CALIBRATION-DATA is the current software slice.
+It adds explicit per-completed-run consent, withdrawal, reconsent, an
+owner-inspectable contribution, and an acknowledged mode-0600 local operator
+export. One random token links included retakes without exporting identity,
+exact timestamps, assessment IDs, share codes, free text, developmental
+history, or derived profile outputs. It adds no telemetry and changes no
+assessment, recommendation, evidence, completion, score, or replay behavior.
+Software collection capability completes zero participant evidence axes.
 
 <!-- BEGIN PORTFOLIO-CONTROL MANAGED -->
 ## Governed agentic delivery

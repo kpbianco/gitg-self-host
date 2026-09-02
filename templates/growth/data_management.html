@@ -21,11 +21,67 @@
     <p>
       This deterministic JSON archive includes private narrative and all owned
       assessment, profile, context, Personal OS, practice, evidence, score,
-      pilot-feedback, and weekly-execution records. It excludes passwords,
+      calibration-consent, pilot-feedback, and weekly-execution records. It excludes passwords,
       sessions, secrets, server metadata, database keys, and every other user.
     </p>
     <p><strong>Do not share this file.</strong> The minimized evidence and feedback exports remain separate.</p>
     <a class="button" href="{% url 'growth:owner-archive' %}">Download owner-private archive</a>
+  </section>
+
+  <section class="panel data-management-panel" aria-labelledby="calibration-heading">
+    <p class="eyebrow">GG-ASSESSMENT-CALIBRATION-CONSENT-1.0</p>
+    <h2 id="calibration-heading">Optional assessment calibration contribution</h2>
+    <p>
+      Normal assessment storage is private account data. This separate opt-in controls whether
+      one completed assessment may also enter a manual, local calibration export. Nothing is
+      uploaded automatically, and participation does not change your assessment, profile,
+      recommendations, completion credit, or scores.
+    </p>
+    <p>
+      The contribution contains item-level answers, N/A choices, answered clarifiers, timing,
+      response-quality summaries, a random participant token, and coarse day intervals between
+      included retakes. It excludes your account identity, exact dates, share codes, free text,
+      Personal OS data, practice history, and score outputs. It is still sensitive pseudonymous
+      data and must not be treated as anonymous.
+    </p>
+    {% if calibration_error %}
+      <p class="form-error" role="alert">{{ calibration_error }}</p>
+    {% else %}
+      <dl class="data-counts">
+        <div><dt>Included completed assessments</dt><dd>{{ calibration_summary.assessment_run_count }}</dd></div>
+        <div><dt>Participant evidence axes completed</dt><dd>0 of 8</dd></div>
+        <div><dt>Remote telemetry</dt><dd>Off</dd></div>
+      </dl>
+      {% if calibration_summary.assessment_run_count %}
+        <a class="button button-secondary" href="{% url 'growth:assessment-calibration-preview' %}">
+          Inspect my exact contribution
+        </a>
+      {% endif %}
+    {% endif %}
+
+    {% if calibration_eligible_count %}
+      <form method="post" class="stacked-form">
+        {% csrf_token %}
+        <input type="hidden" name="action" value="grant_calibration_consent">
+        {{ calibration_consent_form.as_p }}
+        <button class="button button-secondary" type="submit">Include this assessment</button>
+      </form>
+    {% else %}
+      <p>No participant-created assessment is available. The demonstration seed is never eligible.</p>
+    {% endif %}
+
+    {% if calibration_summary.assessment_run_count %}
+      <form method="post" class="stacked-form">
+        {% csrf_token %}
+        <input type="hidden" name="action" value="withdraw_calibration_consent">
+        {{ calibration_withdrawal_form.as_p }}
+        <button class="button button-quiet" type="submit">Withdraw from future exports</button>
+      </form>
+      <p class="fine-print">
+        Withdrawal takes effect for future exports from this instance. It cannot recall a copy
+        that an operator already downloaded.
+      </p>
+    {% endif %}
   </section>
 
   <section class="panel data-management-panel" aria-labelledby="retention-heading">

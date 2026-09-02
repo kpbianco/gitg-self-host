@@ -1,8 +1,8 @@
 # Current state
 
 Last updated: 2026-09-02
-Implementation branch: `codex/m6i-03-assessment-calibration-readiness`
-Baseline: `e20daf5058220322918775b37816073e3bc7892e`
+Implementation branch: `codex/m6i-04-consented-calibration-data`
+Baseline: `306a608990807e34b809b7e86ea94948bd636b42`
 
 ## Canonical runtime and scoring
 
@@ -55,13 +55,34 @@ Baseline: `e20daf5058220322918775b37816073e3bc7892e`
 - This batch changes no assessment source, scoring constant, database, UI,
   recommendation, completion, evidence, or replay behavior.
 
+## M6I-04 consented assessment calibration data
+
+- ADR 0016 and the consent contract define explicit per-run permission for secondary
+  calibration use of an already-stored participant-created assessment.
+- Enrollment is off by default. The Pilot 002 seed is ineligible. Consent,
+  withdrawal, and reconsent are append-only, current-state controlled, and
+  deterministic.
+- A random pseudonymous token links only explicitly included retakes. The
+  dataset excludes identity, exact timestamps, assessment IDs, share codes,
+  free text, private context, developmental history, and derived profile
+  outputs.
+- The owner can inspect their exact contribution. Operator export requires an
+  explicit sensitive-data acknowledgement, creates a new mode-0600 file,
+  refuses overwrite, and performs no upload.
+- Consent is covered by owner archive, deletion, backup/restore, readiness, and
+  reversible migration. Withdrawal does not alter the private assessment.
+- Software collection capability contributes no participant sample and closes
+  zero of the eight empirical evidence axes. Completed runs do not measure
+  abandonment.
+
 ## Verification
 
-The bounded M6I-03 gate is:
+The bounded M6I-04 gate is:
 
 ```bash
 make assessment-calibration-check PYTHON=.venv/bin/python
-.venv/bin/python -m pytest tests/test_assessment_calibration_readiness.py tests/test_assessment_golden.py tests/test_assessment_integration.py
+make assessment-calibration-collection-check PYTHON=.venv/bin/python
+.venv/bin/python -m pytest tests/test_assessment_calibration_consent.py tests/test_data_lifecycle.py tests/test_assessment_integration.py
 ./scripts/agent-verify.sh contract
 ./scripts/agent-verify.sh quick
 ```

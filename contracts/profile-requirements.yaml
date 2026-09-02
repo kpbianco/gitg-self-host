@@ -35,6 +35,7 @@ owner_authorized_operations:
   - exact-383-protocol-score-activation
   - m6h-01-weekly-execution-integration
   - m6h-02-owner-data-lifecycle-and-upgrade-operations
+  - m6i-04-explicit-consent-local-assessment-calibration-data
 review_focus:
   - canonical-source violations
   - placeholder generic or duplicated content
