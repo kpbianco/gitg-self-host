@@ -12,5 +12,7 @@
 - [ADR 0010 — Representative typed protocols remain source-only](0010-source-only-representative-protocol-authoring.md)
 - [ADR 0011 — All-catalog runtime and score activation](0011-all-catalog-runtime-and-score-activation.md)
 - [ADR 0012 — Weekly execution and proof review remain outside evidence creation](0012-weekly-execution-and-proof-review.md)
+- [ADR 0013 — Composite assessment and human-closeout credit](0013-composite-assessment-and-human-closeout-credit.md)
+- [ADR 0014 — Explicit applicability and personal coverage](0014-explicit-applicability-and-personal-coverage.md)
 
 Accepted records are binding unless a later record explicitly supersedes them.

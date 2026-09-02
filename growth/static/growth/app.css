@@ -367,6 +367,14 @@ h3 {
   margin-top: 22px;
 }
 
+.inline-action-form {
+  margin-top: 20px;
+}
+
+.inline-action-form .fine-print {
+  margin-bottom: 0;
+}
+
 .section-block {
   margin-top: 52px;
 }

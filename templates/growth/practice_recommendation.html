@@ -47,6 +47,20 @@
           {% for explanation in context_candidate.explanation %}<p class="fine-print">{{ explanation }}</p>{% endfor %}
         {% endif %}
         <a class="text-link" href="{% url 'growth:practice-context' protocol.slug %}">Review current context <span aria-hidden="true">→</span></a>
+        {% if assessment_run %}
+          <form method="post" action="{% url 'growth:practice-context' protocol.slug %}" class="inline-action-form">
+            {% csrf_token %}
+            <input type="hidden" name="assessment_epoch" value="{{ assessment_run.pk }}">
+            <input type="hidden" name="mode" value="not_applicable">
+            <button class="button button-secondary" type="submit" name="intent" value="save_and_request_alternative">
+              Not applicable to me — show an alternative
+            </button>
+            <p class="fine-print">
+              This records an immutable current-assessment context revision. It awards no
+              completion credit, changes no canonical score, and can be revised later.
+            </p>
+          </form>
+        {% endif %}
       </section>
       <section class="panel">
         <p class="eyebrow">Applicability</p>

@@ -1,7 +1,7 @@
 PYTHON ?= .venv/bin/python
 APP_DATA_DIR ?= $(CURDIR)/var
 
-.PHONY: format lint test e2e migrate seed evidence-backfill evidence-verify score-rebuild score-verify composite-score-rebuild composite-score-verify composite-scoring-check pilot-check practice-reports practice-report-check catalog-governance-audit catalog-governance-audit-check composite-scoring-catalog composite-scoring-catalog-check curriculum-check full-frontier-check competency-evidence-reports competency-evidence-report-check competency-evidence-check context-check personal-os-check context-priority-check m6c-pilot-check m6d-01-check m6h-weekly-check m6h-operations-check run compose-up compose-down compose-smoke backup
+.PHONY: format lint test e2e migrate seed evidence-backfill evidence-verify score-rebuild score-verify composite-score-rebuild composite-score-verify composite-scoring-check applicability-coverage-check pilot-check practice-reports practice-report-check catalog-governance-audit catalog-governance-audit-check composite-scoring-catalog composite-scoring-catalog-check curriculum-check full-frontier-check competency-evidence-reports competency-evidence-report-check competency-evidence-check context-check personal-os-check context-priority-check m6c-pilot-check m6d-01-check m6h-weekly-check m6h-operations-check run compose-up compose-down compose-smoke backup
 
 format:
 	$(PYTHON) -m ruff format .
@@ -82,6 +82,9 @@ composite-scoring-catalog-check:
 
 composite-scoring-check:
 	PYTHON_BIN="$(PYTHON)" ./scripts/verify_composite_scoring_readiness.sh
+
+applicability-coverage-check:
+	PYTHON_BIN="$(PYTHON)" ./scripts/verify_applicability_coverage.sh
 
 curriculum-check:
 	PYTHON_BIN="$(PYTHON)" ./scripts/verify_expansion_readiness.sh

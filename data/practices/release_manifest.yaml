@@ -785,6 +785,6 @@ content_files:
 - schema/risk_taxonomy_v1.schema.json
 - schema/scoring_policy_registry_v1.schema.json
 - schema/source_registry_v1.schema.json
-content_hash: 9be5d07ef52421c3dcaea0536fd32221a3cfcef01198252f736200e37b3fa42f
+content_hash: 93eba5c6dcaedd7a3fb69e75120099a4668fac2bb50e6cfc62b5371988f05cd3
 legacy_projection_version: GG-PRACTICE-RUNTIME-PROJECTION-1.0
 legacy_projection_hash: 9eff5558607936aab20ec2adcdf4912510e9f8816cc291ae6b77918bf6711672

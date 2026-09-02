@@ -707,3 +707,38 @@ acceptance remains false. Owner approval authorizes deterministic software
 implementation; it is not psychometric, clinical, cultural, accessibility,
 privacy/safety-specialist, participant, longitudinal, or intervention-
 effectiveness validation.
+
+## Decision 054 — Explicit applicability and personal coverage
+**Status:** Accepted as the bounded M6I-02 successor to Decision 053
+
+An authenticated person may explicitly mark an active recommended practice
+not applicable for the current assessment epoch and immediately ask for a
+distinct alternative. The response is stored only as the latest revision in
+the existing immutable `PracticeContext` history. It can be superseded by a
+later explicit revision; it is not an assessment answer, evidence event,
+practice closeout, deficit, or negative observation.
+
+`GG-PERSONAL-APPLICABLE-COVERAGE-1.0` is a read-only projection. It verifies
+context ownership, assessment scope, contiguous revisions, canonical
+snapshots, hashes, and the one-active-protocol-to-parent-competency mapping.
+Only a latest verified `not_applicable` state removes that protocol's parent
+competency from the current epoch's personal denominator. Unknown, deferred,
+provided, and explicit zero remain distinct and stay in the denominator.
+
+Personal-applicable coverage is the sum of the already-earned composite
+completion credits for included competencies divided by the number included.
+If none remain, the result is unavailable rather than full. The ordinary UI
+must name this a personal-applicable view, show its denominator and exclusion
+count, and show canonical all-competency coverage alongside it.
+
+Applicability input never awards completion credit or mutates the composite
+state, state hash, snapshots, assessment baseline, historical score state, or
+canonical coverage. Recommendation math remains Decision 053's composite
+priority followed by Decision 046's explicit current-context layer; this
+decision adds no inferred applicability and no cross-epoch carryover.
+
+This is deterministic software and UX authorization only. `ER-M6A-003`,
+`RG-M6A-002`, M6B specialist acceptance, formal claim-level source review, and
+the deferred accessibility, privacy/safety, psychometric, cultural,
+participant, longitudinal, release, deployment, mastery, and intervention-
+effectiveness gates remain open.
