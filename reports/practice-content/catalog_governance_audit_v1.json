@@ -27563,7 +27563,7 @@
     "specialist_review_complete": false
   },
   "canonical_source_hash": "6958ccfbe0c0d80b7485ac866a8418578850284b58956f59168429819447dfc5",
-  "catalog_content_hash": "93eba5c6dcaedd7a3fb69e75120099a4668fac2bb50e6cfc62b5371988f05cd3",
+  "catalog_content_hash": "9b59e8411fbc39ea788e763731e45ffeeb224e0e61c35c4622449ef687066e54",
   "claim_boundary": "Deterministic static and software governance audit only; no specialist, owner, participant, accessibility-population, cultural, clinical, psychometric, longitudinal, release, deployment, mastery, or intervention-effectiveness acceptance.",
   "contract_version": "GG-CATALOG-GOVERNANCE-AUDIT-1.0",
   "counts": {

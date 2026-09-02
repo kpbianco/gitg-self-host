@@ -798,7 +798,7 @@ sources:
   publication_date: '2026-07-27'
   locator: docs/PRODUCT_DECISIONS.md
   locator_kind: repository_path
-  content_sha256: 5af164c32165e0401fd01e82b68bbef07f23c1c7096cfc85fec490df9d244f7b
+  content_sha256: 62caafd651972e31f2a231c3424df13db3a046989b79bc780746917bd13d2275
   source_class: internal_decision_record
   evidence_strength: design_only
   supported_claim: Records accepted product boundaries for dignity, completion versus mastery, scoring

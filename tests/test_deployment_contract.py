@@ -125,6 +125,9 @@ def test_repeatable_compose_acceptance_is_wired_into_make_and_ci():
     assert "verify_composite_scoring_readiness.sh" in makefile
     assert smoke_script.count("verify_composite_scoring_readiness") == 3
     assert "make composite-scoring-check PYTHON=python" in workflow
+    assert "assessment-calibration-check:" in makefile
+    assert "assessment_calibration_readiness.py --check" in makefile
+    assert "make assessment-calibration-check PYTHON=python" in workflow
     assert "Pilot readiness gate" in workflow
     assert set(workflow_data["jobs"]["pilot-ready"]["needs"]) == {
         "quality",

@@ -1,17 +1,17 @@
 schema_version: 1
 batch:
-  id: M6I-02-APPLICABILITY-PERSONAL-COVERAGE
-  title: Add explicit not-applicable routing and personal-applicable coverage
-  goal: Let a person explicitly mark a recommended practice not applicable, receive an immediate distinct-alternative route, and inspect a separately labeled personal-applicable coverage denominator without changing canonical completion coverage or score history.
+  id: M6I-03-ASSESSMENT-CALIBRATION-READINESS
+  title: Make assessment calibration gaps explicit and executable
+  goal: Freeze a deterministic source-only calibration-readiness inventory for assessment v1.1, prove its structural coverage and golden replay, and enumerate the participant evidence still required without changing assessment, scoring, or runtime state.
 sources:
   product: products/gitg-self-host/product.yaml
   requirements:
     - products/gitg-self-host/acceptance.yaml#GG-SCORING-DISPOSITION
-    - docs/PRODUCT_DECISIONS.md#decision-054--explicit-applicability-and-personal-coverage
-  milestone: successor-to-M6I-01-COMPOSITE-CLOSEOUT-SCORING
-  baseline_commit: d7b07e732cee34bffdb1e9c64520573e92d85414
+    - docs/PRODUCT_DECISIONS.md#decision-055--assessment-calibration-readiness-is-not-validation
+  milestone: successor-to-M6I-02-APPLICABILITY-PERSONAL-COVERAGE
+  baseline_commit: e20daf5058220322918775b37816073e3bc7892e
 dependencies:
-  - M6I-01-COMPOSITE-CLOSEOUT-SCORING
+  - M6I-02-APPLICABILITY-PERSONAL-COVERAGE
 scope:
   allowed_paths:
     - AGENTS.md
@@ -22,78 +22,76 @@ scope:
     - contracts/**
     - data/practices/registries/source_registry.yaml
     - data/practices/release_manifest.yaml
-    - growth/**
-    - templates/**
-    - static/**
+    - docs/**
+    - reports/assessment-calibration/**
+    - reports/practice-content/**
     - scripts/**
     - tests/**
-    - docs/**
-    - reports/practice-content/**
   forbidden_paths:
     - data/assessment/**
     - data/curriculum/**
     - data/model/**
     - data/notion/**
     - data/practices/protocols/**
-    - legacy/**
+    - growth/**
+    - templates/**
+    - static/**
     - requirements*.txt
     - pyproject.toml
     - Dockerfile
     - docker-compose.yml
 acceptance:
-  - Decision 054 and ADR 0014 define GG-PERSONAL-APPLICABLE-COVERAGE-1.0 as a read-only assessment-epoch projection.
-  - A recommended active practice exposes a direct authenticated CSRF-protected not-applicable action and an immediate route to a distinct alternative.
-  - Not applicable creates or reuses an immutable verified PracticeContext revision; a later explicit context revision can make the practice applicable again.
-  - The latest verified current-epoch not-applicable revision removes exactly its parent competency from only the personal-applicable denominator.
-  - Unknown deferred and zero remain distinct from not applicable and do not alter the personal denominator.
-  - Personal-applicable coverage averages existing completion credit over the included competencies; an empty denominator is unavailable rather than 100 percent.
-  - Canonical completion coverage composite state hashes snapshots priorities historical score state and assessment baselines remain byte-for-byte unchanged by applicability input.
-  - The ordinary UI shows canonical and personal-applicable coverage together with explicit denominator counts and never labels either as mastery.
-  - Reassessment starts with a fresh personal denominator and cannot inherit prior-epoch applicability.
-  - Invalid ownership scope revision snapshots or hashes fail the personal projection closed while leaving verified canonical coverage visible.
-  - Existing private context export backup restore and deletion behavior remains unchanged and no remote telemetry is added.
+  - Decision 055 and ADR 0015 define GG-ASSESSMENT-CALIBRATION-READINESS-1.0 as a deterministic source-only audit, not psychometric or participant validation.
+  - The audit verifies the frozen assessment v1.1 spec model scorer and coverage artifact by exact SHA-256 digest without changing those source files.
+  - The inventory contains exactly 50 core items, 37 capability items, 12 orientation items, one response-quality item, 37 capability clarifiers, six orientation clarifiers, 37 levers, seven families, and six orientations.
+  - Every lever has exactly one direct core item and one adaptive capability clarifier; all referenced item, lever, family, and orientation IDs are valid and all scoring weights are positive.
+  - Recomputed core-signal counts, weight sums, and effective item counts match all 37 rows of the frozen assessment coverage artifact.
+  - The existing Pilot 001 golden scorer replay and GGA1/GGA11 compatibility remain exact.
+  - Decision source-registry and deterministic practice-report hashes are regenerated without changing any practice package.
+  - The report names every required participant calibration axis, records zero completed axes, and keeps calibration status data_collection_required.
+  - The report reads no database, assessment run, participant, owner-private, evidence, score, Personal OS, context, or pilot-feedback data.
+  - No migration, model, assessment question, scoring constant, recommendation rule, UI, runtime state, or production behavior changes.
   - ER-M6A-003 RG-M6A-002 M6B specialist acceptance and all deferred human review gates remain open.
 validation:
   local:
-    - .venv/bin/python manage.py makemigrations --check --dry-run
-    - .venv/bin/python manage.py check
-    - .venv/bin/python -m ruff check .
-    - .venv/bin/python -m ruff format --check .
-    - .venv/bin/pytest tests/test_applicability_coverage.py tests/test_personal_os_browser.py
-    - make applicability-coverage-check PYTHON=.venv/bin/python
+    - .venv/bin/python -m pytest tests/test_assessment_calibration_readiness.py tests/test_assessment_golden.py tests/test_assessment_integration.py
+    - make assessment-calibration-check PYTHON=.venv/bin/python
     - ./scripts/agent-verify.sh contract
     - ./scripts/agent-verify.sh quick
     - .venv/bin/python scripts/verify-manifest.py
     - git diff --check
   focused_tests_to_add:
-    - personal denominator math including excluded completed credit and empty-denominator behavior
-    - direct not-applicable action alternative route reversibility and score-state immutability
-    - assessment-epoch isolation unknown/deferred distinction and tamper fail-closed behavior
-    - profile labeling accessibility CSRF privacy export and hosted browser journey
+    - exact assessment and clarifier inventory with globally unique item IDs
+    - direct lever and adaptive clarifier completeness across all 37 levers
+    - recomputed coverage parity for counts weight sums and effective item counts
+    - fail-closed tamper cases for missing lever references duplicate IDs and stale report bytes
+    - explicit zero-completed participant evidence axes and unsupported-claim boundaries
   required_ci:
     - Ruff Django pytest migration drift and manifest verification
-    - applicability coverage deterministic readiness
-    - Playwright direct not-applicable alternative and profile coverage journey
-    - Compose migration replay backup restore and persistence drill
+    - assessment calibration readiness deterministic report and golden replay
+    - unchanged Playwright core journeys
+    - unchanged Compose deployment drill
     - aggregate Pilot readiness gate
 risk:
   class: high
   hazards:
-    - a personal denominator is presented as canonical completion or mastery
-    - not applicable awards credit or mutates persisted composite score state
-    - unknown deferred or zero are silently treated as not applicable
-    - applicability leaks across users or reassessment epochs
-    - a corrupt context revision silently changes the projection
+    - structural software checks are mislabeled psychometric validation
+    - committed owner or participant responses leak into a report
+    - a generated report silently changes assessment or scoring semantics
+    - a missing or weakly covered lever is hidden by aggregate counts
+    - an uncollected calibration axis is represented as passed
   stop_conditions:
-    - canonical coverage state hash score snapshot recommendation mathematics or historical replay changes
-    - a context input awards completion credit or closes a practice
-    - a non-current-epoch or non-owned context changes the personal denominator
-    - an empty personal denominator displays full coverage
+    - any data/assessment source byte changes
+    - any database or owner participant runtime record is read or written
+    - any assessment score baseline recommendation completion or replay behavior changes
+    - any participant calibration axis is marked complete without retained evidence
     - a required local or hosted gate fails
 rollback:
-  strategy: Revert the read-only projection direct action and presentation as one batch; retain immutable PracticeContext revisions composite state evidence assessment and score history.
+  strategy: Revert the source-only contract report verifier tests and documentation as one batch; assessment v1.1 runtime data and all historical state remain untouched.
 evidence:
   output:
-    - docs/evidence/M6I-02-APPLICABILITY-PERSONAL-COVERAGE-<date>.md
+    - reports/assessment-calibration/assessment_calibration_readiness_v1.json
+    - reports/assessment-calibration/assessment_calibration_readiness_v1.md
+    - docs/evidence/M6I-03-ASSESSMENT-CALIBRATION-READINESS-<date>.md
     - exact local and hosted CI results
-  claim_boundary: Deterministic owner-directed software and UX implementation only; no specialist psychometric clinical cultural accessibility-population privacy/safety participant longitudinal release deployment mastery or intervention-effectiveness acceptance.
+  claim_boundary: Deterministic source-only software calibration readiness only; no specialist psychometric clinical cultural accessibility-population privacy/safety participant longitudinal release deployment mastery or intervention-effectiveness acceptance.

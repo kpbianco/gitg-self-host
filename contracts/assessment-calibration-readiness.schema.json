@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grounded-growth.local/contracts/assessment-calibration-readiness.schema.json",
+  "title": "Grounded Growth assessment calibration readiness v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "assessment_version",
+    "source_hashes",
+    "inventory",
+    "coverage",
+    "participant_evidence",
+    "validation_state",
+    "privacy",
+    "claim_boundary"
+  ],
+  "properties": {
+    "contract_version": {"const": "GG-ASSESSMENT-CALIBRATION-READINESS-1.0"},
+    "assessment_version": {"const": "1.1"},
+    "source_hashes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assessment_spec", "assessment_model", "assessment_scorer", "assessment_coverage"],
+      "properties": {
+        "assessment_spec": {"$ref": "#/$defs/sha256"},
+        "assessment_model": {"$ref": "#/$defs/sha256"},
+        "assessment_scorer": {"$ref": "#/$defs/sha256"},
+        "assessment_coverage": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "inventory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["core_items", "capability_core_items", "orientation_core_items", "response_quality_core_items", "capability_clarifiers", "orientation_clarifiers", "levers", "lever_families", "orientations", "unique_item_ids"],
+      "properties": {
+        "core_items": {"const": 50},
+        "capability_core_items": {"const": 37},
+        "orientation_core_items": {"const": 12},
+        "response_quality_core_items": {"const": 1},
+        "capability_clarifiers": {"const": 37},
+        "orientation_clarifiers": {"const": 6},
+        "levers": {"const": 37},
+        "lever_families": {"const": 7},
+        "orientations": {"const": 6},
+        "unique_item_ids": {"const": true}
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["direct_capability_coverage_complete", "capability_clarifier_coverage_complete", "coverage_artifact_matches", "positive_scoring_weights", "valid_references", "lever_rows"],
+      "properties": {
+        "direct_capability_coverage_complete": {"const": true},
+        "capability_clarifier_coverage_complete": {"const": true},
+        "coverage_artifact_matches": {"const": true},
+        "positive_scoring_weights": {"const": true},
+        "valid_references": {"const": true},
+        "lever_rows": {
+          "type": "array",
+          "minItems": 37,
+          "maxItems": 37,
+          "items": {"$ref": "#/$defs/leverRow"}
+        }
+      }
+    },
+    "participant_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required_axes", "completed_axes", "open_axes", "axis_rows"],
+      "properties": {
+        "required_axes": {"const": 8},
+        "completed_axes": {"const": 0},
+        "open_axes": {"const": 8},
+        "axis_rows": {
+          "type": "array",
+          "minItems": 8,
+          "maxItems": 8,
+          "items": {"$ref": "#/$defs/evidenceAxis"}
+        }
+      }
+    },
+    "validation_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["structural_readiness", "golden_replay_required", "calibration_status", "psychometric_validation", "participant_validation", "release_authorized"],
+      "properties": {
+        "structural_readiness": {"const": "pass"},
+        "golden_replay_required": {"const": true},
+        "calibration_status": {"const": "data_collection_required"},
+        "psychometric_validation": {"const": false},
+        "participant_validation": {"const": false},
+        "release_authorized": {"const": false}
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_only", "database_read", "database_write", "assessment_run_data_read", "participant_data_read", "owner_private_data_read", "private_values_in_report"],
+      "properties": {
+        "source_only": {"const": true},
+        "database_read": {"const": false},
+        "database_write": {"const": false},
+        "assessment_run_data_read": {"const": false},
+        "participant_data_read": {"const": false},
+        "owner_private_data_read": {"const": false},
+        "private_values_in_report": {"const": false}
+      }
+    },
+    "claim_boundary": {"type": "string", "minLength": 160}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "stableId": {"type": "string", "pattern": "^[A-Za-z0-9_-]+$"},
+    "leverRow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lever_id", "direct_core_item_ids", "all_core_signal_ids", "capability_clarifier_id", "core_weight_sum", "effective_core_item_count", "allows_not_applicable"],
+      "properties": {
+        "lever_id": {"type": "string", "pattern": "^L[0-9]{2}$"},
+        "direct_core_item_ids": {"type": "array", "minItems": 1, "maxItems": 1, "items": {"type": "string", "pattern": "^Q[0-9]{2}$"}},
+        "all_core_signal_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^Q[0-9]{2}$"}},
+        "capability_clarifier_id": {"type": "string", "pattern": "^C_L[0-9]{2}$"},
+        "core_weight_sum": {"type": "number", "exclusiveMinimum": 0},
+        "effective_core_item_count": {"type": "number", "exclusiveMinimum": 0},
+        "allows_not_applicable": {"type": "boolean"}
+      }
+    },
+    "evidenceAxis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["axis_id", "status", "required_evidence", "claim_blocked"],
+      "properties": {
+        "axis_id": {"$ref": "#/$defs/stableId"},
+        "status": {"const": "data_collection_required"},
+        "required_evidence": {"type": "string", "minLength": 30},
+        "claim_blocked": {"type": "string", "minLength": 10}
+      }
+    }
+  }
+}

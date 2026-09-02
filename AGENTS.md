@@ -409,6 +409,20 @@ credit only at explicit human closeout. Completion is not mastery. The batch
 must keep `ER-M6A-003` pending, `RG-M6A-002` open, and all historical scoring
 history immutable and replayable.
 
+M6I-02-APPLICABILITY-PERSONAL-COVERAGE is reviewed and merged. It adds a
+direct explicit N/A route and a separately labeled personal-applicable
+coverage denominator while preserving canonical coverage, score state,
+recommendation mathematics, and reassessment isolation.
+
+M6I-03-ASSESSMENT-CALIBRATION-READINESS is the current source-only software
+slice. It verifies the frozen assessment v1.1 item, clarifier, lever, family,
+orientation, coverage, hash, and golden-replay inventory and enumerates eight
+open participant evidence axes. It reads no application database or private
+runtime data and changes no assessment, score, recommendation, UI, migration,
+or production behavior. Structural readiness must not be described as
+psychometric, fairness, participant, longitudinal, or effectiveness
+validation.
+
 <!-- BEGIN PORTFOLIO-CONTROL MANAGED -->
 ## Governed agentic delivery
 

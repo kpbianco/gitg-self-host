@@ -354,6 +354,39 @@ make composite-scoring-catalog-check
 make composite-scoring-check
 ```
 
+## What M6I-02 adds
+
+- A direct explicit “not applicable to me” route from an active recommendation
+  into the existing distinct-alternative flow.
+- A separately labeled current-epoch personal-applicable coverage denominator
+  beside unchanged canonical all-competency coverage.
+- Strict separation of N/A from unknown, deferred, provided, and explicit zero
+  context; no credit, deficit, score mutation, or cross-epoch carryover.
+
+Run the isolated projection gate with:
+
+```bash
+make applicability-coverage-check
+```
+
+## What M6I-03 adds
+
+- `GG-ASSESSMENT-CALIBRATION-READINESS-1.0`, a source-only audit of the frozen
+  assessment v1.1 spec, model, browser scorer, and coverage artifact.
+- Exact verification of 50 core items, 43 adaptive clarifiers, 37 levers,
+  seven families, six orientations, and one direct item plus one capability
+  clarifier per lever.
+- Recomputed signal counts, positive weight sums, and effective item counts for
+  every lever, with byte-stable JSON and human-readable reports.
+- Eight explicitly open participant evidence axes. Structural and golden
+  software readiness is not psychometric or participant validation.
+
+Run the source-only report and golden replay gate with:
+
+```bash
+make assessment-calibration-check
+```
+
 ## What M6H-01 adds
 
 - One authenticated **Weekly** surface connecting the latest verified
@@ -725,7 +758,8 @@ Migrations and canonical seeding run safely on startup.
 - Direct local-network HTTP is supported. Add Caddy or another proxy later for
   HTTPS or remote access; no proxy is included in M1.
 - The product and assessment are not psychometrically validated and do not
-  score dignity, virtue, perfection, or human worth.
+  score dignity, virtue, perfection, or human worth. M6I-03 makes the eight
+  missing participant evidence axes explicit but does not mark any complete.
 
 ## Documentation
 

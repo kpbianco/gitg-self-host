@@ -14,5 +14,6 @@
 - [ADR 0012 — Weekly execution and proof review remain outside evidence creation](0012-weekly-execution-and-proof-review.md)
 - [ADR 0013 — Composite assessment and human-closeout credit](0013-composite-assessment-and-human-closeout-credit.md)
 - [ADR 0014 — Explicit applicability and personal coverage](0014-explicit-applicability-and-personal-coverage.md)
+- [ADR 0015 — Assessment calibration readiness is source-only](0015-assessment-calibration-readiness.md)
 
 Accepted records are binding unless a later record explicitly supersedes them.

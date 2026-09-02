@@ -1287,3 +1287,29 @@ specialist acceptance remains false. This is owner-approved software
 architecture, not psychometric, clinical, cultural, accessibility,
 privacy/safety-specialist, participant, longitudinal, or intervention-
 effectiveness validation.
+
+# Current M6I-02 applicability and personal coverage — 2026-09-02
+
+Decision 054 adds a direct explicit not-applicable route to an active
+recommendation and derives a separately labeled personal-applicable coverage
+denominator from latest verified current-epoch context revisions. Unknown,
+deferred, provided, and zero remain distinct; an empty denominator is
+unavailable. Applicability awards no credit and changes no canonical coverage,
+score state, recommendation mathematics, baseline, or historical replay.
+
+# Current M6I-03 assessment calibration readiness — 2026-09-02
+
+Decision 055 adds the source-only
+`GG-ASSESSMENT-CALIBRATION-READINESS-1.0` audit. It freezes the assessment v1.1
+specification, model, scorer, and coverage hashes; verifies the exact 50 core,
+43 clarifier, 37-lever, seven-family, and six-orientation inventory; and proves
+one direct item and one adaptive clarifier per lever with complete frozen
+coverage parity. The existing JavaScript golden replay remains mandatory.
+
+All eight empirical calibration axes remain `data_collection_required` with
+zero completed. The audit reads no database or private runtime data and changes
+no assessment, scoring, recommendation, evidence, completion, UI, migration,
+or replay behavior. It is not psychometric, fairness, accessibility-population,
+participant, longitudinal, or effectiveness validation. `ER-M6A-003` remains
+pending, `RG-M6A-002` remains open, and M6B specialist acceptance remains
+false.
