@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grounded-growth.local/contracts/assessment-calibration-analysis.schema.json",
+  "title": "Grounded Growth assessment calibration analysis readiness v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "analysis_contract_version",
+    "analysis_schema_version",
+    "assessment_run_count",
+    "claim_boundary",
+    "cohort_sufficiency",
+    "input_dataset_sha256",
+    "input_schema_version",
+    "item_summaries",
+    "participant_count",
+    "participant_evidence",
+    "privacy",
+    "report_sha256",
+    "response_quality",
+    "retest_summary",
+    "source_counts",
+    "timing_summary"
+  ],
+  "properties": {
+    "analysis_contract_version": {"const": "GG-ASSESSMENT-CALIBRATION-ANALYSIS-READINESS-1.0"},
+    "analysis_schema_version": {"const": "grounded-growth-assessment-calibration-analysis-v1"},
+    "assessment_run_count": {"type": "integer", "minimum": 0},
+    "claim_boundary": {"type": "string", "minLength": 300},
+    "cohort_sufficiency": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["descriptive_threshold_met", "minimum_descriptive_participants", "minimum_retest_participants", "retest_threshold_met"],
+      "properties": {
+        "descriptive_threshold_met": {"type": "boolean"},
+        "minimum_descriptive_participants": {"const": 30},
+        "minimum_retest_participants": {"const": 30},
+        "retest_threshold_met": {"type": "boolean"}
+      }
+    },
+    "input_dataset_sha256": {"$ref": "#/$defs/sha256"},
+    "input_schema_version": {"const": "grounded-growth-assessment-calibration-export-v1"},
+    "item_summaries": {
+      "type": "array",
+      "minItems": 93,
+      "maxItems": 93,
+      "items": {"$ref": "#/$defs/itemSummary"}
+    },
+    "participant_count": {"type": "integer", "minimum": 0},
+    "participant_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["axis_rows", "completed_axes", "open_axes", "required_axes"],
+      "properties": {
+        "axis_rows": {"type": "array", "minItems": 8, "maxItems": 8, "items": {"$ref": "#/$defs/axisRow"}},
+        "completed_axes": {"const": 0},
+        "open_axes": {"const": 8},
+        "required_axes": {"const": 8}
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["classification", "contains_exact_timestamps", "contains_free_text", "contains_identity", "contains_item_level_rows", "contains_participant_references", "contains_raw_responses", "remote_telemetry_used", "safe_for_public_sharing", "small_cell_threshold"],
+      "properties": {
+        "classification": {"const": "sensitive_aggregate_calibration_analysis"},
+        "contains_exact_timestamps": {"const": false},
+        "contains_free_text": {"const": false},
+        "contains_identity": {"const": false},
+        "contains_item_level_rows": {"const": false},
+        "contains_participant_references": {"const": false},
+        "contains_raw_responses": {"const": false},
+        "remote_telemetry_used": {"const": false},
+        "safe_for_public_sharing": {"const": false},
+        "small_cell_threshold": {"const": 5}
+      }
+    },
+    "report_sha256": {"$ref": "#/$defs/sha256"},
+    "response_quality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["flag_counts", "modifier"],
+      "properties": {
+        "flag_counts": {"type": "object", "additionalProperties": {"$ref": "#/$defs/cell"}},
+        "modifier": {"$ref": "#/$defs/numericSummary"}
+      }
+    },
+    "retest_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["consecutive_pairs", "exploratory_only", "item_agreement", "participants_with_retests"],
+      "properties": {
+        "consecutive_pairs": {"type": "integer", "minimum": 0},
+        "exploratory_only": {"const": true},
+        "item_agreement": {"type": "array", "maxItems": 50, "items": {"$ref": "#/$defs/retestItem"}},
+        "participants_with_retests": {"type": "integer", "minimum": 0}
+      }
+    },
+    "source_counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["application", "share_code"],
+      "properties": {
+        "application": {"type": "integer", "minimum": 0},
+        "share_code": {"type": "integer", "minimum": 0}
+      }
+    },
+    "timing_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["abandonment_captured", "completed_runs_only", "total_seconds"],
+      "properties": {
+        "abandonment_captured": {"const": false},
+        "completed_runs_only": {"const": true},
+        "total_seconds": {"$ref": "#/$defs/timingSummary"}
+      }
+    }
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "cell": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["count", "suppressed"],
+      "properties": {
+        "count": {"type": ["integer", "null"], "minimum": 0},
+        "suppressed": {"type": "boolean"}
+      }
+    },
+    "timingSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["observations", "median_seconds", "p25_seconds", "p75_seconds"],
+      "properties": {
+        "observations": {"$ref": "#/$defs/cell"},
+        "median_seconds": {"type": ["number", "null"], "minimum": 0},
+        "p25_seconds": {"type": ["number", "null"], "minimum": 0},
+        "p75_seconds": {"type": ["number", "null"], "minimum": 0}
+      }
+    },
+    "numericSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["observations", "median", "p25", "p75"],
+      "properties": {
+        "observations": {"$ref": "#/$defs/cell"},
+        "median": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "p25": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "p75": {"type": ["number", "null"], "minimum": 0, "maximum": 1}
+      }
+    },
+    "itemSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["distribution", "item_id", "item_kind", "observed_responses", "timing"],
+      "properties": {
+        "distribution": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["1", "2", "3", "4", "5", "NA"],
+          "properties": {
+            "1": {"$ref": "#/$defs/cell"},
+            "2": {"$ref": "#/$defs/cell"},
+            "3": {"$ref": "#/$defs/cell"},
+            "4": {"$ref": "#/$defs/cell"},
+            "5": {"$ref": "#/$defs/cell"},
+            "NA": {"$ref": "#/$defs/cell"}
+          }
+        },
+        "item_id": {"type": "string", "pattern": "^(Q[0-9]{2}|C_[A-Z0-9_]+|O_[A-Z0-9_]+)$"},
+        "item_kind": {"enum": ["core", "capability_clarifier", "orientation_clarifier"]},
+        "observed_responses": {"$ref": "#/$defs/cell"},
+        "timing": {"$ref": "#/$defs/timingSummary"}
+      }
+    },
+    "axisRow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["axis_id", "claim_status", "completed", "reason", "software_data_status"],
+      "properties": {
+        "axis_id": {"enum": ["item_response_distribution", "item_missingness_and_not_applicable", "test_retest_reliability", "convergent_and_discriminant_validity", "differential_item_functioning_and_fairness", "completion_burden_and_abandonment", "recommendation_fit", "longitudinal_outcome_association"]},
+        "claim_status": {"const": "not_established"},
+        "completed": {"const": false},
+        "reason": {"type": "string", "minLength": 25},
+        "software_data_status": {"enum": ["candidate_for_qualified_analysis", "more_consented_data_required", "more_consented_retests_required", "partial_input_only", "unsupported_input_required"]}
+      }
+    },
+    "retestItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["exact_agreement", "item_id", "mean_absolute_difference", "paired_observations"],
+      "properties": {
+        "exact_agreement": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "item_id": {"type": "string", "pattern": "^Q[0-9]{2}$"},
+        "mean_absolute_difference": {"type": ["number", "null"], "minimum": 0, "maximum": 4},
+        "paired_observations": {"$ref": "#/$defs/cell"}
+      }
+    }
+  }
+}

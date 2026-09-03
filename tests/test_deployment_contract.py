@@ -78,6 +78,9 @@ def test_repeatable_compose_acceptance_is_wired_into_make_and_ci():
     calibration_collection_script = (
         ROOT / "scripts" / "verify_assessment_calibration_collection.sh"
     ).read_text()
+    calibration_analysis_script = (
+        ROOT / "scripts" / "verify_assessment_calibration_analysis.sh"
+    ).read_text()
     login_probe = (ROOT / "scripts" / "verify_http_login.py").read_text()
     workflow = (ROOT / ".github" / "workflows" / "verification.yml").read_text()
     workflow_data = yaml.safe_load(workflow)
@@ -136,6 +139,11 @@ def test_repeatable_compose_acceptance_is_wired_into_make_and_ci():
     assert "verify_assessment_calibration_collection" in calibration_collection_script
     assert smoke_script.count("verify_assessment_calibration_collection") == 4
     assert "make assessment-calibration-collection-check PYTHON=python" in workflow
+    assert "assessment-calibration-analysis-check:" in makefile
+    assert "verify_assessment_calibration_analysis.sh" in makefile
+    assert "verify_assessment_calibration_analysis" in calibration_analysis_script
+    assert smoke_script.count("verify_assessment_calibration_analysis") == 4
+    assert "make assessment-calibration-analysis-check PYTHON=python" in workflow
     assert "Pilot readiness gate" in workflow
     assert set(workflow_data["jobs"]["pilot-ready"]["needs"]) == {
         "quality",

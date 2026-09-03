@@ -30,6 +30,7 @@ local_profiles:
       - M6H-01 weekly execution readiness
       - M6H-02 owner operations readiness
       - M6I-04 assessment calibration consent readiness
+      - M6I-05 assessment calibration analysis readiness
       - M6B deterministic catalog governance audit
 validation_levels:
   static: automated
@@ -53,6 +54,7 @@ mandatory_github_ci:
   - M6H-01 weekly execution readiness
   - M6H-02 owner operations readiness
   - M6I-04 assessment calibration consent readiness
+  - M6I-05 assessment calibration analysis readiness
   - M6B deterministic catalog governance audit
   - Playwright core journeys and retained diagnostics
   - Docker Compose deployment backup restore recreation and shutdown drill
