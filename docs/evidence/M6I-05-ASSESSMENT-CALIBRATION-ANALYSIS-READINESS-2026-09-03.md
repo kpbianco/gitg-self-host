@@ -46,13 +46,23 @@ Branch: `codex/m6i-05-calibration-analysis-readiness`
 - Exact final-tree repository-wide non-browser verification: 436 passed and 13
   browser tests deselected in 2,087.19 seconds.
 - Final manifest and diff checks: passed before publication.
-- Hosted results: pending final closeout.
+- Hosted results: passed as recorded below.
 
 ## Hosted verification
 
-Pending draft PR publication. Required jobs are Ruff/Django/pytest/readiness,
-Playwright core journeys, Docker Compose backup/restore/recreation, and the
-aggregate Pilot readiness gate.
+- Draft PR: [#51](https://github.com/tranquilWorks/gitg-self-host/pull/51),
+  initial feature head `29958a41dd3dd2d7c6df02b62c87bed3fcee5819`.
+- Verification run [#115](https://github.com/tranquilWorks/gitg-self-host/actions/runs/33787894970):
+  Ruff, Django, and pytest passed, including 436 tests with 13 browser tests
+  deselected in 3,079.57 seconds and every readiness check, including the
+  M6I-05 assessment-calibration analysis gate with 30 synthetic participants
+  and zero completed evidence axes.
+- Playwright passed all 13 core browser journeys with 436 non-browser tests
+  deselected in 161.76 seconds.
+- Docker Compose migration/bootstrap, authenticated HTTP, backup integrity,
+  container recreation, volume persistence, restore, and all readiness drills
+  passed, including M6I-05 before recreation and after restore.
+- Aggregate Pilot readiness gate: passed.
 
 ## Claim boundary
 
