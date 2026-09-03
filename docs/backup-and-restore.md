@@ -5,12 +5,15 @@
 Grounded Growth uses SQLite's online backup API instead of copying a live WAL
 database file. A database snapshot includes account, assessment, profile,
 context, Personal OS, practice, draft/submitted check-in, evidence, score,
-review, weekly-execution, and optional pilot-feedback data. Treat the database
-and every copy as sensitive private data.
+review, weekly-execution, assessment-calibration consent, and optional
+pilot-feedback data. Treat the database and every copy as sensitive private
+data.
 
 The downloadable owner archive is not a restorable database backup. The
-minimized evidence and pilot-feedback JSON files are analysis exports and also
-cannot restore the application.
+minimized evidence, pilot-feedback, and consent-filtered assessment calibration
+JSON files are analysis exports and also cannot restore the application. The
+calibration file contains linkable item responses and timing and remains
+sensitive even without account identity.
 
 ## Create and verify a pre-upgrade backup
 
@@ -50,6 +53,7 @@ Do not continue if backup verification fails.
 ```bash
 git rev-parse HEAD
 docker compose exec app python manage.py verify_m6h_operations_readiness
+docker compose exec app python manage.py verify_assessment_calibration_collection
 git pull --ff-only
 docker compose up -d --build --wait
 docker compose exec app python manage.py migrate --check
@@ -57,6 +61,7 @@ docker compose exec app python manage.py verify_evidence_events
 docker compose exec app python manage.py rebuild_score_state --verify-only
 docker compose exec app python manage.py verify_weekly_execution_readiness
 docker compose exec app python manage.py verify_m6h_operations_readiness
+docker compose exec app python manage.py verify_assessment_calibration_collection
 curl --fail http://127.0.0.1:${APP_PORT:-3000}/health/
 ```
 
@@ -82,6 +87,7 @@ docker compose exec app python manage.py verify_evidence_events
 docker compose exec app python manage.py rebuild_score_state --verify-only
 docker compose exec app python manage.py verify_weekly_execution_readiness
 docker compose exec app python manage.py verify_m6h_operations_readiness
+docker compose exec app python manage.py verify_assessment_calibration_collection
 curl --fail http://127.0.0.1:${APP_PORT:-3000}/health/
 ```
 

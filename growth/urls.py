@@ -22,6 +22,11 @@ urlpatterns = [
         views_data.owner_archive,
         name="owner-archive",
     ),
+    path(
+        "account/data/assessment-calibration-preview.json",
+        views_data.assessment_calibration_preview,
+        name="assessment-calibration-preview",
+    ),
     path("personal-os/", views_personal_os.personal_os, name="personal-os"),
     path("weekly/", views_weekly.weekly_execution, name="weekly-execution"),
     path("evidence/", views_evidence.evidence_ledger, name="evidence-ledger"),

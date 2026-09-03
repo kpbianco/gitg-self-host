@@ -1313,3 +1313,27 @@ or replay behavior. It is not psychometric, fairness, accessibility-population,
 participant, longitudinal, or effectiveness validation. `ER-M6A-003` remains
 pending, `RG-M6A-002` remains open, and M6B specialist acceptance remains
 false.
+
+# Current M6I-04 consented assessment calibration data — 2026-09-02
+
+ADR 0016 adds `GG-ASSESSMENT-CALIBRATION-CONSENT-1.0` as an explicit
+secondary-use boundary around already-stored completed assessment runs.
+Participant-created runs remain excluded by default; the Pilot 002 seed is
+ineligible. Consent, withdrawal, and later reconsent are authenticated,
+per-run, append-only, contiguous, idempotent, and snapshot/hash verified.
+
+The deterministic dataset links explicitly included retakes with a random
+pseudonymous participant token and exports item responses, clarifiers, timing,
+allowlisted response-quality summaries, run sequence, and whole-day intervals.
+It excludes identity, database and assessment IDs, exact timestamps, share
+codes, free text, Personal OS/context, practice/evidence/completion/score
+history, and derived profile outputs. The owner can inspect their contribution;
+the acknowledged local operator command writes a new mode-0600 file and never
+uploads or overwrites it.
+
+Withdrawal affects future exports and does not delete or mutate the underlying
+private assessment. Calibration consent is included in owner archive, account
+deletion, backup, restore, and migration rollback and is not an automated
+retention target. This software path contributes zero observations and closes
+zero M6I-03 evidence axes. Completed runs do not measure abandonment, and all
+qualified analysis and human validation gates remain open.

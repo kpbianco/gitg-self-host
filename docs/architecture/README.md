@@ -15,5 +15,6 @@
 - [ADR 0013 — Composite assessment and human-closeout credit](0013-composite-assessment-and-human-closeout-credit.md)
 - [ADR 0014 — Explicit applicability and personal coverage](0014-explicit-applicability-and-personal-coverage.md)
 - [ADR 0015 — Assessment calibration readiness is source-only](0015-assessment-calibration-readiness.md)
+- [ADR 0016 — Calibration reuse is explicit, local, and withdrawable](0016-consented-local-assessment-calibration-data.md)
 
 Accepted records are binding unless a later record explicitly supersedes them.

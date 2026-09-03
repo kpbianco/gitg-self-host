@@ -33,7 +33,14 @@ from growth.domain.weekly_execution import (
     WeeklyNextStep,
     week_end,
 )
-from growth.models import PilotFeedback, PracticeAction, PracticeCheckIn, PracticeProtocol
+from growth.models import (
+    AssessmentCalibrationConsent,
+    AssessmentRun,
+    PilotFeedback,
+    PracticeAction,
+    PracticeCheckIn,
+    PracticeProtocol,
+)
 from growth.services.pilot_feedback import (
     FEEDBACK_FIELD_STAGES,
     feedback_scope_errors,
@@ -41,6 +48,66 @@ from growth.services.pilot_feedback import (
 
 DELETE_ACCOUNT_CONFIRMATION = "DELETE MY ACCOUNT"
 APPLY_RETENTION_CONFIRMATION = "APPLY RETENTION"
+
+
+class AssessmentRunChoiceField(forms.ModelChoiceField):
+    def label_from_instance(self, obj):
+        return (
+            f"Assessment {obj.assessment_version} · {obj.created_at:%Y-%m-%d} · "
+            f"{obj.get_source_display()}"
+        )
+
+
+class AssessmentCalibrationConsentForm(forms.Form):
+    assessment_run = AssessmentRunChoiceField(
+        label="Completed assessment",
+        queryset=AssessmentRun.objects.none(),
+        empty_label=None,
+    )
+    acknowledge_sensitive_data = forms.BooleanField(
+        label=(
+            "I understand the calibration contribution contains item-level answers, "
+            "N/A choices, and timing and is sensitive pseudonymous data."
+        )
+    )
+    authorize_manual_export = forms.BooleanField(
+        label=(
+            "I consent to this completed assessment being included in a manual local "
+            "calibration export until I withdraw it."
+        )
+    )
+
+    def __init__(self, *args, user, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["assessment_run"].queryset = AssessmentRun.objects.filter(
+            user=user,
+            source__in=(AssessmentRun.Source.APPLICATION, AssessmentRun.Source.SHARE_CODE),
+        ).order_by("-created_at", "stable_id")
+
+
+class AssessmentCalibrationWithdrawalForm(forms.Form):
+    assessment_run = AssessmentRunChoiceField(
+        label="Included assessment",
+        queryset=AssessmentRun.objects.none(),
+        empty_label=None,
+    )
+
+    def __init__(self, *args, user, **kwargs):
+        super().__init__(*args, **kwargs)
+        latest = {}
+        for row in AssessmentCalibrationConsent.objects.filter(user=user).order_by(
+            "assessment_run_id", "revision"
+        ):
+            latest[row.assessment_run_id] = row
+        active_ids = [
+            assessment_run_id
+            for assessment_run_id, row in latest.items()
+            if row.state == AssessmentCalibrationConsent.State.CONSENTED
+        ]
+        self.fields["assessment_run"].queryset = AssessmentRun.objects.filter(
+            user=user,
+            stable_id__in=active_ids,
+        ).order_by("-created_at", "stable_id")
 
 
 class RetentionConfirmationForm(forms.Form):

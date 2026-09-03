@@ -38,6 +38,7 @@ jobs:
       - run: make composite-scoring-check PYTHON=python
       - run: make applicability-coverage-check PYTHON=python
       - run: make assessment-calibration-check PYTHON=python
+      - run: make assessment-calibration-collection-check PYTHON=python
       - run: make context-check PYTHON=python
       - run: make personal-os-check PYTHON=python
       - run: make context-priority-check PYTHON=python

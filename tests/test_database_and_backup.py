@@ -47,6 +47,7 @@ def test_backup_command_creates_consistent_database(tmp_path, user):
     assert set(manifest["inspection"]["critical_tables"]["auth_user"]) == {"rows", "sha256"}
     assert {
         "growth_assessmentrun",
+        "growth_assessmentcalibrationconsent",
         "growth_orientationresult",
         "growth_archetyperesult",
         "growth_leverbaseline",

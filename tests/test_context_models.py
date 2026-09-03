@@ -205,6 +205,7 @@ def test_migration_round_trip_preserves_all_preexisting_growth_rows():
     executor = MigrationExecutor(connection)
     original_leaves = executor.loader.graph.leaf_nodes()
     excluded = {
+        "growth_assessmentcalibrationconsent",
         "growth_assessmentcontext",
         "growth_completioncreditevent",
         "growth_compositeassessmentsnapshot",

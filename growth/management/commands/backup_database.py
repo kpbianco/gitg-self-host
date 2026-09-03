@@ -28,7 +28,7 @@ class Command(BaseCommand):
         output = options["output"] or settings.DATA_DIR / "backups" / (
             f"grounded_growth-{timestamp}.sqlite3"
         )
-        output = output.expanduser().resolve()
+        output = Path(output).expanduser().resolve()
         database_path = Path(connection.settings_dict["NAME"]).resolve()
         if output == database_path:
             raise CommandError("Backup output must not replace the live database.")

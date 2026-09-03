@@ -1,17 +1,19 @@
 schema_version: 1
 batch:
-  id: M6I-03-ASSESSMENT-CALIBRATION-READINESS
-  title: Make assessment calibration gaps explicit and executable
-  goal: Freeze a deterministic source-only calibration-readiness inventory for assessment v1.1, prove its structural coverage and golden replay, and enumerate the participant evidence still required without changing assessment, scoring, or runtime state.
+  id: M6I-04-CONSENTED-ASSESSMENT-CALIBRATION-DATA
+  title: Add explicit-consent local calibration data collection
+  goal: Let a person explicitly permit or withdraw one completed assessment from a sensitive pseudonymous local calibration export while preserving ordinary private assessment storage and every scoring runtime boundary.
 sources:
   product: products/gitg-self-host/product.yaml
   requirements:
-    - products/gitg-self-host/acceptance.yaml#GG-SCORING-DISPOSITION
+    - products/gitg-self-host/acceptance.yaml#GG-VALIDATION
     - docs/PRODUCT_DECISIONS.md#decision-055--assessment-calibration-readiness-is-not-validation
-  milestone: successor-to-M6I-02-APPLICABILITY-PERSONAL-COVERAGE
-  baseline_commit: e20daf5058220322918775b37816073e3bc7892e
+    - docs/architecture/0016-consented-local-assessment-calibration-data.md
+    - contracts/assessment-calibration-consent.yaml
+  milestone: successor-to-M6I-03-ASSESSMENT-CALIBRATION-READINESS
+  baseline_commit: 306a608990807e34b809b7e86ea94948bd636b42
 dependencies:
-  - M6I-02-APPLICABILITY-PERSONAL-COVERAGE
+  - M6I-03-ASSESSMENT-CALIBRATION-READINESS
 scope:
   allowed_paths:
     - AGENTS.md
@@ -20,78 +22,74 @@ scope:
     - MANIFEST.tsv
     - .github/workflows/**
     - contracts/**
-    - data/practices/registries/source_registry.yaml
-    - data/practices/release_manifest.yaml
     - docs/**
-    - reports/assessment-calibration/**
-    - reports/practice-content/**
+    - growth/**
     - scripts/**
+    - templates/growth/data_management.html
     - tests/**
   forbidden_paths:
-    - data/assessment/**
-    - data/curriculum/**
-    - data/model/**
-    - data/notion/**
-    - data/practices/protocols/**
-    - growth/**
-    - templates/**
-    - static/**
+    - data/**
+    - growth/static/**
+    - templates/growth/assessment.html
     - requirements*.txt
     - pyproject.toml
     - Dockerfile
     - docker-compose.yml
 acceptance:
-  - Decision 055 and ADR 0015 define GG-ASSESSMENT-CALIBRATION-READINESS-1.0 as a deterministic source-only audit, not psychometric or participant validation.
-  - The audit verifies the frozen assessment v1.1 spec model scorer and coverage artifact by exact SHA-256 digest without changing those source files.
-  - The inventory contains exactly 50 core items, 37 capability items, 12 orientation items, one response-quality item, 37 capability clarifiers, six orientation clarifiers, 37 levers, seven families, and six orientations.
-  - Every lever has exactly one direct core item and one adaptive capability clarifier; all referenced item, lever, family, and orientation IDs are valid and all scoring weights are positive.
-  - Recomputed core-signal counts, weight sums, and effective item counts match all 37 rows of the frozen assessment coverage artifact.
-  - The existing Pilot 001 golden scorer replay and GGA1/GGA11 compatibility remain exact.
-  - Decision source-registry and deterministic practice-report hashes are regenerated without changing any practice package.
-  - The report names every required participant calibration axis, records zero completed axes, and keeps calibration status data_collection_required.
-  - The report reads no database, assessment run, participant, owner-private, evidence, score, Personal OS, context, or pilot-feedback data.
-  - No migration, model, assessment question, scoring constant, recommendation rule, UI, runtime state, or production behavior changes.
-  - ER-M6A-003 RG-M6A-002 M6B specialist acceptance and all deferred human review gates remain open.
+  - ADR 0016 and the consent contract define GG-ASSESSMENT-CALIBRATION-CONSENT-1.0 as permission to reuse one already-stored completed assessment in a manual local export, not consent to an assessment or a validation result.
+  - No participant-created assessment is enrolled by default and the Pilot 002 demonstration seed is never eligible.
+  - Grant withdrawal and later reconsent are explicit authenticated CSRF-protected actions bound to an owned immutable assessment run.
+  - Consent history is append-only contiguous deterministic hash-verified and idempotent for an unchanged state.
+  - One random pseudonymous participant token links a person's explicitly included retakes while exact account identity database keys timestamps and assessment IDs remain excluded.
+  - The export contains only assessment version/source item responses clarifier responses timing response-quality summaries run sequence and whole-day intervals.
+  - The export excludes share codes free text Personal OS context practice evidence completion score orientation archetype lever domain and competency outputs.
+  - The owner may inspect their exact current contribution; withdrawal removes the run from every future export without changing or deleting the underlying private assessment.
+  - The operator export requires an explicit sensitive-data acknowledgement creates a new mode-0600 file and refuses overwrite.
+  - Calibration consent participates in the complete owner-private archive account-deletion preview backup restore and schema rollback boundaries and is never an automated retention target.
+  - Readiness accepts empty consent state fails closed on ownership revision token snapshot hash assessment or allowlist drift and prints no sensitive values.
+  - No assessment item scorer baseline recommendation evidence completion credit score state or historical replay behavior changes and no remote telemetry upload or background job is added.
+  - All eight empirical evidence axes remain data_collection_required with zero completed; software collection capability is not participant evidence or qualified analysis.
+  - ER-M6A-003 RG-M6A-002 M6B specialist acceptance and every deferred human validation gate remain open.
 validation:
   local:
-    - .venv/bin/python -m pytest tests/test_assessment_calibration_readiness.py tests/test_assessment_golden.py tests/test_assessment_integration.py
-    - make assessment-calibration-check PYTHON=.venv/bin/python
+    - .venv/bin/python -m pytest tests/test_assessment_calibration_consent.py tests/test_data_lifecycle.py tests/test_assessment_integration.py
+    - make assessment-calibration-collection-check PYTHON=.venv/bin/python
     - ./scripts/agent-verify.sh contract
     - ./scripts/agent-verify.sh quick
     - .venv/bin/python scripts/verify-manifest.py
     - git diff --check
   focused_tests_to_add:
-    - exact assessment and clarifier inventory with globally unique item IDs
-    - direct lever and adaptive clarifier completeness across all 37 levers
-    - recomputed coverage parity for counts weight sums and effective item counts
-    - fail-closed tamper cases for missing lever references duplicate IDs and stale report bytes
-    - explicit zero-completed participant evidence axes and unsupported-claim boundaries
+    - no implicit enrollment and Pilot seed exclusion
+    - append-only consent withdrawal reconsent idempotency ownership and CSRF
+    - deterministic pseudonymous cross-run export with exact allowlist and no identifier or share-code leakage
+    - fail-closed consent assessment revision token snapshot and hash tamper cases
+    - explicit operator acknowledgement no-overwrite and mode-0600 output
+    - owner archive deletion backup migration rollback and readiness integration
   required_ci:
     - Ruff Django pytest migration drift and manifest verification
-    - assessment calibration readiness deterministic report and golden replay
-    - unchanged Playwright core journeys
-    - unchanged Compose deployment drill
+    - assessment calibration source readiness and consent readiness
+    - unchanged Playwright core journeys plus data-management consent journey
+    - Compose migration backup restore recreation and readiness drill
     - aggregate Pilot readiness gate
 risk:
   class: high
   hazards:
-    - structural software checks are mislabeled psychometric validation
-    - committed owner or participant responses leak into a report
-    - a generated report silently changes assessment or scoring semantics
-    - a missing or weakly covered lever is hidden by aggregate counts
-    - an uncollected calibration axis is represented as passed
+    - ordinary assessment use is silently treated as research participation
+    - a supposedly anonymous export retains linkable or identifying fields without warning
+    - withdrawal fails to remove a run from a later export
+    - consent or export mutates assessment or developmental state
+    - software capability is mislabeled collected evidence or validation
   stop_conditions:
-    - any data/assessment source byte changes
-    - any database or owner participant runtime record is read or written
-    - any assessment score baseline recommendation completion or replay behavior changes
-    - any participant calibration axis is marked complete without retained evidence
+    - any assessment source scorer model or canonical content byte changes
+    - any participant run is exported without latest explicit consent
+    - any identity exact timestamp share code free text or developmental output enters the calibration export
+    - any remote upload automatic enrollment background collection or silent overwrite is added
+    - any empirical evidence axis is marked complete without retained consented data and qualified analysis
     - a required local or hosted gate fails
 rollback:
-  strategy: Revert the source-only contract report verifier tests and documentation as one batch; assessment v1.1 runtime data and all historical state remain untouched.
+  strategy: Reverse migration 0013 after removing the consent/export UI service command readiness and owner-archive-v3 changes; all pre-existing assessment evidence score practice and owner-private records remain untouched.
 evidence:
   output:
-    - reports/assessment-calibration/assessment_calibration_readiness_v1.json
-    - reports/assessment-calibration/assessment_calibration_readiness_v1.md
-    - docs/evidence/M6I-03-ASSESSMENT-CALIBRATION-READINESS-<date>.md
+    - docs/evidence/M6I-04-CONSENTED-ASSESSMENT-CALIBRATION-DATA-<date>.md
     - exact local and hosted CI results
-  claim_boundary: Deterministic source-only software calibration readiness only; no specialist psychometric clinical cultural accessibility-population privacy/safety participant longitudinal release deployment mastery or intervention-effectiveness acceptance.
+  claim_boundary: Deterministic opt-in local collection software only; no anonymous-data participant-sample psychometric fairness accessibility-population clinical cultural longitudinal recommendation-fit abandonment effectiveness release deployment mastery or specialist acceptance.

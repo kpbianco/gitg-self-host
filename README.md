@@ -62,7 +62,9 @@ keeping specialist acceptance pending.
 M6I replaces event-level score mutation prospectively: the concise assessment
 projects starting priorities across all 383 competencies, check-ins remain
 immutable evidence, and only an explicit whole-practice closeout records 75%
-or 100% completion credit. Completion is not mastery.
+or 100% completion credit. It also adds explicit N/A/personal coverage,
+source-only assessment calibration readiness, and opt-in local calibration
+reuse. Completion is not mastery, and collection software is not validation.
 
 ## Deployment essentials
 
@@ -387,6 +389,35 @@ Run the source-only report and golden replay gate with:
 make assessment-calibration-check
 ```
 
+## What M6I-04 adds
+
+- Explicit per-completed-run consent, withdrawal, and reconsent for secondary
+  assessment-calibration use; ordinary assessment use remains excluded.
+- A user-inspectable, sensitive pseudonymous contribution containing only item
+  responses, clarifiers, timing, response-quality summaries, run sequence, and
+  coarse whole-day retest intervals.
+- No identity, exact timestamps, share codes, free text, private context,
+  developmental history, derived profile outputs, telemetry, or automatic
+  upload.
+- An explicit operator command that refuses unacknowledged export and overwrite
+  and creates a mode-0600 file.
+- Full owner archive, account-deletion, backup/restore, migration, and readiness
+  integration. Collection capability completes zero empirical evidence axes.
+
+Run the isolated consent/readiness gate with:
+
+```bash
+make assessment-calibration-collection-check
+```
+
+Write the explicitly consented local dataset with:
+
+```bash
+python manage.py export_assessment_calibration_dataset \
+  --output /private/path/calibration.json \
+  --confirm-sensitive-export
+```
+
 ## What M6H-01 adds
 
 - One authenticated **Weekly** surface connecting the latest verified
@@ -414,6 +445,9 @@ make m6h-weekly-check
 - The complete archive contains only the signed-in owner's records, labels
   private narrative as unsafe to share, and excludes credentials, sessions,
   other users, opaque database keys, server metadata, and secrets.
+- Calibration consent and its pseudonymous participant token are included in
+  the owner-private archive and account-deletion boundary; neither is safe to
+  publish merely because the separate calibration export is minimized.
 - Account deletion requires the current password, the exact irreversible
   phrase, and an unchanged signed preview. It runs transactionally, removes
   that owner's sessions and owned records, and preserves canonical content,

@@ -222,6 +222,7 @@ def test_owner_archive_is_complete_deterministic_private_and_cross_user_isolated
     assert archive["privacy"]["safe_for_sharing"] is False
     assert set(archive["records"]) == {
         "archetype_results",
+        "assessment_calibration_consents",
         "assessment_context",
         "assessment_runs",
         "composite_assessment_snapshots",
@@ -278,10 +279,10 @@ def test_owner_archive_download_and_deletion_groups_include_composite_state(clie
     archive = client.get(reverse("growth:owner-archive"))
     assert archive.status_code == 200
     assert archive["Content-Disposition"] == (
-        'attachment; filename="grounded-growth-owner-private-archive-v2.json"'
+        'attachment; filename="grounded-growth-owner-private-archive-v3.json"'
     )
     assert json.loads(archive.content)["schema_version"] == (
-        "grounded-growth-owner-private-archive-v2"
+        "grounded-growth-owner-private-archive-v3"
     )
 
     management = client.get(reverse("growth:data-management"))
@@ -309,7 +310,11 @@ def test_operations_readiness_is_deterministic_read_only_and_privacy_safe(user, 
 
 @pytest.mark.django_db
 def test_archive_and_data_management_require_authentication(client):
-    for name in ("growth:data-management", "growth:owner-archive"):
+    for name in (
+        "growth:data-management",
+        "growth:owner-archive",
+        "growth:assessment-calibration-preview",
+    ):
         response = client.get(reverse(name))
         assert response.status_code == 302
         assert response.url.startswith("/accounts/login/")
