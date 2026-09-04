@@ -63,8 +63,9 @@ M6I replaces event-level score mutation prospectively: the concise assessment
 projects starting priorities across all 383 competencies, check-ins remain
 immutable evidence, and only an explicit whole-practice closeout records 75%
 or 100% completion credit. It also adds explicit N/A/personal coverage,
-source-only assessment calibration readiness, and opt-in local calibration
-reuse. Completion is not mastery, and collection software is not validation.
+source-only assessment calibration readiness, opt-in local calibration reuse,
+and a privacy-safe offline aggregate analysis-readiness packet. Completion is
+not mastery, and collection or analysis software is not validation.
 
 ## Deployment essentials
 
@@ -417,6 +418,40 @@ python manage.py export_assessment_calibration_dataset \
   --output /private/path/calibration.json \
   --confirm-sensitive-export
 ```
+
+## What M6I-05 adds
+
+- An exact, hash-verified reader for the M6I-04 consented export that never
+  queries the application database or uploads data.
+- A deterministic private aggregate containing only small-cell-suppressed item
+  distributions and timing summaries, allowlisted response-quality summaries,
+  exploratory linked-retest agreement, and explicit per-axis limitations.
+- Fixed 30-participant descriptive and linked-retest workflow thresholds that
+  never become sample-adequacy, reliability, validity, fairness, burden, fit,
+  outcome, or effectiveness claims.
+- Explicit recognition that completed-run timing cannot measure abandonment
+  and that M6I-04 does not collect external reference measures,
+  population-group variables, fit judgments, or longitudinal outcomes.
+- An acknowledged operator command that creates a new mode-0600 aggregate,
+  refuses overwrite, and keeps every participant evidence axis incomplete and
+  not established.
+
+Run the synthetic database-free readiness gate with:
+
+```bash
+make assessment-calibration-analysis-check
+```
+
+Analyze an explicitly consented export on private local storage with:
+
+```bash
+python manage.py analyze_assessment_calibration_dataset \
+  --input /private/path/calibration.json \
+  --output /private/path/calibration-analysis.json \
+  --confirm-sensitive-input
+```
+
+The aggregate remains sensitive and is not approved for public sharing.
 
 ## What M6H-01 adds
 

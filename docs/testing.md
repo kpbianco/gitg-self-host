@@ -246,6 +246,16 @@ only counts and contract boundaries.
 - explicit sensitive-export acknowledgement, no overwrite, mode-0600 output,
   owner preview, archive/deletion inclusion, migration rollback, and zero
   participant evidence axes completed.
+- exact M6I-04 export schema, hash, privacy allowlist, participant/run ordering,
+  source, response, timing, and quality validation before aggregate analysis;
+- deterministic schema-validated private aggregate output, duplicate-key
+  rejection, small-cell suppression, no participant references/rows or raw
+  response/timing values, and zero completed evidence axes;
+- fixed descriptive and linked-retest workflow thresholds, exploratory
+  consecutive-pair agreement, explicit missing-input and completed-run
+  abandonment limitations, and unchanged collection-export compatibility;
+- acknowledged input, separate output, no overwrite, mode-0600 file creation,
+  and synthetic database-free analysis readiness.
 
 `make e2e` uses Playwright Chromium for the established browser journeys,
 including the M6C-04 Personal OS/context and M6H-01 weekly journeys:

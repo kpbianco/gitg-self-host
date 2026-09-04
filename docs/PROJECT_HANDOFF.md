@@ -1337,3 +1337,30 @@ deletion, backup, restore, and migration rollback and is not an automated
 retention target. This software path contributes zero observations and closes
 zero M6I-03 evidence axes. Completed runs do not measure abandonment, and all
 qualified analysis and human validation gates remain open.
+
+# Current M6I-05 assessment calibration analysis readiness — 2026-09-03
+
+ADR 0017 adds `GG-ASSESSMENT-CALIBRATION-ANALYSIS-READINESS-1.0` as a deterministic,
+local-only analysis boundary for an exact M6I-04 consented export. The
+operator command requires explicit sensitive-input acknowledgement, verifies
+the export and its hash, reads no database, performs no upload, refuses
+overwrite, and creates a mode-0600 private aggregate.
+
+The report contains only exact cohort/source totals, small-cell-suppressed item
+distributions and timing summaries, allowlisted response-quality summaries,
+threshold status, exploratory linked-retest agreement, and explicit per-axis
+limitations. Participant rows, pseudonyms, raw responses and timing, exact
+timestamps, identity, share codes, free text, Personal OS/context,
+practice/evidence/completion/score history, and derived profile outputs remain
+excluded. The aggregate remains sensitive and is not safe for public sharing.
+
+Thirty consented participants and thirty linked-retest participants are fixed
+software workflow thresholds. Meeting them makes a dataset only a candidate
+for qualified analysis. The M6I-04 export lacks external reference measures,
+population-group variables, abandoned attempts, fit judgments, and
+longitudinal outcomes; completed-run timing cannot measure abandonment. All
+eight participant evidence axes remain incomplete and not established with
+`completed_axes` fixed at zero. All qualified-analysis, specialist,
+psychometric, fairness, accessibility-population, cultural, participant,
+clinical, longitudinal, release, deployment, mastery, and effectiveness gates
+remain open.

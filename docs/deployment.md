@@ -277,6 +277,23 @@ fails closed if consent or included assessment data does not replay. Withdrawal
 removes a run from future exports but cannot recall a previously downloaded
 copy; handle every copy under the agreed private-data lifecycle.
 
+Analyze that exact export only on private local storage:
+
+```bash
+docker compose exec app python manage.py analyze_assessment_calibration_dataset \
+  --input /data/backups/assessment-calibration.json \
+  --output /data/backups/assessment-calibration-analysis.json \
+  --confirm-sensitive-input
+```
+
+The analyzer verifies the export contract and hash, reads no live database,
+performs no upload, refuses overwrite, and creates mode `0600`. Its aggregate
+suppresses nonzero cells below five and omits participant rows, pseudonyms, raw
+responses, raw timing, and identity-bearing fields. It is still sensitive and
+not safe for public sharing. Its 30-participant workflow thresholds and
+exploratory retest agreement do not establish reliability, validity, fairness,
+burden, fit, outcomes, or any other participant evidence axis.
+
 ## HTTPS or remote access later
 
 M1 intentionally has no reverse proxy. For remote access, first establish an

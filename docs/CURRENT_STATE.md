@@ -1,8 +1,8 @@
 # Current state
 
-Last updated: 2026-09-02
-Implementation branch: `codex/m6i-04-consented-calibration-data`
-Baseline: `306a608990807e34b809b7e86ea94948bd636b42`
+Last updated: 2026-09-03
+Implementation branch: `codex/m6i-05-calibration-analysis-readiness`
+Baseline: `d2b326e1760f1904487369623bf51dc37b89c426`
 
 ## Canonical runtime and scoring
 
@@ -75,14 +75,40 @@ Baseline: `306a608990807e34b809b7e86ea94948bd636b42`
   zero of the eight empirical evidence axes. Completed runs do not measure
   abandonment.
 
+## M6I-05 assessment calibration analysis readiness
+
+- ADR 0017 defines
+  `GG-ASSESSMENT-CALIBRATION-ANALYSIS-READINESS-1.0` as a local-only analyzer
+  for an exact, hash-verified M6I-04 export.
+- The analyzer reads no live database, makes no network call or upload, and
+  emits no participant rows, pseudonyms, raw responses, raw timing, identity,
+  exact timestamps, share codes, free text, private context, developmental
+  history, or derived profile output.
+- Its deterministic private aggregate contains exact cohort/source totals,
+  response and timing summaries with nonzero cells below five suppressed,
+  allowlisted response-quality summaries, workflow-threshold status, and
+  explicit per-axis limitations.
+- Thirty consented participants and thirty linked-retest participants are
+  software workflow thresholds only. Exploratory consecutive-pair agreement
+  is not a reliability conclusion.
+- External reference measures, population-group variables, abandoned
+  attempts, participant fit judgments, and longitudinal outcomes remain
+  missing. Completed-run timing cannot measure abandonment.
+- All eight participant evidence axes remain incomplete and not established;
+  `completed_axes` remains zero even when a threshold is met.
+- Operator analysis requires explicit acknowledgement, creates a new mode-0600
+  file, refuses overwrite, and leaves consent, collection, assessment, score,
+  recommendation, evidence, completion, UI, migrations, and replay unchanged.
+
 ## Verification
 
-The bounded M6I-04 gate is:
+The bounded M6I-05 gate is:
 
 ```bash
 make assessment-calibration-check PYTHON=.venv/bin/python
 make assessment-calibration-collection-check PYTHON=.venv/bin/python
-.venv/bin/python -m pytest tests/test_assessment_calibration_consent.py tests/test_data_lifecycle.py tests/test_assessment_integration.py
+make assessment-calibration-analysis-check PYTHON=.venv/bin/python
+.venv/bin/python -m pytest tests/test_assessment_calibration_analysis.py tests/test_assessment_calibration_consent.py tests/test_deployment_contract.py
 ./scripts/agent-verify.sh contract
 ./scripts/agent-verify.sh quick
 ```

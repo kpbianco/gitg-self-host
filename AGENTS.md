@@ -148,6 +148,16 @@ The accepted rationale is recorded in
   Keep identity, exact timestamps, share codes, free text, private context,
   developmental history, and derived profile outputs outside its allowlist;
   never upload it automatically or silently overwrite an existing copy.
+- Calibration analysis must consume only an exact, hash-verified M6I-04 export.
+  It must not query the application database, use a network service, infer
+  uncollected inputs, or emit participant rows, pseudonyms, raw responses, raw
+  timing, exact timestamps, identity, share codes, free text, private context,
+  developmental history, or derived profile outputs.
+- Suppress nonzero aggregate cells below five. The 30-participant descriptive
+  and linked-retest thresholds are software workflow thresholds, not evidence
+  or validation thresholds. Every calibration evidence axis remains open and
+  `completed_axes` remains zero until qualified analysis and separate human
+  review truthfully establish it.
 - Never infer missing task-to-lever links from display strings at runtime.
 - Practice packages, registries, schemas, and the activation ledger under
   `data/practices/` are the canonical protocol source. Do not restore a
@@ -431,7 +441,7 @@ or production behavior. Structural readiness must not be described as
 psychometric, fairness, participant, longitudinal, or effectiveness
 validation.
 
-M6I-04-CONSENTED-ASSESSMENT-CALIBRATION-DATA is the current software slice.
+M6I-04-CONSENTED-ASSESSMENT-CALIBRATION-DATA is reviewed and merged.
 It adds explicit per-completed-run consent, withdrawal, reconsent, an
 owner-inspectable contribution, and an acknowledged mode-0600 local operator
 export. One random token links included retakes without exporting identity,
@@ -439,6 +449,15 @@ exact timestamps, assessment IDs, share codes, free text, developmental
 history, or derived profile outputs. It adds no telemetry and changes no
 assessment, recommendation, evidence, completion, score, or replay behavior.
 Software collection capability completes zero participant evidence axes.
+
+M6I-05-ASSESSMENT-CALIBRATION-ANALYSIS-READINESS is the current software
+slice. It validates an exact M6I-04 export and writes a deterministic private
+aggregate with small-cell suppression, fixed workflow thresholds, exploratory
+linked-retest agreement, and explicit missing-input reasons. It reads no
+database, uploads nothing, includes no participant rows or raw values, and
+keeps all eight participant evidence axes open with zero completed. Aggregate
+analysis readiness is not psychometric, fairness, participant, longitudinal,
+or effectiveness validation.
 
 <!-- BEGIN PORTFOLIO-CONTROL MANAGED -->
 ## Governed agentic delivery

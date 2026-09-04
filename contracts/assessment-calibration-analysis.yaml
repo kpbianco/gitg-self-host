@@ -1,0 +1,54 @@
+contract_version: GG-ASSESSMENT-CALIBRATION-ANALYSIS-READINESS-1.0
+input_schema_version: grounded-growth-assessment-calibration-export-v1
+report_schema_version: grounded-growth-assessment-calibration-analysis-v1
+purpose: Validate an explicitly consented local calibration export and produce a deterministic private aggregate that makes data sufficiency and unsupported claims explicit.
+execution:
+  location: local_operator_only
+  database_access: forbidden
+  remote_upload: forbidden
+  input_classification: sensitive_pseudonymous_assessment_data
+  output_classification: sensitive_aggregate_calibration_analysis
+  acknowledgement_required: true
+  overwrite: forbidden
+  output_file_mode: "0600"
+thresholds:
+  small_cell_threshold: 5
+  minimum_descriptive_participants: 30
+  minimum_retest_participants: 30
+aggregates:
+  included:
+    - exact cohort and completed-run counts
+    - item response distributions with small-cell suppression
+    - item and completed-run timing summaries with small-cell suppression
+    - allowlisted response-quality summary counts
+    - consecutive linked-retest exploratory agreement summaries only after threshold
+    - explicit per-axis software data sufficiency and missing-input reasons
+  excluded:
+    - participant references and participant-level rows
+    - raw item responses and timing values
+    - identity exact timestamps share codes and free text
+    - Personal OS context practice evidence completion and scores
+    - orientation archetype lever domain and competency outputs
+    - inferred demographic or protected-class membership
+participant_evidence_axes:
+  - item_response_distribution
+  - item_missingness_and_not_applicable
+  - test_retest_reliability
+  - convergent_and_discriminant_validity
+  - differential_item_functioning_and_fairness
+  - completion_burden_and_abandonment
+  - recommendation_fit
+  - longitudinal_outcome_association
+axis_boundary:
+  completed_axes: 0
+  descriptive_threshold_is_validation: false
+  exploratory_retest_is_reliability_validation: false
+  completed_run_timing_measures_abandonment: false
+  qualified_analysis_required: true
+unsupported_inputs:
+  convergent_and_discriminant_validity: consented_external_reference_measures
+  differential_item_functioning_and_fairness: consented_population_group_variables_and_prespecified_comparisons
+  completion_burden_and_abandonment: explicitly_consented_abandoned_attempt_data
+  recommendation_fit: linked_participant_fit_judgment
+  longitudinal_outcome_association: linked_prespecified_longitudinal_outcome_measure
+claim_boundary: Aggregate software output and threshold checks are analysis readiness only; retained consented data, prespecified methods, qualified analysis, and separate human review remain required for every validation claim.
