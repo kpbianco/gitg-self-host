@@ -1,0 +1,374 @@
+schema_version: GG-TAILORED-PRACTICE-AUTHORING-1.0
+domain_id: '13'
+exercises:
+  '13.01':
+    title: "Build and test a small life-administration inbox"
+    goal: "Retrieve an essential record and handle one obligation before it becomes a crisis."
+    scope_note: "Three obligations test capture, action and retrieval. A complete administration system also needs secure records, recurring renewals and handling of complex obligations over time."
+    burden: "About 30 minutes to sort and handle an item, then 5 minutes for a separate retrieval check."
+    setup: "Use three non-sensitive examples of mail, appointments, forms or renewals, a folder or envelope, and a calendar you already use. Keep identity numbers and document contents out of the application."
+    actions:
+      - title: "Sort three obligations by next action"
+        instructions: "For each item identify the sender, required action, due date, and where confirmation will be kept. Use these categories: act, waiting for someone, keep as a record, or safely discard. Example: an appointment letter needs a calendar entry, travel preparation, and a confirmation location; it is not merely a document to file."
+        checks: [Three items have next actions, Dates or absence of a deadline are explicit, Sensitive contents remain private]
+      - title: "Complete one action and file its proof"
+        instructions: "Handle the smallest due item within your authority: confirm an appointment, cancel an unwanted reminder, or prepare a form for checking. Store the confirmation in one named location and record the next dependency. Do not submit a legal or financial form whose meaning you do not understand."
+        checks: [One authorized action is completed, Confirmation has a retrieval location, The next dependency is identified]
+      - title: "Test retrieval and the next review"
+        instructions: "After putting the materials away, find the confirmation and next deadline without reconstructing the whole process. Check whether another reminder is necessary and reserve a short recurring inbox review. If retrieval fails, rename or simplify the folder before adding more records."
+        checks: [The confirmation can be found, The deadline can be found, A sustainable review cue is chosen]
+    adaptation: "Use a single envelope and paper calendar, dictation, translated labels or a trusted supporter. If documents are inaccessible, work with fictional appointment and renewal notices; this tests the system rather than resolving the real obligation."
+    review: "Which obligation became easier to act on, and where could an item still disappear?"
+    examples:
+      supportive: "An appointment was confirmed and its confirmation and travel reminder were found on the next check."
+      mixed: "The records are searchable but the calendar reminder was set for the wrong day."
+      contradictory: "Sensitive identification details were copied into a shared task list or an unread form was submitted."
+      inconclusive: "Folders were created but no obligation was handled or retrieved."
+  '13.02':
+    title: "Make one home upkeep routine easy to repeat"
+    goal: "Connect a household function to a clear cue, accessible storage, and a tested upkeep routine."
+    scope_note: "One area tests organizing, upkeep cues and shared burden. It does not cover the maintenance needs of an entire home or show long-term reliability after two uses."
+    burden: "About 20–40 minutes for one reversible change, followed by two ordinary uses and a brief review."
+    setup: "Choose a small area you control, such as an entry tray, reusable shopping bag station or clean-towel shelf. Use existing containers and avoid repairs, chemicals, climbing, heavy lifting and permanent modifications."
+    actions:
+      - title: "Describe the function and current friction"
+        instructions: "State what the area must enable, who controls it, and what repeatedly goes wrong. For a bag station, the function is taking a usable bag when leaving; the failure may be storing it where it is forgotten. Identify safe reach, a clear passage, no hazardous work, a reset cue and what counts as ready, such as one usable bag."
+        checks: [The household function is explicit, A repeated friction is identified, Access and ownership are checked]
+      - title: "Design one small upkeep cue"
+        instructions: "Choose one reversible change tied to the friction: put the bags beside an existing departure item or add a visible note at a reachable location. Specify when the area is reset and what enough means, such as one clean bag ready. Check with anyone who shares the area before changing their arrangement."
+        checks: [One change addresses the friction, The reset cue and enough condition are defined, Shared use is respected]
+      - title: "Install and test the arrangement"
+        instructions: "Make the agreed change using existing materials. Rehearse retrieving and returning the item from your ordinary position. Check that the arrangement leaves exits, ventilation, mobility equipment and other necessary items unobstructed. Undo the change if it creates a new access or safety problem."
+        checks: [The reversible change is installed, Retrieval and return are rehearsed, Safe access is preserved]
+      - title: "Review two ordinary upkeep opportunities"
+        instructions: "At two natural uses, note whether the cue was noticed and the item was ready. Record any reset, missing supply, extra burden or interruption. Keep, move or remove the cue based on those observations. A routine that looks tidy but repeatedly fails its function needs a different design."
+        checks: [Two opportunities are distinguished, Readiness and reset burden are observed, The arrangement is retained or revised for a reason]
+    adaptation: "Use a seated reach, tactile marker, clear label or shared reminder. Reducing the routine to a single ready item may be more useful than reorganizing a whole room."
+    review: "Did the new arrangement prevent the old failure, and who now carries the upkeep burden?"
+    examples:
+      supportive: "A bag was ready on both departures and returning it took one ordinary motion."
+      mixed: "The cue worked once but another household member could not comfortably reach the storage."
+      contradictory: "The new arrangement blocked passage or transferred all upkeep to an unwilling person."
+      inconclusive: "The area was rearranged but no natural use or reset was observed."
+  '13.03':
+    title: "Clean one surface with the right method"
+    goal: "Match a cleaning method to a surface and soil while controlling exposure, cross-contamination and waste."
+    scope_note: "One compatible washable surface practices method selection and contamination control. It does not demonstrate sanitation of hazardous materials or all household surfaces."
+    burden: "About 10 minutes to read directions and 15–25 minutes to clean and inspect one surface."
+    setup: "Choose an ordinary washable table or counter, its care instructions, a cloth and one compatible household cleaner. Exclude bodily fluids, pests, unknown mold, hazardous waste and specialist remediation."
+    actions:
+      - title: "Read the surface and product instructions"
+        instructions: "Identify the surface material, visible soil, product compatibility, required ventilation and any protective equipment on the label. Distinguish removing dirt from a separate disinfecting claim. Never mix products or decant them into food containers. If the material or residue is unknown, stop and identify it before treatment."
+        checks: [Surface and soil are identified, Product directions and compatibility are checked, Mixing and hazardous residues are excluded]
+      - title: "Work from a clean area toward the soil"
+        instructions: "Remove ordinary loose debris, test the compatible method on a small unobtrusive area, then clean the chosen surface using label directions. Keep the dirty cloth away from food and clean items. Rinse only if required and allow the surface to dry; do not interpret a fragrance as evidence of sanitation."
+        checks: [A small compatibility test is completed, The labelled cleaning method is followed, Dirty materials are kept separate]
+      - title: "Inspect and reset the cleaning materials"
+        instructions: "Inspect under ordinary light for remaining residue and material damage. Clean or dispose of the cloth as appropriate, close the product and put it in its designated safe storage. Follow local disposal instructions for packaging or residues. Note what should change next time without adding stronger chemicals by default."
+        checks: [Residue and damage are inspected, Materials are safely cleaned or discarded, Product storage and disposal are checked]
+    adaptation: "Use a small reachable patch, fragrance-free compatible product or a helper for handling. If suitable equipment or ventilation is unavailable, compare labels and rehearse the sequence without applying anything."
+    review: "Was the original soil removed without introducing a new material, exposure or contamination problem?"
+    examples:
+      supportive: "A washable surface was cleaned with one compatible product and the dirty cloth was safely handled."
+      mixed: "Most soil was removed but a residue requires checking the manufacturer's instructions."
+      contradictory: "Products were mixed or a damaged finish was ignored because the surface smelled clean."
+      inconclusive: "A product was selected but no compatible surface was cleaned or inspected."
+  '13.04':
+    title: "Take one garment through a complete care cycle"
+    goal: "Use fabric-care information to clean, dry, inspect and store a garment without preventable damage."
+    scope_note: "One garment practices interpreting care instructions and using an appropriate method. Sewing, stain diagnosis and specialist textile care require additional practice."
+    burden: "About 15 minutes of preparation and review plus the garment's specified washing and drying time."
+    setup: "Choose an ordinary washable garment with a readable care label, compatible detergent, drying space and your normal laundry access. Use an old low-value item for any repair practice."
+    actions:
+      - title: "Turn the care label into a plan"
+        instructions: "Read washing, bleaching, drying and ironing restrictions. Check pockets, fasteners, colors and any stain, then choose a compatible load or separate treatment. Example: a cool-wash, air-dry garment should not be added to a hot wash and high-heat dryer simply because its color matches."
+        checks: [Care restrictions are interpreted, Pockets and garment condition are checked, The load and drying method fit the label]
+      - title: "Wash and dry without improvising chemistry"
+        instructions: "Follow the garment and product directions for the selected method and detergent amount. Separate unsuitable items and do not mix stain treatments. After washing, use the specified drying method and check whether the item is actually dry before storage. If a stain remains, check care guidance before applying heat or another treatment."
+        checks: [The selected care method is followed, Drying respects the garment restriction, Remaining stain and moisture are checked]
+      - title: "Inspect serviceability and plan a repair"
+        instructions: "Check seams, closures, shape and cleanliness. Fold or hang appropriately. For a loose button or seam, identify the repair needed and either follow a supplied repair guide on a spare item or arrange suitable help; do not practice on protective or safety-critical clothing. Record whether care preserved function and what needs follow-up."
+        checks: [Cleanliness and structural condition are inspected, Storage matches the garment, Repair needs have a proportionate disposition]
+    adaptation: "Use accessible laundry controls, a smaller load, line drying or an agreed helper. If laundry access is absent, make the label-based plan and identify an available service; practical laundering remains untested."
+    review: "Which care decision prevented damage, and what would you do differently for another fabric?"
+    examples:
+      supportive: "A restricted garment was washed compatibly, air-dried and stored dry with a loose seam flagged."
+      mixed: "The garment is clean but shrinking or a persistent stain suggests the care plan needs review."
+      contradictory: "A warning label was ignored or a damp garment was sealed away."
+      inconclusive: "The label was read but no care cycle or clearly labelled planning alternative was completed."
+  '13.05':
+    title: "Prepare and improve one simple bean skillet"
+    goal: "Coordinate preparation, gentle heat, seasoning and cleanup while producing a simple meal that fits the eater."
+    scope_note: "The skillet practices preparation, sequencing, heat, moisture and seasoning. It samples cooking fundamentals; it does not establish knife proficiency, raw-meat handling or every cooking method."
+    burden: "About 10 minutes of preparation, 15–25 minutes of cooking, and 10 minutes for cleanup and review."
+    setup: "For one or two portions use a drained can of ready-to-eat beans, a cup of suitable chopped or frozen vegetables, a little oil and water, a pan and a spoon. Check labels, dietary restrictions and access needs; obtain help if handling heat or tools is unsafe."
+    actions:
+      - title: "Prepare ingredients and a safe work area"
+        instructions: "Wash hands, clear a stable work area, read ingredient labels and gather everything before heating. Rinse fresh produce under running water. Use pre-cut vegetables if knife work is unfamiliar, or cut on a stable board with fingers away from the blade. Separate waste and reserve a clean serving utensil."
+        checks: [Ingredients and equipment are ready, Dietary and handling restrictions are checked, Work surfaces and utensils are kept clean]
+      - title: "Cook in a deliberate sequence"
+        instructions: "Soften the vegetables over gentle heat in a little oil, stirring and adding a splash of water if they stick. Add the drained beans and warm through, following any package cooking requirements. Taste with a clean utensil, adjust seasoning modestly, and note how texture and aroma change. Never leave the pan unattended."
+        checks: [Vegetables and beans follow an intentional sequence, Heat and moisture are adjusted to observations, Seasoning and doneness are checked appropriately]
+      - title: "Serve and improve one element"
+        instructions: "Serve the meal and inspect flavor, texture and timing. Identify one adjustment, such as smaller vegetable pieces or adding a little water earlier, and test it on another portion or later attempt. Clean the work area; promptly handle leftovers using the linked food-safety guidance rather than judging safety by smell."
+        checks: [A meal is prepared and evaluated, One cooking adjustment follows an observation, Cleanup and leftover handling are completed]
+    adaptation: "Use a microwave-safe covered vessel according to the appliance instructions, pre-cut ingredients or an agreed helper. With no safe heating access, assemble suitable labelled ready-to-eat ingredients and record that heat management was not practiced."
+    review: "Which preparation or heat decision most affected the result, and can you explain the adjustment without simply memorizing a recipe?"
+    examples:
+      supportive: "The meal was produced safely and adding water earlier corrected sticking in a second portion."
+      mixed: "The food was prepared but uneven vegetable sizes caused inconsistent texture."
+      contradictory: "An allergen warning was ignored, heat was left unattended or unsafe leftovers were treated as safe by smell."
+      inconclusive: "Ingredients were gathered but no meal or explicitly limited no-heat alternative was prepared."
+  '13.06':
+    title: "Compare two small flatbreads and explain the difference"
+    goal: "Use a controlled cooking comparison to connect measurement, hydration and leavening to a finished food."
+    scope_note: "Two flatbreads illustrate measurement, leavening, dough structure and heat control. Yeast fermentation, oven baking, pastry and reliable repeated execution remain further skills."
+    burden: "About 45–60 minutes including measurement, cooking, comparison and cleaning; allow more with assistance."
+    setup: "Use a flour tolerated by the eater, water, a little oil, baking powder labelled for that use, measuring tools and a safe cooking surface. For an unfamiliar flour or restricted diet, use a compatible manufacturer's flatbread formula as the baseline and record that choice."
+    actions:
+      - title: "Measure a baseline and choose one variable"
+        instructions: "For a familiar wheat-flour baseline, mix 100 g flour, about 60 mL water, one teaspoon oil and a pinch of salt into a soft dough. Divide it equally. Leave one half plain and knead one eighth teaspoon baking powder into the other. Keep thickness and cooking method alike. Do not taste raw flour or dough."
+        checks: [Quantities and flour choice are recorded, Only the intended leavening variable differs, Raw dough is not tasted]
+      - title: "Cook both samples under comparable conditions"
+        instructions: "Roll equal portions to about 6 mm thickness. In a lightly oiled skillet, cook for roughly two to three minutes on the first side and two on the second; lower heat if the outside darkens before the center cooks. Cut a sample to check for uncooked dough and continue cooking if needed; color alone is insufficient. Never taste uncooked dough. Wash hands, tools and surfaces after raw-flour contact, and label the cooked samples."
+        checks: [Sample size and method are comparable, Both samples are cooked through, Finished samples remain identifiable]
+      - title: "Connect the result to the formulation"
+        instructions: "Compare height, flexibility, crumb and flavor after cooling. Explain which difference might follow from leavening and which could come from uneven thickness or heat. Note that flour choice and mixing affect structure, while a different liquid-to-flour ratio would test hydration instead. Propose one subsequent change, not a whole new recipe."
+        checks: [Observable differences are compared, Confounding factors are acknowledged, One next controlled change is proposed]
+    adaptation: "Use an existing compatible recipe and halve it, or compare the ingredient functions in two labelled baked products when cooking is inaccessible. Product comparison does not demonstrate execution of baking techniques."
+    review: "What did the comparison support about the chosen variable, and what would you need to control better next time?"
+    examples:
+      supportive: "The leavened sample differed in texture while the cook identified uneven thickness as a possible confound."
+      mixed: "The samples differed but flour or water quantities also changed, preventing attribution."
+      contradictory: "Raw dough was tasted or a flour was used despite a known dietary restriction."
+      inconclusive: "A preference was reported without keeping quantities or identifying the two samples."
+  '13.07':
+    title: "Plan three meals that share ingredients without wasting them"
+    goal: "Connect meals, quantities, shopping, preparation and storage into a workable short food plan."
+    scope_note: "Three meals connect inventory, quantities, cost and storage. This short plan does not establish nutritional adequacy for every person or solve unreliable access to food."
+    burden: "About 25 minutes of planning, ordinary shopping or price checking, and one meal's preparation time."
+    setup: "Choose three upcoming meals and a realistic spending limit. Use your own dietary requirements, household preferences, available cooking equipment and existing food. No particular diet or number of eaters is assumed."
+    actions:
+      - title: "Build three meals from a checked inventory"
+        instructions: "List usable food already available, noting opened or perishable items first. Plan three meals with a filling staple, a suitable protein source and produce where available. Example: beans and vegetables in a skillet, a wrap using the remaining beans, and a soup using the remaining vegetables. Check portion needs and ingredient suitability."
+        checks: [Inventory and perishables are checked, Three meals match household requirements, Shared ingredients have realistic quantities]
+      - title: "Write and use a gap-only shopping list"
+        instructions: "Subtract what you already have from the meal quantities. List only the gaps, estimate their total cost, and identify an affordable substitution for an unavailable item. Shop or price the list within your limit, comparing usable quantity rather than package price alone. Skip a bargain if it exceeds storage or likely consumption."
+        checks: [Existing supplies are subtracted, The list has a cost limit and substitution, Package quantity fits likely use]
+      - title: "Prepare one meal and schedule the remaining food"
+        instructions: "Prepare one planned meal using safe instructions, then compare actual portions and time with the plan. Label and promptly refrigerate or freeze suitable leftovers using the linked food-safety guidance. Put the remaining meals in an order that uses perishables first and revise the list if food or time was wasted."
+        checks: [One planned meal is attempted, Safe storage and next-use timing are explicit, Actual cost or waste informs a revision]
+    adaptation: "Use shelf-stable single-meal ingredients when refrigeration is unreliable, no-cook suitable foods when cooking is unavailable, and community food resources where appropriate. Planning with a sample list tests coordination but does not establish actual food access."
+    review: "Which ingredient was used efficiently, and what assumption about appetite, cost, storage or time needs correcting?"
+    examples:
+      supportive: "Three meals used the planned quantities, and leftover beans were safely stored for the next meal."
+      mixed: "The meals fit the budget but preparation took longer than available and one meal needs simplification."
+      contradictory: "The plan relied on unsafe storage or bought excess food merely because the unit price was lower."
+      inconclusive: "Meal names were listed without quantities, purchasing gaps or a storage plan."
+  '13.08':
+    title: "Diagnose and correct one loose cabinet handle"
+    goal: "Use observation, tool selection and a reversible repair to solve a minor fastener problem within clear limits."
+    scope_note: "A non-structural handle practices diagnosis, tool fit and testing. Plumbing, wiring, structural work and damaged mounting materials remain outside this minor repair."
+    burden: "About 10 minutes to inspect and 10–20 minutes to adjust, test and put tools away."
+    setup: "Use a non-structural handle you own or have permission to service, adequate light and a correctly fitting hand screwdriver. Exclude doors used for fire safety, electrical equipment, sharp machinery, drilling and load-bearing repairs."
+    actions:
+      - title: "Inspect before reaching for a tool"
+        instructions: "Open the empty cabinet or drawer safely and locate the handle fasteners. Check for missing parts, damaged screw heads, cracked material or a handle that is not simply loose. Identify the screwdriver shape and size by fit. If threads or the mounting material are damaged, stop tightening and seek an appropriate replacement or repair guide."
+        checks: [The cause is distinguished from visible movement, Tool fit is checked, Damage and excluded work have a stop decision]
+      - title: "Make the smallest permitted adjustment"
+        instructions: "Support the handle with one hand and turn the screw gently with the fitting tool. Stop when the handle is secure; do not force a spinning screw, crush the panel or use a power driver to overcome uncertainty. Keep small parts away from children and record which fastener was adjusted."
+        checks: [The handle is supported during adjustment, Only a suitable hand tool is used, Tightening stops without force or material damage]
+      - title: "Test function and report the repair"
+        instructions: "Operate the handle normally several times and inspect for wobble, rubbing or renewed looseness. Explain the original symptom, adjustment and test in three short statements. If it loosens again, identify the unresolved issue instead of repeatedly tightening. Return tools and decide whether a competent repairer is needed."
+        checks: [Normal operation is tested, Symptom and intervention are documented, Persistent failure has a next disposition]
+    adaptation: "Use a tabletop assembly or demonstrate tool fit with an unpowered practice fastener if no suitable fixture or hand control is available. A helper may supply force while the person directs diagnosis and checks; note that supported role."
+    review: "Did the adjustment address the cause, and what observation would tell you this is beyond a simple tightening repair?"
+    examples:
+      supportive: "A fitting screwdriver secured the loose handle and repeated ordinary use produced no wobble."
+      mixed: "The handle improved but a damaged thread means the repair is temporary."
+      contradictory: "A slipping tool damaged the screw or force was increased after the fastener spun freely."
+      inconclusive: "The handle was touched but the cause or post-repair function was not checked."
+  '13.09':
+    title: "Read a maintenance need and brief a technician"
+    goal: "Connect a vehicle or machine symptom to its manual, service history and a clear maintenance request."
+    scope_note: "The brief develops maintenance literacy and communication about one system. It neither diagnoses every fault nor demonstrates hands-on servicing of a vehicle or machine."
+    burden: "About 30–45 minutes to locate the manual, inspect safely and prepare the service request."
+    setup: "Choose a vehicle, bicycle or ordinary machine you use, its exact owner's manual and an existing maintenance record if available. Observe only from a safe stationary position; do not crawl beneath equipment or inspect running machinery."
+    actions:
+      - title: "Identify the system and manual guidance"
+        instructions: "Choose one routine item such as tire condition, a service interval or an existing warning indicator. Locate its meaning and recommended response in the exact manual, including when use should stop. Separate what you directly observed from what you suspect. Do not reproduce a warning by deliberately operating faulty equipment."
+        checks: [The exact equipment manual is identified, The relevant system and response are located, Observation and suspected cause are separated]
+      - title: "Compare condition with the maintenance record"
+        instructions: "From a safe position, note visible condition and the last recorded service for that item. For tires, record only observations you can make safely and use the manufacturer's specifications; do not guess inflation or repair limits. Mark missing history as unknown and identify a user-level check versus a technician-only task."
+        checks: [Condition and service history are compared, Missing history remains unknown, User and technician responsibilities are separated]
+      - title: "Prepare a useful service message"
+        instructions: "Write a concise request containing equipment identification, symptom, when it occurs, relevant service history and the manual's instruction. Ask for diagnosis, proposed work, cost and authorization before repair. Example: a warning appeared while stationary; the manual says stop use; the next step is arranging appropriate service, not test-driving it."
+        checks: [The message contains actionable observations, Diagnosis is requested without asserting a cause, Continued-use and authorization decisions are explicit]
+    adaptation: "Use a publicly available manual for a familiar bicycle or appliance and a fictional service record. This practices maintenance literacy and communication, not mechanical repair competence."
+    review: "Could a technician understand the symptom without guessing, and have you avoided treating an unknown condition as safe?"
+    examples:
+      supportive: "A manual-based service need was identified and the request separated facts from a suspected fault."
+      mixed: "The symptom is clear but maintenance history is missing and must remain uncertain."
+      contradictory: "The equipment was operated despite a stop-use instruction or a diagnosis was asserted without evidence."
+      inconclusive: "A generic maintenance checklist was copied without identifying the actual equipment."
+  '13.10':
+    title: "Make a household utility response card"
+    goal: "Distinguish a simple user-level interruption from a utility problem requiring immediate or qualified help."
+    scope_note: "A response card rehearses understanding and safe escalation for one utility. It does not qualify anyone to repair an installation or operate emergency controls."
+    burden: "About 30 minutes to prepare the card and 10 minutes to test one fictional interruption."
+    setup: "Choose one household system and its instructions or provider information. Work from accessible safe locations only. Do not open covers, touch wiring or plumbing, operate unknown shutoffs, or create a fault for practice."
+    actions:
+      - title: "Map the service and its permitted controls"
+        instructions: "Identify the system, provider or responsible person, normal operating indicators and controls the manufacturer explicitly permits users to operate. For internet, distinguish the provider connection, modem, router and your device. For energy or water, identify the emergency contact and the boundary beyond which you leave the area and obtain help."
+        checks: [The system and responsible contact are identified, User controls are distinguished from internal parts, Emergency and professional boundaries are stated]
+      - title: "Walk through one ordinary interruption"
+        instructions: "Use a fictional loss of internet or an unresponsive appliance. Check the sequence: is it one device or the whole service, is there an announced outage, and what safe user-level step does the manual permit? Record a decision tree with a stop point. Never test electrical safety by touch or repeatedly reset a tripping protection device."
+        checks: [Device and service-level faults are distinguished, Steps come from the applicable instructions, The sequence has a clear stop point]
+      - title: "Test the response card from a scenario"
+        instructions: "Have yourself or a willing household member follow the card for the fictional interruption. Verify that contact information, necessary account access and symptom notes can be found privately. Revise any ambiguous step and keep emergency information accessible without exposing passwords or sensitive account data."
+        checks: [A scenario tests the response order, Help can be contacted with useful information, Sensitive credentials remain separate]
+    adaptation: "Use a provider's accessible guide or a sample internet setup where property access is restricted. The card can direct a landlord or support person to act; the participant need not operate utility controls."
+    review: "At what exact point would you stop troubleshooting, and could you obtain help without improvising?"
+    examples:
+      supportive: "The card distinguished a device issue from a provider outage and supplied a clear support contact."
+      mixed: "The sequence is usable but the responsible property contact is not yet verified."
+      contradictory: "A panel was opened or an unknown valve or protection device was operated for practice."
+      inconclusive: "Contacts were listed without a tested decision sequence or stop point."
+  '13.11':
+    title: "Match one plant to its actual growing conditions"
+    goal: "Use plant-specific information and observations to plan care and respond to a small growing trial."
+    scope_note: "A small plant trial connects species, place, care and observation. Early observations are not a completed growing cycle or proof of long-term cultivation skill."
+    burden: "About 30 minutes to identify conditions and set up, then brief observations over a suitable week; a full growing cycle may take much longer."
+    setup: "Choose an existing plant or a small seed trial that fits your space. Identify the species and obtain guidance from a local extension service, botanic garden or reliable supplier. Check toxicity where children or animals have access."
+    actions:
+      - title: "Compare the plant's needs with the site"
+        instructions: "Record actual light exposure, container drainage, growing medium and seasonal temperature conditions. Compare them with the chosen plant's guidance, including watering and mature size. Example: a sunny windowsill may still vary markedly between seasons. If the conditions do not fit, choose a different site or plant instead of compensating with more fertilizer."
+        checks: [Plant identity and guidance are explicit, Site conditions are observed, A mismatch has a proportionate response]
+      - title: "Establish a condition-based care routine"
+        instructions: "Follow the plant's instructions for planting or routine care and record a baseline observation. Check moisture before watering using a method suitable for that medium and plant; do not water solely because a calendar alarm rings. Keep drainage usable and avoid unneeded pesticide or fertilizer applications."
+        checks: [Care follows the selected plant's requirements, A baseline observation is recorded, Watering responds to observed conditions]
+      - title: "Review a growing interval and the next stage"
+        instructions: "After the plant-appropriate interval, compare new growth, wilting, discoloration, moisture and any pest signs with the baseline. Investigate one plausible cause with the reference before changing care. Set checkpoints for the rest of the plant's season or life cycle; this short exercise does not demonstrate a complete growing cycle."
+        checks: [Observations are compared over time, One care change is evidence-linked, The unobserved stages and next checkpoints are explicit]
+    adaptation: "Observe an existing shared plant with permission, use accessible raised placement, or build a species-specific care plan without buying anything. Planning alone does not show that a plant was sustained."
+    review: "Did the routine fit this plant in this location, and what evidence would distinguish too much water from another problem?"
+    examples:
+      supportive: "A light mismatch was corrected and subsequent observations informed the next care decision."
+      mixed: "The plant survived the interval but a new leaf problem has several possible causes."
+      contradictory: "Water or chemicals were added repeatedly without checking conditions or product directions."
+      inconclusive: "A generic watering schedule was written without identifying the plant or observing its site."
+  '13.12':
+    title: "Decide whether to maintain, repair or replace one item"
+    goal: "Compare function, repairability, total cost and waste before replacing a possession."
+    scope_note: "One item tests maintain, repair and replace reasoning. Broader material stewardship includes repeated maintenance, access constraints and disposal practices over time."
+    burden: "About 30 minutes of inspection and comparison, plus one small authorized upkeep or enquiry."
+    setup: "Choose an ordinary low-risk item such as a bag, chair cushion or storage container. Exclude safety-critical equipment and anything with electrical, structural or hazardous-material damage."
+    actions:
+      - title: "Name the failed function and remaining life"
+        instructions: "Describe what the item must do, what has failed, and what still works. Distinguish appearance, wear and a functional defect. Look for care instructions, replaceable parts and repair information. Example: a bag with a loose seam may need a small repair while a damaged safety harness must not be treated similarly."
+        checks: [Required function and failure are distinguished, Care or repair information is checked, Safety-critical uses are excluded]
+      - title: "Compare three realistic options"
+        instructions: "Compare maintaining the item, arranging a repair, and replacing it with a durable or secondhand alternative. Include money, time, transport, tools, likely remaining service and disposal. Do not assume repairing is always cheaper or that a person with little time can supply unpaid labor."
+        checks: [Three dispositions are compared, Total resource cost is considered, Expected service and disposal are included]
+      - title: "Act on the selected disposition"
+        instructions: "Perform only a safe care step already described by the maker, request a repair estimate, or arrange an appropriate replacement or disposal. Set one maintenance cue for the kept item. Afterward check whether it actually serves the required function and record any cost you underestimated."
+        checks: [A safe disposition is acted on, Function or the next dependency is checked, A maintenance cue or disposal plan is set]
+    adaptation: "Use a hypothetical damaged bag and local published repair prices if you cannot authorize work. Borrowing or continuing to use a safe imperfect item may be the best available option."
+    review: "Which option best serves the needed function with your actual resources, and what would change that decision?"
+    examples:
+      supportive: "A modest repair restored a bag's function and a recurring seam check was added."
+      mixed: "Repair is feasible but travel and time make the apparent saving uncertain."
+      contradictory: "An unsafe item was retained to avoid waste or a cosmetic preference was presented as unavoidable replacement."
+      inconclusive: "Prices were compared without specifying the needed function or taking any next step."
+  '13.13':
+    title: "Prepare a welcoming space without sacrificing household needs"
+    goal: "Balance rest, practical use, privacy and welcome in one shared living area."
+    scope_note: "One space trial practices functional hospitality, comfort and shared use. It does not establish interior-design expertise or universal aesthetic preferences."
+    burden: "About 20–40 minutes to plan and make a reversible change, plus one ordinary use and review."
+    setup: "Choose a small space you may arrange and a real or fictional short visit. Consider the household's own use first; hospitality does not require a large home, expensive food or access to private rooms."
+    actions:
+      - title: "Map the needs of residents and a visitor"
+        instructions: "List where people can sit, move, place belongings, rest and use necessary facilities. Identify one household need that must remain protected, such as quiet, medication access or a private area. Ask about a willing visitor's access or dietary needs without demanding medical details."
+        checks: [Resident and visitor needs are considered, A privacy or rest boundary is explicit, Access questions avoid unnecessary disclosure]
+      - title: "Arrange one modest welcome"
+        instructions: "Clear a safe passage, offer a usable seat or equivalent resting place, and make a simple welcome plan such as water and a short conversation. Use existing materials. Explain practical boundaries kindly, including visit length or shared-space rules, and avoid moving another resident's belongings without agreement."
+        checks: [The arrangement supports safe ordinary use, A modest welcome is prepared, Shared property and boundaries are respected]
+      - title: "Try the arrangement and reset the space"
+        instructions: "Walk through arrival, belongings, seating, conversation and departure, with a willing guest or as a rehearsal. Notice awkward reaches, noise, blocked movement or unclear boundaries. Restore the space for household use afterward and change one detail that would make a future welcome easier."
+        checks: [The visit sequence is tested, A practical barrier is noticed or checked, The household function is restored afterward]
+    adaptation: "Welcome someone in an accessible shared or public place, use a remote visit, or offer a brief doorstep exchange. Record which home functions the alternative does not test."
+    review: "Did someone feel practically accommodated while the household's privacy, rest and care needs remained intact?"
+    examples:
+      supportive: "A short visit had a clear seat, route and end time, and the room returned easily to ordinary use."
+      mixed: "The guest was comfortable but resetting the space placed too much work on one resident."
+      contradictory: "Hospitality required unwanted disclosure, an inaccessible route or overriding another resident's boundary."
+      inconclusive: "The space looked attractive but arrival, access and ordinary household use were not tested."
+  '13.14':
+    title: "Trace one housing issue to documents and appropriate help"
+    goal: "Identify the documents, responsibilities, costs and local advice needed to address a housing issue."
+    scope_note: "The worksheet develops housing-document literacy and a clear question. It does not interpret local law, establish legal rights or replace qualified advice about a dispute."
+    burden: "About 30–45 minutes to inspect a document and prepare one question; allow additional time for a qualified response."
+    setup: "Use your own housing agreement privately or a sample lease, one fictional non-emergency maintenance problem and the relevant local housing authority's information. Rules vary by location and housing arrangement."
+    actions:
+      - title: "Locate the relevant obligations and records"
+        instructions: "Find the agreement's rent or payment terms, notice route, maintenance responsibilities, deposit terms and utility allocation. For the chosen issue, mark what the document says, what is unclear and what local rules may affect. Do not assume a lease clause is enforceable simply because it is printed."
+        checks: [Relevant clauses and records are located, Responsibilities are distinguished, Uncertainty about local rules remains explicit]
+      - title: "Prepare a factual maintenance request"
+        instructions: "Describe the problem, when it was observed, its practical effect and the requested response. Keep copies privately and use the agreement's stated communication route where appropriate. Example: a recurring non-emergency fixture issue needs a dated description and repair request, not a guessed legal conclusion or a withheld payment."
+        checks: [The issue is described factually, The request and recordkeeping route are explicit, Unsupported legal action is avoided]
+      - title: "Find the next legitimate escalation path"
+        instructions: "Locate a current local housing authority, tenant advice service, housing counselor or qualified adviser appropriate to the arrangement. Write what information they would need and what question remains unresolved. For urgent threats to health or safety, use the appropriate emergency or local service rather than waiting for this exercise's review."
+        checks: [A relevant local assistance route is identified, The unresolved question is specific, Urgent issues have a separate response]
+    adaptation: "Use a public sample lease or an accessible translated explanation with a trusted adviser. Do not upload agreements, addresses, account numbers, landlord identities or evidence about a dispute."
+    review: "Can you distinguish what you know from the document, what requires local advice, and the next proportionate action?"
+    examples:
+      supportive: "A dated repair request and the local advice contact were prepared with the unclear responsibility identified."
+      mixed: "The agreement is located but the relevant local assistance service has not been verified."
+      contradictory: "A lease clause was treated as universal law or payment was withheld on the exercise's authority."
+      inconclusive: "A list of housing terms was copied without connecting them to a specific issue."
+  '13.15':
+    title: "Make a realistic minimum-function plan for a difficult week"
+    goal: "Prioritize immediate domestic needs using actual resources and reachable support."
+    scope_note: "One constrained-week plan tests provisioning and contingency choices. A feasible paper plan is distinct from actually obtaining food, shelter, utilities and support."
+    burden: "About 30 minutes to map needs and options, then one realistic resource check and a brief revision."
+    setup: "Work with your present resources or a fictional constrained week. Consider safe shelter, food, hygiene, essential transport, communication and document access. This is not an exercise in deprivation or proof of self-sufficiency."
+    actions:
+      - title: "Identify the next essential gaps"
+        instructions: "For the next day and week, separate needs that are already met from gaps that could interrupt safety or basic function. Note actual money, time, storage, utilities, transport and help available. Pick the most immediate gap; do not create a plan that assumes a refrigerator, car, stable address or spare cash you do not have."
+        checks: [Immediate and later needs are distinguished, Actual constraints are recorded, One essential gap is prioritized]
+      - title: "Match the gap to a reachable option"
+        instructions: "Identify one available public, community or personal support and verify its hours, eligibility, location and access route. Examples include a food distribution point, laundry access, a housing service or a document-replacement adviser. Plan how to contact or reach it and a fallback if it is closed or unsuitable."
+        checks: [The option addresses the priority gap, Access conditions are checked, A fallback respects the same constraints]
+      - title: "Take one feasible step and revise the week"
+        instructions: "Make the contact, prepare the required non-sensitive information, or arrange agreed assistance. Update the plan using what was actually available, and identify the next unresolved need. Do not mark a need resolved merely because a phone number was found or an application was submitted."
+        checks: [One feasible access step is attempted, Confirmed support and pending requests are separated, The next unmet need remains visible]
+    adaptation: "Use a fictional case if current hardship makes planning burdensome. A supporter can help make calls or organize information with consent; the plan may appropriately depend on other people and institutions."
+    review: "Which need is actually better supported now, and which assumption about available help proved wrong?"
+    examples:
+      supportive: "A reachable service confirmed assistance and the plan was updated without assuming unavailable transport."
+      mixed: "A contact was made but eligibility or capacity remains uncertain, so the gap is still open."
+      contradictory: "The plan required unsafe food storage, skipped essential care or treated lack of resources as a character failure."
+      inconclusive: "A generic resource list was assembled without checking whether any option could be accessed."
+  '13.16':
+    title: "Remove one household access barrier with its user's input"
+    goal: "Improve a real household task by changing the environment in a way the affected person can evaluate."
+    scope_note: "One user-led change tests an environmental barrier. Broader accessible design requires varied tasks, changing needs and expertise for structural or fitted adaptations."
+    burden: "About 15 minutes to observe, 15–30 minutes to try a change, and a short user evaluation."
+    setup: "Choose one non-hazardous task such as finding a commonly used object, reading a label or reaching a light item. Work with the affected person's consent and preferences; do not simulate disability to guess their needs."
+    actions:
+      - title: "Observe the task and ask about the barrier"
+        instructions: "Walk through the task from its user's ordinary position and communication mode. Ask where effort, confusion, glare, reach or interruption occurs. Record the function that matters, such as finding medication information without moving the medication itself. Separate the person's account from assumptions about what should be easy."
+        checks: [The task is described from its user's perspective, A specific environmental barrier is identified, Preferences and consent guide the observation]
+      - title: "Try one reversible environmental change"
+        instructions: "Agree on a small change using existing materials: clearer labels, a lighter container, more visible contrast or relocating an ordinary item to a reachable position. Preserve exits, supports and shared access. Structural changes, electrical work, medication handling and fitted assistive equipment require appropriate expertise beyond this trial."
+        checks: [The change directly addresses the barrier, It is reversible and agreed, Safety and shared access are preserved]
+      - title: "Have the user evaluate the same task again"
+        instructions: "Repeat the original task and ask whether effort, clarity, comfort or independence changed in the way the person wanted. Check for new difficulties elsewhere. Keep, revise or undo the change based on their assessment, and identify any need for a qualified accessibility professional."
+        checks: [The same task is compared, The affected person's evaluation determines success, New barriers and professional needs are considered]
+    adaptation: "Use photographs or a paper layout only with permission when physical rearrangement is unavailable. A planning exercise may identify options, but it does not establish that a real barrier was reduced."
+    review: "Did the change solve the person's stated problem, and would it remain usable when their needs or the household's needs change?"
+    examples:
+      supportive: "The user found the labelled item more easily and preferred keeping the reversible change."
+      mixed: "Visibility improved but the new location introduced an uncomfortable reach."
+      contradictory: "The arrangement was imposed despite the user's objection or blocked a necessary route."
+      inconclusive: "A redesign was proposed without observing the original task or obtaining the user's evaluation."

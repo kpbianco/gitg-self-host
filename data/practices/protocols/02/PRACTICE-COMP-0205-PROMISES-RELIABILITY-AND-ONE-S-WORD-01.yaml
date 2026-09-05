@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0205-PROMISES-RELIABILITY-AND-ONE-S-WORD-01
 slug: c0205-promises-reliability-and-one-s-word-practice
-name: Bounded Promises, reliability, and one's word Practice
+name: Make, track and close one realistic promise
 parent_competency_id: '02.05'
 domain_id: '02'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 02.05
-      (Promises, reliability, and one's word); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 02.05; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,40 +34,35 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Promises, reliability, and one''s word through a small repeated practice bounded
-    by the canonical scope: Make commitments carefully, track them, fulfill them, or renegotiate before
-    failure.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Others can reasonably
-    rely on stated commitments, and broken promises receive prompt repair. The protocol creates a small
-    opportunity to examine that target without treating completion as broad capability.'
+  purpose: Make a commitment another person can reasonably rely on, and fulfill or renegotiate it before
+    failure.
+  why_recommended: Make a commitment another person can reasonably rely on, and fulfill or renegotiate
+    it before failure.
   claims:
-  - statement: Using the canonical scope and evidence target for Promises, reliability, and one's word
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Make a commitment another person can reasonably rely on, and fulfill or renegotiate it
+      before failure.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Promises, reliability, and one's word practice fit
     the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Promises, reliability, and one's word as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Promises, reliability,
-    and one's word context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Promises,
-    reliability, and one's word; do not manufacture conflict, deprivation, exposure, disclosure, danger,
-    urgency, or dependence for evidence.
+  readiness_considerations: Use an accessible reminder or agreed helper. A fictional commitment can rehearse
+    the tracking process, but only real follow-through demonstrates keeping a promise.
+  opportunity_considerations: Select one small commitment within your control, such as returning a borrowed
+    item or supplying a short note. Use a calendar or paper reminder and avoid promising on another person's
+    behalf.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Promises, reliability, and one's
-    word.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Select one small commitment within your control, such as returning a borrowed item or supplying a
+    short note. Use a calendar or paper reminder and avoid promising on another person's behalf.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Promises, reliability, and one's
-    word instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use an accessible reminder or agreed helper. A fictional commitment can rehearse the tracking process,
+    but only real follow-through demonstrates keeping a promise.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -80,21 +74,25 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Promises, reliability, and
     one's word as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-REPEATED-HABIT
+  protocol_class: PF-RELATIONAL-CONVERSATION
   duration_days: 10
-  cadence: Complete three bounded Promises, reliability, and one's word actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Promises, reliability, and one's word; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Promises,
-    reliability, and one's word. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Promises, reliability, and one's word
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Select one small commitment within your control, such as returning a borrowed item or supplying
+    a short note. Use a calendar or paper reminder and avoid promising on another person''s behalf. Goal:
+    Make a commitment another person can reasonably rely on, and fulfill or renegotiate it before failure.
+    Scope: One completed commitment demonstrates a bounded instance of reliability. Trust across changing
+    conditions depends on a longer pattern and honest repair after failures. Time and effort: About 10
+    minutes to agree scope, the ordinary work involved, and 5 minutes to close the loop. Adaptation: Use
+    an accessible reminder or agreed helper. A fictional commitment can rehearse the tracking process,
+    but only real follow-through demonstrates keeping a promise. Keep personal working notes outside the
+    check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use an accessible reminder or agreed helper. A fictional commitment can rehearse
+    the tracking process, but only real follow-through demonstrates keeping a promise.
+  expected_burden: About 10 minutes to agree scope, the ordinary work involved, and 5 minutes to close
+    the loop.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Promises, reliability, and one's word protocol to rank worth, coerce participation, demand
@@ -102,18 +100,21 @@ intervention:
   - Treating a completed Promises, reliability, and one's word action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Promises, reliability, and one's word situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use an accessible
+    reminder or agreed helper. A fictional commitment can rehearse the tracking process, but only real
+    follow-through demonstrates keeping a promise.
   actions:
   - stable_id: PRACTICE-COMP-0205-PROMISES-RELIABILITY-AND-ONE-S-WORD-01-A1
     sequence: 1
-    title: Define one small Promises, reliability, and one's word behavior
-    instructions: 'Choose one voluntary, reversible behavior that represents a narrow part of Promises,
-      reliability, and one''s word. Bound the cue, context, duration, and valid interruption using this
-      scope: Make commitments carefully, track them, fulfill them, or renegotiate before failure.'
+    title: Agree what is promised and by when
+    instructions: 'Specify the deliverable, recipient, deadline, dependencies and a reasonable check that
+      it is done. Compare the promise with your actual capacity before accepting. Replace a vague offer
+      such as soon with an agreed date, or decline a commitment you cannot responsibly make.
+
+
+      Observation checks: Deliverable and deadline are explicit; Capacity and dependencies are checked;
+      The recipient can understand what to rely on. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -135,9 +136,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0205_a1_behavior_observable
-        - c0205_a1_cue_and_context_defined
-        - c0205_a1_interruption_valid
+        - deliverable_and_deadline_are_explicit
+        - capacity_and_dependencies_are_checked
+        - the_recipient_can_understand_what_to_rely_on
       - measurement_id: c0205_a1_boundary
         kind: boolean
         role: supporting
@@ -154,11 +155,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0205-PROMISES-RELIABILITY-AND-ONE-S-WORD-01-A2
     sequence: 2
-    title: Try the Promises, reliability, and one's word behavior in three windows
-    instructions: Attempt the same small Promises, reliability, and one's word behavior in up to three
-      naturally occurring windows. Record attempt, defer, interruption, support used, and adverse effect
-      separately; never manufacture deprivation, distress, conflict, or unsafe conditions to obtain a
-      repetition.
+    title: Use a reminder before the promise is at risk
+    instructions: 'Set a reminder early enough to act or renegotiate. At that point, inspect actual progress.
+      If a dependency or capacity problem threatens delivery, inform the recipient before the deadline,
+      describe the gap and seek an agreed change; silently moving your private deadline does not renegotiate
+      a promise.
+
+
+      Observation checks: A timely reminder is used; Progress is checked against the promise; Any threatened
+      failure is communicated before the deadline. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -174,15 +180,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0205_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - a_timely_reminder_is_used
+        - progress_is_checked_against_the_promise
+        - any_threatened_failure_is_communicated_before_the_deadline
       - measurement_id: c0205_a2_boundary
         kind: boolean
         role: supporting
@@ -199,10 +205,32 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0205-PROMISES-RELIABILITY-AND-ONE-S-WORD-01-A3
     sequence: 3
-    title: Review the Promises, reliability, and one's word repetition pattern
-    instructions: 'Compare the windows for feasibility, burden, context, and interruption. Keep missing
-      or mixed evidence explicit and compare the limited pattern with this evidence target: Others can
-      reasonably rely on stated commitments, and broken promises receive prompt repair.'
+    title: Deliver and confirm closure or repair
+    instructions: 'Deliver what was agreed and confirm that the recipient can access it. If you failed,
+      name the missed commitment, acknowledge the effect and propose proportionate repair without demanding
+      immediate restored trust. Record which promise-making assumption should change next time.
+
+
+      Observation checks: Delivery or failure is confirmed honestly; Any failure has a concrete repair
+      proposal; A reliability lesson changes a future assumption. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.
+
+
+      Final review: Could the other person plan around your word, and what would make the next promise
+      more dependable?
+
+
+      Examples: Supportive: The item was returned on the agreed day and receipt was confirmed.
+
+
+      Mixed: Delivery was late, but the failure was acknowledged and a proportionate repair was completed.
+
+
+      Contradictory: The deadline was silently changed or the recipient was blamed for relying on the
+      original promise.
+
+
+      Inconclusive: A reminder was created but the delivery point has not occurred.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -224,9 +252,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0205_a3_windows_distinguished
-        - c0205_a3_burden_compared
-        - c0205_a3_transfer_not_assumed
+        - delivery_or_failure_is_confirmed_honestly
+        - any_failure_has_a_concrete_repair_proposal
+        - a_reliability_lesson_changes_a_future_assumption
       - measurement_id: c0205_a3_boundary
         kind: boolean
         role: supporting
@@ -247,17 +275,15 @@ intervention:
       Promises, reliability, and one's word; no purchase, subscription, travel, credential, or public
       artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Promises, reliability, and one's word; assistive technology, interpretation, a support
-      person, and a deferred action are valid without penalty.
+    - Use an accessible reminder or agreed helper. A fictional commitment can rehearse the tracking process,
+      but only real follow-through demonstrates keeping a promise.
     cultural_context:
     - Adapt the expression of Promises, reliability, and one's word to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Promises, reliability, and one's word opportunity is unavailable or inappropriate, use
-      a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use an accessible reminder or agreed helper. A fictional commitment can rehearse the tracking process,
+      but only real follow-through demonstrates keeping a promise.
   pause_conditions:
   - Pause Promises, reliability, and one's word when capacity, consent, authority, privacy, access, care
     duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the
@@ -289,10 +315,7 @@ evidence_and_scoring:
   - c0205_a3_boundary
   - c0205_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Promises, reliability, and one's word action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Promises, reliability, and one's word criterion, depended on
-    coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - The deadline was silently changed or the recipient was blamed for relying on the original promise.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Promises, reliability, and one's word explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -303,14 +326,20 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Promises, reliability, and one's word rules withhold observations older than
     90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Others can reasonably rely on stated commitments, and broken promises receive prompt repair.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Promises, reliability, and one's word requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Agree what is promised and by when. Observed checks: Deliverable and
+    deadline are explicit; Capacity and dependencies are checked; The recipient can understand what to
+    rely on. Action 2: Use a reminder before the promise is at risk. Observed checks: A timely reminder
+    is used; Progress is checked against the promise; Any threatened failure is communicated before the
+    deadline. Action 3: Deliver and confirm closure or repair. Observed checks: Delivery or failure is
+    confirmed honestly; Any failure has a concrete repair proposal; A reliability lesson changes a future
+    assumption.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A reminder was created but the delivery point has not
+    occurred.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Promises,
     reliability, and one's word contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -319,9 +348,8 @@ evidence_and_scoring:
   - L02
   - L10
   - L32
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Promises, reliability, and one's word evidence.
@@ -329,12 +357,15 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define one small promises, reliability, and one's word behavior action was attempted or explicitly
-    deferred.
-  - The try the promises, reliability, and one's word behavior in three windows action was attempted or
-    explicitly deferred.
-  - The review the promises, reliability, and one's word repetition pattern action preserved a limited
-    conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Agree what is promised and by when. Observed checks: Deliverable and deadline are explicit;
+    Capacity and dependencies are checked; The recipient can understand what to rely on.'
+  - 'Action 2: Use a reminder before the promise is at risk. Observed checks: A timely reminder is used;
+    Progress is checked against the promise; Any threatened failure is communicated before the deadline.'
+  - 'Action 3: Deliver and confirm closure or repair. Observed checks: Delivery or failure is confirmed
+    honestly; Any failure has a concrete repair proposal; A reliability lesson changes a future assumption.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -343,58 +374,50 @@ completion_and_review:
     - c0205_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Promises, reliability, and one's word only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Promises, reliability, and one's word across
-    roles, cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: Could the other person plan around your word, and what would make the next promise
+    more dependable?
+  transfer_limit: One completed commitment demonstrates a bounded instance of reliability. Trust across
+    changing conditions depends on a longer pattern and honest repair after failures.
   reflection:
-    before: What does Promises, reliability, and one's word require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Promises, reliability, and one's word criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Others can reasonably rely on stated commitments, and broken
-      promises receive prompt repair.', what contradiction or missing context matters most, and should
-      this Promises, reliability, and one's word design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Make a commitment another person can reasonably
+      rely on, and fulfill or renegotiate it before failure.'
+    during: Which checks have actually been observed? Delivery was late, but the failure was acknowledged
+      and a proportionate repair was completed.
+    after: Could the other person plan around your word, and what would make the next promise more dependable?
   review_guidance:
     repeat: Repeat the same bounded Promises, reliability, and one's word design only when the context
       and burden remain appropriate.
-    adapt: Change the Promises, reliability, and one's word medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Use an accessible reminder or agreed helper. A fictional commitment can rehearse the tracking
+      process, but only real follow-through demonstrates keeping a promise.
     stop: Stop Promises, reliability, and one's word when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Promises, reliability, and one's word
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Promises, reliability, and one's word criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Promises, reliability, and one's word criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Promises, reliability, and one's word criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Promises, reliability, and one's word action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The item was returned on the agreed day and receipt was confirmed.
+    mixed: Delivery was late, but the failure was acknowledged and a proportionate repair was completed.
+    contradictory: The deadline was silently changed or the recipient was blamed for relying on the original
+      promise.
+    inconclusive: A reminder was created but the delivery point has not occurred.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Promises, reliability, and one's word.
+    context_heading: Make, track and close one realistic promise
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Promises,
       reliability, and one's word.
   check_in_labels:
-    c0205_a1_primary: The bounded Promises, reliability, and one's word criterion for action 1 was observed
+    c0205_a1_primary: 'Observed checks: agree what is promised and by when'
     c0205_a1_boundary: Action 1 stayed inside its stated Promises, reliability, and one's word boundary
     c0205_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0205_a2_primary: The bounded Promises, reliability, and one's word criterion for action 2 was observed
+    c0205_a2_primary: 'Observed checks: use a reminder before the promise is at risk'
     c0205_a2_boundary: Action 2 stayed inside its stated Promises, reliability, and one's word boundary
     c0205_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0205_a3_primary: The bounded Promises, reliability, and one's word criterion for action 3 was observed
+    c0205_a3_primary: 'Observed checks: deliver and confirm closure or repair'
     c0205_a3_boundary: Action 3 stayed inside its stated Promises, reliability, and one's word boundary
     c0205_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Promises, reliability,
-    and one's word practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Could the other person plan around your word, and what would make the next promise
+    more dependable? Completion is not mastery.
+  plain_language_evidence: The item was returned on the agreed day and receipt was confirmed.
   display_order: 25

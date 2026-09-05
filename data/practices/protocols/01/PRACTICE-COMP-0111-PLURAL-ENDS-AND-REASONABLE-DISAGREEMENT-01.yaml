@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0111-PLURAL-ENDS-AND-REASONABLE-DISAGREEMENT-01
 slug: c0111-plural-ends-and-reasonable-disagreement-practice
-name: Bounded Plural ends and reasonable disagreement Practice
+name: Cooperate across a real difference in priorities
 parent_competency_id: '01.11'
 domain_id: '01'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-OPENSTAX-VALUE-QUESTIONS
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 01.11
-      (Plural ends and reasonable disagreement); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 01.11; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +35,42 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Plural ends and reasonable disagreement through a pluralist meaning practice bounded
-    by the canonical scope: Recognize that thoughtful people and traditions rank flourishing, duty, freedom,
-    devotion, achievement, peace, and service differently.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can explain a competing
-    vision of the good fairly and state where cooperation remains possible. The protocol creates a small
-    opportunity to examine that target without treating completion as broad capability.'
+  purpose: Represent a competing vision of a good life fairly and identify cooperation without false agreement.
+  why_recommended: Represent a competing vision of a good life fairly and identify cooperation without
+    false agreement.
   claims:
-  - statement: Using the canonical scope and evidence target for Plural ends and reasonable disagreement
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Represent a competing vision of a good life fairly and identify cooperation without false
+      agreement.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Philosophical value inquiry distinguishes goods valued for themselves from instrumental
+      goods and considers plural values that may conflict or resist a single scale.
+    classification: philosophical_or_normative_position
+    source_ids:
+    - SRC-OPENSTAX-VALUE-QUESTIONS
+    limitations: Educational conceptual support only; does not prescribe the person's priority order or
+      test the product's exercises or outcomes.
   applicability_question: Does a voluntary, bounded Plural ends and reasonable disagreement practice fit
     the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Plural ends and reasonable disagreement as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Plural ends and reasonable
-    disagreement context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Plural ends
-    and reasonable disagreement; do not manufacture conflict, deprivation, exposure, disclosure, danger,
-    urgency, or dependence for evidence.
+  readiness_considerations: Use written exchanges, translated material, or the stability/exploration case.
+    No debate partner, travel, disclosure of beliefs, or forced reconciliation is required.
+  opportunity_considerations: Use two reasonable preferences, such as quiet stability and ambitious exploration.
+    Compare written positions or speak with a willing person; disagreement about anyone's equal dignity
+    is outside the exercise.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Plural ends and reasonable disagreement.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Use two reasonable preferences, such as quiet stability and ambitious exploration. Compare written
+    positions or speak with a willing person; disagreement about anyone's equal dignity is outside the
+    exercise.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Plural ends and reasonable disagreement
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use written exchanges, translated material, or the stability/exploration case. No debate partner,
+    travel, disclosure of beliefs, or forced reconciliation is required.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -80,21 +83,30 @@ meaning_and_fit:
     disagreement as inferiority; competing reasonable interpretations and conscientious refusal remain
     visible.
 intervention:
-  protocol_class: PF-CONTEMPLATIVE-MEANING
+  protocol_class: PF-RELATIONAL-CONVERSATION
   duration_days: 10
-  cadence: Complete three bounded Plural ends and reasonable disagreement actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Plural ends and reasonable disagreement; copy the canonical scope and
-    evidence target into a private working note; define the action boundary, valid supports, privacy limit,
-    and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Plural ends
-    and reasonable disagreement. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Plural ends and reasonable disagreement
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use two reasonable preferences, such as quiet stability and ambitious exploration. Compare written
+    positions or speak with a willing person; disagreement about anyone''s equal dignity is outside the
+    exercise. Goal: Represent a competing vision of a good life fairly and identify cooperation without
+    false agreement. Scope: The comparison practices fair representation and bounded cooperation. Some
+    differences remain incompatible, and agreement in one arrangement does not erase deeper disagreement.
+    Time and effort: About 25 minutes to compare positions, plus an optional welcomed exchange and a 10-minute
+    plan. Adaptation: Use written exchanges, translated material, or the stability/exploration case. No
+    debate partner, travel, disclosure of beliefs, or forced reconciliation is required. Keep personal
+    working notes outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Introduction to Philosophy, 8.2 Basic Questions about Values: https://openstax.org/books/introduction-philosophy/pages/8-2-basic-questions-about-values'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use written exchanges, translated material, or the stability/exploration case.
+    No debate partner, travel, disclosure of beliefs, or forced reconciliation is required.
+  expected_burden: About 25 minutes to compare positions, plus an optional welcomed exchange and a 10-minute
+    plan.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Plural ends and reasonable disagreement protocol to rank worth, coerce participation, demand
@@ -102,19 +114,21 @@ intervention:
   - Treating a completed Plural ends and reasonable disagreement action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Plural ends and reasonable disagreement situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use written
+    exchanges, translated material, or the stability/exploration case. No debate partner, travel, disclosure
+    of beliefs, or forced reconciliation is required.
   actions:
   - stable_id: PRACTICE-COMP-0111-PLURAL-ENDS-AND-REASONABLE-DISAGREEMENT-01-A1
     sequence: 1
-    title: Choose a declared frame for Plural ends and reasonable disagreement
-    instructions: 'Select a religious, spiritual, philosophical, cultural, or secular frame through which
-      to explore Plural ends and reasonable disagreement. State the frame, one alternative, and the limits
-      of personal authority using this canonical scope: Recognize that thoughtful people and traditions
-      rank flourishing, duty, freedom, devotion, achievement, peace, and service differently.'
+    title: Explain each position from the inside
+    instructions: 'Give each position its strongest reason, the good it protects, and the cost it accepts.
+      Avoid labels such as lazy or selfish. Example: stability may protect care commitments, while exploration
+      may create discovery and opportunity. Write one question whose answer could improve your understanding.
+
+
+      Observation checks: Both positions have serious reasons; Costs as well as goods are acknowledged;
+      A non-accusatory question is formulated. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -130,15 +144,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0111_a1_primary
-        kind: conceptual
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0111_a1_frame_declared
-        - c0111_a1_alternative_acknowledged
-        - c0111_a1_authority_limited
+        - both_positions_have_serious_reasons
+        - costs_as_well_as_goods_are_acknowledged
+        - a_non_accusatory_question_is_formulated
       - measurement_id: c0111_a1_boundary
         kind: boolean
         role: supporting
@@ -155,11 +169,15 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0111-PLURAL-ENDS-AND-REASONABLE-DISAGREEMENT-01-A2
     sequence: 2
-    title: Complete two bounded Plural ends and reasonable disagreement practices
-    instructions: Complete two short, freely chosen Plural ends and reasonable disagreement practices
-      appropriate to the declared frame, such as reading, silence, prayer, observation, ritual, dialogue,
-      or reflection. Stop for distress, coercion, altered-state risk, conscience conflict, or pressure
-      from an authority or group.
+    title: Check the account without demanding agreement
+    instructions: 'Ask a willing person whether your account is recognizable, or compare it with a substantive
+      statement of that position. Correct one omission or caricature. State the remaining disagreement
+      plainly; do not replace it with a claim that everyone secretly wants the same life.
+
+
+      Observation checks: The account is checked against another perspective; An omission is corrected
+      or explicitly considered; Real disagreement remains visible. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -175,15 +193,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0111_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - the_account_is_checked_against_another_perspective
+        - an_omission_is_corrected_or_explicitly_considered
+        - real_disagreement_remains_visible
       - measurement_id: c0111_a2_boundary
         kind: boolean
         role: supporting
@@ -200,10 +218,33 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0111-PLURAL-ENDS-AND-REASONABLE-DISAGREEMENT-01-A3
     sequence: 3
-    title: Interpret the Plural ends and reasonable disagreement experience modestly
-    instructions: 'Review what was noticed without treating intensity, calm, certainty, group agreement,
-      or unusual experience as automatic truth. Compare the limited record with this evidence target:
-      Can explain a competing vision of the good fairly and state where cooperation remains possible.'
+    title: Design a limited shared arrangement
+    instructions: 'Choose one shared issue, such as planning a weekend or dividing a common resource.
+      Propose an arrangement that protects one important good from each position, along with an opt-out
+      or review point. Identify a conflict it does not solve and check that neither person must profess
+      the other''s values.
+
+
+      Observation checks: A specific shared arrangement is proposed; Both positions retain a protected
+      good; An unresolved conflict and exit are named. Mark only what you observed. Missing, mixed and
+      negative results are valid; a deferred action is not completed.
+
+
+      Final review: What can be shared while the disagreement remains, and which compromise would ask
+      too much?
+
+
+      Examples: Supportive: A shared plan allowed one quiet interval and one optional outing without requiring
+      identical preferences.
+
+
+      Mixed: Each position was understood but resource limits prevented a mutually acceptable plan.
+
+
+      Contradictory: Cooperation depended on one person pretending agreement or abandoning a basic boundary.
+
+
+      Inconclusive: The positions were summarized only as stereotypes without checking their reasons.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -225,9 +266,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0111_a3_experience_and_interpretation_separated
-        - c0111_a3_alternative_explanation_retained
-        - c0111_a3_target_evidence_compared
+        - a_specific_shared_arrangement_is_proposed
+        - both_positions_retain_a_protected_good
+        - an_unresolved_conflict_and_exit_are_named
       - measurement_id: c0111_a3_boundary
         kind: boolean
         role: supporting
@@ -248,17 +289,15 @@ intervention:
       Plural ends and reasonable disagreement; no purchase, subscription, travel, credential, or public
       artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Plural ends and reasonable disagreement; assistive technology, interpretation, a support
-      person, and a deferred action are valid without penalty.
+    - Use written exchanges, translated material, or the stability/exploration case. No debate partner,
+      travel, disclosure of beliefs, or forced reconciliation is required.
     cultural_context:
     - Adapt the expression of Plural ends and reasonable disagreement to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Plural ends and reasonable disagreement opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use written exchanges, translated material, or the stability/exploration case. No debate partner,
+      travel, disclosure of beliefs, or forced reconciliation is required.
   pause_conditions:
   - Pause Plural ends and reasonable disagreement when capacity, consent, authority, privacy, access,
     care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make
@@ -290,10 +329,7 @@ evidence_and_scoring:
   - c0111_a3_boundary
   - c0111_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Plural ends and reasonable disagreement action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Plural ends and reasonable disagreement criterion, depended
-    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - Cooperation depended on one person pretending agreement or abandoning a basic boundary.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Plural ends and reasonable disagreement explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -304,14 +340,19 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Plural ends and reasonable disagreement rules withhold observations older than
     90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can explain a competing vision of the good fairly and state where cooperation remains possible.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Plural ends and reasonable disagreement requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Explain each position from the inside. Observed checks: Both positions
+    have serious reasons; Costs as well as goods are acknowledged; A non-accusatory question is formulated.
+    Action 2: Check the account without demanding agreement. Observed checks: The account is checked against
+    another perspective; An omission is corrected or explicitly considered; Real disagreement remains
+    visible. Action 3: Design a limited shared arrangement. Observed checks: A specific shared arrangement
+    is proposed; Both positions retain a protected good; An unresolved conflict and exit are named.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. The positions were summarized only as stereotypes without
+    checking their reasons.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Plural
     ends and reasonable disagreement contribution under typed evaluation; protocol performance remains
     distinct and is never counted twice.
@@ -321,9 +362,8 @@ evidence_and_scoring:
   - L13
   - L24
   - L31
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Plural ends and reasonable disagreement evidence.
@@ -331,12 +371,16 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The choose a declared frame for plural ends and reasonable disagreement action was attempted or explicitly
-    deferred.
-  - The complete two bounded plural ends and reasonable disagreement practices action was attempted or
-    explicitly deferred.
-  - The interpret the plural ends and reasonable disagreement experience modestly action preserved a limited
-    conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Explain each position from the inside. Observed checks: Both positions have serious reasons;
+    Costs as well as goods are acknowledged; A non-accusatory question is formulated.'
+  - 'Action 2: Check the account without demanding agreement. Observed checks: The account is checked
+    against another perspective; An omission is corrected or explicitly considered; Real disagreement
+    remains visible.'
+  - 'Action 3: Design a limited shared arrangement. Observed checks: A specific shared arrangement is
+    proposed; Both positions retain a protected good; An unresolved conflict and exit are named.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -345,59 +389,51 @@ completion_and_review:
     - c0111_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Plural ends and reasonable disagreement only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Plural ends and reasonable disagreement across
-    roles, cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: What can be shared while the disagreement remains, and which compromise would
+    ask too much?
+  transfer_limit: The comparison practices fair representation and bounded cooperation. Some differences
+    remain incompatible, and agreement in one arrangement does not erase deeper disagreement.
   reflection:
-    before: What does Plural ends and reasonable disagreement require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Plural ends and reasonable disagreement criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can explain a competing vision of the good fairly and state
-      where cooperation remains possible.', what contradiction or missing context matters most, and should
-      this Plural ends and reasonable disagreement design be repeated, adapted, deferred, stopped, or
-      referred?
+    before: 'What would count as doing this honestly? Goal: Represent a competing vision of a good life
+      fairly and identify cooperation without false agreement.'
+    during: Which checks have actually been observed? Each position was understood but resource limits
+      prevented a mutually acceptable plan.
+    after: What can be shared while the disagreement remains, and which compromise would ask too much?
   review_guidance:
     repeat: Repeat the same bounded Plural ends and reasonable disagreement design only when the context
       and burden remain appropriate.
-    adapt: Change the Plural ends and reasonable disagreement medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Use written exchanges, translated material, or the stability/exploration case. No debate partner,
+      travel, disclosure of beliefs, or forced reconciliation is required.
     stop: Stop Plural ends and reasonable disagreement when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Plural ends and reasonable disagreement
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Plural ends and reasonable disagreement criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Plural ends and reasonable disagreement criteria were observed while burden, support,
-      contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Plural ends and reasonable disagreement criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Plural ends and reasonable disagreement action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: A shared plan allowed one quiet interval and one optional outing without requiring identical
+      preferences.
+    mixed: Each position was understood but resource limits prevented a mutually acceptable plan.
+    contradictory: Cooperation depended on one person pretending agreement or abandoning a basic boundary.
+    inconclusive: The positions were summarized only as stereotypes without checking their reasons.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Plural ends and reasonable disagreement.
+    context_heading: Cooperate across a real difference in priorities
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Plural ends
       and reasonable disagreement.
   check_in_labels:
-    c0111_a1_primary: The bounded Plural ends and reasonable disagreement criterion for action 1 was observed
+    c0111_a1_primary: 'Observed checks: explain each position from the inside'
     c0111_a1_boundary: Action 1 stayed inside its stated Plural ends and reasonable disagreement boundary
     c0111_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0111_a2_primary: The bounded Plural ends and reasonable disagreement criterion for action 2 was observed
+    c0111_a2_primary: 'Observed checks: check the account without demanding agreement'
     c0111_a2_boundary: Action 2 stayed inside its stated Plural ends and reasonable disagreement boundary
     c0111_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0111_a3_primary: The bounded Plural ends and reasonable disagreement criterion for action 3 was observed
+    c0111_a3_primary: 'Observed checks: design a limited shared arrangement'
     c0111_a3_boundary: Action 3 stayed inside its stated Plural ends and reasonable disagreement boundary
     c0111_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Plural ends and reasonable
-    disagreement practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What can be shared while the disagreement remains, and which compromise would ask too
+    much? Completion is not mastery.
+  plain_language_evidence: A shared plan allowed one quiet interval and one optional outing without requiring
+    identical preferences.
   display_order: 20

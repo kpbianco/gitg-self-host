@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 1.0.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-HOME-UPKEEP-SYSTEM-01
 slug: audit-and-redesign-one-home-upkeep-system
-name: Audit and Redesign One Home Upkeep System
+name: Make one home upkeep routine easy to repeat
 parent_competency_id: '13.02'
 domain_id: '13'
 governance:
@@ -16,8 +16,8 @@ governance:
   - SRC-CANONICAL-CURRICULUM-V2
   - SRC-M6D-NCHH-HEALTHY-HOME
   authoring:
-    provenance: Individually authored M6D-01 source package for competency 13.02; it is not projected
-      into the runtime.
+    provenance: M6J individually authored exercise for 13.02; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: pending
     safety_review_status: pending_specialist_expansion_review
@@ -36,10 +36,9 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: Audit one user-controlled, non-hazardous home area or routine, make one reversible system redesign,
-    and observe whether two planned upkeep events become easier to see and complete.
-  why_recommended: The selected competency concerns condition, inventory, routines, and preventive needs
-    that keep a living space functional before visible failure.
+  purpose: Connect a household function to a clear cue, accessible storage, and a tested upkeep routine.
+  why_recommended: Connect a household function to a clear cue, accessible storage, and a tested upkeep
+    routine.
   claims:
   - statement: Moisture, pests, combustion safety, structural conditions, and other housing hazards require
       appropriate prevention, reporting, or qualified response rather than an improvised home-organization
@@ -49,32 +48,31 @@ meaning_and_fit:
     - SRC-M6D-NCHH-HEALTHY-HOME
     limitations: General healthy-home guidance does not establish the safety of a specific dwelling or
       authorize inspection, remediation, repair, chemical use, or tenancy action.
-  - statement: This protocol limits system redesign to one non-hazardous area or routine controlled by
-      the participant and does not measure cleanliness, aesthetics, consumption, domestic virtue, or worth.
+  - statement: Connect a household function to a clear cue, accessible storage, and a tested upkeep routine.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: A bounded source-only protocol has not been validated across housing types, disabilities,
-      household structures, cultures, or resource constraints.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Is there one non-hazardous area or routine you control, such as a personal entry
     shelf or paper-supply check, that can be audited and changed without repair, chemicals, lifting risk,
     tenancy conflict, or another person's belongings?
   not_applicable_behavior: Mark not applicable or defer without penalty when the participant lacks control,
     safe access, time, capacity, or a non-hazardous target; housing constraints and support needs are
     not personal deficits.
-  readiness_considerations: Proceed only with authority over the target and a reversible change requiring
-    no tools, hazardous products, heavy lifting, ladder use, repair, disposal of another person's property,
-    or spending.
-  opportunity_considerations: Requires one short audit, one redesign, and two naturally occurring upkeep
-    opportunities within 14 days; do not create mess, waste, or a maintenance problem to test the system.
+  readiness_considerations: Use a seated reach, tactile marker, clear label or shared reminder. Reducing
+    the routine to a single ready item may be more useful than reorganizing a whole room.
+  opportunity_considerations: Choose a small area you control, such as an entry tray, reusable shopping
+    bag station or clean-towel shelf. Use existing containers and avoid repairs, chemicals, climbing,
+    heavy lifting and permanent modifications.
   prerequisites:
-  - One user-controlled non-hazardous area or recurring routine.
-  - A reversible no-cost or low-cost change and a safe accessible observation position.
+  - Choose a small area you control, such as an entry tray, reusable shopping bag station or clean-towel
+    shelf. Use existing containers and avoid repairs, chemicals, climbing, heavy lifting and permanent
+    modifications.
   dependencies: []
   safe_alternatives:
-  - Use a paper or digital simulation of an upkeep system without changing the home.
-  - Record a concern for the owner, landlord, housing provider, support person, tradesperson, or qualified
-    professional instead of acting on it.
+  - Use a seated reach, tactile marker, clear label or shared reminder. Reducing the routine to a single
+    ready item may be more useful than reorganizing a whole room.
   role_conditions:
   - Shared households require agreement before changing shared systems; renters, residents, guests, and
     supported-living participants act only within their authority.
@@ -87,17 +85,23 @@ meaning_and_fit:
 intervention:
   protocol_class: PF-AUDIT-REDESIGN
   duration_days: 14
-  cadence: Audit one system, choose one reversible redesign, install it safely, then observe two planned
-    upkeep opportunities.
-  setup: Choose one narrow target such as locating keys on a personal entry shelf, noticing when a paper
-    supply is low, or returning one frequently used non-hazardous item. Define the target's function,
-    ownership, safe access, one upkeep cue, and one observable completion condition.
-  privacy_and_boundaries: Evidence stores only allowlisted audit and result criteria, never photographs,
-    room descriptions, address, tenancy status, possessions, inventory contents, household member identity,
-    access details, security arrangements, or private narrative. Do not enter inaccessible areas, move
-    another person's belongings, disclose housing conditions, or install surveillance. Organization is
-    not cleanliness, morality, minimalism, or property value.
-  expected_burden: About 45–60 minutes across a short audit, one redesign, and two upkeep observations.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose a small area you control, such as an entry tray, reusable shopping bag station or clean-towel
+    shelf. Use existing containers and avoid repairs, chemicals, climbing, heavy lifting and permanent
+    modifications. Goal: Connect a household function to a clear cue, accessible storage, and a tested
+    upkeep routine. Scope: One area tests organizing, upkeep cues and shared burden. It does not cover
+    the maintenance needs of an entire home or show long-term reliability after two uses. Time and effort:
+    About 20–40 minutes for one reversible change, followed by two ordinary uses and a brief review. Adaptation:
+    Use a seated reach, tactile marker, clear label or shared reminder. Reducing the routine to a single
+    ready item may be more useful than reorganizing a whole room. Keep personal working notes outside
+    the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a seated reach, tactile marker, clear label or shared reminder. Reducing the
+    routine to a single ready item may be more useful than reorganizing a whole room.
+  expected_burden: About 20–40 minutes for one reversible change, followed by two ordinary uses and a
+    brief review.
   action_count_rationale: null
   foreseeable_misuse:
   - Treating clutter, housing quality, disability, poverty, tenancy limits, shared living, or need for
@@ -112,11 +116,16 @@ intervention:
   actions:
   - stable_id: PRACTICE-HOME-UPKEEP-SYSTEM-01-A1
     sequence: 1
-    title: Audit one safe user-controlled system
-    instructions: From a safe accessible position, review one narrow area or routine you control. Mark
-      only whether its function, ownership, cue, safe access, and completion condition are defined. Do
-      not record contents, images, room details, address, another person's belongings, or a hazardous
-      condition.
+    title: Describe the function and current friction
+    instructions: 'State what the area must enable, who controls it, and what repeatedly goes wrong. For
+      a bag station, the function is taking a usable bag when leaving; the failure may be storing it where
+      it is forgotten. Identify safe reach, a clear passage, no hazardous work, a reset cue and what counts
+      as ready, such as one usable bag.
+
+
+      Observation checks: The household function is explicit; A repeated friction is identified; Access
+      and ownership are checked. Mark only what you observed. Missing, mixed and negative results are
+      valid; a deferred action is not completed.'
     expected_time: 10 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -153,11 +162,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-HOME-UPKEEP-SYSTEM-01-A2
     sequence: 2
-    title: Choose one reversible redesign
-    instructions: Select exactly one change that addresses the observed system friction, such as a safe
-      visible cue, a reachable designated place, a simple replenishment threshold, or a reminder. Confirm
-      that it is reversible, user-controlled, non-hazardous, accessible, and does not require moving another
-      person's property.
+    title: Design one small upkeep cue
+    instructions: 'Choose one reversible change tied to the friction: put the bags beside an existing
+      departure item or add a visible note at a reachable location. Specify when the area is reset and
+      what enough means, such as one clean bag ready. Check with anyone who shares the area before changing
+      their arrangement.
+
+
+      Observation checks: One change addresses the friction; The reset cue and enough condition are defined;
+      Shared use is respected. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.'
     expected_time: 10 minutes
     due_within_days: 5
     typed_evidence_identity:
@@ -195,10 +209,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-HOME-UPKEEP-SYSTEM-01-A3
     sequence: 3
-    title: Install the safe change and verify access
-    instructions: Make the one planned change without tools, hazardous products, lifting risk, or permanent
-      alteration. Check that the target remains safely reachable and does not block movement, an exit,
-      assistive equipment, ventilation, utilities, alarms, or another household member's authorized use.
+    title: Install and test the arrangement
+    instructions: 'Make the agreed change using existing materials. Rehearse retrieving and returning
+      the item from your ordinary position. Check that the arrangement leaves exits, ventilation, mobility
+      equipment and other necessary items unobstructed. Undo the change if it creates a new access or
+      safety problem.
+
+
+      Observation checks: The reversible change is installed; Retrieval and return are rehearsed; Safe
+      access is preserved. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.'
     expected_time: 15 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -241,11 +261,30 @@ intervention:
         expected: true
   - stable_id: PRACTICE-HOME-UPKEEP-SYSTEM-01-A4
     sequence: 4
-    title: Observe two upkeep opportunities
-    instructions: At two naturally occurring opportunities, record whether the cue was noticed and the
-      defined upkeep action was safely completed, deferred, or not applicable. Compare the result with
-      the audit without photographing the home or recording contents. Keep a redesign that did not help
-      as valid contradictory evidence and remove it if it reduces access or safety.
+    title: Review two ordinary upkeep opportunities
+    instructions: 'At two natural uses, note whether the cue was noticed and the item was ready. Record
+      any reset, missing supply, extra burden or interruption. Keep, move or remove the cue based on those
+      observations. A routine that looks tidy but repeatedly fails its function needs a different design.
+
+
+      Observation checks: Two opportunities are distinguished; Readiness and reset burden are observed;
+      The arrangement is retained or revised for a reason. Mark only what you observed. Missing, mixed
+      and negative results are valid; a deferred action is not completed.
+
+
+      Final review: Did the new arrangement prevent the old failure, and who now carries the upkeep burden?
+
+
+      Examples: Supportive: A bag was ready on both departures and returning it took one ordinary motion.
+
+
+      Mixed: The cue worked once but another household member could not comfortably reach the storage.
+
+
+      Contradictory: The new arrangement blocked passage or transferred all upkeep to an unwilling person.
+
+
+      Inconclusive: The area was rearranged but no natural use or reset was observed.'
     expected_time: 15 minutes
     due_within_days: 14
     typed_evidence_identity:
@@ -294,14 +333,14 @@ intervention:
     - Prefer moving an existing safe cue, reusing a container, adding a paper threshold card, or setting
       an existing reminder; spending is optional and never an outcome.
     accessibility:
-    - Use seated observation, reachable placement, tactile or audio cues, large print, assistive technology,
-      support from a freely chosen person, or a simulation when physical access is limited.
+    - Use a seated reach, tactile marker, clear label or shared reminder. Reducing the routine to a single
+      ready item may be more useful than reorganizing a whole room.
     cultural_context:
     - Define function with the participant and household rather than imposing minimalist, aesthetic, individualistic,
       ownership, cleanliness, or consumption norms.
     resource_variants:
-    - In shared, temporary, rented, institutional, or supported housing, use a private routine or simulation
-      unless explicit authority for the bounded change is clear.
+    - Use a seated reach, tactile marker, clear label or shared reminder. Reducing the routine to a single
+      ready item may be more useful than reorganizing a whole room.
   pause_conditions:
   - Pause on any sign of hazard, pain, fatigue, access conflict, household disagreement, tenancy uncertainty,
     protected belongings, or need for tools, products, lifting, inspection, or repair.
@@ -332,12 +371,7 @@ evidence_and_scoring:
   - upkeep_observation_criteria
   - upkeep_change_caused_harm
   adverse_or_contradictory_indicators:
-  - The target involved an excluded hazard, repair, chemical, tenancy, accessibility, or professional
-    boundary.
-  - The redesign reduced safe access, blocked a path or support, moved another person's property, or created
-    household conflict.
-  - The cue was not noticed, upkeep did not occur, or the redesign added burden without improving the
-    target function.
+  - The new arrangement blocked passage or transferred all upkeep to an unwilling person.
   independence_rule: Practical help and accessibility support are recorded as support conditions without
     helper identity and do not reduce performance, dignity, or ownership.
   context_transfer_rule: Evidence is limited to one user-controlled system and two opportunities; it does
@@ -347,22 +381,28 @@ evidence_and_scoring:
     diminishing multipliers; duplicate origins are rejected.
   recency_rule: Observations older than the explicit 45-day rule are stale; no maintenance durability
     or prevention effect is inferred beyond the window.
-  performance_rubric: Performance concerns a bounded audit, one safe reversible redesign, preserved access,
-    and two observed upkeep opportunities—not aesthetics, possessions, spending, tidiness, or property
-    condition.
-  evidence_quality_rubric: Quality requires allowlisted criteria, explicit user control and non-hazard
-    checks, two distinct opportunities, and minimal provenance; images, contents, room descriptions, and
-    identities are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Describe the function and current friction. Observed checks: The household
+    function is explicit; A repeated friction is identified; Access and ownership are checked. Action
+    2: Design one small upkeep cue. Observed checks: One change addresses the friction; The reset cue
+    and enough condition are defined; Shared use is respected. Action 3: Install and test the arrangement.
+    Observed checks: The reversible change is installed; Retrieval and return are rehearsed; Safe access
+    is preserved. Action 4: Review two ordinary upkeep opportunities. Observed checks: Two opportunities
+    are distinguished; Readiness and reset burden are observed; The arrangement is retained or revised
+    for a reason.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. The area was rearranged but no natural use or reset
+    was observed.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Selected audit, redesign, installation, and upkeep indicators may produce context-bound
     direct competency shadow evidence distinct from protocol performance.
   canonical_lever_allocation: parent_competency_mapping
   recommendation_target_lever_ids:
   - L18
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold hazard-related, unsafe, adverse, stale, duplicate, cross-epoch, unattempted, unknown, not-observed,
     not-applicable, deferred, or inconclusive evidence.
@@ -370,10 +410,17 @@ evidence_and_scoring:
     private narrative, and any evidence requiring excluded work.
 completion_and_review:
   completion_criteria:
-  - One user-controlled non-hazardous system was audited.
-  - One reversible redesign was selected and safely installed.
-  - Two eligible upkeep opportunities were observed; a safety stop or deferral closes the protocol without
-    claiming completion.
+  - 'Action 1: Describe the function and current friction. Observed checks: The household function is
+    explicit; A repeated friction is identified; Access and ownership are checked.'
+  - 'Action 2: Design one small upkeep cue. Observed checks: One change addresses the friction; The reset
+    cue and enough condition are defined; Shared use is respected.'
+  - 'Action 3: Install and test the arrangement. Observed checks: The reversible change is installed;
+    Retrieval and return are rehearsed; Safe access is preserved.'
+  - 'Action 4: Review two ordinary upkeep opportunities. Observed checks: Two opportunities are distinguished;
+    Readiness and reset burden are observed; The arrangement is retained or revised for a reason.'
+  - For minimum completion, finish at least 3 of these 4 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 3
     substantive_markers:
@@ -383,54 +430,49 @@ completion_and_review:
     - upkeep_observation_criteria
     marker_mode: all
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Keep or repeat the redesign only if access and safety remain intact and two observations
-    show it is no more burdensome; otherwise remove, adapt, or defer it.
-  transfer_limit: One system and two observations do not establish whole-home functionality, preventive
-    maintenance, housing safety, cleanliness, mastery, or transfer to another dwelling.
+  progression_criteria: Did the new arrangement prevent the old failure, and who now carries the upkeep
+    burden?
+  transfer_limit: One area tests organizing, upkeep cues and shared burden. It does not cover the maintenance
+    needs of an entire home or show long-term reliability after two uses.
   reflection:
-    before: Do I control this target, and can I audit and change it without hazard, repair, chemicals,
-      private disclosure, or another person's property?
-    during: Does the one redesign address the observed friction while preserving access, exits, supports,
-      and shared use?
-    after: Across two real opportunities, was the cue noticed and upkeep safely completed, deferred, or
-      made more burdensome?
+    before: 'What would count as doing this honestly? Goal: Connect a household function to a clear cue,
+      accessible storage, and a tested upkeep routine.'
+    during: Which checks have actually been observed? The cue worked once but another household member
+      could not comfortably reach the storage.
+    after: Did the new arrangement prevent the old failure, and who now carries the upkeep burden?
   review_guidance:
     repeat: Retain the redesign for another bounded observation only when it remained safe, accessible,
       user-controlled, and useful.
-    adapt: Reduce scope, change cue modality, use a simulation, add agreed support, or restore the prior
-      arrangement.
+    adapt: Use a seated reach, tactile marker, clear label or shared reminder. Reducing the routine to
+      a single ready item may be more useful than reorganizing a whole room.
     stop: Stop and undo the change for hazards, access loss, disagreement, scope drift, or any need for
       excluded work.
-    escalate: Route hazards and repair, tenancy, accessibility, or emergency needs to the appropriate
-      responsible or qualified party.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The audit identified one friction, the reversible redesign preserved access, and both
-      planned upkeep opportunities were safely completed.
-    mixed: One opportunity was completed and one deferred, or the cue helped noticing while adding manageable
-      burden.
-    contradictory: The change reduced access, added burden, was not noticed, or failed to support the
-      defined upkeep action.
-    inconclusive: No natural upkeep opportunity occurred, the target changed, or observations were unknown,
-      not observed, or not comparable.
+    supportive: A bag was ready on both departures and returning it took one ordinary motion.
+    mixed: The cue worked once but another household member could not comfortably reach the storage.
+    contradictory: The new arrangement blocked passage or transferred all upkeep to an unwilling person.
+    inconclusive: The area was rearranged but no natural use or reset was observed.
 presentation:
   setup_copy:
-    context_heading: Choose one user-controlled non-hazardous home system.
+    context_heading: Make one home upkeep routine easy to repeat
     boundary_heading: No repair, hazard work, private home contents, or judgment of cleanliness.
-    timing_hint: Plan one reversible change and two natural upkeep opportunities within 14 days.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: One safe area or routine within your authority
   check_in_labels:
-    home_system_audit_criteria: Audit criteria present
+    home_system_audit_criteria: 'Observed checks: describe the function and current friction'
     excluded_home_hazard_found: An excluded home hazard was found
-    home_redesign_plan_criteria: Safe redesign criteria present
+    home_redesign_plan_criteria: 'Observed checks: design one small upkeep cue'
     redesign_requires_excluded_work: The redesign requires excluded work
-    safe_redesign_installed: Reversible redesign installed safely
+    safe_redesign_installed: 'Observed checks: install and test the arrangement'
     post_change_access_criteria: Post-change access criteria present
     post_change_safety_problem: The installed change created a safety problem
-    upkeep_observation_count: Eligible upkeep opportunities completed
+    upkeep_observation_count: 'Observed checks: review two ordinary upkeep opportunities'
     upkeep_observation_criteria: Upkeep observation criteria present
     upkeep_change_caused_harm: The upkeep change caused harm or loss of access
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The record checks allowlisted audit, redesign, access, and upkeep indicators
-    without storing home contents, images, location, or identities.
+  completion_copy: Did the new arrangement prevent the old failure, and who now carries the upkeep burden?
+    Completion is not mastery.
+  plain_language_evidence: A bag was ready on both departures and returning it took one ordinary motion.
   display_order: 9

@@ -1,0 +1,348 @@
+schema_version: GG-TAILORED-PRACTICE-AUTHORING-1.0
+domain_id: '02'
+exercises:
+  '02.01':
+    title: "Analyze a shared-resource dilemma through different moral lenses"
+    goal: "Explain how different moral frameworks identify reasons, obligations and unresolved costs in one choice."
+    setup: "Use this case: a shared camera was promised to a friend, but a community group now requests it for a useful event at the same time. No emergency or uniquely correct answer is assumed."
+    scope_note: "One case introduces several moral frameworks. Religious ethics, natural law, rights, justice and particularism require further study; the comparison does not make every framework interchangeable."
+    burden: "About 30–45 minutes for the comparison and one revision; no live dispute is required."
+    actions:
+      - title: "Compare four kinds of moral reason"
+        instructions: "Write the strongest reason each lens offers: virtue asks what a practically wise, reliable person would do; duty asks what the promise requires; consequences consider benefits and harms for everyone affected; care attends to the relationships and dependencies involved. Give each a possible recommendation and an objection rather than assuming all reach the same answer."
+        checks: [Four lenses supply distinct reasons, All affected parties enter the comparison, Each recommendation faces a serious objection]
+      - title: "Test ownership and changed circumstances"
+        instructions: "Ask who has authority over the camera and what legitimate claims each party has. Change one fact: the friend needs it for an irreplaceable family occasion, or the group has another camera available. Explain which reasons change and which persist. Do not add invented facts merely to make your preferred option win."
+        checks: [Authority and legitimate claims are considered, One changed fact is tested consistently, Stable and changing reasons are distinguished]
+      - title: "Defend a decision without erasing its cost"
+        instructions: "Choose lend, keep the promise, seek an agreed rearrangement, or another feasible option. State your decisive reason, strongest remaining objection and who bears the cost. Draft an honest explanation to the affected parties and identify the further information that could change your judgment."
+        checks: [The decision has an explicit moral reason, A remaining cost is acknowledged, A revision condition is identified]
+    adaptation: "Compare four spoken explanations or use cards. The fictional case permits participation without revealing private beliefs or confronting a real authority."
+    review: "Which framework exposed a reason you initially missed, and where does your decision remain contestable?"
+    examples:
+      supportive: "The decision preserved the promise while explaining the lost community benefit and a possible agreed alternative."
+      mixed: "Four frameworks were named but their reasons were reduced to personal preference."
+      contradictory: "Only the decision maker's convenience counted, or missing facts were invented to dismiss an objection."
+      inconclusive: "An answer was chosen without identifying obligations, consequences or relationships."
+  '02.02':
+    title: "Notice the ethical choices inside an ordinary announcement"
+    goal: "Recognize consent, fairness, truth and power before making a small public or shared communication."
+    setup: "Draft a fictional notice thanking people after a shared event. Decide whether to name helpers, use a group photograph and describe the event as a success. Do not upload an actual photograph or identifying details."
+    scope_note: "One announcement practices noticing ethical dimensions before publication. Moral perception in other settings requires further observation and contextual judgment."
+    burden: "About 20 minutes to draft, inspect and revise one short notice."
+    actions:
+      - title: "Map who could be affected by the notice"
+        instructions: "List contributors, attendees, people absent from the photograph, and anyone whose participation may be private. Ask who gets credit, who can meaningfully decline exposure, and whose work is invisible. Separate what the notice's author knows from what they assume about others' preferences."
+        checks: [Affected groups include less visible contributors, Consent and power differences are noticed, Knowledge is separated from assumption]
+      - title: "Locate the ethical decision in each sentence"
+        instructions: "Mark a truth question, a consent question and a fairness question in the draft. For example, a photograph requires permission appropriate to its use, an attendance claim requires a basis, and thanks should consider unpaid preparation. State a possible harm and a proportionate way to prevent it for each."
+        checks: [Three ethical questions are located in the draft, Each question identifies a plausible consequence, Each has a proportionate preventive step]
+      - title: "Revise before any publication"
+        instructions: "Rewrite the notice using verified claims, non-identifying language where needed and fair acknowledgment. Keep unresolved consent as a reason to omit material or wait, not as presumed agreement. Compare the two drafts and name the ethical issue that ordinary proofreading would have missed."
+        checks: [The draft changes in response to the review, Unresolved consent is respected, An initially hidden ethical issue is named]
+    adaptation: "Use an audio announcement or a purely fictional school, neighborhood or club event. Publishing is unnecessary; this exercise tests pre-publication judgment."
+    review: "What ethical concern became visible before anyone needed to complain?"
+    examples:
+      supportive: "The revision credited preparation work and omitted an unapproved photograph."
+      mixed: "Privacy was considered but the announcement still credited only visible presenters."
+      contradictory: "Silence was treated as consent or an unsupported attendance claim was retained for prestige."
+      inconclusive: "Only spelling and layout changed; affected people and ethical decisions were not examined."
+  '02.03':
+    title: "Turn one virtue into an observable distinction"
+    goal: "Distinguish a virtue from its deficiency, excess and impressive-looking counterfeit."
+    setup: "Use courage in a low-stakes correction: a shared note credits the wrong person. Work on paper or choose an equally safe ordinary situation."
+    scope_note: "Courage supplies a worked example of behavioral definition. Honesty, compassion, temperance and other virtues require their own distinctions and repeated practice."
+    burden: "About 20 minutes to define the distinction and 10 minutes to rehearse or apply it."
+    actions:
+      - title: "Describe four different responses"
+        instructions: "Describe silence despite a safe opportunity, a proportionate correction, an aggressive public accusation, and a dramatic correction designed mainly to attract praise. Explain why avoidance, recklessness and performance can all differ from courage. Include fear, purpose, evidence and proportionality in the distinction."
+        checks: [Four responses differ in observable conduct, Purpose and proportionality are considered, Confidence or visibility alone does not define virtue]
+      - title: "Write a behavioral standard that can fail"
+        instructions: "Specify what a courageous correction would include: checking the credit, naming the discrepancy, using an appropriate channel and accepting a modest social cost. Name a condition that would make the same act unwise, such as uncertainty about the facts or a serious retaliation risk."
+        checks: [The standard names concrete behavior, A possible cost is acknowledged, A counterexample or limiting condition is explicit]
+      - title: "Rehearse the proportionate response and correct it"
+        instructions: "Speak or write the correction once, then compare it with your standard. Remove an accusation, unnecessary audience or claim you cannot support. If a real safe opportunity exists, act within your role; otherwise retain the rehearsal as evidence of preparation and state what live courage remains untested."
+        checks: [A specific response is rehearsed or enacted, One weakness is corrected or deliberately checked, Rehearsal and live conduct remain distinct]
+    adaptation: "Use text, a private recording or a supporter who helps communicate. Speaking loudly, acting alone and confronting authority are not requirements."
+    review: "What observable feature distinguishes the virtue from merely looking brave?"
+    examples:
+      supportive: "The correction became factual and proportionate, with a clear account of the cost and its limits."
+      mixed: "The response was direct but used an unnecessarily humiliating audience."
+      contradictory: "Risk-taking or public dominance was treated as sufficient proof of courage."
+      inconclusive: "Courage was described only with another abstract adjective."
+  '02.04':
+    title: "Communicate a difficult truth accurately and respectfully"
+    goal: "Give a relevant truthful account while protecting confidentiality, uncertainty and the listener's dignity."
+    setup: "Use a minor missed commitment, such as sending a promised draft late. Choose a safe recipient or rehearse a fictional exchange; exclude confidential investigations and dangerous confrontations."
+    scope_note: "One statement practices candor in an ordinary responsibility. Professional confidentiality, protected disclosures and serious conflict require context-specific guidance."
+    burden: "About 15 minutes to prepare, one short exchange or rehearsal, and a brief review."
+    actions:
+      - title: "Separate the facts from excuses and private details"
+        instructions: "Write what was promised, what actually happened, what is uncertain and what the recipient needs to know. Exclude another person's private information and explanations that merely shift blame. Example: I promised the draft today; it is unfinished; I can send the checked section tomorrow."
+        checks: [The promise and actual outcome are accurate, Uncertainty is stated where needed, Irrelevant private details are excluded]
+      - title: "Deliver a clear statement with a practical next step"
+        instructions: "Use a suitable private channel and state the gap plainly. Acknowledge its likely inconvenience, offer a realistic correction and ask whether the recipient needs a different arrangement. Avoid misleading optimism, a confession that demands comfort, or criticism disguised as honesty."
+        checks: [The difficult fact is stated directly, The next step is realistic, The recipient can question or decline the proposed arrangement]
+      - title: "Check what the listener could reasonably infer"
+        instructions: "Review the wording for an implication stronger than the facts support. If an exchange occurred, clarify a misunderstanding and follow through on the revised arrangement. In rehearsal, write the listener's strongest reasonable question and answer it without inventing certainty or disclosing someone else's information."
+        checks: [Misleading implications are checked, A reasonable question receives a truthful response, Follow-through or the limits of rehearsal are recorded]
+    adaptation: "Use a written message, extra processing time or communication support. A fictional exchange can develop clarity when direct contact would be unsafe."
+    review: "Did the recipient receive the truth they needed without being made responsible for your discomfort?"
+    examples:
+      supportive: "A missed deadline was acknowledged with a feasible replacement and an honest account of what remained incomplete."
+      mixed: "The facts were accurate but the message hid the missed commitment inside a long explanation."
+      contradictory: "A knowingly unrealistic promise replaced the old one or another person's private situation was exposed."
+      inconclusive: "A draft was polished without identifying the difficult fact or checking its implications."
+  '02.05':
+    title: "Make, track and close one realistic promise"
+    goal: "Make a commitment another person can reasonably rely on, and fulfill or renegotiate it before failure."
+    setup: "Select one small commitment within your control, such as returning a borrowed item or supplying a short note. Use a calendar or paper reminder and avoid promising on another person's behalf."
+    scope_note: "One completed commitment demonstrates a bounded instance of reliability. Trust across changing conditions depends on a longer pattern and honest repair after failures."
+    burden: "About 10 minutes to agree scope, the ordinary work involved, and 5 minutes to close the loop."
+    actions:
+      - title: "Agree what is promised and by when"
+        instructions: "Specify the deliverable, recipient, deadline, dependencies and a reasonable check that it is done. Compare the promise with your actual capacity before accepting. Replace a vague offer such as soon with an agreed date, or decline a commitment you cannot responsibly make."
+        checks: [Deliverable and deadline are explicit, Capacity and dependencies are checked, The recipient can understand what to rely on]
+      - title: "Use a reminder before the promise is at risk"
+        instructions: "Set a reminder early enough to act or renegotiate. At that point, inspect actual progress. If a dependency or capacity problem threatens delivery, inform the recipient before the deadline, describe the gap and seek an agreed change; silently moving your private deadline does not renegotiate a promise."
+        checks: [A timely reminder is used, Progress is checked against the promise, Any threatened failure is communicated before the deadline]
+      - title: "Deliver and confirm closure or repair"
+        instructions: "Deliver what was agreed and confirm that the recipient can access it. If you failed, name the missed commitment, acknowledge the effect and propose proportionate repair without demanding immediate restored trust. Record which promise-making assumption should change next time."
+        checks: [Delivery or failure is confirmed honestly, Any failure has a concrete repair proposal, A reliability lesson changes a future assumption]
+    adaptation: "Use an accessible reminder or agreed helper. A fictional commitment can rehearse the tracking process, but only real follow-through demonstrates keeping a promise."
+    review: "Could the other person plan around your word, and what would make the next promise more dependable?"
+    examples:
+      supportive: "The item was returned on the agreed day and receipt was confirmed."
+      mixed: "Delivery was late, but the failure was acknowledged and a proportionate repair was completed."
+      contradictory: "The deadline was silently changed or the recipient was blamed for relying on the original promise."
+      inconclusive: "A reminder was created but the delivery point has not occurred."
+  '02.06':
+    title: "Check a shared-resource rule for a double standard"
+    goal: "Apply comparable reasons across self, allies and less influential people while recognizing relevant differences in need."
+    setup: "Use a fictional allocation of three one-hour slots in a shared room among four people. One is a close friend, one is unfamiliar, and one has a genuine access constraint. No employment or legal selection decision is involved."
+    scope_note: "A small allocation tests consistency and equal dignity. It does not settle every theory of justice or prove the absence of bias across real institutions."
+    burden: "About 25–35 minutes to specify, test and revise a resource rule."
+    actions:
+      - title: "State relevant criteria before choosing people"
+        instructions: "List legitimate criteria such as prior booking, urgency, access needs and fair rotation. Explain why friendship, status or your own convenience should or should not matter for this resource. State how an exception will be justified so equal treatment is not confused with ignoring relevant need."
+        checks: [Criteria are stated before the allocation, Relevant differences have explicit reasons, Personal connection is not an unexamined advantage]
+      - title: "Apply the rule and reverse the identities"
+        instructions: "Allocate the slots, then swap the friend and unfamiliar person's names while keeping their circumstances unchanged. Check whether your answer changes. Next place yourself in the least favored position. Identify any preference that cannot be defended using the original criteria."
+        checks: [The same rule is applied to everyone, Identity reversal is performed, An unsupported preference is detected or explicitly ruled out]
+      - title: "Revise and explain the remaining disadvantage"
+        instructions: "Correct a double standard, clarify a defensible exception and give an explanation someone denied a slot could understand. Include a fair way to request review or receive a later turn. Acknowledge scarcity instead of describing the losing person as less deserving of dignity."
+        checks: [Any inconsistent allocation is corrected, Remaining disadvantage has an intelligible reason, A review or later-opportunity route is provided]
+    adaptation: "Use tokens, spoken choices or a simple table. The case can remain fictional; do not collect sensitive characteristics to prove fairness."
+    review: "Which part of your rule would you still endorse if you were the person who lost out?"
+    examples:
+      supportive: "A friendship preference was removed while an access-based exception was retained with a stated reason."
+      mixed: "The allocation was consistent but gave no way to question mistaken information."
+      contradictory: "The criteria changed only when they disadvantaged the decision maker's friend."
+      inconclusive: "Fairness was asserted without a rule, allocation or identity reversal."
+  '02.07':
+    title: "Take a proportionate stand on one small unfairness"
+    goal: "Act on a defensible moral concern despite modest discomfort, then review whether the action helped."
+    setup: "Choose a safely correctable issue, such as omitted credit in a shared document. Check facts and authority first; use a fictional case when speaking could threaten safety, livelihood or essential support."
+    scope_note: "One low-stakes stand practices moral courage and practical judgment. It does not test action under serious threat or require confrontation to prove character."
+    burden: "About 15 minutes of preparation, one short intervention, and 10 minutes of review."
+    actions:
+      - title: "Name the concern, evidence and possible cost"
+        instructions: "Describe the unfairness in concrete terms, who is affected, what supports your account and what remains uncertain. Name the cost you fear, such as an awkward conversation. Distinguish moral purpose from a wish to win an argument, punish someone or appear brave."
+        checks: [The concern has factual support, Affected people and uncertainty are considered, The anticipated cost and moral purpose are distinct]
+      - title: "Choose the least harmful effective intervention"
+        instructions: "Use a proportionate channel: ask the document owner to check missing credit, offer a factual correction or request clarification privately. Keep the affected person's preferences in view and avoid exposing them without agreement. State the request calmly and leave room for correction of your own facts."
+        checks: [The channel fits the issue and risk, The request is specific and proportionate, The affected person's preferences are respected]
+      - title: "Review outcome and responsibility after speaking"
+        instructions: "Record what you actually did, how the issue changed and whether your intervention caused an avoidable cost. Correct your own error if needed. Decide whether a follow-up, different channel or no further action is warranted; resistance alone does not prove your stand was wise."
+        checks: [Action and outcome are separately recorded, Unintended costs are examined, Further action has a proportionate reason]
+    adaptation: "Use writing, an agreed advocate or a fictional rehearsal. Declining unsafe confrontation is compatible with moral seriousness."
+    review: "Did the stand serve the affected person or principle, and what would make the method wiser next time?"
+    examples:
+      supportive: "A factual private request corrected missing credit while allowing an honest mistake to be acknowledged."
+      mixed: "The concern was valid but the chosen public channel embarrassed the person it was intended to help."
+      contradictory: "An unverified accusation was escalated to prove bravery or to attract attention."
+      inconclusive: "A stand was imagined but no action or explicit rehearsal was carried out."
+  '02.08':
+    title: "Enjoy a chosen pleasure within a flexible boundary"
+    goal: "Practice enjoying a discretionary good without letting it displace an obligation or turn into a purity test."
+    setup: "Choose a familiar low-stakes leisure activity, such as a puzzle, game or entertainment session. Use ordinary access; do not experiment with food restriction, substance use, medication or activities associated with serious harm."
+    scope_note: "One leisure session tests moderation in a bounded context. Compulsion, dependence and other high-consequence patterns require support beyond a recreational trial."
+    burden: "About 5 minutes to choose a boundary, one ordinary leisure session, and a 5-minute review."
+    actions:
+      - title: "Define the good and what it must leave room for"
+        instructions: "Name what you enjoy in the activity and one other legitimate need it should not displace, such as sleep, a prior agreement or time with someone. Choose a natural stopping point, such as the end of one round, and a reasonable exception for an agreed change of plans."
+        checks: [The pleasure is valued without shame, A competing need is explicit, A stopping point and reasonable exception are chosen]
+      - title: "Take part and notice the stopping decision"
+        instructions: "Enjoy the activity. At the chosen point, pause long enough to check whether continuing serves enjoyment or merely avoids stopping. Stop, or consciously revise the plan when the exception actually applies. Record the decision rather than demanding flawless self-control or manufacturing guilt about pleasure."
+        checks: [The activity is actually enjoyed or honestly evaluated, The stopping decision is noticed, Any extension follows an explicit reason]
+      - title: "Review both excess and unnecessary rigidity"
+        instructions: "Compare the session with the protected need. Note whether the activity crowded it out, whether the boundary was unnecessarily harsh, and whether you could return to ordinary life afterward. Adjust one feature, such as a clearer endpoint or a more generous window, and retain enjoyment as part of the goal."
+        checks: [The effect on the protected need is checked, Rigidity as well as excess is considered, One proportionate adjustment is chosen]
+    adaptation: "Use a natural activity boundary instead of a timer when timing creates stress. Restful or supported leisure is as eligible as an active hobby."
+    review: "Did the boundary protect another good while still allowing this one to be enjoyed?"
+    examples:
+      supportive: "A game ended at the agreed point and remained enjoyable without displacing a promised call."
+      mixed: "The session overran slightly, revealing that the chosen endpoint was difficult to recognize."
+      contradictory: "Enjoyment was treated as a moral failure or repeated extensions displaced an essential need."
+      inconclusive: "A limit was announced without participating in the activity or observing the stopping decision."
+  '02.09':
+    title: "Respond humanely to a minor wrong without erasing a boundary"
+    goal: "Separate compassion and release of retaliation from automatic forgiveness, restored trust or renewed access."
+    setup: "Use a manageable irritation or this fictional case: a borrowed book was returned damaged. Do not revisit abuse, trauma or a dangerous relationship. Contact with the other person is optional."
+    scope_note: "A minor wrong permits practice with humanity and accountability. This exercise does not require forgiveness or establish what reconciliation should mean after serious harm."
+    burden: "About 20 minutes of private reflection and one optional low-stakes response."
+    actions:
+      - title: "Describe the wrong without reducing the person to it"
+        instructions: "State the act, its effect and what you know about intention. Mark unknown intention as unknown. Name the anger or disappointment without treating it as an instruction to retaliate. Describe the other person's humanity without supplying excuses that cancel the actual harm."
+        checks: [Act and impact are specific, Unknown intention remains unknown, Humanity and accountability are held together]
+      - title: "Choose repair and access separately"
+        instructions: "For the damaged book, compare a repair request, a future lending limit and the decision not to pursue revenge. Explain what each choice does. Forgiving, if freely chosen, need not restore lending privileges; requesting repair need not involve humiliation or repeated demands for an emotional response."
+        checks: [Repair and access are separate decisions, Retaliation is distinguished from accountability, Forgiveness remains a voluntary possibility]
+      - title: "Make or rehearse the humane boundary"
+        instructions: "Write or deliver one proportionate response: describe the damage, request an agreed repair if appropriate and state a future limit you control. Review whether the response preserved truth without contempt. If you keep it private, record that you practiced judgment and wording rather than a real reconciliation."
+        checks: [The response preserves the fact of harm, Any limit concerns the speaker's own choices, Private rehearsal is not claimed as reconciliation]
+    adaptation: "Use the fictional book case or a symbolic drawing. No contact, disclosure, absolution or restored relationship is required."
+    review: "What can you release without denying what happened or surrendering a necessary limit?"
+    examples:
+      supportive: "A reasonable repair request was paired with a lending boundary and no demand for public shame."
+      mixed: "Retaliation was avoided but the proposed boundary was still vague."
+      contradictory: "Compassion was used to pressure someone into restored access or to deny the harm."
+      inconclusive: "Forgiveness was declared without distinguishing trust, access, repair or intention."
+  '02.10':
+    title: "Support a group while refusing one misleading claim"
+    goal: "Distinguish legitimate loyalty from complicity and express a principled disagreement constructively."
+    setup: "Use this fictional case: a club wants to describe an event as fully attended although several seats were empty. You value the club and have been asked to help write its summary."
+    scope_note: "An ordinary reporting case tests loyalty and dissent. Whistleblowing, employment disputes and serious wrongdoing need additional local and professional guidance."
+    burden: "About 25 minutes to analyze the obligation and rehearse a truthful alternative."
+    actions:
+      - title: "Separate the group's good from its proposed method"
+        instructions: "Name the legitimate aim, such as encouraging future participation, and the misleading claim proposed to serve it. Identify who relies on the summary and what responsibility your role creates. Explain why supporting the group does not require endorsing every method it chooses."
+        checks: [A legitimate shared aim is recognized, The problematic method is identified precisely, Responsibility follows the person's actual role]
+      - title: "Draft dissent with a usable alternative"
+        instructions: "Write a respectful objection that names the inaccurate wording and offers a truthful version, such as noting strong discussion without claiming full attendance. Explain how the alternative serves the shared aim. Avoid attacking motives you cannot know or presenting personal preference as a moral requirement."
+        checks: [The objection states a concrete principle, A truthful alternative serves the shared aim, Unsupported accusations are excluded]
+      - title: "Define what you will and will not endorse"
+        instructions: "Rehearse two replies: the group accepts the correction, or it insists on the false wording. In the second case, state the contribution you can still offer and what you cannot approve or sign. Identify a proportionate next channel while acknowledging the limits and costs of your role."
+        checks: [Acceptance and resistance are both rehearsed, Endorsement has an explicit boundary, Any next channel is proportionate to the case]
+    adaptation: "Use a written hypothetical response. Real dissent should account for safety and power; the exercise does not require exposing wrongdoing publicly."
+    review: "What exactly are you loyal to, and which method would betray that commitment?"
+    examples:
+      supportive: "The objection preserved the club's legitimate aim while replacing its inaccurate attendance claim."
+      mixed: "The misleading wording was rejected but no constructive alternative was offered."
+      contradictory: "Loyalty was defined as endorsing whatever the group requested, regardless of truth."
+      inconclusive: "The person praised honesty without specifying what they would refuse to approve."
+  '02.11':
+    title: "Offer a specific apology and proportionate repair"
+    goal: "Own an action and its impact, propose repair, and follow through without demanding forgiveness."
+    setup: "Choose a minor failure within your responsibility, such as returning a borrowed item late. Use a fictional case if contact is unwelcome or unsafe; do not use this task to reopen a prohibited or harmful relationship."
+    scope_note: "A small repair practices responsibility, apology and restitution. Serious harms may require processes and support beyond a direct personal apology."
+    burden: "About 15 minutes to prepare, a short permitted exchange, and the agreed repair's actual time."
+    actions:
+      - title: "Describe your responsibility and its effect"
+        instructions: "Write what you did or failed to do, what you reasonably knew at the time and what inconvenience or harm followed. Separate an explanation from an excuse. For the late item, acknowledge the missed return and the owner's lost use without assuming how they must feel."
+        checks: [The action or omission is owned specifically, Foreseeable impact is acknowledged, Explanation does not transfer responsibility]
+      - title: "Give an apology with a repair the recipient can assess"
+        instructions: "State the action, acknowledge the effect, express regret and offer a feasible repair, such as returning the item at a time convenient to its owner. Ask whether another proportionate remedy would help. Do not add a request for reassurance, absolution or immediate restored trust."
+        checks: [The apology names the actual failure, The proposed repair is feasible and relevant, The recipient is free to respond without granting forgiveness]
+      - title: "Complete the repair and prevent a repeat"
+        instructions: "Do the agreed repair and confirm practical completion without repeatedly pursuing an emotional response. Change one contributing habit, such as setting an earlier return reminder or declining loans you cannot manage. If repair is refused or impossible, record the limit and what responsibility remains."
+        checks: [Repair or its genuine limit is recorded, A contributing behavior is changed, Practical closure is separated from forgiveness]
+    adaptation: "Use written communication, an agreed intermediary or a clearly labeled rehearsal. Respect a request for no further contact."
+    review: "What became materially better for the affected person, and what responsibility remains yours?"
+    examples:
+      supportive: "The item was returned, the inconvenience acknowledged and a reminder changed without demanding forgiveness."
+      mixed: "The apology was specific but the promised practical repair has not yet happened."
+      contradictory: "The apology required the recipient to provide comfort or accept renewed contact."
+      inconclusive: "Regret was expressed without identifying an action, impact or repair."
+  '02.12':
+    title: "Test whether one principle survives a change of audience"
+    goal: "Identify and correct a gap between publicly claimed principles and private or rewarded conduct."
+    setup: "Choose a principle relevant to a small action, such as giving accurate credit for shared work. Use your own non-sensitive notes or a fictional comparison; do not monitor another person's private behavior."
+    scope_note: "One audience comparison examines consistency in a bounded setting. Integrity across pressure, incentives and unobserved conduct depends on a sustained pattern."
+    burden: "About 20 minutes to compare cases, one small correction, and a later 5-minute check."
+    actions:
+      - title: "Compare public, private and rewarded versions"
+        instructions: "Describe how you would apply the principle when others can see, when nobody is checking and when ignoring it offers an advantage. For credit, compare a public thank-you, a private draft and a summary where claiming sole authorship would impress someone. Identify the exact behavior that changes."
+        checks: [Three incentive or audience conditions are compared, The principle has an observable expression, Any behavioral difference is identified precisely]
+      - title: "Examine the excuse and choose a consistent rule"
+        instructions: "Write the strongest justification for the inconsistent behavior and test whether you would accept it from someone else. Distinguish a legitimate contextual difference, such as required confidentiality, from self-serving convenience. Specify the smallest correction that aligns the means with the professed end."
+        checks: [The justification faces a reciprocal test, Relevant context is distinguished from convenience, A specific consistency correction is chosen]
+      - title: "Apply the correction where recognition is unnecessary"
+        instructions: "Make the permitted correction in your own work or rehearse it in the supplied case. At a later similar opportunity, check whether the rule still guided the action without an audience. Do not create publicity about the correction merely to transform private integrity into another reward."
+        checks: [A correction is enacted or explicitly rehearsed, A later opportunity is checked when available, Recognition is not treated as the criterion of success]
+    adaptation: "Use a private example, an audio comparison or a fictional document. Confidentiality can justify different public wording while the underlying principle remains consistent."
+    review: "Which incentive made the principle hardest to keep, and what concrete rule survived that pressure?"
+    examples:
+      supportive: "A private draft accurately credited shared work even though claiming sole authorship would have been easier."
+      mixed: "The first correction was made but a later rewarded opportunity remains untested."
+      contradictory: "A convenient exception was defended for oneself while condemning the same conduct in others."
+      inconclusive: "Integrity was affirmed without comparing behavior across any different conditions."
+  '02.13':
+    title: "Separate luck, complicity and responsibility in a hard case"
+    goal: "Distinguish intention, control, negligence, benefit and residual responsibility when outcomes are partly outside anyone's control."
+    setup: "Use two fictional volunteers who ignore the same instruction to cover borrowed equipment before rain. One item happens to stay dry; the other is damaged. The event organizer also omitted an available shelter from the plan."
+    scope_note: "The case illustrates moral luck and shared responsibility. It does not quantify blame or resolve legal liability, trauma or every no-win moral conflict."
+    burden: "About 30 minutes to compare responsibility and formulate a proportionate response."
+    actions:
+      - title: "Hold conduct constant while comparing outcomes"
+        instructions: "List what each volunteer knew, chose and controlled before the rain, then what happened afterward. Identify the role of chance in the different outcomes. Explain why a fortunate outcome does not automatically make the same careless choice responsible, while actual damage still creates practical repair needs."
+        checks: [Prior knowledge and choices are distinguished from outcomes, The role of chance is explicit, Good fortune does not erase the conduct under review]
+      - title: "Map the system without dissolving agency"
+        instructions: "Add the organizer's planning omission and any resource constraints. Distinguish direct action, preventable omission, benefit from the arrangement and conditions nobody could change. State what each role could reasonably have done differently without assigning every participant equal responsibility merely because all were present."
+        checks: [Several forms of involvement are distinguished, Constraints and available alternatives are considered, Responsibility is proportionate to actual agency]
+      - title: "Propose repair and acknowledge what remains unresolved"
+        instructions: "Suggest equipment repair, an honest account to its owner and a changed shelter plan. Separate the practical response to damage from a final verdict on anyone's worth. Name any remaining unfairness, such as one person facing greater consequences for similarly careless conduct, and explain why the response cannot erase it."
+        checks: [Repair addresses actual damage and future prevention, Moral judgment is separated from human worth, Residual unfairness remains acknowledged]
+    adaptation: "Use a diagram, tokens or spoken roles. Stay with the fictional equipment case rather than reenacting a morally distressing event."
+    review: "What does the outcome change about repair, and what does it leave unchanged about the original choice?"
+    examples:
+      supportive: "The analysis distinguished equal carelessness, unequal damage and the organizer's separate planning responsibility."
+      mixed: "Chance was recognized but every participant was assigned the same responsibility without examining their roles."
+      contradictory: "The fortunate volunteer was declared blameless merely because no damage occurred."
+      inconclusive: "Blame was assigned from the outcome alone without examining knowledge, choice or constraints."
+  '02.14':
+    title: "Justify a principled refusal and its responsibilities"
+    goal: "Explain a conscientious objection using reasons others can examine, proportionate methods and accountability."
+    setup: "Use a fictional club policy requiring an insulting initiation phrase that a member refuses to repeat. Draft a response; no actual lawbreaking, protest, employment dispute or confrontation is required."
+    scope_note: "The case practices principled refusal within a group. Civil disobedience involves further questions about law, legitimacy, public action and consequences that this rehearsal does not settle."
+    burden: "About 30 minutes to write the objection, compare methods and review accountability."
+    actions:
+      - title: "State the principle and its public reasons"
+        instructions: "Describe the required act, why conscience objects and who may be harmed or demeaned. Give reasons another member could examine even if they do not share your worldview. Distinguish objection to the degrading act from a preference to avoid ordinary inconvenience or a claim that every personal conviction overrides every obligation."
+        checks: [The objection identifies a specific act and principle, Reasons are intelligible outside the speaker's worldview, Conscience is distinguished from mere convenience]
+      - title: "Compare proportionate ways to resist"
+        instructions: "Compare requesting an exemption, proposing a respectful replacement, declining the initiation or leaving the club. Consider effects on other members and whether a quiet or public response serves the reason for refusal. Keep the methods nonviolent and avoid coercing others to declare agreement."
+        checks: [Several feasible responses are compared, Effects on others and proportionality are considered, The response preserves others' freedom of conscience]
+      - title: "Explain accountability without accepting unlimited mistreatment"
+        instructions: "Write the chosen refusal, the alternative you offer and the ordinary consequences you understand may follow. Identify how you would answer criticism or correct a factual error. Accepting responsibility for a choice does not require accepting abuse or abandoning access to appropriate advice and support."
+        checks: [The refusal and any offered alternative are clear, Foreseeable consequences are acknowledged, Accountability includes correction and legitimate support]
+    adaptation: "Use the fictional case or a written statement. People dependent on a group may need a safer route or an advocate; direct confrontation is not a completion requirement."
+    review: "Could someone disagree with your conclusion while still understanding the principle and the responsibilities you accept?"
+    examples:
+      supportive: "The member proposed a respectful replacement and explained a principled limit without demanding universal agreement."
+      mixed: "The principle was clear but the proposed response imposed unnecessary costs on uninvolved members."
+      contradictory: "Personal conviction was treated as permission to intimidate others or as freedom from every consequence."
+      inconclusive: "A refusal was announced without reasons, a specific objection or consideration of consequences."
+  '02.15':
+    title: "Make a hidden care burden visible and share it fairly"
+    goal: "Recognize responsibilities created by dependence and relationships, then negotiate care around needs and actual capacity."
+    setup: "Use an ordinary agreed household responsibility or this fictional case: one person coordinates all appointments and reminders for a shared dependent's care. Keep health details and identifying information out of the record."
+    scope_note: "One care arrangement examines invisible work, unequal capacity and shared responsibility. It does not replace professional care planning or make every relationship voluntary in the same way."
+    burden: "About 20 minutes to map the work, a welcomed short discussion or rehearsal, and one agreed follow-through."
+    actions:
+      - title: "Include noticing and coordination in the work"
+        instructions: "List not only visible tasks but also noticing needs, arranging help, remembering dates and checking whether care occurred. Identify who currently does each part, whose needs are least heard and which duties arise from dependence rather than an explicit contract. Do not assume the most capable person has unlimited capacity."
+        checks: [Invisible coordination is included, The dependent person's preferences are considered, Responsibilities and capacity limits are both identified]
+      - title: "Propose a fair share with the affected people"
+        instructions: "Choose one burden that could be shared or reduced. Propose who will own it, what information they actually need and when help or backup is necessary. Seek agreement from those affected instead of assigning duties unilaterally. Equal dignity does not require identical tasks when people have different capacities."
+        checks: [One burden has a specific proposed owner or reduction, Agreement and necessary information are addressed, Allocation reflects relevant differences in capacity]
+      - title: "Check whether the new arrangement actually relieved burden"
+        instructions: "Carry out the agreed change or rehearse it in the case. Ask whether the original coordinator still had to notice, remind and rescue the task. Check that the person receiving care experienced the arrangement as useful and respectful. Revise ownership or seek additional support if the work merely became less visible."
+        checks: [Follow-through includes coordination as well as the visible task, Care recipient and coordinator perspectives are checked, A remaining burden receives an explicit next step]
+    adaptation: "Use an accessible task map, agreed advocate or fictional care arrangement. Receiving care and communicating preferences are legitimate contributions; assistance is not a deficit."
+    review: "Whose load became lighter in practice, and whose needs might still be missing from the arrangement?"
+    examples:
+      supportive: "A second person took responsibility for both arranging and confirming transport, reducing repeated reminders."
+      mixed: "The visible errand changed hands but the original coordinator still carried all planning and follow-up."
+      contradictory: "A duty was imposed without agreement or the care recipient's preferences were ignored."
+      inconclusive: "Tasks were listed without identifying invisible work, capacity or a concrete change."

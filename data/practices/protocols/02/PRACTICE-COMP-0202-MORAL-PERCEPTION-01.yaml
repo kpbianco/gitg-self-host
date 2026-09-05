@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0202-MORAL-PERCEPTION-01
 slug: c0202-moral-perception-practice
-name: Bounded Moral perception Practice
+name: Notice the ethical choices inside an ordinary announcement
 parent_competency_id: '02.02'
 domain_id: '02'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 02.02
-      (Moral perception); canonical scope, evidence target, classification, domain boundary, and parent
-      mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 02.02; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,38 +34,33 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Moral perception through a qualified-support preparation bounded by the canonical
-    scope: Notice when an ordinary decision contains questions of dignity, fairness, harm, obligation,
-    consent, truth, or stewardship.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Recognizes ethical
-    dimensions before harm or conflict makes them obvious. The protocol creates a small opportunity to
-    examine that target without treating completion as broad capability.'
+  purpose: Recognize consent, fairness, truth and power before making a small public or shared communication.
+  why_recommended: Recognize consent, fairness, truth and power before making a small public or shared
+    communication.
   claims:
-  - statement: Using the canonical scope and evidence target for Moral perception is a traceable product-design
-      basis for a source-only draft protocol.
+  - statement: Recognize consent, fairness, truth and power before making a small public or shared communication.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Moral perception practice fit the person's current
     role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Moral perception as not applicable, consciously unchosen, or deferred
     without penalty when the role, pathway, capacity, authority, opportunity, or safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Moral perception
-    context, understand the source-only status, and stop without losing safety, care, employment, housing,
-    services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Moral perception;
-    do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency, or dependence for
-    evidence.
+  readiness_considerations: Use an audio announcement or a purely fictional school, neighborhood or club
+    event. Publishing is unnecessary; this exercise tests pre-publication judgment.
+  opportunity_considerations: Draft a fictional notice thanking people after a shared event. Decide whether
+    to name helpers, use a group photograph and describe the event as a success. Do not upload an actual
+    photograph or identifying details.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Moral perception.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Draft a fictional notice thanking people after a shared event. Decide whether to name helpers, use
+    a group photograph and describe the event as a success. Do not upload an actual photograph or identifying
+    details.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Moral perception instead of a live
-    situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use an audio announcement or a purely fictional school, neighborhood or club event. Publishing is
+    unnecessary; this exercise tests pre-publication judgment.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -77,20 +71,24 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Moral perception as inferiority;
     competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-QUALIFIED-CONSULTATION
+  protocol_class: PF-AUDIT-REDESIGN
   duration_days: 10
-  cadence: Complete three bounded Moral perception actions over ten days, preserving explicit not-applicable,
-    defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Moral perception; copy the canonical scope and evidence target into a
-    private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Moral perception.
-    Do not store private prose, names, identities, diagnoses, allegations, credentials, account data,
-    protected work information, intimate detail, artifact contents, observer narrative, or another person's
-    secrets. This source-only draft is not surveillance, professional advice, treatment, certification,
-    or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Moral perception actions, and review;
-    scope may be reduced or deferred for access, care, health, workload, conscience, or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Draft a fictional notice thanking people after a shared event. Decide whether to name helpers,
+    use a group photograph and describe the event as a success. Do not upload an actual photograph or
+    identifying details. Goal: Recognize consent, fairness, truth and power before making a small public
+    or shared communication. Scope: One announcement practices noticing ethical dimensions before publication.
+    Moral perception in other settings requires further observation and contextual judgment. Time and
+    effort: About 20 minutes to draft, inspect and revise one short notice. Adaptation: Use an audio announcement
+    or a purely fictional school, neighborhood or club event. Publishing is unnecessary; this exercise
+    tests pre-publication judgment. Keep personal working notes outside the check-in; record only the
+    listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use an audio announcement or a purely fictional school, neighborhood or club event.
+    Publishing is unnecessary; this exercise tests pre-publication judgment.
+  expected_burden: About 20 minutes to draft, inspect and revise one short notice.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Moral perception protocol to rank worth, coerce participation, demand disclosure, override
@@ -98,20 +96,21 @@ intervention:
   - Treating a completed Moral perception action, a polished artifact, agreement, confidence, speed, independence,
     or output as mastery or universal transfer.
   exclusions:
-  - Any Moral perception situation involving emergency response, abuse, retaliation, illegal conduct,
-    medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous equipment,
-    or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use an audio
+    announcement or a purely fictional school, neighborhood or club event. Publishing is unnecessary;
+    this exercise tests pre-publication judgment.
   actions:
   - stable_id: PRACTICE-COMP-0202-MORAL-PERCEPTION-01-A1
     sequence: 1
-    title: Bound the qualified question for Moral perception
-    instructions: 'Turn Moral perception into one educational or planning question and identify the qualification
-      and jurisdiction needed to answer it. Use the canonical scope to separate general learning from
-      diagnosis, treatment, legal advice, financial advice, safeguarding decisions, or other professional
-      judgment: Notice when an ordinary decision contains questions of dignity, fairness, harm, obligation,
-      consent, truth, or stewardship.'
+    title: Map who could be affected by the notice
+    instructions: 'List contributors, attendees, people absent from the photograph, and anyone whose participation
+      may be private. Ask who gets credit, who can meaningfully decline exposure, and whose work is invisible.
+      Separate what the notice''s author knows from what they assume about others'' preferences.
+
+
+      Observation checks: Affected groups include less visible contributors; Consent and power differences
+      are noticed; Knowledge is separated from assumption. Mark only what you observed. Missing, mixed
+      and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -133,9 +132,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0202_a1_question_bounded
-        - c0202_a1_qualification_named
-        - c0202_a1_professional_boundary_explicit
+        - affected_groups_include_less_visible_contributors
+        - consent_and_power_differences_are_noticed
+        - knowledge_is_separated_from_assumption
       - measurement_id: c0202_a1_boundary
         kind: boolean
         role: supporting
@@ -152,11 +151,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0202-MORAL-PERCEPTION-01-A2
     sequence: 2
-    title: Prepare minimum information for Moral perception
-    instructions: Create a privacy-minimized Moral perception consultation note containing only the question,
-      relevant category-level facts, current constraints, and desired decision. Omit diagnoses, allegations,
-      account numbers, credentials, protected work information, intimate detail, and third-party identity
-      unless a qualified professional lawfully requires it through an appropriate channel.
+    title: Locate the ethical decision in each sentence
+    instructions: 'Mark a truth question, a consent question and a fairness question in the draft. For
+      example, a photograph requires permission appropriate to its use, an attendance claim requires a
+      basis, and thanks should consider unpaid preparation. State a possible harm and a proportionate
+      way to prevent it for each.
+
+
+      Observation checks: Three ethical questions are located in the draft; Each question identifies a
+      plausible consequence; Each has a proportionate preventive step. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -178,9 +182,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0202_a2_minimum_information_only
-        - c0202_a2_sensitive_detail_excluded
-        - c0202_a2_decision_need_named
+        - three_ethical_questions_are_located_in_the_draft
+        - each_question_identifies_a_plausible_consequence
+        - each_has_a_proportionate_preventive_step
       - measurement_id: c0202_a2_boundary
         kind: boolean
         role: supporting
@@ -197,11 +201,32 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0202-MORAL-PERCEPTION-01-A3
     sequence: 3
-    title: Record a bounded Moral perception disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: Recognizes ethical dimensions before harm or conflict makes them obvious.'
+    title: Revise before any publication
+    instructions: 'Rewrite the notice using verified claims, non-identifying language where needed and
+      fair acknowledgment. Keep unresolved consent as a reason to omit material or wait, not as presumed
+      agreement. Compare the two drafts and name the ethical issue that ordinary proofreading would have
+      missed.
+
+
+      Observation checks: The draft changes in response to the review; Unresolved consent is respected;
+      An initially hidden ethical issue is named. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.
+
+
+      Final review: What ethical concern became visible before anyone needed to complain?
+
+
+      Examples: Supportive: The revision credited preparation work and omitted an unapproved photograph.
+
+
+      Mixed: Privacy was considered but the announcement still credited only visible presenters.
+
+
+      Contradictory: Silence was treated as consent or an unsupported attendance claim was retained for
+      prestige.
+
+
+      Inconclusive: Only spelling and layout changed; affected people and ethical decisions were not examined.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -217,14 +242,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0202_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0202_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - the_draft_changes_in_response_to_the_review
+        - unresolved_consent_is_respected
+        - an_initially_hidden_ethical_issue_is_named
       - measurement_id: c0202_a3_boundary
         kind: boolean
         role: supporting
@@ -244,16 +270,15 @@ intervention:
     - Use paper, an offline note, a library resource, a public example, or a no-cost conversation for
       Moral perception; no purchase, subscription, travel, credential, or public artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Moral perception; assistive technology, interpretation, a support person, and a deferred
-      action are valid without penalty.
+    - Use an audio announcement or a purely fictional school, neighborhood or club event. Publishing is
+      unnecessary; this exercise tests pre-publication judgment.
     cultural_context:
     - Adapt the expression of Moral perception to direct or indirect communication, collective or individual
       decision structures, local norms, faith or secular commitments, and role obligations while preserving
       consent and dignity.
     resource_variants:
-    - When a real Moral perception opportunity is unavailable or inappropriate, use a fictional, historical,
-      public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use an audio announcement or a purely fictional school, neighborhood or club event. Publishing is
+      unnecessary; this exercise tests pre-publication judgment.
   pause_conditions:
   - Pause Moral perception when capacity, consent, authority, privacy, access, care duties, uncertainty,
     distress, fatigue, pain, resource scarcity, or changed circumstances make the next action unwise.
@@ -283,10 +308,7 @@ evidence_and_scoring:
   - c0202_a3_boundary
   - c0202_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Moral perception action exceeded consent, authority, privacy, qualification, role, burden, or
-    safety boundaries.
-  - The evidence contradicted the intended Moral perception criterion, depended on coercion or hidden
-    private content, or could not distinguish the protocol from contextual change.
+  - Silence was treated as consent or an unsupported attendance claim was retained for prestige.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Moral perception explicitly; support can enable access and never reduces dignity or silently changes
     the typed value.
@@ -296,14 +318,19 @@ evidence_and_scoring:
     are rejected and later repetitions use the typed contract's explicit diminishing multipliers.
   recency_rule: Generated Moral perception rules withhold observations older than 90 days; no unrecorded
     retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Recognizes ethical dimensions before harm or conflict makes them obvious.—not completion, confidence,
-    conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Moral perception requires a bounded context, allowlisted observations,
-    provenance, contradiction and adverse handling, and preserved uncertainty; free text and artifact
-    contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Map who could be affected by the notice. Observed checks: Affected groups
+    include less visible contributors; Consent and power differences are noticed; Knowledge is separated
+    from assumption. Action 2: Locate the ethical decision in each sentence. Observed checks: Three ethical
+    questions are located in the draft; Each question identifies a plausible consequence; Each has a proportionate
+    preventive step. Action 3: Revise before any publication. Observed checks: The draft changes in response
+    to the review; Unresolved consent is respected; An initially hidden ethical issue is named.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. Only spelling and layout changed; affected people and
+    ethical decisions were not examined.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Moral
     perception contribution under typed evaluation; protocol performance remains distinct and is never
     counted twice.
@@ -312,9 +339,8 @@ evidence_and_scoring:
   - L02
   - L14
   - L24
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Moral perception evidence.
@@ -322,10 +348,16 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for moral perception action was attempted or explicitly deferred.
-  - The prepare minimum information for moral perception action was attempted or explicitly deferred.
-  - The record a bounded moral perception disposition action preserved a limited conclusion, contradiction,
-    or inconclusive result.
+  - 'Action 1: Map who could be affected by the notice. Observed checks: Affected groups include less
+    visible contributors; Consent and power differences are noticed; Knowledge is separated from assumption.'
+  - 'Action 2: Locate the ethical decision in each sentence. Observed checks: Three ethical questions
+    are located in the draft; Each question identifies a plausible consequence; Each has a proportionate
+    preventive step.'
+  - 'Action 3: Revise before any publication. Observed checks: The draft changes in response to the review;
+    Unresolved consent is respected; An initially hidden ethical issue is named.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -334,54 +366,47 @@ completion_and_review:
     - c0202_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Moral perception only when the initial context remained safe,
-    the evidence criteria were usable, burden was acceptable, and a new context can be named without assuming
-    transfer.
-  transfer_limit: Three bounded actions do not establish Moral perception across roles, cultures, relationships,
-    seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: What ethical concern became visible before anyone needed to complain?
+  transfer_limit: One announcement practices noticing ethical dimensions before publication. Moral perception
+    in other settings requires further observation and contextual judgment.
   reflection:
-    before: What does Moral perception require in this exact context, what remains outside my role or
-      authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Moral perception criterion is present, absent, mixed, or unknown, and are
-      consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Recognizes ethical dimensions before harm or conflict makes
-      them obvious.', what contradiction or missing context matters most, and should this Moral perception
-      design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Recognize consent, fairness, truth and power
+      before making a small public or shared communication.'
+    during: Which checks have actually been observed? Privacy was considered but the announcement still
+      credited only visible presenters.
+    after: What ethical concern became visible before anyone needed to complain?
   review_guidance:
     repeat: Repeat the same bounded Moral perception design only when the context and burden remain appropriate.
-    adapt: Change the Moral perception medium, scope, support, timing, criteria, or context while preserving
-      provenance and the narrower evidence claim.
+    adapt: Use an audio announcement or a purely fictional school, neighborhood or club event. Publishing
+      is unnecessary; this exercise tests pre-publication judgment.
     stop: Stop Moral perception when the practice becomes coercive, unsafe, privacy-invasive, role-inappropriate,
       professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Moral perception questions beyond this
-      educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Moral perception criteria were observed with provenance and no adverse boundary
-      signal in the selected context.
-    mixed: Some Moral perception criteria were observed while burden, support, contextual change, or a
-      contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Moral perception criterion, introduced harm
-      or coercion, or showed the design was not workable.
-    inconclusive: The Moral perception action was deferred, not observed, not applicable, stale, insufficiently
-      bounded, or too confounded to interpret.
+    supportive: The revision credited preparation work and omitted an unapproved photograph.
+    mixed: Privacy was considered but the announcement still credited only visible presenters.
+    contradictory: Silence was treated as consent or an unsupported attendance claim was retained for
+      prestige.
+    inconclusive: Only spelling and layout changed; affected people and ethical decisions were not examined.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Moral perception.
+    context_heading: Notice the ethical choices inside an ordinary announcement
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Moral perception.
   check_in_labels:
-    c0202_a1_primary: The bounded Moral perception criterion for action 1 was observed
+    c0202_a1_primary: 'Observed checks: map who could be affected by the notice'
     c0202_a1_boundary: Action 1 stayed inside its stated Moral perception boundary
     c0202_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0202_a2_primary: The bounded Moral perception criterion for action 2 was observed
+    c0202_a2_primary: 'Observed checks: locate the ethical decision in each sentence'
     c0202_a2_boundary: Action 2 stayed inside its stated Moral perception boundary
     c0202_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0202_a3_primary: The bounded Moral perception criterion for action 3 was observed
+    c0202_a3_primary: 'Observed checks: revise before any publication'
     c0202_a3_boundary: Action 3 stayed inside its stated Moral perception boundary
     c0202_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Moral perception practice,
-    including support, contradiction, defer, no result, or harm.
+  completion_copy: What ethical concern became visible before anyone needed to complain? Completion is
+    not mastery.
+  plain_language_evidence: The revision credited preparation work and omitted an unapproved photograph.
   display_order: 22

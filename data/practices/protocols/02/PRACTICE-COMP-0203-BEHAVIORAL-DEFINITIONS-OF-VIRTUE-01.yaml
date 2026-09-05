@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0203-BEHAVIORAL-DEFINITIONS-OF-VIRTUE-01
 slug: c0203-behavioral-definitions-of-virtue-practice
-name: Bounded Behavioral definitions of virtue Practice
+name: Turn one virtue into an observable distinction
 parent_competency_id: '02.03'
 domain_id: '02'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-OPENSTAX-VIRTUE-ETHICS
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 02.03
-      (Behavioral definitions of virtue); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 02.03; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +35,38 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Behavioral definitions of virtue through a small repeated practice bounded by the
-    canonical scope: Define virtues such as courage, honesty, justice, temperance, compassion, humility,
-    loyalty, patience, and wisdom in observable terms.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can distinguish each
-    virtue from its excess, deficiency, and counterfeit. The protocol creates a small opportunity to examine
-    that target without treating completion as broad capability.'
+  purpose: Distinguish a virtue from its deficiency, excess and impressive-looking counterfeit.
+  why_recommended: Distinguish a virtue from its deficiency, excess and impressive-looking counterfeit.
   claims:
-  - statement: Using the canonical scope and evidence target for Behavioral definitions of virtue is a
-      traceable product-design basis for a source-only draft protocol.
+  - statement: Distinguish a virtue from its deficiency, excess and impressive-looking counterfeit.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Virtue ethics attends to character and practical judgment; Aristotle's account distinguishes
+      appropriate conduct from deficiency and excess.
+    classification: philosophical_or_normative_position
+    source_ids:
+    - SRC-OPENSTAX-VIRTUE-ETHICS
+    limitations: One normative tradition, not a universal character metric or empirical proof that the
+      product's courage rehearsal develops virtue.
   applicability_question: Does a voluntary, bounded Behavioral definitions of virtue practice fit the
     person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Behavioral definitions of virtue as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Behavioral definitions
-    of virtue context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Behavioral
-    definitions of virtue; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Use text, a private recording or a supporter who helps communicate. Speaking
+    loudly, acting alone and confronting authority are not requirements.
+  opportunity_considerations: 'Use courage in a low-stakes correction: a shared note credits the wrong
+    person. Work on paper or choose an equally safe ordinary situation.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Behavioral definitions of virtue.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use courage in a low-stakes correction: a shared note credits the wrong person. Work on paper or
+    choose an equally safe ordinary situation.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Behavioral definitions of virtue
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use text, a private recording or a supporter who helps communicate. Speaking loudly, acting alone
+    and confronting authority are not requirements.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +78,28 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Behavioral definitions of
     virtue as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-REPEATED-HABIT
+  protocol_class: PF-SKILL-REHEARSAL
   duration_days: 10
-  cadence: Complete three bounded Behavioral definitions of virtue actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Behavioral definitions of virtue; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Behavioral
-    definitions of virtue. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Behavioral definitions of virtue actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use courage in a low-stakes correction: a shared note credits the wrong person. Work on paper
+    or choose an equally safe ordinary situation. Goal: Distinguish a virtue from its deficiency, excess
+    and impressive-looking counterfeit. Scope: Courage supplies a worked example of behavioral definition.
+    Honesty, compassion, temperance and other virtues require their own distinctions and repeated practice.
+    Time and effort: About 20 minutes to define the distinction and 10 minutes to rehearse or apply it.
+    Adaptation: Use text, a private recording or a supporter who helps communicate. Speaking loudly, acting
+    alone and confronting authority are not requirements. Keep personal working notes outside the check-in;
+    record only the listed observations.
+
+
+    Reference support:
+
+    Introduction to Philosophy, 9.4 Virtue Ethics: https://openstax.org/books/introduction-philosophy/pages/9-4-virtue-ethics'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use text, a private recording or a supporter who helps communicate. Speaking loudly,
+    acting alone and confronting authority are not requirements.
+  expected_burden: About 20 minutes to define the distinction and 10 minutes to rehearse or apply it.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Behavioral definitions of virtue protocol to rank worth, coerce participation, demand disclosure,
@@ -101,19 +107,22 @@ intervention:
   - Treating a completed Behavioral definitions of virtue action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Behavioral definitions of virtue situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use text, a
+    private recording or a supporter who helps communicate. Speaking loudly, acting alone and confronting
+    authority are not requirements.
   actions:
   - stable_id: PRACTICE-COMP-0203-BEHAVIORAL-DEFINITIONS-OF-VIRTUE-01-A1
     sequence: 1
-    title: Define one small Behavioral definitions of virtue behavior
-    instructions: 'Choose one voluntary, reversible behavior that represents a narrow part of Behavioral
-      definitions of virtue. Bound the cue, context, duration, and valid interruption using this scope:
-      Define virtues such as courage, honesty, justice, temperance, compassion, humility, loyalty, patience,
-      and wisdom in observable terms.'
+    title: Describe four different responses
+    instructions: 'Describe silence despite a safe opportunity, a proportionate correction, an aggressive
+      public accusation, and a dramatic correction designed mainly to attract praise. Explain why avoidance,
+      recklessness and performance can all differ from courage. Include fear, purpose, evidence and proportionality
+      in the distinction.
+
+
+      Observation checks: Four responses differ in observable conduct; Purpose and proportionality are
+      considered; Confidence or visibility alone does not define virtue. Mark only what you observed.
+      Missing, mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -135,9 +144,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0203_a1_behavior_observable
-        - c0203_a1_cue_and_context_defined
-        - c0203_a1_interruption_valid
+        - four_responses_differ_in_observable_conduct
+        - purpose_and_proportionality_are_considered
+        - confidence_or_visibility_alone_does_not_define_virtue
       - measurement_id: c0203_a1_boundary
         kind: boolean
         role: supporting
@@ -154,10 +163,15 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0203-BEHAVIORAL-DEFINITIONS-OF-VIRTUE-01-A2
     sequence: 2
-    title: Try the Behavioral definitions of virtue behavior in three windows
-    instructions: Attempt the same small Behavioral definitions of virtue behavior in up to three naturally
-      occurring windows. Record attempt, defer, interruption, support used, and adverse effect separately;
-      never manufacture deprivation, distress, conflict, or unsafe conditions to obtain a repetition.
+    title: Write a behavioral standard that can fail
+    instructions: 'Specify what a courageous correction would include: checking the credit, naming the
+      discrepancy, using an appropriate channel and accepting a modest social cost. Name a condition that
+      would make the same act unwise, such as uncertainty about the facts or a serious retaliation risk.
+
+
+      Observation checks: The standard names concrete behavior; A possible cost is acknowledged; A counterexample
+      or limiting condition is explicit. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -173,15 +187,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0203_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - the_standard_names_concrete_behavior
+        - a_possible_cost_is_acknowledged
+        - a_counterexample_or_limiting_condition_is_explicit
       - measurement_id: c0203_a2_boundary
         kind: boolean
         role: supporting
@@ -198,10 +212,32 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0203-BEHAVIORAL-DEFINITIONS-OF-VIRTUE-01-A3
     sequence: 3
-    title: Review the Behavioral definitions of virtue repetition pattern
-    instructions: 'Compare the windows for feasibility, burden, context, and interruption. Keep missing
-      or mixed evidence explicit and compare the limited pattern with this evidence target: Can distinguish
-      each virtue from its excess, deficiency, and counterfeit.'
+    title: Rehearse the proportionate response and correct it
+    instructions: 'Speak or write the correction once, then compare it with your standard. Remove an accusation,
+      unnecessary audience or claim you cannot support. If a real safe opportunity exists, act within
+      your role; otherwise retain the rehearsal as evidence of preparation and state what live courage
+      remains untested.
+
+
+      Observation checks: A specific response is rehearsed or enacted; One weakness is corrected or deliberately
+      checked; Rehearsal and live conduct remain distinct. Mark only what you observed. Missing, mixed
+      and negative results are valid; a deferred action is not completed.
+
+
+      Final review: What observable feature distinguishes the virtue from merely looking brave?
+
+
+      Examples: Supportive: The correction became factual and proportionate, with a clear account of the
+      cost and its limits.
+
+
+      Mixed: The response was direct but used an unnecessarily humiliating audience.
+
+
+      Contradictory: Risk-taking or public dominance was treated as sufficient proof of courage.
+
+
+      Inconclusive: Courage was described only with another abstract adjective.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -223,9 +259,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0203_a3_windows_distinguished
-        - c0203_a3_burden_compared
-        - c0203_a3_transfer_not_assumed
+        - a_specific_response_is_rehearsed_or_enacted
+        - one_weakness_is_corrected_or_deliberately_checked
+        - rehearsal_and_live_conduct_remain_distinct
       - measurement_id: c0203_a3_boundary
         kind: boolean
         role: supporting
@@ -246,17 +282,15 @@ intervention:
       Behavioral definitions of virtue; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Behavioral definitions of virtue; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - Use text, a private recording or a supporter who helps communicate. Speaking loudly, acting alone
+      and confronting authority are not requirements.
     cultural_context:
     - Adapt the expression of Behavioral definitions of virtue to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Behavioral definitions of virtue opportunity is unavailable or inappropriate, use a
-      fictional, historical, public, simulated, or planning-only equivalent and retain the narrower evidence
-      classification.
+    - Use text, a private recording or a supporter who helps communicate. Speaking loudly, acting alone
+      and confronting authority are not requirements.
   pause_conditions:
   - Pause Behavioral definitions of virtue when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -288,10 +322,7 @@ evidence_and_scoring:
   - c0203_a3_boundary
   - c0203_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Behavioral definitions of virtue action exceeded consent, authority, privacy, qualification, role,
-    burden, or safety boundaries.
-  - The evidence contradicted the intended Behavioral definitions of virtue criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - Risk-taking or public dominance was treated as sufficient proof of courage.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Behavioral definitions of virtue explicitly; support can enable access and never reduces dignity
     or silently changes the typed value.
@@ -302,14 +333,19 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Behavioral definitions of virtue rules withhold observations older than 90 days;
     no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can distinguish each virtue from its excess, deficiency, and counterfeit.—not completion, confidence,
-    conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Behavioral definitions of virtue requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Describe four different responses. Observed checks: Four responses differ
+    in observable conduct; Purpose and proportionality are considered; Confidence or visibility alone
+    does not define virtue. Action 2: Write a behavioral standard that can fail. Observed checks: The
+    standard names concrete behavior; A possible cost is acknowledged; A counterexample or limiting condition
+    is explicit. Action 3: Rehearse the proportionate response and correct it. Observed checks: A specific
+    response is rehearsed or enacted; One weakness is corrected or deliberately checked; Rehearsal and
+    live conduct remain distinct.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. Courage was described only with another abstract adjective.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Behavioral
     definitions of virtue contribution under typed evaluation; protocol performance remains distinct and
     is never counted twice.
@@ -318,9 +354,8 @@ evidence_and_scoring:
   - L02
   - L05
   - L10
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Behavioral definitions of virtue evidence.
@@ -328,12 +363,17 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define one small behavioral definitions of virtue behavior action was attempted or explicitly
-    deferred.
-  - The try the behavioral definitions of virtue behavior in three windows action was attempted or explicitly
-    deferred.
-  - The review the behavioral definitions of virtue repetition pattern action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Describe four different responses. Observed checks: Four responses differ in observable
+    conduct; Purpose and proportionality are considered; Confidence or visibility alone does not define
+    virtue.'
+  - 'Action 2: Write a behavioral standard that can fail. Observed checks: The standard names concrete
+    behavior; A possible cost is acknowledged; A counterexample or limiting condition is explicit.'
+  - 'Action 3: Rehearse the proportionate response and correct it. Observed checks: A specific response
+    is rehearsed or enacted; One weakness is corrected or deliberately checked; Rehearsal and live conduct
+    remain distinct.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -342,57 +382,50 @@ completion_and_review:
     - c0203_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Behavioral definitions of virtue only when the initial context
-    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
-    named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Behavioral definitions of virtue across roles,
-    cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: What observable feature distinguishes the virtue from merely looking brave?
+  transfer_limit: Courage supplies a worked example of behavioral definition. Honesty, compassion, temperance
+    and other virtues require their own distinctions and repeated practice.
   reflection:
-    before: What does Behavioral definitions of virtue require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Behavioral definitions of virtue criterion is present, absent, mixed, or
-      unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can distinguish each virtue from its excess, deficiency, and
-      counterfeit.', what contradiction or missing context matters most, and should this Behavioral definitions
-      of virtue design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Distinguish a virtue from its deficiency,
+      excess and impressive-looking counterfeit.'
+    during: Which checks have actually been observed? The response was direct but used an unnecessarily
+      humiliating audience.
+    after: What observable feature distinguishes the virtue from merely looking brave?
   review_guidance:
     repeat: Repeat the same bounded Behavioral definitions of virtue design only when the context and
       burden remain appropriate.
-    adapt: Change the Behavioral definitions of virtue medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: Use text, a private recording or a supporter who helps communicate. Speaking loudly, acting
+      alone and confronting authority are not requirements.
     stop: Stop Behavioral definitions of virtue when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Behavioral definitions of virtue questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Behavioral definitions of virtue criteria were observed with provenance and
-      no adverse boundary signal in the selected context.
-    mixed: Some Behavioral definitions of virtue criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Behavioral definitions of virtue criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Behavioral definitions of virtue action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The correction became factual and proportionate, with a clear account of the cost and
+      its limits.
+    mixed: The response was direct but used an unnecessarily humiliating audience.
+    contradictory: Risk-taking or public dominance was treated as sufficient proof of courage.
+    inconclusive: Courage was described only with another abstract adjective.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Behavioral definitions of virtue.
+    context_heading: Turn one virtue into an observable distinction
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Behavioral
       definitions of virtue.
   check_in_labels:
-    c0203_a1_primary: The bounded Behavioral definitions of virtue criterion for action 1 was observed
+    c0203_a1_primary: 'Observed checks: describe four different responses'
     c0203_a1_boundary: Action 1 stayed inside its stated Behavioral definitions of virtue boundary
     c0203_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0203_a2_primary: The bounded Behavioral definitions of virtue criterion for action 2 was observed
+    c0203_a2_primary: 'Observed checks: write a behavioral standard that can fail'
     c0203_a2_boundary: Action 2 stayed inside its stated Behavioral definitions of virtue boundary
     c0203_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0203_a3_primary: The bounded Behavioral definitions of virtue criterion for action 3 was observed
+    c0203_a3_primary: 'Observed checks: rehearse the proportionate response and correct it'
     c0203_a3_boundary: Action 3 stayed inside its stated Behavioral definitions of virtue boundary
     c0203_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Behavioral definitions
-    of virtue practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What observable feature distinguishes the virtue from merely looking brave? Completion
+    is not mastery.
+  plain_language_evidence: The correction became factual and proportionate, with a clear account of the
+    cost and its limits.
   display_order: 23

@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-1316-ACCESSIBILITY-AND-ADAPTABLE-HOME-DESIGN-01
 slug: c1316-accessibility-and-adaptable-home-design-practice
-name: Bounded Accessibility and adaptable home design Practice
+name: Remove one household access barrier with its user's input
 parent_competency_id: '13.16'
 domain_id: '13'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 13.16
-      (Accessibility and adaptable home design); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 13.16; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,40 +34,37 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Accessibility and adaptable home design through a consent-respecting relational practice
-    bounded by the canonical scope: Arrange spaces, tools, lighting, storage, and routines to support
-    different bodies, senses, cognition, and ages.'
-  why_recommended: 'The parent competency identifies this limited evidence target: A real household barrier
-    is reduced through redesign or assistive equipment. The protocol creates a small opportunity to examine
-    that target without treating completion as broad capability.'
+  purpose: Improve a real household task by changing the environment in a way the affected person can
+    evaluate.
+  why_recommended: Improve a real household task by changing the environment in a way the affected person
+    can evaluate.
   claims:
-  - statement: Using the canonical scope and evidence target for Accessibility and adaptable home design
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Improve a real household task by changing the environment in a way the affected person
+      can evaluate.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Accessibility and adaptable home design practice fit
     the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Accessibility and adaptable home design as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Accessibility and
-    adaptable home design context, understand the source-only status, and stop without losing safety,
-    care, employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Accessibility
-    and adaptable home design; do not manufacture conflict, deprivation, exposure, disclosure, danger,
-    urgency, or dependence for evidence.
+  readiness_considerations: Use photographs or a paper layout only with permission when physical rearrangement
+    is unavailable. A planning exercise may identify options, but it does not establish that a real barrier
+    was reduced.
+  opportunity_considerations: Choose one non-hazardous task such as finding a commonly used object, reading
+    a label or reaching a light item. Work with the affected person's consent and preferences; do not
+    simulate disability to guess their needs.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Accessibility and adaptable home
-    design.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Choose one non-hazardous task such as finding a commonly used object, reading a label or reaching
+    a light item. Work with the affected person's consent and preferences; do not simulate disability
+    to guess their needs.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Accessibility and adaptable home
-    design instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use photographs or a paper layout only with permission when physical rearrangement is unavailable.
+    A planning exercise may identify options, but it does not establish that a real barrier was reduced.
   role_conditions:
   - This competency is context sensitive; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -81,21 +77,25 @@ meaning_and_fit:
     home design as inferiority; competing reasonable interpretations and conscientious refusal remain
     visible.
 intervention:
-  protocol_class: PF-RELATIONAL-CONVERSATION
+  protocol_class: PF-AUDIT-REDESIGN
   duration_days: 10
-  cadence: Complete three bounded Accessibility and adaptable home design actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Accessibility and adaptable home design; copy the canonical scope and
-    evidence target into a private working note; define the action boundary, valid supports, privacy limit,
-    and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Accessibility
-    and adaptable home design. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Accessibility and adaptable home design
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose one non-hazardous task such as finding a commonly used object, reading a label or reaching
+    a light item. Work with the affected person''s consent and preferences; do not simulate disability
+    to guess their needs. Goal: Improve a real household task by changing the environment in a way the
+    affected person can evaluate. Scope: One user-led change tests an environmental barrier. Broader accessible
+    design requires varied tasks, changing needs and expertise for structural or fitted adaptations. Time
+    and effort: About 15 minutes to observe, 15–30 minutes to try a change, and a short user evaluation.
+    Adaptation: Use photographs or a paper layout only with permission when physical rearrangement is
+    unavailable. A planning exercise may identify options, but it does not establish that a real barrier
+    was reduced. Keep personal working notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use photographs or a paper layout only with permission when physical rearrangement
+    is unavailable. A planning exercise may identify options, but it does not establish that a real barrier
+    was reduced.
+  expected_burden: About 15 minutes to observe, 15–30 minutes to try a change, and a short user evaluation.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Accessibility and adaptable home design protocol to rank worth, coerce participation, demand
@@ -103,20 +103,22 @@ intervention:
   - Treating a completed Accessibility and adaptable home design action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Accessibility and adaptable home design situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use photographs
+    or a paper layout only with permission when physical rearrangement is unavailable. A planning exercise
+    may identify options, but it does not establish that a real barrier was reduced.
   actions:
   - stable_id: PRACTICE-COMP-1316-ACCESSIBILITY-AND-ADAPTABLE-HOME-DESIGN-01-A1
     sequence: 1
-    title: Prepare a consent-safe Accessibility and adaptable home design interaction
-    instructions: 'Choose one welcome, low-stakes relationship context for Accessibility and adaptable
-      home design. Translate the canonical scope into one observable communication act, identify power
-      or retaliation concerns, and obtain or preserve the other person''s freedom not to participate:
-      Arrange spaces, tools, lighting, storage, and routines to support different bodies, senses, cognition,
-      and ages.'
+    title: Observe the task and ask about the barrier
+    instructions: 'Walk through the task from its user''s ordinary position and communication mode. Ask
+      where effort, confusion, glare, reach or interruption occurs. Record the function that matters,
+      such as finding medication information without moving the medication itself. Separate the person''s
+      account from assumptions about what should be easy.
+
+
+      Observation checks: The task is described from its user''s perspective; A specific environmental
+      barrier is identified; Preferences and consent guide the observation. Mark only what you observed.
+      Missing, mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -138,9 +140,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c1316_a1_communication_act_specific
-        - c1316_a1_consent_boundary_present
-        - c1316_a1_power_checked
+        - the_task_is_described_from_its_user_s_perspective
+        - a_specific_environmental_barrier_is_identified
+        - preferences_and_consent_guide_the_observation
       - measurement_id: c1316_a1_boundary
         kind: boolean
         role: supporting
@@ -157,10 +159,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-1316-ACCESSIBILITY-AND-ADAPTABLE-HOME-DESIGN-01-A2
     sequence: 2
-    title: Practice one Accessibility and adaptable home design communication act
-    instructions: Use the prepared Accessibility and adaptable home design act once without covert testing,
-      pressure, diagnosis, deception inference, or a demand for disclosure. Ask one direct clarification
-      when appropriate and allow refusal, delay, indirect communication, language access, or another format.
+    title: Try one reversible environmental change
+    instructions: 'Agree on a small change using existing materials: clearer labels, a lighter container,
+      more visible contrast or relocating an ordinary item to a reachable position. Preserve exits, supports
+      and shared access. Structural changes, electrical work, medication handling and fitted assistive
+      equipment require appropriate expertise beyond this trial.
+
+
+      Observation checks: The change directly addresses the barrier; It is reversible and agreed; Safety
+      and shared access are preserved. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -176,12 +184,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c1316_a2_primary
-        kind: boolean
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        expected: true
+        - reviewed_artifact
+        criteria:
+        - the_change_directly_addresses_the_barrier
+        - it_is_reversible_and_agreed
+        - safety_and_shared_access_are_preserved
       - measurement_id: c1316_a2_boundary
         kind: boolean
         role: supporting
@@ -198,10 +209,34 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-1316-ACCESSIBILITY-AND-ADAPTABLE-HOME-DESIGN-01-A3
     sequence: 3
-    title: Review Accessibility and adaptable home design without scoring the person
-    instructions: 'Review only the observable interaction and its boundaries. Do not infer motives or
-      store private narrative. Compare what happened with this evidence target and retain disagreement
-      or an inconclusive result: A real household barrier is reduced through redesign or assistive equipment.'
+    title: Have the user evaluate the same task again
+    instructions: 'Repeat the original task and ask whether effort, clarity, comfort or independence changed
+      in the way the person wanted. Check for new difficulties elsewhere. Keep, revise or undo the change
+      based on their assessment, and identify any need for a qualified accessibility professional.
+
+
+      Observation checks: The same task is compared; The affected person''s evaluation determines success;
+      New barriers and professional needs are considered. Mark only what you observed. Missing, mixed
+      and negative results are valid; a deferred action is not completed.
+
+
+      Final review: Did the change solve the person''s stated problem, and would it remain usable when
+      their needs or the household''s needs change?
+
+
+      Examples: Supportive: The user found the labelled item more easily and preferred keeping the reversible
+      change.
+
+
+      Mixed: Visibility improved but the new location introduced an uncomfortable reach.
+
+
+      Contradictory: The arrangement was imposed despite the user''s objection or blocked a necessary
+      route.
+
+
+      Inconclusive: A redesign was proposed without observing the original task or obtaining the user''s
+      evaluation.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -223,9 +258,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c1316_a3_observable_interaction_reviewed
-        - c1316_a3_private_narrative_excluded
-        - c1316_a3_inconclusive_allowed
+        - the_same_task_is_compared
+        - the_affected_person_s_evaluation_determines_success
+        - new_barriers_and_professional_needs_are_considered
       - measurement_id: c1316_a3_boundary
         kind: boolean
         role: supporting
@@ -246,17 +281,15 @@ intervention:
       Accessibility and adaptable home design; no purchase, subscription, travel, credential, or public
       artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Accessibility and adaptable home design; assistive technology, interpretation, a support
-      person, and a deferred action are valid without penalty.
+    - Use photographs or a paper layout only with permission when physical rearrangement is unavailable.
+      A planning exercise may identify options, but it does not establish that a real barrier was reduced.
     cultural_context:
     - Adapt the expression of Accessibility and adaptable home design to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Accessibility and adaptable home design opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use photographs or a paper layout only with permission when physical rearrangement is unavailable.
+      A planning exercise may identify options, but it does not establish that a real barrier was reduced.
   pause_conditions:
   - Pause Accessibility and adaptable home design when capacity, consent, authority, privacy, access,
     care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make
@@ -288,10 +321,7 @@ evidence_and_scoring:
   - c1316_a3_boundary
   - c1316_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Accessibility and adaptable home design action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Accessibility and adaptable home design criterion, depended
-    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - The arrangement was imposed despite the user's objection or blocked a necessary route.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Accessibility and adaptable home design explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -302,14 +332,20 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Accessibility and adaptable home design rules withhold observations older than
     90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—A real household barrier is reduced through redesign or assistive equipment.—not completion,
-    confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Accessibility and adaptable home design requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Observe the task and ask about the barrier. Observed checks: The task
+    is described from its user''s perspective; A specific environmental barrier is identified; Preferences
+    and consent guide the observation. Action 2: Try one reversible environmental change. Observed checks:
+    The change directly addresses the barrier; It is reversible and agreed; Safety and shared access are
+    preserved. Action 3: Have the user evaluate the same task again. Observed checks: The same task is
+    compared; The affected person''s evaluation determines success; New barriers and professional needs
+    are considered.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A redesign was proposed without observing the original
+    task or obtaining the user's evaluation.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Accessibility
     and adaptable home design contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -319,9 +355,8 @@ evidence_and_scoring:
   - L18
   - L28
   - L31
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Accessibility and adaptable home design evidence.
@@ -329,12 +364,16 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The prepare a consent-safe accessibility and adaptable home design interaction action was attempted
-    or explicitly deferred.
-  - The practice one accessibility and adaptable home design communication act action was attempted or
-    explicitly deferred.
-  - The review accessibility and adaptable home design without scoring the person action preserved a limited
-    conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Observe the task and ask about the barrier. Observed checks: The task is described from
+    its user''s perspective; A specific environmental barrier is identified; Preferences and consent guide
+    the observation.'
+  - 'Action 2: Try one reversible environmental change. Observed checks: The change directly addresses
+    the barrier; It is reversible and agreed; Safety and shared access are preserved.'
+  - 'Action 3: Have the user evaluate the same task again. Observed checks: The same task is compared;
+    The affected person''s evaluation determines success; New barriers and professional needs are considered.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -343,58 +382,52 @@ completion_and_review:
     - c1316_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Accessibility and adaptable home design only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Accessibility and adaptable home design across
-    roles, cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: Did the change solve the person's stated problem, and would it remain usable when
+    their needs or the household's needs change?
+  transfer_limit: One user-led change tests an environmental barrier. Broader accessible design requires
+    varied tasks, changing needs and expertise for structural or fitted adaptations.
   reflection:
-    before: What does Accessibility and adaptable home design require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Accessibility and adaptable home design criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'A real household barrier is reduced through redesign or assistive
-      equipment.', what contradiction or missing context matters most, and should this Accessibility and
-      adaptable home design design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Improve a real household task by changing
+      the environment in a way the affected person can evaluate.'
+    during: Which checks have actually been observed? Visibility improved but the new location introduced
+      an uncomfortable reach.
+    after: Did the change solve the person's stated problem, and would it remain usable when their needs
+      or the household's needs change?
   review_guidance:
     repeat: Repeat the same bounded Accessibility and adaptable home design design only when the context
       and burden remain appropriate.
-    adapt: Change the Accessibility and adaptable home design medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Use photographs or a paper layout only with permission when physical rearrangement is unavailable.
+      A planning exercise may identify options, but it does not establish that a real barrier was reduced.
     stop: Stop Accessibility and adaptable home design when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Accessibility and adaptable home design
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Accessibility and adaptable home design criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Accessibility and adaptable home design criteria were observed while burden, support,
-      contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Accessibility and adaptable home design criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Accessibility and adaptable home design action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The user found the labelled item more easily and preferred keeping the reversible change.
+    mixed: Visibility improved but the new location introduced an uncomfortable reach.
+    contradictory: The arrangement was imposed despite the user's objection or blocked a necessary route.
+    inconclusive: A redesign was proposed without observing the original task or obtaining the user's
+      evaluation.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Accessibility and adaptable home design.
+    context_heading: Remove one household access barrier with its user's input
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Accessibility
       and adaptable home design.
   check_in_labels:
-    c1316_a1_primary: The bounded Accessibility and adaptable home design criterion for action 1 was observed
+    c1316_a1_primary: 'Observed checks: observe the task and ask about the barrier'
     c1316_a1_boundary: Action 1 stayed inside its stated Accessibility and adaptable home design boundary
     c1316_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c1316_a2_primary: The bounded Accessibility and adaptable home design criterion for action 2 was observed
+    c1316_a2_primary: 'Observed checks: try one reversible environmental change'
     c1316_a2_boundary: Action 2 stayed inside its stated Accessibility and adaptable home design boundary
     c1316_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c1316_a3_primary: The bounded Accessibility and adaptable home design criterion for action 3 was observed
+    c1316_a3_primary: 'Observed checks: have the user evaluate the same task again'
     c1316_a3_boundary: Action 3 stayed inside its stated Accessibility and adaptable home design boundary
     c1316_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Accessibility and
-    adaptable home design practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Did the change solve the person's stated problem, and would it remain usable when their
+    needs or the household's needs change? Completion is not mastery.
+  plain_language_evidence: The user found the labelled item more easily and preferred keeping the reversible
+    change.
   display_order: 176

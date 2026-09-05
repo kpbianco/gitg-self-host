@@ -9,7 +9,7 @@
       <p class="eyebrow">{% if is_recommended %}Recommended next{% else %}Practice protocol{% endif %}</p>
       <h1>{{ protocol.name }}</h1>
       {% if protocol.duration_days %}
-        <p class="lede">{{ protocol.duration_days }} days · three defined actions · compact check-ins</p>
+        <p class="lede">{{ protocol.duration_days }} days · {{ protocol.actions.count }} defined actions · compact check-ins</p>
       {% endif %}
     </div>
     {% if protocol.availability == "active" %}
@@ -83,7 +83,7 @@
             <span class="rank">{{ action.sequence|stringformat:"02d" }}</span>
             <div>
               <strong>{{ action.title }}</strong>
-              <p>{{ action.instructions }}</p>
+              {{ action.instructions|linebreaks }}
             </div>
           </li>
         {% endfor %}

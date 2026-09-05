@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-1305-COOKING-FUNDAMENTALS-01
 slug: c1305-cooking-fundamentals-practice
-name: Bounded Cooking fundamentals Practice
+name: Prepare and improve one simple bean skillet
 parent_competency_id: '13.05'
 domain_id: '13'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-USDA-LEFTOVER-SAFETY
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 13.05
-      (Cooking fundamentals); canonical scope, evidence target, classification, domain boundary, and parent
-      mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 13.05; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,37 +35,44 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Cooking fundamentals through a bounded longitudinal review bounded by the canonical
-    scope: Use knives, heat, seasoning, timing, mise en place, and core cooking methods safely.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can prepare varied,
-    nourishing meals without total dependence on recipes or prepared food. The protocol creates a small
-    opportunity to examine that target without treating completion as broad capability.'
+  purpose: Coordinate preparation, gentle heat, seasoning and cleanup while producing a simple meal that
+    fits the eater.
+  why_recommended: Coordinate preparation, gentle heat, seasoning and cleanup while producing a simple
+    meal that fits the eater.
   claims:
-  - statement: Using the canonical scope and evidence target for Cooking fundamentals is a traceable product-design
-      basis for a source-only draft protocol.
+  - statement: Coordinate preparation, gentle heat, seasoning and cleanup while producing a simple meal
+      that fits the eater.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Refrigerate perishable leftovers within two hours, or one hour above 32 C (90 F); use shallow
+      containers, keep refrigerated leftovers for three to four days, and reheat to 74 C (165 F).
+    classification: safety_precaution
+    source_ids:
+    - SRC-USDA-LEFTOVER-SAFETY
+    limitations: General household guidance, not an assurance about a particular ingredient, interrupted
+      cold chain or a person's dietary needs. This source does not test the bean-skillet exercise.
   applicability_question: Does a voluntary, bounded Cooking fundamentals practice fit the person's current
     role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Cooking fundamentals as not applicable, consciously unchosen, or deferred
     without penalty when the role, pathway, capacity, authority, opportunity, or safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Cooking fundamentals
-    context, understand the source-only status, and stop without losing safety, care, employment, housing,
-    services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Cooking fundamentals;
-    do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency, or dependence for
-    evidence.
+  readiness_considerations: Use a microwave-safe covered vessel according to the appliance instructions,
+    pre-cut ingredients or an agreed helper. With no safe heating access, assemble suitable labelled ready-to-eat
+    ingredients and record that heat management was not practiced.
+  opportunity_considerations: For one or two portions use a drained can of ready-to-eat beans, a cup of
+    suitable chopped or frozen vegetables, a little oil and water, a pan and a spoon. Check labels, dietary
+    restrictions and access needs; obtain help if handling heat or tools is unsafe.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Cooking fundamentals.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - For one or two portions use a drained can of ready-to-eat beans, a cup of suitable chopped or frozen
+    vegetables, a little oil and water, a pan and a spoon. Check labels, dietary restrictions and access
+    needs; obtain help if handling heat or tools is unsafe.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Cooking fundamentals instead of
-    a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a microwave-safe covered vessel according to the appliance instructions, pre-cut ingredients or
+    an agreed helper. With no safe heating access, assemble suitable labelled ready-to-eat ingredients
+    and record that heat management was not practiced.
   role_conditions:
   - This competency is context sensitive; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -76,20 +83,33 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Cooking fundamentals as inferiority;
     competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-LONGITUDINAL-REVIEW
+  protocol_class: PF-SKILL-REHEARSAL
   duration_days: 10
-  cadence: Complete three bounded Cooking fundamentals actions over ten days, preserving explicit not-applicable,
-    defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Cooking fundamentals; copy the canonical scope and evidence target into
-    a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Cooking
-    fundamentals. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Cooking fundamentals actions, and review;
-    scope may be reduced or deferred for access, care, health, workload, conscience, or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'For one or two portions use a drained can of ready-to-eat beans, a cup of suitable chopped or
+    frozen vegetables, a little oil and water, a pan and a spoon. Check labels, dietary restrictions and
+    access needs; obtain help if handling heat or tools is unsafe. Goal: Coordinate preparation, gentle
+    heat, seasoning and cleanup while producing a simple meal that fits the eater. Scope: The skillet
+    practices preparation, sequencing, heat, moisture and seasoning. It samples cooking fundamentals;
+    it does not establish knife proficiency, raw-meat handling or every cooking method. Time and effort:
+    About 10 minutes of preparation, 15–25 minutes of cooking, and 10 minutes for cleanup and review.
+    Adaptation: Use a microwave-safe covered vessel according to the appliance instructions, pre-cut ingredients
+    or an agreed helper. With no safe heating access, assemble suitable labelled ready-to-eat ingredients
+    and record that heat management was not practiced. Keep personal working notes outside the check-in;
+    record only the listed observations.
+
+
+    Reference support:
+
+    Leftovers and Food Safety: https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/leftovers-and-food-safety'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a microwave-safe covered vessel according to the appliance instructions, pre-cut
+    ingredients or an agreed helper. With no safe heating access, assemble suitable labelled ready-to-eat
+    ingredients and record that heat management was not practiced.
+  expected_burden: About 10 minutes of preparation, 15–25 minutes of cooking, and 10 minutes for cleanup
+    and review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Cooking fundamentals protocol to rank worth, coerce participation, demand disclosure, override
@@ -97,18 +117,23 @@ intervention:
   - Treating a completed Cooking fundamentals action, a polished artifact, agreement, confidence, speed,
     independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Cooking fundamentals situation involving emergency response, abuse, retaliation, illegal conduct,
-    medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous equipment,
-    or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a microwave-safe
+    covered vessel according to the appliance instructions, pre-cut ingredients or an agreed helper. With
+    no safe heating access, assemble suitable labelled ready-to-eat ingredients and record that heat management
+    was not practiced.
   actions:
   - stable_id: PRACTICE-COMP-1305-COOKING-FUNDAMENTALS-01-A1
     sequence: 1
-    title: Define indicators for Cooking fundamentals
-    instructions: 'Choose two to four observable, privacy-minimized indicators for Cooking fundamentals,
-      plus a missing-data rule and one contradiction indicator. Bound the review to one role or context
-      using this scope: Use knives, heat, seasoning, timing, mise en place, and core cooking methods safely.'
+    title: Prepare ingredients and a safe work area
+    instructions: 'Wash hands, clear a stable work area, read ingredient labels and gather everything
+      before heating. Rinse fresh produce under running water. Use pre-cut vegetables if knife work is
+      unfamiliar, or cut on a stable board with fingers away from the blade. Separate waste and reserve
+      a clean serving utensil.
+
+
+      Observation checks: Ingredients and equipment are ready; Dietary and handling restrictions are checked;
+      Work surfaces and utensils are kept clean. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -130,9 +155,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c1305_a1_indicators_observable
-        - c1305_a1_missing_data_rule_present
-        - c1305_a1_contradiction_indicator_present
+        - ingredients_and_equipment_are_ready
+        - dietary_and_handling_restrictions_are_checked
+        - work_surfaces_and_utensils_are_kept_clean
       - measurement_id: c1305_a1_boundary
         kind: boolean
         role: supporting
@@ -149,10 +174,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-1305-COOKING-FUNDAMENTALS-01-A2
     sequence: 2
-    title: Observe Cooking fundamentals across three checkpoints
-    instructions: Collect up to three brief Cooking fundamentals checkpoints across the selected period
-      or contexts. Record unknown, not observed, not applicable, defer, and adverse outcomes as valid
-      states; do not infer a trend from prose length, mood, or one unusually good or bad event.
+    title: Cook in a deliberate sequence
+    instructions: 'Soften the vegetables over gentle heat in a little oil, stirring and adding a splash
+      of water if they stick. Add the drained beans and warm through, following any package cooking requirements.
+      Taste with a clean utensil, adjust seasoning modestly, and note how texture and aroma change. Never
+      leave the pan unattended.
+
+
+      Observation checks: Vegetables and beans follow an intentional sequence; Heat and moisture are adjusted
+      to observations; Seasoning and doneness are checked appropriately. Mark only what you observed.
+      Missing, mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -168,15 +199,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c1305_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - vegetables_and_beans_follow_an_intentional_sequence
+        - heat_and_moisture_are_adjusted_to_observations
+        - seasoning_and_doneness_are_checked_appropriately
       - measurement_id: c1305_a2_boundary
         kind: boolean
         role: supporting
@@ -193,11 +224,35 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-1305-COOKING-FUNDAMENTALS-01-A3
     sequence: 3
-    title: Review the limited Cooking fundamentals pattern
-    instructions: 'Compare the checkpoints, name the strongest contradiction or missing context, and choose
-      repeat, adapt, stop, or seek support. Treat this target as a review criterion rather than proof
-      of transfer: Can prepare varied, nourishing meals without total dependence on recipes or prepared
-      food.'
+    title: Serve and improve one element
+    instructions: 'Serve the meal and inspect flavor, texture and timing. Identify one adjustment, such
+      as smaller vegetable pieces or adding a little water earlier, and test it on another portion or
+      later attempt. Clean the work area; promptly handle leftovers using the linked food-safety guidance
+      rather than judging safety by smell.
+
+
+      Observation checks: A meal is prepared and evaluated; One cooking adjustment follows an observation;
+      Cleanup and leftover handling are completed. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.
+
+
+      Final review: Which preparation or heat decision most affected the result, and can you explain the
+      adjustment without simply memorizing a recipe?
+
+
+      Examples: Supportive: The meal was produced safely and adding water earlier corrected sticking in
+      a second portion.
+
+
+      Mixed: The food was prepared but uneven vegetable sizes caused inconsistent texture.
+
+
+      Contradictory: An allergen warning was ignored, heat was left unattended or unsafe leftovers were
+      treated as safe by smell.
+
+
+      Inconclusive: Ingredients were gathered but no meal or explicitly limited no-heat alternative was
+      prepared.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -219,9 +274,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c1305_a3_checkpoints_compared
-        - c1305_a3_contradiction_or_gap_named
-        - c1305_a3_transfer_limit_preserved
+        - a_meal_is_prepared_and_evaluated
+        - one_cooking_adjustment_follows_an_observation
+        - cleanup_and_leftover_handling_are_completed
       - measurement_id: c1305_a3_boundary
         kind: boolean
         role: supporting
@@ -241,16 +296,17 @@ intervention:
     - Use paper, an offline note, a library resource, a public example, or a no-cost conversation for
       Cooking fundamentals; no purchase, subscription, travel, credential, or public artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Cooking fundamentals; assistive technology, interpretation, a support person, and a deferred
-      action are valid without penalty.
+    - Use a microwave-safe covered vessel according to the appliance instructions, pre-cut ingredients
+      or an agreed helper. With no safe heating access, assemble suitable labelled ready-to-eat ingredients
+      and record that heat management was not practiced.
     cultural_context:
     - Adapt the expression of Cooking fundamentals to direct or indirect communication, collective or
       individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Cooking fundamentals opportunity is unavailable or inappropriate, use a fictional, historical,
-      public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use a microwave-safe covered vessel according to the appliance instructions, pre-cut ingredients
+      or an agreed helper. With no safe heating access, assemble suitable labelled ready-to-eat ingredients
+      and record that heat management was not practiced.
   pause_conditions:
   - Pause Cooking fundamentals when capacity, consent, authority, privacy, access, care duties, uncertainty,
     distress, fatigue, pain, resource scarcity, or changed circumstances make the next action unwise.
@@ -280,10 +336,8 @@ evidence_and_scoring:
   - c1305_a3_boundary
   - c1305_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Cooking fundamentals action exceeded consent, authority, privacy, qualification, role, burden,
-    or safety boundaries.
-  - The evidence contradicted the intended Cooking fundamentals criterion, depended on coercion or hidden
-    private content, or could not distinguish the protocol from contextual change.
+  - An allergen warning was ignored, heat was left unattended or unsafe leftovers were treated as safe
+    by smell.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Cooking fundamentals explicitly; support can enable access and never reduces dignity or silently
     changes the typed value.
@@ -293,14 +347,19 @@ evidence_and_scoring:
     origins are rejected and later repetitions use the typed contract's explicit diminishing multipliers.
   recency_rule: Generated Cooking fundamentals rules withhold observations older than 90 days; no unrecorded
     retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can prepare varied, nourishing meals without total dependence on recipes or prepared food.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Cooking fundamentals requires a bounded context, allowlisted observations,
-    provenance, contradiction and adverse handling, and preserved uncertainty; free text and artifact
-    contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Prepare ingredients and a safe work area. Observed checks: Ingredients
+    and equipment are ready; Dietary and handling restrictions are checked; Work surfaces and utensils
+    are kept clean. Action 2: Cook in a deliberate sequence. Observed checks: Vegetables and beans follow
+    an intentional sequence; Heat and moisture are adjusted to observations; Seasoning and doneness are
+    checked appropriately. Action 3: Serve and improve one element. Observed checks: A meal is prepared
+    and evaluated; One cooking adjustment follows an observation; Cleanup and leftover handling are completed.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. Ingredients were gathered but no meal or explicitly
+    limited no-heat alternative was prepared.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Cooking
     fundamentals contribution under typed evaluation; protocol performance remains distinct and is never
     counted twice.
@@ -309,9 +368,8 @@ evidence_and_scoring:
   - L16
   - L17
   - L18
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Cooking fundamentals evidence.
@@ -319,10 +377,15 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define indicators for cooking fundamentals action was attempted or explicitly deferred.
-  - The observe cooking fundamentals across three checkpoints action was attempted or explicitly deferred.
-  - The review the limited cooking fundamentals pattern action preserved a limited conclusion, contradiction,
-    or inconclusive result.
+  - 'Action 1: Prepare ingredients and a safe work area. Observed checks: Ingredients and equipment are
+    ready; Dietary and handling restrictions are checked; Work surfaces and utensils are kept clean.'
+  - 'Action 2: Cook in a deliberate sequence. Observed checks: Vegetables and beans follow an intentional
+    sequence; Heat and moisture are adjusted to observations; Seasoning and doneness are checked appropriately.'
+  - 'Action 3: Serve and improve one element. Observed checks: A meal is prepared and evaluated; One cooking
+    adjustment follows an observation; Cleanup and leftover handling are completed.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -331,55 +394,54 @@ completion_and_review:
     - c1305_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Cooking fundamentals only when the initial context remained
-    safe, the evidence criteria were usable, burden was acceptable, and a new context can be named without
-    assuming transfer.
-  transfer_limit: Three bounded actions do not establish Cooking fundamentals across roles, cultures,
-    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: Which preparation or heat decision most affected the result, and can you explain
+    the adjustment without simply memorizing a recipe?
+  transfer_limit: The skillet practices preparation, sequencing, heat, moisture and seasoning. It samples
+    cooking fundamentals; it does not establish knife proficiency, raw-meat handling or every cooking
+    method.
   reflection:
-    before: What does Cooking fundamentals require in this exact context, what remains outside my role
-      or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Cooking fundamentals criterion is present, absent, mixed, or unknown, and
-      are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can prepare varied, nourishing meals without total dependence
-      on recipes or prepared food.', what contradiction or missing context matters most, and should this
-      Cooking fundamentals design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Coordinate preparation, gentle heat, seasoning
+      and cleanup while producing a simple meal that fits the eater.'
+    during: Which checks have actually been observed? The food was prepared but uneven vegetable sizes
+      caused inconsistent texture.
+    after: Which preparation or heat decision most affected the result, and can you explain the adjustment
+      without simply memorizing a recipe?
   review_guidance:
     repeat: Repeat the same bounded Cooking fundamentals design only when the context and burden remain
       appropriate.
-    adapt: Change the Cooking fundamentals medium, scope, support, timing, criteria, or context while
-      preserving provenance and the narrower evidence claim.
+    adapt: Use a microwave-safe covered vessel according to the appliance instructions, pre-cut ingredients
+      or an agreed helper. With no safe heating access, assemble suitable labelled ready-to-eat ingredients
+      and record that heat management was not practiced.
     stop: Stop Cooking fundamentals when the practice becomes coercive, unsafe, privacy-invasive, role-inappropriate,
       professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Cooking fundamentals questions beyond
-      this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Cooking fundamentals criteria were observed with provenance and no adverse
-      boundary signal in the selected context.
-    mixed: Some Cooking fundamentals criteria were observed while burden, support, contextual change,
-      or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Cooking fundamentals criterion, introduced
-      harm or coercion, or showed the design was not workable.
-    inconclusive: The Cooking fundamentals action was deferred, not observed, not applicable, stale, insufficiently
-      bounded, or too confounded to interpret.
+    supportive: The meal was produced safely and adding water earlier corrected sticking in a second portion.
+    mixed: The food was prepared but uneven vegetable sizes caused inconsistent texture.
+    contradictory: An allergen warning was ignored, heat was left unattended or unsafe leftovers were
+      treated as safe by smell.
+    inconclusive: Ingredients were gathered but no meal or explicitly limited no-heat alternative was
+      prepared.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Cooking fundamentals.
+    context_heading: Prepare and improve one simple bean skillet
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Cooking fundamentals.
   check_in_labels:
-    c1305_a1_primary: The bounded Cooking fundamentals criterion for action 1 was observed
+    c1305_a1_primary: 'Observed checks: prepare ingredients and a safe work area'
     c1305_a1_boundary: Action 1 stayed inside its stated Cooking fundamentals boundary
     c1305_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c1305_a2_primary: The bounded Cooking fundamentals criterion for action 2 was observed
+    c1305_a2_primary: 'Observed checks: cook in a deliberate sequence'
     c1305_a2_boundary: Action 2 stayed inside its stated Cooking fundamentals boundary
     c1305_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c1305_a3_primary: The bounded Cooking fundamentals criterion for action 3 was observed
+    c1305_a3_primary: 'Observed checks: serve and improve one element'
     c1305_a3_boundary: Action 3 stayed inside its stated Cooking fundamentals boundary
     c1305_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Cooking fundamentals
-    practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Which preparation or heat decision most affected the result, and can you explain the
+    adjustment without simply memorizing a recipe? Completion is not mastery.
+  plain_language_evidence: The meal was produced safely and adding water earlier corrected sticking in
+    a second portion.
   display_order: 165

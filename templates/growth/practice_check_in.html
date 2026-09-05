@@ -47,6 +47,14 @@
       Choose an action to see only the observations relevant to that action.
     </p>
     {% for field in form %}
+      {% if field.field.widget.input_type == "checkbox" and field.field.widget.allow_multiple_selected %}
+        <fieldset class="form-field checkbox-group">
+          <legend>{{ field.label }}</legend>
+          {{ field }}
+          {% if field.help_text %}<p class="helptext">{{ field.help_text }}</p>{% endif %}
+          {% for error in field.errors %}<p class="form-error">{{ error }}</p>{% endfor %}
+        </fieldset>
+      {% else %}
       <div class="form-field{% if field.field.widget.input_type == 'checkbox' %} checkbox-field{% endif %}">
         {% if field.field.widget.input_type == "checkbox" %}
           {{ field }}
@@ -58,6 +66,7 @@
         {% if field.help_text %}<p class="helptext">{{ field.help_text }}</p>{% endif %}
         {% for error in field.errors %}<p class="form-error">{{ error }}</p>{% endfor %}
       </div>
+      {% endif %}
     {% endfor %}
     <div class="button-row">
       <button class="button button-secondary" name="intent" value="draft" type="submit"{% if sprint.status != "active" %} disabled{% endif %}>

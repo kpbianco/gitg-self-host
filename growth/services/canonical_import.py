@@ -43,6 +43,7 @@ from growth.models import (
     OrientationResult,
     PracticeAction,
     PracticeProtocol,
+    PracticeSprint,
 )
 
 CURRICULUM_PATH = Path("data/curriculum/ideal_person_curriculum_v2_pluralist_full_scope.yaml")
@@ -298,6 +299,7 @@ def validate_practice_content_mapping(
 
 
 def _seed_protocols(protocols: tuple[dict, ...]) -> None:
+    _verify_ongoing_practice_content(protocols)
     for item in protocols:
         completion_rules = item.get("completion_rules", {})
         minimum_completed = completion_rules.get("minimum_completed", 2)
@@ -399,6 +401,64 @@ def _seed_protocols(protocols: tuple[dict, ...]) -> None:
                 },
             )
         protocol.actions.exclude(stable_id__in=desired_actions).delete()
+
+
+def _verify_ongoing_practice_content(protocols: tuple[dict, ...]) -> None:
+    """Reject an upgrade that would change the task a person is already doing."""
+    ongoing_ids = set(
+        PracticeSprint.objects.filter(
+            status__in=[PracticeSprint.Status.ACTIVE, PracticeSprint.Status.PAUSED]
+        ).values_list("protocol_id", flat=True)
+    )
+    if not ongoing_ids:
+        return
+    current = {
+        protocol.pk: protocol
+        for protocol in PracticeProtocol.objects.filter(pk__in=ongoing_ids).prefetch_related(
+            "actions"
+        )
+    }
+    incoming = {item["stable_id"]: item for item in protocols}
+    for protocol_id, protocol in current.items():
+        item = incoming.get(protocol_id)
+        if item is None:
+            raise CanonicalDataError("An ongoing practice is missing from the incoming catalog.")
+        fields = (
+            "name",
+            "duration_days",
+            "recommendation_reason",
+            "applicability_prompt",
+            "setup_prompt",
+            "privacy_and_boundaries",
+            "completion_criteria",
+            "completion_rules",
+            "setup_copy",
+            "check_in_fields",
+            "mastery_disclaimer",
+            "availability",
+            "score_active",
+        )
+        action_fields = ("sequence", "title", "instructions", "due_within_days", "evidence_rules")
+        existing_actions = {
+            action.pk: {field: getattr(action, field) for field in action_fields}
+            for action in protocol.actions.all()
+        }
+        incoming_actions = {
+            action["stable_id"]: {field: action[field] for field in action_fields}
+            for action in item["actions"]
+        }
+        if (
+            any(getattr(protocol, field) != item[field] for field in fields)
+            or protocol.parent_competency_id != item["parent_competency_id"]
+            or set(protocol.target_levers.values_list("pk", flat=True))
+            != set(item["target_levers"])
+            or existing_actions != incoming_actions
+        ):
+            raise CanonicalDataError(
+                f"{protocol_id}: content changes affect an active or paused practice. "
+                "Finish or explicitly stop that practice before retrying the catalog import. "
+                "No ongoing task instructions or evidence rules were replaced."
+            )
 
 
 def _seed_pilot(version: CurriculumVersion, model: dict) -> tuple[int, int]:

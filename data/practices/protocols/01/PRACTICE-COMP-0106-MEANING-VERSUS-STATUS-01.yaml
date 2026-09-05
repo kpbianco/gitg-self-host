@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0106-MEANING-VERSUS-STATUS-01
 slug: c0106-meaning-versus-status-practice
-name: Bounded Meaning versus status Practice
+name: Test a goal without its audience
 parent_competency_id: '01.06'
 domain_id: '01'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-OPENSTAX-VALUE-QUESTIONS
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 01.06
-      (Meaning versus status); canonical scope, evidence target, classification, domain boundary, and
-      parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 01.06; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,38 +35,38 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Meaning versus status through a pluralist meaning practice bounded by the canonical
-    scope: Distinguish internally meaningful pursuits from prestige, comparison, insecurity, approval,
-    and borrowed ambition.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Has revised or abandoned
-    at least one goal whose primary function was image or comparison. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Separate meaningful motives from comparison and revise one goal accordingly.
+  why_recommended: Separate meaningful motives from comparison and revise one goal accordingly.
   claims:
-  - statement: Using the canonical scope and evidence target for Meaning versus status is a traceable
-      product-design basis for a source-only draft protocol.
+  - statement: Separate meaningful motives from comparison and revise one goal accordingly.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Philosophical value inquiry distinguishes goods valued for themselves from instrumental
+      goods and considers plural values that may conflict or resist a single scale.
+    classification: philosophical_or_normative_position
+    source_ids:
+    - SRC-OPENSTAX-VALUE-QUESTIONS
+    limitations: Educational conceptual support only; does not prescribe the person's priority order or
+      test the product's exercises or outcomes.
   applicability_question: Does a voluntary, bounded Meaning versus status practice fit the person's current
     role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Meaning versus status as not applicable, consciously unchosen, or deferred
     without penalty when the role, pathway, capacity, authority, opportunity, or safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Meaning versus status
-    context, understand the source-only status, and stop without losing safety, care, employment, housing,
-    services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Meaning versus
-    status; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency, or dependence
-    for evidence.
+  readiness_considerations: Use existing materials, a library resource, or a simulated private comparison.
+    Necessary public collaboration need not be hidden; this is a motive check, not enforced secrecy.
+  opportunity_considerations: Pick a discretionary goal with a small next step, such as learning a skill,
+    changing a room, or joining an activity. Avoid irreversible career or financial decisions in this
+    exercise.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Meaning versus status.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Pick a discretionary goal with a small next step, such as learning a skill, changing a room, or joining
+    an activity. Avoid irreversible career or financial decisions in this exercise.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Meaning versus status instead of
-    a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use existing materials, a library resource, or a simulated private comparison. Necessary public collaboration
+    need not be hidden; this is a motive check, not enforced secrecy.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -77,20 +77,30 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Meaning versus status as inferiority;
     competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-CONTEMPLATIVE-MEANING
+  protocol_class: PF-BEHAVIORAL-EXPERIMENT
   duration_days: 10
-  cadence: Complete three bounded Meaning versus status actions over ten days, preserving explicit not-applicable,
-    defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Meaning versus status; copy the canonical scope and evidence target into
-    a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Meaning
-    versus status. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Meaning versus status actions, and review;
-    scope may be reduced or deferred for access, care, health, workload, conscience, or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Pick a discretionary goal with a small next step, such as learning a skill, changing a room,
+    or joining an activity. Avoid irreversible career or financial decisions in this exercise. Goal: Separate
+    meaningful motives from comparison and revise one goal accordingly. Scope: The trial separates substance
+    from audience rewards for one goal. Motives can remain mixed, and one session cannot determine an
+    entire career or life direction. Time and effort: About 15 minutes of motive review, one 10–30 minute
+    activity, and 10 minutes to revise the goal. Adaptation: Use existing materials, a library resource,
+    or a simulated private comparison. Necessary public collaboration need not be hidden; this is a motive
+    check, not enforced secrecy. Keep personal working notes outside the check-in; record only the listed
+    observations.
+
+
+    Reference support:
+
+    Introduction to Philosophy, 8.2 Basic Questions about Values: https://openstax.org/books/introduction-philosophy/pages/8-2-basic-questions-about-values'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use existing materials, a library resource, or a simulated private comparison.
+    Necessary public collaboration need not be hidden; this is a motive check, not enforced secrecy.
+  expected_burden: About 15 minutes of motive review, one 10–30 minute activity, and 10 minutes to revise
+    the goal.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Meaning versus status protocol to rank worth, coerce participation, demand disclosure, override
@@ -98,19 +108,21 @@ intervention:
   - Treating a completed Meaning versus status action, a polished artifact, agreement, confidence, speed,
     independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Meaning versus status situation involving emergency response, abuse, retaliation, illegal conduct,
-    medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous equipment,
-    or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use existing
+    materials, a library resource, or a simulated private comparison. Necessary public collaboration need
+    not be hidden; this is a motive check, not enforced secrecy.
   actions:
   - stable_id: PRACTICE-COMP-0106-MEANING-VERSUS-STATUS-01-A1
     sequence: 1
-    title: Choose a declared frame for Meaning versus status
-    instructions: 'Select a religious, spiritual, philosophical, cultural, or secular frame through which
-      to explore Meaning versus status. State the frame, one alternative, and the limits of personal authority
-      using this canonical scope: Distinguish internally meaningful pursuits from prestige, comparison,
-      insecurity, approval, and borrowed ambition.'
+    title: Compare visible and invisible rewards
+    instructions: 'Write what the goal gives you if nobody learns about it, then what it gives you through
+      approval or comparison. Mixed motives are allowed. Ask whether you would still want the activity
+      with a plain title, modest equipment, and no public progress display.
+
+
+      Observation checks: Private benefits are identified; Social rewards are acknowledged without shame;
+      The audience-free version is considered. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -126,15 +138,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0106_a1_primary
-        kind: conceptual
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0106_a1_frame_declared
-        - c0106_a1_alternative_acknowledged
-        - c0106_a1_authority_limited
+        - private_benefits_are_identified
+        - social_rewards_are_acknowledged_without_shame
+        - the_audience_free_version_is_considered
       - measurement_id: c0106_a1_boundary
         kind: boolean
         role: supporting
@@ -151,11 +163,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0106-MEANING-VERSUS-STATUS-01-A2
     sequence: 2
-    title: Complete two bounded Meaning versus status practices
-    instructions: Complete two short, freely chosen Meaning versus status practices appropriate to the
-      declared frame, such as reading, silence, prayer, observation, ritual, dialogue, or reflection.
-      Stop for distress, coercion, altered-state risk, conscience conflict, or pressure from an authority
-      or group.
+    title: Try the substance without the display
+    instructions: 'Spend one short session on the underlying activity without announcing it or buying
+      a status upgrade. For example, practice a few musical phrases rather than shopping for an impressive
+      instrument. Note attention, frustration, enjoyment, usefulness, and effort; an unexciting session
+      is valid evidence.
+
+
+      Observation checks: The underlying activity is attempted; Public display is unnecessary; The experience
+      includes costs as well as appeal. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -171,15 +188,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0106_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - the_underlying_activity_is_attempted
+        - public_display_is_unnecessary
+        - the_experience_includes_costs_as_well_as_appeal
       - measurement_id: c0106_a2_boundary
         kind: boolean
         role: supporting
@@ -196,10 +213,32 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0106-MEANING-VERSUS-STATUS-01-A3
     sequence: 3
-    title: Interpret the Meaning versus status experience modestly
-    instructions: 'Review what was noticed without treating intensity, calm, certainty, group agreement,
-      or unusual experience as automatic truth. Compare the limited record with this evidence target:
-      Has revised or abandoned at least one goal whose primary function was image or comparison.'
+    title: Rewrite the goal around what remains
+    instructions: 'Keep, shrink, replace, or retire the goal using the trial. Write a next action and
+      remove one audience-dependent condition if it has no useful function. Preserve professional recognition
+      or social participation when those serve a real purpose rather than treating all visibility as vanity.
+
+
+      Observation checks: A goal disposition follows the trial; A meaningful next action is specified;
+      Legitimate social purposes are distinguished. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.
+
+
+      Final review: Which part of the goal survives without applause, and which external reward is still
+      legitimately useful?
+
+
+      Examples: Supportive: A prestige purchase was dropped while a modest weekly learning goal was retained.
+
+
+      Mixed: The activity still matters, but recognition is also a significant motive.
+
+
+      Contradictory: The exercise became shame about enjoying recognition or a reason to abandon necessary
+      paid work.
+
+
+      Inconclusive: Motives were guessed without trying the underlying activity or revisiting the goal.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -221,9 +260,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0106_a3_experience_and_interpretation_separated
-        - c0106_a3_alternative_explanation_retained
-        - c0106_a3_target_evidence_compared
+        - a_goal_disposition_follows_the_trial
+        - a_meaningful_next_action_is_specified
+        - legitimate_social_purposes_are_distinguished
       - measurement_id: c0106_a3_boundary
         kind: boolean
         role: supporting
@@ -243,16 +282,15 @@ intervention:
     - Use paper, an offline note, a library resource, a public example, or a no-cost conversation for
       Meaning versus status; no purchase, subscription, travel, credential, or public artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Meaning versus status; assistive technology, interpretation, a support person, and a deferred
-      action are valid without penalty.
+    - Use existing materials, a library resource, or a simulated private comparison. Necessary public
+      collaboration need not be hidden; this is a motive check, not enforced secrecy.
     cultural_context:
     - Adapt the expression of Meaning versus status to direct or indirect communication, collective or
       individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Meaning versus status opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use existing materials, a library resource, or a simulated private comparison. Necessary public
+      collaboration need not be hidden; this is a motive check, not enforced secrecy.
   pause_conditions:
   - Pause Meaning versus status when capacity, consent, authority, privacy, access, care duties, uncertainty,
     distress, fatigue, pain, resource scarcity, or changed circumstances make the next action unwise.
@@ -282,10 +320,7 @@ evidence_and_scoring:
   - c0106_a3_boundary
   - c0106_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Meaning versus status action exceeded consent, authority, privacy, qualification, role, burden,
-    or safety boundaries.
-  - The evidence contradicted the intended Meaning versus status criterion, depended on coercion or hidden
-    private content, or could not distinguish the protocol from contextual change.
+  - The exercise became shame about enjoying recognition or a reason to abandon necessary paid work.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Meaning versus status explicitly; support can enable access and never reduces dignity or silently
     changes the typed value.
@@ -295,14 +330,19 @@ evidence_and_scoring:
     origins are rejected and later repetitions use the typed contract's explicit diminishing multipliers.
   recency_rule: Generated Meaning versus status rules withhold observations older than 90 days; no unrecorded
     retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Has revised or abandoned at least one goal whose primary function was image or comparison.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Meaning versus status requires a bounded context, allowlisted observations,
-    provenance, contradiction and adverse handling, and preserved uncertainty; free text and artifact
-    contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Compare visible and invisible rewards. Observed checks: Private benefits
+    are identified; Social rewards are acknowledged without shame; The audience-free version is considered.
+    Action 2: Try the substance without the display. Observed checks: The underlying activity is attempted;
+    Public display is unnecessary; The experience includes costs as well as appeal. Action 3: Rewrite
+    the goal around what remains. Observed checks: A goal disposition follows the trial; A meaningful
+    next action is specified; Legitimate social purposes are distinguished.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. Motives were guessed without trying the underlying
+    activity or revisiting the goal.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Meaning
     versus status contribution under typed evaluation; protocol performance remains distinct and is never
     counted twice.
@@ -312,9 +352,8 @@ evidence_and_scoring:
   - L05
   - L09
   - L36
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Meaning versus status evidence.
@@ -322,10 +361,15 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The choose a declared frame for meaning versus status action was attempted or explicitly deferred.
-  - The complete two bounded meaning versus status practices action was attempted or explicitly deferred.
-  - The interpret the meaning versus status experience modestly action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Compare visible and invisible rewards. Observed checks: Private benefits are identified;
+    Social rewards are acknowledged without shame; The audience-free version is considered.'
+  - 'Action 2: Try the substance without the display. Observed checks: The underlying activity is attempted;
+    Public display is unnecessary; The experience includes costs as well as appeal.'
+  - 'Action 3: Rewrite the goal around what remains. Observed checks: A goal disposition follows the trial;
+    A meaningful next action is specified; Legitimate social purposes are distinguished.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -334,56 +378,51 @@ completion_and_review:
     - c0106_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Meaning versus status only when the initial context remained
-    safe, the evidence criteria were usable, burden was acceptable, and a new context can be named without
-    assuming transfer.
-  transfer_limit: Three bounded actions do not establish Meaning versus status across roles, cultures,
-    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: Which part of the goal survives without applause, and which external reward is
+    still legitimately useful?
+  transfer_limit: The trial separates substance from audience rewards for one goal. Motives can remain
+    mixed, and one session cannot determine an entire career or life direction.
   reflection:
-    before: What does Meaning versus status require in this exact context, what remains outside my role
-      or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Meaning versus status criterion is present, absent, mixed, or unknown, and
-      are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Has revised or abandoned at least one goal whose primary function
-      was image or comparison.', what contradiction or missing context matters most, and should this Meaning
-      versus status design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Separate meaningful motives from comparison
+      and revise one goal accordingly.'
+    during: Which checks have actually been observed? The activity still matters, but recognition is also
+      a significant motive.
+    after: Which part of the goal survives without applause, and which external reward is still legitimately
+      useful?
   review_guidance:
     repeat: Repeat the same bounded Meaning versus status design only when the context and burden remain
       appropriate.
-    adapt: Change the Meaning versus status medium, scope, support, timing, criteria, or context while
-      preserving provenance and the narrower evidence claim.
+    adapt: Use existing materials, a library resource, or a simulated private comparison. Necessary public
+      collaboration need not be hidden; this is a motive check, not enforced secrecy.
     stop: Stop Meaning versus status when the practice becomes coercive, unsafe, privacy-invasive, role-inappropriate,
       professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Meaning versus status questions beyond
-      this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Meaning versus status criteria were observed with provenance and no adverse
-      boundary signal in the selected context.
-    mixed: Some Meaning versus status criteria were observed while burden, support, contextual change,
-      or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Meaning versus status criterion, introduced
-      harm or coercion, or showed the design was not workable.
-    inconclusive: The Meaning versus status action was deferred, not observed, not applicable, stale,
-      insufficiently bounded, or too confounded to interpret.
+    supportive: A prestige purchase was dropped while a modest weekly learning goal was retained.
+    mixed: The activity still matters, but recognition is also a significant motive.
+    contradictory: The exercise became shame about enjoying recognition or a reason to abandon necessary
+      paid work.
+    inconclusive: Motives were guessed without trying the underlying activity or revisiting the goal.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Meaning versus status.
+    context_heading: Test a goal without its audience
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Meaning versus
       status.
   check_in_labels:
-    c0106_a1_primary: The bounded Meaning versus status criterion for action 1 was observed
+    c0106_a1_primary: 'Observed checks: compare visible and invisible rewards'
     c0106_a1_boundary: Action 1 stayed inside its stated Meaning versus status boundary
     c0106_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0106_a2_primary: The bounded Meaning versus status criterion for action 2 was observed
+    c0106_a2_primary: 'Observed checks: try the substance without the display'
     c0106_a2_boundary: Action 2 stayed inside its stated Meaning versus status boundary
     c0106_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0106_a3_primary: The bounded Meaning versus status criterion for action 3 was observed
+    c0106_a3_primary: 'Observed checks: rewrite the goal around what remains'
     c0106_a3_boundary: Action 3 stayed inside its stated Meaning versus status boundary
     c0106_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Meaning versus status
-    practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Which part of the goal survives without applause, and which external reward is still
+    legitimately useful? Completion is not mastery.
+  plain_language_evidence: A prestige purchase was dropped while a modest weekly learning goal was retained.
   display_order: 15

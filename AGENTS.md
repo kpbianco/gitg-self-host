@@ -459,6 +459,20 @@ keeps all eight participant evidence axes open with zero completed. Aggregate
 analysis readiness is not psychometric, fairness, participant, longitudinal,
 or effectiveness validation.
 
+## M6J tailored-content continuation
+
+M6J-01 individually rewrites all 42 practices in domains 01, 02 and 13. The broader
+owner requirement covers all 383; the remaining 341 must stay explicitly
+rewrite-pending. Compiler inputs live in `docs/authoring/exercises/`, while
+the canonical runtime source remains the manifest-listed practice YAML.
+The compiler must reject missing competencies, duplicated instructions and
+invalid observation checks; passing those checks is not human acceptance.
+Preserve the existing home-upkeep evidence rules as well as the five frozen
+legacy projections. An import must not replace instructions or rules for an
+active or paused practice. See ADR 0018 and the current handoff before the next
+cohort. Do not describe scoring completion, source links or 383 active records
+as completion of this content rewrite.
+
 <!-- BEGIN PORTFOLIO-CONTROL MANAGED -->
 ## Governed agentic delivery
 

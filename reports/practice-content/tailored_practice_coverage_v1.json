@@ -1,0 +1,1924 @@
+{
+  "schema_version": "GG-TAILORED-PRACTICE-AUTHORING-1.0",
+  "target": 383,
+  "authored": 42,
+  "remaining": 341,
+  "human_review_complete": 0,
+  "rows": [
+    {
+      "competency_id": "01.01",
+      "name": "Conceptions of flourishing",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "01.02",
+      "name": "A provisional worldview",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "01.03",
+      "name": "Chosen and inherited values",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "01.04",
+      "name": "A hierarchy of goods",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "01.05",
+      "name": "Purpose and calling",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "01.06",
+      "name": "Meaning versus status",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "01.07",
+      "name": "Commitment under uncertainty",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "01.08",
+      "name": "Existential responsibility",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "01.09",
+      "name": "Life review and philosophical revision",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "01.10",
+      "name": "Meaning after disillusionment",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "01.11",
+      "name": "Plural ends and reasonable disagreement",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "02.01",
+      "name": "Moral frameworks",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "02.02",
+      "name": "Moral perception",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "02.03",
+      "name": "Behavioral definitions of virtue",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "02.04",
+      "name": "Truthfulness and candor",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "02.05",
+      "name": "Promises, reliability, and one's word",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "02.06",
+      "name": "Justice, fairness, and equal dignity",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "02.07",
+      "name": "Moral courage",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "02.08",
+      "name": "Temperance and moderation",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "02.09",
+      "name": "Compassion, mercy, and forgiveness",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "02.10",
+      "name": "Loyalty and principled dissent",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "02.11",
+      "name": "Responsibility, apology, and restitution",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "02.12",
+      "name": "Integrity across contexts",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "02.13",
+      "name": "Moral luck, complicity, and dirty hands",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "02.14",
+      "name": "Conscience, conscientious objection, and civil disobedience",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "02.15",
+      "name": "Ethics of care and dependency",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "03.01",
+      "name": "Metaphysical and spiritual inquiry",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "03.02",
+      "name": "Serious study of a wisdom tradition",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "03.03",
+      "name": "Contemplation, prayer, and silence",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "03.04",
+      "name": "Reverence and the sacred",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "03.05",
+      "name": "Gratitude and received life",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "03.06",
+      "name": "Surrender and limits of control",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "03.07",
+      "name": "Religious and spiritual community",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "03.08",
+      "name": "Vocation and service beyond self",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "03.09",
+      "name": "Ritual, remembrance, and sacred time",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "03.10",
+      "name": "Communal worship, liturgy, and shared sacred practice",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "03.11",
+      "name": "Authority, tradition, conscience, and reform",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "03.12",
+      "name": "Religious pluralism and interfaith humility",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "03.13",
+      "name": "Mystical, ecstatic, and peak experience",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "04.01",
+      "name": "Suffering, evil, and lament",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "04.02",
+      "name": "Mortality and impermanence",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "04.03",
+      "name": "Tragic knowledge and the limits of control",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "04.04",
+      "name": "Meaning after catastrophic loss",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "04.05",
+      "name": "Absurdity, existential anxiety, and meaninglessness",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "04.06",
+      "name": "Endurance without self-optimization",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "04.07",
+      "name": "Moral injury and compromised action",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "04.08",
+      "name": "Dying, end-of-life choices, and accompaniment",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "04.09",
+      "name": "Hope without denial",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "04.10",
+      "name": "Irreversibility, remorse, and living after the unfixable",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "05.01",
+      "name": "An honest personal inventory",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "05.02",
+      "name": "Narrative identity",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "05.03",
+      "name": "Strengths, limitations, and fit",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "05.04",
+      "name": "Personality as hypothesis",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "05.05",
+      "name": "Defenses and self-deception",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "05.06",
+      "name": "Triggers and repeated patterns",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "05.07",
+      "name": "Feedback and disconfirmation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "05.08",
+      "name": "Self-worth beyond performance",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "05.09",
+      "name": "Integration of conflicting parts",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "05.10",
+      "name": "Humility and proportionate self-regard",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "05.11",
+      "name": "Embodied and socially situated identity",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "05.12",
+      "name": "Cultural self-location and inherited assumptions",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "06.01",
+      "name": "Vulnerability as a human condition",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "06.02",
+      "name": "Trauma and post-traumatic stress literacy",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "06.03",
+      "name": "Recovery after violation and betrayal",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "06.04",
+      "name": "Chronic illness adaptation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "06.05",
+      "name": "Chronic pain and pain-related functioning",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "06.06",
+      "name": "Disability identity, access, and adaptive excellence",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "06.07",
+      "name": "Neurodiversity and cognitive variation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "06.08",
+      "name": "Receiving care and seasons of reduced agency",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "06.09",
+      "name": "Accommodation, assistive technology, and universal design",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "06.10",
+      "name": "Dignity under limitation and loss of role",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "06.11",
+      "name": "Relapse, recurrence, and nonlinear recovery",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "06.12",
+      "name": "Care-recipient agency and safeguarding",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "06.13",
+      "name": "Ableism, stigma, and inclusive participation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "06.14",
+      "name": "Professional and emergency boundaries",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "07.01",
+      "name": "Emotional vocabulary and differentiation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "07.02",
+      "name": "Body-based emotional awareness",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "07.03",
+      "name": "The pause between feeling and action",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "07.04",
+      "name": "Anxiety and courageous exposure",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "07.05",
+      "name": "Anger and assertive repair",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "07.06",
+      "name": "Sadness, grief, and loss",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "07.07",
+      "name": "Shame, guilt, and remorse",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "07.08",
+      "name": "Envy, jealousy, and comparison",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "07.09",
+      "name": "Healthy emotional expression",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "07.10",
+      "name": "Self-compassion with standards",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "07.11",
+      "name": "Hope, optimism, joy, and contentment",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "07.12",
+      "name": "Resilience and post-setback adaptation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "07.13",
+      "name": "Mental-health literacy and help-seeking",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "07.14",
+      "name": "Chronic dysregulation and skill generalization",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "08.01",
+      "name": "Attention audit",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "08.02",
+      "name": "Mindfulness and present attention",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "08.03",
+      "name": "Impulse control",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "08.04",
+      "name": "Desire, craving, and lust",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "08.05",
+      "name": "Tolerance of discomfort",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "08.06",
+      "name": "Action independent of motivation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "08.07",
+      "name": "Habit and environment design",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "08.08",
+      "name": "Consistency and minimum standards",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "08.09",
+      "name": "Voluntary restraint and hardship",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "08.10",
+      "name": "Completion and perseverance",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "08.11",
+      "name": "Discipline without domination or purity",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "09.01",
+      "name": "Observation versus interpretation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "09.02",
+      "name": "Logic and argument structure",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "09.03",
+      "name": "Cognitive and motivational bias",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "09.04",
+      "name": "Source and evidence evaluation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "09.05",
+      "name": "Epistemic humility",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "09.06",
+      "name": "Probabilistic and scenario thinking",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "09.07",
+      "name": "Systems and causal reasoning",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "09.08",
+      "name": "Root-cause problem solving",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "09.09",
+      "name": "Tradeoffs and opportunity cost",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "09.10",
+      "name": "Risk assessment and precaution",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "09.11",
+      "name": "Practical wisdom and context",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "09.12",
+      "name": "Decision records and updating",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "09.13",
+      "name": "Statistical literacy",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "09.14",
+      "name": "Scientific reasoning and research design",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "09.15",
+      "name": "Causal inference and intervention logic",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "09.16",
+      "name": "Models, simulations, and abstraction limits",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "09.17",
+      "name": "Adversarial reasoning and information operations",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "10.01",
+      "name": "The science of learning",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "10.02",
+      "name": "Deliberate practice",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "10.03",
+      "name": "Curiosity and question formation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "10.04",
+      "name": "Research and information gathering",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "10.05",
+      "name": "Knowledge organization and notes",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "10.06",
+      "name": "Memory and recall",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "10.07",
+      "name": "Skill decomposition and progression",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "10.08",
+      "name": "Feedback and error correction",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "10.09",
+      "name": "Independent learning and resourcefulness",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "10.10",
+      "name": "Teaching and explanation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "10.11",
+      "name": "Breadth and interdisciplinary literacy",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "10.12",
+      "name": "Apprenticeship and tacit knowledge",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "10.13",
+      "name": "Communal and intergenerational knowledge transmission",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "10.14",
+      "name": "Accessible and differentiated learning",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "11.01",
+      "name": "Time and energy audit",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "11.02",
+      "name": "Priority hierarchy",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "11.03",
+      "name": "Goal definition and success criteria",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "11.04",
+      "name": "Milestones and task decomposition",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "11.05",
+      "name": "Scheduling and realistic capacity",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "11.06",
+      "name": "Project and workflow management",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "11.07",
+      "name": "Pacing and sustainable intensity",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "11.08",
+      "name": "Follow-through and accountability",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "11.09",
+      "name": "Review, measurement, and adaptation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "11.10",
+      "name": "Saying no and ending responsibly",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "12.01",
+      "name": "Health literacy and preventive care",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "12.02",
+      "name": "Sleep and circadian health",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "12.03",
+      "name": "Nutrition fundamentals",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "12.04",
+      "name": "Food relationship and body image",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "12.05",
+      "name": "Strength and muscular capability",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "12.06",
+      "name": "Cardiovascular endurance",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "12.07",
+      "name": "Mobility, flexibility, and joint capacity",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "12.08",
+      "name": "Power, speed, coordination, and agility",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "12.09",
+      "name": "Body composition and metabolic health",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "12.10",
+      "name": "Recovery, fatigue, and injury prevention",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "12.11",
+      "name": "Substances and altered states",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "12.12",
+      "name": "Bodily autonomy and personal boundaries",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "12.13",
+      "name": "Grooming, dress, and presentation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "12.14",
+      "name": "Functional aging and lifelong movement",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "12.15",
+      "name": "Adaptive movement and fitness",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "12.16",
+      "name": "Pain literacy and safe response",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "13.01",
+      "name": "Independent-living administration",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "13.02",
+      "name": "Home organization and maintenance systems",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "13.03",
+      "name": "Cleaning, sanitation, and waste",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "13.04",
+      "name": "Laundry and clothing care",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "13.05",
+      "name": "Cooking fundamentals",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "13.06",
+      "name": "Baking and food chemistry",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "13.07",
+      "name": "Meal planning, shopping, and food storage",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "13.08",
+      "name": "Basic tools and household repair",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "13.09",
+      "name": "Mechanical and vehicle literacy",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "13.10",
+      "name": "Utilities and household systems",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "13.11",
+      "name": "Gardening and plant care",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "13.12",
+      "name": "Resource maintenance and repair culture",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "13.13",
+      "name": "Hospitality and a functional living environment",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "13.14",
+      "name": "Housing, tenancy, and basic property literacy",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "13.15",
+      "name": "Domestic life under scarcity or instability",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "13.16",
+      "name": "Accessibility and adaptable home design",
+      "status": "authored_pending_review"
+    },
+    {
+      "competency_id": "14.01",
+      "name": "Digital and media self-governance",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "14.02",
+      "name": "Digital competence and data hygiene",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "14.03",
+      "name": "Digital identity, privacy, and data rights",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "14.04",
+      "name": "Cybersecurity and account resilience",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "14.05",
+      "name": "Online fraud, scams, and social engineering",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "14.06",
+      "name": "Algorithmic feeds and persuasive design",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "14.07",
+      "name": "AI literacy and appropriate use",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "14.08",
+      "name": "Synthetic media, deepfakes, and provenance",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "14.09",
+      "name": "Digital information verification",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "14.10",
+      "name": "Online communication and community conduct",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "14.11",
+      "name": "Digital creation, ownership, and attribution",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "14.12",
+      "name": "Automation dependence and operational resilience",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "14.13",
+      "name": "Digital citizenship and platform governance",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "15.01",
+      "name": "First aid, CPR, and emergency response",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "15.02",
+      "name": "Household emergency planning",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "15.03",
+      "name": "Situational awareness",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "15.04",
+      "name": "Personal safety and de-escalation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "15.05",
+      "name": "Self-protection and lawful force",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "15.06",
+      "name": "Outdoor survival fundamentals",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "15.07",
+      "name": "Water competence and rescue awareness",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "15.08",
+      "name": "Travel and unfamiliar-environment safety",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "15.09",
+      "name": "Cybersecurity, fraud, and identity protection",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "15.10",
+      "name": "Risk ownership and contingency thinking",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "15.11",
+      "name": "Community disaster readiness and mutual aid",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "15.12",
+      "name": "Public-health emergency competence",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "15.13",
+      "name": "Bystander intervention and violence prevention",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "15.14",
+      "name": "Workplace and activity-specific safety",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "16.01",
+      "name": "Attentive listening",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "16.02",
+      "name": "Clear and direct expression",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "16.03",
+      "name": "Nonverbal communication",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "16.04",
+      "name": "One-to-one and group conversation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "16.05",
+      "name": "Perspective taking and empathic accuracy",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "16.06",
+      "name": "Audience and context adaptation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "16.07",
+      "name": "Feedback and developmental conversation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "16.08",
+      "name": "Classical and modern rhetoric",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "16.09",
+      "name": "Public speaking and presentation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "16.10",
+      "name": "Storytelling and explanation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "16.11",
+      "name": "Negotiation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "16.12",
+      "name": "Conflict and de-escalation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "16.13",
+      "name": "Humor, warmth, and social ease",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "16.14",
+      "name": "Etiquette, courtesy, and first impressions",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "16.15",
+      "name": "Manipulation and coercion literacy",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "16.16",
+      "name": "High-context, indirect, and face-sensitive communication",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "16.17",
+      "name": "Intercultural communication and code-switching",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "16.18",
+      "name": "Language access and communication accommodation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "17.01",
+      "name": "Initiating connection",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "17.02",
+      "name": "Friendship formation and selection",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "17.03",
+      "name": "Maintaining friendship",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "17.04",
+      "name": "Reliable support",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "17.05",
+      "name": "Reciprocity and healthy dependence",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "17.06",
+      "name": "Boundaries and harmful relationships",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "17.07",
+      "name": "Hospitality and inclusion",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "17.08",
+      "name": "Collaboration and complementary strengths",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "17.09",
+      "name": "Belonging, loneliness, and social ecology",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "17.10",
+      "name": "Networks and social capital",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "17.11",
+      "name": "Intergenerational friendship and mentorship",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "17.12",
+      "name": "Kin, clan, neighborhood, and communal obligation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "17.13",
+      "name": "Friendship across deep difference",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "17.14",
+      "name": "Collective belonging without conformity",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "18.01",
+      "name": "The nature and practice of love",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "18.02",
+      "name": "Attraction and respectful courtship",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "18.03",
+      "name": "Partner selection and compatibility",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "18.04",
+      "name": "Attachment and relational security",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "18.05",
+      "name": "Vulnerability and emotional intimacy",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "18.06",
+      "name": "Relationship stages and changing needs",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "18.07",
+      "name": "Shared expectations, roles, and labor",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "18.08",
+      "name": "Partnership conflict and repair",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "18.09",
+      "name": "Sexual ethics and consent",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "18.10",
+      "name": "Sexual communication, pleasure, and health",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "18.11",
+      "name": "Commitment, fidelity, and trust",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "18.12",
+      "name": "Separation, divorce, estrangement, and endings",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "18.13",
+      "name": "Relationship diversity and chosen form",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "18.14",
+      "name": "Reproductive intentions and partnership communication",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "19.01",
+      "name": "Family systems and intergenerational patterns",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "19.02",
+      "name": "Parenting and child development",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "19.03",
+      "name": "Caregiving for elders, illness, and disability",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "19.04",
+      "name": "Fertility and reproductive health literacy",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "19.05",
+      "name": "Pregnancy, birth, and postpartum responsibility",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "19.06",
+      "name": "Miscarriage, infertility, and reproductive grief",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "19.07",
+      "name": "Adoption, fostering, stepfamilies, and chosen family",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "19.08",
+      "name": "Child protection and safeguarding",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "19.09",
+      "name": "Developmentally appropriate autonomy and discipline",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "19.10",
+      "name": "Education, formation, and modeling in family life",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "19.11",
+      "name": "Elder care, dementia, and later-life decision-making",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "19.12",
+      "name": "Family labor, provision, and invisible work",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "19.13",
+      "name": "Co-parenting, separation, and family restructuring",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "19.14",
+      "name": "Family ritual, heritage, and intergenerational continuity",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "19.15",
+      "name": "Caregiver limits, respite, and shared responsibility",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "20.01",
+      "name": "Social interdependence",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "20.02",
+      "name": "Civic and governmental literacy",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "20.03",
+      "name": "Rights, duties, law, and civil liberty",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "20.04",
+      "name": "Justice, inequality, and social structure",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "20.05",
+      "name": "Engagement across difference",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "20.06",
+      "name": "Service and volunteering",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "20.07",
+      "name": "Helping without paternalism",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "20.08",
+      "name": "Collective action and organizing",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "20.09",
+      "name": "Public discourse and information responsibility",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "20.10",
+      "name": "Stewardship of commons and environment",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "20.11",
+      "name": "Pluralism and peaceful coexistence",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "20.12",
+      "name": "Institutional and media-system literacy",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "20.13",
+      "name": "Propaganda, polarization, and democratic resilience",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "20.14",
+      "name": "Nonviolent action and conflict transformation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "20.15",
+      "name": "Civil disobedience and principled lawbreaking",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "20.16",
+      "name": "Mutual aid and community resilience",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "20.17",
+      "name": "Social insurance and shared risk",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "20.18",
+      "name": "Peacebuilding and reconciliation after collective harm",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "21.01",
+      "name": "Work worth doing",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "21.02",
+      "name": "Professional reliability",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "21.03",
+      "name": "Foundational craft competence",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "21.04",
+      "name": "Deliberate mastery and expertise",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "21.05",
+      "name": "Quality, craftsmanship, and reputation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "21.06",
+      "name": "Customer, stakeholder, and user understanding",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "21.07",
+      "name": "Systems and organizational awareness",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "21.08",
+      "name": "Project delivery",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "21.09",
+      "name": "Collaboration and team contribution",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "21.10",
+      "name": "Innovation and improvement",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "21.11",
+      "name": "Career adaptability and marketable capability",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "21.12",
+      "name": "Meaningful contribution and service through work",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "21.13",
+      "name": "Documentation, maintainability, and professional legacy",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "21.14",
+      "name": "Efficiency, thoroughness, and quality tradeoffs",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "21.15",
+      "name": "Worker rights and employment law literacy",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "21.16",
+      "name": "Power asymmetry, exploitation, and precarity",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "21.17",
+      "name": "Collective bargaining, unions, and worker voice",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "21.18",
+      "name": "Inclusive and accessible work",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "21.19",
+      "name": "Work boundaries, rest, and freedom from total identity",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "22.01",
+      "name": "Self-leadership and credibility",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "22.02",
+      "name": "Direction, vision, and priorities",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "22.03",
+      "name": "Authority and ethical use of power",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "22.04",
+      "name": "Decision-making under responsibility",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "22.05",
+      "name": "Delegation and empowerment",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "22.06",
+      "name": "Coaching, mentorship, and development",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "22.07",
+      "name": "Accountability and standards",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "22.08",
+      "name": "Conflict, dissent, and psychological safety",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "22.09",
+      "name": "Culture and institutional design",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "22.10",
+      "name": "Organizational politics and stakeholder navigation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "22.11",
+      "name": "Crisis leadership",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "22.12",
+      "name": "Succession and institutional stewardship",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "22.13",
+      "name": "Anti-corruption and conflicts of interest",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "22.14",
+      "name": "Institutional capture and concentrated power",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "22.15",
+      "name": "Whistleblowing and protected dissent",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "22.16",
+      "name": "Governance, checks, and accountable authority",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "22.17",
+      "name": "Abuse response and institutional repair",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "23.01",
+      "name": "Personal financial literacy",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "23.02",
+      "name": "Budgeting and cash-flow control",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "23.03",
+      "name": "Emergency reserves and liquidity",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "23.04",
+      "name": "Debt and credit",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "23.05",
+      "name": "Saving, investing, and retirement",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "23.06",
+      "name": "Insurance, estate, and dependent protection",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "23.07",
+      "name": "Consumption, status, and enoughness",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "23.08",
+      "name": "Generosity and responsible provision",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "23.09",
+      "name": "Family and intergenerational stewardship",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "23.10",
+      "name": "Material and ecological stewardship",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "23.11",
+      "name": "Financial hardship, poverty, and constrained choice",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "23.12",
+      "name": "Financial relationships and shared money",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "24.01",
+      "name": "Income, negotiation, and career economics",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "24.02",
+      "name": "Entrepreneurship and value creation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "24.03",
+      "name": "Business, markets, and economics",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "24.04",
+      "name": "Customer discovery and problem validation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "24.05",
+      "name": "Business models, pricing, and unit economics",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "24.06",
+      "name": "Operations, accounting, and compliance",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "24.07",
+      "name": "Competition, monopoly, and market power",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "24.08",
+      "name": "Externalities and full-cost accounting",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "24.09",
+      "name": "Macroeconomics and economic cycles",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "24.10",
+      "name": "Public finance, taxation, and redistribution",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "24.11",
+      "name": "Social insurance and welfare-state design",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "24.12",
+      "name": "Ownership, governance, and alternative enterprise forms",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "24.13",
+      "name": "Responsible innovation and technological change",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "24.14",
+      "name": "Global trade, development, and supply chains",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "25.01",
+      "name": "Regular creative production",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "25.02",
+      "name": "Observation and imagination",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "25.03",
+      "name": "Aesthetic literacy and taste",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "25.04",
+      "name": "Medium and technique",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "25.05",
+      "name": "Originality through synthesis",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "25.06",
+      "name": "Creative courage and experimentation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "25.07",
+      "name": "Revision, finishing, and publication",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "25.08",
+      "name": "Creative collaboration",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "25.09",
+      "name": "Art as truth, memory, and moral imagination",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "25.10",
+      "name": "Cultural and historical literacy",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "25.11",
+      "name": "Personal style and aesthetic environment",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "25.12",
+      "name": "Communal craft and tradition-bearing",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "25.13",
+      "name": "Cultural appropriation, exchange, and attribution",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "26.01",
+      "name": "Play for its own sake",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "26.02",
+      "name": "Rest and leisure",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "26.03",
+      "name": "Hobbies and lifelong interests",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "26.04",
+      "name": "Nature connection and ecological awareness",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "26.05",
+      "name": "Outdoor competence and responsible recreation",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "26.06",
+      "name": "Travel, geography, and place",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "26.07",
+      "name": "Cross-cultural exploration",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "26.08",
+      "name": "Adventure and calculated challenge",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "26.09",
+      "name": "Wonder and awe",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "26.10",
+      "name": "Communal festivity and celebration",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "26.11",
+      "name": "Communal recreation and inclusive play",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "26.12",
+      "name": "Pilgrimage and meaningful journey",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "26.13",
+      "name": "Humor, delight, and lightness",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "26.14",
+      "name": "Ecological relationship and reciprocal stewardship",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "27.01",
+      "name": "Life architecture",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "27.02",
+      "name": "Balancing competing goods",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "27.03",
+      "name": "Seasons and changing emphasis",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "27.04",
+      "name": "Roles and responsibility portfolio",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "27.05",
+      "name": "Personal operating reviews",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "27.06",
+      "name": "Goals as experiments",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "27.07",
+      "name": "Transition preparedness",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "27.08",
+      "name": "Ambition and contentment",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "27.09",
+      "name": "Coherence without rigidity",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "27.10",
+      "name": "Mentorship and generativity",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "27.11",
+      "name": "Legacy in people, institutions, and works",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "27.12",
+      "name": "Annual reckoning and recommitment",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "27.13",
+      "name": "Applicability, role choice, and the right to leave domains unchosen",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "27.14",
+      "name": "Multiple pathways to flourishing",
+      "status": "rewrite_pending"
+    },
+    {
+      "competency_id": "27.15",
+      "name": "Receiving as well as achieving",
+      "status": "rewrite_pending"
+    }
+  ]
+}

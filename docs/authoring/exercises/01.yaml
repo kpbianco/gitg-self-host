@@ -1,0 +1,256 @@
+schema_version: GG-TAILORED-PRACTICE-AUTHORING-1.0
+domain_id: '01'
+exercises:
+  '01.01':
+    title: "Compare three good lives through one ordinary choice"
+    goal: "Explain competing accounts of flourishing and use their differences to make one defensible choice."
+    scope_note: "This compares three lenses on one choice. Wider flourishing includes faith, freedom, relationships, service and contentment; the optional fourth lens begins that extension without settling every account."
+    burden: "About 30 minutes of comparison, one ordinary choice, and a 10-minute review."
+    setup: "Use paper or an offline note. Work with a free afternoon divided between rest, keeping a promise, and learning something useful; substitute an equally small real choice if preferred."
+    actions:
+      - title: "Give three accounts a fair hearing"
+        instructions: "Describe a good afternoon through character development, obligations to others, and overall benefit. For each, write its recommended choice, strongest reason, and one good it might neglect. Add a faith, freedom, care, or contentment perspective if it changes the answer. Do not rank people by their preferred account."
+        checks: [Three distinct reasons are explained, Each account has a genuine limitation, The same choice is used for comparison]
+      - title: "Make the tradeoff visible"
+        instructions: "Allocate the afternoon's actual available time. Explain which account drives the allocation and what another account would change. For example, keeping a short promise before resting may protect reliability and recovery while postponing learning. Try the allocation once, or walk through the supplied case if no free time is available."
+        checks: [An allocation is specified, A forgone good is named, The allocation is tried or explicitly simulated]
+      - title: "Test the account against changed circumstances"
+        instructions: "Reconsider the afternoon with an exhausted person, a dependent needing help, or an urgent promise. State what changes and why. Keep or revise your original reasoning, explaining how circumstances influence flourishing without making one lifestyle mandatory."
+        checks: [A changed circumstance is considered, Reasoning is revised or defended, A limit on generalization is recorded]
+    adaptation: "Explain the comparison aloud or with three symbols. Rest and receiving care may be the whole appropriate afternoon; no purchase, productivity target, or religious commitment is required."
+    review: "Which account illuminated a neglected good, and where would your chosen rule fail?"
+    examples:
+      supportive: "The allocation protected a promise and rest, and its author explained why urgent care would change it."
+      mixed: "Three accounts were named but two gave indistinguishable reasons; the comparison needs clarification."
+      contradictory: "The comparison dismissed rest as laziness or treated another person's way of life as inferior."
+      inconclusive: "A preference was stated without explaining any competing account or testing a choice."
+  '01.02':
+    title: "Write a worldview that can be questioned"
+    goal: "Articulate present convictions, unresolved questions, and conditions for revising them."
+    scope_note: "The six headings connect the principal worldview questions. One tension check develops coherence; it cannot establish the truth of every belief or replace sustained philosophical study."
+    burden: "About 30 minutes to draft and examine one tension; 10 minutes for a later reread."
+    setup: "Use six headings: reality, human nature, knowledge, morality, suffering, and freedom/responsibility. Uncertainty is an acceptable entry under every heading."
+    actions:
+      - title: "State convictions and uncertainty separately"
+        instructions: "Under each heading write one current belief or open question, one reason for it, and how confident you are in ordinary language. Distinguish experience, trusted testimony, inference, and faith. Example: people can change; a repaired relationship supports this; the circumstances that make change possible remain uncertain."
+        checks: [All six headings are addressed, Reasons are distinguished from convictions, Uncertainty is explicit]
+      - title: "Examine one tension between beliefs"
+        instructions: "Select two entries that could conflict, such as strong personal responsibility and unequal opportunity. Describe one case in which both matter. Explain whether the beliefs genuinely contradict, apply at different levels, or require revision. Include the strongest objection you can fairly state."
+        checks: [Two beliefs are compared, A concrete case tests their relationship, A serious objection is represented]
+      - title: "Add a revision clause and one implication"
+        instructions: "Rewrite one entry after the tension check. State what evidence, experience, reasoning, or unresolved question could change your view, and one small decision affected by it. Schedule a later reread; agreement with a particular worldview is never a completion criterion."
+        checks: [A revision condition is stated, A practical implication is identified, A dated reread is chosen]
+    adaptation: "Keep this private, dictate it, or use fictional positions if disclosure is unsafe. No conversion, debate, trauma disclosure, or resolution of every philosophical question is needed."
+    review: "Which conviction is better supported now, and which is simply more clearly uncertain?"
+    examples:
+      supportive: "Responsibility was retained while the decision rule explicitly accounted for resources and constraints."
+      mixed: "The worldview is coherent on paper but no imaginable revision condition was identified."
+      contradictory: "Disagreement was treated as proof of another person's ignorance or lesser dignity."
+      inconclusive: "Six slogans were copied without reasons, questions, or implications."
+  '01.03':
+    title: "Trace and deliberately choose three values"
+    goal: "Distinguish inherited commitments from values consciously reaffirmed, revised, or declined."
+    scope_note: "Three values provide a sample of family, cultural and personal influences. Deliberate endorsement requires later conduct as well as this initial historical account."
+    burden: "About 25 minutes of reflection, one small ordinary choice, and a brief review."
+    setup: "Choose three values affecting a small decision, such as reliability, independence, generosity, privacy, or achievement. Use a private page; identifying relatives or communities is unnecessary."
+    actions:
+      - title: "Draw each value's history"
+        instructions: "For each value, note where you encountered it, an experience that strengthened or challenged it, and a current behavior it influences. Separate admiration or belonging from fear of disapproval. Example: reliability came from a household expectation and now affects how quickly you accept requests."
+        checks: [Three origins are traced, Experiences are distinguished from assumptions, Each value connects to behavior]
+      - title: "Decide what you actually endorse"
+        instructions: "Mark each value retain, reinterpret, question, or decline. Give a reason you endorse today and a boundary against its excess. Reliability might mean making fewer realistic promises rather than accepting every request. Inherited values may be freely reaffirmed; rejecting tradition earns no extra credit."
+        checks: [Each value has a present disposition, Endorsement has a current reason, An excess or boundary is identified]
+      - title: "Act on one deliberate interpretation"
+        instructions: "Apply one revised interpretation to a low-stakes request, purchase, schedule, or conversation. Record the choice and its cost privately, then check whether it reflects your reason rather than merely reversing an old expectation. A role-play can rehearse the decision but does not demonstrate changed conduct."
+        checks: [A specific choice is made, The choice traces to a stated value, Real action and rehearsal are distinguished]
+    adaptation: "Use broad labels such as family or school without naming anyone. Keep the exercise private where disagreeing could threaten safety, housing, employment, or belonging."
+    review: "What did you choose freely to retain, and what behavior will reveal whether the reinterpretation lasts?"
+    examples:
+      supportive: "Reliability was reaffirmed and one unrealistic promise was renegotiated before its deadline."
+      mixed: "The reasoning changed but the first opportunity to act has not occurred."
+      contradictory: "The exercise became an accusation against relatives or pressure to reject a tradition."
+      inconclusive: "Values were listed without origins, present reasons, or a decision."
+  '01.04':
+    title: "Resolve one conflict between worthwhile goods"
+    goal: "Use an explicit, revisable priority order when two legitimate goods cannot both be fully served."
+    scope_note: "A priority order is tested in one conflict. Other goods and emergencies may require different judgments; this is a revisable ordering, not a universal numerical ranking."
+    burden: "About 20 minutes of comparison plus one small decision and its review."
+    setup: "Use a minor conflict such as rest versus volunteering or candor versus confidentiality. Write two feasible options and keep essential care and safety outside the tradeoff."
+    actions:
+      - title: "Name the goods and the actual conflict"
+        instructions: "For each option, name who benefits, which good it serves, and which good it sacrifices. Example: accepting an extra shift supports income but displaces a promised family visit. Separate needs, promises, preferences, and status concerns before ordering them."
+        checks: [Both options serve a real good, Affected people are considered, The unavoidable tradeoff is specified]
+      - title: "Choose a priority with an exception"
+        instructions: "State which good takes precedence in this case and why. Name a threshold that would reverse the choice, such as an essential expense rather than discretionary spending. Test whether you would accept the same reasoning if the inconvenience fell on you instead of someone else."
+        checks: [A priority is explicit, A reversal condition is defined, The role-reversal check is performed]
+      - title: "Make and review the bounded choice"
+        instructions: "Carry out the small choice or rehearse the supplied case. Communicate any changed commitment to the affected person where appropriate. Afterward note the preserved good, the remaining cost, and whether the priority should change next time. Do not rewrite the cost as though nothing was lost."
+        checks: [The choice is enacted or explicitly rehearsed, Consequences are reviewed, The forgone good remains acknowledged]
+    adaptation: "Sort cards or speak the comparison instead of writing. A person receiving care can prioritize care and rest without justifying those needs as productivity."
+    review: "Would your stated hierarchy still make sense if you received less benefit from this choice?"
+    examples:
+      supportive: "A prior promise took precedence over optional income, with an explicit essential-expense exception."
+      mixed: "A defensible priority was chosen but another person's inconvenience was not discussed."
+      contradictory: "Every good was called equally important and the choice was justified only after the fact."
+      inconclusive: "No conflict, consequence, or feasible choice was identified."
+  '01.05':
+    title: "Turn a possible calling into a small commitment"
+    goal: "Explore purpose through a useful contribution and honest reflection on its fit and demands."
+    scope_note: "One contribution tests the fit of a possible calling. Sustained vocation also involves repeated service, changing responsibilities and long-term costs that this trial cannot establish."
+    burden: "About 15 minutes to plan, a contribution small enough for current capacity, and a 10-minute review."
+    setup: "List one responsibility you hold, one problem you care about, and one ability or form of presence you can offer. Reserve a small amount of time that does not displace essential obligations."
+    actions:
+      - title: "Form a contribution hypothesis"
+        instructions: "Complete this sentence: I may contribute to this person, community, craft, or problem by doing this specific useful act. Include who defines usefulness and what permission or competence is needed. Example: help a willing neighbor organize a shared notice, rather than decide what the neighbor needs without asking."
+        checks: [A contribution and recipient are specified, Usefulness has a way to be checked, Permission and limits are considered]
+      - title: "Deliver a modest piece of useful work"
+        instructions: "Offer and, if welcomed, complete one bounded contribution. It may be listening, repairing a small document, sharing a resource, or doing an existing responsibility more attentively. Keep the recipient free to decline. Record what was delivered and the actual demand on time, energy, and other duties."
+        checks: [An agreed contribution is attempted, Its actual demands are recorded, The recipient can decline or redirect it]
+      - title: "Decide whether to deepen the commitment"
+        instructions: "Compare expected meaning with what the contribution actually required. Seek brief feedback if appropriate without demanding gratitude. Choose continue, change role, or stop; name a realistic next commitment and a review point. One unpleasant attempt neither disproves a calling nor obliges lifelong persistence."
+        checks: [Fit and cost are both reviewed, A next disposition is chosen, The commitment has a bounded review point]
+    adaptation: "Receiving care, maintaining a home, or offering attentive presence can be meaningful contributions. Use a fictional service plan if a real opportunity is unavailable; label it preparation."
+    review: "Did the work serve something you value, and what would make continued commitment sustainable?"
+    examples:
+      supportive: "A welcomed contribution was delivered and followed by a realistic recurring commitment."
+      mixed: "The work mattered but its time cost requires a smaller role."
+      contradictory: "Help was imposed despite refusal or essential personal care was sacrificed to prove purpose."
+      inconclusive: "An inspiring mission sentence was written without testing a contribution."
+  '01.06':
+    title: "Test a goal without its audience"
+    goal: "Separate meaningful motives from comparison and revise one goal accordingly."
+    scope_note: "The trial separates substance from audience rewards for one goal. Motives can remain mixed, and one session cannot determine an entire career or life direction."
+    burden: "About 15 minutes of motive review, one 10–30 minute activity, and 10 minutes to revise the goal."
+    setup: "Pick a discretionary goal with a small next step, such as learning a skill, changing a room, or joining an activity. Avoid irreversible career or financial decisions in this exercise."
+    actions:
+      - title: "Compare visible and invisible rewards"
+        instructions: "Write what the goal gives you if nobody learns about it, then what it gives you through approval or comparison. Mixed motives are allowed. Ask whether you would still want the activity with a plain title, modest equipment, and no public progress display."
+        checks: [Private benefits are identified, Social rewards are acknowledged without shame, The audience-free version is considered]
+      - title: "Try the substance without the display"
+        instructions: "Spend one short session on the underlying activity without announcing it or buying a status upgrade. For example, practice a few musical phrases rather than shopping for an impressive instrument. Note attention, frustration, enjoyment, usefulness, and effort; an unexciting session is valid evidence."
+        checks: [The underlying activity is attempted, Public display is unnecessary, The experience includes costs as well as appeal]
+      - title: "Rewrite the goal around what remains"
+        instructions: "Keep, shrink, replace, or retire the goal using the trial. Write a next action and remove one audience-dependent condition if it has no useful function. Preserve professional recognition or social participation when those serve a real purpose rather than treating all visibility as vanity."
+        checks: [A goal disposition follows the trial, A meaningful next action is specified, Legitimate social purposes are distinguished]
+    adaptation: "Use existing materials, a library resource, or a simulated private comparison. Necessary public collaboration need not be hidden; this is a motive check, not enforced secrecy."
+    review: "Which part of the goal survives without applause, and which external reward is still legitimately useful?"
+    examples:
+      supportive: "A prestige purchase was dropped while a modest weekly learning goal was retained."
+      mixed: "The activity still matters, but recognition is also a significant motive."
+      contradictory: "The exercise became shame about enjoying recognition or a reason to abandon necessary paid work."
+      inconclusive: "Motives were guessed without trying the underlying activity or revisiting the goal."
+  '01.07':
+    title: "Make one reversible decision with known unknowns"
+    goal: "Act under uncertainty using explicit assumptions, a limited downside, and a review trigger."
+    scope_note: "A reversible trial practices assumptions and review under uncertainty. Consequential or irreversible decisions require additional information and safeguards beyond this exercise."
+    burden: "About 15 minutes of decision preparation, one ordinary trial, and a 10-minute reassessment."
+    setup: "Pick a reversible ordinary decision, such as trying a different study time or asking about an activity. Exclude contracts, treatment changes, investments, and choices with serious consequences."
+    actions:
+      - title: "Separate facts from decision assumptions"
+        instructions: "Write the decision, two feasible options, three facts you know, and two assumptions you are making. Identify one missing fact that would genuinely change the choice. Give information gathering a small time limit so investigation serves the decision rather than postpones it indefinitely."
+        checks: [Facts and assumptions are separated, Options are feasible, A decision-relevant unknown is named]
+      - title: "Choose the smallest informative trial"
+        instructions: "Select the option that offers useful information with an acceptable, reversible cost. State the trial length, maximum time or resource cost, and stop condition. Carry it out once; for a study-time trial, use one ordinary session and keep other conditions as similar as practical."
+        checks: [A bounded trial is selected, Downside and stop conditions are explicit, The trial is actually attempted]
+      - title: "Reassess at the promised point"
+        instructions: "At the chosen review point, compare observations with the assumptions. Decide continue, alter, or stop, and name what is still unknown. If the result is inconclusive, choose whether another bounded trial is worth its cost rather than declaring success to justify the decision."
+        checks: [The review occurs at a stated point, Observations test the assumptions, Uncertainty survives where evidence is missing]
+    adaptation: "Use the study-time example as a paper simulation when live experimentation is impractical. Simulation exercises decision structure but does not show real-world results."
+    review: "What did acting teach you that more speculation would not, and what remains worth investigating?"
+    examples:
+      supportive: "A one-session trial overturned an assumption and the next session was rescheduled accordingly."
+      mixed: "The trial occurred but an interruption prevented a fair comparison."
+      contradictory: "The trial exceeded its resource limit or its review point was repeatedly avoided."
+      inconclusive: "The options were compared but no trial or explicit simulation occurred."
+  '01.08':
+    title: "Find one actionable responsibility inside a constraint"
+    goal: "Distinguish control, influence, and external conditions while taking one proportionate action."
+    scope_note: "The three categories apply responsibility without denying constraint. One successful action does not remove structural limits or establish control over another person."
+    burden: "About 15 minutes to sort the situation, one proportionate action, and a brief review."
+    setup: "Choose a current minor frustration, such as a delayed response, a crowded schedule, or an unavailable resource. Do not use abuse, crisis, or traumatic events for this exercise."
+    actions:
+      - title: "Sort the situation without assigning blame"
+        instructions: "Make three columns: my direct choices, things I can influence, and conditions I cannot decide. Place concrete facts in each. For a delayed reply, your follow-up timing is a choice, clarity may influence the response, and the other person's availability is outside your control."
+        checks: [All three categories are distinguished, Entries describe concrete conditions, Responsibility is not expanded into blame]
+      - title: "Take one proportionate action"
+        instructions: "Choose one useful direct action and, if appropriate, one respectful request. Send a clear follow-up, adjust your own schedule, or use an available alternative. Specify when you will stop checking or escalating. Do not treat another person's refusal as permission to pressure them."
+        checks: [A controllable action is attempted, Any request respects refusal, An escalation or checking limit is set]
+      - title: "Review agency and remaining constraint"
+        instructions: "Record what your action changed and what it could not change. Decide whether to ask for support, pursue a different option, wait, or accept the limit. Retain the external obstacle in the explanation instead of interpreting a poor outcome as personal failure."
+        checks: [Action and outcome are separated, Remaining constraints are acknowledged, A proportionate next disposition is chosen]
+    adaptation: "A support person can help communicate or implement your choice. Choosing rest, declining an unsafe demand, or seeking assistance is an exercise of agency."
+    review: "Where did you have a choice, and where would demanding more control become unfair to yourself or others?"
+    examples:
+      supportive: "A clear follow-up was sent and an alternative was chosen without blaming anyone for the delay."
+      mixed: "The action was useful but the main constraint remains outside the person's influence."
+      contradictory: "The person accepted blame for another's conduct or repeatedly pressured them to respond."
+      inconclusive: "The columns contain only broad labels such as everything or nothing."
+  '01.09':
+    title: "Compare a stated belief with an ordinary week"
+    goal: "Turn a recurring life review into a concrete revision of conduct or belief."
+    scope_note: "The weekly loop connects belief and conduct across several moments. A lasting philosophical revision requires later reviews and evidence from more than one week."
+    burden: "About 20 minutes now, one small adjustment, and 10 minutes at the following week's review."
+    setup: "Choose one stated priority and reconstruct three ordinary moments from the last week. Use memory or your own calendar; no surveillance, detailed diary, or productivity scoring is needed."
+    actions:
+      - title: "Collect supporting and conflicting moments"
+        instructions: "Write one moment that reflected the priority, one that did not, and one that is ambiguous. For each, note circumstances, competing obligations, and available choices. Example: valuing friendship may appear in checking on someone, while a missed call may reflect a necessary care duty rather than indifference."
+        checks: [Three different observations are considered, Context accompanies each observation, Conduct is not reduced to a total identity judgment]
+      - title: "Revise the belief or its expression"
+        instructions: "Decide whether the mismatch calls for a behavior change, a more realistic priority, or acceptance of a legitimate tradeoff. Make one specific adjustment, such as arranging a ten-minute call or admitting that rest takes precedence this week. Explain why that adjustment addresses the actual mismatch."
+        checks: [A mismatch is interpreted rather than assumed, One concrete adjustment is chosen, The adjustment follows the evidence]
+      - title: "Close the review loop"
+        instructions: "Try the adjustment and set a brief review for the following week. At that review, record whether it happened and whether it helped express the priority. Keep, modify, or remove it. Do not accumulate corrective tasks when the evidence calls for fewer obligations."
+        checks: [An adjustment is tried, A follow-up review occurs, The resulting disposition is recorded]
+    adaptation: "Review aloud, with a trusted supporter, or using three calendar symbols. A week dominated by illness or caregiving can justify a smaller expectation rather than another task."
+    review: "What changed because you reviewed your life, and what did you learn about the belief itself?"
+    examples:
+      supportive: "A vague friendship priority became one realistic call, then was reviewed for fit."
+      mixed: "The adjustment occurred but competed with needed rest and should be reduced."
+      contradictory: "The review produced escalating self-criticism and more obligations without acknowledging constraints."
+      inconclusive: "The same priority was restated without an adjustment or follow-up."
+  '01.10':
+    title: "Rebuild one commitment after disappointment"
+    goal: "Identify what a disappointed expectation no longer supports and choose one modest commitment that remains worthwhile."
+    scope_note: "A manageable disappointment provides a first step in rebuilding meaning. Catastrophic loss, trauma and persistent impairment call for support beyond this bounded reflection."
+    burden: "About 15 minutes of optional reflection and one low-demand commitment; pause whenever needed."
+    setup: "Use a manageable disappointment such as an unrewarding achievement or a group that no longer fits. Do not revisit traumatic detail; choose a fictional case or stop if the reflection is destabilizing."
+    actions:
+      - title: "Separate the failed promise from the whole story"
+        instructions: "Finish three statements privately: I expected this to provide something; that expectation failed in this way; this does not tell me everything about my life. Distinguish a particular outcome, institution, relationship, or belief from the value it once represented. No forced positive reinterpretation is required."
+        checks: [The failed expectation is specific, The loss is acknowledged, A broader totalizing conclusion is questioned]
+      - title: "Identify what remains worth protecting"
+        instructions: "Name one relationship, responsibility, pleasure, principle, or source of support that does not require the old promise to be restored. Explain why it matters in its own right. If nothing is clear, identify a person or service with whom uncertainty can be held without pressure to solve it."
+        checks: [A remaining good or support is identified, Its value is independent of the old outcome, Uncertainty is permitted]
+      - title: "Make a commitment small enough to keep"
+        instructions: "Take one low-demand action toward the remaining good, such as keeping a meal appointment or spending time on an enjoyed craft. Afterward describe what the action sustained, not whether it cured disappointment. Choose a gentle review point or seek appropriate support if functioning or safety is affected."
+        checks: [A modest action is attempted, Its limited effect is described, Further support or review is considered]
+    adaptation: "Use a fictional disappointed achievement, respond by drawing, or ask a trusted person to help identify practical support. Distress is not material that must be mined for growth."
+    review: "What can you commit to without pretending the disappointment has disappeared?"
+    examples:
+      supportive: "A disappointing promotion did not regain its meaning, but a modest valued commitment was restored."
+      mixed: "A remaining good was identified while energy for action remained limited."
+      contradictory: "The exercise demanded gratitude for harm or rushed someone into a replacement identity."
+      inconclusive: "Only a general inspirational statement was produced, with no specific expectation or commitment."
+  '01.11':
+    title: "Cooperate across a real difference in priorities"
+    goal: "Represent a competing vision of a good life fairly and identify cooperation without false agreement."
+    scope_note: "The comparison practices fair representation and bounded cooperation. Some differences remain incompatible, and agreement in one arrangement does not erase deeper disagreement."
+    burden: "About 25 minutes to compare positions, plus an optional welcomed exchange and a 10-minute plan."
+    setup: "Use two reasonable preferences, such as quiet stability and ambitious exploration. Compare written positions or speak with a willing person; disagreement about anyone's equal dignity is outside the exercise."
+    actions:
+      - title: "Explain each position from the inside"
+        instructions: "Give each position its strongest reason, the good it protects, and the cost it accepts. Avoid labels such as lazy or selfish. Example: stability may protect care commitments, while exploration may create discovery and opportunity. Write one question whose answer could improve your understanding."
+        checks: [Both positions have serious reasons, Costs as well as goods are acknowledged, A non-accusatory question is formulated]
+      - title: "Check the account without demanding agreement"
+        instructions: "Ask a willing person whether your account is recognizable, or compare it with a substantive statement of that position. Correct one omission or caricature. State the remaining disagreement plainly; do not replace it with a claim that everyone secretly wants the same life."
+        checks: [The account is checked against another perspective, An omission is corrected or explicitly considered, Real disagreement remains visible]
+      - title: "Design a limited shared arrangement"
+        instructions: "Choose one shared issue, such as planning a weekend or dividing a common resource. Propose an arrangement that protects one important good from each position, along with an opt-out or review point. Identify a conflict it does not solve and check that neither person must profess the other's values."
+        checks: [A specific shared arrangement is proposed, Both positions retain a protected good, An unresolved conflict and exit are named]
+    adaptation: "Use written exchanges, translated material, or the stability/exploration case. No debate partner, travel, disclosure of beliefs, or forced reconciliation is required."
+    review: "What can be shared while the disagreement remains, and which compromise would ask too much?"
+    examples:
+      supportive: "A shared plan allowed one quiet interval and one optional outing without requiring identical preferences."
+      mixed: "Each position was understood but resource limits prevented a mutually acceptable plan."
+      contradictory: "Cooperation depended on one person pretending agreement or abandoning a basic boundary."
+      inconclusive: "The positions were summarized only as stereotypes without checking their reasons."

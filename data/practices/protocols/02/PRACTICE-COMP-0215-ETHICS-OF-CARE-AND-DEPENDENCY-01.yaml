@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0215-ETHICS-OF-CARE-AND-DEPENDENCY-01
 slug: c0215-ethics-of-care-and-dependency-practice
-name: Bounded Ethics of care and dependency Practice
+name: Make a hidden care burden visible and share it fairly
 parent_competency_id: '02.15'
 domain_id: '02'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-OPENSTAX-CARE-ETHICS
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 02.15
-      (Ethics of care and dependency); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 02.15; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +35,43 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Ethics of care and dependency through a small repeated practice bounded by the canonical
-    scope: Recognize moral obligations created by vulnerability, relationship, dependence, and unequal
-    capacity, not only contracts or autonomous choice.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can identify who bears
-    care burdens, whose needs are invisible, and how responsibility can be shared fairly. The protocol
-    creates a small opportunity to examine that target without treating completion as broad capability.'
+  purpose: Recognize responsibilities created by dependence and relationships, then negotiate care around
+    needs and actual capacity.
+  why_recommended: Recognize responsibilities created by dependence and relationships, then negotiate
+    care around needs and actual capacity.
   claims:
-  - statement: Using the canonical scope and evidence target for Ethics of care and dependency is a traceable
-      product-design basis for a source-only draft protocol.
+  - statement: Recognize responsibilities created by dependence and relationships, then negotiate care
+      around needs and actual capacity.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Care ethics gives moral attention to particular relationships, needs and circumstances,
+      including responsibilities that abstract rules alone may overlook.
+    classification: philosophical_or_normative_position
+    source_ids:
+    - SRC-OPENSTAX-CARE-ETHICS
+    limitations: Conceptual support only. No claim that caring roles or ethical capacities are determined
+      by gender; no effectiveness claim for the product's care-burden exercise.
   applicability_question: Does a voluntary, bounded Ethics of care and dependency practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Ethics of care and dependency as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Ethics of care and
-    dependency context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Ethics of
-    care and dependency; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Use an accessible task map, agreed advocate or fictional care arrangement.
+    Receiving care and communicating preferences are legitimate contributions; assistance is not a deficit.
+  opportunity_considerations: 'Use an ordinary agreed household responsibility or this fictional case:
+    one person coordinates all appointments and reminders for a shared dependent''s care. Keep health
+    details and identifying information out of the record.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Ethics of care and dependency.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use an ordinary agreed household responsibility or this fictional case: one person coordinates all
+    appointments and reminders for a shared dependent''s care. Keep health details and identifying information
+    out of the record.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Ethics of care and dependency instead
-    of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use an accessible task map, agreed advocate or fictional care arrangement. Receiving care and communicating
+    preferences are legitimate contributions; assistance is not a deficit.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +83,31 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Ethics of care and dependency
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-REPEATED-HABIT
+  protocol_class: PF-RELATIONAL-CONVERSATION
   duration_days: 10
-  cadence: Complete three bounded Ethics of care and dependency actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Ethics of care and dependency; copy the canonical scope and evidence target
-    into a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Ethics of
-    care and dependency. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Ethics of care and dependency actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use an ordinary agreed household responsibility or this fictional case: one person coordinates
+    all appointments and reminders for a shared dependent''s care. Keep health details and identifying
+    information out of the record. Goal: Recognize responsibilities created by dependence and relationships,
+    then negotiate care around needs and actual capacity. Scope: One care arrangement examines invisible
+    work, unequal capacity and shared responsibility. It does not replace professional care planning or
+    make every relationship voluntary in the same way. Time and effort: About 20 minutes to map the work,
+    a welcomed short discussion or rehearsal, and one agreed follow-through. Adaptation: Use an accessible
+    task map, agreed advocate or fictional care arrangement. Receiving care and communicating preferences
+    are legitimate contributions; assistance is not a deficit. Keep personal working notes outside the
+    check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Introduction to Philosophy, 9.6 Feminist Theories of Ethics: https://openstax.org/books/introduction-philosophy/pages/9-6-feminist-theories-of-ethics'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use an accessible task map, agreed advocate or fictional care arrangement. Receiving
+    care and communicating preferences are legitimate contributions; assistance is not a deficit.
+  expected_burden: About 20 minutes to map the work, a welcomed short discussion or rehearsal, and one
+    agreed follow-through.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Ethics of care and dependency protocol to rank worth, coerce participation, demand disclosure,
@@ -101,19 +115,22 @@ intervention:
   - Treating a completed Ethics of care and dependency action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Ethics of care and dependency situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use an accessible
+    task map, agreed advocate or fictional care arrangement. Receiving care and communicating preferences
+    are legitimate contributions; assistance is not a deficit.
   actions:
   - stable_id: PRACTICE-COMP-0215-ETHICS-OF-CARE-AND-DEPENDENCY-01-A1
     sequence: 1
-    title: Define one small Ethics of care and dependency behavior
-    instructions: 'Choose one voluntary, reversible behavior that represents a narrow part of Ethics of
-      care and dependency. Bound the cue, context, duration, and valid interruption using this scope:
-      Recognize moral obligations created by vulnerability, relationship, dependence, and unequal capacity,
-      not only contracts or autonomous choice.'
+    title: Include noticing and coordination in the work
+    instructions: 'List not only visible tasks but also noticing needs, arranging help, remembering dates
+      and checking whether care occurred. Identify who currently does each part, whose needs are least
+      heard and which duties arise from dependence rather than an explicit contract. Do not assume the
+      most capable person has unlimited capacity.
+
+
+      Observation checks: Invisible coordination is included; The dependent person''s preferences are
+      considered; Responsibilities and capacity limits are both identified. Mark only what you observed.
+      Missing, mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -135,9 +152,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0215_a1_behavior_observable
-        - c0215_a1_cue_and_context_defined
-        - c0215_a1_interruption_valid
+        - invisible_coordination_is_included
+        - the_dependent_person_s_preferences_are_considered
+        - responsibilities_and_capacity_limits_are_both_identified
       - measurement_id: c0215_a1_boundary
         kind: boolean
         role: supporting
@@ -154,10 +171,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0215-ETHICS-OF-CARE-AND-DEPENDENCY-01-A2
     sequence: 2
-    title: Try the Ethics of care and dependency behavior in three windows
-    instructions: Attempt the same small Ethics of care and dependency behavior in up to three naturally
-      occurring windows. Record attempt, defer, interruption, support used, and adverse effect separately;
-      never manufacture deprivation, distress, conflict, or unsafe conditions to obtain a repetition.
+    title: Propose a fair share with the affected people
+    instructions: 'Choose one burden that could be shared or reduced. Propose who will own it, what information
+      they actually need and when help or backup is necessary. Seek agreement from those affected instead
+      of assigning duties unilaterally. Equal dignity does not require identical tasks when people have
+      different capacities.
+
+
+      Observation checks: One burden has a specific proposed owner or reduction; Agreement and necessary
+      information are addressed; Allocation reflects relevant differences in capacity. Mark only what
+      you observed. Missing, mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -173,15 +196,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0215_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - one_burden_has_a_specific_proposed_owner_or_reduction
+        - agreement_and_necessary_information_are_addressed
+        - allocation_reflects_relevant_differences_in_capacity
       - measurement_id: c0215_a2_boundary
         kind: boolean
         role: supporting
@@ -198,10 +221,35 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0215-ETHICS-OF-CARE-AND-DEPENDENCY-01-A3
     sequence: 3
-    title: Review the Ethics of care and dependency repetition pattern
-    instructions: 'Compare the windows for feasibility, burden, context, and interruption. Keep missing
-      or mixed evidence explicit and compare the limited pattern with this evidence target: Can identify
-      who bears care burdens, whose needs are invisible, and how responsibility can be shared fairly.'
+    title: Check whether the new arrangement actually relieved burden
+    instructions: 'Carry out the agreed change or rehearse it in the case. Ask whether the original coordinator
+      still had to notice, remind and rescue the task. Check that the person receiving care experienced
+      the arrangement as useful and respectful. Revise ownership or seek additional support if the work
+      merely became less visible.
+
+
+      Observation checks: Follow-through includes coordination as well as the visible task; Care recipient
+      and coordinator perspectives are checked; A remaining burden receives an explicit next step. Mark
+      only what you observed. Missing, mixed and negative results are valid; a deferred action is not
+      completed.
+
+
+      Final review: Whose load became lighter in practice, and whose needs might still be missing from
+      the arrangement?
+
+
+      Examples: Supportive: A second person took responsibility for both arranging and confirming transport,
+      reducing repeated reminders.
+
+
+      Mixed: The visible errand changed hands but the original coordinator still carried all planning
+      and follow-up.
+
+
+      Contradictory: A duty was imposed without agreement or the care recipient''s preferences were ignored.
+
+
+      Inconclusive: Tasks were listed without identifying invisible work, capacity or a concrete change.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -223,9 +271,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0215_a3_windows_distinguished
-        - c0215_a3_burden_compared
-        - c0215_a3_transfer_not_assumed
+        - follow_through_includes_coordination_as_well_as_the_visible_task
+        - care_recipient_and_coordinator_perspectives_are_checked
+        - a_remaining_burden_receives_an_explicit_next_step
       - measurement_id: c0215_a3_boundary
         kind: boolean
         role: supporting
@@ -246,16 +294,15 @@ intervention:
       Ethics of care and dependency; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Ethics of care and dependency; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - Use an accessible task map, agreed advocate or fictional care arrangement. Receiving care and communicating
+      preferences are legitimate contributions; assistance is not a deficit.
     cultural_context:
     - Adapt the expression of Ethics of care and dependency to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Ethics of care and dependency opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use an accessible task map, agreed advocate or fictional care arrangement. Receiving care and communicating
+      preferences are legitimate contributions; assistance is not a deficit.
   pause_conditions:
   - Pause Ethics of care and dependency when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -287,10 +334,7 @@ evidence_and_scoring:
   - c0215_a3_boundary
   - c0215_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Ethics of care and dependency action exceeded consent, authority, privacy, qualification, role,
-    burden, or safety boundaries.
-  - The evidence contradicted the intended Ethics of care and dependency criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - A duty was imposed without agreement or the care recipient's preferences were ignored.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Ethics of care and dependency explicitly; support can enable access and never reduces dignity
     or silently changes the typed value.
@@ -301,14 +345,21 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Ethics of care and dependency rules withhold observations older than 90 days;
     no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can identify who bears care burdens, whose needs are invisible, and how responsibility can
-    be shared fairly.—not completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Ethics of care and dependency requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Include noticing and coordination in the work. Observed checks: Invisible
+    coordination is included; The dependent person''s preferences are considered; Responsibilities and
+    capacity limits are both identified. Action 2: Propose a fair share with the affected people. Observed
+    checks: One burden has a specific proposed owner or reduction; Agreement and necessary information
+    are addressed; Allocation reflects relevant differences in capacity. Action 3: Check whether the new
+    arrangement actually relieved burden. Observed checks: Follow-through includes coordination as well
+    as the visible task; Care recipient and coordinator perspectives are checked; A remaining burden receives
+    an explicit next step.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. Tasks were listed without identifying invisible work,
+    capacity or a concrete change.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Ethics
     of care and dependency contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -318,9 +369,8 @@ evidence_and_scoring:
   - L24
   - L28
   - L31
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Ethics of care and dependency evidence.
@@ -328,11 +378,18 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define one small ethics of care and dependency behavior action was attempted or explicitly deferred.
-  - The try the ethics of care and dependency behavior in three windows action was attempted or explicitly
-    deferred.
-  - The review the ethics of care and dependency repetition pattern action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Include noticing and coordination in the work. Observed checks: Invisible coordination
+    is included; The dependent person''s preferences are considered; Responsibilities and capacity limits
+    are both identified.'
+  - 'Action 2: Propose a fair share with the affected people. Observed checks: One burden has a specific
+    proposed owner or reduction; Agreement and necessary information are addressed; Allocation reflects
+    relevant differences in capacity.'
+  - 'Action 3: Check whether the new arrangement actually relieved burden. Observed checks: Follow-through
+    includes coordination as well as the visible task; Care recipient and coordinator perspectives are
+    checked; A remaining burden receives an explicit next step.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -341,57 +398,52 @@ completion_and_review:
     - c0215_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Ethics of care and dependency only when the initial context
-    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
-    named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Ethics of care and dependency across roles, cultures,
-    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: Whose load became lighter in practice, and whose needs might still be missing
+    from the arrangement?
+  transfer_limit: One care arrangement examines invisible work, unequal capacity and shared responsibility.
+    It does not replace professional care planning or make every relationship voluntary in the same way.
   reflection:
-    before: What does Ethics of care and dependency require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Ethics of care and dependency criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can identify who bears care burdens, whose needs are invisible,
-      and how responsibility can be shared fairly.', what contradiction or missing context matters most,
-      and should this Ethics of care and dependency design be repeated, adapted, deferred, stopped, or
-      referred?
+    before: 'What would count as doing this honestly? Goal: Recognize responsibilities created by dependence
+      and relationships, then negotiate care around needs and actual capacity.'
+    during: Which checks have actually been observed? The visible errand changed hands but the original
+      coordinator still carried all planning and follow-up.
+    after: Whose load became lighter in practice, and whose needs might still be missing from the arrangement?
   review_guidance:
     repeat: Repeat the same bounded Ethics of care and dependency design only when the context and burden
       remain appropriate.
-    adapt: Change the Ethics of care and dependency medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: Use an accessible task map, agreed advocate or fictional care arrangement. Receiving care and
+      communicating preferences are legitimate contributions; assistance is not a deficit.
     stop: Stop Ethics of care and dependency when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Ethics of care and dependency questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Ethics of care and dependency criteria were observed with provenance and no
-      adverse boundary signal in the selected context.
-    mixed: Some Ethics of care and dependency criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Ethics of care and dependency criterion, introduced
-      harm or coercion, or showed the design was not workable.
-    inconclusive: The Ethics of care and dependency action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: A second person took responsibility for both arranging and confirming transport, reducing
+      repeated reminders.
+    mixed: The visible errand changed hands but the original coordinator still carried all planning and
+      follow-up.
+    contradictory: A duty was imposed without agreement or the care recipient's preferences were ignored.
+    inconclusive: Tasks were listed without identifying invisible work, capacity or a concrete change.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Ethics of care and dependency.
+    context_heading: Make a hidden care burden visible and share it fairly
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Ethics of
       care and dependency.
   check_in_labels:
-    c0215_a1_primary: The bounded Ethics of care and dependency criterion for action 1 was observed
+    c0215_a1_primary: 'Observed checks: include noticing and coordination in the work'
     c0215_a1_boundary: Action 1 stayed inside its stated Ethics of care and dependency boundary
     c0215_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0215_a2_primary: The bounded Ethics of care and dependency criterion for action 2 was observed
+    c0215_a2_primary: 'Observed checks: propose a fair share with the affected people'
     c0215_a2_boundary: Action 2 stayed inside its stated Ethics of care and dependency boundary
     c0215_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0215_a3_primary: The bounded Ethics of care and dependency criterion for action 3 was observed
+    c0215_a3_primary: 'Observed checks: check whether the new arrangement actually relieved burden'
     c0215_a3_boundary: Action 3 stayed inside its stated Ethics of care and dependency boundary
     c0215_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Ethics of care and
-    dependency practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Whose load became lighter in practice, and whose needs might still be missing from
+    the arrangement? Completion is not mastery.
+  plain_language_evidence: A second person took responsibility for both arranging and confirming transport,
+    reducing repeated reminders.
   display_order: 35

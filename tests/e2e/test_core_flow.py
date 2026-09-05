@@ -500,6 +500,76 @@ def test_play_protocol_setup_is_specific_and_score_active(live_server, page: Pag
 
 @pytest.mark.e2e
 @pytest.mark.django_db(transaction=True)
+@pytest.mark.parametrize(
+    "cid,label,mixed,scope,reference,criterion,other_criterion",
+    [
+        (
+            "13.05",
+            "cooking",
+            "Mixed: The food was prepared",
+            "Scope: The skillet practices",
+            "fsis.usda.gov",
+            "Ingredients and equipment are ready",
+            "Heat and moisture are adjusted to observations",
+        ),
+        (
+            "02.01",
+            "ethics",
+            "Mixed: Four frameworks were named",
+            "Scope: One case introduces",
+            "openstax.org",
+            "Four lenses supply distinct reasons",
+            "Authority and legitimate claims are considered",
+        ),
+    ],
+)
+def test_tailored_practices_show_readable_scope_examples_and_observation_checks(
+    live_server, page: Page, cid, label, mixed, scope, reference, criterion, other_criterion
+):
+    user = create_browser_user()
+    seed_browser_data()
+    log_in(live_server, page)
+    protocol = PracticeProtocol.objects.get(parent_competency_id=cid)
+    page.set_viewport_size({"width": 390, "height": 844})
+    page.goto(f"{live_server.url}/practices/{protocol.slug}/")
+    page.get_by_role("heading", name=protocol.name, exact=True).wait_for()
+    expect(page.get_by_text(mixed, exact=False)).to_be_visible()
+    assert_no_horizontal_overflow(page)
+    save_walkthrough_screenshot(page, f"mobile-tailored-{label}-actions")
+    page.get_by_role("link", name="Start guided setup").click()
+    page.get_by_role("button", name="Continue").click()
+    page.get_by_label("Yes, this activity or context is available").check()
+    page.get_by_role("button", name="Continue").click()
+    expect(page.get_by_text(scope, exact=False)).to_be_visible()
+    expect(page.get_by_role("link", name=re.compile(re.escape(reference))).first).to_be_visible()
+    assert_no_horizontal_overflow(page)
+    save_walkthrough_screenshot(page, f"mobile-tailored-{label}-setup")
+    sprint = start_practice(
+        user=user,
+        protocol=protocol,
+        person_or_context=f"Synthetic {label} demonstration",
+        start_date=date.today(),
+    )
+    page.goto(f"{live_server.url}/practice-sprints/{sprint.pk}/")
+    page.get_by_role("link", name="Add compact check-in").click()
+    checks = page.get_by_role(
+        "group",
+        name=f"Observed checks: {protocol.actions.get(sequence=1).title.lower()}",
+        exact=True,
+    )
+    expect(checks).to_be_visible()
+    expect(checks.get_by_label(criterion, exact=True)).to_be_visible()
+    expect(page.get_by_label(other_criterion, exact=True)).to_be_hidden()
+    assert_no_horizontal_overflow(page)
+    save_walkthrough_screenshot(page, f"mobile-tailored-{label}-observations")
+    page.set_viewport_size({"width": 1440, "height": 1000})
+    page.goto(f"{live_server.url}/practices/{protocol.slug}/")
+    assert_no_horizontal_overflow(page)
+    save_walkthrough_screenshot(page, f"desktop-tailored-{label}-actions")
+
+
+@pytest.mark.e2e
+@pytest.mark.django_db(transaction=True)
 def test_emotional_cue_setup_and_check_in_are_bounded(live_server, page: Page):
     create_browser_user()
     seed_browser_data()

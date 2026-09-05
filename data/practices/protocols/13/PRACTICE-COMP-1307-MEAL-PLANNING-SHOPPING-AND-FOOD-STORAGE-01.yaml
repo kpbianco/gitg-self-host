@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-1307-MEAL-PLANNING-SHOPPING-AND-FOOD-STORAGE-01
 slug: c1307-meal-planning-shopping-and-food-storage-practice
-name: Bounded Meal planning, shopping, and food storage Practice
+name: Plan three meals that share ingredients without wasting them
 parent_competency_id: '13.07'
 domain_id: '13'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-USDA-LEFTOVER-SAFETY
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 13.07
-      (Meal planning, shopping, and food storage); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 13.07; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +35,44 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Meal planning, shopping, and food storage through a low-stakes skill rehearsal bounded
-    by the canonical scope: Plan around nutrition, budget, time, waste, shelf life, and household preferences.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Maintains an efficient
-    food system with minimal avoidable waste. The protocol creates a small opportunity to examine that
-    target without treating completion as broad capability.'
+  purpose: Connect meals, quantities, shopping, preparation and storage into a workable short food plan.
+  why_recommended: Connect meals, quantities, shopping, preparation and storage into a workable short
+    food plan.
   claims:
-  - statement: Using the canonical scope and evidence target for Meal planning, shopping, and food storage
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Connect meals, quantities, shopping, preparation and storage into a workable short food
+      plan.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Refrigerate perishable leftovers within two hours, or one hour above 32 C (90 F); use shallow
+      containers, keep refrigerated leftovers for three to four days, and reheat to 74 C (165 F).
+    classification: safety_precaution
+    source_ids:
+    - SRC-USDA-LEFTOVER-SAFETY
+    limitations: General household guidance, not an assurance about a particular ingredient, interrupted
+      cold chain or a person's dietary needs. This source does not test the bean-skillet exercise.
   applicability_question: Does a voluntary, bounded Meal planning, shopping, and food storage practice
     fit the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Meal planning, shopping, and food storage as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Meal planning, shopping,
-    and food storage context, understand the source-only status, and stop without losing safety, care,
-    employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Meal planning,
-    shopping, and food storage; do not manufacture conflict, deprivation, exposure, disclosure, danger,
-    urgency, or dependence for evidence.
+  readiness_considerations: Use shelf-stable single-meal ingredients when refrigeration is unreliable,
+    no-cook suitable foods when cooking is unavailable, and community food resources where appropriate.
+    Planning with a sample list tests coordination but does not establish actual food access.
+  opportunity_considerations: Choose three upcoming meals and a realistic spending limit. Use your own
+    dietary requirements, household preferences, available cooking equipment and existing food. No particular
+    diet or number of eaters is assumed.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Meal planning, shopping, and food
-    storage.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Choose three upcoming meals and a realistic spending limit. Use your own dietary requirements, household
+    preferences, available cooking equipment and existing food. No particular diet or number of eaters
+    is assumed.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Meal planning, shopping, and food
-    storage instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use shelf-stable single-meal ingredients when refrigeration is unreliable, no-cook suitable foods
+    when cooking is unavailable, and community food resources where appropriate. Planning with a sample
+    list tests coordination but does not establish actual food access.
   role_conditions:
   - This competency is context sensitive; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -80,21 +85,32 @@ meaning_and_fit:
     food storage as inferiority; competing reasonable interpretations and conscientious refusal remain
     visible.
 intervention:
-  protocol_class: PF-SKILL-REHEARSAL
+  protocol_class: PF-ARTIFACT-PLAN
   duration_days: 10
-  cadence: Complete three bounded Meal planning, shopping, and food storage actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Meal planning, shopping, and food storage; copy the canonical scope and
-    evidence target into a private working note; define the action boundary, valid supports, privacy limit,
-    and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Meal planning,
-    shopping, and food storage. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Meal planning, shopping, and food storage
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose three upcoming meals and a realistic spending limit. Use your own dietary requirements,
+    household preferences, available cooking equipment and existing food. No particular diet or number
+    of eaters is assumed. Goal: Connect meals, quantities, shopping, preparation and storage into a workable
+    short food plan. Scope: Three meals connect inventory, quantities, cost and storage. This short plan
+    does not establish nutritional adequacy for every person or solve unreliable access to food. Time
+    and effort: About 25 minutes of planning, ordinary shopping or price checking, and one meal''s preparation
+    time. Adaptation: Use shelf-stable single-meal ingredients when refrigeration is unreliable, no-cook
+    suitable foods when cooking is unavailable, and community food resources where appropriate. Planning
+    with a sample list tests coordination but does not establish actual food access. Keep personal working
+    notes outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Leftovers and Food Safety: https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/leftovers-and-food-safety'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use shelf-stable single-meal ingredients when refrigeration is unreliable, no-cook
+    suitable foods when cooking is unavailable, and community food resources where appropriate. Planning
+    with a sample list tests coordination but does not establish actual food access.
+  expected_burden: About 25 minutes of planning, ordinary shopping or price checking, and one meal's preparation
+    time.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Meal planning, shopping, and food storage protocol to rank worth, coerce participation,
@@ -103,18 +119,23 @@ intervention:
   - Treating a completed Meal planning, shopping, and food storage action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Meal planning, shopping, and food storage situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use shelf-stable
+    single-meal ingredients when refrigeration is unreliable, no-cook suitable foods when cooking is unavailable,
+    and community food resources where appropriate. Planning with a sample list tests coordination but
+    does not establish actual food access.
   actions:
   - stable_id: PRACTICE-COMP-1307-MEAL-PLANNING-SHOPPING-AND-FOOD-STORAGE-01-A1
     sequence: 1
-    title: Define observable criteria for Meal planning, shopping, and food storage
-    instructions: 'Select one safe, lawful, low-stakes component of Meal planning, shopping, and food
-      storage. Build a three-to-five-item rubric from this scope, including an error or stop criterion:
-      Plan around nutrition, budget, time, waste, shelf life, and household preferences.'
+    title: Build three meals from a checked inventory
+    instructions: 'List usable food already available, noting opened or perishable items first. Plan three
+      meals with a filling staple, a suitable protein source and produce where available. Example: beans
+      and vegetables in a skillet, a wrap using the remaining beans, and a soup using the remaining vegetables.
+      Check portion needs and ingredient suitability.
+
+
+      Observation checks: Inventory and perishables are checked; Three meals match household requirements;
+      Shared ingredients have realistic quantities. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -136,9 +157,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c1307_a1_skill_component_bounded
-        - c1307_a1_observable_rubric_present
-        - c1307_a1_error_or_stop_defined
+        - inventory_and_perishables_are_checked
+        - three_meals_match_household_requirements
+        - shared_ingredients_have_realistic_quantities
       - measurement_id: c1307_a1_boundary
         kind: boolean
         role: supporting
@@ -155,10 +176,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-1307-MEAL-PLANNING-SHOPPING-AND-FOOD-STORAGE-01-A2
     sequence: 2
-    title: Rehearse Meal planning, shopping, and food storage twice
-    instructions: Perform two bounded attempts of the selected Meal planning, shopping, and food storage
-      component under comparable safe conditions. Use self-review, a consensual observer, or a reviewed
-      artifact; do not require public exposure, coerced feedback, licensed work, or high-consequence performance.
+    title: Write and use a gap-only shopping list
+    instructions: 'Subtract what you already have from the meal quantities. List only the gaps, estimate
+      their total cost, and identify an affordable substitution for an unavailable item. Shop or price
+      the list within your limit, comparing usable quantity rather than package price alone. Skip a bargain
+      if it exceeds storage or likely consumption.
+
+
+      Observation checks: Existing supplies are subtracted; The list has a cost limit and substitution;
+      Package quantity fits likely use. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -174,15 +201,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c1307_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - existing_supplies_are_subtracted
+        - the_list_has_a_cost_limit_and_substitution
+        - package_quantity_fits_likely_use
       - measurement_id: c1307_a2_boundary
         kind: boolean
         role: supporting
@@ -199,10 +226,34 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-1307-MEAL-PLANNING-SHOPPING-AND-FOOD-STORAGE-01-A3
     sequence: 3
-    title: Use feedback for one Meal planning, shopping, and food storage retry
-    instructions: 'Choose one rubric item that remained weak, make one specific adjustment, and retry
-      only that component. Preserve no-change or worse results and compare the evidence with: Maintains
-      an efficient food system with minimal avoidable waste.'
+    title: Prepare one meal and schedule the remaining food
+    instructions: 'Prepare one planned meal using safe instructions, then compare actual portions and
+      time with the plan. Label and promptly refrigerate or freeze suitable leftovers using the linked
+      food-safety guidance. Put the remaining meals in an order that uses perishables first and revise
+      the list if food or time was wasted.
+
+
+      Observation checks: One planned meal is attempted; Safe storage and next-use timing are explicit;
+      Actual cost or waste informs a revision. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.
+
+
+      Final review: Which ingredient was used efficiently, and what assumption about appetite, cost, storage
+      or time needs correcting?
+
+
+      Examples: Supportive: Three meals used the planned quantities, and leftover beans were safely stored
+      for the next meal.
+
+
+      Mixed: The meals fit the budget but preparation took longer than available and one meal needs simplification.
+
+
+      Contradictory: The plan relied on unsafe storage or bought excess food merely because the unit price
+      was lower.
+
+
+      Inconclusive: Meal names were listed without quantities, purchasing gaps or a storage plan.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -224,9 +275,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c1307_a3_feedback_item_selected
-        - c1307_a3_adjustment_traceable
-        - c1307_a3_retry_result_preserved
+        - one_planned_meal_is_attempted
+        - safe_storage_and_next_use_timing_are_explicit
+        - actual_cost_or_waste_informs_a_revision
       - measurement_id: c1307_a3_boundary
         kind: boolean
         role: supporting
@@ -247,17 +298,17 @@ intervention:
       Meal planning, shopping, and food storage; no purchase, subscription, travel, credential, or public
       artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Meal planning, shopping, and food storage; assistive technology, interpretation, a support
-      person, and a deferred action are valid without penalty.
+    - Use shelf-stable single-meal ingredients when refrigeration is unreliable, no-cook suitable foods
+      when cooking is unavailable, and community food resources where appropriate. Planning with a sample
+      list tests coordination but does not establish actual food access.
     cultural_context:
     - Adapt the expression of Meal planning, shopping, and food storage to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Meal planning, shopping, and food storage opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use shelf-stable single-meal ingredients when refrigeration is unreliable, no-cook suitable foods
+      when cooking is unavailable, and community food resources where appropriate. Planning with a sample
+      list tests coordination but does not establish actual food access.
   pause_conditions:
   - Pause Meal planning, shopping, and food storage when capacity, consent, authority, privacy, access,
     care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make
@@ -289,10 +340,7 @@ evidence_and_scoring:
   - c1307_a3_boundary
   - c1307_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Meal planning, shopping, and food storage action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Meal planning, shopping, and food storage criterion, depended
-    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - The plan relied on unsafe storage or bought excess food merely because the unit price was lower.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Meal planning, shopping, and food storage explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -303,14 +351,19 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Meal planning, shopping, and food storage rules withhold observations older
     than 90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Maintains an efficient food system with minimal avoidable waste.—not completion, confidence,
-    conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Meal planning, shopping, and food storage requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Build three meals from a checked inventory. Observed checks: Inventory
+    and perishables are checked; Three meals match household requirements; Shared ingredients have realistic
+    quantities. Action 2: Write and use a gap-only shopping list. Observed checks: Existing supplies are
+    subtracted; The list has a cost limit and substitution; Package quantity fits likely use. Action 3:
+    Prepare one meal and schedule the remaining food. Observed checks: One planned meal is attempted;
+    Safe storage and next-use timing are explicit; Actual cost or waste informs a revision.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. Meal names were listed without quantities, purchasing
+    gaps or a storage plan.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Meal planning,
     shopping, and food storage contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -319,9 +372,8 @@ evidence_and_scoring:
   - L17
   - L18
   - L21
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Meal planning, shopping, and food storage evidence.
@@ -329,11 +381,15 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define observable criteria for meal planning, shopping, and food storage action was attempted
-    or explicitly deferred.
-  - The rehearse meal planning, shopping, and food storage twice action was attempted or explicitly deferred.
-  - The use feedback for one meal planning, shopping, and food storage retry action preserved a limited
-    conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Build three meals from a checked inventory. Observed checks: Inventory and perishables
+    are checked; Three meals match household requirements; Shared ingredients have realistic quantities.'
+  - 'Action 2: Write and use a gap-only shopping list. Observed checks: Existing supplies are subtracted;
+    The list has a cost limit and substitution; Package quantity fits likely use.'
+  - 'Action 3: Prepare one meal and schedule the remaining food. Observed checks: One planned meal is
+    attempted; Safe storage and next-use timing are explicit; Actual cost or waste informs a revision.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -342,61 +398,54 @@ completion_and_review:
     - c1307_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Meal planning, shopping, and food storage only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Meal planning, shopping, and food storage across
-    roles, cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: Which ingredient was used efficiently, and what assumption about appetite, cost,
+    storage or time needs correcting?
+  transfer_limit: Three meals connect inventory, quantities, cost and storage. This short plan does not
+    establish nutritional adequacy for every person or solve unreliable access to food.
   reflection:
-    before: What does Meal planning, shopping, and food storage require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Meal planning, shopping, and food storage criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Maintains an efficient food system with minimal avoidable
-      waste.', what contradiction or missing context matters most, and should this Meal planning, shopping,
-      and food storage design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Connect meals, quantities, shopping, preparation
+      and storage into a workable short food plan.'
+    during: Which checks have actually been observed? The meals fit the budget but preparation took longer
+      than available and one meal needs simplification.
+    after: Which ingredient was used efficiently, and what assumption about appetite, cost, storage or
+      time needs correcting?
   review_guidance:
     repeat: Repeat the same bounded Meal planning, shopping, and food storage design only when the context
       and burden remain appropriate.
-    adapt: Change the Meal planning, shopping, and food storage medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Use shelf-stable single-meal ingredients when refrigeration is unreliable, no-cook suitable
+      foods when cooking is unavailable, and community food resources where appropriate. Planning with
+      a sample list tests coordination but does not establish actual food access.
     stop: Stop Meal planning, shopping, and food storage when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Meal planning, shopping, and food storage
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Meal planning, shopping, and food storage criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Meal planning, shopping, and food storage criteria were observed while burden, support,
-      contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Meal planning, shopping, and food storage
-      criterion, introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Meal planning, shopping, and food storage action was deferred, not observed, not
-      applicable, stale, insufficiently bounded, or too confounded to interpret.
+    supportive: Three meals used the planned quantities, and leftover beans were safely stored for the
+      next meal.
+    mixed: The meals fit the budget but preparation took longer than available and one meal needs simplification.
+    contradictory: The plan relied on unsafe storage or bought excess food merely because the unit price
+      was lower.
+    inconclusive: Meal names were listed without quantities, purchasing gaps or a storage plan.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Meal planning, shopping, and food storage.
+    context_heading: Plan three meals that share ingredients without wasting them
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Meal planning,
       shopping, and food storage.
   check_in_labels:
-    c1307_a1_primary: The bounded Meal planning, shopping, and food storage criterion for action 1 was
-      observed
+    c1307_a1_primary: 'Observed checks: build three meals from a checked inventory'
     c1307_a1_boundary: Action 1 stayed inside its stated Meal planning, shopping, and food storage boundary
     c1307_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c1307_a2_primary: The bounded Meal planning, shopping, and food storage criterion for action 2 was
-      observed
+    c1307_a2_primary: 'Observed checks: write and use a gap-only shopping list'
     c1307_a2_boundary: Action 2 stayed inside its stated Meal planning, shopping, and food storage boundary
     c1307_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c1307_a3_primary: The bounded Meal planning, shopping, and food storage criterion for action 3 was
-      observed
+    c1307_a3_primary: 'Observed checks: prepare one meal and schedule the remaining food'
     c1307_a3_boundary: Action 3 stayed inside its stated Meal planning, shopping, and food storage boundary
     c1307_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Meal planning, shopping,
-    and food storage practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Which ingredient was used efficiently, and what assumption about appetite, cost, storage
+    or time needs correcting? Completion is not mastery.
+  plain_language_evidence: Three meals used the planned quantities, and leftover beans were safely stored
+    for the next meal.
   display_order: 167

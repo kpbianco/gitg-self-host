@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-1310-UTILITIES-AND-HOUSEHOLD-SYSTEMS-01
 slug: c1310-utilities-and-household-systems-practice
-name: Bounded Utilities and household systems Practice
+name: Make a household utility response card
 parent_competency_id: '13.10'
 domain_id: '13'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 13.10
-      (Utilities and household systems); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 13.10; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,38 +34,38 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Utilities and household systems through a low-stakes skill rehearsal bounded by the
-    canonical scope: Understand electrical, plumbing, HVAC, water, internet, and appliance basics.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can isolate common
-    problems, shut systems down safely, and obtain appropriate help. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Distinguish a simple user-level interruption from a utility problem requiring immediate or
+    qualified help.
+  why_recommended: Distinguish a simple user-level interruption from a utility problem requiring immediate
+    or qualified help.
   claims:
-  - statement: Using the canonical scope and evidence target for Utilities and household systems is a
-      traceable product-design basis for a source-only draft protocol.
+  - statement: Distinguish a simple user-level interruption from a utility problem requiring immediate
+      or qualified help.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Utilities and household systems practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Utilities and household systems as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Utilities and household
-    systems context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Utilities
-    and household systems; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Use a provider's accessible guide or a sample internet setup where property
+    access is restricted. The card can direct a landlord or support person to act; the participant need
+    not operate utility controls.
+  opportunity_considerations: Choose one household system and its instructions or provider information.
+    Work from accessible safe locations only. Do not open covers, touch wiring or plumbing, operate unknown
+    shutoffs, or create a fault for practice.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Utilities and household systems.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Choose one household system and its instructions or provider information. Work from accessible safe
+    locations only. Do not open covers, touch wiring or plumbing, operate unknown shutoffs, or create
+    a fault for practice.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Utilities and household systems
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a provider's accessible guide or a sample internet setup where property access is restricted.
+    The card can direct a landlord or support person to act; the participant need not operate utility
+    controls.
   role_conditions:
   - This competency is context sensitive; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -78,21 +77,25 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Utilities and household systems
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-SKILL-REHEARSAL
+  protocol_class: PF-SAFETY-PREPARATION
   duration_days: 10
-  cadence: Complete three bounded Utilities and household systems actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Utilities and household systems; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Utilities
-    and household systems. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Utilities and household systems actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose one household system and its instructions or provider information. Work from accessible
+    safe locations only. Do not open covers, touch wiring or plumbing, operate unknown shutoffs, or create
+    a fault for practice. Goal: Distinguish a simple user-level interruption from a utility problem requiring
+    immediate or qualified help. Scope: A response card rehearses understanding and safe escalation for
+    one utility. It does not qualify anyone to repair an installation or operate emergency controls. Time
+    and effort: About 30 minutes to prepare the card and 10 minutes to test one fictional interruption.
+    Adaptation: Use a provider''s accessible guide or a sample internet setup where property access is
+    restricted. The card can direct a landlord or support person to act; the participant need not operate
+    utility controls. Keep personal working notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a provider's accessible guide or a sample internet setup where property access
+    is restricted. The card can direct a landlord or support person to act; the participant need not operate
+    utility controls.
+  expected_burden: About 30 minutes to prepare the card and 10 minutes to test one fictional interruption.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Utilities and household systems protocol to rank worth, coerce participation, demand disclosure,
@@ -100,18 +103,22 @@ intervention:
   - Treating a completed Utilities and household systems action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Utilities and household systems situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a provider's
+    accessible guide or a sample internet setup where property access is restricted. The card can direct
+    a landlord or support person to act; the participant need not operate utility controls.
   actions:
   - stable_id: PRACTICE-COMP-1310-UTILITIES-AND-HOUSEHOLD-SYSTEMS-01-A1
     sequence: 1
-    title: Define observable criteria for Utilities and household systems
-    instructions: 'Select one safe, lawful, low-stakes component of Utilities and household systems. Build
-      a three-to-five-item rubric from this scope, including an error or stop criterion: Understand electrical,
-      plumbing, HVAC, water, internet, and appliance basics.'
+    title: Map the service and its permitted controls
+    instructions: 'Identify the system, provider or responsible person, normal operating indicators and
+      controls the manufacturer explicitly permits users to operate. For internet, distinguish the provider
+      connection, modem, router and your device. For energy or water, identify the emergency contact and
+      the boundary beyond which you leave the area and obtain help.
+
+
+      Observation checks: The system and responsible contact are identified; User controls are distinguished
+      from internal parts; Emergency and professional boundaries are stated. Mark only what you observed.
+      Missing, mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -133,9 +140,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c1310_a1_skill_component_bounded
-        - c1310_a1_observable_rubric_present
-        - c1310_a1_error_or_stop_defined
+        - the_system_and_responsible_contact_are_identified
+        - user_controls_are_distinguished_from_internal_parts
+        - emergency_and_professional_boundaries_are_stated
       - measurement_id: c1310_a1_boundary
         kind: boolean
         role: supporting
@@ -152,10 +159,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-1310-UTILITIES-AND-HOUSEHOLD-SYSTEMS-01-A2
     sequence: 2
-    title: Rehearse Utilities and household systems twice
-    instructions: Perform two bounded attempts of the selected Utilities and household systems component
-      under comparable safe conditions. Use self-review, a consensual observer, or a reviewed artifact;
-      do not require public exposure, coerced feedback, licensed work, or high-consequence performance.
+    title: Walk through one ordinary interruption
+    instructions: 'Use a fictional loss of internet or an unresponsive appliance. Check the sequence:
+      is it one device or the whole service, is there an announced outage, and what safe user-level step
+      does the manual permit? Record a decision tree with a stop point. Never test electrical safety by
+      touch or repeatedly reset a tripping protection device.
+
+
+      Observation checks: Device and service-level faults are distinguished; Steps come from the applicable
+      instructions; The sequence has a clear stop point. Mark only what you observed. Missing, mixed and
+      negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -171,15 +184,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c1310_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - device_and_service_level_faults_are_distinguished
+        - steps_come_from_the_applicable_instructions
+        - the_sequence_has_a_clear_stop_point
       - measurement_id: c1310_a2_boundary
         kind: boolean
         role: supporting
@@ -196,10 +209,33 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-1310-UTILITIES-AND-HOUSEHOLD-SYSTEMS-01-A3
     sequence: 3
-    title: Use feedback for one Utilities and household systems retry
-    instructions: 'Choose one rubric item that remained weak, make one specific adjustment, and retry
-      only that component. Preserve no-change or worse results and compare the evidence with: Can isolate
-      common problems, shut systems down safely, and obtain appropriate help.'
+    title: Test the response card from a scenario
+    instructions: 'Have yourself or a willing household member follow the card for the fictional interruption.
+      Verify that contact information, necessary account access and symptom notes can be found privately.
+      Revise any ambiguous step and keep emergency information accessible without exposing passwords or
+      sensitive account data.
+
+
+      Observation checks: A scenario tests the response order; Help can be contacted with useful information;
+      Sensitive credentials remain separate. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.
+
+
+      Final review: At what exact point would you stop troubleshooting, and could you obtain help without
+      improvising?
+
+
+      Examples: Supportive: The card distinguished a device issue from a provider outage and supplied
+      a clear support contact.
+
+
+      Mixed: The sequence is usable but the responsible property contact is not yet verified.
+
+
+      Contradictory: A panel was opened or an unknown valve or protection device was operated for practice.
+
+
+      Inconclusive: Contacts were listed without a tested decision sequence or stop point.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -221,9 +257,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c1310_a3_feedback_item_selected
-        - c1310_a3_adjustment_traceable
-        - c1310_a3_retry_result_preserved
+        - a_scenario_tests_the_response_order
+        - help_can_be_contacted_with_useful_information
+        - sensitive_credentials_remain_separate
       - measurement_id: c1310_a3_boundary
         kind: boolean
         role: supporting
@@ -244,16 +280,17 @@ intervention:
       Utilities and household systems; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Utilities and household systems; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - Use a provider's accessible guide or a sample internet setup where property access is restricted.
+      The card can direct a landlord or support person to act; the participant need not operate utility
+      controls.
     cultural_context:
     - Adapt the expression of Utilities and household systems to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Utilities and household systems opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use a provider's accessible guide or a sample internet setup where property access is restricted.
+      The card can direct a landlord or support person to act; the participant need not operate utility
+      controls.
   pause_conditions:
   - Pause Utilities and household systems when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -285,10 +322,7 @@ evidence_and_scoring:
   - c1310_a3_boundary
   - c1310_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Utilities and household systems action exceeded consent, authority, privacy, qualification, role,
-    burden, or safety boundaries.
-  - The evidence contradicted the intended Utilities and household systems criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - A panel was opened or an unknown valve or protection device was operated for practice.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Utilities and household systems explicitly; support can enable access and never reduces dignity
     or silently changes the typed value.
@@ -299,14 +333,20 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Utilities and household systems rules withhold observations older than 90 days;
     no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can isolate common problems, shut systems down safely, and obtain appropriate help.—not completion,
-    confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Utilities and household systems requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Map the service and its permitted controls. Observed checks: The system
+    and responsible contact are identified; User controls are distinguished from internal parts; Emergency
+    and professional boundaries are stated. Action 2: Walk through one ordinary interruption. Observed
+    checks: Device and service-level faults are distinguished; Steps come from the applicable instructions;
+    The sequence has a clear stop point. Action 3: Test the response card from a scenario. Observed checks:
+    A scenario tests the response order; Help can be contacted with useful information; Sensitive credentials
+    remain separate.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. Contacts were listed without a tested decision sequence
+    or stop point.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Utilities
     and household systems contribution under typed evaluation; protocol performance remains distinct and
     is never counted twice.
@@ -315,9 +355,8 @@ evidence_and_scoring:
   - L14
   - L18
   - L20
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Utilities and household systems evidence.
@@ -325,11 +364,16 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define observable criteria for utilities and household systems action was attempted or explicitly
-    deferred.
-  - The rehearse utilities and household systems twice action was attempted or explicitly deferred.
-  - The use feedback for one utilities and household systems retry action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Map the service and its permitted controls. Observed checks: The system and responsible
+    contact are identified; User controls are distinguished from internal parts; Emergency and professional
+    boundaries are stated.'
+  - 'Action 2: Walk through one ordinary interruption. Observed checks: Device and service-level faults
+    are distinguished; Steps come from the applicable instructions; The sequence has a clear stop point.'
+  - 'Action 3: Test the response card from a scenario. Observed checks: A scenario tests the response
+    order; Help can be contacted with useful information; Sensitive credentials remain separate.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -338,57 +382,52 @@ completion_and_review:
     - c1310_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Utilities and household systems only when the initial context
-    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
-    named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Utilities and household systems across roles,
-    cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: At what exact point would you stop troubleshooting, and could you obtain help
+    without improvising?
+  transfer_limit: A response card rehearses understanding and safe escalation for one utility. It does
+    not qualify anyone to repair an installation or operate emergency controls.
   reflection:
-    before: What does Utilities and household systems require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Utilities and household systems criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can isolate common problems, shut systems down safely, and
-      obtain appropriate help.', what contradiction or missing context matters most, and should this Utilities
-      and household systems design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Distinguish a simple user-level interruption
+      from a utility problem requiring immediate or qualified help.'
+    during: Which checks have actually been observed? The sequence is usable but the responsible property
+      contact is not yet verified.
+    after: At what exact point would you stop troubleshooting, and could you obtain help without improvising?
   review_guidance:
     repeat: Repeat the same bounded Utilities and household systems design only when the context and burden
       remain appropriate.
-    adapt: Change the Utilities and household systems medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: Use a provider's accessible guide or a sample internet setup where property access is restricted.
+      The card can direct a landlord or support person to act; the participant need not operate utility
+      controls.
     stop: Stop Utilities and household systems when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Utilities and household systems questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Utilities and household systems criteria were observed with provenance and
-      no adverse boundary signal in the selected context.
-    mixed: Some Utilities and household systems criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Utilities and household systems criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Utilities and household systems action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The card distinguished a device issue from a provider outage and supplied a clear support
+      contact.
+    mixed: The sequence is usable but the responsible property contact is not yet verified.
+    contradictory: A panel was opened or an unknown valve or protection device was operated for practice.
+    inconclusive: Contacts were listed without a tested decision sequence or stop point.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Utilities and household systems.
+    context_heading: Make a household utility response card
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Utilities
       and household systems.
   check_in_labels:
-    c1310_a1_primary: The bounded Utilities and household systems criterion for action 1 was observed
+    c1310_a1_primary: 'Observed checks: map the service and its permitted controls'
     c1310_a1_boundary: Action 1 stayed inside its stated Utilities and household systems boundary
     c1310_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c1310_a2_primary: The bounded Utilities and household systems criterion for action 2 was observed
+    c1310_a2_primary: 'Observed checks: walk through one ordinary interruption'
     c1310_a2_boundary: Action 2 stayed inside its stated Utilities and household systems boundary
     c1310_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c1310_a3_primary: The bounded Utilities and household systems criterion for action 3 was observed
+    c1310_a3_primary: 'Observed checks: test the response card from a scenario'
     c1310_a3_boundary: Action 3 stayed inside its stated Utilities and household systems boundary
     c1310_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Utilities and household
-    systems practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: At what exact point would you stop troubleshooting, and could you obtain help without
+    improvising? Completion is not mastery.
+  plain_language_evidence: The card distinguished a device issue from a provider outage and supplied a
+    clear support contact.
   display_order: 170

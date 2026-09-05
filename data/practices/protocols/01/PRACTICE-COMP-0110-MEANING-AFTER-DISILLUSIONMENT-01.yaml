@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0110-MEANING-AFTER-DISILLUSIONMENT-01
 slug: c0110-meaning-after-disillusionment-practice
-name: Bounded Meaning after disillusionment Practice
+name: Rebuild one commitment after disappointment
 parent_competency_id: '01.10'
 domain_id: '01'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 01.10
-      (Meaning after disillusionment); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 01.10; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +34,35 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Meaning after disillusionment through a pluralist meaning practice bounded by the
-    canonical scope: Reconstruct meaning when success, institutions, relationships, faith, or prior identity
-    no longer sustain the life story.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can name what failed,
-    what remains true, and a next commitment that does not depend on restoring the old certainty. The
-    protocol creates a small opportunity to examine that target without treating completion as broad capability.'
+  purpose: Identify what a disappointed expectation no longer supports and choose one modest commitment
+    that remains worthwhile.
+  why_recommended: Identify what a disappointed expectation no longer supports and choose one modest commitment
+    that remains worthwhile.
   claims:
-  - statement: Using the canonical scope and evidence target for Meaning after disillusionment is a traceable
-      product-design basis for a source-only draft protocol.
+  - statement: Identify what a disappointed expectation no longer supports and choose one modest commitment
+      that remains worthwhile.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Meaning after disillusionment practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Meaning after disillusionment as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Meaning after disillusionment
-    context, understand the source-only status, and stop without losing safety, care, employment, housing,
-    services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Meaning after
-    disillusionment; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Use a fictional disappointed achievement, respond by drawing, or ask a trusted
+    person to help identify practical support. Distress is not material that must be mined for growth.
+  opportunity_considerations: Use a manageable disappointment such as an unrewarding achievement or a
+    group that no longer fits. Do not revisit traumatic detail; choose a fictional case or stop if the
+    reflection is destabilizing.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Meaning after disillusionment.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Use a manageable disappointment such as an unrewarding achievement or a group that no longer fits.
+    Do not revisit traumatic detail; choose a fictional case or stop if the reflection is destabilizing.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Meaning after disillusionment instead
-    of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a fictional disappointed achievement, respond by drawing, or ask a trusted person to help identify
+    practical support. Distress is not material that must be mined for growth.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -81,19 +76,23 @@ meaning_and_fit:
 intervention:
   protocol_class: PF-CONTEMPLATIVE-MEANING
   duration_days: 10
-  cadence: Complete three bounded Meaning after disillusionment actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Meaning after disillusionment; copy the canonical scope and evidence target
-    into a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Meaning
-    after disillusionment. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Meaning after disillusionment actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use a manageable disappointment such as an unrewarding achievement or a group that no longer
+    fits. Do not revisit traumatic detail; choose a fictional case or stop if the reflection is destabilizing.
+    Goal: Identify what a disappointed expectation no longer supports and choose one modest commitment
+    that remains worthwhile. Scope: A manageable disappointment provides a first step in rebuilding meaning.
+    Catastrophic loss, trauma and persistent impairment call for support beyond this bounded reflection.
+    Time and effort: About 15 minutes of optional reflection and one low-demand commitment; pause whenever
+    needed. Adaptation: Use a fictional disappointed achievement, respond by drawing, or ask a trusted
+    person to help identify practical support. Distress is not material that must be mined for growth.
+    Keep personal working notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a fictional disappointed achievement, respond by drawing, or ask a trusted
+    person to help identify practical support. Distress is not material that must be mined for growth.
+  expected_burden: About 15 minutes of optional reflection and one low-demand commitment; pause whenever
+    needed.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Meaning after disillusionment protocol to rank worth, coerce participation, demand disclosure,
@@ -101,19 +100,22 @@ intervention:
   - Treating a completed Meaning after disillusionment action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Meaning after disillusionment situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a fictional
+    disappointed achievement, respond by drawing, or ask a trusted person to help identify practical support.
+    Distress is not material that must be mined for growth.
   actions:
   - stable_id: PRACTICE-COMP-0110-MEANING-AFTER-DISILLUSIONMENT-01-A1
     sequence: 1
-    title: Choose a declared frame for Meaning after disillusionment
-    instructions: 'Select a religious, spiritual, philosophical, cultural, or secular frame through which
-      to explore Meaning after disillusionment. State the frame, one alternative, and the limits of personal
-      authority using this canonical scope: Reconstruct meaning when success, institutions, relationships,
-      faith, or prior identity no longer sustain the life story.'
+    title: Separate the failed promise from the whole story
+    instructions: 'Finish three statements privately: I expected this to provide something; that expectation
+      failed in this way; this does not tell me everything about my life. Distinguish a particular outcome,
+      institution, relationship, or belief from the value it once represented. No forced positive reinterpretation
+      is required.
+
+
+      Observation checks: The failed expectation is specific; The loss is acknowledged; A broader totalizing
+      conclusion is questioned. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -129,15 +131,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0110_a1_primary
-        kind: conceptual
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0110_a1_frame_declared
-        - c0110_a1_alternative_acknowledged
-        - c0110_a1_authority_limited
+        - the_failed_expectation_is_specific
+        - the_loss_is_acknowledged
+        - a_broader_totalizing_conclusion_is_questioned
       - measurement_id: c0110_a1_boundary
         kind: boolean
         role: supporting
@@ -154,11 +156,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0110-MEANING-AFTER-DISILLUSIONMENT-01-A2
     sequence: 2
-    title: Complete two bounded Meaning after disillusionment practices
-    instructions: Complete two short, freely chosen Meaning after disillusionment practices appropriate
-      to the declared frame, such as reading, silence, prayer, observation, ritual, dialogue, or reflection.
-      Stop for distress, coercion, altered-state risk, conscience conflict, or pressure from an authority
-      or group.
+    title: Identify what remains worth protecting
+    instructions: 'Name one relationship, responsibility, pleasure, principle, or source of support that
+      does not require the old promise to be restored. Explain why it matters in its own right. If nothing
+      is clear, identify a person or service with whom uncertainty can be held without pressure to solve
+      it.
+
+
+      Observation checks: A remaining good or support is identified; Its value is independent of the old
+      outcome; Uncertainty is permitted. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -174,15 +181,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0110_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - a_remaining_good_or_support_is_identified
+        - its_value_is_independent_of_the_old_outcome
+        - uncertainty_is_permitted
       - measurement_id: c0110_a2_boundary
         kind: boolean
         role: supporting
@@ -199,11 +206,33 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0110-MEANING-AFTER-DISILLUSIONMENT-01-A3
     sequence: 3
-    title: Interpret the Meaning after disillusionment experience modestly
-    instructions: 'Review what was noticed without treating intensity, calm, certainty, group agreement,
-      or unusual experience as automatic truth. Compare the limited record with this evidence target:
-      Can name what failed, what remains true, and a next commitment that does not depend on restoring
-      the old certainty.'
+    title: Make a commitment small enough to keep
+    instructions: 'Take one low-demand action toward the remaining good, such as keeping a meal appointment
+      or spending time on an enjoyed craft. Afterward describe what the action sustained, not whether
+      it cured disappointment. Choose a gentle review point or seek appropriate support if functioning
+      or safety is affected.
+
+
+      Observation checks: A modest action is attempted; Its limited effect is described; Further support
+      or review is considered. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.
+
+
+      Final review: What can you commit to without pretending the disappointment has disappeared?
+
+
+      Examples: Supportive: A disappointing promotion did not regain its meaning, but a modest valued
+      commitment was restored.
+
+
+      Mixed: A remaining good was identified while energy for action remained limited.
+
+
+      Contradictory: The exercise demanded gratitude for harm or rushed someone into a replacement identity.
+
+
+      Inconclusive: Only a general inspirational statement was produced, with no specific expectation
+      or commitment.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -225,9 +254,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0110_a3_experience_and_interpretation_separated
-        - c0110_a3_alternative_explanation_retained
-        - c0110_a3_target_evidence_compared
+        - a_modest_action_is_attempted
+        - its_limited_effect_is_described
+        - further_support_or_review_is_considered
       - measurement_id: c0110_a3_boundary
         kind: boolean
         role: supporting
@@ -248,16 +277,15 @@ intervention:
       Meaning after disillusionment; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Meaning after disillusionment; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - Use a fictional disappointed achievement, respond by drawing, or ask a trusted person to help identify
+      practical support. Distress is not material that must be mined for growth.
     cultural_context:
     - Adapt the expression of Meaning after disillusionment to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Meaning after disillusionment opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use a fictional disappointed achievement, respond by drawing, or ask a trusted person to help identify
+      practical support. Distress is not material that must be mined for growth.
   pause_conditions:
   - Pause Meaning after disillusionment when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -289,10 +317,7 @@ evidence_and_scoring:
   - c0110_a3_boundary
   - c0110_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Meaning after disillusionment action exceeded consent, authority, privacy, qualification, role,
-    burden, or safety boundaries.
-  - The evidence contradicted the intended Meaning after disillusionment criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - The exercise demanded gratitude for harm or rushed someone into a replacement identity.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Meaning after disillusionment explicitly; support can enable access and never reduces dignity
     or silently changes the typed value.
@@ -303,14 +328,19 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Meaning after disillusionment rules withhold observations older than 90 days;
     no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can name what failed, what remains true, and a next commitment that does not depend on restoring
-    the old certainty.—not completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Meaning after disillusionment requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Separate the failed promise from the whole story. Observed checks: The
+    failed expectation is specific; The loss is acknowledged; A broader totalizing conclusion is questioned.
+    Action 2: Identify what remains worth protecting. Observed checks: A remaining good or support is
+    identified; Its value is independent of the old outcome; Uncertainty is permitted. Action 3: Make
+    a commitment small enough to keep. Observed checks: A modest action is attempted; Its limited effect
+    is described; Further support or review is considered.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. Only a general inspirational statement was produced,
+    with no specific expectation or commitment.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Meaning
     after disillusionment contribution under typed evaluation; protocol performance remains distinct and
     is never counted twice.
@@ -319,9 +349,8 @@ evidence_and_scoring:
   - L01
   - L04
   - L11
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Meaning after disillusionment evidence.
@@ -329,11 +358,15 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The choose a declared frame for meaning after disillusionment action was attempted or explicitly deferred.
-  - The complete two bounded meaning after disillusionment practices action was attempted or explicitly
-    deferred.
-  - The interpret the meaning after disillusionment experience modestly action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Separate the failed promise from the whole story. Observed checks: The failed expectation
+    is specific; The loss is acknowledged; A broader totalizing conclusion is questioned.'
+  - 'Action 2: Identify what remains worth protecting. Observed checks: A remaining good or support is
+    identified; Its value is independent of the old outcome; Uncertainty is permitted.'
+  - 'Action 3: Make a commitment small enough to keep. Observed checks: A modest action is attempted;
+    Its limited effect is described; Further support or review is considered.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -342,57 +375,51 @@ completion_and_review:
     - c0110_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Meaning after disillusionment only when the initial context
-    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
-    named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Meaning after disillusionment across roles, cultures,
-    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: What can you commit to without pretending the disappointment has disappeared?
+  transfer_limit: A manageable disappointment provides a first step in rebuilding meaning. Catastrophic
+    loss, trauma and persistent impairment call for support beyond this bounded reflection.
   reflection:
-    before: What does Meaning after disillusionment require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Meaning after disillusionment criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can name what failed, what remains true, and a next commitment
-      that does not depend on restoring the old certainty.', what contradiction or missing context matters
-      most, and should this Meaning after disillusionment design be repeated, adapted, deferred, stopped,
-      or referred?
+    before: 'What would count as doing this honestly? Goal: Identify what a disappointed expectation no
+      longer supports and choose one modest commitment that remains worthwhile.'
+    during: Which checks have actually been observed? A remaining good was identified while energy for
+      action remained limited.
+    after: What can you commit to without pretending the disappointment has disappeared?
   review_guidance:
     repeat: Repeat the same bounded Meaning after disillusionment design only when the context and burden
       remain appropriate.
-    adapt: Change the Meaning after disillusionment medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: Use a fictional disappointed achievement, respond by drawing, or ask a trusted person to help
+      identify practical support. Distress is not material that must be mined for growth.
     stop: Stop Meaning after disillusionment when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Meaning after disillusionment questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Meaning after disillusionment criteria were observed with provenance and no
-      adverse boundary signal in the selected context.
-    mixed: Some Meaning after disillusionment criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Meaning after disillusionment criterion, introduced
-      harm or coercion, or showed the design was not workable.
-    inconclusive: The Meaning after disillusionment action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: A disappointing promotion did not regain its meaning, but a modest valued commitment was
+      restored.
+    mixed: A remaining good was identified while energy for action remained limited.
+    contradictory: The exercise demanded gratitude for harm or rushed someone into a replacement identity.
+    inconclusive: Only a general inspirational statement was produced, with no specific expectation or
+      commitment.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Meaning after disillusionment.
+    context_heading: Rebuild one commitment after disappointment
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Meaning after
       disillusionment.
   check_in_labels:
-    c0110_a1_primary: The bounded Meaning after disillusionment criterion for action 1 was observed
+    c0110_a1_primary: 'Observed checks: separate the failed promise from the whole story'
     c0110_a1_boundary: Action 1 stayed inside its stated Meaning after disillusionment boundary
     c0110_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0110_a2_primary: The bounded Meaning after disillusionment criterion for action 2 was observed
+    c0110_a2_primary: 'Observed checks: identify what remains worth protecting'
     c0110_a2_boundary: Action 2 stayed inside its stated Meaning after disillusionment boundary
     c0110_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0110_a3_primary: The bounded Meaning after disillusionment criterion for action 3 was observed
+    c0110_a3_primary: 'Observed checks: make a commitment small enough to keep'
     c0110_a3_boundary: Action 3 stayed inside its stated Meaning after disillusionment boundary
     c0110_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Meaning after disillusionment
-    practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What can you commit to without pretending the disappointment has disappeared? Completion
+    is not mastery.
+  plain_language_evidence: A disappointing promotion did not regain its meaning, but a modest valued commitment
+    was restored.
   display_order: 19
