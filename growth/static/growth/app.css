@@ -1188,6 +1188,37 @@ meter::-webkit-meter-optimum-value {
   grid-column: 1 / -1;
 }
 
+.checkbox-group {
+  border: 0;
+  margin: 0;
+  min-width: 0;
+  padding: 0;
+}
+
+.checkbox-group legend {
+  font-size: 0.84rem;
+  font-weight: 720;
+  margin-bottom: 7px;
+  padding: 0;
+}
+
+.checkbox-group label {
+  align-items: flex-start;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  padding: 8px 0;
+}
+
+.checkbox-group input[type="checkbox"] {
+  flex: 0 0 18px;
+  height: 18px;
+  margin: 2px 0;
+  min-height: 18px;
+  padding: 0;
+  width: 18px;
+}
+
 .helptext {
   color: var(--ink-soft);
   font-size: 0.78rem;

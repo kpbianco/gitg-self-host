@@ -529,6 +529,10 @@ def test_tailored_practices_show_readable_scope_examples_and_observation_checks(
     )
     page.goto(f"{live_server.url}/practice-sprints/{sprint.pk}/")
     page.get_by_role("link", name="Add compact check-in").click()
+    checks = page.get_by_role(
+        "group", name="Observed checks: prepare ingredients and a safe work area", exact=True
+    )
+    expect(checks).to_be_visible()
     expect(page.get_by_label("Ingredients and equipment are ready", exact=True)).to_be_visible()
     expect(
         page.get_by_label("Heat and moisture are adjusted to observations", exact=True)

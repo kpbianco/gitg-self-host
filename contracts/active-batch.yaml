@@ -26,6 +26,8 @@ scope:
     - scripts/**
     - tests/**
     - growth/services/canonical_import.py
+    - growth/static/growth/app.css
+    - templates/growth/practice_check_in.html
     - templates/growth/practice_recommendation.html
     - templates/growth/practice_sprint.html
     - templates/growth/practice_setup.html
@@ -39,7 +41,6 @@ scope:
     - growth/domain/composite_scoring.py
     - growth/services/composite_score_state.py
     - growth/domain/context_priority.py
-    - growth/static/**
     - growth/templates/**
     - requirements*.txt
     - pyproject.toml
