@@ -24,7 +24,7 @@
 .github/codex/schemas/intake.schema.json	1419
 .github/codex/schemas/planner-review.schema.json	1475
 .github/codex/schemas/product.schema.json	1140
-.github/workflows/verification.yml	3504
+.github/workflows/verification.yml	3551
 .gitignore	266
 .portfolio-harness.json	3559
 AGENTS.md	28948
@@ -98,7 +98,7 @@ data/practices/protocols/01/PRACTICE-COMP-0108-EXISTENTIAL-RESPONSIBILITY-01.yam
 data/practices/protocols/01/PRACTICE-COMP-0109-LIFE-REVIEW-AND-PHILOSOPHICAL-REVISION-01.yaml	23369
 data/practices/protocols/01/PRACTICE-COMP-0110-MEANING-AFTER-DISILLUSIONMENT-01.yaml	22799
 data/practices/protocols/01/PRACTICE-COMP-0111-PLURAL-ENDS-AND-REASONABLE-DISAGREEMENT-01.yaml	23914
-data/practices/protocols/02/PRACTICE-COMP-0201-MORAL-FRAMEWORKS-01.yaml	24286
+data/practices/protocols/02/PRACTICE-COMP-0201-MORAL-FRAMEWORKS-01.yaml	24922
 data/practices/protocols/02/PRACTICE-COMP-0202-MORAL-PERCEPTION-01.yaml	22172
 data/practices/protocols/02/PRACTICE-COMP-0203-BEHAVIORAL-DEFINITIONS-OF-VIRTUE-01.yaml	22993
 data/practices/protocols/02/PRACTICE-COMP-0204-TRUTHFULNESS-AND-CANDOR-01.yaml	22863
@@ -474,7 +474,7 @@ data/practices/registries/activation_ledger.yaml	125082
 data/practices/registries/protocol_families.yaml	4692
 data/practices/registries/risk_taxonomy.yaml	3079
 data/practices/registries/scoring_policy_registry.yaml	5704
-data/practices/registries/source_registry.yaml	53681
+data/practices/registries/source_registry.yaml	53736
 data/practices/release_manifest.yaml	59564
 data/practices/research_gaps.yaml	6969
 data/practices/schema/activation_ledger_v1.schema.json	1439
@@ -752,14 +752,14 @@ manage.py	291
 pyproject.toml	682
 reports/assessment-calibration/assessment_calibration_readiness_v1.json	18314
 reports/assessment-calibration/assessment_calibration_readiness_v1.md	2314
-reports/practice-content/catalog_governance_audit_v1.json	8361724
-reports/practice-content/catalog_governance_findings_v1.csv	3362560
+reports/practice-content/catalog_governance_audit_v1.json	8364315
+reports/practice-content/catalog_governance_findings_v1.csv	3364022
 reports/practice-content/catalog_governance_review_packet_v1.md	2420
-reports/practice-content/catalog_governance_review_queue_v1.csv	1884810
+reports/practice-content/catalog_governance_review_queue_v1.csv	1885564
 reports/practice-content/competency_coverage_v1.csv	316366
 reports/practice-content/competency_evidence_readiness_v1.json	2575
 reports/practice-content/composite_scoring_catalog_v1.json	1185829
-reports/practice-content/content_originality_v1.json	3516013
+reports/practice-content/content_originality_v1.json	3518287
 reports/practice-content/coverage_summary_v1.json	959
 reports/practice-content/domain_coverage_v1.csv	2136
 reports/practice-content/lever_coverage_v1.csv	3222
@@ -823,7 +823,7 @@ templates/registration/password_change_form.html	992
 tests/__init__.py	1
 tests/conftest.py	866
 tests/e2e/conftest.py	233
-tests/e2e/test_core_flow.py	41842
+tests/e2e/test_core_flow.py	42514
 tests/fixtures/assessment/README.md	878
 tests/fixtures/assessment/manifest.json	415
 tests/fixtures/context/context_v1.json	871

@@ -28,6 +28,7 @@ jobs:
           cache: pip
           cache-dependency-path: requirements-dev.txt
       - run: python -m pip install -r requirements-dev.txt
+      - run: python scripts/verify-manifest.py
       - run: make lint PYTHON=python
       - run: python scripts/author_full_competency_frontier.py --check
       - run: make test PYTHON=python
