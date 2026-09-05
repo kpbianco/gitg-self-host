@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0504-PERSONALITY-AS-HYPOTHESIS-01
 slug: c0504-personality-as-hypothesis-practice
-name: Bounded Personality as hypothesis Practice
+name: Test a personality label against two ordinary situations
 parent_competency_id: '05.04'
 domain_id: '05'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-FLEESON-STATES-2001
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 05.04
-      (Personality as hypothesis); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 05.04; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +35,46 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Personality as hypothesis through a artifact-and-review practice bounded by the canonical
-    scope: Use temperament, attachment, MBTI, Enneagram, Big Five, or other models as provisional lenses
-    rather than fixed identity.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can name useful predictions,
-    failures of the model, and one opposite capacity to practice. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Turn a personality description into a revisable prediction, seek a counterexample and practice
+    one capacity the label might otherwise discourage.
+  why_recommended: Turn a personality description into a revisable prediction, seek a counterexample and
+    practice one capacity the label might otherwise discourage.
   claims:
-  - statement: Using the canonical scope and evidence target for Personality as hypothesis is a traceable
-      product-design basis for a source-only draft protocol.
+  - statement: Turn a personality description into a revisable prediction, seek a counterexample and practice
+      one capacity the label might otherwise discourage.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Three experience-sampling studies found substantial within-person variation in Big Five
+      related states alongside stable individual differences in their central tendencies.
+    classification: empirical_finding
+    source_ids:
+    - SRC-FLEESON-STATES-2001
+    limitations: Observational findings over two to three weeks do not establish causation, equal validity
+      across personality models, or effectiveness of these product-authored trials. Two personal observations
+      cannot validate a trait or instrument.
   applicability_question: Does a voluntary, bounded Personality as hypothesis practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Personality as hypothesis as not applicable, consciously unchosen, or
     deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Personality as hypothesis
-    context, understand the source-only status, and stop without losing safety, care, employment, housing,
-    services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Personality
-    as hypothesis; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency, or
-    dependence for evidence.
+  readiness_considerations: Use writing instead of speech or a trusted person's consented role-play. Role-play
+    tests rehearsal only. Do not reinterpret disability, access needs, distress or a clinician's advice
+    as a personality obstacle to overcome.
+  opportunity_considerations: Choose a label you already use, or the ordinary statement I prefer to prepare
+    before speaking. No paid questionnaire is needed. Use low-stakes settings such as a familiar discussion
+    and a short planning conversation.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Personality as hypothesis.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Choose a label you already use, or the ordinary statement I prefer to prepare before speaking. No
+    paid questionnaire is needed. Use low-stakes settings such as a familiar discussion and a short planning
+    conversation.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Personality as hypothesis instead
-    of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use writing instead of speech or a trusted person's consented role-play. Role-play tests rehearsal
+    only. Do not reinterpret disability, access needs, distress or a clinician's advice as a personality
+    obstacle to overcome.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +86,32 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Personality as hypothesis
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-ARTIFACT-PLAN
+  protocol_class: PF-BEHAVIORAL-EXPERIMENT
   duration_days: 10
-  cadence: Complete three bounded Personality as hypothesis actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Personality as hypothesis; copy the canonical scope and evidence target
-    into a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Personality
-    as hypothesis. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Personality as hypothesis actions, and
-    review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose a label you already use, or the ordinary statement I prefer to prepare before speaking.
+    No paid questionnaire is needed. Use low-stakes settings such as a familiar discussion and a short
+    planning conversation. Goal: Turn a personality description into a revisable prediction, seek a counterexample
+    and practice one capacity the label might otherwise discourage. Scope: This tests one practical prediction,
+    not the validity of a personality instrument. Different models are not interchangeable; no type, attachment
+    label or trait score establishes destiny or diagnosis. Time and effort: About 15 minutes of preparation,
+    two ordinary opportunities, and a 10-minute comparison. Adaptation: Use writing instead of speech
+    or a trusted person''s consented role-play. Role-play tests rehearsal only. Do not reinterpret disability,
+    access needs, distress or a clinician''s advice as a personality obstacle to overcome. Keep personal
+    working notes outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Toward a Structure- and Process-Integrated View of Personality: Traits as Density Distributions of
+    States: https://simine.com/407/readings/Fleeson_2001.pdf'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use writing instead of speech or a trusted person's consented role-play. Role-play
+    tests rehearsal only. Do not reinterpret disability, access needs, distress or a clinician's advice
+    as a personality obstacle to overcome.
+  expected_burden: About 15 minutes of preparation, two ordinary opportunities, and a 10-minute comparison.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Personality as hypothesis protocol to rank worth, coerce participation, demand disclosure,
@@ -101,19 +119,23 @@ intervention:
   - Treating a completed Personality as hypothesis action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Personality as hypothesis situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use writing
+    instead of speech or a trusted person's consented role-play. Role-play tests rehearsal only. Do not
+    reinterpret disability, access needs, distress or a clinician's advice as a personality obstacle to
+    overcome.
   actions:
   - stable_id: PRACTICE-COMP-0504-PERSONALITY-AS-HYPOTHESIS-01-A1
     sequence: 1
-    title: Define a rubric for Personality as hypothesis
-    instructions: 'Turn the canonical scope for Personality as hypothesis into three to five inspectable
-      criteria: Use temperament, attachment, MBTI, Enneagram, Big Five, or other models as provisional
-      lenses rather than fixed identity. Keep the rubric bounded to one current context and include one
-      criterion for uncertainty, access, or competing obligations.'
+    title: Make the label risk being wrong
+    instructions: 'Translate the label into a specific prediction and name the context: without notes
+      I expect to struggle to make one useful contribution. Write what an observer could notice and what
+      would contradict the prediction. Distinguish a preference, a learned skill, and a constraint; the
+      label alone cannot decide which explains the behavior.
+
+
+      Observation checks: A label becomes a context-specific prediction; An observable counterexample
+      is stated; Preference skill and constraint are distinguished. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -135,9 +157,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0504_a1_criteria_trace_to_scope
-        - c0504_a1_context_bounded
-        - c0504_a1_constraint_included
+        - a_label_becomes_a_context_specific_prediction
+        - an_observable_counterexample_is_stated
+        - preference_skill_and_constraint_are_distinguished
       - measurement_id: c0504_a1_boundary
         kind: boolean
         role: supporting
@@ -154,10 +176,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0504-PERSONALITY-AS-HYPOTHESIS-01-A2
     sequence: 2
-    title: Build one Personality as hypothesis artifact
-    instructions: Create the smallest useful plan, checklist, diagram, record, or other artifact that
-      applies the rubric for Personality as hypothesis. Store only category-level information and omit
-      names, secrets, credentials, diagnoses, protected work detail, and unnecessary third-party information.
+    title: Observe a usual and a contrasting opportunity
+    instructions: 'Use two safe everyday opportunities with different demands. In each, record whether
+      the predicted behavior occurred, what preparation or support was available, and one exception. Do
+      not manipulate others or force unwanted social exposure. If the opportunities do not differ meaningfully,
+      say that the contrast remains untested.
+
+
+      Observation checks: Two opportunities are described with their conditions; Predicted behavior and
+      exceptions are recorded; Limits of the comparison are explicit. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -179,9 +207,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0504_a2_artifact_matches_rubric
-        - c0504_a2_minimum_private_detail
-        - c0504_a2_usable_next_step_present
+        - two_opportunities_are_described_with_their_conditions
+        - predicted_behavior_and_exceptions_are_recorded
+        - limits_of_the_comparison_are_explicit
       - measurement_id: c0504_a2_boundary
         kind: boolean
         role: supporting
@@ -198,10 +226,34 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0504-PERSONALITY-AS-HYPOTHESIS-01-A3
     sequence: 3
-    title: Stress-test and revise the Personality as hypothesis artifact
-    instructions: 'Test the artifact against one realistic variation, counterexample, or changed constraint.
-      Revise it only where the test exposes a gap, then compare the result with this evidence target:
-      Can name useful predictions, failures of the model, and one opposite capacity to practice.'
+    title: Practice a capacity outside the label
+    instructions: 'Choose one modest opposite capacity suggested by the comparison. A habitual preparer
+      might ask one unplanned clarifying question; an improviser might use three written points. Try it
+      once, record usefulness and cost, and rewrite the label as a conditional description that includes
+      what you can practice. An uncomfortable attempt need not be repeated.
+
+
+      Observation checks: A contrasting capacity receives an actual attempt; Usefulness and cost are considered;
+      The identity description becomes conditional. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.
+
+
+      Final review: Where did the label help you predict, where did it fail, and what option does the
+      revised description leave open?
+
+
+      Examples: Supportive: The preparer contributed a useful question without notes and changed always
+      need preparation to prefer notes for unfamiliar presentations.
+
+
+      Mixed: The label predicted one situation but noise and familiarity may explain the other.
+
+
+      Contradictory: A type was used to excuse dismissing others or to require an inaccessible activity.
+
+
+      Inconclusive: A quiz result was repeated without a prediction, comparison or attempted contrasting
+      capacity.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -217,15 +269,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0504_a3_primary
-        kind: scenario
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0504_a3_variation_tested
-        - c0504_a3_revision_traceable
-        - c0504_a3_target_evidence_compared
+        - a_contrasting_capacity_receives_an_actual_attempt
+        - usefulness_and_cost_are_considered
+        - the_identity_description_becomes_conditional
       - measurement_id: c0504_a3_boundary
         kind: boolean
         role: supporting
@@ -246,16 +298,17 @@ intervention:
       Personality as hypothesis; no purchase, subscription, travel, credential, or public artifact is
       required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Personality as hypothesis; assistive technology, interpretation, a support person, and
-      a deferred action are valid without penalty.
+    - Use writing instead of speech or a trusted person's consented role-play. Role-play tests rehearsal
+      only. Do not reinterpret disability, access needs, distress or a clinician's advice as a personality
+      obstacle to overcome.
     cultural_context:
     - Adapt the expression of Personality as hypothesis to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Personality as hypothesis opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use writing instead of speech or a trusted person's consented role-play. Role-play tests rehearsal
+      only. Do not reinterpret disability, access needs, distress or a clinician's advice as a personality
+      obstacle to overcome.
   pause_conditions:
   - Pause Personality as hypothesis when capacity, consent, authority, privacy, access, care duties, uncertainty,
     distress, fatigue, pain, resource scarcity, or changed circumstances make the next action unwise.
@@ -286,10 +339,7 @@ evidence_and_scoring:
   - c0504_a3_boundary
   - c0504_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Personality as hypothesis action exceeded consent, authority, privacy, qualification, role, burden,
-    or safety boundaries.
-  - The evidence contradicted the intended Personality as hypothesis criterion, depended on coercion or
-    hidden private content, or could not distinguish the protocol from contextual change.
+  - A type was used to excuse dismissing others or to require an inaccessible activity.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Personality as hypothesis explicitly; support can enable access and never reduces dignity or silently
     changes the typed value.
@@ -299,14 +349,19 @@ evidence_and_scoring:
     origins are rejected and later repetitions use the typed contract's explicit diminishing multipliers.
   recency_rule: Generated Personality as hypothesis rules withhold observations older than 90 days; no
     unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can name useful predictions, failures of the model, and one opposite capacity to practice.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Personality as hypothesis requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Make the label risk being wrong. Observed checks: A label becomes a context-specific
+    prediction; An observable counterexample is stated; Preference skill and constraint are distinguished.
+    Action 2: Observe a usual and a contrasting opportunity. Observed checks: Two opportunities are described
+    with their conditions; Predicted behavior and exceptions are recorded; Limits of the comparison are
+    explicit. Action 3: Practice a capacity outside the label. Observed checks: A contrasting capacity
+    receives an actual attempt; Usefulness and cost are considered; The identity description becomes conditional.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A quiz result was repeated without a prediction, comparison
+    or attempted contrasting capacity.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Personality
     as hypothesis contribution under typed evaluation; protocol performance remains distinct and is never
     counted twice.
@@ -315,9 +370,8 @@ evidence_and_scoring:
   - L05
   - L11
   - L13
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Personality as hypothesis evidence.
@@ -325,10 +379,16 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define a rubric for personality as hypothesis action was attempted or explicitly deferred.
-  - The build one personality as hypothesis artifact action was attempted or explicitly deferred.
-  - The stress-test and revise the personality as hypothesis artifact action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Make the label risk being wrong. Observed checks: A label becomes a context-specific prediction;
+    An observable counterexample is stated; Preference skill and constraint are distinguished.'
+  - 'Action 2: Observe a usual and a contrasting opportunity. Observed checks: Two opportunities are described
+    with their conditions; Predicted behavior and exceptions are recorded; Limits of the comparison are
+    explicit.'
+  - 'Action 3: Practice a capacity outside the label. Observed checks: A contrasting capacity receives
+    an actual attempt; Usefulness and cost are considered; The identity description becomes conditional.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -337,56 +397,54 @@ completion_and_review:
     - c0504_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Personality as hypothesis only when the initial context remained
-    safe, the evidence criteria were usable, burden was acceptable, and a new context can be named without
-    assuming transfer.
-  transfer_limit: Three bounded actions do not establish Personality as hypothesis across roles, cultures,
-    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: Where did the label help you predict, where did it fail, and what option does
+    the revised description leave open?
+  transfer_limit: This tests one practical prediction, not the validity of a personality instrument. Different
+    models are not interchangeable; no type, attachment label or trait score establishes destiny or diagnosis.
   reflection:
-    before: What does Personality as hypothesis require in this exact context, what remains outside my
-      role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Personality as hypothesis criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can name useful predictions, failures of the model, and one
-      opposite capacity to practice.', what contradiction or missing context matters most, and should
-      this Personality as hypothesis design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Turn a personality description into a revisable
+      prediction, seek a counterexample and practice one capacity the label might otherwise discourage.'
+    during: Which checks have actually been observed? The label predicted one situation but noise and
+      familiarity may explain the other.
+    after: Where did the label help you predict, where did it fail, and what option does the revised description
+      leave open?
   review_guidance:
     repeat: Repeat the same bounded Personality as hypothesis design only when the context and burden
       remain appropriate.
-    adapt: Change the Personality as hypothesis medium, scope, support, timing, criteria, or context while
-      preserving provenance and the narrower evidence claim.
+    adapt: Use writing instead of speech or a trusted person's consented role-play. Role-play tests rehearsal
+      only. Do not reinterpret disability, access needs, distress or a clinician's advice as a personality
+      obstacle to overcome.
     stop: Stop Personality as hypothesis when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Personality as hypothesis questions beyond
-      this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Personality as hypothesis criteria were observed with provenance and no adverse
-      boundary signal in the selected context.
-    mixed: Some Personality as hypothesis criteria were observed while burden, support, contextual change,
-      or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Personality as hypothesis criterion, introduced
-      harm or coercion, or showed the design was not workable.
-    inconclusive: The Personality as hypothesis action was deferred, not observed, not applicable, stale,
-      insufficiently bounded, or too confounded to interpret.
+    supportive: The preparer contributed a useful question without notes and changed always need preparation
+      to prefer notes for unfamiliar presentations.
+    mixed: The label predicted one situation but noise and familiarity may explain the other.
+    contradictory: A type was used to excuse dismissing others or to require an inaccessible activity.
+    inconclusive: A quiz result was repeated without a prediction, comparison or attempted contrasting
+      capacity.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Personality as hypothesis.
+    context_heading: Test a personality label against two ordinary situations
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Personality
       as hypothesis.
   check_in_labels:
-    c0504_a1_primary: The bounded Personality as hypothesis criterion for action 1 was observed
+    c0504_a1_primary: 'Observed checks: make the label risk being wrong'
     c0504_a1_boundary: Action 1 stayed inside its stated Personality as hypothesis boundary
     c0504_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0504_a2_primary: The bounded Personality as hypothesis criterion for action 2 was observed
+    c0504_a2_primary: 'Observed checks: observe a usual and a contrasting opportunity'
     c0504_a2_boundary: Action 2 stayed inside its stated Personality as hypothesis boundary
     c0504_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0504_a3_primary: The bounded Personality as hypothesis criterion for action 3 was observed
+    c0504_a3_primary: 'Observed checks: practice a capacity outside the label'
     c0504_a3_boundary: Action 3 stayed inside its stated Personality as hypothesis boundary
     c0504_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Personality as hypothesis
-    practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Where did the label help you predict, where did it fail, and what option does the revised
+    description leave open? Completion is not mastery.
+  plain_language_evidence: The preparer contributed a useful question without notes and changed always
+    need preparation to prefer notes for unfamiliar presentations.
   display_order: 62

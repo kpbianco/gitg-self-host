@@ -302,11 +302,19 @@ h3 {
   background: var(--accent-pale);
   border-radius: 999px;
   color: var(--accent-dark);
-  flex: 0 0 auto;
+  flex: 0 1 auto;
   font-size: 0.7rem;
   font-weight: 750;
   padding: 5px 9px;
   text-transform: uppercase;
+}
+
+/* Labels must reflow inside narrow cards, including a zoomed mobile view. */
+.button,
+.status-pill {
+  max-width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .status-pill-muted {

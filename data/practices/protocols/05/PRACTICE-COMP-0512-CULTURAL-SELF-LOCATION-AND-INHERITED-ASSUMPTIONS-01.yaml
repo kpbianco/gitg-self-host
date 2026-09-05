@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0512-CULTURAL-SELF-LOCATION-AND-INHERITED-ASSUMPTIONS-01
 slug: c0512-cultural-self-location-and-inherited-assumptions-practice
-name: Bounded Cultural self-location and inherited assumptions Practice
+name: Examine an inherited norm through a respectful comparison
 parent_competency_id: '05.12'
 domain_id: '05'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 05.12
-      (Cultural self-location and inherited assumptions); canonical scope, evidence target, classification,
-      domain boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 05.12; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,40 +34,38 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Cultural self-location and inherited assumptions through a consent-respecting relational
-    practice bounded by the canonical scope: Identify norms about family, authority, emotion, work, gender,
-    religion, privacy, and success that feel natural because they are familiar.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can compare those assumptions
-    with another culture and choose what to retain, revise, or hold provisionally. The protocol creates
-    a small opportunity to examine that target without treating completion as broad capability.'
+  purpose: Identify an assumption that feels natural through familiarity, compare a different situated
+    account and choose a reasoned present stance.
+  why_recommended: Identify an assumption that feels natural through familiarity, compare a different
+    situated account and choose a reasoned present stance.
   claims:
-  - statement: Using the canonical scope and evidence target for Cultural self-location and inherited
-      assumptions is a traceable product-design basis for a source-only draft protocol.
+  - statement: Identify an assumption that feels natural through familiarity, compare a different situated
+      account and choose a reasoned present stance.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Cultural self-location and inherited assumptions practice
     fit the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Cultural self-location and inherited assumptions as not applicable,
     consciously unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity,
     or safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Cultural self-location
-    and inherited assumptions context, understand the source-only status, and stop without losing safety,
-    care, employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Cultural
-    self-location and inherited assumptions; do not manufacture conflict, deprivation, exposure, disclosure,
-    danger, urgency, or dependence for evidence.
+  readiness_considerations: Use a public first-person written or audio account and avoid naming people.
+    If none is accessible, compare the two supplied guest rules as fictional cases and label the cultural
+    comparison unverified. No travel, religious change or disclosure of family conflict is required.
+  opportunity_considerations: Use the default norm that a guest should immediately decline an offer before
+    accepting it, or choose a familiar norm about privacy, authority, emotion or success. Find a voluntary
+    first-person account or public source describing a different practice; retain its context privately.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Cultural self-location and inherited
-    assumptions.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Use the default norm that a guest should immediately decline an offer before accepting it, or choose
+    a familiar norm about privacy, authority, emotion or success. Find a voluntary first-person account
+    or public source describing a different practice; retain its context privately.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Cultural self-location and inherited
-    assumptions instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a public first-person written or audio account and avoid naming people. If none is accessible,
+    compare the two supplied guest rules as fictional cases and label the cultural comparison unverified.
+    No travel, religious change or disclosure of family conflict is required.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -81,21 +78,27 @@ meaning_and_fit:
     inherited assumptions as inferiority; competing reasonable interpretations and conscientious refusal
     remain visible.
 intervention:
-  protocol_class: PF-RELATIONAL-CONVERSATION
+  protocol_class: PF-KNOWLEDGE-APPLICATION
   duration_days: 10
-  cadence: Complete three bounded Cultural self-location and inherited assumptions actions over ten days,
-    preserving explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Cultural self-location and inherited assumptions; copy the canonical scope
-    and evidence target into a private working note; define the action boundary, valid supports, privacy
-    limit, and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Cultural
-    self-location and inherited assumptions. Do not store private prose, names, identities, diagnoses,
-    allegations, credentials, account data, protected work information, intimate detail, artifact contents,
-    observer narrative, or another person's secrets. This source-only draft is not surveillance, professional
-    advice, treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Cultural self-location and inherited
-    assumptions actions, and review; scope may be reduced or deferred for access, care, health, workload,
-    conscience, or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use the default norm that a guest should immediately decline an offer before accepting it, or
+    choose a familiar norm about privacy, authority, emotion or success. Find a voluntary first-person
+    account or public source describing a different practice; retain its context privately. Goal: Identify
+    an assumption that feels natural through familiarity, compare a different situated account and choose
+    a reasoned present stance. Scope: One comparison examines a particular norm, not a whole culture.
+    People disagree within cultures, and neither unfamiliarity nor tradition automatically makes a practice
+    better. Time and effort: About 30 minutes of reflection and comparison, plus one small low-stakes
+    application. Adaptation: Use a public first-person written or audio account and avoid naming people.
+    If none is accessible, compare the two supplied guest rules as fictional cases and label the cultural
+    comparison unverified. No travel, religious change or disclosure of family conflict is required. Keep
+    personal working notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a public first-person written or audio account and avoid naming people. If
+    none is accessible, compare the two supplied guest rules as fictional cases and label the cultural
+    comparison unverified. No travel, religious change or disclosure of family conflict is required.
+  expected_burden: About 30 minutes of reflection and comparison, plus one small low-stakes application.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Cultural self-location and inherited assumptions protocol to rank worth, coerce participation,
@@ -104,20 +107,23 @@ intervention:
   - Treating a completed Cultural self-location and inherited assumptions action, a polished artifact,
     agreement, confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Cultural self-location and inherited assumptions situation involving emergency response, abuse,
-    retaliation, illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a public
+    first-person written or audio account and avoid naming people. If none is accessible, compare the
+    two supplied guest rules as fictional cases and label the cultural comparison unverified. No travel,
+    religious change or disclosure of family conflict is required.
   actions:
   - stable_id: PRACTICE-COMP-0512-CULTURAL-SELF-LOCATION-AND-INHERITED-ASSUMPTIONS-01-A1
     sequence: 1
-    title: Prepare a consent-safe Cultural self-location and inherited assumptions interaction
-    instructions: 'Choose one welcome, low-stakes relationship context for Cultural self-location and
-      inherited assumptions. Translate the canonical scope into one observable communication act, identify
-      power or retaliation concerns, and obtain or preserve the other person''s freedom not to participate:
-      Identify norms about family, authority, emotion, work, gender, religion, privacy, and success that
-      feel natural because they are familiar.'
+    title: Make the familiar rule visible
+    instructions: 'State the rule as a behavior and expectation, not everyone knows. Record where you
+      learned it, what good it protects, how it is enforced, and someone within your own setting who follows
+      it differently. In the guest case, polite refusal may signal restraint but may also leave a host
+      uncertain about a real preference.
+
+
+      Observation checks: A familiar assumption becomes an explicit behavioral rule; Its origin and protected
+      good are considered; Variation within the familiar setting is acknowledged. Mark only what you observed.
+      Missing, mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -139,9 +145,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0512_a1_communication_act_specific
-        - c0512_a1_consent_boundary_present
-        - c0512_a1_power_checked
+        - a_familiar_assumption_becomes_an_explicit_behavioral_rule
+        - its_origin_and_protected_good_are_considered
+        - variation_within_the_familiar_setting_is_acknowledged
       - measurement_id: c0512_a1_boundary
         kind: boolean
         role: supporting
@@ -158,10 +164,17 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0512-CULTURAL-SELF-LOCATION-AND-INHERITED-ASSUMPTIONS-01-A2
     sequence: 2
-    title: Practice one Cultural self-location and inherited assumptions communication act
-    instructions: Use the prepared Cultural self-location and inherited assumptions act once without covert
-      testing, pressure, diagnosis, deception inference, or a demand for disclosure. Ask one direct clarification
-      when appropriate and allow refusal, delay, indirect communication, language access, or another format.
+    title: Understand a different rule on its own terms
+    instructions: 'Read or listen to the selected account. Note who is describing which setting, what
+      behavior they consider appropriate, and why. Separate their actual description from your interpretation.
+      Compare one real difference and one shared concern, and identify what the account cannot tell you
+      about other people in that culture. Do not request intimate cultural explanations from an unwilling
+      person.
+
+
+      Observation checks: The comparison account has a specific perspective and setting; A real difference
+      and shared concern are explained; Limits on cultural generalization are explicit. Mark only what
+      you observed. Missing, mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -177,12 +190,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0512_a2_primary
-        kind: boolean
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        expected: true
+        - reviewed_artifact
+        criteria:
+        - the_comparison_account_has_a_specific_perspective_and_setting
+        - a_real_difference_and_shared_concern_are_explained
+        - limits_on_cultural_generalization_are_explicit
       - measurement_id: c0512_a2_boundary
         kind: boolean
         role: supporting
@@ -199,11 +215,35 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0512-CULTURAL-SELF-LOCATION-AND-INHERITED-ASSUMPTIONS-01-A3
     sequence: 3
-    title: Review Cultural self-location and inherited assumptions without scoring the person
-    instructions: 'Review only the observable interaction and its boundaries. Do not infer motives or
-      store private narrative. Compare what happened with this evidence target and retain disagreement
-      or an inconclusive result: Can compare those assumptions with another culture and choose what to
-      retain, revise, or hold provisionally.'
+    title: Choose and try a context-sensitive response
+    instructions: 'Retain, revise or hold the original norm provisionally, giving a reason. Try one respectful
+      clarification in an ordinary context, such as saying I would enjoy some, thank you instead of expecting
+      a host to decode repeated refusal. Notice the response and revise your assumption if needed; ask
+      preferences rather than assigning a rule based on identity.
+
+
+      Observation checks: The norm has a reasoned present disposition; A clarification receives an ordinary
+      attempt; The response is reviewed without assigning identity-based preferences. Mark only what you
+      observed. Missing, mixed and negative results are valid; a deferred action is not completed.
+
+
+      Final review: Which assumption stopped being invisible, and what can you now ask instead of treating
+      familiarity as universality?
+
+
+      Examples: Supportive: The participant understood two meanings of polite refusal, asked a host''s
+      preference, and retained uncertainty about wider cultural norms.
+
+
+      Mixed: The account clarified a difference, but the participant has not yet tried a respectful clarification.
+
+
+      Contradictory: The comparison ranked entire cultures or assumed someone''s preferred behavior from
+      their identity.
+
+
+      Inconclusive: An unfamiliar custom was collected as trivia without examining a personal norm or
+      its application.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -225,9 +265,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0512_a3_observable_interaction_reviewed
-        - c0512_a3_private_narrative_excluded
-        - c0512_a3_inconclusive_allowed
+        - the_norm_has_a_reasoned_present_disposition
+        - a_clarification_receives_an_ordinary_attempt
+        - the_response_is_reviewed_without_assigning_identity_based_preferences
       - measurement_id: c0512_a3_boundary
         kind: boolean
         role: supporting
@@ -248,17 +288,17 @@ intervention:
       Cultural self-location and inherited assumptions; no purchase, subscription, travel, credential,
       or public artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Cultural self-location and inherited assumptions; assistive technology, interpretation,
-      a support person, and a deferred action are valid without penalty.
+    - Use a public first-person written or audio account and avoid naming people. If none is accessible,
+      compare the two supplied guest rules as fictional cases and label the cultural comparison unverified.
+      No travel, religious change or disclosure of family conflict is required.
     cultural_context:
     - Adapt the expression of Cultural self-location and inherited assumptions to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Cultural self-location and inherited assumptions opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use a public first-person written or audio account and avoid naming people. If none is accessible,
+      compare the two supplied guest rules as fictional cases and label the cultural comparison unverified.
+      No travel, religious change or disclosure of family conflict is required.
   pause_conditions:
   - Pause Cultural self-location and inherited assumptions when capacity, consent, authority, privacy,
     access, care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances
@@ -291,11 +331,7 @@ evidence_and_scoring:
   - c0512_a3_boundary
   - c0512_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Cultural self-location and inherited assumptions action exceeded consent, authority, privacy,
-    qualification, role, burden, or safety boundaries.
-  - The evidence contradicted the intended Cultural self-location and inherited assumptions criterion,
-    depended on coercion or hidden private content, or could not distinguish the protocol from contextual
-    change.
+  - The comparison ranked entire cultures or assumed someone's preferred behavior from their identity.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Cultural self-location and inherited assumptions explicitly; support can enable access and never
     reduces dignity or silently changes the typed value.
@@ -306,14 +342,20 @@ evidence_and_scoring:
     diminishing multipliers.
   recency_rule: Generated Cultural self-location and inherited assumptions rules withhold observations
     older than 90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can compare those assumptions with another culture and choose what to retain, revise, or hold
-    provisionally.—not completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Cultural self-location and inherited assumptions requires a bounded
-    context, allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Make the familiar rule visible. Observed checks: A familiar assumption
+    becomes an explicit behavioral rule; Its origin and protected good are considered; Variation within
+    the familiar setting is acknowledged. Action 2: Understand a different rule on its own terms. Observed
+    checks: The comparison account has a specific perspective and setting; A real difference and shared
+    concern are explained; Limits on cultural generalization are explicit. Action 3: Choose and try a
+    context-sensitive response. Observed checks: The norm has a reasoned present disposition; A clarification
+    receives an ordinary attempt; The response is reviewed without assigning identity-based preferences.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. An unfamiliar custom was collected as trivia without
+    examining a personal norm or its application.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Cultural
     self-location and inherited assumptions contribution under typed evaluation; protocol performance
     remains distinct and is never counted twice.
@@ -323,9 +365,8 @@ evidence_and_scoring:
   - L13
   - L24
   - L31
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Cultural self-location and inherited assumptions evidence.
@@ -333,12 +374,18 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The prepare a consent-safe cultural self-location and inherited assumptions interaction action was
-    attempted or explicitly deferred.
-  - The practice one cultural self-location and inherited assumptions communication act action was attempted
-    or explicitly deferred.
-  - The review cultural self-location and inherited assumptions without scoring the person action preserved
-    a limited conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Make the familiar rule visible. Observed checks: A familiar assumption becomes an explicit
+    behavioral rule; Its origin and protected good are considered; Variation within the familiar setting
+    is acknowledged.'
+  - 'Action 2: Understand a different rule on its own terms. Observed checks: The comparison account has
+    a specific perspective and setting; A real difference and shared concern are explained; Limits on
+    cultural generalization are explicit.'
+  - 'Action 3: Choose and try a context-sensitive response. Observed checks: The norm has a reasoned present
+    disposition; A clarification receives an ordinary attempt; The response is reviewed without assigning
+    identity-based preferences.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -347,65 +394,58 @@ completion_and_review:
     - c0512_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Cultural self-location and inherited assumptions only when the
-    initial context remained safe, the evidence criteria were usable, burden was acceptable, and a new
-    context can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Cultural self-location and inherited assumptions
-    across roles, cultures, relationships, seasons, stress levels, disability states, institutions, or
-    high-consequence settings.
+  progression_criteria: Which assumption stopped being invisible, and what can you now ask instead of
+    treating familiarity as universality?
+  transfer_limit: One comparison examines a particular norm, not a whole culture. People disagree within
+    cultures, and neither unfamiliarity nor tradition automatically makes a practice better.
   reflection:
-    before: What does Cultural self-location and inherited assumptions require in this exact context,
-      what remains outside my role or authority, and which scope sentence or evidence criterion will keep
-      the practice honest?
-    during: Which observable Cultural self-location and inherited assumptions criterion is present, absent,
-      mixed, or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can compare those assumptions with another culture and choose
-      what to retain, revise, or hold provisionally.', what contradiction or missing context matters most,
-      and should this Cultural self-location and inherited assumptions design be repeated, adapted, deferred,
-      stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Identify an assumption that feels natural
+      through familiarity, compare a different situated account and choose a reasoned present stance.'
+    during: Which checks have actually been observed? The account clarified a difference, but the participant
+      has not yet tried a respectful clarification.
+    after: Which assumption stopped being invisible, and what can you now ask instead of treating familiarity
+      as universality?
   review_guidance:
     repeat: Repeat the same bounded Cultural self-location and inherited assumptions design only when
       the context and burden remain appropriate.
-    adapt: Change the Cultural self-location and inherited assumptions medium, scope, support, timing,
-      criteria, or context while preserving provenance and the narrower evidence claim.
+    adapt: Use a public first-person written or audio account and avoid naming people. If none is accessible,
+      compare the two supplied guest rules as fictional cases and label the cultural comparison unverified.
+      No travel, religious change or disclosure of family conflict is required.
     stop: Stop Cultural self-location and inherited assumptions when the practice becomes coercive, unsafe,
       privacy-invasive, role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Cultural self-location and inherited
-      assumptions questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Cultural self-location and inherited assumptions criteria were observed with
-      provenance and no adverse boundary signal in the selected context.
-    mixed: Some Cultural self-location and inherited assumptions criteria were observed while burden,
-      support, contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Cultural self-location and inherited assumptions
-      criterion, introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Cultural self-location and inherited assumptions action was deferred, not observed,
-      not applicable, stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The participant understood two meanings of polite refusal, asked a host's preference,
+      and retained uncertainty about wider cultural norms.
+    mixed: The account clarified a difference, but the participant has not yet tried a respectful clarification.
+    contradictory: The comparison ranked entire cultures or assumed someone's preferred behavior from
+      their identity.
+    inconclusive: An unfamiliar custom was collected as trivia without examining a personal norm or its
+      application.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Cultural self-location and inherited assumptions.
+    context_heading: Examine an inherited norm through a respectful comparison
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Cultural
       self-location and inherited assumptions.
   check_in_labels:
-    c0512_a1_primary: The bounded Cultural self-location and inherited assumptions criterion for action
-      1 was observed
+    c0512_a1_primary: 'Observed checks: make the familiar rule visible'
     c0512_a1_boundary: Action 1 stayed inside its stated Cultural self-location and inherited assumptions
       boundary
     c0512_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0512_a2_primary: The bounded Cultural self-location and inherited assumptions criterion for action
-      2 was observed
+    c0512_a2_primary: 'Observed checks: understand a different rule on its own terms'
     c0512_a2_boundary: Action 2 stayed inside its stated Cultural self-location and inherited assumptions
       boundary
     c0512_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0512_a3_primary: The bounded Cultural self-location and inherited assumptions criterion for action
-      3 was observed
+    c0512_a3_primary: 'Observed checks: choose and try a context-sensitive response'
     c0512_a3_boundary: Action 3 stayed inside its stated Cultural self-location and inherited assumptions
       boundary
     c0512_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Cultural self-location
-    and inherited assumptions practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Which assumption stopped being invisible, and what can you now ask instead of treating
+    familiarity as universality? Completion is not mastery.
+  plain_language_evidence: The participant understood two meanings of polite refusal, asked a host's preference,
+    and retained uncertainty about wider cultural norms.
   display_order: 70

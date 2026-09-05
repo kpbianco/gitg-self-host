@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0502-NARRATIVE-IDENTITY-01
 slug: c0502-narrative-identity-practice
-name: Bounded Narrative identity Practice
+name: Retell a life chapter with agency and circumstance
 parent_competency_id: '05.02'
 domain_id: '05'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 05.02
-      (Narrative identity); canonical scope, evidence target, classification, domain boundary, and parent
-      mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 05.02; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,38 +34,36 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Narrative identity through a artifact-and-review practice bounded by the canonical
-    scope: Construct a life story that includes agency, circumstance, help, harm, contingency, failure,
-    and change.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can tell the story
-    without casting the self solely as hero, victim, failure, or exceptional case. The protocol creates
-    a small opportunity to examine that target without treating completion as broad capability.'
+  purpose: Create a balanced account of one life chapter that includes choices, help, constraints, chance
+    and change without forcing a heroic or failed-self story.
+  why_recommended: Create a balanced account of one life chapter that includes choices, help, constraints,
+    chance and change without forcing a heroic or failed-self story.
   claims:
-  - statement: Using the canonical scope and evidence target for Narrative identity is a traceable product-design
-      basis for a source-only draft protocol.
+  - statement: Create a balanced account of one life chapter that includes choices, help, constraints,
+      chance and change without forcing a heroic or failed-self story.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Narrative identity practice fit the person's current
     role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Narrative identity as not applicable, consciously unchosen, or deferred
     without penalty when the role, pathway, capacity, authority, opportunity, or safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Narrative identity
-    context, understand the source-only status, and stop without losing safety, care, employment, housing,
-    services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Narrative
-    identity; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency, or dependence
-    for evidence.
+  readiness_considerations: Use a three-picture sequence or a private voice note. No public storytelling,
+    confrontation, forgiveness, disclosure of harm, or positive reinterpretation of adversity is required.
+    Fiction exercises interpretation only.
+  opportunity_considerations: 'Choose a manageable chapter such as learning a hobby, moving rooms, or
+    joining a group. Draw three points: before, turning point, and now. Use a fictional learner if personal
+    history feels too exposed.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Narrative identity.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Choose a manageable chapter such as learning a hobby, moving rooms, or joining a group. Draw three
+    points: before, turning point, and now. Use a fictional learner if personal history feels too exposed.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Narrative identity instead of a
-    live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a three-picture sequence or a private voice note. No public storytelling, confrontation, forgiveness,
+    disclosure of harm, or positive reinterpretation of adversity is required. Fiction exercises interpretation
+    only.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -77,20 +74,26 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Narrative identity as inferiority;
     competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-ARTIFACT-PLAN
+  protocol_class: PF-LONGITUDINAL-REVIEW
   duration_days: 10
-  cadence: Complete three bounded Narrative identity actions over ten days, preserving explicit not-applicable,
-    defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Narrative identity; copy the canonical scope and evidence target into
-    a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Narrative
-    identity. Do not store private prose, names, identities, diagnoses, allegations, credentials, account
-    data, protected work information, intimate detail, artifact contents, observer narrative, or another
-    person's secrets. This source-only draft is not surveillance, professional advice, treatment, certification,
-    or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Narrative identity actions, and review;
-    scope may be reduced or deferred for access, care, health, workload, conscience, or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose a manageable chapter such as learning a hobby, moving rooms, or joining a group. Draw
+    three points: before, turning point, and now. Use a fictional learner if personal history feels too
+    exposed. Goal: Create a balanced account of one life chapter that includes choices, help, constraints,
+    chance and change without forcing a heroic or failed-self story. Scope: A short chapter practices
+    narrative balance; it cannot verify uncertain memories, recover hidden history or explain an entire
+    identity. There is no required redemptive ending. Time and effort: About 25 minutes to draft and revise,
+    then a 10-minute reread on another day. Adaptation: Use a three-picture sequence or a private voice
+    note. No public storytelling, confrontation, forgiveness, disclosure of harm, or positive reinterpretation
+    of adversity is required. Fiction exercises interpretation only. Keep personal working notes outside
+    the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a three-picture sequence or a private voice note. No public storytelling, confrontation,
+    forgiveness, disclosure of harm, or positive reinterpretation of adversity is required. Fiction exercises
+    interpretation only.
+  expected_burden: About 25 minutes to draft and revise, then a 10-minute reread on another day.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Narrative identity protocol to rank worth, coerce participation, demand disclosure, override
@@ -98,19 +101,22 @@ intervention:
   - Treating a completed Narrative identity action, a polished artifact, agreement, confidence, speed,
     independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Narrative identity situation involving emergency response, abuse, retaliation, illegal conduct,
-    medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous equipment,
-    or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a three-picture
+    sequence or a private voice note. No public storytelling, confrontation, forgiveness, disclosure of
+    harm, or positive reinterpretation of adversity is required. Fiction exercises interpretation only.
   actions:
   - stable_id: PRACTICE-COMP-0502-NARRATIVE-IDENTITY-01-A1
     sequence: 1
-    title: Define a rubric for Narrative identity
-    instructions: 'Turn the canonical scope for Narrative identity into three to five inspectable criteria:
-      Construct a life story that includes agency, circumstance, help, harm, contingency, failure, and
-      change. Keep the rubric bounded to one current context and include one criterion for uncertainty,
-      access, or competing obligations.'
+    title: Write the chapter without a final verdict
+    instructions: 'Describe what happened at each of the three points. Mark remembered events, interpretation,
+      and uncertain details separately. Include a choice you made, a circumstance you did not choose,
+      help received, and something that went differently than hoped. Harm may be acknowledged without
+      detail; do not invent harm or require gratitude for it.
+
+
+      Observation checks: Three moments have concrete events; Memory and interpretation are separated;
+      Agency help and unchosen circumstances are included. Mark only what you observed. Missing, mixed
+      and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -132,9 +138,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0502_a1_criteria_trace_to_scope
-        - c0502_a1_context_bounded
-        - c0502_a1_constraint_included
+        - three_moments_have_concrete_events
+        - memory_and_interpretation_are_separated
+        - agency_help_and_unchosen_circumstances_are_included
       - measurement_id: c0502_a1_boundary
         kind: boolean
         role: supporting
@@ -151,10 +157,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0502-NARRATIVE-IDENTITY-01-A2
     sequence: 2
-    title: Build one Narrative identity artifact
-    instructions: Create the smallest useful plan, checklist, diagram, record, or other artifact that
-      applies the rubric for Narrative identity. Store only category-level information and omit names,
-      secrets, credentials, diagnoses, protected work detail, and unnecessary third-party information.
+    title: Restore what the first telling left out
+    instructions: 'Underline places where the narrator becomes only a hero, victim, failure or exceptional
+      case. Add one omitted fact that complicates that role without denying responsibility or real harm.
+      For example, I taught myself the instrument can become I practiced persistently using a borrowed
+      instrument and a friend''s corrections. Keep an unresolved loss unresolved.
+
+
+      Observation checks: A one-sided role is identified; An omitted fact changes the account; Responsibility
+      and real constraints remain visible. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -176,9 +188,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0502_a2_artifact_matches_rubric
-        - c0502_a2_minimum_private_detail
-        - c0502_a2_usable_next_step_present
+        - a_one_sided_role_is_identified
+        - an_omitted_fact_changes_the_account
+        - responsibility_and_real_constraints_remain_visible
       - measurement_id: c0502_a2_boundary
         kind: boolean
         role: supporting
@@ -195,10 +207,34 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0502-NARRATIVE-IDENTITY-01-A3
     sequence: 3
-    title: Stress-test and revise the Narrative identity artifact
-    instructions: 'Test the artifact against one realistic variation, counterexample, or changed constraint.
-      Revise it only where the test exposes a gap, then compare the result with this evidence target:
-      Can tell the story without casting the self solely as hero, victim, failure, or exceptional case.'
+    title: Let the ending stay revisable
+    instructions: 'Reread the account on another day. Write what changed in your conduct or understanding,
+      what has not changed, and one next ordinary choice the chapter informs. If the story now sounds
+      too neat, restore the uncertainty. Finish with a possible next chapter rather than a prediction
+      that your identity is fixed.
+
+
+      Observation checks: A later reread informs the ending; Change and continuity are both named; A next
+      choice leaves room for revision. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.
+
+
+      Final review: What became more truthful when you included both your choices and the conditions around
+      them?
+
+
+      Examples: Supportive: A learning story retained persistence, acknowledged instruction and access,
+      and included an unresolved setback.
+
+
+      Mixed: The revised story includes help but still treats every later event as inevitable.
+
+
+      Contradictory: The story excuses a harmful choice by deleting agency or pressures its author to
+      call mistreatment a gift.
+
+
+      Inconclusive: A polished slogan replaced the chapter without examining any event.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -214,15 +250,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0502_a3_primary
-        kind: scenario
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0502_a3_variation_tested
-        - c0502_a3_revision_traceable
-        - c0502_a3_target_evidence_compared
+        - a_later_reread_informs_the_ending
+        - change_and_continuity_are_both_named
+        - a_next_choice_leaves_room_for_revision
       - measurement_id: c0502_a3_boundary
         kind: boolean
         role: supporting
@@ -242,16 +278,17 @@ intervention:
     - Use paper, an offline note, a library resource, a public example, or a no-cost conversation for
       Narrative identity; no purchase, subscription, travel, credential, or public artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Narrative identity; assistive technology, interpretation, a support person, and a deferred
-      action are valid without penalty.
+    - Use a three-picture sequence or a private voice note. No public storytelling, confrontation, forgiveness,
+      disclosure of harm, or positive reinterpretation of adversity is required. Fiction exercises interpretation
+      only.
     cultural_context:
     - Adapt the expression of Narrative identity to direct or indirect communication, collective or individual
       decision structures, local norms, faith or secular commitments, and role obligations while preserving
       consent and dignity.
     resource_variants:
-    - When a real Narrative identity opportunity is unavailable or inappropriate, use a fictional, historical,
-      public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use a three-picture sequence or a private voice note. No public storytelling, confrontation, forgiveness,
+      disclosure of harm, or positive reinterpretation of adversity is required. Fiction exercises interpretation
+      only.
   pause_conditions:
   - Pause Narrative identity when capacity, consent, authority, privacy, access, care duties, uncertainty,
     distress, fatigue, pain, resource scarcity, or changed circumstances make the next action unwise.
@@ -281,10 +318,8 @@ evidence_and_scoring:
   - c0502_a3_boundary
   - c0502_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Narrative identity action exceeded consent, authority, privacy, qualification, role, burden, or
-    safety boundaries.
-  - The evidence contradicted the intended Narrative identity criterion, depended on coercion or hidden
-    private content, or could not distinguish the protocol from contextual change.
+  - The story excuses a harmful choice by deleting agency or pressures its author to call mistreatment
+    a gift.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Narrative identity explicitly; support can enable access and never reduces dignity or silently
     changes the typed value.
@@ -294,14 +329,19 @@ evidence_and_scoring:
     origins are rejected and later repetitions use the typed contract's explicit diminishing multipliers.
   recency_rule: Generated Narrative identity rules withhold observations older than 90 days; no unrecorded
     retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can tell the story without casting the self solely as hero, victim, failure, or exceptional
-    case.—not completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Narrative identity requires a bounded context, allowlisted observations,
-    provenance, contradiction and adverse handling, and preserved uncertainty; free text and artifact
-    contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Write the chapter without a final verdict. Observed checks: Three moments
+    have concrete events; Memory and interpretation are separated; Agency help and unchosen circumstances
+    are included. Action 2: Restore what the first telling left out. Observed checks: A one-sided role
+    is identified; An omitted fact changes the account; Responsibility and real constraints remain visible.
+    Action 3: Let the ending stay revisable. Observed checks: A later reread informs the ending; Change
+    and continuity are both named; A next choice leaves room for revision.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A polished slogan replaced the chapter without examining
+    any event.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Narrative
     identity contribution under typed evaluation; protocol performance remains distinct and is never counted
     twice.
@@ -310,9 +350,8 @@ evidence_and_scoring:
   - L01
   - L05
   - L16
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Narrative identity evidence.
@@ -320,10 +359,15 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define a rubric for narrative identity action was attempted or explicitly deferred.
-  - The build one narrative identity artifact action was attempted or explicitly deferred.
-  - The stress-test and revise the narrative identity artifact action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Write the chapter without a final verdict. Observed checks: Three moments have concrete
+    events; Memory and interpretation are separated; Agency help and unchosen circumstances are included.'
+  - 'Action 2: Restore what the first telling left out. Observed checks: A one-sided role is identified;
+    An omitted fact changes the account; Responsibility and real constraints remain visible.'
+  - 'Action 3: Let the ending stay revisable. Observed checks: A later reread informs the ending; Change
+    and continuity are both named; A next choice leaves room for revision.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -332,56 +376,54 @@ completion_and_review:
     - c0502_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Narrative identity only when the initial context remained safe,
-    the evidence criteria were usable, burden was acceptable, and a new context can be named without assuming
-    transfer.
-  transfer_limit: Three bounded actions do not establish Narrative identity across roles, cultures, relationships,
-    seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: What became more truthful when you included both your choices and the conditions
+    around them?
+  transfer_limit: A short chapter practices narrative balance; it cannot verify uncertain memories, recover
+    hidden history or explain an entire identity. There is no required redemptive ending.
   reflection:
-    before: What does Narrative identity require in this exact context, what remains outside my role or
-      authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Narrative identity criterion is present, absent, mixed, or unknown, and are
-      consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can tell the story without casting the self solely as hero,
-      victim, failure, or exceptional case.', what contradiction or missing context matters most, and
-      should this Narrative identity design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Create a balanced account of one life chapter
+      that includes choices, help, constraints, chance and change without forcing a heroic or failed-self
+      story.'
+    during: Which checks have actually been observed? The revised story includes help but still treats
+      every later event as inevitable.
+    after: What became more truthful when you included both your choices and the conditions around them?
   review_guidance:
     repeat: Repeat the same bounded Narrative identity design only when the context and burden remain
       appropriate.
-    adapt: Change the Narrative identity medium, scope, support, timing, criteria, or context while preserving
-      provenance and the narrower evidence claim.
+    adapt: Use a three-picture sequence or a private voice note. No public storytelling, confrontation,
+      forgiveness, disclosure of harm, or positive reinterpretation of adversity is required. Fiction
+      exercises interpretation only.
     stop: Stop Narrative identity when the practice becomes coercive, unsafe, privacy-invasive, role-inappropriate,
       professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Narrative identity questions beyond this
-      educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Narrative identity criteria were observed with provenance and no adverse boundary
-      signal in the selected context.
-    mixed: Some Narrative identity criteria were observed while burden, support, contextual change, or
-      a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Narrative identity criterion, introduced harm
-      or coercion, or showed the design was not workable.
-    inconclusive: The Narrative identity action was deferred, not observed, not applicable, stale, insufficiently
-      bounded, or too confounded to interpret.
+    supportive: A learning story retained persistence, acknowledged instruction and access, and included
+      an unresolved setback.
+    mixed: The revised story includes help but still treats every later event as inevitable.
+    contradictory: The story excuses a harmful choice by deleting agency or pressures its author to call
+      mistreatment a gift.
+    inconclusive: A polished slogan replaced the chapter without examining any event.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Narrative identity.
+    context_heading: Retell a life chapter with agency and circumstance
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Narrative
       identity.
   check_in_labels:
-    c0502_a1_primary: The bounded Narrative identity criterion for action 1 was observed
+    c0502_a1_primary: 'Observed checks: write the chapter without a final verdict'
     c0502_a1_boundary: Action 1 stayed inside its stated Narrative identity boundary
     c0502_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0502_a2_primary: The bounded Narrative identity criterion for action 2 was observed
+    c0502_a2_primary: 'Observed checks: restore what the first telling left out'
     c0502_a2_boundary: Action 2 stayed inside its stated Narrative identity boundary
     c0502_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0502_a3_primary: The bounded Narrative identity criterion for action 3 was observed
+    c0502_a3_primary: 'Observed checks: let the ending stay revisable'
     c0502_a3_boundary: Action 3 stayed inside its stated Narrative identity boundary
     c0502_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Narrative identity
-    practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What became more truthful when you included both your choices and the conditions around
+    them? Completion is not mastery.
+  plain_language_evidence: A learning story retained persistence, acknowledged instruction and access,
+    and included an unresolved setback.
   display_order: 60

@@ -1,37 +1,32 @@
 schema_version: 1
 batch:
-  id: M6J-01-TAILORED-COMPETENCY-PRACTICES
-  title: First tailored-content cohort — meaning, ethics and domestic competence
-  goal: Individually rewrite all 42 practices in domains 01, 02 and 13 as the first cohort of the 383-competency rewrite; retain an exact remaining-work inventory.
+  id: M6J-02-SELF-KNOWLEDGE-PRACTICES
+  title: Tailored self-knowledge identity and humility practices
+  goal: Individually rewrite all 12 domain 05 practices; retain the 42 previously authored practices and an exact inventory of 329 still pending.
 sources:
   product: products/gitg-self-host/product.yaml
   requirements:
     - docs/architecture/0018-tailored-competency-practices.md
     - docs/PRODUCT_DECISIONS.md#decision-053
     - docs/program/M6_CURRICULUM_EXPANSION.md
-  milestone: owner-directed-successor-to-M6I-05
-  baseline_commit: 425001e5533d50462f5b9a2bb049720834824426
+  milestone: owner-directed-M6J-continuation
+  baseline_commit: e993ad142dee7652c3c029d6b1c75c0cdaf3d298
 dependencies:
-  - M6I-05-ASSESSMENT-CALIBRATION-ANALYSIS-READINESS
+  - M6J-01-TAILORED-COMPETENCY-PRACTICES
 scope:
   allowed_paths:
     - AGENTS.md
     - README.md
     - MANIFEST.tsv
-    - Makefile
     - contracts/**
     - docs/**
-    - data/practices/**
+    - data/practices/protocols/05/**
+    - data/practices/registries/source_registry.yaml
+    - data/practices/registries/research_gap_registry.yaml
+    - data/practices/release_manifest.yaml
     - reports/practice-content/**
-    - scripts/**
     - tests/**
-    - growth/services/canonical_import.py
     - growth/static/growth/app.css
-    - templates/growth/practice_check_in.html
-    - templates/growth/practice_recommendation.html
-    - templates/growth/practice_sprint.html
-    - templates/growth/practice_setup.html
-    - .github/workflows/**
   forbidden_paths:
     - data/assessment/**
     - data/model/**
@@ -46,14 +41,19 @@ scope:
     - pyproject.toml
     - Dockerfile
     - docker-compose.yml
+    - scripts/**
+    - templates/**
+    - .github/workflows/**
+    - data/practices/registries/activation_ledger.yaml
 acceptance:
-  - All 42 competencies in domains 01, 02 and 13 have individually authored instructions aligned with canonical scope and an explicit bounded exercise goal.
-  - The catalog-wide 383-competency requirement remains open with exactly 341 rewrite-pending rows; this cohort is never reported as complete catalog remediation.
+  - All 12 competencies 05.01 through 05.12 have individually authored instructions aligned with canonical scope and an explicit bounded exercise goal.
+  - Previously authored domains 01 02 and 13 remain byte-identical; exactly 54 authored and 329 rewrite-pending rows are reported.
   - Each action supplies observable success criteria and a usable example without requiring the person to design a rubric or exercise.
   - Prerequisites materials burden meaningful review and accessible equivalents are explicit.
   - Simulation and preparation do not claim live performance or comprehensive mastery.
   - Deferral N/A and unattempted actions do not satisfy completion.
   - Sources support specific factual claims and do not imply validation of the product-authored exercise.
+  - The existing 200 percent mobile zoom test passes with readable wrapping buttons and status labels; retain the overflow assertion and review its screenshot.
   - All 383 protocol IDs 1151 action IDs parent mappings activation records assessment and scoring mathematics remain unchanged.
   - Existing submitted events replay from their original snapshots and content import refuses to change active or paused practices.
   - Every canonical competency receives an explicit authored-pending-review or rewrite-pending disposition; 13.02 retains its existing typed evidence fixtures and the five frozen legacy runtime packages remain byte-equivalent.
@@ -89,7 +89,7 @@ rollback:
   strategy: Revert the content release before import or restore the verified pre-upgrade backup; never reinterpret existing event snapshots.
 evidence:
   output:
-    - docs/evidence/M6J-01-TAILORED-COMPETENCY-PRACTICES-2026-09-05.md
+    - docs/evidence/M6J-02-SELF-KNOWLEDGE-PRACTICES-2026-09-05.md
     - exact per-competency content coverage and residual gaps
     - exact local and hosted verification results
   claim_boundary: Authored educational practices and software verification; no automatic human review or empirical validation acceptance.

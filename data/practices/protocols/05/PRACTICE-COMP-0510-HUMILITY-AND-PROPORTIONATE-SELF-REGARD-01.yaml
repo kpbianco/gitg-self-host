@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0510-HUMILITY-AND-PROPORTIONATE-SELF-REGARD-01
 slug: c0510-humility-and-proportionate-self-regard-practice
-name: Bounded Humility and proportionate self-regard Practice
+name: Practice proportionate self-regard in ordinary exchanges
 parent_competency_id: '05.10'
 domain_id: '05'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 05.10
-      (Humility and proportionate self-regard); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 05.10; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +34,38 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Humility and proportionate self-regard through a artifact-and-review practice bounded
-    by the canonical scope: See oneself neither as the center of reality nor as worthless; recognize dependence,
-    limits, gifts, and responsibility.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can accept correction,
-    help, praise, and obscurity without grandiosity or self-erasure. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Acknowledge your contribution and dependence while responding to correction, help, praise and
+    a lack of recognition without inflation or self-erasure.
+  why_recommended: Acknowledge your contribution and dependence while responding to correction, help,
+    praise and a lack of recognition without inflation or self-erasure.
   claims:
-  - statement: Using the canonical scope and evidence target for Humility and proportionate self-regard
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Acknowledge your contribution and dependence while responding to correction, help, praise
+      and a lack of recognition without inflation or self-erasure.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Humility and proportionate self-regard practice fit
     the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Humility and proportionate self-regard as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Humility and proportionate
-    self-regard context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Humility
-    and proportionate self-regard; do not manufacture conflict, deprivation, exposure, disclosure, danger,
-    urgency, or dependence for evidence.
+  readiness_considerations: Use a private collaborative task or a consented written exchange. If no safe
+    partner is available, rehearse with a supplied correction such as this label is unclear; live help
+    and feedback then remain untested. No deference to mistreatment is required.
+  opportunity_considerations: 'Choose a shared household, study, hobby or volunteer task. Use a private
+    note with three headings: my contribution, other contributions, and limits. No status loss, humiliation
+    or public confession is required.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Humility and proportionate self-regard.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Choose a shared household, study, hobby or volunteer task. Use a private note with three headings:
+    my contribution, other contributions, and limits. No status loss, humiliation or public confession
+    is required.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Humility and proportionate self-regard
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a private collaborative task or a consented written exchange. If no safe partner is available,
+    rehearse with a supplied correction such as this label is unclear; live help and feedback then remain
+    untested. No deference to mistreatment is required.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -80,21 +78,26 @@ meaning_and_fit:
     self-regard as inferiority; competing reasonable interpretations and conscientious refusal remain
     visible.
 intervention:
-  protocol_class: PF-ARTIFACT-PLAN
+  protocol_class: PF-BEHAVIORAL-EXPERIMENT
   duration_days: 10
-  cadence: Complete three bounded Humility and proportionate self-regard actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Humility and proportionate self-regard; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Humility
-    and proportionate self-regard. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Humility and proportionate self-regard
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose a shared household, study, hobby or volunteer task. Use a private note with three headings:
+    my contribution, other contributions, and limits. No status loss, humiliation or public confession
+    is required. Goal: Acknowledge your contribution and dependence while responding to correction, help,
+    praise and a lack of recognition without inflation or self-erasure. Scope: A small set of exchanges
+    practices proportion, not a humility score. Rehearsed responses remain distinct from live responses,
+    and obscurity is not inherently virtuous. Time and effort: About 15 minutes of preparation, two brief
+    ordinary occasions, and a 10-minute review. Adaptation: Use a private collaborative task or a consented
+    written exchange. If no safe partner is available, rehearse with a supplied correction such as this
+    label is unclear; live help and feedback then remain untested. No deference to mistreatment is required.
+    Keep personal working notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a private collaborative task or a consented written exchange. If no safe partner
+    is available, rehearse with a supplied correction such as this label is unclear; live help and feedback
+    then remain untested. No deference to mistreatment is required.
+  expected_burden: About 15 minutes of preparation, two brief ordinary occasions, and a 10-minute review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Humility and proportionate self-regard protocol to rank worth, coerce participation, demand
@@ -102,19 +105,23 @@ intervention:
   - Treating a completed Humility and proportionate self-regard action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Humility and proportionate self-regard situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a private
+    collaborative task or a consented written exchange. If no safe partner is available, rehearse with
+    a supplied correction such as this label is unclear; live help and feedback then remain untested.
+    No deference to mistreatment is required.
   actions:
   - stable_id: PRACTICE-COMP-0510-HUMILITY-AND-PROPORTIONATE-SELF-REGARD-01-A1
     sequence: 1
-    title: Define a rubric for Humility and proportionate self-regard
-    instructions: 'Turn the canonical scope for Humility and proportionate self-regard into three to five
-      inspectable criteria: See oneself neither as the center of reality nor as worthless; recognize dependence,
-      limits, gifts, and responsibility. Keep the rubric bounded to one current context and include one
-      criterion for uncertainty, access, or competing obligations.'
+    title: Account for your part without claiming the whole result
+    instructions: 'Describe what you actually contributed, one limit or mistake, and help, tools or circumstances
+      that mattered. Practice saying thank you, I did spend time on that when praised, without exaggerating
+      or erasing your work. Also practice acknowledging one specific correction without appending a defense.
+      Mark these sentences as rehearsal.
+
+
+      Observation checks: Your contribution is stated accurately; Dependencies and a limit remain visible;
+      Praise and correction responses are explicitly rehearsed. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -136,9 +143,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0510_a1_criteria_trace_to_scope
-        - c0510_a1_context_bounded
-        - c0510_a1_constraint_included
+        - your_contribution_is_stated_accurately
+        - dependencies_and_a_limit_remain_visible
+        - praise_and_correction_responses_are_explicitly_rehearsed
       - measurement_id: c0510_a1_boundary
         kind: boolean
         role: supporting
@@ -155,11 +162,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0510-HUMILITY-AND-PROPORTIONATE-SELF-REGARD-01-A2
     sequence: 2
-    title: Build one Humility and proportionate self-regard artifact
-    instructions: Create the smallest useful plan, checklist, diagram, record, or other artifact that
-      applies the rubric for Humility and proportionate self-regard. Store only category-level information
-      and omit names, secrets, credentials, diagnoses, protected work detail, and unnecessary third-party
-      information.
+    title: Receive correction or useful help in a real task
+    instructions: 'At a safe ordinary opportunity, ask for a concrete check or accept a welcomed offer
+      of help. Clarify what is useful, act on one sound correction or use the help, and acknowledge the
+      contribution. You may question an inaccurate correction or refuse unsuitable help politely; agreement
+      is not the objective.
+
+
+      Observation checks: A real exchange concerns useful help or a concrete check; Your response preserves
+      both judgment and acknowledgment; One practical consequence of the exchange is observed. Mark only
+      what you observed. Missing, mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -181,9 +193,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0510_a2_artifact_matches_rubric
-        - c0510_a2_minimum_private_detail
-        - c0510_a2_usable_next_step_present
+        - a_real_exchange_concerns_useful_help_or_a_concrete_check
+        - your_response_preserves_both_judgment_and_acknowledgment
+        - one_practical_consequence_of_the_exchange_is_observed
       - measurement_id: c0510_a2_boundary
         kind: boolean
         role: supporting
@@ -200,10 +212,35 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0510-HUMILITY-AND-PROPORTIONATE-SELF-REGARD-01-A3
     sequence: 3
-    title: Stress-test and revise the Humility and proportionate self-regard artifact
-    instructions: 'Test the artifact against one realistic variation, counterexample, or changed constraint.
-      Revise it only where the test exposes a gap, then compare the result with this evidence target:
-      Can accept correction, help, praise, and obscurity without grandiosity or self-erasure.'
+    title: Do useful work without using recognition as the verdict
+    instructions: 'Complete one modest appropriate contribution whether or not anyone notices. Record
+      its actual value and cost, then review how you responded to any praise, silence or correction. Do
+      not conceal work needed for fair credit or tolerate exploitation. Name one place where you can claim
+      your part plainly and one where you can recognize dependence.
+
+
+      Observation checks: A bounded contribution is completed; Recognition and actual value are distinguished;
+      Both fair self-credit and dependence appear in the review. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.
+
+
+      Final review: Where did you inflate or erase your part, and what would a proportionate response
+      sound like next time?
+
+
+      Examples: Supportive: The participant credited their preparation, used a helpful correction, and
+      recognized a colleague''s contribution without denying their own.
+
+
+      Mixed: Help was used, but disappointment about missing praise remained and was acknowledged.
+
+
+      Contradictory: Humility became accepting humiliation, hiding deserved credit or making others reassure
+      the participant.
+
+
+      Inconclusive: A modest-sounding statement was rehearsed but neither a real exchange nor a contribution
+      occurred.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -219,15 +256,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0510_a3_primary
-        kind: scenario
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0510_a3_variation_tested
-        - c0510_a3_revision_traceable
-        - c0510_a3_target_evidence_compared
+        - a_bounded_contribution_is_completed
+        - recognition_and_actual_value_are_distinguished
+        - both_fair_self_credit_and_dependence_appear_in_the_review
       - measurement_id: c0510_a3_boundary
         kind: boolean
         role: supporting
@@ -248,17 +285,17 @@ intervention:
       Humility and proportionate self-regard; no purchase, subscription, travel, credential, or public
       artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Humility and proportionate self-regard; assistive technology, interpretation, a support
-      person, and a deferred action are valid without penalty.
+    - Use a private collaborative task or a consented written exchange. If no safe partner is available,
+      rehearse with a supplied correction such as this label is unclear; live help and feedback then remain
+      untested. No deference to mistreatment is required.
     cultural_context:
     - Adapt the expression of Humility and proportionate self-regard to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Humility and proportionate self-regard opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use a private collaborative task or a consented written exchange. If no safe partner is available,
+      rehearse with a supplied correction such as this label is unclear; live help and feedback then remain
+      untested. No deference to mistreatment is required.
   pause_conditions:
   - Pause Humility and proportionate self-regard when capacity, consent, authority, privacy, access, care
     duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the
@@ -290,10 +327,7 @@ evidence_and_scoring:
   - c0510_a3_boundary
   - c0510_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Humility and proportionate self-regard action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Humility and proportionate self-regard criterion, depended
-    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - Humility became accepting humiliation, hiding deserved credit or making others reassure the participant.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Humility and proportionate self-regard explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -304,14 +338,20 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Humility and proportionate self-regard rules withhold observations older than
     90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can accept correction, help, praise, and obscurity without grandiosity or self-erasure.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Humility and proportionate self-regard requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Account for your part without claiming the whole result. Observed checks:
+    Your contribution is stated accurately; Dependencies and a limit remain visible; Praise and correction
+    responses are explicitly rehearsed. Action 2: Receive correction or useful help in a real task. Observed
+    checks: A real exchange concerns useful help or a concrete check; Your response preserves both judgment
+    and acknowledgment; One practical consequence of the exchange is observed. Action 3: Do useful work
+    without using recognition as the verdict. Observed checks: A bounded contribution is completed; Recognition
+    and actual value are distinguished; Both fair self-credit and dependence appear in the review.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A modest-sounding statement was rehearsed but neither
+    a real exchange nor a contribution occurred.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Humility
     and proportionate self-regard contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -321,9 +361,8 @@ evidence_and_scoring:
   - L05
   - L13
   - L24
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Humility and proportionate self-regard evidence.
@@ -331,11 +370,18 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define a rubric for humility and proportionate self-regard action was attempted or explicitly
-    deferred.
-  - The build one humility and proportionate self-regard artifact action was attempted or explicitly deferred.
-  - The stress-test and revise the humility and proportionate self-regard artifact action preserved a
-    limited conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Account for your part without claiming the whole result. Observed checks: Your contribution
+    is stated accurately; Dependencies and a limit remain visible; Praise and correction responses are
+    explicitly rehearsed.'
+  - 'Action 2: Receive correction or useful help in a real task. Observed checks: A real exchange concerns
+    useful help or a concrete check; Your response preserves both judgment and acknowledgment; One practical
+    consequence of the exchange is observed.'
+  - 'Action 3: Do useful work without using recognition as the verdict. Observed checks: A bounded contribution
+    is completed; Recognition and actual value are distinguished; Both fair self-credit and dependence
+    appear in the review.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -344,58 +390,55 @@ completion_and_review:
     - c0510_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Humility and proportionate self-regard only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Humility and proportionate self-regard across
-    roles, cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: Where did you inflate or erase your part, and what would a proportionate response
+    sound like next time?
+  transfer_limit: A small set of exchanges practices proportion, not a humility score. Rehearsed responses
+    remain distinct from live responses, and obscurity is not inherently virtuous.
   reflection:
-    before: What does Humility and proportionate self-regard require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Humility and proportionate self-regard criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can accept correction, help, praise, and obscurity without
-      grandiosity or self-erasure.', what contradiction or missing context matters most, and should this
-      Humility and proportionate self-regard design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Acknowledge your contribution and dependence
+      while responding to correction, help, praise and a lack of recognition without inflation or self-erasure.'
+    during: Which checks have actually been observed? Help was used, but disappointment about missing
+      praise remained and was acknowledged.
+    after: Where did you inflate or erase your part, and what would a proportionate response sound like
+      next time?
   review_guidance:
     repeat: Repeat the same bounded Humility and proportionate self-regard design only when the context
       and burden remain appropriate.
-    adapt: Change the Humility and proportionate self-regard medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Use a private collaborative task or a consented written exchange. If no safe partner is available,
+      rehearse with a supplied correction such as this label is unclear; live help and feedback then remain
+      untested. No deference to mistreatment is required.
     stop: Stop Humility and proportionate self-regard when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Humility and proportionate self-regard
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Humility and proportionate self-regard criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Humility and proportionate self-regard criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Humility and proportionate self-regard criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Humility and proportionate self-regard action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The participant credited their preparation, used a helpful correction, and recognized
+      a colleague's contribution without denying their own.
+    mixed: Help was used, but disappointment about missing praise remained and was acknowledged.
+    contradictory: Humility became accepting humiliation, hiding deserved credit or making others reassure
+      the participant.
+    inconclusive: A modest-sounding statement was rehearsed but neither a real exchange nor a contribution
+      occurred.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Humility and proportionate self-regard.
+    context_heading: Practice proportionate self-regard in ordinary exchanges
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Humility
       and proportionate self-regard.
   check_in_labels:
-    c0510_a1_primary: The bounded Humility and proportionate self-regard criterion for action 1 was observed
+    c0510_a1_primary: 'Observed checks: account for your part without claiming the whole result'
     c0510_a1_boundary: Action 1 stayed inside its stated Humility and proportionate self-regard boundary
     c0510_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0510_a2_primary: The bounded Humility and proportionate self-regard criterion for action 2 was observed
+    c0510_a2_primary: 'Observed checks: receive correction or useful help in a real task'
     c0510_a2_boundary: Action 2 stayed inside its stated Humility and proportionate self-regard boundary
     c0510_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0510_a3_primary: The bounded Humility and proportionate self-regard criterion for action 3 was observed
+    c0510_a3_primary: 'Observed checks: do useful work without using recognition as the verdict'
     c0510_a3_boundary: Action 3 stayed inside its stated Humility and proportionate self-regard boundary
     c0510_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Humility and proportionate
-    self-regard practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Where did you inflate or erase your part, and what would a proportionate response sound
+    like next time? Completion is not mastery.
+  plain_language_evidence: The participant credited their preparation, used a helpful correction, and
+    recognized a colleague's contribution without denying their own.
   display_order: 68
