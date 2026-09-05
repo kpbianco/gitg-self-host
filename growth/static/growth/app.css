@@ -35,6 +35,7 @@ body {
 
 a {
   color: var(--accent-dark);
+  overflow-wrap: anywhere;
 }
 
 button,

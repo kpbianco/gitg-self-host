@@ -74,6 +74,12 @@ lets the status pill shrink. It retains the existing zoom and overflow
 assertions and adds a screenshot of that exact state. No test, timeout,
 workflow command or aggregate gate is waived or changed.
 
+Initial PR #53 run 33978504897 passed that zoom journey and the other 14
+existing journeys. Both new journeys exposed long reference URLs overflowing
+mobile setup. Links now wrap within the available width, retaining their full
+text and targets. This follow-up requires a fresh complete CI run; the first
+15/17 result is not a browser pass for the revised head.
+
 ## Verification
 
 - Ten focused authoring/import/closeout/replay tests passed, including new

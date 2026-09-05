@@ -541,7 +541,7 @@ docs/evidence/M6I-03-ASSESSMENT-CALIBRATION-READINESS-2026-09-02.md	2188
 docs/evidence/M6I-04-CONSENTED-ASSESSMENT-CALIBRATION-DATA-2026-09-02.md	4038
 docs/evidence/M6I-05-ASSESSMENT-CALIBRATION-ANALYSIS-READINESS-2026-09-03.md	4196
 docs/evidence/M6J-01-TAILORED-COMPETENCY-PRACTICES-2026-09-05.md	3691
-docs/evidence/M6J-02-SELF-KNOWLEDGE-PRACTICES-2026-09-05.md	6678
+docs/evidence/M6J-02-SELF-KNOWLEDGE-PRACTICES-2026-09-05.md	7041
 docs/evidence/local/.gitignore	14
 docs/ideal_person_curriculum_scope_audit.md	4060
 docs/ideal_person_curriculum_v2_revision_report.md	5987
@@ -661,7 +661,7 @@ growth/services/profile.py	14579
 growth/services/score_state.py	29529
 growth/services/scoring.py	24842
 growth/services/weekly_execution.py	17931
-growth/static/growth/app.css	28560
+growth/static/growth/app.css	28587
 growth/static/growth/assessment.js	16629
 growth/static/growth/contextual_forms.js	2145
 growth/static/growth/personal_os.js	1613
