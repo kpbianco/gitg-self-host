@@ -17,9 +17,9 @@ jobs:
   quality:
     name: Ruff, Django, and pytest
     runs-on: ubuntu-24.04
-    # The complete non-browser suite plus isolated readiness gates
-    # repeatedly recomputes the full corpus. Preserve headroom for runner variance.
-    timeout-minutes: 120
+    # Run 33948198395 passed pytest but reached 120 minutes during readiness.
+    # Allow the remaining full-corpus gates to finish on slower runners.
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
@@ -78,9 +78,9 @@ jobs:
   compose:
     name: Docker Compose deployment drill
     runs-on: ubuntu-24.04
-    # The full backup/recreation/restore drill validates the complete source
-    # corpus repeatedly and can exceed 20 minutes under runner variance.
-    timeout-minutes: 35
+    # Run 33948198395 reached 35 minutes during post-restore readiness.
+    # Preserve the complete drill and allow headroom for repeated corpus checks.
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v6
       - run: make compose-smoke
