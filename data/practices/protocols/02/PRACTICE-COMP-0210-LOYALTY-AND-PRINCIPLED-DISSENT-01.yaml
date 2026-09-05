@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0210-LOYALTY-AND-PRINCIPLED-DISSENT-01
 slug: c0210-loyalty-and-principled-dissent-practice
-name: Bounded Loyalty and principled dissent Practice
+name: Support a group while refusing one misleading claim
 parent_competency_id: '02.10'
 domain_id: '02'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 02.10
-      (Loyalty and principled dissent); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 02.10; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,38 +34,32 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Loyalty and principled dissent through a small repeated practice bounded by the canonical
-    scope: Honor legitimate obligations to people and institutions without becoming complicit in wrongdoing.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can explain where loyalty
-    ends and has voiced dissent or withdrawn when principle required it. The protocol creates a small
-    opportunity to examine that target without treating completion as broad capability.'
+  purpose: Distinguish legitimate loyalty from complicity and express a principled disagreement constructively.
+  why_recommended: Distinguish legitimate loyalty from complicity and express a principled disagreement
+    constructively.
   claims:
-  - statement: Using the canonical scope and evidence target for Loyalty and principled dissent is a traceable
-      product-design basis for a source-only draft protocol.
+  - statement: Distinguish legitimate loyalty from complicity and express a principled disagreement constructively.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Loyalty and principled dissent practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Loyalty and principled dissent as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Loyalty and principled
-    dissent context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Loyalty and
-    principled dissent; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Use a written hypothetical response. Real dissent should account for safety
+    and power; the exercise does not require exposing wrongdoing publicly.
+  opportunity_considerations: 'Use this fictional case: a club wants to describe an event as fully attended
+    although several seats were empty. You value the club and have been asked to help write its summary.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Loyalty and principled dissent.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use this fictional case: a club wants to describe an event as fully attended although several seats
+    were empty. You value the club and have been asked to help write its summary.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Loyalty and principled dissent
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a written hypothetical response. Real dissent should account for safety and power; the exercise
+    does not require exposing wrongdoing publicly.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -78,21 +71,23 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Loyalty and principled dissent
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-REPEATED-HABIT
+  protocol_class: PF-RELATIONAL-CONVERSATION
   duration_days: 10
-  cadence: Complete three bounded Loyalty and principled dissent actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Loyalty and principled dissent; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Loyalty
-    and principled dissent. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Loyalty and principled dissent actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use this fictional case: a club wants to describe an event as fully attended although several
+    seats were empty. You value the club and have been asked to help write its summary. Goal: Distinguish
+    legitimate loyalty from complicity and express a principled disagreement constructively. Scope: An
+    ordinary reporting case tests loyalty and dissent. Whistleblowing, employment disputes and serious
+    wrongdoing need additional local and professional guidance. Time and effort: About 25 minutes to analyze
+    the obligation and rehearse a truthful alternative. Adaptation: Use a written hypothetical response.
+    Real dissent should account for safety and power; the exercise does not require exposing wrongdoing
+    publicly. Keep personal working notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a written hypothetical response. Real dissent should account for safety and
+    power; the exercise does not require exposing wrongdoing publicly.
+  expected_burden: About 25 minutes to analyze the obligation and rehearse a truthful alternative.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Loyalty and principled dissent protocol to rank worth, coerce participation, demand disclosure,
@@ -100,18 +95,21 @@ intervention:
   - Treating a completed Loyalty and principled dissent action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Loyalty and principled dissent situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a written
+    hypothetical response. Real dissent should account for safety and power; the exercise does not require
+    exposing wrongdoing publicly.
   actions:
   - stable_id: PRACTICE-COMP-0210-LOYALTY-AND-PRINCIPLED-DISSENT-01-A1
     sequence: 1
-    title: Define one small Loyalty and principled dissent behavior
-    instructions: 'Choose one voluntary, reversible behavior that represents a narrow part of Loyalty
-      and principled dissent. Bound the cue, context, duration, and valid interruption using this scope:
-      Honor legitimate obligations to people and institutions without becoming complicit in wrongdoing.'
+    title: Separate the group's good from its proposed method
+    instructions: 'Name the legitimate aim, such as encouraging future participation, and the misleading
+      claim proposed to serve it. Identify who relies on the summary and what responsibility your role
+      creates. Explain why supporting the group does not require endorsing every method it chooses.
+
+
+      Observation checks: A legitimate shared aim is recognized; The problematic method is identified
+      precisely; Responsibility follows the person''s actual role. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -133,9 +131,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0210_a1_behavior_observable
-        - c0210_a1_cue_and_context_defined
-        - c0210_a1_interruption_valid
+        - a_legitimate_shared_aim_is_recognized
+        - the_problematic_method_is_identified_precisely
+        - responsibility_follows_the_person_s_actual_role
       - measurement_id: c0210_a1_boundary
         kind: boolean
         role: supporting
@@ -152,10 +150,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0210-LOYALTY-AND-PRINCIPLED-DISSENT-01-A2
     sequence: 2
-    title: Try the Loyalty and principled dissent behavior in three windows
-    instructions: Attempt the same small Loyalty and principled dissent behavior in up to three naturally
-      occurring windows. Record attempt, defer, interruption, support used, and adverse effect separately;
-      never manufacture deprivation, distress, conflict, or unsafe conditions to obtain a repetition.
+    title: Draft dissent with a usable alternative
+    instructions: 'Write a respectful objection that names the inaccurate wording and offers a truthful
+      version, such as noting strong discussion without claiming full attendance. Explain how the alternative
+      serves the shared aim. Avoid attacking motives you cannot know or presenting personal preference
+      as a moral requirement.
+
+
+      Observation checks: The objection states a concrete principle; A truthful alternative serves the
+      shared aim; Unsupported accusations are excluded. Mark only what you observed. Missing, mixed and
+      negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -171,15 +175,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0210_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - the_objection_states_a_concrete_principle
+        - a_truthful_alternative_serves_the_shared_aim
+        - unsupported_accusations_are_excluded
       - measurement_id: c0210_a2_boundary
         kind: boolean
         role: supporting
@@ -196,10 +200,32 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0210-LOYALTY-AND-PRINCIPLED-DISSENT-01-A3
     sequence: 3
-    title: Review the Loyalty and principled dissent repetition pattern
-    instructions: 'Compare the windows for feasibility, burden, context, and interruption. Keep missing
-      or mixed evidence explicit and compare the limited pattern with this evidence target: Can explain
-      where loyalty ends and has voiced dissent or withdrawn when principle required it.'
+    title: Define what you will and will not endorse
+    instructions: 'Rehearse two replies: the group accepts the correction, or it insists on the false
+      wording. In the second case, state the contribution you can still offer and what you cannot approve
+      or sign. Identify a proportionate next channel while acknowledging the limits and costs of your
+      role.
+
+
+      Observation checks: Acceptance and resistance are both rehearsed; Endorsement has an explicit boundary;
+      Any next channel is proportionate to the case. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.
+
+
+      Final review: What exactly are you loyal to, and which method would betray that commitment?
+
+
+      Examples: Supportive: The objection preserved the club''s legitimate aim while replacing its inaccurate
+      attendance claim.
+
+
+      Mixed: The misleading wording was rejected but no constructive alternative was offered.
+
+
+      Contradictory: Loyalty was defined as endorsing whatever the group requested, regardless of truth.
+
+
+      Inconclusive: The person praised honesty without specifying what they would refuse to approve.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -221,9 +247,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0210_a3_windows_distinguished
-        - c0210_a3_burden_compared
-        - c0210_a3_transfer_not_assumed
+        - acceptance_and_resistance_are_both_rehearsed
+        - endorsement_has_an_explicit_boundary
+        - any_next_channel_is_proportionate_to_the_case
       - measurement_id: c0210_a3_boundary
         kind: boolean
         role: supporting
@@ -244,16 +270,15 @@ intervention:
       Loyalty and principled dissent; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Loyalty and principled dissent; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - Use a written hypothetical response. Real dissent should account for safety and power; the exercise
+      does not require exposing wrongdoing publicly.
     cultural_context:
     - Adapt the expression of Loyalty and principled dissent to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Loyalty and principled dissent opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use a written hypothetical response. Real dissent should account for safety and power; the exercise
+      does not require exposing wrongdoing publicly.
   pause_conditions:
   - Pause Loyalty and principled dissent when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -285,10 +310,7 @@ evidence_and_scoring:
   - c0210_a3_boundary
   - c0210_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Loyalty and principled dissent action exceeded consent, authority, privacy, qualification, role,
-    burden, or safety boundaries.
-  - The evidence contradicted the intended Loyalty and principled dissent criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - Loyalty was defined as endorsing whatever the group requested, regardless of truth.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Loyalty and principled dissent explicitly; support can enable access and never reduces dignity
     or silently changes the typed value.
@@ -299,14 +321,20 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Loyalty and principled dissent rules withhold observations older than 90 days;
     no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can explain where loyalty ends and has voiced dissent or withdrawn when principle required
-    it.—not completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Loyalty and principled dissent requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Separate the group''s good from its proposed method. Observed checks:
+    A legitimate shared aim is recognized; The problematic method is identified precisely; Responsibility
+    follows the person''s actual role. Action 2: Draft dissent with a usable alternative. Observed checks:
+    The objection states a concrete principle; A truthful alternative serves the shared aim; Unsupported
+    accusations are excluded. Action 3: Define what you will and will not endorse. Observed checks: Acceptance
+    and resistance are both rehearsed; Endorsement has an explicit boundary; Any next channel is proportionate
+    to the case.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. The person praised honesty without specifying what
+    they would refuse to approve.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Loyalty
     and principled dissent contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -316,9 +344,8 @@ evidence_and_scoring:
   - L25
   - L31
   - L33
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Loyalty and principled dissent evidence.
@@ -326,11 +353,16 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define one small loyalty and principled dissent behavior action was attempted or explicitly deferred.
-  - The try the loyalty and principled dissent behavior in three windows action was attempted or explicitly
-    deferred.
-  - The review the loyalty and principled dissent repetition pattern action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Separate the group''s good from its proposed method. Observed checks: A legitimate shared
+    aim is recognized; The problematic method is identified precisely; Responsibility follows the person''s
+    actual role.'
+  - 'Action 2: Draft dissent with a usable alternative. Observed checks: The objection states a concrete
+    principle; A truthful alternative serves the shared aim; Unsupported accusations are excluded.'
+  - 'Action 3: Define what you will and will not endorse. Observed checks: Acceptance and resistance are
+    both rehearsed; Endorsement has an explicit boundary; Any next channel is proportionate to the case.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -339,57 +371,50 @@ completion_and_review:
     - c0210_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Loyalty and principled dissent only when the initial context
-    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
-    named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Loyalty and principled dissent across roles,
-    cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: What exactly are you loyal to, and which method would betray that commitment?
+  transfer_limit: An ordinary reporting case tests loyalty and dissent. Whistleblowing, employment disputes
+    and serious wrongdoing need additional local and professional guidance.
   reflection:
-    before: What does Loyalty and principled dissent require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Loyalty and principled dissent criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can explain where loyalty ends and has voiced dissent or withdrawn
-      when principle required it.', what contradiction or missing context matters most, and should this
-      Loyalty and principled dissent design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Distinguish legitimate loyalty from complicity
+      and express a principled disagreement constructively.'
+    during: Which checks have actually been observed? The misleading wording was rejected but no constructive
+      alternative was offered.
+    after: What exactly are you loyal to, and which method would betray that commitment?
   review_guidance:
     repeat: Repeat the same bounded Loyalty and principled dissent design only when the context and burden
       remain appropriate.
-    adapt: Change the Loyalty and principled dissent medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: Use a written hypothetical response. Real dissent should account for safety and power; the
+      exercise does not require exposing wrongdoing publicly.
     stop: Stop Loyalty and principled dissent when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Loyalty and principled dissent questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Loyalty and principled dissent criteria were observed with provenance and
-      no adverse boundary signal in the selected context.
-    mixed: Some Loyalty and principled dissent criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Loyalty and principled dissent criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Loyalty and principled dissent action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The objection preserved the club's legitimate aim while replacing its inaccurate attendance
+      claim.
+    mixed: The misleading wording was rejected but no constructive alternative was offered.
+    contradictory: Loyalty was defined as endorsing whatever the group requested, regardless of truth.
+    inconclusive: The person praised honesty without specifying what they would refuse to approve.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Loyalty and principled dissent.
+    context_heading: Support a group while refusing one misleading claim
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Loyalty and
       principled dissent.
   check_in_labels:
-    c0210_a1_primary: The bounded Loyalty and principled dissent criterion for action 1 was observed
+    c0210_a1_primary: 'Observed checks: separate the group''s good from its proposed method'
     c0210_a1_boundary: Action 1 stayed inside its stated Loyalty and principled dissent boundary
     c0210_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0210_a2_primary: The bounded Loyalty and principled dissent criterion for action 2 was observed
+    c0210_a2_primary: 'Observed checks: draft dissent with a usable alternative'
     c0210_a2_boundary: Action 2 stayed inside its stated Loyalty and principled dissent boundary
     c0210_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0210_a3_primary: The bounded Loyalty and principled dissent criterion for action 3 was observed
+    c0210_a3_primary: 'Observed checks: define what you will and will not endorse'
     c0210_a3_boundary: Action 3 stayed inside its stated Loyalty and principled dissent boundary
     c0210_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Loyalty and principled
-    dissent practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What exactly are you loyal to, and which method would betray that commitment? Completion
+    is not mastery.
+  plain_language_evidence: The objection preserved the club's legitimate aim while replacing its inaccurate
+    attendance claim.
   display_order: 30

@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0214-CONSCIENCE-CONSCIENTIOUS-OBJECTION-AND-CIVIL-DISOBEDIENCE-01
 slug: c0214-conscience-conscientious-objection-and-civil-disobedience-practice
-name: Bounded Conscience, conscientious objection, and civil disobedience Practice
+name: Justify a principled refusal and its responsibilities
 parent_competency_id: '02.14'
 domain_id: '02'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 02.14
-      (Conscience, conscientious objection, and civil disobedience); canonical scope, evidence target,
-      classification, domain boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 02.14; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,41 +34,35 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Conscience, conscientious objection, and civil disobedience through a qualified-support
-    preparation bounded by the canonical scope: Understand when law, authority, employment, or group loyalty
-    may be resisted for principled reasons and what responsibilities accompany resistance.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can justify a refusal
-    or act of disobedience using public reasons, proportionality, nonviolence where possible, and willingness
-    to accept accountability. The protocol creates a small opportunity to examine that target without
-    treating completion as broad capability.'
+  purpose: Explain a conscientious objection using reasons others can examine, proportionate methods and
+    accountability.
+  why_recommended: Explain a conscientious objection using reasons others can examine, proportionate methods
+    and accountability.
   claims:
-  - statement: Using the canonical scope and evidence target for Conscience, conscientious objection,
-      and civil disobedience is a traceable product-design basis for a source-only draft protocol.
+  - statement: Explain a conscientious objection using reasons others can examine, proportionate methods
+      and accountability.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Conscience, conscientious objection, and civil disobedience
     practice fit the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Conscience, conscientious objection, and civil disobedience as not applicable,
     consciously unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity,
     or safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Conscience, conscientious
-    objection, and civil disobedience context, understand the source-only status, and stop without losing
-    safety, care, employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Conscience,
-    conscientious objection, and civil disobedience; do not manufacture conflict, deprivation, exposure,
-    disclosure, danger, urgency, or dependence for evidence.
+  readiness_considerations: Use the fictional case or a written statement. People dependent on a group
+    may need a safer route or an advocate; direct confrontation is not a completion requirement.
+  opportunity_considerations: Use a fictional club policy requiring an insulting initiation phrase that
+    a member refuses to repeat. Draft a response; no actual lawbreaking, protest, employment dispute or
+    confrontation is required.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Conscience, conscientious objection,
-    and civil disobedience.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Use a fictional club policy requiring an insulting initiation phrase that a member refuses to repeat.
+    Draft a response; no actual lawbreaking, protest, employment dispute or confrontation is required.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Conscience, conscientious objection,
-    and civil disobedience instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use the fictional case or a written statement. People dependent on a group may need a safer route
+    or an advocate; direct confrontation is not a completion requirement.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -82,21 +75,24 @@ meaning_and_fit:
     objection, and civil disobedience as inferiority; competing reasonable interpretations and conscientious
     refusal remain visible.
 intervention:
-  protocol_class: PF-QUALIFIED-CONSULTATION
+  protocol_class: PF-KNOWLEDGE-APPLICATION
   duration_days: 10
-  cadence: Complete three bounded Conscience, conscientious objection, and civil disobedience actions
-    over ten days, preserving explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Conscience, conscientious objection, and civil disobedience; copy the
-    canonical scope and evidence target into a private working note; define the action boundary, valid
-    supports, privacy limit, and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Conscience,
-    conscientious objection, and civil disobedience. Do not store private prose, names, identities, diagnoses,
-    allegations, credentials, account data, protected work information, intimate detail, artifact contents,
-    observer narrative, or another person's secrets. This source-only draft is not surveillance, professional
-    advice, treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Conscience, conscientious objection,
-    and civil disobedience actions, and review; scope may be reduced or deferred for access, care, health,
-    workload, conscience, or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use a fictional club policy requiring an insulting initiation phrase that a member refuses to
+    repeat. Draft a response; no actual lawbreaking, protest, employment dispute or confrontation is required.
+    Goal: Explain a conscientious objection using reasons others can examine, proportionate methods and
+    accountability. Scope: The case practices principled refusal within a group. Civil disobedience involves
+    further questions about law, legitimacy, public action and consequences that this rehearsal does not
+    settle. Time and effort: About 30 minutes to write the objection, compare methods and review accountability.
+    Adaptation: Use the fictional case or a written statement. People dependent on a group may need a
+    safer route or an advocate; direct confrontation is not a completion requirement. Keep personal working
+    notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use the fictional case or a written statement. People dependent on a group may
+    need a safer route or an advocate; direct confrontation is not a completion requirement.
+  expected_burden: About 30 minutes to write the objection, compare methods and review accountability.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Conscience, conscientious objection, and civil disobedience protocol to rank worth, coerce
@@ -105,21 +101,22 @@ intervention:
   - Treating a completed Conscience, conscientious objection, and civil disobedience action, a polished
     artifact, agreement, confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Conscience, conscientious objection, and civil disobedience situation involving emergency response,
-    abuse, retaliation, illegal conduct, medical treatment, legal representation, financial-loss decisions,
-    safeguarding, hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use the fictional
+    case or a written statement. People dependent on a group may need a safer route or an advocate; direct
+    confrontation is not a completion requirement.
   actions:
   - stable_id: PRACTICE-COMP-0214-CONSCIENCE-CONSCIENTIOUS-OBJECTION-AND-CIVIL-DISOBEDIENCE-01-A1
     sequence: 1
-    title: Bound the qualified question for Conscience, conscientious objection, and civil disobedience
-    instructions: 'Turn Conscience, conscientious objection, and civil disobedience into one educational
-      or planning question and identify the qualification and jurisdiction needed to answer it. Use the
-      canonical scope to separate general learning from diagnosis, treatment, legal advice, financial
-      advice, safeguarding decisions, or other professional judgment: Understand when law, authority,
-      employment, or group loyalty may be resisted for principled reasons and what responsibilities accompany
-      resistance.'
+    title: State the principle and its public reasons
+    instructions: 'Describe the required act, why conscience objects and who may be harmed or demeaned.
+      Give reasons another member could examine even if they do not share your worldview. Distinguish
+      objection to the degrading act from a preference to avoid ordinary inconvenience or a claim that
+      every personal conviction overrides every obligation.
+
+
+      Observation checks: The objection identifies a specific act and principle; Reasons are intelligible
+      outside the speaker''s worldview; Conscience is distinguished from mere convenience. Mark only what
+      you observed. Missing, mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -141,9 +138,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0214_a1_question_bounded
-        - c0214_a1_qualification_named
-        - c0214_a1_professional_boundary_explicit
+        - the_objection_identifies_a_specific_act_and_principle
+        - reasons_are_intelligible_outside_the_speaker_s_worldview
+        - conscience_is_distinguished_from_mere_convenience
       - measurement_id: c0214_a1_boundary
         kind: boolean
         role: supporting
@@ -160,12 +157,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0214-CONSCIENCE-CONSCIENTIOUS-OBJECTION-AND-CIVIL-DISOBEDIENCE-01-A2
     sequence: 2
-    title: Prepare minimum information for Conscience, conscientious objection, and civil disobedience
-    instructions: Create a privacy-minimized Conscience, conscientious objection, and civil disobedience
-      consultation note containing only the question, relevant category-level facts, current constraints,
-      and desired decision. Omit diagnoses, allegations, account numbers, credentials, protected work
-      information, intimate detail, and third-party identity unless a qualified professional lawfully
-      requires it through an appropriate channel.
+    title: Compare proportionate ways to resist
+    instructions: 'Compare requesting an exemption, proposing a respectful replacement, declining the
+      initiation or leaving the club. Consider effects on other members and whether a quiet or public
+      response serves the reason for refusal. Keep the methods nonviolent and avoid coercing others to
+      declare agreement.
+
+
+      Observation checks: Several feasible responses are compared; Effects on others and proportionality
+      are considered; The response preserves others'' freedom of conscience. Mark only what you observed.
+      Missing, mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -187,9 +188,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0214_a2_minimum_information_only
-        - c0214_a2_sensitive_detail_excluded
-        - c0214_a2_decision_need_named
+        - several_feasible_responses_are_compared
+        - effects_on_others_and_proportionality_are_considered
+        - the_response_preserves_others_freedom_of_conscience
       - measurement_id: c0214_a2_boundary
         kind: boolean
         role: supporting
@@ -206,12 +207,36 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0214-CONSCIENCE-CONSCIENTIOUS-OBJECTION-AND-CIVIL-DISOBEDIENCE-01-A3
     sequence: 3
-    title: Record a bounded Conscience, conscientious objection, and civil disobedience disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: Can justify a refusal or act of disobedience using public reasons, proportionality,
-      nonviolence where possible, and willingness to accept accountability.'
+    title: Explain accountability without accepting unlimited mistreatment
+    instructions: 'Write the chosen refusal, the alternative you offer and the ordinary consequences you
+      understand may follow. Identify how you would answer criticism or correct a factual error. Accepting
+      responsibility for a choice does not require accepting abuse or abandoning access to appropriate
+      advice and support.
+
+
+      Observation checks: The refusal and any offered alternative are clear; Foreseeable consequences
+      are acknowledged; Accountability includes correction and legitimate support. Mark only what you
+      observed. Missing, mixed and negative results are valid; a deferred action is not completed.
+
+
+      Final review: Could someone disagree with your conclusion while still understanding the principle
+      and the responsibilities you accept?
+
+
+      Examples: Supportive: The member proposed a respectful replacement and explained a principled limit
+      without demanding universal agreement.
+
+
+      Mixed: The principle was clear but the proposed response imposed unnecessary costs on uninvolved
+      members.
+
+
+      Contradictory: Personal conviction was treated as permission to intimidate others or as freedom
+      from every consequence.
+
+
+      Inconclusive: A refusal was announced without reasons, a specific objection or consideration of
+      consequences.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -227,14 +252,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0214_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0214_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - the_refusal_and_any_offered_alternative_are_clear
+        - foreseeable_consequences_are_acknowledged
+        - accountability_includes_correction_and_legitimate_support
       - measurement_id: c0214_a3_boundary
         kind: boolean
         role: supporting
@@ -255,17 +281,15 @@ intervention:
       Conscience, conscientious objection, and civil disobedience; no purchase, subscription, travel,
       credential, or public artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Conscience, conscientious objection, and civil disobedience; assistive technology, interpretation,
-      a support person, and a deferred action are valid without penalty.
+    - Use the fictional case or a written statement. People dependent on a group may need a safer route
+      or an advocate; direct confrontation is not a completion requirement.
     cultural_context:
     - Adapt the expression of Conscience, conscientious objection, and civil disobedience to direct or
       indirect communication, collective or individual decision structures, local norms, faith or secular
       commitments, and role obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Conscience, conscientious objection, and civil disobedience opportunity is unavailable
-      or inappropriate, use a fictional, historical, public, simulated, or planning-only equivalent and
-      retain the narrower evidence classification.
+    - Use the fictional case or a written statement. People dependent on a group may need a safer route
+      or an advocate; direct confrontation is not a completion requirement.
   pause_conditions:
   - Pause Conscience, conscientious objection, and civil disobedience when capacity, consent, authority,
     privacy, access, care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed
@@ -298,11 +322,7 @@ evidence_and_scoring:
   - c0214_a3_boundary
   - c0214_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Conscience, conscientious objection, and civil disobedience action exceeded consent, authority,
-    privacy, qualification, role, burden, or safety boundaries.
-  - The evidence contradicted the intended Conscience, conscientious objection, and civil disobedience
-    criterion, depended on coercion or hidden private content, or could not distinguish the protocol from
-    contextual change.
+  - Personal conviction was treated as permission to intimidate others or as freedom from every consequence.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Conscience, conscientious objection, and civil disobedience explicitly; support can enable access
     and never reduces dignity or silently changes the typed value.
@@ -314,15 +334,21 @@ evidence_and_scoring:
     explicit diminishing multipliers.
   recency_rule: Generated Conscience, conscientious objection, and civil disobedience rules withhold observations
     older than 90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can justify a refusal or act of disobedience using public reasons, proportionality, nonviolence
-    where possible, and willingness to accept accountability.—not completion, confidence, conformity,
-    output, independence, or worth.
-  evidence_quality_rubric: Quality for Conscience, conscientious objection, and civil disobedience requires
-    a bounded context, allowlisted observations, provenance, contradiction and adverse handling, and preserved
-    uncertainty; free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: State the principle and its public reasons. Observed checks: The objection
+    identifies a specific act and principle; Reasons are intelligible outside the speaker''s worldview;
+    Conscience is distinguished from mere convenience. Action 2: Compare proportionate ways to resist.
+    Observed checks: Several feasible responses are compared; Effects on others and proportionality are
+    considered; The response preserves others'' freedom of conscience. Action 3: Explain accountability
+    without accepting unlimited mistreatment. Observed checks: The refusal and any offered alternative
+    are clear; Foreseeable consequences are acknowledged; Accountability includes correction and legitimate
+    support.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A refusal was announced without reasons, a specific
+    objection or consideration of consequences.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Conscience,
     conscientious objection, and civil disobedience contribution under typed evaluation; protocol performance
     remains distinct and is never counted twice.
@@ -332,9 +358,8 @@ evidence_and_scoring:
   - L25
   - L30
   - L31
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Conscience, conscientious objection, and civil disobedience evidence.
@@ -342,12 +367,17 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for conscience, conscientious objection, and civil disobedience action
-    was attempted or explicitly deferred.
-  - The prepare minimum information for conscience, conscientious objection, and civil disobedience action
-    was attempted or explicitly deferred.
-  - The record a bounded conscience, conscientious objection, and civil disobedience disposition action
-    preserved a limited conclusion, contradiction, or inconclusive result.
+  - 'Action 1: State the principle and its public reasons. Observed checks: The objection identifies a
+    specific act and principle; Reasons are intelligible outside the speaker''s worldview; Conscience
+    is distinguished from mere convenience.'
+  - 'Action 2: Compare proportionate ways to resist. Observed checks: Several feasible responses are compared;
+    Effects on others and proportionality are considered; The response preserves others'' freedom of conscience.'
+  - 'Action 3: Explain accountability without accepting unlimited mistreatment. Observed checks: The refusal
+    and any offered alternative are clear; Foreseeable consequences are acknowledged; Accountability includes
+    correction and legitimate support.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -356,67 +386,56 @@ completion_and_review:
     - c0214_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Conscience, conscientious objection, and civil disobedience
-    only when the initial context remained safe, the evidence criteria were usable, burden was acceptable,
-    and a new context can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Conscience, conscientious objection, and civil
-    disobedience across roles, cultures, relationships, seasons, stress levels, disability states, institutions,
-    or high-consequence settings.
+  progression_criteria: Could someone disagree with your conclusion while still understanding the principle
+    and the responsibilities you accept?
+  transfer_limit: The case practices principled refusal within a group. Civil disobedience involves further
+    questions about law, legitimacy, public action and consequences that this rehearsal does not settle.
   reflection:
-    before: What does Conscience, conscientious objection, and civil disobedience require in this exact
-      context, what remains outside my role or authority, and which scope sentence or evidence criterion
-      will keep the practice honest?
-    during: Which observable Conscience, conscientious objection, and civil disobedience criterion is
-      present, absent, mixed, or unknown, and are consent, privacy, access, burden, and stop conditions
-      still intact?
-    after: How did the result compare with 'Can justify a refusal or act of disobedience using public
-      reasons, proportionality, nonviolence where possible, and willingness to accept accountability.',
-      what contradiction or missing context matters most, and should this Conscience, conscientious objection,
-      and civil disobedience design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Explain a conscientious objection using reasons
+      others can examine, proportionate methods and accountability.'
+    during: Which checks have actually been observed? The principle was clear but the proposed response
+      imposed unnecessary costs on uninvolved members.
+    after: Could someone disagree with your conclusion while still understanding the principle and the
+      responsibilities you accept?
   review_guidance:
     repeat: Repeat the same bounded Conscience, conscientious objection, and civil disobedience design
       only when the context and burden remain appropriate.
-    adapt: Change the Conscience, conscientious objection, and civil disobedience medium, scope, support,
-      timing, criteria, or context while preserving provenance and the narrower evidence claim.
+    adapt: Use the fictional case or a written statement. People dependent on a group may need a safer
+      route or an advocate; direct confrontation is not a completion requirement.
     stop: Stop Conscience, conscientious objection, and civil disobedience when the practice becomes coercive,
       unsafe, privacy-invasive, role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Conscience, conscientious objection,
-      and civil disobedience questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Conscience, conscientious objection, and civil disobedience criteria were
-      observed with provenance and no adverse boundary signal in the selected context.
-    mixed: Some Conscience, conscientious objection, and civil disobedience criteria were observed while
-      burden, support, contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Conscience, conscientious objection, and civil
-      disobedience criterion, introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Conscience, conscientious objection, and civil disobedience action was deferred,
-      not observed, not applicable, stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The member proposed a respectful replacement and explained a principled limit without
+      demanding universal agreement.
+    mixed: The principle was clear but the proposed response imposed unnecessary costs on uninvolved members.
+    contradictory: Personal conviction was treated as permission to intimidate others or as freedom from
+      every consequence.
+    inconclusive: A refusal was announced without reasons, a specific objection or consideration of consequences.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Conscience, conscientious objection, and civil disobedience.
+    context_heading: Justify a principled refusal and its responsibilities
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Conscience,
       conscientious objection, and civil disobedience.
   check_in_labels:
-    c0214_a1_primary: The bounded Conscience, conscientious objection, and civil disobedience criterion
-      for action 1 was observed
+    c0214_a1_primary: 'Observed checks: state the principle and its public reasons'
     c0214_a1_boundary: Action 1 stayed inside its stated Conscience, conscientious objection, and civil
       disobedience boundary
     c0214_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0214_a2_primary: The bounded Conscience, conscientious objection, and civil disobedience criterion
-      for action 2 was observed
+    c0214_a2_primary: 'Observed checks: compare proportionate ways to resist'
     c0214_a2_boundary: Action 2 stayed inside its stated Conscience, conscientious objection, and civil
       disobedience boundary
     c0214_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0214_a3_primary: The bounded Conscience, conscientious objection, and civil disobedience criterion
-      for action 3 was observed
+    c0214_a3_primary: 'Observed checks: explain accountability without accepting unlimited mistreatment'
     c0214_a3_boundary: Action 3 stayed inside its stated Conscience, conscientious objection, and civil
       disobedience boundary
     c0214_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Conscience, conscientious
-    objection, and civil disobedience practice, including support, contradiction, defer, no result, or
-    harm.
+  completion_copy: Could someone disagree with your conclusion while still understanding the principle
+    and the responsibilities you accept? Completion is not mastery.
+  plain_language_evidence: The member proposed a respectful replacement and explained a principled limit
+    without demanding universal agreement.
   display_order: 34

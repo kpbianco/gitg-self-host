@@ -778,9 +778,9 @@ Migrations and canonical seeding run safely on startup.
 
 ## Current limitations
 
-- The tailored-content rewrite is incomplete. M6J-01 replaces 27 practices in
-  meaning/worldview and domestic competence with specific steps, checks,
-  examples, adaptations and scope limits. Another 356 practices remain
+- The tailored-content rewrite is incomplete. M6J-01 replaces 42 practices in
+  meaning/worldview, ethics/integrity and domestic competence with specific steps, checks,
+  examples, adaptations and scope limits. Another 341 practices remain
   rewrite-pending; 383 active packages do not imply 383 finished exercises.
 - Before importing revised content, finish or explicitly stop any active or
   paused practice that uses changed instructions. Import fails before writes

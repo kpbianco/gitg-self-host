@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0208-TEMPERANCE-AND-MODERATION-01
 slug: c0208-temperance-and-moderation-practice
-name: Bounded Temperance and moderation Practice
+name: Enjoy a chosen pleasure within a flexible boundary
 parent_competency_id: '02.08'
 domain_id: '02'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 02.08
-      (Temperance and moderation); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 02.08; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +34,36 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Temperance and moderation through a small repeated practice bounded by the canonical
-    scope: Use pleasure, consumption, sex, food, money, entertainment, comfort, and status without becoming
-    ruled by them.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can enjoy a good without
-    compulsive excess, shame, or rigid purity. The protocol creates a small opportunity to examine that
-    target without treating completion as broad capability.'
+  purpose: Practice enjoying a discretionary good without letting it displace an obligation or turn into
+    a purity test.
+  why_recommended: Practice enjoying a discretionary good without letting it displace an obligation or
+    turn into a purity test.
   claims:
-  - statement: Using the canonical scope and evidence target for Temperance and moderation is a traceable
-      product-design basis for a source-only draft protocol.
+  - statement: Practice enjoying a discretionary good without letting it displace an obligation or turn
+      into a purity test.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Temperance and moderation practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Temperance and moderation as not applicable, consciously unchosen, or
     deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Temperance and moderation
-    context, understand the source-only status, and stop without losing safety, care, employment, housing,
-    services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Temperance
-    and moderation; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency, or
-    dependence for evidence.
+  readiness_considerations: Use a natural activity boundary instead of a timer when timing creates stress.
+    Restful or supported leisure is as eligible as an active hobby.
+  opportunity_considerations: Choose a familiar low-stakes leisure activity, such as a puzzle, game or
+    entertainment session. Use ordinary access; do not experiment with food restriction, substance use,
+    medication or activities associated with serious harm.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Temperance and moderation.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Choose a familiar low-stakes leisure activity, such as a puzzle, game or entertainment session. Use
+    ordinary access; do not experiment with food restriction, substance use, medication or activities
+    associated with serious harm.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Temperance and moderation instead
-    of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a natural activity boundary instead of a timer when timing creates stress. Restful or supported
+    leisure is as eligible as an active hobby.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +75,25 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Temperance and moderation
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-REPEATED-HABIT
+  protocol_class: PF-BEHAVIORAL-EXPERIMENT
   duration_days: 10
-  cadence: Complete three bounded Temperance and moderation actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Temperance and moderation; copy the canonical scope and evidence target
-    into a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Temperance
-    and moderation. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Temperance and moderation actions, and
-    review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose a familiar low-stakes leisure activity, such as a puzzle, game or entertainment session.
+    Use ordinary access; do not experiment with food restriction, substance use, medication or activities
+    associated with serious harm. Goal: Practice enjoying a discretionary good without letting it displace
+    an obligation or turn into a purity test. Scope: One leisure session tests moderation in a bounded
+    context. Compulsion, dependence and other high-consequence patterns require support beyond a recreational
+    trial. Time and effort: About 5 minutes to choose a boundary, one ordinary leisure session, and a
+    5-minute review. Adaptation: Use a natural activity boundary instead of a timer when timing creates
+    stress. Restful or supported leisure is as eligible as an active hobby. Keep personal working notes
+    outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a natural activity boundary instead of a timer when timing creates stress.
+    Restful or supported leisure is as eligible as an active hobby.
+  expected_burden: About 5 minutes to choose a boundary, one ordinary leisure session, and a 5-minute
+    review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Temperance and moderation protocol to rank worth, coerce participation, demand disclosure,
@@ -101,18 +101,21 @@ intervention:
   - Treating a completed Temperance and moderation action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Temperance and moderation situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a natural
+    activity boundary instead of a timer when timing creates stress. Restful or supported leisure is as
+    eligible as an active hobby.
   actions:
   - stable_id: PRACTICE-COMP-0208-TEMPERANCE-AND-MODERATION-01-A1
     sequence: 1
-    title: Define one small Temperance and moderation behavior
-    instructions: 'Choose one voluntary, reversible behavior that represents a narrow part of Temperance
-      and moderation. Bound the cue, context, duration, and valid interruption using this scope: Use pleasure,
-      consumption, sex, food, money, entertainment, comfort, and status without becoming ruled by them.'
+    title: Define the good and what it must leave room for
+    instructions: 'Name what you enjoy in the activity and one other legitimate need it should not displace,
+      such as sleep, a prior agreement or time with someone. Choose a natural stopping point, such as
+      the end of one round, and a reasonable exception for an agreed change of plans.
+
+
+      Observation checks: The pleasure is valued without shame; A competing need is explicit; A stopping
+      point and reasonable exception are chosen. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -134,9 +137,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0208_a1_behavior_observable
-        - c0208_a1_cue_and_context_defined
-        - c0208_a1_interruption_valid
+        - the_pleasure_is_valued_without_shame
+        - a_competing_need_is_explicit
+        - a_stopping_point_and_reasonable_exception_are_chosen
       - measurement_id: c0208_a1_boundary
         kind: boolean
         role: supporting
@@ -153,10 +156,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0208-TEMPERANCE-AND-MODERATION-01-A2
     sequence: 2
-    title: Try the Temperance and moderation behavior in three windows
-    instructions: Attempt the same small Temperance and moderation behavior in up to three naturally occurring
-      windows. Record attempt, defer, interruption, support used, and adverse effect separately; never
-      manufacture deprivation, distress, conflict, or unsafe conditions to obtain a repetition.
+    title: Take part and notice the stopping decision
+    instructions: 'Enjoy the activity. At the chosen point, pause long enough to check whether continuing
+      serves enjoyment or merely avoids stopping. Stop, or consciously revise the plan when the exception
+      actually applies. Record the decision rather than demanding flawless self-control or manufacturing
+      guilt about pleasure.
+
+
+      Observation checks: The activity is actually enjoyed or honestly evaluated; The stopping decision
+      is noticed; Any extension follows an explicit reason. Mark only what you observed. Missing, mixed
+      and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -172,15 +181,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0208_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - the_activity_is_actually_enjoyed_or_honestly_evaluated
+        - the_stopping_decision_is_noticed
+        - any_extension_follows_an_explicit_reason
       - measurement_id: c0208_a2_boundary
         kind: boolean
         role: supporting
@@ -197,10 +206,34 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0208-TEMPERANCE-AND-MODERATION-01-A3
     sequence: 3
-    title: Review the Temperance and moderation repetition pattern
-    instructions: 'Compare the windows for feasibility, burden, context, and interruption. Keep missing
-      or mixed evidence explicit and compare the limited pattern with this evidence target: Can enjoy
-      a good without compulsive excess, shame, or rigid purity.'
+    title: Review both excess and unnecessary rigidity
+    instructions: 'Compare the session with the protected need. Note whether the activity crowded it out,
+      whether the boundary was unnecessarily harsh, and whether you could return to ordinary life afterward.
+      Adjust one feature, such as a clearer endpoint or a more generous window, and retain enjoyment as
+      part of the goal.
+
+
+      Observation checks: The effect on the protected need is checked; Rigidity as well as excess is considered;
+      One proportionate adjustment is chosen. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.
+
+
+      Final review: Did the boundary protect another good while still allowing this one to be enjoyed?
+
+
+      Examples: Supportive: A game ended at the agreed point and remained enjoyable without displacing
+      a promised call.
+
+
+      Mixed: The session overran slightly, revealing that the chosen endpoint was difficult to recognize.
+
+
+      Contradictory: Enjoyment was treated as a moral failure or repeated extensions displaced an essential
+      need.
+
+
+      Inconclusive: A limit was announced without participating in the activity or observing the stopping
+      decision.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -222,9 +255,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0208_a3_windows_distinguished
-        - c0208_a3_burden_compared
-        - c0208_a3_transfer_not_assumed
+        - the_effect_on_the_protected_need_is_checked
+        - rigidity_as_well_as_excess_is_considered
+        - one_proportionate_adjustment_is_chosen
       - measurement_id: c0208_a3_boundary
         kind: boolean
         role: supporting
@@ -245,16 +278,15 @@ intervention:
       Temperance and moderation; no purchase, subscription, travel, credential, or public artifact is
       required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Temperance and moderation; assistive technology, interpretation, a support person, and
-      a deferred action are valid without penalty.
+    - Use a natural activity boundary instead of a timer when timing creates stress. Restful or supported
+      leisure is as eligible as an active hobby.
     cultural_context:
     - Adapt the expression of Temperance and moderation to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Temperance and moderation opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use a natural activity boundary instead of a timer when timing creates stress. Restful or supported
+      leisure is as eligible as an active hobby.
   pause_conditions:
   - Pause Temperance and moderation when capacity, consent, authority, privacy, access, care duties, uncertainty,
     distress, fatigue, pain, resource scarcity, or changed circumstances make the next action unwise.
@@ -285,10 +317,7 @@ evidence_and_scoring:
   - c0208_a3_boundary
   - c0208_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Temperance and moderation action exceeded consent, authority, privacy, qualification, role, burden,
-    or safety boundaries.
-  - The evidence contradicted the intended Temperance and moderation criterion, depended on coercion or
-    hidden private content, or could not distinguish the protocol from contextual change.
+  - Enjoyment was treated as a moral failure or repeated extensions displaced an essential need.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Temperance and moderation explicitly; support can enable access and never reduces dignity or silently
     changes the typed value.
@@ -298,14 +327,20 @@ evidence_and_scoring:
     origins are rejected and later repetitions use the typed contract's explicit diminishing multipliers.
   recency_rule: Generated Temperance and moderation rules withhold observations older than 90 days; no
     unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can enjoy a good without compulsive excess, shame, or rigid purity.—not completion, confidence,
-    conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Temperance and moderation requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Define the good and what it must leave room for. Observed checks: The
+    pleasure is valued without shame; A competing need is explicit; A stopping point and reasonable exception
+    are chosen. Action 2: Take part and notice the stopping decision. Observed checks: The activity is
+    actually enjoyed or honestly evaluated; The stopping decision is noticed; Any extension follows an
+    explicit reason. Action 3: Review both excess and unnecessary rigidity. Observed checks: The effect
+    on the protected need is checked; Rigidity as well as excess is considered; One proportionate adjustment
+    is chosen.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A limit was announced without participating in the
+    activity or observing the stopping decision.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Temperance
     and moderation contribution under typed evaluation; protocol performance remains distinct and is never
     counted twice.
@@ -314,9 +349,8 @@ evidence_and_scoring:
   - L02
   - L09
   - L10
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Temperance and moderation evidence.
@@ -324,11 +358,15 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define one small temperance and moderation behavior action was attempted or explicitly deferred.
-  - The try the temperance and moderation behavior in three windows action was attempted or explicitly
-    deferred.
-  - The review the temperance and moderation repetition pattern action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Define the good and what it must leave room for. Observed checks: The pleasure is valued
+    without shame; A competing need is explicit; A stopping point and reasonable exception are chosen.'
+  - 'Action 2: Take part and notice the stopping decision. Observed checks: The activity is actually enjoyed
+    or honestly evaluated; The stopping decision is noticed; Any extension follows an explicit reason.'
+  - 'Action 3: Review both excess and unnecessary rigidity. Observed checks: The effect on the protected
+    need is checked; Rigidity as well as excess is considered; One proportionate adjustment is chosen.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -337,56 +375,52 @@ completion_and_review:
     - c0208_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Temperance and moderation only when the initial context remained
-    safe, the evidence criteria were usable, burden was acceptable, and a new context can be named without
-    assuming transfer.
-  transfer_limit: Three bounded actions do not establish Temperance and moderation across roles, cultures,
-    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: Did the boundary protect another good while still allowing this one to be enjoyed?
+  transfer_limit: One leisure session tests moderation in a bounded context. Compulsion, dependence and
+    other high-consequence patterns require support beyond a recreational trial.
   reflection:
-    before: What does Temperance and moderation require in this exact context, what remains outside my
-      role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Temperance and moderation criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can enjoy a good without compulsive excess, shame, or rigid
-      purity.', what contradiction or missing context matters most, and should this Temperance and moderation
-      design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Practice enjoying a discretionary good without
+      letting it displace an obligation or turn into a purity test.'
+    during: Which checks have actually been observed? The session overran slightly, revealing that the
+      chosen endpoint was difficult to recognize.
+    after: Did the boundary protect another good while still allowing this one to be enjoyed?
   review_guidance:
     repeat: Repeat the same bounded Temperance and moderation design only when the context and burden
       remain appropriate.
-    adapt: Change the Temperance and moderation medium, scope, support, timing, criteria, or context while
-      preserving provenance and the narrower evidence claim.
+    adapt: Use a natural activity boundary instead of a timer when timing creates stress. Restful or supported
+      leisure is as eligible as an active hobby.
     stop: Stop Temperance and moderation when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Temperance and moderation questions beyond
-      this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Temperance and moderation criteria were observed with provenance and no adverse
-      boundary signal in the selected context.
-    mixed: Some Temperance and moderation criteria were observed while burden, support, contextual change,
-      or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Temperance and moderation criterion, introduced
-      harm or coercion, or showed the design was not workable.
-    inconclusive: The Temperance and moderation action was deferred, not observed, not applicable, stale,
-      insufficiently bounded, or too confounded to interpret.
+    supportive: A game ended at the agreed point and remained enjoyable without displacing a promised
+      call.
+    mixed: The session overran slightly, revealing that the chosen endpoint was difficult to recognize.
+    contradictory: Enjoyment was treated as a moral failure or repeated extensions displaced an essential
+      need.
+    inconclusive: A limit was announced without participating in the activity or observing the stopping
+      decision.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Temperance and moderation.
+    context_heading: Enjoy a chosen pleasure within a flexible boundary
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Temperance
       and moderation.
   check_in_labels:
-    c0208_a1_primary: The bounded Temperance and moderation criterion for action 1 was observed
+    c0208_a1_primary: 'Observed checks: define the good and what it must leave room for'
     c0208_a1_boundary: Action 1 stayed inside its stated Temperance and moderation boundary
     c0208_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0208_a2_primary: The bounded Temperance and moderation criterion for action 2 was observed
+    c0208_a2_primary: 'Observed checks: take part and notice the stopping decision'
     c0208_a2_boundary: Action 2 stayed inside its stated Temperance and moderation boundary
     c0208_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0208_a3_primary: The bounded Temperance and moderation criterion for action 3 was observed
+    c0208_a3_primary: 'Observed checks: review both excess and unnecessary rigidity'
     c0208_a3_boundary: Action 3 stayed inside its stated Temperance and moderation boundary
     c0208_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Temperance and moderation
-    practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Did the boundary protect another good while still allowing this one to be enjoyed?
+    Completion is not mastery.
+  plain_language_evidence: A game ended at the agreed point and remained enjoyable without displacing
+    a promised call.
   display_order: 28

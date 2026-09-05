@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0201-MORAL-FRAMEWORKS-01
 slug: c0201-moral-frameworks-practice
-name: Bounded Moral frameworks Practice
+name: Analyze a shared-resource dilemma through different moral lenses
 parent_competency_id: '02.01'
 domain_id: '02'
 governance:
@@ -14,10 +14,13 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-OPENSTAX-DEONTOLOGY
+  - SRC-OPENSTAX-VIRTUE-ETHICS
+  - SRC-OPENSTAX-CARE-ETHICS
+  - SRC-OPENSTAX-CONSEQUENTIALISM
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 02.01
-      (Moral frameworks); canonical scope, evidence target, classification, domain boundary, and parent
-      mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 02.01; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,38 +38,62 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Moral frameworks through a small repeated practice bounded by the canonical scope:
-    Understand virtue ethics, deontology, consequentialism, care ethics, natural-law or religious ethics,
-    rights, justice, and moral particularism.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can analyze one difficult
-    choice through several frameworks without caricaturing them. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Explain how different moral frameworks identify reasons, obligations and unresolved costs in
+    one choice.
+  why_recommended: Explain how different moral frameworks identify reasons, obligations and unresolved
+    costs in one choice.
   claims:
-  - statement: Using the canonical scope and evidence target for Moral frameworks is a traceable product-design
-      basis for a source-only draft protocol.
+  - statement: Explain how different moral frameworks identify reasons, obligations and unresolved costs
+      in one choice.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Deontological approaches evaluate conduct through duties and moral norms rather than consequences
+      alone.
+    classification: philosophical_or_normative_position
+    source_ids:
+    - SRC-OPENSTAX-DEONTOLOGY
+    limitations: Conceptual orientation only; does not settle competing duties or validate the product's
+      shared-camera exercise.
+  - statement: Virtue ethics attends to character and practical judgment; Aristotle's account distinguishes
+      appropriate conduct from deficiency and excess.
+    classification: philosophical_or_normative_position
+    source_ids:
+    - SRC-OPENSTAX-VIRTUE-ETHICS
+    limitations: One normative tradition, not a universal character metric or empirical proof that the
+      product's courage rehearsal develops virtue.
+  - statement: Care ethics gives moral attention to particular relationships, needs and circumstances,
+      including responsibilities that abstract rules alone may overlook.
+    classification: philosophical_or_normative_position
+    source_ids:
+    - SRC-OPENSTAX-CARE-ETHICS
+    limitations: Conceptual support only. No claim that caring roles or ethical capacities are determined
+      by gender; no effectiveness claim for the product's care-burden exercise.
+  - statement: Consequentialist reasoning evaluates consequences for those affected; considering only
+      the decision maker's own benefit is not an adequate account of that approach.
+    classification: philosophical_or_normative_position
+    source_ids:
+    - SRC-OPENSTAX-CONSEQUENTIALISM
+    limitations: One family of normative positions, not the uniquely correct morality, a numerical wellbeing
+      measure, or evidence of the effectiveness of this exercise.
   applicability_question: Does a voluntary, bounded Moral frameworks practice fit the person's current
     role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Moral frameworks as not applicable, consciously unchosen, or deferred
     without penalty when the role, pathway, capacity, authority, opportunity, or safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Moral frameworks
-    context, understand the source-only status, and stop without losing safety, care, employment, housing,
-    services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Moral frameworks;
-    do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency, or dependence for
-    evidence.
+  readiness_considerations: Compare four spoken explanations or use cards. The fictional case permits
+    participation without revealing private beliefs or confronting a real authority.
+  opportunity_considerations: 'Use this case: a shared camera was promised to a friend, but a community
+    group now requests it for a useful event at the same time. No emergency or uniquely correct answer
+    is assumed.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Moral frameworks.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use this case: a shared camera was promised to a friend, but a community group now requests it for
+    a useful event at the same time. No emergency or uniquely correct answer is assumed.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Moral frameworks instead of a live
-    situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Compare four spoken explanations or use cards. The fictional case permits participation without revealing
+    private beliefs or confronting a real authority.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -77,20 +104,35 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Moral frameworks as inferiority;
     competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-REPEATED-HABIT
+  protocol_class: PF-KNOWLEDGE-APPLICATION
   duration_days: 10
-  cadence: Complete three bounded Moral frameworks actions over ten days, preserving explicit not-applicable,
-    defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Moral frameworks; copy the canonical scope and evidence target into a
-    private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Moral frameworks.
-    Do not store private prose, names, identities, diagnoses, allegations, credentials, account data,
-    protected work information, intimate detail, artifact contents, observer narrative, or another person's
-    secrets. This source-only draft is not surveillance, professional advice, treatment, certification,
-    or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Moral frameworks actions, and review;
-    scope may be reduced or deferred for access, care, health, workload, conscience, or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use this case: a shared camera was promised to a friend, but a community group now requests
+    it for a useful event at the same time. No emergency or uniquely correct answer is assumed. Goal:
+    Explain how different moral frameworks identify reasons, obligations and unresolved costs in one choice.
+    Scope: One case introduces several moral frameworks. Religious ethics, natural law, rights, justice
+    and particularism require further study; the comparison does not make every framework interchangeable.
+    Time and effort: About 30–45 minutes for the comparison and one revision; no live dispute is required.
+    Adaptation: Compare four spoken explanations or use cards. The fictional case permits participation
+    without revealing private beliefs or confronting a real authority. Keep personal working notes outside
+    the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Introduction to Philosophy, 9.3 Deontology: https://openstax.org/books/introduction-philosophy/pages/9-3-deontology
+
+    Introduction to Philosophy, 9.4 Virtue Ethics: https://openstax.org/books/introduction-philosophy/pages/9-4-virtue-ethics
+
+    Introduction to Philosophy, 9.6 Feminist Theories of Ethics: https://openstax.org/books/introduction-philosophy/pages/9-6-feminist-theories-of-ethics
+
+    Introduction to Philosophy, 9.2 Consequentialism: https://openstax.org/books/introduction-philosophy/pages/9-2-consequentialism'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Compare four spoken explanations or use cards. The fictional case permits participation
+    without revealing private beliefs or confronting a real authority.
+  expected_burden: About 30–45 minutes for the comparison and one revision; no live dispute is required.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Moral frameworks protocol to rank worth, coerce participation, demand disclosure, override
@@ -98,19 +140,22 @@ intervention:
   - Treating a completed Moral frameworks action, a polished artifact, agreement, confidence, speed, independence,
     or output as mastery or universal transfer.
   exclusions:
-  - Any Moral frameworks situation involving emergency response, abuse, retaliation, illegal conduct,
-    medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous equipment,
-    or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Compare four
+    spoken explanations or use cards. The fictional case permits participation without revealing private
+    beliefs or confronting a real authority.
   actions:
   - stable_id: PRACTICE-COMP-0201-MORAL-FRAMEWORKS-01-A1
     sequence: 1
-    title: Define one small Moral frameworks behavior
-    instructions: 'Choose one voluntary, reversible behavior that represents a narrow part of Moral frameworks.
-      Bound the cue, context, duration, and valid interruption using this scope: Understand virtue ethics,
-      deontology, consequentialism, care ethics, natural-law or religious ethics, rights, justice, and
-      moral particularism.'
+    title: Compare four kinds of moral reason
+    instructions: 'Write the strongest reason each lens offers: virtue asks what a practically wise, reliable
+      person would do; duty asks what the promise requires; consequences consider benefits and harms for
+      everyone affected; care attends to the relationships and dependencies involved. Give each a possible
+      recommendation and an objection rather than assuming all reach the same answer.
+
+
+      Observation checks: Four lenses supply distinct reasons; All affected parties enter the comparison;
+      Each recommendation faces a serious objection. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -132,9 +177,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0201_a1_behavior_observable
-        - c0201_a1_cue_and_context_defined
-        - c0201_a1_interruption_valid
+        - four_lenses_supply_distinct_reasons
+        - all_affected_parties_enter_the_comparison
+        - each_recommendation_faces_a_serious_objection
       - measurement_id: c0201_a1_boundary
         kind: boolean
         role: supporting
@@ -151,10 +196,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0201-MORAL-FRAMEWORKS-01-A2
     sequence: 2
-    title: Try the Moral frameworks behavior in three windows
-    instructions: Attempt the same small Moral frameworks behavior in up to three naturally occurring
-      windows. Record attempt, defer, interruption, support used, and adverse effect separately; never
-      manufacture deprivation, distress, conflict, or unsafe conditions to obtain a repetition.
+    title: Test ownership and changed circumstances
+    instructions: 'Ask who has authority over the camera and what legitimate claims each party has. Change
+      one fact: the friend needs it for an irreplaceable family occasion, or the group has another camera
+      available. Explain which reasons change and which persist. Do not add invented facts merely to make
+      your preferred option win.
+
+
+      Observation checks: Authority and legitimate claims are considered; One changed fact is tested consistently;
+      Stable and changing reasons are distinguished. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -170,15 +221,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0201_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - authority_and_legitimate_claims_are_considered
+        - one_changed_fact_is_tested_consistently
+        - stable_and_changing_reasons_are_distinguished
       - measurement_id: c0201_a2_boundary
         kind: boolean
         role: supporting
@@ -195,10 +246,34 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0201-MORAL-FRAMEWORKS-01-A3
     sequence: 3
-    title: Review the Moral frameworks repetition pattern
-    instructions: 'Compare the windows for feasibility, burden, context, and interruption. Keep missing
-      or mixed evidence explicit and compare the limited pattern with this evidence target: Can analyze
-      one difficult choice through several frameworks without caricaturing them.'
+    title: Defend a decision without erasing its cost
+    instructions: 'Choose lend, keep the promise, seek an agreed rearrangement, or another feasible option.
+      State your decisive reason, strongest remaining objection and who bears the cost. Draft an honest
+      explanation to the affected parties and identify the further information that could change your
+      judgment.
+
+
+      Observation checks: The decision has an explicit moral reason; A remaining cost is acknowledged;
+      A revision condition is identified. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.
+
+
+      Final review: Which framework exposed a reason you initially missed, and where does your decision
+      remain contestable?
+
+
+      Examples: Supportive: The decision preserved the promise while explaining the lost community benefit
+      and a possible agreed alternative.
+
+
+      Mixed: Four frameworks were named but their reasons were reduced to personal preference.
+
+
+      Contradictory: Only the decision maker''s convenience counted, or missing facts were invented to
+      dismiss an objection.
+
+
+      Inconclusive: An answer was chosen without identifying obligations, consequences or relationships.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -220,9 +295,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0201_a3_windows_distinguished
-        - c0201_a3_burden_compared
-        - c0201_a3_transfer_not_assumed
+        - the_decision_has_an_explicit_moral_reason
+        - a_remaining_cost_is_acknowledged
+        - a_revision_condition_is_identified
       - measurement_id: c0201_a3_boundary
         kind: boolean
         role: supporting
@@ -242,16 +317,15 @@ intervention:
     - Use paper, an offline note, a library resource, a public example, or a no-cost conversation for
       Moral frameworks; no purchase, subscription, travel, credential, or public artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Moral frameworks; assistive technology, interpretation, a support person, and a deferred
-      action are valid without penalty.
+    - Compare four spoken explanations or use cards. The fictional case permits participation without
+      revealing private beliefs or confronting a real authority.
     cultural_context:
     - Adapt the expression of Moral frameworks to direct or indirect communication, collective or individual
       decision structures, local norms, faith or secular commitments, and role obligations while preserving
       consent and dignity.
     resource_variants:
-    - When a real Moral frameworks opportunity is unavailable or inappropriate, use a fictional, historical,
-      public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Compare four spoken explanations or use cards. The fictional case permits participation without
+      revealing private beliefs or confronting a real authority.
   pause_conditions:
   - Pause Moral frameworks when capacity, consent, authority, privacy, access, care duties, uncertainty,
     distress, fatigue, pain, resource scarcity, or changed circumstances make the next action unwise.
@@ -281,10 +355,7 @@ evidence_and_scoring:
   - c0201_a3_boundary
   - c0201_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Moral frameworks action exceeded consent, authority, privacy, qualification, role, burden, or
-    safety boundaries.
-  - The evidence contradicted the intended Moral frameworks criterion, depended on coercion or hidden
-    private content, or could not distinguish the protocol from contextual change.
+  - Only the decision maker's convenience counted, or missing facts were invented to dismiss an objection.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Moral frameworks explicitly; support can enable access and never reduces dignity or silently changes
     the typed value.
@@ -294,14 +365,19 @@ evidence_and_scoring:
     are rejected and later repetitions use the typed contract's explicit diminishing multipliers.
   recency_rule: Generated Moral frameworks rules withhold observations older than 90 days; no unrecorded
     retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can analyze one difficult choice through several frameworks without caricaturing them.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Moral frameworks requires a bounded context, allowlisted observations,
-    provenance, contradiction and adverse handling, and preserved uncertainty; free text and artifact
-    contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Compare four kinds of moral reason. Observed checks: Four lenses supply
+    distinct reasons; All affected parties enter the comparison; Each recommendation faces a serious objection.
+    Action 2: Test ownership and changed circumstances. Observed checks: Authority and legitimate claims
+    are considered; One changed fact is tested consistently; Stable and changing reasons are distinguished.
+    Action 3: Defend a decision without erasing its cost. Observed checks: The decision has an explicit
+    moral reason; A remaining cost is acknowledged; A revision condition is identified.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. An answer was chosen without identifying obligations,
+    consequences or relationships.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Moral
     frameworks contribution under typed evaluation; protocol performance remains distinct and is never
     counted twice.
@@ -310,9 +386,8 @@ evidence_and_scoring:
   - L02
   - L12
   - L31
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Moral frameworks evidence.
@@ -320,10 +395,15 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define one small moral frameworks behavior action was attempted or explicitly deferred.
-  - The try the moral frameworks behavior in three windows action was attempted or explicitly deferred.
-  - The review the moral frameworks repetition pattern action preserved a limited conclusion, contradiction,
-    or inconclusive result.
+  - 'Action 1: Compare four kinds of moral reason. Observed checks: Four lenses supply distinct reasons;
+    All affected parties enter the comparison; Each recommendation faces a serious objection.'
+  - 'Action 2: Test ownership and changed circumstances. Observed checks: Authority and legitimate claims
+    are considered; One changed fact is tested consistently; Stable and changing reasons are distinguished.'
+  - 'Action 3: Defend a decision without erasing its cost. Observed checks: The decision has an explicit
+    moral reason; A remaining cost is acknowledged; A revision condition is identified.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -332,54 +412,51 @@ completion_and_review:
     - c0201_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Moral frameworks only when the initial context remained safe,
-    the evidence criteria were usable, burden was acceptable, and a new context can be named without assuming
-    transfer.
-  transfer_limit: Three bounded actions do not establish Moral frameworks across roles, cultures, relationships,
-    seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: Which framework exposed a reason you initially missed, and where does your decision
+    remain contestable?
+  transfer_limit: One case introduces several moral frameworks. Religious ethics, natural law, rights,
+    justice and particularism require further study; the comparison does not make every framework interchangeable.
   reflection:
-    before: What does Moral frameworks require in this exact context, what remains outside my role or
-      authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Moral frameworks criterion is present, absent, mixed, or unknown, and are
-      consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can analyze one difficult choice through several frameworks
-      without caricaturing them.', what contradiction or missing context matters most, and should this
-      Moral frameworks design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Explain how different moral frameworks identify
+      reasons, obligations and unresolved costs in one choice.'
+    during: Which checks have actually been observed? Four frameworks were named but their reasons were
+      reduced to personal preference.
+    after: Which framework exposed a reason you initially missed, and where does your decision remain
+      contestable?
   review_guidance:
     repeat: Repeat the same bounded Moral frameworks design only when the context and burden remain appropriate.
-    adapt: Change the Moral frameworks medium, scope, support, timing, criteria, or context while preserving
-      provenance and the narrower evidence claim.
+    adapt: Compare four spoken explanations or use cards. The fictional case permits participation without
+      revealing private beliefs or confronting a real authority.
     stop: Stop Moral frameworks when the practice becomes coercive, unsafe, privacy-invasive, role-inappropriate,
       professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Moral frameworks questions beyond this
-      educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Moral frameworks criteria were observed with provenance and no adverse boundary
-      signal in the selected context.
-    mixed: Some Moral frameworks criteria were observed while burden, support, contextual change, or a
-      contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Moral frameworks criterion, introduced harm
-      or coercion, or showed the design was not workable.
-    inconclusive: The Moral frameworks action was deferred, not observed, not applicable, stale, insufficiently
-      bounded, or too confounded to interpret.
+    supportive: The decision preserved the promise while explaining the lost community benefit and a possible
+      agreed alternative.
+    mixed: Four frameworks were named but their reasons were reduced to personal preference.
+    contradictory: Only the decision maker's convenience counted, or missing facts were invented to dismiss
+      an objection.
+    inconclusive: An answer was chosen without identifying obligations, consequences or relationships.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Moral frameworks.
+    context_heading: Analyze a shared-resource dilemma through different moral lenses
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Moral frameworks.
   check_in_labels:
-    c0201_a1_primary: The bounded Moral frameworks criterion for action 1 was observed
+    c0201_a1_primary: 'Observed checks: compare four kinds of moral reason'
     c0201_a1_boundary: Action 1 stayed inside its stated Moral frameworks boundary
     c0201_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0201_a2_primary: The bounded Moral frameworks criterion for action 2 was observed
+    c0201_a2_primary: 'Observed checks: test ownership and changed circumstances'
     c0201_a2_boundary: Action 2 stayed inside its stated Moral frameworks boundary
     c0201_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0201_a3_primary: The bounded Moral frameworks criterion for action 3 was observed
+    c0201_a3_primary: 'Observed checks: defend a decision without erasing its cost'
     c0201_a3_boundary: Action 3 stayed inside its stated Moral frameworks boundary
     c0201_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Moral frameworks practice,
-    including support, contradiction, defer, no result, or harm.
+  completion_copy: Which framework exposed a reason you initially missed, and where does your decision
+    remain contestable? Completion is not mastery.
+  plain_language_evidence: The decision preserved the promise while explaining the lost community benefit
+    and a possible agreed alternative.
   display_order: 21

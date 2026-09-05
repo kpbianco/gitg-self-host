@@ -1,5 +1,69 @@
 # Inspected reference support; exercises themselves are original product designs.
 sources:
+  - source_id: SRC-OPENSTAX-DEONTOLOGY
+    title: Introduction to Philosophy, 9.3 Deontology
+    authors_or_issuing_body: Nathan Smith / OpenStax, Rice University
+    publication_date: '2022-06-15'
+    locator: https://openstax.org/books/introduction-philosophy/pages/9-3-deontology
+    locator_kind: external_url
+    content_sha256: null
+    source_class: reputable_synthesis
+    evidence_strength: authoritative
+    supported_claim: Deontological approaches evaluate conduct through duties and moral norms rather than consequences alone.
+    claim_classification: philosophical_or_normative_position
+    limitations: Conceptual orientation only; does not settle competing duties or validate the product's shared-camera exercise.
+    applicable_competency_ids: ['02.01']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-05'
+    license_or_quotation_constraints: Link and concise original paraphrase only; no textbook exercise or prose reproduced. Source lists CC BY-NC-SA terms.
+  - source_id: SRC-OPENSTAX-VIRTUE-ETHICS
+    title: Introduction to Philosophy, 9.4 Virtue Ethics
+    authors_or_issuing_body: Nathan Smith / OpenStax, Rice University
+    publication_date: '2022-06-15'
+    locator: https://openstax.org/books/introduction-philosophy/pages/9-4-virtue-ethics
+    locator_kind: external_url
+    content_sha256: null
+    source_class: reputable_synthesis
+    evidence_strength: authoritative
+    supported_claim: Virtue ethics attends to character and practical judgment; Aristotle's account distinguishes appropriate conduct from deficiency and excess.
+    claim_classification: philosophical_or_normative_position
+    limitations: One normative tradition, not a universal character metric or empirical proof that the product's courage rehearsal develops virtue.
+    applicable_competency_ids: ['02.01', '02.03']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-05'
+    license_or_quotation_constraints: Link and concise original conceptual paraphrase only; no source prose or exercise reproduced. Source lists CC BY-NC-SA terms.
+  - source_id: SRC-OPENSTAX-CARE-ETHICS
+    title: Introduction to Philosophy, 9.6 Feminist Theories of Ethics
+    authors_or_issuing_body: Nathan Smith / OpenStax, Rice University
+    publication_date: '2022-06-15'
+    locator: https://openstax.org/books/introduction-philosophy/pages/9-6-feminist-theories-of-ethics
+    locator_kind: external_url
+    content_sha256: null
+    source_class: reputable_synthesis
+    evidence_strength: authoritative
+    supported_claim: Care ethics gives moral attention to particular relationships, needs and circumstances, including responsibilities that abstract rules alone may overlook.
+    claim_classification: philosophical_or_normative_position
+    limitations: Conceptual support only. No claim that caring roles or ethical capacities are determined by gender; no effectiveness claim for the product's care-burden exercise.
+    applicable_competency_ids: ['02.01', '02.15']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-05'
+    license_or_quotation_constraints: Citation and brief original conceptual paraphrase only; no source exercise or extended passage reproduced. Source lists CC BY-NC-SA terms.
+  - source_id: SRC-SEP-MORAL-LUCK
+    title: Moral Luck
+    authors_or_issuing_body: Stanford Encyclopedia of Philosophy
+    publication_date: '2025-01-20'
+    locator: https://plato.stanford.edu/entries/moral-luck/
+    locator_kind: external_url
+    content_sha256: null
+    source_class: reputable_synthesis
+    evidence_strength: authoritative
+    supported_claim: Moral-luck debates examine the tension between judging responsibility by what a person controls and judging outcomes influenced by circumstances outside that control.
+    claim_classification: philosophical_or_normative_position
+    limitations: Date is the inspected substantive revision. Philosophers disagree about the resolution; the fictional equipment case supplies no legal-liability judgment or validated measure of responsibility.
+    applicable_competency_ids: ['02.13']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-05'
+    license_or_quotation_constraints: Link and short original paraphrase only; no entry text, examples or extended quotation reproduced.
   - source_id: SRC-WADOH-CLEANER-MIXING
     title: Dangers of Mixing Bleach with Cleaners
     authors_or_issuing_body: Washington State Department of Health
@@ -124,7 +188,7 @@ sources:
     supported_claim: Consequentialist reasoning evaluates consequences for those affected; considering only the decision maker's own benefit is not an adequate account of that approach.
     claim_classification: philosophical_or_normative_position
     limitations: One family of normative positions, not the uniquely correct morality, a numerical wellbeing measure, or evidence of the effectiveness of this exercise.
-    applicable_competency_ids: ['01.01']
+    applicable_competency_ids: ['01.01', '02.01']
     applicable_protocol_ids: []
     date_accessed: '2026-09-05'
     license_or_quotation_constraints: Citation and original conceptual paraphrase only; no source exercise or extended passage reproduced. Source lists CC BY-NC-SA terms.

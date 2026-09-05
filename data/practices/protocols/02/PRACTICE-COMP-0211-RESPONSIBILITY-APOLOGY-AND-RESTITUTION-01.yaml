@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0211-RESPONSIBILITY-APOLOGY-AND-RESTITUTION-01
 slug: c0211-responsibility-apology-and-restitution-practice
-name: Bounded Responsibility, apology, and restitution Practice
+name: Offer a specific apology and proportionate repair
 parent_competency_id: '02.11'
 domain_id: '02'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 02.11
-      (Responsibility, apology, and restitution); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 02.11; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +34,33 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Responsibility, apology, and restitution through a consent-respecting relational
-    practice bounded by the canonical scope: Own intention, action, impact, negligence, and foreseeable
-    consequences; repair harm where possible.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Offers specific apology
-    and restitution rather than image management or blame shifting. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Own an action and its impact, propose repair, and follow through without demanding forgiveness.
+  why_recommended: Own an action and its impact, propose repair, and follow through without demanding
+    forgiveness.
   claims:
-  - statement: Using the canonical scope and evidence target for Responsibility, apology, and restitution
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Own an action and its impact, propose repair, and follow through without demanding forgiveness.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Responsibility, apology, and restitution practice
     fit the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Responsibility, apology, and restitution as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Responsibility, apology,
-    and restitution context, understand the source-only status, and stop without losing safety, care,
-    employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Responsibility,
-    apology, and restitution; do not manufacture conflict, deprivation, exposure, disclosure, danger,
-    urgency, or dependence for evidence.
+  readiness_considerations: Use written communication, an agreed intermediary or a clearly labeled rehearsal.
+    Respect a request for no further contact.
+  opportunity_considerations: Choose a minor failure within your responsibility, such as returning a borrowed
+    item late. Use a fictional case if contact is unwelcome or unsafe; do not use this task to reopen
+    a prohibited or harmful relationship.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Responsibility, apology, and restitution.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Choose a minor failure within your responsibility, such as returning a borrowed item late. Use a fictional
+    case if contact is unwelcome or unsafe; do not use this task to reopen a prohibited or harmful relationship.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Responsibility, apology, and restitution
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use written communication, an agreed intermediary or a clearly labeled rehearsal. Respect a request
+    for no further contact.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -82,19 +75,22 @@ meaning_and_fit:
 intervention:
   protocol_class: PF-RELATIONAL-CONVERSATION
   duration_days: 10
-  cadence: Complete three bounded Responsibility, apology, and restitution actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Responsibility, apology, and restitution; copy the canonical scope and
-    evidence target into a private working note; define the action boundary, valid supports, privacy limit,
-    and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Responsibility,
-    apology, and restitution. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Responsibility, apology, and restitution
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose a minor failure within your responsibility, such as returning a borrowed item late. Use
+    a fictional case if contact is unwelcome or unsafe; do not use this task to reopen a prohibited or
+    harmful relationship. Goal: Own an action and its impact, propose repair, and follow through without
+    demanding forgiveness. Scope: A small repair practices responsibility, apology and restitution. Serious
+    harms may require processes and support beyond a direct personal apology. Time and effort: About 15
+    minutes to prepare, a short permitted exchange, and the agreed repair''s actual time. Adaptation:
+    Use written communication, an agreed intermediary or a clearly labeled rehearsal. Respect a request
+    for no further contact. Keep personal working notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use written communication, an agreed intermediary or a clearly labeled rehearsal.
+    Respect a request for no further contact.
+  expected_burden: About 15 minutes to prepare, a short permitted exchange, and the agreed repair's actual
+    time.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Responsibility, apology, and restitution protocol to rank worth, coerce participation, demand
@@ -102,19 +98,21 @@ intervention:
   - Treating a completed Responsibility, apology, and restitution action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Responsibility, apology, and restitution situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use written
+    communication, an agreed intermediary or a clearly labeled rehearsal. Respect a request for no further
+    contact.
   actions:
   - stable_id: PRACTICE-COMP-0211-RESPONSIBILITY-APOLOGY-AND-RESTITUTION-01-A1
     sequence: 1
-    title: Prepare a consent-safe Responsibility, apology, and restitution interaction
-    instructions: 'Choose one welcome, low-stakes relationship context for Responsibility, apology, and
-      restitution. Translate the canonical scope into one observable communication act, identify power
-      or retaliation concerns, and obtain or preserve the other person''s freedom not to participate:
-      Own intention, action, impact, negligence, and foreseeable consequences; repair harm where possible.'
+    title: Describe your responsibility and its effect
+    instructions: 'Write what you did or failed to do, what you reasonably knew at the time and what inconvenience
+      or harm followed. Separate an explanation from an excuse. For the late item, acknowledge the missed
+      return and the owner''s lost use without assuming how they must feel.
+
+
+      Observation checks: The action or omission is owned specifically; Foreseeable impact is acknowledged;
+      Explanation does not transfer responsibility. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -136,9 +134,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0211_a1_communication_act_specific
-        - c0211_a1_consent_boundary_present
-        - c0211_a1_power_checked
+        - the_action_or_omission_is_owned_specifically
+        - foreseeable_impact_is_acknowledged
+        - explanation_does_not_transfer_responsibility
       - measurement_id: c0211_a1_boundary
         kind: boolean
         role: supporting
@@ -155,10 +153,15 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0211-RESPONSIBILITY-APOLOGY-AND-RESTITUTION-01-A2
     sequence: 2
-    title: Practice one Responsibility, apology, and restitution communication act
-    instructions: Use the prepared Responsibility, apology, and restitution act once without covert testing,
-      pressure, diagnosis, deception inference, or a demand for disclosure. Ask one direct clarification
-      when appropriate and allow refusal, delay, indirect communication, language access, or another format.
+    title: Give an apology with a repair the recipient can assess
+    instructions: 'State the action, acknowledge the effect, express regret and offer a feasible repair,
+      such as returning the item at a time convenient to its owner. Ask whether another proportionate
+      remedy would help. Do not add a request for reassurance, absolution or immediate restored trust.
+
+
+      Observation checks: The apology names the actual failure; The proposed repair is feasible and relevant;
+      The recipient is free to respond without granting forgiveness. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -174,12 +177,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0211_a2_primary
-        kind: boolean
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        expected: true
+        - reviewed_artifact
+        criteria:
+        - the_apology_names_the_actual_failure
+        - the_proposed_repair_is_feasible_and_relevant
+        - the_recipient_is_free_to_respond_without_granting_forgiveness
       - measurement_id: c0211_a2_boundary
         kind: boolean
         role: supporting
@@ -196,11 +202,33 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0211-RESPONSIBILITY-APOLOGY-AND-RESTITUTION-01-A3
     sequence: 3
-    title: Review Responsibility, apology, and restitution without scoring the person
-    instructions: 'Review only the observable interaction and its boundaries. Do not infer motives or
-      store private narrative. Compare what happened with this evidence target and retain disagreement
-      or an inconclusive result: Offers specific apology and restitution rather than image management
-      or blame shifting.'
+    title: Complete the repair and prevent a repeat
+    instructions: 'Do the agreed repair and confirm practical completion without repeatedly pursuing an
+      emotional response. Change one contributing habit, such as setting an earlier return reminder or
+      declining loans you cannot manage. If repair is refused or impossible, record the limit and what
+      responsibility remains.
+
+
+      Observation checks: Repair or its genuine limit is recorded; A contributing behavior is changed;
+      Practical closure is separated from forgiveness. Mark only what you observed. Missing, mixed and
+      negative results are valid; a deferred action is not completed.
+
+
+      Final review: What became materially better for the affected person, and what responsibility remains
+      yours?
+
+
+      Examples: Supportive: The item was returned, the inconvenience acknowledged and a reminder changed
+      without demanding forgiveness.
+
+
+      Mixed: The apology was specific but the promised practical repair has not yet happened.
+
+
+      Contradictory: The apology required the recipient to provide comfort or accept renewed contact.
+
+
+      Inconclusive: Regret was expressed without identifying an action, impact or repair.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -222,9 +250,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0211_a3_observable_interaction_reviewed
-        - c0211_a3_private_narrative_excluded
-        - c0211_a3_inconclusive_allowed
+        - repair_or_its_genuine_limit_is_recorded
+        - a_contributing_behavior_is_changed
+        - practical_closure_is_separated_from_forgiveness
       - measurement_id: c0211_a3_boundary
         kind: boolean
         role: supporting
@@ -245,17 +273,15 @@ intervention:
       Responsibility, apology, and restitution; no purchase, subscription, travel, credential, or public
       artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Responsibility, apology, and restitution; assistive technology, interpretation, a support
-      person, and a deferred action are valid without penalty.
+    - Use written communication, an agreed intermediary or a clearly labeled rehearsal. Respect a request
+      for no further contact.
     cultural_context:
     - Adapt the expression of Responsibility, apology, and restitution to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Responsibility, apology, and restitution opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use written communication, an agreed intermediary or a clearly labeled rehearsal. Respect a request
+      for no further contact.
   pause_conditions:
   - Pause Responsibility, apology, and restitution when capacity, consent, authority, privacy, access,
     care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make
@@ -287,10 +313,7 @@ evidence_and_scoring:
   - c0211_a3_boundary
   - c0211_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Responsibility, apology, and restitution action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Responsibility, apology, and restitution criterion, depended
-    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - The apology required the recipient to provide comfort or accept renewed contact.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Responsibility, apology, and restitution explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -301,14 +324,20 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Responsibility, apology, and restitution rules withhold observations older than
     90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Offers specific apology and restitution rather than image management or blame shifting.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Responsibility, apology, and restitution requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Describe your responsibility and its effect. Observed checks: The action
+    or omission is owned specifically; Foreseeable impact is acknowledged; Explanation does not transfer
+    responsibility. Action 2: Give an apology with a repair the recipient can assess. Observed checks:
+    The apology names the actual failure; The proposed repair is feasible and relevant; The recipient
+    is free to respond without granting forgiveness. Action 3: Complete the repair and prevent a repeat.
+    Observed checks: Repair or its genuine limit is recorded; A contributing behavior is changed; Practical
+    closure is separated from forgiveness.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. Regret was expressed without identifying an action,
+    impact or repair.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Responsibility,
     apology, and restitution contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -317,9 +346,8 @@ evidence_and_scoring:
   - L02
   - L23
   - L29
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Responsibility, apology, and restitution evidence.
@@ -327,12 +355,16 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The prepare a consent-safe responsibility, apology, and restitution interaction action was attempted
-    or explicitly deferred.
-  - The practice one responsibility, apology, and restitution communication act action was attempted or
-    explicitly deferred.
-  - The review responsibility, apology, and restitution without scoring the person action preserved a
-    limited conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Describe your responsibility and its effect. Observed checks: The action or omission is
+    owned specifically; Foreseeable impact is acknowledged; Explanation does not transfer responsibility.'
+  - 'Action 2: Give an apology with a repair the recipient can assess. Observed checks: The apology names
+    the actual failure; The proposed repair is feasible and relevant; The recipient is free to respond
+    without granting forgiveness.'
+  - 'Action 3: Complete the repair and prevent a repeat. Observed checks: Repair or its genuine limit
+    is recorded; A contributing behavior is changed; Practical closure is separated from forgiveness.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -341,61 +373,51 @@ completion_and_review:
     - c0211_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Responsibility, apology, and restitution only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Responsibility, apology, and restitution across
-    roles, cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: What became materially better for the affected person, and what responsibility
+    remains yours?
+  transfer_limit: A small repair practices responsibility, apology and restitution. Serious harms may
+    require processes and support beyond a direct personal apology.
   reflection:
-    before: What does Responsibility, apology, and restitution require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Responsibility, apology, and restitution criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Offers specific apology and restitution rather than image
-      management or blame shifting.', what contradiction or missing context matters most, and should this
-      Responsibility, apology, and restitution design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Own an action and its impact, propose repair,
+      and follow through without demanding forgiveness.'
+    during: Which checks have actually been observed? The apology was specific but the promised practical
+      repair has not yet happened.
+    after: What became materially better for the affected person, and what responsibility remains yours?
   review_guidance:
     repeat: Repeat the same bounded Responsibility, apology, and restitution design only when the context
       and burden remain appropriate.
-    adapt: Change the Responsibility, apology, and restitution medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Use written communication, an agreed intermediary or a clearly labeled rehearsal. Respect a
+      request for no further contact.
     stop: Stop Responsibility, apology, and restitution when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Responsibility, apology, and restitution
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Responsibility, apology, and restitution criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Responsibility, apology, and restitution criteria were observed while burden, support,
-      contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Responsibility, apology, and restitution criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Responsibility, apology, and restitution action was deferred, not observed, not
-      applicable, stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The item was returned, the inconvenience acknowledged and a reminder changed without demanding
+      forgiveness.
+    mixed: The apology was specific but the promised practical repair has not yet happened.
+    contradictory: The apology required the recipient to provide comfort or accept renewed contact.
+    inconclusive: Regret was expressed without identifying an action, impact or repair.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Responsibility, apology, and restitution.
+    context_heading: Offer a specific apology and proportionate repair
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Responsibility,
       apology, and restitution.
   check_in_labels:
-    c0211_a1_primary: The bounded Responsibility, apology, and restitution criterion for action 1 was
-      observed
+    c0211_a1_primary: 'Observed checks: describe your responsibility and its effect'
     c0211_a1_boundary: Action 1 stayed inside its stated Responsibility, apology, and restitution boundary
     c0211_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0211_a2_primary: The bounded Responsibility, apology, and restitution criterion for action 2 was
-      observed
+    c0211_a2_primary: 'Observed checks: give an apology with a repair the recipient can assess'
     c0211_a2_boundary: Action 2 stayed inside its stated Responsibility, apology, and restitution boundary
     c0211_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0211_a3_primary: The bounded Responsibility, apology, and restitution criterion for action 3 was
-      observed
+    c0211_a3_primary: 'Observed checks: complete the repair and prevent a repeat'
     c0211_a3_boundary: Action 3 stayed inside its stated Responsibility, apology, and restitution boundary
     c0211_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Responsibility, apology,
-    and restitution practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What became materially better for the affected person, and what responsibility remains
+    yours? Completion is not mastery.
+  plain_language_evidence: The item was returned, the inconvenience acknowledged and a reminder changed
+    without demanding forgiveness.
   display_order: 31

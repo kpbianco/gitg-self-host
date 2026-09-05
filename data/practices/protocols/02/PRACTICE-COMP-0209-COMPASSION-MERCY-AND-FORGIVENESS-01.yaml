@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0209-COMPASSION-MERCY-AND-FORGIVENESS-01
 slug: c0209-compassion-mercy-and-forgiveness-practice
-name: Bounded Compassion, mercy, and forgiveness Practice
+name: Respond humanely to a minor wrong without erasing a boundary
 parent_competency_id: '02.09'
 domain_id: '02'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 02.09
-      (Compassion, mercy, and forgiveness); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 02.09; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +34,35 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Compassion, mercy, and forgiveness through a small repeated practice bounded by the
-    canonical scope: Respond to suffering and wrongdoing with humanity while preserving truth, boundaries,
-    justice, and accountability.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can release vengeance
-    or contempt without automatically restoring trust or access. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Separate compassion and release of retaliation from automatic forgiveness, restored trust or
+    renewed access.
+  why_recommended: Separate compassion and release of retaliation from automatic forgiveness, restored
+    trust or renewed access.
   claims:
-  - statement: Using the canonical scope and evidence target for Compassion, mercy, and forgiveness is
-      a traceable product-design basis for a source-only draft protocol.
+  - statement: Separate compassion and release of retaliation from automatic forgiveness, restored trust
+      or renewed access.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Compassion, mercy, and forgiveness practice fit the
     person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Compassion, mercy, and forgiveness as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Compassion, mercy,
-    and forgiveness context, understand the source-only status, and stop without losing safety, care,
-    employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Compassion,
-    mercy, and forgiveness; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Use the fictional book case or a symbolic drawing. No contact, disclosure,
+    absolution or restored relationship is required.
+  opportunity_considerations: 'Use a manageable irritation or this fictional case: a borrowed book was
+    returned damaged. Do not revisit abuse, trauma or a dangerous relationship. Contact with the other
+    person is optional.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Compassion, mercy, and forgiveness.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use a manageable irritation or this fictional case: a borrowed book was returned damaged. Do not
+    revisit abuse, trauma or a dangerous relationship. Contact with the other person is optional.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Compassion, mercy, and forgiveness
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use the fictional book case or a symbolic drawing. No contact, disclosure, absolution or restored
+    relationship is required.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +74,24 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Compassion, mercy, and forgiveness
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-REPEATED-HABIT
+  protocol_class: PF-CONTEMPLATIVE-MEANING
   duration_days: 10
-  cadence: Complete three bounded Compassion, mercy, and forgiveness actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Compassion, mercy, and forgiveness; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Compassion,
-    mercy, and forgiveness. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Compassion, mercy, and forgiveness actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use a manageable irritation or this fictional case: a borrowed book was returned damaged. Do
+    not revisit abuse, trauma or a dangerous relationship. Contact with the other person is optional.
+    Goal: Separate compassion and release of retaliation from automatic forgiveness, restored trust or
+    renewed access. Scope: A minor wrong permits practice with humanity and accountability. This exercise
+    does not require forgiveness or establish what reconciliation should mean after serious harm. Time
+    and effort: About 20 minutes of private reflection and one optional low-stakes response. Adaptation:
+    Use the fictional book case or a symbolic drawing. No contact, disclosure, absolution or restored
+    relationship is required. Keep personal working notes outside the check-in; record only the listed
+    observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use the fictional book case or a symbolic drawing. No contact, disclosure, absolution
+    or restored relationship is required.
+  expected_burden: About 20 minutes of private reflection and one optional low-stakes response.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Compassion, mercy, and forgiveness protocol to rank worth, coerce participation, demand
@@ -101,19 +99,20 @@ intervention:
   - Treating a completed Compassion, mercy, and forgiveness action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Compassion, mercy, and forgiveness situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use the fictional
+    book case or a symbolic drawing. No contact, disclosure, absolution or restored relationship is required.
   actions:
   - stable_id: PRACTICE-COMP-0209-COMPASSION-MERCY-AND-FORGIVENESS-01-A1
     sequence: 1
-    title: Define one small Compassion, mercy, and forgiveness behavior
-    instructions: 'Choose one voluntary, reversible behavior that represents a narrow part of Compassion,
-      mercy, and forgiveness. Bound the cue, context, duration, and valid interruption using this scope:
-      Respond to suffering and wrongdoing with humanity while preserving truth, boundaries, justice, and
-      accountability.'
+    title: Describe the wrong without reducing the person to it
+    instructions: 'State the act, its effect and what you know about intention. Mark unknown intention
+      as unknown. Name the anger or disappointment without treating it as an instruction to retaliate.
+      Describe the other person''s humanity without supplying excuses that cancel the actual harm.
+
+
+      Observation checks: Act and impact are specific; Unknown intention remains unknown; Humanity and
+      accountability are held together. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -135,9 +134,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0209_a1_behavior_observable
-        - c0209_a1_cue_and_context_defined
-        - c0209_a1_interruption_valid
+        - act_and_impact_are_specific
+        - unknown_intention_remains_unknown
+        - humanity_and_accountability_are_held_together
       - measurement_id: c0209_a1_boundary
         kind: boolean
         role: supporting
@@ -154,10 +153,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0209-COMPASSION-MERCY-AND-FORGIVENESS-01-A2
     sequence: 2
-    title: Try the Compassion, mercy, and forgiveness behavior in three windows
-    instructions: Attempt the same small Compassion, mercy, and forgiveness behavior in up to three naturally
-      occurring windows. Record attempt, defer, interruption, support used, and adverse effect separately;
-      never manufacture deprivation, distress, conflict, or unsafe conditions to obtain a repetition.
+    title: Choose repair and access separately
+    instructions: 'For the damaged book, compare a repair request, a future lending limit and the decision
+      not to pursue revenge. Explain what each choice does. Forgiving, if freely chosen, need not restore
+      lending privileges; requesting repair need not involve humiliation or repeated demands for an emotional
+      response.
+
+
+      Observation checks: Repair and access are separate decisions; Retaliation is distinguished from
+      accountability; Forgiveness remains a voluntary possibility. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -173,15 +178,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0209_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - repair_and_access_are_separate_decisions
+        - retaliation_is_distinguished_from_accountability
+        - forgiveness_remains_a_voluntary_possibility
       - measurement_id: c0209_a2_boundary
         kind: boolean
         role: supporting
@@ -198,10 +203,32 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0209-COMPASSION-MERCY-AND-FORGIVENESS-01-A3
     sequence: 3
-    title: Review the Compassion, mercy, and forgiveness repetition pattern
-    instructions: 'Compare the windows for feasibility, burden, context, and interruption. Keep missing
-      or mixed evidence explicit and compare the limited pattern with this evidence target: Can release
-      vengeance or contempt without automatically restoring trust or access.'
+    title: Make or rehearse the humane boundary
+    instructions: 'Write or deliver one proportionate response: describe the damage, request an agreed
+      repair if appropriate and state a future limit you control. Review whether the response preserved
+      truth without contempt. If you keep it private, record that you practiced judgment and wording rather
+      than a real reconciliation.
+
+
+      Observation checks: The response preserves the fact of harm; Any limit concerns the speaker''s own
+      choices; Private rehearsal is not claimed as reconciliation. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.
+
+
+      Final review: What can you release without denying what happened or surrendering a necessary limit?
+
+
+      Examples: Supportive: A reasonable repair request was paired with a lending boundary and no demand
+      for public shame.
+
+
+      Mixed: Retaliation was avoided but the proposed boundary was still vague.
+
+
+      Contradictory: Compassion was used to pressure someone into restored access or to deny the harm.
+
+
+      Inconclusive: Forgiveness was declared without distinguishing trust, access, repair or intention.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -223,9 +250,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0209_a3_windows_distinguished
-        - c0209_a3_burden_compared
-        - c0209_a3_transfer_not_assumed
+        - the_response_preserves_the_fact_of_harm
+        - any_limit_concerns_the_speaker_s_own_choices
+        - private_rehearsal_is_not_claimed_as_reconciliation
       - measurement_id: c0209_a3_boundary
         kind: boolean
         role: supporting
@@ -246,17 +273,15 @@ intervention:
       Compassion, mercy, and forgiveness; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Compassion, mercy, and forgiveness; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - Use the fictional book case or a symbolic drawing. No contact, disclosure, absolution or restored
+      relationship is required.
     cultural_context:
     - Adapt the expression of Compassion, mercy, and forgiveness to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Compassion, mercy, and forgiveness opportunity is unavailable or inappropriate, use
-      a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use the fictional book case or a symbolic drawing. No contact, disclosure, absolution or restored
+      relationship is required.
   pause_conditions:
   - Pause Compassion, mercy, and forgiveness when capacity, consent, authority, privacy, access, care
     duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the
@@ -288,10 +313,7 @@ evidence_and_scoring:
   - c0209_a3_boundary
   - c0209_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Compassion, mercy, and forgiveness action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Compassion, mercy, and forgiveness criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - Compassion was used to pressure someone into restored access or to deny the harm.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Compassion, mercy, and forgiveness explicitly; support can enable access and never reduces dignity
     or silently changes the typed value.
@@ -302,14 +324,19 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Compassion, mercy, and forgiveness rules withhold observations older than 90
     days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can release vengeance or contempt without automatically restoring trust or access.—not completion,
-    confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Compassion, mercy, and forgiveness requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Describe the wrong without reducing the person to it. Observed checks:
+    Act and impact are specific; Unknown intention remains unknown; Humanity and accountability are held
+    together. Action 2: Choose repair and access separately. Observed checks: Repair and access are separate
+    decisions; Retaliation is distinguished from accountability; Forgiveness remains a voluntary possibility.
+    Action 3: Make or rehearse the humane boundary. Observed checks: The response preserves the fact of
+    harm; Any limit concerns the speaker''s own choices; Private rehearsal is not claimed as reconciliation.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. Forgiveness was declared without distinguishing trust,
+    access, repair or intention.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Compassion,
     mercy, and forgiveness contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -318,9 +345,8 @@ evidence_and_scoring:
   - L02
   - L24
   - L29
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Compassion, mercy, and forgiveness evidence.
@@ -328,12 +354,15 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define one small compassion, mercy, and forgiveness behavior action was attempted or explicitly
-    deferred.
-  - The try the compassion, mercy, and forgiveness behavior in three windows action was attempted or explicitly
-    deferred.
-  - The review the compassion, mercy, and forgiveness repetition pattern action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Describe the wrong without reducing the person to it. Observed checks: Act and impact are
+    specific; Unknown intention remains unknown; Humanity and accountability are held together.'
+  - 'Action 2: Choose repair and access separately. Observed checks: Repair and access are separate decisions;
+    Retaliation is distinguished from accountability; Forgiveness remains a voluntary possibility.'
+  - 'Action 3: Make or rehearse the humane boundary. Observed checks: The response preserves the fact
+    of harm; Any limit concerns the speaker''s own choices; Private rehearsal is not claimed as reconciliation.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -342,57 +371,51 @@ completion_and_review:
     - c0209_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Compassion, mercy, and forgiveness only when the initial context
-    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
-    named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Compassion, mercy, and forgiveness across roles,
-    cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: What can you release without denying what happened or surrendering a necessary
+    limit?
+  transfer_limit: A minor wrong permits practice with humanity and accountability. This exercise does
+    not require forgiveness or establish what reconciliation should mean after serious harm.
   reflection:
-    before: What does Compassion, mercy, and forgiveness require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Compassion, mercy, and forgiveness criterion is present, absent, mixed, or
-      unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can release vengeance or contempt without automatically restoring
-      trust or access.', what contradiction or missing context matters most, and should this Compassion,
-      mercy, and forgiveness design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Separate compassion and release of retaliation
+      from automatic forgiveness, restored trust or renewed access.'
+    during: Which checks have actually been observed? Retaliation was avoided but the proposed boundary
+      was still vague.
+    after: What can you release without denying what happened or surrendering a necessary limit?
   review_guidance:
     repeat: Repeat the same bounded Compassion, mercy, and forgiveness design only when the context and
       burden remain appropriate.
-    adapt: Change the Compassion, mercy, and forgiveness medium, scope, support, timing, criteria, or
-      context while preserving provenance and the narrower evidence claim.
+    adapt: Use the fictional book case or a symbolic drawing. No contact, disclosure, absolution or restored
+      relationship is required.
     stop: Stop Compassion, mercy, and forgiveness when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Compassion, mercy, and forgiveness questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Compassion, mercy, and forgiveness criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Compassion, mercy, and forgiveness criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Compassion, mercy, and forgiveness criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Compassion, mercy, and forgiveness action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: A reasonable repair request was paired with a lending boundary and no demand for public
+      shame.
+    mixed: Retaliation was avoided but the proposed boundary was still vague.
+    contradictory: Compassion was used to pressure someone into restored access or to deny the harm.
+    inconclusive: Forgiveness was declared without distinguishing trust, access, repair or intention.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Compassion, mercy, and forgiveness.
+    context_heading: Respond humanely to a minor wrong without erasing a boundary
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Compassion,
       mercy, and forgiveness.
   check_in_labels:
-    c0209_a1_primary: The bounded Compassion, mercy, and forgiveness criterion for action 1 was observed
+    c0209_a1_primary: 'Observed checks: describe the wrong without reducing the person to it'
     c0209_a1_boundary: Action 1 stayed inside its stated Compassion, mercy, and forgiveness boundary
     c0209_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0209_a2_primary: The bounded Compassion, mercy, and forgiveness criterion for action 2 was observed
+    c0209_a2_primary: 'Observed checks: choose repair and access separately'
     c0209_a2_boundary: Action 2 stayed inside its stated Compassion, mercy, and forgiveness boundary
     c0209_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0209_a3_primary: The bounded Compassion, mercy, and forgiveness criterion for action 3 was observed
+    c0209_a3_primary: 'Observed checks: make or rehearse the humane boundary'
     c0209_a3_boundary: Action 3 stayed inside its stated Compassion, mercy, and forgiveness boundary
     c0209_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Compassion, mercy,
-    and forgiveness practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What can you release without denying what happened or surrendering a necessary limit?
+    Completion is not mastery.
+  plain_language_evidence: A reasonable repair request was paired with a lending boundary and no demand
+    for public shame.
   display_order: 29

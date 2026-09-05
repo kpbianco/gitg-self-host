@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0213-MORAL-LUCK-COMPLICITY-AND-DIRTY-HANDS-01
 slug: c0213-moral-luck-complicity-and-dirty-hands-practice
-name: Bounded Moral luck, complicity, and dirty hands Practice
+name: Separate luck, complicity and responsibility in a hard case
 parent_competency_id: '02.13'
 domain_id: '02'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-SEP-MORAL-LUCK
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 02.13
-      (Moral luck, complicity, and dirty hands); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 02.13; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,40 +35,43 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Moral luck, complicity, and dirty hands through a small repeated practice bounded
-    by the canonical scope: Examine responsibility when outcomes depend partly on chance, systems implicate
-    everyone, or every available option causes harm.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can distinguish direct
-    action, negligence, benefit, complicity, constraint, and residual responsibility in a hard case. The
-    protocol creates a small opportunity to examine that target without treating completion as broad capability.'
+  purpose: Distinguish intention, control, negligence, benefit and residual responsibility when outcomes
+    are partly outside anyone's control.
+  why_recommended: Distinguish intention, control, negligence, benefit and residual responsibility when
+    outcomes are partly outside anyone's control.
   claims:
-  - statement: Using the canonical scope and evidence target for Moral luck, complicity, and dirty hands
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Distinguish intention, control, negligence, benefit and residual responsibility when outcomes
+      are partly outside anyone's control.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Moral-luck debates examine the tension between judging responsibility by what a person
+      controls and judging outcomes influenced by circumstances outside that control.
+    classification: philosophical_or_normative_position
+    source_ids:
+    - SRC-SEP-MORAL-LUCK
+    limitations: Date is the inspected substantive revision. Philosophers disagree about the resolution;
+      the fictional equipment case supplies no legal-liability judgment or validated measure of responsibility.
   applicability_question: Does a voluntary, bounded Moral luck, complicity, and dirty hands practice fit
     the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Moral luck, complicity, and dirty hands as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Moral luck, complicity,
-    and dirty hands context, understand the source-only status, and stop without losing safety, care,
-    employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Moral luck,
-    complicity, and dirty hands; do not manufacture conflict, deprivation, exposure, disclosure, danger,
-    urgency, or dependence for evidence.
+  readiness_considerations: Use a diagram, tokens or spoken roles. Stay with the fictional equipment case
+    rather than reenacting a morally distressing event.
+  opportunity_considerations: Use two fictional volunteers who ignore the same instruction to cover borrowed
+    equipment before rain. One item happens to stay dry; the other is damaged. The event organizer also
+    omitted an available shelter from the plan.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Moral luck, complicity, and dirty
-    hands.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Use two fictional volunteers who ignore the same instruction to cover borrowed equipment before rain.
+    One item happens to stay dry; the other is damaged. The event organizer also omitted an available
+    shelter from the plan.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Moral luck, complicity, and dirty
-    hands instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a diagram, tokens or spoken roles. Stay with the fictional equipment case rather than reenacting
+    a morally distressing event.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -81,21 +84,29 @@ meaning_and_fit:
     dirty hands as inferiority; competing reasonable interpretations and conscientious refusal remain
     visible.
 intervention:
-  protocol_class: PF-REPEATED-HABIT
+  protocol_class: PF-KNOWLEDGE-APPLICATION
   duration_days: 10
-  cadence: Complete three bounded Moral luck, complicity, and dirty hands actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Moral luck, complicity, and dirty hands; copy the canonical scope and
-    evidence target into a private working note; define the action boundary, valid supports, privacy limit,
-    and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Moral luck,
-    complicity, and dirty hands. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Moral luck, complicity, and dirty hands
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use two fictional volunteers who ignore the same instruction to cover borrowed equipment before
+    rain. One item happens to stay dry; the other is damaged. The event organizer also omitted an available
+    shelter from the plan. Goal: Distinguish intention, control, negligence, benefit and residual responsibility
+    when outcomes are partly outside anyone''s control. Scope: The case illustrates moral luck and shared
+    responsibility. It does not quantify blame or resolve legal liability, trauma or every no-win moral
+    conflict. Time and effort: About 30 minutes to compare responsibility and formulate a proportionate
+    response. Adaptation: Use a diagram, tokens or spoken roles. Stay with the fictional equipment case
+    rather than reenacting a morally distressing event. Keep personal working notes outside the check-in;
+    record only the listed observations.
+
+
+    Reference support:
+
+    Moral Luck: https://plato.stanford.edu/entries/moral-luck/'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a diagram, tokens or spoken roles. Stay with the fictional equipment case rather
+    than reenacting a morally distressing event.
+  expected_burden: About 30 minutes to compare responsibility and formulate a proportionate response.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Moral luck, complicity, and dirty hands protocol to rank worth, coerce participation, demand
@@ -103,19 +114,22 @@ intervention:
   - Treating a completed Moral luck, complicity, and dirty hands action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Moral luck, complicity, and dirty hands situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a diagram,
+    tokens or spoken roles. Stay with the fictional equipment case rather than reenacting a morally distressing
+    event.
   actions:
   - stable_id: PRACTICE-COMP-0213-MORAL-LUCK-COMPLICITY-AND-DIRTY-HANDS-01-A1
     sequence: 1
-    title: Define one small Moral luck, complicity, and dirty hands behavior
-    instructions: 'Choose one voluntary, reversible behavior that represents a narrow part of Moral luck,
-      complicity, and dirty hands. Bound the cue, context, duration, and valid interruption using this
-      scope: Examine responsibility when outcomes depend partly on chance, systems implicate everyone,
-      or every available option causes harm.'
+    title: Hold conduct constant while comparing outcomes
+    instructions: 'List what each volunteer knew, chose and controlled before the rain, then what happened
+      afterward. Identify the role of chance in the different outcomes. Explain why a fortunate outcome
+      does not automatically make the same careless choice responsible, while actual damage still creates
+      practical repair needs.
+
+
+      Observation checks: Prior knowledge and choices are distinguished from outcomes; The role of chance
+      is explicit; Good fortune does not erase the conduct under review. Mark only what you observed.
+      Missing, mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -137,9 +151,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0213_a1_behavior_observable
-        - c0213_a1_cue_and_context_defined
-        - c0213_a1_interruption_valid
+        - prior_knowledge_and_choices_are_distinguished_from_outcomes
+        - the_role_of_chance_is_explicit
+        - good_fortune_does_not_erase_the_conduct_under_review
       - measurement_id: c0213_a1_boundary
         kind: boolean
         role: supporting
@@ -156,11 +170,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0213-MORAL-LUCK-COMPLICITY-AND-DIRTY-HANDS-01-A2
     sequence: 2
-    title: Try the Moral luck, complicity, and dirty hands behavior in three windows
-    instructions: Attempt the same small Moral luck, complicity, and dirty hands behavior in up to three
-      naturally occurring windows. Record attempt, defer, interruption, support used, and adverse effect
-      separately; never manufacture deprivation, distress, conflict, or unsafe conditions to obtain a
-      repetition.
+    title: Map the system without dissolving agency
+    instructions: 'Add the organizer''s planning omission and any resource constraints. Distinguish direct
+      action, preventable omission, benefit from the arrangement and conditions nobody could change. State
+      what each role could reasonably have done differently without assigning every participant equal
+      responsibility merely because all were present.
+
+
+      Observation checks: Several forms of involvement are distinguished; Constraints and available alternatives
+      are considered; Responsibility is proportionate to actual agency. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -176,15 +195,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0213_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - several_forms_of_involvement_are_distinguished
+        - constraints_and_available_alternatives_are_considered
+        - responsibility_is_proportionate_to_actual_agency
       - measurement_id: c0213_a2_boundary
         kind: boolean
         role: supporting
@@ -201,11 +220,34 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0213-MORAL-LUCK-COMPLICITY-AND-DIRTY-HANDS-01-A3
     sequence: 3
-    title: Review the Moral luck, complicity, and dirty hands repetition pattern
-    instructions: 'Compare the windows for feasibility, burden, context, and interruption. Keep missing
-      or mixed evidence explicit and compare the limited pattern with this evidence target: Can distinguish
-      direct action, negligence, benefit, complicity, constraint, and residual responsibility in a hard
-      case.'
+    title: Propose repair and acknowledge what remains unresolved
+    instructions: 'Suggest equipment repair, an honest account to its owner and a changed shelter plan.
+      Separate the practical response to damage from a final verdict on anyone''s worth. Name any remaining
+      unfairness, such as one person facing greater consequences for similarly careless conduct, and explain
+      why the response cannot erase it.
+
+
+      Observation checks: Repair addresses actual damage and future prevention; Moral judgment is separated
+      from human worth; Residual unfairness remains acknowledged. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.
+
+
+      Final review: What does the outcome change about repair, and what does it leave unchanged about
+      the original choice?
+
+
+      Examples: Supportive: The analysis distinguished equal carelessness, unequal damage and the organizer''s
+      separate planning responsibility.
+
+
+      Mixed: Chance was recognized but every participant was assigned the same responsibility without
+      examining their roles.
+
+
+      Contradictory: The fortunate volunteer was declared blameless merely because no damage occurred.
+
+
+      Inconclusive: Blame was assigned from the outcome alone without examining knowledge, choice or constraints.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -227,9 +269,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0213_a3_windows_distinguished
-        - c0213_a3_burden_compared
-        - c0213_a3_transfer_not_assumed
+        - repair_addresses_actual_damage_and_future_prevention
+        - moral_judgment_is_separated_from_human_worth
+        - residual_unfairness_remains_acknowledged
       - measurement_id: c0213_a3_boundary
         kind: boolean
         role: supporting
@@ -250,17 +292,15 @@ intervention:
       Moral luck, complicity, and dirty hands; no purchase, subscription, travel, credential, or public
       artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Moral luck, complicity, and dirty hands; assistive technology, interpretation, a support
-      person, and a deferred action are valid without penalty.
+    - Use a diagram, tokens or spoken roles. Stay with the fictional equipment case rather than reenacting
+      a morally distressing event.
     cultural_context:
     - Adapt the expression of Moral luck, complicity, and dirty hands to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Moral luck, complicity, and dirty hands opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use a diagram, tokens or spoken roles. Stay with the fictional equipment case rather than reenacting
+      a morally distressing event.
   pause_conditions:
   - Pause Moral luck, complicity, and dirty hands when capacity, consent, authority, privacy, access,
     care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make
@@ -292,10 +332,7 @@ evidence_and_scoring:
   - c0213_a3_boundary
   - c0213_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Moral luck, complicity, and dirty hands action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Moral luck, complicity, and dirty hands criterion, depended
-    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - The fortunate volunteer was declared blameless merely because no damage occurred.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Moral luck, complicity, and dirty hands explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -306,14 +343,20 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Moral luck, complicity, and dirty hands rules withhold observations older than
     90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can distinguish direct action, negligence, benefit, complicity, constraint, and residual responsibility
-    in a hard case.—not completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Moral luck, complicity, and dirty hands requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Hold conduct constant while comparing outcomes. Observed checks: Prior
+    knowledge and choices are distinguished from outcomes; The role of chance is explicit; Good fortune
+    does not erase the conduct under review. Action 2: Map the system without dissolving agency. Observed
+    checks: Several forms of involvement are distinguished; Constraints and available alternatives are
+    considered; Responsibility is proportionate to actual agency. Action 3: Propose repair and acknowledge
+    what remains unresolved. Observed checks: Repair addresses actual damage and future prevention; Moral
+    judgment is separated from human worth; Residual unfairness remains acknowledged.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. Blame was assigned from the outcome alone without examining
+    knowledge, choice or constraints.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Moral
     luck, complicity, and dirty hands contribution under typed evaluation; protocol performance remains
     distinct and is never counted twice.
@@ -323,9 +366,8 @@ evidence_and_scoring:
   - L04
   - L14
   - L31
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Moral luck, complicity, and dirty hands evidence.
@@ -333,12 +375,18 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define one small moral luck, complicity, and dirty hands behavior action was attempted or explicitly
-    deferred.
-  - The try the moral luck, complicity, and dirty hands behavior in three windows action was attempted
-    or explicitly deferred.
-  - The review the moral luck, complicity, and dirty hands repetition pattern action preserved a limited
-    conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Hold conduct constant while comparing outcomes. Observed checks: Prior knowledge and choices
+    are distinguished from outcomes; The role of chance is explicit; Good fortune does not erase the conduct
+    under review.'
+  - 'Action 2: Map the system without dissolving agency. Observed checks: Several forms of involvement
+    are distinguished; Constraints and available alternatives are considered; Responsibility is proportionate
+    to actual agency.'
+  - 'Action 3: Propose repair and acknowledge what remains unresolved. Observed checks: Repair addresses
+    actual damage and future prevention; Moral judgment is separated from human worth; Residual unfairness
+    remains acknowledged.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -347,59 +395,53 @@ completion_and_review:
     - c0213_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Moral luck, complicity, and dirty hands only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Moral luck, complicity, and dirty hands across
-    roles, cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: What does the outcome change about repair, and what does it leave unchanged about
+    the original choice?
+  transfer_limit: The case illustrates moral luck and shared responsibility. It does not quantify blame
+    or resolve legal liability, trauma or every no-win moral conflict.
   reflection:
-    before: What does Moral luck, complicity, and dirty hands require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Moral luck, complicity, and dirty hands criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can distinguish direct action, negligence, benefit, complicity,
-      constraint, and residual responsibility in a hard case.', what contradiction or missing context
-      matters most, and should this Moral luck, complicity, and dirty hands design be repeated, adapted,
-      deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Distinguish intention, control, negligence,
+      benefit and residual responsibility when outcomes are partly outside anyone''s control.'
+    during: Which checks have actually been observed? Chance was recognized but every participant was
+      assigned the same responsibility without examining their roles.
+    after: What does the outcome change about repair, and what does it leave unchanged about the original
+      choice?
   review_guidance:
     repeat: Repeat the same bounded Moral luck, complicity, and dirty hands design only when the context
       and burden remain appropriate.
-    adapt: Change the Moral luck, complicity, and dirty hands medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Use a diagram, tokens or spoken roles. Stay with the fictional equipment case rather than reenacting
+      a morally distressing event.
     stop: Stop Moral luck, complicity, and dirty hands when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Moral luck, complicity, and dirty hands
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Moral luck, complicity, and dirty hands criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Moral luck, complicity, and dirty hands criteria were observed while burden, support,
-      contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Moral luck, complicity, and dirty hands criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Moral luck, complicity, and dirty hands action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The analysis distinguished equal carelessness, unequal damage and the organizer's separate
+      planning responsibility.
+    mixed: Chance was recognized but every participant was assigned the same responsibility without examining
+      their roles.
+    contradictory: The fortunate volunteer was declared blameless merely because no damage occurred.
+    inconclusive: Blame was assigned from the outcome alone without examining knowledge, choice or constraints.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Moral luck, complicity, and dirty hands.
+    context_heading: Separate luck, complicity and responsibility in a hard case
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Moral luck,
       complicity, and dirty hands.
   check_in_labels:
-    c0213_a1_primary: The bounded Moral luck, complicity, and dirty hands criterion for action 1 was observed
+    c0213_a1_primary: 'Observed checks: hold conduct constant while comparing outcomes'
     c0213_a1_boundary: Action 1 stayed inside its stated Moral luck, complicity, and dirty hands boundary
     c0213_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0213_a2_primary: The bounded Moral luck, complicity, and dirty hands criterion for action 2 was observed
+    c0213_a2_primary: 'Observed checks: map the system without dissolving agency'
     c0213_a2_boundary: Action 2 stayed inside its stated Moral luck, complicity, and dirty hands boundary
     c0213_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0213_a3_primary: The bounded Moral luck, complicity, and dirty hands criterion for action 3 was observed
+    c0213_a3_primary: 'Observed checks: propose repair and acknowledge what remains unresolved'
     c0213_a3_boundary: Action 3 stayed inside its stated Moral luck, complicity, and dirty hands boundary
     c0213_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Moral luck, complicity,
-    and dirty hands practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What does the outcome change about repair, and what does it leave unchanged about the
+    original choice? Completion is not mastery.
+  plain_language_evidence: The analysis distinguished equal carelessness, unequal damage and the organizer's
+    separate planning responsibility.
   display_order: 33

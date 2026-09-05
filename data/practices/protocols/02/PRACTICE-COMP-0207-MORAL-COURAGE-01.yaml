@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0207-MORAL-COURAGE-01
 slug: c0207-moral-courage-practice
-name: Bounded Moral courage Practice
+name: Take a proportionate stand on one small unfairness
 parent_competency_id: '02.07'
 domain_id: '02'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 02.07
-      (Moral courage); canonical scope, evidence target, classification, domain boundary, and parent mapping
-      remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 02.07; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,37 +34,34 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Moral courage through a small repeated practice bounded by the canonical scope: Defend
-    what is right when doing so involves fear, inconvenience, uncertainty, or social cost.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Has taken a proportionate
-    stand in a real situation and reviewed whether it was wise and effective. The protocol creates a small
-    opportunity to examine that target without treating completion as broad capability.'
+  purpose: Act on a defensible moral concern despite modest discomfort, then review whether the action
+    helped.
+  why_recommended: Act on a defensible moral concern despite modest discomfort, then review whether the
+    action helped.
   claims:
-  - statement: Using the canonical scope and evidence target for Moral courage is a traceable product-design
-      basis for a source-only draft protocol.
+  - statement: Act on a defensible moral concern despite modest discomfort, then review whether the action
+      helped.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Moral courage practice fit the person's current role,
     pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Moral courage as not applicable, consciously unchosen, or deferred without
     penalty when the role, pathway, capacity, authority, opportunity, or safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Moral courage context,
-    understand the source-only status, and stop without losing safety, care, employment, housing, services,
-    relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Moral courage;
-    do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency, or dependence for
-    evidence.
+  readiness_considerations: Use writing, an agreed advocate or a fictional rehearsal. Declining unsafe
+    confrontation is compatible with moral seriousness.
+  opportunity_considerations: Choose a safely correctable issue, such as omitted credit in a shared document.
+    Check facts and authority first; use a fictional case when speaking could threaten safety, livelihood
+    or essential support.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Moral courage.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Choose a safely correctable issue, such as omitted credit in a shared document. Check facts and authority
+    first; use a fictional case when speaking could threaten safety, livelihood or essential support.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Moral courage instead of a live
-    situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use writing, an agreed advocate or a fictional rehearsal. Declining unsafe confrontation is compatible
+    with moral seriousness.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -76,20 +72,23 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Moral courage as inferiority;
     competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-REPEATED-HABIT
+  protocol_class: PF-RELATIONAL-CONVERSATION
   duration_days: 10
-  cadence: Complete three bounded Moral courage actions over ten days, preserving explicit not-applicable,
-    defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Moral courage; copy the canonical scope and evidence target into a private
-    working note; define the action boundary, valid supports, privacy limit, and stop condition before
-    beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Moral courage.
-    Do not store private prose, names, identities, diagnoses, allegations, credentials, account data,
-    protected work information, intimate detail, artifact contents, observer narrative, or another person's
-    secrets. This source-only draft is not surveillance, professional advice, treatment, certification,
-    or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Moral courage actions, and review; scope
-    may be reduced or deferred for access, care, health, workload, conscience, or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose a safely correctable issue, such as omitted credit in a shared document. Check facts
+    and authority first; use a fictional case when speaking could threaten safety, livelihood or essential
+    support. Goal: Act on a defensible moral concern despite modest discomfort, then review whether the
+    action helped. Scope: One low-stakes stand practices moral courage and practical judgment. It does
+    not test action under serious threat or require confrontation to prove character. Time and effort:
+    About 15 minutes of preparation, one short intervention, and 10 minutes of review. Adaptation: Use
+    writing, an agreed advocate or a fictional rehearsal. Declining unsafe confrontation is compatible
+    with moral seriousness. Keep personal working notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use writing, an agreed advocate or a fictional rehearsal. Declining unsafe confrontation
+    is compatible with moral seriousness.
+  expected_burden: About 15 minutes of preparation, one short intervention, and 10 minutes of review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Moral courage protocol to rank worth, coerce participation, demand disclosure, override
@@ -97,18 +96,21 @@ intervention:
   - Treating a completed Moral courage action, a polished artifact, agreement, confidence, speed, independence,
     or output as mastery or universal transfer.
   exclusions:
-  - Any Moral courage situation involving emergency response, abuse, retaliation, illegal conduct, medical
-    treatment, legal representation, financial-loss decisions, safeguarding, hazardous equipment, or other
-    consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use writing,
+    an agreed advocate or a fictional rehearsal. Declining unsafe confrontation is compatible with moral
+    seriousness.
   actions:
   - stable_id: PRACTICE-COMP-0207-MORAL-COURAGE-01-A1
     sequence: 1
-    title: Define one small Moral courage behavior
-    instructions: 'Choose one voluntary, reversible behavior that represents a narrow part of Moral courage.
-      Bound the cue, context, duration, and valid interruption using this scope: Defend what is right
-      when doing so involves fear, inconvenience, uncertainty, or social cost.'
+    title: Name the concern, evidence and possible cost
+    instructions: 'Describe the unfairness in concrete terms, who is affected, what supports your account
+      and what remains uncertain. Name the cost you fear, such as an awkward conversation. Distinguish
+      moral purpose from a wish to win an argument, punish someone or appear brave.
+
+
+      Observation checks: The concern has factual support; Affected people and uncertainty are considered;
+      The anticipated cost and moral purpose are distinct. Mark only what you observed. Missing, mixed
+      and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -130,9 +132,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0207_a1_behavior_observable
-        - c0207_a1_cue_and_context_defined
-        - c0207_a1_interruption_valid
+        - the_concern_has_factual_support
+        - affected_people_and_uncertainty_are_considered
+        - the_anticipated_cost_and_moral_purpose_are_distinct
       - measurement_id: c0207_a1_boundary
         kind: boolean
         role: supporting
@@ -149,10 +151,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0207-MORAL-COURAGE-01-A2
     sequence: 2
-    title: Try the Moral courage behavior in three windows
-    instructions: Attempt the same small Moral courage behavior in up to three naturally occurring windows.
-      Record attempt, defer, interruption, support used, and adverse effect separately; never manufacture
-      deprivation, distress, conflict, or unsafe conditions to obtain a repetition.
+    title: Choose the least harmful effective intervention
+    instructions: 'Use a proportionate channel: ask the document owner to check missing credit, offer
+      a factual correction or request clarification privately. Keep the affected person''s preferences
+      in view and avoid exposing them without agreement. State the request calmly and leave room for correction
+      of your own facts.
+
+
+      Observation checks: The channel fits the issue and risk; The request is specific and proportionate;
+      The affected person''s preferences are respected. Mark only what you observed. Missing, mixed and
+      negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -168,15 +176,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0207_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - the_channel_fits_the_issue_and_risk
+        - the_request_is_specific_and_proportionate
+        - the_affected_person_s_preferences_are_respected
       - measurement_id: c0207_a2_boundary
         kind: boolean
         role: supporting
@@ -193,10 +201,33 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0207-MORAL-COURAGE-01-A3
     sequence: 3
-    title: Review the Moral courage repetition pattern
-    instructions: 'Compare the windows for feasibility, burden, context, and interruption. Keep missing
-      or mixed evidence explicit and compare the limited pattern with this evidence target: Has taken
-      a proportionate stand in a real situation and reviewed whether it was wise and effective.'
+    title: Review outcome and responsibility after speaking
+    instructions: 'Record what you actually did, how the issue changed and whether your intervention caused
+      an avoidable cost. Correct your own error if needed. Decide whether a follow-up, different channel
+      or no further action is warranted; resistance alone does not prove your stand was wise.
+
+
+      Observation checks: Action and outcome are separately recorded; Unintended costs are examined; Further
+      action has a proportionate reason. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.
+
+
+      Final review: Did the stand serve the affected person or principle, and what would make the method
+      wiser next time?
+
+
+      Examples: Supportive: A factual private request corrected missing credit while allowing an honest
+      mistake to be acknowledged.
+
+
+      Mixed: The concern was valid but the chosen public channel embarrassed the person it was intended
+      to help.
+
+
+      Contradictory: An unverified accusation was escalated to prove bravery or to attract attention.
+
+
+      Inconclusive: A stand was imagined but no action or explicit rehearsal was carried out.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -218,9 +249,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0207_a3_windows_distinguished
-        - c0207_a3_burden_compared
-        - c0207_a3_transfer_not_assumed
+        - action_and_outcome_are_separately_recorded
+        - unintended_costs_are_examined
+        - further_action_has_a_proportionate_reason
       - measurement_id: c0207_a3_boundary
         kind: boolean
         role: supporting
@@ -240,16 +271,15 @@ intervention:
     - Use paper, an offline note, a library resource, a public example, or a no-cost conversation for
       Moral courage; no purchase, subscription, travel, credential, or public artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Moral courage; assistive technology, interpretation, a support person, and a deferred
-      action are valid without penalty.
+    - Use writing, an agreed advocate or a fictional rehearsal. Declining unsafe confrontation is compatible
+      with moral seriousness.
     cultural_context:
     - Adapt the expression of Moral courage to direct or indirect communication, collective or individual
       decision structures, local norms, faith or secular commitments, and role obligations while preserving
       consent and dignity.
     resource_variants:
-    - When a real Moral courage opportunity is unavailable or inappropriate, use a fictional, historical,
-      public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use writing, an agreed advocate or a fictional rehearsal. Declining unsafe confrontation is compatible
+      with moral seriousness.
   pause_conditions:
   - Pause Moral courage when capacity, consent, authority, privacy, access, care duties, uncertainty,
     distress, fatigue, pain, resource scarcity, or changed circumstances make the next action unwise.
@@ -279,10 +309,7 @@ evidence_and_scoring:
   - c0207_a3_boundary
   - c0207_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Moral courage action exceeded consent, authority, privacy, qualification, role, burden, or safety
-    boundaries.
-  - The evidence contradicted the intended Moral courage criterion, depended on coercion or hidden private
-    content, or could not distinguish the protocol from contextual change.
+  - An unverified accusation was escalated to prove bravery or to attract attention.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Moral courage explicitly; support can enable access and never reduces dignity or silently changes
     the typed value.
@@ -292,14 +319,20 @@ evidence_and_scoring:
     are rejected and later repetitions use the typed contract's explicit diminishing multipliers.
   recency_rule: Generated Moral courage rules withhold observations older than 90 days; no unrecorded
     retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Has taken a proportionate stand in a real situation and reviewed whether it was wise and effective.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Moral courage requires a bounded context, allowlisted observations,
-    provenance, contradiction and adverse handling, and preserved uncertainty; free text and artifact
-    contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Name the concern, evidence and possible cost. Observed checks: The concern
+    has factual support; Affected people and uncertainty are considered; The anticipated cost and moral
+    purpose are distinct. Action 2: Choose the least harmful effective intervention. Observed checks:
+    The channel fits the issue and risk; The request is specific and proportionate; The affected person''s
+    preferences are respected. Action 3: Review outcome and responsibility after speaking. Observed checks:
+    Action and outcome are separately recorded; Unintended costs are examined; Further action has a proportionate
+    reason.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A stand was imagined but no action or explicit rehearsal
+    was carried out.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Moral
     courage contribution under typed evaluation; protocol performance remains distinct and is never counted
     twice.
@@ -308,9 +341,8 @@ evidence_and_scoring:
   - L02
   - L25
   - L30
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Moral courage evidence.
@@ -318,10 +350,17 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define one small moral courage behavior action was attempted or explicitly deferred.
-  - The try the moral courage behavior in three windows action was attempted or explicitly deferred.
-  - The review the moral courage repetition pattern action preserved a limited conclusion, contradiction,
-    or inconclusive result.
+  - 'Action 1: Name the concern, evidence and possible cost. Observed checks: The concern has factual
+    support; Affected people and uncertainty are considered; The anticipated cost and moral purpose are
+    distinct.'
+  - 'Action 2: Choose the least harmful effective intervention. Observed checks: The channel fits the
+    issue and risk; The request is specific and proportionate; The affected person''s preferences are
+    respected.'
+  - 'Action 3: Review outcome and responsibility after speaking. Observed checks: Action and outcome are
+    separately recorded; Unintended costs are examined; Further action has a proportionate reason.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -330,54 +369,51 @@ completion_and_review:
     - c0207_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Moral courage only when the initial context remained safe, the
-    evidence criteria were usable, burden was acceptable, and a new context can be named without assuming
-    transfer.
-  transfer_limit: Three bounded actions do not establish Moral courage across roles, cultures, relationships,
-    seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: Did the stand serve the affected person or principle, and what would make the
+    method wiser next time?
+  transfer_limit: One low-stakes stand practices moral courage and practical judgment. It does not test
+    action under serious threat or require confrontation to prove character.
   reflection:
-    before: What does Moral courage require in this exact context, what remains outside my role or authority,
-      and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Moral courage criterion is present, absent, mixed, or unknown, and are consent,
-      privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Has taken a proportionate stand in a real situation and reviewed
-      whether it was wise and effective.', what contradiction or missing context matters most, and should
-      this Moral courage design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Act on a defensible moral concern despite
+      modest discomfort, then review whether the action helped.'
+    during: Which checks have actually been observed? The concern was valid but the chosen public channel
+      embarrassed the person it was intended to help.
+    after: Did the stand serve the affected person or principle, and what would make the method wiser
+      next time?
   review_guidance:
     repeat: Repeat the same bounded Moral courage design only when the context and burden remain appropriate.
-    adapt: Change the Moral courage medium, scope, support, timing, criteria, or context while preserving
-      provenance and the narrower evidence claim.
+    adapt: Use writing, an agreed advocate or a fictional rehearsal. Declining unsafe confrontation is
+      compatible with moral seriousness.
     stop: Stop Moral courage when the practice becomes coercive, unsafe, privacy-invasive, role-inappropriate,
       professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Moral courage questions beyond this educational
-      source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Moral courage criteria were observed with provenance and no adverse boundary
-      signal in the selected context.
-    mixed: Some Moral courage criteria were observed while burden, support, contextual change, or a contradiction
-      limited the conclusion.
-    contradictory: The observed result opposed the intended Moral courage criterion, introduced harm or
-      coercion, or showed the design was not workable.
-    inconclusive: The Moral courage action was deferred, not observed, not applicable, stale, insufficiently
-      bounded, or too confounded to interpret.
+    supportive: A factual private request corrected missing credit while allowing an honest mistake to
+      be acknowledged.
+    mixed: The concern was valid but the chosen public channel embarrassed the person it was intended
+      to help.
+    contradictory: An unverified accusation was escalated to prove bravery or to attract attention.
+    inconclusive: A stand was imagined but no action or explicit rehearsal was carried out.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Moral courage.
+    context_heading: Take a proportionate stand on one small unfairness
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Moral courage.
   check_in_labels:
-    c0207_a1_primary: The bounded Moral courage criterion for action 1 was observed
+    c0207_a1_primary: 'Observed checks: name the concern, evidence and possible cost'
     c0207_a1_boundary: Action 1 stayed inside its stated Moral courage boundary
     c0207_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0207_a2_primary: The bounded Moral courage criterion for action 2 was observed
+    c0207_a2_primary: 'Observed checks: choose the least harmful effective intervention'
     c0207_a2_boundary: Action 2 stayed inside its stated Moral courage boundary
     c0207_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0207_a3_primary: The bounded Moral courage criterion for action 3 was observed
+    c0207_a3_primary: 'Observed checks: review outcome and responsibility after speaking'
     c0207_a3_boundary: Action 3 stayed inside its stated Moral courage boundary
     c0207_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Moral courage practice,
-    including support, contradiction, defer, no result, or harm.
+  completion_copy: Did the stand serve the affected person or principle, and what would make the method
+    wiser next time? Completion is not mastery.
+  plain_language_evidence: A factual private request corrected missing credit while allowing an honest
+    mistake to be acknowledged.
   display_order: 27

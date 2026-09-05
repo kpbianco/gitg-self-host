@@ -9,8 +9,8 @@ does not meet this requirement. M6J replaces the generated exercise content
 and reviews the nine earlier packages against the same standard.
 
 Delivery follows the existing multi-PR M6 program. M6J-01 rewrites the 11
-meaning/worldview practices and 16 domestic practices, including the earlier
-home-upkeep package. It leaves 356 explicitly pending. Completing or merging
+meaning/worldview, 15 ethics/integrity and 16 domestic practices, including the
+earlier home-upkeep package. It leaves 341 explicitly pending. Completing or merging
 this cohort does not close the catalog-wide requirement. Subsequent cohorts
 must supply equally concrete content, not merely increase a counter.
 

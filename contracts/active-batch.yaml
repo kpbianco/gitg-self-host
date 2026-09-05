@@ -1,8 +1,8 @@
 schema_version: 1
 batch:
   id: M6J-01-TAILORED-COMPETENCY-PRACTICES
-  title: First tailored-content cohort — meaning and domestic competence
-  goal: Individually rewrite all 27 practices in domains 01 and 13 as the first cohort of the 383-competency rewrite; retain an exact remaining-work inventory.
+  title: First tailored-content cohort — meaning, ethics and domestic competence
+  goal: Individually rewrite all 42 practices in domains 01, 02 and 13 as the first cohort of the 383-competency rewrite; retain an exact remaining-work inventory.
 sources:
   product: products/gitg-self-host/product.yaml
   requirements:
@@ -47,8 +47,8 @@ scope:
     - Dockerfile
     - docker-compose.yml
 acceptance:
-  - All 27 competencies in domains 01 and 13 have individually authored instructions aligned with canonical scope and an explicit bounded exercise goal.
-  - The catalog-wide 383-competency requirement remains open with exactly 356 rewrite-pending rows; this cohort is never reported as complete catalog remediation.
+  - All 42 competencies in domains 01, 02 and 13 have individually authored instructions aligned with canonical scope and an explicit bounded exercise goal.
+  - The catalog-wide 383-competency requirement remains open with exactly 341 rewrite-pending rows; this cohort is never reported as complete catalog remediation.
   - Each action supplies observable success criteria and a usable example without requiring the person to design a rubric or exercise.
   - Prerequisites materials burden meaningful review and accessible equivalents are explicit.
   - Simulation and preparation do not claim live performance or comprehensive mastery.

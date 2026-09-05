@@ -4,12 +4,12 @@
 
 The owner confirmed that scoring/ranking implementation and 383-package
 coverage did not resolve the generic tasking problem. M6J is the actual
-catalog-wide content rewrite described in ADR 0018. M6J-01 supplies 27
-individually authored practices: all 11 in domain 01 and all 16 in domain 13.
+catalog-wide content rewrite described in ADR 0018. M6J-01 supplies 42
+individually authored practices: all 11 in domain 01, 15 in domain 02 and 16 in domain 13.
 They include concrete materials, ordered actions, observation checks, worked
 outcomes, individual adaptations, realistic burden and explicit scope limits.
 The exact remaining-work inventory is
-`reports/practice-content/tailored_practice_coverage_v1.json`: 356 practices
+`reports/practice-content/tailored_practice_coverage_v1.json`: 341 practices
 remain rewrite-pending and zero are represented as human-review-complete.
 
 These authored inputs compile into the canonical YAML consumed by the app;
@@ -19,7 +19,7 @@ change affecting an active or paused practice, so an operator must finish or
 explicitly stop affected work before importing revised instructions. Existing
 submitted events keep their own replay rules.
 
-The next content cohort is ethics/integrity (domain 02), followed by the
+The next content cohort is spirituality and religion (domain 03), followed by the
 remaining domains and explicit review of the other eight earlier packages.
 The target remains all 383. The two earlier roadblocks are not collectively
 closed: Decision 053's scoring software is implemented; content remediation

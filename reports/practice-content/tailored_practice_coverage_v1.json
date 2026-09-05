@@ -1,8 +1,8 @@
 {
   "schema_version": "GG-TAILORED-PRACTICE-AUTHORING-1.0",
   "target": 383,
-  "authored": 27,
-  "remaining": 356,
+  "authored": 42,
+  "remaining": 341,
   "human_review_complete": 0,
   "rows": [
     {
@@ -63,77 +63,77 @@
     {
       "competency_id": "02.01",
       "name": "Moral frameworks",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "02.02",
       "name": "Moral perception",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "02.03",
       "name": "Behavioral definitions of virtue",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "02.04",
       "name": "Truthfulness and candor",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "02.05",
       "name": "Promises, reliability, and one's word",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "02.06",
       "name": "Justice, fairness, and equal dignity",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "02.07",
       "name": "Moral courage",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "02.08",
       "name": "Temperance and moderation",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "02.09",
       "name": "Compassion, mercy, and forgiveness",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "02.10",
       "name": "Loyalty and principled dissent",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "02.11",
       "name": "Responsibility, apology, and restitution",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "02.12",
       "name": "Integrity across contexts",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "02.13",
       "name": "Moral luck, complicity, and dirty hands",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "02.14",
       "name": "Conscience, conscientious objection, and civil disobedience",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "02.15",
       "name": "Ethics of care and dependency",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "03.01",
