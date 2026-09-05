@@ -70,7 +70,7 @@
         </div>
       {% elif next_action %}
         <h2>{{ next_action.title }}</h2>
-        <p>{{ next_action.instructions }}</p>
+        {{ next_action.instructions|linebreaks }}
         <a class="button" href="{% url 'growth:practice-check-in-new' sprint.pk %}?action={{ next_action.pk }}">
           Add compact check-in
         </a>
@@ -129,7 +129,7 @@
           </span>
           <div>
             <strong>{{ row.action.title }}</strong>
-            <p>{{ row.action.instructions }}</p>
+            {{ row.action.instructions|linebreaks }}
           </div>
         </li>
       {% endfor %}

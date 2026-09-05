@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0104-A-HIERARCHY-OF-GOODS-01
 slug: c0104-a-hierarchy-of-goods-practice
-name: Bounded A hierarchy of goods Practice
+name: Resolve one conflict between worthwhile goods
 parent_competency_id: '01.04'
 domain_id: '01'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-OPENSTAX-VALUE-QUESTIONS
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 01.04
-      (A hierarchy of goods); canonical scope, evidence target, classification, domain boundary, and parent
-      mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 01.04; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,38 +35,39 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice A hierarchy of goods through a consent-respecting relational practice bounded by
-    the canonical scope: Rank competing goods such as truth, love, justice, loyalty, freedom, security,
-    achievement, pleasure, family, and service.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can use the hierarchy
-    to resolve a real conflict instead of claiming every value is equally important. The protocol creates
-    a small opportunity to examine that target without treating completion as broad capability.'
+  purpose: Use an explicit, revisable priority order when two legitimate goods cannot both be fully served.
+  why_recommended: Use an explicit, revisable priority order when two legitimate goods cannot both be
+    fully served.
   claims:
-  - statement: Using the canonical scope and evidence target for A hierarchy of goods is a traceable product-design
-      basis for a source-only draft protocol.
+  - statement: Use an explicit, revisable priority order when two legitimate goods cannot both be fully
+      served.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Philosophical value inquiry distinguishes goods valued for themselves from instrumental
+      goods and considers plural values that may conflict or resist a single scale.
+    classification: philosophical_or_normative_position
+    source_ids:
+    - SRC-OPENSTAX-VALUE-QUESTIONS
+    limitations: Educational conceptual support only; does not prescribe the person's priority order or
+      test the product's exercises or outcomes.
   applicability_question: Does a voluntary, bounded A hierarchy of goods practice fit the person's current
     role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record A hierarchy of goods as not applicable, consciously unchosen, or deferred
     without penalty when the role, pathway, capacity, authority, opportunity, or safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited A hierarchy of goods
-    context, understand the source-only status, and stop without losing safety, care, employment, housing,
-    services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to A hierarchy
-    of goods; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency, or dependence
-    for evidence.
+  readiness_considerations: Sort cards or speak the comparison instead of writing. A person receiving
+    care can prioritize care and rest without justifying those needs as productivity.
+  opportunity_considerations: Use a minor conflict such as rest versus volunteering or candor versus confidentiality.
+    Write two feasible options and keep essential care and safety outside the tradeoff.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of A hierarchy of goods.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Use a minor conflict such as rest versus volunteering or candor versus confidentiality. Write two
+    feasible options and keep essential care and safety outside the tradeoff.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for A hierarchy of goods instead of
-    a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Sort cards or speak the comparison instead of writing. A person receiving care can prioritize care
+    and rest without justifying those needs as productivity.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -77,20 +78,28 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about A hierarchy of goods as inferiority;
     competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-RELATIONAL-CONVERSATION
+  protocol_class: PF-KNOWLEDGE-APPLICATION
   duration_days: 10
-  cadence: Complete three bounded A hierarchy of goods actions over ten days, preserving explicit not-applicable,
-    defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for A hierarchy of goods; copy the canonical scope and evidence target into
-    a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for A hierarchy
-    of goods. Do not store private prose, names, identities, diagnoses, allegations, credentials, account
-    data, protected work information, intimate detail, artifact contents, observer narrative, or another
-    person's secrets. This source-only draft is not surveillance, professional advice, treatment, certification,
-    or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three A hierarchy of goods actions, and review;
-    scope may be reduced or deferred for access, care, health, workload, conscience, or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use a minor conflict such as rest versus volunteering or candor versus confidentiality. Write
+    two feasible options and keep essential care and safety outside the tradeoff. Goal: Use an explicit,
+    revisable priority order when two legitimate goods cannot both be fully served. Scope: A priority
+    order is tested in one conflict. Other goods and emergencies may require different judgments; this
+    is a revisable ordering, not a universal numerical ranking. Time and effort: About 20 minutes of comparison
+    plus one small decision and its review. Adaptation: Sort cards or speak the comparison instead of
+    writing. A person receiving care can prioritize care and rest without justifying those needs as productivity.
+    Keep personal working notes outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Introduction to Philosophy, 8.2 Basic Questions about Values: https://openstax.org/books/introduction-philosophy/pages/8-2-basic-questions-about-values'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Sort cards or speak the comparison instead of writing. A person receiving care
+    can prioritize care and rest without justifying those needs as productivity.
+  expected_burden: About 20 minutes of comparison plus one small decision and its review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the A hierarchy of goods protocol to rank worth, coerce participation, demand disclosure, override
@@ -98,19 +107,21 @@ intervention:
   - Treating a completed A hierarchy of goods action, a polished artifact, agreement, confidence, speed,
     independence, or output as mastery or universal transfer.
   exclusions:
-  - Any A hierarchy of goods situation involving emergency response, abuse, retaliation, illegal conduct,
-    medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous equipment,
-    or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Sort cards
+    or speak the comparison instead of writing. A person receiving care can prioritize care and rest without
+    justifying those needs as productivity.
   actions:
   - stable_id: PRACTICE-COMP-0104-A-HIERARCHY-OF-GOODS-01-A1
     sequence: 1
-    title: Prepare a consent-safe A hierarchy of goods interaction
-    instructions: 'Choose one welcome, low-stakes relationship context for A hierarchy of goods. Translate
-      the canonical scope into one observable communication act, identify power or retaliation concerns,
-      and obtain or preserve the other person''s freedom not to participate: Rank competing goods such
-      as truth, love, justice, loyalty, freedom, security, achievement, pleasure, family, and service.'
+    title: Name the goods and the actual conflict
+    instructions: 'For each option, name who benefits, which good it serves, and which good it sacrifices.
+      Example: accepting an extra shift supports income but displaces a promised family visit. Separate
+      needs, promises, preferences, and status concerns before ordering them.
+
+
+      Observation checks: Both options serve a real good; Affected people are considered; The unavoidable
+      tradeoff is specified. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -132,9 +143,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0104_a1_communication_act_specific
-        - c0104_a1_consent_boundary_present
-        - c0104_a1_power_checked
+        - both_options_serve_a_real_good
+        - affected_people_are_considered
+        - the_unavoidable_tradeoff_is_specified
       - measurement_id: c0104_a1_boundary
         kind: boolean
         role: supporting
@@ -151,10 +162,15 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0104-A-HIERARCHY-OF-GOODS-01-A2
     sequence: 2
-    title: Practice one A hierarchy of goods communication act
-    instructions: Use the prepared A hierarchy of goods act once without covert testing, pressure, diagnosis,
-      deception inference, or a demand for disclosure. Ask one direct clarification when appropriate and
-      allow refusal, delay, indirect communication, language access, or another format.
+    title: Choose a priority with an exception
+    instructions: 'State which good takes precedence in this case and why. Name a threshold that would
+      reverse the choice, such as an essential expense rather than discretionary spending. Test whether
+      you would accept the same reasoning if the inconvenience fell on you instead of someone else.
+
+
+      Observation checks: A priority is explicit; A reversal condition is defined; The role-reversal check
+      is performed. Mark only what you observed. Missing, mixed and negative results are valid; a deferred
+      action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -170,12 +186,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0104_a2_primary
-        kind: boolean
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        expected: true
+        - reviewed_artifact
+        criteria:
+        - a_priority_is_explicit
+        - a_reversal_condition_is_defined
+        - the_role_reversal_check_is_performed
       - measurement_id: c0104_a2_boundary
         kind: boolean
         role: supporting
@@ -192,11 +211,34 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0104-A-HIERARCHY-OF-GOODS-01-A3
     sequence: 3
-    title: Review A hierarchy of goods without scoring the person
-    instructions: 'Review only the observable interaction and its boundaries. Do not infer motives or
-      store private narrative. Compare what happened with this evidence target and retain disagreement
-      or an inconclusive result: Can use the hierarchy to resolve a real conflict instead of claiming
-      every value is equally important.'
+    title: Make and review the bounded choice
+    instructions: 'Carry out the small choice or rehearse the supplied case. Communicate any changed commitment
+      to the affected person where appropriate. Afterward note the preserved good, the remaining cost,
+      and whether the priority should change next time. Do not rewrite the cost as though nothing was
+      lost.
+
+
+      Observation checks: The choice is enacted or explicitly rehearsed; Consequences are reviewed; The
+      forgone good remains acknowledged. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.
+
+
+      Final review: Would your stated hierarchy still make sense if you received less benefit from this
+      choice?
+
+
+      Examples: Supportive: A prior promise took precedence over optional income, with an explicit essential-expense
+      exception.
+
+
+      Mixed: A defensible priority was chosen but another person''s inconvenience was not discussed.
+
+
+      Contradictory: Every good was called equally important and the choice was justified only after the
+      fact.
+
+
+      Inconclusive: No conflict, consequence, or feasible choice was identified.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -218,9 +260,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0104_a3_observable_interaction_reviewed
-        - c0104_a3_private_narrative_excluded
-        - c0104_a3_inconclusive_allowed
+        - the_choice_is_enacted_or_explicitly_rehearsed
+        - consequences_are_reviewed
+        - the_forgone_good_remains_acknowledged
       - measurement_id: c0104_a3_boundary
         kind: boolean
         role: supporting
@@ -240,16 +282,15 @@ intervention:
     - Use paper, an offline note, a library resource, a public example, or a no-cost conversation for
       A hierarchy of goods; no purchase, subscription, travel, credential, or public artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for A hierarchy of goods; assistive technology, interpretation, a support person, and a deferred
-      action are valid without penalty.
+    - Sort cards or speak the comparison instead of writing. A person receiving care can prioritize care
+      and rest without justifying those needs as productivity.
     cultural_context:
     - Adapt the expression of A hierarchy of goods to direct or indirect communication, collective or
       individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real A hierarchy of goods opportunity is unavailable or inappropriate, use a fictional, historical,
-      public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Sort cards or speak the comparison instead of writing. A person receiving care can prioritize care
+      and rest without justifying those needs as productivity.
   pause_conditions:
   - Pause A hierarchy of goods when capacity, consent, authority, privacy, access, care duties, uncertainty,
     distress, fatigue, pain, resource scarcity, or changed circumstances make the next action unwise.
@@ -279,10 +320,7 @@ evidence_and_scoring:
   - c0104_a3_boundary
   - c0104_a3_adverse
   adverse_or_contradictory_indicators:
-  - The A hierarchy of goods action exceeded consent, authority, privacy, qualification, role, burden,
-    or safety boundaries.
-  - The evidence contradicted the intended A hierarchy of goods criterion, depended on coercion or hidden
-    private content, or could not distinguish the protocol from contextual change.
+  - Every good was called equally important and the choice was justified only after the fact.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for A hierarchy of goods explicitly; support can enable access and never reduces dignity or silently
     changes the typed value.
@@ -292,14 +330,18 @@ evidence_and_scoring:
     origins are rejected and later repetitions use the typed contract's explicit diminishing multipliers.
   recency_rule: Generated A hierarchy of goods rules withhold observations older than 90 days; no unrecorded
     retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can use the hierarchy to resolve a real conflict instead of claiming every value is equally
-    important.—not completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for A hierarchy of goods requires a bounded context, allowlisted observations,
-    provenance, contradiction and adverse handling, and preserved uncertainty; free text and artifact
-    contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Name the goods and the actual conflict. Observed checks: Both options
+    serve a real good; Affected people are considered; The unavoidable tradeoff is specified. Action 2:
+    Choose a priority with an exception. Observed checks: A priority is explicit; A reversal condition
+    is defined; The role-reversal check is performed. Action 3: Make and review the bounded choice. Observed
+    checks: The choice is enacted or explicitly rehearsed; Consequences are reviewed; The forgone good
+    remains acknowledged.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. No conflict, consequence, or feasible choice was identified.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct A hierarchy
     of goods contribution under typed evaluation; protocol performance remains distinct and is never counted
     twice.
@@ -308,9 +350,8 @@ evidence_and_scoring:
   - L02
   - L14
   - L36
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse A hierarchy of goods evidence.
@@ -318,10 +359,15 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The prepare a consent-safe a hierarchy of goods interaction action was attempted or explicitly deferred.
-  - The practice one a hierarchy of goods communication act action was attempted or explicitly deferred.
-  - The review a hierarchy of goods without scoring the person action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Name the goods and the actual conflict. Observed checks: Both options serve a real good;
+    Affected people are considered; The unavoidable tradeoff is specified.'
+  - 'Action 2: Choose a priority with an exception. Observed checks: A priority is explicit; A reversal
+    condition is defined; The role-reversal check is performed.'
+  - 'Action 3: Make and review the bounded choice. Observed checks: The choice is enacted or explicitly
+    rehearsed; Consequences are reviewed; The forgone good remains acknowledged.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -330,56 +376,52 @@ completion_and_review:
     - c0104_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden A hierarchy of goods only when the initial context remained
-    safe, the evidence criteria were usable, burden was acceptable, and a new context can be named without
-    assuming transfer.
-  transfer_limit: Three bounded actions do not establish A hierarchy of goods across roles, cultures,
-    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: Would your stated hierarchy still make sense if you received less benefit from
+    this choice?
+  transfer_limit: A priority order is tested in one conflict. Other goods and emergencies may require
+    different judgments; this is a revisable ordering, not a universal numerical ranking.
   reflection:
-    before: What does A hierarchy of goods require in this exact context, what remains outside my role
-      or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable A hierarchy of goods criterion is present, absent, mixed, or unknown, and
-      are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can use the hierarchy to resolve a real conflict instead of
-      claiming every value is equally important.', what contradiction or missing context matters most,
-      and should this A hierarchy of goods design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Use an explicit, revisable priority order
+      when two legitimate goods cannot both be fully served.'
+    during: Which checks have actually been observed? A defensible priority was chosen but another person's
+      inconvenience was not discussed.
+    after: Would your stated hierarchy still make sense if you received less benefit from this choice?
   review_guidance:
     repeat: Repeat the same bounded A hierarchy of goods design only when the context and burden remain
       appropriate.
-    adapt: Change the A hierarchy of goods medium, scope, support, timing, criteria, or context while
-      preserving provenance and the narrower evidence claim.
+    adapt: Sort cards or speak the comparison instead of writing. A person receiving care can prioritize
+      care and rest without justifying those needs as productivity.
     stop: Stop A hierarchy of goods when the practice becomes coercive, unsafe, privacy-invasive, role-inappropriate,
       professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for A hierarchy of goods questions beyond
-      this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded A hierarchy of goods criteria were observed with provenance and no adverse
-      boundary signal in the selected context.
-    mixed: Some A hierarchy of goods criteria were observed while burden, support, contextual change,
-      or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended A hierarchy of goods criterion, introduced
-      harm or coercion, or showed the design was not workable.
-    inconclusive: The A hierarchy of goods action was deferred, not observed, not applicable, stale, insufficiently
-      bounded, or too confounded to interpret.
+    supportive: A prior promise took precedence over optional income, with an explicit essential-expense
+      exception.
+    mixed: A defensible priority was chosen but another person's inconvenience was not discussed.
+    contradictory: Every good was called equally important and the choice was justified only after the
+      fact.
+    inconclusive: No conflict, consequence, or feasible choice was identified.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for A hierarchy of goods.
+    context_heading: Resolve one conflict between worthwhile goods
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for A hierarchy
       of goods.
   check_in_labels:
-    c0104_a1_primary: The bounded A hierarchy of goods criterion for action 1 was observed
+    c0104_a1_primary: 'Observed checks: name the goods and the actual conflict'
     c0104_a1_boundary: Action 1 stayed inside its stated A hierarchy of goods boundary
     c0104_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0104_a2_primary: The bounded A hierarchy of goods criterion for action 2 was observed
+    c0104_a2_primary: 'Observed checks: choose a priority with an exception'
     c0104_a2_boundary: Action 2 stayed inside its stated A hierarchy of goods boundary
     c0104_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0104_a3_primary: The bounded A hierarchy of goods criterion for action 3 was observed
+    c0104_a3_primary: 'Observed checks: make and review the bounded choice'
     c0104_a3_boundary: Action 3 stayed inside its stated A hierarchy of goods boundary
     c0104_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited A hierarchy of goods
-    practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Would your stated hierarchy still make sense if you received less benefit from this
+    choice? Completion is not mastery.
+  plain_language_evidence: A prior promise took precedence over optional income, with an explicit essential-expense
+    exception.
   display_order: 13

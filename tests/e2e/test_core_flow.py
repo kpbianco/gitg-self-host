@@ -500,6 +500,49 @@ def test_play_protocol_setup_is_specific_and_score_active(live_server, page: Pag
 
 @pytest.mark.e2e
 @pytest.mark.django_db(transaction=True)
+def test_tailored_practices_show_readable_scope_examples_and_observation_checks(
+    live_server, page: Page
+):
+    user = create_browser_user()
+    seed_browser_data()
+    log_in(live_server, page)
+    protocol = PracticeProtocol.objects.get(parent_competency_id="13.05")
+    page.set_viewport_size({"width": 390, "height": 844})
+    page.goto(f"{live_server.url}/practices/{protocol.slug}/")
+    page.get_by_role("heading", name=protocol.name, exact=True).wait_for()
+    expect(page.get_by_text("Mixed: The food was prepared", exact=False)).to_be_visible()
+    assert_no_horizontal_overflow(page)
+    save_walkthrough_screenshot(page, "mobile-tailored-cooking-actions")
+    page.get_by_role("link", name="Start guided setup").click()
+    page.get_by_role("button", name="Continue").click()
+    page.get_by_label("Yes, this activity or context is available").check()
+    page.get_by_role("button", name="Continue").click()
+    expect(page.get_by_text("Scope: The skillet practices", exact=False)).to_be_visible()
+    expect(page.get_by_role("link", name=re.compile("fsis.usda.gov"))).to_be_visible()
+    assert_no_horizontal_overflow(page)
+    save_walkthrough_screenshot(page, "mobile-tailored-cooking-setup")
+    sprint = start_practice(
+        user=user,
+        protocol=protocol,
+        person_or_context="Synthetic bean-skillet demonstration",
+        start_date=date.today(),
+    )
+    page.goto(f"{live_server.url}/practice-sprints/{sprint.pk}/")
+    page.get_by_role("link", name="Add compact check-in").click()
+    expect(page.get_by_label("Ingredients and equipment are ready", exact=True)).to_be_visible()
+    expect(
+        page.get_by_label("Heat and moisture are adjusted to observations", exact=True)
+    ).to_be_hidden()
+    assert_no_horizontal_overflow(page)
+    save_walkthrough_screenshot(page, "mobile-tailored-cooking-observations")
+    page.set_viewport_size({"width": 1440, "height": 1000})
+    page.goto(f"{live_server.url}/practices/{protocol.slug}/")
+    assert_no_horizontal_overflow(page)
+    save_walkthrough_screenshot(page, "desktop-tailored-cooking-actions")
+
+
+@pytest.mark.e2e
+@pytest.mark.django_db(transaction=True)
 def test_emotional_cue_setup_and_check_in_are_bounded(live_server, page: Page):
     create_browser_user()
     seed_browser_data()

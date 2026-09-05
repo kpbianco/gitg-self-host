@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-1312-RESOURCE-MAINTENANCE-AND-REPAIR-CULTURE-01
 slug: c1312-resource-maintenance-and-repair-culture-practice
-name: Bounded Resource maintenance and repair culture Practice
+name: Decide whether to maintain, repair or replace one item
 parent_competency_id: '13.12'
 domain_id: '13'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 13.12
-      (Resource maintenance and repair culture); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 13.12; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,40 +34,32 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Resource maintenance and repair culture through a consent-respecting relational practice
-    bounded by the canonical scope: Choose durable goods, maintain them, repair when sensible, and understand
-    lifecycle cost.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Possessions last longer
-    and serve their purpose with less waste and replacement. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Compare function, repairability, total cost and waste before replacing a possession.
+  why_recommended: Compare function, repairability, total cost and waste before replacing a possession.
   claims:
-  - statement: Using the canonical scope and evidence target for Resource maintenance and repair culture
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Compare function, repairability, total cost and waste before replacing a possession.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Resource maintenance and repair culture practice fit
     the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Resource maintenance and repair culture as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Resource maintenance
-    and repair culture context, understand the source-only status, and stop without losing safety, care,
-    employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Resource
-    maintenance and repair culture; do not manufacture conflict, deprivation, exposure, disclosure, danger,
-    urgency, or dependence for evidence.
+  readiness_considerations: Use a hypothetical damaged bag and local published repair prices if you cannot
+    authorize work. Borrowing or continuing to use a safe imperfect item may be the best available option.
+  opportunity_considerations: Choose an ordinary low-risk item such as a bag, chair cushion or storage
+    container. Exclude safety-critical equipment and anything with electrical, structural or hazardous-material
+    damage.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Resource maintenance and repair
-    culture.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Choose an ordinary low-risk item such as a bag, chair cushion or storage container. Exclude safety-critical
+    equipment and anything with electrical, structural or hazardous-material damage.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Resource maintenance and repair
-    culture instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a hypothetical damaged bag and local published repair prices if you cannot authorize work. Borrowing
+    or continuing to use a safe imperfect item may be the best available option.
   role_conditions:
   - This competency is context sensitive; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -80,21 +71,25 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Resource maintenance and repair
     culture as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-RELATIONAL-CONVERSATION
+  protocol_class: PF-AUDIT-REDESIGN
   duration_days: 10
-  cadence: Complete three bounded Resource maintenance and repair culture actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Resource maintenance and repair culture; copy the canonical scope and
-    evidence target into a private working note; define the action boundary, valid supports, privacy limit,
-    and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Resource
-    maintenance and repair culture. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Resource maintenance and repair culture
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose an ordinary low-risk item such as a bag, chair cushion or storage container. Exclude
+    safety-critical equipment and anything with electrical, structural or hazardous-material damage. Goal:
+    Compare function, repairability, total cost and waste before replacing a possession. Scope: One item
+    tests maintain, repair and replace reasoning. Broader material stewardship includes repeated maintenance,
+    access constraints and disposal practices over time. Time and effort: About 30 minutes of inspection
+    and comparison, plus one small authorized upkeep or enquiry. Adaptation: Use a hypothetical damaged
+    bag and local published repair prices if you cannot authorize work. Borrowing or continuing to use
+    a safe imperfect item may be the best available option. Keep personal working notes outside the check-in;
+    record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a hypothetical damaged bag and local published repair prices if you cannot
+    authorize work. Borrowing or continuing to use a safe imperfect item may be the best available option.
+  expected_burden: About 30 minutes of inspection and comparison, plus one small authorized upkeep or
+    enquiry.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Resource maintenance and repair culture protocol to rank worth, coerce participation, demand
@@ -102,19 +97,22 @@ intervention:
   - Treating a completed Resource maintenance and repair culture action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Resource maintenance and repair culture situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a hypothetical
+    damaged bag and local published repair prices if you cannot authorize work. Borrowing or continuing
+    to use a safe imperfect item may be the best available option.
   actions:
   - stable_id: PRACTICE-COMP-1312-RESOURCE-MAINTENANCE-AND-REPAIR-CULTURE-01-A1
     sequence: 1
-    title: Prepare a consent-safe Resource maintenance and repair culture interaction
-    instructions: 'Choose one welcome, low-stakes relationship context for Resource maintenance and repair
-      culture. Translate the canonical scope into one observable communication act, identify power or
-      retaliation concerns, and obtain or preserve the other person''s freedom not to participate: Choose
-      durable goods, maintain them, repair when sensible, and understand lifecycle cost.'
+    title: Name the failed function and remaining life
+    instructions: 'Describe what the item must do, what has failed, and what still works. Distinguish
+      appearance, wear and a functional defect. Look for care instructions, replaceable parts and repair
+      information. Example: a bag with a loose seam may need a small repair while a damaged safety harness
+      must not be treated similarly.
+
+
+      Observation checks: Required function and failure are distinguished; Care or repair information
+      is checked; Safety-critical uses are excluded. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -136,9 +134,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c1312_a1_communication_act_specific
-        - c1312_a1_consent_boundary_present
-        - c1312_a1_power_checked
+        - required_function_and_failure_are_distinguished
+        - care_or_repair_information_is_checked
+        - safety_critical_uses_are_excluded
       - measurement_id: c1312_a1_boundary
         kind: boolean
         role: supporting
@@ -155,10 +153,15 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-1312-RESOURCE-MAINTENANCE-AND-REPAIR-CULTURE-01-A2
     sequence: 2
-    title: Practice one Resource maintenance and repair culture communication act
-    instructions: Use the prepared Resource maintenance and repair culture act once without covert testing,
-      pressure, diagnosis, deception inference, or a demand for disclosure. Ask one direct clarification
-      when appropriate and allow refusal, delay, indirect communication, language access, or another format.
+    title: Compare three realistic options
+    instructions: 'Compare maintaining the item, arranging a repair, and replacing it with a durable or
+      secondhand alternative. Include money, time, transport, tools, likely remaining service and disposal.
+      Do not assume repairing is always cheaper or that a person with little time can supply unpaid labor.
+
+
+      Observation checks: Three dispositions are compared; Total resource cost is considered; Expected
+      service and disposal are included. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -174,12 +177,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c1312_a2_primary
-        kind: boolean
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        expected: true
+        - reviewed_artifact
+        criteria:
+        - three_dispositions_are_compared
+        - total_resource_cost_is_considered
+        - expected_service_and_disposal_are_included
       - measurement_id: c1312_a2_boundary
         kind: boolean
         role: supporting
@@ -196,10 +202,33 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-1312-RESOURCE-MAINTENANCE-AND-REPAIR-CULTURE-01-A3
     sequence: 3
-    title: Review Resource maintenance and repair culture without scoring the person
-    instructions: 'Review only the observable interaction and its boundaries. Do not infer motives or
-      store private narrative. Compare what happened with this evidence target and retain disagreement
-      or an inconclusive result: Possessions last longer and serve their purpose with less waste and replacement.'
+    title: Act on the selected disposition
+    instructions: 'Perform only a safe care step already described by the maker, request a repair estimate,
+      or arrange an appropriate replacement or disposal. Set one maintenance cue for the kept item. Afterward
+      check whether it actually serves the required function and record any cost you underestimated.
+
+
+      Observation checks: A safe disposition is acted on; Function or the next dependency is checked;
+      A maintenance cue or disposal plan is set. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.
+
+
+      Final review: Which option best serves the needed function with your actual resources, and what
+      would change that decision?
+
+
+      Examples: Supportive: A modest repair restored a bag''s function and a recurring seam check was
+      added.
+
+
+      Mixed: Repair is feasible but travel and time make the apparent saving uncertain.
+
+
+      Contradictory: An unsafe item was retained to avoid waste or a cosmetic preference was presented
+      as unavoidable replacement.
+
+
+      Inconclusive: Prices were compared without specifying the needed function or taking any next step.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -221,9 +250,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c1312_a3_observable_interaction_reviewed
-        - c1312_a3_private_narrative_excluded
-        - c1312_a3_inconclusive_allowed
+        - a_safe_disposition_is_acted_on
+        - function_or_the_next_dependency_is_checked
+        - a_maintenance_cue_or_disposal_plan_is_set
       - measurement_id: c1312_a3_boundary
         kind: boolean
         role: supporting
@@ -244,17 +273,15 @@ intervention:
       Resource maintenance and repair culture; no purchase, subscription, travel, credential, or public
       artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Resource maintenance and repair culture; assistive technology, interpretation, a support
-      person, and a deferred action are valid without penalty.
+    - Use a hypothetical damaged bag and local published repair prices if you cannot authorize work. Borrowing
+      or continuing to use a safe imperfect item may be the best available option.
     cultural_context:
     - Adapt the expression of Resource maintenance and repair culture to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Resource maintenance and repair culture opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use a hypothetical damaged bag and local published repair prices if you cannot authorize work. Borrowing
+      or continuing to use a safe imperfect item may be the best available option.
   pause_conditions:
   - Pause Resource maintenance and repair culture when capacity, consent, authority, privacy, access,
     care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make
@@ -286,10 +313,7 @@ evidence_and_scoring:
   - c1312_a3_boundary
   - c1312_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Resource maintenance and repair culture action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Resource maintenance and repair culture criterion, depended
-    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - An unsafe item was retained to avoid waste or a cosmetic preference was presented as unavoidable replacement.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Resource maintenance and repair culture explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -300,14 +324,19 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Resource maintenance and repair culture rules withhold observations older than
     90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Possessions last longer and serve their purpose with less waste and replacement.—not completion,
-    confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Resource maintenance and repair culture requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Name the failed function and remaining life. Observed checks: Required
+    function and failure are distinguished; Care or repair information is checked; Safety-critical uses
+    are excluded. Action 2: Compare three realistic options. Observed checks: Three dispositions are compared;
+    Total resource cost is considered; Expected service and disposal are included. Action 3: Act on the
+    selected disposition. Observed checks: A safe disposition is acted on; Function or the next dependency
+    is checked; A maintenance cue or disposal plan is set.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. Prices were compared without specifying the needed
+    function or taking any next step.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Resource
     maintenance and repair culture contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -317,9 +346,8 @@ evidence_and_scoring:
   - L21
   - L32
   - L35
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Resource maintenance and repair culture evidence.
@@ -327,12 +355,15 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The prepare a consent-safe resource maintenance and repair culture interaction action was attempted
-    or explicitly deferred.
-  - The practice one resource maintenance and repair culture communication act action was attempted or
-    explicitly deferred.
-  - The review resource maintenance and repair culture without scoring the person action preserved a limited
-    conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Name the failed function and remaining life. Observed checks: Required function and failure
+    are distinguished; Care or repair information is checked; Safety-critical uses are excluded.'
+  - 'Action 2: Compare three realistic options. Observed checks: Three dispositions are compared; Total
+    resource cost is considered; Expected service and disposal are included.'
+  - 'Action 3: Act on the selected disposition. Observed checks: A safe disposition is acted on; Function
+    or the next dependency is checked; A maintenance cue or disposal plan is set.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -341,58 +372,51 @@ completion_and_review:
     - c1312_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Resource maintenance and repair culture only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Resource maintenance and repair culture across
-    roles, cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: Which option best serves the needed function with your actual resources, and what
+    would change that decision?
+  transfer_limit: One item tests maintain, repair and replace reasoning. Broader material stewardship
+    includes repeated maintenance, access constraints and disposal practices over time.
   reflection:
-    before: What does Resource maintenance and repair culture require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Resource maintenance and repair culture criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Possessions last longer and serve their purpose with less
-      waste and replacement.', what contradiction or missing context matters most, and should this Resource
-      maintenance and repair culture design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Compare function, repairability, total cost
+      and waste before replacing a possession.'
+    during: Which checks have actually been observed? Repair is feasible but travel and time make the
+      apparent saving uncertain.
+    after: Which option best serves the needed function with your actual resources, and what would change
+      that decision?
   review_guidance:
     repeat: Repeat the same bounded Resource maintenance and repair culture design only when the context
       and burden remain appropriate.
-    adapt: Change the Resource maintenance and repair culture medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Use a hypothetical damaged bag and local published repair prices if you cannot authorize work.
+      Borrowing or continuing to use a safe imperfect item may be the best available option.
     stop: Stop Resource maintenance and repair culture when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Resource maintenance and repair culture
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Resource maintenance and repair culture criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Resource maintenance and repair culture criteria were observed while burden, support,
-      contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Resource maintenance and repair culture criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Resource maintenance and repair culture action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: A modest repair restored a bag's function and a recurring seam check was added.
+    mixed: Repair is feasible but travel and time make the apparent saving uncertain.
+    contradictory: An unsafe item was retained to avoid waste or a cosmetic preference was presented as
+      unavoidable replacement.
+    inconclusive: Prices were compared without specifying the needed function or taking any next step.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Resource maintenance and repair culture.
+    context_heading: Decide whether to maintain, repair or replace one item
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Resource
       maintenance and repair culture.
   check_in_labels:
-    c1312_a1_primary: The bounded Resource maintenance and repair culture criterion for action 1 was observed
+    c1312_a1_primary: 'Observed checks: name the failed function and remaining life'
     c1312_a1_boundary: Action 1 stayed inside its stated Resource maintenance and repair culture boundary
     c1312_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c1312_a2_primary: The bounded Resource maintenance and repair culture criterion for action 2 was observed
+    c1312_a2_primary: 'Observed checks: compare three realistic options'
     c1312_a2_boundary: Action 2 stayed inside its stated Resource maintenance and repair culture boundary
     c1312_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c1312_a3_primary: The bounded Resource maintenance and repair culture criterion for action 3 was observed
+    c1312_a3_primary: 'Observed checks: act on the selected disposition'
     c1312_a3_boundary: Action 3 stayed inside its stated Resource maintenance and repair culture boundary
     c1312_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Resource maintenance
-    and repair culture practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Which option best serves the needed function with your actual resources, and what would
+    change that decision? Completion is not mastery.
+  plain_language_evidence: A modest repair restored a bag's function and a recurring seam check was added.
   display_order: 172

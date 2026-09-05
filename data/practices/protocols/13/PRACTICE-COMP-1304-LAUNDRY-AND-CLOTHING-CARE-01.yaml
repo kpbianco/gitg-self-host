@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-1304-LAUNDRY-AND-CLOTHING-CARE-01
 slug: c1304-laundry-and-clothing-care-practice
-name: Bounded Laundry and clothing care Practice
+name: Take one garment through a complete care cycle
 parent_competency_id: '13.04'
 domain_id: '13'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-FTC-GARMENT-CARE
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 13.04
-      (Laundry and clothing care); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 13.04; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,38 +35,43 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Laundry and clothing care through a low-stakes skill rehearsal bounded by the canonical
-    scope: Wash, dry, store, mend, alter, and preserve clothing and textiles.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Clothing remains clean,
-    serviceable, and appropriately repaired. The protocol creates a small opportunity to examine that
-    target without treating completion as broad capability.'
+  purpose: Use fabric-care information to clean, dry, inspect and store a garment without preventable
+    damage.
+  why_recommended: Use fabric-care information to clean, dry, inspect and store a garment without preventable
+    damage.
   claims:
-  - statement: Using the canonical scope and evidence target for Laundry and clothing care is a traceable
-      product-design basis for a source-only draft protocol.
+  - statement: Use fabric-care information to clean, dry, inspect and store a garment without preventable
+      damage.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Garment care labels describe suitable washing, bleaching, drying and ironing methods and
+      warnings about harmful treatments.
+    classification: safety_precaution
+    source_ids:
+    - SRC-FTC-GARMENT-CARE
+    limitations: US labeling guidance; legal labeling requirements vary elsewhere. Supports reading the
+      actual label, not any invented treatment for an unknown textile.
   applicability_question: Does a voluntary, bounded Laundry and clothing care practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Laundry and clothing care as not applicable, consciously unchosen, or
     deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Laundry and clothing
-    care context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Laundry and
-    clothing care; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency, or
-    dependence for evidence.
+  readiness_considerations: Use accessible laundry controls, a smaller load, line drying or an agreed
+    helper. If laundry access is absent, make the label-based plan and identify an available service;
+    practical laundering remains untested.
+  opportunity_considerations: Choose an ordinary washable garment with a readable care label, compatible
+    detergent, drying space and your normal laundry access. Use an old low-value item for any repair practice.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Laundry and clothing care.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Choose an ordinary washable garment with a readable care label, compatible detergent, drying space
+    and your normal laundry access. Use an old low-value item for any repair practice.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Laundry and clothing care instead
-    of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use accessible laundry controls, a smaller load, line drying or an agreed helper. If laundry access
+    is absent, make the label-based plan and identify an available service; practical laundering remains
+    untested.
   role_conditions:
   - This competency is context sensitive; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -80,19 +85,29 @@ meaning_and_fit:
 intervention:
   protocol_class: PF-SKILL-REHEARSAL
   duration_days: 10
-  cadence: Complete three bounded Laundry and clothing care actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Laundry and clothing care; copy the canonical scope and evidence target
-    into a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Laundry
-    and clothing care. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Laundry and clothing care actions, and
-    review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose an ordinary washable garment with a readable care label, compatible detergent, drying
+    space and your normal laundry access. Use an old low-value item for any repair practice. Goal: Use
+    fabric-care information to clean, dry, inspect and store a garment without preventable damage. Scope:
+    One garment practices interpreting care instructions and using an appropriate method. Sewing, stain
+    diagnosis and specialist textile care require additional practice. Time and effort: About 15 minutes
+    of preparation and review plus the garment''s specified washing and drying time. Adaptation: Use accessible
+    laundry controls, a smaller load, line drying or an agreed helper. If laundry access is absent, make
+    the label-based plan and identify an available service; practical laundering remains untested. Keep
+    personal working notes outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Clothes Captioning — Complying with the Care Labeling Rule: https://www.ftc.gov/business-guidance/resources/clothes-captioning-complying-care-labeling-rule'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use accessible laundry controls, a smaller load, line drying or an agreed helper.
+    If laundry access is absent, make the label-based plan and identify an available service; practical
+    laundering remains untested.
+  expected_burden: About 15 minutes of preparation and review plus the garment's specified washing and
+    drying time.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Laundry and clothing care protocol to rank worth, coerce participation, demand disclosure,
@@ -100,18 +115,21 @@ intervention:
   - Treating a completed Laundry and clothing care action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Laundry and clothing care situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use accessible
+    laundry controls, a smaller load, line drying or an agreed helper. If laundry access is absent, make
+    the label-based plan and identify an available service; practical laundering remains untested.
   actions:
   - stable_id: PRACTICE-COMP-1304-LAUNDRY-AND-CLOTHING-CARE-01-A1
     sequence: 1
-    title: Define observable criteria for Laundry and clothing care
-    instructions: 'Select one safe, lawful, low-stakes component of Laundry and clothing care. Build a
-      three-to-five-item rubric from this scope, including an error or stop criterion: Wash, dry, store,
-      mend, alter, and preserve clothing and textiles.'
+    title: Turn the care label into a plan
+    instructions: 'Read washing, bleaching, drying and ironing restrictions. Check pockets, fasteners,
+      colors and any stain, then choose a compatible load or separate treatment. Example: a cool-wash,
+      air-dry garment should not be added to a hot wash and high-heat dryer simply because its color matches.
+
+
+      Observation checks: Care restrictions are interpreted; Pockets and garment condition are checked;
+      The load and drying method fit the label. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -133,9 +151,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c1304_a1_skill_component_bounded
-        - c1304_a1_observable_rubric_present
-        - c1304_a1_error_or_stop_defined
+        - care_restrictions_are_interpreted
+        - pockets_and_garment_condition_are_checked
+        - the_load_and_drying_method_fit_the_label
       - measurement_id: c1304_a1_boundary
         kind: boolean
         role: supporting
@@ -152,10 +170,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-1304-LAUNDRY-AND-CLOTHING-CARE-01-A2
     sequence: 2
-    title: Rehearse Laundry and clothing care twice
-    instructions: Perform two bounded attempts of the selected Laundry and clothing care component under
-      comparable safe conditions. Use self-review, a consensual observer, or a reviewed artifact; do not
-      require public exposure, coerced feedback, licensed work, or high-consequence performance.
+    title: Wash and dry without improvising chemistry
+    instructions: 'Follow the garment and product directions for the selected method and detergent amount.
+      Separate unsuitable items and do not mix stain treatments. After washing, use the specified drying
+      method and check whether the item is actually dry before storage. If a stain remains, check care
+      guidance before applying heat or another treatment.
+
+
+      Observation checks: The selected care method is followed; Drying respects the garment restriction;
+      Remaining stain and moisture are checked. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -171,15 +195,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c1304_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - the_selected_care_method_is_followed
+        - drying_respects_the_garment_restriction
+        - remaining_stain_and_moisture_are_checked
       - measurement_id: c1304_a2_boundary
         kind: boolean
         role: supporting
@@ -196,10 +220,34 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-1304-LAUNDRY-AND-CLOTHING-CARE-01-A3
     sequence: 3
-    title: Use feedback for one Laundry and clothing care retry
-    instructions: 'Choose one rubric item that remained weak, make one specific adjustment, and retry
-      only that component. Preserve no-change or worse results and compare the evidence with: Clothing
-      remains clean, serviceable, and appropriately repaired.'
+    title: Inspect serviceability and plan a repair
+    instructions: 'Check seams, closures, shape and cleanliness. Fold or hang appropriately. For a loose
+      button or seam, identify the repair needed and either follow a supplied repair guide on a spare
+      item or arrange suitable help; do not practice on protective or safety-critical clothing. Record
+      whether care preserved function and what needs follow-up.
+
+
+      Observation checks: Cleanliness and structural condition are inspected; Storage matches the garment;
+      Repair needs have a proportionate disposition. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.
+
+
+      Final review: Which care decision prevented damage, and what would you do differently for another
+      fabric?
+
+
+      Examples: Supportive: A restricted garment was washed compatibly, air-dried and stored dry with
+      a loose seam flagged.
+
+
+      Mixed: The garment is clean but shrinking or a persistent stain suggests the care plan needs review.
+
+
+      Contradictory: A warning label was ignored or a damp garment was sealed away.
+
+
+      Inconclusive: The label was read but no care cycle or clearly labelled planning alternative was
+      completed.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -221,9 +269,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c1304_a3_feedback_item_selected
-        - c1304_a3_adjustment_traceable
-        - c1304_a3_retry_result_preserved
+        - cleanliness_and_structural_condition_are_inspected
+        - storage_matches_the_garment
+        - repair_needs_have_a_proportionate_disposition
       - measurement_id: c1304_a3_boundary
         kind: boolean
         role: supporting
@@ -244,16 +292,17 @@ intervention:
       Laundry and clothing care; no purchase, subscription, travel, credential, or public artifact is
       required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Laundry and clothing care; assistive technology, interpretation, a support person, and
-      a deferred action are valid without penalty.
+    - Use accessible laundry controls, a smaller load, line drying or an agreed helper. If laundry access
+      is absent, make the label-based plan and identify an available service; practical laundering remains
+      untested.
     cultural_context:
     - Adapt the expression of Laundry and clothing care to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Laundry and clothing care opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use accessible laundry controls, a smaller load, line drying or an agreed helper. If laundry access
+      is absent, make the label-based plan and identify an available service; practical laundering remains
+      untested.
   pause_conditions:
   - Pause Laundry and clothing care when capacity, consent, authority, privacy, access, care duties, uncertainty,
     distress, fatigue, pain, resource scarcity, or changed circumstances make the next action unwise.
@@ -284,10 +333,7 @@ evidence_and_scoring:
   - c1304_a3_boundary
   - c1304_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Laundry and clothing care action exceeded consent, authority, privacy, qualification, role, burden,
-    or safety boundaries.
-  - The evidence contradicted the intended Laundry and clothing care criterion, depended on coercion or
-    hidden private content, or could not distinguish the protocol from contextual change.
+  - A warning label was ignored or a damp garment was sealed away.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Laundry and clothing care explicitly; support can enable access and never reduces dignity or silently
     changes the typed value.
@@ -297,14 +343,19 @@ evidence_and_scoring:
     origins are rejected and later repetitions use the typed contract's explicit diminishing multipliers.
   recency_rule: Generated Laundry and clothing care rules withhold observations older than 90 days; no
     unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Clothing remains clean, serviceable, and appropriately repaired.—not completion, confidence,
-    conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Laundry and clothing care requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Turn the care label into a plan. Observed checks: Care restrictions are
+    interpreted; Pockets and garment condition are checked; The load and drying method fit the label.
+    Action 2: Wash and dry without improvising chemistry. Observed checks: The selected care method is
+    followed; Drying respects the garment restriction; Remaining stain and moisture are checked. Action
+    3: Inspect serviceability and plan a repair. Observed checks: Cleanliness and structural condition
+    are inspected; Storage matches the garment; Repair needs have a proportionate disposition.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. The label was read but no care cycle or clearly labelled
+    planning alternative was completed.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Laundry
     and clothing care contribution under typed evaluation; protocol performance remains distinct and is
     never counted twice.
@@ -312,9 +363,8 @@ evidence_and_scoring:
   recommendation_target_lever_ids:
   - L10
   - L18
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Laundry and clothing care evidence.
@@ -322,10 +372,15 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define observable criteria for laundry and clothing care action was attempted or explicitly deferred.
-  - The rehearse laundry and clothing care twice action was attempted or explicitly deferred.
-  - The use feedback for one laundry and clothing care retry action preserved a limited conclusion, contradiction,
-    or inconclusive result.
+  - 'Action 1: Turn the care label into a plan. Observed checks: Care restrictions are interpreted; Pockets
+    and garment condition are checked; The load and drying method fit the label.'
+  - 'Action 2: Wash and dry without improvising chemistry. Observed checks: The selected care method is
+    followed; Drying respects the garment restriction; Remaining stain and moisture are checked.'
+  - 'Action 3: Inspect serviceability and plan a repair. Observed checks: Cleanliness and structural condition
+    are inspected; Storage matches the garment; Repair needs have a proportionate disposition.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -334,56 +389,52 @@ completion_and_review:
     - c1304_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Laundry and clothing care only when the initial context remained
-    safe, the evidence criteria were usable, burden was acceptable, and a new context can be named without
-    assuming transfer.
-  transfer_limit: Three bounded actions do not establish Laundry and clothing care across roles, cultures,
-    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: Which care decision prevented damage, and what would you do differently for another
+    fabric?
+  transfer_limit: One garment practices interpreting care instructions and using an appropriate method.
+    Sewing, stain diagnosis and specialist textile care require additional practice.
   reflection:
-    before: What does Laundry and clothing care require in this exact context, what remains outside my
-      role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Laundry and clothing care criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Clothing remains clean, serviceable, and appropriately repaired.',
-      what contradiction or missing context matters most, and should this Laundry and clothing care design
-      be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Use fabric-care information to clean, dry,
+      inspect and store a garment without preventable damage.'
+    during: Which checks have actually been observed? The garment is clean but shrinking or a persistent
+      stain suggests the care plan needs review.
+    after: Which care decision prevented damage, and what would you do differently for another fabric?
   review_guidance:
     repeat: Repeat the same bounded Laundry and clothing care design only when the context and burden
       remain appropriate.
-    adapt: Change the Laundry and clothing care medium, scope, support, timing, criteria, or context while
-      preserving provenance and the narrower evidence claim.
+    adapt: Use accessible laundry controls, a smaller load, line drying or an agreed helper. If laundry
+      access is absent, make the label-based plan and identify an available service; practical laundering
+      remains untested.
     stop: Stop Laundry and clothing care when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Laundry and clothing care questions beyond
-      this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Laundry and clothing care criteria were observed with provenance and no adverse
-      boundary signal in the selected context.
-    mixed: Some Laundry and clothing care criteria were observed while burden, support, contextual change,
-      or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Laundry and clothing care criterion, introduced
-      harm or coercion, or showed the design was not workable.
-    inconclusive: The Laundry and clothing care action was deferred, not observed, not applicable, stale,
-      insufficiently bounded, or too confounded to interpret.
+    supportive: A restricted garment was washed compatibly, air-dried and stored dry with a loose seam
+      flagged.
+    mixed: The garment is clean but shrinking or a persistent stain suggests the care plan needs review.
+    contradictory: A warning label was ignored or a damp garment was sealed away.
+    inconclusive: The label was read but no care cycle or clearly labelled planning alternative was completed.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Laundry and clothing care.
+    context_heading: Take one garment through a complete care cycle
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Laundry and
       clothing care.
   check_in_labels:
-    c1304_a1_primary: The bounded Laundry and clothing care criterion for action 1 was observed
+    c1304_a1_primary: 'Observed checks: turn the care label into a plan'
     c1304_a1_boundary: Action 1 stayed inside its stated Laundry and clothing care boundary
     c1304_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c1304_a2_primary: The bounded Laundry and clothing care criterion for action 2 was observed
+    c1304_a2_primary: 'Observed checks: wash and dry without improvising chemistry'
     c1304_a2_boundary: Action 2 stayed inside its stated Laundry and clothing care boundary
     c1304_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c1304_a3_primary: The bounded Laundry and clothing care criterion for action 3 was observed
+    c1304_a3_primary: 'Observed checks: inspect serviceability and plan a repair'
     c1304_a3_boundary: Action 3 stayed inside its stated Laundry and clothing care boundary
     c1304_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Laundry and clothing
-    care practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Which care decision prevented damage, and what would you do differently for another
+    fabric? Completion is not mastery.
+  plain_language_evidence: A restricted garment was washed compatibly, air-dried and stored dry with a
+    loose seam flagged.
   display_order: 164

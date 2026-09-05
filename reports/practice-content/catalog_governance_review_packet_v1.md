@@ -12,8 +12,8 @@ All 383 packages are owner-directed runtime and score active. This audit does no
 - Actions audited: 1151
 - Legacy packages: 5
 - Typed packages: 378
-- Generated additions: 374
-- Open findings: 3369
+- Originally generated additions: 374
+- Open findings: 3516
 
 ## Governance gates
 
@@ -27,7 +27,7 @@ All 383 packages are owner-directed runtime and score active. This audit does no
 | --- | ---: |
 | critical | 0 |
 | high | 1045 |
-| moderate | 2073 |
+| moderate | 2220 |
 | low | 251 |
 
 ## Review routing by required role
@@ -41,7 +41,7 @@ All 383 packages are owner-directed runtime and score active. This audit does no
 | measurement specialist | 768 |
 | owner | 384 |
 | privacy and safety reviewer | 385 |
-| trained content reviewer | 1452 |
+| trained content reviewer | 1599 |
 | trained source reviewer | 767 |
 
 ## Review routing by dependency
@@ -58,7 +58,7 @@ All 383 packages are owner-directed runtime and score active. This audit does no
 | manual_safety_review_pending | 383 |
 | manual_source_review_pending | 383 |
 | trained_content_and_measurement_review | 383 |
-| trained_content_and_originality_review | 302 |
+| trained_content_and_originality_review | 449 |
 
 ## Artifacts
 

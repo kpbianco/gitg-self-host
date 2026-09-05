@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-1311-GARDENING-AND-PLANT-CARE-01
 slug: c1311-gardening-and-plant-care-practice
-name: Bounded Gardening and plant care Practice
+name: Match one plant to its actual growing conditions
 parent_competency_id: '13.11'
 domain_id: '13'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-UMN-HOUSEPLANT-CARE
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 13.11
-      (Gardening and plant care); canonical scope, evidence target, classification, domain boundary, and
-      parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 13.11; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,38 +35,44 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Gardening and plant care through a bounded longitudinal review bounded by the canonical
-    scope: Understand soil, light, water, nutrients, pests, seasons, and plant selection.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can sustain plants
-    or a small growing system through a full cycle. The protocol creates a small opportunity to examine
-    that target without treating completion as broad capability.'
+  purpose: Use plant-specific information and observations to plan care and respond to a small growing
+    trial.
+  why_recommended: Use plant-specific information and observations to plan care and respond to a small
+    growing trial.
   claims:
-  - statement: Using the canonical scope and evidence target for Gardening and plant care is a traceable
-      product-design basis for a source-only draft protocol.
+  - statement: Use plant-specific information and observations to plan care and respond to a small growing
+      trial.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Houseplant care should respond to observed light, moisture, drainage and growth conditions;
+      watering solely by calendar can miss the plant's actual needs.
+    classification: professional_or_public_standard
+    source_ids:
+    - SRC-UMN-HOUSEPLANT-CARE
+    limitations: Seasonal Upper Midwest houseplant guidance, not a universal watering or growing schedule
+      for all species, climates or cultivation methods.
   applicability_question: Does a voluntary, bounded Gardening and plant care practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Gardening and plant care as not applicable, consciously unchosen, or
     deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Gardening and plant
-    care context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Gardening
-    and plant care; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency, or
-    dependence for evidence.
+  readiness_considerations: Observe an existing shared plant with permission, use accessible raised placement,
+    or build a species-specific care plan without buying anything. Planning alone does not show that a
+    plant was sustained.
+  opportunity_considerations: Choose an existing plant or a small seed trial that fits your space. Identify
+    the species and obtain guidance from a local extension service, botanic garden or reliable supplier.
+    Check toxicity where children or animals have access.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Gardening and plant care.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Choose an existing plant or a small seed trial that fits your space. Identify the species and obtain
+    guidance from a local extension service, botanic garden or reliable supplier. Check toxicity where
+    children or animals have access.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Gardening and plant care instead
-    of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Observe an existing shared plant with permission, use accessible raised placement, or build a species-specific
+    care plan without buying anything. Planning alone does not show that a plant was sustained.
   role_conditions:
   - This competency is context sensitive; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -80,19 +86,30 @@ meaning_and_fit:
 intervention:
   protocol_class: PF-LONGITUDINAL-REVIEW
   duration_days: 10
-  cadence: Complete three bounded Gardening and plant care actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Gardening and plant care; copy the canonical scope and evidence target
-    into a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Gardening
-    and plant care. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Gardening and plant care actions, and
-    review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose an existing plant or a small seed trial that fits your space. Identify the species and
+    obtain guidance from a local extension service, botanic garden or reliable supplier. Check toxicity
+    where children or animals have access. Goal: Use plant-specific information and observations to plan
+    care and respond to a small growing trial. Scope: A small plant trial connects species, place, care
+    and observation. Early observations are not a completed growing cycle or proof of long-term cultivation
+    skill. Time and effort: About 30 minutes to identify conditions and set up, then brief observations
+    over a suitable week; a full growing cycle may take much longer. Adaptation: Observe an existing shared
+    plant with permission, use accessible raised placement, or build a species-specific care plan without
+    buying anything. Planning alone does not show that a plant was sustained. Keep personal working notes
+    outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Spring houseplant care: https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/houseplants/spring-houseplant-care'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Observe an existing shared plant with permission, use accessible raised placement,
+    or build a species-specific care plan without buying anything. Planning alone does not show that a
+    plant was sustained.
+  expected_burden: About 30 minutes to identify conditions and set up, then brief observations over a
+    suitable week; a full growing cycle may take much longer.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Gardening and plant care protocol to rank worth, coerce participation, demand disclosure,
@@ -100,18 +117,22 @@ intervention:
   - Treating a completed Gardening and plant care action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Gardening and plant care situation involving emergency response, abuse, retaliation, illegal conduct,
-    medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous equipment,
-    or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Observe an
+    existing shared plant with permission, use accessible raised placement, or build a species-specific
+    care plan without buying anything. Planning alone does not show that a plant was sustained.
   actions:
   - stable_id: PRACTICE-COMP-1311-GARDENING-AND-PLANT-CARE-01-A1
     sequence: 1
-    title: Define indicators for Gardening and plant care
-    instructions: 'Choose two to four observable, privacy-minimized indicators for Gardening and plant
-      care, plus a missing-data rule and one contradiction indicator. Bound the review to one role or
-      context using this scope: Understand soil, light, water, nutrients, pests, seasons, and plant selection.'
+    title: Compare the plant's needs with the site
+    instructions: 'Record actual light exposure, container drainage, growing medium and seasonal temperature
+      conditions. Compare them with the chosen plant''s guidance, including watering and mature size.
+      Example: a sunny windowsill may still vary markedly between seasons. If the conditions do not fit,
+      choose a different site or plant instead of compensating with more fertilizer.
+
+
+      Observation checks: Plant identity and guidance are explicit; Site conditions are observed; A mismatch
+      has a proportionate response. Mark only what you observed. Missing, mixed and negative results are
+      valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -133,9 +154,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c1311_a1_indicators_observable
-        - c1311_a1_missing_data_rule_present
-        - c1311_a1_contradiction_indicator_present
+        - plant_identity_and_guidance_are_explicit
+        - site_conditions_are_observed
+        - a_mismatch_has_a_proportionate_response
       - measurement_id: c1311_a1_boundary
         kind: boolean
         role: supporting
@@ -152,10 +173,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-1311-GARDENING-AND-PLANT-CARE-01-A2
     sequence: 2
-    title: Observe Gardening and plant care across three checkpoints
-    instructions: Collect up to three brief Gardening and plant care checkpoints across the selected period
-      or contexts. Record unknown, not observed, not applicable, defer, and adverse outcomes as valid
-      states; do not infer a trend from prose length, mood, or one unusually good or bad event.
+    title: Establish a condition-based care routine
+    instructions: 'Follow the plant''s instructions for planting or routine care and record a baseline
+      observation. Check moisture before watering using a method suitable for that medium and plant; do
+      not water solely because a calendar alarm rings. Keep drainage usable and avoid unneeded pesticide
+      or fertilizer applications.
+
+
+      Observation checks: Care follows the selected plant''s requirements; A baseline observation is recorded;
+      Watering responds to observed conditions. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -171,15 +198,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c1311_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - care_follows_the_selected_plant_s_requirements
+        - a_baseline_observation_is_recorded
+        - watering_responds_to_observed_conditions
       - measurement_id: c1311_a2_boundary
         kind: boolean
         role: supporting
@@ -196,10 +223,34 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-1311-GARDENING-AND-PLANT-CARE-01-A3
     sequence: 3
-    title: Review the limited Gardening and plant care pattern
-    instructions: 'Compare the checkpoints, name the strongest contradiction or missing context, and choose
-      repeat, adapt, stop, or seek support. Treat this target as a review criterion rather than proof
-      of transfer: Can sustain plants or a small growing system through a full cycle.'
+    title: Review a growing interval and the next stage
+    instructions: 'After the plant-appropriate interval, compare new growth, wilting, discoloration, moisture
+      and any pest signs with the baseline. Investigate one plausible cause with the reference before
+      changing care. Set checkpoints for the rest of the plant''s season or life cycle; this short exercise
+      does not demonstrate a complete growing cycle.
+
+
+      Observation checks: Observations are compared over time; One care change is evidence-linked; The
+      unobserved stages and next checkpoints are explicit. Mark only what you observed. Missing, mixed
+      and negative results are valid; a deferred action is not completed.
+
+
+      Final review: Did the routine fit this plant in this location, and what evidence would distinguish
+      too much water from another problem?
+
+
+      Examples: Supportive: A light mismatch was corrected and subsequent observations informed the next
+      care decision.
+
+
+      Mixed: The plant survived the interval but a new leaf problem has several possible causes.
+
+
+      Contradictory: Water or chemicals were added repeatedly without checking conditions or product directions.
+
+
+      Inconclusive: A generic watering schedule was written without identifying the plant or observing
+      its site.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -221,9 +272,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c1311_a3_checkpoints_compared
-        - c1311_a3_contradiction_or_gap_named
-        - c1311_a3_transfer_limit_preserved
+        - observations_are_compared_over_time
+        - one_care_change_is_evidence_linked
+        - the_unobserved_stages_and_next_checkpoints_are_explicit
       - measurement_id: c1311_a3_boundary
         kind: boolean
         role: supporting
@@ -243,16 +294,15 @@ intervention:
     - Use paper, an offline note, a library resource, a public example, or a no-cost conversation for
       Gardening and plant care; no purchase, subscription, travel, credential, or public artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Gardening and plant care; assistive technology, interpretation, a support person, and
-      a deferred action are valid without penalty.
+    - Observe an existing shared plant with permission, use accessible raised placement, or build a species-specific
+      care plan without buying anything. Planning alone does not show that a plant was sustained.
     cultural_context:
     - Adapt the expression of Gardening and plant care to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Gardening and plant care opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Observe an existing shared plant with permission, use accessible raised placement, or build a species-specific
+      care plan without buying anything. Planning alone does not show that a plant was sustained.
   pause_conditions:
   - Pause Gardening and plant care when capacity, consent, authority, privacy, access, care duties, uncertainty,
     distress, fatigue, pain, resource scarcity, or changed circumstances make the next action unwise.
@@ -283,10 +333,7 @@ evidence_and_scoring:
   - c1311_a3_boundary
   - c1311_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Gardening and plant care action exceeded consent, authority, privacy, qualification, role, burden,
-    or safety boundaries.
-  - The evidence contradicted the intended Gardening and plant care criterion, depended on coercion or
-    hidden private content, or could not distinguish the protocol from contextual change.
+  - Water or chemicals were added repeatedly without checking conditions or product directions.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Gardening and plant care explicitly; support can enable access and never reduces dignity or silently
     changes the typed value.
@@ -296,14 +343,19 @@ evidence_and_scoring:
     origins are rejected and later repetitions use the typed contract's explicit diminishing multipliers.
   recency_rule: Generated Gardening and plant care rules withhold observations older than 90 days; no
     unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can sustain plants or a small growing system through a full cycle.—not completion, confidence,
-    conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Gardening and plant care requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Compare the plant''s needs with the site. Observed checks: Plant identity
+    and guidance are explicit; Site conditions are observed; A mismatch has a proportionate response.
+    Action 2: Establish a condition-based care routine. Observed checks: Care follows the selected plant''s
+    requirements; A baseline observation is recorded; Watering responds to observed conditions. Action
+    3: Review a growing interval and the next stage. Observed checks: Observations are compared over time;
+    One care change is evidence-linked; The unobserved stages and next checkpoints are explicit.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A generic watering schedule was written without identifying
+    the plant or observing its site.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Gardening
     and plant care contribution under typed evaluation; protocol performance remains distinct and is never
     counted twice.
@@ -313,9 +365,8 @@ evidence_and_scoring:
   - L17
   - L18
   - L35
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Gardening and plant care evidence.
@@ -323,10 +374,15 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define indicators for gardening and plant care action was attempted or explicitly deferred.
-  - The observe gardening and plant care across three checkpoints action was attempted or explicitly deferred.
-  - The review the limited gardening and plant care pattern action preserved a limited conclusion, contradiction,
-    or inconclusive result.
+  - 'Action 1: Compare the plant''s needs with the site. Observed checks: Plant identity and guidance
+    are explicit; Site conditions are observed; A mismatch has a proportionate response.'
+  - 'Action 2: Establish a condition-based care routine. Observed checks: Care follows the selected plant''s
+    requirements; A baseline observation is recorded; Watering responds to observed conditions.'
+  - 'Action 3: Review a growing interval and the next stage. Observed checks: Observations are compared
+    over time; One care change is evidence-linked; The unobserved stages and next checkpoints are explicit.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -335,56 +391,53 @@ completion_and_review:
     - c1311_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Gardening and plant care only when the initial context remained
-    safe, the evidence criteria were usable, burden was acceptable, and a new context can be named without
-    assuming transfer.
-  transfer_limit: Three bounded actions do not establish Gardening and plant care across roles, cultures,
-    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: Did the routine fit this plant in this location, and what evidence would distinguish
+    too much water from another problem?
+  transfer_limit: A small plant trial connects species, place, care and observation. Early observations
+    are not a completed growing cycle or proof of long-term cultivation skill.
   reflection:
-    before: What does Gardening and plant care require in this exact context, what remains outside my
-      role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Gardening and plant care criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can sustain plants or a small growing system through a full
-      cycle.', what contradiction or missing context matters most, and should this Gardening and plant
-      care design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Use plant-specific information and observations
+      to plan care and respond to a small growing trial.'
+    during: Which checks have actually been observed? The plant survived the interval but a new leaf problem
+      has several possible causes.
+    after: Did the routine fit this plant in this location, and what evidence would distinguish too much
+      water from another problem?
   review_guidance:
     repeat: Repeat the same bounded Gardening and plant care design only when the context and burden remain
       appropriate.
-    adapt: Change the Gardening and plant care medium, scope, support, timing, criteria, or context while
-      preserving provenance and the narrower evidence claim.
+    adapt: Observe an existing shared plant with permission, use accessible raised placement, or build
+      a species-specific care plan without buying anything. Planning alone does not show that a plant
+      was sustained.
     stop: Stop Gardening and plant care when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Gardening and plant care questions beyond
-      this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Gardening and plant care criteria were observed with provenance and no adverse
-      boundary signal in the selected context.
-    mixed: Some Gardening and plant care criteria were observed while burden, support, contextual change,
-      or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Gardening and plant care criterion, introduced
-      harm or coercion, or showed the design was not workable.
-    inconclusive: The Gardening and plant care action was deferred, not observed, not applicable, stale,
-      insufficiently bounded, or too confounded to interpret.
+    supportive: A light mismatch was corrected and subsequent observations informed the next care decision.
+    mixed: The plant survived the interval but a new leaf problem has several possible causes.
+    contradictory: Water or chemicals were added repeatedly without checking conditions or product directions.
+    inconclusive: A generic watering schedule was written without identifying the plant or observing its
+      site.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Gardening and plant care.
+    context_heading: Match one plant to its actual growing conditions
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Gardening
       and plant care.
   check_in_labels:
-    c1311_a1_primary: The bounded Gardening and plant care criterion for action 1 was observed
+    c1311_a1_primary: 'Observed checks: compare the plant''s needs with the site'
     c1311_a1_boundary: Action 1 stayed inside its stated Gardening and plant care boundary
     c1311_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c1311_a2_primary: The bounded Gardening and plant care criterion for action 2 was observed
+    c1311_a2_primary: 'Observed checks: establish a condition-based care routine'
     c1311_a2_boundary: Action 2 stayed inside its stated Gardening and plant care boundary
     c1311_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c1311_a3_primary: The bounded Gardening and plant care criterion for action 3 was observed
+    c1311_a3_primary: 'Observed checks: review a growing interval and the next stage'
     c1311_a3_boundary: Action 3 stayed inside its stated Gardening and plant care boundary
     c1311_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Gardening and plant
-    care practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Did the routine fit this plant in this location, and what evidence would distinguish
+    too much water from another problem? Completion is not mastery.
+  plain_language_evidence: A light mismatch was corrected and subsequent observations informed the next
+    care decision.
   display_order: 171

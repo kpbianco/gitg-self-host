@@ -13,6 +13,12 @@ from pathlib import Path
 from typing import Any
 
 import yaml
+from tailored_practice_authoring import (
+    apply_exercise,
+    attach_sources,
+    coverage_report,
+    load_exercises,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 PRACTICE_ROOT = ROOT / "data" / "practices"
@@ -1084,8 +1090,17 @@ def _expected_documents() -> tuple[
         [_activate_protocol(protocol) for protocol in preserved_protocols + generated_protocols],
         key=lambda item: item["parent_competency_id"],
     )
+    exercises = load_exercises(ROOT)
+    all_protocols = [
+        apply_exercise(protocol, exercises[protocol["parent_competency_id"]])
+        if protocol["parent_competency_id"] in exercises
+        else protocol
+        for protocol in all_protocols
+    ]
     if len(all_protocols) != 383:
         raise ValueError(f"Expected 383 packages, found {len(all_protocols)}.")
+    source_registry = _load_yaml(SOURCE_PATH)
+    attach_sources(all_protocols, source_registry, ROOT)
     generated_files = [
         (
             PRACTICE_ROOT / "protocols" / protocol["domain_id"] / f"{protocol['stable_id']}.yaml",
@@ -1094,7 +1109,6 @@ def _expected_documents() -> tuple[
         for protocol in all_protocols
     ]
 
-    source_registry = _load_yaml(SOURCE_PATH)
     for source in source_registry["sources"]:
         if source["locator_kind"] == "repository_path":
             source["content_sha256"] = hashlib.sha256(
@@ -1150,6 +1164,10 @@ def _write_or_check(check: bool) -> int:
     expected_files = dict(generated_files)
     expected_files[SOURCE_PATH] = _yaml_bytes(source_registry)
     expected_files[ACTIVATION_PATH] = _yaml_bytes(activation)
+    report = coverage_report(load_exercises(ROOT), ROOT)
+    expected_files[ROOT / "reports/practice-content/tailored_practice_coverage_v1.json"] = (
+        json.dumps(report, indent=2, ensure_ascii=False) + "\n"
+    ).encode()
 
     manifest = _load_yaml(MANIFEST_PATH)
     manifest["release_id"] = "M6A-CANONICAL-PRACTICE-FOUNDATION-1"
@@ -1169,8 +1187,9 @@ def _write_or_check(check: bool) -> int:
         manifest["content_hash"] = _content_hash(manifest)
         MANIFEST_PATH.write_bytes(_yaml_bytes(manifest))
         print(
-            "Authored 383/383 source packages: "
-            f"{len(generated_files)} runtime and score active; "
+            f"Catalog: {len(generated_files)} runtime and score active; "
+            f"tailored rewrite {report['authored']}/{report['target']}, "
+            f"{report['remaining']} remain; "
             f"content hash {manifest['content_hash']}."
         )
         return 0
@@ -1188,7 +1207,12 @@ def _write_or_check(check: bool) -> int:
     if MANIFEST_PATH.read_bytes() != _yaml_bytes(expected_manifest):
         print("Full-frontier release manifest or content hash is stale.")
         return 1
-    print("Full-frontier authored source is deterministic and current (383/383).")
+    report = coverage_report(load_exercises(ROOT), ROOT)
+    print(
+        "Canonical source is deterministic and current; "
+        f"tailored rewrite {report['authored']}/{report['target']}, "
+        f"{report['remaining']} remain."
+    )
     return 0
 
 

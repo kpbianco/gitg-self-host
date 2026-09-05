@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0109-LIFE-REVIEW-AND-PHILOSOPHICAL-REVISION-01
 slug: c0109-life-review-and-philosophical-revision-practice
-name: Bounded Life review and philosophical revision Practice
+name: Compare a stated belief with an ordinary week
 parent_competency_id: '01.09'
 domain_id: '01'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-OPENSTAX-SOCRATIC-INQUIRY
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 01.09
-      (Life review and philosophical revision); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 01.09; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +35,39 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Life review and philosophical revision through a bounded longitudinal review bounded
-    by the canonical scope: Review whether daily life still reflects stated beliefs and revise the philosophy
-    when experience exposes contradictions.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Maintains a recurring
-    review that produces actual changes in priorities or conduct. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Turn a recurring life review into a concrete revision of conduct or belief.
+  why_recommended: Turn a recurring life review into a concrete revision of conduct or belief.
   claims:
-  - statement: Using the canonical scope and evidence target for Life review and philosophical revision
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Turn a recurring life review into a concrete revision of conduct or belief.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Socratic inquiry examines beliefs through questions and recognizes the limits of what one
+      knows.
+    classification: philosophical_or_normative_position
+    source_ids:
+    - SRC-OPENSTAX-SOCRATIC-INQUIRY
+    limitations: Historical philosophical context only; does not validate this worldview worksheet, promise
+      psychological benefit, or require acceptance of Socrates' conclusions.
   applicability_question: Does a voluntary, bounded Life review and philosophical revision practice fit
     the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Life review and philosophical revision as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Life review and philosophical
-    revision context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Life review
-    and philosophical revision; do not manufacture conflict, deprivation, exposure, disclosure, danger,
-    urgency, or dependence for evidence.
+  readiness_considerations: Review aloud, with a trusted supporter, or using three calendar symbols. A
+    week dominated by illness or caregiving can justify a smaller expectation rather than another task.
+  opportunity_considerations: Choose one stated priority and reconstruct three ordinary moments from the
+    last week. Use memory or your own calendar; no surveillance, detailed diary, or productivity scoring
+    is needed.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Life review and philosophical revision.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Choose one stated priority and reconstruct three ordinary moments from the last week. Use memory or
+    your own calendar; no surveillance, detailed diary, or productivity scoring is needed.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Life review and philosophical revision
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Review aloud, with a trusted supporter, or using three calendar symbols. A week dominated by illness
+    or caregiving can justify a smaller expectation rather than another task.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -81,19 +81,28 @@ meaning_and_fit:
 intervention:
   protocol_class: PF-LONGITUDINAL-REVIEW
   duration_days: 10
-  cadence: Complete three bounded Life review and philosophical revision actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Life review and philosophical revision; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Life review
-    and philosophical revision. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Life review and philosophical revision
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose one stated priority and reconstruct three ordinary moments from the last week. Use memory
+    or your own calendar; no surveillance, detailed diary, or productivity scoring is needed. Goal: Turn
+    a recurring life review into a concrete revision of conduct or belief. Scope: The weekly loop connects
+    belief and conduct across several moments. A lasting philosophical revision requires later reviews
+    and evidence from more than one week. Time and effort: About 20 minutes now, one small adjustment,
+    and 10 minutes at the following week''s review. Adaptation: Review aloud, with a trusted supporter,
+    or using three calendar symbols. A week dominated by illness or caregiving can justify a smaller expectation
+    rather than another task. Keep personal working notes outside the check-in; record only the listed
+    observations.
+
+
+    Reference support:
+
+    Introduction to Philosophy, 1.3 Socrates as a Paradigmatic Historical Philosopher: https://openstax.org/books/introduction-philosophy/pages/1-3-socrates-as-a-paradigmatic-historical-philosopher'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Review aloud, with a trusted supporter, or using three calendar symbols. A week
+    dominated by illness or caregiving can justify a smaller expectation rather than another task.
+  expected_burden: About 20 minutes now, one small adjustment, and 10 minutes at the following week's
+    review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Life review and philosophical revision protocol to rank worth, coerce participation, demand
@@ -101,19 +110,22 @@ intervention:
   - Treating a completed Life review and philosophical revision action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Life review and philosophical revision situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Review aloud,
+    with a trusted supporter, or using three calendar symbols. A week dominated by illness or caregiving
+    can justify a smaller expectation rather than another task.
   actions:
   - stable_id: PRACTICE-COMP-0109-LIFE-REVIEW-AND-PHILOSOPHICAL-REVISION-01-A1
     sequence: 1
-    title: Define indicators for Life review and philosophical revision
-    instructions: 'Choose two to four observable, privacy-minimized indicators for Life review and philosophical
-      revision, plus a missing-data rule and one contradiction indicator. Bound the review to one role
-      or context using this scope: Review whether daily life still reflects stated beliefs and revise
-      the philosophy when experience exposes contradictions.'
+    title: Collect supporting and conflicting moments
+    instructions: 'Write one moment that reflected the priority, one that did not, and one that is ambiguous.
+      For each, note circumstances, competing obligations, and available choices. Example: valuing friendship
+      may appear in checking on someone, while a missed call may reflect a necessary care duty rather
+      than indifference.
+
+
+      Observation checks: Three different observations are considered; Context accompanies each observation;
+      Conduct is not reduced to a total identity judgment. Mark only what you observed. Missing, mixed
+      and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -135,9 +147,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0109_a1_indicators_observable
-        - c0109_a1_missing_data_rule_present
-        - c0109_a1_contradiction_indicator_present
+        - three_different_observations_are_considered
+        - context_accompanies_each_observation
+        - conduct_is_not_reduced_to_a_total_identity_judgment
       - measurement_id: c0109_a1_boundary
         kind: boolean
         role: supporting
@@ -154,11 +166,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0109-LIFE-REVIEW-AND-PHILOSOPHICAL-REVISION-01-A2
     sequence: 2
-    title: Observe Life review and philosophical revision across three checkpoints
-    instructions: Collect up to three brief Life review and philosophical revision checkpoints across
-      the selected period or contexts. Record unknown, not observed, not applicable, defer, and adverse
-      outcomes as valid states; do not infer a trend from prose length, mood, or one unusually good or
-      bad event.
+    title: Revise the belief or its expression
+    instructions: 'Decide whether the mismatch calls for a behavior change, a more realistic priority,
+      or acceptance of a legitimate tradeoff. Make one specific adjustment, such as arranging a ten-minute
+      call or admitting that rest takes precedence this week. Explain why that adjustment addresses the
+      actual mismatch.
+
+
+      Observation checks: A mismatch is interpreted rather than assumed; One concrete adjustment is chosen;
+      The adjustment follows the evidence. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -174,15 +191,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0109_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - a_mismatch_is_interpreted_rather_than_assumed
+        - one_concrete_adjustment_is_chosen
+        - the_adjustment_follows_the_evidence
       - measurement_id: c0109_a2_boundary
         kind: boolean
         role: supporting
@@ -199,10 +216,33 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0109-LIFE-REVIEW-AND-PHILOSOPHICAL-REVISION-01-A3
     sequence: 3
-    title: Review the limited Life review and philosophical revision pattern
-    instructions: 'Compare the checkpoints, name the strongest contradiction or missing context, and choose
-      repeat, adapt, stop, or seek support. Treat this target as a review criterion rather than proof
-      of transfer: Maintains a recurring review that produces actual changes in priorities or conduct.'
+    title: Close the review loop
+    instructions: 'Try the adjustment and set a brief review for the following week. At that review, record
+      whether it happened and whether it helped express the priority. Keep, modify, or remove it. Do not
+      accumulate corrective tasks when the evidence calls for fewer obligations.
+
+
+      Observation checks: An adjustment is tried; A follow-up review occurs; The resulting disposition
+      is recorded. Mark only what you observed. Missing, mixed and negative results are valid; a deferred
+      action is not completed.
+
+
+      Final review: What changed because you reviewed your life, and what did you learn about the belief
+      itself?
+
+
+      Examples: Supportive: A vague friendship priority became one realistic call, then was reviewed for
+      fit.
+
+
+      Mixed: The adjustment occurred but competed with needed rest and should be reduced.
+
+
+      Contradictory: The review produced escalating self-criticism and more obligations without acknowledging
+      constraints.
+
+
+      Inconclusive: The same priority was restated without an adjustment or follow-up.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -224,9 +264,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0109_a3_checkpoints_compared
-        - c0109_a3_contradiction_or_gap_named
-        - c0109_a3_transfer_limit_preserved
+        - an_adjustment_is_tried
+        - a_follow_up_review_occurs
+        - the_resulting_disposition_is_recorded
       - measurement_id: c0109_a3_boundary
         kind: boolean
         role: supporting
@@ -247,17 +287,15 @@ intervention:
       Life review and philosophical revision; no purchase, subscription, travel, credential, or public
       artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Life review and philosophical revision; assistive technology, interpretation, a support
-      person, and a deferred action are valid without penalty.
+    - Review aloud, with a trusted supporter, or using three calendar symbols. A week dominated by illness
+      or caregiving can justify a smaller expectation rather than another task.
     cultural_context:
     - Adapt the expression of Life review and philosophical revision to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Life review and philosophical revision opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Review aloud, with a trusted supporter, or using three calendar symbols. A week dominated by illness
+      or caregiving can justify a smaller expectation rather than another task.
   pause_conditions:
   - Pause Life review and philosophical revision when capacity, consent, authority, privacy, access, care
     duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the
@@ -289,10 +327,7 @@ evidence_and_scoring:
   - c0109_a3_boundary
   - c0109_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Life review and philosophical revision action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Life review and philosophical revision criterion, depended
-    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - The review produced escalating self-criticism and more obligations without acknowledging constraints.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Life review and philosophical revision explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -303,14 +338,19 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Life review and philosophical revision rules withhold observations older than
     90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Maintains a recurring review that produces actual changes in priorities or conduct.—not completion,
-    confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Life review and philosophical revision requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Collect supporting and conflicting moments. Observed checks: Three different
+    observations are considered; Context accompanies each observation; Conduct is not reduced to a total
+    identity judgment. Action 2: Revise the belief or its expression. Observed checks: A mismatch is interpreted
+    rather than assumed; One concrete adjustment is chosen; The adjustment follows the evidence. Action
+    3: Close the review loop. Observed checks: An adjustment is tried; A follow-up review occurs; The
+    resulting disposition is recorded.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. The same priority was restated without an adjustment
+    or follow-up.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Life review
     and philosophical revision contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -319,9 +359,8 @@ evidence_and_scoring:
   - L01
   - L05
   - L36
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Life review and philosophical revision evidence.
@@ -329,12 +368,15 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define indicators for life review and philosophical revision action was attempted or explicitly
-    deferred.
-  - The observe life review and philosophical revision across three checkpoints action was attempted or
-    explicitly deferred.
-  - The review the limited life review and philosophical revision pattern action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Collect supporting and conflicting moments. Observed checks: Three different observations
+    are considered; Context accompanies each observation; Conduct is not reduced to a total identity judgment.'
+  - 'Action 2: Revise the belief or its expression. Observed checks: A mismatch is interpreted rather
+    than assumed; One concrete adjustment is chosen; The adjustment follows the evidence.'
+  - 'Action 3: Close the review loop. Observed checks: An adjustment is tried; A follow-up review occurs;
+    The resulting disposition is recorded.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -343,58 +385,51 @@ completion_and_review:
     - c0109_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Life review and philosophical revision only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Life review and philosophical revision across
-    roles, cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: What changed because you reviewed your life, and what did you learn about the
+    belief itself?
+  transfer_limit: The weekly loop connects belief and conduct across several moments. A lasting philosophical
+    revision requires later reviews and evidence from more than one week.
   reflection:
-    before: What does Life review and philosophical revision require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Life review and philosophical revision criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Maintains a recurring review that produces actual changes
-      in priorities or conduct.', what contradiction or missing context matters most, and should this
-      Life review and philosophical revision design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Turn a recurring life review into a concrete
+      revision of conduct or belief.'
+    during: Which checks have actually been observed? The adjustment occurred but competed with needed
+      rest and should be reduced.
+    after: What changed because you reviewed your life, and what did you learn about the belief itself?
   review_guidance:
     repeat: Repeat the same bounded Life review and philosophical revision design only when the context
       and burden remain appropriate.
-    adapt: Change the Life review and philosophical revision medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Review aloud, with a trusted supporter, or using three calendar symbols. A week dominated by
+      illness or caregiving can justify a smaller expectation rather than another task.
     stop: Stop Life review and philosophical revision when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Life review and philosophical revision
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Life review and philosophical revision criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Life review and philosophical revision criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Life review and philosophical revision criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Life review and philosophical revision action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: A vague friendship priority became one realistic call, then was reviewed for fit.
+    mixed: The adjustment occurred but competed with needed rest and should be reduced.
+    contradictory: The review produced escalating self-criticism and more obligations without acknowledging
+      constraints.
+    inconclusive: The same priority was restated without an adjustment or follow-up.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Life review and philosophical revision.
+    context_heading: Compare a stated belief with an ordinary week
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Life review
       and philosophical revision.
   check_in_labels:
-    c0109_a1_primary: The bounded Life review and philosophical revision criterion for action 1 was observed
+    c0109_a1_primary: 'Observed checks: collect supporting and conflicting moments'
     c0109_a1_boundary: Action 1 stayed inside its stated Life review and philosophical revision boundary
     c0109_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0109_a2_primary: The bounded Life review and philosophical revision criterion for action 2 was observed
+    c0109_a2_primary: 'Observed checks: revise the belief or its expression'
     c0109_a2_boundary: Action 2 stayed inside its stated Life review and philosophical revision boundary
     c0109_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0109_a3_primary: The bounded Life review and philosophical revision criterion for action 3 was observed
+    c0109_a3_primary: 'Observed checks: close the review loop'
     c0109_a3_boundary: Action 3 stayed inside its stated Life review and philosophical revision boundary
     c0109_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Life review and philosophical
-    revision practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What changed because you reviewed your life, and what did you learn about the belief
+    itself? Completion is not mastery.
+  plain_language_evidence: A vague friendship priority became one realistic call, then was reviewed for
+    fit.
   display_order: 18

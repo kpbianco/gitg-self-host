@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-1303-CLEANING-SANITATION-AND-WASTE-01
 slug: c1303-cleaning-sanitation-and-waste-practice
-name: Bounded Cleaning, sanitation, and waste Practice
+name: Clean one surface with the right method
 parent_competency_id: '13.03'
 domain_id: '13'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-WADOH-CLEANER-MIXING
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 13.03
-      (Cleaning, sanitation, and waste); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 13.03; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +35,44 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Cleaning, sanitation, and waste through a low-stakes skill rehearsal bounded by the
-    canonical scope: Understand soils, surfaces, products, contamination, ventilation, disposal, and safe
-    cleaning methods.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can maintain a hygienic
-    home without damaging people, materials, or the environment. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Match a cleaning method to a surface and soil while controlling exposure, cross-contamination
+    and waste.
+  why_recommended: Match a cleaning method to a surface and soil while controlling exposure, cross-contamination
+    and waste.
   claims:
-  - statement: Using the canonical scope and evidence target for Cleaning, sanitation, and waste is a
-      traceable product-design basis for a source-only draft protocol.
+  - statement: Match a cleaning method to a surface and soil while controlling exposure, cross-contamination
+      and waste.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Mixing bleach with ammonia, acids or other cleaners can cause serious injury; product directions
+      must be read before use.
+    classification: safety_precaution
+    source_ids:
+    - SRC-WADOH-CLEANER-MIXING
+    limitations: Supports the cleaner-mixing boundary, not a universal surface treatment, exposure response
+      or evaluation of this exercise.
   applicability_question: Does a voluntary, bounded Cleaning, sanitation, and waste practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Cleaning, sanitation, and waste as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Cleaning, sanitation,
-    and waste context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Cleaning,
-    sanitation, and waste; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Use a small reachable patch, fragrance-free compatible product or a helper
+    for handling. If suitable equipment or ventilation is unavailable, compare labels and rehearse the
+    sequence without applying anything.
+  opportunity_considerations: Choose an ordinary washable table or counter, its care instructions, a cloth
+    and one compatible household cleaner. Exclude bodily fluids, pests, unknown mold, hazardous waste
+    and specialist remediation.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Cleaning, sanitation, and waste.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Choose an ordinary washable table or counter, its care instructions, a cloth and one compatible household
+    cleaner. Exclude bodily fluids, pests, unknown mold, hazardous waste and specialist remediation.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Cleaning, sanitation, and waste
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a small reachable patch, fragrance-free compatible product or a helper for handling. If suitable
+    equipment or ventilation is unavailable, compare labels and rehearse the sequence without applying
+    anything.
   role_conditions:
   - This competency is context sensitive; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -81,19 +86,28 @@ meaning_and_fit:
 intervention:
   protocol_class: PF-SKILL-REHEARSAL
   duration_days: 10
-  cadence: Complete three bounded Cleaning, sanitation, and waste actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Cleaning, sanitation, and waste; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Cleaning,
-    sanitation, and waste. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Cleaning, sanitation, and waste actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose an ordinary washable table or counter, its care instructions, a cloth and one compatible
+    household cleaner. Exclude bodily fluids, pests, unknown mold, hazardous waste and specialist remediation.
+    Goal: Match a cleaning method to a surface and soil while controlling exposure, cross-contamination
+    and waste. Scope: One compatible washable surface practices method selection and contamination control.
+    It does not demonstrate sanitation of hazardous materials or all household surfaces. Time and effort:
+    About 10 minutes to read directions and 15–25 minutes to clean and inspect one surface. Adaptation:
+    Use a small reachable patch, fragrance-free compatible product or a helper for handling. If suitable
+    equipment or ventilation is unavailable, compare labels and rehearse the sequence without applying
+    anything. Keep personal working notes outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Dangers of Mixing Bleach with Cleaners: https://doh.wa.gov/community-and-environment/contaminants/bleach-mixing-dangers'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a small reachable patch, fragrance-free compatible product or a helper for
+    handling. If suitable equipment or ventilation is unavailable, compare labels and rehearse the sequence
+    without applying anything.
+  expected_burden: About 10 minutes to read directions and 15–25 minutes to clean and inspect one surface.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Cleaning, sanitation, and waste protocol to rank worth, coerce participation, demand disclosure,
@@ -101,18 +115,22 @@ intervention:
   - Treating a completed Cleaning, sanitation, and waste action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Cleaning, sanitation, and waste situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a small
+    reachable patch, fragrance-free compatible product or a helper for handling. If suitable equipment
+    or ventilation is unavailable, compare labels and rehearse the sequence without applying anything.
   actions:
   - stable_id: PRACTICE-COMP-1303-CLEANING-SANITATION-AND-WASTE-01-A1
     sequence: 1
-    title: Define observable criteria for Cleaning, sanitation, and waste
-    instructions: 'Select one safe, lawful, low-stakes component of Cleaning, sanitation, and waste. Build
-      a three-to-five-item rubric from this scope, including an error or stop criterion: Understand soils,
-      surfaces, products, contamination, ventilation, disposal, and safe cleaning methods.'
+    title: Read the surface and product instructions
+    instructions: 'Identify the surface material, visible soil, product compatibility, required ventilation
+      and any protective equipment on the label. Distinguish removing dirt from a separate disinfecting
+      claim. Never mix products or decant them into food containers. If the material or residue is unknown,
+      stop and identify it before treatment.
+
+
+      Observation checks: Surface and soil are identified; Product directions and compatibility are checked;
+      Mixing and hazardous residues are excluded. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -134,9 +152,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c1303_a1_skill_component_bounded
-        - c1303_a1_observable_rubric_present
-        - c1303_a1_error_or_stop_defined
+        - surface_and_soil_are_identified
+        - product_directions_and_compatibility_are_checked
+        - mixing_and_hazardous_residues_are_excluded
       - measurement_id: c1303_a1_boundary
         kind: boolean
         role: supporting
@@ -153,10 +171,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-1303-CLEANING-SANITATION-AND-WASTE-01-A2
     sequence: 2
-    title: Rehearse Cleaning, sanitation, and waste twice
-    instructions: Perform two bounded attempts of the selected Cleaning, sanitation, and waste component
-      under comparable safe conditions. Use self-review, a consensual observer, or a reviewed artifact;
-      do not require public exposure, coerced feedback, licensed work, or high-consequence performance.
+    title: Work from a clean area toward the soil
+    instructions: 'Remove ordinary loose debris, test the compatible method on a small unobtrusive area,
+      then clean the chosen surface using label directions. Keep the dirty cloth away from food and clean
+      items. Rinse only if required and allow the surface to dry; do not interpret a fragrance as evidence
+      of sanitation.
+
+
+      Observation checks: A small compatibility test is completed; The labelled cleaning method is followed;
+      Dirty materials are kept separate. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -172,15 +196,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c1303_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - a_small_compatibility_test_is_completed
+        - the_labelled_cleaning_method_is_followed
+        - dirty_materials_are_kept_separate
       - measurement_id: c1303_a2_boundary
         kind: boolean
         role: supporting
@@ -197,10 +221,33 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-1303-CLEANING-SANITATION-AND-WASTE-01-A3
     sequence: 3
-    title: Use feedback for one Cleaning, sanitation, and waste retry
-    instructions: 'Choose one rubric item that remained weak, make one specific adjustment, and retry
-      only that component. Preserve no-change or worse results and compare the evidence with: Can maintain
-      a hygienic home without damaging people, materials, or the environment.'
+    title: Inspect and reset the cleaning materials
+    instructions: 'Inspect under ordinary light for remaining residue and material damage. Clean or dispose
+      of the cloth as appropriate, close the product and put it in its designated safe storage. Follow
+      local disposal instructions for packaging or residues. Note what should change next time without
+      adding stronger chemicals by default.
+
+
+      Observation checks: Residue and damage are inspected; Materials are safely cleaned or discarded;
+      Product storage and disposal are checked. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.
+
+
+      Final review: Was the original soil removed without introducing a new material, exposure or contamination
+      problem?
+
+
+      Examples: Supportive: A washable surface was cleaned with one compatible product and the dirty cloth
+      was safely handled.
+
+
+      Mixed: Most soil was removed but a residue requires checking the manufacturer''s instructions.
+
+
+      Contradictory: Products were mixed or a damaged finish was ignored because the surface smelled clean.
+
+
+      Inconclusive: A product was selected but no compatible surface was cleaned or inspected.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -222,9 +269,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c1303_a3_feedback_item_selected
-        - c1303_a3_adjustment_traceable
-        - c1303_a3_retry_result_preserved
+        - residue_and_damage_are_inspected
+        - materials_are_safely_cleaned_or_discarded
+        - product_storage_and_disposal_are_checked
       - measurement_id: c1303_a3_boundary
         kind: boolean
         role: supporting
@@ -245,16 +292,17 @@ intervention:
       Cleaning, sanitation, and waste; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Cleaning, sanitation, and waste; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - Use a small reachable patch, fragrance-free compatible product or a helper for handling. If suitable
+      equipment or ventilation is unavailable, compare labels and rehearse the sequence without applying
+      anything.
     cultural_context:
     - Adapt the expression of Cleaning, sanitation, and waste to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Cleaning, sanitation, and waste opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use a small reachable patch, fragrance-free compatible product or a helper for handling. If suitable
+      equipment or ventilation is unavailable, compare labels and rehearse the sequence without applying
+      anything.
   pause_conditions:
   - Pause Cleaning, sanitation, and waste when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -286,10 +334,7 @@ evidence_and_scoring:
   - c1303_a3_boundary
   - c1303_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Cleaning, sanitation, and waste action exceeded consent, authority, privacy, qualification, role,
-    burden, or safety boundaries.
-  - The evidence contradicted the intended Cleaning, sanitation, and waste criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - Products were mixed or a damaged finish was ignored because the surface smelled clean.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Cleaning, sanitation, and waste explicitly; support can enable access and never reduces dignity
     or silently changes the typed value.
@@ -300,14 +345,19 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Cleaning, sanitation, and waste rules withhold observations older than 90 days;
     no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can maintain a hygienic home without damaging people, materials, or the environment.—not completion,
-    confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Cleaning, sanitation, and waste requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Read the surface and product instructions. Observed checks: Surface and
+    soil are identified; Product directions and compatibility are checked; Mixing and hazardous residues
+    are excluded. Action 2: Work from a clean area toward the soil. Observed checks: A small compatibility
+    test is completed; The labelled cleaning method is followed; Dirty materials are kept separate. Action
+    3: Inspect and reset the cleaning materials. Observed checks: Residue and damage are inspected; Materials
+    are safely cleaned or discarded; Product storage and disposal are checked.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A product was selected but no compatible surface was
+    cleaned or inspected.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Cleaning,
     sanitation, and waste contribution under typed evaluation; protocol performance remains distinct and
     is never counted twice.
@@ -316,9 +366,8 @@ evidence_and_scoring:
   - L10
   - L17
   - L18
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Cleaning, sanitation, and waste evidence.
@@ -326,11 +375,15 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define observable criteria for cleaning, sanitation, and waste action was attempted or explicitly
-    deferred.
-  - The rehearse cleaning, sanitation, and waste twice action was attempted or explicitly deferred.
-  - The use feedback for one cleaning, sanitation, and waste retry action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Read the surface and product instructions. Observed checks: Surface and soil are identified;
+    Product directions and compatibility are checked; Mixing and hazardous residues are excluded.'
+  - 'Action 2: Work from a clean area toward the soil. Observed checks: A small compatibility test is
+    completed; The labelled cleaning method is followed; Dirty materials are kept separate.'
+  - 'Action 3: Inspect and reset the cleaning materials. Observed checks: Residue and damage are inspected;
+    Materials are safely cleaned or discarded; Product storage and disposal are checked.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -339,57 +392,53 @@ completion_and_review:
     - c1303_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Cleaning, sanitation, and waste only when the initial context
-    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
-    named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Cleaning, sanitation, and waste across roles,
-    cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: Was the original soil removed without introducing a new material, exposure or
+    contamination problem?
+  transfer_limit: One compatible washable surface practices method selection and contamination control.
+    It does not demonstrate sanitation of hazardous materials or all household surfaces.
   reflection:
-    before: What does Cleaning, sanitation, and waste require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Cleaning, sanitation, and waste criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can maintain a hygienic home without damaging people, materials,
-      or the environment.', what contradiction or missing context matters most, and should this Cleaning,
-      sanitation, and waste design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Match a cleaning method to a surface and soil
+      while controlling exposure, cross-contamination and waste.'
+    during: Which checks have actually been observed? Most soil was removed but a residue requires checking
+      the manufacturer's instructions.
+    after: Was the original soil removed without introducing a new material, exposure or contamination
+      problem?
   review_guidance:
     repeat: Repeat the same bounded Cleaning, sanitation, and waste design only when the context and burden
       remain appropriate.
-    adapt: Change the Cleaning, sanitation, and waste medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: Use a small reachable patch, fragrance-free compatible product or a helper for handling. If
+      suitable equipment or ventilation is unavailable, compare labels and rehearse the sequence without
+      applying anything.
     stop: Stop Cleaning, sanitation, and waste when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Cleaning, sanitation, and waste questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Cleaning, sanitation, and waste criteria were observed with provenance and
-      no adverse boundary signal in the selected context.
-    mixed: Some Cleaning, sanitation, and waste criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Cleaning, sanitation, and waste criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Cleaning, sanitation, and waste action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: A washable surface was cleaned with one compatible product and the dirty cloth was safely
+      handled.
+    mixed: Most soil was removed but a residue requires checking the manufacturer's instructions.
+    contradictory: Products were mixed or a damaged finish was ignored because the surface smelled clean.
+    inconclusive: A product was selected but no compatible surface was cleaned or inspected.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Cleaning, sanitation, and waste.
+    context_heading: Clean one surface with the right method
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Cleaning,
       sanitation, and waste.
   check_in_labels:
-    c1303_a1_primary: The bounded Cleaning, sanitation, and waste criterion for action 1 was observed
+    c1303_a1_primary: 'Observed checks: read the surface and product instructions'
     c1303_a1_boundary: Action 1 stayed inside its stated Cleaning, sanitation, and waste boundary
     c1303_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c1303_a2_primary: The bounded Cleaning, sanitation, and waste criterion for action 2 was observed
+    c1303_a2_primary: 'Observed checks: work from a clean area toward the soil'
     c1303_a2_boundary: Action 2 stayed inside its stated Cleaning, sanitation, and waste boundary
     c1303_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c1303_a3_primary: The bounded Cleaning, sanitation, and waste criterion for action 3 was observed
+    c1303_a3_primary: 'Observed checks: inspect and reset the cleaning materials'
     c1303_a3_boundary: Action 3 stayed inside its stated Cleaning, sanitation, and waste boundary
     c1303_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Cleaning, sanitation,
-    and waste practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Was the original soil removed without introducing a new material, exposure or contamination
+    problem? Completion is not mastery.
+  plain_language_evidence: A washable surface was cleaned with one compatible product and the dirty cloth
+    was safely handled.
   display_order: 163

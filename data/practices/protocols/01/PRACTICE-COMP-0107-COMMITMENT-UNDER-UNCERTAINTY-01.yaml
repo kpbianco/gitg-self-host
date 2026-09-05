@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0107-COMMITMENT-UNDER-UNCERTAINTY-01
 slug: c0107-commitment-under-uncertainty-practice
-name: Bounded Commitment under uncertainty Practice
+name: Make one reversible decision with known unknowns
 parent_competency_id: '01.07'
 domain_id: '01'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 01.07
-      (Commitment under uncertainty); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 01.07; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +34,33 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Commitment under uncertainty through a artifact-and-review practice bounded by the
-    canonical scope: Choose and act without waiting for perfect certainty, while using assumptions, review
-    points, and reversible experiments.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can make a consequential
-    decision with explicit uncertainty and a scheduled reassessment. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Act under uncertainty using explicit assumptions, a limited downside, and a review trigger.
+  why_recommended: Act under uncertainty using explicit assumptions, a limited downside, and a review
+    trigger.
   claims:
-  - statement: Using the canonical scope and evidence target for Commitment under uncertainty is a traceable
-      product-design basis for a source-only draft protocol.
+  - statement: Act under uncertainty using explicit assumptions, a limited downside, and a review trigger.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Commitment under uncertainty practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Commitment under uncertainty as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Commitment under
-    uncertainty context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Commitment
-    under uncertainty; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Use the study-time example as a paper simulation when live experimentation
+    is impractical. Simulation exercises decision structure but does not show real-world results.
+  opportunity_considerations: Pick a reversible ordinary decision, such as trying a different study time
+    or asking about an activity. Exclude contracts, treatment changes, investments, and choices with serious
+    consequences.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Commitment under uncertainty.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Pick a reversible ordinary decision, such as trying a different study time or asking about an activity.
+    Exclude contracts, treatment changes, investments, and choices with serious consequences.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Commitment under uncertainty instead
-    of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use the study-time example as a paper simulation when live experimentation is impractical. Simulation
+    exercises decision structure but does not show real-world results.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +72,24 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Commitment under uncertainty
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-ARTIFACT-PLAN
+  protocol_class: PF-BEHAVIORAL-EXPERIMENT
   duration_days: 10
-  cadence: Complete three bounded Commitment under uncertainty actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Commitment under uncertainty; copy the canonical scope and evidence target
-    into a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Commitment
-    under uncertainty. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Commitment under uncertainty actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Pick a reversible ordinary decision, such as trying a different study time or asking about an
+    activity. Exclude contracts, treatment changes, investments, and choices with serious consequences.
+    Goal: Act under uncertainty using explicit assumptions, a limited downside, and a review trigger.
+    Scope: A reversible trial practices assumptions and review under uncertainty. Consequential or irreversible
+    decisions require additional information and safeguards beyond this exercise. Time and effort: About
+    15 minutes of decision preparation, one ordinary trial, and a 10-minute reassessment. Adaptation:
+    Use the study-time example as a paper simulation when live experimentation is impractical. Simulation
+    exercises decision structure but does not show real-world results. Keep personal working notes outside
+    the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use the study-time example as a paper simulation when live experimentation is impractical.
+    Simulation exercises decision structure but does not show real-world results.
+  expected_burden: About 15 minutes of decision preparation, one ordinary trial, and a 10-minute reassessment.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Commitment under uncertainty protocol to rank worth, coerce participation, demand disclosure,
@@ -101,19 +97,21 @@ intervention:
   - Treating a completed Commitment under uncertainty action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Commitment under uncertainty situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use the study-time
+    example as a paper simulation when live experimentation is impractical. Simulation exercises decision
+    structure but does not show real-world results.
   actions:
   - stable_id: PRACTICE-COMP-0107-COMMITMENT-UNDER-UNCERTAINTY-01-A1
     sequence: 1
-    title: Define a rubric for Commitment under uncertainty
-    instructions: 'Turn the canonical scope for Commitment under uncertainty into three to five inspectable
-      criteria: Choose and act without waiting for perfect certainty, while using assumptions, review
-      points, and reversible experiments. Keep the rubric bounded to one current context and include one
-      criterion for uncertainty, access, or competing obligations.'
+    title: Separate facts from decision assumptions
+    instructions: 'Write the decision, two feasible options, three facts you know, and two assumptions
+      you are making. Identify one missing fact that would genuinely change the choice. Give information
+      gathering a small time limit so investigation serves the decision rather than postpones it indefinitely.
+
+
+      Observation checks: Facts and assumptions are separated; Options are feasible; A decision-relevant
+      unknown is named. Mark only what you observed. Missing, mixed and negative results are valid; a
+      deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -135,9 +133,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0107_a1_criteria_trace_to_scope
-        - c0107_a1_context_bounded
-        - c0107_a1_constraint_included
+        - facts_and_assumptions_are_separated
+        - options_are_feasible
+        - a_decision_relevant_unknown_is_named
       - measurement_id: c0107_a1_boundary
         kind: boolean
         role: supporting
@@ -154,10 +152,15 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0107-COMMITMENT-UNDER-UNCERTAINTY-01-A2
     sequence: 2
-    title: Build one Commitment under uncertainty artifact
-    instructions: Create the smallest useful plan, checklist, diagram, record, or other artifact that
-      applies the rubric for Commitment under uncertainty. Store only category-level information and omit
-      names, secrets, credentials, diagnoses, protected work detail, and unnecessary third-party information.
+    title: Choose the smallest informative trial
+    instructions: 'Select the option that offers useful information with an acceptable, reversible cost.
+      State the trial length, maximum time or resource cost, and stop condition. Carry it out once; for
+      a study-time trial, use one ordinary session and keep other conditions as similar as practical.
+
+
+      Observation checks: A bounded trial is selected; Downside and stop conditions are explicit; The
+      trial is actually attempted. Mark only what you observed. Missing, mixed and negative results are
+      valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -179,9 +182,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0107_a2_artifact_matches_rubric
-        - c0107_a2_minimum_private_detail
-        - c0107_a2_usable_next_step_present
+        - a_bounded_trial_is_selected
+        - downside_and_stop_conditions_are_explicit
+        - the_trial_is_actually_attempted
       - measurement_id: c0107_a2_boundary
         kind: boolean
         role: supporting
@@ -198,10 +201,32 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0107-COMMITMENT-UNDER-UNCERTAINTY-01-A3
     sequence: 3
-    title: Stress-test and revise the Commitment under uncertainty artifact
-    instructions: 'Test the artifact against one realistic variation, counterexample, or changed constraint.
-      Revise it only where the test exposes a gap, then compare the result with this evidence target:
-      Can make a consequential decision with explicit uncertainty and a scheduled reassessment.'
+    title: Reassess at the promised point
+    instructions: 'At the chosen review point, compare observations with the assumptions. Decide continue,
+      alter, or stop, and name what is still unknown. If the result is inconclusive, choose whether another
+      bounded trial is worth its cost rather than declaring success to justify the decision.
+
+
+      Observation checks: The review occurs at a stated point; Observations test the assumptions; Uncertainty
+      survives where evidence is missing. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.
+
+
+      Final review: What did acting teach you that more speculation would not, and what remains worth
+      investigating?
+
+
+      Examples: Supportive: A one-session trial overturned an assumption and the next session was rescheduled
+      accordingly.
+
+
+      Mixed: The trial occurred but an interruption prevented a fair comparison.
+
+
+      Contradictory: The trial exceeded its resource limit or its review point was repeatedly avoided.
+
+
+      Inconclusive: The options were compared but no trial or explicit simulation occurred.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -217,15 +242,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0107_a3_primary
-        kind: scenario
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0107_a3_variation_tested
-        - c0107_a3_revision_traceable
-        - c0107_a3_target_evidence_compared
+        - the_review_occurs_at_a_stated_point
+        - observations_test_the_assumptions
+        - uncertainty_survives_where_evidence_is_missing
       - measurement_id: c0107_a3_boundary
         kind: boolean
         role: supporting
@@ -246,16 +271,15 @@ intervention:
       Commitment under uncertainty; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Commitment under uncertainty; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - Use the study-time example as a paper simulation when live experimentation is impractical. Simulation
+      exercises decision structure but does not show real-world results.
     cultural_context:
     - Adapt the expression of Commitment under uncertainty to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Commitment under uncertainty opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use the study-time example as a paper simulation when live experimentation is impractical. Simulation
+      exercises decision structure but does not show real-world results.
   pause_conditions:
   - Pause Commitment under uncertainty when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -287,10 +311,7 @@ evidence_and_scoring:
   - c0107_a3_boundary
   - c0107_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Commitment under uncertainty action exceeded consent, authority, privacy, qualification, role,
-    burden, or safety boundaries.
-  - The evidence contradicted the intended Commitment under uncertainty criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - The trial exceeded its resource limit or its review point was repeatedly avoided.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Commitment under uncertainty explicitly; support can enable access and never reduces dignity or
     silently changes the typed value.
@@ -301,14 +322,19 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Commitment under uncertainty rules withhold observations older than 90 days;
     no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can make a consequential decision with explicit uncertainty and a scheduled reassessment.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Commitment under uncertainty requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Separate facts from decision assumptions. Observed checks: Facts and
+    assumptions are separated; Options are feasible; A decision-relevant unknown is named. Action 2: Choose
+    the smallest informative trial. Observed checks: A bounded trial is selected; Downside and stop conditions
+    are explicit; The trial is actually attempted. Action 3: Reassess at the promised point. Observed
+    checks: The review occurs at a stated point; Observations test the assumptions; Uncertainty survives
+    where evidence is missing.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. The options were compared but no trial or explicit
+    simulation occurred.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Commitment
     under uncertainty contribution under typed evaluation; protocol performance remains distinct and is
     never counted twice.
@@ -317,9 +343,8 @@ evidence_and_scoring:
   - L10
   - L11
   - L14
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Commitment under uncertainty evidence.
@@ -327,10 +352,15 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define a rubric for commitment under uncertainty action was attempted or explicitly deferred.
-  - The build one commitment under uncertainty artifact action was attempted or explicitly deferred.
-  - The stress-test and revise the commitment under uncertainty artifact action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Separate facts from decision assumptions. Observed checks: Facts and assumptions are separated;
+    Options are feasible; A decision-relevant unknown is named.'
+  - 'Action 2: Choose the smallest informative trial. Observed checks: A bounded trial is selected; Downside
+    and stop conditions are explicit; The trial is actually attempted.'
+  - 'Action 3: Reassess at the promised point. Observed checks: The review occurs at a stated point; Observations
+    test the assumptions; Uncertainty survives where evidence is missing.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -339,56 +369,50 @@ completion_and_review:
     - c0107_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Commitment under uncertainty only when the initial context remained
-    safe, the evidence criteria were usable, burden was acceptable, and a new context can be named without
-    assuming transfer.
-  transfer_limit: Three bounded actions do not establish Commitment under uncertainty across roles, cultures,
-    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: What did acting teach you that more speculation would not, and what remains worth
+    investigating?
+  transfer_limit: A reversible trial practices assumptions and review under uncertainty. Consequential
+    or irreversible decisions require additional information and safeguards beyond this exercise.
   reflection:
-    before: What does Commitment under uncertainty require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Commitment under uncertainty criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can make a consequential decision with explicit uncertainty
-      and a scheduled reassessment.', what contradiction or missing context matters most, and should this
-      Commitment under uncertainty design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Act under uncertainty using explicit assumptions,
+      a limited downside, and a review trigger.'
+    during: Which checks have actually been observed? The trial occurred but an interruption prevented
+      a fair comparison.
+    after: What did acting teach you that more speculation would not, and what remains worth investigating?
   review_guidance:
     repeat: Repeat the same bounded Commitment under uncertainty design only when the context and burden
       remain appropriate.
-    adapt: Change the Commitment under uncertainty medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: Use the study-time example as a paper simulation when live experimentation is impractical.
+      Simulation exercises decision structure but does not show real-world results.
     stop: Stop Commitment under uncertainty when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Commitment under uncertainty questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Commitment under uncertainty criteria were observed with provenance and no
-      adverse boundary signal in the selected context.
-    mixed: Some Commitment under uncertainty criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Commitment under uncertainty criterion, introduced
-      harm or coercion, or showed the design was not workable.
-    inconclusive: The Commitment under uncertainty action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: A one-session trial overturned an assumption and the next session was rescheduled accordingly.
+    mixed: The trial occurred but an interruption prevented a fair comparison.
+    contradictory: The trial exceeded its resource limit or its review point was repeatedly avoided.
+    inconclusive: The options were compared but no trial or explicit simulation occurred.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Commitment under uncertainty.
+    context_heading: Make one reversible decision with known unknowns
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Commitment
       under uncertainty.
   check_in_labels:
-    c0107_a1_primary: The bounded Commitment under uncertainty criterion for action 1 was observed
+    c0107_a1_primary: 'Observed checks: separate facts from decision assumptions'
     c0107_a1_boundary: Action 1 stayed inside its stated Commitment under uncertainty boundary
     c0107_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0107_a2_primary: The bounded Commitment under uncertainty criterion for action 2 was observed
+    c0107_a2_primary: 'Observed checks: choose the smallest informative trial'
     c0107_a2_boundary: Action 2 stayed inside its stated Commitment under uncertainty boundary
     c0107_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0107_a3_primary: The bounded Commitment under uncertainty criterion for action 3 was observed
+    c0107_a3_primary: 'Observed checks: reassess at the promised point'
     c0107_a3_boundary: Action 3 stayed inside its stated Commitment under uncertainty boundary
     c0107_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Commitment under uncertainty
-    practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What did acting teach you that more speculation would not, and what remains worth investigating?
+    Completion is not mastery.
+  plain_language_evidence: A one-session trial overturned an assumption and the next session was rescheduled
+    accordingly.
   display_order: 16

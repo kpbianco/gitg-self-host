@@ -29,6 +29,7 @@ jobs:
           cache-dependency-path: requirements-dev.txt
       - run: python -m pip install -r requirements-dev.txt
       - run: make lint PYTHON=python
+      - run: python scripts/author_full_competency_frontier.py --check
       - run: make test PYTHON=python
       - run: make pilot-check PYTHON=python
       - run: make curriculum-check PYTHON=python

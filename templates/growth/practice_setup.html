@@ -37,7 +37,7 @@
       {% elif step == 3 %}
         <p class="eyebrow">Person or context</p>
         <h1>{{ protocol.setup_copy.context_heading|default:"Choose one context." }}</h1>
-        <p class="lede">{{ protocol.setup_prompt }}</p>
+        <div class="lede">{{ protocol.setup_prompt|urlize|linebreaks }}</div>
         {% include "growth/partials/setup_form.html" with submit_label="Continue" %}
       {% elif step == 4 %}
         <p class="eyebrow">Privacy and interpersonal boundaries</p>
@@ -70,7 +70,7 @@
               <span class="rank">{{ action.sequence|stringformat:"02d" }}</span>
               <div>
                 <strong>{{ action.title }}</strong>
-                <p>{{ action.instructions }}</p>
+                {{ action.instructions|linebreaks }}
               </div>
             </li>
           {% endfor %}

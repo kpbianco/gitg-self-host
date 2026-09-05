@@ -778,11 +778,18 @@ Migrations and canonical seeding run safely on startup.
 
 ## Current limitations
 
+- The tailored-content rewrite is incomplete. M6J-01 replaces 27 practices in
+  meaning/worldview and domestic competence with specific steps, checks,
+  examples, adaptations and scope limits. Another 356 practices remain
+  rewrite-pending; 383 active packages do not imply 383 finished exercises.
+- Before importing revised content, finish or explicitly stop any active or
+  paused practice that uses changed instructions. Import fails before writes
+  if ongoing work would be redefined; submitted evidence remains replayable.
 - Pilot 002 source files publish only the top three archetypes and do not
   include original answers or a share code; the seed does not invent them.
-- Dynamic scoring is activated for all 383 canonical protocols under Decision
-  052. A database flag alone cannot activate scoring; canonical activation,
-  evidence replay, parent mapping, and score-state validation must all agree.
+- All 383 protocols remain activated. Under Decision 053, new practices record
+  evidence at check-in and earn completion credit only at explicit final
+  closeout. Historical event-level scoring retains its own replay contract.
 - Pilot 002 does not publish original alpha/beta mass. Canonical seeding
   reconstructs 33 identifiable rows; L06, L15, L32, and L37 remain
   baseline-only. All four friendship-mapped rows are active.

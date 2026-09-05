@@ -572,9 +572,10 @@ def _audit_rows(
             privacy_finding_ids.append(finding["finding_id"])
         findings.extend(_review_findings(protocol, practices, package_evidence_kinds))
 
-        generated_addition = authoring["provenance"].startswith(
-            "Individually materialized source-only frontier package"
-        )
+        # This is historical cohort membership, not a claim about current
+        # editorial quality. Rewriting provenance must not move a frontier
+        # package into the four original representative typed packages.
+        generated_addition = stable_id.startswith("PRACTICE-COMP-")
         cohort = (
             "legacy"
             if stable_id in FROZEN_LEGACY_PROTOCOL_IDS
@@ -844,7 +845,7 @@ def _review_packet(audit: dict[str, Any], findings: list[dict[str, Any]]) -> byt
         f"- Actions audited: {audit['counts']['actions']}",
         f"- Legacy packages: {audit['counts']['legacy_packages']}",
         f"- Typed packages: {audit['counts']['typed_packages']}",
-        f"- Generated additions: {audit['counts']['generated_additions']}",
+        f"- Originally generated additions: {audit['counts']['generated_additions']}",
         f"- Open findings: {len(findings)}",
         "",
         "## Governance gates",

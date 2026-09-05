@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-1309-MECHANICAL-AND-VEHICLE-LITERACY-01
 slug: c1309-mechanical-and-vehicle-literacy-practice
-name: Bounded Mechanical and vehicle literacy Practice
+name: Read a maintenance need and brief a technician
 parent_competency_id: '13.09'
 domain_id: '13'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 13.09
-      (Mechanical and vehicle literacy); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 13.09; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +34,37 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Mechanical and vehicle literacy through a low-stakes skill rehearsal bounded by the
-    canonical scope: Understand basic machines, vehicle systems, inspections, routine service, and warning
-    signs.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can maintain essential
-    equipment and communicate intelligently with a technician. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Connect a vehicle or machine symptom to its manual, service history and a clear maintenance
+    request.
+  why_recommended: Connect a vehicle or machine symptom to its manual, service history and a clear maintenance
+    request.
   claims:
-  - statement: Using the canonical scope and evidence target for Mechanical and vehicle literacy is a
-      traceable product-design basis for a source-only draft protocol.
+  - statement: Connect a vehicle or machine symptom to its manual, service history and a clear maintenance
+      request.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Mechanical and vehicle literacy practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Mechanical and vehicle literacy as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Mechanical and vehicle
-    literacy context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Mechanical
-    and vehicle literacy; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Use a publicly available manual for a familiar bicycle or appliance and a
+    fictional service record. This practices maintenance literacy and communication, not mechanical repair
+    competence.
+  opportunity_considerations: Choose a vehicle, bicycle or ordinary machine you use, its exact owner's
+    manual and an existing maintenance record if available. Observe only from a safe stationary position;
+    do not crawl beneath equipment or inspect running machinery.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Mechanical and vehicle literacy.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Choose a vehicle, bicycle or ordinary machine you use, its exact owner's manual and an existing maintenance
+    record if available. Observe only from a safe stationary position; do not crawl beneath equipment
+    or inspect running machinery.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Mechanical and vehicle literacy
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a publicly available manual for a familiar bicycle or appliance and a fictional service record.
+    This practices maintenance literacy and communication, not mechanical repair competence.
   role_conditions:
   - This competency is context sensitive; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +76,25 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Mechanical and vehicle literacy
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-SKILL-REHEARSAL
+  protocol_class: PF-KNOWLEDGE-APPLICATION
   duration_days: 10
-  cadence: Complete three bounded Mechanical and vehicle literacy actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Mechanical and vehicle literacy; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Mechanical
-    and vehicle literacy. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Mechanical and vehicle literacy actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose a vehicle, bicycle or ordinary machine you use, its exact owner''s manual and an existing
+    maintenance record if available. Observe only from a safe stationary position; do not crawl beneath
+    equipment or inspect running machinery. Goal: Connect a vehicle or machine symptom to its manual,
+    service history and a clear maintenance request. Scope: The brief develops maintenance literacy and
+    communication about one system. It neither diagnoses every fault nor demonstrates hands-on servicing
+    of a vehicle or machine. Time and effort: About 30–45 minutes to locate the manual, inspect safely
+    and prepare the service request. Adaptation: Use a publicly available manual for a familiar bicycle
+    or appliance and a fictional service record. This practices maintenance literacy and communication,
+    not mechanical repair competence. Keep personal working notes outside the check-in; record only the
+    listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a publicly available manual for a familiar bicycle or appliance and a fictional
+    service record. This practices maintenance literacy and communication, not mechanical repair competence.
+  expected_burden: About 30–45 minutes to locate the manual, inspect safely and prepare the service request.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Mechanical and vehicle literacy protocol to rank worth, coerce participation, demand disclosure,
@@ -101,18 +102,22 @@ intervention:
   - Treating a completed Mechanical and vehicle literacy action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Mechanical and vehicle literacy situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a publicly
+    available manual for a familiar bicycle or appliance and a fictional service record. This practices
+    maintenance literacy and communication, not mechanical repair competence.
   actions:
   - stable_id: PRACTICE-COMP-1309-MECHANICAL-AND-VEHICLE-LITERACY-01-A1
     sequence: 1
-    title: Define observable criteria for Mechanical and vehicle literacy
-    instructions: 'Select one safe, lawful, low-stakes component of Mechanical and vehicle literacy. Build
-      a three-to-five-item rubric from this scope, including an error or stop criterion: Understand basic
-      machines, vehicle systems, inspections, routine service, and warning signs.'
+    title: Identify the system and manual guidance
+    instructions: 'Choose one routine item such as tire condition, a service interval or an existing warning
+      indicator. Locate its meaning and recommended response in the exact manual, including when use should
+      stop. Separate what you directly observed from what you suspect. Do not reproduce a warning by deliberately
+      operating faulty equipment.
+
+
+      Observation checks: The exact equipment manual is identified; The relevant system and response are
+      located; Observation and suspected cause are separated. Mark only what you observed. Missing, mixed
+      and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -134,9 +139,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c1309_a1_skill_component_bounded
-        - c1309_a1_observable_rubric_present
-        - c1309_a1_error_or_stop_defined
+        - the_exact_equipment_manual_is_identified
+        - the_relevant_system_and_response_are_located
+        - observation_and_suspected_cause_are_separated
       - measurement_id: c1309_a1_boundary
         kind: boolean
         role: supporting
@@ -153,10 +158,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-1309-MECHANICAL-AND-VEHICLE-LITERACY-01-A2
     sequence: 2
-    title: Rehearse Mechanical and vehicle literacy twice
-    instructions: Perform two bounded attempts of the selected Mechanical and vehicle literacy component
-      under comparable safe conditions. Use self-review, a consensual observer, or a reviewed artifact;
-      do not require public exposure, coerced feedback, licensed work, or high-consequence performance.
+    title: Compare condition with the maintenance record
+    instructions: 'From a safe position, note visible condition and the last recorded service for that
+      item. For tires, record only observations you can make safely and use the manufacturer''s specifications;
+      do not guess inflation or repair limits. Mark missing history as unknown and identify a user-level
+      check versus a technician-only task.
+
+
+      Observation checks: Condition and service history are compared; Missing history remains unknown;
+      User and technician responsibilities are separated. Mark only what you observed. Missing, mixed
+      and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -172,15 +183,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c1309_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - condition_and_service_history_are_compared
+        - missing_history_remains_unknown
+        - user_and_technician_responsibilities_are_separated
       - measurement_id: c1309_a2_boundary
         kind: boolean
         role: supporting
@@ -197,10 +208,34 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-1309-MECHANICAL-AND-VEHICLE-LITERACY-01-A3
     sequence: 3
-    title: Use feedback for one Mechanical and vehicle literacy retry
-    instructions: 'Choose one rubric item that remained weak, make one specific adjustment, and retry
-      only that component. Preserve no-change or worse results and compare the evidence with: Can maintain
-      essential equipment and communicate intelligently with a technician.'
+    title: Prepare a useful service message
+    instructions: 'Write a concise request containing equipment identification, symptom, when it occurs,
+      relevant service history and the manual''s instruction. Ask for diagnosis, proposed work, cost and
+      authorization before repair. Example: a warning appeared while stationary; the manual says stop
+      use; the next step is arranging appropriate service, not test-driving it.
+
+
+      Observation checks: The message contains actionable observations; Diagnosis is requested without
+      asserting a cause; Continued-use and authorization decisions are explicit. Mark only what you observed.
+      Missing, mixed and negative results are valid; a deferred action is not completed.
+
+
+      Final review: Could a technician understand the symptom without guessing, and have you avoided treating
+      an unknown condition as safe?
+
+
+      Examples: Supportive: A manual-based service need was identified and the request separated facts
+      from a suspected fault.
+
+
+      Mixed: The symptom is clear but maintenance history is missing and must remain uncertain.
+
+
+      Contradictory: The equipment was operated despite a stop-use instruction or a diagnosis was asserted
+      without evidence.
+
+
+      Inconclusive: A generic maintenance checklist was copied without identifying the actual equipment.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -222,9 +257,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c1309_a3_feedback_item_selected
-        - c1309_a3_adjustment_traceable
-        - c1309_a3_retry_result_preserved
+        - the_message_contains_actionable_observations
+        - diagnosis_is_requested_without_asserting_a_cause
+        - continued_use_and_authorization_decisions_are_explicit
       - measurement_id: c1309_a3_boundary
         kind: boolean
         role: supporting
@@ -245,16 +280,15 @@ intervention:
       Mechanical and vehicle literacy; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Mechanical and vehicle literacy; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - Use a publicly available manual for a familiar bicycle or appliance and a fictional service record.
+      This practices maintenance literacy and communication, not mechanical repair competence.
     cultural_context:
     - Adapt the expression of Mechanical and vehicle literacy to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Mechanical and vehicle literacy opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use a publicly available manual for a familiar bicycle or appliance and a fictional service record.
+      This practices maintenance literacy and communication, not mechanical repair competence.
   pause_conditions:
   - Pause Mechanical and vehicle literacy when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -286,10 +320,7 @@ evidence_and_scoring:
   - c1309_a3_boundary
   - c1309_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Mechanical and vehicle literacy action exceeded consent, authority, privacy, qualification, role,
-    burden, or safety boundaries.
-  - The evidence contradicted the intended Mechanical and vehicle literacy criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - The equipment was operated despite a stop-use instruction or a diagnosis was asserted without evidence.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Mechanical and vehicle literacy explicitly; support can enable access and never reduces dignity
     or silently changes the typed value.
@@ -300,14 +331,20 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Mechanical and vehicle literacy rules withhold observations older than 90 days;
     no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can maintain essential equipment and communicate intelligently with a technician.—not completion,
-    confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Mechanical and vehicle literacy requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Identify the system and manual guidance. Observed checks: The exact equipment
+    manual is identified; The relevant system and response are located; Observation and suspected cause
+    are separated. Action 2: Compare condition with the maintenance record. Observed checks: Condition
+    and service history are compared; Missing history remains unknown; User and technician responsibilities
+    are separated. Action 3: Prepare a useful service message. Observed checks: The message contains actionable
+    observations; Diagnosis is requested without asserting a cause; Continued-use and authorization decisions
+    are explicit.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A generic maintenance checklist was copied without
+    identifying the actual equipment.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Mechanical
     and vehicle literacy contribution under typed evaluation; protocol performance remains distinct and
     is never counted twice.
@@ -316,9 +353,8 @@ evidence_and_scoring:
   - L15
   - L18
   - L20
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Mechanical and vehicle literacy evidence.
@@ -326,11 +362,15 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define observable criteria for mechanical and vehicle literacy action was attempted or explicitly
-    deferred.
-  - The rehearse mechanical and vehicle literacy twice action was attempted or explicitly deferred.
-  - The use feedback for one mechanical and vehicle literacy retry action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Identify the system and manual guidance. Observed checks: The exact equipment manual is
+    identified; The relevant system and response are located; Observation and suspected cause are separated.'
+  - 'Action 2: Compare condition with the maintenance record. Observed checks: Condition and service history
+    are compared; Missing history remains unknown; User and technician responsibilities are separated.'
+  - 'Action 3: Prepare a useful service message. Observed checks: The message contains actionable observations;
+    Diagnosis is requested without asserting a cause; Continued-use and authorization decisions are explicit.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -339,57 +379,53 @@ completion_and_review:
     - c1309_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Mechanical and vehicle literacy only when the initial context
-    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
-    named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Mechanical and vehicle literacy across roles,
-    cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: Could a technician understand the symptom without guessing, and have you avoided
+    treating an unknown condition as safe?
+  transfer_limit: The brief develops maintenance literacy and communication about one system. It neither
+    diagnoses every fault nor demonstrates hands-on servicing of a vehicle or machine.
   reflection:
-    before: What does Mechanical and vehicle literacy require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Mechanical and vehicle literacy criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can maintain essential equipment and communicate intelligently
-      with a technician.', what contradiction or missing context matters most, and should this Mechanical
-      and vehicle literacy design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Connect a vehicle or machine symptom to its
+      manual, service history and a clear maintenance request.'
+    during: Which checks have actually been observed? The symptom is clear but maintenance history is
+      missing and must remain uncertain.
+    after: Could a technician understand the symptom without guessing, and have you avoided treating an
+      unknown condition as safe?
   review_guidance:
     repeat: Repeat the same bounded Mechanical and vehicle literacy design only when the context and burden
       remain appropriate.
-    adapt: Change the Mechanical and vehicle literacy medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: Use a publicly available manual for a familiar bicycle or appliance and a fictional service
+      record. This practices maintenance literacy and communication, not mechanical repair competence.
     stop: Stop Mechanical and vehicle literacy when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Mechanical and vehicle literacy questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Mechanical and vehicle literacy criteria were observed with provenance and
-      no adverse boundary signal in the selected context.
-    mixed: Some Mechanical and vehicle literacy criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Mechanical and vehicle literacy criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Mechanical and vehicle literacy action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: A manual-based service need was identified and the request separated facts from a suspected
+      fault.
+    mixed: The symptom is clear but maintenance history is missing and must remain uncertain.
+    contradictory: The equipment was operated despite a stop-use instruction or a diagnosis was asserted
+      without evidence.
+    inconclusive: A generic maintenance checklist was copied without identifying the actual equipment.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Mechanical and vehicle literacy.
+    context_heading: Read a maintenance need and brief a technician
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Mechanical
       and vehicle literacy.
   check_in_labels:
-    c1309_a1_primary: The bounded Mechanical and vehicle literacy criterion for action 1 was observed
+    c1309_a1_primary: 'Observed checks: identify the system and manual guidance'
     c1309_a1_boundary: Action 1 stayed inside its stated Mechanical and vehicle literacy boundary
     c1309_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c1309_a2_primary: The bounded Mechanical and vehicle literacy criterion for action 2 was observed
+    c1309_a2_primary: 'Observed checks: compare condition with the maintenance record'
     c1309_a2_boundary: Action 2 stayed inside its stated Mechanical and vehicle literacy boundary
     c1309_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c1309_a3_primary: The bounded Mechanical and vehicle literacy criterion for action 3 was observed
+    c1309_a3_primary: 'Observed checks: prepare a useful service message'
     c1309_a3_boundary: Action 3 stayed inside its stated Mechanical and vehicle literacy boundary
     c1309_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Mechanical and vehicle
-    literacy practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Could a technician understand the symptom without guessing, and have you avoided treating
+    an unknown condition as safe? Completion is not mastery.
+  plain_language_evidence: A manual-based service need was identified and the request separated facts
+    from a suspected fault.
   display_order: 169

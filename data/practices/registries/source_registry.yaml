@@ -1007,3 +1007,199 @@ sources:
   date_accessed: '2026-08-15'
   license_or_quotation_constraints: Guidance may be summarized with attribution; follow any notices in
     the source document.
+- source_id: SRC-WADOH-CLEANER-MIXING
+  title: Dangers of Mixing Bleach with Cleaners
+  authors_or_issuing_body: Washington State Department of Health
+  publication_date: Not stated on the inspected page
+  locator: https://doh.wa.gov/community-and-environment/contaminants/bleach-mixing-dangers
+  locator_kind: external_url
+  content_sha256: null
+  source_class: official_guidance
+  evidence_strength: authoritative
+  supported_claim: Mixing bleach with ammonia, acids or other cleaners can cause serious injury; product
+    directions must be read before use.
+  claim_classification: safety_precaution
+  limitations: Supports the cleaner-mixing boundary, not a universal surface treatment, exposure response
+    or evaluation of this exercise.
+  applicable_competency_ids:
+  - '13.03'
+  applicable_protocol_ids:
+  - PRACTICE-COMP-1303-CLEANING-SANITATION-AND-WASTE-01
+  date_accessed: '2026-09-05'
+  license_or_quotation_constraints: Citation and brief original paraphrase; no source prose reproduced.
+- source_id: SRC-FTC-GARMENT-CARE
+  title: Clothes Captioning — Complying with the Care Labeling Rule
+  authors_or_issuing_body: United States Federal Trade Commission
+  publication_date: Not stated on the inspected page
+  locator: https://www.ftc.gov/business-guidance/resources/clothes-captioning-complying-care-labeling-rule
+  locator_kind: external_url
+  content_sha256: null
+  source_class: official_guidance
+  evidence_strength: authoritative
+  supported_claim: Garment care labels describe suitable washing, bleaching, drying and ironing methods
+    and warnings about harmful treatments.
+  claim_classification: safety_precaution
+  limitations: US labeling guidance; legal labeling requirements vary elsewhere. Supports reading the
+    actual label, not any invented treatment for an unknown textile.
+  applicable_competency_ids:
+  - '13.04'
+  applicable_protocol_ids:
+  - PRACTICE-COMP-1304-LAUNDRY-AND-CLOTHING-CARE-01
+  date_accessed: '2026-09-05'
+  license_or_quotation_constraints: Citation and original concise paraphrase only.
+- source_id: SRC-USDA-LEFTOVER-SAFETY
+  title: Leftovers and Food Safety
+  authors_or_issuing_body: United States Department of Agriculture, Food Safety and Inspection Service
+  publication_date: '2020-07-31'
+  locator: https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/leftovers-and-food-safety
+  locator_kind: external_url
+  content_sha256: null
+  source_class: official_guidance
+  evidence_strength: authoritative
+  supported_claim: Refrigerate perishable leftovers within two hours, or one hour above 32 C (90 F); use
+    shallow containers, keep refrigerated leftovers for three to four days, and reheat to 74 C (165 F).
+  claim_classification: safety_precaution
+  limitations: General household guidance, not an assurance about a particular ingredient, interrupted
+    cold chain or a person's dietary needs. This source does not test the bean-skillet exercise.
+  applicable_competency_ids:
+  - '13.05'
+  - '13.07'
+  applicable_protocol_ids:
+  - PRACTICE-COMP-1305-COOKING-FUNDAMENTALS-01
+  - PRACTICE-COMP-1307-MEAL-PLANNING-SHOPPING-AND-FOOD-STORAGE-01
+  date_accessed: '2026-09-05'
+  license_or_quotation_constraints: Citation and concise original paraphrase of safety thresholds only.
+- source_id: SRC-FDA-RAW-FLOUR
+  title: Flour Is a Raw Food and Other Safety Facts
+  authors_or_issuing_body: United States Food and Drug Administration
+  publication_date: '2023-12-05'
+  locator: https://www.fda.gov/consumers/consumer-updates/flour-raw-food-and-other-safety-facts
+  locator_kind: external_url
+  content_sha256: null
+  source_class: official_guidance
+  evidence_strength: authoritative
+  supported_claim: Raw flour and dough can contain harmful germs; do not taste them, and clean hands,
+    equipment and surfaces after handling them.
+  claim_classification: safety_precaution
+  limitations: Food-handling support only; does not validate the educational comparison or establish that
+    appearance alone proves a flour product safe.
+  applicable_competency_ids:
+  - '13.06'
+  applicable_protocol_ids:
+  - PRACTICE-COMP-1306-BAKING-AND-FOOD-CHEMISTRY-01
+  date_accessed: '2026-09-05'
+  license_or_quotation_constraints: Citation and brief original paraphrase only.
+- source_id: SRC-KAB-SKILLET-TECHNIQUE
+  title: Skillet Flatbreads
+  authors_or_issuing_body: MaryJane Robbins / King Arthur Baking
+  publication_date: Not stated on the inspected page
+  locator: https://www.kingarthurbaking.com/recipes/skillet-flatbreads-recipe
+  locator_kind: external_url
+  content_sha256: null
+  source_class: authoritative_primary_source
+  evidence_strength: limited
+  supported_claim: A published skillet-flatbread method rolls portions to about 6 mm thickness and cooks
+    each side for several minutes; thickness and heat need to be controlled together.
+  claim_classification: professional_or_public_standard
+  limitations: Technique reference only. The product's smaller two-sample formulation and leavening comparison
+    are original educational designs, not tested or endorsed by the source.
+  applicable_competency_ids:
+  - '13.06'
+  applicable_protocol_ids:
+  - PRACTICE-COMP-1306-BAKING-AND-FOOD-CHEMISTRY-01
+  date_accessed: '2026-09-05'
+  license_or_quotation_constraints: Link and short original technique summary only; no recipe text, photographs
+    or complete source recipe reproduced.
+- source_id: SRC-UMN-HOUSEPLANT-CARE
+  title: Spring houseplant care
+  authors_or_issuing_body: Robin Trott / University of Minnesota Extension
+  publication_date: Not stated on the inspected page
+  locator: https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/houseplants/spring-houseplant-care
+  locator_kind: external_url
+  content_sha256: null
+  source_class: reputable_synthesis
+  evidence_strength: authoritative
+  supported_claim: Houseplant care should respond to observed light, moisture, drainage and growth conditions;
+    watering solely by calendar can miss the plant's actual needs.
+  claim_classification: professional_or_public_standard
+  limitations: Seasonal Upper Midwest houseplant guidance, not a universal watering or growing schedule
+    for all species, climates or cultivation methods.
+  applicable_competency_ids:
+  - '13.11'
+  applicable_protocol_ids:
+  - PRACTICE-COMP-1311-GARDENING-AND-PLANT-CARE-01
+  date_accessed: '2026-09-05'
+  license_or_quotation_constraints: Citation and original brief paraphrase only; no extension text, images
+    or teaching materials reproduced.
+- source_id: SRC-OPENSTAX-VALUE-QUESTIONS
+  title: Introduction to Philosophy, 8.2 Basic Questions about Values
+  authors_or_issuing_body: Nathan Smith / OpenStax, Rice University
+  publication_date: '2022-06-15'
+  locator: https://openstax.org/books/introduction-philosophy/pages/8-2-basic-questions-about-values
+  locator_kind: external_url
+  content_sha256: null
+  source_class: reputable_synthesis
+  evidence_strength: authoritative
+  supported_claim: Philosophical value inquiry distinguishes goods valued for themselves from instrumental
+    goods and considers plural values that may conflict or resist a single scale.
+  claim_classification: philosophical_or_normative_position
+  limitations: Educational conceptual support only; does not prescribe the person's priority order or
+    test the product's exercises or outcomes.
+  applicable_competency_ids:
+  - '01.01'
+  - '01.04'
+  - '01.06'
+  - '01.11'
+  applicable_protocol_ids:
+  - PRACTICE-COMP-0101-CONCEPTIONS-OF-FLOURISHING-01
+  - PRACTICE-COMP-0104-A-HIERARCHY-OF-GOODS-01
+  - PRACTICE-COMP-0106-MEANING-VERSUS-STATUS-01
+  - PRACTICE-COMP-0111-PLURAL-ENDS-AND-REASONABLE-DISAGREEMENT-01
+  date_accessed: '2026-09-05'
+  license_or_quotation_constraints: Link and original concise paraphrase only; no textbook prose, images,
+    worksheets or exercises are reproduced. Source lists CC BY-NC-SA terms; no redistribution license
+    for the textbook is asserted.
+- source_id: SRC-OPENSTAX-CONSEQUENTIALISM
+  title: Introduction to Philosophy, 9.2 Consequentialism
+  authors_or_issuing_body: Nathan Smith / OpenStax, Rice University
+  publication_date: '2022-06-15'
+  locator: https://openstax.org/books/introduction-philosophy/pages/9-2-consequentialism
+  locator_kind: external_url
+  content_sha256: null
+  source_class: reputable_synthesis
+  evidence_strength: authoritative
+  supported_claim: Consequentialist reasoning evaluates consequences for those affected; considering only
+    the decision maker's own benefit is not an adequate account of that approach.
+  claim_classification: philosophical_or_normative_position
+  limitations: One family of normative positions, not the uniquely correct morality, a numerical wellbeing
+    measure, or evidence of the effectiveness of this exercise.
+  applicable_competency_ids:
+  - '01.01'
+  applicable_protocol_ids:
+  - PRACTICE-COMP-0101-CONCEPTIONS-OF-FLOURISHING-01
+  date_accessed: '2026-09-05'
+  license_or_quotation_constraints: Citation and original conceptual paraphrase only; no source exercise
+    or extended passage reproduced. Source lists CC BY-NC-SA terms.
+- source_id: SRC-OPENSTAX-SOCRATIC-INQUIRY
+  title: Introduction to Philosophy, 1.3 Socrates as a Paradigmatic Historical Philosopher
+  authors_or_issuing_body: Nathan Smith / OpenStax, Rice University
+  publication_date: '2022-06-15'
+  locator: https://openstax.org/books/introduction-philosophy/pages/1-3-socrates-as-a-paradigmatic-historical-philosopher
+  locator_kind: external_url
+  content_sha256: null
+  source_class: reputable_synthesis
+  evidence_strength: authoritative
+  supported_claim: Socratic inquiry examines beliefs through questions and recognizes the limits of what
+    one knows.
+  claim_classification: philosophical_or_normative_position
+  limitations: Historical philosophical context only; does not validate this worldview worksheet, promise
+    psychological benefit, or require acceptance of Socrates' conclusions.
+  applicable_competency_ids:
+  - '01.02'
+  - '01.09'
+  applicable_protocol_ids:
+  - PRACTICE-COMP-0102-A-PROVISIONAL-WORLDVIEW-01
+  - PRACTICE-COMP-0109-LIFE-REVIEW-AND-PHILOSOPHICAL-REVISION-01
+  date_accessed: '2026-09-05'
+  license_or_quotation_constraints: Citation and original concise paraphrase only; no source prose or
+    exercises reproduced. Source lists CC BY-NC-SA terms.

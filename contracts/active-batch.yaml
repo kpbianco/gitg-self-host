@@ -1,103 +1,94 @@
 schema_version: 1
 batch:
-  id: M6I-05-ASSESSMENT-CALIBRATION-ANALYSIS-READINESS
-  title: Add privacy-safe offline calibration analysis readiness
-  goal: Validate an M6I-04 consented export and produce a deterministic aggregate sufficiency packet without retaining participant rows or converting software thresholds into validation claims.
+  id: M6J-01-TAILORED-COMPETENCY-PRACTICES
+  title: First tailored-content cohort — meaning and domestic competence
+  goal: Individually rewrite all 27 practices in domains 01 and 13 as the first cohort of the 383-competency rewrite; retain an exact remaining-work inventory.
 sources:
   product: products/gitg-self-host/product.yaml
   requirements:
-    - products/gitg-self-host/acceptance.yaml#GG-VALIDATION
-    - docs/PRODUCT_DECISIONS.md#decision-055--assessment-calibration-readiness-is-not-validation
-    - docs/architecture/0017-private-aggregate-assessment-calibration-analysis.md
-    - contracts/assessment-calibration-analysis.yaml
-  milestone: successor-to-M6I-04-CONSENTED-ASSESSMENT-CALIBRATION-DATA
-  baseline_commit: d2b326e1760f1904487369623bf51dc37b89c426
+    - docs/architecture/0018-tailored-competency-practices.md
+    - docs/PRODUCT_DECISIONS.md#decision-053
+    - docs/program/M6_CURRICULUM_EXPANSION.md
+  milestone: owner-directed-successor-to-M6I-05
+  baseline_commit: 425001e5533d50462f5b9a2bb049720834824426
 dependencies:
-  - M6I-04-CONSENTED-ASSESSMENT-CALIBRATION-DATA
+  - M6I-05-ASSESSMENT-CALIBRATION-ANALYSIS-READINESS
 scope:
   allowed_paths:
     - AGENTS.md
     - README.md
-    - Makefile
     - MANIFEST.tsv
-    - .github/workflows/**
+    - Makefile
     - contracts/**
     - docs/**
-    - growth/management/commands/analyze_assessment_calibration_dataset.py
-    - growth/management/commands/verify_assessment_calibration_analysis.py
-    - growth/services/assessment_calibration_analysis.py
-    - scripts/verify_assessment_calibration_analysis.sh
-    - scripts/verify_compose.sh
-    - tests/test_assessment_calibration_analysis.py
-    - tests/test_deployment_contract.py
+    - data/practices/**
+    - reports/practice-content/**
+    - scripts/**
+    - tests/**
+    - growth/services/canonical_import.py
+    - templates/growth/practice_recommendation.html
+    - templates/growth/practice_sprint.html
+    - templates/growth/practice_setup.html
+    - .github/workflows/**
   forbidden_paths:
-    - data/**
+    - data/assessment/**
+    - data/model/**
+    - data/curriculum/**
     - growth/models.py
     - growth/migrations/**
+    - growth/domain/composite_scoring.py
+    - growth/services/composite_score_state.py
+    - growth/domain/context_priority.py
     - growth/static/**
     - growth/templates/**
-    - templates/**
     - requirements*.txt
     - pyproject.toml
     - Dockerfile
     - docker-compose.yml
 acceptance:
-  - ADR 0017 and GG-ASSESSMENT-CALIBRATION-ANALYSIS-READINESS-1.0 define a local operator analysis-readiness aid not a participant evidence or validation result.
-  - Input is exactly grounded-growth-assessment-calibration-export-v1 with a verified dataset hash consent/disclosure versions privacy metadata counts participant pseudonyms run sequences intervals sources responses timing and quality allowlists.
-  - Unknown missing extra malformed duplicate-key mis-sequenced or hash-drifted input fails closed with no output and without printing a participant reference response timing or other sensitive value.
-  - Output contains only exact cohort/source totals suppressed aggregate item distributions timing summaries response-quality summaries exploratory retest summaries and per-axis sufficiency reasons.
-  - Participant references participant-level rows raw responses raw timing exact timestamps identity share codes free text Personal OS context practice evidence completion score and derived outputs are absent.
-  - Nonzero cells below five are suppressed. Descriptive and linked-retest software thresholds are fixed at thirty participants and are never represented as validation thresholds.
-  - Linked retest summaries are exploratory consecutive-pair agreement only and require thirty participants with retests before item metrics are emitted.
-  - Completed-run timing is explicitly unable to measure abandonment and the M6I-04 export is explicitly insufficient for external-measure construct validity population-group fairness recommendation fit or longitudinal outcomes.
-  - All eight participant evidence axes remain open and not established with completed_axes fixed at zero even when software data thresholds are met.
-  - The operator command requires explicit sensitive-input acknowledgement writes a new mode-0600 file refuses overwrite and performs no database read network call or remote upload.
-  - Readiness uses conspicuously synthetic in-memory data validates schema determinism thresholds suppression privacy and zero claims and performs no database query or participant-data read.
-  - Assessment source scoring recommendation evidence completion score state consent history export behavior owner lifecycle and historical replay remain unchanged.
-  - ER-M6A-003 RG-M6A-002 M6B specialist acceptance and every deferred participant qualified-analysis accessibility fairness cultural clinical longitudinal release deployment mastery and effectiveness gate remain open.
+  - All 27 competencies in domains 01 and 13 have individually authored instructions aligned with canonical scope and an explicit bounded exercise goal.
+  - The catalog-wide 383-competency requirement remains open with exactly 356 rewrite-pending rows; this cohort is never reported as complete catalog remediation.
+  - Each action supplies observable success criteria and a usable example without requiring the person to design a rubric or exercise.
+  - Prerequisites materials burden meaningful review and accessible equivalents are explicit.
+  - Simulation and preparation do not claim live performance or comprehensive mastery.
+  - Deferral N/A and unattempted actions do not satisfy completion.
+  - Sources support specific factual claims and do not imply validation of the product-authored exercise.
+  - All 383 protocol IDs 1151 action IDs parent mappings activation records assessment and scoring mathematics remain unchanged.
+  - Existing submitted events replay from their original snapshots and content import refuses to change active or paused practices.
+  - Every canonical competency receives an explicit authored-pending-review or rewrite-pending disposition; 13.02 retains its existing typed evidence fixtures and the five frozen legacy runtime packages remain byte-equivalent.
+  - ER-M6A-003 RG-M6A-002 and all specialist and empirical validation gates remain truthful and open.
 validation:
   local:
-    - .venv/bin/python -m pytest tests/test_assessment_calibration_analysis.py tests/test_assessment_calibration_consent.py tests/test_deployment_contract.py
-    - make assessment-calibration-analysis-check PYTHON=.venv/bin/python
-    - make assessment-calibration-collection-check PYTHON=.venv/bin/python
-    - make assessment-calibration-check PYTHON=.venv/bin/python
+    - make full-frontier-check PYTHON=.venv/bin/python
     - ./scripts/agent-verify.sh contract
     - ./scripts/agent-verify.sh quick
-    - .venv/bin/python scripts/verify-manifest.py
+    - make practice-report-check PYTHON=.venv/bin/python
+    - make catalog-governance-audit-check PYTHON=.venv/bin/python
+    - make composite-scoring-catalog-check PYTHON=.venv/bin/python
     - git diff --check
-  focused_tests_to_add:
-    - exact M6I-04 schema hash allowlist and structural validation
-    - deterministic aggregate report schema and report hash
-    - small-cell suppression and absence of participant rows raw values or pseudonyms
-    - fixed descriptive and linked-retest software thresholds with zero completed evidence axes
-    - explicit unsupported-input and completed-run-abandonment limitations
-    - operator acknowledgement no-overwrite mode-0600 and input-output separation
-    - database-free synthetic readiness and unchanged collection export compatibility
   required_ci:
     - Ruff Django pytest migration drift and manifest verification
-    - assessment calibration source collection and analysis readiness
-    - unchanged Playwright core journeys
-    - Compose backup restore recreation and all readiness drills
+    - all readiness and canonical report gates
+    - Playwright core journeys
+    - Compose backup restore and recreation
     - aggregate Pilot readiness gate
 risk:
   class: high
   hazards:
-    - aggregate output leaks a participant pseudonym or small response cell
-    - malformed or foreign input is summarized as trusted calibration data
-    - an arbitrary software threshold is mislabeled psychometric or fairness validation
-    - completed-run timing is mislabeled abandonment evidence
-    - analysis reads the live database or uploads sensitive data
+    - noun-swapped content is misrepresented as individually authored
+    - revised instructions invalidate an ongoing practice
+    - source support is overstated as specialist or empirical validation
+    - task completion is confused with mastery
   stop_conditions:
-    - any participant-level row pseudonym raw response timing identity timestamp share code or free text appears in the report
-    - any nonzero aggregate cell below five is emitted unsuppressed
-    - any evidence axis is marked complete or established
-    - any database read network call upload telemetry overwrite or background processing is added
-    - any assessment scorer source consent collection recommendation evidence completion score or replay behavior changes
-    - a required local or hosted gate fails
+    - historical event replay changes
+    - assessment or scoring mathematics changes
+    - any missing or generic exercise is hidden by the coverage report
+    - a required CI gate fails
 rollback:
-  strategy: Remove the analysis contract schema service commands readiness script and verification wiring; M6I-04 consent and export behavior and all existing application data remain untouched.
+  strategy: Revert the content release before import or restore the verified pre-upgrade backup; never reinterpret existing event snapshots.
 evidence:
   output:
-    - docs/evidence/M6I-05-ASSESSMENT-CALIBRATION-ANALYSIS-READINESS-<date>.md
-    - exact local and hosted CI results
-  claim_boundary: Deterministic private aggregate analysis readiness only; no participant evidence axis calibration reliability validity fairness accessibility burden abandonment recommendation-fit longitudinal clinical effectiveness release deployment mastery or specialist claim.
+    - docs/evidence/M6J-01-TAILORED-COMPETENCY-PRACTICES-2026-09-05.md
+    - exact per-competency content coverage and residual gaps
+    - exact local and hosted verification results
+  claim_boundary: Authored educational practices and software verification; no automatic human review or empirical validation acceptance.

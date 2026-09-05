@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0108-EXISTENTIAL-RESPONSIBILITY-01
 slug: c0108-existential-responsibility-practice
-name: Bounded Existential responsibility Practice
+name: Find one actionable responsibility inside a constraint
 parent_competency_id: '01.08'
 domain_id: '01'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 01.08
-      (Existential responsibility); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 01.08; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +34,33 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Existential responsibility through a artifact-and-review practice bounded by the
-    canonical scope: Accept that circumstances constrain life without eliminating personal agency, responsibility,
-    and choice.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can name what is and
-    is not under personal control and act on the controllable portion. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Distinguish control, influence, and external conditions while taking one proportionate action.
+  why_recommended: Distinguish control, influence, and external conditions while taking one proportionate
+    action.
   claims:
-  - statement: Using the canonical scope and evidence target for Existential responsibility is a traceable
-      product-design basis for a source-only draft protocol.
+  - statement: Distinguish control, influence, and external conditions while taking one proportionate
+      action.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Existential responsibility practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Existential responsibility as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Existential responsibility
-    context, understand the source-only status, and stop without losing safety, care, employment, housing,
-    services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Existential
-    responsibility; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency, or
-    dependence for evidence.
+  readiness_considerations: A support person can help communicate or implement your choice. Choosing rest,
+    declining an unsafe demand, or seeking assistance is an exercise of agency.
+  opportunity_considerations: Choose a current minor frustration, such as a delayed response, a crowded
+    schedule, or an unavailable resource. Do not use abuse, crisis, or traumatic events for this exercise.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Existential responsibility.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Choose a current minor frustration, such as a delayed response, a crowded schedule, or an unavailable
+    resource. Do not use abuse, crisis, or traumatic events for this exercise.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Existential responsibility instead
-    of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - A support person can help communicate or implement your choice. Choosing rest, declining an unsafe
+    demand, or seeking assistance is an exercise of agency.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +72,23 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Existential responsibility
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-ARTIFACT-PLAN
+  protocol_class: PF-BEHAVIORAL-EXPERIMENT
   duration_days: 10
-  cadence: Complete three bounded Existential responsibility actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Existential responsibility; copy the canonical scope and evidence target
-    into a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Existential
-    responsibility. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Existential responsibility actions, and
-    review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose a current minor frustration, such as a delayed response, a crowded schedule, or an unavailable
+    resource. Do not use abuse, crisis, or traumatic events for this exercise. Goal: Distinguish control,
+    influence, and external conditions while taking one proportionate action. Scope: The three categories
+    apply responsibility without denying constraint. One successful action does not remove structural
+    limits or establish control over another person. Time and effort: About 15 minutes to sort the situation,
+    one proportionate action, and a brief review. Adaptation: A support person can help communicate or
+    implement your choice. Choosing rest, declining an unsafe demand, or seeking assistance is an exercise
+    of agency. Keep personal working notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. A support person can help communicate or implement your choice. Choosing rest,
+    declining an unsafe demand, or seeking assistance is an exercise of agency.
+  expected_burden: About 15 minutes to sort the situation, one proportionate action, and a brief review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Existential responsibility protocol to rank worth, coerce participation, demand disclosure,
@@ -101,19 +96,21 @@ intervention:
   - Treating a completed Existential responsibility action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Existential responsibility situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. A support person
+    can help communicate or implement your choice. Choosing rest, declining an unsafe demand, or seeking
+    assistance is an exercise of agency.
   actions:
   - stable_id: PRACTICE-COMP-0108-EXISTENTIAL-RESPONSIBILITY-01-A1
     sequence: 1
-    title: Define a rubric for Existential responsibility
-    instructions: 'Turn the canonical scope for Existential responsibility into three to five inspectable
-      criteria: Accept that circumstances constrain life without eliminating personal agency, responsibility,
-      and choice. Keep the rubric bounded to one current context and include one criterion for uncertainty,
-      access, or competing obligations.'
+    title: Sort the situation without assigning blame
+    instructions: 'Make three columns: my direct choices, things I can influence, and conditions I cannot
+      decide. Place concrete facts in each. For a delayed reply, your follow-up timing is a choice, clarity
+      may influence the response, and the other person''s availability is outside your control.
+
+
+      Observation checks: All three categories are distinguished; Entries describe concrete conditions;
+      Responsibility is not expanded into blame. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -135,9 +132,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0108_a1_criteria_trace_to_scope
-        - c0108_a1_context_bounded
-        - c0108_a1_constraint_included
+        - all_three_categories_are_distinguished
+        - entries_describe_concrete_conditions
+        - responsibility_is_not_expanded_into_blame
       - measurement_id: c0108_a1_boundary
         kind: boolean
         role: supporting
@@ -154,10 +151,15 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0108-EXISTENTIAL-RESPONSIBILITY-01-A2
     sequence: 2
-    title: Build one Existential responsibility artifact
-    instructions: Create the smallest useful plan, checklist, diagram, record, or other artifact that
-      applies the rubric for Existential responsibility. Store only category-level information and omit
-      names, secrets, credentials, diagnoses, protected work detail, and unnecessary third-party information.
+    title: Take one proportionate action
+    instructions: 'Choose one useful direct action and, if appropriate, one respectful request. Send a
+      clear follow-up, adjust your own schedule, or use an available alternative. Specify when you will
+      stop checking or escalating. Do not treat another person''s refusal as permission to pressure them.
+
+
+      Observation checks: A controllable action is attempted; Any request respects refusal; An escalation
+      or checking limit is set. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -179,9 +181,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0108_a2_artifact_matches_rubric
-        - c0108_a2_minimum_private_detail
-        - c0108_a2_usable_next_step_present
+        - a_controllable_action_is_attempted
+        - any_request_respects_refusal
+        - an_escalation_or_checking_limit_is_set
       - measurement_id: c0108_a2_boundary
         kind: boolean
         role: supporting
@@ -198,10 +200,33 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0108-EXISTENTIAL-RESPONSIBILITY-01-A3
     sequence: 3
-    title: Stress-test and revise the Existential responsibility artifact
-    instructions: 'Test the artifact against one realistic variation, counterexample, or changed constraint.
-      Revise it only where the test exposes a gap, then compare the result with this evidence target:
-      Can name what is and is not under personal control and act on the controllable portion.'
+    title: Review agency and remaining constraint
+    instructions: 'Record what your action changed and what it could not change. Decide whether to ask
+      for support, pursue a different option, wait, or accept the limit. Retain the external obstacle
+      in the explanation instead of interpreting a poor outcome as personal failure.
+
+
+      Observation checks: Action and outcome are separated; Remaining constraints are acknowledged; A
+      proportionate next disposition is chosen. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.
+
+
+      Final review: Where did you have a choice, and where would demanding more control become unfair
+      to yourself or others?
+
+
+      Examples: Supportive: A clear follow-up was sent and an alternative was chosen without blaming anyone
+      for the delay.
+
+
+      Mixed: The action was useful but the main constraint remains outside the person''s influence.
+
+
+      Contradictory: The person accepted blame for another''s conduct or repeatedly pressured them to
+      respond.
+
+
+      Inconclusive: The columns contain only broad labels such as everything or nothing.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -217,15 +242,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0108_a3_primary
-        kind: scenario
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0108_a3_variation_tested
-        - c0108_a3_revision_traceable
-        - c0108_a3_target_evidence_compared
+        - action_and_outcome_are_separated
+        - remaining_constraints_are_acknowledged
+        - a_proportionate_next_disposition_is_chosen
       - measurement_id: c0108_a3_boundary
         kind: boolean
         role: supporting
@@ -246,16 +271,15 @@ intervention:
       Existential responsibility; no purchase, subscription, travel, credential, or public artifact is
       required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Existential responsibility; assistive technology, interpretation, a support person, and
-      a deferred action are valid without penalty.
+    - A support person can help communicate or implement your choice. Choosing rest, declining an unsafe
+      demand, or seeking assistance is an exercise of agency.
     cultural_context:
     - Adapt the expression of Existential responsibility to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Existential responsibility opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - A support person can help communicate or implement your choice. Choosing rest, declining an unsafe
+      demand, or seeking assistance is an exercise of agency.
   pause_conditions:
   - Pause Existential responsibility when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -287,10 +311,7 @@ evidence_and_scoring:
   - c0108_a3_boundary
   - c0108_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Existential responsibility action exceeded consent, authority, privacy, qualification, role, burden,
-    or safety boundaries.
-  - The evidence contradicted the intended Existential responsibility criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - The person accepted blame for another's conduct or repeatedly pressured them to respond.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Existential responsibility explicitly; support can enable access and never reduces dignity or
     silently changes the typed value.
@@ -300,14 +321,19 @@ evidence_and_scoring:
     origins are rejected and later repetitions use the typed contract's explicit diminishing multipliers.
   recency_rule: Generated Existential responsibility rules withhold observations older than 90 days; no
     unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can name what is and is not under personal control and act on the controllable portion.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Existential responsibility requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Sort the situation without assigning blame. Observed checks: All three
+    categories are distinguished; Entries describe concrete conditions; Responsibility is not expanded
+    into blame. Action 2: Take one proportionate action. Observed checks: A controllable action is attempted;
+    Any request respects refusal; An escalation or checking limit is set. Action 3: Review agency and
+    remaining constraint. Observed checks: Action and outcome are separated; Remaining constraints are
+    acknowledged; A proportionate next disposition is chosen.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. The columns contain only broad labels such as everything
+    or nothing.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Existential
     responsibility contribution under typed evaluation; protocol performance remains distinct and is never
     counted twice.
@@ -317,9 +343,8 @@ evidence_and_scoring:
   - L05
   - L10
   - L11
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Existential responsibility evidence.
@@ -327,10 +352,15 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define a rubric for existential responsibility action was attempted or explicitly deferred.
-  - The build one existential responsibility artifact action was attempted or explicitly deferred.
-  - The stress-test and revise the existential responsibility artifact action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Sort the situation without assigning blame. Observed checks: All three categories are distinguished;
+    Entries describe concrete conditions; Responsibility is not expanded into blame.'
+  - 'Action 2: Take one proportionate action. Observed checks: A controllable action is attempted; Any
+    request respects refusal; An escalation or checking limit is set.'
+  - 'Action 3: Review agency and remaining constraint. Observed checks: Action and outcome are separated;
+    Remaining constraints are acknowledged; A proportionate next disposition is chosen.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -339,56 +369,52 @@ completion_and_review:
     - c0108_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Existential responsibility only when the initial context remained
-    safe, the evidence criteria were usable, burden was acceptable, and a new context can be named without
-    assuming transfer.
-  transfer_limit: Three bounded actions do not establish Existential responsibility across roles, cultures,
-    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: Where did you have a choice, and where would demanding more control become unfair
+    to yourself or others?
+  transfer_limit: The three categories apply responsibility without denying constraint. One successful
+    action does not remove structural limits or establish control over another person.
   reflection:
-    before: What does Existential responsibility require in this exact context, what remains outside my
-      role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Existential responsibility criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can name what is and is not under personal control and act
-      on the controllable portion.', what contradiction or missing context matters most, and should this
-      Existential responsibility design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Distinguish control, influence, and external
+      conditions while taking one proportionate action.'
+    during: Which checks have actually been observed? The action was useful but the main constraint remains
+      outside the person's influence.
+    after: Where did you have a choice, and where would demanding more control become unfair to yourself
+      or others?
   review_guidance:
     repeat: Repeat the same bounded Existential responsibility design only when the context and burden
       remain appropriate.
-    adapt: Change the Existential responsibility medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: A support person can help communicate or implement your choice. Choosing rest, declining an
+      unsafe demand, or seeking assistance is an exercise of agency.
     stop: Stop Existential responsibility when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Existential responsibility questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Existential responsibility criteria were observed with provenance and no adverse
-      boundary signal in the selected context.
-    mixed: Some Existential responsibility criteria were observed while burden, support, contextual change,
-      or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Existential responsibility criterion, introduced
-      harm or coercion, or showed the design was not workable.
-    inconclusive: The Existential responsibility action was deferred, not observed, not applicable, stale,
-      insufficiently bounded, or too confounded to interpret.
+    supportive: A clear follow-up was sent and an alternative was chosen without blaming anyone for the
+      delay.
+    mixed: The action was useful but the main constraint remains outside the person's influence.
+    contradictory: The person accepted blame for another's conduct or repeatedly pressured them to respond.
+    inconclusive: The columns contain only broad labels such as everything or nothing.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Existential responsibility.
+    context_heading: Find one actionable responsibility inside a constraint
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Existential
       responsibility.
   check_in_labels:
-    c0108_a1_primary: The bounded Existential responsibility criterion for action 1 was observed
+    c0108_a1_primary: 'Observed checks: sort the situation without assigning blame'
     c0108_a1_boundary: Action 1 stayed inside its stated Existential responsibility boundary
     c0108_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0108_a2_primary: The bounded Existential responsibility criterion for action 2 was observed
+    c0108_a2_primary: 'Observed checks: take one proportionate action'
     c0108_a2_boundary: Action 2 stayed inside its stated Existential responsibility boundary
     c0108_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0108_a3_primary: The bounded Existential responsibility criterion for action 3 was observed
+    c0108_a3_primary: 'Observed checks: review agency and remaining constraint'
     c0108_a3_boundary: Action 3 stayed inside its stated Existential responsibility boundary
     c0108_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Existential responsibility
-    practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Where did you have a choice, and where would demanding more control become unfair to
+    yourself or others? Completion is not mastery.
+  plain_language_evidence: A clear follow-up was sent and an alternative was chosen without blaming anyone
+    for the delay.
   display_order: 17
