@@ -461,8 +461,9 @@ or effectiveness validation.
 
 ## M6J tailored-content continuation
 
-M6J-01 individually rewrites all 42 practices in domains 01, 02 and 13. The broader
-owner requirement covers all 383; the remaining 341 must stay explicitly
+M6J-01 individually rewrites all 42 practices in domains 01, 02 and 13. M6J-02
+adds all 12 self-knowledge practices in domain 05, for 54 authored. The broader
+owner requirement covers all 383; the remaining 329 must stay explicitly
 rewrite-pending. Compiler inputs live in `docs/authoring/exercises/`, while
 the canonical runtime source remains the manifest-listed practice YAML.
 The compiler must reject missing competencies, duplicated instructions and

@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0501-AN-HONEST-PERSONAL-INVENTORY-01
 slug: c0501-an-honest-personal-inventory-practice
-name: Bounded An honest personal inventory Practice
+name: Build a personal inventory from ordinary evidence
 parent_competency_id: '05.01'
 domain_id: '05'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-VAZIRE-SELF-OTHER-2010
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 05.01
-      (An honest personal inventory); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 05.01; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +35,46 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice An honest personal inventory through a bounded longitudinal review bounded by the
-    canonical scope: Document strengths, weaknesses, fears, wounds, privileges, habits, obligations, dependencies,
-    and recurring outcomes.'
-  why_recommended: 'The parent competency identifies this limited evidence target: The inventory includes
-    concrete evidence and truths that are neither flattering nor catastrophizing. The protocol creates
-    a small opportunity to examine that target without treating completion as broad capability.'
+  purpose: Describe present strengths, difficulties, supports and responsibilities using concrete observations
+    instead of a flattering or condemning identity verdict.
+  why_recommended: Describe present strengths, difficulties, supports and responsibilities using concrete
+    observations instead of a flattering or condemning identity verdict.
   claims:
-  - statement: Using the canonical scope and evidence target for An honest personal inventory is a traceable
-      product-design basis for a source-only draft protocol.
+  - statement: Describe present strengths, difficulties, supports and responsibilities using concrete
+      observations instead of a flattering or condemning identity verdict.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: In this study, the relative accuracy of self and other personality judgments differed by
+      the traits examined; neither perspective was uniformly best.
+    classification: empirical_finding
+    source_ids:
+    - SRC-VAZIRE-SELF-OTHER-2010
+    limitations: One study of 165 participants with friend and stranger ratings and behavioral criteria.
+      It does not establish the truth of any individual feedback, validate this inventory or conversation
+      exercise, or make another person's view authoritative.
   applicability_question: Does a voluntary, bounded An honest personal inventory practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record An honest personal inventory as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited An honest personal
-    inventory context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to An honest
-    personal inventory; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Dictate privately or use brief symbols. You may omit identifying details and
+    use an invented appointment case for rehearsal; that does not establish a personal inventory. Stop
+    if reflection becomes distressing and choose a neutral topic or appropriate support.
+  opportunity_considerations: 'Use a private page with nine headings: strengths, limitations, fears, past
+    difficulties, advantages, habits, obligations, dependencies, and recurring outcomes. Use the last
+    two weeks and an ordinary example such as keeping appointments; no painful memory retrieval is needed.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of An honest personal inventory.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use a private page with nine headings: strengths, limitations, fears, past difficulties, advantages,
+    habits, obligations, dependencies, and recurring outcomes. Use the last two weeks and an ordinary
+    example such as keeping appointments; no painful memory retrieval is needed.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for An honest personal inventory instead
-    of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Dictate privately or use brief symbols. You may omit identifying details and use an invented appointment
+    case for rehearsal; that does not establish a personal inventory. Stop if reflection becomes distressing
+    and choose a neutral topic or appropriate support.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +86,32 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about An honest personal inventory
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-LONGITUDINAL-REVIEW
+  protocol_class: PF-AUDIT-REDESIGN
   duration_days: 10
-  cadence: Complete three bounded An honest personal inventory actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for An honest personal inventory; copy the canonical scope and evidence target
-    into a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for An honest
-    personal inventory. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three An honest personal inventory actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use a private page with nine headings: strengths, limitations, fears, past difficulties, advantages,
+    habits, obligations, dependencies, and recurring outcomes. Use the last two weeks and an ordinary
+    example such as keeping appointments; no painful memory retrieval is needed. Goal: Describe present
+    strengths, difficulties, supports and responsibilities using concrete observations instead of a flattering
+    or condemning identity verdict. Scope: This is a current-life sample, not a diagnosis or complete
+    autobiography. Sensitive history can remain undescribed; an unknown or private entry does not mean
+    that part of life is absent. Time and effort: Two 15-minute sessions and one brief check during the
+    next ordinary week. Adaptation: Dictate privately or use brief symbols. You may omit identifying details
+    and use an invented appointment case for rehearsal; that does not establish a personal inventory.
+    Stop if reflection becomes distressing and choose a neutral topic or appropriate support. Keep personal
+    working notes outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Who Knows What About a Person? The Self–Other Knowledge Asymmetry (SOKA) Model: https://www.simine.com/docs/Vazire_JPSP_2010.pdf'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Dictate privately or use brief symbols. You may omit identifying details and use
+    an invented appointment case for rehearsal; that does not establish a personal inventory. Stop if
+    reflection becomes distressing and choose a neutral topic or appropriate support.
+  expected_burden: Two 15-minute sessions and one brief check during the next ordinary week.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the An honest personal inventory protocol to rank worth, coerce participation, demand disclosure,
@@ -101,19 +119,23 @@ intervention:
   - Treating a completed An honest personal inventory action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any An honest personal inventory situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Dictate privately
+    or use brief symbols. You may omit identifying details and use an invented appointment case for rehearsal;
+    that does not establish a personal inventory. Stop if reflection becomes distressing and choose a
+    neutral topic or appropriate support.
   actions:
   - stable_id: PRACTICE-COMP-0501-AN-HONEST-PERSONAL-INVENTORY-01-A1
     sequence: 1
-    title: Define indicators for An honest personal inventory
-    instructions: 'Choose two to four observable, privacy-minimized indicators for An honest personal
-      inventory, plus a missing-data rule and one contradiction indicator. Bound the review to one role
-      or context using this scope: Document strengths, weaknesses, fears, wounds, privileges, habits,
-      obligations, dependencies, and recurring outcomes.'
+    title: Separate a description from its evidence
+    instructions: 'Put one observation, unknown, or deliberately private entry under each heading. For
+      observations, record an event and its limits: I arrived on time twice when reminders were set, rather
+      than I am always dependable. Include one thing that went well, one that did not, and help or access
+      that mattered. Describe fear as your present experience, not proof that its prediction is true.
+
+
+      Observation checks: All nine headings have a disposition; Positive and difficult events are both
+      represented; Observations are distinguished from interpretations. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -135,9 +157,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0501_a1_indicators_observable
-        - c0501_a1_missing_data_rule_present
-        - c0501_a1_contradiction_indicator_present
+        - all_nine_headings_have_a_disposition
+        - positive_and_difficult_events_are_both_represented
+        - observations_are_distinguished_from_interpretations
       - measurement_id: c0501_a1_boundary
         kind: boolean
         role: supporting
@@ -154,10 +176,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0501-AN-HONEST-PERSONAL-INVENTORY-01-A2
     sequence: 2
-    title: Observe An honest personal inventory across three checkpoints
-    instructions: Collect up to three brief An honest personal inventory checkpoints across the selected
-      period or contexts. Record unknown, not observed, not applicable, defer, and adverse outcomes as
-      valid states; do not infer a trend from prose length, mood, or one unusually good or bad event.
+    title: Challenge an overstatement in each direction
+    instructions: 'Find the most flattering and most condemning sentence. For each, identify an exception,
+      missing context, or uncertainty and rewrite it proportionately. Connect a recurring result to a
+      habit, obligation, resource or dependency without assuming that connection proves causation. Example:
+      lateness after an extra care task suggests a scheduling constraint, not total irresponsibility.
+
+
+      Observation checks: A flattering overstatement is qualified; A condemning overstatement is qualified;
+      One recurring outcome has a tentative contextual explanation. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -173,15 +201,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0501_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - a_flattering_overstatement_is_qualified
+        - a_condemning_overstatement_is_qualified
+        - one_recurring_outcome_has_a_tentative_contextual_explanation
       - measurement_id: c0501_a2_boundary
         kind: boolean
         role: supporting
@@ -198,11 +226,35 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0501-AN-HONEST-PERSONAL-INVENTORY-01-A3
     sequence: 3
-    title: Review the limited An honest personal inventory pattern
-    instructions: 'Compare the checkpoints, name the strongest contradiction or missing context, and choose
-      repeat, adapt, stop, or seek support. Treat this target as a review criterion rather than proof
-      of transfer: The inventory includes concrete evidence and truths that are neither flattering nor
-      catastrophizing.'
+    title: Check one inventory claim against the next occasion
+    instructions: 'Choose one ordinary claim that has an upcoming opportunity. Before it occurs, write
+      what you expect and what would count against it. At the opportunity, use normal supports and record
+      what actually happened; then retain, narrow or revise the claim. If no occasion occurs, leave the
+      claim untested instead of counting a prediction as observation.
+
+
+      Observation checks: A prediction and possible counterexample precede the occasion; An actual outcome
+      or missing opportunity is recorded; The claim is retained or revised with a reason. Mark only what
+      you observed. Missing, mixed and negative results are valid; a deferred action is not completed.
+
+
+      Final review: Which statement became more accurate, what remains unknown, and what practical support
+      does this inventory suggest?
+
+
+      Examples: Supportive: The claim about unreliability was narrowed to appointments without travel
+      time, and the next recorded appointment tested that distinction.
+
+
+      Mixed: The inventory includes strengths and difficulties, but a recurring outcome still has several
+      plausible explanations.
+
+
+      Contradictory: One mistake was converted into a verdict of worthlessness, or an advantage was hidden
+      to make success appear entirely self-made.
+
+
+      Inconclusive: Nine labels were filled in without examples or an observed follow-up opportunity.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -224,9 +276,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0501_a3_checkpoints_compared
-        - c0501_a3_contradiction_or_gap_named
-        - c0501_a3_transfer_limit_preserved
+        - a_prediction_and_possible_counterexample_precede_the_occasion
+        - an_actual_outcome_or_missing_opportunity_is_recorded
+        - the_claim_is_retained_or_revised_with_a_reason
       - measurement_id: c0501_a3_boundary
         kind: boolean
         role: supporting
@@ -247,16 +299,17 @@ intervention:
       An honest personal inventory; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for An honest personal inventory; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - Dictate privately or use brief symbols. You may omit identifying details and use an invented appointment
+      case for rehearsal; that does not establish a personal inventory. Stop if reflection becomes distressing
+      and choose a neutral topic or appropriate support.
     cultural_context:
     - Adapt the expression of An honest personal inventory to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real An honest personal inventory opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Dictate privately or use brief symbols. You may omit identifying details and use an invented appointment
+      case for rehearsal; that does not establish a personal inventory. Stop if reflection becomes distressing
+      and choose a neutral topic or appropriate support.
   pause_conditions:
   - Pause An honest personal inventory when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -288,10 +341,8 @@ evidence_and_scoring:
   - c0501_a3_boundary
   - c0501_a3_adverse
   adverse_or_contradictory_indicators:
-  - The An honest personal inventory action exceeded consent, authority, privacy, qualification, role,
-    burden, or safety boundaries.
-  - The evidence contradicted the intended An honest personal inventory criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - One mistake was converted into a verdict of worthlessness, or an advantage was hidden to make success
+    appear entirely self-made.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for An honest personal inventory explicitly; support can enable access and never reduces dignity or
     silently changes the typed value.
@@ -302,14 +353,20 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated An honest personal inventory rules withhold observations older than 90 days;
     no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—The inventory includes concrete evidence and truths that are neither flattering nor catastrophizing.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for An honest personal inventory requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Separate a description from its evidence. Observed checks: All nine headings
+    have a disposition; Positive and difficult events are both represented; Observations are distinguished
+    from interpretations. Action 2: Challenge an overstatement in each direction. Observed checks: A flattering
+    overstatement is qualified; A condemning overstatement is qualified; One recurring outcome has a tentative
+    contextual explanation. Action 3: Check one inventory claim against the next occasion. Observed checks:
+    A prediction and possible counterexample precede the occasion; An actual outcome or missing opportunity
+    is recorded; The claim is retained or revised with a reason.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. Nine labels were filled in without examples or an observed
+    follow-up opportunity.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct An honest
     personal inventory contribution under typed evaluation; protocol performance remains distinct and
     is never counted twice.
@@ -318,9 +375,8 @@ evidence_and_scoring:
   - L05
   - L13
   - L36
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse An honest personal inventory evidence.
@@ -328,11 +384,17 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define indicators for an honest personal inventory action was attempted or explicitly deferred.
-  - The observe an honest personal inventory across three checkpoints action was attempted or explicitly
-    deferred.
-  - The review the limited an honest personal inventory pattern action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Separate a description from its evidence. Observed checks: All nine headings have a disposition;
+    Positive and difficult events are both represented; Observations are distinguished from interpretations.'
+  - 'Action 2: Challenge an overstatement in each direction. Observed checks: A flattering overstatement
+    is qualified; A condemning overstatement is qualified; One recurring outcome has a tentative contextual
+    explanation.'
+  - 'Action 3: Check one inventory claim against the next occasion. Observed checks: A prediction and
+    possible counterexample precede the occasion; An actual outcome or missing opportunity is recorded;
+    The claim is retained or revised with a reason.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -341,56 +403,56 @@ completion_and_review:
     - c0501_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden An honest personal inventory only when the initial context remained
-    safe, the evidence criteria were usable, burden was acceptable, and a new context can be named without
-    assuming transfer.
-  transfer_limit: Three bounded actions do not establish An honest personal inventory across roles, cultures,
-    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: Which statement became more accurate, what remains unknown, and what practical
+    support does this inventory suggest?
+  transfer_limit: This is a current-life sample, not a diagnosis or complete autobiography. Sensitive
+    history can remain undescribed; an unknown or private entry does not mean that part of life is absent.
   reflection:
-    before: What does An honest personal inventory require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable An honest personal inventory criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'The inventory includes concrete evidence and truths that are
-      neither flattering nor catastrophizing.', what contradiction or missing context matters most, and
-      should this An honest personal inventory design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Describe present strengths, difficulties,
+      supports and responsibilities using concrete observations instead of a flattering or condemning
+      identity verdict.'
+    during: Which checks have actually been observed? The inventory includes strengths and difficulties,
+      but a recurring outcome still has several plausible explanations.
+    after: Which statement became more accurate, what remains unknown, and what practical support does
+      this inventory suggest?
   review_guidance:
     repeat: Repeat the same bounded An honest personal inventory design only when the context and burden
       remain appropriate.
-    adapt: Change the An honest personal inventory medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: Dictate privately or use brief symbols. You may omit identifying details and use an invented
+      appointment case for rehearsal; that does not establish a personal inventory. Stop if reflection
+      becomes distressing and choose a neutral topic or appropriate support.
     stop: Stop An honest personal inventory when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for An honest personal inventory questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded An honest personal inventory criteria were observed with provenance and no
-      adverse boundary signal in the selected context.
-    mixed: Some An honest personal inventory criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended An honest personal inventory criterion, introduced
-      harm or coercion, or showed the design was not workable.
-    inconclusive: The An honest personal inventory action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The claim about unreliability was narrowed to appointments without travel time, and the
+      next recorded appointment tested that distinction.
+    mixed: The inventory includes strengths and difficulties, but a recurring outcome still has several
+      plausible explanations.
+    contradictory: One mistake was converted into a verdict of worthlessness, or an advantage was hidden
+      to make success appear entirely self-made.
+    inconclusive: Nine labels were filled in without examples or an observed follow-up opportunity.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for An honest personal inventory.
+    context_heading: Build a personal inventory from ordinary evidence
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for An honest
       personal inventory.
   check_in_labels:
-    c0501_a1_primary: The bounded An honest personal inventory criterion for action 1 was observed
+    c0501_a1_primary: 'Observed checks: separate a description from its evidence'
     c0501_a1_boundary: Action 1 stayed inside its stated An honest personal inventory boundary
     c0501_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0501_a2_primary: The bounded An honest personal inventory criterion for action 2 was observed
+    c0501_a2_primary: 'Observed checks: challenge an overstatement in each direction'
     c0501_a2_boundary: Action 2 stayed inside its stated An honest personal inventory boundary
     c0501_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0501_a3_primary: The bounded An honest personal inventory criterion for action 3 was observed
+    c0501_a3_primary: 'Observed checks: check one inventory claim against the next occasion'
     c0501_a3_boundary: Action 3 stayed inside its stated An honest personal inventory boundary
     c0501_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited An honest personal
-    inventory practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Which statement became more accurate, what remains unknown, and what practical support
+    does this inventory suggest? Completion is not mastery.
+  plain_language_evidence: The claim about unreliability was narrowed to appointments without travel time,
+    and the next recorded appointment tested that distinction.
   display_order: 59

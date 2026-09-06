@@ -289,6 +289,7 @@ def test_personal_os_context_priority_alternative_private_accessible_journey(
     assert_no_horizontal_overflow(page)
     page.evaluate("document.body.style.zoom = '200%'")
     assert_no_horizontal_overflow(page)
+    save_walkthrough_screenshot(page, "mobile-context-home-200-percent")
     page.evaluate("document.body.style.zoom = ''")
 
     page.set_viewport_size({"width": 1440, "height": 1000})
@@ -520,6 +521,24 @@ def test_play_protocol_setup_is_specific_and_score_active(live_server, page: Pag
             "openstax.org",
             "Four lenses supply distinct reasons",
             "Authority and legitimate claims are considered",
+        ),
+        (
+            "05.04",
+            "personality",
+            "Mixed: The label predicted one situation",
+            "Scope: This tests one practical prediction",
+            "simine.com",
+            "A label becomes a context specific prediction",
+            "Two opportunities are described with their conditions",
+        ),
+        (
+            "05.07",
+            "feedback",
+            "Mixed: The feedback was summarized accurately",
+            "Scope: One person's observation supplies a perspective",
+            "simine.com",
+            "Feedback is voluntary and about one shared event",
+            "The giver can correct the summary",
         ),
     ],
 )

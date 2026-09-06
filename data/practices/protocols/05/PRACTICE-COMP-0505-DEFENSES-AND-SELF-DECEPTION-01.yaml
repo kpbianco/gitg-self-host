@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0505-DEFENSES-AND-SELF-DECEPTION-01
 slug: c0505-defenses-and-self-deception-practice
-name: Bounded Defenses and self-deception Practice
+name: Catch one excuse before it replaces an honest response
 parent_competency_id: '05.05'
 domain_id: '05'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 05.05
-      (Defenses and self-deception); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 05.05; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +34,38 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Defenses and self-deception through a artifact-and-review practice bounded by the
-    canonical scope: Recognize avoidance, rationalization, blame, perfectionism, control, withdrawal,
-    intellectualization, and performative humility.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Catches one defense
-    in real time and chooses a more honest response. The protocol creates a small opportunity to examine
-    that target without treating completion as broad capability.'
+  purpose: Notice a possible avoidance or self-protective explanation in an ordinary moment and choose
+    a more accurate, responsible response.
+  why_recommended: Notice a possible avoidance or self-protective explanation in an ordinary moment and
+    choose a more accurate, responsible response.
   claims:
-  - statement: Using the canonical scope and evidence target for Defenses and self-deception is a traceable
-      product-design basis for a source-only draft protocol.
+  - statement: Notice a possible avoidance or self-protective explanation in an ordinary moment and choose
+      a more accurate, responsible response.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Defenses and self-deception practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Defenses and self-deception as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Defenses and self-deception
-    context, understand the source-only status, and stop without losing safety, care, employment, housing,
-    services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Defenses
-    and self-deception; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Use an impersonal scheduling task and private shorthand. Rehearse the supplied
+    draft-message case if no real cue occurs, labeling it rehearsal. Stop if the task invites rumination,
+    forced confession or unsafe disclosure.
+  opportunity_considerations: Choose a low-stakes unfinished task or minor correction. Use the default
+    case of delaying a short message while repeatedly polishing it. Keep legitimate constraints such as
+    safety, access, care and workload visible.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Defenses and self-deception.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Choose a low-stakes unfinished task or minor correction. Use the default case of delaying a short
+    message while repeatedly polishing it. Keep legitimate constraints such as safety, access, care and
+    workload visible.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Defenses and self-deception instead
-    of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use an impersonal scheduling task and private shorthand. Rehearse the supplied draft-message case
+    if no real cue occurs, labeling it rehearsal. Stop if the task invites rumination, forced confession
+    or unsafe disclosure.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +77,26 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Defenses and self-deception
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-ARTIFACT-PLAN
+  protocol_class: PF-BEHAVIORAL-EXPERIMENT
   duration_days: 10
-  cadence: Complete three bounded Defenses and self-deception actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Defenses and self-deception; copy the canonical scope and evidence target
-    into a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Defenses
-    and self-deception. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Defenses and self-deception actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose a low-stakes unfinished task or minor correction. Use the default case of delaying a
+    short message while repeatedly polishing it. Keep legitimate constraints such as safety, access, care
+    and workload visible. Goal: Notice a possible avoidance or self-protective explanation in an ordinary
+    moment and choose a more accurate, responsible response. Scope: This examines one observable habit
+    of explanation. It does not diagnose an unconscious defense, expose hidden motives or require you
+    to accept someone else''s accusation. Time and effort: About 15 minutes of preparation, one natural
+    opportunity, and a brief private review. Adaptation: Use an impersonal scheduling task and private
+    shorthand. Rehearse the supplied draft-message case if no real cue occurs, labeling it rehearsal.
+    Stop if the task invites rumination, forced confession or unsafe disclosure. Keep personal working
+    notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use an impersonal scheduling task and private shorthand. Rehearse the supplied
+    draft-message case if no real cue occurs, labeling it rehearsal. Stop if the task invites rumination,
+    forced confession or unsafe disclosure.
+  expected_burden: About 15 minutes of preparation, one natural opportunity, and a brief private review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Defenses and self-deception protocol to rank worth, coerce participation, demand disclosure,
@@ -101,19 +104,22 @@ intervention:
   - Treating a completed Defenses and self-deception action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Defenses and self-deception situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use an impersonal
+    scheduling task and private shorthand. Rehearse the supplied draft-message case if no real cue occurs,
+    labeling it rehearsal. Stop if the task invites rumination, forced confession or unsafe disclosure.
   actions:
   - stable_id: PRACTICE-COMP-0505-DEFENSES-AND-SELF-DECEPTION-01-A1
     sequence: 1
-    title: Define a rubric for Defenses and self-deception
-    instructions: 'Turn the canonical scope for Defenses and self-deception into three to five inspectable
-      criteria: Recognize avoidance, rationalization, blame, perfectionism, control, withdrawal, intellectualization,
-      and performative humility. Keep the rubric bounded to one current context and include one criterion
-      for uncertainty, access, or competing obligations.'
+    title: Compare the explanation with the sequence of actions
+    instructions: 'Write the task, what you did instead, and the explanation you gave yourself. Ask what
+      facts support it and what facts it leaves out. In the message case, distinguishing an unclear request
+      from fear of an imperfect reply prevents both unfair self-blame and an automatic excuse. Offer two
+      possible explanations rather than claiming to know a hidden motive.
+
+
+      Observation checks: Actions and explanation are recorded separately; Supporting and omitted facts
+      are considered; Two plausible explanations remain distinguishable. Mark only what you observed.
+      Missing, mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -135,9 +141,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0505_a1_criteria_trace_to_scope
-        - c0505_a1_context_bounded
-        - c0505_a1_constraint_included
+        - actions_and_explanation_are_recorded_separately
+        - supporting_and_omitted_facts_are_considered
+        - two_plausible_explanations_remain_distinguishable
       - measurement_id: c0505_a1_boundary
         kind: boolean
         role: supporting
@@ -154,10 +160,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0505-DEFENSES-AND-SELF-DECEPTION-01-A2
     sequence: 2
-    title: Build one Defenses and self-deception artifact
-    instructions: Create the smallest useful plan, checklist, diagram, record, or other artifact that
-      applies the rubric for Defenses and self-deception. Store only category-level information and omit
-      names, secrets, credentials, diagnoses, protected work detail, and unnecessary third-party information.
+    title: Use an honest sentence at the next cue
+    instructions: 'Choose a visible cue, such as opening the draft for another unnecessary rewrite. At
+      the next natural occurrence, pause and state the narrower truth privately: I have enough information
+      for a short reply, but I am reluctant to send it. Then send a reasonable reply, ask one necessary
+      question, or state an actual capacity limit. Do not manufacture a conflict to obtain evidence.
+
+
+      Observation checks: A natural cue is noticed during an attempt; A narrower honest statement replaces
+      the first explanation; A proportionate response is taken. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -179,9 +191,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0505_a2_artifact_matches_rubric
-        - c0505_a2_minimum_private_detail
-        - c0505_a2_usable_next_step_present
+        - a_natural_cue_is_noticed_during_an_attempt
+        - a_narrower_honest_statement_replaces_the_first_explanation
+        - a_proportionate_response_is_taken
       - measurement_id: c0505_a2_boundary
         kind: boolean
         role: supporting
@@ -198,10 +210,35 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0505-DEFENSES-AND-SELF-DECEPTION-01-A3
     sequence: 3
-    title: Stress-test and revise the Defenses and self-deception artifact
-    instructions: 'Test the artifact against one realistic variation, counterexample, or changed constraint.
-      Revise it only where the test exposes a gap, then compare the result with this evidence target:
-      Catches one defense in real time and chooses a more honest response.'
+    title: Review the response without creating a new excuse
+    instructions: 'Record what happened after your response and whether the original explanation still
+      fits. If someone was affected, consider a brief correction or repair within your responsibility;
+      do not demand reassurance. Identify the next early cue and one condition under which pausing or
+      declining would be reasonable rather than avoidance.
+
+
+      Observation checks: The response has an observed consequence; Responsibility is considered without
+      demanding reassurance; Legitimate limits are distinguished from the repeated excuse. Mark only what
+      you observed. Missing, mixed and negative results are valid; a deferred action is not completed.
+
+
+      Final review: What became more honest at the cue, and how can you keep both accountability and legitimate
+      limits?
+
+
+      Examples: Supportive: The writer noticed a fourth cosmetic edit, sent a concise accurate reply,
+      and retained a genuine boundary on additional work.
+
+
+      Mixed: An excuse was noticed only afterward; the next cue is clearer but the real-time alternative
+      remains untested.
+
+
+      Contradictory: Every reluctance was labeled cowardice or another person''s criticism was treated
+      as certain knowledge of hidden motives.
+
+
+      Inconclusive: A defense was named in general without an observable moment or different response.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -217,15 +254,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0505_a3_primary
-        kind: scenario
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0505_a3_variation_tested
-        - c0505_a3_revision_traceable
-        - c0505_a3_target_evidence_compared
+        - the_response_has_an_observed_consequence
+        - responsibility_is_considered_without_demanding_reassurance
+        - legitimate_limits_are_distinguished_from_the_repeated_excuse
       - measurement_id: c0505_a3_boundary
         kind: boolean
         role: supporting
@@ -246,16 +283,17 @@ intervention:
       Defenses and self-deception; no purchase, subscription, travel, credential, or public artifact is
       required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Defenses and self-deception; assistive technology, interpretation, a support person, and
-      a deferred action are valid without penalty.
+    - Use an impersonal scheduling task and private shorthand. Rehearse the supplied draft-message case
+      if no real cue occurs, labeling it rehearsal. Stop if the task invites rumination, forced confession
+      or unsafe disclosure.
     cultural_context:
     - Adapt the expression of Defenses and self-deception to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Defenses and self-deception opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use an impersonal scheduling task and private shorthand. Rehearse the supplied draft-message case
+      if no real cue occurs, labeling it rehearsal. Stop if the task invites rumination, forced confession
+      or unsafe disclosure.
   pause_conditions:
   - Pause Defenses and self-deception when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -287,10 +325,8 @@ evidence_and_scoring:
   - c0505_a3_boundary
   - c0505_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Defenses and self-deception action exceeded consent, authority, privacy, qualification, role,
-    burden, or safety boundaries.
-  - The evidence contradicted the intended Defenses and self-deception criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - Every reluctance was labeled cowardice or another person's criticism was treated as certain knowledge
+    of hidden motives.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Defenses and self-deception explicitly; support can enable access and never reduces dignity or
     silently changes the typed value.
@@ -301,14 +337,20 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Defenses and self-deception rules withhold observations older than 90 days;
     no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Catches one defense in real time and chooses a more honest response.—not completion, confidence,
-    conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Defenses and self-deception requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Compare the explanation with the sequence of actions. Observed checks:
+    Actions and explanation are recorded separately; Supporting and omitted facts are considered; Two
+    plausible explanations remain distinguishable. Action 2: Use an honest sentence at the next cue. Observed
+    checks: A natural cue is noticed during an attempt; A narrower honest statement replaces the first
+    explanation; A proportionate response is taken. Action 3: Review the response without creating a new
+    excuse. Observed checks: The response has an observed consequence; Responsibility is considered without
+    demanding reassurance; Legitimate limits are distinguished from the repeated excuse.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A defense was named in general without an observable
+    moment or different response.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Defenses
     and self-deception contribution under typed evaluation; protocol performance remains distinct and
     is never counted twice.
@@ -317,9 +359,8 @@ evidence_and_scoring:
   - L05
   - L06
   - L13
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Defenses and self-deception evidence.
@@ -327,10 +368,18 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define a rubric for defenses and self-deception action was attempted or explicitly deferred.
-  - The build one defenses and self-deception artifact action was attempted or explicitly deferred.
-  - The stress-test and revise the defenses and self-deception artifact action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Compare the explanation with the sequence of actions. Observed checks: Actions and explanation
+    are recorded separately; Supporting and omitted facts are considered; Two plausible explanations remain
+    distinguishable.'
+  - 'Action 2: Use an honest sentence at the next cue. Observed checks: A natural cue is noticed during
+    an attempt; A narrower honest statement replaces the first explanation; A proportionate response is
+    taken.'
+  - 'Action 3: Review the response without creating a new excuse. Observed checks: The response has an
+    observed consequence; Responsibility is considered without demanding reassurance; Legitimate limits
+    are distinguished from the repeated excuse.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -339,56 +388,55 @@ completion_and_review:
     - c0505_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Defenses and self-deception only when the initial context remained
-    safe, the evidence criteria were usable, burden was acceptable, and a new context can be named without
-    assuming transfer.
-  transfer_limit: Three bounded actions do not establish Defenses and self-deception across roles, cultures,
-    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: What became more honest at the cue, and how can you keep both accountability and
+    legitimate limits?
+  transfer_limit: This examines one observable habit of explanation. It does not diagnose an unconscious
+    defense, expose hidden motives or require you to accept someone else's accusation.
   reflection:
-    before: What does Defenses and self-deception require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Defenses and self-deception criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Catches one defense in real time and chooses a more honest
-      response.', what contradiction or missing context matters most, and should this Defenses and self-deception
-      design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Notice a possible avoidance or self-protective
+      explanation in an ordinary moment and choose a more accurate, responsible response.'
+    during: Which checks have actually been observed? An excuse was noticed only afterward; the next cue
+      is clearer but the real-time alternative remains untested.
+    after: What became more honest at the cue, and how can you keep both accountability and legitimate
+      limits?
   review_guidance:
     repeat: Repeat the same bounded Defenses and self-deception design only when the context and burden
       remain appropriate.
-    adapt: Change the Defenses and self-deception medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: Use an impersonal scheduling task and private shorthand. Rehearse the supplied draft-message
+      case if no real cue occurs, labeling it rehearsal. Stop if the task invites rumination, forced confession
+      or unsafe disclosure.
     stop: Stop Defenses and self-deception when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Defenses and self-deception questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Defenses and self-deception criteria were observed with provenance and no
-      adverse boundary signal in the selected context.
-    mixed: Some Defenses and self-deception criteria were observed while burden, support, contextual change,
-      or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Defenses and self-deception criterion, introduced
-      harm or coercion, or showed the design was not workable.
-    inconclusive: The Defenses and self-deception action was deferred, not observed, not applicable, stale,
-      insufficiently bounded, or too confounded to interpret.
+    supportive: The writer noticed a fourth cosmetic edit, sent a concise accurate reply, and retained
+      a genuine boundary on additional work.
+    mixed: An excuse was noticed only afterward; the next cue is clearer but the real-time alternative
+      remains untested.
+    contradictory: Every reluctance was labeled cowardice or another person's criticism was treated as
+      certain knowledge of hidden motives.
+    inconclusive: A defense was named in general without an observable moment or different response.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Defenses and self-deception.
+    context_heading: Catch one excuse before it replaces an honest response
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Defenses
       and self-deception.
   check_in_labels:
-    c0505_a1_primary: The bounded Defenses and self-deception criterion for action 1 was observed
+    c0505_a1_primary: 'Observed checks: compare the explanation with the sequence of actions'
     c0505_a1_boundary: Action 1 stayed inside its stated Defenses and self-deception boundary
     c0505_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0505_a2_primary: The bounded Defenses and self-deception criterion for action 2 was observed
+    c0505_a2_primary: 'Observed checks: use an honest sentence at the next cue'
     c0505_a2_boundary: Action 2 stayed inside its stated Defenses and self-deception boundary
     c0505_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0505_a3_primary: The bounded Defenses and self-deception criterion for action 3 was observed
+    c0505_a3_primary: 'Observed checks: review the response without creating a new excuse'
     c0505_a3_boundary: Action 3 stayed inside its stated Defenses and self-deception boundary
     c0505_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Defenses and self-deception
-    practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What became more honest at the cue, and how can you keep both accountability and legitimate
+    limits? Completion is not mastery.
+  plain_language_evidence: The writer noticed a fourth cosmetic edit, sent a concise accurate reply, and
+    retained a genuine boundary on additional work.
   display_order: 63

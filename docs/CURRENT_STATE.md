@@ -1,8 +1,23 @@
 # Current state
 
-Last updated: 2026-09-03
-Implementation branch: `codex/m6i-05-calibration-analysis-readiness`
-Baseline: `d2b326e1760f1904487369623bf51dc37b89c426`
+Last updated: 2026-09-05
+Implementation branch: `codex/m6j-02-self-knowledge`
+Baseline: `e993ad142dee7652c3c029d6b1c75c0cdaf3d298` (merged PR #52)
+
+## Current M6J content delivery
+
+M6J-02 adds 12 individually authored self-knowledge practices (05.01–05.12)
+and 36 tailored actions. There are now 54 authored practices and 329 still
+rewrite-pending. The 42 earlier practices, all stable IDs and activation,
+assessment, ranking, scoring and human-closeout behavior remain unchanged.
+Coverage is not specialist acceptance or empirical validation. The branch's
+exact verification and publication results belong in its M6J-02 evidence
+record and PR; the earlier M6I implementation history below remains relevant.
+
+PR #52 merged on 2026-09-05 at 16:07:55 UTC. Its PR quality and Compose jobs
+were cancelled and its aggregate failed; that PR run is not passing evidence.
+A separate main run, 33976905386, began at the merge and was still running
+when this continuation began. It must be assessed on its own results.
 
 ## Canonical runtime and scoring
 

@@ -1,8 +1,8 @@
 {
   "schema_version": "GG-TAILORED-PRACTICE-AUTHORING-1.0",
   "target": 383,
-  "authored": 42,
-  "remaining": 341,
+  "authored": 54,
+  "remaining": 329,
   "human_review_complete": 0,
   "rows": [
     {
@@ -253,62 +253,62 @@
     {
       "competency_id": "05.01",
       "name": "An honest personal inventory",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "05.02",
       "name": "Narrative identity",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "05.03",
       "name": "Strengths, limitations, and fit",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "05.04",
       "name": "Personality as hypothesis",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "05.05",
       "name": "Defenses and self-deception",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "05.06",
       "name": "Triggers and repeated patterns",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "05.07",
       "name": "Feedback and disconfirmation",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "05.08",
       "name": "Self-worth beyond performance",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "05.09",
       "name": "Integration of conflicting parts",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "05.10",
       "name": "Humility and proportionate self-regard",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "05.11",
       "name": "Embodied and socially situated identity",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "05.12",
       "name": "Cultural self-location and inherited assumptions",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "06.01",

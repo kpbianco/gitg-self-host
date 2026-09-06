@@ -1,5 +1,37 @@
 # Inspected reference support; exercises themselves are original product designs.
 sources:
+  - source_id: SRC-VAZIRE-SELF-OTHER-2010
+    title: Who Knows What About a Person? The Self–Other Knowledge Asymmetry (SOKA) Model
+    authors_or_issuing_body: Simine Vazire
+    publication_date: '2010-02'
+    locator: https://www.simine.com/docs/Vazire_JPSP_2010.pdf
+    locator_kind: external_url
+    content_sha256: null
+    source_class: primary_research
+    evidence_strength: limited
+    supported_claim: In this study, the relative accuracy of self and other personality judgments differed by the traits examined; neither perspective was uniformly best.
+    claim_classification: empirical_finding
+    limitations: One study of 165 participants with friend and stranger ratings and behavioral criteria. It does not establish the truth of any individual feedback, validate this inventory or conversation exercise, or make another person's view authoritative.
+    applicable_competency_ids: ['05.01', '05.07']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-05'
+    license_or_quotation_constraints: Inspected author-hosted article; citation and brief original paraphrase only, with no copied instruments, exercises or extended text.
+  - source_id: SRC-FLEESON-STATES-2001
+    title: 'Toward a Structure- and Process-Integrated View of Personality: Traits as Density Distributions of States'
+    authors_or_issuing_body: William Fleeson
+    publication_date: '2001-06'
+    locator: https://simine.com/407/readings/Fleeson_2001.pdf
+    locator_kind: external_url
+    content_sha256: null
+    source_class: primary_research
+    evidence_strength: limited
+    supported_claim: Three experience-sampling studies found substantial within-person variation in Big Five related states alongside stable individual differences in their central tendencies.
+    claim_classification: empirical_finding
+    limitations: Observational findings over two to three weeks do not establish causation, equal validity across personality models, or effectiveness of these product-authored trials. Two personal observations cannot validate a trait or instrument.
+    applicable_competency_ids: ['05.03', '05.04']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-05'
+    license_or_quotation_constraints: Inspected research article; link and concise original paraphrase only, with no copied instruments, exercises or extended text.
   - source_id: SRC-OPENSTAX-DEONTOLOGY
     title: Introduction to Philosophy, 9.3 Deontology
     authors_or_issuing_body: Nathan Smith / OpenStax, Rice University

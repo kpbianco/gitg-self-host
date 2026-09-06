@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0507-FEEDBACK-AND-DISCONFIRMATION-01
 slug: c0507-feedback-and-disconfirmation-practice
-name: Bounded Feedback and disconfirmation Practice
+name: Use one specific piece of feedback without instant rebuttal
 parent_competency_id: '05.07'
 domain_id: '05'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-VAZIRE-SELF-OTHER-2010
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 05.07
-      (Feedback and disconfirmation); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 05.07; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +35,46 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Feedback and disconfirmation through a consent-respecting relational practice bounded
-    by the canonical scope: Invite observations about the gap between intention and impact, especially
-    from people who are safe but not deferential.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can summarize feedback
-    accurately and test a change without immediate rebuttal. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Compare intended and observed impact, represent another person's feedback accurately and test
+    a bounded change while retaining your judgment.
+  why_recommended: Compare intended and observed impact, represent another person's feedback accurately
+    and test a bounded change while retaining your judgment.
   claims:
-  - statement: Using the canonical scope and evidence target for Feedback and disconfirmation is a traceable
-      product-design basis for a source-only draft protocol.
+  - statement: Compare intended and observed impact, represent another person's feedback accurately and
+      test a bounded change while retaining your judgment.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: In this study, the relative accuracy of self and other personality judgments differed by
+      the traits examined; neither perspective was uniformly best.
+    classification: empirical_finding
+    source_ids:
+    - SRC-VAZIRE-SELF-OTHER-2010
+    limitations: One study of 165 participants with friend and stranger ratings and behavioral criteria.
+      It does not establish the truth of any individual feedback, validate this inventory or conversation
+      exercise, or make another person's view authoritative.
   applicability_question: Does a voluntary, bounded Feedback and disconfirmation practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Feedback and disconfirmation as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Feedback and disconfirmation
-    context, understand the source-only status, and stop without losing safety, care, employment, housing,
-    services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Feedback
-    and disconfirmation; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Use an accessible written exchange. Without a safe willing person, use the
+    supplied directions example to rehearse listening and revision; label it rehearsal and leave actual
+    interpersonal feedback untested. Never solicit criticism from a coercive person for this exercise.
+  opportunity_considerations: Choose a safe person who can disagree with you and one low-stakes shared
+    event, such as explaining directions or coordinating a plan. Ask whether they are willing to give
+    one concrete observation; a refusal ends the request.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Feedback and disconfirmation.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Choose a safe person who can disagree with you and one low-stakes shared event, such as explaining
+    directions or coordinating a plan. Ask whether they are willing to give one concrete observation;
+    a refusal ends the request.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Feedback and disconfirmation instead
-    of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use an accessible written exchange. Without a safe willing person, use the supplied directions example
+    to rehearse listening and revision; label it rehearsal and leave actual interpersonal feedback untested.
+    Never solicit criticism from a coercive person for this exercise.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -81,19 +88,30 @@ meaning_and_fit:
 intervention:
   protocol_class: PF-RELATIONAL-CONVERSATION
   duration_days: 10
-  cadence: Complete three bounded Feedback and disconfirmation actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Feedback and disconfirmation; copy the canonical scope and evidence target
-    into a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Feedback
-    and disconfirmation. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Feedback and disconfirmation actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose a safe person who can disagree with you and one low-stakes shared event, such as explaining
+    directions or coordinating a plan. Ask whether they are willing to give one concrete observation;
+    a refusal ends the request. Goal: Compare intended and observed impact, represent another person''s
+    feedback accurately and test a bounded change while retaining your judgment. Scope: One person''s
+    observation supplies a perspective on one interaction. It is not an objective identity verdict, and
+    accurately hearing feedback does not require accepting abuse or agreeing with every interpretation.
+    Time and effort: A voluntary 10-minute exchange, one later interaction, and a five-minute review.
+    Adaptation: Use an accessible written exchange. Without a safe willing person, use the supplied directions
+    example to rehearse listening and revision; label it rehearsal and leave actual interpersonal feedback
+    untested. Never solicit criticism from a coercive person for this exercise. Keep personal working
+    notes outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Who Knows What About a Person? The Self–Other Knowledge Asymmetry (SOKA) Model: https://www.simine.com/docs/Vazire_JPSP_2010.pdf'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use an accessible written exchange. Without a safe willing person, use the supplied
+    directions example to rehearse listening and revision; label it rehearsal and leave actual interpersonal
+    feedback untested. Never solicit criticism from a coercive person for this exercise.
+  expected_burden: A voluntary 10-minute exchange, one later interaction, and a five-minute review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Feedback and disconfirmation protocol to rank worth, coerce participation, demand disclosure,
@@ -101,19 +119,23 @@ intervention:
   - Treating a completed Feedback and disconfirmation action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Feedback and disconfirmation situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use an accessible
+    written exchange. Without a safe willing person, use the supplied directions example to rehearse listening
+    and revision; label it rehearsal and leave actual interpersonal feedback untested. Never solicit criticism
+    from a coercive person for this exercise.
   actions:
   - stable_id: PRACTICE-COMP-0507-FEEDBACK-AND-DISCONFIRMATION-01-A1
     sequence: 1
-    title: Prepare a consent-safe Feedback and disconfirmation interaction
-    instructions: 'Choose one welcome, low-stakes relationship context for Feedback and disconfirmation.
-      Translate the canonical scope into one observable communication act, identify power or retaliation
-      concerns, and obtain or preserve the other person''s freedom not to participate: Invite observations
-      about the gap between intention and impact, especially from people who are safe but not deferential.'
+    title: Ask about an event rather than your worth
+    instructions: 'State the event and ask: what did I do that helped, and what made the task harder?
+      Request an example rather than a trait label. Before asking, note your intention privately. Listen
+      to the described behavior and effect without preparing a defense; do not record or upload the person''s
+      words or identity.
+
+
+      Observation checks: Feedback is voluntary and about one shared event; An observable example is requested;
+      Intended effect is distinguished from reported impact. Mark only what you observed. Missing, mixed
+      and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -135,9 +157,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0507_a1_communication_act_specific
-        - c0507_a1_consent_boundary_present
-        - c0507_a1_power_checked
+        - feedback_is_voluntary_and_about_one_shared_event
+        - an_observable_example_is_requested
+        - intended_effect_is_distinguished_from_reported_impact
       - measurement_id: c0507_a1_boundary
         kind: boolean
         role: supporting
@@ -154,10 +176,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0507-FEEDBACK-AND-DISCONFIRMATION-01-A2
     sequence: 2
-    title: Practice one Feedback and disconfirmation communication act
-    instructions: Use the prepared Feedback and disconfirmation act once without covert testing, pressure,
-      diagnosis, deception inference, or a demand for disclosure. Ask one direct clarification when appropriate
-      and allow refusal, delay, indirect communication, language access, or another format.
+    title: Check understanding before judging the advice
+    instructions: 'Summarize what you heard in your own words and ask whether the summary is accurate.
+      Example: my directions were detailed, but you could not tell which step came first. Separate the
+      observation from an inferred motive or proposed solution. Identify what you accept, question or
+      need to check, without requiring the person to reassure you.
+
+
+      Observation checks: The giver can correct the summary; Observation and interpretation are distinguished;
+      Agreement and uncertainty are both permitted. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -173,12 +201,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0507_a2_primary
-        kind: boolean
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        expected: true
+        - reviewed_artifact
+        criteria:
+        - the_giver_can_correct_the_summary
+        - observation_and_interpretation_are_distinguished
+        - agreement_and_uncertainty_are_both_permitted
       - measurement_id: c0507_a2_boundary
         kind: boolean
         role: supporting
@@ -195,11 +226,35 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0507-FEEDBACK-AND-DISCONFIRMATION-01-A3
     sequence: 3
-    title: Review Feedback and disconfirmation without scoring the person
-    instructions: 'Review only the observable interaction and its boundaries. Do not infer motives or
-      store private narrative. Compare what happened with this evidence target and retain disagreement
-      or an inconclusive result: Can summarize feedback accurately and test a change without immediate
-      rebuttal.'
+    title: Test a small change against the reported effect
+    instructions: 'Choose one change responsive to the example, such as leading with the first step before
+      adding detail. Try it in a comparable ordinary interaction. Check an observable result, and ask
+      for brief follow-up only if welcomed. Retain, revise or reject the change with a reason; missing
+      follow-up is not evidence of success.
+
+
+      Observation checks: A change addresses the specific feedback; A comparable interaction contains
+      an actual attempt; An observed result informs the next decision. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.
+
+
+      Final review: What did you learn about the gap between intention and impact, and which part still
+      needs checking?
+
+
+      Examples: Supportive: The summary was corrected, the speaker led with the first step next time,
+      and the listener could begin without another explanation.
+
+
+      Mixed: The feedback was summarized accurately, but the next interaction differed too much to assess
+      the change.
+
+
+      Contradictory: The giver was pressured to retract feedback, or a demeaning identity label was accepted
+      as established fact.
+
+
+      Inconclusive: Advice was collected but no accurate summary or later behavioral attempt occurred.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -221,9 +276,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0507_a3_observable_interaction_reviewed
-        - c0507_a3_private_narrative_excluded
-        - c0507_a3_inconclusive_allowed
+        - a_change_addresses_the_specific_feedback
+        - a_comparable_interaction_contains_an_actual_attempt
+        - an_observed_result_informs_the_next_decision
       - measurement_id: c0507_a3_boundary
         kind: boolean
         role: supporting
@@ -244,16 +299,17 @@ intervention:
       Feedback and disconfirmation; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Feedback and disconfirmation; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - Use an accessible written exchange. Without a safe willing person, use the supplied directions example
+      to rehearse listening and revision; label it rehearsal and leave actual interpersonal feedback untested.
+      Never solicit criticism from a coercive person for this exercise.
     cultural_context:
     - Adapt the expression of Feedback and disconfirmation to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Feedback and disconfirmation opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use an accessible written exchange. Without a safe willing person, use the supplied directions example
+      to rehearse listening and revision; label it rehearsal and leave actual interpersonal feedback untested.
+      Never solicit criticism from a coercive person for this exercise.
   pause_conditions:
   - Pause Feedback and disconfirmation when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -285,10 +341,8 @@ evidence_and_scoring:
   - c0507_a3_boundary
   - c0507_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Feedback and disconfirmation action exceeded consent, authority, privacy, qualification, role,
-    burden, or safety boundaries.
-  - The evidence contradicted the intended Feedback and disconfirmation criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - The giver was pressured to retract feedback, or a demeaning identity label was accepted as established
+    fact.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Feedback and disconfirmation explicitly; support can enable access and never reduces dignity or
     silently changes the typed value.
@@ -299,14 +353,20 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Feedback and disconfirmation rules withhold observations older than 90 days;
     no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can summarize feedback accurately and test a change without immediate rebuttal.—not completion,
-    confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Feedback and disconfirmation requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Ask about an event rather than your worth. Observed checks: Feedback
+    is voluntary and about one shared event; An observable example is requested; Intended effect is distinguished
+    from reported impact. Action 2: Check understanding before judging the advice. Observed checks: The
+    giver can correct the summary; Observation and interpretation are distinguished; Agreement and uncertainty
+    are both permitted. Action 3: Test a small change against the reported effect. Observed checks: A
+    change addresses the specific feedback; A comparable interaction contains an actual attempt; An observed
+    result informs the next decision.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. Advice was collected but no accurate summary or later
+    behavioral attempt occurred.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Feedback
     and disconfirmation contribution under typed evaluation; protocol performance remains distinct and
     is never counted twice.
@@ -316,9 +376,8 @@ evidence_and_scoring:
   - L13
   - L15
   - L23
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Feedback and disconfirmation evidence.
@@ -326,12 +385,17 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The prepare a consent-safe feedback and disconfirmation interaction action was attempted or explicitly
-    deferred.
-  - The practice one feedback and disconfirmation communication act action was attempted or explicitly
-    deferred.
-  - The review feedback and disconfirmation without scoring the person action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Ask about an event rather than your worth. Observed checks: Feedback is voluntary and about
+    one shared event; An observable example is requested; Intended effect is distinguished from reported
+    impact.'
+  - 'Action 2: Check understanding before judging the advice. Observed checks: The giver can correct the
+    summary; Observation and interpretation are distinguished; Agreement and uncertainty are both permitted.'
+  - 'Action 3: Test a small change against the reported effect. Observed checks: A change addresses the
+    specific feedback; A comparable interaction contains an actual attempt; An observed result informs
+    the next decision.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -340,56 +404,55 @@ completion_and_review:
     - c0507_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Feedback and disconfirmation only when the initial context remained
-    safe, the evidence criteria were usable, burden was acceptable, and a new context can be named without
-    assuming transfer.
-  transfer_limit: Three bounded actions do not establish Feedback and disconfirmation across roles, cultures,
-    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: What did you learn about the gap between intention and impact, and which part
+    still needs checking?
+  transfer_limit: One person's observation supplies a perspective on one interaction. It is not an objective
+    identity verdict, and accurately hearing feedback does not require accepting abuse or agreeing with
+    every interpretation.
   reflection:
-    before: What does Feedback and disconfirmation require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Feedback and disconfirmation criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can summarize feedback accurately and test a change without
-      immediate rebuttal.', what contradiction or missing context matters most, and should this Feedback
-      and disconfirmation design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Compare intended and observed impact, represent
+      another person''s feedback accurately and test a bounded change while retaining your judgment.'
+    during: Which checks have actually been observed? The feedback was summarized accurately, but the
+      next interaction differed too much to assess the change.
+    after: What did you learn about the gap between intention and impact, and which part still needs checking?
   review_guidance:
     repeat: Repeat the same bounded Feedback and disconfirmation design only when the context and burden
       remain appropriate.
-    adapt: Change the Feedback and disconfirmation medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: Use an accessible written exchange. Without a safe willing person, use the supplied directions
+      example to rehearse listening and revision; label it rehearsal and leave actual interpersonal feedback
+      untested. Never solicit criticism from a coercive person for this exercise.
     stop: Stop Feedback and disconfirmation when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Feedback and disconfirmation questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Feedback and disconfirmation criteria were observed with provenance and no
-      adverse boundary signal in the selected context.
-    mixed: Some Feedback and disconfirmation criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Feedback and disconfirmation criterion, introduced
-      harm or coercion, or showed the design was not workable.
-    inconclusive: The Feedback and disconfirmation action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The summary was corrected, the speaker led with the first step next time, and the listener
+      could begin without another explanation.
+    mixed: The feedback was summarized accurately, but the next interaction differed too much to assess
+      the change.
+    contradictory: The giver was pressured to retract feedback, or a demeaning identity label was accepted
+      as established fact.
+    inconclusive: Advice was collected but no accurate summary or later behavioral attempt occurred.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Feedback and disconfirmation.
+    context_heading: Use one specific piece of feedback without instant rebuttal
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Feedback
       and disconfirmation.
   check_in_labels:
-    c0507_a1_primary: The bounded Feedback and disconfirmation criterion for action 1 was observed
+    c0507_a1_primary: 'Observed checks: ask about an event rather than your worth'
     c0507_a1_boundary: Action 1 stayed inside its stated Feedback and disconfirmation boundary
     c0507_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0507_a2_primary: The bounded Feedback and disconfirmation criterion for action 2 was observed
+    c0507_a2_primary: 'Observed checks: check understanding before judging the advice'
     c0507_a2_boundary: Action 2 stayed inside its stated Feedback and disconfirmation boundary
     c0507_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0507_a3_primary: The bounded Feedback and disconfirmation criterion for action 3 was observed
+    c0507_a3_primary: 'Observed checks: test a small change against the reported effect'
     c0507_a3_boundary: Action 3 stayed inside its stated Feedback and disconfirmation boundary
     c0507_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Feedback and disconfirmation
-    practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What did you learn about the gap between intention and impact, and which part still
+    needs checking? Completion is not mastery.
+  plain_language_evidence: The summary was corrected, the speaker led with the first step next time, and
+    the listener could begin without another explanation.
   display_order: 65

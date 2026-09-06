@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0503-STRENGTHS-LIMITATIONS-AND-FIT-01
 slug: c0503-strengths-limitations-and-fit-practice
-name: Bounded Strengths, limitations, and fit Practice
+name: Find where a strength works and a limit needs support
 parent_competency_id: '05.03'
 domain_id: '05'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-FLEESON-STATES-2001
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 05.03
-      (Strengths, limitations, and fit); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 05.03; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +35,46 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Strengths, limitations, and fit through a bounded longitudinal review bounded by
-    the canonical scope: Identify capabilities, energy patterns, constraints, environments, and roles
-    that improve or impair performance.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Uses strengths deliberately
-    while designing around limits and developing neglected capacities. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Use a small performance comparison to distinguish capability, energy, environment and support,
+    then adapt one role or task accordingly.
+  why_recommended: Use a small performance comparison to distinguish capability, energy, environment and
+    support, then adapt one role or task accordingly.
   claims:
-  - statement: Using the canonical scope and evidence target for Strengths, limitations, and fit is a
-      traceable product-design basis for a source-only draft protocol.
+  - statement: Use a small performance comparison to distinguish capability, energy, environment and support,
+      then adapt one role or task accordingly.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Three experience-sampling studies found substantial within-person variation in Big Five
+      related states alongside stable individual differences in their central tendencies.
+    classification: empirical_finding
+    source_ids:
+    - SRC-FLEESON-STATES-2001
+    limitations: Observational findings over two to three weeks do not establish causation, equal validity
+      across personality models, or effectiveness of these product-authored trials. Two personal observations
+      cannot validate a trait or instrument.
   applicability_question: Does a voluntary, bounded Strengths, limitations, and fit practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Strengths, limitations, and fit as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Strengths, limitations,
-    and fit context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Strengths,
-    limitations, and fit; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Use seated, spoken, tactile or assisted work suited to you. Scale the task
+    down rather than pushing through pain or exhaustion. Planning an inaccessible task is preparation
+    and cannot substitute for the two performance observations.
+  opportunity_considerations: Choose a harmless repeatable task, such as summarizing a short text or arranging
+    a shelf. Keep necessary aids. Define one visible result, such as three accurate points or items easy
+    to retrieve, and note available time and energy.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Strengths, limitations, and fit.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Choose a harmless repeatable task, such as summarizing a short text or arranging a shelf. Keep necessary
+    aids. Define one visible result, such as three accurate points or items easy to retrieve, and note
+    available time and energy.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Strengths, limitations, and fit
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use seated, spoken, tactile or assisted work suited to you. Scale the task down rather than pushing
+    through pain or exhaustion. Planning an inaccessible task is preparation and cannot substitute for
+    the two performance observations.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +86,32 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Strengths, limitations, and
     fit as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-LONGITUDINAL-REVIEW
+  protocol_class: PF-BEHAVIORAL-EXPERIMENT
   duration_days: 10
-  cadence: Complete three bounded Strengths, limitations, and fit actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Strengths, limitations, and fit; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Strengths,
-    limitations, and fit. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Strengths, limitations, and fit actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose a harmless repeatable task, such as summarizing a short text or arranging a shelf. Keep
+    necessary aids. Define one visible result, such as three accurate points or items easy to retrieve,
+    and note available time and energy. Goal: Use a small performance comparison to distinguish capability,
+    energy, environment and support, then adapt one role or task accordingly. Scope: Two ordinary sessions
+    can suggest a better fit; they do not establish a stable trait, disability, career verdict or causal
+    effect. Accommodations and assistance remain legitimate parts of performance. Time and effort: Two
+    10–20 minute task sessions on different occasions and a 10-minute comparison. Adaptation: Use seated,
+    spoken, tactile or assisted work suited to you. Scale the task down rather than pushing through pain
+    or exhaustion. Planning an inaccessible task is preparation and cannot substitute for the two performance
+    observations. Keep personal working notes outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Toward a Structure- and Process-Integrated View of Personality: Traits as Density Distributions of
+    States: https://simine.com/407/readings/Fleeson_2001.pdf'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use seated, spoken, tactile or assisted work suited to you. Scale the task down
+    rather than pushing through pain or exhaustion. Planning an inaccessible task is preparation and cannot
+    substitute for the two performance observations.
+  expected_burden: Two 10–20 minute task sessions on different occasions and a 10-minute comparison.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Strengths, limitations, and fit protocol to rank worth, coerce participation, demand disclosure,
@@ -101,19 +119,23 @@ intervention:
   - Treating a completed Strengths, limitations, and fit action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Strengths, limitations, and fit situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use seated,
+    spoken, tactile or assisted work suited to you. Scale the task down rather than pushing through pain
+    or exhaustion. Planning an inaccessible task is preparation and cannot substitute for the two performance
+    observations.
   actions:
   - stable_id: PRACTICE-COMP-0503-STRENGTHS-LIMITATIONS-AND-FIT-01-A1
     sequence: 1
-    title: Define indicators for Strengths, limitations, and fit
-    instructions: 'Choose two to four observable, privacy-minimized indicators for Strengths, limitations,
-      and fit, plus a missing-data rule and one contradiction indicator. Bound the review to one role
-      or context using this scope: Identify capabilities, energy patterns, constraints, environments,
-      and roles that improve or impair performance.'
+    title: Describe the task and its operating conditions
+    instructions: 'Name a capability the task uses, a part you find harder, and one constraint such as
+      interruptions, reach, language or fatigue. Before the first session, state the visible result you
+      will check. Complete the short session and record the result, effort and help used, including a
+      strength that contributed.
+
+
+      Observation checks: A visible task result is defined before the session; Capability and constraint
+      are distinguished; First-session result effort and help are recorded. Mark only what you observed.
+      Missing, mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -135,9 +157,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0503_a1_indicators_observable
-        - c0503_a1_missing_data_rule_present
-        - c0503_a1_contradiction_indicator_present
+        - a_visible_task_result_is_defined_before_the_session
+        - capability_and_constraint_are_distinguished
+        - first_session_result_effort_and_help_are_recorded
       - measurement_id: c0503_a1_boundary
         kind: boolean
         role: supporting
@@ -154,10 +176,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0503-STRENGTHS-LIMITATIONS-AND-FIT-01-A2
     sequence: 2
-    title: Observe Strengths, limitations, and fit across three checkpoints
-    instructions: Collect up to three brief Strengths, limitations, and fit checkpoints across the selected
-      period or contexts. Record unknown, not observed, not applicable, defer, and adverse outcomes as
-      valid states; do not infer a trend from prose length, mood, or one unusually good or bad event.
+    title: Try a supported version of the difficult part
+    instructions: 'Keep the same kind of task and change one feasible support: a quieter time, a written
+      checklist, accessible placement or a smaller step. Practice the difficult component once with that
+      support. Record the same result and effort checks, plus anything else that differed between sessions.
+      Do not remove a needed aid to prove independence.
+
+
+      Observation checks: One deliberate support change is tried; The difficult component receives a bounded
+      attempt; Comparable results and other changed conditions are recorded. Mark only what you observed.
+      Missing, mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -173,15 +201,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0503_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - one_deliberate_support_change_is_tried
+        - the_difficult_component_receives_a_bounded_attempt
+        - comparable_results_and_other_changed_conditions_are_recorded
       - measurement_id: c0503_a2_boundary
         kind: boolean
         role: supporting
@@ -198,11 +226,34 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0503-STRENGTHS-LIMITATIONS-AND-FIT-01-A3
     sequence: 3
-    title: Review the limited Strengths, limitations, and fit pattern
-    instructions: 'Compare the checkpoints, name the strongest contradiction or missing context, and choose
-      repeat, adapt, stop, or seek support. Treat this target as a review criterion rather than proof
-      of transfer: Uses strengths deliberately while designing around limits and developing neglected
-      capacities.'
+    title: Write a usable fit recommendation
+    instructions: 'Compare both attempts. Write I can contribute X under conditions Y; I need support
+      Z; I will develop W through this small next step. Name one alternative explanation for the difference
+      and the next opportunity that could test the recommendation. Keep it provisional if the sessions
+      disagree.
+
+
+      Observation checks: The recommendation connects contribution and conditions; A supported development
+      step is specified; An alternative explanation limits the conclusion. Mark only what you observed.
+      Missing, mixed and negative results are valid; a deferred action is not completed.
+
+
+      Final review: What should you use deliberately, what should you design around, and what deserves
+      another supported attempt?
+
+
+      Examples: Supportive: A checklist reduced missing steps while a verbal explanation used an existing
+      strength; the participant kept both supports for another trial.
+
+
+      Mixed: The second result improved, but better sleep and a simpler text make the reason uncertain.
+
+
+      Contradictory: A necessary aid was removed or one difficult session was used to declare permanent
+      incapacity.
+
+
+      Inconclusive: A preferred role was chosen without trying or observing the task.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -224,9 +275,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0503_a3_checkpoints_compared
-        - c0503_a3_contradiction_or_gap_named
-        - c0503_a3_transfer_limit_preserved
+        - the_recommendation_connects_contribution_and_conditions
+        - a_supported_development_step_is_specified
+        - an_alternative_explanation_limits_the_conclusion
       - measurement_id: c0503_a3_boundary
         kind: boolean
         role: supporting
@@ -247,16 +298,17 @@ intervention:
       Strengths, limitations, and fit; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Strengths, limitations, and fit; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - Use seated, spoken, tactile or assisted work suited to you. Scale the task down rather than pushing
+      through pain or exhaustion. Planning an inaccessible task is preparation and cannot substitute for
+      the two performance observations.
     cultural_context:
     - Adapt the expression of Strengths, limitations, and fit to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Strengths, limitations, and fit opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use seated, spoken, tactile or assisted work suited to you. Scale the task down rather than pushing
+      through pain or exhaustion. Planning an inaccessible task is preparation and cannot substitute for
+      the two performance observations.
   pause_conditions:
   - Pause Strengths, limitations, and fit when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -288,10 +340,7 @@ evidence_and_scoring:
   - c0503_a3_boundary
   - c0503_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Strengths, limitations, and fit action exceeded consent, authority, privacy, qualification, role,
-    burden, or safety boundaries.
-  - The evidence contradicted the intended Strengths, limitations, and fit criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - A necessary aid was removed or one difficult session was used to declare permanent incapacity.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Strengths, limitations, and fit explicitly; support can enable access and never reduces dignity
     or silently changes the typed value.
@@ -302,14 +351,20 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Strengths, limitations, and fit rules withhold observations older than 90 days;
     no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Uses strengths deliberately while designing around limits and developing neglected capacities.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Strengths, limitations, and fit requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Describe the task and its operating conditions. Observed checks: A visible
+    task result is defined before the session; Capability and constraint are distinguished; First-session
+    result effort and help are recorded. Action 2: Try a supported version of the difficult part. Observed
+    checks: One deliberate support change is tried; The difficult component receives a bounded attempt;
+    Comparable results and other changed conditions are recorded. Action 3: Write a usable fit recommendation.
+    Observed checks: The recommendation connects contribution and conditions; A supported development
+    step is specified; An alternative explanation limits the conclusion.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A preferred role was chosen without trying or observing
+    the task.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Strengths,
     limitations, and fit contribution under typed evaluation; protocol performance remains distinct and
     is never counted twice.
@@ -318,9 +373,8 @@ evidence_and_scoring:
   - L05
   - L32
   - L36
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Strengths, limitations, and fit evidence.
@@ -328,11 +382,17 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define indicators for strengths, limitations, and fit action was attempted or explicitly deferred.
-  - The observe strengths, limitations, and fit across three checkpoints action was attempted or explicitly
-    deferred.
-  - The review the limited strengths, limitations, and fit pattern action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Describe the task and its operating conditions. Observed checks: A visible task result
+    is defined before the session; Capability and constraint are distinguished; First-session result effort
+    and help are recorded.'
+  - 'Action 2: Try a supported version of the difficult part. Observed checks: One deliberate support
+    change is tried; The difficult component receives a bounded attempt; Comparable results and other
+    changed conditions are recorded.'
+  - 'Action 3: Write a usable fit recommendation. Observed checks: The recommendation connects contribution
+    and conditions; A supported development step is specified; An alternative explanation limits the conclusion.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -341,57 +401,55 @@ completion_and_review:
     - c0503_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Strengths, limitations, and fit only when the initial context
-    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
-    named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Strengths, limitations, and fit across roles,
-    cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: What should you use deliberately, what should you design around, and what deserves
+    another supported attempt?
+  transfer_limit: Two ordinary sessions can suggest a better fit; they do not establish a stable trait,
+    disability, career verdict or causal effect. Accommodations and assistance remain legitimate parts
+    of performance.
   reflection:
-    before: What does Strengths, limitations, and fit require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Strengths, limitations, and fit criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Uses strengths deliberately while designing around limits
-      and developing neglected capacities.', what contradiction or missing context matters most, and should
-      this Strengths, limitations, and fit design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Use a small performance comparison to distinguish
+      capability, energy, environment and support, then adapt one role or task accordingly.'
+    during: Which checks have actually been observed? The second result improved, but better sleep and
+      a simpler text make the reason uncertain.
+    after: What should you use deliberately, what should you design around, and what deserves another
+      supported attempt?
   review_guidance:
     repeat: Repeat the same bounded Strengths, limitations, and fit design only when the context and burden
       remain appropriate.
-    adapt: Change the Strengths, limitations, and fit medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: Use seated, spoken, tactile or assisted work suited to you. Scale the task down rather than
+      pushing through pain or exhaustion. Planning an inaccessible task is preparation and cannot substitute
+      for the two performance observations.
     stop: Stop Strengths, limitations, and fit when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Strengths, limitations, and fit questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Strengths, limitations, and fit criteria were observed with provenance and
-      no adverse boundary signal in the selected context.
-    mixed: Some Strengths, limitations, and fit criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Strengths, limitations, and fit criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Strengths, limitations, and fit action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: A checklist reduced missing steps while a verbal explanation used an existing strength;
+      the participant kept both supports for another trial.
+    mixed: The second result improved, but better sleep and a simpler text make the reason uncertain.
+    contradictory: A necessary aid was removed or one difficult session was used to declare permanent
+      incapacity.
+    inconclusive: A preferred role was chosen without trying or observing the task.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Strengths, limitations, and fit.
+    context_heading: Find where a strength works and a limit needs support
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Strengths,
       limitations, and fit.
   check_in_labels:
-    c0503_a1_primary: The bounded Strengths, limitations, and fit criterion for action 1 was observed
+    c0503_a1_primary: 'Observed checks: describe the task and its operating conditions'
     c0503_a1_boundary: Action 1 stayed inside its stated Strengths, limitations, and fit boundary
     c0503_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0503_a2_primary: The bounded Strengths, limitations, and fit criterion for action 2 was observed
+    c0503_a2_primary: 'Observed checks: try a supported version of the difficult part'
     c0503_a2_boundary: Action 2 stayed inside its stated Strengths, limitations, and fit boundary
     c0503_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0503_a3_primary: The bounded Strengths, limitations, and fit criterion for action 3 was observed
+    c0503_a3_primary: 'Observed checks: write a usable fit recommendation'
     c0503_a3_boundary: Action 3 stayed inside its stated Strengths, limitations, and fit boundary
     c0503_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Strengths, limitations,
-    and fit practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What should you use deliberately, what should you design around, and what deserves
+    another supported attempt? Completion is not mastery.
+  plain_language_evidence: A checklist reduced missing steps while a verbal explanation used an existing
+    strength; the participant kept both supports for another trial.
   display_order: 61

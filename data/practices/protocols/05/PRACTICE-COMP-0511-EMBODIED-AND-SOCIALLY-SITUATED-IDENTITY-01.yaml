@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0511-EMBODIED-AND-SOCIALLY-SITUATED-IDENTITY-01
 slug: c0511-embodied-and-socially-situated-identity-practice
-name: Bounded Embodied and socially situated identity Practice
+name: Map personal choice and context in one ordinary route
 parent_competency_id: '05.11'
 domain_id: '05'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 05.11
-      (Embodied and socially situated identity); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 05.11; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,40 +34,38 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Embodied and socially situated identity through a artifact-and-review practice bounded
-    by the canonical scope: Understand how body, age, sex, race, class, culture, disability, language,
-    geography, and institutions affect experience without reducing identity to any single category.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can describe both personal
-    agency and structural context without erasing either. The protocol creates a small opportunity to
-    examine that target without treating completion as broad capability.'
+  purpose: Explain how access, embodiment, social position and institutions shape a concrete experience
+    while identifying real agency without blaming or reducing a person to a category.
+  why_recommended: Explain how access, embodiment, social position and institutions shape a concrete experience
+    while identifying real agency without blaming or reducing a person to a category.
   claims:
-  - statement: Using the canonical scope and evidence target for Embodied and socially situated identity
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Explain how access, embodiment, social position and institutions shape a concrete experience
+      while identifying real agency without blaming or reducing a person to a category.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Embodied and socially situated identity practice fit
     the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Embodied and socially situated identity as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Embodied and socially
-    situated identity context, understand the source-only status, and stop without losing safety, care,
-    employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Embodied
-    and socially situated identity; do not manufacture conflict, deprivation, exposure, disclosure, danger,
-    urgency, or dependence for evidence.
+  readiness_considerations: Use a familiar process from home, public information, dictation or voluntary
+    assistance. No travel, demographic disclosure, discriminatory encounter or test of physical endurance
+    is needed. A wholly fictional case demonstrates analysis only.
+  opportunity_considerations: Choose an ordinary process you know, such as reaching a library, joining
+    a free event or using a public form. Use a private sketch. Consider time, body and access needs, language,
+    cost, transport, rules and social expectations; unknown is acceptable.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Embodied and socially situated
-    identity.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Choose an ordinary process you know, such as reaching a library, joining a free event or using a public
+    form. Use a private sketch. Consider time, body and access needs, language, cost, transport, rules
+    and social expectations; unknown is acceptable.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Embodied and socially situated
-    identity instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a familiar process from home, public information, dictation or voluntary assistance. No travel,
+    demographic disclosure, discriminatory encounter or test of physical endurance is needed. A wholly
+    fictional case demonstrates analysis only.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -80,21 +77,28 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Embodied and socially situated
     identity as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-ARTIFACT-PLAN
+  protocol_class: PF-KNOWLEDGE-APPLICATION
   duration_days: 10
-  cadence: Complete three bounded Embodied and socially situated identity actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Embodied and socially situated identity; copy the canonical scope and
-    evidence target into a private working note; define the action boundary, valid supports, privacy limit,
-    and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Embodied
-    and socially situated identity. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Embodied and socially situated identity
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose an ordinary process you know, such as reaching a library, joining a free event or using
+    a public form. Use a private sketch. Consider time, body and access needs, language, cost, transport,
+    rules and social expectations; unknown is acceptable. Goal: Explain how access, embodiment, social
+    position and institutions shape a concrete experience while identifying real agency without blaming
+    or reducing a person to a category. Scope: One route or process offers a situated example. It does
+    not establish what every member of a group experiences or require disclosure of protected or sensitive
+    identity information. Time and effort: About 25 minutes to trace a familiar process and one small
+    accessible trial or information check. Adaptation: Use a familiar process from home, public information,
+    dictation or voluntary assistance. No travel, demographic disclosure, discriminatory encounter or
+    test of physical endurance is needed. A wholly fictional case demonstrates analysis only. Keep personal
+    working notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a familiar process from home, public information, dictation or voluntary assistance.
+    No travel, demographic disclosure, discriminatory encounter or test of physical endurance is needed.
+    A wholly fictional case demonstrates analysis only.
+  expected_burden: About 25 minutes to trace a familiar process and one small accessible trial or information
+    check.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Embodied and socially situated identity protocol to rank worth, coerce participation, demand
@@ -102,20 +106,23 @@ intervention:
   - Treating a completed Embodied and socially situated identity action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Embodied and socially situated identity situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a familiar
+    process from home, public information, dictation or voluntary assistance. No travel, demographic disclosure,
+    discriminatory encounter or test of physical endurance is needed. A wholly fictional case demonstrates
+    analysis only.
   actions:
   - stable_id: PRACTICE-COMP-0511-EMBODIED-AND-SOCIALLY-SITUATED-IDENTITY-01-A1
     sequence: 1
-    title: Define a rubric for Embodied and socially situated identity
-    instructions: 'Turn the canonical scope for Embodied and socially situated identity into three to
-      five inspectable criteria: Understand how body, age, sex, race, class, culture, disability, language,
-      geography, and institutions affect experience without reducing identity to any single category.
-      Keep the rubric bounded to one current context and include one criterion for uncertainty, access,
-      or competing obligations.'
+    title: Trace where conditions change the experience
+    instructions: 'Walk through the process on paper from start to finish. At each step note a choice
+      you can make and a condition you do not individually control. Consider whether age, disability,
+      sex, race, class, culture or geography matters in this case without inferring anyone''s identity
+      or inventing a barrier. Distinguish observed conditions from questions needing information.
+
+
+      Observation checks: The process has concrete steps; Personal choices and external conditions are
+      distinguished; Observed barriers and unknowns are labeled separately. Mark only what you observed.
+      Missing, mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -137,9 +144,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0511_a1_criteria_trace_to_scope
-        - c0511_a1_context_bounded
-        - c0511_a1_constraint_included
+        - the_process_has_concrete_steps
+        - personal_choices_and_external_conditions_are_distinguished
+        - observed_barriers_and_unknowns_are_labeled_separately
       - measurement_id: c0511_a1_boundary
         kind: boolean
         role: supporting
@@ -156,11 +163,16 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0511-EMBODIED-AND-SOCIALLY-SITUATED-IDENTITY-01-A2
     sequence: 2
-    title: Build one Embodied and socially situated identity artifact
-    instructions: Create the smallest useful plan, checklist, diagram, record, or other artifact that
-      applies the rubric for Embodied and socially situated identity. Store only category-level information
-      and omit names, secrets, credentials, diagnoses, protected work detail, and unnecessary third-party
-      information.
+    title: Compare a changed condition without impersonating a group
+    instructions: 'Change one condition in the case: the bus does not run at that hour, instructions are
+      unfamiliar, or the entrance requires stairs. Explain how the route changes and what remains possible.
+      Use actual public access information where available, and do not simulate a disability or claim
+      to know a group''s lived experience from this thought experiment.
+
+
+      Observation checks: One changed condition has a concrete consequence; Available information and
+      assumptions are separated; The comparison avoids claims about an entire group. Mark only what you
+      observed. Missing, mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -182,9 +194,9 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0511_a2_artifact_matches_rubric
-        - c0511_a2_minimum_private_detail
-        - c0511_a2_usable_next_step_present
+        - one_changed_condition_has_a_concrete_consequence
+        - available_information_and_assumptions_are_separated
+        - the_comparison_avoids_claims_about_an_entire_group
       - measurement_id: c0511_a2_boundary
         kind: boolean
         role: supporting
@@ -201,10 +213,34 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0511-EMBODIED-AND-SOCIALLY-SITUATED-IDENTITY-01-A3
     sequence: 3
-    title: Stress-test and revise the Embodied and socially situated identity artifact
-    instructions: 'Test the artifact against one realistic variation, counterexample, or changed constraint.
-      Revise it only where the test exposes a gap, then compare the result with this evidence target:
-      Can describe both personal agency and structural context without erasing either.'
+    title: Act where you have agency and name the remaining barrier
+    instructions: 'Try one feasible response: check accessible opening information, request an alternate
+      format, or choose a suitable route. Record the result and anything the individual choice could not
+      resolve. Write a short account linking effort, support and structure; do not turn success into proof
+      that everyone can overcome the same condition.
+
+
+      Observation checks: A feasible response is actually tried; The result and remaining barrier are
+      recorded; The account preserves agency support and structural limits. Mark only what you observed.
+      Missing, mixed and negative results are valid; a deferred action is not completed.
+
+
+      Final review: Which part was yours to choose, which depended on access or institutions, and what
+      would improve the process beyond your individual workaround?
+
+
+      Examples: Supportive: A later opening time made one library route possible, while the review retained
+      the transport barrier for people on other schedules.
+
+
+      Mixed: Public information suggested an accessible entrance, but actual access remained unverified.
+
+
+      Contradictory: One successful workaround was used to blame others or a presumed identity was treated
+      as the whole explanation.
+
+
+      Inconclusive: Identity categories were listed without tracing a process or checking any condition.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -220,15 +256,15 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0511_a3_primary
-        kind: scenario
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0511_a3_variation_tested
-        - c0511_a3_revision_traceable
-        - c0511_a3_target_evidence_compared
+        - a_feasible_response_is_actually_tried
+        - the_result_and_remaining_barrier_are_recorded
+        - the_account_preserves_agency_support_and_structural_limits
       - measurement_id: c0511_a3_boundary
         kind: boolean
         role: supporting
@@ -249,17 +285,17 @@ intervention:
       Embodied and socially situated identity; no purchase, subscription, travel, credential, or public
       artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Embodied and socially situated identity; assistive technology, interpretation, a support
-      person, and a deferred action are valid without penalty.
+    - Use a familiar process from home, public information, dictation or voluntary assistance. No travel,
+      demographic disclosure, discriminatory encounter or test of physical endurance is needed. A wholly
+      fictional case demonstrates analysis only.
     cultural_context:
     - Adapt the expression of Embodied and socially situated identity to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Embodied and socially situated identity opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use a familiar process from home, public information, dictation or voluntary assistance. No travel,
+      demographic disclosure, discriminatory encounter or test of physical endurance is needed. A wholly
+      fictional case demonstrates analysis only.
   pause_conditions:
   - Pause Embodied and socially situated identity when capacity, consent, authority, privacy, access,
     care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make
@@ -291,10 +327,8 @@ evidence_and_scoring:
   - c0511_a3_boundary
   - c0511_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Embodied and socially situated identity action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Embodied and socially situated identity criterion, depended
-    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - One successful workaround was used to blame others or a presumed identity was treated as the whole
+    explanation.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Embodied and socially situated identity explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -305,14 +339,21 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Embodied and socially situated identity rules withhold observations older than
     90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can describe both personal agency and structural context without erasing either.—not completion,
-    confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Embodied and socially situated identity requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Trace where conditions change the experience. Observed checks: The process
+    has concrete steps; Personal choices and external conditions are distinguished; Observed barriers
+    and unknowns are labeled separately. Action 2: Compare a changed condition without impersonating a
+    group. Observed checks: One changed condition has a concrete consequence; Available information and
+    assumptions are separated; The comparison avoids claims about an entire group. Action 3: Act where
+    you have agency and name the remaining barrier. Observed checks: A feasible response is actually tried;
+    The result and remaining barrier are recorded; The account preserves agency support and structural
+    limits.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. Identity categories were listed without tracing a process
+    or checking any condition.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Embodied
     and socially situated identity contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -322,9 +363,8 @@ evidence_and_scoring:
   - L17
   - L24
   - L31
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Embodied and socially situated identity evidence.
@@ -332,12 +372,18 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define a rubric for embodied and socially situated identity action was attempted or explicitly
-    deferred.
-  - The build one embodied and socially situated identity artifact action was attempted or explicitly
-    deferred.
-  - The stress-test and revise the embodied and socially situated identity artifact action preserved a
-    limited conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Trace where conditions change the experience. Observed checks: The process has concrete
+    steps; Personal choices and external conditions are distinguished; Observed barriers and unknowns
+    are labeled separately.'
+  - 'Action 2: Compare a changed condition without impersonating a group. Observed checks: One changed
+    condition has a concrete consequence; Available information and assumptions are separated; The comparison
+    avoids claims about an entire group.'
+  - 'Action 3: Act where you have agency and name the remaining barrier. Observed checks: A feasible response
+    is actually tried; The result and remaining barrier are recorded; The account preserves agency support
+    and structural limits.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -346,58 +392,55 @@ completion_and_review:
     - c0511_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Embodied and socially situated identity only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Embodied and socially situated identity across
-    roles, cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: Which part was yours to choose, which depended on access or institutions, and
+    what would improve the process beyond your individual workaround?
+  transfer_limit: One route or process offers a situated example. It does not establish what every member
+    of a group experiences or require disclosure of protected or sensitive identity information.
   reflection:
-    before: What does Embodied and socially situated identity require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Embodied and socially situated identity criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can describe both personal agency and structural context without
-      erasing either.', what contradiction or missing context matters most, and should this Embodied and
-      socially situated identity design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Explain how access, embodiment, social position
+      and institutions shape a concrete experience while identifying real agency without blaming or reducing
+      a person to a category.'
+    during: Which checks have actually been observed? Public information suggested an accessible entrance,
+      but actual access remained unverified.
+    after: Which part was yours to choose, which depended on access or institutions, and what would improve
+      the process beyond your individual workaround?
   review_guidance:
     repeat: Repeat the same bounded Embodied and socially situated identity design only when the context
       and burden remain appropriate.
-    adapt: Change the Embodied and socially situated identity medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Use a familiar process from home, public information, dictation or voluntary assistance. No
+      travel, demographic disclosure, discriminatory encounter or test of physical endurance is needed.
+      A wholly fictional case demonstrates analysis only.
     stop: Stop Embodied and socially situated identity when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Embodied and socially situated identity
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Embodied and socially situated identity criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Embodied and socially situated identity criteria were observed while burden, support,
-      contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Embodied and socially situated identity criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Embodied and socially situated identity action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: A later opening time made one library route possible, while the review retained the transport
+      barrier for people on other schedules.
+    mixed: Public information suggested an accessible entrance, but actual access remained unverified.
+    contradictory: One successful workaround was used to blame others or a presumed identity was treated
+      as the whole explanation.
+    inconclusive: Identity categories were listed without tracing a process or checking any condition.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Embodied and socially situated identity.
+    context_heading: Map personal choice and context in one ordinary route
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Embodied
       and socially situated identity.
   check_in_labels:
-    c0511_a1_primary: The bounded Embodied and socially situated identity criterion for action 1 was observed
+    c0511_a1_primary: 'Observed checks: trace where conditions change the experience'
     c0511_a1_boundary: Action 1 stayed inside its stated Embodied and socially situated identity boundary
     c0511_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0511_a2_primary: The bounded Embodied and socially situated identity criterion for action 2 was observed
+    c0511_a2_primary: 'Observed checks: compare a changed condition without impersonating a group'
     c0511_a2_boundary: Action 2 stayed inside its stated Embodied and socially situated identity boundary
     c0511_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0511_a3_primary: The bounded Embodied and socially situated identity criterion for action 3 was observed
+    c0511_a3_primary: 'Observed checks: act where you have agency and name the remaining barrier'
     c0511_a3_boundary: Action 3 stayed inside its stated Embodied and socially situated identity boundary
     c0511_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Embodied and socially
-    situated identity practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Which part was yours to choose, which depended on access or institutions, and what
+    would improve the process beyond your individual workaround? Completion is not mastery.
+  plain_language_evidence: A later opening time made one library route possible, while the review retained
+    the transport barrier for people on other schedules.
   display_order: 69
