@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0305-GRATITUDE-AND-RECEIVED-LIFE-01
 slug: c0305-gratitude-and-received-life-practice
-name: Bounded Gratitude and received life Practice
+name: Trace a received good and answer it through conduct
 parent_competency_id: '03.05'
 domain_id: '03'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 03.05
-      (Gratitude and received life); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 03.05; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +34,40 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Gratitude and received life through a pluralist meaning practice bounded by the canonical
-    scope: Recognize dependence, gifts, contingency, sacrifice, inheritance, and goods not personally
-    earned.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Gratitude changes conduct
-    through care, generosity, restraint, remembrance, or service. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Recognize dependence, gifts, contingency, sacrifice and inheritance in an ordinary good, then
+    express gratitude through appropriate care, remembrance or generosity.
+  why_recommended: Recognize dependence, gifts, contingency, sacrifice and inheritance in an ordinary
+    good, then express gratitude through appropriate care, remembrance or generosity.
   claims:
-  - statement: Using the canonical scope and evidence target for Gratitude and received life is a traceable
-      product-design basis for a source-only draft protocol.
+  - statement: Recognize dependence, gifts, contingency, sacrifice and inheritance in an ordinary good,
+      then express gratitude through appropriate care, remembrance or generosity.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Gratitude and received life practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Gratitude and received life as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Gratitude and received
-    life context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Gratitude
-    and received life; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Use spoken recollection or a simple object instead of writing. Choose an impersonal
+    public good or a safe historical contribution when direct relationships are difficult. A private acknowledgment
+    can replace contact; do not give money or labor you cannot reasonably spare.
+  opportunity_considerations: Use a skill someone taught you, a book available to you, a useful tool or
+    an ordinary meal. The default is a learned household skill such as mending a loose button or organizing
+    a cupboard. No purchase, public thanks or religious interpretation is needed. Keep names and personal
+    histories in your private notes.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Gratitude and received life.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Use a skill someone taught you, a book available to you, a useful tool or an ordinary meal. The default
+    is a learned household skill such as mending a loose button or organizing a cupboard. No purchase,
+    public thanks or religious interpretation is needed. Keep names and personal histories in your private
+    notes.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Gratitude and received life instead
-    of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use spoken recollection or a simple object instead of writing. Choose an impersonal public good or
+    a safe historical contribution when direct relationships are difficult. A private acknowledgment can
+    replace contact; do not give money or labor you cannot reasonably spare.
   role_conditions:
   - This competency is pathway dependent; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +79,29 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Gratitude and received life
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-CONTEMPLATIVE-MEANING
+  protocol_class: PF-BEHAVIORAL-EXPERIMENT
   duration_days: 10
-  cadence: Complete three bounded Gratitude and received life actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Gratitude and received life; copy the canonical scope and evidence target
-    into a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Gratitude
-    and received life. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Gratitude and received life actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use a skill someone taught you, a book available to you, a useful tool or an ordinary meal.
+    The default is a learned household skill such as mending a loose button or organizing a cupboard.
+    No purchase, public thanks or religious interpretation is needed. Keep names and personal histories
+    in your private notes. Goal: Recognize dependence, gifts, contingency, sacrifice and inheritance in
+    an ordinary good, then express gratitude through appropriate care, remembrance or generosity. Scope:
+    Gratitude concerns a specific received good, not a duty to feel grateful for harm. Recognizing help
+    does not erase your work, create unlimited debt or require contact with an unsafe benefactor. Time
+    and effort: About 20 minutes to trace a good, one modest response, and a 15-minute review after a
+    later use. Adaptation: Use spoken recollection or a simple object instead of writing. Choose an impersonal
+    public good or a safe historical contribution when direct relationships are difficult. A private acknowledgment
+    can replace contact; do not give money or labor you cannot reasonably spare. Keep personal working
+    notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use spoken recollection or a simple object instead of writing. Choose an impersonal
+    public good or a safe historical contribution when direct relationships are difficult. A private acknowledgment
+    can replace contact; do not give money or labor you cannot reasonably spare.
+  expected_burden: About 20 minutes to trace a good, one modest response, and a 15-minute review after
+    a later use.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Gratitude and received life protocol to rank worth, coerce participation, demand disclosure,
@@ -101,19 +109,26 @@ intervention:
   - Treating a completed Gratitude and received life action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Gratitude and received life situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use spoken
+    recollection or a simple object instead of writing. Choose an impersonal public good or a safe historical
+    contribution when direct relationships are difficult. A private acknowledgment can replace contact;
+    do not give money or labor you cannot reasonably spare.
   actions:
   - stable_id: PRACTICE-COMP-0305-GRATITUDE-AND-RECEIVED-LIFE-01-A1
     sequence: 1
-    title: Choose a declared frame for Gratitude and received life
-    instructions: 'Select a religious, spiritual, philosophical, cultural, or secular frame through which
-      to explore Gratitude and received life. State the frame, one alternative, and the limits of personal
-      authority using this canonical scope: Recognize dependence, gifts, contingency, sacrifice, inheritance,
-      and goods not personally earned.'
+    title: Trace the good beyond your own contribution
+    instructions: 'Draw a short chain from the good you now use to people, inherited knowledge, materials
+      and circumstances that made it possible. Mark your own effort too. Identify one gift or unearned
+      advantage, one dependence, one contingent opportunity, one cost someone may have borne and one inheritance
+      worth preserving. Label an unknown cost as unknown rather than inventing a sacrifice. For the learned
+      skill, distinguish a teacher''s time from the practice you supplied and the tools that happened
+      to be available.
+
+
+      Observation checks: The chain includes personal effort and dependence; Gift contingency and inheritance
+      are considered; A cost or sacrifice is identified without invention; Unknown parts of the chain
+      remain explicit. Mark only what you observed. Missing, mixed and negative results are valid; a deferred
+      action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -129,15 +144,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0305_a1_primary
-        kind: conceptual
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0305_a1_frame_declared
-        - c0305_a1_alternative_acknowledged
-        - c0305_a1_authority_limited
+        - the_chain_includes_personal_effort_and_dependence
+        - gift_contingency_and_inheritance_are_considered
+        - a_cost_or_sacrifice_is_identified_without_invention
+        - unknown_parts_of_the_chain_remain_explicit
       - measurement_id: c0305_a1_boundary
         kind: boolean
         role: supporting
@@ -154,11 +170,18 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0305-GRATITUDE-AND-RECEIVED-LIFE-01-A2
     sequence: 2
-    title: Complete two bounded Gratitude and received life practices
-    instructions: Complete two short, freely chosen Gratitude and received life practices appropriate
-      to the declared frame, such as reading, silence, prayer, observation, ritual, dialogue, or reflection.
-      Stop for distress, coercion, altered-state risk, conscience conflict, or pressure from an authority
-      or group.
+    title: Respond in a way that serves the good
+    instructions: 'Choose a response from this concrete menu: use a borrowed item carefully and return
+      it; thank a willing recipient for a specific help; maintain a tool you own; teach the skill to someone
+      who wants it; or preserve a short private remembrance of a contribution. State why the response
+      is suitable and what it will cost in time or effort. Carry it out without expecting recognition,
+      access or forgiveness in return. If the benefactor also caused harm, acknowledge the limited good
+      without surrendering a needed boundary.
+
+
+      Observation checks: The response fits the particular received good; A real response is completed;
+      The response does not demand a return favor; Gratitude preserves any necessary boundary. Mark only
+      what you observed. Missing, mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -174,15 +197,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0305_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - the_response_fits_the_particular_received_good
+        - a_real_response_is_completed
+        - the_response_does_not_demand_a_return_favor
+        - gratitude_preserves_any_necessary_boundary
       - measurement_id: c0305_a2_boundary
         kind: boolean
         role: supporting
@@ -199,10 +223,38 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0305-GRATITUDE-AND-RECEIVED-LIFE-01-A3
     sequence: 3
-    title: Interpret the Gratitude and received life experience modestly
-    instructions: 'Review what was noticed without treating intensity, calm, certainty, group agreement,
-      or unusual experience as automatic truth. Compare the limited record with this evidence target:
-      Gratitude changes conduct through care, generosity, restraint, remembrance, or service.'
+    title: Let remembrance guide the next ordinary use
+    instructions: 'When you next use the skill, object or opportunity, recall one part of the chain and
+      make a concrete choice about care, restraint, sharing or preservation. Compare this conduct with
+      your original expression of thanks. Ask whether you erased someone, overstated another person''s
+      sacrifice or made gratitude into self-accusation. Retain one truthful acknowledgment and one sustainable
+      future behavior. A quiet act of care is sufficient; warm feelings and public display are not required.
+
+
+      Observation checks: A later ordinary use is reviewed; Remembrance has a concrete consequence for
+      conduct; An omission or overstatement is checked; The continuing response remains proportionate.
+      Mark only what you observed. Missing, mixed and negative results are valid; a deferred action is
+      not completed.
+
+
+      Final review: Which received contribution became visible, and what did you actually do differently
+      because of it?
+
+
+      Examples: Supportive: The learner credited a teacher and their own practice, maintained a tool and
+      later shared the skill with someone who had requested help.
+
+
+      Mixed: A specific thanks was offered, but the contribution chain still contained unknowns and no
+      later use had occurred.
+
+
+      Contradictory: Gratitude was used to demand obedience, excuse harm or impose a debt that the recipient
+      had never accepted.
+
+
+      Inconclusive: A gratitude list was written without tracing a particular good or taking any related
+      action.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -224,9 +276,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0305_a3_experience_and_interpretation_separated
-        - c0305_a3_alternative_explanation_retained
-        - c0305_a3_target_evidence_compared
+        - a_later_ordinary_use_is_reviewed
+        - remembrance_has_a_concrete_consequence_for_conduct
+        - an_omission_or_overstatement_is_checked
+        - the_continuing_response_remains_proportionate
       - measurement_id: c0305_a3_boundary
         kind: boolean
         role: supporting
@@ -247,16 +300,17 @@ intervention:
       Gratitude and received life; no purchase, subscription, travel, credential, or public artifact is
       required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Gratitude and received life; assistive technology, interpretation, a support person, and
-      a deferred action are valid without penalty.
+    - Use spoken recollection or a simple object instead of writing. Choose an impersonal public good
+      or a safe historical contribution when direct relationships are difficult. A private acknowledgment
+      can replace contact; do not give money or labor you cannot reasonably spare.
     cultural_context:
     - Adapt the expression of Gratitude and received life to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Gratitude and received life opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use spoken recollection or a simple object instead of writing. Choose an impersonal public good
+      or a safe historical contribution when direct relationships are difficult. A private acknowledgment
+      can replace contact; do not give money or labor you cannot reasonably spare.
   pause_conditions:
   - Pause Gratitude and received life when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -288,10 +342,8 @@ evidence_and_scoring:
   - c0305_a3_boundary
   - c0305_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Gratitude and received life action exceeded consent, authority, privacy, qualification, role,
-    burden, or safety boundaries.
-  - The evidence contradicted the intended Gratitude and received life criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - Gratitude was used to demand obedience, excuse harm or impose a debt that the recipient had never
+    accepted.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Gratitude and received life explicitly; support can enable access and never reduces dignity or
     silently changes the typed value.
@@ -302,14 +354,21 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Gratitude and received life rules withhold observations older than 90 days;
     no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Gratitude changes conduct through care, generosity, restraint, remembrance, or service.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Gratitude and received life requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Trace the good beyond your own contribution. Observed checks: The chain
+    includes personal effort and dependence; Gift contingency and inheritance are considered; A cost or
+    sacrifice is identified without invention; Unknown parts of the chain remain explicit. Action 2: Respond
+    in a way that serves the good. Observed checks: The response fits the particular received good; A
+    real response is completed; The response does not demand a return favor; Gratitude preserves any necessary
+    boundary. Action 3: Let remembrance guide the next ordinary use. Observed checks: A later ordinary
+    use is reviewed; Remembrance has a concrete consequence for conduct; An omission or overstatement
+    is checked; The continuing response remains proportionate.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A gratitude list was written without tracing a particular
+    good or taking any related action.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Gratitude
     and received life contribution under typed evaluation; protocol performance remains distinct and is
     never counted twice.
@@ -319,9 +378,8 @@ evidence_and_scoring:
   - L04
   - L34
   - L36
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Gratitude and received life evidence.
@@ -329,11 +387,18 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The choose a declared frame for gratitude and received life action was attempted or explicitly deferred.
-  - The complete two bounded gratitude and received life practices action was attempted or explicitly
-    deferred.
-  - The interpret the gratitude and received life experience modestly action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Trace the good beyond your own contribution. Observed checks: The chain includes personal
+    effort and dependence; Gift contingency and inheritance are considered; A cost or sacrifice is identified
+    without invention; Unknown parts of the chain remain explicit.'
+  - 'Action 2: Respond in a way that serves the good. Observed checks: The response fits the particular
+    received good; A real response is completed; The response does not demand a return favor; Gratitude
+    preserves any necessary boundary.'
+  - 'Action 3: Let remembrance guide the next ordinary use. Observed checks: A later ordinary use is reviewed;
+    Remembrance has a concrete consequence for conduct; An omission or overstatement is checked; The continuing
+    response remains proportionate.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -342,56 +407,57 @@ completion_and_review:
     - c0305_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Gratitude and received life only when the initial context remained
-    safe, the evidence criteria were usable, burden was acceptable, and a new context can be named without
-    assuming transfer.
-  transfer_limit: Three bounded actions do not establish Gratitude and received life across roles, cultures,
-    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: Which received contribution became visible, and what did you actually do differently
+    because of it?
+  transfer_limit: Gratitude concerns a specific received good, not a duty to feel grateful for harm. Recognizing
+    help does not erase your work, create unlimited debt or require contact with an unsafe benefactor.
   reflection:
-    before: What does Gratitude and received life require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Gratitude and received life criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Gratitude changes conduct through care, generosity, restraint,
-      remembrance, or service.', what contradiction or missing context matters most, and should this Gratitude
-      and received life design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Recognize dependence, gifts, contingency,
+      sacrifice and inheritance in an ordinary good, then express gratitude through appropriate care,
+      remembrance or generosity.'
+    during: Which checks have actually been observed? A specific thanks was offered, but the contribution
+      chain still contained unknowns and no later use had occurred.
+    after: Which received contribution became visible, and what did you actually do differently because
+      of it?
   review_guidance:
     repeat: Repeat the same bounded Gratitude and received life design only when the context and burden
       remain appropriate.
-    adapt: Change the Gratitude and received life medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: Use spoken recollection or a simple object instead of writing. Choose an impersonal public
+      good or a safe historical contribution when direct relationships are difficult. A private acknowledgment
+      can replace contact; do not give money or labor you cannot reasonably spare.
     stop: Stop Gratitude and received life when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Gratitude and received life questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Gratitude and received life criteria were observed with provenance and no
-      adverse boundary signal in the selected context.
-    mixed: Some Gratitude and received life criteria were observed while burden, support, contextual change,
-      or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Gratitude and received life criterion, introduced
-      harm or coercion, or showed the design was not workable.
-    inconclusive: The Gratitude and received life action was deferred, not observed, not applicable, stale,
-      insufficiently bounded, or too confounded to interpret.
+    supportive: The learner credited a teacher and their own practice, maintained a tool and later shared
+      the skill with someone who had requested help.
+    mixed: A specific thanks was offered, but the contribution chain still contained unknowns and no later
+      use had occurred.
+    contradictory: Gratitude was used to demand obedience, excuse harm or impose a debt that the recipient
+      had never accepted.
+    inconclusive: A gratitude list was written without tracing a particular good or taking any related
+      action.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Gratitude and received life.
+    context_heading: Trace a received good and answer it through conduct
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Gratitude
       and received life.
   check_in_labels:
-    c0305_a1_primary: The bounded Gratitude and received life criterion for action 1 was observed
+    c0305_a1_primary: 'Observed checks: trace the good beyond your own contribution'
     c0305_a1_boundary: Action 1 stayed inside its stated Gratitude and received life boundary
     c0305_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0305_a2_primary: The bounded Gratitude and received life criterion for action 2 was observed
+    c0305_a2_primary: 'Observed checks: respond in a way that serves the good'
     c0305_a2_boundary: Action 2 stayed inside its stated Gratitude and received life boundary
     c0305_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0305_a3_primary: The bounded Gratitude and received life criterion for action 3 was observed
+    c0305_a3_primary: 'Observed checks: let remembrance guide the next ordinary use'
     c0305_a3_boundary: Action 3 stayed inside its stated Gratitude and received life boundary
     c0305_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Gratitude and received
-    life practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Which received contribution became visible, and what did you actually do differently
+    because of it? Completion is not mastery.
+  plain_language_evidence: The learner credited a teacher and their own practice, maintained a tool and
+    later shared the skill with someone who had requested help.
   display_order: 40

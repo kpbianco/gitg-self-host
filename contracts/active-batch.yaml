@@ -1,8 +1,8 @@
 schema_version: 1
 batch:
-  id: M6J-02-SELF-KNOWLEDGE-PRACTICES
-  title: Tailored self-knowledge identity and humility practices
-  goal: Individually rewrite all 12 domain 05 practices; retain the 42 previously authored practices and an exact inventory of 329 still pending.
+  id: M6J-03-FOUNDATIONAL-PRACTICES
+  title: Tailored spirituality mortality suffering and hope practices
+  goal: Individually rewrite all 23 practices in domains 03 and 04 with explicit canonical scope maps; retain the 54 previously authored practices and an exact inventory of 306 still pending.
 sources:
   product: products/gitg-self-host/product.yaml
   requirements:
@@ -10,9 +10,9 @@ sources:
     - docs/PRODUCT_DECISIONS.md#decision-053
     - docs/program/M6_CURRICULUM_EXPANSION.md
   milestone: owner-directed-M6J-continuation
-  baseline_commit: e993ad142dee7652c3c029d6b1c75c0cdaf3d298
+  baseline_commit: 5e68dabe0b4598e72034669bafe38b0eb1fe1fcf
 dependencies:
-  - M6J-01-TAILORED-COMPETENCY-PRACTICES
+  - M6J-02-SELF-KNOWLEDGE-PRACTICES
 scope:
   allowed_paths:
     - AGENTS.md
@@ -20,13 +20,13 @@ scope:
     - MANIFEST.tsv
     - contracts/**
     - docs/**
-    - data/practices/protocols/05/**
+    - data/practices/protocols/03/**
+    - data/practices/protocols/04/**
     - data/practices/registries/source_registry.yaml
     - data/practices/registries/research_gap_registry.yaml
     - data/practices/release_manifest.yaml
     - reports/practice-content/**
     - tests/**
-    - growth/static/growth/app.css
   forbidden_paths:
     - data/assessment/**
     - data/model/**
@@ -46,14 +46,15 @@ scope:
     - .github/workflows/**
     - data/practices/registries/activation_ledger.yaml
 acceptance:
-  - All 12 competencies 05.01 through 05.12 have individually authored instructions aligned with canonical scope and an explicit bounded exercise goal.
-  - Previously authored domains 01 02 and 13 remain byte-identical; exactly 54 authored and 329 rewrite-pending rows are reported.
+  - All 23 competencies in domains 03 and 04 have individually authored instructions aligned with canonical scope and an explicit bounded exercise goal.
+  - Previously authored domains 01 02 05 and 13 remain byte-identical; exactly 77 authored and 306 rewrite-pending rows are reported.
   - Each action supplies observable success criteria and a usable example without requiring the person to design a rubric or exercise.
   - Prerequisites materials burden meaningful review and accessible equivalents are explicit.
   - Simulation and preparation do not claim live performance or comprehensive mastery.
   - Deferral N/A and unattempted actions do not satisfy completion.
   - Sources support specific factual claims and do not imply validation of the product-authored exercise.
-  - The existing 200 percent mobile zoom test passes with readable wrapping buttons and status labels; retain the overflow assertion and review its screenshot.
+  - Every canonical scope facet maps to concrete actions or an explicit legitimate pathway choice; a supplied rehearsal never claims live participation.
+  - The study contemplation and communal-practice journeys show readable instructions setup and observations at desktop and mobile widths; retain all existing browser journeys and overflow assertions.
   - All 383 protocol IDs 1151 action IDs parent mappings activation records assessment and scoring mathematics remain unchanged.
   - Existing submitted events replay from their original snapshots and content import refuses to change active or paused practices.
   - Every canonical competency receives an explicit authored-pending-review or rewrite-pending disposition; 13.02 retains its existing typed evidence fixtures and the five frozen legacy runtime packages remain byte-equivalent.
@@ -89,7 +90,7 @@ rollback:
   strategy: Revert the content release before import or restore the verified pre-upgrade backup; never reinterpret existing event snapshots.
 evidence:
   output:
-    - docs/evidence/M6J-02-SELF-KNOWLEDGE-PRACTICES-2026-09-05.md
+    - docs/evidence/M6J-03-FOUNDATIONAL-PRACTICES-2026-09-06.md
     - exact per-competency content coverage and residual gaps
     - exact local and hosted verification results
   claim_boundary: Authored educational practices and software verification; no automatic human review or empirical validation acceptance.

@@ -137,7 +137,17 @@ def test_tailored_setup_and_action_copy_are_visible_in_authenticated_journey(cli
 
 @pytest.mark.django_db
 @pytest.mark.parametrize(
-    "cid,full", [("01.04", False), ("13.02", True), ("05.04", False), ("05.07", True)]
+    "cid,full",
+    [
+        ("01.04", False),
+        ("13.02", True),
+        ("05.04", False),
+        ("05.07", True),
+        ("03.02", False),
+        ("03.10", True),
+        ("04.07", False),
+        ("04.08", True),
+    ],
 )
 def test_tailored_evidence_closeout_and_replay_survive_a_later_content_revision(
     user, seeded, cid, full

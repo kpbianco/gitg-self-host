@@ -1,5 +1,165 @@
 # Inspected reference support; exercises themselves are original product designs.
 sources:
+  - source_id: SRC-NHS-GRIEF-AND-LOSS
+    title: Grief after bereavement or loss
+    authors_or_issuing_body: National Health Service
+    publication_date: 'undated current page'
+    locator: https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/grief-bereavement-loss/
+    locator_kind: external_url
+    content_sha256: null
+    source_class: official_guidance
+    evidence_strength: authoritative
+    supported_claim: Grief responses vary between people and can follow losses other than bereavement; support is available when coping is difficult.
+    claim_classification: safety_precaution
+    limitations: Supports acknowledging varied responses and appropriate support. It does not validate this educational exercise, prescribe a grief timetable or establish readiness for personal loss reflection.
+    applicable_competency_ids: ['04.01', '04.04', '04.06']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Link and brief original summary only; no copied therapeutic worksheet, symptom measure or intervention.
+  - source_id: SRC-VA-MORAL-INJURY-LITERACY
+    title: Moral Injury and PTSD
+    authors_or_issuing_body: US Department of Veterans Affairs, National Center for PTSD
+    publication_date: 'undated current page'
+    locator: https://www.ptsd.va.gov/understand/related/moral_injury_ptsd.asp
+    locator_kind: external_url
+    content_sha256: null
+    source_class: official_guidance
+    evidence_strength: authoritative
+    supported_claim: Moral injury concerns distress after events violating deeply held values; it can involve guilt, shame or betrayal and coexist with PTSD, but is not itself a diagnosis.
+    claim_classification: safety_precaution
+    limitations: Supports terminology and qualified-support boundaries, not diagnosis, culpability judgments or a treatment protocol. No published therapy, questionnaire or symptom scoring is reproduced.
+    applicable_competency_ids: ['04.07']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Official public guidance summarized briefly in original language; no clinical instrument or treatment exercise copied.
+  - source_id: SRC-NIH-ADVANCE-CARE-PREPARATION
+    title: 'Advance care plan: A checklist for the future'
+    authors_or_issuing_body: NIH MedlinePlus Magazine / National Institute on Aging
+    publication_date: '2024-11-01'
+    locator: https://magazine.medlineplus.gov/article/advance-care-plan-a-checklist-for-the-future
+    locator_kind: external_url
+    content_sha256: null
+    source_class: official_guidance
+    evidence_strength: authoritative
+    supported_claim: Advance care planning considers values, preferences and trusted decision support for a time when a person cannot communicate; formal advance directives are legal documents.
+    claim_classification: professional_or_public_standard
+    limitations: US public information used only for conceptual preparation. Local legal formalities, document validity, clinical choices and eligibility require qualified local guidance; the product does not reproduce a directive or prescribe universal signing requirements.
+    applicable_competency_ids: ['04.08']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Citation and concise original summary; no legal document, checklist wording or medical order reproduced.
+  - source_id: SRC-NHS-PALLIATIVE-CARE-OVERVIEW
+    title: What end of life care involves
+    authors_or_issuing_body: National Health Service
+    publication_date: '2026-05-06'
+    locator: https://www.nhs.uk/tests-and-treatments/end-of-life-care/what-it-involves-and-when-it-starts/
+    locator_kind: external_url
+    content_sha256: null
+    source_class: official_guidance
+    evidence_strength: authoritative
+    supported_claim: Palliative support addresses comfort and psychological, social and spiritual needs; care should take account of the person's wishes and involve appropriate professionals.
+    claim_classification: professional_or_public_standard
+    limitations: UK public guidance used for basic care literacy and accompaniment boundaries. It does not establish eligibility elsewhere, offer prognosis or authorize treatment decisions by a visitor or by this product.
+    applicable_competency_ids: ['04.08']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Link and concise original paraphrase; no clinical protocol or treatment advice copied.
+  - source_id: SRC-EPICTETUS-ENCHIRIDION
+    title: 'Enchiridion: sections 1, 17 and 31'
+    authors_or_issuing_body: Epictetus / Internet Classics Archive edition
+    publication_date: 'ancient text; archive edition undated'
+    locator: https://classics.mit.edu/Epictetus/epicench.html
+    locator_kind: external_url
+    content_sha256: null
+    source_class: authoritative_primary_source
+    evidence_strength: authoritative
+    supported_claim: These selected passages connect judgments and choice with assigned roles and a providential account of the gods.
+    claim_classification: philosophical_or_normative_position
+    limitations: Historical philosophical positions, not established scientific findings. The archive credits Elizabeth Carter; this exercise uses the displayed edition without reproducing its wording. No claim that all Stoics agree or that ancient prescriptions about suffering and obedience should govern present conduct.
+    applicable_competency_ids: ['03.01', '03.02']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Linked primary passage and original concise paraphrase; no copied exercise or extended quotation.
+  - source_id: SRC-MARCUS-MEDITATIONS-BOOK-ONE
+    title: 'Meditations: Book One, opening entries through Rusticus'
+    authors_or_issuing_body: Marcus Aurelius / George Long translation, Internet Classics Archive
+    publication_date: 'ancient text; George Long translation 1862'
+    locator: https://classics.mit.edu/Antoninus/meditations.1.one.html
+    locator_kind: external_url
+    content_sha256: null
+    source_class: authoritative_primary_source
+    evidence_strength: authoritative
+    supported_claim: Marcus identifies lessons received from family and teachers; the Rusticus entry includes careful reading and a willingness to recognize a need for correction.
+    claim_classification: philosophical_or_normative_position
+    limitations: A particular author's account of exemplars, not evidence that every claim in the text is accurate or that the product's study and practice unit develops virtue.
+    applicable_competency_ids: ['03.02']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Public-domain classical text and historical translation; citation and original paraphrase only in this unit.
+  - source_id: SRC-MODERN-STOICISM-SELF-DESCRIPTION
+    title: About Modern Stoicism
+    authors_or_issuing_body: Modern Stoicism
+    publication_date: 'undated page'
+    locator: https://modernstoicism.com/about-us/
+    locator_kind: external_url
+    content_sha256: null
+    source_class: authoritative_primary_source
+    evidence_strength: limited
+    supported_claim: This organization describes a project originating in 2012 and welcomes different religious views and interpretations within its contemporary Stoic activities.
+    claim_classification: philosophical_or_normative_position
+    limitations: The organization's own description is a primary account of its stated approach, not independent verification of its practices, a representation of all Stoics or endorsement of its research claims.
+    applicable_competency_ids: ['03.02']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Link and brief original paraphrase; no copied program, exercises or research instruments.
+  - source_id: SRC-NCCIH-MEDITATION-SAFETY
+    title: 'Meditation and Mindfulness: Effectiveness and Safety'
+    authors_or_issuing_body: National Center for Complementary and Integrative Health
+    publication_date: '2022-06'
+    locator: https://www.nccih.nih.gov/health/meditation-and-mindfulness-effectiveness-and-safety
+    locator_kind: external_url
+    content_sha256: null
+    source_class: official_guidance
+    evidence_strength: authoritative
+    supported_claim: Meditation can involve negative experiences; health concerns should not be managed by replacing appropriate care with meditation.
+    claim_classification: safety_precaution
+    limitations: Supports a cautious stop-and-support boundary only. It does not establish safety or effectiveness of this product's short pause, classify a spiritual experience, or validate individual outcomes.
+    applicable_competency_ids: ['03.03', '03.13']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Government public information; link and original brief summary, with no copied intervention or questionnaire.
+  - source_id: SRC-VATICAN-NICENE-CREED
+    title: 'The Credo: Nicene Creed'
+    authors_or_issuing_body: Catechism of the Catholic Church / Vatican
+    publication_date: 'undated online edition'
+    locator: https://www.vatican.va/archive/ENG0015/__P13.HTM
+    locator_kind: external_url
+    content_sha256: null
+    source_class: authoritative_primary_source
+    evidence_strength: authoritative
+    supported_claim: The published Nicene Creed affirms one divine creator.
+    claim_classification: philosophical_or_normative_position
+    limitations: A specified religious confession, not empirical proof, a complete account of Christianity or evidence that every Christian expresses belief identically. It is compared without requiring assent.
+    applicable_competency_ids: ['03.12']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Citation and short original paraphrase only; no liturgical text reproduced.
+  - source_id: SRC-HUMANISTS-UK-HUMANISM
+    title: Humanism
+    authors_or_issuing_body: Humanists UK
+    publication_date: 'undated page'
+    locator: https://humanists.uk/humanism/
+    locator_kind: external_url
+    content_sha256: null
+    source_class: authoritative_primary_source
+    evidence_strength: limited
+    supported_claim: Humanists UK describes humanism through a nonreligious naturalistic outlook, reason and concern for human welfare.
+    claim_classification: philosophical_or_normative_position
+    limitations: A named organization's self-description, not a claim about every nonreligious person or a proof against religious belief. It supports comparison of stated positions, not validation of the dialogue exercise.
+    applicable_competency_ids: ['03.12']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Link and concise original paraphrase only; no source exercises or extended prose reproduced.
   - source_id: SRC-VAZIRE-SELF-OTHER-2010
     title: Who Knows What About a Person? The Self–Other Knowledge Asymmetry (SOKA) Model
     authors_or_issuing_body: Simine Vazire

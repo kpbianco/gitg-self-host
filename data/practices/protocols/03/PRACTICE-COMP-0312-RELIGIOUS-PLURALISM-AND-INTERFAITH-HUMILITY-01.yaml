@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0312-RELIGIOUS-PLURALISM-AND-INTERFAITH-HUMILITY-01
 slug: c0312-religious-pluralism-and-interfaith-humility-practice
-name: Bounded Religious pluralism and interfaith humility Practice
+name: Cooperate across a real worldview difference without false agreement
 parent_competency_id: '03.12'
 domain_id: '03'
 governance:
@@ -14,10 +14,11 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-VATICAN-NICENE-CREED
+  - SRC-HUMANISTS-UK-HUMANISM
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 03.12
-      (Religious pluralism and interfaith humility); canonical scope, evidence target, classification,
-      domain boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 03.12; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,40 +36,58 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Religious pluralism and interfaith humility through a pluralist meaning practice
-    bounded by the canonical scope: Engage competing truth claims without reducing every tradition to
-    sameness or treating disagreement as license for contempt.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can describe another
-    tradition accurately, state real disagreement, and cooperate without deceptive consensus. The protocol
-    creates a small opportunity to examine that target without treating completion as broad capability.'
+  purpose: Describe another tradition accurately from its own account, state a genuine disagreement without
+    contempt and define shared conduct that does not require deceptive consensus.
+  why_recommended: Describe another tradition accurately from its own account, state a genuine disagreement
+    without contempt and define shared conduct that does not require deceptive consensus.
   claims:
-  - statement: Using the canonical scope and evidence target for Religious pluralism and interfaith humility
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Describe another tradition accurately from its own account, state a genuine disagreement
+      without contempt and define shared conduct that does not require deceptive consensus.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: The published Nicene Creed affirms one divine creator.
+    classification: philosophical_or_normative_position
+    source_ids:
+    - SRC-VATICAN-NICENE-CREED
+    limitations: A specified religious confession, not empirical proof, a complete account of Christianity
+      or evidence that every Christian expresses belief identically. It is compared without requiring
+      assent.
+  - statement: Humanists UK describes humanism through a nonreligious naturalistic outlook, reason and
+      concern for human welfare.
+    classification: philosophical_or_normative_position
+    source_ids:
+    - SRC-HUMANISTS-UK-HUMANISM
+    limitations: A named organization's self-description, not a claim about every nonreligious person
+      or a proof against religious belief. It supports comparison of stated positions, not validation
+      of the dialogue exercise.
   applicability_question: Does a voluntary, bounded Religious pluralism and interfaith humility practice
     fit the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Religious pluralism and interfaith humility as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Religious pluralism
-    and interfaith humility context, understand the source-only status, and stop without losing safety,
-    care, employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Religious
-    pluralism and interfaith humility; do not manufacture conflict, deprivation, exposure, disclosure,
-    danger, urgency, or dependence for evidence.
+  readiness_considerations: Read the sources with text to speech or use an accurate accessible edition.
+    If access is missing, the supplied summaries support rehearsal only; source-accuracy checks remain
+    unverified. No debate, religious disclosure, interfaith event or contact with an unwilling person
+    is required. Unchosen participation is N/A, not deficient tolerance.
+  opportunity_considerations: Read the Vatican-hosted Nicene Creed and Humanists UK's Humanism introduction
+    using the provided references. The first affirms a divine creator; the second presents a nonreligious
+    account centered on reason and human welfare. Neither summary is a complete tradition. Use the fictional
+    shared-library event below or a willing person's own account; never assign someone's beliefs from
+    a group label.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Religious pluralism and interfaith
-    humility.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Read the Vatican-hosted Nicene Creed and Humanists UK's Humanism introduction using the provided references.
+    The first affirms a divine creator; the second presents a nonreligious account centered on reason
+    and human welfare. Neither summary is a complete tradition. Use the fictional shared-library event
+    below or a willing person's own account; never assign someone's beliefs from a group label.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Religious pluralism and interfaith
-    humility instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Read the sources with text to speech or use an accurate accessible edition. If access is missing,
+    the supplied summaries support rehearsal only; source-accuracy checks remain unverified. No debate,
+    religious disclosure, interfaith event or contact with an unwilling person is required. Unchosen participation
+    is N/A, not deficient tolerance.
   role_conditions:
   - This competency is pathway dependent; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -80,21 +99,39 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Religious pluralism and interfaith
     humility as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-CONTEMPLATIVE-MEANING
+  protocol_class: PF-RELATIONAL-CONVERSATION
   duration_days: 10
-  cadence: Complete three bounded Religious pluralism and interfaith humility actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Religious pluralism and interfaith humility; copy the canonical scope
-    and evidence target into a private working note; define the action boundary, valid supports, privacy
-    limit, and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Religious
-    pluralism and interfaith humility. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Religious pluralism and interfaith humility
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Read the Vatican-hosted Nicene Creed and Humanists UK''s Humanism introduction using the provided
+    references. The first affirms a divine creator; the second presents a nonreligious account centered
+    on reason and human welfare. Neither summary is a complete tradition. Use the fictional shared-library
+    event below or a willing person''s own account; never assign someone''s beliefs from a group label.
+    Goal: Describe another tradition accurately from its own account, state a genuine disagreement without
+    contempt and define shared conduct that does not require deceptive consensus. Scope: The default compares
+    two identified accounts, not every Christian or every humanist. A dialogue rehearsal tests understanding
+    and cooperation design; it does not establish interfaith relationship skill until a real voluntary
+    exchange occurs. Time and effort: About 20 minutes of reading, a 15-minute rehearsal or voluntary
+    conversation and a 15-minute cooperation review. Adaptation: Read the sources with text to speech
+    or use an accurate accessible edition. If access is missing, the supplied summaries support rehearsal
+    only; source-accuracy checks remain unverified. No debate, religious disclosure, interfaith event
+    or contact with an unwilling person is required. Unchosen participation is N/A, not deficient tolerance.
+    Keep personal working notes outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    The Credo: Nicene Creed: https://www.vatican.va/archive/ENG0015/__P13.HTM
+
+    Humanism: https://humanists.uk/humanism/'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Read the sources with text to speech or use an accurate accessible edition. If
+    access is missing, the supplied summaries support rehearsal only; source-accuracy checks remain unverified.
+    No debate, religious disclosure, interfaith event or contact with an unwilling person is required.
+    Unchosen participation is N/A, not deficient tolerance.
+  expected_burden: About 20 minutes of reading, a 15-minute rehearsal or voluntary conversation and a
+    15-minute cooperation review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Religious pluralism and interfaith humility protocol to rank worth, coerce participation,
@@ -103,19 +140,27 @@ intervention:
   - Treating a completed Religious pluralism and interfaith humility action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Religious pluralism and interfaith humility situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Read the sources
+    with text to speech or use an accurate accessible edition. If access is missing, the supplied summaries
+    support rehearsal only; source-accuracy checks remain unverified. No debate, religious disclosure,
+    interfaith event or contact with an unwilling person is required. Unchosen participation is N/A, not
+    deficient tolerance.
   actions:
   - stable_id: PRACTICE-COMP-0312-RELIGIOUS-PLURALISM-AND-INTERFAITH-HUMILITY-01-A1
     sequence: 1
-    title: Choose a declared frame for Religious pluralism and interfaith humility
-    instructions: 'Select a religious, spiritual, philosophical, cultural, or secular frame through which
-      to explore Religious pluralism and interfaith humility. State the frame, one alternative, and the
-      limits of personal authority using this canonical scope: Engage competing truth claims without reducing
-      every tradition to sameness or treating disagreement as license for contempt.'
+    title: State each account so its proponent could recognize it
+    instructions: 'Read both named accounts. For each, record one actual claim, its source location, one
+      implication and one question the account does not answer for you. State the disagreement about a
+      divine creator plainly; do not reduce it to different words for the same belief. Also identify a
+      possible practical shared concern, such as care for neighbors, without pretending that its reasons
+      must be identical. Correct your own summary against the source before evaluating it. With a willing
+      conversation partner, ask them to correct their own view rather than speak for a whole tradition.
+
+
+      Observation checks: Two accounts are traced to their own sources; Each summary is checked for accuracy;
+      A real disagreement is stated without caricature; Shared conduct is distinguished from shared reasons.
+      Mark only what you observed. Missing, mixed and negative results are valid; a deferred action is
+      not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -131,15 +176,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0312_a1_primary
-        kind: conceptual
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0312_a1_frame_declared
-        - c0312_a1_alternative_acknowledged
-        - c0312_a1_authority_limited
+        - two_accounts_are_traced_to_their_own_sources
+        - each_summary_is_checked_for_accuracy
+        - a_real_disagreement_is_stated_without_caricature
+        - shared_conduct_is_distinguished_from_shared_reasons
       - measurement_id: c0312_a1_boundary
         kind: boolean
         role: supporting
@@ -156,11 +202,19 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0312-RELIGIOUS-PLURALISM-AND-INTERFAITH-HUMILITY-01-A2
     sequence: 2
-    title: Complete two bounded Religious pluralism and interfaith humility practices
-    instructions: Complete two short, freely chosen Religious pluralism and interfaith humility practices
-      appropriate to the declared frame, such as reading, silence, prayer, observation, ritual, dialogue,
-      or reflection. Stop for distress, coercion, altered-state risk, conscience conflict, or pressure
-      from an authority or group.
+    title: Practice a conversation that makes disagreement speakable
+    instructions: 'Use this fictional case: two volunteers disagree about belief in God while organizing
+      a library event. One requests an optional prayer before setup; the other asks not to be included
+      in prayer or described as endorsing it. Rehearse both positions in three turns each: a fair summary,
+      a sincere disagreement and a curious clarifying question. Replace you people with this claim or
+      my view. Give neither side a conversion goal. If using a real willing partner, agree time and topic
+      in advance and stop if either person wants to end. Label rehearsal and live dialogue separately.
+
+
+      Observation checks: Both positions receive a fair summary and sincere disagreement; Questions invite
+      clarification rather than a trap; No group is treated with contempt; Rehearsal or live dialogue
+      is identified honestly. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -176,15 +230,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0312_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - both_positions_receive_a_fair_summary_and_sincere_disagreement
+        - questions_invite_clarification_rather_than_a_trap
+        - no_group_is_treated_with_contempt
+        - rehearsal_or_live_dialogue_is_identified_honestly
       - measurement_id: c0312_a2_boundary
         kind: boolean
         role: supporting
@@ -201,11 +256,40 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0312-RELIGIOUS-PLURALISM-AND-INTERFAITH-HUMILITY-01-A3
     sequence: 3
-    title: Interpret the Religious pluralism and interfaith humility experience modestly
-    instructions: 'Review what was noticed without treating intensity, calm, certainty, group agreement,
-      or unusual experience as automatic truth. Compare the limited record with this evidence target:
-      Can describe another tradition accurately, state real disagreement, and cooperate without deceptive
-      consensus.'
+    title: Design cooperation that does not borrow another person's assent
+    instructions: 'For the library case, agree a shared practical task, optional prayer outside required
+      work, truthful descriptions of who participates, and equal ability to help without worship. Identify
+      any real venue rule that would need checking; do not invent permission. Test the arrangement against
+      two changes: someone declines prayer, and someone asks to discuss belief during the task. State
+      how each can decline without punishment. In a real opportunity, agree and carry out a comparably
+      modest task; otherwise retain the result as a cooperation design and leave live cooperation untested.
+
+
+      Observation checks: A useful shared task and voluntary boundaries are specified; Participation is
+      described without false endorsement; The arrangement handles two concrete disagreements; Designed
+      cooperation is separated from any actual joint work. Mark only what you observed. Missing, mixed
+      and negative results are valid; a deferred action is not completed.
+
+
+      Final review: What disagreement stayed real, what understanding improved, and exactly what could
+      you do together without either person pretending agreement?
+
+
+      Examples: Supportive: Both sourced accounts were represented fairly and the library arrangement
+      let people cooperate while prayer and assent remained voluntary; live cooperation was not claimed
+      from rehearsal.
+
+
+      Mixed: The disagreement was respectful, but an assumed venue rule still needed checking before the
+      arrangement could be used.
+
+
+      Contradictory: One person''s silence was presented as assent, a tradition was caricatured or cooperation
+      was made conditional on conversion.
+
+
+      Inconclusive: Everyone was declared basically the same without examining a real claim, disagreement
+      or workable shared task.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -227,9 +311,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0312_a3_experience_and_interpretation_separated
-        - c0312_a3_alternative_explanation_retained
-        - c0312_a3_target_evidence_compared
+        - a_useful_shared_task_and_voluntary_boundaries_are_specified
+        - participation_is_described_without_false_endorsement
+        - the_arrangement_handles_two_concrete_disagreements
+        - designed_cooperation_is_separated_from_any_actual_joint_work
       - measurement_id: c0312_a3_boundary
         kind: boolean
         role: supporting
@@ -250,17 +335,19 @@ intervention:
       Religious pluralism and interfaith humility; no purchase, subscription, travel, credential, or public
       artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Religious pluralism and interfaith humility; assistive technology, interpretation, a support
-      person, and a deferred action are valid without penalty.
+    - Read the sources with text to speech or use an accurate accessible edition. If access is missing,
+      the supplied summaries support rehearsal only; source-accuracy checks remain unverified. No debate,
+      religious disclosure, interfaith event or contact with an unwilling person is required. Unchosen
+      participation is N/A, not deficient tolerance.
     cultural_context:
     - Adapt the expression of Religious pluralism and interfaith humility to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Religious pluralism and interfaith humility opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Read the sources with text to speech or use an accurate accessible edition. If access is missing,
+      the supplied summaries support rehearsal only; source-accuracy checks remain unverified. No debate,
+      religious disclosure, interfaith event or contact with an unwilling person is required. Unchosen
+      participation is N/A, not deficient tolerance.
   pause_conditions:
   - Pause Religious pluralism and interfaith humility when capacity, consent, authority, privacy, access,
     care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make
@@ -292,10 +379,8 @@ evidence_and_scoring:
   - c0312_a3_boundary
   - c0312_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Religious pluralism and interfaith humility action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Religious pluralism and interfaith humility criterion, depended
-    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - One person's silence was presented as assent, a tradition was caricatured or cooperation was made
+    conditional on conversion.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Religious pluralism and interfaith humility explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -306,14 +391,22 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Religious pluralism and interfaith humility rules withhold observations older
     than 90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can describe another tradition accurately, state real disagreement, and cooperate without deceptive
-    consensus.—not completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Religious pluralism and interfaith humility requires a bounded
-    context, allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: State each account so its proponent could recognize it. Observed checks:
+    Two accounts are traced to their own sources; Each summary is checked for accuracy; A real disagreement
+    is stated without caricature; Shared conduct is distinguished from shared reasons. Action 2: Practice
+    a conversation that makes disagreement speakable. Observed checks: Both positions receive a fair summary
+    and sincere disagreement; Questions invite clarification rather than a trap; No group is treated with
+    contempt; Rehearsal or live dialogue is identified honestly. Action 3: Design cooperation that does
+    not borrow another person''s assent. Observed checks: A useful shared task and voluntary boundaries
+    are specified; Participation is described without false endorsement; The arrangement handles two concrete
+    disagreements; Designed cooperation is separated from any actual joint work.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. Everyone was declared basically the same without examining
+    a real claim, disagreement or workable shared task.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Religious
     pluralism and interfaith humility contribution under typed evaluation; protocol performance remains
     distinct and is never counted twice.
@@ -323,9 +416,8 @@ evidence_and_scoring:
   - L05
   - L24
   - L31
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Religious pluralism and interfaith humility evidence.
@@ -333,12 +425,19 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The choose a declared frame for religious pluralism and interfaith humility action was attempted or
-    explicitly deferred.
-  - The complete two bounded religious pluralism and interfaith humility practices action was attempted
-    or explicitly deferred.
-  - The interpret the religious pluralism and interfaith humility experience modestly action preserved
-    a limited conclusion, contradiction, or inconclusive result.
+  - 'Action 1: State each account so its proponent could recognize it. Observed checks: Two accounts are
+    traced to their own sources; Each summary is checked for accuracy; A real disagreement is stated without
+    caricature; Shared conduct is distinguished from shared reasons.'
+  - 'Action 2: Practice a conversation that makes disagreement speakable. Observed checks: Both positions
+    receive a fair summary and sincere disagreement; Questions invite clarification rather than a trap;
+    No group is treated with contempt; Rehearsal or live dialogue is identified honestly.'
+  - 'Action 3: Design cooperation that does not borrow another person''s assent. Observed checks: A useful
+    shared task and voluntary boundaries are specified; Participation is described without false endorsement;
+    The arrangement handles two concrete disagreements; Designed cooperation is separated from any actual
+    joint work.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -347,62 +446,60 @@ completion_and_review:
     - c0312_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Religious pluralism and interfaith humility only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Religious pluralism and interfaith humility across
-    roles, cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: What disagreement stayed real, what understanding improved, and exactly what could
+    you do together without either person pretending agreement?
+  transfer_limit: The default compares two identified accounts, not every Christian or every humanist.
+    A dialogue rehearsal tests understanding and cooperation design; it does not establish interfaith
+    relationship skill until a real voluntary exchange occurs.
   reflection:
-    before: What does Religious pluralism and interfaith humility require in this exact context, what
-      remains outside my role or authority, and which scope sentence or evidence criterion will keep the
-      practice honest?
-    during: Which observable Religious pluralism and interfaith humility criterion is present, absent,
-      mixed, or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can describe another tradition accurately, state real disagreement,
-      and cooperate without deceptive consensus.', what contradiction or missing context matters most,
-      and should this Religious pluralism and interfaith humility design be repeated, adapted, deferred,
-      stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Describe another tradition accurately from
+      its own account, state a genuine disagreement without contempt and define shared conduct that does
+      not require deceptive consensus.'
+    during: Which checks have actually been observed? The disagreement was respectful, but an assumed
+      venue rule still needed checking before the arrangement could be used.
+    after: What disagreement stayed real, what understanding improved, and exactly what could you do together
+      without either person pretending agreement?
   review_guidance:
     repeat: Repeat the same bounded Religious pluralism and interfaith humility design only when the context
       and burden remain appropriate.
-    adapt: Change the Religious pluralism and interfaith humility medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Read the sources with text to speech or use an accurate accessible edition. If access is missing,
+      the supplied summaries support rehearsal only; source-accuracy checks remain unverified. No debate,
+      religious disclosure, interfaith event or contact with an unwilling person is required. Unchosen
+      participation is N/A, not deficient tolerance.
     stop: Stop Religious pluralism and interfaith humility when the practice becomes coercive, unsafe,
       privacy-invasive, role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Religious pluralism and interfaith humility
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Religious pluralism and interfaith humility criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Religious pluralism and interfaith humility criteria were observed while burden, support,
-      contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Religious pluralism and interfaith humility
-      criterion, introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Religious pluralism and interfaith humility action was deferred, not observed, not
-      applicable, stale, insufficiently bounded, or too confounded to interpret.
+    supportive: Both sourced accounts were represented fairly and the library arrangement let people cooperate
+      while prayer and assent remained voluntary; live cooperation was not claimed from rehearsal.
+    mixed: The disagreement was respectful, but an assumed venue rule still needed checking before the
+      arrangement could be used.
+    contradictory: One person's silence was presented as assent, a tradition was caricatured or cooperation
+      was made conditional on conversion.
+    inconclusive: Everyone was declared basically the same without examining a real claim, disagreement
+      or workable shared task.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Religious pluralism and interfaith humility.
+    context_heading: Cooperate across a real worldview difference without false agreement
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Religious
       pluralism and interfaith humility.
   check_in_labels:
-    c0312_a1_primary: The bounded Religious pluralism and interfaith humility criterion for action 1 was
-      observed
+    c0312_a1_primary: 'Observed checks: state each account so its proponent could recognize it'
     c0312_a1_boundary: Action 1 stayed inside its stated Religious pluralism and interfaith humility boundary
     c0312_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0312_a2_primary: The bounded Religious pluralism and interfaith humility criterion for action 2 was
-      observed
+    c0312_a2_primary: 'Observed checks: practice a conversation that makes disagreement speakable'
     c0312_a2_boundary: Action 2 stayed inside its stated Religious pluralism and interfaith humility boundary
     c0312_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0312_a3_primary: The bounded Religious pluralism and interfaith humility criterion for action 3 was
-      observed
+    c0312_a3_primary: 'Observed checks: design cooperation that does not borrow another person''s assent'
     c0312_a3_boundary: Action 3 stayed inside its stated Religious pluralism and interfaith humility boundary
     c0312_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Religious pluralism
-    and interfaith humility practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What disagreement stayed real, what understanding improved, and exactly what could
+    you do together without either person pretending agreement? Completion is not mastery.
+  plain_language_evidence: Both sourced accounts were represented fairly and the library arrangement let
+    people cooperate while prayer and assent remained voluntary; live cooperation was not claimed from
+    rehearsal.
   display_order: 47

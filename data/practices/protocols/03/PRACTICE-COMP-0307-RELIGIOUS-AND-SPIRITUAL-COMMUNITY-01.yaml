@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0307-RELIGIOUS-AND-SPIRITUAL-COMMUNITY-01
 slug: c0307-religious-and-spiritual-community-practice
-name: Bounded Religious and spiritual community Practice
+name: Contribute to a chosen community while keeping conscience intact
 parent_competency_id: '03.07'
 domain_id: '03'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 03.07
-      (Religious and spiritual community); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 03.07; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,39 +34,44 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Religious and spiritual community through a non-confrontational safety preparation
-    bounded by the canonical scope: Participate in shared practices, service, accountability, celebration,
-    and care while recognizing risks of coercion and abuse.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Contributes to a community
-    and maintains boundaries that protect conscience and dignity. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Take part in a freely chosen community's shared practice, service, care and accountability,
+    then examine whether belonging and celebration coexist with boundaries against coercion.
+  why_recommended: Take part in a freely chosen community's shared practice, service, care and accountability,
+    then examine whether belonging and celebration coexist with boundaries against coercion.
   claims:
-  - statement: Using the canonical scope and evidence target for Religious and spiritual community is
-      a traceable product-design basis for a source-only draft protocol.
+  - statement: Take part in a freely chosen community's shared practice, service, care and accountability,
+      then examine whether belonging and celebration coexist with boundaries against coercion.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Religious and spiritual community practice fit the
     person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Religious and spiritual community as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Religious and spiritual
-    community context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Religious
-    and spiritual community; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: A suitable online group may offer a small accessible task. If no safe community
+    is available, use a fictional open reading circle to prepare questions and boundaries; leave live
+    contribution and participation checks unmarked. No travel, donation, doctrinal assent, private interview
+    or contact with an unsafe group is required.
+  opportunity_considerations: Choose an existing community you can approach safely, such as a faith group,
+    meditation circle, philosophical discussion group or mutual-care gathering. The default contribution
+    is helping prepare or restore the space for an open gathering after asking the organizer. Confirm
+    visitor access, an exit route and that participation does not require a donation, confession, private
+    disclosure or agreement you do not hold.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Religious and spiritual community.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Choose an existing community you can approach safely, such as a faith group, meditation circle, philosophical
+    discussion group or mutual-care gathering. The default contribution is helping prepare or restore
+    the space for an open gathering after asking the organizer. Confirm visitor access, an exit route
+    and that participation does not require a donation, confession, private disclosure or agreement you
+    do not hold.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Religious and spiritual community
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - A suitable online group may offer a small accessible task. If no safe community is available, use
+    a fictional open reading circle to prepare questions and boundaries; leave live contribution and participation
+    checks unmarked. No travel, donation, doctrinal assent, private interview or contact with an unsafe
+    group is required.
   role_conditions:
   - This competency is pathway dependent; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +83,32 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Religious and spiritual community
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-SAFETY-PREPARATION
+  protocol_class: PF-COMMUNITY-CONTRIBUTION
   duration_days: 10
-  cadence: Complete three bounded Religious and spiritual community actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Religious and spiritual community; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Religious
-    and spiritual community. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Religious and spiritual community actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose an existing community you can approach safely, such as a faith group, meditation circle,
+    philosophical discussion group or mutual-care gathering. The default contribution is helping prepare
+    or restore the space for an open gathering after asking the organizer. Confirm visitor access, an
+    exit route and that participation does not require a donation, confession, private disclosure or agreement
+    you do not hold. Goal: Take part in a freely chosen community''s shared practice, service, care and
+    accountability, then examine whether belonging and celebration coexist with boundaries against coercion.
+    Scope: One community contact and contribution can begin participation; they do not establish a trustworthy
+    institution or lasting belonging. A secular ethical or contemplative community is a legitimate chosen
+    pathway, and declining community participation remains possible. Time and effort: About 20 minutes
+    of preparation, an agreed small contribution of up to 30 minutes, and a 15-minute review. Adaptation:
+    A suitable online group may offer a small accessible task. If no safe community is available, use
+    a fictional open reading circle to prepare questions and boundaries; leave live contribution and participation
+    checks unmarked. No travel, donation, doctrinal assent, private interview or contact with an unsafe
+    group is required. Keep personal working notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. A suitable online group may offer a small accessible task. If no safe community
+    is available, use a fictional open reading circle to prepare questions and boundaries; leave live
+    contribution and participation checks unmarked. No travel, donation, doctrinal assent, private interview
+    or contact with an unsafe group is required.
+  expected_burden: About 20 minutes of preparation, an agreed small contribution of up to 30 minutes,
+    and a 15-minute review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Religious and spiritual community protocol to rank worth, coerce participation, demand disclosure,
@@ -101,19 +116,27 @@ intervention:
   - Treating a completed Religious and spiritual community action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Religious and spiritual community situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. A suitable
+    online group may offer a small accessible task. If no safe community is available, use a fictional
+    open reading circle to prepare questions and boundaries; leave live contribution and participation
+    checks unmarked. No travel, donation, doctrinal assent, private interview or contact with an unsafe
+    group is required.
   actions:
   - stable_id: PRACTICE-COMP-0307-RELIGIOUS-AND-SPIRITUAL-COMMUNITY-01-A1
     sequence: 1
-    title: Identify the non-emergency boundary for Religious and spiritual community
-    instructions: 'Define one planning-only question for Religious and spiritual community, the hazards
-      that must not be rehearsed, and the local qualified or emergency authority that supersedes this
-      source-only protocol. Do not create, approach, or simulate danger: Participate in shared practices,
-      service, accountability, celebration, and care while recognizing risks of coercion and abuse.'
+    title: Learn how this community practices care and accountability
+    instructions: 'Use public information or a voluntary brief question to learn the gathering''s purpose,
+      a shared practice, how help is requested, how achievements or important occasions are marked, and
+      where concerns can be raised. Ask what a newcomer may join or observe. Write one contribution you
+      can genuinely offer and one limit, such as leaving after the agreed time. Treat an unanswered accountability
+      question as missing information. Pressure for secrecy, isolation or personal access is a reason
+      to pause, not a test of devotion.
+
+
+      Observation checks: Shared practice care and celebration have concrete examples; An accountability
+      route or its absence is identified; Visitor participation and a contribution are agreed; A personal
+      limit and exit option are explicit. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -135,9 +158,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0307_a1_planning_scope_bounded
-        - c0307_a1_hazards_excluded
-        - c0307_a1_authority_identified
+        - shared_practice_care_and_celebration_have_concrete_examples
+        - an_accountability_route_or_its_absence_is_identified
+        - visitor_participation_and_a_contribution_are_agreed
+        - a_personal_limit_and_exit_option_are_explicit
       - measurement_id: c0307_a1_boundary
         kind: boolean
         role: supporting
@@ -154,11 +178,19 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0307-RELIGIOUS-AND-SPIRITUAL-COMMUNITY-01-A2
     sequence: 2
-    title: Prepare one safe Religious and spiritual community support step
-    instructions: Create one non-confrontational Religious and spiritual community step such as locating
-      official guidance, checking accessible contact information, assembling a category-level checklist,
-      or scheduling qualified instruction. Do not test emergency response, weapons, rescue, medical treatment,
-      confrontation, evasion, or hazardous equipment.
+    title: Make a useful contribution without purchasing belonging
+    instructions: 'Carry out the agreed bounded help, such as setting out permitted materials or restoring
+      the room. Ask how the work should be done and accept an ordinary correction when sound. Join or
+      respectfully observe one permitted shared practice, and notice how participants acknowledge effort
+      or care for someone who needs help. Do not record identifying details. Keep the promised time limit;
+      contribution is not consent to membership, proselytizing, unpaid ongoing work or another person''s
+      authority over your life.
+
+
+      Observation checks: An agreed contribution is actually made; A shared practice is joined or explicitly
+      observed; An ordinary correction or care interaction is noticed; Time and personal boundaries remain
+      intact. Mark only what you observed. Missing, mixed and negative results are valid; a deferred action
+      is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -180,9 +212,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0307_a2_step_is_preparatory
-        - c0307_a2_official_or_qualified_path_used
-        - c0307_a2_no_hazard_rehearsed
+        - an_agreed_contribution_is_actually_made
+        - a_shared_practice_is_joined_or_explicitly_observed
+        - an_ordinary_correction_or_care_interaction_is_noticed
+        - time_and_personal_boundaries_remain_intact
       - measurement_id: c0307_a2_boundary
         kind: boolean
         role: supporting
@@ -199,11 +232,38 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0307-RELIGIOUS-AND-SPIRITUAL-COMMUNITY-01-A3
     sequence: 3
-    title: Review the Religious and spiritual community plan against stop conditions
-    instructions: 'Check whether the plan identifies when to stop, leave, call emergency services, contact
-      a qualified professional, or follow local authority. Mark unknown requirements rather than inventing
-      them and compare only with: Contributes to a community and maintains boundaries that protect conscience
-      and dignity.'
+    title: Decide whether further participation is warranted
+    instructions: 'Compare what the group said with what you observed about welcome, care, celebration
+      and accountability. Record one appreciated feature, one concern or unknown, and the response to
+      your stated limit. If appropriate, ask one modest clarifying question or offer factual feedback
+      through the stated route; do not confront a coercive situation. Choose return, a smaller role, another
+      community or no further contact. A warm welcome is not proof of safety, and discomfort with an unfamiliar
+      form is not by itself proof of abuse.
+
+
+      Observation checks: Stated values and observed conduct are compared; A strength and concern or unknown
+      are retained; The treatment of a boundary is reviewed; Further participation has a reasoned voluntary
+      decision. Mark only what you observed. Missing, mixed and negative results are valid; a deferred
+      action is not completed.
+
+
+      Final review: Was the contribution useful, could you say no, and what evidence supports the amount
+      of trust you are considering next?
+
+
+      Examples: Supportive: The visitor helped restore a room, observed a shared reading, received a clear
+      answer about concerns and left at the agreed time without pressure.
+
+
+      Mixed: The group was welcoming and the task useful, but its accountability route remained unclear
+      and further commitment was deferred.
+
+
+      Contradictory: Help was treated as consent to escalating demands, or a boundary was framed as disloyalty
+      or spiritual inferiority.
+
+
+      Inconclusive: A group was researched but no agreed contribution or shared practice was experienced.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -219,15 +279,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0307_a3_primary
-        kind: scenario
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0307_a3_stop_conditions_present
-        - c0307_a3_escalation_path_present
-        - c0307_a3_unknowns_retained
+        - stated_values_and_observed_conduct_are_compared
+        - a_strength_and_concern_or_unknown_are_retained
+        - the_treatment_of_a_boundary_is_reviewed
+        - further_participation_has_a_reasoned_voluntary_decision
       - measurement_id: c0307_a3_boundary
         kind: boolean
         role: supporting
@@ -248,17 +309,19 @@ intervention:
       Religious and spiritual community; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Religious and spiritual community; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - A suitable online group may offer a small accessible task. If no safe community is available, use
+      a fictional open reading circle to prepare questions and boundaries; leave live contribution and
+      participation checks unmarked. No travel, donation, doctrinal assent, private interview or contact
+      with an unsafe group is required.
     cultural_context:
     - Adapt the expression of Religious and spiritual community to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Religious and spiritual community opportunity is unavailable or inappropriate, use a
-      fictional, historical, public, simulated, or planning-only equivalent and retain the narrower evidence
-      classification.
+    - A suitable online group may offer a small accessible task. If no safe community is available, use
+      a fictional open reading circle to prepare questions and boundaries; leave live contribution and
+      participation checks unmarked. No travel, donation, doctrinal assent, private interview or contact
+      with an unsafe group is required.
   pause_conditions:
   - Pause Religious and spiritual community when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -290,10 +353,8 @@ evidence_and_scoring:
   - c0307_a3_boundary
   - c0307_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Religious and spiritual community action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Religious and spiritual community criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - Help was treated as consent to escalating demands, or a boundary was framed as disloyalty or spiritual
+    inferiority.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Religious and spiritual community explicitly; support can enable access and never reduces dignity
     or silently changes the typed value.
@@ -304,14 +365,22 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Religious and spiritual community rules withhold observations older than 90
     days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Contributes to a community and maintains boundaries that protect conscience and dignity.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Religious and spiritual community requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Learn how this community practices care and accountability. Observed
+    checks: Shared practice care and celebration have concrete examples; An accountability route or its
+    absence is identified; Visitor participation and a contribution are agreed; A personal limit and exit
+    option are explicit. Action 2: Make a useful contribution without purchasing belonging. Observed checks:
+    An agreed contribution is actually made; A shared practice is joined or explicitly observed; An ordinary
+    correction or care interaction is noticed; Time and personal boundaries remain intact. Action 3: Decide
+    whether further participation is warranted. Observed checks: Stated values and observed conduct are
+    compared; A strength and concern or unknown are retained; The treatment of a boundary is reviewed;
+    Further participation has a reasoned voluntary decision.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A group was researched but no agreed contribution or
+    shared practice was experienced.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Religious
     and spiritual community contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -320,9 +389,8 @@ evidence_and_scoring:
   - L03
   - L26
   - L30
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Religious and spiritual community evidence.
@@ -330,12 +398,18 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The identify the non-emergency boundary for religious and spiritual community action was attempted
-    or explicitly deferred.
-  - The prepare one safe religious and spiritual community support step action was attempted or explicitly
-    deferred.
-  - The review the religious and spiritual community plan against stop conditions action preserved a limited
-    conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Learn how this community practices care and accountability. Observed checks: Shared practice
+    care and celebration have concrete examples; An accountability route or its absence is identified;
+    Visitor participation and a contribution are agreed; A personal limit and exit option are explicit.'
+  - 'Action 2: Make a useful contribution without purchasing belonging. Observed checks: An agreed contribution
+    is actually made; A shared practice is joined or explicitly observed; An ordinary correction or care
+    interaction is noticed; Time and personal boundaries remain intact.'
+  - 'Action 3: Decide whether further participation is warranted. Observed checks: Stated values and observed
+    conduct are compared; A strength and concern or unknown are retained; The treatment of a boundary
+    is reviewed; Further participation has a reasoned voluntary decision.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -344,57 +418,58 @@ completion_and_review:
     - c0307_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Religious and spiritual community only when the initial context
-    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
-    named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Religious and spiritual community across roles,
-    cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: Was the contribution useful, could you say no, and what evidence supports the
+    amount of trust you are considering next?
+  transfer_limit: One community contact and contribution can begin participation; they do not establish
+    a trustworthy institution or lasting belonging. A secular ethical or contemplative community is a
+    legitimate chosen pathway, and declining community participation remains possible.
   reflection:
-    before: What does Religious and spiritual community require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Religious and spiritual community criterion is present, absent, mixed, or
-      unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Contributes to a community and maintains boundaries that protect
-      conscience and dignity.', what contradiction or missing context matters most, and should this Religious
-      and spiritual community design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Take part in a freely chosen community''s
+      shared practice, service, care and accountability, then examine whether belonging and celebration
+      coexist with boundaries against coercion.'
+    during: Which checks have actually been observed? The group was welcoming and the task useful, but
+      its accountability route remained unclear and further commitment was deferred.
+    after: Was the contribution useful, could you say no, and what evidence supports the amount of trust
+      you are considering next?
   review_guidance:
     repeat: Repeat the same bounded Religious and spiritual community design only when the context and
       burden remain appropriate.
-    adapt: Change the Religious and spiritual community medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: A suitable online group may offer a small accessible task. If no safe community is available,
+      use a fictional open reading circle to prepare questions and boundaries; leave live contribution
+      and participation checks unmarked. No travel, donation, doctrinal assent, private interview or contact
+      with an unsafe group is required.
     stop: Stop Religious and spiritual community when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Religious and spiritual community questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Religious and spiritual community criteria were observed with provenance and
-      no adverse boundary signal in the selected context.
-    mixed: Some Religious and spiritual community criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Religious and spiritual community criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Religious and spiritual community action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The visitor helped restore a room, observed a shared reading, received a clear answer
+      about concerns and left at the agreed time without pressure.
+    mixed: The group was welcoming and the task useful, but its accountability route remained unclear
+      and further commitment was deferred.
+    contradictory: Help was treated as consent to escalating demands, or a boundary was framed as disloyalty
+      or spiritual inferiority.
+    inconclusive: A group was researched but no agreed contribution or shared practice was experienced.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Religious and spiritual community.
+    context_heading: Contribute to a chosen community while keeping conscience intact
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Religious
       and spiritual community.
   check_in_labels:
-    c0307_a1_primary: The bounded Religious and spiritual community criterion for action 1 was observed
+    c0307_a1_primary: 'Observed checks: learn how this community practices care and accountability'
     c0307_a1_boundary: Action 1 stayed inside its stated Religious and spiritual community boundary
     c0307_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0307_a2_primary: The bounded Religious and spiritual community criterion for action 2 was observed
+    c0307_a2_primary: 'Observed checks: make a useful contribution without purchasing belonging'
     c0307_a2_boundary: Action 2 stayed inside its stated Religious and spiritual community boundary
     c0307_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0307_a3_primary: The bounded Religious and spiritual community criterion for action 3 was observed
+    c0307_a3_primary: 'Observed checks: decide whether further participation is warranted'
     c0307_a3_boundary: Action 3 stayed inside its stated Religious and spiritual community boundary
     c0307_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Religious and spiritual
-    community practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Was the contribution useful, could you say no, and what evidence supports the amount
+    of trust you are considering next? Completion is not mastery.
+  plain_language_evidence: The visitor helped restore a room, observed a shared reading, received a clear
+    answer about concerns and left at the agreed time without pressure.
   display_order: 42

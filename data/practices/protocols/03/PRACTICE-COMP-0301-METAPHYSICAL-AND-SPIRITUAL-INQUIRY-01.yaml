@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0301-METAPHYSICAL-AND-SPIRITUAL-INQUIRY-01
 slug: c0301-metaphysical-and-spiritual-inquiry-practice
-name: Bounded Metaphysical and spiritual inquiry Practice
+name: Examine an ultimate question without manufacturing certainty
 parent_competency_id: '03.01'
 domain_id: '03'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-EPICTETUS-ENCHIRIDION
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 03.01
-      (Metaphysical and spiritual inquiry); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 03.01; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +35,50 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Metaphysical and spiritual inquiry through a pluralist meaning practice bounded by
-    the canonical scope: Examine religious, spiritual, philosophical, and naturalistic accounts of God,
-    consciousness, soul, freedom, providence, and transcendence.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can state a position
-    or principled uncertainty without pretending proof or dismissing alternatives. The protocol creates
-    a small opportunity to examine that target without treating completion as broad capability.'
+  purpose: Compare religious, spiritual, philosophical and naturalistic accounts of ultimate questions,
+    then state a reasoned position or uncertainty that represents alternatives fairly.
+  why_recommended: Compare religious, spiritual, philosophical and naturalistic accounts of ultimate questions,
+    then state a reasoned position or uncertainty that represents alternatives fairly.
   claims:
-  - statement: Using the canonical scope and evidence target for Metaphysical and spiritual inquiry is
-      a traceable product-design basis for a source-only draft protocol.
+  - statement: Compare religious, spiritual, philosophical and naturalistic accounts of ultimate questions,
+      then state a reasoned position or uncertainty that represents alternatives fairly.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: These selected passages connect judgments and choice with assigned roles and a providential
+      account of the gods.
+    classification: philosophical_or_normative_position
+    source_ids:
+    - SRC-EPICTETUS-ENCHIRIDION
+    limitations: Historical philosophical positions, not established scientific findings. The archive
+      credits Elizabeth Carter; this exercise uses the displayed edition without reproducing its wording.
+      No claim that all Stoics agree or that ancient prescriptions about suffering and obedience should
+      govern present conduct.
   applicability_question: Does a voluntary, bounded Metaphysical and spiritual inquiry practice fit the
     person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Metaphysical and spiritual inquiry as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Metaphysical and
-    spiritual inquiry context, understand the source-only status, and stop without losing safety, care,
-    employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Metaphysical
-    and spiritual inquiry; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Use the supplied coincidence instead of personal religious experiences. Definitions
+    can be read aloud; a drawing can separate observation from explanation. A chosen faith commitment
+    and principled nonbelief are both possible outcomes. Leave questions open or use N/A if this pathway
+    is consciously unchosen.
+  opportunity_considerations: 'Use paper, dictation or a private note. No religious affiliation or previous
+    philosophy study is required. Start with the supplied question: does the feeling that a helpful coincidence
+    was meant to happen justify believing it was providential? Use the constructed viewpoints below as
+    starting positions, not descriptions of every believer or nonbeliever.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Metaphysical and spiritual inquiry.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use paper, dictation or a private note. No religious affiliation or previous philosophy study is
+    required. Start with the supplied question: does the feeling that a helpful coincidence was meant
+    to happen justify believing it was providential? Use the constructed viewpoints below as starting
+    positions, not descriptions of every believer or nonbeliever.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Metaphysical and spiritual inquiry
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use the supplied coincidence instead of personal religious experiences. Definitions can be read aloud;
+    a drawing can separate observation from explanation. A chosen faith commitment and principled nonbelief
+    are both possible outcomes. Leave questions open or use N/A if this pathway is consciously unchosen.
   role_conditions:
   - This competency is pathway dependent; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +90,36 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Metaphysical and spiritual
     inquiry as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-CONTEMPLATIVE-MEANING
+  protocol_class: PF-KNOWLEDGE-APPLICATION
   duration_days: 10
-  cadence: Complete three bounded Metaphysical and spiritual inquiry actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Metaphysical and spiritual inquiry; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Metaphysical
-    and spiritual inquiry. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Metaphysical and spiritual inquiry actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use paper, dictation or a private note. No religious affiliation or previous philosophy study
+    is required. Start with the supplied question: does the feeling that a helpful coincidence was meant
+    to happen justify believing it was providential? Use the constructed viewpoints below as starting
+    positions, not descriptions of every believer or nonbeliever. Goal: Compare religious, spiritual,
+    philosophical and naturalistic accounts of ultimate questions, then state a reasoned position or uncertainty
+    that represents alternatives fairly. Scope: The six-question map covers God, consciousness, soul,
+    freedom, providence and transcendence; one comparison receives deeper examination. A reasoned position
+    is an inquiry result, not a proof, conversion, or comprehensive survey of traditions. Time and effort:
+    Three sessions of about 20 minutes, with an optional later return to an unresolved question. Adaptation:
+    Use the supplied coincidence instead of personal religious experiences. Definitions can be read aloud;
+    a drawing can separate observation from explanation. A chosen faith commitment and principled nonbelief
+    are both possible outcomes. Leave questions open or use N/A if this pathway is consciously unchosen.
+    Keep personal working notes outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Enchiridion: sections 1, 17 and 31: https://classics.mit.edu/Epictetus/epicench.html'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use the supplied coincidence instead of personal religious experiences. Definitions
+    can be read aloud; a drawing can separate observation from explanation. A chosen faith commitment
+    and principled nonbelief are both possible outcomes. Leave questions open or use N/A if this pathway
+    is consciously unchosen.
+  expected_burden: Three sessions of about 20 minutes, with an optional later return to an unresolved
+    question.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Metaphysical and spiritual inquiry protocol to rank worth, coerce participation, demand
@@ -101,19 +127,29 @@ intervention:
   - Treating a completed Metaphysical and spiritual inquiry action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Metaphysical and spiritual inquiry situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use the supplied
+    coincidence instead of personal religious experiences. Definitions can be read aloud; a drawing can
+    separate observation from explanation. A chosen faith commitment and principled nonbelief are both
+    possible outcomes. Leave questions open or use N/A if this pathway is consciously unchosen.
   actions:
   - stable_id: PRACTICE-COMP-0301-METAPHYSICAL-AND-SPIRITUAL-INQUIRY-01-A1
     sequence: 1
-    title: Choose a declared frame for Metaphysical and spiritual inquiry
-    instructions: 'Select a religious, spiritual, philosophical, cultural, or secular frame through which
-      to explore Metaphysical and spiritual inquiry. State the frame, one alternative, and the limits
-      of personal authority using this canonical scope: Examine religious, spiritual, philosophical, and
-      naturalistic accounts of God, consciousness, soul, freedom, providence, and transcendence.'
+    title: Separate six questions that are easily collapsed together
+    instructions: 'Make six short entries and consider a contrast for each: God as a personal creator
+      versus impersonal ultimate reality or no divinity; consciousness as physically explained versus
+      having an irreducible experiential aspect; soul as a persisting immaterial self versus a changing
+      embodied pattern; freedom as acting from reasons within causes versus requiring another kind of
+      agency; providence as guiding intention versus events without such direction; transcendence as contact
+      with ultimate reality versus going beyond ordinary self-concern. These are constructed contrasts,
+      not exhaustive accounts or labels for entire traditions. For each, state what the disagreement is
+      and a present view or honest question. Separate experience, explanation, moral commitment and claims
+      about reality; feeling awe alone does not answer all six.
+
+
+      Observation checks: All six questions include a considered contrast; Experience and interpretation
+      are distinguished; Present uncertainty is recorded rather than concealed; The focused question is
+      stated in ordinary language. Mark only what you observed. Missing, mixed and negative results are
+      valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -129,15 +165,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0301_a1_primary
-        kind: conceptual
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0301_a1_frame_declared
-        - c0301_a1_alternative_acknowledged
-        - c0301_a1_authority_limited
+        - all_six_questions_include_a_considered_contrast
+        - experience_and_interpretation_are_distinguished
+        - present_uncertainty_is_recorded_rather_than_concealed
+        - the_focused_question_is_stated_in_ordinary_language
       - measurement_id: c0301_a1_boundary
         kind: boolean
         role: supporting
@@ -154,11 +191,20 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0301-METAPHYSICAL-AND-SPIRITUAL-INQUIRY-01-A2
     sequence: 2
-    title: Complete two bounded Metaphysical and spiritual inquiry practices
-    instructions: Complete two short, freely chosen Metaphysical and spiritual inquiry practices appropriate
-      to the declared frame, such as reading, silence, prayer, observation, ritual, dialogue, or reflection.
-      Stop for distress, coercion, altered-state risk, conscience conflict, or pressure from an authority
-      or group.
+    title: Give competing accounts their strongest reasons
+    instructions: 'Apply four constructed accounts to the coincidence: a personal God may guide events;
+      an impersonal spiritual order may make the event meaningful; a philosophical skeptic asks which
+      inference is justified; a naturalistic account examines ordinary causes and attention to memorable
+      events. Write a reason each proponent might offer and a serious difficulty for each. Ask what observation
+      would distinguish the accounts, and which disagreement may remain metaphysical rather than experimentally
+      decidable. Read Enchiridion 31 through the supplied reference for one actual providential account,
+      and keep that author''s claim separate from your reconstruction.
+
+
+      Observation checks: Four distinct accounts are represented fairly; Each account has a reason and
+      a difficulty; A possible discriminator or its absence is stated; A source-backed claim is distinguished
+      from constructed viewpoints. Mark only what you observed. Missing, mixed and negative results are
+      valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -174,15 +220,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0301_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - four_distinct_accounts_are_represented_fairly
+        - each_account_has_a_reason_and_a_difficulty
+        - a_possible_discriminator_or_its_absence_is_stated
+        - a_source_backed_claim_is_distinguished_from_constructed_viewpoints
       - measurement_id: c0301_a2_boundary
         kind: boolean
         role: supporting
@@ -199,10 +246,39 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0301-METAPHYSICAL-AND-SPIRITUAL-INQUIRY-01-A3
     sequence: 3
-    title: Interpret the Metaphysical and spiritual inquiry experience modestly
-    instructions: 'Review what was noticed without treating intensity, calm, certainty, group agreement,
-      or unusual experience as automatic truth. Compare the limited record with this evidence target:
-      Can state a position or principled uncertainty without pretending proof or dismissing alternatives.'
+    title: State what you believe and how you could revise it
+    instructions: 'Write or speak a short conclusion with five parts: my current view or suspension of
+      judgment; my strongest reason; the strongest remaining objection; what could change my view; and
+      one practical consequence that does not require others to agree. Revisit the other five entries
+      and note whether the conclusion actually changes them. In the coincidence case, you might appreciate
+      the help and thank the person while leaving divine intention unresolved. Explain an alternative
+      without sarcasm before defending your own conclusion.
+
+
+      Observation checks: The conclusion includes a reason and an unresolved objection; A revision condition
+      is explicit; Practical conduct does not require manufactured agreement; Implications for the other
+      questions are checked. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.
+
+
+      Final review: Can someone who disagrees recognize their view in your account, and can you say why
+      you hold or withhold your conclusion without pretending proof?
+
+
+      Examples: Supportive: The inquiry separated a meaningful experience from an explanation, represented
+      four alternatives, and retained uncertainty about providence while identifying a reasoned next question.
+
+
+      Mixed: The competing accounts were fair, but the supposed discriminator would not actually separate
+      them and the conclusion stayed provisional.
+
+
+      Contradictory: The intensity of a feeling was presented as decisive proof, or a competing worldview
+      was reduced to stupidity or moral inferiority.
+
+
+      Inconclusive: Definitions were copied without comparing reasons or stating a position, objection
+      or principled uncertainty.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -224,9 +300,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0301_a3_experience_and_interpretation_separated
-        - c0301_a3_alternative_explanation_retained
-        - c0301_a3_target_evidence_compared
+        - the_conclusion_includes_a_reason_and_an_unresolved_objection
+        - a_revision_condition_is_explicit
+        - practical_conduct_does_not_require_manufactured_agreement
+        - implications_for_the_other_questions_are_checked
       - measurement_id: c0301_a3_boundary
         kind: boolean
         role: supporting
@@ -247,17 +324,19 @@ intervention:
       Metaphysical and spiritual inquiry; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Metaphysical and spiritual inquiry; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - Use the supplied coincidence instead of personal religious experiences. Definitions can be read
+      aloud; a drawing can separate observation from explanation. A chosen faith commitment and principled
+      nonbelief are both possible outcomes. Leave questions open or use N/A if this pathway is consciously
+      unchosen.
     cultural_context:
     - Adapt the expression of Metaphysical and spiritual inquiry to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Metaphysical and spiritual inquiry opportunity is unavailable or inappropriate, use
-      a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use the supplied coincidence instead of personal religious experiences. Definitions can be read
+      aloud; a drawing can separate observation from explanation. A chosen faith commitment and principled
+      nonbelief are both possible outcomes. Leave questions open or use N/A if this pathway is consciously
+      unchosen.
   pause_conditions:
   - Pause Metaphysical and spiritual inquiry when capacity, consent, authority, privacy, access, care
     duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the
@@ -289,10 +368,8 @@ evidence_and_scoring:
   - c0301_a3_boundary
   - c0301_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Metaphysical and spiritual inquiry action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Metaphysical and spiritual inquiry criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - The intensity of a feeling was presented as decisive proof, or a competing worldview was reduced to
+    stupidity or moral inferiority.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Metaphysical and spiritual inquiry explicitly; support can enable access and never reduces dignity
     or silently changes the typed value.
@@ -303,14 +380,22 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Metaphysical and spiritual inquiry rules withhold observations older than 90
     days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can state a position or principled uncertainty without pretending proof or dismissing alternatives.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Metaphysical and spiritual inquiry requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Separate six questions that are easily collapsed together. Observed checks:
+    All six questions include a considered contrast; Experience and interpretation are distinguished;
+    Present uncertainty is recorded rather than concealed; The focused question is stated in ordinary
+    language. Action 2: Give competing accounts their strongest reasons. Observed checks: Four distinct
+    accounts are represented fairly; Each account has a reason and a difficulty; A possible discriminator
+    or its absence is stated; A source-backed claim is distinguished from constructed viewpoints. Action
+    3: State what you believe and how you could revise it. Observed checks: The conclusion includes a
+    reason and an unresolved objection; A revision condition is explicit; Practical conduct does not require
+    manufactured agreement; Implications for the other questions are checked.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. Definitions were copied without comparing reasons or
+    stating a position, objection or principled uncertainty.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Metaphysical
     and spiritual inquiry contribution under typed evaluation; protocol performance remains distinct and
     is never counted twice.
@@ -319,9 +404,8 @@ evidence_and_scoring:
   - L01
   - L03
   - L13
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Metaphysical and spiritual inquiry evidence.
@@ -329,12 +413,18 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The choose a declared frame for metaphysical and spiritual inquiry action was attempted or explicitly
-    deferred.
-  - The complete two bounded metaphysical and spiritual inquiry practices action was attempted or explicitly
-    deferred.
-  - The interpret the metaphysical and spiritual inquiry experience modestly action preserved a limited
-    conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Separate six questions that are easily collapsed together. Observed checks: All six questions
+    include a considered contrast; Experience and interpretation are distinguished; Present uncertainty
+    is recorded rather than concealed; The focused question is stated in ordinary language.'
+  - 'Action 2: Give competing accounts their strongest reasons. Observed checks: Four distinct accounts
+    are represented fairly; Each account has a reason and a difficulty; A possible discriminator or its
+    absence is stated; A source-backed claim is distinguished from constructed viewpoints.'
+  - 'Action 3: State what you believe and how you could revise it. Observed checks: The conclusion includes
+    a reason and an unresolved objection; A revision condition is explicit; Practical conduct does not
+    require manufactured agreement; Implications for the other questions are checked.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -343,57 +433,59 @@ completion_and_review:
     - c0301_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Metaphysical and spiritual inquiry only when the initial context
-    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
-    named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Metaphysical and spiritual inquiry across roles,
-    cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: Can someone who disagrees recognize their view in your account, and can you say
+    why you hold or withhold your conclusion without pretending proof?
+  transfer_limit: The six-question map covers God, consciousness, soul, freedom, providence and transcendence;
+    one comparison receives deeper examination. A reasoned position is an inquiry result, not a proof,
+    conversion, or comprehensive survey of traditions.
   reflection:
-    before: What does Metaphysical and spiritual inquiry require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Metaphysical and spiritual inquiry criterion is present, absent, mixed, or
-      unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can state a position or principled uncertainty without pretending
-      proof or dismissing alternatives.', what contradiction or missing context matters most, and should
-      this Metaphysical and spiritual inquiry design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Compare religious, spiritual, philosophical
+      and naturalistic accounts of ultimate questions, then state a reasoned position or uncertainty that
+      represents alternatives fairly.'
+    during: Which checks have actually been observed? The competing accounts were fair, but the supposed
+      discriminator would not actually separate them and the conclusion stayed provisional.
+    after: Can someone who disagrees recognize their view in your account, and can you say why you hold
+      or withhold your conclusion without pretending proof?
   review_guidance:
     repeat: Repeat the same bounded Metaphysical and spiritual inquiry design only when the context and
       burden remain appropriate.
-    adapt: Change the Metaphysical and spiritual inquiry medium, scope, support, timing, criteria, or
-      context while preserving provenance and the narrower evidence claim.
+    adapt: Use the supplied coincidence instead of personal religious experiences. Definitions can be
+      read aloud; a drawing can separate observation from explanation. A chosen faith commitment and principled
+      nonbelief are both possible outcomes. Leave questions open or use N/A if this pathway is consciously
+      unchosen.
     stop: Stop Metaphysical and spiritual inquiry when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Metaphysical and spiritual inquiry questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Metaphysical and spiritual inquiry criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Metaphysical and spiritual inquiry criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Metaphysical and spiritual inquiry criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Metaphysical and spiritual inquiry action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The inquiry separated a meaningful experience from an explanation, represented four alternatives,
+      and retained uncertainty about providence while identifying a reasoned next question.
+    mixed: The competing accounts were fair, but the supposed discriminator would not actually separate
+      them and the conclusion stayed provisional.
+    contradictory: The intensity of a feeling was presented as decisive proof, or a competing worldview
+      was reduced to stupidity or moral inferiority.
+    inconclusive: Definitions were copied without comparing reasons or stating a position, objection or
+      principled uncertainty.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Metaphysical and spiritual inquiry.
+    context_heading: Examine an ultimate question without manufacturing certainty
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Metaphysical
       and spiritual inquiry.
   check_in_labels:
-    c0301_a1_primary: The bounded Metaphysical and spiritual inquiry criterion for action 1 was observed
+    c0301_a1_primary: 'Observed checks: separate six questions that are easily collapsed together'
     c0301_a1_boundary: Action 1 stayed inside its stated Metaphysical and spiritual inquiry boundary
     c0301_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0301_a2_primary: The bounded Metaphysical and spiritual inquiry criterion for action 2 was observed
+    c0301_a2_primary: 'Observed checks: give competing accounts their strongest reasons'
     c0301_a2_boundary: Action 2 stayed inside its stated Metaphysical and spiritual inquiry boundary
     c0301_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0301_a3_primary: The bounded Metaphysical and spiritual inquiry criterion for action 3 was observed
+    c0301_a3_primary: 'Observed checks: state what you believe and how you could revise it'
     c0301_a3_boundary: Action 3 stayed inside its stated Metaphysical and spiritual inquiry boundary
     c0301_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Metaphysical and spiritual
-    inquiry practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Can someone who disagrees recognize their view in your account, and can you say why
+    you hold or withhold your conclusion without pretending proof? Completion is not mastery.
+  plain_language_evidence: The inquiry separated a meaningful experience from an explanation, represented
+    four alternatives, and retained uncertainty about providence while identifying a reasoned next question.
   display_order: 36

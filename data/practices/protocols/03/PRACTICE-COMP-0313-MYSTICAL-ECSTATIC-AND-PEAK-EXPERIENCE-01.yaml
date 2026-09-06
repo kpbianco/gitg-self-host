@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0313-MYSTICAL-ECSTATIC-AND-PEAK-EXPERIENCE-01
 slug: c0313-mystical-ecstatic-and-peak-experience-practice
-name: Bounded Mystical, ecstatic, and peak experience Practice
+name: Interpret an intense experience with reason conduct and time
 parent_competency_id: '03.13'
 domain_id: '03'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-NCCIH-MEDITATION-SAFETY
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 03.13
-      (Mystical, ecstatic, and peak experience); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 03.13; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,40 +35,49 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Mystical, ecstatic, and peak experience through a pluralist meaning practice bounded
-    by the canonical scope: Understand altered states of awe, unity, devotion, revelation, or transcendence
-    and the risks of overinterpreting them.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can integrate an intense
-    experience through community, reason, conduct, and time rather than treating intensity as automatic
-    truth. The protocol creates a small opportunity to examine that target without treating completion
-    as broad capability.'
+  purpose: Separate a vivid experience from claims about its meaning and integrate it through careful
+    reasoning, an appropriate outside perspective, ordinary conduct and later review.
+  why_recommended: Separate a vivid experience from claims about its meaning and integrate it through
+    careful reasoning, an appropriate outside perspective, ordinary conduct and later review.
   claims:
-  - statement: Using the canonical scope and evidence target for Mystical, ecstatic, and peak experience
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Separate a vivid experience from claims about its meaning and integrate it through careful
+      reasoning, an appropriate outside perspective, ordinary conduct and later review.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Meditation can involve negative experiences; health concerns should not be managed by replacing
+      appropriate care with meditation.
+    classification: safety_precaution
+    source_ids:
+    - SRC-NCCIH-MEDITATION-SAFETY
+    limitations: Supports a cautious stop-and-support boundary only. It does not establish safety or effectiveness
+      of this product's short pause, classify a spiritual experience, or validate individual outcomes.
   applicability_question: Does a voluntary, bounded Mystical, ecstatic, and peak experience practice fit
     the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Mystical, ecstatic, and peak experience as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Mystical, ecstatic,
-    and peak experience context, understand the source-only status, and stop without losing safety, care,
-    employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Mystical,
-    ecstatic, and peak experience; do not manufacture conflict, deprivation, exposure, disclosure, danger,
-    urgency, or dependence for evidence.
+  readiness_considerations: Use the fictional case, spoken notes or a simple three-column diagram. Do
+    not re-enter an upsetting state to obtain evidence. If an experience is frightening, disrupts ordinary
+    functioning or seems to demand dangerous action, stop this educational exercise and seek suitable
+    professional support; immediate danger needs urgent local help.
+  opportunity_considerations: 'Use the supplied fictional case: after music and a striking sky, a person
+    feels deeply connected to others and wonders whether they have been given a special mission. No unusual
+    experience is required. A settled, non-distressing memory may replace the case if freely chosen. Do
+    not seek substances, deprivation, hyperventilation, intense meditation or sensory overload.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Mystical, ecstatic, and peak experience.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use the supplied fictional case: after music and a striking sky, a person feels deeply connected
+    to others and wonders whether they have been given a special mission. No unusual experience is required.
+    A settled, non-distressing memory may replace the case if freely chosen. Do not seek substances, deprivation,
+    hyperventilation, intense meditation or sensory overload.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Mystical, ecstatic, and peak experience
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use the fictional case, spoken notes or a simple three-column diagram. Do not re-enter an upsetting
+    state to obtain evidence. If an experience is frightening, disrupts ordinary functioning or seems
+    to demand dangerous action, stop this educational exercise and seek suitable professional support;
+    immediate danger needs urgent local help.
   role_conditions:
   - This competency is pathway dependent; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -80,21 +89,37 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Mystical, ecstatic, and peak
     experience as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-CONTEMPLATIVE-MEANING
+  protocol_class: PF-LONGITUDINAL-REVIEW
   duration_days: 10
-  cadence: Complete three bounded Mystical, ecstatic, and peak experience actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Mystical, ecstatic, and peak experience; copy the canonical scope and
-    evidence target into a private working note; define the action boundary, valid supports, privacy limit,
-    and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Mystical,
-    ecstatic, and peak experience. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Mystical, ecstatic, and peak experience
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use the supplied fictional case: after music and a striking sky, a person feels deeply connected
+    to others and wonders whether they have been given a special mission. No unusual experience is required.
+    A settled, non-distressing memory may replace the case if freely chosen. Do not seek substances, deprivation,
+    hyperventilation, intense meditation or sensory overload. Goal: Separate a vivid experience from claims
+    about its meaning and integrate it through careful reasoning, an appropriate outside perspective,
+    ordinary conduct and later review. Scope: Awe, unity, devotion, revelation and transcendence describe
+    different experiences and interpretations. Intensity does not automatically establish truth or authority.
+    This exercise interprets a manageable past or fictional event; it does not induce altered states or
+    assess mental health. Time and effort: About 20 minutes initially, one short perspective check and
+    ordinary action, then a 15-minute review after several days. Adaptation: Use the fictional case, spoken
+    notes or a simple three-column diagram. Do not re-enter an upsetting state to obtain evidence. If
+    an experience is frightening, disrupts ordinary functioning or seems to demand dangerous action, stop
+    this educational exercise and seek suitable professional support; immediate danger needs urgent local
+    help. Keep personal working notes outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Meditation and Mindfulness: Effectiveness and Safety: https://www.nccih.nih.gov/health/meditation-and-mindfulness-effectiveness-and-safety'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use the fictional case, spoken notes or a simple three-column diagram. Do not re-enter
+    an upsetting state to obtain evidence. If an experience is frightening, disrupts ordinary functioning
+    or seems to demand dangerous action, stop this educational exercise and seek suitable professional
+    support; immediate danger needs urgent local help.
+  expected_burden: About 20 minutes initially, one short perspective check and ordinary action, then a
+    15-minute review after several days.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Mystical, ecstatic, and peak experience protocol to rank worth, coerce participation, demand
@@ -102,19 +127,27 @@ intervention:
   - Treating a completed Mystical, ecstatic, and peak experience action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Mystical, ecstatic, and peak experience situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use the fictional
+    case, spoken notes or a simple three-column diagram. Do not re-enter an upsetting state to obtain
+    evidence. If an experience is frightening, disrupts ordinary functioning or seems to demand dangerous
+    action, stop this educational exercise and seek suitable professional support; immediate danger needs
+    urgent local help.
   actions:
   - stable_id: PRACTICE-COMP-0313-MYSTICAL-ECSTATIC-AND-PEAK-EXPERIENCE-01-A1
     sequence: 1
-    title: Choose a declared frame for Mystical, ecstatic, and peak experience
-    instructions: 'Select a religious, spiritual, philosophical, cultural, or secular frame through which
-      to explore Mystical, ecstatic, and peak experience. State the frame, one alternative, and the limits
-      of personal authority using this canonical scope: Understand altered states of awe, unity, devotion,
-      revelation, or transcendence and the risks of overinterpreting them.'
+    title: Separate what happened from what it seems to mean
+    instructions: 'Make three headings: experienced, interpreted and proposed action. In the case, music,
+      the sky and a feeling of connection belong under experienced; a special mission is an interpretation;
+      quitting commitments would be a proposed action. Distinguish awe, a sense of unity, devotion and
+      an apparent revelation rather than treating them as one proof. Write at least two possible accounts,
+      such as personally meaningful emotion and a spiritual interpretation, and identify what the experience
+      alone cannot decide. Include context such as tiredness only if known.
+
+
+      Observation checks: Experience interpretation and proposed action are separated; Different kinds
+      of intense experience are distinguished; At least two possible accounts remain available; Unknown
+      context and limits of inference are explicit. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -130,15 +163,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0313_a1_primary
-        kind: conceptual
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0313_a1_frame_declared
-        - c0313_a1_alternative_acknowledged
-        - c0313_a1_authority_limited
+        - experience_interpretation_and_proposed_action_are_separated
+        - different_kinds_of_intense_experience_are_distinguished
+        - at_least_two_possible_accounts_remain_available
+        - unknown_context_and_limits_of_inference_are_explicit
       - measurement_id: c0313_a1_boundary
         kind: boolean
         role: supporting
@@ -155,11 +189,20 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0313-MYSTICAL-ECSTATIC-AND-PEAK-EXPERIENCE-01-A2
     sequence: 2
-    title: Complete two bounded Mystical, ecstatic, and peak experience practices
-    instructions: Complete two short, freely chosen Mystical, ecstatic, and peak experience practices
-      appropriate to the declared frame, such as reading, silence, prayer, observation, ritual, dialogue,
-      or reflection. Stop for distress, coercion, altered-state risk, conscience conflict, or pressure
-      from an authority or group.
+    title: Check an interpretation without outsourcing judgment
+    instructions: 'For a personal memory, discuss only what you choose with a trusted willing person who
+      can question the interpretation without pressure; this might be a thoughtful peer or appropriate
+      community member. Ask what would support the claim, what would count against it and whether the
+      proposed action serves others responsibly. For the fictional case, compare two supplied responses:
+      the feeling proves a unique mission, versus the feeling may matter while its explanation stays uncertain.
+      Explain why reassurance, charisma or agreement alone does not settle the claim. No private disclosure
+      or authority endorsement is required.
+
+
+      Observation checks: An outside perspective or explicitly fictional comparison is considered; Supporting
+      and disconfirming reasons are requested; Authority and agreement are not treated as proof; Disclosure
+      and participation remain voluntary. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -175,15 +218,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0313_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - an_outside_perspective_or_explicitly_fictional_comparison_is_considered
+        - supporting_and_disconfirming_reasons_are_requested
+        - authority_and_agreement_are_not_treated_as_proof
+        - disclosure_and_participation_remain_voluntary
       - measurement_id: c0313_a2_boundary
         kind: boolean
         role: supporting
@@ -200,11 +244,40 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0313-MYSTICAL-ECSTATIC-AND-PEAK-EXPERIENCE-01-A3
     sequence: 3
-    title: Interpret the Mystical, ecstatic, and peak experience experience modestly
-    instructions: 'Review what was noticed without treating intensity, calm, certainty, group agreement,
-      or unusual experience as automatic truth. Compare the limited record with this evidence target:
-      Can integrate an intense experience through community, reason, conduct, and time rather than treating
-      intensity as automatic truth.'
+    title: Integrate through a reversible action and a later review
+    instructions: 'Choose one ordinary action consistent with the constructive meaning but reasonable
+      under either interpretation: return something borrowed, keep an existing promise or offer a small
+      welcome that is wanted. For the default case, try one such action in your own ordinary life without
+      claiming the fictional experience as yours. After several days, compare the action''s effects, the
+      remaining meaning and any revised explanation. Maintain ordinary responsibilities and postpone major
+      commitments based solely on the experience. Conclude what you can retain and what remains uncertain;
+      an enduring feeling still does not prove a metaphysical claim.
+
+
+      Observation checks: A proportionate reversible action is actually attempted; Existing responsibilities
+      are preserved; A later review examines conduct and interpretation separately; Retained meaning does
+      not become automatic proof. Mark only what you observed. Missing, mixed and negative results are
+      valid; a deferred action is not completed.
+
+
+      Final review: What meaning survived patient examination, what changed in ordinary conduct, and what
+      claim still lacks evidence?
+
+
+      Examples: Supportive: The person retained a sense of connection, kept an ordinary promise, welcomed
+      a questioning perspective and left the proposed special mission unproven after later review.
+
+
+      Mixed: The small action was constructive, but the interpretation remained uncertain and the outside
+      perspective was only a fictional comparison.
+
+
+      Contradictory: An intense feeling became unquestionable authority for a major commitment, or a skeptical
+      question was treated as evidence that outsiders were hostile.
+
+
+      Inconclusive: The event was described vividly without separating interpretation, checking a perspective
+      or reviewing any ordinary action over time.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -226,9 +299,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0313_a3_experience_and_interpretation_separated
-        - c0313_a3_alternative_explanation_retained
-        - c0313_a3_target_evidence_compared
+        - a_proportionate_reversible_action_is_actually_attempted
+        - existing_responsibilities_are_preserved
+        - a_later_review_examines_conduct_and_interpretation_separately
+        - retained_meaning_does_not_become_automatic_proof
       - measurement_id: c0313_a3_boundary
         kind: boolean
         role: supporting
@@ -249,17 +323,19 @@ intervention:
       Mystical, ecstatic, and peak experience; no purchase, subscription, travel, credential, or public
       artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Mystical, ecstatic, and peak experience; assistive technology, interpretation, a support
-      person, and a deferred action are valid without penalty.
+    - Use the fictional case, spoken notes or a simple three-column diagram. Do not re-enter an upsetting
+      state to obtain evidence. If an experience is frightening, disrupts ordinary functioning or seems
+      to demand dangerous action, stop this educational exercise and seek suitable professional support;
+      immediate danger needs urgent local help.
     cultural_context:
     - Adapt the expression of Mystical, ecstatic, and peak experience to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Mystical, ecstatic, and peak experience opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use the fictional case, spoken notes or a simple three-column diagram. Do not re-enter an upsetting
+      state to obtain evidence. If an experience is frightening, disrupts ordinary functioning or seems
+      to demand dangerous action, stop this educational exercise and seek suitable professional support;
+      immediate danger needs urgent local help.
   pause_conditions:
   - Pause Mystical, ecstatic, and peak experience when capacity, consent, authority, privacy, access,
     care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make
@@ -291,10 +367,8 @@ evidence_and_scoring:
   - c0313_a3_boundary
   - c0313_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Mystical, ecstatic, and peak experience action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Mystical, ecstatic, and peak experience criterion, depended
-    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - An intense feeling became unquestionable authority for a major commitment, or a skeptical question
+    was treated as evidence that outsiders were hostile.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Mystical, ecstatic, and peak experience explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -305,15 +379,22 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Mystical, ecstatic, and peak experience rules withhold observations older than
     90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can integrate an intense experience through community, reason, conduct, and time rather than
-    treating intensity as automatic truth.—not completion, confidence, conformity, output, independence,
-    or worth.
-  evidence_quality_rubric: Quality for Mystical, ecstatic, and peak experience requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Separate what happened from what it seems to mean. Observed checks: Experience
+    interpretation and proposed action are separated; Different kinds of intense experience are distinguished;
+    At least two possible accounts remain available; Unknown context and limits of inference are explicit.
+    Action 2: Check an interpretation without outsourcing judgment. Observed checks: An outside perspective
+    or explicitly fictional comparison is considered; Supporting and disconfirming reasons are requested;
+    Authority and agreement are not treated as proof; Disclosure and participation remain voluntary. Action
+    3: Integrate through a reversible action and a later review. Observed checks: A proportionate reversible
+    action is actually attempted; Existing responsibilities are preserved; A later review examines conduct
+    and interpretation separately; Retained meaning does not become automatic proof.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. The event was described vividly without separating
+    interpretation, checking a perspective or reviewing any ordinary action over time.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Mystical,
     ecstatic, and peak experience contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -323,9 +404,8 @@ evidence_and_scoring:
   - L04
   - L16
   - L35
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Mystical, ecstatic, and peak experience evidence.
@@ -333,12 +413,18 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The choose a declared frame for mystical, ecstatic, and peak experience action was attempted or explicitly
-    deferred.
-  - The complete two bounded mystical, ecstatic, and peak experience practices action was attempted or
-    explicitly deferred.
-  - The interpret the mystical, ecstatic, and peak experience experience modestly action preserved a limited
-    conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Separate what happened from what it seems to mean. Observed checks: Experience interpretation
+    and proposed action are separated; Different kinds of intense experience are distinguished; At least
+    two possible accounts remain available; Unknown context and limits of inference are explicit.'
+  - 'Action 2: Check an interpretation without outsourcing judgment. Observed checks: An outside perspective
+    or explicitly fictional comparison is considered; Supporting and disconfirming reasons are requested;
+    Authority and agreement are not treated as proof; Disclosure and participation remain voluntary.'
+  - 'Action 3: Integrate through a reversible action and a later review. Observed checks: A proportionate
+    reversible action is actually attempted; Existing responsibilities are preserved; A later review examines
+    conduct and interpretation separately; Retained meaning does not become automatic proof.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -347,59 +433,59 @@ completion_and_review:
     - c0313_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Mystical, ecstatic, and peak experience only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Mystical, ecstatic, and peak experience across
-    roles, cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: What meaning survived patient examination, what changed in ordinary conduct, and
+    what claim still lacks evidence?
+  transfer_limit: Awe, unity, devotion, revelation and transcendence describe different experiences and
+    interpretations. Intensity does not automatically establish truth or authority. This exercise interprets
+    a manageable past or fictional event; it does not induce altered states or assess mental health.
   reflection:
-    before: What does Mystical, ecstatic, and peak experience require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Mystical, ecstatic, and peak experience criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can integrate an intense experience through community, reason,
-      conduct, and time rather than treating intensity as automatic truth.', what contradiction or missing
-      context matters most, and should this Mystical, ecstatic, and peak experience design be repeated,
-      adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Separate a vivid experience from claims about
+      its meaning and integrate it through careful reasoning, an appropriate outside perspective, ordinary
+      conduct and later review.'
+    during: Which checks have actually been observed? The small action was constructive, but the interpretation
+      remained uncertain and the outside perspective was only a fictional comparison.
+    after: What meaning survived patient examination, what changed in ordinary conduct, and what claim
+      still lacks evidence?
   review_guidance:
     repeat: Repeat the same bounded Mystical, ecstatic, and peak experience design only when the context
       and burden remain appropriate.
-    adapt: Change the Mystical, ecstatic, and peak experience medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Use the fictional case, spoken notes or a simple three-column diagram. Do not re-enter an upsetting
+      state to obtain evidence. If an experience is frightening, disrupts ordinary functioning or seems
+      to demand dangerous action, stop this educational exercise and seek suitable professional support;
+      immediate danger needs urgent local help.
     stop: Stop Mystical, ecstatic, and peak experience when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Mystical, ecstatic, and peak experience
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Mystical, ecstatic, and peak experience criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Mystical, ecstatic, and peak experience criteria were observed while burden, support,
-      contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Mystical, ecstatic, and peak experience criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Mystical, ecstatic, and peak experience action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The person retained a sense of connection, kept an ordinary promise, welcomed a questioning
+      perspective and left the proposed special mission unproven after later review.
+    mixed: The small action was constructive, but the interpretation remained uncertain and the outside
+      perspective was only a fictional comparison.
+    contradictory: An intense feeling became unquestionable authority for a major commitment, or a skeptical
+      question was treated as evidence that outsiders were hostile.
+    inconclusive: The event was described vividly without separating interpretation, checking a perspective
+      or reviewing any ordinary action over time.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Mystical, ecstatic, and peak experience.
+    context_heading: Interpret an intense experience with reason conduct and time
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Mystical,
       ecstatic, and peak experience.
   check_in_labels:
-    c0313_a1_primary: The bounded Mystical, ecstatic, and peak experience criterion for action 1 was observed
+    c0313_a1_primary: 'Observed checks: separate what happened from what it seems to mean'
     c0313_a1_boundary: Action 1 stayed inside its stated Mystical, ecstatic, and peak experience boundary
     c0313_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0313_a2_primary: The bounded Mystical, ecstatic, and peak experience criterion for action 2 was observed
+    c0313_a2_primary: 'Observed checks: check an interpretation without outsourcing judgment'
     c0313_a2_boundary: Action 2 stayed inside its stated Mystical, ecstatic, and peak experience boundary
     c0313_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0313_a3_primary: The bounded Mystical, ecstatic, and peak experience criterion for action 3 was observed
+    c0313_a3_primary: 'Observed checks: integrate through a reversible action and a later review'
     c0313_a3_boundary: Action 3 stayed inside its stated Mystical, ecstatic, and peak experience boundary
     c0313_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Mystical, ecstatic,
-    and peak experience practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What meaning survived patient examination, what changed in ordinary conduct, and what
+    claim still lacks evidence? Completion is not mastery.
+  plain_language_evidence: The person retained a sense of connection, kept an ordinary promise, welcomed
+    a questioning perspective and left the proposed special mission unproven after later review.
   display_order: 48

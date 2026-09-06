@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0311-AUTHORITY-TRADITION-CONSCIENCE-AND-REFORM-01
 slug: c0311-authority-tradition-conscience-and-reform-practice
-name: Bounded Authority, tradition, conscience, and reform Practice
+name: Reason through authority conscience and a disputed practice
 parent_competency_id: '03.11'
 domain_id: '03'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 03.11
-      (Authority, tradition, conscience, and reform); canonical scope, evidence target, classification,
-      domain boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 03.11; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,40 +34,43 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Authority, tradition, conscience, and reform through a qualified-support preparation
-    bounded by the canonical scope: Discern how sacred texts, teachers, institutions, inherited practices,
-    personal experience, and moral conscience should relate.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can identify legitimate
-    authority, possible abuse, and a principled process for obedience, dissent, or reform. The protocol
-    creates a small opportunity to examine that target without treating completion as broad capability.'
+  purpose: Distinguish the legitimate roles and limits of texts, teachers, institutions, inherited practice,
+    experience and conscience, then give a principled process for agreement, dissent or reform.
+  why_recommended: Distinguish the legitimate roles and limits of texts, teachers, institutions, inherited
+    practice, experience and conscience, then give a principled process for agreement, dissent or reform.
   claims:
-  - statement: Using the canonical scope and evidence target for Authority, tradition, conscience, and
-      reform is a traceable product-design basis for a source-only draft protocol.
+  - statement: Distinguish the legitimate roles and limits of texts, teachers, institutions, inherited
+      practice, experience and conscience, then give a principled process for agreement, dissent or reform.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Authority, tradition, conscience, and reform practice
     fit the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Authority, tradition, conscience, and reform as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Authority, tradition,
-    conscience, and reform context, understand the source-only status, and stop without losing safety,
-    care, employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Authority,
-    tradition, conscience, and reform; do not manufacture conflict, deprivation, exposure, disclosure,
-    danger, urgency, or dependence for evidence.
+  readiness_considerations: Use spoken reasoning, six labeled objects or the supplied case without personal
+    disclosure. In an actual coercive or abusive setting, do not use this exercise to investigate, negotiate
+    safety or confront an authority; use independent support appropriate to the circumstances. No complaint,
+    confession or change of belief is required.
+  opportunity_considerations: 'Use this fictional case: a community reading circle traditionally ends
+    with a statement of gratitude. A respected teacher proposes requiring every visitor to say the same
+    words, citing unity and a valued text. One visitor wants to remain silent honestly. The written visitor
+    policy permits observation, and the coordinator can review meeting procedures. No real group needs
+    to be contacted.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Authority, tradition, conscience,
-    and reform.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use this fictional case: a community reading circle traditionally ends with a statement of gratitude.
+    A respected teacher proposes requiring every visitor to say the same words, citing unity and a valued
+    text. One visitor wants to remain silent honestly. The written visitor policy permits observation,
+    and the coordinator can review meeting procedures. No real group needs to be contacted.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Authority, tradition, conscience,
-    and reform instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use spoken reasoning, six labeled objects or the supplied case without personal disclosure. In an
+    actual coercive or abusive setting, do not use this exercise to investigate, negotiate safety or confront
+    an authority; use independent support appropriate to the circumstances. No complaint, confession or
+    change of belief is required.
   role_conditions:
   - This competency is pathway dependent; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -80,21 +82,32 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Authority, tradition, conscience,
     and reform as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-QUALIFIED-CONSULTATION
+  protocol_class: PF-KNOWLEDGE-APPLICATION
   duration_days: 10
-  cadence: Complete three bounded Authority, tradition, conscience, and reform actions over ten days,
-    preserving explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Authority, tradition, conscience, and reform; copy the canonical scope
-    and evidence target into a private working note; define the action boundary, valid supports, privacy
-    limit, and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Authority,
-    tradition, conscience, and reform. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Authority, tradition, conscience, and
-    reform actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use this fictional case: a community reading circle traditionally ends with a statement of gratitude.
+    A respected teacher proposes requiring every visitor to say the same words, citing unity and a valued
+    text. One visitor wants to remain silent honestly. The written visitor policy permits observation,
+    and the coordinator can review meeting procedures. No real group needs to be contacted. Goal: Distinguish
+    the legitimate roles and limits of texts, teachers, institutions, inherited practice, experience and
+    conscience, then give a principled process for agreement, dissent or reform. Scope: The supplied low-stakes
+    fictional case practices discernment. It neither adjudicates a real abuse allegation nor makes this
+    app a religious, legal or safeguarding authority. A thoughtful decision is not measured by obedience
+    or dissent alone. Time and effort: Three sessions of about 20 minutes, using the supplied case or
+    a comparably safe ordinary disagreement. Adaptation: Use spoken reasoning, six labeled objects or
+    the supplied case without personal disclosure. In an actual coercive or abusive setting, do not use
+    this exercise to investigate, negotiate safety or confront an authority; use independent support appropriate
+    to the circumstances. No complaint, confession or change of belief is required. Keep personal working
+    notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use spoken reasoning, six labeled objects or the supplied case without personal
+    disclosure. In an actual coercive or abusive setting, do not use this exercise to investigate, negotiate
+    safety or confront an authority; use independent support appropriate to the circumstances. No complaint,
+    confession or change of belief is required.
+  expected_burden: Three sessions of about 20 minutes, using the supplied case or a comparably safe ordinary
+    disagreement.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Authority, tradition, conscience, and reform protocol to rank worth, coerce participation,
@@ -103,20 +116,28 @@ intervention:
   - Treating a completed Authority, tradition, conscience, and reform action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Authority, tradition, conscience, and reform situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use spoken
+    reasoning, six labeled objects or the supplied case without personal disclosure. In an actual coercive
+    or abusive setting, do not use this exercise to investigate, negotiate safety or confront an authority;
+    use independent support appropriate to the circumstances. No complaint, confession or change of belief
+    is required.
   actions:
   - stable_id: PRACTICE-COMP-0311-AUTHORITY-TRADITION-CONSCIENCE-AND-REFORM-01-A1
     sequence: 1
-    title: Bound the qualified question for Authority, tradition, conscience, and reform
-    instructions: 'Turn Authority, tradition, conscience, and reform into one educational or planning
-      question and identify the qualification and jurisdiction needed to answer it. Use the canonical
-      scope to separate general learning from diagnosis, treatment, legal advice, financial advice, safeguarding
-      decisions, or other professional judgment: Discern how sacred texts, teachers, institutions, inherited
-      practices, personal experience, and moral conscience should relate.'
+    title: Map the sources of authority without treating them as identical
+    instructions: 'Make six entries for the case: text, teacher, institution, inherited practice, experience
+      and conscience. State what each contributes and what it cannot settle by itself. The text may guide
+      gratitude but needs interpretation; the teacher may explain it but not rewrite the visitor policy
+      alone; the coordinator manages procedure; tradition carries shared meaning; the visitor describes
+      their own experience; conscience addresses sincere assent and conduct. Identify the exact disputed
+      demand, who is affected and which facts are missing. Do not invent the text''s wording to win the
+      argument.
+
+
+      Observation checks: All six sources of authority have distinct roles and limits; The disputed demand
+      and affected people are specific; Interpretation is separated from an actual rule; Missing facts
+      are retained rather than invented. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -138,9 +159,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0311_a1_question_bounded
-        - c0311_a1_qualification_named
-        - c0311_a1_professional_boundary_explicit
+        - all_six_sources_of_authority_have_distinct_roles_and_limits
+        - the_disputed_demand_and_affected_people_are_specific
+        - interpretation_is_separated_from_an_actual_rule
+        - missing_facts_are_retained_rather_than_invented
       - measurement_id: c0311_a1_boundary
         kind: boolean
         role: supporting
@@ -157,12 +179,19 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0311-AUTHORITY-TRADITION-CONSCIENCE-AND-REFORM-01-A2
     sequence: 2
-    title: Prepare minimum information for Authority, tradition, conscience, and reform
-    instructions: Create a privacy-minimized Authority, tradition, conscience, and reform consultation
-      note containing only the question, relevant category-level facts, current constraints, and desired
-      decision. Omit diagnoses, allegations, account numbers, credentials, protected work information,
-      intimate detail, and third-party identity unless a qualified professional lawfully requires it through
-      an appropriate channel.
+    title: Test legitimate direction and signs of coercion
+    instructions: 'Give the strongest fair reason for shared words and the strongest fair reason for voluntary
+      silence. Examine the demand against its proper scope, the stated visitor policy, truthful assent,
+      proportionality and an available appeal. Distinguish ordinary coordination, such as ending on time,
+      from compelled belief or punishment for respectful refusal. Consider a counterfactual: if the coordinator
+      threatens exclusion from essential support for silence, the issue exceeds a meeting preference and
+      requires safety-conscious outside advice. Do not rehearse a confrontation with a threatening authority.
+
+
+      Observation checks: Both sides receive a fair reason; Scope consent and accountability are examined;
+      Coordination is distinguished from compelled belief; A coercive escalation has an appropriately
+      different response. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -184,9 +213,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0311_a2_minimum_information_only
-        - c0311_a2_sensitive_detail_excluded
-        - c0311_a2_decision_need_named
+        - both_sides_receive_a_fair_reason
+        - scope_consent_and_accountability_are_examined
+        - coordination_is_distinguished_from_compelled_belief
+        - a_coercive_escalation_has_an_appropriately_different_response
       - measurement_id: c0311_a2_boundary
         kind: boolean
         role: supporting
@@ -203,12 +233,39 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0311-AUTHORITY-TRADITION-CONSCIENCE-AND-REFORM-01-A3
     sequence: 3
-    title: Record a bounded Authority, tradition, conscience, and reform disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: Can identify legitimate authority, possible abuse, and a principled process
-      for obedience, dissent, or reform.'
+    title: Give a principled process and test it against a changed case
+    instructions: 'Write a short proposed response: identify the text or policy to clarify, explain the
+      conscientious concern, propose spoken words or respectful silence, and ask the coordinator to review
+      the procedure through a fair route. State when you would comply, decline, seek independent advice
+      or leave. Then change one fact: the group advertises a members-only rite and offers a separate open
+      gathering. Re-evaluate without insisting that every form must be open to everyone. End with a reasoned
+      disposition and an unresolved question, not a verdict that all tradition or all dissent is good.
+
+
+      Observation checks: A concrete clarification and review process is proposed; Compliance dissent
+      and exit have stated conditions; The changed case produces a reasoned reassessment; A conclusion
+      and remaining question preserve conscience and the rights of others. Mark only what you observed.
+      Missing, mixed and negative results are valid; a deferred action is not completed.
+
+
+      Final review: Which authority was legitimate for which question, and what makes your process principled
+      rather than convenient agreement or reflexive opposition?
+
+
+      Examples: Supportive: The proposal preserved shared gratitude and honest silence, used the policy
+      review route, and distinguished an open gathering from an appropriately restricted rite.
+
+
+      Mixed: The reasoning recognized conscience but could not verify the cited text, so that interpretive
+      question remained open.
+
+
+      Contradictory: Respect for tradition became permission to coerce belief, or personal discomfort
+      was treated as authority to erase every community boundary.
+
+
+      Inconclusive: A preferred answer was announced without distinguishing authority roles, considering
+      an objection or specifying a review process.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -224,14 +281,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0311_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0311_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - a_concrete_clarification_and_review_process_is_proposed
+        - compliance_dissent_and_exit_have_stated_conditions
+        - the_changed_case_produces_a_reasoned_reassessment
+        - a_conclusion_and_remaining_question_preserve_conscience_and_the_rights_of_others
       - measurement_id: c0311_a3_boundary
         kind: boolean
         role: supporting
@@ -252,17 +311,19 @@ intervention:
       Authority, tradition, conscience, and reform; no purchase, subscription, travel, credential, or
       public artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Authority, tradition, conscience, and reform; assistive technology, interpretation, a
-      support person, and a deferred action are valid without penalty.
+    - Use spoken reasoning, six labeled objects or the supplied case without personal disclosure. In an
+      actual coercive or abusive setting, do not use this exercise to investigate, negotiate safety or
+      confront an authority; use independent support appropriate to the circumstances. No complaint, confession
+      or change of belief is required.
     cultural_context:
     - Adapt the expression of Authority, tradition, conscience, and reform to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Authority, tradition, conscience, and reform opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use spoken reasoning, six labeled objects or the supplied case without personal disclosure. In an
+      actual coercive or abusive setting, do not use this exercise to investigate, negotiate safety or
+      confront an authority; use independent support appropriate to the circumstances. No complaint, confession
+      or change of belief is required.
   pause_conditions:
   - Pause Authority, tradition, conscience, and reform when capacity, consent, authority, privacy, access,
     care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make
@@ -294,10 +355,8 @@ evidence_and_scoring:
   - c0311_a3_boundary
   - c0311_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Authority, tradition, conscience, and reform action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Authority, tradition, conscience, and reform criterion, depended
-    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - Respect for tradition became permission to coerce belief, or personal discomfort was treated as authority
+    to erase every community boundary.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Authority, tradition, conscience, and reform explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -308,14 +367,23 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Authority, tradition, conscience, and reform rules withhold observations older
     than 90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can identify legitimate authority, possible abuse, and a principled process for obedience,
-    dissent, or reform.—not completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Authority, tradition, conscience, and reform requires a bounded
-    context, allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Map the sources of authority without treating them as identical. Observed
+    checks: All six sources of authority have distinct roles and limits; The disputed demand and affected
+    people are specific; Interpretation is separated from an actual rule; Missing facts are retained rather
+    than invented. Action 2: Test legitimate direction and signs of coercion. Observed checks: Both sides
+    receive a fair reason; Scope consent and accountability are examined; Coordination is distinguished
+    from compelled belief; A coercive escalation has an appropriately different response. Action 3: Give
+    a principled process and test it against a changed case. Observed checks: A concrete clarification
+    and review process is proposed; Compliance dissent and exit have stated conditions; The changed case
+    produces a reasoned reassessment; A conclusion and remaining question preserve conscience and the
+    rights of others.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A preferred answer was announced without distinguishing
+    authority roles, considering an objection or specifying a review process.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Authority,
     tradition, conscience, and reform contribution under typed evaluation; protocol performance remains
     distinct and is never counted twice.
@@ -325,9 +393,8 @@ evidence_and_scoring:
   - L03
   - L13
   - L31
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Authority, tradition, conscience, and reform evidence.
@@ -335,12 +402,19 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for authority, tradition, conscience, and reform action was attempted
-    or explicitly deferred.
-  - The prepare minimum information for authority, tradition, conscience, and reform action was attempted
-    or explicitly deferred.
-  - The record a bounded authority, tradition, conscience, and reform disposition action preserved a limited
-    conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Map the sources of authority without treating them as identical. Observed checks: All six
+    sources of authority have distinct roles and limits; The disputed demand and affected people are specific;
+    Interpretation is separated from an actual rule; Missing facts are retained rather than invented.'
+  - 'Action 2: Test legitimate direction and signs of coercion. Observed checks: Both sides receive a
+    fair reason; Scope consent and accountability are examined; Coordination is distinguished from compelled
+    belief; A coercive escalation has an appropriately different response.'
+  - 'Action 3: Give a principled process and test it against a changed case. Observed checks: A concrete
+    clarification and review process is proposed; Compliance dissent and exit have stated conditions;
+    The changed case produces a reasoned reassessment; A conclusion and remaining question preserve conscience
+    and the rights of others.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -349,65 +423,62 @@ completion_and_review:
     - c0311_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Authority, tradition, conscience, and reform only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Authority, tradition, conscience, and reform
-    across roles, cultures, relationships, seasons, stress levels, disability states, institutions, or
-    high-consequence settings.
+  progression_criteria: Which authority was legitimate for which question, and what makes your process
+    principled rather than convenient agreement or reflexive opposition?
+  transfer_limit: The supplied low-stakes fictional case practices discernment. It neither adjudicates
+    a real abuse allegation nor makes this app a religious, legal or safeguarding authority. A thoughtful
+    decision is not measured by obedience or dissent alone.
   reflection:
-    before: What does Authority, tradition, conscience, and reform require in this exact context, what
-      remains outside my role or authority, and which scope sentence or evidence criterion will keep the
-      practice honest?
-    during: Which observable Authority, tradition, conscience, and reform criterion is present, absent,
-      mixed, or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can identify legitimate authority, possible abuse, and a principled
-      process for obedience, dissent, or reform.', what contradiction or missing context matters most,
-      and should this Authority, tradition, conscience, and reform design be repeated, adapted, deferred,
-      stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Distinguish the legitimate roles and limits
+      of texts, teachers, institutions, inherited practice, experience and conscience, then give a principled
+      process for agreement, dissent or reform.'
+    during: Which checks have actually been observed? The reasoning recognized conscience but could not
+      verify the cited text, so that interpretive question remained open.
+    after: Which authority was legitimate for which question, and what makes your process principled rather
+      than convenient agreement or reflexive opposition?
   review_guidance:
     repeat: Repeat the same bounded Authority, tradition, conscience, and reform design only when the
       context and burden remain appropriate.
-    adapt: Change the Authority, tradition, conscience, and reform medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Use spoken reasoning, six labeled objects or the supplied case without personal disclosure.
+      In an actual coercive or abusive setting, do not use this exercise to investigate, negotiate safety
+      or confront an authority; use independent support appropriate to the circumstances. No complaint,
+      confession or change of belief is required.
     stop: Stop Authority, tradition, conscience, and reform when the practice becomes coercive, unsafe,
       privacy-invasive, role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Authority, tradition, conscience, and
-      reform questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Authority, tradition, conscience, and reform criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Authority, tradition, conscience, and reform criteria were observed while burden, support,
-      contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Authority, tradition, conscience, and reform
-      criterion, introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Authority, tradition, conscience, and reform action was deferred, not observed,
-      not applicable, stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The proposal preserved shared gratitude and honest silence, used the policy review route,
+      and distinguished an open gathering from an appropriately restricted rite.
+    mixed: The reasoning recognized conscience but could not verify the cited text, so that interpretive
+      question remained open.
+    contradictory: Respect for tradition became permission to coerce belief, or personal discomfort was
+      treated as authority to erase every community boundary.
+    inconclusive: A preferred answer was announced without distinguishing authority roles, considering
+      an objection or specifying a review process.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Authority, tradition, conscience, and reform.
+    context_heading: Reason through authority conscience and a disputed practice
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Authority,
       tradition, conscience, and reform.
   check_in_labels:
-    c0311_a1_primary: The bounded Authority, tradition, conscience, and reform criterion for action 1
-      was observed
+    c0311_a1_primary: 'Observed checks: map the sources of authority without treating them as identical'
     c0311_a1_boundary: Action 1 stayed inside its stated Authority, tradition, conscience, and reform
       boundary
     c0311_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0311_a2_primary: The bounded Authority, tradition, conscience, and reform criterion for action 2
-      was observed
+    c0311_a2_primary: 'Observed checks: test legitimate direction and signs of coercion'
     c0311_a2_boundary: Action 2 stayed inside its stated Authority, tradition, conscience, and reform
       boundary
     c0311_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0311_a3_primary: The bounded Authority, tradition, conscience, and reform criterion for action 3
-      was observed
+    c0311_a3_primary: 'Observed checks: give a principled process and test it against a changed case'
     c0311_a3_boundary: Action 3 stayed inside its stated Authority, tradition, conscience, and reform
       boundary
     c0311_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Authority, tradition,
-    conscience, and reform practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Which authority was legitimate for which question, and what makes your process principled
+    rather than convenient agreement or reflexive opposition? Completion is not mastery.
+  plain_language_evidence: The proposal preserved shared gratitude and honest silence, used the policy
+    review route, and distinguished an open gathering from an appropriately restricted rite.
   display_order: 46

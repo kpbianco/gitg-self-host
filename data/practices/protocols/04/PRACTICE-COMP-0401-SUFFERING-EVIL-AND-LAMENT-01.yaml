@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0401-SUFFERING-EVIL-AND-LAMENT-01
 slug: c0401-suffering-evil-and-lament-practice
-name: Bounded Suffering, evil, and lament Practice
+name: Name suffering honestly and choose one humane response
 parent_competency_id: '04.01'
 domain_id: '04'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-NHS-GRIEF-AND-LOSS
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 04.01
-      (Suffering, evil, and lament); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 04.01; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +35,48 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Suffering, evil, and lament through a pluralist meaning practice bounded by the canonical
-    scope: Develop an honest response to pain, injustice, tragedy, apparent meaninglessness, and unanswered
-    prayer.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can lament without
-    denial and continue acting without requiring a simplistic explanation. The protocol creates a small
-    opportunity to examine that target without treating completion as broad capability.'
+  purpose: Respond to pain, injustice, tragedy or unanswered questions with truthful lament and a proportionate
+    act of care, without requiring a tidy explanation before acting.
+  why_recommended: Respond to pain, injustice, tragedy or unanswered questions with truthful lament and
+    a proportionate act of care, without requiring a tidy explanation before acting.
   claims:
-  - statement: Using the canonical scope and evidence target for Suffering, evil, and lament is a traceable
-      product-design basis for a source-only draft protocol.
+  - statement: Respond to pain, injustice, tragedy or unanswered questions with truthful lament and a
+      proportionate act of care, without requiring a tidy explanation before acting.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Grief responses vary between people and can follow losses other than bereavement; support
+      is available when coping is difficult.
+    classification: safety_precaution
+    source_ids:
+    - SRC-NHS-GRIEF-AND-LOSS
+    limitations: Supports acknowledging varied responses and appropriate support. It does not validate
+      this educational exercise, prescribe a grief timetable or establish readiness for personal loss
+      reflection.
   applicability_question: Does a voluntary, bounded Suffering, evil, and lament practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Suffering, evil, and lament as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Suffering, evil,
-    and lament context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Suffering,
-    evil, and lament; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Use a drawing, a few words or the fictional case. No public lament, theological
+    agreement, painful disclosure or positive feeling is required. Stop if the topic becomes overwhelming;
+    use support suited to your needs rather than pushing through for completion.
+  opportunity_considerations: 'Use this fictional case: a much-used neighborhood meeting place closes
+    after storm damage, disrupting connection despite volunteers'' sincere efforts. You may instead use
+    a settled, manageable disappointment. Do not select an acute traumatic event, recent bereavement or
+    someone else''s private pain for the sake of producing evidence.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Suffering, evil, and lament.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use this fictional case: a much-used neighborhood meeting place closes after storm damage, disrupting
+    connection despite volunteers'' sincere efforts. You may instead use a settled, manageable disappointment.
+    Do not select an acute traumatic event, recent bereavement or someone else''s private pain for the
+    sake of producing evidence.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Suffering, evil, and lament instead
-    of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a drawing, a few words or the fictional case. No public lament, theological agreement, painful
+    disclosure or positive feeling is required. Stop if the topic becomes overwhelming; use support suited
+    to your needs rather than pushing through for completion.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -81,19 +90,31 @@ meaning_and_fit:
 intervention:
   protocol_class: PF-CONTEMPLATIVE-MEANING
   duration_days: 10
-  cadence: Complete three bounded Suffering, evil, and lament actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Suffering, evil, and lament; copy the canonical scope and evidence target
-    into a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Suffering,
-    evil, and lament. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Suffering, evil, and lament actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use this fictional case: a much-used neighborhood meeting place closes after storm damage, disrupting
+    connection despite volunteers'' sincere efforts. You may instead use a settled, manageable disappointment.
+    Do not select an acute traumatic event, recent bereavement or someone else''s private pain for the
+    sake of producing evidence. Goal: Respond to pain, injustice, tragedy or unanswered questions with
+    truthful lament and a proportionate act of care, without requiring a tidy explanation before acting.
+    Scope: This is an exercise in honest language and humane response, not a treatment for distress or
+    a solution to evil. Lament may be religious, secular, spoken, written or silent; no explanation of
+    another person''s suffering is imposed. Time and effort: Three short sessions of up to 15 minutes,
+    with pauses or deferral whenever useful. Adaptation: Use a drawing, a few words or the fictional case.
+    No public lament, theological agreement, painful disclosure or positive feeling is required. Stop
+    if the topic becomes overwhelming; use support suited to your needs rather than pushing through for
+    completion. Keep personal working notes outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Grief after bereavement or loss: https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/grief-bereavement-loss/'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a drawing, a few words or the fictional case. No public lament, theological
+    agreement, painful disclosure or positive feeling is required. Stop if the topic becomes overwhelming;
+    use support suited to your needs rather than pushing through for completion.
+  expected_burden: Three short sessions of up to 15 minutes, with pauses or deferral whenever useful.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Suffering, evil, and lament protocol to rank worth, coerce participation, demand disclosure,
@@ -101,19 +122,26 @@ intervention:
   - Treating a completed Suffering, evil, and lament action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Suffering, evil, and lament situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a drawing,
+    a few words or the fictional case. No public lament, theological agreement, painful disclosure or
+    positive feeling is required. Stop if the topic becomes overwhelming; use support suited to your needs
+    rather than pushing through for completion.
   actions:
   - stable_id: PRACTICE-COMP-0401-SUFFERING-EVIL-AND-LAMENT-01-A1
     sequence: 1
-    title: Choose a declared frame for Suffering, evil, and lament
-    instructions: 'Select a religious, spiritual, philosophical, cultural, or secular frame through which
-      to explore Suffering, evil, and lament. State the frame, one alternative, and the limits of personal
-      authority using this canonical scope: Develop an honest response to pain, injustice, tragedy, apparent
-      meaninglessness, and unanswered prayer.'
+    title: Describe the hurt without correcting it into a lesson
+    instructions: 'Make four short entries: what happened; what is lost or unfair; what you feel or cannot
+      yet name; and what remains unanswered. In the supplied case, separate physical damage from the loss
+      of a shared place and from any question about why this happened. If prayer is part of your pathway,
+      an unanswered prayer may be named without inventing a divine answer. Otherwise address the situation
+      in ordinary language. Do not add at least, everything happens for a reason or an obligatory growth
+      lesson to make the lament acceptable.
+
+
+      Observation checks: The event and its consequences are described concretely; Loss unfairness and
+      unanswered questions are distinguished; Feeling or difficulty naming it is recorded honestly; No
+      reassuring explanation is imposed. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -129,15 +157,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0401_a1_primary
-        kind: conceptual
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0401_a1_frame_declared
-        - c0401_a1_alternative_acknowledged
-        - c0401_a1_authority_limited
+        - the_event_and_its_consequences_are_described_concretely
+        - loss_unfairness_and_unanswered_questions_are_distinguished
+        - feeling_or_difficulty_naming_it_is_recorded_honestly
+        - no_reassuring_explanation_is_imposed
       - measurement_id: c0401_a1_boundary
         kind: boolean
         role: supporting
@@ -154,11 +183,19 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0401-SUFFERING-EVIL-AND-LAMENT-01-A2
     sequence: 2
-    title: Complete two bounded Suffering, evil, and lament practices
-    instructions: Complete two short, freely chosen Suffering, evil, and lament practices appropriate
-      to the declared frame, such as reading, silence, prayer, observation, ritual, dialogue, or reflection.
-      Stop for distress, coercion, altered-state risk, conscience conflict, or pressure from an authority
-      or group.
+    title: Make room for a response without demanding agreement
+    instructions: 'Read the four entries privately or, if useful, share a limited version with a willing
+      listener after asking whether they can listen without solving it. Use the request: I want this acknowledged;
+      I am not asking you to explain why it happened. For the fictional case, rehearse an acknowledgment
+      that names the lost place and effort, then contrast it with a response that minimizes the loss.
+      Notice whether silence, anger, sorrow or uncertainty can remain without being judged as a failed
+      performance.
+
+
+      Observation checks: An acknowledgment names the particular loss; Any listener freely agrees to the
+      request; A minimizing response is distinguished from acknowledgment; The experience need not resolve
+      into a preferred emotion. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -174,15 +211,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0401_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - an_acknowledgment_names_the_particular_loss
+        - any_listener_freely_agrees_to_the_request
+        - a_minimizing_response_is_distinguished_from_acknowledgment
+        - the_experience_need_not_resolve_into_a_preferred_emotion
       - measurement_id: c0401_a2_boundary
         kind: boolean
         role: supporting
@@ -199,10 +237,39 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0401-SUFFERING-EVIL-AND-LAMENT-01-A3
     sequence: 3
-    title: Interpret the Suffering, evil, and lament experience modestly
-    instructions: 'Review what was noticed without treating intensity, calm, certainty, group agreement,
-      or unusual experience as automatic truth. Compare the limited record with this evidence target:
-      Can lament without denial and continue acting without requiring a simplistic explanation.'
+    title: Act on a need that does not depend on solving the question
+    instructions: 'Identify one ordinary need you can appropriately address: offer a wanted check-in,
+      help someone find a permitted alternative meeting place, or take care of your own immediate rest
+      or routine. In the fictional case, draft a practical notice separating confirmed closure information
+      from unknown reopening dates; then make one comparable, modest act of care in ordinary life. Review
+      what it helped and what it could not repair. Keep the unanswered question visible rather than calling
+      the action an explanation of suffering.
+
+
+      Observation checks: A proportionate need and action are identified; An ordinary act of care is actually
+      attempted; Help provided and loss remaining are separated; The unanswered question is not concealed
+      by the action. Mark only what you observed. Missing, mixed and negative results are valid; a deferred
+      action is not completed.
+
+
+      Final review: What was acknowledged accurately, what care remained possible, and which question
+      still deserves to remain unanswered?
+
+
+      Examples: Supportive: The loss was named without a forced lesson, a wanted check-in occurred and
+      uncertainty about the future remained explicit.
+
+
+      Mixed: An honest lament was possible, but the offered help was not wanted and the participant respected
+      that response.
+
+
+      Contradictory: A listener insisted that suffering was deserved, secretly beneficial or evidence
+      of insufficient faith.
+
+
+      Inconclusive: A general statement about resilience replaced acknowledgment of the particular loss
+      and no care action was attempted.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -224,9 +291,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0401_a3_experience_and_interpretation_separated
-        - c0401_a3_alternative_explanation_retained
-        - c0401_a3_target_evidence_compared
+        - a_proportionate_need_and_action_are_identified
+        - an_ordinary_act_of_care_is_actually_attempted
+        - help_provided_and_loss_remaining_are_separated
+        - the_unanswered_question_is_not_concealed_by_the_action
       - measurement_id: c0401_a3_boundary
         kind: boolean
         role: supporting
@@ -247,16 +315,17 @@ intervention:
       Suffering, evil, and lament; no purchase, subscription, travel, credential, or public artifact is
       required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Suffering, evil, and lament; assistive technology, interpretation, a support person, and
-      a deferred action are valid without penalty.
+    - Use a drawing, a few words or the fictional case. No public lament, theological agreement, painful
+      disclosure or positive feeling is required. Stop if the topic becomes overwhelming; use support
+      suited to your needs rather than pushing through for completion.
     cultural_context:
     - Adapt the expression of Suffering, evil, and lament to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Suffering, evil, and lament opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use a drawing, a few words or the fictional case. No public lament, theological agreement, painful
+      disclosure or positive feeling is required. Stop if the topic becomes overwhelming; use support
+      suited to your needs rather than pushing through for completion.
   pause_conditions:
   - Pause Suffering, evil, and lament when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -288,10 +357,7 @@ evidence_and_scoring:
   - c0401_a3_boundary
   - c0401_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Suffering, evil, and lament action exceeded consent, authority, privacy, qualification, role,
-    burden, or safety boundaries.
-  - The evidence contradicted the intended Suffering, evil, and lament criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - A listener insisted that suffering was deserved, secretly beneficial or evidence of insufficient faith.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Suffering, evil, and lament explicitly; support can enable access and never reduces dignity or
     silently changes the typed value.
@@ -302,14 +368,22 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Suffering, evil, and lament rules withhold observations older than 90 days;
     no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can lament without denial and continue acting without requiring a simplistic explanation.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Suffering, evil, and lament requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Describe the hurt without correcting it into a lesson. Observed checks:
+    The event and its consequences are described concretely; Loss unfairness and unanswered questions
+    are distinguished; Feeling or difficulty naming it is recorded honestly; No reassuring explanation
+    is imposed. Action 2: Make room for a response without demanding agreement. Observed checks: An acknowledgment
+    names the particular loss; Any listener freely agrees to the request; A minimizing response is distinguished
+    from acknowledgment; The experience need not resolve into a preferred emotion. Action 3: Act on a
+    need that does not depend on solving the question. Observed checks: A proportionate need and action
+    are identified; An ordinary act of care is actually attempted; Help provided and loss remaining are
+    separated; The unanswered question is not concealed by the action.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A general statement about resilience replaced acknowledgment
+    of the particular loss and no care action was attempted.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Suffering,
     evil, and lament contribution under typed evaluation; protocol performance remains distinct and is
     never counted twice.
@@ -318,9 +392,8 @@ evidence_and_scoring:
   - L03
   - L04
   - L06
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Suffering, evil, and lament evidence.
@@ -328,11 +401,18 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The choose a declared frame for suffering, evil, and lament action was attempted or explicitly deferred.
-  - The complete two bounded suffering, evil, and lament practices action was attempted or explicitly
-    deferred.
-  - The interpret the suffering, evil, and lament experience modestly action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Describe the hurt without correcting it into a lesson. Observed checks: The event and its
+    consequences are described concretely; Loss unfairness and unanswered questions are distinguished;
+    Feeling or difficulty naming it is recorded honestly; No reassuring explanation is imposed.'
+  - 'Action 2: Make room for a response without demanding agreement. Observed checks: An acknowledgment
+    names the particular loss; Any listener freely agrees to the request; A minimizing response is distinguished
+    from acknowledgment; The experience need not resolve into a preferred emotion.'
+  - 'Action 3: Act on a need that does not depend on solving the question. Observed checks: A proportionate
+    need and action are identified; An ordinary act of care is actually attempted; Help provided and loss
+    remaining are separated; The unanswered question is not concealed by the action.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -341,56 +421,58 @@ completion_and_review:
     - c0401_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Suffering, evil, and lament only when the initial context remained
-    safe, the evidence criteria were usable, burden was acceptable, and a new context can be named without
-    assuming transfer.
-  transfer_limit: Three bounded actions do not establish Suffering, evil, and lament across roles, cultures,
-    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: What was acknowledged accurately, what care remained possible, and which question
+    still deserves to remain unanswered?
+  transfer_limit: This is an exercise in honest language and humane response, not a treatment for distress
+    or a solution to evil. Lament may be religious, secular, spoken, written or silent; no explanation
+    of another person's suffering is imposed.
   reflection:
-    before: What does Suffering, evil, and lament require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Suffering, evil, and lament criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can lament without denial and continue acting without requiring
-      a simplistic explanation.', what contradiction or missing context matters most, and should this
-      Suffering, evil, and lament design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Respond to pain, injustice, tragedy or unanswered
+      questions with truthful lament and a proportionate act of care, without requiring a tidy explanation
+      before acting.'
+    during: Which checks have actually been observed? An honest lament was possible, but the offered help
+      was not wanted and the participant respected that response.
+    after: What was acknowledged accurately, what care remained possible, and which question still deserves
+      to remain unanswered?
   review_guidance:
     repeat: Repeat the same bounded Suffering, evil, and lament design only when the context and burden
       remain appropriate.
-    adapt: Change the Suffering, evil, and lament medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: Use a drawing, a few words or the fictional case. No public lament, theological agreement,
+      painful disclosure or positive feeling is required. Stop if the topic becomes overwhelming; use
+      support suited to your needs rather than pushing through for completion.
     stop: Stop Suffering, evil, and lament when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Suffering, evil, and lament questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Suffering, evil, and lament criteria were observed with provenance and no
-      adverse boundary signal in the selected context.
-    mixed: Some Suffering, evil, and lament criteria were observed while burden, support, contextual change,
-      or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Suffering, evil, and lament criterion, introduced
-      harm or coercion, or showed the design was not workable.
-    inconclusive: The Suffering, evil, and lament action was deferred, not observed, not applicable, stale,
-      insufficiently bounded, or too confounded to interpret.
+    supportive: The loss was named without a forced lesson, a wanted check-in occurred and uncertainty
+      about the future remained explicit.
+    mixed: An honest lament was possible, but the offered help was not wanted and the participant respected
+      that response.
+    contradictory: A listener insisted that suffering was deserved, secretly beneficial or evidence of
+      insufficient faith.
+    inconclusive: A general statement about resilience replaced acknowledgment of the particular loss
+      and no care action was attempted.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Suffering, evil, and lament.
+    context_heading: Name suffering honestly and choose one humane response
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Suffering,
       evil, and lament.
   check_in_labels:
-    c0401_a1_primary: The bounded Suffering, evil, and lament criterion for action 1 was observed
+    c0401_a1_primary: 'Observed checks: describe the hurt without correcting it into a lesson'
     c0401_a1_boundary: Action 1 stayed inside its stated Suffering, evil, and lament boundary
     c0401_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0401_a2_primary: The bounded Suffering, evil, and lament criterion for action 2 was observed
+    c0401_a2_primary: 'Observed checks: make room for a response without demanding agreement'
     c0401_a2_boundary: Action 2 stayed inside its stated Suffering, evil, and lament boundary
     c0401_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0401_a3_primary: The bounded Suffering, evil, and lament criterion for action 3 was observed
+    c0401_a3_primary: 'Observed checks: act on a need that does not depend on solving the question'
     c0401_a3_boundary: Action 3 stayed inside its stated Suffering, evil, and lament boundary
     c0401_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Suffering, evil, and
-    lament practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What was acknowledged accurately, what care remained possible, and which question still
+    deserves to remain unanswered? Completion is not mastery.
+  plain_language_evidence: The loss was named without a forced lesson, a wanted check-in occurred and
+    uncertainty about the future remained explicit.
   display_order: 49

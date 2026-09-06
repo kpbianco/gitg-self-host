@@ -1,8 +1,8 @@
 {
   "schema_version": "GG-TAILORED-PRACTICE-AUTHORING-1.0",
   "target": 383,
-  "authored": 54,
-  "remaining": 329,
+  "authored": 77,
+  "remaining": 306,
   "human_review_complete": 0,
   "rows": [
     {
@@ -138,117 +138,117 @@
     {
       "competency_id": "03.01",
       "name": "Metaphysical and spiritual inquiry",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "03.02",
       "name": "Serious study of a wisdom tradition",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "03.03",
       "name": "Contemplation, prayer, and silence",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "03.04",
       "name": "Reverence and the sacred",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "03.05",
       "name": "Gratitude and received life",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "03.06",
       "name": "Surrender and limits of control",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "03.07",
       "name": "Religious and spiritual community",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "03.08",
       "name": "Vocation and service beyond self",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "03.09",
       "name": "Ritual, remembrance, and sacred time",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "03.10",
       "name": "Communal worship, liturgy, and shared sacred practice",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "03.11",
       "name": "Authority, tradition, conscience, and reform",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "03.12",
       "name": "Religious pluralism and interfaith humility",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "03.13",
       "name": "Mystical, ecstatic, and peak experience",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "04.01",
       "name": "Suffering, evil, and lament",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "04.02",
       "name": "Mortality and impermanence",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "04.03",
       "name": "Tragic knowledge and the limits of control",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "04.04",
       "name": "Meaning after catastrophic loss",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "04.05",
       "name": "Absurdity, existential anxiety, and meaninglessness",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "04.06",
       "name": "Endurance without self-optimization",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "04.07",
       "name": "Moral injury and compromised action",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "04.08",
       "name": "Dying, end-of-life choices, and accompaniment",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "04.09",
       "name": "Hope without denial",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "04.10",
       "name": "Irreversibility, remorse, and living after the unfixable",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "05.01",

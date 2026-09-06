@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0410-IRREVERSIBILITY-REMORSE-AND-LIVING-AFTER-THE-UNFIXABLE-01
 slug: c0410-irreversibility-remorse-and-living-after-the-unfixable-practice
-name: Bounded Irreversibility, remorse, and living after the unfixable Practice
+name: Continue responsibility when an important consequence cannot be undone
 parent_competency_id: '04.10'
 domain_id: '04'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 04.10
-      (Irreversibility, remorse, and living after the unfixable); canonical scope, evidence target, classification,
-      domain boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 04.10; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,40 +34,44 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Irreversibility, remorse, and living after the unfixable through a artifact-and-review
-    practice bounded by the canonical scope: Learn how to continue when restitution is incomplete, opportunities
-    are gone, or consequences cannot be undone.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can accept permanent
-    consequence while continuing responsibility, service, and moral growth. The protocol creates a small
-    opportunity to examine that target without treating completion as broad capability.'
+  purpose: Distinguish irreversible consequence from remaining responsibility, make proportionate repair
+    where possible and continue service or changed conduct without demanding that remorse erase the past.
+  why_recommended: Distinguish irreversible consequence from remaining responsibility, make proportionate
+    repair where possible and continue service or changed conduct without demanding that remorse erase
+    the past.
   claims:
-  - statement: Using the canonical scope and evidence target for Irreversibility, remorse, and living
-      after the unfixable is a traceable product-design basis for a source-only draft protocol.
+  - statement: Distinguish irreversible consequence from remaining responsibility, make proportionate
+      repair where possible and continue service or changed conduct without demanding that remorse erase
+      the past.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Irreversibility, remorse, and living after the unfixable
     practice fit the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Irreversibility, remorse, and living after the unfixable as not applicable,
     consciously unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity,
     or safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Irreversibility,
-    remorse, and living after the unfixable context, understand the source-only status, and stop without
-    losing safety, care, employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Irreversibility,
-    remorse, and living after the unfixable; do not manufacture conflict, deprivation, exposure, disclosure,
-    danger, urgency, or dependence for evidence.
+  readiness_considerations: Use only the fictional note, a spoken acknowledgment or an impersonal missed-opportunity
+    case. No confession, apology delivery, self-punishment, reconciliation or forgiveness is required.
+    If the topic is overwhelming or involves legal, trauma or safety concerns, use qualified support instead
+    of escalating the exercise.
+  opportunity_considerations: 'Use this fictional case: someone carelessly discards a friend''s handwritten
+    note while tidying. The original cannot be recovered. An apology and a changed handling rule are possible,
+    but a replacement would not be the same object. No participant needs to disclose a serious regret
+    or contact a person harmed.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Irreversibility, remorse, and living
-    after the unfixable.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use this fictional case: someone carelessly discards a friend''s handwritten note while tidying.
+    The original cannot be recovered. An apology and a changed handling rule are possible, but a replacement
+    would not be the same object. No participant needs to disclose a serious regret or contact a person
+    harmed.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Irreversibility, remorse, and living
-    after the unfixable instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use only the fictional note, a spoken acknowledgment or an impersonal missed-opportunity case. No
+    confession, apology delivery, self-punishment, reconciliation or forgiveness is required. If the topic
+    is overwhelming or involves legal, trauma or safety concerns, use qualified support instead of escalating
+    the exercise.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -81,21 +84,31 @@ meaning_and_fit:
     and living after the unfixable as inferiority; competing reasonable interpretations and conscientious
     refusal remain visible.
 intervention:
-  protocol_class: PF-ARTIFACT-PLAN
+  protocol_class: PF-LONGITUDINAL-REVIEW
   duration_days: 10
-  cadence: Complete three bounded Irreversibility, remorse, and living after the unfixable actions over
-    ten days, preserving explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Irreversibility, remorse, and living after the unfixable; copy the canonical
-    scope and evidence target into a private working note; define the action boundary, valid supports,
-    privacy limit, and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Irreversibility,
-    remorse, and living after the unfixable. Do not store private prose, names, identities, diagnoses,
-    allegations, credentials, account data, protected work information, intimate detail, artifact contents,
-    observer narrative, or another person's secrets. This source-only draft is not surveillance, professional
-    advice, treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Irreversibility, remorse, and living
-    after the unfixable actions, and review; scope may be reduced or deferred for access, care, health,
-    workload, conscience, or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use this fictional case: someone carelessly discards a friend''s handwritten note while tidying.
+    The original cannot be recovered. An apology and a changed handling rule are possible, but a replacement
+    would not be the same object. No participant needs to disclose a serious regret or contact a person
+    harmed. Goal: Distinguish irreversible consequence from remaining responsibility, make proportionate
+    repair where possible and continue service or changed conduct without demanding that remorse erase
+    the past. Scope: This uses an ordinary fictional mistake, not a process for adjudicating serious wrongdoing
+    or recovering from trauma. Repair can be incomplete, forgiveness belongs to others and personal growth
+    does not cancel a consequence. Time and effort: About 20 minutes to examine the case, one bounded
+    responsibility action and a review several days later. Adaptation: Use only the fictional note, a
+    spoken acknowledgment or an impersonal missed-opportunity case. No confession, apology delivery, self-punishment,
+    reconciliation or forgiveness is required. If the topic is overwhelming or involves legal, trauma
+    or safety concerns, use qualified support instead of escalating the exercise. Keep personal working
+    notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use only the fictional note, a spoken acknowledgment or an impersonal missed-opportunity
+    case. No confession, apology delivery, self-punishment, reconciliation or forgiveness is required.
+    If the topic is overwhelming or involves legal, trauma or safety concerns, use qualified support instead
+    of escalating the exercise.
+  expected_burden: About 20 minutes to examine the case, one bounded responsibility action and a review
+    several days later.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Irreversibility, remorse, and living after the unfixable protocol to rank worth, coerce
@@ -104,19 +117,26 @@ intervention:
   - Treating a completed Irreversibility, remorse, and living after the unfixable action, a polished artifact,
     agreement, confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Irreversibility, remorse, and living after the unfixable situation involving emergency response,
-    abuse, retaliation, illegal conduct, medical treatment, legal representation, financial-loss decisions,
-    safeguarding, hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use only the
+    fictional note, a spoken acknowledgment or an impersonal missed-opportunity case. No confession, apology
+    delivery, self-punishment, reconciliation or forgiveness is required. If the topic is overwhelming
+    or involves legal, trauma or safety concerns, use qualified support instead of escalating the exercise.
   actions:
   - stable_id: PRACTICE-COMP-0410-IRREVERSIBILITY-REMORSE-AND-LIVING-AFTER-THE-UNFIXABLE-01-A1
     sequence: 1
-    title: Define a rubric for Irreversibility, remorse, and living after the unfixable
-    instructions: 'Turn the canonical scope for Irreversibility, remorse, and living after the unfixable
-      into three to five inspectable criteria: Learn how to continue when restitution is incomplete, opportunities
-      are gone, or consequences cannot be undone. Keep the rubric bounded to one current context and include
-      one criterion for uncertainty, access, or competing obligations.'
+    title: Separate the irreversible loss from what remains yours to do
+    instructions: 'Make three entries: cannot undo, can still address and do not control. In the note
+      case, the original is gone; the person can acknowledge the mistake, ask whether any practical response
+      is wanted and change how belongings are handled; they cannot require forgiveness or renewed trust.
+      State the particular responsibility without turning it into a verdict that the whole person is worthless.
+      Consider the related cases of a missed opportunity and incomplete restitution: regret may remain
+      even after an appropriate next action.
+
+
+      Observation checks: Irreversible consequence and possible action are separated; A specific responsibility
+      is acknowledged without a total worth verdict; Forgiveness and trust remain outside personal control;
+      Incomplete restitution and missed opportunity are recognized. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -138,9 +158,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0410_a1_criteria_trace_to_scope
-        - c0410_a1_context_bounded
-        - c0410_a1_constraint_included
+        - irreversible_consequence_and_possible_action_are_separated
+        - a_specific_responsibility_is_acknowledged_without_a_total_worth_verdict
+        - forgiveness_and_trust_remain_outside_personal_control
+        - incomplete_restitution_and_missed_opportunity_are_recognized
       - measurement_id: c0410_a1_boundary
         kind: boolean
         role: supporting
@@ -157,11 +178,19 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0410-IRREVERSIBILITY-REMORSE-AND-LIVING-AFTER-THE-UNFIXABLE-01-A2
     sequence: 2
-    title: Build one Irreversibility, remorse, and living after the unfixable artifact
-    instructions: Create the smallest useful plan, checklist, diagram, record, or other artifact that
-      applies the rubric for Irreversibility, remorse, and living after the unfixable. Store only category-level
-      information and omit names, secrets, credentials, diagnoses, protected work detail, and unnecessary
-      third-party information.
+    title: Define repair that respects the affected person
+    instructions: 'Draft a brief acknowledgment for the fictional case: name the mistake and consequence,
+      omit excuses, ask whether a practical response would be welcome and allow no response. Do not claim
+      a replacement will restore the original. Add a prevention rule: do not discard another person''s
+      paper or objects without permission. For a real low-stakes application within your authority, put
+      that handling rule into use or complete an already agreed small responsibility. Serious or unsafe
+      contact requires appropriate independent advice rather than an exercise-driven apology.
+
+
+      Observation checks: The acknowledgment names the consequence without erasing it; Any proposed repair
+      respects the wishes of the affected person; A prevention rule addresses the actual failure; A safe
+      ordinary responsibility action is actually taken. Mark only what you observed. Missing, mixed and
+      negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -183,9 +212,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0410_a2_artifact_matches_rubric
-        - c0410_a2_minimum_private_detail
-        - c0410_a2_usable_next_step_present
+        - the_acknowledgment_names_the_consequence_without_erasing_it
+        - any_proposed_repair_respects_the_wishes_of_the_affected_person
+        - a_prevention_rule_addresses_the_actual_failure
+        - a_safe_ordinary_responsibility_action_is_actually_taken
       - measurement_id: c0410_a2_boundary
         kind: boolean
         role: supporting
@@ -202,10 +232,39 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0410-IRREVERSIBILITY-REMORSE-AND-LIVING-AFTER-THE-UNFIXABLE-01-A3
     sequence: 3
-    title: Stress-test and revise the Irreversibility, remorse, and living after the unfixable artifact
-    instructions: 'Test the artifact against one realistic variation, counterexample, or changed constraint.
-      Revise it only where the test exposes a gap, then compare the result with this evidence target:
-      Can accept permanent consequence while continuing responsibility, service, and moral growth.'
+    title: Review continued conduct without asking it to absolve the past
+    instructions: 'Several days later, check whether the rule or responsibility was followed at an actual
+      opportunity; if none occurred, keep that part unverified. Distinguish remorse, practical learning
+      and any remaining consequence. Choose a sustainable commitment to care or service that follows the
+      value violated, such as careful treatment of shared belongings, without treating it as a purchase
+      of forgiveness. Decide what must remain acknowledged and what repetitive self-punishment does not
+      help repair. Support may be needed for continuing distress.
+
+
+      Observation checks: A later opportunity or its absence is recorded; Learning remorse and permanent
+      consequence remain distinct; Continued care is connected to the violated value; Service is not treated
+      as entitlement to forgiveness. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.
+
+
+      Final review: What cannot be restored, what responsibility continues, and how can you live that
+      responsibility without pretending either innocence or permanent worthlessness?
+
+
+      Examples: Supportive: The learner acknowledged the permanent loss, practiced a permission rule and
+      reviewed a later opportunity without treating better conduct as restoration of the original.
+
+
+      Mixed: The prevention rule was installed but had not yet faced a real opportunity, and the continuing
+      consequence remained explicit.
+
+
+      Contradictory: Good deeds were presented as buying forgiveness, a replacement was said to erase
+      the loss or remorse became an obligation to punish oneself indefinitely.
+
+
+      Inconclusive: Regret was expressed repeatedly without distinguishing consequences, proposing appropriate
+      repair or taking any responsible action.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -221,15 +280,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0410_a3_primary
-        kind: scenario
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0410_a3_variation_tested
-        - c0410_a3_revision_traceable
-        - c0410_a3_target_evidence_compared
+        - a_later_opportunity_or_its_absence_is_recorded
+        - learning_remorse_and_permanent_consequence_remain_distinct
+        - continued_care_is_connected_to_the_violated_value
+        - service_is_not_treated_as_entitlement_to_forgiveness
       - measurement_id: c0410_a3_boundary
         kind: boolean
         role: supporting
@@ -250,17 +310,19 @@ intervention:
       Irreversibility, remorse, and living after the unfixable; no purchase, subscription, travel, credential,
       or public artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Irreversibility, remorse, and living after the unfixable; assistive technology, interpretation,
-      a support person, and a deferred action are valid without penalty.
+    - Use only the fictional note, a spoken acknowledgment or an impersonal missed-opportunity case. No
+      confession, apology delivery, self-punishment, reconciliation or forgiveness is required. If the
+      topic is overwhelming or involves legal, trauma or safety concerns, use qualified support instead
+      of escalating the exercise.
     cultural_context:
     - Adapt the expression of Irreversibility, remorse, and living after the unfixable to direct or indirect
       communication, collective or individual decision structures, local norms, faith or secular commitments,
       and role obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Irreversibility, remorse, and living after the unfixable opportunity is unavailable
-      or inappropriate, use a fictional, historical, public, simulated, or planning-only equivalent and
-      retain the narrower evidence classification.
+    - Use only the fictional note, a spoken acknowledgment or an impersonal missed-opportunity case. No
+      confession, apology delivery, self-punishment, reconciliation or forgiveness is required. If the
+      topic is overwhelming or involves legal, trauma or safety concerns, use qualified support instead
+      of escalating the exercise.
   pause_conditions:
   - Pause Irreversibility, remorse, and living after the unfixable when capacity, consent, authority,
     privacy, access, care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed
@@ -293,11 +355,8 @@ evidence_and_scoring:
   - c0410_a3_boundary
   - c0410_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Irreversibility, remorse, and living after the unfixable action exceeded consent, authority, privacy,
-    qualification, role, burden, or safety boundaries.
-  - The evidence contradicted the intended Irreversibility, remorse, and living after the unfixable criterion,
-    depended on coercion or hidden private content, or could not distinguish the protocol from contextual
-    change.
+  - Good deeds were presented as buying forgiveness, a replacement was said to erase the loss or remorse
+    became an obligation to punish oneself indefinitely.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Irreversibility, remorse, and living after the unfixable explicitly; support can enable access
     and never reduces dignity or silently changes the typed value.
@@ -309,14 +368,23 @@ evidence_and_scoring:
     explicit diminishing multipliers.
   recency_rule: Generated Irreversibility, remorse, and living after the unfixable rules withhold observations
     older than 90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can accept permanent consequence while continuing responsibility, service, and moral growth.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Irreversibility, remorse, and living after the unfixable requires
-    a bounded context, allowlisted observations, provenance, contradiction and adverse handling, and preserved
-    uncertainty; free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Separate the irreversible loss from what remains yours to do. Observed
+    checks: Irreversible consequence and possible action are separated; A specific responsibility is acknowledged
+    without a total worth verdict; Forgiveness and trust remain outside personal control; Incomplete restitution
+    and missed opportunity are recognized. Action 2: Define repair that respects the affected person.
+    Observed checks: The acknowledgment names the consequence without erasing it; Any proposed repair
+    respects the wishes of the affected person; A prevention rule addresses the actual failure; A safe
+    ordinary responsibility action is actually taken. Action 3: Review continued conduct without asking
+    it to absolve the past. Observed checks: A later opportunity or its absence is recorded; Learning
+    remorse and permanent consequence remain distinct; Continued care is connected to the violated value;
+    Service is not treated as entitlement to forgiveness.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. Regret was expressed repeatedly without distinguishing
+    consequences, proposing appropriate repair or taking any responsible action.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Irreversibility,
     remorse, and living after the unfixable contribution under typed evaluation; protocol performance
     remains distinct and is never counted twice.
@@ -326,9 +394,8 @@ evidence_and_scoring:
   - L04
   - L07
   - L29
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Irreversibility, remorse, and living after the unfixable evidence.
@@ -336,12 +403,20 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The define a rubric for irreversibility, remorse, and living after the unfixable action was attempted
-    or explicitly deferred.
-  - The build one irreversibility, remorse, and living after the unfixable artifact action was attempted
-    or explicitly deferred.
-  - The stress-test and revise the irreversibility, remorse, and living after the unfixable artifact action
-    preserved a limited conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Separate the irreversible loss from what remains yours to do. Observed checks: Irreversible
+    consequence and possible action are separated; A specific responsibility is acknowledged without a
+    total worth verdict; Forgiveness and trust remain outside personal control; Incomplete restitution
+    and missed opportunity are recognized.'
+  - 'Action 2: Define repair that respects the affected person. Observed checks: The acknowledgment names
+    the consequence without erasing it; Any proposed repair respects the wishes of the affected person;
+    A prevention rule addresses the actual failure; A safe ordinary responsibility action is actually
+    taken.'
+  - 'Action 3: Review continued conduct without asking it to absolve the past. Observed checks: A later
+    opportunity or its absence is recorded; Learning remorse and permanent consequence remain distinct;
+    Continued care is connected to the violated value; Service is not treated as entitlement to forgiveness.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -350,65 +425,62 @@ completion_and_review:
     - c0410_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Irreversibility, remorse, and living after the unfixable only
-    when the initial context remained safe, the evidence criteria were usable, burden was acceptable,
-    and a new context can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Irreversibility, remorse, and living after the
-    unfixable across roles, cultures, relationships, seasons, stress levels, disability states, institutions,
-    or high-consequence settings.
+  progression_criteria: What cannot be restored, what responsibility continues, and how can you live that
+    responsibility without pretending either innocence or permanent worthlessness?
+  transfer_limit: This uses an ordinary fictional mistake, not a process for adjudicating serious wrongdoing
+    or recovering from trauma. Repair can be incomplete, forgiveness belongs to others and personal growth
+    does not cancel a consequence.
   reflection:
-    before: What does Irreversibility, remorse, and living after the unfixable require in this exact context,
-      what remains outside my role or authority, and which scope sentence or evidence criterion will keep
-      the practice honest?
-    during: Which observable Irreversibility, remorse, and living after the unfixable criterion is present,
-      absent, mixed, or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can accept permanent consequence while continuing responsibility,
-      service, and moral growth.', what contradiction or missing context matters most, and should this
-      Irreversibility, remorse, and living after the unfixable design be repeated, adapted, deferred,
-      stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Distinguish irreversible consequence from
+      remaining responsibility, make proportionate repair where possible and continue service or changed
+      conduct without demanding that remorse erase the past.'
+    during: Which checks have actually been observed? The prevention rule was installed but had not yet
+      faced a real opportunity, and the continuing consequence remained explicit.
+    after: What cannot be restored, what responsibility continues, and how can you live that responsibility
+      without pretending either innocence or permanent worthlessness?
   review_guidance:
     repeat: Repeat the same bounded Irreversibility, remorse, and living after the unfixable design only
       when the context and burden remain appropriate.
-    adapt: Change the Irreversibility, remorse, and living after the unfixable medium, scope, support,
-      timing, criteria, or context while preserving provenance and the narrower evidence claim.
+    adapt: Use only the fictional note, a spoken acknowledgment or an impersonal missed-opportunity case.
+      No confession, apology delivery, self-punishment, reconciliation or forgiveness is required. If
+      the topic is overwhelming or involves legal, trauma or safety concerns, use qualified support instead
+      of escalating the exercise.
     stop: Stop Irreversibility, remorse, and living after the unfixable when the practice becomes coercive,
       unsafe, privacy-invasive, role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Irreversibility, remorse, and living
-      after the unfixable questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Irreversibility, remorse, and living after the unfixable criteria were observed
-      with provenance and no adverse boundary signal in the selected context.
-    mixed: Some Irreversibility, remorse, and living after the unfixable criteria were observed while
-      burden, support, contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Irreversibility, remorse, and living after
-      the unfixable criterion, introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Irreversibility, remorse, and living after the unfixable action was deferred, not
-      observed, not applicable, stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The learner acknowledged the permanent loss, practiced a permission rule and reviewed
+      a later opportunity without treating better conduct as restoration of the original.
+    mixed: The prevention rule was installed but had not yet faced a real opportunity, and the continuing
+      consequence remained explicit.
+    contradictory: Good deeds were presented as buying forgiveness, a replacement was said to erase the
+      loss or remorse became an obligation to punish oneself indefinitely.
+    inconclusive: Regret was expressed repeatedly without distinguishing consequences, proposing appropriate
+      repair or taking any responsible action.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Irreversibility, remorse, and living after the unfixable.
+    context_heading: Continue responsibility when an important consequence cannot be undone
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Irreversibility,
       remorse, and living after the unfixable.
   check_in_labels:
-    c0410_a1_primary: The bounded Irreversibility, remorse, and living after the unfixable criterion for
-      action 1 was observed
+    c0410_a1_primary: 'Observed checks: separate the irreversible loss from what remains yours to do'
     c0410_a1_boundary: Action 1 stayed inside its stated Irreversibility, remorse, and living after the
       unfixable boundary
     c0410_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0410_a2_primary: The bounded Irreversibility, remorse, and living after the unfixable criterion for
-      action 2 was observed
+    c0410_a2_primary: 'Observed checks: define repair that respects the affected person'
     c0410_a2_boundary: Action 2 stayed inside its stated Irreversibility, remorse, and living after the
       unfixable boundary
     c0410_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0410_a3_primary: The bounded Irreversibility, remorse, and living after the unfixable criterion for
-      action 3 was observed
+    c0410_a3_primary: 'Observed checks: review continued conduct without asking it to absolve the past'
     c0410_a3_boundary: Action 3 stayed inside its stated Irreversibility, remorse, and living after the
       unfixable boundary
     c0410_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Irreversibility, remorse,
-    and living after the unfixable practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What cannot be restored, what responsibility continues, and how can you live that responsibility
+    without pretending either innocence or permanent worthlessness? Completion is not mastery.
+  plain_language_evidence: The learner acknowledged the permanent loss, practiced a permission rule and
+    reviewed a later opportunity without treating better conduct as restoration of the original.
   display_order: 58

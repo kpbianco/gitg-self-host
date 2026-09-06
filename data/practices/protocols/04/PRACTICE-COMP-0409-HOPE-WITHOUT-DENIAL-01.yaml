@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0409-HOPE-WITHOUT-DENIAL-01
 slug: c0409-hope-without-denial-practice
-name: Bounded Hope without denial Practice
+name: Hold a reason for hope alongside the reasons for grief
 parent_competency_id: '04.09'
 domain_id: '04'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 04.09
-      (Hope without denial); canonical scope, evidence target, classification, domain boundary, and parent
-      mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 04.09; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,38 +34,38 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Hope without denial through a qualified-support preparation bounded by the canonical
-    scope: Cultivate realistic hope grounded in relationship, possibility, faith, meaning, or action while
-    acknowledging adverse probabilities.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can name reasons for
-    hope and reasons for grief in the same situation. The protocol creates a small opportunity to examine
-    that target without treating completion as broad capability.'
+  purpose: Develop realistic hope through relationship, remaining possibility, faith, meaning or action
+    while acknowledging adverse evidence and outcomes you cannot promise.
+  why_recommended: Develop realistic hope through relationship, remaining possibility, faith, meaning
+    or action while acknowledging adverse evidence and outcomes you cannot promise.
   claims:
-  - statement: Using the canonical scope and evidence target for Hope without denial is a traceable product-design
-      basis for a source-only draft protocol.
+  - statement: Develop realistic hope through relationship, remaining possibility, faith, meaning or action
+      while acknowledging adverse evidence and outcomes you cannot promise.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Hope without denial practice fit the person's current
     role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Hope without denial as not applicable, consciously unchosen, or deferred
     without penalty when the role, pathway, capacity, authority, opportunity, or safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Hope without denial
-    context, understand the source-only status, and stop without losing safety, care, employment, housing,
-    services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Hope without
-    denial; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency, or dependence
-    for evidence.
+  readiness_considerations: Use the fictional garden, spoken columns or a neutral uncertain hobby plan.
+    Hope need not feel positive. No optimistic affirmation, religious explanation, public promise or pressure
+    on another person's grief is required.
+  opportunity_considerations: 'Use this fictional case: a community garden may lose access to its site,
+    and an appeal might fail. Members still value one another and the knowledge they share. Alternatively
+    choose a low-stakes uncertain outcome from ordinary life. Do not use an acute medical prognosis or
+    someone else''s crisis.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Hope without denial.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use this fictional case: a community garden may lose access to its site, and an appeal might fail.
+    Members still value one another and the knowledge they share. Alternatively choose a low-stakes uncertain
+    outcome from ordinary life. Do not use an acute medical prognosis or someone else''s crisis.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Hope without denial instead of
-    a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use the fictional garden, spoken columns or a neutral uncertain hobby plan. Hope need not feel positive.
+    No optimistic affirmation, religious explanation, public promise or pressure on another person's grief
+    is required.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -77,20 +76,28 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Hope without denial as inferiority;
     competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-QUALIFIED-CONSULTATION
+  protocol_class: PF-BEHAVIORAL-EXPERIMENT
   duration_days: 10
-  cadence: Complete three bounded Hope without denial actions over ten days, preserving explicit not-applicable,
-    defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Hope without denial; copy the canonical scope and evidence target into
-    a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Hope without
-    denial. Do not store private prose, names, identities, diagnoses, allegations, credentials, account
-    data, protected work information, intimate detail, artifact contents, observer narrative, or another
-    person's secrets. This source-only draft is not surveillance, professional advice, treatment, certification,
-    or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Hope without denial actions, and review;
-    scope may be reduced or deferred for access, care, health, workload, conscience, or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use this fictional case: a community garden may lose access to its site, and an appeal might
+    fail. Members still value one another and the knowledge they share. Alternatively choose a low-stakes
+    uncertain outcome from ordinary life. Do not use an acute medical prognosis or someone else''s crisis.
+    Goal: Develop realistic hope through relationship, remaining possibility, faith, meaning or action
+    while acknowledging adverse evidence and outcomes you cannot promise. Scope: Hope can concern a particular
+    outcome or how people will meet it; those are different claims. This small practice does not manufacture
+    optimism, predict recovery or require a hopeful feeling. Time and effort: About 15 minutes to map
+    the situation, one small action and a 15-minute review at a natural decision point. Adaptation: Use
+    the fictional garden, spoken columns or a neutral uncertain hobby plan. Hope need not feel positive.
+    No optimistic affirmation, religious explanation, public promise or pressure on another person''s
+    grief is required. Keep personal working notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use the fictional garden, spoken columns or a neutral uncertain hobby plan. Hope
+    need not feel positive. No optimistic affirmation, religious explanation, public promise or pressure
+    on another person's grief is required.
+  expected_burden: About 15 minutes to map the situation, one small action and a 15-minute review at a
+    natural decision point.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Hope without denial protocol to rank worth, coerce participation, demand disclosure, override
@@ -98,20 +105,25 @@ intervention:
   - Treating a completed Hope without denial action, a polished artifact, agreement, confidence, speed,
     independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Hope without denial situation involving emergency response, abuse, retaliation, illegal conduct,
-    medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous equipment,
-    or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use the fictional
+    garden, spoken columns or a neutral uncertain hobby plan. Hope need not feel positive. No optimistic
+    affirmation, religious explanation, public promise or pressure on another person's grief is required.
   actions:
   - stable_id: PRACTICE-COMP-0409-HOPE-WITHOUT-DENIAL-01-A1
     sequence: 1
-    title: Bound the qualified question for Hope without denial
-    instructions: 'Turn Hope without denial into one educational or planning question and identify the
-      qualification and jurisdiction needed to answer it. Use the canonical scope to separate general
-      learning from diagnosis, treatment, legal advice, financial advice, safeguarding decisions, or other
-      professional judgment: Cultivate realistic hope grounded in relationship, possibility, faith, meaning,
-      or action while acknowledging adverse probabilities.'
+    title: Write the hopeful and adverse evidence on the same page
+    instructions: 'Use two columns: reasons this outcome might improve, and reasons it might not. Mark
+      facts, interpretations and unknowns in each. In the garden case, a review meeting is possible but
+      continued access has not been promised. Add a separate line for what is already worth grieving.
+      Name at least one kind of hope beyond winning the appeal, such as remaining connected or preserving
+      knowledge, without claiming it replaces the lost place. Do not invent numerical odds; use them only
+      if a trustworthy relevant source supplies them.
+
+
+      Observation checks: Hopeful and adverse considerations are both concrete; Facts assumptions and
+      unknowns are distinguished; A reason for grief is acknowledged; Outcome hope is separated from hope
+      about response. Mark only what you observed. Missing, mixed and negative results are valid; a deferred
+      action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -133,9 +145,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0409_a1_question_bounded
-        - c0409_a1_qualification_named
-        - c0409_a1_professional_boundary_explicit
+        - hopeful_and_adverse_considerations_are_both_concrete
+        - facts_assumptions_and_unknowns_are_distinguished
+        - a_reason_for_grief_is_acknowledged
+        - outcome_hope_is_separated_from_hope_about_response
       - measurement_id: c0409_a1_boundary
         kind: boolean
         role: supporting
@@ -152,11 +165,19 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0409-HOPE-WITHOUT-DENIAL-01-A2
     sequence: 2
-    title: Prepare minimum information for Hope without denial
-    instructions: Create a privacy-minimized Hope without denial consultation note containing only the
-      question, relevant category-level facts, current constraints, and desired decision. Omit diagnoses,
-      allegations, account numbers, credentials, protected work information, intimate detail, and third-party
-      identity unless a qualified professional lawfully requires it through an appropriate channel.
+    title: Choose an action justified under more than one outcome
+    instructions: 'For the case, design a modest plan to preserve a shared planting note and ask permission
+      before sharing it. For a real ordinary application, do one useful action that remains worthwhile
+      whether the preferred outcome happens or not, such as keeping a wanted connection or making accurate
+      information easier to find. State how relationship, faith, meaning or practical possibility supports
+      the action if that is genuinely your reason. Do not make others reassure you or commit to the same
+      belief in order to participate.
+
+
+      Observation checks: The action remains useful under different outcomes; A real ordinary action is
+      attempted; Its reason for hope is honestly stated; Others are not required to supply reassurance
+      or agreement. Mark only what you observed. Missing, mixed and negative results are valid; a deferred
+      action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -178,9 +199,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0409_a2_minimum_information_only
-        - c0409_a2_sensitive_detail_excluded
-        - c0409_a2_decision_need_named
+        - the_action_remains_useful_under_different_outcomes
+        - a_real_ordinary_action_is_attempted
+        - its_reason_for_hope_is_honestly_stated
+        - others_are_not_required_to_supply_reassurance_or_agreement
       - measurement_id: c0409_a2_boundary
         kind: boolean
         role: supporting
@@ -197,11 +219,39 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0409-HOPE-WITHOUT-DENIAL-01-A3
     sequence: 3
-    title: Record a bounded Hope without denial disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: Can name reasons for hope and reasons for grief in the same situation.'
+    title: Update hope when new information arrives
+    instructions: 'At the decision point, add the actual result or state that it remains unknown. Revise
+      the preferred-outcome expectation in light of evidence, and review what the action accomplished.
+      Keep grief and disappointment visible even if some hope remains. If the outcome fails, identify
+      whether a relationship, responsibility or possible next step still warrants care; if none is clear,
+      uncertainty and rest are acceptable. Do not reinterpret a failed prediction as proof that it was
+      secretly guaranteed all along.
+
+
+      Observation checks: New information changes the expectation when appropriate; The action is evaluated
+      by its actual effect; Grief and any remaining hope can coexist; The conclusion avoids guaranteed
+      or unfalsifiable reassurance. Mark only what you observed. Missing, mixed and negative results are
+      valid; a deferred action is not completed.
+
+
+      Final review: What can you reasonably hope for, what must you still grieve, and what action remains
+      worthwhile without a guarantee?
+
+
+      Examples: Supportive: The appeal failed, the loss was acknowledged and a wanted connection and shared
+      knowledge remained worth preserving without pretending the loss was good.
+
+
+      Mixed: The useful action occurred but the outcome was still unknown, so both confidence and disappointment
+      remained provisional.
+
+
+      Contradictory: Adverse evidence was hidden to protect optimism or someone was blamed for an outcome
+      because they did not hope or pray hard enough.
+
+
+      Inconclusive: A reassuring prediction was repeated without considering evidence, grief or any worthwhile
+      action.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -217,14 +267,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0409_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0409_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - new_information_changes_the_expectation_when_appropriate
+        - the_action_is_evaluated_by_its_actual_effect
+        - grief_and_any_remaining_hope_can_coexist
+        - the_conclusion_avoids_guaranteed_or_unfalsifiable_reassurance
       - measurement_id: c0409_a3_boundary
         kind: boolean
         role: supporting
@@ -244,16 +296,17 @@ intervention:
     - Use paper, an offline note, a library resource, a public example, or a no-cost conversation for
       Hope without denial; no purchase, subscription, travel, credential, or public artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Hope without denial; assistive technology, interpretation, a support person, and a deferred
-      action are valid without penalty.
+    - Use the fictional garden, spoken columns or a neutral uncertain hobby plan. Hope need not feel positive.
+      No optimistic affirmation, religious explanation, public promise or pressure on another person's
+      grief is required.
     cultural_context:
     - Adapt the expression of Hope without denial to direct or indirect communication, collective or individual
       decision structures, local norms, faith or secular commitments, and role obligations while preserving
       consent and dignity.
     resource_variants:
-    - When a real Hope without denial opportunity is unavailable or inappropriate, use a fictional, historical,
-      public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use the fictional garden, spoken columns or a neutral uncertain hobby plan. Hope need not feel positive.
+      No optimistic affirmation, religious explanation, public promise or pressure on another person's
+      grief is required.
   pause_conditions:
   - Pause Hope without denial when capacity, consent, authority, privacy, access, care duties, uncertainty,
     distress, fatigue, pain, resource scarcity, or changed circumstances make the next action unwise.
@@ -283,10 +336,8 @@ evidence_and_scoring:
   - c0409_a3_boundary
   - c0409_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Hope without denial action exceeded consent, authority, privacy, qualification, role, burden,
-    or safety boundaries.
-  - The evidence contradicted the intended Hope without denial criterion, depended on coercion or hidden
-    private content, or could not distinguish the protocol from contextual change.
+  - Adverse evidence was hidden to protect optimism or someone was blamed for an outcome because they
+    did not hope or pray hard enough.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Hope without denial explicitly; support can enable access and never reduces dignity or silently
     changes the typed value.
@@ -296,14 +347,22 @@ evidence_and_scoring:
     origins are rejected and later repetitions use the typed contract's explicit diminishing multipliers.
   recency_rule: Generated Hope without denial rules withhold observations older than 90 days; no unrecorded
     retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can name reasons for hope and reasons for grief in the same situation.—not completion, confidence,
-    conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Hope without denial requires a bounded context, allowlisted observations,
-    provenance, contradiction and adverse handling, and preserved uncertainty; free text and artifact
-    contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Write the hopeful and adverse evidence on the same page. Observed checks:
+    Hopeful and adverse considerations are both concrete; Facts assumptions and unknowns are distinguished;
+    A reason for grief is acknowledged; Outcome hope is separated from hope about response. Action 2:
+    Choose an action justified under more than one outcome. Observed checks: The action remains useful
+    under different outcomes; A real ordinary action is attempted; Its reason for hope is honestly stated;
+    Others are not required to supply reassurance or agreement. Action 3: Update hope when new information
+    arrives. Observed checks: New information changes the expectation when appropriate; The action is
+    evaluated by its actual effect; Grief and any remaining hope can coexist; The conclusion avoids guaranteed
+    or unfalsifiable reassurance.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A reassuring prediction was repeated without considering
+    evidence, grief or any worthwhile action.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Hope without
     denial contribution under typed evaluation; protocol performance remains distinct and is never counted
     twice.
@@ -312,9 +371,8 @@ evidence_and_scoring:
   - L04
   - L07
   - L13
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Hope without denial evidence.
@@ -322,10 +380,18 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for hope without denial action was attempted or explicitly deferred.
-  - The prepare minimum information for hope without denial action was attempted or explicitly deferred.
-  - The record a bounded hope without denial disposition action preserved a limited conclusion, contradiction,
-    or inconclusive result.
+  - 'Action 1: Write the hopeful and adverse evidence on the same page. Observed checks: Hopeful and adverse
+    considerations are both concrete; Facts assumptions and unknowns are distinguished; A reason for grief
+    is acknowledged; Outcome hope is separated from hope about response.'
+  - 'Action 2: Choose an action justified under more than one outcome. Observed checks: The action remains
+    useful under different outcomes; A real ordinary action is attempted; Its reason for hope is honestly
+    stated; Others are not required to supply reassurance or agreement.'
+  - 'Action 3: Update hope when new information arrives. Observed checks: New information changes the
+    expectation when appropriate; The action is evaluated by its actual effect; Grief and any remaining
+    hope can coexist; The conclusion avoids guaranteed or unfalsifiable reassurance.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -334,56 +400,57 @@ completion_and_review:
     - c0409_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Hope without denial only when the initial context remained safe,
-    the evidence criteria were usable, burden was acceptable, and a new context can be named without assuming
-    transfer.
-  transfer_limit: Three bounded actions do not establish Hope without denial across roles, cultures, relationships,
-    seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: What can you reasonably hope for, what must you still grieve, and what action
+    remains worthwhile without a guarantee?
+  transfer_limit: Hope can concern a particular outcome or how people will meet it; those are different
+    claims. This small practice does not manufacture optimism, predict recovery or require a hopeful feeling.
   reflection:
-    before: What does Hope without denial require in this exact context, what remains outside my role
-      or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Hope without denial criterion is present, absent, mixed, or unknown, and
-      are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can name reasons for hope and reasons for grief in the same
-      situation.', what contradiction or missing context matters most, and should this Hope without denial
-      design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Develop realistic hope through relationship,
+      remaining possibility, faith, meaning or action while acknowledging adverse evidence and outcomes
+      you cannot promise.'
+    during: Which checks have actually been observed? The useful action occurred but the outcome was still
+      unknown, so both confidence and disappointment remained provisional.
+    after: What can you reasonably hope for, what must you still grieve, and what action remains worthwhile
+      without a guarantee?
   review_guidance:
     repeat: Repeat the same bounded Hope without denial design only when the context and burden remain
       appropriate.
-    adapt: Change the Hope without denial medium, scope, support, timing, criteria, or context while preserving
-      provenance and the narrower evidence claim.
+    adapt: Use the fictional garden, spoken columns or a neutral uncertain hobby plan. Hope need not feel
+      positive. No optimistic affirmation, religious explanation, public promise or pressure on another
+      person's grief is required.
     stop: Stop Hope without denial when the practice becomes coercive, unsafe, privacy-invasive, role-inappropriate,
       professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Hope without denial questions beyond
-      this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Hope without denial criteria were observed with provenance and no adverse
-      boundary signal in the selected context.
-    mixed: Some Hope without denial criteria were observed while burden, support, contextual change, or
-      a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Hope without denial criterion, introduced
-      harm or coercion, or showed the design was not workable.
-    inconclusive: The Hope without denial action was deferred, not observed, not applicable, stale, insufficiently
-      bounded, or too confounded to interpret.
+    supportive: The appeal failed, the loss was acknowledged and a wanted connection and shared knowledge
+      remained worth preserving without pretending the loss was good.
+    mixed: The useful action occurred but the outcome was still unknown, so both confidence and disappointment
+      remained provisional.
+    contradictory: Adverse evidence was hidden to protect optimism or someone was blamed for an outcome
+      because they did not hope or pray hard enough.
+    inconclusive: A reassuring prediction was repeated without considering evidence, grief or any worthwhile
+      action.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Hope without denial.
+    context_heading: Hold a reason for hope alongside the reasons for grief
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Hope without
       denial.
   check_in_labels:
-    c0409_a1_primary: The bounded Hope without denial criterion for action 1 was observed
+    c0409_a1_primary: 'Observed checks: write the hopeful and adverse evidence on the same page'
     c0409_a1_boundary: Action 1 stayed inside its stated Hope without denial boundary
     c0409_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0409_a2_primary: The bounded Hope without denial criterion for action 2 was observed
+    c0409_a2_primary: 'Observed checks: choose an action justified under more than one outcome'
     c0409_a2_boundary: Action 2 stayed inside its stated Hope without denial boundary
     c0409_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0409_a3_primary: The bounded Hope without denial criterion for action 3 was observed
+    c0409_a3_primary: 'Observed checks: update hope when new information arrives'
     c0409_a3_boundary: Action 3 stayed inside its stated Hope without denial boundary
     c0409_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Hope without denial
-    practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What can you reasonably hope for, what must you still grieve, and what action remains
+    worthwhile without a guarantee? Completion is not mastery.
+  plain_language_evidence: The appeal failed, the loss was acknowledged and a wanted connection and shared
+    knowledge remained worth preserving without pretending the loss was good.
   display_order: 57

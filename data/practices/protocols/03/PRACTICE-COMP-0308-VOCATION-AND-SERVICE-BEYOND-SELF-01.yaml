@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0308-VOCATION-AND-SERVICE-BEYOND-SELF-01
 slug: c0308-vocation-and-service-beyond-self-practice
-name: Bounded Vocation and service beyond self Practice
+name: Make a sustainable commitment to a good beyond yourself
 parent_competency_id: '03.08'
 domain_id: '03'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 03.08
-      (Vocation and service beyond self); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 03.08; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +34,44 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Vocation and service beyond self through a pluralist meaning practice bounded by
-    the canonical scope: Commit to a truth, God, community, craft, cause, future generation, or common
-    good that places real demands on the self.'
-  why_recommended: 'The parent competency identifies this limited evidence target: The commitment alters
-    allocation of time, comfort, money, or status. The protocol creates a small opportunity to examine
-    that target without treating completion as broad capability.'
+  purpose: Choose a freely endorsed commitment to truth, faith, community, craft, a cause or future people
+    and let it make a real, proportionate claim on your time, comfort, resources or status.
+  why_recommended: Choose a freely endorsed commitment to truth, faith, community, craft, a cause or future
+    people and let it make a real, proportionate claim on your time, comfort, resources or status.
   claims:
-  - statement: Using the canonical scope and evidence target for Vocation and service beyond self is a
-      traceable product-design basis for a source-only draft protocol.
+  - statement: Choose a freely endorsed commitment to truth, faith, community, craft, a cause or future
+      people and let it make a real, proportionate claim on your time, comfort, resources or status.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Vocation and service beyond self practice fit the
     person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Vocation and service beyond self as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Vocation and service
-    beyond self context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Vocation
-    and service beyond self; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Offer spoken or large-print instructions, a simple diagram or another requested
+    accessible format. Use a familiar safe item and the authority you actually have. No money, unpaid
+    professional work, recruitment, public credit or irreversible life commitment is required. A private
+    future-use guide does not count as observed benefit to a community.
+  opportunity_considerations: Choose a good you actually endorse and an appropriate recipient or future
+    user. The default is preparing a clear care-and-return instruction card for a shared item, with the
+    responsible person's permission. Use an item you know how to handle safely; do not invent technical
+    instructions. A private reusable guide for your future household can substitute when no shared setting
+    is available, with its narrower benefit stated.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Vocation and service beyond self.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Choose a good you actually endorse and an appropriate recipient or future user. The default is preparing
+    a clear care-and-return instruction card for a shared item, with the responsible person's permission.
+    Use an item you know how to handle safely; do not invent technical instructions. A private reusable
+    guide for your future household can substitute when no shared setting is available, with its narrower
+    benefit stated.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Vocation and service beyond self
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Offer spoken or large-print instructions, a simple diagram or another requested accessible format.
+    Use a familiar safe item and the authority you actually have. No money, unpaid professional work,
+    recruitment, public credit or irreversible life commitment is required. A private future-use guide
+    does not count as observed benefit to a community.
   role_conditions:
   - This competency is pathway dependent; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +83,32 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Vocation and service beyond
     self as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-CONTEMPLATIVE-MEANING
+  protocol_class: PF-COMMUNITY-CONTRIBUTION
   duration_days: 10
-  cadence: Complete three bounded Vocation and service beyond self actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Vocation and service beyond self; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Vocation
-    and service beyond self. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Vocation and service beyond self actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose a good you actually endorse and an appropriate recipient or future user. The default
+    is preparing a clear care-and-return instruction card for a shared item, with the responsible person''s
+    permission. Use an item you know how to handle safely; do not invent technical instructions. A private
+    reusable guide for your future household can substitute when no shared setting is available, with
+    its narrower benefit stated. Goal: Choose a freely endorsed commitment to truth, faith, community,
+    craft, a cause or future people and let it make a real, proportionate claim on your time, comfort,
+    resources or status. Scope: A small completed commitment tests service and follow-through, not discovery
+    of a permanent calling or the moral value of a person. Service must meet a real use rather than treating
+    recipients as props for identity. Time and effort: About 20 minutes to choose and agree the work,
+    two 15-minute work periods within a week, and a 15-minute review. Adaptation: Offer spoken or large-print
+    instructions, a simple diagram or another requested accessible format. Use a familiar safe item and
+    the authority you actually have. No money, unpaid professional work, recruitment, public credit or
+    irreversible life commitment is required. A private future-use guide does not count as observed benefit
+    to a community. Keep personal working notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Offer spoken or large-print instructions, a simple diagram or another requested
+    accessible format. Use a familiar safe item and the authority you actually have. No money, unpaid
+    professional work, recruitment, public credit or irreversible life commitment is required. A private
+    future-use guide does not count as observed benefit to a community.
+  expected_burden: About 20 minutes to choose and agree the work, two 15-minute work periods within a
+    week, and a 15-minute review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Vocation and service beyond self protocol to rank worth, coerce participation, demand disclosure,
@@ -101,19 +116,27 @@ intervention:
   - Treating a completed Vocation and service beyond self action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Vocation and service beyond self situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Offer spoken
+    or large-print instructions, a simple diagram or another requested accessible format. Use a familiar
+    safe item and the authority you actually have. No money, unpaid professional work, recruitment, public
+    credit or irreversible life commitment is required. A private future-use guide does not count as observed
+    benefit to a community.
   actions:
   - stable_id: PRACTICE-COMP-0308-VOCATION-AND-SERVICE-BEYOND-SELF-01-A1
     sequence: 1
-    title: Choose a declared frame for Vocation and service beyond self
-    instructions: 'Select a religious, spiritual, philosophical, cultural, or secular frame through which
-      to explore Vocation and service beyond self. State the frame, one alternative, and the limits of
-      personal authority using this canonical scope: Commit to a truth, God, community, craft, cause,
-      future generation, or common good that places real demands on the self.'
+    title: Turn a large cause into a useful and bounded promise
+    instructions: 'Name which good calls for your effort and who or what should benefit. Confirm one real
+      need with the responsible person or observable use, such as repeated uncertainty about where a shared
+      item belongs. Define a small deliverable, its recipient, an agreement or authority to act, and a
+      finish date. Identify the real cost: two short blocks that displace optional leisure, a minor inconvenience,
+      or giving another contributor due credit. Protect essential needs and existing commitments; a demanding
+      promise is not automatically a better one.
+
+
+      Observation checks: A chosen good has a specific beneficiary or future use; A real need and permission
+      are checked; A deliverable and finish date are explicit; A proportionate cost is acknowledged without
+      neglecting duties. Mark only what you observed. Missing, mixed and negative results are valid; a
+      deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -129,15 +152,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0308_a1_primary
-        kind: conceptual
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0308_a1_frame_declared
-        - c0308_a1_alternative_acknowledged
-        - c0308_a1_authority_limited
+        - a_chosen_good_has_a_specific_beneficiary_or_future_use
+        - a_real_need_and_permission_are_checked
+        - a_deliverable_and_finish_date_are_explicit
+        - a_proportionate_cost_is_acknowledged_without_neglecting_duties
       - measurement_id: c0308_a1_boundary
         kind: boolean
         role: supporting
@@ -154,11 +178,19 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0308-VOCATION-AND-SERVICE-BEYOND-SELF-01-A2
     sequence: 2
-    title: Complete two bounded Vocation and service beyond self practices
-    instructions: Complete two short, freely chosen Vocation and service beyond self practices appropriate
-      to the declared frame, such as reading, silence, prayer, observation, ritual, dialogue, or reflection.
-      Stop for distress, coercion, altered-state risk, conscience conflict, or pressure from an authority
-      or group.
+    title: Deliver something another person can actually use
+    instructions: 'Use the first work period to make the instruction card: where the item is kept, how
+      an authorized user checks it, and how it is returned or a problem reported. Verify each statement
+      from known instructions or the responsible person. Use the second period to check readability and
+      completeness with an intended user if willing, then hand it over or place it only where permitted.
+      Credit contributions. Keep promises small enough to finish rather than turning the work into an
+      impressive public project.
+
+
+      Observation checks: The promised work receives both actual work periods; Content or workmanship
+      is checked against its intended use; The deliverable reaches the agreed recipient or place; Other
+      contributions and permissions are respected. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -174,15 +206,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0308_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - the_promised_work_receives_both_actual_work_periods
+        - content_or_workmanship_is_checked_against_its_intended_use
+        - the_deliverable_reaches_the_agreed_recipient_or_place
+        - other_contributions_and_permissions_are_respected
       - measurement_id: c0308_a2_boundary
         kind: boolean
         role: supporting
@@ -199,10 +232,38 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0308-VOCATION-AND-SERVICE-BEYOND-SELF-01-A3
     sequence: 3
-    title: Interpret the Vocation and service beyond self experience modestly
-    instructions: 'Review what was noticed without treating intensity, calm, certainty, group agreement,
-      or unusual experience as automatic truth. Compare the limited record with this evidence target:
-      The commitment alters allocation of time, comfort, money, or status.'
+    title: Review service against benefit and actual cost
+    instructions: 'Ask whether the deliverable was useful, or record that actual use remains unknown.
+      Compare the time and convenience you gave up with the promise and the needs it served. Identify
+      one correction, such as a missing return location, and make it if still within scope. Decide whether
+      this commitment deserves continuation, a different form or a clear ending. A negative review of
+      the deliverable is information about service, not proof that you lack a vocation.
+
+
+      Observation checks: Benefit is checked or explicitly remains unknown; Actual sacrifice is compared
+      with the promise; A needed bounded correction is addressed; Continuation or closure has a reason.
+      Mark only what you observed. Missing, mixed and negative results are valid; a deferred action is
+      not completed.
+
+
+      Final review: What received something useful, what did the commitment really cost, and what would
+      justify continuing it?
+
+
+      Examples: Supportive: Two short leisure periods produced a checked return card that an intended
+      user could follow, and a missing location was corrected.
+
+
+      Mixed: The work was delivered and cost real effort, but no later use had occurred, so benefit remained
+      unverified.
+
+
+      Contradictory: The helper ignored the recipient''s actual request, sought recognition over usefulness
+      or neglected essential responsibilities to prove devotion.
+
+
+      Inconclusive: A noble cause and intended sacrifice were described without completing an agreed piece
+      of work.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -224,9 +285,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0308_a3_experience_and_interpretation_separated
-        - c0308_a3_alternative_explanation_retained
-        - c0308_a3_target_evidence_compared
+        - benefit_is_checked_or_explicitly_remains_unknown
+        - actual_sacrifice_is_compared_with_the_promise
+        - a_needed_bounded_correction_is_addressed
+        - continuation_or_closure_has_a_reason
       - measurement_id: c0308_a3_boundary
         kind: boolean
         role: supporting
@@ -247,17 +309,19 @@ intervention:
       Vocation and service beyond self; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Vocation and service beyond self; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - Offer spoken or large-print instructions, a simple diagram or another requested accessible format.
+      Use a familiar safe item and the authority you actually have. No money, unpaid professional work,
+      recruitment, public credit or irreversible life commitment is required. A private future-use guide
+      does not count as observed benefit to a community.
     cultural_context:
     - Adapt the expression of Vocation and service beyond self to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Vocation and service beyond self opportunity is unavailable or inappropriate, use a
-      fictional, historical, public, simulated, or planning-only equivalent and retain the narrower evidence
-      classification.
+    - Offer spoken or large-print instructions, a simple diagram or another requested accessible format.
+      Use a familiar safe item and the authority you actually have. No money, unpaid professional work,
+      recruitment, public credit or irreversible life commitment is required. A private future-use guide
+      does not count as observed benefit to a community.
   pause_conditions:
   - Pause Vocation and service beyond self when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -289,10 +353,8 @@ evidence_and_scoring:
   - c0308_a3_boundary
   - c0308_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Vocation and service beyond self action exceeded consent, authority, privacy, qualification, role,
-    burden, or safety boundaries.
-  - The evidence contradicted the intended Vocation and service beyond self criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - The helper ignored the recipient's actual request, sought recognition over usefulness or neglected
+    essential responsibilities to prove devotion.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Vocation and service beyond self explicitly; support can enable access and never reduces dignity
     or silently changes the typed value.
@@ -303,14 +365,22 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Vocation and service beyond self rules withhold observations older than 90 days;
     no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—The commitment alters allocation of time, comfort, money, or status.—not completion, confidence,
-    conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Vocation and service beyond self requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Turn a large cause into a useful and bounded promise. Observed checks:
+    A chosen good has a specific beneficiary or future use; A real need and permission are checked; A
+    deliverable and finish date are explicit; A proportionate cost is acknowledged without neglecting
+    duties. Action 2: Deliver something another person can actually use. Observed checks: The promised
+    work receives both actual work periods; Content or workmanship is checked against its intended use;
+    The deliverable reaches the agreed recipient or place; Other contributions and permissions are respected.
+    Action 3: Review service against benefit and actual cost. Observed checks: Benefit is checked or explicitly
+    remains unknown; Actual sacrifice is compared with the promise; A needed bounded correction is addressed;
+    Continuation or closure has a reason.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A noble cause and intended sacrifice were described
+    without completing an agreed piece of work.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Vocation
     and service beyond self contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -320,9 +390,8 @@ evidence_and_scoring:
   - L03
   - L30
   - L32
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Vocation and service beyond self evidence.
@@ -330,12 +399,18 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The choose a declared frame for vocation and service beyond self action was attempted or explicitly
-    deferred.
-  - The complete two bounded vocation and service beyond self practices action was attempted or explicitly
-    deferred.
-  - The interpret the vocation and service beyond self experience modestly action preserved a limited
-    conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Turn a large cause into a useful and bounded promise. Observed checks: A chosen good has
+    a specific beneficiary or future use; A real need and permission are checked; A deliverable and finish
+    date are explicit; A proportionate cost is acknowledged without neglecting duties.'
+  - 'Action 2: Deliver something another person can actually use. Observed checks: The promised work receives
+    both actual work periods; Content or workmanship is checked against its intended use; The deliverable
+    reaches the agreed recipient or place; Other contributions and permissions are respected.'
+  - 'Action 3: Review service against benefit and actual cost. Observed checks: Benefit is checked or
+    explicitly remains unknown; Actual sacrifice is compared with the promise; A needed bounded correction
+    is addressed; Continuation or closure has a reason.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -344,57 +419,59 @@ completion_and_review:
     - c0308_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Vocation and service beyond self only when the initial context
-    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
-    named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Vocation and service beyond self across roles,
-    cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: What received something useful, what did the commitment really cost, and what
+    would justify continuing it?
+  transfer_limit: A small completed commitment tests service and follow-through, not discovery of a permanent
+    calling or the moral value of a person. Service must meet a real use rather than treating recipients
+    as props for identity.
   reflection:
-    before: What does Vocation and service beyond self require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Vocation and service beyond self criterion is present, absent, mixed, or
-      unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'The commitment alters allocation of time, comfort, money,
-      or status.', what contradiction or missing context matters most, and should this Vocation and service
-      beyond self design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Choose a freely endorsed commitment to truth,
+      faith, community, craft, a cause or future people and let it make a real, proportionate claim on
+      your time, comfort, resources or status.'
+    during: Which checks have actually been observed? The work was delivered and cost real effort, but
+      no later use had occurred, so benefit remained unverified.
+    after: What received something useful, what did the commitment really cost, and what would justify
+      continuing it?
   review_guidance:
     repeat: Repeat the same bounded Vocation and service beyond self design only when the context and
       burden remain appropriate.
-    adapt: Change the Vocation and service beyond self medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: Offer spoken or large-print instructions, a simple diagram or another requested accessible
+      format. Use a familiar safe item and the authority you actually have. No money, unpaid professional
+      work, recruitment, public credit or irreversible life commitment is required. A private future-use
+      guide does not count as observed benefit to a community.
     stop: Stop Vocation and service beyond self when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Vocation and service beyond self questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Vocation and service beyond self criteria were observed with provenance and
-      no adverse boundary signal in the selected context.
-    mixed: Some Vocation and service beyond self criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Vocation and service beyond self criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Vocation and service beyond self action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: Two short leisure periods produced a checked return card that an intended user could follow,
+      and a missing location was corrected.
+    mixed: The work was delivered and cost real effort, but no later use had occurred, so benefit remained
+      unverified.
+    contradictory: The helper ignored the recipient's actual request, sought recognition over usefulness
+      or neglected essential responsibilities to prove devotion.
+    inconclusive: A noble cause and intended sacrifice were described without completing an agreed piece
+      of work.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Vocation and service beyond self.
+    context_heading: Make a sustainable commitment to a good beyond yourself
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Vocation
       and service beyond self.
   check_in_labels:
-    c0308_a1_primary: The bounded Vocation and service beyond self criterion for action 1 was observed
+    c0308_a1_primary: 'Observed checks: turn a large cause into a useful and bounded promise'
     c0308_a1_boundary: Action 1 stayed inside its stated Vocation and service beyond self boundary
     c0308_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0308_a2_primary: The bounded Vocation and service beyond self criterion for action 2 was observed
+    c0308_a2_primary: 'Observed checks: deliver something another person can actually use'
     c0308_a2_boundary: Action 2 stayed inside its stated Vocation and service beyond self boundary
     c0308_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0308_a3_primary: The bounded Vocation and service beyond self criterion for action 3 was observed
+    c0308_a3_primary: 'Observed checks: review service against benefit and actual cost'
     c0308_a3_boundary: Action 3 stayed inside its stated Vocation and service beyond self boundary
     c0308_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Vocation and service
-    beyond self practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What received something useful, what did the commitment really cost, and what would
+    justify continuing it? Completion is not mastery.
+  plain_language_evidence: Two short leisure periods produced a checked return card that an intended user
+    could follow, and a missing location was corrected.
   display_order: 43
