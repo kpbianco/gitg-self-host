@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0805-TOLERANCE-OF-DISCOMFORT-01
 slug: c0805-tolerance-of-discomfort-practice
-name: Bounded Tolerance of discomfort Practice
+name: Finish a small worthwhile task while allowing ordinary discomfort
 parent_competency_id: '08.05'
 domain_id: 08
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 08.05
-      (Tolerance of discomfort); canonical scope, evidence target, classification, domain boundary, and
-      parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 08.05; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +34,39 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Tolerance of discomfort through a bounded audit and redesign bounded by the canonical
-    scope: Remain present with boredom, uncertainty, frustration, embarrassment, fatigue, craving, and
-    temporary pain.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Completes worthwhile
-    action while discomfort is present and reviews what was learned. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Distinguish tolerable ordinary discomfort from a reason to stop, then complete a bounded useful
+    action without requiring boredom or frustration to disappear.
+  why_recommended: Distinguish tolerable ordinary discomfort from a reason to stop, then complete a bounded
+    useful action without requiring boredom or frustration to disappear.
   claims:
-  - statement: Using the canonical scope and evidence target for Tolerance of discomfort is a traceable
-      product-design basis for a source-only draft protocol.
+  - statement: Distinguish tolerable ordinary discomfort from a reason to stop, then complete a bounded
+      useful action without requiring boredom or frustration to disappear.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Tolerance of discomfort practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Tolerance of discomfort as not applicable, consciously unchosen, or
     deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Tolerance of discomfort
-    context, understand the source-only status, and stop without losing safety, care, employment, housing,
-    services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Tolerance
-    of discomfort; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency, or
-    dependence for evidence.
+  readiness_considerations: Use dictation, symbols or a helper transcribing your choices. Do not select
+    an activity that aggravates pain or requires ignoring care guidance. A task completed without discomfort
+    shows task performance only.
+  opportunity_considerations: 'Use this two-minute task: rewrite the vague note Bring the stuff later
+    into an actionable reminder naming the item, time and destination. Supply these facts: library book,
+    tomorrow at 3 pm, front desk. Paper or dictation is sufficient. If you use a personal task, make it
+    comparably small and appropriate.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Tolerance of discomfort.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use this two-minute task: rewrite the vague note Bring the stuff later into an actionable reminder
+    naming the item, time and destination. Supply these facts: library book, tomorrow at 3 pm, front desk.
+    Paper or dictation is sufficient. If you use a personal task, make it comparably small and appropriate.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Tolerance of discomfort instead
-    of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use dictation, symbols or a helper transcribing your choices. Do not select an activity that aggravates
+    pain or requires ignoring care guidance. A task completed without discomfort shows task performance
+    only.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -78,21 +77,26 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Tolerance of discomfort as
     inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-AUDIT-REDESIGN
+  protocol_class: PF-SKILL-REHEARSAL
   duration_days: 10
-  cadence: Complete three bounded Tolerance of discomfort actions over ten days, preserving explicit not-applicable,
-    defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Tolerance of discomfort; copy the canonical scope and evidence target
-    into a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Tolerance
-    of discomfort. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Tolerance of discomfort actions, and
-    review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use this two-minute task: rewrite the vague note Bring the stuff later into an actionable reminder
+    naming the item, time and destination. Supply these facts: library book, tomorrow at 3 pm, front desk.
+    Paper or dictation is sufficient. If you use a personal task, make it comparably small and appropriate.
+    Goal: Distinguish tolerable ordinary discomfort from a reason to stop, then complete a bounded useful
+    action without requiring boredom or frustration to disappear. Scope: This exercise uses low-stakes
+    boredom or uncertainty, not pain exposure, exhaustion training or a test of how much distress someone
+    can endure. Time and effort: About 10 minutes including preparation, the bounded task and review.
+    Adaptation: Use dictation, symbols or a helper transcribing your choices. Do not select an activity
+    that aggravates pain or requires ignoring care guidance. A task completed without discomfort shows
+    task performance only. Keep personal working notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use dictation, symbols or a helper transcribing your choices. Do not select an
+    activity that aggravates pain or requires ignoring care guidance. A task completed without discomfort
+    shows task performance only.
+  expected_burden: About 10 minutes including preparation, the bounded task and review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Tolerance of discomfort protocol to rank worth, coerce participation, demand disclosure,
@@ -100,18 +104,25 @@ intervention:
   - Treating a completed Tolerance of discomfort action, a polished artifact, agreement, confidence, speed,
     independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Tolerance of discomfort situation involving emergency response, abuse, retaliation, illegal conduct,
-    medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous equipment,
-    or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use dictation,
+    symbols or a helper transcribing your choices. Do not select an activity that aggravates pain or requires
+    ignoring care guidance. A task completed without discomfort shows task performance only.
   actions:
   - stable_id: PRACTICE-COMP-0805-TOLERANCE-OF-DISCOMFORT-01-A1
     sequence: 1
-    title: Audit one bounded Tolerance of discomfort context
-    instructions: 'Inspect one user-controlled, low-consequence context relevant to Tolerance of discomfort.
-      Use the canonical scope to name observable conditions without diagnosing people or systems: Remain
-      present with boredom, uncertainty, frustration, embarrassment, fatigue, craving, and temporary pain.'
+    title: Choose useful discomfort and define a stopping boundary
+    instructions: 'Consider boredom, uncertainty, frustration, embarrassment, fatigue, craving and temporary
+      pain as different experiences rather than one demand to push through. Choose ordinary boredom or
+      uncertainty for this task; do not induce the others. Name the useful result and a short stopping
+      point. For the supplied note, success is a reminder containing all three given facts. Identify a
+      reason to stop or adapt, such as pain, worsening distress or an inaccessible writing method. Stopping
+      for such a reason protects the task''s purpose; it is not evidence of moral weakness.
+
+
+      Observation checks: The seven kinds of discomfort are distinguished without inducing them; The selected
+      task has a useful concrete result; A short stopping point is stated; Safety and accessibility limits
+      are explicit. Mark only what you observed. Missing, mixed and negative results are valid; a deferred
+      action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -133,9 +144,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0805_a1_one_context_only
-        - c0805_a1_observable_conditions_recorded
-        - c0805_a1_hazards_excluded
+        - the_seven_kinds_of_discomfort_are_distinguished_without_inducing_them
+        - the_selected_task_has_a_useful_concrete_result
+        - a_short_stopping_point_is_stated
+        - safety_and_accessibility_limits_are_explicit
       - measurement_id: c0805_a1_boundary
         kind: boolean
         role: supporting
@@ -152,10 +164,19 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0805-TOLERANCE-OF-DISCOMFORT-01-A2
     sequence: 2
-    title: Make one reversible Tolerance of discomfort redesign
-    instructions: Choose one small, lawful, reversible change that addresses a specific audit finding
-      for Tolerance of discomfort. Record the intended effect, cost or burden, and a rollback condition
-      before changing anything.
+    title: Attempt the bounded work without first negotiating away every feeling
+    instructions: 'Begin the reminder and include the item, time and destination. If boredom, uncertainty
+      or an urge to switch appears, name it briefly and return to the next concrete word or dictated phrase.
+      Do not spend the whole window measuring discomfort. Use the supplied facts instead of searching
+      for a perfect sentence. If no discomfort appears, simply complete the task and record that this
+      occasion did not test tolerance. Respect the stopping boundary or use an accessible format if needed.
+      An unfinished attempt remains visible rather than being redefined as success.
+
+
+      Observation checks: The useful task is actually attempted; Any ordinary discomfort is recorded without
+      required provocation; Attention returns to a concrete next step when appropriate; Completion absence
+      of discomfort and stopping remain distinct. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -177,9 +198,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0805_a2_change_traces_to_finding
-        - c0805_a2_rollback_defined
-        - c0805_a2_burden_recorded
+        - the_useful_task_is_actually_attempted
+        - any_ordinary_discomfort_is_recorded_without_required_provocation
+        - attention_returns_to_a_concrete_next_step_when_appropriate
+        - completion_absence_of_discomfort_and_stopping_remain_distinct
       - measurement_id: c0805_a2_boundary
         kind: boolean
         role: supporting
@@ -196,10 +218,41 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0805-TOLERANCE-OF-DISCOMFORT-01-A3
     sequence: 3
-    title: Compare the Tolerance of discomfort context after the change
-    instructions: 'Reinspect the same bounded context after the change. Record improvement, no difference,
-      mixed effects, harm, or insufficient observation and compare only with this target: Completes worthwhile
-      action while discomfort is present and reviews what was learned.'
+    title: Check the work and separate willingness from endurance
+    instructions: 'Compare the reminder with the three facts, correcting any omission. Record whether
+      ordinary discomfort was present, whether you continued appropriately and what made the task workable.
+      For example, Return the library book tomorrow at 3 pm to the front desk meets the requirement without
+      elegant wording. If you stopped for a legitimate limit, identify an accessible next arrangement
+      rather than prescribing a longer exposure. Choose whether this small method is useful for another
+      ordinary task. Completing a trivial exercise does not demonstrate tolerance of pain, fatigue or
+      a major uncertain situation.
+
+
+      Observation checks: The result is checked against all three supplied facts; Actual willingness is
+      distinguished from imagined endurance; A legitimate stop leads to adaptation rather than punishment;
+      Transfer claims stay within the observed ordinary task. Mark only what you observed. Missing, mixed
+      and negative results are valid; a deferred action is not completed.
+
+
+      Final review: Could a small useful action proceed while ordinary discomfort was present, and where
+      did stopping or support make more sense? Keep the practical lesson without making suffering the
+      goal.
+
+
+      Examples: Supportive: The person felt bored, returned to the three facts and completed an actionable
+      reminder without waiting to become interested.
+
+
+      Mixed: The reminder was finished easily, so task completion was observed but discomfort tolerance
+      was not tested on this occasion.
+
+
+      Contradictory: Pain or worsening distress was deliberately ignored to make the task count as toughness,
+      or the time limit was repeatedly extended.
+
+
+      Inconclusive: The person planned to endure boredom but neither attempted the supplied task nor recorded
+      a legitimate stopping decision.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -221,9 +274,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0805_a3_same_context_compared
-        - c0805_a3_mixed_or_null_result_allowed
-        - c0805_a3_target_evidence_reviewed
+        - the_result_is_checked_against_all_three_supplied_facts
+        - actual_willingness_is_distinguished_from_imagined_endurance
+        - a_legitimate_stop_leads_to_adaptation_rather_than_punishment
+        - transfer_claims_stay_within_the_observed_ordinary_task
       - measurement_id: c0805_a3_boundary
         kind: boolean
         role: supporting
@@ -243,16 +297,17 @@ intervention:
     - Use paper, an offline note, a library resource, a public example, or a no-cost conversation for
       Tolerance of discomfort; no purchase, subscription, travel, credential, or public artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Tolerance of discomfort; assistive technology, interpretation, a support person, and a
-      deferred action are valid without penalty.
+    - Use dictation, symbols or a helper transcribing your choices. Do not select an activity that aggravates
+      pain or requires ignoring care guidance. A task completed without discomfort shows task performance
+      only.
     cultural_context:
     - Adapt the expression of Tolerance of discomfort to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Tolerance of discomfort opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use dictation, symbols or a helper transcribing your choices. Do not select an activity that aggravates
+      pain or requires ignoring care guidance. A task completed without discomfort shows task performance
+      only.
   pause_conditions:
   - Pause Tolerance of discomfort when capacity, consent, authority, privacy, access, care duties, uncertainty,
     distress, fatigue, pain, resource scarcity, or changed circumstances make the next action unwise.
@@ -283,10 +338,8 @@ evidence_and_scoring:
   - c0805_a3_boundary
   - c0805_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Tolerance of discomfort action exceeded consent, authority, privacy, qualification, role, burden,
-    or safety boundaries.
-  - The evidence contradicted the intended Tolerance of discomfort criterion, depended on coercion or
-    hidden private content, or could not distinguish the protocol from contextual change.
+  - Pain or worsening distress was deliberately ignored to make the task count as toughness, or the time
+    limit was repeatedly extended.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Tolerance of discomfort explicitly; support can enable access and never reduces dignity or silently
     changes the typed value.
@@ -296,14 +349,23 @@ evidence_and_scoring:
     origins are rejected and later repetitions use the typed contract's explicit diminishing multipliers.
   recency_rule: Generated Tolerance of discomfort rules withhold observations older than 90 days; no unrecorded
     retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Completes worthwhile action while discomfort is present and reviews what was learned.—not completion,
-    confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Tolerance of discomfort requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Choose useful discomfort and define a stopping boundary. Observed checks:
+    The seven kinds of discomfort are distinguished without inducing them; The selected task has a useful
+    concrete result; A short stopping point is stated; Safety and accessibility limits are explicit. Action
+    2: Attempt the bounded work without first negotiating away every feeling. Observed checks: The useful
+    task is actually attempted; Any ordinary discomfort is recorded without required provocation; Attention
+    returns to a concrete next step when appropriate; Completion absence of discomfort and stopping remain
+    distinct. Action 3: Check the work and separate willingness from endurance. Observed checks: The result
+    is checked against all three supplied facts; Actual willingness is distinguished from imagined endurance;
+    A legitimate stop leads to adaptation rather than punishment; Transfer claims stay within the observed
+    ordinary task.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. The person planned to endure boredom but neither attempted
+    the supplied task nor recorded a legitimate stopping decision.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Tolerance
     of discomfort contribution under typed evaluation; protocol performance remains distinct and is never
     counted twice.
@@ -313,9 +375,8 @@ evidence_and_scoring:
   - L09
   - L10
   - L11
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Tolerance of discomfort evidence.
@@ -323,10 +384,20 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The audit one bounded tolerance of discomfort context action was attempted or explicitly deferred.
-  - The make one reversible tolerance of discomfort redesign action was attempted or explicitly deferred.
-  - The compare the tolerance of discomfort context after the change action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Choose useful discomfort and define a stopping boundary. Observed checks: The seven kinds
+    of discomfort are distinguished without inducing them; The selected task has a useful concrete result;
+    A short stopping point is stated; Safety and accessibility limits are explicit.'
+  - 'Action 2: Attempt the bounded work without first negotiating away every feeling. Observed checks:
+    The useful task is actually attempted; Any ordinary discomfort is recorded without required provocation;
+    Attention returns to a concrete next step when appropriate; Completion absence of discomfort and stopping
+    remain distinct.'
+  - 'Action 3: Check the work and separate willingness from endurance. Observed checks: The result is
+    checked against all three supplied facts; Actual willingness is distinguished from imagined endurance;
+    A legitimate stop leads to adaptation rather than punishment; Transfer claims stay within the observed
+    ordinary task.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -335,56 +406,60 @@ completion_and_review:
     - c0805_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Tolerance of discomfort only when the initial context remained
-    safe, the evidence criteria were usable, burden was acceptable, and a new context can be named without
-    assuming transfer.
-  transfer_limit: Three bounded actions do not establish Tolerance of discomfort across roles, cultures,
-    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: Could a small useful action proceed while ordinary discomfort was present, and
+    where did stopping or support make more sense? Keep the practical lesson without making suffering
+    the goal.
+  transfer_limit: This exercise uses low-stakes boredom or uncertainty, not pain exposure, exhaustion
+    training or a test of how much distress someone can endure.
   reflection:
-    before: What does Tolerance of discomfort require in this exact context, what remains outside my role
-      or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Tolerance of discomfort criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Completes worthwhile action while discomfort is present and
-      reviews what was learned.', what contradiction or missing context matters most, and should this
-      Tolerance of discomfort design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Distinguish tolerable ordinary discomfort
+      from a reason to stop, then complete a bounded useful action without requiring boredom or frustration
+      to disappear.'
+    during: Which checks have actually been observed? The reminder was finished easily, so task completion
+      was observed but discomfort tolerance was not tested on this occasion.
+    after: Could a small useful action proceed while ordinary discomfort was present, and where did stopping
+      or support make more sense? Keep the practical lesson without making suffering the goal.
   review_guidance:
     repeat: Repeat the same bounded Tolerance of discomfort design only when the context and burden remain
       appropriate.
-    adapt: Change the Tolerance of discomfort medium, scope, support, timing, criteria, or context while
-      preserving provenance and the narrower evidence claim.
+    adapt: Use dictation, symbols or a helper transcribing your choices. Do not select an activity that
+      aggravates pain or requires ignoring care guidance. A task completed without discomfort shows task
+      performance only.
     stop: Stop Tolerance of discomfort when the practice becomes coercive, unsafe, privacy-invasive, role-inappropriate,
       professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Tolerance of discomfort questions beyond
-      this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Tolerance of discomfort criteria were observed with provenance and no adverse
-      boundary signal in the selected context.
-    mixed: Some Tolerance of discomfort criteria were observed while burden, support, contextual change,
-      or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Tolerance of discomfort criterion, introduced
-      harm or coercion, or showed the design was not workable.
-    inconclusive: The Tolerance of discomfort action was deferred, not observed, not applicable, stale,
-      insufficiently bounded, or too confounded to interpret.
+    supportive: The person felt bored, returned to the three facts and completed an actionable reminder
+      without waiting to become interested.
+    mixed: The reminder was finished easily, so task completion was observed but discomfort tolerance
+      was not tested on this occasion.
+    contradictory: Pain or worsening distress was deliberately ignored to make the task count as toughness,
+      or the time limit was repeatedly extended.
+    inconclusive: The person planned to endure boredom but neither attempted the supplied task nor recorded
+      a legitimate stopping decision.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Tolerance of discomfort.
+    context_heading: Finish a small worthwhile task while allowing ordinary discomfort
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Tolerance
       of discomfort.
   check_in_labels:
-    c0805_a1_primary: The bounded Tolerance of discomfort criterion for action 1 was observed
+    c0805_a1_primary: 'Observed checks: choose useful discomfort and define a stopping boundary'
     c0805_a1_boundary: Action 1 stayed inside its stated Tolerance of discomfort boundary
     c0805_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0805_a2_primary: The bounded Tolerance of discomfort criterion for action 2 was observed
+    c0805_a2_primary: 'Observed checks: attempt the bounded work without first negotiating away every
+      feeling'
     c0805_a2_boundary: Action 2 stayed inside its stated Tolerance of discomfort boundary
     c0805_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0805_a3_primary: The bounded Tolerance of discomfort criterion for action 3 was observed
+    c0805_a3_primary: 'Observed checks: check the work and separate willingness from endurance'
     c0805_a3_boundary: Action 3 stayed inside its stated Tolerance of discomfort boundary
     c0805_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Tolerance of discomfort
-    practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Could a small useful action proceed while ordinary discomfort was present, and where
+    did stopping or support make more sense? Keep the practical lesson without making suffering the goal.
+    Completion is not mastery.
+  plain_language_evidence: The person felt bored, returned to the three facts and completed an actionable
+    reminder without waiting to become interested.
   display_order: 102

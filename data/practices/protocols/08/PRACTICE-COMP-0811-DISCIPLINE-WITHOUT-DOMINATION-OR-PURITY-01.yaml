@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0811-DISCIPLINE-WITHOUT-DOMINATION-OR-PURITY-01
 slug: c0811-discipline-without-domination-or-purity-practice
-name: Bounded Discipline without domination or purity Practice
+name: Revise one discipline when its rule no longer serves its purpose
 parent_competency_id: '08.11'
 domain_id: 08
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 08.11
-      (Discipline without domination or purity); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 08.11; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,40 +34,40 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Discipline without domination or purity through a bounded audit and redesign bounded
-    by the canonical scope: Use structure and restraint as tools for freedom while avoiding self-hatred,
-    compulsive control, and moral superiority.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can relax or revise
-    a discipline when it no longer serves health, duty, or meaning. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Use structure to support chosen health, duty or meaning while recognizing when rigidity, self-punishment
+    or superiority requires a more proportionate rule.
+  why_recommended: Use structure to support chosen health, duty or meaning while recognizing when rigidity,
+    self-punishment or superiority requires a more proportionate rule.
   claims:
-  - statement: Using the canonical scope and evidence target for Discipline without domination or purity
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Use structure to support chosen health, duty or meaning while recognizing when rigidity,
+      self-punishment or superiority requires a more proportionate rule.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Discipline without domination or purity practice fit
     the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Discipline without domination or purity as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Discipline without
-    domination or purity context, understand the source-only status, and stop without losing safety, care,
-    employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Discipline
-    without domination or purity; do not manufacture conflict, deprivation, exposure, disclosure, danger,
-    urgency, or dependence for evidence.
+  readiness_considerations: Use a written, spoken or supported rule and a fictional case if no appropriate
+    personal rule exists. Choose an optional activity; leave prescribed care, safety controls and another
+    person's boundaries intact.
+  opportunity_considerations: 'Choose an ordinary self-imposed rule or use this case: someone insists
+    on finishing every optional reading session even when an important agreed conversation is about to
+    start. The reading serves learning, but the rule is now displacing a valued relationship. Use a private
+    note; no actual conflict needs to be created.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Discipline without domination or
-    purity.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Choose an ordinary self-imposed rule or use this case: someone insists on finishing every optional
+    reading session even when an important agreed conversation is about to start. The reading serves learning,
+    but the rule is now displacing a valued relationship. Use a private note; no actual conflict needs
+    to be created.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Discipline without domination or
-    purity instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a written, spoken or supported rule and a fictional case if no appropriate personal rule exists.
+    Choose an optional activity; leave prescribed care, safety controls and another person's boundaries
+    intact.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -82,19 +81,26 @@ meaning_and_fit:
 intervention:
   protocol_class: PF-AUDIT-REDESIGN
   duration_days: 10
-  cadence: Complete three bounded Discipline without domination or purity actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Discipline without domination or purity; copy the canonical scope and
-    evidence target into a private working note; define the action boundary, valid supports, privacy limit,
-    and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Discipline
-    without domination or purity. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Discipline without domination or purity
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose an ordinary self-imposed rule or use this case: someone insists on finishing every optional
+    reading session even when an important agreed conversation is about to start. The reading serves learning,
+    but the rule is now displacing a valued relationship. Use a private note; no actual conflict needs
+    to be created. Goal: Use structure to support chosen health, duty or meaning while recognizing when
+    rigidity, self-punishment or superiority requires a more proportionate rule. Scope: One optional personal
+    rule is examined and revised. This does not authorize changing treatment, safety procedures or obligations
+    owed to others without the appropriate agreement. Time and effort: About 15 minutes to examine the
+    rule, one appropriate trial or rehearsal and a short review. Adaptation: Use a written, spoken or
+    supported rule and a fictional case if no appropriate personal rule exists. Choose an optional activity;
+    leave prescribed care, safety controls and another person''s boundaries intact. Keep personal working
+    notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a written, spoken or supported rule and a fictional case if no appropriate
+    personal rule exists. Choose an optional activity; leave prescribed care, safety controls and another
+    person's boundaries intact.
+  expected_burden: About 15 minutes to examine the rule, one appropriate trial or rehearsal and a short
+    review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Discipline without domination or purity protocol to rank worth, coerce participation, demand
@@ -102,19 +108,26 @@ intervention:
   - Treating a completed Discipline without domination or purity action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Discipline without domination or purity situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a written,
+    spoken or supported rule and a fictional case if no appropriate personal rule exists. Choose an optional
+    activity; leave prescribed care, safety controls and another person's boundaries intact.
   actions:
   - stable_id: PRACTICE-COMP-0811-DISCIPLINE-WITHOUT-DOMINATION-OR-PURITY-01-A1
     sequence: 1
-    title: Audit one bounded Discipline without domination or purity context
-    instructions: 'Inspect one user-controlled, low-consequence context relevant to Discipline without
-      domination or purity. Use the canonical scope to name observable conditions without diagnosing people
-      or systems: Use structure and restraint as tools for freedom while avoiding self-hatred, compulsive
-      control, and moral superiority.'
+    title: Compare the rule's purpose with its actual costs
+    instructions: 'Write the rule, the freedom or value it originally supported and its observed effects.
+      Consider health, duties and meaning separately so a visible streak does not become the only criterion.
+      In the case, regular reading supports learning, while never stopping can undermine an agreed conversation.
+      Look for concrete signs of domination: insults toward yourself after a miss, escalating penalties,
+      inability to revise an optional rule or judging other people as inferior. Distinguish these from
+      ordinary effort and a legitimate commitment. Do not infer a clinical condition from a single rigid
+      habit.
+
+
+      Observation checks: The rule is connected to its original purpose; Effects on health duties and
+      meaning are considered; Concrete rigidity or superiority signs are examined; Ordinary effort is
+      distinguished from punishment and diagnosis. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -136,9 +149,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0811_a1_one_context_only
-        - c0811_a1_observable_conditions_recorded
-        - c0811_a1_hazards_excluded
+        - the_rule_is_connected_to_its_original_purpose
+        - effects_on_health_duties_and_meaning_are_considered
+        - concrete_rigidity_or_superiority_signs_are_examined
+        - ordinary_effort_is_distinguished_from_punishment_and_diagnosis
       - measurement_id: c0811_a1_boundary
         kind: boolean
         role: supporting
@@ -155,10 +169,20 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0811-DISCIPLINE-WITHOUT-DOMINATION-OR-PURITY-01-A2
     sequence: 2
-    title: Make one reversible Discipline without domination or purity redesign
-    instructions: Choose one small, lawful, reversible change that addresses a specific audit finding
-      for Discipline without domination or purity. Record the intended effect, cost or burden, and a rollback
-      condition before changing anything.
+    title: Write a proportionate exception that preserves the underlying value
+    instructions: 'Define when the rule should hold, when it should yield and how the valued activity
+      can resume without punishment. For the reading case: read during the chosen window; stop at the
+      agreed conversation time; mark the next paragraph and return at the next suitable reading period.
+      Explain why this protects both learning and the relationship. Avoid an exception so vague that it
+      erases the commitment or a catch-up penalty that recreates the original rigidity. If the rule is
+      actually a medical, safety or shared obligation, identify the appropriate person to consult rather
+      than changing it unilaterally.
+
+
+      Observation checks: The revised rule states normal use and a specific exception; The underlying
+      value remains represented; Resumption does not require punitive compensation; External or safety
+      obligations are not changed unilaterally. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -180,9 +204,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0811_a2_change_traces_to_finding
-        - c0811_a2_rollback_defined
-        - c0811_a2_burden_recorded
+        - the_revised_rule_states_normal_use_and_a_specific_exception
+        - the_underlying_value_remains_represented
+        - resumption_does_not_require_punitive_compensation
+        - external_or_safety_obligations_are_not_changed_unilaterally
       - measurement_id: c0811_a2_boundary
         kind: boolean
         role: supporting
@@ -199,10 +224,40 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0811-DISCIPLINE-WITHOUT-DOMINATION-OR-PURITY-01-A3
     sequence: 3
-    title: Compare the Discipline without domination or purity context after the change
-    instructions: 'Reinspect the same bounded context after the change. Record improvement, no difference,
-      mixed effects, harm, or insufficient observation and compare only with this target: Can relax or
-      revise a discipline when it no longer serves health, duty, or meaning.'
+    title: Use the exception and assess whether flexibility served the purpose
+    instructions: 'At a suitable real opportunity, follow the revised rule and record its effects on the
+      original value and the competing legitimate need. For the supplied case, rehearse by marking a stopping
+      point in a short text, setting it aside and stating when reading would resume; do not claim the
+      conversation occurred. Review whether you could stop without a self-attack or a status judgment,
+      and whether the next commitment remained feasible. Keep, narrow or revise the exception from the
+      evidence. Flexibility is useful when it serves a reason, not merely because every rule should be
+      relaxed.
+
+
+      Observation checks: The revised rule is actually used or explicitly rehearsed; Effects on both the
+      original and competing values are assessed; Self-punishment and status judgments are not rewarded;
+      Further revision follows practical evidence rather than blanket permissiveness. Mark only what you
+      observed. Missing, mixed and negative results are valid; a deferred action is not completed.
+
+
+      Final review: Did the structure serve your chosen life, and could it change when the reason changed?
+      Keep a rule with a clear purpose and legitimate exception rather than a test of personal purity.
+
+
+      Examples: Supportive: The reader stopped at the agreed time, marked the next paragraph and resumed
+      later without penalizing themselves for respecting the conversation.
+
+
+      Mixed: The exception protected the conversation, but the next reading period was vague and needed
+      a more realistic cue.
+
+
+      Contradictory: The person treated a missed optional session as moral failure, imposed deprivation
+      or judged people with different routines as inferior.
+
+
+      Inconclusive: The person praised balance but never identified a rule, a legitimate exception or
+      an attempted revision.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -224,9 +279,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0811_a3_same_context_compared
-        - c0811_a3_mixed_or_null_result_allowed
-        - c0811_a3_target_evidence_reviewed
+        - the_revised_rule_is_actually_used_or_explicitly_rehearsed
+        - effects_on_both_the_original_and_competing_values_are_assessed
+        - self_punishment_and_status_judgments_are_not_rewarded
+        - further_revision_follows_practical_evidence_rather_than_blanket_permissiveness
       - measurement_id: c0811_a3_boundary
         kind: boolean
         role: supporting
@@ -247,17 +303,17 @@ intervention:
       Discipline without domination or purity; no purchase, subscription, travel, credential, or public
       artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Discipline without domination or purity; assistive technology, interpretation, a support
-      person, and a deferred action are valid without penalty.
+    - Use a written, spoken or supported rule and a fictional case if no appropriate personal rule exists.
+      Choose an optional activity; leave prescribed care, safety controls and another person's boundaries
+      intact.
     cultural_context:
     - Adapt the expression of Discipline without domination or purity to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Discipline without domination or purity opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use a written, spoken or supported rule and a fictional case if no appropriate personal rule exists.
+      Choose an optional activity; leave prescribed care, safety controls and another person's boundaries
+      intact.
   pause_conditions:
   - Pause Discipline without domination or purity when capacity, consent, authority, privacy, access,
     care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make
@@ -289,10 +345,8 @@ evidence_and_scoring:
   - c0811_a3_boundary
   - c0811_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Discipline without domination or purity action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Discipline without domination or purity criterion, depended
-    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - The person treated a missed optional session as moral failure, imposed deprivation or judged people
+    with different routines as inferior.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Discipline without domination or purity explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -303,14 +357,23 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Discipline without domination or purity rules withhold observations older than
     90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can relax or revise a discipline when it no longer serves health, duty, or meaning.—not completion,
-    confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Discipline without domination or purity requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Compare the rule''s purpose with its actual costs. Observed checks: The
+    rule is connected to its original purpose; Effects on health duties and meaning are considered; Concrete
+    rigidity or superiority signs are examined; Ordinary effort is distinguished from punishment and diagnosis.
+    Action 2: Write a proportionate exception that preserves the underlying value. Observed checks: The
+    revised rule states normal use and a specific exception; The underlying value remains represented;
+    Resumption does not require punitive compensation; External or safety obligations are not changed
+    unilaterally. Action 3: Use the exception and assess whether flexibility served the purpose. Observed
+    checks: The revised rule is actually used or explicitly rehearsed; Effects on both the original and
+    competing values are assessed; Self-punishment and status judgments are not rewarded; Further revision
+    follows practical evidence rather than blanket permissiveness.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. The person praised balance but never identified a rule,
+    a legitimate exception or an attempted revision.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Discipline
     without domination or purity contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -320,9 +383,8 @@ evidence_and_scoring:
   - L05
   - L09
   - L10
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Discipline without domination or purity evidence.
@@ -330,12 +392,20 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The audit one bounded discipline without domination or purity context action was attempted or explicitly
-    deferred.
-  - The make one reversible discipline without domination or purity redesign action was attempted or explicitly
-    deferred.
-  - The compare the discipline without domination or purity context after the change action preserved
-    a limited conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Compare the rule''s purpose with its actual costs. Observed checks: The rule is connected
+    to its original purpose; Effects on health duties and meaning are considered; Concrete rigidity or
+    superiority signs are examined; Ordinary effort is distinguished from punishment and diagnosis.'
+  - 'Action 2: Write a proportionate exception that preserves the underlying value. Observed checks: The
+    revised rule states normal use and a specific exception; The underlying value remains represented;
+    Resumption does not require punitive compensation; External or safety obligations are not changed
+    unilaterally.'
+  - 'Action 3: Use the exception and assess whether flexibility served the purpose. Observed checks: The
+    revised rule is actually used or explicitly rehearsed; Effects on both the original and competing
+    values are assessed; Self-punishment and status judgments are not rewarded; Further revision follows
+    practical evidence rather than blanket permissiveness.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -344,58 +414,60 @@ completion_and_review:
     - c0811_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Discipline without domination or purity only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Discipline without domination or purity across
-    roles, cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: Did the structure serve your chosen life, and could it change when the reason
+    changed? Keep a rule with a clear purpose and legitimate exception rather than a test of personal
+    purity.
+  transfer_limit: One optional personal rule is examined and revised. This does not authorize changing
+    treatment, safety procedures or obligations owed to others without the appropriate agreement.
   reflection:
-    before: What does Discipline without domination or purity require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Discipline without domination or purity criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can relax or revise a discipline when it no longer serves
-      health, duty, or meaning.', what contradiction or missing context matters most, and should this
-      Discipline without domination or purity design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Use structure to support chosen health, duty
+      or meaning while recognizing when rigidity, self-punishment or superiority requires a more proportionate
+      rule.'
+    during: Which checks have actually been observed? The exception protected the conversation, but the
+      next reading period was vague and needed a more realistic cue.
+    after: Did the structure serve your chosen life, and could it change when the reason changed? Keep
+      a rule with a clear purpose and legitimate exception rather than a test of personal purity.
   review_guidance:
     repeat: Repeat the same bounded Discipline without domination or purity design only when the context
       and burden remain appropriate.
-    adapt: Change the Discipline without domination or purity medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Use a written, spoken or supported rule and a fictional case if no appropriate personal rule
+      exists. Choose an optional activity; leave prescribed care, safety controls and another person's
+      boundaries intact.
     stop: Stop Discipline without domination or purity when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Discipline without domination or purity
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Discipline without domination or purity criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Discipline without domination or purity criteria were observed while burden, support,
-      contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Discipline without domination or purity criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Discipline without domination or purity action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The reader stopped at the agreed time, marked the next paragraph and resumed later without
+      penalizing themselves for respecting the conversation.
+    mixed: The exception protected the conversation, but the next reading period was vague and needed
+      a more realistic cue.
+    contradictory: The person treated a missed optional session as moral failure, imposed deprivation
+      or judged people with different routines as inferior.
+    inconclusive: The person praised balance but never identified a rule, a legitimate exception or an
+      attempted revision.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Discipline without domination or purity.
+    context_heading: Revise one discipline when its rule no longer serves its purpose
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Discipline
       without domination or purity.
   check_in_labels:
-    c0811_a1_primary: The bounded Discipline without domination or purity criterion for action 1 was observed
+    c0811_a1_primary: 'Observed checks: compare the rule''s purpose with its actual costs'
     c0811_a1_boundary: Action 1 stayed inside its stated Discipline without domination or purity boundary
     c0811_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0811_a2_primary: The bounded Discipline without domination or purity criterion for action 2 was observed
+    c0811_a2_primary: 'Observed checks: write a proportionate exception that preserves the underlying
+      value'
     c0811_a2_boundary: Action 2 stayed inside its stated Discipline without domination or purity boundary
     c0811_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0811_a3_primary: The bounded Discipline without domination or purity criterion for action 3 was observed
+    c0811_a3_primary: 'Observed checks: use the exception and assess whether flexibility served the purpose'
     c0811_a3_boundary: Action 3 stayed inside its stated Discipline without domination or purity boundary
     c0811_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Discipline without
-    domination or purity practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Did the structure serve your chosen life, and could it change when the reason changed?
+    Keep a rule with a clear purpose and legitimate exception rather than a test of personal purity. Completion
+    is not mastery.
+  plain_language_evidence: The reader stopped at the agreed time, marked the next paragraph and resumed
+    later without penalizing themselves for respecting the conversation.
   display_order: 107

@@ -465,8 +465,8 @@ M6J-01 individually rewrites all 42 practices in domains 01, 02 and 13. M6J-02
 adds all 12 self-knowledge practices in domain 05. M6J-03 adds all 23 practices
 in domains 03 and 04. M6J-04 adds all 14 vulnerability/disability/care practices
 in domain 06. M6J-05 adds all 14 emotional-maturity/resilience practices in
-domain 07, for 105 authored. The broader owner requirement covers all 383;
-the remaining 278 must stay explicitly rewrite-pending. The owner
+domain 07, bringing that batch to 105 authored and 278 pending. The broader
+owner requirement covers all 383; current M6J-06 counts appear below. The owner
 requires focus on the substantive content rewrite, with explicit canonical
 scope maps and self-contained tasks; publication status is not content
 progress. Compiler inputs live in `docs/authoring/exercises/`, while
@@ -478,6 +478,13 @@ legacy projections. An import must not replace instructions or rules for an
 active or paused practice. See ADR 0018 and the current handoff before the next
 cohort. Do not describe scoring completion, source links or 383 active records
 as completion of this content rewrite.
+
+M6J-06 continues with ten domain 08 runtime rewrites and one validated
+source-only guide for frozen 08.02. Current runtime authoring is 115/383 with
+268 pending. The guide stays pending in runtime coverage and never changes
+legacy instructions or evidence. Guide exclusions must be restricted to the
+five known frozen IDs and require complete matching source files; do not use
+this exception to hide an unwritten nonlegacy competency.
 
 <!-- BEGIN PORTFOLIO-CONTROL MANAGED -->
 ## Governed agentic delivery
@@ -493,3 +500,9 @@ as completion of this content rewrite.
 - Do not claim physical, release, deployment, or production evidence that was
   not actually produced.
 <!-- END PORTFOLIO-CONTROL MANAGED -->
+
+M6J-06 also preserves the existing 08.06 typed evidence rules and golden
+fixtures, as for 13.02. Its richer content follows the original usual start,
+one-cue start and comparison sequence; preparation is not relabeled as a
+Boolean start observation. Later pre-frontier rewrites must check this
+compatibility before replacing primary evidence kinds.

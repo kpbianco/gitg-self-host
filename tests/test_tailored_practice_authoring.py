@@ -1,4 +1,5 @@
 import copy
+import shutil
 from datetime import date
 from decimal import Decimal
 from pathlib import Path
@@ -28,6 +29,53 @@ from scripts.tailored_practice_authoring import (
 )
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def test_legacy_guide_is_not_a_runtime_rewrite_or_new_evidence_contract():
+    exercises = load_exercises(ROOT)
+    report = coverage_report(exercises, ROOT)
+    assert "08.02" not in exercises
+    assert "08.02" in report["source_only_legacy_guides"]
+    row = next(row for row in report["rows"] if row["competency_id"] == "08.02")
+    assert row["status"] == "rewrite_pending"
+    protocol = yaml.safe_load(
+        (ROOT / "data/practices/protocols/08/PRACTICE-PRESENCE-01.yaml").read_text()
+    )
+    before = copy.deepcopy(protocol)
+    guide = yaml.safe_load((ROOT / "docs/authoring/legacy-guides/08.yaml").read_text())[
+        "exercises"
+    ]["08.02"]
+    guide["protocol_family"] = "PF-BEHAVIORAL-EXPERIMENT"
+    with pytest.raises(ValueError, match="Frozen legacy runtime instructions"):
+        apply_exercise(protocol, guide)
+    assert protocol == before
+
+
+@pytest.mark.parametrize("defect", ["missing", "nonlegacy", "duplicate", "foreign"])
+def test_legacy_guide_exclusions_cannot_hide_missing_runtime_content(tmp_path, defect):
+    for relative in [
+        "docs/authoring",
+        "contracts",
+        "data/curriculum",
+        "data/practices/registries",
+    ]:
+        shutil.copytree(ROOT / relative, tmp_path / relative)
+    contract_path = tmp_path / "contracts/tailored-practice-authoring.yaml"
+    contract = yaml.safe_load(contract_path.read_text())
+    guide_path = tmp_path / "docs/authoring/legacy-guides/08.yaml"
+    if defect == "missing":
+        guide_path.unlink()
+    elif defect == "nonlegacy":
+        contract["source_only_legacy_guide_competency_ids"] = ["08.03"]
+    elif defect == "duplicate":
+        contract["source_only_legacy_guide_competency_ids"] = ["08.02", "08.02"]
+    else:
+        guide = yaml.safe_load(guide_path.read_text())
+        guide["exercises"]["08.03"] = guide["exercises"].pop("08.02")
+        guide_path.write_text(yaml.safe_dump(guide))
+    contract_path.write_text(yaml.safe_dump(contract))
+    with pytest.raises(ValueError, match=r"[Gg]uide"):
+        load_exercises(tmp_path)
 
 
 def test_tailored_coverage_keeps_unwritten_competencies_explicit():
@@ -156,6 +204,10 @@ def test_tailored_setup_and_action_copy_are_visible_in_authenticated_journey(cli
         ("07.09", True),
         ("07.13", True),
         ("07.14", False),
+        ("08.03", False),
+        ("08.06", True),
+        ("08.07", True),
+        ("08.10", True),
     ],
 )
 def test_tailored_evidence_closeout_and_replay_survive_a_later_content_revision(
@@ -191,6 +243,10 @@ def test_tailored_evidence_closeout_and_replay_survive_a_later_content_revision(
                 if rule["kind"] == "artifact"
                 else {"numerator": 2, "denominator": 2}
                 if rule["kind"] == "bounded_frequency"
+                else {"amount": rule["target"], "unit": rule["unit"]}
+                if rule["kind"] == "duration"
+                else int(rule["target"])
+                if rule["kind"] == "count"
                 else rule["expected"]
             )
             observations.append(
@@ -241,9 +297,11 @@ def test_tailored_evidence_closeout_and_replay_survive_a_later_content_revision(
     protocols = copy.deepcopy(load_practice_content_bundle(ROOT).runtime_protocols)
     revised = next(row for row in protocols if row["parent_competency_id"] == cid)
     revised["actions"][0]["instructions"] = "A later, separately reviewed exercise revision."
-    revised["actions"][0]["evidence_rules"]["measurements"][0]["criteria"] = [
-        "a_different_future_criterion"
-    ]
+    future_rule = revised["actions"][0]["evidence_rules"]["measurements"][0]
+    if future_rule["kind"] == "boolean":
+        future_rule["expected"] = not future_rule["expected"]
+    else:
+        future_rule["criteria"] = ["a_different_future_criterion"]
     _seed_protocols(protocols)
     for event, snapshot in zip(events, snapshots, strict=True):
         event.refresh_from_db()

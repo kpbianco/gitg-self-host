@@ -1,0 +1,26 @@
+schema_version: GG-TAILORED-PRACTICE-AUTHORING-1.0
+domain_id: '08'
+exercises:
+  '08.02':
+    title: "Guide to the existing attention-presence experiment"
+    goal: "Practice noticing attention drift and returning to a chosen activity, then compare one safe condition and repeat the more workable arrangement."
+    scope_note: "This is a source-only explanatory guide for the frozen PRACTICE-PRESENCE-01 protocol. It does not replace runtime instructions, evidence markers, timing or completion rules, and 08.02 remains runtime rewrite-pending."
+    setup: "Choose one repeatable safe activity: read an accessible page, do a familiar desk task or attend to ordinary surroundings. Have three private note spaces for usual, changed and repeat. The existing protocol uses comparable 15-minute windows and a repeat within seven days. Keep normal accessibility, movement, sensory and communication supports."
+    burden: "Three 15-minute windows with brief notes; the final repeat is within seven days under the existing protocol. Follow its stop and adaptation guidance when a window is unsuitable."
+    actions:
+      - title: "Run the existing usual-condition window and notice returns"
+        instructions: "Spend the existing 15-minute window on the chosen activity under usual safe conditions. If reading, return to the current sentence when you notice your attention elsewhere. If attending to surroundings, return to an ordinary visible or audible detail without forcing internal body attention. Notice whether drift concerned a past event, future plan or competing stimulation; private thought content need not be recorded. Do not count every drift, suppress thoughts or treat output as the measure. Afterward, describe one noticed return or honestly record that you cannot recall one."
+        checks: [The existing usual-condition window is attempted, The chosen activity and normal supports are clear, Noticing and returning are distinguished from thought suppression, The note describes observation rather than a productivity score]
+      - title: "Change exactly one safe condition for the comparable window"
+        instructions: "Repeat a comparable 15-minute window on the same activity after changing one controllable feature, such as closing an unrelated tab or adding a helpful visual cue. Do not remove necessary alerts, sensory supports or movement. Compare how readily you noticed drift and returned, rather than how much you completed. Record differences that complicate the comparison, such as an interruption or a harder passage. A bodily focus is optional, and attention to a person requires an ordinary willing interaction rather than secretly grading their presence. Leave an unclear comparison unclear."
+        checks: [Exactly one safe condition changes, The activity and duration remain comparable under the existing protocol, Needed supports and another person's agency remain intact, Observed returns and confounding differences are recorded honestly]
+      - title: "Repeat the more workable condition within the existing interval"
+        instructions: "Within seven days, repeat the condition that appeared more workable under the existing protocol. If the comparison was indistinguishable, retain that result and choose a suitable condition without inventing a winner. Record whether noticing and returning felt more workable again, unchanged or less workable. Consider which activity, body, person or environment contexts were actually observed and which were not. The explanation and checks in this guide are reading aids, not new scoring inputs; use the application's unchanged evidence form and explicit final review for any actual sprint."
+        checks: [The repeat follows the existing seven-day interval, Mixed negative or indistinguishable results remain available, Transfer claims name only contexts actually observed, Guide checks are not substituted for historical runtime evidence markers]
+    adaptation: "Use an accessible activity and retain the existing protocol's guidance on duration, movement, sensory load, pain, fatigue and necessary alerts. If adaptation makes windows incomparable, record that limit. The guide cannot modify an active sprint or reinterpret prior evidence."
+    review: "Which condition supported noticing and returning, and did that result recur? Keep uncertainty about other activities, settings and stress levels. The original protocol still requires its defined attempts, comparison, repeat and explicit final review; this guide does not award completion."
+    examples:
+      supportive: "Closing one unrelated tab made returning to the same reading activity more workable, and the comparable repeat supported that narrow observation."
+      mixed: "The changed window helped initially but a later interruption made the repeat harder to interpret; both observations were retained."
+      contradictory: "A necessary support was removed or distraction was treated as personal failure in pursuit of a supposedly perfect attention score."
+      inconclusive: "The guide was read but no windows occurred, or different activities and conditions prevented a meaningful comparison."

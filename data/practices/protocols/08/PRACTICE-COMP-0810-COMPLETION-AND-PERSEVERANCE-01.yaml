@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0810-COMPLETION-AND-PERSEVERANCE-01
 slug: c0810-completion-and-perseverance-practice
-name: Bounded Completion and perseverance Practice
+name: Close one open commitment through completion or a reasoned ending
 parent_competency_id: '08.10'
 domain_id: 08
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 08.10
-      (Completion and perseverance); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 08.10; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +34,40 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Completion and perseverance through a bounded audit and redesign bounded by the canonical
-    scope: Limit simultaneous commitments, define done, work through plateaus, and close or consciously
-    terminate open loops.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Finishes a meaningful
-    commitment despite boredom or difficulty, or ends it for a reasoned cause. The protocol creates a
-    small opportunity to examine that target without treating completion as broad capability.'
+  purpose: Limit competing work, define done, address a specific obstacle and either finish a meaningful
+    commitment or explicitly end it for a defensible reason.
+  why_recommended: Limit competing work, define done, address a specific obstacle and either finish a
+    meaningful commitment or explicitly end it for a defensible reason.
   claims:
-  - statement: Using the canonical scope and evidence target for Completion and perseverance is a traceable
-      product-design basis for a source-only draft protocol.
+  - statement: Limit competing work, define done, address a specific obstacle and either finish a meaningful
+      commitment or explicitly end it for a defensible reason.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Completion and perseverance practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Completion and perseverance as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Completion and perseverance
-    context, understand the source-only status, and stop without losing safety, care, employment, housing,
-    services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Completion
-    and perseverance; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Use a smaller legitimate deliverable, dictation or agreed assistance. A task
+    involving others may need renegotiation before it can end; the exercise does not cancel obligations
+    on their behalf. Retain safety and care needs over a completion target.
+  opportunity_considerations: 'Choose one modest open personal commitment. Default: finish an invitation
+    containing purpose, time, place or access route, and a way to reply. Use these facts: a voluntary
+    reading discussion, Saturday 2 pm, community room, reply to the organizer by Thursday. A private draft
+    is sufficient for the supplied task; do not send a fictional event invitation.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Completion and perseverance.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Choose one modest open personal commitment. Default: finish an invitation containing purpose, time,
+    place or access route, and a way to reply. Use these facts: a voluntary reading discussion, Saturday
+    2 pm, community room, reply to the organizer by Thursday. A private draft is sufficient for the supplied
+    task; do not send a fictional event invitation.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Completion and perseverance instead
-    of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a smaller legitimate deliverable, dictation or agreed assistance. A task involving others may
+    need renegotiation before it can end; the exercise does not cancel obligations on their behalf. Retain
+    safety and care needs over a completion target.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +79,28 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Completion and perseverance
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-AUDIT-REDESIGN
+  protocol_class: PF-ARTIFACT-PLAN
   duration_days: 10
-  cadence: Complete three bounded Completion and perseverance actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Completion and perseverance; copy the canonical scope and evidence target
-    into a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Completion
-    and perseverance. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Completion and perseverance actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose one modest open personal commitment. Default: finish an invitation containing purpose,
+    time, place or access route, and a way to reply. Use these facts: a voluntary reading discussion,
+    Saturday 2 pm, community room, reply to the organizer by Thursday. A private draft is sufficient for
+    the supplied task; do not send a fictional event invitation. Goal: Limit competing work, define done,
+    address a specific obstacle and either finish a meaningful commitment or explicitly end it for a defensible
+    reason. Scope: One closed loop tests follow-through and judgment. It does not require finishing a
+    harmful or obsolete goal, and quietly abandoning a promise is not the same as a reasoned ending. Time
+    and effort: About 15 minutes to choose and define done, one bounded work period and a short closeout.
+    Adaptation: Use a smaller legitimate deliverable, dictation or agreed assistance. A task involving
+    others may need renegotiation before it can end; the exercise does not cancel obligations on their
+    behalf. Retain safety and care needs over a completion target. Keep personal working notes outside
+    the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a smaller legitimate deliverable, dictation or agreed assistance. A task involving
+    others may need renegotiation before it can end; the exercise does not cancel obligations on their
+    behalf. Retain safety and care needs over a completion target.
+  expected_burden: About 15 minutes to choose and define done, one bounded work period and a short closeout.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Completion and perseverance protocol to rank worth, coerce participation, demand disclosure,
@@ -101,19 +108,26 @@ intervention:
   - Treating a completed Completion and perseverance action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Completion and perseverance situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a smaller
+    legitimate deliverable, dictation or agreed assistance. A task involving others may need renegotiation
+    before it can end; the exercise does not cancel obligations on their behalf. Retain safety and care
+    needs over a completion target.
   actions:
   - stable_id: PRACTICE-COMP-0810-COMPLETION-AND-PERSEVERANCE-01-A1
     sequence: 1
-    title: Audit one bounded Completion and perseverance context
-    instructions: 'Inspect one user-controlled, low-consequence context relevant to Completion and perseverance.
-      Use the canonical scope to name observable conditions without diagnosing people or systems: Limit
-      simultaneous commitments, define done, work through plateaus, and close or consciously terminate
-      open loops.'
+    title: Choose one open loop and define an honest endpoint
+    instructions: 'List up to three current open commitments and choose one meaningful item to address
+      now. Put the others explicitly on hold for this work period so novelty does not silently replace
+      the selected task. Define done in observable terms and identify anyone affected by its completion
+      or cancellation. For the supplied task, done is a complete four-part invitation draft, not an event
+      that actually happens. Name the next physical action and a reasonable work limit. Check whether
+      the goal still serves a purpose before committing to finish it.
+
+
+      Observation checks: One meaningful open loop is selected from a limited list; Competing commitments
+      are explicitly deferred for the work period; Done and affected people are identified concretely;
+      The goal''s continued usefulness is checked. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -135,9 +149,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0810_a1_one_context_only
-        - c0810_a1_observable_conditions_recorded
-        - c0810_a1_hazards_excluded
+        - one_meaningful_open_loop_is_selected_from_a_limited_list
+        - competing_commitments_are_explicitly_deferred_for_the_work_period
+        - done_and_affected_people_are_identified_concretely
+        - the_goal_s_continued_usefulness_is_checked
       - measurement_id: c0810_a1_boundary
         kind: boolean
         role: supporting
@@ -154,10 +169,20 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0810-COMPLETION-AND-PERSEVERANCE-01-A2
     sequence: 2
-    title: Make one reversible Completion and perseverance redesign
-    instructions: Choose one small, lawful, reversible change that addresses a specific audit finding
-      for Completion and perseverance. Record the intended effect, cost or burden, and a rollback condition
-      before changing anything.
+    title: Work through a specific plateau instead of switching goals automatically
+    instructions: 'Begin the next action and compare progress with the endpoint. If you stall, name the
+      actual obstacle: missing information, a decision, an oversized step, boredom or loss of usefulness.
+      For the invitation, use the supplied facts rather than polishing an opening indefinitely. Choose
+      a matching response, such as drafting the missing reply line, asking a relevant question or reducing
+      nonessential embellishment. Continue within the chosen limit when appropriate. If the task is unsafe,
+      obsolete or no longer justified, prepare a reasoned ending instead of disguising avoidance as a
+      new exciting project.
+
+
+      Observation checks: A concrete next action is actually attempted; Any plateau is described as a
+      specific obstacle; The response addresses that obstacle rather than generic effort; A justified
+      reason to end remains distinct from automatic switching. Mark only what you observed. Missing, mixed
+      and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -179,9 +204,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0810_a2_change_traces_to_finding
-        - c0810_a2_rollback_defined
-        - c0810_a2_burden_recorded
+        - a_concrete_next_action_is_actually_attempted
+        - any_plateau_is_described_as_a_specific_obstacle
+        - the_response_addresses_that_obstacle_rather_than_generic_effort
+        - a_justified_reason_to_end_remains_distinct_from_automatic_switching
       - measurement_id: c0810_a2_boundary
         kind: boolean
         role: supporting
@@ -198,10 +224,40 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0810-COMPLETION-AND-PERSEVERANCE-01-A3
     sequence: 3
-    title: Compare the Completion and perseverance context after the change
-    instructions: 'Reinspect the same bounded context after the change. Record improvement, no difference,
-      mixed effects, harm, or insufficient observation and compare only with this target: Finishes a meaningful
-      commitment despite boredom or difficulty, or ends it for a reasoned cause.'
+    title: Close the loop and communicate any consequences
+    instructions: 'Check the finished work against every stated requirement. For the default, confirm
+      the purpose, Saturday time, community room and Thursday reply route are all present; label the result
+      a draft. For a real commitment that should end, record the reason, unresolved effects, any handoff
+      and an appropriate message to people relying on it. Do not claim cancellation occurred if the necessary
+      communication was never made. Record finished, explicitly ended or still open accurately, and remove
+      or reschedule reminders accordingly. A stopped work session is not automatically a closed commitment.
+
+
+      Observation checks: The final disposition is finished explicitly ended or still open; Completion
+      is checked against all stated requirements; A reasoned ending addresses affected people and remaining
+      effects; Reminders and next actions match the actual disposition. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.
+
+
+      Final review: What made this loop genuinely closed, and which obstacle-handling choice was useful?
+      Keep unfinished effects visible and select the next commitment deliberately rather than expanding
+      the active list.
+
+
+      Examples: Supportive: The invitation draft was checked for all four facts and closed as a complete
+      draft, without pretending a fictional gathering had been arranged.
+
+
+      Mixed: Most of a real task was finished but a required reply was still missing, so it remained open
+      with one concrete next step.
+
+
+      Contradictory: An obsolete task was pursued for status, or a commitment affecting others was abandoned
+      without addressing its consequences.
+
+
+      Inconclusive: The person worked for a set time but never defined or checked what would make the
+      commitment complete.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -223,9 +279,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0810_a3_same_context_compared
-        - c0810_a3_mixed_or_null_result_allowed
-        - c0810_a3_target_evidence_reviewed
+        - the_final_disposition_is_finished_explicitly_ended_or_still_open
+        - completion_is_checked_against_all_stated_requirements
+        - a_reasoned_ending_addresses_affected_people_and_remaining_effects
+        - reminders_and_next_actions_match_the_actual_disposition
       - measurement_id: c0810_a3_boundary
         kind: boolean
         role: supporting
@@ -246,16 +303,17 @@ intervention:
       Completion and perseverance; no purchase, subscription, travel, credential, or public artifact is
       required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Completion and perseverance; assistive technology, interpretation, a support person, and
-      a deferred action are valid without penalty.
+    - Use a smaller legitimate deliverable, dictation or agreed assistance. A task involving others may
+      need renegotiation before it can end; the exercise does not cancel obligations on their behalf.
+      Retain safety and care needs over a completion target.
     cultural_context:
     - Adapt the expression of Completion and perseverance to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Completion and perseverance opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use a smaller legitimate deliverable, dictation or agreed assistance. A task involving others may
+      need renegotiation before it can end; the exercise does not cancel obligations on their behalf.
+      Retain safety and care needs over a completion target.
   pause_conditions:
   - Pause Completion and perseverance when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -287,10 +345,8 @@ evidence_and_scoring:
   - c0810_a3_boundary
   - c0810_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Completion and perseverance action exceeded consent, authority, privacy, qualification, role,
-    burden, or safety boundaries.
-  - The evidence contradicted the intended Completion and perseverance criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - An obsolete task was pursued for status, or a commitment affecting others was abandoned without addressing
+    its consequences.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Completion and perseverance explicitly; support can enable access and never reduces dignity or
     silently changes the typed value.
@@ -301,14 +357,23 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Completion and perseverance rules withhold observations older than 90 days;
     no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Finishes a meaningful commitment despite boredom or difficulty, or ends it for a reasoned cause.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Completion and perseverance requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Choose one open loop and define an honest endpoint. Observed checks:
+    One meaningful open loop is selected from a limited list; Competing commitments are explicitly deferred
+    for the work period; Done and affected people are identified concretely; The goal''s continued usefulness
+    is checked. Action 2: Work through a specific plateau instead of switching goals automatically. Observed
+    checks: A concrete next action is actually attempted; Any plateau is described as a specific obstacle;
+    The response addresses that obstacle rather than generic effort; A justified reason to end remains
+    distinct from automatic switching. Action 3: Close the loop and communicate any consequences. Observed
+    checks: The final disposition is finished explicitly ended or still open; Completion is checked against
+    all stated requirements; A reasoned ending addresses affected people and remaining effects; Reminders
+    and next actions match the actual disposition.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. The person worked for a set time but never defined
+    or checked what would make the commitment complete.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Completion
     and perseverance contribution under typed evaluation; protocol performance remains distinct and is
     never counted twice.
@@ -317,9 +382,8 @@ evidence_and_scoring:
   - L07
   - L10
   - L32
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Completion and perseverance evidence.
@@ -327,10 +391,20 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The audit one bounded completion and perseverance context action was attempted or explicitly deferred.
-  - The make one reversible completion and perseverance redesign action was attempted or explicitly deferred.
-  - The compare the completion and perseverance context after the change action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Choose one open loop and define an honest endpoint. Observed checks: One meaningful open
+    loop is selected from a limited list; Competing commitments are explicitly deferred for the work period;
+    Done and affected people are identified concretely; The goal''s continued usefulness is checked.'
+  - 'Action 2: Work through a specific plateau instead of switching goals automatically. Observed checks:
+    A concrete next action is actually attempted; Any plateau is described as a specific obstacle; The
+    response addresses that obstacle rather than generic effort; A justified reason to end remains distinct
+    from automatic switching.'
+  - 'Action 3: Close the loop and communicate any consequences. Observed checks: The final disposition
+    is finished explicitly ended or still open; Completion is checked against all stated requirements;
+    A reasoned ending addresses affected people and remaining effects; Reminders and next actions match
+    the actual disposition.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -339,56 +413,59 @@ completion_and_review:
     - c0810_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Completion and perseverance only when the initial context remained
-    safe, the evidence criteria were usable, burden was acceptable, and a new context can be named without
-    assuming transfer.
-  transfer_limit: Three bounded actions do not establish Completion and perseverance across roles, cultures,
-    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: What made this loop genuinely closed, and which obstacle-handling choice was useful?
+    Keep unfinished effects visible and select the next commitment deliberately rather than expanding
+    the active list.
+  transfer_limit: One closed loop tests follow-through and judgment. It does not require finishing a harmful
+    or obsolete goal, and quietly abandoning a promise is not the same as a reasoned ending.
   reflection:
-    before: What does Completion and perseverance require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Completion and perseverance criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Finishes a meaningful commitment despite boredom or difficulty,
-      or ends it for a reasoned cause.', what contradiction or missing context matters most, and should
-      this Completion and perseverance design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Limit competing work, define done, address
+      a specific obstacle and either finish a meaningful commitment or explicitly end it for a defensible
+      reason.'
+    during: Which checks have actually been observed? Most of a real task was finished but a required
+      reply was still missing, so it remained open with one concrete next step.
+    after: What made this loop genuinely closed, and which obstacle-handling choice was useful? Keep unfinished
+      effects visible and select the next commitment deliberately rather than expanding the active list.
   review_guidance:
     repeat: Repeat the same bounded Completion and perseverance design only when the context and burden
       remain appropriate.
-    adapt: Change the Completion and perseverance medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: Use a smaller legitimate deliverable, dictation or agreed assistance. A task involving others
+      may need renegotiation before it can end; the exercise does not cancel obligations on their behalf.
+      Retain safety and care needs over a completion target.
     stop: Stop Completion and perseverance when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Completion and perseverance questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Completion and perseverance criteria were observed with provenance and no
-      adverse boundary signal in the selected context.
-    mixed: Some Completion and perseverance criteria were observed while burden, support, contextual change,
-      or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Completion and perseverance criterion, introduced
-      harm or coercion, or showed the design was not workable.
-    inconclusive: The Completion and perseverance action was deferred, not observed, not applicable, stale,
-      insufficiently bounded, or too confounded to interpret.
+    supportive: The invitation draft was checked for all four facts and closed as a complete draft, without
+      pretending a fictional gathering had been arranged.
+    mixed: Most of a real task was finished but a required reply was still missing, so it remained open
+      with one concrete next step.
+    contradictory: An obsolete task was pursued for status, or a commitment affecting others was abandoned
+      without addressing its consequences.
+    inconclusive: The person worked for a set time but never defined or checked what would make the commitment
+      complete.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Completion and perseverance.
+    context_heading: Close one open commitment through completion or a reasoned ending
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Completion
       and perseverance.
   check_in_labels:
-    c0810_a1_primary: The bounded Completion and perseverance criterion for action 1 was observed
+    c0810_a1_primary: 'Observed checks: choose one open loop and define an honest endpoint'
     c0810_a1_boundary: Action 1 stayed inside its stated Completion and perseverance boundary
     c0810_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0810_a2_primary: The bounded Completion and perseverance criterion for action 2 was observed
+    c0810_a2_primary: 'Observed checks: work through a specific plateau instead of switching goals automatically'
     c0810_a2_boundary: Action 2 stayed inside its stated Completion and perseverance boundary
     c0810_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0810_a3_primary: The bounded Completion and perseverance criterion for action 3 was observed
+    c0810_a3_primary: 'Observed checks: close the loop and communicate any consequences'
     c0810_a3_boundary: Action 3 stayed inside its stated Completion and perseverance boundary
     c0810_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Completion and perseverance
-    practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What made this loop genuinely closed, and which obstacle-handling choice was useful?
+    Keep unfinished effects visible and select the next commitment deliberately rather than expanding
+    the active list. Completion is not mastery.
+  plain_language_evidence: The invitation draft was checked for all four facts and closed as a complete
+    draft, without pretending a fictional gathering had been arranged.
   display_order: 106

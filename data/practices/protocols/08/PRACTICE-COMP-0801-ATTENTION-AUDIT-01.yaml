@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0801-ATTENTION-AUDIT-01
 slug: c0801-attention-audit-practice
-name: Bounded Attention audit Practice
+name: Find one recurring attention leak and change its surroundings
 parent_competency_id: '08.01'
 domain_id: 08
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 08.01
-      (Attention audit); canonical scope, evidence target, classification, domain boundary, and parent
-      mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 08.01; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,38 +34,38 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Attention audit through a bounded audit and redesign bounded by the canonical scope:
-    Track where attention goes across devices, entertainment, work, relationships, rumination, and deliberate
-    practice.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can identify major
-    attention leaks and redesign at least one recurring environment. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Observe where attention goes, distinguish chosen engagement from unwanted drift, and redesign
+    one recurring setting without treating all leisure as wasted time.
+  why_recommended: Observe where attention goes, distinguish chosen engagement from unwanted drift, and
+    redesign one recurring setting without treating all leisure as wasted time.
   claims:
-  - statement: Using the canonical scope and evidence target for Attention audit is a traceable product-design
-      basis for a source-only draft protocol.
+  - statement: Observe where attention goes, distinguish chosen engagement from unwanted drift, and redesign
+      one recurring setting without treating all leisure as wasted time.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Attention audit practice fit the person's current
     role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Attention audit as not applicable, consciously unchosen, or deferred
     without penalty when the role, pathway, capacity, authority, opportunity, or safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Attention audit context,
-    understand the source-only status, and stop without losing safety, care, employment, housing, services,
-    relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Attention
-    audit; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency, or dependence
-    for evidence.
+  readiness_considerations: Use spoken notes, symbols or a trusted recorder without exposing private content.
+    Sample fewer details if recall is difficult. A planned comparison is preparation until performed;
+    do not create a stressful interruption to obtain data.
+  opportunity_considerations: Keep a private six-line note headed devices, entertainment, work, relationships,
+    repetitive worry, and deliberate practice. Sample three ordinary transitions today, such as finishing
+    breakfast, finishing a work period and beginning leisure. No monitoring app or access to anyone else's
+    device is needed.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Attention audit.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Keep a private six-line note headed devices, entertainment, work, relationships, repetitive worry,
+    and deliberate practice. Sample three ordinary transitions today, such as finishing breakfast, finishing
+    a work period and beginning leisure. No monitoring app or access to anyone else's device is needed.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Attention audit instead of a live
-    situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use spoken notes, symbols or a trusted recorder without exposing private content. Sample fewer details
+    if recall is difficult. A planned comparison is preparation until performed; do not create a stressful
+    interruption to obtain data.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,18 +78,26 @@ meaning_and_fit:
 intervention:
   protocol_class: PF-AUDIT-REDESIGN
   duration_days: 10
-  cadence: Complete three bounded Attention audit actions over ten days, preserving explicit not-applicable,
-    defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Attention audit; copy the canonical scope and evidence target into a private
-    working note; define the action boundary, valid supports, privacy limit, and stop condition before
-    beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Attention
-    audit. Do not store private prose, names, identities, diagnoses, allegations, credentials, account
-    data, protected work information, intimate detail, artifact contents, observer narrative, or another
-    person's secrets. This source-only draft is not surveillance, professional advice, treatment, certification,
-    or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Attention audit actions, and review;
-    scope may be reduced or deferred for access, care, health, workload, conscience, or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Keep a private six-line note headed devices, entertainment, work, relationships, repetitive
+    worry, and deliberate practice. Sample three ordinary transitions today, such as finishing breakfast,
+    finishing a work period and beginning leisure. No monitoring app or access to anyone else''s device
+    is needed. Goal: Observe where attention goes, distinguish chosen engagement from unwanted drift,
+    and redesign one recurring setting without treating all leisure as wasted time. Scope: A short sample
+    identifies one testable attention pattern. It is not continuous monitoring, a productivity score or
+    a diagnosis of attention difficulty. Time and effort: Three brief notes on one day, about 15 minutes
+    of review and one comparable trial of a changed setting. Adaptation: Use spoken notes, symbols or
+    a trusted recorder without exposing private content. Sample fewer details if recall is difficult.
+    A planned comparison is preparation until performed; do not create a stressful interruption to obtain
+    data. Keep personal working notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use spoken notes, symbols or a trusted recorder without exposing private content.
+    Sample fewer details if recall is difficult. A planned comparison is preparation until performed;
+    do not create a stressful interruption to obtain data.
+  expected_burden: Three brief notes on one day, about 15 minutes of review and one comparable trial of
+    a changed setting.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Attention audit protocol to rank worth, coerce participation, demand disclosure, override
@@ -98,18 +105,27 @@ intervention:
   - Treating a completed Attention audit action, a polished artifact, agreement, confidence, speed, independence,
     or output as mastery or universal transfer.
   exclusions:
-  - Any Attention audit situation involving emergency response, abuse, retaliation, illegal conduct, medical
-    treatment, legal representation, financial-loss decisions, safeguarding, hazardous equipment, or other
-    consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use spoken
+    notes, symbols or a trusted recorder without exposing private content. Sample fewer details if recall
+    is difficult. A planned comparison is preparation until performed; do not create a stressful interruption
+    to obtain data.
   actions:
   - stable_id: PRACTICE-COMP-0801-ATTENTION-AUDIT-01-A1
     sequence: 1
-    title: Audit one bounded Attention audit context
-    instructions: 'Inspect one user-controlled, low-consequence context relevant to Attention audit. Use
-      the canonical scope to name observable conditions without diagnosing people or systems: Track where
-      attention goes across devices, entertainment, work, relationships, rumination, and deliberate practice.'
+    title: Sample actual attention and distinguish choice from unwanted drift
+    instructions: 'At each chosen transition, recall the activity you intended, what actually held your
+      attention and whether the change was freely chosen, necessary or unwanted. Place it under the six
+      headings; leave unsampled categories unknown. For example, checking an essential message is different
+      from opening unrelated feeds after the reply, and a welcome conversation is not a leak merely because
+      work paused. For repetitive worry, describe only its effect on the activity, not private thought
+      content. Record a concrete cue where available, such as a visible notification, and avoid reconstructing
+      an entire day from memory.
+
+
+      Observation checks: Three actual transitions are sampled; All six attention categories are considered
+      with unknowns allowed; Chosen leisure and necessary interruption are distinguished from unwanted
+      drift; A concrete cue or uncertainty is recorded. Mark only what you observed. Missing, mixed and
+      negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -131,9 +147,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0801_a1_one_context_only
-        - c0801_a1_observable_conditions_recorded
-        - c0801_a1_hazards_excluded
+        - three_actual_transitions_are_sampled
+        - all_six_attention_categories_are_considered_with_unknowns_allowed
+        - chosen_leisure_and_necessary_interruption_are_distinguished_from_unwanted_drift
+        - a_concrete_cue_or_uncertainty_is_recorded
       - measurement_id: c0801_a1_boundary
         kind: boolean
         role: supporting
@@ -150,10 +167,20 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0801-ATTENTION-AUDIT-01-A2
     sequence: 2
-    title: Make one reversible Attention audit redesign
-    instructions: Choose one small, lawful, reversible change that addresses a specific audit finding
-      for Attention audit. Record the intended effect, cost or burden, and a rollback condition before
-      changing anything.
+    title: Redesign one recurring setting around the observed cue
+    instructions: 'Choose an unwanted pattern that appeared in the sample and state the activity you want
+      to protect. Change one controllable feature: close an unrelated tab before reading, place the needed
+      page in view, silence only nonessential alerts or keep a note for later worries beside the task.
+      If no pattern appeared, use a separate explicit experiment comparing reading with and without an
+      unrelated visible tab; do not invent a personal leak. Preserve emergency contact, accessibility
+      and caregiving needs. Write what would count as a useful change, such as returning to the selected
+      page without opening the unrelated tab.
+
+
+      Observation checks: The redesign targets an observed pattern or a labeled exploratory comparison;
+      Exactly one controllable feature changes; Necessary communication and accessibility supports remain
+      available; A useful result is defined in observable terms. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -175,9 +202,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0801_a2_change_traces_to_finding
-        - c0801_a2_rollback_defined
-        - c0801_a2_burden_recorded
+        - the_redesign_targets_an_observed_pattern_or_a_labeled_exploratory_comparison
+        - exactly_one_controllable_feature_changes
+        - necessary_communication_and_accessibility_supports_remain_available
+        - a_useful_result_is_defined_in_observable_terms
       - measurement_id: c0801_a2_boundary
         kind: boolean
         role: supporting
@@ -194,10 +222,40 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0801-ATTENTION-AUDIT-01-A3
     sequence: 3
-    title: Compare the Attention audit context after the change
-    instructions: 'Reinspect the same bounded context after the change. Record improvement, no difference,
-      mixed effects, harm, or insufficient observation and compare only with this target: Can identify
-      major attention leaks and redesign at least one recurring environment.'
+    title: Try the changed setting and compare its practical effect
+    instructions: 'Use the changed setting during a comparable ordinary activity. Afterward, note whether
+      the cue occurred, where attention went and how readily you returned. Compare it with a sampled usual
+      occurrence while retaining differences in fatigue, urgency or interruptions. If the change blocked
+      a legitimate need or merely moved the distraction elsewhere, record that cost. Keep the adjustment,
+      revise it or restore the original setting based on the actual comparison. A single better occasion
+      supports a local possibility, not a conclusion that all devices, entertainment or drifting thoughts
+      are harmful.
+
+
+      Observation checks: The changed setting is actually used; Its result is compared with a usual occurrence;
+      Relevant context differences and costs remain visible; The next environmental choice follows the
+      observation. Mark only what you observed. Missing, mixed and negative results are valid; a deferred
+      action is not completed.
+
+
+      Final review: Which cue repeatedly pulled attention away from a chosen purpose, and did the redesign
+      help without blocking a real need? Retain one useful change and leave unsampled parts of life unknown.
+
+
+      Examples: Supportive: Unrelated tabs repeatedly drew attention after an essential reply; closing
+      one before reading made returning to the page easier on the trial.
+
+
+      Mixed: Silencing an alert reduced unwanted checking but also obscured a needed message, so the setting
+      required a narrower exception.
+
+
+      Contradictory: All conversation and leisure were classified as failure, or an essential accessibility
+      alert was removed to improve apparent focus.
+
+
+      Inconclusive: A general belief about screen time replaced actual samples, and no changed setting
+      was tried.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -219,9 +277,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0801_a3_same_context_compared
-        - c0801_a3_mixed_or_null_result_allowed
-        - c0801_a3_target_evidence_reviewed
+        - the_changed_setting_is_actually_used
+        - its_result_is_compared_with_a_usual_occurrence
+        - relevant_context_differences_and_costs_remain_visible
+        - the_next_environmental_choice_follows_the_observation
       - measurement_id: c0801_a3_boundary
         kind: boolean
         role: supporting
@@ -241,16 +300,17 @@ intervention:
     - Use paper, an offline note, a library resource, a public example, or a no-cost conversation for
       Attention audit; no purchase, subscription, travel, credential, or public artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Attention audit; assistive technology, interpretation, a support person, and a deferred
-      action are valid without penalty.
+    - Use spoken notes, symbols or a trusted recorder without exposing private content. Sample fewer details
+      if recall is difficult. A planned comparison is preparation until performed; do not create a stressful
+      interruption to obtain data.
     cultural_context:
     - Adapt the expression of Attention audit to direct or indirect communication, collective or individual
       decision structures, local norms, faith or secular commitments, and role obligations while preserving
       consent and dignity.
     resource_variants:
-    - When a real Attention audit opportunity is unavailable or inappropriate, use a fictional, historical,
-      public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use spoken notes, symbols or a trusted recorder without exposing private content. Sample fewer details
+      if recall is difficult. A planned comparison is preparation until performed; do not create a stressful
+      interruption to obtain data.
   pause_conditions:
   - Pause Attention audit when capacity, consent, authority, privacy, access, care duties, uncertainty,
     distress, fatigue, pain, resource scarcity, or changed circumstances make the next action unwise.
@@ -280,10 +340,8 @@ evidence_and_scoring:
   - c0801_a3_boundary
   - c0801_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Attention audit action exceeded consent, authority, privacy, qualification, role, burden, or safety
-    boundaries.
-  - The evidence contradicted the intended Attention audit criterion, depended on coercion or hidden private
-    content, or could not distinguish the protocol from contextual change.
+  - All conversation and leisure were classified as failure, or an essential accessibility alert was removed
+    to improve apparent focus.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Attention audit explicitly; support can enable access and never reduces dignity or silently changes
     the typed value.
@@ -293,14 +351,23 @@ evidence_and_scoring:
     are rejected and later repetitions use the typed contract's explicit diminishing multipliers.
   recency_rule: Generated Attention audit rules withhold observations older than 90 days; no unrecorded
     retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can identify major attention leaks and redesign at least one recurring environment.—not completion,
-    confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Attention audit requires a bounded context, allowlisted observations,
-    provenance, contradiction and adverse handling, and preserved uncertainty; free text and artifact
-    contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Sample actual attention and distinguish choice from unwanted drift. Observed
+    checks: Three actual transitions are sampled; All six attention categories are considered with unknowns
+    allowed; Chosen leisure and necessary interruption are distinguished from unwanted drift; A concrete
+    cue or uncertainty is recorded. Action 2: Redesign one recurring setting around the observed cue.
+    Observed checks: The redesign targets an observed pattern or a labeled exploratory comparison; Exactly
+    one controllable feature changes; Necessary communication and accessibility supports remain available;
+    A useful result is defined in observable terms. Action 3: Try the changed setting and compare its
+    practical effect. Observed checks: The changed setting is actually used; Its result is compared with
+    a usual occurrence; Relevant context differences and costs remain visible; The next environmental
+    choice follows the observation.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A general belief about screen time replaced actual
+    samples, and no changed setting was tried.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Attention
     audit contribution under typed evaluation; protocol performance remains distinct and is never counted
     twice.
@@ -309,9 +376,8 @@ evidence_and_scoring:
   - L08
   - L10
   - L36
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Attention audit evidence.
@@ -319,10 +385,20 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The audit one bounded attention audit context action was attempted or explicitly deferred.
-  - The make one reversible attention audit redesign action was attempted or explicitly deferred.
-  - The compare the attention audit context after the change action preserved a limited conclusion, contradiction,
-    or inconclusive result.
+  - 'Action 1: Sample actual attention and distinguish choice from unwanted drift. Observed checks: Three
+    actual transitions are sampled; All six attention categories are considered with unknowns allowed;
+    Chosen leisure and necessary interruption are distinguished from unwanted drift; A concrete cue or
+    uncertainty is recorded.'
+  - 'Action 2: Redesign one recurring setting around the observed cue. Observed checks: The redesign targets
+    an observed pattern or a labeled exploratory comparison; Exactly one controllable feature changes;
+    Necessary communication and accessibility supports remain available; A useful result is defined in
+    observable terms.'
+  - 'Action 3: Try the changed setting and compare its practical effect. Observed checks: The changed
+    setting is actually used; Its result is compared with a usual occurrence; Relevant context differences
+    and costs remain visible; The next environmental choice follows the observation.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -331,55 +407,58 @@ completion_and_review:
     - c0801_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Attention audit only when the initial context remained safe,
-    the evidence criteria were usable, burden was acceptable, and a new context can be named without assuming
-    transfer.
-  transfer_limit: Three bounded actions do not establish Attention audit across roles, cultures, relationships,
-    seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: Which cue repeatedly pulled attention away from a chosen purpose, and did the
+    redesign help without blocking a real need? Retain one useful change and leave unsampled parts of
+    life unknown.
+  transfer_limit: A short sample identifies one testable attention pattern. It is not continuous monitoring,
+    a productivity score or a diagnosis of attention difficulty.
   reflection:
-    before: What does Attention audit require in this exact context, what remains outside my role or authority,
-      and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Attention audit criterion is present, absent, mixed, or unknown, and are
-      consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can identify major attention leaks and redesign at least one
-      recurring environment.', what contradiction or missing context matters most, and should this Attention
-      audit design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Observe where attention goes, distinguish
+      chosen engagement from unwanted drift, and redesign one recurring setting without treating all leisure
+      as wasted time.'
+    during: Which checks have actually been observed? Silencing an alert reduced unwanted checking but
+      also obscured a needed message, so the setting required a narrower exception.
+    after: Which cue repeatedly pulled attention away from a chosen purpose, and did the redesign help
+      without blocking a real need? Retain one useful change and leave unsampled parts of life unknown.
   review_guidance:
     repeat: Repeat the same bounded Attention audit design only when the context and burden remain appropriate.
-    adapt: Change the Attention audit medium, scope, support, timing, criteria, or context while preserving
-      provenance and the narrower evidence claim.
+    adapt: Use spoken notes, symbols or a trusted recorder without exposing private content. Sample fewer
+      details if recall is difficult. A planned comparison is preparation until performed; do not create
+      a stressful interruption to obtain data.
     stop: Stop Attention audit when the practice becomes coercive, unsafe, privacy-invasive, role-inappropriate,
       professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Attention audit questions beyond this
-      educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Attention audit criteria were observed with provenance and no adverse boundary
-      signal in the selected context.
-    mixed: Some Attention audit criteria were observed while burden, support, contextual change, or a
-      contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Attention audit criterion, introduced harm
-      or coercion, or showed the design was not workable.
-    inconclusive: The Attention audit action was deferred, not observed, not applicable, stale, insufficiently
-      bounded, or too confounded to interpret.
+    supportive: Unrelated tabs repeatedly drew attention after an essential reply; closing one before
+      reading made returning to the page easier on the trial.
+    mixed: Silencing an alert reduced unwanted checking but also obscured a needed message, so the setting
+      required a narrower exception.
+    contradictory: All conversation and leisure were classified as failure, or an essential accessibility
+      alert was removed to improve apparent focus.
+    inconclusive: A general belief about screen time replaced actual samples, and no changed setting was
+      tried.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Attention audit.
+    context_heading: Find one recurring attention leak and change its surroundings
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Attention
       audit.
   check_in_labels:
-    c0801_a1_primary: The bounded Attention audit criterion for action 1 was observed
+    c0801_a1_primary: 'Observed checks: sample actual attention and distinguish choice from unwanted drift'
     c0801_a1_boundary: Action 1 stayed inside its stated Attention audit boundary
     c0801_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0801_a2_primary: The bounded Attention audit criterion for action 2 was observed
+    c0801_a2_primary: 'Observed checks: redesign one recurring setting around the observed cue'
     c0801_a2_boundary: Action 2 stayed inside its stated Attention audit boundary
     c0801_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0801_a3_primary: The bounded Attention audit criterion for action 3 was observed
+    c0801_a3_primary: 'Observed checks: try the changed setting and compare its practical effect'
     c0801_a3_boundary: Action 3 stayed inside its stated Attention audit boundary
     c0801_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Attention audit practice,
-    including support, contradiction, defer, no result, or harm.
+  completion_copy: Which cue repeatedly pulled attention away from a chosen purpose, and did the redesign
+    help without blocking a real need? Retain one useful change and leave unsampled parts of life unknown.
+    Completion is not mastery.
+  plain_language_evidence: Unrelated tabs repeatedly drew attention after an essential reply; closing
+    one before reading made returning to the page easier on the trial.
   display_order: 99

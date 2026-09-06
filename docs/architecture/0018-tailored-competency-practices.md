@@ -78,3 +78,20 @@ in domains 03, 04, 06 and 07 and supply reviewer-readable instructions. Domain
 diagnosis, treatment, clinical exposure, crisis response and induced distress.
 The catalog-wide target remains all 383; 105 authored records do not resolve
 the remaining 278 rewrites or any deferred human or empirical review.
+
+
+M6J-06 handles the first frozen legacy intersection explicitly. Domain 08 has
+ten runtime rewrites and one complete source-only presence guide. A narrowly
+validated contract lists guide-only IDs drawn solely from the five known
+frozen legacy competencies. Missing or foreign guides fail closed. Guide
+instructions are checked for completeness and originality but never projected
+into runtime; the legacy projection rejection remains unchanged. Runtime
+coverage is 115 authored and 268 pending, with 08.02 still pending and its guide
+listed separately. This is an explanatory compatibility step, not a waiver of
+legacy review or a claim that all eleven domain packages were rewritten.
+
+M6J-06 also preserves the existing 08.06 typed evidence rules and golden
+fixtures, as for 13.02. Its richer content follows the original usual start,
+one-cue start and comparison sequence; preparation is not relabeled as a
+Boolean start observation. Later pre-frontier rewrites must check this
+compatibility before replacing primary evidence kinds.

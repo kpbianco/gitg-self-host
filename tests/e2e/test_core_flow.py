@@ -657,6 +657,33 @@ def test_play_protocol_setup_is_specific_and_score_active(live_server, page: Pag
             "All four support levels have observable thresholds",
             "Personal routine specialized and emergency routes are listed",
         ),
+        (
+            "08.03",
+            "impulse-choice",
+            "Mixed: The pause worked once but became unnecessary delay later",
+            "Scope: One low-stakes impulse is practiced twice",
+            None,
+            "The seven possible contexts are considered without compulsory enactment",
+            "A pause occurs before the optional commitment",
+        ),
+        (
+            "08.07",
+            "habit-design",
+            "Mixed: The item was ready once but the location obstructed a shared surface",
+            "Scope: Two opportunities test one local design",
+            None,
+            "A specific recurring action and current cue are identified",
+            "The selected arrangement is actually installed",
+        ),
+        (
+            "08.10",
+            "commitment-closeout",
+            "Mixed: Most of a real task was finished but a required reply was still missing",
+            "Scope: One closed loop tests follow-through and judgment",
+            None,
+            "One meaningful open loop is selected from a limited list",
+            "A concrete next action is actually attempted",
+        ),
     ],
 )
 def test_tailored_practices_show_readable_scope_examples_and_observation_checks(

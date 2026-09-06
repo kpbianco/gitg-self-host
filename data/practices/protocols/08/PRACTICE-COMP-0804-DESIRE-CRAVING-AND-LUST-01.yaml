@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0804-DESIRE-CRAVING-AND-LUST-01
 slug: c0804-desire-craving-and-lust-practice
-name: Bounded Desire, craving, and lust Practice
+name: Observe one desire without turning it into an obligation or entitlement
 parent_competency_id: '08.04'
 domain_id: 08
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 08.04
-      (Desire, craving, and lust); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 08.04; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,38 +34,38 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Desire, craving, and lust through a bounded audit and redesign bounded by the canonical
-    scope: Observe how desire narrows attention, distorts judgment, and treats persons or goods as instruments.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can experience desire
-    without compulsory action or dehumanization. The protocol creates a small opportunity to examine that
-    target without treating completion as broad capability.'
+  purpose: Notice how wanting narrows attention and shapes judgment, then make a bounded choice that respects
+    people and goods beyond their usefulness to the desire.
+  why_recommended: Notice how wanting narrows attention and shapes judgment, then make a bounded choice
+    that respects people and goods beyond their usefulness to the desire.
   claims:
-  - statement: Using the canonical scope and evidence target for Desire, craving, and lust is a traceable
-      product-design basis for a source-only draft protocol.
+  - statement: Notice how wanting narrows attention and shapes judgment, then make a bounded choice that
+      respects people and goods beyond their usefulness to the desire.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Desire, craving, and lust practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Desire, craving, and lust as not applicable, consciously unchosen, or
     deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Desire, craving,
-    and lust context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Desire, craving,
-    and lust; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency, or dependence
-    for evidence.
+  readiness_considerations: Use the accessory case or a nonsexual ordinary desire. Privacy, consent and
+    necessities remain intact. If craving concerns dependence or distressing compulsive behavior, seek
+    suitable care rather than abruptly changing substance use or imposing deprivation through this exercise.
+  opportunity_considerations: 'Use an ordinary desire such as checking an entertaining feed, or this case:
+    an attractive new accessory seems essential even though an existing one serves its function. Use a
+    private note; do not buy anything or view provocative material for the exercise.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Desire, craving, and lust.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use an ordinary desire such as checking an entertaining feed, or this case: an attractive new accessory
+    seems essential even though an existing one serves its function. Use a private note; do not buy anything
+    or view provocative material for the exercise.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Desire, craving, and lust instead
-    of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use the accessory case or a nonsexual ordinary desire. Privacy, consent and necessities remain intact.
+    If craving concerns dependence or distressing compulsive behavior, seek suitable care rather than
+    abruptly changing substance use or imposing deprivation through this exercise.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -78,21 +77,28 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Desire, craving, and lust
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-AUDIT-REDESIGN
+  protocol_class: PF-BEHAVIORAL-EXPERIMENT
   duration_days: 10
-  cadence: Complete three bounded Desire, craving, and lust actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Desire, craving, and lust; copy the canonical scope and evidence target
-    into a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Desire,
-    craving, and lust. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Desire, craving, and lust actions, and
-    review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use an ordinary desire such as checking an entertaining feed, or this case: an attractive new
+    accessory seems essential even though an existing one serves its function. Use a private note; do
+    not buy anything or view provocative material for the exercise. Goal: Notice how wanting narrows attention
+    and shapes judgment, then make a bounded choice that respects people and goods beyond their usefulness
+    to the desire. Scope: A harmless ordinary desire illustrates attention and choice. It does not require
+    sexual disclosure, abstinence from necessities, deliberate craving or treatment of addiction. Time
+    and effort: About 15 minutes for observation and one ordinary choice, followed by a short later review.
+    Adaptation: Use the accessory case or a nonsexual ordinary desire. Privacy, consent and necessities
+    remain intact. If craving concerns dependence or distressing compulsive behavior, seek suitable care
+    rather than abruptly changing substance use or imposing deprivation through this exercise. Keep personal
+    working notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use the accessory case or a nonsexual ordinary desire. Privacy, consent and necessities
+    remain intact. If craving concerns dependence or distressing compulsive behavior, seek suitable care
+    rather than abruptly changing substance use or imposing deprivation through this exercise.
+  expected_burden: About 15 minutes for observation and one ordinary choice, followed by a short later
+    review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Desire, craving, and lust protocol to rank worth, coerce participation, demand disclosure,
@@ -100,18 +106,26 @@ intervention:
   - Treating a completed Desire, craving, and lust action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Desire, craving, and lust situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use the accessory
+    case or a nonsexual ordinary desire. Privacy, consent and necessities remain intact. If craving concerns
+    dependence or distressing compulsive behavior, seek suitable care rather than abruptly changing substance
+    use or imposing deprivation through this exercise.
   actions:
   - stable_id: PRACTICE-COMP-0804-DESIRE-CRAVING-AND-LUST-01-A1
     sequence: 1
-    title: Audit one bounded Desire, craving, and lust context
-    instructions: 'Inspect one user-controlled, low-consequence context relevant to Desire, craving, and
-      lust. Use the canonical scope to name observable conditions without diagnosing people or systems:
-      Observe how desire narrows attention, distorts judgment, and treats persons or goods as instruments.'
+    title: Describe what wanting makes prominent and what it hides
+    instructions: 'Write the wanted experience, the promised benefit and the details receiving most attention.
+      Then name two neglected facts, such as the existing item''s usefulness or another commitment that
+      matters. Separate I want this from I must have this and from a claim that obtaining it will settle
+      your identity. In the case, attractive design may be a real preference without making the accessory
+      necessary. Notice whether the desire changes what evidence you accept. Record the desire''s presence
+      without trying to intensify it or insisting it vanish before you can choose.
+
+
+      Observation checks: The wanted experience and promised benefit are specific; Two neglected facts
+      broaden the picture; Wanting is separated from necessity and identity claims; Changes in attention
+      or evidence selection are identified. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -133,9 +147,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0804_a1_one_context_only
-        - c0804_a1_observable_conditions_recorded
-        - c0804_a1_hazards_excluded
+        - the_wanted_experience_and_promised_benefit_are_specific
+        - two_neglected_facts_broaden_the_picture
+        - wanting_is_separated_from_necessity_and_identity_claims
+        - changes_in_attention_or_evidence_selection_are_identified
       - measurement_id: c0804_a1_boundary
         kind: boolean
         role: supporting
@@ -152,10 +167,19 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0804-DESIRE-CRAVING-AND-LUST-01-A2
     sequence: 2
-    title: Make one reversible Desire, craving, and lust redesign
-    instructions: Choose one small, lawful, reversible change that addresses a specific audit finding
-      for Desire, craving, and lust. Record the intended effect, cost or burden, and a rollback condition
-      before changing anything.
+    title: Check whether a person or good is being reduced to a means
+    instructions: 'Ask what else matters about the person or object beyond satisfying the urge. For an
+      object, consider its actual function, care and place among other chosen commitments. For a relational
+      or sexual example considered privately, another person''s preferences, boundaries and right to decline
+      remain independent of your wanting; attraction creates no entitlement. Do not contact someone to
+      test this. Write a sentence that restores the broader view, such as I can appreciate this design
+      while using what already works, or Their choice is theirs even when I feel disappointed.
+
+
+      Observation checks: The person or good is considered beyond satisfying the urge; Another person''s
+      independent boundaries are preserved where relevant; Desire is not treated as entitlement; A concrete
+      broader-view statement is written. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -177,9 +201,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0804_a2_change_traces_to_finding
-        - c0804_a2_rollback_defined
-        - c0804_a2_burden_recorded
+        - the_person_or_good_is_considered_beyond_satisfying_the_urge
+        - another_person_s_independent_boundaries_are_preserved_where_relevant
+        - desire_is_not_treated_as_entitlement
+        - a_concrete_broader_view_statement_is_written
       - measurement_id: c0804_a2_boundary
         kind: boolean
         role: supporting
@@ -196,10 +221,39 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0804-DESIRE-CRAVING-AND-LUST-01-A3
     sequence: 3
-    title: Compare the Desire, craving, and lust context after the change
-    instructions: 'Reinspect the same bounded context after the change. Record improvement, no difference,
-      mixed effects, harm, or insufficient observation and compare only with this target: Can experience
-      desire without compulsory action or dehumanization.'
+    title: Make a bounded choice while allowing the desire to remain
+    instructions: 'Choose a suitable action: continue the chosen task, take a freely chosen ordinary leisure
+      break, keep using the existing item or decline an optional acquisition. Perform that choice and
+      review later whether wanting remained and whether the action served your reasons. In the supplied
+      case, return to an actual activity using what you already have; a purchase is unnecessary. If the
+      desire returned, note the recurrence without turning it into a failed purity test. Record any unchosen
+      checking or pressure honestly and revise the situation rather than defending it as irresistible.
+
+
+      Observation checks: A bounded ordinary choice is actually performed; The choice has reasons beyond
+      immediate wanting; Continuing desire does not automatically invalidate the action; Unchosen behavior
+      or pressure is recorded without justification. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.
+
+
+      Final review: What did desire hide, and could you choose with the fuller picture available? Keep
+      a useful reminder without claiming that appreciating or experiencing desire is itself wrong.
+
+
+      Examples: Supportive: The new item still appealed, but the person noticed the existing item''s function
+      and deliberately returned to using it.
+
+
+      Mixed: The choice fit the person''s reasons, yet repeated browsing continued; that unresolved pattern
+      was retained for review.
+
+
+      Contradictory: Wanting was used to justify pressuring another person or dismissing every fact that
+      complicated an acquisition.
+
+
+      Inconclusive: The person condemned desire in general without examining a specific promise, neglected
+      fact or chosen action.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -221,9 +275,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0804_a3_same_context_compared
-        - c0804_a3_mixed_or_null_result_allowed
-        - c0804_a3_target_evidence_reviewed
+        - a_bounded_ordinary_choice_is_actually_performed
+        - the_choice_has_reasons_beyond_immediate_wanting
+        - continuing_desire_does_not_automatically_invalidate_the_action
+        - unchosen_behavior_or_pressure_is_recorded_without_justification
       - measurement_id: c0804_a3_boundary
         kind: boolean
         role: supporting
@@ -244,16 +299,17 @@ intervention:
       Desire, craving, and lust; no purchase, subscription, travel, credential, or public artifact is
       required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Desire, craving, and lust; assistive technology, interpretation, a support person, and
-      a deferred action are valid without penalty.
+    - Use the accessory case or a nonsexual ordinary desire. Privacy, consent and necessities remain intact.
+      If craving concerns dependence or distressing compulsive behavior, seek suitable care rather than
+      abruptly changing substance use or imposing deprivation through this exercise.
     cultural_context:
     - Adapt the expression of Desire, craving, and lust to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Desire, craving, and lust opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use the accessory case or a nonsexual ordinary desire. Privacy, consent and necessities remain intact.
+      If craving concerns dependence or distressing compulsive behavior, seek suitable care rather than
+      abruptly changing substance use or imposing deprivation through this exercise.
   pause_conditions:
   - Pause Desire, craving, and lust when capacity, consent, authority, privacy, access, care duties, uncertainty,
     distress, fatigue, pain, resource scarcity, or changed circumstances make the next action unwise.
@@ -284,10 +340,8 @@ evidence_and_scoring:
   - c0804_a3_boundary
   - c0804_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Desire, craving, and lust action exceeded consent, authority, privacy, qualification, role, burden,
-    or safety boundaries.
-  - The evidence contradicted the intended Desire, craving, and lust criterion, depended on coercion or
-    hidden private content, or could not distinguish the protocol from contextual change.
+  - Wanting was used to justify pressuring another person or dismissing every fact that complicated an
+    acquisition.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Desire, craving, and lust explicitly; support can enable access and never reduces dignity or silently
     changes the typed value.
@@ -297,14 +351,23 @@ evidence_and_scoring:
     origins are rejected and later repetitions use the typed contract's explicit diminishing multipliers.
   recency_rule: Generated Desire, craving, and lust rules withhold observations older than 90 days; no
     unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can experience desire without compulsory action or dehumanization.—not completion, confidence,
-    conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Desire, craving, and lust requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Describe what wanting makes prominent and what it hides. Observed checks:
+    The wanted experience and promised benefit are specific; Two neglected facts broaden the picture;
+    Wanting is separated from necessity and identity claims; Changes in attention or evidence selection
+    are identified. Action 2: Check whether a person or good is being reduced to a means. Observed checks:
+    The person or good is considered beyond satisfying the urge; Another person''s independent boundaries
+    are preserved where relevant; Desire is not treated as entitlement; A concrete broader-view statement
+    is written. Action 3: Make a bounded choice while allowing the desire to remain. Observed checks:
+    A bounded ordinary choice is actually performed; The choice has reasons beyond immediate wanting;
+    Continuing desire does not automatically invalidate the action; Unchosen behavior or pressure is recorded
+    without justification.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. The person condemned desire in general without examining
+    a specific promise, neglected fact or chosen action.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Desire,
     craving, and lust contribution under typed evaluation; protocol performance remains distinct and is
     never counted twice.
@@ -314,9 +377,8 @@ evidence_and_scoring:
   - L08
   - L09
   - L27
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Desire, craving, and lust evidence.
@@ -324,10 +386,18 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The audit one bounded desire, craving, and lust context action was attempted or explicitly deferred.
-  - The make one reversible desire, craving, and lust redesign action was attempted or explicitly deferred.
-  - The compare the desire, craving, and lust context after the change action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Describe what wanting makes prominent and what it hides. Observed checks: The wanted experience
+    and promised benefit are specific; Two neglected facts broaden the picture; Wanting is separated from
+    necessity and identity claims; Changes in attention or evidence selection are identified.'
+  - 'Action 2: Check whether a person or good is being reduced to a means. Observed checks: The person
+    or good is considered beyond satisfying the urge; Another person''s independent boundaries are preserved
+    where relevant; Desire is not treated as entitlement; A concrete broader-view statement is written.'
+  - 'Action 3: Make a bounded choice while allowing the desire to remain. Observed checks: A bounded ordinary
+    choice is actually performed; The choice has reasons beyond immediate wanting; Continuing desire does
+    not automatically invalidate the action; Unchosen behavior or pressure is recorded without justification.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -336,56 +406,58 @@ completion_and_review:
     - c0804_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Desire, craving, and lust only when the initial context remained
-    safe, the evidence criteria were usable, burden was acceptable, and a new context can be named without
-    assuming transfer.
-  transfer_limit: Three bounded actions do not establish Desire, craving, and lust across roles, cultures,
-    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: What did desire hide, and could you choose with the fuller picture available?
+    Keep a useful reminder without claiming that appreciating or experiencing desire is itself wrong.
+  transfer_limit: A harmless ordinary desire illustrates attention and choice. It does not require sexual
+    disclosure, abstinence from necessities, deliberate craving or treatment of addiction.
   reflection:
-    before: What does Desire, craving, and lust require in this exact context, what remains outside my
-      role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Desire, craving, and lust criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can experience desire without compulsory action or dehumanization.',
-      what contradiction or missing context matters most, and should this Desire, craving, and lust design
-      be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Notice how wanting narrows attention and shapes
+      judgment, then make a bounded choice that respects people and goods beyond their usefulness to the
+      desire.'
+    during: Which checks have actually been observed? The choice fit the person's reasons, yet repeated
+      browsing continued; that unresolved pattern was retained for review.
+    after: What did desire hide, and could you choose with the fuller picture available? Keep a useful
+      reminder without claiming that appreciating or experiencing desire is itself wrong.
   review_guidance:
     repeat: Repeat the same bounded Desire, craving, and lust design only when the context and burden
       remain appropriate.
-    adapt: Change the Desire, craving, and lust medium, scope, support, timing, criteria, or context while
-      preserving provenance and the narrower evidence claim.
+    adapt: Use the accessory case or a nonsexual ordinary desire. Privacy, consent and necessities remain
+      intact. If craving concerns dependence or distressing compulsive behavior, seek suitable care rather
+      than abruptly changing substance use or imposing deprivation through this exercise.
     stop: Stop Desire, craving, and lust when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Desire, craving, and lust questions beyond
-      this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Desire, craving, and lust criteria were observed with provenance and no adverse
-      boundary signal in the selected context.
-    mixed: Some Desire, craving, and lust criteria were observed while burden, support, contextual change,
-      or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Desire, craving, and lust criterion, introduced
-      harm or coercion, or showed the design was not workable.
-    inconclusive: The Desire, craving, and lust action was deferred, not observed, not applicable, stale,
-      insufficiently bounded, or too confounded to interpret.
+    supportive: The new item still appealed, but the person noticed the existing item's function and deliberately
+      returned to using it.
+    mixed: The choice fit the person's reasons, yet repeated browsing continued; that unresolved pattern
+      was retained for review.
+    contradictory: Wanting was used to justify pressuring another person or dismissing every fact that
+      complicated an acquisition.
+    inconclusive: The person condemned desire in general without examining a specific promise, neglected
+      fact or chosen action.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Desire, craving, and lust.
+    context_heading: Observe one desire without turning it into an obligation or entitlement
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Desire, craving,
       and lust.
   check_in_labels:
-    c0804_a1_primary: The bounded Desire, craving, and lust criterion for action 1 was observed
+    c0804_a1_primary: 'Observed checks: describe what wanting makes prominent and what it hides'
     c0804_a1_boundary: Action 1 stayed inside its stated Desire, craving, and lust boundary
     c0804_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0804_a2_primary: The bounded Desire, craving, and lust criterion for action 2 was observed
+    c0804_a2_primary: 'Observed checks: check whether a person or good is being reduced to a means'
     c0804_a2_boundary: Action 2 stayed inside its stated Desire, craving, and lust boundary
     c0804_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0804_a3_primary: The bounded Desire, craving, and lust criterion for action 3 was observed
+    c0804_a3_primary: 'Observed checks: make a bounded choice while allowing the desire to remain'
     c0804_a3_boundary: Action 3 stayed inside its stated Desire, craving, and lust boundary
     c0804_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Desire, craving, and
-    lust practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What did desire hide, and could you choose with the fuller picture available? Keep
+    a useful reminder without claiming that appreciating or experiencing desire is itself wrong. Completion
+    is not mastery.
+  plain_language_evidence: The new item still appealed, but the person noticed the existing item's function
+    and deliberately returned to using it.
   display_order: 101

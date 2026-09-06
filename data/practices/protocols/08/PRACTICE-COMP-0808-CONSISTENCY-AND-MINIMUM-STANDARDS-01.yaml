@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0808-CONSISTENCY-AND-MINIMUM-STANDARDS-01
 slug: c0808-consistency-and-minimum-standards-practice
-name: Bounded Consistency and minimum standards Practice
+name: Define and test a difficult-day minimum without hiding the full standard
 parent_competency_id: '08.08'
 domain_id: 08
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 08.08
-      (Consistency and minimum standards); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 08.08; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +34,38 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Consistency and minimum standards through a bounded audit and redesign bounded by
-    the canonical scope: Define a viable minimum for difficult days while preserving a higher standard
-    for normal conditions.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Maintains continuity
-    without pretending minimal effort equals full performance. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Maintain a meaningful thread of a chosen commitment during constrained days while keeping minimum,
+    normal performance and unmet requirements visibly different.
+  why_recommended: Maintain a meaningful thread of a chosen commitment during constrained days while keeping
+    minimum, normal performance and unmet requirements visibly different.
   claims:
-  - statement: Using the canonical scope and evidence target for Consistency and minimum standards is
-      a traceable product-design basis for a source-only draft protocol.
+  - statement: Maintain a meaningful thread of a chosen commitment during constrained days while keeping
+      minimum, normal performance and unmet requirements visibly different.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Consistency and minimum standards practice fit the
     person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Consistency and minimum standards as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Consistency and minimum
-    standards context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Consistency
-    and minimum standards; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Use dictation or a diagram with the same informational requirements. Choose
+    another genuinely flexible activity if writing is unsuitable. External obligations need agreement
+    before their required standard changes.
+  opportunity_considerations: 'Choose a flexible personal learning task. Default: explain this instruction
+    in your own words and give an example: A useful reminder states the action, when it is needed and
+    where it applies. Have two short note spaces labeled normal and minimum.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Consistency and minimum standards.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Choose a flexible personal learning task. Default: explain this instruction in your own words and
+    give an example: A useful reminder states the action, when it is needed and where it applies. Have
+    two short note spaces labeled normal and minimum.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Consistency and minimum standards
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use dictation or a diagram with the same informational requirements. Choose another genuinely flexible
+    activity if writing is unsuitable. External obligations need agreement before their required standard
+    changes.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +77,28 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Consistency and minimum standards
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-AUDIT-REDESIGN
+  protocol_class: PF-BEHAVIORAL-EXPERIMENT
   duration_days: 10
-  cadence: Complete three bounded Consistency and minimum standards actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Consistency and minimum standards; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Consistency
-    and minimum standards. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Consistency and minimum standards actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose a flexible personal learning task. Default: explain this instruction in your own words
+    and give an example: A useful reminder states the action, when it is needed and where it applies.
+    Have two short note spaces labeled normal and minimum. Goal: Maintain a meaningful thread of a chosen
+    commitment during constrained days while keeping minimum, normal performance and unmet requirements
+    visibly different. Scope: One normal and one reduced attempt test a practical standard. A minimum
+    is appropriate only where reduced scope is legitimate; it cannot replace safety-critical or externally
+    required work without agreement. Time and effort: About 15 minutes to define and try both versions,
+    followed by a review at a naturally constrained opportunity if one occurs. Adaptation: Use dictation
+    or a diagram with the same informational requirements. Choose another genuinely flexible activity
+    if writing is unsuitable. External obligations need agreement before their required standard changes.
+    Keep personal working notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use dictation or a diagram with the same informational requirements. Choose another
+    genuinely flexible activity if writing is unsuitable. External obligations need agreement before their
+    required standard changes.
+  expected_burden: About 15 minutes to define and try both versions, followed by a review at a naturally
+    constrained opportunity if one occurs.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Consistency and minimum standards protocol to rank worth, coerce participation, demand disclosure,
@@ -101,18 +106,25 @@ intervention:
   - Treating a completed Consistency and minimum standards action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Consistency and minimum standards situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use dictation
+    or a diagram with the same informational requirements. Choose another genuinely flexible activity
+    if writing is unsuitable. External obligations need agreement before their required standard changes.
   actions:
   - stable_id: PRACTICE-COMP-0808-CONSISTENCY-AND-MINIMUM-STANDARDS-01-A1
     sequence: 1
-    title: Audit one bounded Consistency and minimum standards context
-    instructions: 'Inspect one user-controlled, low-consequence context relevant to Consistency and minimum
-      standards. Use the canonical scope to name observable conditions without diagnosing people or systems:
-      Define a viable minimum for difficult days while preserving a higher standard for normal conditions.'
+    title: Write two observable standards and name what the minimum leaves out
+    instructions: 'For the normal version, write a three-sentence explanation and an example reminder
+      containing an action, time and place. For the minimum, write one accurate sentence naming the three
+      components. Explain why that still serves learning and what remains untested: producing a usable
+      example and explaining the idea more fully. State when reduced scope fits, such as limited discretionary
+      time, and when stopping or renegotiation is needed instead. Do not turn a minimum into permission
+      to omit essential care, safety steps or work promised to someone else.
+
+
+      Observation checks: Normal and minimum standards are both observable; The minimum retains a meaningful
+      part of the purpose; Omitted requirements are named explicitly; Reduced scope is limited to contexts
+      where it is legitimate. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -134,9 +146,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0808_a1_one_context_only
-        - c0808_a1_observable_conditions_recorded
-        - c0808_a1_hazards_excluded
+        - normal_and_minimum_standards_are_both_observable
+        - the_minimum_retains_a_meaningful_part_of_the_purpose
+        - omitted_requirements_are_named_explicitly
+        - reduced_scope_is_limited_to_contexts_where_it_is_legitimate
       - measurement_id: c0808_a1_boundary
         kind: boolean
         role: supporting
@@ -153,10 +166,19 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0808-CONSISTENCY-AND-MINIMUM-STANDARDS-01-A2
     sequence: 2
-    title: Make one reversible Consistency and minimum standards redesign
-    instructions: Choose one small, lawful, reversible change that addresses a specific audit finding
-      for Consistency and minimum standards. Record the intended effect, cost or burden, and a rollback
-      condition before changing anything.
+    title: Perform both versions and check that the minimum is still substantive
+    instructions: 'Produce the normal explanation and example, then separately produce the minimum sentence.
+      Check each against its own stated criteria. A usable normal example is Return the library book tomorrow
+      at 3 pm to the front desk; the minimum might say A reminder needs an action, a time and a place.
+      If the minimum is only opening the note or writing a title, it does not yet demonstrate this learning
+      purpose. Label this a design trial when no actual difficult day is involved, rather than claiming
+      continuity through hardship from an easy rehearsal.
+
+
+      Observation checks: Both versions are actually attempted; Each is checked against its own requirements;
+      The minimum includes substantive work rather than symbolic attendance; A design trial is distinguished
+      from an actual constrained day. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -178,9 +200,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0808_a2_change_traces_to_finding
-        - c0808_a2_rollback_defined
-        - c0808_a2_burden_recorded
+        - both_versions_are_actually_attempted
+        - each_is_checked_against_its_own_requirements
+        - the_minimum_includes_substantive_work_rather_than_symbolic_attendance
+        - a_design_trial_is_distinguished_from_an_actual_constrained_day
       - measurement_id: c0808_a2_boundary
         kind: boolean
         role: supporting
@@ -197,10 +220,40 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0808-CONSISTENCY-AND-MINIMUM-STANDARDS-01-A3
     sequence: 3
-    title: Compare the Consistency and minimum standards context after the change
-    instructions: 'Reinspect the same bounded context after the change. Record improvement, no difference,
-      mixed effects, harm, or insufficient observation and compare only with this target: Maintains continuity
-      without pretending minimal effort equals full performance.'
+    title: Choose the fitting standard and review continuity honestly
+    instructions: 'At the next natural opportunity, choose normal, minimum, or a reasoned pause based
+      on actual circumstances. Attempt the selected version if appropriate, and record which standard
+      it met, what was omitted and what the next opportunity needs. If no constrained day occurs, keep
+      the trial result and leave difficult-day continuity unknown. Do not create a debt requiring punitive
+      catch-up after every minimum day. If reduced scope repeatedly fails the larger purpose, revise the
+      commitment or seek needed support rather than hiding the gap behind an unbroken streak.
+
+
+      Observation checks: The selected standard follows actual circumstances; The achieved level and omissions
+      are recorded honestly; Missing constrained-day evidence stays unknown; Repeated reduced scope prompts
+      review of the larger purpose. Mark only what you observed. Missing, mixed and negative results are
+      valid; a deferred action is not completed.
+
+
+      Final review: Did the minimum preserve meaningful continuity, and which normal requirements remained
+      unmet? Keep two clearly labeled standards or revise the commitment. A reduced attempt is not full
+      performance.
+
+
+      Examples: Supportive: A short accurate sentence preserved the learning purpose on a constrained
+      day, and the person clearly recorded that the full example was not produced.
+
+
+      Mixed: Both versions worked in rehearsal, but no difficult-day opportunity occurred, so continuity
+      under constraint remained untested.
+
+
+      Contradictory: Opening a notebook was counted as learning, or the minimum was used to conceal repeatedly
+      unmet essential requirements.
+
+
+      Inconclusive: The person endorsed doing a little every day without defining either level or trying
+      the proposed minimum.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -222,9 +275,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0808_a3_same_context_compared
-        - c0808_a3_mixed_or_null_result_allowed
-        - c0808_a3_target_evidence_reviewed
+        - the_selected_standard_follows_actual_circumstances
+        - the_achieved_level_and_omissions_are_recorded_honestly
+        - missing_constrained_day_evidence_stays_unknown
+        - repeated_reduced_scope_prompts_review_of_the_larger_purpose
       - measurement_id: c0808_a3_boundary
         kind: boolean
         role: supporting
@@ -245,17 +299,17 @@ intervention:
       Consistency and minimum standards; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Consistency and minimum standards; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - Use dictation or a diagram with the same informational requirements. Choose another genuinely flexible
+      activity if writing is unsuitable. External obligations need agreement before their required standard
+      changes.
     cultural_context:
     - Adapt the expression of Consistency and minimum standards to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Consistency and minimum standards opportunity is unavailable or inappropriate, use a
-      fictional, historical, public, simulated, or planning-only equivalent and retain the narrower evidence
-      classification.
+    - Use dictation or a diagram with the same informational requirements. Choose another genuinely flexible
+      activity if writing is unsuitable. External obligations need agreement before their required standard
+      changes.
   pause_conditions:
   - Pause Consistency and minimum standards when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -287,10 +341,8 @@ evidence_and_scoring:
   - c0808_a3_boundary
   - c0808_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Consistency and minimum standards action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Consistency and minimum standards criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - Opening a notebook was counted as learning, or the minimum was used to conceal repeatedly unmet essential
+    requirements.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Consistency and minimum standards explicitly; support can enable access and never reduces dignity
     or silently changes the typed value.
@@ -301,14 +353,23 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Consistency and minimum standards rules withhold observations older than 90
     days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Maintains continuity without pretending minimal effort equals full performance.—not completion,
-    confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Consistency and minimum standards requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Write two observable standards and name what the minimum leaves out.
+    Observed checks: Normal and minimum standards are both observable; The minimum retains a meaningful
+    part of the purpose; Omitted requirements are named explicitly; Reduced scope is limited to contexts
+    where it is legitimate. Action 2: Perform both versions and check that the minimum is still substantive.
+    Observed checks: Both versions are actually attempted; Each is checked against its own requirements;
+    The minimum includes substantive work rather than symbolic attendance; A design trial is distinguished
+    from an actual constrained day. Action 3: Choose the fitting standard and review continuity honestly.
+    Observed checks: The selected standard follows actual circumstances; The achieved level and omissions
+    are recorded honestly; Missing constrained-day evidence stays unknown; Repeated reduced scope prompts
+    review of the larger purpose.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. The person endorsed doing a little every day without
+    defining either level or trying the proposed minimum.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Consistency
     and minimum standards contribution under typed evaluation; protocol performance remains distinct and
     is never counted twice.
@@ -317,9 +378,8 @@ evidence_and_scoring:
   - L09
   - L10
   - L36
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Consistency and minimum standards evidence.
@@ -327,12 +387,19 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The audit one bounded consistency and minimum standards context action was attempted or explicitly
-    deferred.
-  - The make one reversible consistency and minimum standards redesign action was attempted or explicitly
-    deferred.
-  - The compare the consistency and minimum standards context after the change action preserved a limited
-    conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Write two observable standards and name what the minimum leaves out. Observed checks: Normal
+    and minimum standards are both observable; The minimum retains a meaningful part of the purpose; Omitted
+    requirements are named explicitly; Reduced scope is limited to contexts where it is legitimate.'
+  - 'Action 2: Perform both versions and check that the minimum is still substantive. Observed checks:
+    Both versions are actually attempted; Each is checked against its own requirements; The minimum includes
+    substantive work rather than symbolic attendance; A design trial is distinguished from an actual constrained
+    day.'
+  - 'Action 3: Choose the fitting standard and review continuity honestly. Observed checks: The selected
+    standard follows actual circumstances; The achieved level and omissions are recorded honestly; Missing
+    constrained-day evidence stays unknown; Repeated reduced scope prompts review of the larger purpose.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -341,57 +408,61 @@ completion_and_review:
     - c0808_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Consistency and minimum standards only when the initial context
-    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
-    named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Consistency and minimum standards across roles,
-    cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: Did the minimum preserve meaningful continuity, and which normal requirements
+    remained unmet? Keep two clearly labeled standards or revise the commitment. A reduced attempt is
+    not full performance.
+  transfer_limit: One normal and one reduced attempt test a practical standard. A minimum is appropriate
+    only where reduced scope is legitimate; it cannot replace safety-critical or externally required work
+    without agreement.
   reflection:
-    before: What does Consistency and minimum standards require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Consistency and minimum standards criterion is present, absent, mixed, or
-      unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Maintains continuity without pretending minimal effort equals
-      full performance.', what contradiction or missing context matters most, and should this Consistency
-      and minimum standards design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Maintain a meaningful thread of a chosen commitment
+      during constrained days while keeping minimum, normal performance and unmet requirements visibly
+      different.'
+    during: Which checks have actually been observed? Both versions worked in rehearsal, but no difficult-day
+      opportunity occurred, so continuity under constraint remained untested.
+    after: Did the minimum preserve meaningful continuity, and which normal requirements remained unmet?
+      Keep two clearly labeled standards or revise the commitment. A reduced attempt is not full performance.
   review_guidance:
     repeat: Repeat the same bounded Consistency and minimum standards design only when the context and
       burden remain appropriate.
-    adapt: Change the Consistency and minimum standards medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: Use dictation or a diagram with the same informational requirements. Choose another genuinely
+      flexible activity if writing is unsuitable. External obligations need agreement before their required
+      standard changes.
     stop: Stop Consistency and minimum standards when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Consistency and minimum standards questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Consistency and minimum standards criteria were observed with provenance and
-      no adverse boundary signal in the selected context.
-    mixed: Some Consistency and minimum standards criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Consistency and minimum standards criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Consistency and minimum standards action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: A short accurate sentence preserved the learning purpose on a constrained day, and the
+      person clearly recorded that the full example was not produced.
+    mixed: Both versions worked in rehearsal, but no difficult-day opportunity occurred, so continuity
+      under constraint remained untested.
+    contradictory: Opening a notebook was counted as learning, or the minimum was used to conceal repeatedly
+      unmet essential requirements.
+    inconclusive: The person endorsed doing a little every day without defining either level or trying
+      the proposed minimum.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Consistency and minimum standards.
+    context_heading: Define and test a difficult-day minimum without hiding the full standard
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Consistency
       and minimum standards.
   check_in_labels:
-    c0808_a1_primary: The bounded Consistency and minimum standards criterion for action 1 was observed
+    c0808_a1_primary: 'Observed checks: write two observable standards and name what the minimum leaves
+      out'
     c0808_a1_boundary: Action 1 stayed inside its stated Consistency and minimum standards boundary
     c0808_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0808_a2_primary: The bounded Consistency and minimum standards criterion for action 2 was observed
+    c0808_a2_primary: 'Observed checks: perform both versions and check that the minimum is still substantive'
     c0808_a2_boundary: Action 2 stayed inside its stated Consistency and minimum standards boundary
     c0808_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0808_a3_primary: The bounded Consistency and minimum standards criterion for action 3 was observed
+    c0808_a3_primary: 'Observed checks: choose the fitting standard and review continuity honestly'
     c0808_a3_boundary: Action 3 stayed inside its stated Consistency and minimum standards boundary
     c0808_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Consistency and minimum
-    standards practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Did the minimum preserve meaningful continuity, and which normal requirements remained
+    unmet? Keep two clearly labeled standards or revise the commitment. A reduced attempt is not full
+    performance. Completion is not mastery.
+  plain_language_evidence: A short accurate sentence preserved the learning purpose on a constrained day,
+    and the person clearly recorded that the full example was not produced.
   display_order: 104

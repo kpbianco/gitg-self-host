@@ -113,6 +113,12 @@ def load_exercises(root: Path = ROOT) -> dict[str, dict[str, Any]]:
         (root / "data/curriculum/ideal_person_curriculum_v2_pluralist_full_scope.yaml").read_text()
     )["curriculum"]
     expected_domains = contract["implemented_domains"]
+    guide_ids = contract.get("source_only_legacy_guide_competency_ids", [])
+    frozen_ids = {"08.02", "11.10", "16.03", "17.03", "26.01"}
+    if len(set(guide_ids)) != len(guide_ids) or set(guide_ids) - frozen_ids:
+        raise ValueError("Guide-only exclusions must be unique frozen legacy competencies.")
+    if any(cid.split(".")[0] not in expected_domains for cid in guide_ids):
+        raise ValueError("Legacy guides must belong to an implemented authoring domain.")
     if len(set(expected_domains)) != len(expected_domains):
         raise ValueError("Duplicate implemented authoring domain.")
     canonical_domains = {domain["id"]: domain for domain in curriculum["domains"]}
@@ -127,13 +133,27 @@ def load_exercises(root: Path = ROOT) -> dict[str, dict[str, Any]]:
         Draft202012Validator(SCHEMA).validate(document)
         if document["domain_id"] != path.stem:
             raise ValueError(f"{path.name}: wrong domain ID.")
-        expected = {row["id"] for row in canonical_domains[path.stem]["competencies"]}
+        expected = {row["id"] for row in canonical_domains[path.stem]["competencies"]} - set(
+            guide_ids
+        )
         if set(document["exercises"]) != expected:
             raise ValueError(f"{path.name}: missing or foreign canonical competency.")
         exercises.update(document["exercises"])
+    guides = {}
+    for path in sorted((root / "docs/authoring/legacy-guides").glob("*.yaml")):
+        document = yaml.load(path.read_text(), Loader=UniqueKeyLoader)
+        Draft202012Validator(SCHEMA).validate(document)
+        if document["domain_id"] != path.stem:
+            raise ValueError("Legacy guide filename must match its domain.")
+        for cid, guide in document["exercises"].items():
+            if cid in guides or cid.split(".")[0] != path.stem:
+                raise ValueError("Duplicate or foreign legacy guide competency.")
+            guides[cid] = guide
+    if set(guides) != set(guide_ids):
+        raise ValueError("Declared frozen legacy guides must exist exactly; no missing guides.")
     instructions = [
         re.sub(r"\W+", " ", action["instructions"]).lower().strip()
-        for exercise in exercises.values()
+        for exercise in [*exercises.values(), *guides.values()]
         for action in exercise["actions"]
     ]
     if len(instructions) != len(set(instructions)):
@@ -324,6 +344,9 @@ def coverage_report(exercises: dict[str, dict], root: Path = ROOT) -> dict:
         "authored": len(exercises),
         "remaining": len(rows) - len(exercises),
         "human_review_complete": 0,
+        "source_only_legacy_guides": yaml.safe_load(
+            (root / "contracts/tailored-practice-authoring.yaml").read_text()
+        ).get("source_only_legacy_guide_competency_ids", []),
         "rows": rows,
     }
 

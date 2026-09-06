@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0809-VOLUNTARY-RESTRAINT-AND-HARDSHIP-01
 slug: c0809-voluntary-restraint-and-hardship-practice
-name: Bounded Voluntary restraint and hardship Practice
+name: Try one modest voluntary simplification and examine freedom rather than toughness
 parent_competency_id: '08.09'
 domain_id: 08
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 08.09
-      (Voluntary restraint and hardship); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 08.09; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +34,39 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Voluntary restraint and hardship through a pluralist meaning practice bounded by
-    the canonical scope: Use safe fasting, simplicity, silence, difficult training, abstinence, or reduced
-    comfort to strengthen freedom and gratitude.'
-  why_recommended: 'The parent competency identifies this limited evidence target: The practice produces
-    greater choice and humility rather than injury, pride, or obsession. The protocol creates a small
-    opportunity to examine that target without treating completion as broad capability.'
+  purpose: Choose a safe optional restraint, observe its effect on choice and appreciation, and stop or
+    revise it if it becomes pride, compulsion or needless burden.
+  why_recommended: Choose a safe optional restraint, observe its effect on choice and appreciation, and
+    stop or revise it if it becomes pride, compulsion or needless burden.
   claims:
-  - statement: Using the canonical scope and evidence target for Voluntary restraint and hardship is a
-      traceable product-design basis for a source-only draft protocol.
+  - statement: Choose a safe optional restraint, observe its effect on choice and appreciation, and stop
+      or revise it if it becomes pride, compulsion or needless burden.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Voluntary restraint and hardship practice fit the
     person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Voluntary restraint and hardship as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Voluntary restraint
-    and hardship context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Voluntary
-    restraint and hardship; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Choose another optional feature if quiet is uncomfortable or background sound
+    is an access support. Do not remove food, water, sleep, medication, temperature protection or needed
+    human contact. Health-related restraint belongs with suitable qualified guidance rather than this
+    generic trial.
+  opportunity_considerations: Choose one ordinary ten-minute period without optional background entertainment
+    while doing a suitable routine activity. Keep communication, accessibility aids and anything needed
+    for care or safety available. No personal hardship needs to be created.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Voluntary restraint and hardship.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Choose one ordinary ten-minute period without optional background entertainment while doing a suitable
+    routine activity. Keep communication, accessibility aids and anything needed for care or safety available.
+    No personal hardship needs to be created.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Voluntary restraint and hardship
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Choose another optional feature if quiet is uncomfortable or background sound is an access support.
+    Do not remove food, water, sleep, medication, temperature protection or needed human contact. Health-related
+    restraint belongs with suitable qualified guidance rather than this generic trial.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +78,30 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Voluntary restraint and hardship
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-CONTEMPLATIVE-MEANING
+  protocol_class: PF-BEHAVIORAL-EXPERIMENT
   duration_days: 10
-  cadence: Complete three bounded Voluntary restraint and hardship actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Voluntary restraint and hardship; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Voluntary
-    restraint and hardship. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Voluntary restraint and hardship actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose one ordinary ten-minute period without optional background entertainment while doing
+    a suitable routine activity. Keep communication, accessibility aids and anything needed for care or
+    safety available. No personal hardship needs to be created. Goal: Choose a safe optional restraint,
+    observe its effect on choice and appreciation, and stop or revise it if it becomes pride, compulsion
+    or needless burden. Scope: This practice chooses simplicity or reduced optional stimulation. It does
+    not prescribe fasting, sleep loss, deprivation, pain or strenuous training; those are not interchangeable
+    demonstrations of freedom. Time and effort: About 10 minutes of preparation, one ten-minute optional
+    simplification and a short review. Adaptation: Choose another optional feature if quiet is uncomfortable
+    or background sound is an access support. Do not remove food, water, sleep, medication, temperature
+    protection or needed human contact. Health-related restraint belongs with suitable qualified guidance
+    rather than this generic trial. Keep personal working notes outside the check-in; record only the
+    listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Choose another optional feature if quiet is uncomfortable or background sound is
+    an access support. Do not remove food, water, sleep, medication, temperature protection or needed
+    human contact. Health-related restraint belongs with suitable qualified guidance rather than this
+    generic trial.
+  expected_burden: About 10 minutes of preparation, one ten-minute optional simplification and a short
+    review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Voluntary restraint and hardship protocol to rank worth, coerce participation, demand disclosure,
@@ -101,19 +109,27 @@ intervention:
   - Treating a completed Voluntary restraint and hardship action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Voluntary restraint and hardship situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Choose another
+    optional feature if quiet is uncomfortable or background sound is an access support. Do not remove
+    food, water, sleep, medication, temperature protection or needed human contact. Health-related restraint
+    belongs with suitable qualified guidance rather than this generic trial.
   actions:
   - stable_id: PRACTICE-COMP-0809-VOLUNTARY-RESTRAINT-AND-HARDSHIP-01-A1
     sequence: 1
-    title: Choose a declared frame for Voluntary restraint and hardship
-    instructions: 'Select a religious, spiritual, philosophical, cultural, or secular frame through which
-      to explore Voluntary restraint and hardship. State the frame, one alternative, and the limits of
-      personal authority using this canonical scope: Use safe fasting, simplicity, silence, difficult
-      training, abstinence, or reduced comfort to strengthen freedom and gratitude.'
+    title: Choose restraint for a purpose and compare legitimate alternatives
+    instructions: 'Consider simplicity, silence, abstaining from an optional activity and reduced comfort
+      as possible forms; fasting and difficult training involve additional health and context questions
+      and are not selected here. State the purpose of this modest trial, such as noticing what you usually
+      seek from background entertainment. Define the exact optional feature you will omit and what will
+      stay available. Set the end time and a stopping reason, such as interference with an access need.
+      Keep the choice voluntary; another person''s different practice or decision not to participate is
+      not a lower moral standard.
+
+
+      Observation checks: Different forms of restraint are considered without treating them as equivalent;
+      One modest optional omission has a concrete purpose; End time stopping reason and retained necessities
+      are explicit; Participation remains voluntary without ranking other people. Mark only what you observed.
+      Missing, mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -129,15 +145,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0809_a1_primary
-        kind: conceptual
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0809_a1_frame_declared
-        - c0809_a1_alternative_acknowledged
-        - c0809_a1_authority_limited
+        - different_forms_of_restraint_are_considered_without_treating_them_as_equivalent
+        - one_modest_optional_omission_has_a_concrete_purpose
+        - end_time_stopping_reason_and_retained_necessities_are_explicit
+        - participation_remains_voluntary_without_ranking_other_people
       - measurement_id: c0809_a1_boundary
         kind: boolean
         role: supporting
@@ -154,11 +171,19 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0809-VOLUNTARY-RESTRAINT-AND-HARDSHIP-01-A2
     sequence: 2
-    title: Complete two bounded Voluntary restraint and hardship practices
-    instructions: Complete two short, freely chosen Voluntary restraint and hardship practices appropriate
-      to the declared frame, such as reading, silence, prayer, observation, ritual, dialogue, or reflection.
-      Stop for distress, coercion, altered-state risk, conscience conflict, or pressure from an authority
-      or group.
+    title: Perform the simplification without turning discomfort into the objective
+    instructions: 'During the chosen period, do the ordinary activity with only the selected optional
+      feature absent. Notice what you miss, what remains available and whether you can choose how to respond.
+      You may restore the feature if the omission interferes with a legitimate need; record why. Do not
+      increase the duration because the trial seems too easy, seek an audience for toughness or withhold
+      ordinary care. If nothing significant happens, retain that neutral result. The action is the bounded
+      simplification, not achieving a required amount of boredom or deprivation.
+
+
+      Observation checks: Only the chosen optional feature is omitted; The ordinary activity remains safe
+      and accessible; Actual effects including neutrality are recorded; Duration or hardship is not escalated
+      to make the trial impressive. Mark only what you observed. Missing, mixed and negative results are
+      valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -174,15 +199,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0809_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - only_the_chosen_optional_feature_is_omitted
+        - the_ordinary_activity_remains_safe_and_accessible
+        - actual_effects_including_neutrality_are_recorded
+        - duration_or_hardship_is_not_escalated_to_make_the_trial_impressive
       - measurement_id: c0809_a2_boundary
         kind: boolean
         role: supporting
@@ -199,10 +225,39 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0809-VOLUNTARY-RESTRAINT-AND-HARDSHIP-01-A3
     sequence: 3
-    title: Interpret the Voluntary restraint and hardship experience modestly
-    instructions: 'Review what was noticed without treating intensity, calm, certainty, group agreement,
-      or unusual experience as automatic truth. Compare the limited record with this evidence target:
-      The practice produces greater choice and humility rather than injury, pride, or obsession.'
+    title: End on time and examine choice humility and appreciation
+    instructions: 'End the trial as planned and freely decide whether to restore the optional feature.
+      Name one thing you appreciate with or without it, one effect on your freedom to choose and any sign
+      of pride or rigidity. For example, noticing the value of a quiet moment differs from claiming that
+      people who enjoy music lack discipline. If you felt unable to stop the rule or wanted to extend
+      it as punishment, treat that as a reason to discontinue and reconsider, not a breakthrough. Keep,
+      revise or decline future trials on their practical merits.
+
+
+      Observation checks: The trial ends at the chosen point; Appreciation is specific rather than compulsory
+      gratitude; Choice and humility are assessed separately from endurance; Rigidity or punitive escalation
+      leads to reconsideration. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.
+
+
+      Final review: Did the restraint increase your ability to choose and appreciate, or did it add rigidity
+      and status comparison? Keep only what serves the original purpose; no harder version is required.
+
+
+      Examples: Supportive: The person tried a brief optional quiet period, noticed a welcome detail of
+      the activity and ended on time without judging others'' preferences.
+
+
+      Mixed: The background sound proved helpful for access, so it was restored and the trial''s unsuitable
+      choice was recorded.
+
+
+      Contradictory: The person extended the omission as punishment, removed a necessity or used the exercise
+      to claim superiority.
+
+
+      Inconclusive: A difficult challenge was admired in principle but no bounded voluntary choice or
+      actual effect was examined.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -224,9 +279,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0809_a3_experience_and_interpretation_separated
-        - c0809_a3_alternative_explanation_retained
-        - c0809_a3_target_evidence_compared
+        - the_trial_ends_at_the_chosen_point
+        - appreciation_is_specific_rather_than_compulsory_gratitude
+        - choice_and_humility_are_assessed_separately_from_endurance
+        - rigidity_or_punitive_escalation_leads_to_reconsideration
       - measurement_id: c0809_a3_boundary
         kind: boolean
         role: supporting
@@ -247,17 +303,17 @@ intervention:
       Voluntary restraint and hardship; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Voluntary restraint and hardship; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - Choose another optional feature if quiet is uncomfortable or background sound is an access support.
+      Do not remove food, water, sleep, medication, temperature protection or needed human contact. Health-related
+      restraint belongs with suitable qualified guidance rather than this generic trial.
     cultural_context:
     - Adapt the expression of Voluntary restraint and hardship to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Voluntary restraint and hardship opportunity is unavailable or inappropriate, use a
-      fictional, historical, public, simulated, or planning-only equivalent and retain the narrower evidence
-      classification.
+    - Choose another optional feature if quiet is uncomfortable or background sound is an access support.
+      Do not remove food, water, sleep, medication, temperature protection or needed human contact. Health-related
+      restraint belongs with suitable qualified guidance rather than this generic trial.
   pause_conditions:
   - Pause Voluntary restraint and hardship when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -289,10 +345,8 @@ evidence_and_scoring:
   - c0809_a3_boundary
   - c0809_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Voluntary restraint and hardship action exceeded consent, authority, privacy, qualification, role,
-    burden, or safety boundaries.
-  - The evidence contradicted the intended Voluntary restraint and hardship criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - The person extended the omission as punishment, removed a necessity or used the exercise to claim
+    superiority.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Voluntary restraint and hardship explicitly; support can enable access and never reduces dignity
     or silently changes the typed value.
@@ -303,14 +357,23 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Voluntary restraint and hardship rules withhold observations older than 90 days;
     no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—The practice produces greater choice and humility rather than injury, pride, or obsession.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Voluntary restraint and hardship requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Choose restraint for a purpose and compare legitimate alternatives. Observed
+    checks: Different forms of restraint are considered without treating them as equivalent; One modest
+    optional omission has a concrete purpose; End time stopping reason and retained necessities are explicit;
+    Participation remains voluntary without ranking other people. Action 2: Perform the simplification
+    without turning discomfort into the objective. Observed checks: Only the chosen optional feature is
+    omitted; The ordinary activity remains safe and accessible; Actual effects including neutrality are
+    recorded; Duration or hardship is not escalated to make the trial impressive. Action 3: End on time
+    and examine choice humility and appreciation. Observed checks: The trial ends at the chosen point;
+    Appreciation is specific rather than compulsory gratitude; Choice and humility are assessed separately
+    from endurance; Rigidity or punitive escalation leads to reconsideration.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A difficult challenge was admired in principle but
+    no bounded voluntary choice or actual effect was examined.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Voluntary
     restraint and hardship contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -320,9 +383,8 @@ evidence_and_scoring:
   - L09
   - L10
   - L17
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Voluntary restraint and hardship evidence.
@@ -330,12 +392,20 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The choose a declared frame for voluntary restraint and hardship action was attempted or explicitly
-    deferred.
-  - The complete two bounded voluntary restraint and hardship practices action was attempted or explicitly
-    deferred.
-  - The interpret the voluntary restraint and hardship experience modestly action preserved a limited
-    conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Choose restraint for a purpose and compare legitimate alternatives. Observed checks: Different
+    forms of restraint are considered without treating them as equivalent; One modest optional omission
+    has a concrete purpose; End time stopping reason and retained necessities are explicit; Participation
+    remains voluntary without ranking other people.'
+  - 'Action 2: Perform the simplification without turning discomfort into the objective. Observed checks:
+    Only the chosen optional feature is omitted; The ordinary activity remains safe and accessible; Actual
+    effects including neutrality are recorded; Duration or hardship is not escalated to make the trial
+    impressive.'
+  - 'Action 3: End on time and examine choice humility and appreciation. Observed checks: The trial ends
+    at the chosen point; Appreciation is specific rather than compulsory gratitude; Choice and humility
+    are assessed separately from endurance; Rigidity or punitive escalation leads to reconsideration.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -344,57 +414,60 @@ completion_and_review:
     - c0809_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Voluntary restraint and hardship only when the initial context
-    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
-    named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Voluntary restraint and hardship across roles,
-    cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: Did the restraint increase your ability to choose and appreciate, or did it add
+    rigidity and status comparison? Keep only what serves the original purpose; no harder version is required.
+  transfer_limit: This practice chooses simplicity or reduced optional stimulation. It does not prescribe
+    fasting, sleep loss, deprivation, pain or strenuous training; those are not interchangeable demonstrations
+    of freedom.
   reflection:
-    before: What does Voluntary restraint and hardship require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Voluntary restraint and hardship criterion is present, absent, mixed, or
-      unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'The practice produces greater choice and humility rather than
-      injury, pride, or obsession.', what contradiction or missing context matters most, and should this
-      Voluntary restraint and hardship design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Choose a safe optional restraint, observe
+      its effect on choice and appreciation, and stop or revise it if it becomes pride, compulsion or
+      needless burden.'
+    during: Which checks have actually been observed? The background sound proved helpful for access,
+      so it was restored and the trial's unsuitable choice was recorded.
+    after: Did the restraint increase your ability to choose and appreciate, or did it add rigidity and
+      status comparison? Keep only what serves the original purpose; no harder version is required.
   review_guidance:
     repeat: Repeat the same bounded Voluntary restraint and hardship design only when the context and
       burden remain appropriate.
-    adapt: Change the Voluntary restraint and hardship medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: Choose another optional feature if quiet is uncomfortable or background sound is an access
+      support. Do not remove food, water, sleep, medication, temperature protection or needed human contact.
+      Health-related restraint belongs with suitable qualified guidance rather than this generic trial.
     stop: Stop Voluntary restraint and hardship when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Voluntary restraint and hardship questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Voluntary restraint and hardship criteria were observed with provenance and
-      no adverse boundary signal in the selected context.
-    mixed: Some Voluntary restraint and hardship criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Voluntary restraint and hardship criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Voluntary restraint and hardship action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The person tried a brief optional quiet period, noticed a welcome detail of the activity
+      and ended on time without judging others' preferences.
+    mixed: The background sound proved helpful for access, so it was restored and the trial's unsuitable
+      choice was recorded.
+    contradictory: The person extended the omission as punishment, removed a necessity or used the exercise
+      to claim superiority.
+    inconclusive: A difficult challenge was admired in principle but no bounded voluntary choice or actual
+      effect was examined.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Voluntary restraint and hardship.
+    context_heading: Try one modest voluntary simplification and examine freedom rather than toughness
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Voluntary
       restraint and hardship.
   check_in_labels:
-    c0809_a1_primary: The bounded Voluntary restraint and hardship criterion for action 1 was observed
+    c0809_a1_primary: 'Observed checks: choose restraint for a purpose and compare legitimate alternatives'
     c0809_a1_boundary: Action 1 stayed inside its stated Voluntary restraint and hardship boundary
     c0809_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0809_a2_primary: The bounded Voluntary restraint and hardship criterion for action 2 was observed
+    c0809_a2_primary: 'Observed checks: perform the simplification without turning discomfort into the
+      objective'
     c0809_a2_boundary: Action 2 stayed inside its stated Voluntary restraint and hardship boundary
     c0809_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0809_a3_primary: The bounded Voluntary restraint and hardship criterion for action 3 was observed
+    c0809_a3_primary: 'Observed checks: end on time and examine choice humility and appreciation'
     c0809_a3_boundary: Action 3 stayed inside its stated Voluntary restraint and hardship boundary
     c0809_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Voluntary restraint
-    and hardship practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Did the restraint increase your ability to choose and appreciate, or did it add rigidity
+    and status comparison? Keep only what serves the original purpose; no harder version is required.
+    Completion is not mastery.
+  plain_language_evidence: The person tried a brief optional quiet period, noticed a welcome detail of
+    the activity and ended on time without judging others' preferences.
   display_order: 105

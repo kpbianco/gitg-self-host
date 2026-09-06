@@ -7,45 +7,44 @@ representative of its underlying goal, self-contained and usable by different
 individuals. The owner specifically redirected this continuation away from
 PR/merge work and back to that content requirement.
 
-M6J-01 through M6J-04 supplied 91 authored practices in domains 01 through 06
-and 13. M6J-05 adds all 14 practices in domain 07, emotional maturity,
-resilience and mental well-being. Its 42 distinct action instructions, 168
-observable checks and 56 worked outcome examples bring the total to 105
-authored practices with 278 explicitly rewrite-pending. No automated count
-represents human review or empirical acceptance. The competency-by-competency
-relationship to canonical scope is recorded in
-`docs/authoring/M6J-05-SCOPE-MAP.md`. The reviewer index is
-`docs/authoring/M6J-05-PRACTICE-READER.md`, and the complete fields are in
-`docs/authoring/exercises/07.yaml`.
+M6J-06 starts from the latest saved M6J-05 emotional-resilience candidate
+`c3491a4ff4c0ba77c7d8f2244bae7218ae568880`, preserving its domain 06 browser-label correction
+and all 105 existing rewrites. It adds ten domain 08 runtime rewrites covering
+attention audits, impulses, desire, discomfort, starting, habits, minimum
+standards, restraint, completion and flexible discipline. Total authoring is
+115/383 with exactly 268 runtime rewrites pending.
 
-Each entry supplies a usable default, necessary materials, a goal, distinct
-ordered tasks, concrete observations, adaptations, limits and meaningful
-review. Emotional labels remain provisional; pauses require a return to the
-issue; anger repair preserves safety; hope retains adverse facts; and the help
-card requires current local verification and real contact when its threshold is
-present. No diagnosis, unsupervised clinical exposure, deliberate
-dysregulation, treatment change, unsafe confrontation or delayed emergency
-response is introduced. Two inspected NIMH references and reused NIMH/NHS
-guidance support limited safety boundaries; they do not validate the original
-exercises or establish individual treatment need.
+The eleventh domain 08 competency, 08.02, has a complete source-only guide to
+the existing frozen presence experiment. It is validated separately, never
+projected and remains rewrite-pending in runtime coverage. Its guide explains
+the same comparable windows and seven-day repeat without redefining evidence
+or completion. Missing, duplicate, foreign and nonlegacy guide exclusions fail
+closed. The current content is fully readable in
+`docs/authoring/M6J-06-PRACTICE-READER.md`; every canonical facet is mapped in
+`docs/authoring/M6J-06-SCOPE-MAP.md`.
 
-Authoring inputs in `docs/authoring/exercises/` compile into the canonical YAML
-consumed by the application. They are not a competing runtime catalog. All
-383 protocol identities, 1,151 action identities, parent mappings, activation,
-assessment, ranking, scoring mathematics and explicit human closeout remain
-unchanged. The other 369 practice packages are byte-identical to the M6J-04
-baseline `0a3939a468dac1e9ffd9451c012968e88840930c`. Active/paused
-practice import protection and historical snapshot replay remain mandatory.
+All other 373 practice packages, including frozen 08.02, remain byte-identical.
+Stable identities, 1,151 actions, parent mappings, activation, assessment,
+ranking, scoring and explicit human closeout remain unchanged. No source link,
+authoring count or software result marks human or empirical review complete.
+See the M6J-06 evidence record for exact executed and unverified checks.
 
-Continue through the remaining domains with the same scope-mapping and
-self-contained instruction standard. Do not revert to noun-swapped exercises
-or substitute publication status for content progress. Domain 08,
-self-regulation, discipline and attention, is the next domain requiring review
-and rewrite; its existing legacy practices need explicit compatibility handling.
-The other earlier pre-frontier packages
-still need explicit review against this standard. The two original concerns
-are not collectively closed: scoring software exists, content remediation is
-partial, and specialist/source/empirical acceptance remains open.
+Continue with domain 09 in canonical order, while retaining the explicit
+legacy-guide disposition and the other pre-frontier review work. Do not
+substitute publication status for substantive content progress. The remaining
+268 runtime rewrites, legacy compatibility review and specialist/source/
+empirical acceptance remain open; the original concerns are not collectively
+resolved.
+
+M6J-06 also preserves the existing 08.06 typed evidence rules and golden
+fixtures, as for 13.02. Its richer content follows the original usual start,
+one-cue start and comparison sequence; preparation is not relabeled as a
+Boolean start observation. Later pre-frontier rewrites must check this
+compatibility before replacing primary evidence kinds.
+
+The next M6D pre-frontier typed fixtures are 09.12 and 10.02. Preserve their
+original measurement kinds and action semantics when enriching them; do not
+overwrite them with generic artifact criteria and then bless changed fixtures.
 
 ## What this project is
 Grounded Growth is a personalized human-development curriculum and adaptive practice system. It began as an 876-item list of traits/tasks, was reconstructed into a pluralist 383-competency curriculum, mapped to 37 trainable developmental levers, and paired with a 50-item assessment that initializes provisional lever states and task rankings.

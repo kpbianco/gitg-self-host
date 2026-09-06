@@ -1,6 +1,7 @@
 schema_version: GG-TAILORED-PRACTICE-AUTHORING-1.0
 target_competencies: 383
-retained_typed_evidence_competency_ids: ['13.02']
+retained_typed_evidence_competency_ids: ['13.02', '08.06']
+source_only_legacy_guide_competency_ids: ['08.02']
 implemented_domains:
   - '01'
   - '02'
@@ -9,8 +10,19 @@ implemented_domains:
   - '05'
   - '06'
   - '07'
+  - '08'
   - '13'
 protocol_families:
+  '08.01': PF-AUDIT-REDESIGN
+  '08.03': PF-BEHAVIORAL-EXPERIMENT
+  '08.04': PF-BEHAVIORAL-EXPERIMENT
+  '08.05': PF-SKILL-REHEARSAL
+  '08.06': PF-BEHAVIORAL-EXPERIMENT
+  '08.07': PF-AUDIT-REDESIGN
+  '08.08': PF-BEHAVIORAL-EXPERIMENT
+  '08.09': PF-BEHAVIORAL-EXPERIMENT
+  '08.10': PF-ARTIFACT-PLAN
+  '08.11': PF-AUDIT-REDESIGN
   '06.01': PF-RELATIONAL-CONVERSATION
   '06.02': PF-QUALIFIED-CONSULTATION
   '06.03': PF-SAFETY-PREPARATION

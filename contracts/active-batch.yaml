@@ -1,8 +1,8 @@
 schema_version: 1
 batch:
-  id: M6J-05-EMOTIONAL-RESILIENCE-PRACTICES
-  title: Tailored emotional maturity resilience and mental well-being practices
-  goal: Individually rewrite all 14 domain 07 practices with explicit clinical and safety boundaries; retain the 91 previously authored practices and an exact inventory of 278 still pending.
+  id: M6J-06-ATTENTION-DISCIPLINE-PRACTICES
+  title: Tailored attention discipline and legacy presence guidance
+  goal: Rewrite ten domain 08 runtime practices and supply one separately validated legacy presence guide; retain 105 earlier rewrites and exactly 268 runtime rewrites pending.
 sources:
   product: products/gitg-self-host/product.yaml
   requirements:
@@ -10,9 +10,9 @@ sources:
     - docs/PRODUCT_DECISIONS.md#decision-053
     - docs/program/M6_CURRICULUM_EXPANSION.md
   milestone: owner-directed-M6J-continuation
-  baseline_commit: 0a3939a468dac1e9ffd9451c012968e88840930c
+  baseline_commit: c3491a4ff4c0ba77c7d8f2244bae7218ae568880
 dependencies:
-  - M6J-04-VULNERABILITY-PRACTICES
+  - M6J-05-EMOTIONAL-RESILIENCE-PRACTICES
 scope:
   allowed_paths:
     - AGENTS.md
@@ -20,12 +20,13 @@ scope:
     - MANIFEST.tsv
     - contracts/**
     - docs/**
-    - data/practices/protocols/07/**
+    - data/practices/protocols/08/**
     - data/practices/registries/source_registry.yaml
     - data/practices/registries/research_gap_registry.yaml
     - data/practices/release_manifest.yaml
     - reports/practice-content/**
     - tests/**
+    - scripts/tailored_practice_authoring.py
   forbidden_paths:
     - data/assessment/**
     - data/model/**
@@ -40,21 +41,24 @@ scope:
     - pyproject.toml
     - Dockerfile
     - docker-compose.yml
-    - scripts/**
+    - scripts/author_full_competency_frontier.py
     - templates/**
     - .github/workflows/**
     - data/practices/registries/activation_ledger.yaml
 acceptance:
-  - All 14 domain 07 competencies have individually authored instructions aligned with canonical scope and an explicit bounded exercise goal.
-  - The other 369 practice packages remain byte-identical; exactly 105 authored and 278 rewrite-pending rows are reported.
+  - All ten nonlegacy domain 08 competencies have individually authored instructions aligned with canonical scope and an explicit bounded exercise goal.
+  - The other 373 practice packages remain byte-identical; exactly 115 authored and 268 rewrite-pending rows are reported.
   - Each action supplies observable success criteria and a usable example without requiring the person to design a rubric or exercise.
+  - The 08.06 typed evidence rules and original baseline cued-start comparison sequence remain compatible with all frozen M6D fixtures.
+  - The frozen 08.02 protocol remains byte-identical; its complete source-only guide is validated separately and remains rewrite-pending in runtime coverage.
+  - Guide-only exclusions are restricted to the five known frozen legacy IDs; missing or foreign guides fail closed.
   - Prerequisites materials burden meaningful review and accessible equivalents are explicit.
   - Simulation and preparation do not claim live performance or comprehensive mastery.
   - Deferral N/A and unattempted actions do not satisfy completion.
   - Sources support specific factual claims and do not imply validation of the product-authored exercise.
   - Every canonical scope facet maps to concrete actions or an explicit legitimate pathway choice; a supplied rehearsal never claims live participation.
-  - The emotion differentiation graduated approach expression and help-route journeys show readable instructions setup and observations at desktop and mobile widths; retain all existing browser journeys and overflow assertions.
-  - No diagnosis unsupervised clinical exposure deliberate dysregulation treatment change unsafe confrontation or delayed emergency response is introduced; help routes require current local verification.
+  - The impulse habit-design and commitment-closeout journeys show readable actions setup and observations; preserve all existing browser journeys and overflow assertions.
+  - No deliberate pain exhaustion food restriction sleep loss or deprivation is introduced; ordinary practice retains necessary supports and never overrides consent or safety obligations.
   - All 383 protocol IDs 1151 action IDs parent mappings activation records assessment and scoring mathematics remain unchanged.
   - Existing submitted events replay from their original snapshots and content import refuses to change active or paused practices.
   - Every canonical competency receives an explicit authored-pending-review or rewrite-pending disposition; 13.02 retains its existing typed evidence fixtures and the five frozen legacy runtime packages remain byte-equivalent.
@@ -90,7 +94,7 @@ rollback:
   strategy: Revert the content release before import or restore the verified pre-upgrade backup; never reinterpret existing event snapshots.
 evidence:
   output:
-    - docs/evidence/M6J-05-EMOTIONAL-RESILIENCE-PRACTICES-2026-09-06.md
+    - docs/evidence/M6J-06-ATTENTION-DISCIPLINE-PRACTICES-2026-09-06.md
     - exact per-competency content coverage and residual gaps
     - exact local and hosted verification results
   claim_boundary: Authored educational practices and software verification; no automatic human review or empirical validation acceptance.
