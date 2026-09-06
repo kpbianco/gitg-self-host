@@ -1,0 +1,27 @@
+# M6J-05 domain 07 scope map
+
+This map checks the 14 authored exercises against the exact canonical scope in
+`ideal_person_curriculum_v2_pluralist_full_scope.yaml`. It is an internal
+authoring review, not specialist, clinical or empirical acceptance.
+
+| ID | Canonical capability | Concrete coverage in the exercise | Deliberate boundary |
+| --- | --- | --- | --- |
+| 07.01 | Name emotions, intensity, body, trigger, meaning and urge precisely | Records event, intensity, signals and urge; compares at least three nearby labels; lets the provisional label select and later revise a response | One ordinary episode cannot diagnose a condition or prove another person's motive |
+| 07.02 | Notice breathing, tension, temperature, energy, posture, pain and activation early enough to intervene | Builds a neutral six-area comparison, observes two natural cue occasions and tests one signal–response pairing | Does not provoke activation or assign pain and medical symptoms an emotional cause |
+| 07.03 | Insert breath, grounding, movement, delay, prayer, writing or consultation before consequential action | Defines a cue–pause–return card, rehearses it twice and verifies both delayed reaction and promised return in a natural use | Pausing is neither suppression nor permission to delay emergency action or avoid the issue indefinitely |
+| 07.04 | Approach worthwhile fears gradually, repeat exposure and compare feared with actual outcomes | Supplies a three-step meeting-question ladder, requires a manageable step twice and revises the prediction from both outcomes | An ordinary comfort-zone trial is not clinical exposure; trauma, OCD, phobia, panic and unsafe fears require qualified care |
+| 07.05 | Distinguish value or boundary violation from ego threat, reduce escalation and communicate directly | Separates event, impact, value, ego amplification and revising fact; makes a direct request or controlled boundary; reviews delivery and follow-through | No intimidation, punishment, surveillance or direct confrontation in abusive or retaliatory settings |
+| 07.06 | Allow sorrow, remembrance, ritual, support, changed expectation and continued living | Names the loss, what remains and the changed future; completes remembrance and support actions; carries one responsibility forward | No grief timetable, forced gratitude, disclosure, positive meaning or claim that the loss is resolved |
+| 07.07 | Separate shame from specific responsibility and use guilt or remorse for repair | Replaces the identity verdict with an event record, distinguishes repair/consequence/prevention and completes safe renewed conduct | Does not determine legal culpability, compel confession, demand forgiveness or bypass formal accountability |
+| 07.08 | Identify admiration, need, insecurity, scarcity, relational fear and possessiveness beneath comparison | Gives every factor a disposition, checks scarcity or relationship assumptions and converts the episode into learning, gratitude, a boundary or a chosen goal | Comparison never licenses possession, control, monitoring, entitlement or sabotage |
+| 07.09 | Express feelings and needs without withdrawal, hostility, performance or control | Prepares observation–feeling–need–request copy, obtains consent, communicates through an accessible channel and reviews response and repair | One disclosure does not guarantee understanding and is not required with unsafe or unwilling people |
+| 07.10 | Combine self-care after suffering or failure with accountability, effort and consequences | Contrasts punishment, indulgence and accountable care; assigns care, repair and consequence separately; tests a renewed action | Compassion does not excuse harm, and standards do not justify deprivation, worth attacks or escalating self-punishment |
+| 07.11 | Hold realistic hope, joy, appreciation and enoughness beside hardship and ambition | Keeps verified adverse facts, receives one present good with its limits and completes a plausible future action with fallback | Does not prescribe optimism, deny hardship, abandon responsibility or require a positive mood |
+| 07.12 | Separate facts, responsibility, lessons, support and recovery, then adapt after setback | Debriefs six distinct factors, changes one controllable variable and compares a bounded restart with the failed attempt | Does not rush acute shock, romanticize harm or turn every disruption into a clean lesson |
+| 07.13 | Recognize self-help limits and routes to medical, psychological, spiritual, legal or emergency support | Defines observable thresholds, verifies four location-specific support levels and rehearses a concise handoff while requiring real contact when a threshold is current | The card is not diagnosis or triage certification; current local services and professional judgment remain authoritative |
+| 07.14 | Generalize more than one regulation strategy across triggers, relationships, stress and environments | Defines two contexts and two strategies, records four natural uses and creates a conditional menu with failure and escalation rules | Does not induce dysregulation, alter treatment or claim broad effectiveness from four observations |
+
+Every row also has a usable default, burden, accessible alternative, three
+ordered actions, four checks per action, four outcome examples and a review
+question in `docs/authoring/exercises/07.yaml`. Rehearsal and fictional cases
+remain labeled and never stand in for live transfer.

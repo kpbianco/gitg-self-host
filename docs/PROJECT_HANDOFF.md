@@ -7,39 +7,42 @@ representative of its underlying goal, self-contained and usable by different
 individuals. The owner specifically redirected this continuation away from
 PR/merge work and back to that content requirement.
 
-M6J-01 through M6J-03 supplied 77 authored practices in domains 01 through 05
-and 13. M6J-04 adds all 14 practices in domain 06, vulnerability, trauma,
-disability, neurodiversity and dependency. Its 42 distinct action instructions,
-168 observable checks and 56 worked outcome examples bring the total to 91
-authored practices with 292 explicitly rewrite-pending. No automated count
+M6J-01 through M6J-04 supplied 91 authored practices in domains 01 through 06
+and 13. M6J-05 adds all 14 practices in domain 07, emotional maturity,
+resilience and mental well-being. Its 42 distinct action instructions, 168
+observable checks and 56 worked outcome examples bring the total to 105
+authored practices with 278 explicitly rewrite-pending. No automated count
 represents human review or empirical acceptance. The competency-by-competency
 relationship to canonical scope is recorded in
-`docs/authoring/M6J-04-SCOPE-MAP.md`. The complete new content is in
-`docs/authoring/M6J-04-PRACTICE-READER.md`.
+`docs/authoring/M6J-05-SCOPE-MAP.md`. The reviewer index is
+`docs/authoring/M6J-05-PRACTICE-READER.md`, and the complete fields are in
+`docs/authoring/exercises/07.yaml`.
 
 Each entry supplies a usable default, necessary materials, a goal, distinct
 ordered tasks, concrete observations, adaptations, limits and meaningful
-review. The care agreement retains the recipient's choices; access redesign
-produces a testable notice; trauma literacy uses a fictional case and a real
-professional support route. No personal trauma, diagnosis, treatment change,
-disability simulation, forced independence or disclosure is required. Fictional
-preparation is not represented as actual recovery, care or crisis response.
-Ten inspected references provide limited factual, safety and design support;
-they do not validate the original exercises or establish local legal authority.
+review. Emotional labels remain provisional; pauses require a return to the
+issue; anger repair preserves safety; hope retains adverse facts; and the help
+card requires current local verification and real contact when its threshold is
+present. No diagnosis, unsupervised clinical exposure, deliberate
+dysregulation, treatment change, unsafe confrontation or delayed emergency
+response is introduced. Two inspected NIMH references and reused NIMH/NHS
+guidance support limited safety boundaries; they do not validate the original
+exercises or establish individual treatment need.
 
 Authoring inputs in `docs/authoring/exercises/` compile into the canonical YAML
 consumed by the application. They are not a competing runtime catalog. All
 383 protocol identities, 1,151 action identities, parent mappings, activation,
 assessment, ranking, scoring mathematics and explicit human closeout remain
-unchanged. The other 369 practice packages are byte-identical to the M6J-03
-baseline `b8188ab66bc129bb87d2ee8d3e6a617a46139788`. Active/paused
+unchanged. The other 369 practice packages are byte-identical to the M6J-04
+baseline `0a3939a468dac1e9ffd9451c012968e88840930c`. Active/paused
 practice import protection and historical snapshot replay remain mandatory.
 
 Continue through the remaining domains with the same scope-mapping and
 self-contained instruction standard. Do not revert to noun-swapped exercises
-or substitute publication status for content progress. Domain 07, emotional
-maturity, resilience and mental well-being, is the next unwritten domain in
-canonical order; the earlier eight pre-frontier packages
+or substitute publication status for content progress. Domain 08,
+self-regulation, discipline and attention, is the next domain requiring review
+and rewrite; its existing legacy practices need explicit compatibility handling.
+The other earlier pre-frontier packages
 still need explicit review against this standard. The two original concerns
 are not collectively closed: scoring software exists, content remediation is
 partial, and specialist/source/empirical acceptance remains open.

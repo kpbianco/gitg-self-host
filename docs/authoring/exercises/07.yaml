@@ -1,0 +1,325 @@
+schema_version: GG-TAILORED-PRACTICE-AUTHORING-1.0
+domain_id: '07'
+exercises:
+  '07.01':
+    title: "Name one emotional episode precisely enough to choose a response"
+    goal: "Distinguish an emotion's intensity, bodily signals, trigger, meaning and action urge from nearby possibilities before deciding what to do."
+    scope_note: "One ordinary episode practices emotional differentiation; it does not diagnose a condition, prove why the feeling occurred or require disclosure of private history."
+    burden: "Two private 10-minute passes over one manageable episode and a five-minute review after the next relevant action."
+    setup: "Use a private page and the supplied default: a friend changes a plan shortly before it starts and you want to send a sharp reply. Make six headings—event, body, intensity, possible emotions, meaning and urge. Choose a similarly ordinary event if preferred."
+    actions:
+      - title: "Record the episode before giving it one label"
+        instructions: "Write only the observable event first, then note a 0–10 intensity, bodily sensations and the action urge. For the default, the event is the changed plan; a hot face, dropped energy or tight jaw are observations, while they do not respect me is an interpretation. If no body signal is noticeable, record not noticed rather than inventing one."
+        checks: ["The event is separated from its interpretation", "Intensity and action urge receive explicit entries", "Bodily signals are observed or marked not noticed", "No motive or diagnosis is assigned to another person"]
+      - title: "Compare nearby emotions using the actual evidence"
+        instructions: "Consider at least three plausible labels from anger, hurt, shame, fear, envy, grief, disappointment and exhaustion. For each, write one feature that fits and one that does not. Select a provisional primary and secondary emotion or retain uncertainty; for example, disappointment may fit the lost plan while anger fits the urge to protest."
+        checks: ["At least three nearby emotions are compared", "Each candidate has fitting and nonfitting evidence", "A primary and secondary label or principled uncertainty is recorded", "The label does not become a verdict about character"]
+      - title: "Let the refined label change one next response"
+        instructions: "Choose a response matched to the differentiated episode: rest for exhaustion, clarification for uncertainty, a direct request for a violated expectation, or time to grieve a loss. Carry out one safe response or rehearse it on the default case, then record what the response addressed and what remains unresolved. Revise the label if later evidence points elsewhere."
+        checks: ["The response is linked to the identified emotion or need", "A safe action or explicitly labeled rehearsal occurs", "The underlying issue is not dismissed merely because intensity fell", "Later evidence is allowed to revise the interpretation"]
+    adaptation: "Use icons, a word bank, speech-to-text or only event–urge–response if detailed interoception is inaccessible. A fictional case practices classification but is not personal emotional evidence. Stop and seek suitable support if attention to the episode becomes overwhelming or unsafe."
+    review: "Which distinction changed the available response, and which part of the episode is still uncertain?"
+    examples:
+      supportive: "The person distinguished disappointment and hurt from anger, delayed the sharp reply and made a direct request about future notice."
+      mixed: "Several signals and labels were compared, but the chosen response addressed tiredness while the changed expectation remained unspoken."
+      contradictory: "A single body sensation was treated as proof of a diagnosis or of another person's hostile motive."
+      inconclusive: "Emotion words were selected without a specific event, intensity, urge or resulting response."
+  '07.02':
+    title: "Build and test an early body-signal cue for one ordinary stressor"
+    goal: "Notice breathing, tension, temperature, energy, posture, pain or activation early enough to choose a safe regulating action before automatic behavior takes over."
+    scope_note: "This compares signals around one manageable stressor, not a medical assessment or a claim that every emotion has a distinct bodily signature. Pain and other symptoms may have non-emotional causes."
+    burden: "A five-minute neutral baseline, two brief natural observations and one 10-minute comparison over several days."
+    setup: "Choose a recurring low-stakes cue such as opening a crowded inbox. Prepare a private six-area scan—breathing, jaw or shoulders, temperature, energy, posture and pain—and one optional response such as looking around the room, changing posture, walking briefly or delaying a reply. Breath focus is not required."
+    actions:
+      - title: "Record a neutral comparison without trying to relax"
+        instructions: "At an ordinary calm-enough moment, scan the six areas once and record noticed, not noticed or not accessible. Also note location, activity and time of day. Do not force slower breathing, intensify pain or decide what a signal means; this baseline exists only to make later changes easier to notice."
+        checks: ["All six signal areas have an honest disposition", "Context and time are recorded with the scan", "The baseline is observed without forcing a state change", "Pain or absent sensation is not assigned an emotional cause"]
+      - title: "Catch the earliest change at two natural cues"
+        instructions: "When the chosen ordinary cue occurs, pause only if doing so is safe. Repeat the scan and identify the first clear change from baseline, its approximate intensity and the behavior beginning to follow. On a second natural occurrence, check whether the same signal appears or whether a different early cue is more reliable."
+        checks: ["Two natural cue occasions or missing opportunities are recorded", "An early change is compared with the neutral baseline", "The beginning behavior is named without moral judgment", "Differences between occasions remain visible"]
+      - title: "Use one early signal as a prompt rather than a diagnosis"
+        instructions: "Choose the most observable early signal and pair it with the prepared safe response. At the next natural cue, use the response if appropriate and record whether it occurred before, during or after the automatic behavior. Keep, change or discard the pairing based on what happened; a signal that is new, severe or medically concerning calls for appropriate care."
+        checks: ["One observable signal is paired with a specific response", "The response timing is recorded on an actual opportunity", "The cue-response pairing is retained or revised from evidence", "Concerning symptoms are not treated as an emotional exercise"]
+    adaptation: "Use external cues such as speech speed, hand pressure or pacing if internal sensation is hard to access. Choose orienting, movement or consultation instead of breath work when breath attention is unpleasant. Do not provoke activation; a neutral scripted scenario tests recognition only."
+    review: "Which cue was early and reliable enough to act on, and when did the chosen response stop being useful?"
+    examples:
+      supportive: "Shoulders rose before rapid inbox replies on both occasions, and standing up created enough delay to reread the next message."
+      mixed: "A signal appeared, but only after the automatic response on one occasion and before it on another."
+      contradictory: "Chest pain was presumed to be mere stress and used to avoid appropriate medical attention."
+      inconclusive: "A body map was completed once without a natural cue, comparison or tested response."
+  '07.03':
+    title: "Install a brief pause before one consequential reaction"
+    goal: "Create enough space between a strong feeling and a consequential action to choose deliberately while preserving the feeling's information and the issue that needs attention."
+    scope_note: "A pause can interrupt one reaction; it is not emotional suppression, conflict resolution or proof of regulation across contexts. Immediate safety action should not be delayed."
+    burden: "Fifteen minutes to prepare, one naturally occurring use and a 10-minute return-and-review."
+    setup: "Use the default of receiving a frustrating non-urgent message. Prepare a three-part pause card: notice one cue, use one 60–120 second action such as orienting, movement, prayer, writing or consultation, and state when you will return. Include an exception for emergencies and time-sensitive safety decisions."
+    actions:
+      - title: "Define the reaction and the cost worth interrupting"
+        instructions: "Name one likely trigger, early cue, automatic reaction and concrete cost. For the default: seeing the message, jaw tension, sending an immediate accusation and creating avoidable escalation. Distinguish the reaction you want to delay from the concern you still intend to address, and list any situation where pausing would create danger."
+        checks: ["Trigger cue reaction and likely cost are specific", "The valid underlying concern remains explicit", "Emergency or safety exceptions are named", "The pause is not framed as permanent avoidance"]
+      - title: "Rehearse the complete pause and return sequence"
+        instructions: "Read the sample message, notice the cue and do the chosen brief action. Draft a holding statement such as I want to answer this carefully; I will reply by 3 p.m. Then write the first sentence of the later response, addressing the actual issue without accusation. Repeat once with a slightly different message so the sequence is usable rather than merely described."
+        checks: ["A cue activates the selected brief pause", "A clear return time or condition is stated", "The later response addresses the underlying issue", "The full sequence is rehearsed twice"]
+      - title: "Use the pause once and verify that you returned"
+        instructions: "At one safe natural opportunity, use the cue, pause action and holding statement as needed. Record whether the consequential reaction was delayed, whether you returned when promised and how the eventual response handled the issue. If no opportunity occurs, retain this as rehearsal evidence only rather than claiming a prevented reaction."
+        checks: ["An actual opportunity or its absence is recorded", "The reaction is delayed without denying the feeling", "The issue receives the promised return", "Any failure to return or added harm remains visible"]
+    adaptation: "Use a visual card, device reminder, prewritten message or support person. If speaking is unsafe or inaccessible, leave the situation and use an appropriate communication channel later. Do not use a pause to remain in danger, postpone urgent care or force another person to wait indefinitely."
+    review: "Did the pause improve the eventual action, and what would make returning to the issue more reliable?"
+    examples:
+      supportive: "The person sent a timed holding message, walked briefly and returned with a specific question instead of an accusation."
+      mixed: "The immediate reply was prevented, but the promised return was late and needed repair."
+      contradictory: "The pause became silent punishment, indefinite avoidance or a delay during an urgent safety problem."
+      inconclusive: "A calming technique was listed without rehearsing or using the cue–pause–return sequence."
+  '07.04':
+    title: "Test one low-stakes fear prediction through graduated approach"
+    goal: "Approach a worthwhile and objectively safe avoided situation in small repeatable steps while comparing a specific feared prediction with observable outcomes."
+    scope_note: "This is an ordinary comfort-zone experiment, not treatment for an anxiety disorder, trauma, OCD, panic, a phobia or another clinical concern. Clinical exposure belongs in an appropriate professional plan."
+    burden: "Twenty minutes to build the ladder, two 5–15 minute attempts at one step and a 10-minute comparison."
+    setup: "Use the supplied low-stakes case: asking one routine clarifying question in a familiar meeting. The three-step ladder is writing the question, saying it to a trusted person or empty room, and asking it in the meeting. Rate expected distress 0–10 and use only a step at 4 or below."
+    actions:
+      - title: "Bound the fear and choose an objectively safe step"
+        instructions: "Write the worthwhile aim, the exact feared prediction and what would be observable if it occurred. Check that the situation involves no threat, coercion, trauma cue, medical risk, unsafe person or serious consequence. Select the smallest ladder step rated 4 or below; ordinary accessibility and communication supports stay in place rather than becoming things to eliminate."
+        checks: ["A worthwhile aim and testable feared prediction are written", "The selected step is specific and rated manageable", "Objective safety and exclusion conditions are checked", "Necessary access and communication supports remain allowed"]
+      - title: "Approach the same manageable step twice"
+        instructions: "Attempt the selected step on two separate safe occasions without escalating merely to prove courage. Before each, record the predicted outcome and expected distress; afterward record the observed outcome, peak distress and whether you stayed long enough to complete the step. Stop if risk changes or distress exceeds the preset limit, and do not count a stopped attempt as failure."
+        checks: ["Two attempts or an explicit safety stop are recorded", "Prediction and observed outcome are compared each time", "Distress stays within the preset boundary or triggers stopping", "Completion is not equated with fear disappearing"]
+      - title: "Revise the prediction and decide the next bounded step"
+        instructions: "Compare both attempts. Narrow, retain or revise the prediction based on what actually happened, including partial feared outcomes. Choose to repeat, take the next small step, defer or seek qualified help; give the reason. A rehearsal never counts as completing the real meeting step, and worsening or function-limiting anxiety is a reason for professional support."
+        checks: ["Both attempts inform the revised prediction", "Partial or adverse outcomes are retained", "The next step repeat defer or help route has a reason", "No treatment or broad anxiety improvement is claimed"]
+    adaptation: "Use a written, remote, supported or speech-device version of the same ordinary participation goal. If no appropriate live opportunity exists, complete the ladder and one rehearsal but label behavioral transfer untested. Do not remove prescribed supports or conduct unsupervised exposure to clinical fears."
+    review: "What did the two attempts show about the feared prediction, and what is the safest honest next step?"
+    examples:
+      supportive: "The routine question was rehearsed and asked twice; one answer was brief but no ridicule occurred, so the prediction was narrowed rather than erased."
+      mixed: "The person completed both attempts, but distress remained high enough that repeating the same step is more appropriate than advancing."
+      contradictory: "A trauma trigger or dangerous encounter was deliberately provoked, or essential support was removed to make the attempt harder."
+      inconclusive: "A ladder was written but no step was attempted and rehearsal was reported as real-world exposure."
+  '07.05':
+    title: "Turn one manageable anger episode into a proportionate repair"
+    goal: "Distinguish a violated value or boundary from ego threat, lower escalation and communicate the issue directly without intimidation, suppression or passive aggression."
+    scope_note: "One low-risk repair practices assertive anger; it does not decide who is morally right, repair abuse or require direct contact where retaliation or coercion is plausible."
+    burden: "Two 15-minute preparation periods, one brief willing conversation or rehearsal and a 10-minute follow-up."
+    setup: "Use a minor shared-life default: someone repeatedly leaves a borrowed item in the wrong place. Prepare four headings—observable event, impact, value or boundary, and requested future action—plus a safe exit plan. Choose rehearsal if direct contact is unwelcome or unsafe."
+    actions:
+      - title: "Separate the event, threatened concern and escalation story"
+        instructions: "Describe the event without always, never or motive claims. Name the practical impact, the value or boundary involved and any status or ego threat that may be amplifying intensity. Write one fact that could change your interpretation. Reduce activation before contact through time, movement, writing or consultation, but retain the issue for later action."
+        checks: ["The event is described without motive or character claims", "Impact value or boundary and possible ego threat are separated", "A fact that could revise the interpretation is named", "Escalation is reduced without abandoning the issue"]
+      - title: "Make a direct request with a proportionate boundary"
+        instructions: "Ask whether the person is willing to talk. State the observed event, its effect and one specific request: When the tool stays outside, I cannot find it; please return it to the marked shelf. If needed, state only a boundary you control, such as lending it only when a return plan is agreed. Do not threaten, shame, crowd, monitor or demand emotional agreement."
+        checks: ["The other person is willing to receive the message", "Event impact and request are stated directly", "Any boundary describes the speaker's own future action", "No intimidation punishment or forced agreement is used"]
+      - title: "Review response, follow-through and remaining repair"
+        instructions: "Record whether the message was delivered or only rehearsed, the other person's actual response and your follow-through. Acknowledge any part of your delivery that needs repair without withdrawing a legitimate boundary. If the request is declined, choose a safe next action within your control rather than escalating or pretending agreement."
+        checks: ["Live communication and rehearsal are distinguished", "The actual response is recorded without mind-reading", "Delivery harm and the substantive boundary are reviewed separately", "A declined request leads to a controlled next action"]
+    adaptation: "Use writing, AAC, an interpreter or a neutral support person with consent. Rehearse against the supplied case when no willing person is available; this does not prove live assertiveness. In abusive, discriminatory or retaliatory contexts, prioritize safety, documentation and appropriate support over direct confrontation."
+    review: "What part of the anger contained useful information, and did the response remain proportionate to the actual event?"
+    examples:
+      supportive: "The person cooled down, named the missing-tool impact, made one request and followed a lending boundary without insults."
+      mixed: "The request was clear, but the opening included a motive claim that required a later correction."
+      contradictory: "The exercise was used to justify yelling, surveillance, humiliation, revenge or unsafe confrontation."
+      inconclusive: "Anger was privately analyzed, but no request, boundary, rehearsal or follow-through occurred."
+  '07.06':
+    title: "Carry one bounded loss through remembrance, support and changed action"
+    goal: "Name what was lost, what remains and what expectations changed, then make room for sorrow while choosing one form of remembrance, support and continued living."
+    scope_note: "This uses a manageable loss and does not prescribe a grief timetable, require positive meaning or replace bereavement, medical or mental-health support."
+    burden: "One private 20-minute reflection, one 10–20 minute remembrance or support action and a later 10-minute review."
+    setup: "Choose a loss safe enough to approach, such as the end of a hobby group, a missed opportunity or a familiar place closing. Use a fictional case if personal grief is too close. Prepare three headings—lost, remaining and now changed—and one ordinary care obligation that still needs attention."
+    actions:
+      - title: "Describe the loss without erasing either sorrow or continuity"
+        instructions: "Name the person, role, future, place or routine that is absent and the expectation that changed. Add what genuinely remains, such as a skill, relationship, responsibility or memory, without calling the loss beneficial. Record the present feeling and intensity, and stop if the chosen material becomes too destabilizing for self-guided reflection."
+        checks: ["The lost good and changed expectation are specific", "What remains is named without canceling the loss", "Present feeling and intensity receive an honest entry", "The exercise stops or narrows when self-guided reflection is unsuitable"]
+      - title: "Choose remembrance and support that fit this loss"
+        instructions: "Complete one bounded act such as saving a photo, writing the group's final date, visiting the place, observing a fitting ritual or telling a willing person what is missed. Also make or accept one specific support request, even if it is simply company during a routine task. A private ritual is valid; public disclosure, gratitude and closure are not required."
+        checks: ["A concrete remembrance act is completed", "One specific support request or accepted offer occurs", "Participation and disclosure remain voluntary", "The action does not demand closure or a positive interpretation"]
+      - title: "Carry one changed responsibility into ordinary life"
+        instructions: "Choose one action that continues life under the changed conditions: attend the next class elsewhere, update a calendar, care for a remaining responsibility or schedule qualified support. Complete it or record why it must wait. Later, name what the action carried forward and what sorrow or uncertainty remains rather than claiming resolution."
+        checks: ["A continued-life action fits the changed circumstances", "The action is completed or honestly deferred", "What is carried forward and what remains painful are both named", "Need for additional support is reviewed without a deadline"]
+    adaptation: "Use objects, images, music without quoted lyrics, brief dictation or a support person. A fictional case practices the structure but is not evidence of grieving a real loss. For recent, traumatic, function-impairing or unsafe grief, use appropriate personal, spiritual, medical or mental-health support instead."
+    review: "What deserves remembrance, what still needs carrying, and which expectation now has to change?"
+    examples:
+      supportive: "The person named the lost weekly group, kept one friendship, archived a photo and registered for one replacement session without calling the loss good."
+      mixed: "A remembrance was completed and support accepted, but the new routine is not yet workable."
+      contradictory: "The loss was minimized, rushed into gratitude or used to impose a required timetable for closure."
+      inconclusive: "General thoughts about grief were recorded without identifying a loss, remembrance, support or changed action."
+  '07.07':
+    title: "Convert global shame into specific responsibility and repair"
+    goal: "Separate a condemning identity verdict from responsibility for a particular action, then choose proportionate repair, prevention and renewed conduct."
+    scope_note: "This addresses one manageable event; it does not determine legal culpability, compel confession, require contact with someone harmed or erase consequences."
+    burden: "Two private 15-minute sessions, one bounded repair or prevention action and a 10-minute follow-up."
+    setup: "Use the supplied low-stakes case: you forgot a commitment and caused a teammate extra work. Prepare five headings—fact, your choice, impact, context without excuse, and what is not established about your worth. Exclude abuse, active legal disputes and unsafe contact from self-guided repair."
+    actions:
+      - title: "Replace the identity verdict with an accountable event record"
+        instructions: "Write the observable event and its likely impact. Name the choice or omission you own, relevant constraints that explain but do not automatically excuse it, and responsibility that belongs elsewhere or remains uncertain. Translate I am useless into I missed the agreed reminder and did not notify the team, which created extra work."
+        checks: ["The event and impact replace a global identity verdict", "Owned choice and contextual constraint are both visible", "Responsibility belonging elsewhere is not absorbed", "Uncertainty is preserved where facts are incomplete"]
+      - title: "Select repair, consequence and prevention separately"
+        instructions: "List one repair for the impact, one consequence you may need to accept and one prevention change. Check that the repair is wanted, safe and within your authority; an apology does not demand forgiveness, restitution does not buy absolution and no contact may be the appropriate boundary. For the default, offer to restore the work, accept the schedule consequence and add a shared reminder."
+        checks: ["Repair consequence and prevention are distinct", "The proposed repair respects consent and safety", "Forgiveness or reassurance is not demanded", "A concrete prevention change addresses the actual failure"]
+      - title: "Act where appropriate and permit renewed conduct"
+        instructions: "Complete the safe repair or prevention step, or document why direct action is unsuitable and use an appropriate advisor or process. Record the response without turning acceptance into proof of worth. State one standard for the next similar event and carry it out when the opportunity occurs; continued self-punishment does not substitute for changed conduct."
+        checks: ["A safe repair prevention or qualified process is used", "The other person's response is not controlled or reinterpreted", "A next-event standard is explicit", "Self-care and accountability coexist without erasing consequences"]
+    adaptation: "Use a private voice note, advisor or fictional case. No disclosure of trauma, illegal conduct or identifying details is required. Seek appropriate legal, clinical, safeguarding or spiritual counsel for high-stakes harm; do not use this exercise to pressure contact or bypass formal accountability."
+    review: "Which responsibility became clearer once the verdict about your whole self was removed, and what repair is still owed?"
+    examples:
+      supportive: "The person owned the missed reminder, repaired part of the extra work, accepted the consequence and changed the notification system."
+      mixed: "The apology and prevention step were appropriate, but the person still sought reassurance that no consequence should follow."
+      contradictory: "Self-condemnation replaced repair, or contextual pressure was used to deny a clearly owned action."
+      inconclusive: "The person repeated a compassionate phrase without identifying the event, impact or any next conduct."
+  '07.08':
+    title: "Translate one comparison reaction into information and chosen action"
+    goal: "Distinguish admiration, threatened need, insecurity, scarcity belief, relational fear and possessiveness within envy or jealousy, then choose gratitude, learning, a boundary or a goal."
+    scope_note: "One comparison episode can reveal a useful concern; it does not prove another person's intent, justify control or establish a stable personality trait."
+    burden: "Two private 10-minute analyses, one 10–20 minute response and a brief later review."
+    setup: "Use the default of a peer receiving recognition you wanted. Make six headings—observable event, admired quality, threatened need, scarce-resource fact, relationship fear and controlling urge. Keep the peer unnamed and do not inspect their private information."
+    actions:
+      - title: "Separate admiration, threat and possession in the comparison"
+        instructions: "Record what actually happened and rate the reaction. Under each heading, write a specific entry or not present. In the default, admiration may concern preparation, the threatened need may be recognition, the scarce resource may be one promotion, and the urge may be to belittle the peer. Treat these as hypotheses about your reaction, not claims about the peer."
+        checks: ["The event and reaction intensity are recorded", "Admiration need scarcity fear and urge each have a disposition", "Facts are separated from hypotheses about meaning", "No private information or hostile motive is assigned"]
+      - title: "Test the scarcity and relationship assumptions"
+        instructions: "Identify which desired goods are actually limited and which may have multiple routes. Check one available fact, policy or direct clarification without interrogating or monitoring anyone. If jealousy concerns a relationship, state the needed boundary or reassurance as a request and recognize the other person's freedom; possession and surveillance are not care."
+        checks: ["Limited and nonexclusive goods are distinguished", "One assumption is checked through an appropriate source", "Any relational request preserves the other person's agency", "Monitoring control and entitlement are rejected"]
+      - title: "Choose one clean conversion of the comparison"
+        instructions: "Take one response that fits the analysis: ask the peer for a learning resource, define a skill goal, appreciate an existing good, make a fair boundary request or disengage from an unhealthy comparison cue. Record what the action can change and what disappointment remains. Do not imitate another life wholesale or convert gratitude into a ban on ambition."
+        checks: ["The chosen response matches the identified concern", "A concrete learning goal gratitude act boundary or disengagement occurs", "Remaining disappointment is acknowledged", "The action avoids imitation sabotage and compulsory contentment"]
+    adaptation: "Use an invented recognition case or an anonymized media comparison. Rehearsal can test classification and response selection but not a live relationship. If jealousy occurs with coercion, stalking, abuse risk or severe distress, prioritize safety and qualified support."
+    review: "What did the comparison reveal that can be pursued cleanly, and which urge should not be obeyed?"
+    examples:
+      supportive: "The person identified admiration for preparation, checked the promotion criteria and chose a three-week skill goal without diminishing the peer."
+      mixed: "A clean goal emerged, but the belief that recognition is entirely scarce remains only partly tested."
+      contradictory: "Jealousy was used to justify surveillance, isolation, sabotage or entitlement to another person's attention."
+      inconclusive: "The person wrote that comparison is bad without identifying a need, assumption or chosen response."
+  '07.09':
+    title: "Express one difficult feeling without leaking it through control"
+    goal: "Communicate an emotionally important truth to a trustworthy and willing person with clear observation, proportionate feeling language, a need and a negotiable request."
+    scope_note: "One bounded disclosure practices healthy expression; it does not require vulnerability with unsafe people, guarantee understanding or resolve the wider relationship."
+    burden: "Fifteen minutes to prepare, a 5–15 minute conversation or rehearsal and a 10-minute review."
+    setup: "Use the default: tell a trusted friend you felt left out when a recurring plan changed without notice. Draft four lines—what happened, what you felt and at what intensity, what mattered, and one specific request. Choose a private channel and ask whether this is a workable time."
+    actions:
+      - title: "Prepare a proportionate truth and a bounded request"
+        instructions: "Describe the event without motive claims, choose one or two precise feeling words and state the relevant need or value. Make a request the listener can accept, decline or modify. Remove threats, mind-reading, strategic withdrawal, exaggerated performance and demands that the listener regulate your feeling; keep any boundary focused on your own future action."
+        checks: ["Observation feeling and need are distinguishable", "Intensity and detail fit the relationship and event", "The request allows acceptance refusal or modification", "Threats motive claims and emotional coercion are absent"]
+      - title: "Ask consent and communicate through an accessible channel"
+        instructions: "Ask whether the person is willing and has time to listen. Deliver the four lines in speech, writing or an accessible format, then pause. Invite correction of facts and ask what they understood before arguing the conclusion. If the person declines, respect that response and choose another time, private processing or appropriate support rather than leaking the message indirectly."
+        checks: ["The listener consents to the time and channel", "The prepared emotional truth is actually communicated", "Fact correction and the listener's understanding are invited", "A refusal does not trigger pressure or indirect retaliation"]
+      - title: "Review clarity, impact and the next relational action"
+        instructions: "Record whether this was live or rehearsed, what the listener actually said and whether the request was answered. Note any wording that overstated, minimized or controlled, and repair it if welcome. Decide one next action that respects both parties' agency; an imperfect response does not make the original feeling unreal or the request automatically binding."
+        checks: ["Live disclosure and rehearsal are clearly labeled", "The listener's response is recorded without interpretation as fact", "Any harmful or unclear delivery receives a repair decision", "The next action preserves both people's agency"]
+    adaptation: "Use text, email, AAC, an interpreter or a consented support person. Rehearse with the supplied case when no trustworthy listener is available, while leaving live expression untested. Do not disclose to an abusive, retaliatory or coercive person; use safety planning or qualified support instead."
+    review: "Which part of the message was both honest and proportionate, and what did the listener remain free to decide?"
+    examples:
+      supportive: "The person asked for time, named feeling left out, requested future notice and heard that the friend could try but could not promise every update."
+      mixed: "The feeling was expressed clearly, but the need and request were blended and required clarification."
+      contradictory: "Disclosure was used as a threat, loyalty test, public performance or demand that the listener remove every difficult feeling."
+      inconclusive: "A message was drafted but neither rehearsed nor delivered, while avoidance continued through indirect hostility."
+  '07.10':
+    title: "Pair self-compassion with repair after one ordinary failure"
+    goal: "Respond to a setback with the care needed to remain functional while preserving accurate responsibility, consequences, effort and a concrete renewed action."
+    scope_note: "This tests one post-failure response; it does not excuse harm, require positive self-esteem or treat severe depression, trauma or persistent self-hatred."
+    burden: "Two 15-minute passes and one 10–30 minute repair or renewed attempt within an appropriate timeframe."
+    setup: "Use the default of missing a self-imposed study session. Divide a page into punishment, indulgence and accountable care. Prepare one sentence you would say to a respected peer while still naming the missed commitment."
+    actions:
+      - title: "Write the failure at the level of fact and responsibility"
+        instructions: "State what was expected, what occurred, the effect and which choice or constraint mattered. Write the punishing response that attacks worth and the indulgent response that denies impact, then reject both inaccuracies. Produce an accountable-care sentence such as I missed tonight's session after overscheduling; the work remains, and rest plus a smaller restart is more useful than contempt."
+        checks: ["Expectation event impact and responsibility are specific", "Punishment and indulgence are identified separately", "The revised response neither attacks worth nor erases impact", "Constraints are included without becoming automatic excuses"]
+      - title: "Design care, repair and consequence as distinct actions"
+        instructions: "Choose one stabilizing care action, one repair for anyone affected and one proportionate consequence or schedule adjustment. Keep care available even when repair is owed. For the default, take the needed sleep, tell the study partner the truth and replace the oversized session with a defined 20-minute block; do not add punitive deprivation or cancel every standard."
+        checks: ["Care repair and consequence each have a concrete form", "Care is not made conditional on earning worth", "Repair addresses an actual impact without demanding reassurance", "The revised standard remains meaningful and feasible"]
+      - title: "Complete the renewed action and compare its effect"
+        instructions: "Carry out the safe repair and the next defined attempt. Compare whether punishment, indulgence or accountable care better supported truthful follow-through, using the completed behavior rather than mood alone. If the restart fails, keep the evidence and revise task size, support or timing; repeated impairment calls for appropriate help, not harsher self-attack."
+        checks: ["A repair and renewed attempt occur or are honestly deferred", "Follow-through rather than mood alone informs the comparison", "A failed restart leads to a specific design revision", "Persistent impairment is not answered with escalating punishment"]
+    adaptation: "Use a voice note, checklist or trusted support person. A fictional missed-session case practices the distinction but does not demonstrate personal follow-through. When self-criticism includes self-harm risk or severe persistent symptoms, use crisis or qualified care rather than this exercise alone."
+    review: "Which form of care made responsibility more actionable, and what consequence still needs to be carried?"
+    examples:
+      supportive: "The person rested, acknowledged the missed commitment, completed a smaller restart and retained the real deadline consequence."
+      mixed: "The compassionate statement was accurate, but the repair occurred while the renewed attempt remained oversized."
+      contradictory: "Care was treated as permission to deny harm, or accountability became sleep deprivation and global self-condemnation."
+      inconclusive: "Kind words were written without identifying responsibility, repair, consequence or renewed action."
+  '07.11':
+    title: "Hold one hard fact beside a present good and a plausible future"
+    goal: "Practice realistic hope, receptivity to joy and enoughness without denying hardship, abandoning ambition or demanding a positive mood."
+    scope_note: "One bounded exercise can improve the accuracy of attention and planning; it does not promise optimism, treat depression or prove that circumstances will improve."
+    burden: "Fifteen minutes to prepare, one 10-minute present-good practice and one small future action with later review."
+    setup: "Use the default of a project delay. Make three columns: hard facts, present goods and plausible futures. Add a stopping point for today's work, such as after sending one status update, so contentment means enough for now rather than no further ambition."
+    actions:
+      - title: "Write the hard facts without turning them into the whole future"
+        instructions: "List verified adverse facts, current uncertainty and consequences. Remove predictions disguised as facts and do not soften the real loss. Then list one condition that could make the future worse and one that could improve it. For the delayed project, the missed date is a fact; permanent career damage may be a fear requiring evidence."
+        checks: ["Verified hardship and uncertainty remain explicit", "Predictions are separated from current facts", "A worsening and improving condition are both named", "No required positive interpretation is imposed"]
+      - title: "Receive one present good without using it to cancel hardship"
+        instructions: "Choose an available good such as a meal, a useful tool, a kind message, beauty, rest or competent work. Attend to it for several minutes or accept it from another person, then name what was actually good. Also write what the good does not fix. Stop at the preset enough-for-now boundary instead of converting appreciation into another performance target."
+        checks: ["A specific present good receives actual attention", "The experienced good is described concretely", "The hardship it does not fix remains visible", "The enough-for-now boundary is observed or honestly missed"]
+      - title: "Act on one plausible future with a fallback"
+        instructions: "Choose one valued possibility supported by at least one real path. Complete the smallest next action and write a fallback if the hoped-for result does not occur. For the default, send a revised status and request a decision by Friday; if denied, preserve the work and re-scope. Review hope by whether it supported truthful action, not whether optimism felt intense."
+        checks: ["The hoped-for future has a plausible route", "One concrete next action is completed", "A fallback preserves agency if the result fails", "Hope is evaluated without demanding a positive mood"]
+    adaptation: "Use photos, objects, sensory description, dictation or a supporter. If joy is inaccessible, record a neutral support or reduced burden rather than fabricate gratitude. Severe or persistent loss of interest, hopelessness or impaired functioning merits qualified support."
+    review: "What remained hard, what was genuinely available now, and which future action stayed plausible after both were acknowledged?"
+    examples:
+      supportive: "The missed date remained explicit, lunch with a friend was enjoyed without calling the delay good, and a revised scope was submitted with a fallback."
+      mixed: "A present good was noticed, but the future plan still depended on an unverified optimistic assumption."
+      contradictory: "Hardship was denied, gratitude was forced or contentment was used to abandon a responsibility that still mattered."
+      inconclusive: "Positive possibilities were listed without a hard-fact column, present attention or completed next action."
+  '07.12':
+    title: "Run one evidence-based restart after a manageable setback"
+    goal: "Separate facts, responsibility, lessons, support and recovery after disruption, change one controllable variable and test a renewed attempt."
+    scope_note: "A single restart practices adaptation; it does not prove resilience, require rapid recovery or turn trauma, injustice or uncontrollable loss into a lesson."
+    burden: "A 20-minute debrief, one recovery or support action and a 10–30 minute renewed attempt followed by comparison."
+    setup: "Use the default of failing to finish a planned household task before guests arrive. Prepare six headings—facts, effect, my responsibility, outside conditions, recovery need and support available. Wait until acute danger or shock has passed."
+    actions:
+      - title: "Debrief the setback without inventing a clean lesson"
+        instructions: "Record what happened, what evidence shows, the immediate effect and what remains unknown. Assign your responsibility narrowly and name outside conditions without blaming them for every outcome. Identify a needed recovery action and available support. Write at most one provisional lesson tied to a fact; it is valid to record that no lesson is yet clear."
+        checks: ["Facts effects and unknowns are separated", "Personal and external contributions are bounded", "A recovery need and available support are identified", "Any lesson is provisional and tied to evidence"]
+      - title: "Change one controllable variable for the restart"
+        instructions: "Select one variable that plausibly contributed and can be changed, such as task size, sequence, timing, tool or help. Keep other conditions as stable as practical and define the visible result. For the default, reduce the task to clearing the entry table, schedule 20 minutes and ask another household member to choose where displaced items go."
+        checks: ["One controllable variable is selected from the debrief", "The change is specific and feasible", "A visible restart result is defined", "Needed recovery and support are not treated as weakness"]
+      - title: "Attempt, compare and preserve an adverse result"
+        instructions: "Make the bounded renewed attempt when conditions are appropriate. Compare result, effort and constraints with the failed attempt. Keep evidence that the change did not help, created a new cost or was not attempted; then repeat, revise, seek support or stop with a reason. Resilience here is honest adaptation, not speed, toughness or uninterrupted output."
+        checks: ["A renewed attempt or explicit deferral is recorded", "Result effort and conditions are compared with the setback", "Adverse or null effects remain in the review", "The next decision follows evidence rather than toughness"]
+    adaptation: "Use a visual six-box form, dictation or a support person. A fictional failed-task case practices analysis only. Do not rush debriefing after trauma, bereavement or medical crisis; use qualified support and stabilization before any optional learning exercise."
+    review: "Which changed variable earned another test, and which part of the setback should remain unresolved rather than converted into a lesson?"
+    examples:
+      supportive: "The person separated overscheduling from an unexpected interruption, rested, reduced the task and completed the revised entry-area goal."
+      mixed: "The restart occurred, but changing both timing and tools made the useful variable unclear."
+      contradictory: "The setback was romanticized, outside harm was blamed on character or recovery needs were treated as excuses."
+      inconclusive: "A motivational statement replaced the factual debrief and no variable was tested."
+  '07.13':
+    title: "Build and rehearse a location-specific mental-health help route"
+    goal: "Recognize when self-help is insufficient and prepare usable ordinary, qualified, specialized and emergency support routes before functioning or safety is impaired."
+    scope_note: "This is support navigation, not diagnosis, triage certification or a substitute for current local emergency guidance and professional assessment."
+    burden: "Thirty minutes to verify a private support card, a 10-minute rehearsal and one immediate real contact when current safety or functioning requires it."
+    setup: "Use a private card with four levels: ordinary support, routine professional care, urgent specialized help and emergency response. Record your actual country or region. In the United States, verify 988 for suicide or emotional crisis and 911 for life-threatening emergencies; elsewhere, replace them with current local services."
+    actions:
+      - title: "Define observable thresholds for each support level"
+        instructions: "Write two or three observable signs for each level without assigning a diagnosis. Include duration, loss of usual functioning, inability to complete basic tasks, severe distress, immediate danger, thoughts of suicide or harm, psychosis-like experiences, abuse or medical concerns where relevant. Mark uncertainty as a reason to consult rather than an invitation to self-diagnose."
+        checks: ["All four support levels have observable thresholds", "Function duration distress and safety are considered", "Signs are not converted into a self-diagnosis", "Uncertainty has an explicit consultation route"]
+      - title: "Verify reachable people and services in the actual location"
+        instructions: "Add one willing personal or spiritual support, one routine health or mental-health entry point, one specialized route relevant to known needs and the local crisis or emergency route. Verify names, current contact methods, eligibility, hours and accessibility from official or direct sources. Do not store another person's sensitive details or assume a service is available because it appears in this example."
+        checks: ["Personal routine specialized and emergency routes are listed", "Location eligibility hours and contact methods are verified", "Accessibility or communication needs are addressed", "Only minimum private information is retained"]
+      - title: "Rehearse the handoff and act now when a threshold is present"
+        instructions: "Practice one opening sentence: I have had [observable problem] for [time], it is affecting [function], and I need help deciding the next step. Locate the device, transportation, interpreter, insurance information or trusted person needed to make contact. If a current threshold on the card is met, use the appropriate real route now; a rehearsal never substitutes for urgent or emergency action."
+        checks: ["The opening sentence includes observation duration and function", "Practical access needs for making contact are prepared", "A current threshold leads to the appropriate real contact", "Rehearsal is not counted as receiving professional help"]
+    adaptation: "Use a wallet card, screen-reader-friendly note, translated resource or trusted helper. Keep exact symptoms and identity details off shared devices. When immediate danger is present, contact current local emergency services or go to an appropriate emergency setting rather than completing the worksheet."
+    review: "Could you reach the correct level of help from this card under stress, and which detail still needs current local verification?"
+    examples:
+      supportive: "The person verified a primary-care entry point, a therapist directory, a trusted contact and current local crisis routes, then rehearsed a concise call."
+      mixed: "The levels and contacts are complete, but transportation and after-hours accessibility remain unresolved."
+      contradictory: "The card assigned diagnoses, relied on an unverified hotline or was used to delay help despite an immediate safety threshold."
+      inconclusive: "Generic advice to seek help was copied without local services, thresholds or a rehearsed contact path."
+  '07.14':
+    title: "Compare two regulation strategies across two ordinary contexts"
+    goal: "Generalize regulation by trying more than one safe strategy across different triggers, relationships, stress levels or environments and identifying when each stops helping."
+    scope_note: "Four low-risk observations can refine a personal strategy menu; they do not induce dysregulation, treat chronic symptoms or establish broad effectiveness."
+    burden: "Fifteen minutes to prepare, four brief natural uses over one to two weeks and a 15-minute comparison."
+    setup: "Choose two recurring manageable contexts, such as deadline tension at a desk and irritation during a household transition. Select two already-safe strategies: orient to five visible objects, walk or change posture, write before replying, use a brief prayer, or consult a willing person. Define a stop condition for rising distress or impaired safety."
+    actions:
+      - title: "Define contexts, strategies and a modest success marker"
+        instructions: "Describe each context, its likely trigger, typical intensity and the behavior you want enough regulation to choose. Write the exact steps and access needs for both strategies. Use a behavioral marker such as reading a message twice before replying rather than calmness or feeling good, and name when each strategy is unavailable or should stop."
+        checks: ["Two distinct contexts and triggers are defined", "Two strategies have exact usable steps", "Success is a chosen behavior rather than a required mood", "Availability limits and stop conditions are explicit"]
+      - title: "Use both strategies in natural nonideal conditions"
+        instructions: "Across four natural opportunities, use each strategy at least once and include both contexts if they occur. Record context, starting intensity, strategy, whether the behavioral marker occurred and any unwanted effect. Do not provoke a trigger or increase intensity for the test. Missing opportunities remain missing rather than being replaced by imagined success."
+        checks: ["Four natural uses or missing opportunities are recorded", "Each strategy and each available context receives representation", "Intensity behavior and unwanted effects are observed", "No trigger or distress is deliberately induced"]
+      - title: "Build a conditional menu and an escalation rule"
+        instructions: "Compare which strategy was usable at which intensity and setting. Create if–then guidance, such as writing works for remote conflict below 6, while movement is more usable after noisy transitions. Mark a strategy ineffective, inaccessible or harmful where warranted, and add a support or professional route for persistent dysregulation, worsening effects or loss of function."
+        checks: ["The comparison distinguishes context and intensity", "The menu includes at least two conditional choices", "Ineffective inaccessible or harmful results are retained", "A clear escalation route covers loss of function or worsening"]
+    adaptation: "Use external prompts, AAC, sensory accommodations or a helper, and select strategies compatible with existing care. A scripted scenario can test recall of the menu but not regulation under stress. Do not change medication, treatment or a clinician's safety plan through this exercise."
+    review: "Which strategy worked under which conditions, and what is the earliest sign that self-guided regulation is no longer enough?"
+    examples:
+      supportive: "Writing before replying supported the desk marker, movement helped the household transition, and the menu recorded where each was unavailable."
+      mixed: "Both strategies were used, but three attempts occurred in the same ideal setting, so cross-context transfer remains uncertain."
+      contradictory: "The person deliberately triggered severe distress, discarded prescribed support or treated one technique as universally effective."
+      inconclusive: "Several coping skills were listed without natural use, context comparison or a stop-and-escalate rule."

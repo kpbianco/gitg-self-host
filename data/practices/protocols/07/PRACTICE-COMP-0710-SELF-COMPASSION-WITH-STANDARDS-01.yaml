@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0710-SELF-COMPASSION-WITH-STANDARDS-01
 slug: c0710-self-compassion-with-standards-practice
-name: Bounded Self-compassion with standards Practice
+name: Pair self-compassion with repair after one ordinary failure
 parent_competency_id: '07.10'
 domain_id: '07'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 07.10
-      (Self-compassion with standards); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 07.10; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,39 +34,39 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Self-compassion with standards through a qualified-support preparation bounded by
-    the canonical scope: Respond to suffering and failure with care while preserving accountability, effort,
-    and consequences.'
-  why_recommended: 'The parent competency identifies this limited evidence target: The internal response
-    supports repair and renewed action rather than indulgence or punishment. The protocol creates a small
-    opportunity to examine that target without treating completion as broad capability.'
+  purpose: Respond to a setback with the care needed to remain functional while preserving accurate responsibility,
+    consequences, effort and a concrete renewed action.
+  why_recommended: Respond to a setback with the care needed to remain functional while preserving accurate
+    responsibility, consequences, effort and a concrete renewed action.
   claims:
-  - statement: Using the canonical scope and evidence target for Self-compassion with standards is a traceable
-      product-design basis for a source-only draft protocol.
+  - statement: Respond to a setback with the care needed to remain functional while preserving accurate
+      responsibility, consequences, effort and a concrete renewed action.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Self-compassion with standards practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Self-compassion with standards as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Self-compassion with
-    standards context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Self-compassion
-    with standards; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency, or
-    dependence for evidence.
+  readiness_considerations: Use a voice note, checklist or trusted support person. A fictional missed-session
+    case practices the distinction but does not demonstrate personal follow-through. When self-criticism
+    includes self-harm risk or severe persistent symptoms, use crisis or qualified care rather than this
+    exercise alone.
+  opportunity_considerations: Use the default of missing a self-imposed study session. Divide a page into
+    punishment, indulgence and accountable care. Prepare one sentence you would say to a respected peer
+    while still naming the missed commitment.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Self-compassion with standards.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Use the default of missing a self-imposed study session. Divide a page into punishment, indulgence
+    and accountable care. Prepare one sentence you would say to a respected peer while still naming the
+    missed commitment.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Self-compassion with standards
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a voice note, checklist or trusted support person. A fictional missed-session case practices the
+    distinction but does not demonstrate personal follow-through. When self-criticism includes self-harm
+    risk or severe persistent symptoms, use crisis or qualified care rather than this exercise alone.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +78,29 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Self-compassion with standards
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-QUALIFIED-CONSULTATION
+  protocol_class: PF-BEHAVIORAL-EXPERIMENT
   duration_days: 10
-  cadence: Complete three bounded Self-compassion with standards actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Self-compassion with standards; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Self-compassion
-    with standards. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Self-compassion with standards actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use the default of missing a self-imposed study session. Divide a page into punishment, indulgence
+    and accountable care. Prepare one sentence you would say to a respected peer while still naming the
+    missed commitment. Goal: Respond to a setback with the care needed to remain functional while preserving
+    accurate responsibility, consequences, effort and a concrete renewed action. Scope: This tests one
+    post-failure response; it does not excuse harm, require positive self-esteem or treat severe depression,
+    trauma or persistent self-hatred. Time and effort: Two 15-minute passes and one 10–30 minute repair
+    or renewed attempt within an appropriate timeframe. Adaptation: Use a voice note, checklist or trusted
+    support person. A fictional missed-session case practices the distinction but does not demonstrate
+    personal follow-through. When self-criticism includes self-harm risk or severe persistent symptoms,
+    use crisis or qualified care rather than this exercise alone. Keep personal working notes outside
+    the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a voice note, checklist or trusted support person. A fictional missed-session
+    case practices the distinction but does not demonstrate personal follow-through. When self-criticism
+    includes self-harm risk or severe persistent symptoms, use crisis or qualified care rather than this
+    exercise alone.
+  expected_burden: Two 15-minute passes and one 10–30 minute repair or renewed attempt within an appropriate
+    timeframe.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Self-compassion with standards protocol to rank worth, coerce participation, demand disclosure,
@@ -101,20 +108,24 @@ intervention:
   - Treating a completed Self-compassion with standards action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Self-compassion with standards situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Not therapy or diagnosis; severe or persistent symptoms require qualified mental-health or medical
-    care.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a voice
+    note, checklist or trusted support person. A fictional missed-session case practices the distinction
+    but does not demonstrate personal follow-through. When self-criticism includes self-harm risk or severe
+    persistent symptoms, use crisis or qualified care rather than this exercise alone.
   actions:
   - stable_id: PRACTICE-COMP-0710-SELF-COMPASSION-WITH-STANDARDS-01-A1
     sequence: 1
-    title: Bound the qualified question for Self-compassion with standards
-    instructions: 'Turn Self-compassion with standards into one educational or planning question and identify
-      the qualification and jurisdiction needed to answer it. Use the canonical scope to separate general
-      learning from diagnosis, treatment, legal advice, financial advice, safeguarding decisions, or other
-      professional judgment: Respond to suffering and failure with care while preserving accountability,
-      effort, and consequences.'
+    title: Write the failure at the level of fact and responsibility
+    instructions: 'State what was expected, what occurred, the effect and which choice or constraint mattered.
+      Write the punishing response that attacks worth and the indulgent response that denies impact, then
+      reject both inaccuracies. Produce an accountable-care sentence such as I missed tonight''s session
+      after overscheduling; the work remains, and rest plus a smaller restart is more useful than contempt.
+
+
+      Observation checks: Expectation event impact and responsibility are specific; Punishment and indulgence
+      are identified separately; The revised response neither attacks worth nor erases impact; Constraints
+      are included without becoming automatic excuses. Mark only what you observed. Missing, mixed and
+      negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -136,9 +147,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0710_a1_question_bounded
-        - c0710_a1_qualification_named
-        - c0710_a1_professional_boundary_explicit
+        - expectation_event_impact_and_responsibility_are_specific
+        - punishment_and_indulgence_are_identified_separately
+        - the_revised_response_neither_attacks_worth_nor_erases_impact
+        - constraints_are_included_without_becoming_automatic_excuses
       - measurement_id: c0710_a1_boundary
         kind: boolean
         role: supporting
@@ -155,12 +167,17 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0710-SELF-COMPASSION-WITH-STANDARDS-01-A2
     sequence: 2
-    title: Prepare minimum information for Self-compassion with standards
-    instructions: Create a privacy-minimized Self-compassion with standards consultation note containing
-      only the question, relevant category-level facts, current constraints, and desired decision. Omit
-      diagnoses, allegations, account numbers, credentials, protected work information, intimate detail,
-      and third-party identity unless a qualified professional lawfully requires it through an appropriate
-      channel.
+    title: Design care, repair and consequence as distinct actions
+    instructions: 'Choose one stabilizing care action, one repair for anyone affected and one proportionate
+      consequence or schedule adjustment. Keep care available even when repair is owed. For the default,
+      take the needed sleep, tell the study partner the truth and replace the oversized session with a
+      defined 20-minute block; do not add punitive deprivation or cancel every standard.
+
+
+      Observation checks: Care repair and consequence each have a concrete form; Care is not made conditional
+      on earning worth; Repair addresses an actual impact without demanding reassurance; The revised standard
+      remains meaningful and feasible. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -182,9 +199,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0710_a2_minimum_information_only
-        - c0710_a2_sensitive_detail_excluded
-        - c0710_a2_decision_need_named
+        - care_repair_and_consequence_each_have_a_concrete_form
+        - care_is_not_made_conditional_on_earning_worth
+        - repair_addresses_an_actual_impact_without_demanding_reassurance
+        - the_revised_standard_remains_meaningful_and_feasible
       - measurement_id: c0710_a2_boundary
         kind: boolean
         role: supporting
@@ -201,12 +219,37 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0710-SELF-COMPASSION-WITH-STANDARDS-01-A3
     sequence: 3
-    title: Record a bounded Self-compassion with standards disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: The internal response supports repair and renewed action rather than indulgence
-      or punishment.'
+    title: Complete the renewed action and compare its effect
+    instructions: 'Carry out the safe repair and the next defined attempt. Compare whether punishment,
+      indulgence or accountable care better supported truthful follow-through, using the completed behavior
+      rather than mood alone. If the restart fails, keep the evidence and revise task size, support or
+      timing; repeated impairment calls for appropriate help, not harsher self-attack.
+
+
+      Observation checks: A repair and renewed attempt occur or are honestly deferred; Follow-through
+      rather than mood alone informs the comparison; A failed restart leads to a specific design revision;
+      Persistent impairment is not answered with escalating punishment. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.
+
+
+      Final review: Which form of care made responsibility more actionable, and what consequence still
+      needs to be carried?
+
+
+      Examples: Supportive: The person rested, acknowledged the missed commitment, completed a smaller
+      restart and retained the real deadline consequence.
+
+
+      Mixed: The compassionate statement was accurate, but the repair occurred while the renewed attempt
+      remained oversized.
+
+
+      Contradictory: Care was treated as permission to deny harm, or accountability became sleep deprivation
+      and global self-condemnation.
+
+
+      Inconclusive: Kind words were written without identifying responsibility, repair, consequence or
+      renewed action.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -222,14 +265,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0710_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0710_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - a_repair_and_renewed_attempt_occur_or_are_honestly_deferred
+        - follow_through_rather_than_mood_alone_informs_the_comparison
+        - a_failed_restart_leads_to_a_specific_design_revision
+        - persistent_impairment_is_not_answered_with_escalating_punishment
       - measurement_id: c0710_a3_boundary
         kind: boolean
         role: supporting
@@ -250,16 +295,17 @@ intervention:
       Self-compassion with standards; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Self-compassion with standards; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - Use a voice note, checklist or trusted support person. A fictional missed-session case practices
+      the distinction but does not demonstrate personal follow-through. When self-criticism includes self-harm
+      risk or severe persistent symptoms, use crisis or qualified care rather than this exercise alone.
     cultural_context:
     - Adapt the expression of Self-compassion with standards to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Self-compassion with standards opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use a voice note, checklist or trusted support person. A fictional missed-session case practices
+      the distinction but does not demonstrate personal follow-through. When self-criticism includes self-harm
+      risk or severe persistent symptoms, use crisis or qualified care rather than this exercise alone.
   pause_conditions:
   - Pause Self-compassion with standards when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -291,10 +337,8 @@ evidence_and_scoring:
   - c0710_a3_boundary
   - c0710_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Self-compassion with standards action exceeded consent, authority, privacy, qualification, role,
-    burden, or safety boundaries.
-  - The evidence contradicted the intended Self-compassion with standards criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - Care was treated as permission to deny harm, or accountability became sleep deprivation and global
+    self-condemnation.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Self-compassion with standards explicitly; support can enable access and never reduces dignity
     or silently changes the typed value.
@@ -305,14 +349,23 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Self-compassion with standards rules withhold observations older than 90 days;
     no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—The internal response supports repair and renewed action rather than indulgence or punishment.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Self-compassion with standards requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Write the failure at the level of fact and responsibility. Observed checks:
+    Expectation event impact and responsibility are specific; Punishment and indulgence are identified
+    separately; The revised response neither attacks worth nor erases impact; Constraints are included
+    without becoming automatic excuses. Action 2: Design care, repair and consequence as distinct actions.
+    Observed checks: Care repair and consequence each have a concrete form; Care is not made conditional
+    on earning worth; Repair addresses an actual impact without demanding reassurance; The revised standard
+    remains meaningful and feasible. Action 3: Complete the renewed action and compare its effect. Observed
+    checks: A repair and renewed attempt occur or are honestly deferred; Follow-through rather than mood
+    alone informs the comparison; A failed restart leads to a specific design revision; Persistent impairment
+    is not answered with escalating punishment.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. Kind words were written without identifying responsibility,
+    repair, consequence or renewed action.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Self-compassion
     with standards contribution under typed evaluation; protocol performance remains distinct and is never
     counted twice.
@@ -322,9 +375,8 @@ evidence_and_scoring:
   - L05
   - L07
   - L10
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Self-compassion with standards evidence.
@@ -332,12 +384,20 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for self-compassion with standards action was attempted or explicitly
-    deferred.
-  - The prepare minimum information for self-compassion with standards action was attempted or explicitly
-    deferred.
-  - The record a bounded self-compassion with standards disposition action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Write the failure at the level of fact and responsibility. Observed checks: Expectation
+    event impact and responsibility are specific; Punishment and indulgence are identified separately;
+    The revised response neither attacks worth nor erases impact; Constraints are included without becoming
+    automatic excuses.'
+  - 'Action 2: Design care, repair and consequence as distinct actions. Observed checks: Care repair and
+    consequence each have a concrete form; Care is not made conditional on earning worth; Repair addresses
+    an actual impact without demanding reassurance; The revised standard remains meaningful and feasible.'
+  - 'Action 3: Complete the renewed action and compare its effect. Observed checks: A repair and renewed
+    attempt occur or are honestly deferred; Follow-through rather than mood alone informs the comparison;
+    A failed restart leads to a specific design revision; Persistent impairment is not answered with escalating
+    punishment.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -346,57 +406,57 @@ completion_and_review:
     - c0710_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Self-compassion with standards only when the initial context
-    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
-    named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Self-compassion with standards across roles,
-    cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: Which form of care made responsibility more actionable, and what consequence still
+    needs to be carried?
+  transfer_limit: This tests one post-failure response; it does not excuse harm, require positive self-esteem
+    or treat severe depression, trauma or persistent self-hatred.
   reflection:
-    before: What does Self-compassion with standards require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Self-compassion with standards criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'The internal response supports repair and renewed action rather
-      than indulgence or punishment.', what contradiction or missing context matters most, and should
-      this Self-compassion with standards design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Respond to a setback with the care needed
+      to remain functional while preserving accurate responsibility, consequences, effort and a concrete
+      renewed action.'
+    during: Which checks have actually been observed? The compassionate statement was accurate, but the
+      repair occurred while the renewed attempt remained oversized.
+    after: Which form of care made responsibility more actionable, and what consequence still needs to
+      be carried?
   review_guidance:
     repeat: Repeat the same bounded Self-compassion with standards design only when the context and burden
       remain appropriate.
-    adapt: Change the Self-compassion with standards medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: Use a voice note, checklist or trusted support person. A fictional missed-session case practices
+      the distinction but does not demonstrate personal follow-through. When self-criticism includes self-harm
+      risk or severe persistent symptoms, use crisis or qualified care rather than this exercise alone.
     stop: Stop Self-compassion with standards when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Self-compassion with standards questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Self-compassion with standards criteria were observed with provenance and
-      no adverse boundary signal in the selected context.
-    mixed: Some Self-compassion with standards criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Self-compassion with standards criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Self-compassion with standards action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The person rested, acknowledged the missed commitment, completed a smaller restart and
+      retained the real deadline consequence.
+    mixed: The compassionate statement was accurate, but the repair occurred while the renewed attempt
+      remained oversized.
+    contradictory: Care was treated as permission to deny harm, or accountability became sleep deprivation
+      and global self-condemnation.
+    inconclusive: Kind words were written without identifying responsibility, repair, consequence or renewed
+      action.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Self-compassion with standards.
+    context_heading: Pair self-compassion with repair after one ordinary failure
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Self-compassion
       with standards.
   check_in_labels:
-    c0710_a1_primary: The bounded Self-compassion with standards criterion for action 1 was observed
+    c0710_a1_primary: 'Observed checks: write the failure at the level of fact and responsibility'
     c0710_a1_boundary: Action 1 stayed inside its stated Self-compassion with standards boundary
     c0710_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0710_a2_primary: The bounded Self-compassion with standards criterion for action 2 was observed
+    c0710_a2_primary: 'Observed checks: design care, repair and consequence as distinct actions'
     c0710_a2_boundary: Action 2 stayed inside its stated Self-compassion with standards boundary
     c0710_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0710_a3_primary: The bounded Self-compassion with standards criterion for action 3 was observed
+    c0710_a3_primary: 'Observed checks: complete the renewed action and compare its effect'
     c0710_a3_boundary: Action 3 stayed inside its stated Self-compassion with standards boundary
     c0710_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Self-compassion with
-    standards practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Which form of care made responsibility more actionable, and what consequence still
+    needs to be carried? Completion is not mastery.
+  plain_language_evidence: The person rested, acknowledged the missed commitment, completed a smaller
+    restart and retained the real deadline consequence.
   display_order: 94

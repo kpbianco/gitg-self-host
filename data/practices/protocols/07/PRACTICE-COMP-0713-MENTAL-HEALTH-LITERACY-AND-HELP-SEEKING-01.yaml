@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0713-MENTAL-HEALTH-LITERACY-AND-HELP-SEEKING-01
 slug: c0713-mental-health-literacy-and-help-seeking-practice
-name: Bounded Mental-health literacy and help-seeking Practice
+name: Build and rehearse a location-specific mental-health help route
 parent_competency_id: '07.13'
 domain_id: '07'
 governance:
@@ -14,10 +14,11 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-NIMH-HELP-ROUTES
+  - SRC-NIMH-CARE-THRESHOLDS
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 07.13
-      (Mental-health literacy and help-seeking); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 07.13; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,39 +36,57 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Mental-health literacy and help-seeking through a non-confrontational safety preparation
-    bounded by the canonical scope: Recognize the limits of self-help and signs requiring medical, psychological,
-    spiritual, legal, or emergency support.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Maintains a practical
-    support plan and uses qualified help when functioning or safety is impaired. The protocol creates
-    a small opportunity to examine that target without treating completion as broad capability.'
+  purpose: Recognize when self-help is insufficient and prepare usable ordinary, qualified, specialized
+    and emergency support routes before functioning or safety is impaired.
+  why_recommended: Recognize when self-help is insufficient and prepare usable ordinary, qualified, specialized
+    and emergency support routes before functioning or safety is impaired.
   claims:
-  - statement: Using the canonical scope and evidence target for Mental-health literacy and help-seeking
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Recognize when self-help is insufficient and prepare usable ordinary, qualified, specialized
+      and emergency support routes before functioning or safety is impaired.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: US life-threatening emergencies call for 911; 988 provides suicide and emotional-crisis
+      support by call or text, and ordinary mental health care requires an appropriate provider.
+    classification: safety_precaution
+    source_ids:
+    - SRC-NIMH-HELP-ROUTES
+    limitations: US public resource guidance only. Local availability, accessibility, eligibility and
+      other countries' services need current verification. A resource card or rehearsal is not a clinical
+      assessment or emergency-response qualification.
+  - statement: Severe or distressing symptoms that persist or impair usual tasks are reasons to seek professional
+      help; a primary care provider can be an entry point to qualified mental-health care.
+    classification: safety_precaution
+    source_ids:
+    - SRC-NIMH-CARE-THRESHOLDS
+    limitations: US public guidance used to support help-seeking thresholds, not a diagnostic rule, exhaustive
+      symptom screen or substitute for clinical judgment. Duration alone does not determine urgency, and
+      immediate safety concerns require current local crisis or emergency action.
   applicability_question: Does a voluntary, bounded Mental-health literacy and help-seeking practice fit
     the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Mental-health literacy and help-seeking as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Mental-health literacy
-    and help-seeking context, understand the source-only status, and stop without losing safety, care,
-    employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Mental-health
-    literacy and help-seeking; do not manufacture conflict, deprivation, exposure, disclosure, danger,
-    urgency, or dependence for evidence.
+  readiness_considerations: Use a wallet card, screen-reader-friendly note, translated resource or trusted
+    helper. Keep exact symptoms and identity details off shared devices. When immediate danger is present,
+    contact current local emergency services or go to an appropriate emergency setting rather than completing
+    the worksheet.
+  opportunity_considerations: 'Use a private card with four levels: ordinary support, routine professional
+    care, urgent specialized help and emergency response. Record your actual country or region. In the
+    United States, verify 988 for suicide or emotional crisis and 911 for life-threatening emergencies;
+    elsewhere, replace them with current local services.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Mental-health literacy and help-seeking.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use a private card with four levels: ordinary support, routine professional care, urgent specialized
+    help and emergency response. Record your actual country or region. In the United States, verify 988
+    for suicide or emotional crisis and 911 for life-threatening emergencies; elsewhere, replace them
+    with current local services.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Mental-health literacy and help-seeking
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a wallet card, screen-reader-friendly note, translated resource or trusted helper. Keep exact
+    symptoms and identity details off shared devices. When immediate danger is present, contact current
+    local emergency services or go to an appropriate emergency setting rather than completing the worksheet.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -82,19 +101,35 @@ meaning_and_fit:
 intervention:
   protocol_class: PF-SAFETY-PREPARATION
   duration_days: 10
-  cadence: Complete three bounded Mental-health literacy and help-seeking actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Mental-health literacy and help-seeking; copy the canonical scope and
-    evidence target into a private working note; define the action boundary, valid supports, privacy limit,
-    and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Mental-health
-    literacy and help-seeking. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Mental-health literacy and help-seeking
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use a private card with four levels: ordinary support, routine professional care, urgent specialized
+    help and emergency response. Record your actual country or region. In the United States, verify 988
+    for suicide or emotional crisis and 911 for life-threatening emergencies; elsewhere, replace them
+    with current local services. Goal: Recognize when self-help is insufficient and prepare usable ordinary,
+    qualified, specialized and emergency support routes before functioning or safety is impaired. Scope:
+    This is support navigation, not diagnosis, triage certification or a substitute for current local
+    emergency guidance and professional assessment. Time and effort: Thirty minutes to verify a private
+    support card, a 10-minute rehearsal and one immediate real contact when current safety or functioning
+    requires it. Adaptation: Use a wallet card, screen-reader-friendly note, translated resource or trusted
+    helper. Keep exact symptoms and identity details off shared devices. When immediate danger is present,
+    contact current local emergency services or go to an appropriate emergency setting rather than completing
+    the worksheet. Keep personal working notes outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Help for Mental Illnesses: https://www.nimh.nih.gov/health/find-help
+
+    Caring for Your Mental Health: https://www.nimh.nih.gov/health/topics/caring-for-your-mental-health'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a wallet card, screen-reader-friendly note, translated resource or trusted
+    helper. Keep exact symptoms and identity details off shared devices. When immediate danger is present,
+    contact current local emergency services or go to an appropriate emergency setting rather than completing
+    the worksheet.
+  expected_burden: Thirty minutes to verify a private support card, a 10-minute rehearsal and one immediate
+    real contact when current safety or functioning requires it.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Mental-health literacy and help-seeking protocol to rank worth, coerce participation, demand
@@ -102,19 +137,24 @@ intervention:
   - Treating a completed Mental-health literacy and help-seeking action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Mental-health literacy and help-seeking situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Not therapy or diagnosis; severe or persistent symptoms require qualified mental-health or medical
-    care.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a wallet
+    card, screen-reader-friendly note, translated resource or trusted helper. Keep exact symptoms and
+    identity details off shared devices. When immediate danger is present, contact current local emergency
+    services or go to an appropriate emergency setting rather than completing the worksheet.
   actions:
   - stable_id: PRACTICE-COMP-0713-MENTAL-HEALTH-LITERACY-AND-HELP-SEEKING-01-A1
     sequence: 1
-    title: Identify the non-emergency boundary for Mental-health literacy and help-seeking
-    instructions: 'Define one planning-only question for Mental-health literacy and help-seeking, the
-      hazards that must not be rehearsed, and the local qualified or emergency authority that supersedes
-      this source-only protocol. Do not create, approach, or simulate danger: Recognize the limits of
-      self-help and signs requiring medical, psychological, spiritual, legal, or emergency support.'
+    title: Define observable thresholds for each support level
+    instructions: 'Write two or three observable signs for each level without assigning a diagnosis. Include
+      duration, loss of usual functioning, inability to complete basic tasks, severe distress, immediate
+      danger, thoughts of suicide or harm, psychosis-like experiences, abuse or medical concerns where
+      relevant. Mark uncertainty as a reason to consult rather than an invitation to self-diagnose.
+
+
+      Observation checks: All four support levels have observable thresholds; Function duration distress
+      and safety are considered; Signs are not converted into a self-diagnosis; Uncertainty has an explicit
+      consultation route. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -136,9 +176,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0713_a1_planning_scope_bounded
-        - c0713_a1_hazards_excluded
-        - c0713_a1_authority_identified
+        - all_four_support_levels_have_observable_thresholds
+        - function_duration_distress_and_safety_are_considered
+        - signs_are_not_converted_into_a_self_diagnosis
+        - uncertainty_has_an_explicit_consultation_route
       - measurement_id: c0713_a1_boundary
         kind: boolean
         role: supporting
@@ -155,11 +196,18 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0713-MENTAL-HEALTH-LITERACY-AND-HELP-SEEKING-01-A2
     sequence: 2
-    title: Prepare one safe Mental-health literacy and help-seeking support step
-    instructions: Create one non-confrontational Mental-health literacy and help-seeking step such as
-      locating official guidance, checking accessible contact information, assembling a category-level
-      checklist, or scheduling qualified instruction. Do not test emergency response, weapons, rescue,
-      medical treatment, confrontation, evasion, or hazardous equipment.
+    title: Verify reachable people and services in the actual location
+    instructions: 'Add one willing personal or spiritual support, one routine health or mental-health
+      entry point, one specialized route relevant to known needs and the local crisis or emergency route.
+      Verify names, current contact methods, eligibility, hours and accessibility from official or direct
+      sources. Do not store another person''s sensitive details or assume a service is available because
+      it appears in this example.
+
+
+      Observation checks: Personal routine specialized and emergency routes are listed; Location eligibility
+      hours and contact methods are verified; Accessibility or communication needs are addressed; Only
+      minimum private information is retained. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -181,9 +229,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0713_a2_step_is_preparatory
-        - c0713_a2_official_or_qualified_path_used
-        - c0713_a2_no_hazard_rehearsed
+        - personal_routine_specialized_and_emergency_routes_are_listed
+        - location_eligibility_hours_and_contact_methods_are_verified
+        - accessibility_or_communication_needs_are_addressed
+        - only_minimum_private_information_is_retained
       - measurement_id: c0713_a2_boundary
         kind: boolean
         role: supporting
@@ -200,11 +249,38 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0713-MENTAL-HEALTH-LITERACY-AND-HELP-SEEKING-01-A3
     sequence: 3
-    title: Review the Mental-health literacy and help-seeking plan against stop conditions
-    instructions: 'Check whether the plan identifies when to stop, leave, call emergency services, contact
-      a qualified professional, or follow local authority. Mark unknown requirements rather than inventing
-      them and compare only with: Maintains a practical support plan and uses qualified help when functioning
-      or safety is impaired.'
+    title: Rehearse the handoff and act now when a threshold is present
+    instructions: 'Practice one opening sentence: I have had [observable problem] for [time], it is affecting
+      [function], and I need help deciding the next step. Locate the device, transportation, interpreter,
+      insurance information or trusted person needed to make contact. If a current threshold on the card
+      is met, use the appropriate real route now; a rehearsal never substitutes for urgent or emergency
+      action.
+
+
+      Observation checks: The opening sentence includes observation duration and function; Practical access
+      needs for making contact are prepared; A current threshold leads to the appropriate real contact;
+      Rehearsal is not counted as receiving professional help. Mark only what you observed. Missing, mixed
+      and negative results are valid; a deferred action is not completed.
+
+
+      Final review: Could you reach the correct level of help from this card under stress, and which detail
+      still needs current local verification?
+
+
+      Examples: Supportive: The person verified a primary-care entry point, a therapist directory, a trusted
+      contact and current local crisis routes, then rehearsed a concise call.
+
+
+      Mixed: The levels and contacts are complete, but transportation and after-hours accessibility remain
+      unresolved.
+
+
+      Contradictory: The card assigned diagnoses, relied on an unverified hotline or was used to delay
+      help despite an immediate safety threshold.
+
+
+      Inconclusive: Generic advice to seek help was copied without local services, thresholds or a rehearsed
+      contact path.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -220,15 +296,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0713_a3_primary
-        kind: scenario
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0713_a3_stop_conditions_present
-        - c0713_a3_escalation_path_present
-        - c0713_a3_unknowns_retained
+        - the_opening_sentence_includes_observation_duration_and_function
+        - practical_access_needs_for_making_contact_are_prepared
+        - a_current_threshold_leads_to_the_appropriate_real_contact
+        - rehearsal_is_not_counted_as_receiving_professional_help
       - measurement_id: c0713_a3_boundary
         kind: boolean
         role: supporting
@@ -249,17 +326,17 @@ intervention:
       Mental-health literacy and help-seeking; no purchase, subscription, travel, credential, or public
       artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Mental-health literacy and help-seeking; assistive technology, interpretation, a support
-      person, and a deferred action are valid without penalty.
+    - Use a wallet card, screen-reader-friendly note, translated resource or trusted helper. Keep exact
+      symptoms and identity details off shared devices. When immediate danger is present, contact current
+      local emergency services or go to an appropriate emergency setting rather than completing the worksheet.
     cultural_context:
     - Adapt the expression of Mental-health literacy and help-seeking to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Mental-health literacy and help-seeking opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use a wallet card, screen-reader-friendly note, translated resource or trusted helper. Keep exact
+      symptoms and identity details off shared devices. When immediate danger is present, contact current
+      local emergency services or go to an appropriate emergency setting rather than completing the worksheet.
   pause_conditions:
   - Pause Mental-health literacy and help-seeking when capacity, consent, authority, privacy, access,
     care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make
@@ -291,10 +368,8 @@ evidence_and_scoring:
   - c0713_a3_boundary
   - c0713_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Mental-health literacy and help-seeking action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Mental-health literacy and help-seeking criterion, depended
-    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - The card assigned diagnoses, relied on an unverified hotline or was used to delay help despite an
+    immediate safety threshold.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Mental-health literacy and help-seeking explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -305,14 +380,23 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Mental-health literacy and help-seeking rules withhold observations older than
     90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Maintains a practical support plan and uses qualified help when functioning or safety is impaired.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Mental-health literacy and help-seeking requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Define observable thresholds for each support level. Observed checks:
+    All four support levels have observable thresholds; Function duration distress and safety are considered;
+    Signs are not converted into a self-diagnosis; Uncertainty has an explicit consultation route. Action
+    2: Verify reachable people and services in the actual location. Observed checks: Personal routine
+    specialized and emergency routes are listed; Location eligibility hours and contact methods are verified;
+    Accessibility or communication needs are addressed; Only minimum private information is retained.
+    Action 3: Rehearse the handoff and act now when a threshold is present. Observed checks: The opening
+    sentence includes observation duration and function; Practical access needs for making contact are
+    prepared; A current threshold leads to the appropriate real contact; Rehearsal is not counted as receiving
+    professional help.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. Generic advice to seek help was copied without local
+    services, thresholds or a rehearsed contact path.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Mental-health
     literacy and help-seeking contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -322,9 +406,8 @@ evidence_and_scoring:
   - L13
   - L17
   - L25
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Mental-health literacy and help-seeking evidence.
@@ -332,12 +415,20 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The identify the non-emergency boundary for mental-health literacy and help-seeking action was attempted
-    or explicitly deferred.
-  - The prepare one safe mental-health literacy and help-seeking support step action was attempted or
-    explicitly deferred.
-  - The review the mental-health literacy and help-seeking plan against stop conditions action preserved
-    a limited conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Define observable thresholds for each support level. Observed checks: All four support
+    levels have observable thresholds; Function duration distress and safety are considered; Signs are
+    not converted into a self-diagnosis; Uncertainty has an explicit consultation route.'
+  - 'Action 2: Verify reachable people and services in the actual location. Observed checks: Personal
+    routine specialized and emergency routes are listed; Location eligibility hours and contact methods
+    are verified; Accessibility or communication needs are addressed; Only minimum private information
+    is retained.'
+  - 'Action 3: Rehearse the handoff and act now when a threshold is present. Observed checks: The opening
+    sentence includes observation duration and function; Practical access needs for making contact are
+    prepared; A current threshold leads to the appropriate real contact; Rehearsal is not counted as receiving
+    professional help.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -346,59 +437,58 @@ completion_and_review:
     - c0713_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Mental-health literacy and help-seeking only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Mental-health literacy and help-seeking across
-    roles, cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: Could you reach the correct level of help from this card under stress, and which
+    detail still needs current local verification?
+  transfer_limit: This is support navigation, not diagnosis, triage certification or a substitute for
+    current local emergency guidance and professional assessment.
   reflection:
-    before: What does Mental-health literacy and help-seeking require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Mental-health literacy and help-seeking criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Maintains a practical support plan and uses qualified help
-      when functioning or safety is impaired.', what contradiction or missing context matters most, and
-      should this Mental-health literacy and help-seeking design be repeated, adapted, deferred, stopped,
-      or referred?
+    before: 'What would count as doing this honestly? Goal: Recognize when self-help is insufficient and
+      prepare usable ordinary, qualified, specialized and emergency support routes before functioning
+      or safety is impaired.'
+    during: Which checks have actually been observed? The levels and contacts are complete, but transportation
+      and after-hours accessibility remain unresolved.
+    after: Could you reach the correct level of help from this card under stress, and which detail still
+      needs current local verification?
   review_guidance:
     repeat: Repeat the same bounded Mental-health literacy and help-seeking design only when the context
       and burden remain appropriate.
-    adapt: Change the Mental-health literacy and help-seeking medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Use a wallet card, screen-reader-friendly note, translated resource or trusted helper. Keep
+      exact symptoms and identity details off shared devices. When immediate danger is present, contact
+      current local emergency services or go to an appropriate emergency setting rather than completing
+      the worksheet.
     stop: Stop Mental-health literacy and help-seeking when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Mental-health literacy and help-seeking
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Mental-health literacy and help-seeking criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Mental-health literacy and help-seeking criteria were observed while burden, support,
-      contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Mental-health literacy and help-seeking criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Mental-health literacy and help-seeking action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The person verified a primary-care entry point, a therapist directory, a trusted contact
+      and current local crisis routes, then rehearsed a concise call.
+    mixed: The levels and contacts are complete, but transportation and after-hours accessibility remain
+      unresolved.
+    contradictory: The card assigned diagnoses, relied on an unverified hotline or was used to delay help
+      despite an immediate safety threshold.
+    inconclusive: Generic advice to seek help was copied without local services, thresholds or a rehearsed
+      contact path.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Mental-health literacy and help-seeking.
+    context_heading: Build and rehearse a location-specific mental-health help route
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Mental-health
       literacy and help-seeking.
   check_in_labels:
-    c0713_a1_primary: The bounded Mental-health literacy and help-seeking criterion for action 1 was observed
+    c0713_a1_primary: 'Observed checks: define observable thresholds for each support level'
     c0713_a1_boundary: Action 1 stayed inside its stated Mental-health literacy and help-seeking boundary
     c0713_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0713_a2_primary: The bounded Mental-health literacy and help-seeking criterion for action 2 was observed
+    c0713_a2_primary: 'Observed checks: verify reachable people and services in the actual location'
     c0713_a2_boundary: Action 2 stayed inside its stated Mental-health literacy and help-seeking boundary
     c0713_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0713_a3_primary: The bounded Mental-health literacy and help-seeking criterion for action 3 was observed
+    c0713_a3_primary: 'Observed checks: rehearse the handoff and act now when a threshold is present'
     c0713_a3_boundary: Action 3 stayed inside its stated Mental-health literacy and help-seeking boundary
     c0713_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Mental-health literacy
-    and help-seeking practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Could you reach the correct level of help from this card under stress, and which detail
+    still needs current local verification? Completion is not mastery.
+  plain_language_evidence: The person verified a primary-care entry point, a therapist directory, a trusted
+    contact and current local crisis routes, then rehearsed a concise call.
   display_order: 97

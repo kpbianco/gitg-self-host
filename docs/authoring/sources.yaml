@@ -28,10 +28,42 @@ sources:
     supported_claim: US life-threatening emergencies call for 911; 988 provides suicide and emotional-crisis support by call or text, and ordinary mental health care requires an appropriate provider.
     claim_classification: safety_precaution
     limitations: US public resource guidance only. Local availability, accessibility, eligibility and other countries' services need current verification. A resource card or rehearsal is not a clinical assessment or emergency-response qualification.
-    applicable_competency_ids: ['06.02', '06.14']
+    applicable_competency_ids: ['06.02', '06.14', '07.13']
     applicable_protocol_ids: []
     date_accessed: '2026-09-06'
     license_or_quotation_constraints: Citation and brief original paraphrase only; no service endorsement by the product or reproduced screening tool.
+  - source_id: SRC-NIMH-CARE-THRESHOLDS
+    title: Caring for Your Mental Health
+    authors_or_issuing_body: National Institute of Mental Health
+    publication_date: '2026-04 review'
+    locator: https://www.nimh.nih.gov/health/topics/caring-for-your-mental-health
+    locator_kind: external_url
+    content_sha256: null
+    source_class: official_guidance
+    evidence_strength: authoritative
+    supported_claim: Severe or distressing symptoms that persist or impair usual tasks are reasons to seek professional help; a primary care provider can be an entry point to qualified mental-health care.
+    claim_classification: safety_precaution
+    limitations: US public guidance used to support help-seeking thresholds, not a diagnostic rule, exhaustive symptom screen or substitute for clinical judgment. Duration alone does not determine urgency, and immediate safety concerns require current local crisis or emergency action.
+    applicable_competency_ids: ['07.13']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Original concise paraphrase with attribution; no copied infographic, symptom checklist, image or clinical instrument. The page identifies its text as public domain unless otherwise stated.
+  - source_id: SRC-NIMH-PSYCHOTHERAPIES-EXPOSURE
+    title: Psychotherapies
+    authors_or_issuing_body: National Institute of Mental Health
+    publication_date: 'undated current page'
+    locator: https://www.nimh.nih.gov/health/topics/psychotherapies
+    locator_kind: external_url
+    content_sha256: null
+    source_class: official_guidance
+    evidence_strength: authoritative
+    supported_claim: Exposure therapy is a psychotherapy used for anxiety disorders in which brief supported contact with feared material is repeated over time to build tolerance.
+    claim_classification: safety_precaution
+    limitations: Supports the boundary between clinician-delivered exposure treatment and this product's optional low-stakes approach exercise. It does not prescribe unsupervised exposure, validate the supplied meeting example or authorize approaching trauma cues, unsafe people, medical risks or severe fear without qualified care.
+    applicable_competency_ids: ['07.04']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Original brief summary with attribution; no therapy protocol, worksheet, case or image is reproduced. The source is linked for public health information only.
   - source_id: SRC-RAINN-CHOICE-AND-SUPPORT
     title: Help and Healing
     authors_or_issuing_body: RAINN
@@ -172,7 +204,7 @@ sources:
     supported_claim: Grief responses vary between people and can follow losses other than bereavement; support is available when coping is difficult.
     claim_classification: safety_precaution
     limitations: Supports acknowledging varied responses and appropriate support. It does not validate this educational exercise, prescribe a grief timetable or establish readiness for personal loss reflection.
-    applicable_competency_ids: ['04.01', '04.04', '04.06']
+    applicable_competency_ids: ['04.01', '04.04', '04.06', '07.06']
     applicable_protocol_ids: []
     date_accessed: '2026-09-06'
     license_or_quotation_constraints: Link and brief original summary only; no copied therapeutic worksheet, symptom measure or intervention.

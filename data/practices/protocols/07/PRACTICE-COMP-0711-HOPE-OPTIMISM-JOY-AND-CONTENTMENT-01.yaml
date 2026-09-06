@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0711-HOPE-OPTIMISM-JOY-AND-CONTENTMENT-01
 slug: c0711-hope-optimism-joy-and-contentment-practice
-name: Bounded Hope, optimism, joy, and contentment Practice
+name: Hold one hard fact beside a present good and a plausible future
 parent_competency_id: '07.11'
 domain_id: '07'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 07.11
-      (Hope, optimism, joy, and contentment); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 07.11; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,39 +34,38 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Hope, optimism, joy, and contentment through a qualified-support preparation bounded
-    by the canonical scope: Cultivate realistic hope, receptivity to joy, appreciation, and enoughness
-    without denying hardship or ambition.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can identify present
-    goods and future possibilities while facing unpleasant facts. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Practice realistic hope, receptivity to joy and enoughness without denying hardship, abandoning
+    ambition or demanding a positive mood.
+  why_recommended: Practice realistic hope, receptivity to joy and enoughness without denying hardship,
+    abandoning ambition or demanding a positive mood.
   claims:
-  - statement: Using the canonical scope and evidence target for Hope, optimism, joy, and contentment
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Practice realistic hope, receptivity to joy and enoughness without denying hardship, abandoning
+      ambition or demanding a positive mood.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Hope, optimism, joy, and contentment practice fit
     the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Hope, optimism, joy, and contentment as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Hope, optimism, joy,
-    and contentment context, understand the source-only status, and stop without losing safety, care,
-    employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Hope, optimism,
-    joy, and contentment; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Use photos, objects, sensory description, dictation or a supporter. If joy
+    is inaccessible, record a neutral support or reduced burden rather than fabricate gratitude. Severe
+    or persistent loss of interest, hopelessness or impaired functioning merits qualified support.
+  opportunity_considerations: 'Use the default of a project delay. Make three columns: hard facts, present
+    goods and plausible futures. Add a stopping point for today''s work, such as after sending one status
+    update, so contentment means enough for now rather than no further ambition.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Hope, optimism, joy, and contentment.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use the default of a project delay. Make three columns: hard facts, present goods and plausible futures.
+    Add a stopping point for today''s work, such as after sending one status update, so contentment means
+    enough for now rather than no further ambition.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Hope, optimism, joy, and contentment
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use photos, objects, sensory description, dictation or a supporter. If joy is inaccessible, record
+    a neutral support or reduced burden rather than fabricate gratitude. Severe or persistent loss of
+    interest, hopelessness or impaired functioning merits qualified support.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +77,28 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Hope, optimism, joy, and contentment
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-QUALIFIED-CONSULTATION
+  protocol_class: PF-CONTEMPLATIVE-MEANING
   duration_days: 10
-  cadence: Complete three bounded Hope, optimism, joy, and contentment actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Hope, optimism, joy, and contentment; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Hope, optimism,
-    joy, and contentment. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Hope, optimism, joy, and contentment
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use the default of a project delay. Make three columns: hard facts, present goods and plausible
+    futures. Add a stopping point for today''s work, such as after sending one status update, so contentment
+    means enough for now rather than no further ambition. Goal: Practice realistic hope, receptivity to
+    joy and enoughness without denying hardship, abandoning ambition or demanding a positive mood. Scope:
+    One bounded exercise can improve the accuracy of attention and planning; it does not promise optimism,
+    treat depression or prove that circumstances will improve. Time and effort: Fifteen minutes to prepare,
+    one 10-minute present-good practice and one small future action with later review. Adaptation: Use
+    photos, objects, sensory description, dictation or a supporter. If joy is inaccessible, record a neutral
+    support or reduced burden rather than fabricate gratitude. Severe or persistent loss of interest,
+    hopelessness or impaired functioning merits qualified support. Keep personal working notes outside
+    the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use photos, objects, sensory description, dictation or a supporter. If joy is inaccessible,
+    record a neutral support or reduced burden rather than fabricate gratitude. Severe or persistent loss
+    of interest, hopelessness or impaired functioning merits qualified support.
+  expected_burden: Fifteen minutes to prepare, one 10-minute present-good practice and one small future
+    action with later review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Hope, optimism, joy, and contentment protocol to rank worth, coerce participation, demand
@@ -101,20 +106,24 @@ intervention:
   - Treating a completed Hope, optimism, joy, and contentment action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Hope, optimism, joy, and contentment situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Not therapy or diagnosis; severe or persistent symptoms require qualified mental-health or medical
-    care.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use photos,
+    objects, sensory description, dictation or a supporter. If joy is inaccessible, record a neutral support
+    or reduced burden rather than fabricate gratitude. Severe or persistent loss of interest, hopelessness
+    or impaired functioning merits qualified support.
   actions:
   - stable_id: PRACTICE-COMP-0711-HOPE-OPTIMISM-JOY-AND-CONTENTMENT-01-A1
     sequence: 1
-    title: Bound the qualified question for Hope, optimism, joy, and contentment
-    instructions: 'Turn Hope, optimism, joy, and contentment into one educational or planning question
-      and identify the qualification and jurisdiction needed to answer it. Use the canonical scope to
-      separate general learning from diagnosis, treatment, legal advice, financial advice, safeguarding
-      decisions, or other professional judgment: Cultivate realistic hope, receptivity to joy, appreciation,
-      and enoughness without denying hardship or ambition.'
+    title: Write the hard facts without turning them into the whole future
+    instructions: 'List verified adverse facts, current uncertainty and consequences. Remove predictions
+      disguised as facts and do not soften the real loss. Then list one condition that could make the
+      future worse and one that could improve it. For the delayed project, the missed date is a fact;
+      permanent career damage may be a fear requiring evidence.
+
+
+      Observation checks: Verified hardship and uncertainty remain explicit; Predictions are separated
+      from current facts; A worsening and improving condition are both named; No required positive interpretation
+      is imposed. Mark only what you observed. Missing, mixed and negative results are valid; a deferred
+      action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -136,9 +145,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0711_a1_question_bounded
-        - c0711_a1_qualification_named
-        - c0711_a1_professional_boundary_explicit
+        - verified_hardship_and_uncertainty_remain_explicit
+        - predictions_are_separated_from_current_facts
+        - a_worsening_and_improving_condition_are_both_named
+        - no_required_positive_interpretation_is_imposed
       - measurement_id: c0711_a1_boundary
         kind: boolean
         role: supporting
@@ -155,12 +165,17 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0711-HOPE-OPTIMISM-JOY-AND-CONTENTMENT-01-A2
     sequence: 2
-    title: Prepare minimum information for Hope, optimism, joy, and contentment
-    instructions: Create a privacy-minimized Hope, optimism, joy, and contentment consultation note containing
-      only the question, relevant category-level facts, current constraints, and desired decision. Omit
-      diagnoses, allegations, account numbers, credentials, protected work information, intimate detail,
-      and third-party identity unless a qualified professional lawfully requires it through an appropriate
-      channel.
+    title: Receive one present good without using it to cancel hardship
+    instructions: 'Choose an available good such as a meal, a useful tool, a kind message, beauty, rest
+      or competent work. Attend to it for several minutes or accept it from another person, then name
+      what was actually good. Also write what the good does not fix. Stop at the preset enough-for-now
+      boundary instead of converting appreciation into another performance target.
+
+
+      Observation checks: A specific present good receives actual attention; The experienced good is described
+      concretely; The hardship it does not fix remains visible; The enough-for-now boundary is observed
+      or honestly missed. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -182,9 +197,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0711_a2_minimum_information_only
-        - c0711_a2_sensitive_detail_excluded
-        - c0711_a2_decision_need_named
+        - a_specific_present_good_receives_actual_attention
+        - the_experienced_good_is_described_concretely
+        - the_hardship_it_does_not_fix_remains_visible
+        - the_enough_for_now_boundary_is_observed_or_honestly_missed
       - measurement_id: c0711_a2_boundary
         kind: boolean
         role: supporting
@@ -201,12 +217,37 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0711-HOPE-OPTIMISM-JOY-AND-CONTENTMENT-01-A3
     sequence: 3
-    title: Record a bounded Hope, optimism, joy, and contentment disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: Can identify present goods and future possibilities while facing unpleasant
-      facts.'
+    title: Act on one plausible future with a fallback
+    instructions: 'Choose one valued possibility supported by at least one real path. Complete the smallest
+      next action and write a fallback if the hoped-for result does not occur. For the default, send a
+      revised status and request a decision by Friday; if denied, preserve the work and re-scope. Review
+      hope by whether it supported truthful action, not whether optimism felt intense.
+
+
+      Observation checks: The hoped-for future has a plausible route; One concrete next action is completed;
+      A fallback preserves agency if the result fails; Hope is evaluated without demanding a positive
+      mood. Mark only what you observed. Missing, mixed and negative results are valid; a deferred action
+      is not completed.
+
+
+      Final review: What remained hard, what was genuinely available now, and which future action stayed
+      plausible after both were acknowledged?
+
+
+      Examples: Supportive: The missed date remained explicit, lunch with a friend was enjoyed without
+      calling the delay good, and a revised scope was submitted with a fallback.
+
+
+      Mixed: A present good was noticed, but the future plan still depended on an unverified optimistic
+      assumption.
+
+
+      Contradictory: Hardship was denied, gratitude was forced or contentment was used to abandon a responsibility
+      that still mattered.
+
+
+      Inconclusive: Positive possibilities were listed without a hard-fact column, present attention or
+      completed next action.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -222,14 +263,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0711_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0711_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - the_hoped_for_future_has_a_plausible_route
+        - one_concrete_next_action_is_completed
+        - a_fallback_preserves_agency_if_the_result_fails
+        - hope_is_evaluated_without_demanding_a_positive_mood
       - measurement_id: c0711_a3_boundary
         kind: boolean
         role: supporting
@@ -250,17 +293,17 @@ intervention:
       Hope, optimism, joy, and contentment; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Hope, optimism, joy, and contentment; assistive technology, interpretation, a support
-      person, and a deferred action are valid without penalty.
+    - Use photos, objects, sensory description, dictation or a supporter. If joy is inaccessible, record
+      a neutral support or reduced burden rather than fabricate gratitude. Severe or persistent loss of
+      interest, hopelessness or impaired functioning merits qualified support.
     cultural_context:
     - Adapt the expression of Hope, optimism, joy, and contentment to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Hope, optimism, joy, and contentment opportunity is unavailable or inappropriate, use
-      a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use photos, objects, sensory description, dictation or a supporter. If joy is inaccessible, record
+      a neutral support or reduced burden rather than fabricate gratitude. Severe or persistent loss of
+      interest, hopelessness or impaired functioning merits qualified support.
   pause_conditions:
   - Pause Hope, optimism, joy, and contentment when capacity, consent, authority, privacy, access, care
     duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the
@@ -292,10 +335,8 @@ evidence_and_scoring:
   - c0711_a3_boundary
   - c0711_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Hope, optimism, joy, and contentment action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Hope, optimism, joy, and contentment criterion, depended on
-    coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - Hardship was denied, gratitude was forced or contentment was used to abandon a responsibility that
+    still mattered.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Hope, optimism, joy, and contentment explicitly; support can enable access and never reduces dignity
     or silently changes the typed value.
@@ -306,14 +347,22 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Hope, optimism, joy, and contentment rules withhold observations older than
     90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can identify present goods and future possibilities while facing unpleasant facts.—not completion,
-    confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Hope, optimism, joy, and contentment requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Write the hard facts without turning them into the whole future. Observed
+    checks: Verified hardship and uncertainty remain explicit; Predictions are separated from current
+    facts; A worsening and improving condition are both named; No required positive interpretation is
+    imposed. Action 2: Receive one present good without using it to cancel hardship. Observed checks:
+    A specific present good receives actual attention; The experienced good is described concretely; The
+    hardship it does not fix remains visible; The enough-for-now boundary is observed or honestly missed.
+    Action 3: Act on one plausible future with a fallback. Observed checks: The hoped-for future has a
+    plausible route; One concrete next action is completed; A fallback preserves agency if the result
+    fails; Hope is evaluated without demanding a positive mood.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. Positive possibilities were listed without a hard-fact
+    column, present attention or completed next action.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Hope,
     optimism, joy, and contentment contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -323,9 +372,8 @@ evidence_and_scoring:
   - L04
   - L07
   - L34
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Hope, optimism, joy, and contentment evidence.
@@ -333,12 +381,18 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for hope, optimism, joy, and contentment action was attempted or
-    explicitly deferred.
-  - The prepare minimum information for hope, optimism, joy, and contentment action was attempted or explicitly
-    deferred.
-  - The record a bounded hope, optimism, joy, and contentment disposition action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Write the hard facts without turning them into the whole future. Observed checks: Verified
+    hardship and uncertainty remain explicit; Predictions are separated from current facts; A worsening
+    and improving condition are both named; No required positive interpretation is imposed.'
+  - 'Action 2: Receive one present good without using it to cancel hardship. Observed checks: A specific
+    present good receives actual attention; The experienced good is described concretely; The hardship
+    it does not fix remains visible; The enough-for-now boundary is observed or honestly missed.'
+  - 'Action 3: Act on one plausible future with a fallback. Observed checks: The hoped-for future has
+    a plausible route; One concrete next action is completed; A fallback preserves agency if the result
+    fails; Hope is evaluated without demanding a positive mood.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -347,58 +401,56 @@ completion_and_review:
     - c0711_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Hope, optimism, joy, and contentment only when the initial context
-    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
-    named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Hope, optimism, joy, and contentment across roles,
-    cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: What remained hard, what was genuinely available now, and which future action
+    stayed plausible after both were acknowledged?
+  transfer_limit: One bounded exercise can improve the accuracy of attention and planning; it does not
+    promise optimism, treat depression or prove that circumstances will improve.
   reflection:
-    before: What does Hope, optimism, joy, and contentment require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Hope, optimism, joy, and contentment criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can identify present goods and future possibilities while
-      facing unpleasant facts.', what contradiction or missing context matters most, and should this Hope,
-      optimism, joy, and contentment design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Practice realistic hope, receptivity to joy
+      and enoughness without denying hardship, abandoning ambition or demanding a positive mood.'
+    during: Which checks have actually been observed? A present good was noticed, but the future plan
+      still depended on an unverified optimistic assumption.
+    after: What remained hard, what was genuinely available now, and which future action stayed plausible
+      after both were acknowledged?
   review_guidance:
     repeat: Repeat the same bounded Hope, optimism, joy, and contentment design only when the context
       and burden remain appropriate.
-    adapt: Change the Hope, optimism, joy, and contentment medium, scope, support, timing, criteria, or
-      context while preserving provenance and the narrower evidence claim.
+    adapt: Use photos, objects, sensory description, dictation or a supporter. If joy is inaccessible,
+      record a neutral support or reduced burden rather than fabricate gratitude. Severe or persistent
+      loss of interest, hopelessness or impaired functioning merits qualified support.
     stop: Stop Hope, optimism, joy, and contentment when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Hope, optimism, joy, and contentment
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Hope, optimism, joy, and contentment criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Hope, optimism, joy, and contentment criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Hope, optimism, joy, and contentment criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Hope, optimism, joy, and contentment action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The missed date remained explicit, lunch with a friend was enjoyed without calling the
+      delay good, and a revised scope was submitted with a fallback.
+    mixed: A present good was noticed, but the future plan still depended on an unverified optimistic
+      assumption.
+    contradictory: Hardship was denied, gratitude was forced or contentment was used to abandon a responsibility
+      that still mattered.
+    inconclusive: Positive possibilities were listed without a hard-fact column, present attention or
+      completed next action.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Hope, optimism, joy, and contentment.
+    context_heading: Hold one hard fact beside a present good and a plausible future
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Hope, optimism,
       joy, and contentment.
   check_in_labels:
-    c0711_a1_primary: The bounded Hope, optimism, joy, and contentment criterion for action 1 was observed
+    c0711_a1_primary: 'Observed checks: write the hard facts without turning them into the whole future'
     c0711_a1_boundary: Action 1 stayed inside its stated Hope, optimism, joy, and contentment boundary
     c0711_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0711_a2_primary: The bounded Hope, optimism, joy, and contentment criterion for action 2 was observed
+    c0711_a2_primary: 'Observed checks: receive one present good without using it to cancel hardship'
     c0711_a2_boundary: Action 2 stayed inside its stated Hope, optimism, joy, and contentment boundary
     c0711_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0711_a3_primary: The bounded Hope, optimism, joy, and contentment criterion for action 3 was observed
+    c0711_a3_primary: 'Observed checks: act on one plausible future with a fallback'
     c0711_a3_boundary: Action 3 stayed inside its stated Hope, optimism, joy, and contentment boundary
     c0711_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Hope, optimism, joy,
-    and contentment practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What remained hard, what was genuinely available now, and which future action stayed
+    plausible after both were acknowledged? Completion is not mastery.
+  plain_language_evidence: The missed date remained explicit, lunch with a friend was enjoyed without
+    calling the delay good, and a revised scope was submitted with a fallback.
   display_order: 95
