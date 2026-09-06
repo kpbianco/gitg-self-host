@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0704-ANXIETY-AND-COURAGEOUS-EXPOSURE-01
 slug: c0704-anxiety-and-courageous-exposure-practice
-name: Bounded Anxiety and courageous exposure Practice
+name: Test one manageable fear prediction through repeated ordinary attempts
 parent_competency_id: '07.04'
 domain_id: '07'
 governance:
@@ -14,10 +14,11 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-NHS-GRADUAL-FEAR-APPROACH
+  - SRC-NIMH-SELF-HELP-LIMITS
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 07.04
-      (Anxiety and courageous exposure); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 07.04; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,39 +36,60 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Anxiety and courageous exposure through a qualified-support preparation bounded by
-    the canonical scope: Approach worthwhile feared situations gradually while testing predictions and
-    building tolerance.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Completes repeated
-    exposures and compares feared outcomes with what actually occurred. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Approach a worthwhile, suitably safe situation gradually and compare a specific feared outcome
+    with what actually happens on repeated attempts.
+  why_recommended: Approach a worthwhile, suitably safe situation gradually and compare a specific feared
+    outcome with what actually happens on repeated attempts.
   claims:
-  - statement: Using the canonical scope and evidence target for Anxiety and courageous exposure is a
-      traceable product-design basis for a source-only draft protocol.
+  - statement: Approach a worthwhile, suitably safe situation gradually and compare a specific feared
+      outcome with what actually happens on repeated attempts.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: NHS self-help guidance describes approaching feared situations gradually and repeating
+      manageable steps rather than beginning with the most difficult situation.
+    classification: safety_precaution
+    source_ids:
+    - SRC-NHS-GRADUAL-FEAR-APPROACH
+    limitations: Supports only the gradual-approach principle. The product-authored ordinary communication
+      experiment is not the NHS treatment protocol, does not use its fear-reduction threshold, does not
+      remove necessary supports and is not validated anxiety treatment or trauma exposure.
+  - statement: Worsening symptoms and severe persistent distress affecting usual activities call for professional
+      help; suicidal thoughts or urges to self-harm call for immediate help.
+    classification: safety_precaution
+    source_ids:
+    - SRC-NIMH-SELF-HELP-LIMITS
+    limitations: Public help-seeking guidance, not a diagnosis or validated product screening tool. The
+      source's duration examples are not instructions to wait during danger or deterioration. It does
+      not validate the original emotional-awareness, hope or strategy-transfer exercises.
   applicability_question: Does a voluntary, bounded Anxiety and courageous exposure practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Anxiety and courageous exposure as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Anxiety and courageous
-    exposure context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Anxiety and
-    courageous exposure; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Text, AAC, an interpreter or another accessible channel can be the actual
+    communication route; necessary supports are not failures. With no safe opportunity, work through the
+    case privately and label it preparation. An existing clinician-led plan takes precedence; do not alter
+    treatment or attempt trauma exposure here.
+  opportunity_considerations: Read the NHS Facing your fears reference. Choose a genuinely useful ordinary
+    step, such as asking a routine clarification in a setting where questions are welcome. Exclude danger,
+    trauma reminders, severe distress, medical challenges and violations of another person's boundaries.
+    If suitability is unclear or symptoms impair daily functioning, use qualified help to plan rather
+    than starting self-directed exposure.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Anxiety and courageous exposure.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Read the NHS Facing your fears reference. Choose a genuinely useful ordinary step, such as asking
+    a routine clarification in a setting where questions are welcome. Exclude danger, trauma reminders,
+    severe distress, medical challenges and violations of another person's boundaries. If suitability
+    is unclear or symptoms impair daily functioning, use qualified help to plan rather than starting self-directed
+    exposure.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Anxiety and courageous exposure
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Text, AAC, an interpreter or another accessible channel can be the actual communication route; necessary
+    supports are not failures. With no safe opportunity, work through the case privately and label it
+    preparation. An existing clinician-led plan takes precedence; do not alter treatment or attempt trauma
+    exposure here.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +101,39 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Anxiety and courageous exposure
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-QUALIFIED-CONSULTATION
+  protocol_class: PF-BEHAVIORAL-EXPERIMENT
   duration_days: 10
-  cadence: Complete three bounded Anxiety and courageous exposure actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Anxiety and courageous exposure; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Anxiety
-    and courageous exposure. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Anxiety and courageous exposure actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Read the NHS Facing your fears reference. Choose a genuinely useful ordinary step, such as asking
+    a routine clarification in a setting where questions are welcome. Exclude danger, trauma reminders,
+    severe distress, medical challenges and violations of another person''s boundaries. If suitability
+    is unclear or symptoms impair daily functioning, use qualified help to plan rather than starting self-directed
+    exposure. Goal: Approach a worthwhile, suitably safe situation gradually and compare a specific feared
+    outcome with what actually happens on repeated attempts. Scope: This is a bounded experiment with
+    ordinary mild apprehension, not treatment for an anxiety disorder, trauma, panic or compulsions. Rehearsing
+    a fictional case does not demonstrate exposure to a personally feared situation. Time and effort:
+    About 15 minutes to prepare, two or more naturally available brief attempts over a week, and 10 minutes
+    to compare them. No escalation deadline applies. Adaptation: Text, AAC, an interpreter or another
+    accessible channel can be the actual communication route; necessary supports are not failures. With
+    no safe opportunity, work through the case privately and label it preparation. An existing clinician-led
+    plan takes precedence; do not alter treatment or attempt trauma exposure here. Keep personal working
+    notes outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Facing your fears: https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/facing-your-fears/
+
+    My Mental Health: Do I Need Help?: https://www.nimh.nih.gov/health/publications/my-mental-health-do-i-need-help'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Text, AAC, an interpreter or another accessible channel can be the actual communication
+    route; necessary supports are not failures. With no safe opportunity, work through the case privately
+    and label it preparation. An existing clinician-led plan takes precedence; do not alter treatment
+    or attempt trauma exposure here.
+  expected_burden: About 15 minutes to prepare, two or more naturally available brief attempts over a
+    week, and 10 minutes to compare them. No escalation deadline applies.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Anxiety and courageous exposure protocol to rank worth, coerce participation, demand disclosure,
@@ -101,20 +141,28 @@ intervention:
   - Treating a completed Anxiety and courageous exposure action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Anxiety and courageous exposure situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Not therapy or diagnosis; severe or persistent symptoms require qualified mental-health or medical
-    care.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Text, AAC,
+    an interpreter or another accessible channel can be the actual communication route; necessary supports
+    are not failures. With no safe opportunity, work through the case privately and label it preparation.
+    An existing clinician-led plan takes precedence; do not alter treatment or attempt trauma exposure
+    here.
   actions:
   - stable_id: PRACTICE-COMP-0704-ANXIETY-AND-COURAGEOUS-EXPOSURE-01-A1
     sequence: 1
-    title: Bound the qualified question for Anxiety and courageous exposure
-    instructions: 'Turn Anxiety and courageous exposure into one educational or planning question and
-      identify the qualification and jurisdiction needed to answer it. Use the canonical scope to separate
-      general learning from diagnosis, treatment, legal advice, financial advice, safeguarding decisions,
-      or other professional judgment: Approach worthwhile feared situations gradually while testing predictions
-      and building tolerance.'
+    title: Choose the smallest worthwhile step and a prediction you can observe
+    instructions: 'Name the value served, such as obtaining information needed to participate. Write two
+      or three genuinely feasible versions in increasing personal difficulty: ask a familiar person privately,
+      ask a routine question in a welcoming small group, or ask in a larger suitable setting. Start with
+      the manageable version, not the most impressive one. Write a testable prediction, such as the person
+      will call the question foolish, and what would count as a different outcome. Keep necessary accessibility
+      and safety supports. If there is no personally relevant fear, analyze the supplied ladder as preparation
+      and leave live attempts unclaimed.
+
+
+      Observation checks: The step serves a chosen worthwhile purpose; Difficulty is ordered for this
+      person rather than assumed; The feared outcome is observable and specific; Suitability and necessary
+      supports are preserved. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -136,9 +184,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0704_a1_question_bounded
-        - c0704_a1_qualification_named
-        - c0704_a1_professional_boundary_explicit
+        - the_step_serves_a_chosen_worthwhile_purpose
+        - difficulty_is_ordered_for_this_person_rather_than_assumed
+        - the_feared_outcome_is_observable_and_specific
+        - suitability_and_necessary_supports_are_preserved
       - measurement_id: c0704_a1_boundary
         kind: boolean
         role: supporting
@@ -155,12 +204,20 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0704-ANXIETY-AND-COURAGEOUS-EXPOSURE-01-A2
     sequence: 2
-    title: Prepare minimum information for Anxiety and courageous exposure
-    instructions: Create a privacy-minimized Anxiety and courageous exposure consultation note containing
-      only the question, relevant category-level facts, current constraints, and desired decision. Omit
-      diagnoses, allegations, account numbers, credentials, protected work information, intimate detail,
-      and third-party identity unless a qualified professional lawfully requires it through an appropriate
-      channel.
+    title: Make a first ordinary attempt and record the actual response
+    instructions: 'At an appropriate opportunity, ask the selected question and allow the ordinary exchange
+      to finish without adding an endurance challenge. Record what you predicted, what you actually asked,
+      the other person''s observable reply, and any uncertainty. Note whether apprehension was present
+      and what you managed while it was present; do not use a required reduction in anxiety as the completion
+      rule. A neutral answer can contradict a prediction of ridicule without proving every future interaction
+      safe. Stop for actual danger or unmanageable distress and seek suitable support rather than pushing
+      through for credit.
+
+
+      Observation checks: A suitable live attempt actually occurs; Prediction and observable outcome are
+      compared; Participation is distinguished from symptom reduction; Uncertainty or a difficult outcome
+      is recorded honestly. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -182,9 +239,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0704_a2_minimum_information_only
-        - c0704_a2_sensitive_detail_excluded
-        - c0704_a2_decision_need_named
+        - a_suitable_live_attempt_actually_occurs
+        - prediction_and_observable_outcome_are_compared
+        - participation_is_distinguished_from_symptom_reduction
+        - uncertainty_or_a_difficult_outcome_is_recorded_honestly
       - measurement_id: c0704_a2_boundary
         kind: boolean
         role: supporting
@@ -201,12 +259,40 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0704-ANXIETY-AND-COURAGEOUS-EXPOSURE-01-A3
     sequence: 3
-    title: Record a bounded Anxiety and courageous exposure disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: Completes repeated exposures and compares feared outcomes with what actually
-      occurred.'
+    title: Repeat a suitable step and revise the prediction from both occasions
+    instructions: 'Use another natural opportunity for the same manageable step. Repeat rather than automatically
+      increasing difficulty; choose a modest next version only if appropriate and freely chosen. Compare
+      both predictions with both outcomes, including any dismissive response. If something went badly,
+      distinguish the actual problem, such as an unsuitable setting, from a conclusion that all questions
+      are unsafe. Decide to repeat, adjust the setting, ask for help or stop this experiment. Keep a missed
+      second opportunity pending instead of counting a plan as repeated exposure.
+
+
+      Observation checks: A second suitable live attempt is recorded; Both outcomes inform the revised
+      prediction; Difficulty is not increased automatically; The next choice follows evidence and current
+      suitability. Mark only what you observed. Missing, mixed and negative results are valid; a deferred
+      action is not completed.
+
+
+      Final review: What exactly did each attempt teach about the feared outcome and your ability to participate
+      with uncertainty? Retain adverse evidence as well as reassuring evidence. Repeated ordinary attempts
+      do not establish treatment success or general fearlessness.
+
+
+      Examples: Supportive: Two routine questions received usable replies rather than the predicted ridicule;
+      apprehension remained, but the person obtained the needed information.
+
+
+      Mixed: One reply was helpful and one was curt, so the person revised the prediction narrowly and
+      considered whether the setting was suitable.
+
+
+      Contradictory: The person entered an actually unsafe situation or removed a needed communication
+      support to make the challenge count as courage.
+
+
+      Inconclusive: A fear ladder was written or rehearsed, but no personally relevant live attempt occurred,
+      so exposure remains untested.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -222,14 +308,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0704_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0704_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - a_second_suitable_live_attempt_is_recorded
+        - both_outcomes_inform_the_revised_prediction
+        - difficulty_is_not_increased_automatically
+        - the_next_choice_follows_evidence_and_current_suitability
       - measurement_id: c0704_a3_boundary
         kind: boolean
         role: supporting
@@ -250,16 +338,19 @@ intervention:
       Anxiety and courageous exposure; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Anxiety and courageous exposure; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - Text, AAC, an interpreter or another accessible channel can be the actual communication route; necessary
+      supports are not failures. With no safe opportunity, work through the case privately and label it
+      preparation. An existing clinician-led plan takes precedence; do not alter treatment or attempt
+      trauma exposure here.
     cultural_context:
     - Adapt the expression of Anxiety and courageous exposure to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Anxiety and courageous exposure opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Text, AAC, an interpreter or another accessible channel can be the actual communication route; necessary
+      supports are not failures. With no safe opportunity, work through the case privately and label it
+      preparation. An existing clinician-led plan takes precedence; do not alter treatment or attempt
+      trauma exposure here.
   pause_conditions:
   - Pause Anxiety and courageous exposure when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -291,10 +382,8 @@ evidence_and_scoring:
   - c0704_a3_boundary
   - c0704_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Anxiety and courageous exposure action exceeded consent, authority, privacy, qualification, role,
-    burden, or safety boundaries.
-  - The evidence contradicted the intended Anxiety and courageous exposure criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - The person entered an actually unsafe situation or removed a needed communication support to make
+    the challenge count as courage.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Anxiety and courageous exposure explicitly; support can enable access and never reduces dignity
     or silently changes the typed value.
@@ -305,14 +394,22 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Anxiety and courageous exposure rules withhold observations older than 90 days;
     no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Completes repeated exposures and compares feared outcomes with what actually occurred.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Anxiety and courageous exposure requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Choose the smallest worthwhile step and a prediction you can observe.
+    Observed checks: The step serves a chosen worthwhile purpose; Difficulty is ordered for this person
+    rather than assumed; The feared outcome is observable and specific; Suitability and necessary supports
+    are preserved. Action 2: Make a first ordinary attempt and record the actual response. Observed checks:
+    A suitable live attempt actually occurs; Prediction and observable outcome are compared; Participation
+    is distinguished from symptom reduction; Uncertainty or a difficult outcome is recorded honestly.
+    Action 3: Repeat a suitable step and revise the prediction from both occasions. Observed checks: A
+    second suitable live attempt is recorded; Both outcomes inform the revised prediction; Difficulty
+    is not increased automatically; The next choice follows evidence and current suitability.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A fear ladder was written or rehearsed, but no personally
+    relevant live attempt occurred, so exposure remains untested.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Anxiety
     and courageous exposure contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -321,9 +418,8 @@ evidence_and_scoring:
   - L07
   - L10
   - L11
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Anxiety and courageous exposure evidence.
@@ -331,12 +427,18 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for anxiety and courageous exposure action was attempted or explicitly
-    deferred.
-  - The prepare minimum information for anxiety and courageous exposure action was attempted or explicitly
-    deferred.
-  - The record a bounded anxiety and courageous exposure disposition action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Choose the smallest worthwhile step and a prediction you can observe. Observed checks:
+    The step serves a chosen worthwhile purpose; Difficulty is ordered for this person rather than assumed;
+    The feared outcome is observable and specific; Suitability and necessary supports are preserved.'
+  - 'Action 2: Make a first ordinary attempt and record the actual response. Observed checks: A suitable
+    live attempt actually occurs; Prediction and observable outcome are compared; Participation is distinguished
+    from symptom reduction; Uncertainty or a difficult outcome is recorded honestly.'
+  - 'Action 3: Repeat a suitable step and revise the prediction from both occasions. Observed checks:
+    A second suitable live attempt is recorded; Both outcomes inform the revised prediction; Difficulty
+    is not increased automatically; The next choice follows evidence and current suitability.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -345,57 +447,61 @@ completion_and_review:
     - c0704_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Anxiety and courageous exposure only when the initial context
-    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
-    named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Anxiety and courageous exposure across roles,
-    cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: What exactly did each attempt teach about the feared outcome and your ability
+    to participate with uncertainty? Retain adverse evidence as well as reassuring evidence. Repeated
+    ordinary attempts do not establish treatment success or general fearlessness.
+  transfer_limit: This is a bounded experiment with ordinary mild apprehension, not treatment for an anxiety
+    disorder, trauma, panic or compulsions. Rehearsing a fictional case does not demonstrate exposure
+    to a personally feared situation.
   reflection:
-    before: What does Anxiety and courageous exposure require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Anxiety and courageous exposure criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Completes repeated exposures and compares feared outcomes
-      with what actually occurred.', what contradiction or missing context matters most, and should this
-      Anxiety and courageous exposure design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Approach a worthwhile, suitably safe situation
+      gradually and compare a specific feared outcome with what actually happens on repeated attempts.'
+    during: Which checks have actually been observed? One reply was helpful and one was curt, so the person
+      revised the prediction narrowly and considered whether the setting was suitable.
+    after: What exactly did each attempt teach about the feared outcome and your ability to participate
+      with uncertainty? Retain adverse evidence as well as reassuring evidence. Repeated ordinary attempts
+      do not establish treatment success or general fearlessness.
   review_guidance:
     repeat: Repeat the same bounded Anxiety and courageous exposure design only when the context and burden
       remain appropriate.
-    adapt: Change the Anxiety and courageous exposure medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: Text, AAC, an interpreter or another accessible channel can be the actual communication route;
+      necessary supports are not failures. With no safe opportunity, work through the case privately and
+      label it preparation. An existing clinician-led plan takes precedence; do not alter treatment or
+      attempt trauma exposure here.
     stop: Stop Anxiety and courageous exposure when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Anxiety and courageous exposure questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Anxiety and courageous exposure criteria were observed with provenance and
-      no adverse boundary signal in the selected context.
-    mixed: Some Anxiety and courageous exposure criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Anxiety and courageous exposure criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Anxiety and courageous exposure action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: Two routine questions received usable replies rather than the predicted ridicule; apprehension
+      remained, but the person obtained the needed information.
+    mixed: One reply was helpful and one was curt, so the person revised the prediction narrowly and considered
+      whether the setting was suitable.
+    contradictory: The person entered an actually unsafe situation or removed a needed communication support
+      to make the challenge count as courage.
+    inconclusive: A fear ladder was written or rehearsed, but no personally relevant live attempt occurred,
+      so exposure remains untested.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Anxiety and courageous exposure.
+    context_heading: Test one manageable fear prediction through repeated ordinary attempts
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Anxiety and
       courageous exposure.
   check_in_labels:
-    c0704_a1_primary: The bounded Anxiety and courageous exposure criterion for action 1 was observed
+    c0704_a1_primary: 'Observed checks: choose the smallest worthwhile step and a prediction you can observe'
     c0704_a1_boundary: Action 1 stayed inside its stated Anxiety and courageous exposure boundary
     c0704_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0704_a2_primary: The bounded Anxiety and courageous exposure criterion for action 2 was observed
+    c0704_a2_primary: 'Observed checks: make a first ordinary attempt and record the actual response'
     c0704_a2_boundary: Action 2 stayed inside its stated Anxiety and courageous exposure boundary
     c0704_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0704_a3_primary: The bounded Anxiety and courageous exposure criterion for action 3 was observed
+    c0704_a3_primary: 'Observed checks: repeat a suitable step and revise the prediction from both occasions'
     c0704_a3_boundary: Action 3 stayed inside its stated Anxiety and courageous exposure boundary
     c0704_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Anxiety and courageous
-    exposure practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What exactly did each attempt teach about the feared outcome and your ability to participate
+    with uncertainty? Retain adverse evidence as well as reassuring evidence. Repeated ordinary attempts
+    do not establish treatment success or general fearlessness. Completion is not mastery.
+  plain_language_evidence: Two routine questions received usable replies rather than the predicted ridicule;
+    apprehension remained, but the person obtained the needed information.
   display_order: 88

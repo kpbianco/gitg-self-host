@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0702-BODY-BASED-EMOTIONAL-AWARENESS-01
 slug: c0702-body-based-emotional-awareness-practice
-name: Bounded Body-based emotional awareness Practice
+name: Notice an early body cue before an ordinary reaction takes over
 parent_competency_id: '07.02'
 domain_id: '07'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-NIMH-SELF-HELP-LIMITS
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 07.02
-      (Body-based emotional awareness); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 07.02; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,39 +35,48 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Body-based emotional awareness through a qualified-support preparation bounded by
-    the canonical scope: Notice breathing, tension, temperature, energy, posture, pain, and activation
-    before emotion becomes behavior.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Identifies early physiological
-    signals and uses them to intervene sooner. The protocol creates a small opportunity to examine that
-    target without treating completion as broad capability.'
+  purpose: Observe personally accessible physical signals and use an early cue to choose a practical response
+    before it becomes an unwanted behavior.
+  why_recommended: Observe personally accessible physical signals and use an early cue to choose a practical
+    response before it becomes an unwanted behavior.
   claims:
-  - statement: Using the canonical scope and evidence target for Body-based emotional awareness is a traceable
-      product-design basis for a source-only draft protocol.
+  - statement: Observe personally accessible physical signals and use an early cue to choose a practical
+      response before it becomes an unwanted behavior.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Worsening symptoms and severe persistent distress affecting usual activities call for professional
+      help; suicidal thoughts or urges to self-harm call for immediate help.
+    classification: safety_precaution
+    source_ids:
+    - SRC-NIMH-SELF-HELP-LIMITS
+    limitations: Public help-seeking guidance, not a diagnosis or validated product screening tool. The
+      source's duration examples are not instructions to wait during danger or deterioration. It does
+      not validate the original emotional-awareness, hope or strategy-transfer exercises.
   applicability_question: Does a voluntary, bounded Body-based emotional awareness practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Body-based emotional awareness as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Body-based emotional
-    awareness context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Body-based
-    emotional awareness; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: A visual timer, a pause card or a chosen external behavior can substitute
+    for inaccessible body awareness. These alternatives test earlier response selection, not improved
+    interoception. Keep prescribed supports and care unchanged; this practice never asks you to ignore
+    pain or hold your breath.
+  opportunity_considerations: Choose a familiar low-pressure activity such as reading an ordinary message.
+    Keep a private note with before, early cue, response and afterward. Observe without changing your
+    breathing or provoking stress. If internal attention is uncomfortable, use an external cue such as
+    typing speed or an urge to interrupt.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Body-based emotional awareness.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Choose a familiar low-pressure activity such as reading an ordinary message. Keep a private note with
+    before, early cue, response and afterward. Observe without changing your breathing or provoking stress.
+    If internal attention is uncomfortable, use an external cue such as typing speed or an urge to interrupt.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Body-based emotional awareness
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - A visual timer, a pause card or a chosen external behavior can substitute for inaccessible body awareness.
+    These alternatives test earlier response selection, not improved interoception. Keep prescribed supports
+    and care unchanged; this practice never asks you to ignore pain or hold your breath.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +88,35 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Body-based emotional awareness
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-QUALIFIED-CONSULTATION
+  protocol_class: PF-BEHAVIORAL-EXPERIMENT
   duration_days: 10
-  cadence: Complete three bounded Body-based emotional awareness actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Body-based emotional awareness; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Body-based
-    emotional awareness. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Body-based emotional awareness actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose a familiar low-pressure activity such as reading an ordinary message. Keep a private
+    note with before, early cue, response and afterward. Observe without changing your breathing or provoking
+    stress. If internal attention is uncomfortable, use an external cue such as typing speed or an urge
+    to interrupt. Goal: Observe personally accessible physical signals and use an early cue to choose
+    a practical response before it becomes an unwanted behavior. Scope: This is brief everyday observation,
+    not a diagnostic body scan or a requirement to detect every internal sensation. New or concerning
+    symptoms need appropriate medical assessment rather than an emotional explanation. Time and effort:
+    Two ordinary opportunities over several days, with less than two minutes of observation at each and
+    a short review. Adaptation: A visual timer, a pause card or a chosen external behavior can substitute
+    for inaccessible body awareness. These alternatives test earlier response selection, not improved
+    interoception. Keep prescribed supports and care unchanged; this practice never asks you to ignore
+    pain or hold your breath. Keep personal working notes outside the check-in; record only the listed
+    observations.
+
+
+    Reference support:
+
+    My Mental Health: Do I Need Help?: https://www.nimh.nih.gov/health/publications/my-mental-health-do-i-need-help'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. A visual timer, a pause card or a chosen external behavior can substitute for inaccessible
+    body awareness. These alternatives test earlier response selection, not improved interoception. Keep
+    prescribed supports and care unchanged; this practice never asks you to ignore pain or hold your breath.
+  expected_burden: Two ordinary opportunities over several days, with less than two minutes of observation
+    at each and a short review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Body-based emotional awareness protocol to rank worth, coerce participation, demand disclosure,
@@ -101,20 +124,26 @@ intervention:
   - Treating a completed Body-based emotional awareness action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Body-based emotional awareness situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Not therapy or diagnosis; severe or persistent symptoms require qualified mental-health or medical
-    care.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. A visual timer,
+    a pause card or a chosen external behavior can substitute for inaccessible body awareness. These alternatives
+    test earlier response selection, not improved interoception. Keep prescribed supports and care unchanged;
+    this practice never asks you to ignore pain or hold your breath.
   actions:
   - stable_id: PRACTICE-COMP-0702-BODY-BASED-EMOTIONAL-AWARENESS-01-A1
     sequence: 1
-    title: Bound the qualified question for Body-based emotional awareness
-    instructions: 'Turn Body-based emotional awareness into one educational or planning question and identify
-      the qualification and jurisdiction needed to answer it. Use the canonical scope to separate general
-      learning from diagnosis, treatment, legal advice, financial advice, safeguarding decisions, or other
-      professional judgment: Notice breathing, tension, temperature, energy, posture, pain, and activation
-      before emotion becomes behavior.'
+    title: Describe a baseline without interpreting it as an emotional diagnosis
+    instructions: 'Before the selected activity, briefly consider breathing, tension, temperature, energy,
+      posture, pain and overall activation. For each, write an ordinary description, unchanged, or not
+      noticed; do not search repeatedly for a sensation. Activation means your sense of being keyed up,
+      settled or slowed down, not a measured nervous-system state. Include ordinary context such as heat,
+      an uncomfortable chair or a tiring day. End the observation and start the activity. A tense shoulder
+      alone cannot identify an emotion or rule out a physical cause.
+
+
+      Observation checks: All seven cue categories are considered without forced detection; Unknown or
+      unchanged cues are allowed; Ordinary physical context is recorded; Sensations are not used to diagnose
+      an emotion or condition. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -136,9 +165,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0702_a1_question_bounded
-        - c0702_a1_qualification_named
-        - c0702_a1_professional_boundary_explicit
+        - all_seven_cue_categories_are_considered_without_forced_detection
+        - unknown_or_unchanged_cues_are_allowed
+        - ordinary_physical_context_is_recorded
+        - sensations_are_not_used_to_diagnose_an_emotion_or_condition
       - measurement_id: c0702_a1_boundary
         kind: boolean
         role: supporting
@@ -155,12 +185,19 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0702-BODY-BASED-EMOTIONAL-AWARENESS-01-A2
     sequence: 2
-    title: Prepare minimum information for Body-based emotional awareness
-    instructions: Create a privacy-minimized Body-based emotional awareness consultation note containing
-      only the question, relevant category-level facts, current constraints, and desired decision. Omit
-      diagnoses, allegations, account numbers, credentials, protected work information, intimate detail,
-      and third-party identity unless a qualified professional lawfully requires it through an appropriate
-      channel.
+    title: Connect one early cue to a specific interruptible behavior
+    instructions: 'During the ordinary activity, notice whether one accessible cue appears before a behavior
+      you would prefer to choose deliberately. For example, faster typing may precede sending an abrupt
+      reply; raised shoulders may accompany continuing an uncomfortable task. If a cue occurs, stop the
+      optional behavior briefly, reread the message or adjust the ordinary setup, then choose the next
+      step. Record the order of cue, response and behavior afterward. If you noticed only after acting,
+      say so; retrospective awareness is useful but is not earlier intervention.
+
+
+      Observation checks: One cue is linked to a specific behavior; The actual order of events is recorded;
+      A practical response is attempted when appropriate; Late recognition is distinguished from early
+      intervention. Mark only what you observed. Missing, mixed and negative results are valid; a deferred
+      action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -182,9 +219,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0702_a2_minimum_information_only
-        - c0702_a2_sensitive_detail_excluded
-        - c0702_a2_decision_need_named
+        - one_cue_is_linked_to_a_specific_behavior
+        - the_actual_order_of_events_is_recorded
+        - a_practical_response_is_attempted_when_appropriate
+        - late_recognition_is_distinguished_from_early_intervention
       - measurement_id: c0702_a2_boundary
         kind: boolean
         role: supporting
@@ -201,11 +239,41 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0702-BODY-BASED-EMOTIONAL-AWARENESS-01-A3
     sequence: 3
-    title: Record a bounded Body-based emotional awareness disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: Identifies early physiological signals and uses them to intervene sooner.'
+    title: Try the cue-response link again and keep its limits visible
+    instructions: 'At another natural occurrence of the same activity, use the same cue as a reminder
+      to reread, adjust the setup or request a moment before responding. Compare whether the cue appeared,
+      whether you caught it earlier, what you did and what happened. If the cue was absent or unreliable,
+      select a visible alternative such as reaching for Send rather than inventing a physiological pattern.
+      If noticing sensations increases distress or preoccupation, discontinue the internal observation
+      and use an external prompt or seek appropriate help. Do not manufacture a stressful event for a
+      second trial.
+
+
+      Observation checks: A second natural opportunity is examined; Earlier recognition is assessed from
+      the recorded sequence; An unreliable cue can be replaced by an external prompt; Increased distress
+      does not trigger more intensive self-monitoring. Mark only what you observed. Missing, mixed and
+      negative results are valid; a deferred action is not completed.
+
+
+      Final review: Was the cue observable before action and useful enough to keep? Retain one practical
+      reminder, change it or stop monitoring. Do not infer improved health or universal emotional regulation
+      from two occasions.
+
+
+      Examples: Supportive: Faster typing was noticed before an abrupt reply; rereading allowed a factual
+      question, and the sequence was observed again later.
+
+
+      Mixed: Shoulder tension was noticed only afterward on the first occasion, while an external Send
+      prompt supported a timely pause on the second.
+
+
+      Contradictory: A new concerning physical symptom was dismissed as emotion, or repeated checking
+      made the activity harder and was intensified.
+
+
+      Inconclusive: The person planned to watch for tension but recorded no opportunity, cue or response
+      sequence.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -221,14 +289,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0702_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0702_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - a_second_natural_opportunity_is_examined
+        - earlier_recognition_is_assessed_from_the_recorded_sequence
+        - an_unreliable_cue_can_be_replaced_by_an_external_prompt
+        - increased_distress_does_not_trigger_more_intensive_self_monitoring
       - measurement_id: c0702_a3_boundary
         kind: boolean
         role: supporting
@@ -249,16 +319,19 @@ intervention:
       Body-based emotional awareness; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Body-based emotional awareness; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - A visual timer, a pause card or a chosen external behavior can substitute for inaccessible body
+      awareness. These alternatives test earlier response selection, not improved interoception. Keep
+      prescribed supports and care unchanged; this practice never asks you to ignore pain or hold your
+      breath.
     cultural_context:
     - Adapt the expression of Body-based emotional awareness to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Body-based emotional awareness opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - A visual timer, a pause card or a chosen external behavior can substitute for inaccessible body
+      awareness. These alternatives test earlier response selection, not improved interoception. Keep
+      prescribed supports and care unchanged; this practice never asks you to ignore pain or hold your
+      breath.
   pause_conditions:
   - Pause Body-based emotional awareness when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -290,10 +363,8 @@ evidence_and_scoring:
   - c0702_a3_boundary
   - c0702_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Body-based emotional awareness action exceeded consent, authority, privacy, qualification, role,
-    burden, or safety boundaries.
-  - The evidence contradicted the intended Body-based emotional awareness criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - A new concerning physical symptom was dismissed as emotion, or repeated checking made the activity
+    harder and was intensified.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Body-based emotional awareness explicitly; support can enable access and never reduces dignity
     or silently changes the typed value.
@@ -304,14 +375,22 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Body-based emotional awareness rules withhold observations older than 90 days;
     no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Identifies early physiological signals and uses them to intervene sooner.—not completion, confidence,
-    conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Body-based emotional awareness requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Describe a baseline without interpreting it as an emotional diagnosis.
+    Observed checks: All seven cue categories are considered without forced detection; Unknown or unchanged
+    cues are allowed; Ordinary physical context is recorded; Sensations are not used to diagnose an emotion
+    or condition. Action 2: Connect one early cue to a specific interruptible behavior. Observed checks:
+    One cue is linked to a specific behavior; The actual order of events is recorded; A practical response
+    is attempted when appropriate; Late recognition is distinguished from early intervention. Action 3:
+    Try the cue-response link again and keep its limits visible. Observed checks: A second natural opportunity
+    is examined; Earlier recognition is assessed from the recorded sequence; An unreliable cue can be
+    replaced by an external prompt; Increased distress does not trigger more intensive self-monitoring.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. The person planned to watch for tension but recorded
+    no opportunity, cue or response sequence.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Body-based
     emotional awareness contribution under typed evaluation; protocol performance remains distinct and
     is never counted twice.
@@ -320,9 +399,8 @@ evidence_and_scoring:
   - L06
   - L08
   - L17
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Body-based emotional awareness evidence.
@@ -330,12 +408,18 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for body-based emotional awareness action was attempted or explicitly
-    deferred.
-  - The prepare minimum information for body-based emotional awareness action was attempted or explicitly
-    deferred.
-  - The record a bounded body-based emotional awareness disposition action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Describe a baseline without interpreting it as an emotional diagnosis. Observed checks:
+    All seven cue categories are considered without forced detection; Unknown or unchanged cues are allowed;
+    Ordinary physical context is recorded; Sensations are not used to diagnose an emotion or condition.'
+  - 'Action 2: Connect one early cue to a specific interruptible behavior. Observed checks: One cue is
+    linked to a specific behavior; The actual order of events is recorded; A practical response is attempted
+    when appropriate; Late recognition is distinguished from early intervention.'
+  - 'Action 3: Try the cue-response link again and keep its limits visible. Observed checks: A second
+    natural opportunity is examined; Earlier recognition is assessed from the recorded sequence; An unreliable
+    cue can be replaced by an external prompt; Increased distress does not trigger more intensive self-monitoring.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -344,57 +428,61 @@ completion_and_review:
     - c0702_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Body-based emotional awareness only when the initial context
-    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
-    named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Body-based emotional awareness across roles,
-    cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: Was the cue observable before action and useful enough to keep? Retain one practical
+    reminder, change it or stop monitoring. Do not infer improved health or universal emotional regulation
+    from two occasions.
+  transfer_limit: This is brief everyday observation, not a diagnostic body scan or a requirement to detect
+    every internal sensation. New or concerning symptoms need appropriate medical assessment rather than
+    an emotional explanation.
   reflection:
-    before: What does Body-based emotional awareness require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Body-based emotional awareness criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Identifies early physiological signals and uses them to intervene
-      sooner.', what contradiction or missing context matters most, and should this Body-based emotional
-      awareness design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Observe personally accessible physical signals
+      and use an early cue to choose a practical response before it becomes an unwanted behavior.'
+    during: Which checks have actually been observed? Shoulder tension was noticed only afterward on the
+      first occasion, while an external Send prompt supported a timely pause on the second.
+    after: Was the cue observable before action and useful enough to keep? Retain one practical reminder,
+      change it or stop monitoring. Do not infer improved health or universal emotional regulation from
+      two occasions.
   review_guidance:
     repeat: Repeat the same bounded Body-based emotional awareness design only when the context and burden
       remain appropriate.
-    adapt: Change the Body-based emotional awareness medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: A visual timer, a pause card or a chosen external behavior can substitute for inaccessible
+      body awareness. These alternatives test earlier response selection, not improved interoception.
+      Keep prescribed supports and care unchanged; this practice never asks you to ignore pain or hold
+      your breath.
     stop: Stop Body-based emotional awareness when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Body-based emotional awareness questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Body-based emotional awareness criteria were observed with provenance and
-      no adverse boundary signal in the selected context.
-    mixed: Some Body-based emotional awareness criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Body-based emotional awareness criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Body-based emotional awareness action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: Faster typing was noticed before an abrupt reply; rereading allowed a factual question,
+      and the sequence was observed again later.
+    mixed: Shoulder tension was noticed only afterward on the first occasion, while an external Send prompt
+      supported a timely pause on the second.
+    contradictory: A new concerning physical symptom was dismissed as emotion, or repeated checking made
+      the activity harder and was intensified.
+    inconclusive: The person planned to watch for tension but recorded no opportunity, cue or response
+      sequence.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Body-based emotional awareness.
+    context_heading: Notice an early body cue before an ordinary reaction takes over
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Body-based
       emotional awareness.
   check_in_labels:
-    c0702_a1_primary: The bounded Body-based emotional awareness criterion for action 1 was observed
+    c0702_a1_primary: 'Observed checks: describe a baseline without interpreting it as an emotional diagnosis'
     c0702_a1_boundary: Action 1 stayed inside its stated Body-based emotional awareness boundary
     c0702_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0702_a2_primary: The bounded Body-based emotional awareness criterion for action 2 was observed
+    c0702_a2_primary: 'Observed checks: connect one early cue to a specific interruptible behavior'
     c0702_a2_boundary: Action 2 stayed inside its stated Body-based emotional awareness boundary
     c0702_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0702_a3_primary: The bounded Body-based emotional awareness criterion for action 3 was observed
+    c0702_a3_primary: 'Observed checks: try the cue-response link again and keep its limits visible'
     c0702_a3_boundary: Action 3 stayed inside its stated Body-based emotional awareness boundary
     c0702_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Body-based emotional
-    awareness practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Was the cue observable before action and useful enough to keep? Retain one practical
+    reminder, change it or stop monitoring. Do not infer improved health or universal emotional regulation
+    from two occasions. Completion is not mastery.
+  plain_language_evidence: Faster typing was noticed before an abrupt reply; rereading allowed a factual
+    question, and the sequence was observed again later.
   display_order: 86

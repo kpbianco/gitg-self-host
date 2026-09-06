@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0714-CHRONIC-DYSREGULATION-AND-SKILL-GENERALIZATION-01
 slug: c0714-chronic-dysregulation-and-skill-generalization-practice
-name: Bounded Chronic dysregulation and skill generalization Practice
+name: Test two regulation options across ordinary contexts and notice their limits
 parent_competency_id: '07.14'
 domain_id: '07'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-NIMH-SELF-HELP-LIMITS
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 07.14
-      (Chronic dysregulation and skill generalization); canonical scope, evidence target, classification,
-      domain boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 07.14; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,40 +35,50 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Chronic dysregulation and skill generalization through a qualified-support preparation
-    bounded by the canonical scope: Practice regulation skills across different triggers, relationships,
-    stress levels, and environments rather than only under ideal conditions.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can use more than one
-    strategy in real situations and identify when a strategy stops working. The protocol creates a small
-    opportunity to examine that target without treating completion as broad capability.'
+  purpose: Practice more than one response strategy across naturally occurring triggers, relationships
+    and settings, and identify when a strategy needs adjustment or qualified support.
+  why_recommended: Practice more than one response strategy across naturally occurring triggers, relationships
+    and settings, and identify when a strategy needs adjustment or qualified support.
   claims:
-  - statement: Using the canonical scope and evidence target for Chronic dysregulation and skill generalization
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Practice more than one response strategy across naturally occurring triggers, relationships
+      and settings, and identify when a strategy needs adjustment or qualified support.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Worsening symptoms and severe persistent distress affecting usual activities call for professional
+      help; suicidal thoughts or urges to self-harm call for immediate help.
+    classification: safety_precaution
+    source_ids:
+    - SRC-NIMH-SELF-HELP-LIMITS
+    limitations: Public help-seeking guidance, not a diagnosis or validated product screening tool. The
+      source's duration examples are not instructions to wait during danger or deterioration. It does
+      not validate the original emotional-awareness, hope or strategy-transfer exercises.
   applicability_question: Does a voluntary, bounded Chronic dysregulation and skill generalization practice
     fit the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Chronic dysregulation and skill generalization as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Chronic dysregulation
-    and skill generalization context, understand the source-only status, and stop without losing safety,
-    care, employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Chronic dysregulation
-    and skill generalization; do not manufacture conflict, deprivation, exposure, disclosure, danger,
-    urgency, or dependence for evidence.
+  readiness_considerations: Use accessible written, spoken or supported communication instead of a specific
+    format. If no suitable live contexts occur, rehearse an ordinary message and conversation privately;
+    label both rehearsals and leave real-world generalization untested. Severe or persistent dysregulation
+    calls for qualified care, not a harder practice challenge.
+  opportunity_considerations: 'Choose two already tolerable options: briefly leave a message unsent and
+    reread it before responding; and state a concrete need or ask for a short break with a return time.
+    Keep a private three-row note with context, trigger, stress level in words, strategy, action and result.
+    Use ordinary situations only and preserve any existing care plan.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Chronic dysregulation and skill
-    generalization.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Choose two already tolerable options: briefly leave a message unsent and reread it before responding;
+    and state a concrete need or ask for a short break with a return time. Keep a private three-row note
+    with context, trigger, stress level in words, strategy, action and result. Use ordinary situations
+    only and preserve any existing care plan.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Chronic dysregulation and skill
-    generalization instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use accessible written, spoken or supported communication instead of a specific format. If no suitable
+    live contexts occur, rehearse an ordinary message and conversation privately; label both rehearsals
+    and leave real-world generalization untested. Severe or persistent dysregulation calls for qualified
+    care, not a harder practice challenge.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -81,21 +91,36 @@ meaning_and_fit:
     skill generalization as inferiority; competing reasonable interpretations and conscientious refusal
     remain visible.
 intervention:
-  protocol_class: PF-QUALIFIED-CONSULTATION
+  protocol_class: PF-LONGITUDINAL-REVIEW
   duration_days: 10
-  cadence: Complete three bounded Chronic dysregulation and skill generalization actions over ten days,
-    preserving explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Chronic dysregulation and skill generalization; copy the canonical scope
-    and evidence target into a private working note; define the action boundary, valid supports, privacy
-    limit, and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Chronic
-    dysregulation and skill generalization. Do not store private prose, names, identities, diagnoses,
-    allegations, credentials, account data, protected work information, intimate detail, artifact contents,
-    observer narrative, or another person's secrets. This source-only draft is not surveillance, professional
-    advice, treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Chronic dysregulation and skill generalization
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose two already tolerable options: briefly leave a message unsent and reread it before responding;
+    and state a concrete need or ask for a short break with a return time. Keep a private three-row note
+    with context, trigger, stress level in words, strategy, action and result. Use ordinary situations
+    only and preserve any existing care plan. Goal: Practice more than one response strategy across naturally
+    occurring triggers, relationships and settings, and identify when a strategy needs adjustment or qualified
+    support. Scope: This small transfer test examines everyday strategy use, not treatment for chronic
+    dysregulation or proof that skills generalize to severe stress. No trigger or conflict should be manufactured.
+    Time and effort: About 15 minutes to prepare and three naturally occurring opportunities over one
+    or two weeks, with a brief note afterward. Missing opportunities remain pending. Adaptation: Use accessible
+    written, spoken or supported communication instead of a specific format. If no suitable live contexts
+    occur, rehearse an ordinary message and conversation privately; label both rehearsals and leave real-world
+    generalization untested. Severe or persistent dysregulation calls for qualified care, not a harder
+    practice challenge. Keep personal working notes outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    My Mental Health: Do I Need Help?: https://www.nimh.nih.gov/health/publications/my-mental-health-do-i-need-help'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use accessible written, spoken or supported communication instead of a specific
+    format. If no suitable live contexts occur, rehearse an ordinary message and conversation privately;
+    label both rehearsals and leave real-world generalization untested. Severe or persistent dysregulation
+    calls for qualified care, not a harder practice challenge.
+  expected_burden: About 15 minutes to prepare and three naturally occurring opportunities over one or
+    two weeks, with a brief note afterward. Missing opportunities remain pending.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Chronic dysregulation and skill generalization protocol to rank worth, coerce participation,
@@ -104,20 +129,27 @@ intervention:
   - Treating a completed Chronic dysregulation and skill generalization action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Chronic dysregulation and skill generalization situation involving emergency response, abuse,
-    retaliation, illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Not therapy or diagnosis; severe or persistent symptoms require qualified mental-health or medical
-    care.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use accessible
+    written, spoken or supported communication instead of a specific format. If no suitable live contexts
+    occur, rehearse an ordinary message and conversation privately; label both rehearsals and leave real-world
+    generalization untested. Severe or persistent dysregulation calls for qualified care, not a harder
+    practice challenge.
   actions:
   - stable_id: PRACTICE-COMP-0714-CHRONIC-DYSREGULATION-AND-SKILL-GENERALIZATION-01-A1
     sequence: 1
-    title: Bound the qualified question for Chronic dysregulation and skill generalization
-    instructions: 'Turn Chronic dysregulation and skill generalization into one educational or planning
-      question and identify the qualification and jurisdiction needed to answer it. Use the canonical
-      scope to separate general learning from diagnosis, treatment, legal advice, financial advice, safeguarding
-      decisions, or other professional judgment: Practice regulation skills across different triggers,
-      relationships, stress levels, and environments rather than only under ideal conditions.'
+    title: Prepare two strategies and the conditions in which each fits
+    instructions: 'Describe how to perform both options and where they are suitable. An unsent-message
+      pause fits a non-urgent written exchange; a direct need or agreed break fits a reasonably safe interaction
+      where clarification can help. Name an early cue for each, such as starting to type an accusation
+      or noticing an urge to interrupt. Define signs that an option is not helping: repeated rereading
+      becomes stuck rumination, or a requested break becomes indefinite avoidance. Identify a fallback,
+      such as ending the optional exchange, using another accessible format or seeking suitable support.
+
+
+      Observation checks: Two strategies have concrete performance instructions; Their suitable contexts
+      and early cues are specified; A recognizable limit is stated for each option; A fallback preserves
+      access safety and a route back when appropriate. Mark only what you observed. Missing, mixed and
+      negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -139,9 +171,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0714_a1_question_bounded
-        - c0714_a1_qualification_named
-        - c0714_a1_professional_boundary_explicit
+        - two_strategies_have_concrete_performance_instructions
+        - their_suitable_contexts_and_early_cues_are_specified
+        - a_recognizable_limit_is_stated_for_each_option
+        - a_fallback_preserves_access_safety_and_a_route_back_when_appropriate
       - measurement_id: c0714_a1_boundary
         kind: boolean
         role: supporting
@@ -158,12 +191,20 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0714-CHRONIC-DYSREGULATION-AND-SKILL-GENERALIZATION-01-A2
     sequence: 2
-    title: Prepare minimum information for Chronic dysregulation and skill generalization
-    instructions: Create a privacy-minimized Chronic dysregulation and skill generalization consultation
-      note containing only the question, relevant category-level facts, current constraints, and desired
-      decision. Omit diagnoses, allegations, account numbers, credentials, protected work information,
-      intimate detail, and third-party identity unless a qualified professional lawfully requires it through
-      an appropriate channel.
+    title: Use both options during naturally different ordinary opportunities
+    instructions: 'At two suitable opportunities, use each strategy at least once. Record the trigger,
+      setting, relationship if any, ordinary stress level and the sequence from cue to chosen action.
+      Aim for a genuine difference, such as a written coordination message and a spoken conversation,
+      rather than claiming two identical drafts demonstrate broad transfer. Note whether the response
+      clarified the issue, delayed it appropriately or failed to help. If all suitable events are very
+      low stress, record that narrow range; do not create higher stress or provoke another person to fill
+      the record.
+
+
+      Observation checks: Both strategies are actually attempted in suitable ordinary situations; Trigger
+      setting relationship and stress context are recorded; At least one genuine context difference is
+      identified; An unobserved stress range is not claimed as tested. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -185,9 +226,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0714_a2_minimum_information_only
-        - c0714_a2_sensitive_detail_excluded
-        - c0714_a2_decision_need_named
+        - both_strategies_are_actually_attempted_in_suitable_ordinary_situations
+        - trigger_setting_relationship_and_stress_context_are_recorded
+        - at_least_one_genuine_context_difference_is_identified
+        - an_unobserved_stress_range_is_not_claimed_as_tested
       - measurement_id: c0714_a2_boundary
         kind: boolean
         role: supporting
@@ -204,12 +246,42 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0714-CHRONIC-DYSREGULATION-AND-SKILL-GENERALIZATION-01-A3
     sequence: 3
-    title: Record a bounded Chronic dysregulation and skill generalization disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: Can use more than one strategy in real situations and identify when a strategy
-      stops working.'
+    title: Try a third opportunity and revise a strategy that reaches its limit
+    instructions: 'At another naturally occurring event, choose the option that fits the context and record
+      why. If it stops helping, use the prepared fallback and note the observable sign rather than repeating
+      it more intensely. Compare all three records for differences in triggers, relationships, settings
+      and stress levels. Identify one supported transfer claim, one untested context and one revision
+      or question for qualified help if difficulties persist or impair functioning. If the third event
+      never occurs, retain the two observations and leave this transfer check pending. A strategy''s failure
+      in one setting is information, not proof of personal failure.
+
+
+      Observation checks: A third actual opportunity informs strategy choice; Any observed limit leads
+      to an appropriate fallback or revision; Transfer claims are restricted to recorded contexts; Persistent
+      impairment prompts qualified support rather than escalating self-help. Mark only what you observed.
+      Missing, mixed and negative results are valid; a deferred action is not completed.
+
+
+      Final review: Which strategy worked where, where did it stop helping, and which contexts remain
+      unknown? Keep a conditional choice rather than a universal favorite. Three ordinary attempts cannot
+      establish recovery or reliable use during crisis.
+
+
+      Examples: Supportive: A message pause and a direct request were used in different ordinary situations;
+      a third event revealed that repeated rereading was unhelpful, so the person used a clear return
+      plan.
+
+
+      Mixed: Both strategies helped at low stress with familiar people, but no unfamiliar or higher-stress
+      context occurred and those limits remained explicit.
+
+
+      Contradictory: The person provoked conflict to test a skill, intensified an unhelpful strategy or
+      claimed low-stress rehearsals proved crisis competence.
+
+
+      Inconclusive: Two strategies were described but no real use was recorded, so generalization across
+      everyday situations remains untested.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -225,14 +297,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0714_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0714_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - a_third_actual_opportunity_informs_strategy_choice
+        - any_observed_limit_leads_to_an_appropriate_fallback_or_revision
+        - transfer_claims_are_restricted_to_recorded_contexts
+        - persistent_impairment_prompts_qualified_support_rather_than_escalating_self_help
       - measurement_id: c0714_a3_boundary
         kind: boolean
         role: supporting
@@ -253,17 +327,19 @@ intervention:
       Chronic dysregulation and skill generalization; no purchase, subscription, travel, credential, or
       public artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Chronic dysregulation and skill generalization; assistive technology, interpretation,
-      a support person, and a deferred action are valid without penalty.
+    - Use accessible written, spoken or supported communication instead of a specific format. If no suitable
+      live contexts occur, rehearse an ordinary message and conversation privately; label both rehearsals
+      and leave real-world generalization untested. Severe or persistent dysregulation calls for qualified
+      care, not a harder practice challenge.
     cultural_context:
     - Adapt the expression of Chronic dysregulation and skill generalization to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Chronic dysregulation and skill generalization opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use accessible written, spoken or supported communication instead of a specific format. If no suitable
+      live contexts occur, rehearse an ordinary message and conversation privately; label both rehearsals
+      and leave real-world generalization untested. Severe or persistent dysregulation calls for qualified
+      care, not a harder practice challenge.
   pause_conditions:
   - Pause Chronic dysregulation and skill generalization when capacity, consent, authority, privacy, access,
     care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make
@@ -295,10 +371,8 @@ evidence_and_scoring:
   - c0714_a3_boundary
   - c0714_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Chronic dysregulation and skill generalization action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Chronic dysregulation and skill generalization criterion, depended
-    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - The person provoked conflict to test a skill, intensified an unhelpful strategy or claimed low-stress
+    rehearsals proved crisis competence.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Chronic dysregulation and skill generalization explicitly; support can enable access and never
     reduces dignity or silently changes the typed value.
@@ -309,14 +383,24 @@ evidence_and_scoring:
     diminishing multipliers.
   recency_rule: Generated Chronic dysregulation and skill generalization rules withhold observations older
     than 90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can use more than one strategy in real situations and identify when a strategy stops working.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Chronic dysregulation and skill generalization requires a bounded
-    context, allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Prepare two strategies and the conditions in which each fits. Observed
+    checks: Two strategies have concrete performance instructions; Their suitable contexts and early cues
+    are specified; A recognizable limit is stated for each option; A fallback preserves access safety
+    and a route back when appropriate. Action 2: Use both options during naturally different ordinary
+    opportunities. Observed checks: Both strategies are actually attempted in suitable ordinary situations;
+    Trigger setting relationship and stress context are recorded; At least one genuine context difference
+    is identified; An unobserved stress range is not claimed as tested. Action 3: Try a third opportunity
+    and revise a strategy that reaches its limit. Observed checks: A third actual opportunity informs
+    strategy choice; Any observed limit leads to an appropriate fallback or revision; Transfer claims
+    are restricted to recorded contexts; Persistent impairment prompts qualified support rather than escalating
+    self-help.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. Two strategies were described but no real use was recorded,
+    so generalization across everyday situations remains untested.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Chronic
     dysregulation and skill generalization contribution under typed evaluation; protocol performance remains
     distinct and is never counted twice.
@@ -326,9 +410,8 @@ evidence_and_scoring:
   - L08
   - L10
   - L11
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Chronic dysregulation and skill generalization evidence.
@@ -336,12 +419,20 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for chronic dysregulation and skill generalization action was attempted
-    or explicitly deferred.
-  - The prepare minimum information for chronic dysregulation and skill generalization action was attempted
-    or explicitly deferred.
-  - The record a bounded chronic dysregulation and skill generalization disposition action preserved a
-    limited conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Prepare two strategies and the conditions in which each fits. Observed checks: Two strategies
+    have concrete performance instructions; Their suitable contexts and early cues are specified; A recognizable
+    limit is stated for each option; A fallback preserves access safety and a route back when appropriate.'
+  - 'Action 2: Use both options during naturally different ordinary opportunities. Observed checks: Both
+    strategies are actually attempted in suitable ordinary situations; Trigger setting relationship and
+    stress context are recorded; At least one genuine context difference is identified; An unobserved
+    stress range is not claimed as tested.'
+  - 'Action 3: Try a third opportunity and revise a strategy that reaches its limit. Observed checks:
+    A third actual opportunity informs strategy choice; Any observed limit leads to an appropriate fallback
+    or revision; Transfer claims are restricted to recorded contexts; Persistent impairment prompts qualified
+    support rather than escalating self-help.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -350,65 +441,65 @@ completion_and_review:
     - c0714_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Chronic dysregulation and skill generalization only when the
-    initial context remained safe, the evidence criteria were usable, burden was acceptable, and a new
-    context can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Chronic dysregulation and skill generalization
-    across roles, cultures, relationships, seasons, stress levels, disability states, institutions, or
-    high-consequence settings.
+  progression_criteria: Which strategy worked where, where did it stop helping, and which contexts remain
+    unknown? Keep a conditional choice rather than a universal favorite. Three ordinary attempts cannot
+    establish recovery or reliable use during crisis.
+  transfer_limit: This small transfer test examines everyday strategy use, not treatment for chronic dysregulation
+    or proof that skills generalize to severe stress. No trigger or conflict should be manufactured.
   reflection:
-    before: What does Chronic dysregulation and skill generalization require in this exact context, what
-      remains outside my role or authority, and which scope sentence or evidence criterion will keep the
-      practice honest?
-    during: Which observable Chronic dysregulation and skill generalization criterion is present, absent,
-      mixed, or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can use more than one strategy in real situations and identify
-      when a strategy stops working.', what contradiction or missing context matters most, and should
-      this Chronic dysregulation and skill generalization design be repeated, adapted, deferred, stopped,
-      or referred?
+    before: 'What would count as doing this honestly? Goal: Practice more than one response strategy across
+      naturally occurring triggers, relationships and settings, and identify when a strategy needs adjustment
+      or qualified support.'
+    during: Which checks have actually been observed? Both strategies helped at low stress with familiar
+      people, but no unfamiliar or higher-stress context occurred and those limits remained explicit.
+    after: Which strategy worked where, where did it stop helping, and which contexts remain unknown?
+      Keep a conditional choice rather than a universal favorite. Three ordinary attempts cannot establish
+      recovery or reliable use during crisis.
   review_guidance:
     repeat: Repeat the same bounded Chronic dysregulation and skill generalization design only when the
       context and burden remain appropriate.
-    adapt: Change the Chronic dysregulation and skill generalization medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Use accessible written, spoken or supported communication instead of a specific format. If
+      no suitable live contexts occur, rehearse an ordinary message and conversation privately; label
+      both rehearsals and leave real-world generalization untested. Severe or persistent dysregulation
+      calls for qualified care, not a harder practice challenge.
     stop: Stop Chronic dysregulation and skill generalization when the practice becomes coercive, unsafe,
       privacy-invasive, role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Chronic dysregulation and skill generalization
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Chronic dysregulation and skill generalization criteria were observed with
-      provenance and no adverse boundary signal in the selected context.
-    mixed: Some Chronic dysregulation and skill generalization criteria were observed while burden, support,
-      contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Chronic dysregulation and skill generalization
-      criterion, introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Chronic dysregulation and skill generalization action was deferred, not observed,
-      not applicable, stale, insufficiently bounded, or too confounded to interpret.
+    supportive: A message pause and a direct request were used in different ordinary situations; a third
+      event revealed that repeated rereading was unhelpful, so the person used a clear return plan.
+    mixed: Both strategies helped at low stress with familiar people, but no unfamiliar or higher-stress
+      context occurred and those limits remained explicit.
+    contradictory: The person provoked conflict to test a skill, intensified an unhelpful strategy or
+      claimed low-stress rehearsals proved crisis competence.
+    inconclusive: Two strategies were described but no real use was recorded, so generalization across
+      everyday situations remains untested.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Chronic dysregulation and skill generalization.
+    context_heading: Test two regulation options across ordinary contexts and notice their limits
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Chronic dysregulation
       and skill generalization.
   check_in_labels:
-    c0714_a1_primary: The bounded Chronic dysregulation and skill generalization criterion for action
-      1 was observed
+    c0714_a1_primary: 'Observed checks: prepare two strategies and the conditions in which each fits'
     c0714_a1_boundary: Action 1 stayed inside its stated Chronic dysregulation and skill generalization
       boundary
     c0714_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0714_a2_primary: The bounded Chronic dysregulation and skill generalization criterion for action
-      2 was observed
+    c0714_a2_primary: 'Observed checks: use both options during naturally different ordinary opportunities'
     c0714_a2_boundary: Action 2 stayed inside its stated Chronic dysregulation and skill generalization
       boundary
     c0714_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0714_a3_primary: The bounded Chronic dysregulation and skill generalization criterion for action
-      3 was observed
+    c0714_a3_primary: 'Observed checks: try a third opportunity and revise a strategy that reaches its
+      limit'
     c0714_a3_boundary: Action 3 stayed inside its stated Chronic dysregulation and skill generalization
       boundary
     c0714_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Chronic dysregulation
-    and skill generalization practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Which strategy worked where, where did it stop helping, and which contexts remain unknown?
+    Keep a conditional choice rather than a universal favorite. Three ordinary attempts cannot establish
+    recovery or reliable use during crisis. Completion is not mastery.
+  plain_language_evidence: A message pause and a direct request were used in different ordinary situations;
+    a third event revealed that repeated rereading was unhelpful, so the person used a clear return plan.
   display_order: 98

@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0709-HEALTHY-EMOTIONAL-EXPRESSION-01
 slug: c0709-healthy-emotional-expression-practice
-name: Bounded Healthy emotional expression Practice
+name: Express one difficult feeling and need to a suitable willing listener
 parent_competency_id: '07.09'
 domain_id: '07'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 07.09
-      (Healthy emotional expression); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 07.09; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,39 +34,42 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Healthy emotional expression through a qualified-support preparation bounded by the
-    canonical scope: Communicate feelings and needs appropriately rather than leaking them through withdrawal,
-    hostility, performance, or control.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can disclose a difficult
-    emotional truth to a trustworthy person with clarity and proportion. The protocol creates a small
-    opportunity to examine that target without treating completion as broad capability.'
+  purpose: Communicate a difficult emotional truth clearly and proportionately, with a concrete request
+    and room for the listener's boundaries.
+  why_recommended: Communicate a difficult emotional truth clearly and proportionately, with a concrete
+    request and room for the listener's boundaries.
   claims:
-  - statement: Using the canonical scope and evidence target for Healthy emotional expression is a traceable
-      product-design basis for a source-only draft protocol.
+  - statement: Communicate a difficult emotional truth clearly and proportionately, with a concrete request
+      and room for the listener's boundaries.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Healthy emotional expression practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Healthy emotional expression as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Healthy emotional
-    expression context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Healthy emotional
-    expression; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency, or dependence
-    for evidence.
+  readiness_considerations: Use text, sign, AAC, an interpreter or a culturally suitable indirect opening
+    that still makes the request understandable. A trusted communication partner may help convey your
+    words without deciding your feelings. Rehearsal is valid preparation; actual disclosure remains untested
+    until a suitable exchange occurs.
+  opportunity_considerations: 'Choose an ordinary feeling you are willing to share with someone who has
+    previously respected boundaries. Default example: repeated last-minute changes leave you disappointed,
+    and you would prefer earlier notice. If no suitable listener is available, use an unsent draft and
+    rehearsal; do not approach an unsafe person to satisfy the exercise.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Healthy emotional expression.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Choose an ordinary feeling you are willing to share with someone who has previously respected boundaries.
+    Default example: repeated last-minute changes leave you disappointed, and you would prefer earlier
+    notice. If no suitable listener is available, use an unsent draft and rehearsal; do not approach an
+    unsafe person to satisfy the exercise.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Healthy emotional expression instead
-    of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use text, sign, AAC, an interpreter or a culturally suitable indirect opening that still makes the
+    request understandable. A trusted communication partner may help convey your words without deciding
+    your feelings. Rehearsal is valid preparation; actual disclosure remains untested until a suitable
+    exchange occurs.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +81,29 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Healthy emotional expression
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-QUALIFIED-CONSULTATION
+  protocol_class: PF-RELATIONAL-CONVERSATION
   duration_days: 10
-  cadence: Complete three bounded Healthy emotional expression actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Healthy emotional expression; copy the canonical scope and evidence target
-    into a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Healthy
-    emotional expression. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Healthy emotional expression actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose an ordinary feeling you are willing to share with someone who has previously respected
+    boundaries. Default example: repeated last-minute changes leave you disappointed, and you would prefer
+    earlier notice. If no suitable listener is available, use an unsent draft and rehearsal; do not approach
+    an unsafe person to satisfy the exercise. Goal: Communicate a difficult emotional truth clearly and
+    proportionately, with a concrete request and room for the listener''s boundaries. Scope: One bounded
+    disclosure practices expression and listening. It does not require revealing trauma, making every
+    feeling public or proving that another person is trustworthy through a risky disclosure. Time and
+    effort: About 10 minutes to prepare, a brief agreed exchange and 10 minutes afterward. Adaptation:
+    Use text, sign, AAC, an interpreter or a culturally suitable indirect opening that still makes the
+    request understandable. A trusted communication partner may help convey your words without deciding
+    your feelings. Rehearsal is valid preparation; actual disclosure remains untested until a suitable
+    exchange occurs. Keep personal working notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use text, sign, AAC, an interpreter or a culturally suitable indirect opening that
+    still makes the request understandable. A trusted communication partner may help convey your words
+    without deciding your feelings. Rehearsal is valid preparation; actual disclosure remains untested
+    until a suitable exchange occurs.
+  expected_burden: About 10 minutes to prepare, a brief agreed exchange and 10 minutes afterward.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Healthy emotional expression protocol to rank worth, coerce participation, demand disclosure,
@@ -101,20 +111,27 @@ intervention:
   - Treating a completed Healthy emotional expression action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Healthy emotional expression situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Not therapy or diagnosis; severe or persistent symptoms require qualified mental-health or medical
-    care.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use text, sign,
+    AAC, an interpreter or a culturally suitable indirect opening that still makes the request understandable.
+    A trusted communication partner may help convey your words without deciding your feelings. Rehearsal
+    is valid preparation; actual disclosure remains untested until a suitable exchange occurs.
   actions:
   - stable_id: PRACTICE-COMP-0709-HEALTHY-EMOTIONAL-EXPRESSION-01-A1
     sequence: 1
-    title: Bound the qualified question for Healthy emotional expression
-    instructions: 'Turn Healthy emotional expression into one educational or planning question and identify
-      the qualification and jurisdiction needed to answer it. Use the canonical scope to separate general
-      learning from diagnosis, treatment, legal advice, financial advice, safeguarding decisions, or other
-      professional judgment: Communicate feelings and needs appropriately rather than leaking them through
-      withdrawal, hostility, performance, or control.'
+    title: Prepare a feeling statement with the right amount of disclosure
+    instructions: 'Write four parts: the specific event, your feeling, the need or value involved and
+      a feasible request. For the example: When plans change at the last minute, I feel disappointed and
+      unsettled. Predictability matters to me; could you let me know earlier when possible? Remove mind-reading,
+      global accusations and private details not needed for the request. Identify how the feeling might
+      otherwise leak out through unexplained withdrawal, hostility, acting cheerful for approval or attempts
+      to control. Choose one direct sentence to replace that pattern without requiring an elaborate emotional
+      performance.
+
+
+      Observation checks: Event feeling need and request are all explicit; The statement avoids mind-reading
+      and global accusation; Disclosure is limited to what the person freely chooses; A specific indirect
+      expression pattern is replaced. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -136,9 +153,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0709_a1_question_bounded
-        - c0709_a1_qualification_named
-        - c0709_a1_professional_boundary_explicit
+        - event_feeling_need_and_request_are_all_explicit
+        - the_statement_avoids_mind_reading_and_global_accusation
+        - disclosure_is_limited_to_what_the_person_freely_chooses
+        - a_specific_indirect_expression_pattern_is_replaced
       - measurement_id: c0709_a1_boundary
         kind: boolean
         role: supporting
@@ -155,12 +173,19 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0709-HEALTHY-EMOTIONAL-EXPRESSION-01-A2
     sequence: 2
-    title: Prepare minimum information for Healthy emotional expression
-    instructions: Create a privacy-minimized Healthy emotional expression consultation note containing
-      only the question, relevant category-level facts, current constraints, and desired decision. Omit
-      diagnoses, allegations, account numbers, credentials, protected work information, intimate detail,
-      and third-party identity unless a qualified professional lawfully requires it through an appropriate
-      channel.
+    title: Ask for listening space and communicate the chosen truth
+    instructions: 'Ask whether this is a suitable time for a short conversation or message, and whether
+      you want listening, advice or a practical answer. Share the prepared statement in your own words.
+      Allow the listener to say that now is not a good time or that they cannot meet the request. If you
+      are rehearsing, speak or write the statement and practice a response to Not now without pretending
+      consent was obtained. Do not increase the disclosure to force engagement, or treat the listener''s
+      different feelings as proof that your own were wrong.
+
+
+      Observation checks: The listener''s availability and willingness are checked; The feeling and concrete
+      request are actually communicated or explicitly rehearsed; The preferred kind of response is stated;
+      A refusal or different response can be accepted without pressure. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -182,9 +207,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0709_a2_minimum_information_only
-        - c0709_a2_sensitive_detail_excluded
-        - c0709_a2_decision_need_named
+        - the_listener_s_availability_and_willingness_are_checked
+        - the_feeling_and_concrete_request_are_actually_communicated_or_explicitly_rehearsed
+        - the_preferred_kind_of_response_is_stated
+        - a_refusal_or_different_response_can_be_accepted_without_pressure
       - measurement_id: c0709_a2_boundary
         kind: boolean
         role: supporting
@@ -201,12 +227,41 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0709-HEALTHY-EMOTIONAL-EXPRESSION-01-A3
     sequence: 3
-    title: Record a bounded Healthy emotional expression disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: Can disclose a difficult emotional truth to a trustworthy person with clarity
-      and proportion.'
+    title: Clarify what was understood and agree only what is mutual
+    instructions: 'Ask what the listener understood if they are willing, or summarize the practical answer
+      you received and invite correction. In the example, earlier notice when possible differs from a
+      promise that plans never change. Acknowledge any part you expressed unclearly and restate it once
+      without escalating. Record what was shared, what response actually occurred, what was mutually agreed
+      and what remains private or unresolved. Check whether the exchange replaced withdrawal, hostility,
+      performance or control with clearer communication. Do not equate being heard with having every request
+      granted.
+
+
+      Observation checks: Understanding is checked without demanding a particular emotional response;
+      Any agreement is specific and mutual; Unclear wording can be corrected proportionately; Being heard
+      is distinguished from having a request granted. Mark only what you observed. Missing, mixed and
+      negative results are valid; a deferred action is not completed.
+
+
+      Final review: Did you say what mattered in a form the listener could understand and freely respond
+      to? Keep the useful wording, clarify one ambiguity or choose a different support route. Disclosure
+      itself does not establish intimacy or trustworthiness.
+
+
+      Examples: Supportive: The person asked for a short conversation, named disappointment and requested
+      earlier notice; both agreed on a practical message when plans changed.
+
+
+      Mixed: The feeling was understood but earlier notice could not always be promised, so the person
+      retained that limit and considered their own planning options.
+
+
+      Contradictory: The disclosure demanded agreement, exposed unwanted private details or used tears
+      and accusations to override the listener''s refusal.
+
+
+      Inconclusive: The person rehearsed the statement alone and accurately recorded preparation, with
+      no claim of being heard by another person.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -222,14 +277,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0709_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0709_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - understanding_is_checked_without_demanding_a_particular_emotional_response
+        - any_agreement_is_specific_and_mutual
+        - unclear_wording_can_be_corrected_proportionately
+        - being_heard_is_distinguished_from_having_a_request_granted
       - measurement_id: c0709_a3_boundary
         kind: boolean
         role: supporting
@@ -250,16 +307,19 @@ intervention:
       Healthy emotional expression; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Healthy emotional expression; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - Use text, sign, AAC, an interpreter or a culturally suitable indirect opening that still makes the
+      request understandable. A trusted communication partner may help convey your words without deciding
+      your feelings. Rehearsal is valid preparation; actual disclosure remains untested until a suitable
+      exchange occurs.
     cultural_context:
     - Adapt the expression of Healthy emotional expression to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Healthy emotional expression opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use text, sign, AAC, an interpreter or a culturally suitable indirect opening that still makes the
+      request understandable. A trusted communication partner may help convey your words without deciding
+      your feelings. Rehearsal is valid preparation; actual disclosure remains untested until a suitable
+      exchange occurs.
   pause_conditions:
   - Pause Healthy emotional expression when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -291,10 +351,8 @@ evidence_and_scoring:
   - c0709_a3_boundary
   - c0709_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Healthy emotional expression action exceeded consent, authority, privacy, qualification, role,
-    burden, or safety boundaries.
-  - The evidence contradicted the intended Healthy emotional expression criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - The disclosure demanded agreement, exposed unwanted private details or used tears and accusations
+    to override the listener's refusal.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Healthy emotional expression explicitly; support can enable access and never reduces dignity or
     silently changes the typed value.
@@ -305,14 +363,23 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Healthy emotional expression rules withhold observations older than 90 days;
     no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can disclose a difficult emotional truth to a trustworthy person with clarity and proportion.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Healthy emotional expression requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Prepare a feeling statement with the right amount of disclosure. Observed
+    checks: Event feeling need and request are all explicit; The statement avoids mind-reading and global
+    accusation; Disclosure is limited to what the person freely chooses; A specific indirect expression
+    pattern is replaced. Action 2: Ask for listening space and communicate the chosen truth. Observed
+    checks: The listener''s availability and willingness are checked; The feeling and concrete request
+    are actually communicated or explicitly rehearsed; The preferred kind of response is stated; A refusal
+    or different response can be accepted without pressure. Action 3: Clarify what was understood and
+    agree only what is mutual. Observed checks: Understanding is checked without demanding a particular
+    emotional response; Any agreement is specific and mutual; Unclear wording can be corrected proportionately;
+    Being heard is distinguished from having a request granted.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. The person rehearsed the statement alone and accurately
+    recorded preparation, with no claim of being heard by another person.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Healthy
     emotional expression contribution under typed evaluation; protocol performance remains distinct and
     is never counted twice.
@@ -322,9 +389,8 @@ evidence_and_scoring:
   - L07
   - L23
   - L25
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Healthy emotional expression evidence.
@@ -332,12 +398,21 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for healthy emotional expression action was attempted or explicitly
-    deferred.
-  - The prepare minimum information for healthy emotional expression action was attempted or explicitly
-    deferred.
-  - The record a bounded healthy emotional expression disposition action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Prepare a feeling statement with the right amount of disclosure. Observed checks: Event
+    feeling need and request are all explicit; The statement avoids mind-reading and global accusation;
+    Disclosure is limited to what the person freely chooses; A specific indirect expression pattern is
+    replaced.'
+  - 'Action 2: Ask for listening space and communicate the chosen truth. Observed checks: The listener''s
+    availability and willingness are checked; The feeling and concrete request are actually communicated
+    or explicitly rehearsed; The preferred kind of response is stated; A refusal or different response
+    can be accepted without pressure.'
+  - 'Action 3: Clarify what was understood and agree only what is mutual. Observed checks: Understanding
+    is checked without demanding a particular emotional response; Any agreement is specific and mutual;
+    Unclear wording can be corrected proportionately; Being heard is distinguished from having a request
+    granted.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -346,56 +421,61 @@ completion_and_review:
     - c0709_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Healthy emotional expression only when the initial context remained
-    safe, the evidence criteria were usable, burden was acceptable, and a new context can be named without
-    assuming transfer.
-  transfer_limit: Three bounded actions do not establish Healthy emotional expression across roles, cultures,
-    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: Did you say what mattered in a form the listener could understand and freely respond
+    to? Keep the useful wording, clarify one ambiguity or choose a different support route. Disclosure
+    itself does not establish intimacy or trustworthiness.
+  transfer_limit: One bounded disclosure practices expression and listening. It does not require revealing
+    trauma, making every feeling public or proving that another person is trustworthy through a risky
+    disclosure.
   reflection:
-    before: What does Healthy emotional expression require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Healthy emotional expression criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can disclose a difficult emotional truth to a trustworthy
-      person with clarity and proportion.', what contradiction or missing context matters most, and should
-      this Healthy emotional expression design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Communicate a difficult emotional truth clearly
+      and proportionately, with a concrete request and room for the listener''s boundaries.'
+    during: Which checks have actually been observed? The feeling was understood but earlier notice could
+      not always be promised, so the person retained that limit and considered their own planning options.
+    after: Did you say what mattered in a form the listener could understand and freely respond to? Keep
+      the useful wording, clarify one ambiguity or choose a different support route. Disclosure itself
+      does not establish intimacy or trustworthiness.
   review_guidance:
     repeat: Repeat the same bounded Healthy emotional expression design only when the context and burden
       remain appropriate.
-    adapt: Change the Healthy emotional expression medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: Use text, sign, AAC, an interpreter or a culturally suitable indirect opening that still makes
+      the request understandable. A trusted communication partner may help convey your words without deciding
+      your feelings. Rehearsal is valid preparation; actual disclosure remains untested until a suitable
+      exchange occurs.
     stop: Stop Healthy emotional expression when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Healthy emotional expression questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Healthy emotional expression criteria were observed with provenance and no
-      adverse boundary signal in the selected context.
-    mixed: Some Healthy emotional expression criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Healthy emotional expression criterion, introduced
-      harm or coercion, or showed the design was not workable.
-    inconclusive: The Healthy emotional expression action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The person asked for a short conversation, named disappointment and requested earlier
+      notice; both agreed on a practical message when plans changed.
+    mixed: The feeling was understood but earlier notice could not always be promised, so the person retained
+      that limit and considered their own planning options.
+    contradictory: The disclosure demanded agreement, exposed unwanted private details or used tears and
+      accusations to override the listener's refusal.
+    inconclusive: The person rehearsed the statement alone and accurately recorded preparation, with no
+      claim of being heard by another person.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Healthy emotional expression.
+    context_heading: Express one difficult feeling and need to a suitable willing listener
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Healthy emotional
       expression.
   check_in_labels:
-    c0709_a1_primary: The bounded Healthy emotional expression criterion for action 1 was observed
+    c0709_a1_primary: 'Observed checks: prepare a feeling statement with the right amount of disclosure'
     c0709_a1_boundary: Action 1 stayed inside its stated Healthy emotional expression boundary
     c0709_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0709_a2_primary: The bounded Healthy emotional expression criterion for action 2 was observed
+    c0709_a2_primary: 'Observed checks: ask for listening space and communicate the chosen truth'
     c0709_a2_boundary: Action 2 stayed inside its stated Healthy emotional expression boundary
     c0709_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0709_a3_primary: The bounded Healthy emotional expression criterion for action 3 was observed
+    c0709_a3_primary: 'Observed checks: clarify what was understood and agree only what is mutual'
     c0709_a3_boundary: Action 3 stayed inside its stated Healthy emotional expression boundary
     c0709_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Healthy emotional
-    expression practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Did you say what mattered in a form the listener could understand and freely respond
+    to? Keep the useful wording, clarify one ambiguity or choose a different support route. Disclosure
+    itself does not establish intimacy or trustworthiness. Completion is not mastery.
+  plain_language_evidence: The person asked for a short conversation, named disappointment and requested
+    earlier notice; both agreed on a practical message when plans changed.
   display_order: 93

@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0712-RESILIENCE-AND-POST-SETBACK-ADAPTATION-01
 slug: c0712-resilience-and-post-setback-adaptation-practice
-name: Bounded Resilience and post-setback adaptation Practice
+name: Use a setback to redesign and retry one meaningful attempt
 parent_competency_id: '07.12'
 domain_id: '07'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 07.12
-      (Resilience and post-setback adaptation); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 07.12; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,39 +34,40 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Resilience and post-setback adaptation through a qualified-support preparation bounded
-    by the canonical scope: Separate facts, responsibility, lessons, support, recovery, and the next experiment
-    after failure or disruption.'
-  why_recommended: 'The parent competency identifies this limited evidence target: A setback produces
-    a concrete adjustment and renewed attempt. The protocol creates a small opportunity to examine that
-    target without treating completion as broad capability.'
+  purpose: Separate facts, responsibility, lessons, support and recovery needs, then make and evaluate
+    a concrete adjustment after a setback.
+  why_recommended: Separate facts, responsibility, lessons, support and recovery needs, then make and
+    evaluate a concrete adjustment after a setback.
   claims:
-  - statement: Using the canonical scope and evidence target for Resilience and post-setback adaptation
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Separate facts, responsibility, lessons, support and recovery needs, then make and evaluate
+      a concrete adjustment after a setback.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Resilience and post-setback adaptation practice fit
     the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Resilience and post-setback adaptation as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Resilience and post-setback
-    adaptation context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Resilience
-    and post-setback adaptation; do not manufacture conflict, deprivation, exposure, disclosure, danger,
-    urgency, or dependence for evidence.
+  readiness_considerations: Use dictation, an accessible checklist or a willing helper. A small supplied
+    writing task is a valid adaptation exercise but does not reproduce resilience after major loss. Do
+    not create a stressful failure or withhold support to make a retry harder.
+  opportunity_considerations: 'Use a modest real setback, or perform this supplied exercise: in two minutes
+    draft a clear invitation containing a purpose, time, place or access route, and a way to reply. Check
+    it against those four requirements. If nothing is missing, use the case variation that the proposed
+    time is unavailable; do not claim your first draft failed.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Resilience and post-setback adaptation.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use a modest real setback, or perform this supplied exercise: in two minutes draft a clear invitation
+    containing a purpose, time, place or access route, and a way to reply. Check it against those four
+    requirements. If nothing is missing, use the case variation that the proposed time is unavailable;
+    do not claim your first draft failed.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Resilience and post-setback adaptation
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use dictation, an accessible checklist or a willing helper. A small supplied writing task is a valid
+    adaptation exercise but does not reproduce resilience after major loss. Do not create a stressful
+    failure or withhold support to make a retry harder.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +79,27 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Resilience and post-setback
     adaptation as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-QUALIFIED-CONSULTATION
+  protocol_class: PF-BEHAVIORAL-EXPERIMENT
   duration_days: 10
-  cadence: Complete three bounded Resilience and post-setback adaptation actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Resilience and post-setback adaptation; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Resilience
-    and post-setback adaptation. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Resilience and post-setback adaptation
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use a modest real setback, or perform this supplied exercise: in two minutes draft a clear invitation
+    containing a purpose, time, place or access route, and a way to reply. Check it against those four
+    requirements. If nothing is missing, use the case variation that the proposed time is unavailable;
+    do not claim your first draft failed. Goal: Separate facts, responsibility, lessons, support and recovery
+    needs, then make and evaluate a concrete adjustment after a setback. Scope: One revised attempt practices
+    adaptation. It does not require enduring a harmful goal, overcoming structural barriers alone or interpreting
+    every disruption as personal failure. Time and effort: About 20 minutes to reconstruct and redesign,
+    one bounded retry and a short review. Adaptation: Use dictation, an accessible checklist or a willing
+    helper. A small supplied writing task is a valid adaptation exercise but does not reproduce resilience
+    after major loss. Do not create a stressful failure or withhold support to make a retry harder. Keep
+    personal working notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use dictation, an accessible checklist or a willing helper. A small supplied writing
+    task is a valid adaptation exercise but does not reproduce resilience after major loss. Do not create
+    a stressful failure or withhold support to make a retry harder.
+  expected_burden: About 20 minutes to reconstruct and redesign, one bounded retry and a short review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Resilience and post-setback adaptation protocol to rank worth, coerce participation, demand
@@ -101,20 +107,26 @@ intervention:
   - Treating a completed Resilience and post-setback adaptation action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Resilience and post-setback adaptation situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Not therapy or diagnosis; severe or persistent symptoms require qualified mental-health or medical
-    care.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use dictation,
+    an accessible checklist or a willing helper. A small supplied writing task is a valid adaptation exercise
+    but does not reproduce resilience after major loss. Do not create a stressful failure or withhold
+    support to make a retry harder.
   actions:
   - stable_id: PRACTICE-COMP-0712-RESILIENCE-AND-POST-SETBACK-ADAPTATION-01-A1
     sequence: 1
-    title: Bound the qualified question for Resilience and post-setback adaptation
-    instructions: 'Turn Resilience and post-setback adaptation into one educational or planning question
-      and identify the qualification and jurisdiction needed to answer it. Use the canonical scope to
-      separate general learning from diagnosis, treatment, legal advice, financial advice, safeguarding
-      decisions, or other professional judgment: Separate facts, responsibility, lessons, support, recovery,
-      and the next experiment after failure or disruption.'
+    title: Reconstruct the setback without collapsing every cause into blame
+    instructions: 'Describe the intended result, what actually happened and the evidence for the gap.
+      Sort contributing factors into choices you controlled, constraints you did not control and questions
+      still unresolved. For the invitation, an omitted reply route differs from a recipient''s unavailable
+      time. Name your actual responsibility and one recoverable lesson without attributing motives to
+      others. Add what recovery requires before a useful retry, such as a break, clarification or reduced
+      scope. Do not make exhaustion, shame or immediately working harder the price of showing resilience.
+
+
+      Observation checks: The intended and actual outcomes are concretely compared; Controlled factors
+      constraints and unknowns are separated; Responsibility and a usable lesson are stated proportionately;
+      Recovery needs are included before the next attempt. Mark only what you observed. Missing, mixed
+      and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -136,9 +148,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0712_a1_question_bounded
-        - c0712_a1_qualification_named
-        - c0712_a1_professional_boundary_explicit
+        - the_intended_and_actual_outcomes_are_concretely_compared
+        - controlled_factors_constraints_and_unknowns_are_separated
+        - responsibility_and_a_usable_lesson_are_stated_proportionately
+        - recovery_needs_are_included_before_the_next_attempt
       - measurement_id: c0712_a1_boundary
         kind: boolean
         role: supporting
@@ -155,12 +168,20 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0712-RESILIENCE-AND-POST-SETBACK-ADAPTATION-01-A2
     sequence: 2
-    title: Prepare minimum information for Resilience and post-setback adaptation
-    instructions: Create a privacy-minimized Resilience and post-setback adaptation consultation note
-      containing only the question, relevant category-level facts, current constraints, and desired decision.
-      Omit diagnoses, allegations, account numbers, credentials, protected work information, intimate
-      detail, and third-party identity unless a qualified professional lawfully requires it through an
-      appropriate channel.
+    title: Change the mechanism that contributed to the setback
+    instructions: 'Select one adjustment with a reason it addresses the observed gap. In the invitation
+      example, use a four-item check before sending if information was omitted; ask about availability
+      before proposing a single fixed time if timing was the problem. Identify useful support, such as
+      a willing reader checking clarity, and ask only if needed. Define the next experiment''s outcome
+      before attempting it: all four details are understandable, or a mutually available option is identified.
+      If the original goal is no longer worthwhile or safe, explain a reasoned change rather than repeating
+      it to prove perseverance.
+
+
+      Observation checks: The adjustment addresses an observed cause rather than generic effort; Support
+      is considered as a legitimate resource; The retry has a concrete outcome criterion; Continuing the
+      original goal is checked for suitability. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -182,9 +203,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0712_a2_minimum_information_only
-        - c0712_a2_sensitive_detail_excluded
-        - c0712_a2_decision_need_named
+        - the_adjustment_addresses_an_observed_cause_rather_than_generic_effort
+        - support_is_considered_as_a_legitimate_resource
+        - the_retry_has_a_concrete_outcome_criterion
+        - continuing_the_original_goal_is_checked_for_suitability
       - measurement_id: c0712_a2_boundary
         kind: boolean
         role: supporting
@@ -201,11 +223,40 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0712-RESILIENCE-AND-POST-SETBACK-ADAPTATION-01-A3
     sequence: 3
-    title: Record a bounded Resilience and post-setback adaptation disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: A setback produces a concrete adjustment and renewed attempt.'
+    title: Retry with the adjustment and compare the actual outcomes
+    instructions: 'Carry out the revised attempt. For the supplied exercise, produce a new invitation
+      and check each required detail; if using the unavailable-time variation, write a message offering
+      two feasible alternatives and a way to suggest another. A private draft tests completeness, not
+      whether anyone attends. Compare the new outcome with the first, including any remaining defect.
+      Retain the adjustment, change it again or close the goal for an explicit reason. Record the renewed
+      attempt itself separately from success, so an informative second setback is not hidden.
+
+
+      Observation checks: A revised attempt is actually performed; The stated criterion is applied to
+      its result; Draft quality is distinguished from real-world uptake; Remaining defects inform a concrete
+      next decision. Mark only what you observed. Missing, mixed and negative results are valid; a deferred
+      action is not completed.
+
+
+      Final review: Which adjustment changed the result, what support or recovery mattered and what remains
+      outside your control? Keep, revise or end the approach with reasons. Persistence alone is not proof
+      that a goal is wise.
+
+
+      Examples: Supportive: A missing reply route was identified, a four-part check was added and the
+      second invitation contained all necessary information.
+
+
+      Mixed: The revised invitation was complete but no shared time was available; communication improved
+      while the real-world constraint remained.
+
+
+      Contradictory: The person repeated the same approach with more pressure, blamed themselves for another
+      person''s availability or ignored the need for recovery.
+
+
+      Inconclusive: A lesson about trying harder was written without a specific adjustment or a renewed
+      attempt.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -221,14 +272,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0712_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0712_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - a_revised_attempt_is_actually_performed
+        - the_stated_criterion_is_applied_to_its_result
+        - draft_quality_is_distinguished_from_real_world_uptake
+        - remaining_defects_inform_a_concrete_next_decision
       - measurement_id: c0712_a3_boundary
         kind: boolean
         role: supporting
@@ -249,17 +302,17 @@ intervention:
       Resilience and post-setback adaptation; no purchase, subscription, travel, credential, or public
       artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Resilience and post-setback adaptation; assistive technology, interpretation, a support
-      person, and a deferred action are valid without penalty.
+    - Use dictation, an accessible checklist or a willing helper. A small supplied writing task is a valid
+      adaptation exercise but does not reproduce resilience after major loss. Do not create a stressful
+      failure or withhold support to make a retry harder.
     cultural_context:
     - Adapt the expression of Resilience and post-setback adaptation to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Resilience and post-setback adaptation opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use dictation, an accessible checklist or a willing helper. A small supplied writing task is a valid
+      adaptation exercise but does not reproduce resilience after major loss. Do not create a stressful
+      failure or withhold support to make a retry harder.
   pause_conditions:
   - Pause Resilience and post-setback adaptation when capacity, consent, authority, privacy, access, care
     duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the
@@ -291,10 +344,8 @@ evidence_and_scoring:
   - c0712_a3_boundary
   - c0712_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Resilience and post-setback adaptation action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Resilience and post-setback adaptation criterion, depended
-    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - The person repeated the same approach with more pressure, blamed themselves for another person's availability
+    or ignored the need for recovery.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Resilience and post-setback adaptation explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -305,14 +356,22 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Resilience and post-setback adaptation rules withhold observations older than
     90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—A setback produces a concrete adjustment and renewed attempt.—not completion, confidence, conformity,
-    output, independence, or worth.
-  evidence_quality_rubric: Quality for Resilience and post-setback adaptation requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Reconstruct the setback without collapsing every cause into blame. Observed
+    checks: The intended and actual outcomes are concretely compared; Controlled factors constraints and
+    unknowns are separated; Responsibility and a usable lesson are stated proportionately; Recovery needs
+    are included before the next attempt. Action 2: Change the mechanism that contributed to the setback.
+    Observed checks: The adjustment addresses an observed cause rather than generic effort; Support is
+    considered as a legitimate resource; The retry has a concrete outcome criterion; Continuing the original
+    goal is checked for suitability. Action 3: Retry with the adjustment and compare the actual outcomes.
+    Observed checks: A revised attempt is actually performed; The stated criterion is applied to its result;
+    Draft quality is distinguished from real-world uptake; Remaining defects inform a concrete next decision.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A lesson about trying harder was written without a
+    specific adjustment or a renewed attempt.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Resilience
     and post-setback adaptation contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -321,9 +380,8 @@ evidence_and_scoring:
   - L07
   - L10
   - L11
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Resilience and post-setback adaptation evidence.
@@ -331,12 +389,19 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for resilience and post-setback adaptation action was attempted or
-    explicitly deferred.
-  - The prepare minimum information for resilience and post-setback adaptation action was attempted or
-    explicitly deferred.
-  - The record a bounded resilience and post-setback adaptation disposition action preserved a limited
-    conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Reconstruct the setback without collapsing every cause into blame. Observed checks: The
+    intended and actual outcomes are concretely compared; Controlled factors constraints and unknowns
+    are separated; Responsibility and a usable lesson are stated proportionately; Recovery needs are included
+    before the next attempt.'
+  - 'Action 2: Change the mechanism that contributed to the setback. Observed checks: The adjustment addresses
+    an observed cause rather than generic effort; Support is considered as a legitimate resource; The
+    retry has a concrete outcome criterion; Continuing the original goal is checked for suitability.'
+  - 'Action 3: Retry with the adjustment and compare the actual outcomes. Observed checks: A revised attempt
+    is actually performed; The stated criterion is applied to its result; Draft quality is distinguished
+    from real-world uptake; Remaining defects inform a concrete next decision.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -345,58 +410,59 @@ completion_and_review:
     - c0712_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Resilience and post-setback adaptation only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Resilience and post-setback adaptation across
-    roles, cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: Which adjustment changed the result, what support or recovery mattered and what
+    remains outside your control? Keep, revise or end the approach with reasons. Persistence alone is
+    not proof that a goal is wise.
+  transfer_limit: One revised attempt practices adaptation. It does not require enduring a harmful goal,
+    overcoming structural barriers alone or interpreting every disruption as personal failure.
   reflection:
-    before: What does Resilience and post-setback adaptation require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Resilience and post-setback adaptation criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'A setback produces a concrete adjustment and renewed attempt.',
-      what contradiction or missing context matters most, and should this Resilience and post-setback
-      adaptation design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Separate facts, responsibility, lessons, support
+      and recovery needs, then make and evaluate a concrete adjustment after a setback.'
+    during: Which checks have actually been observed? The revised invitation was complete but no shared
+      time was available; communication improved while the real-world constraint remained.
+    after: Which adjustment changed the result, what support or recovery mattered and what remains outside
+      your control? Keep, revise or end the approach with reasons. Persistence alone is not proof that
+      a goal is wise.
   review_guidance:
     repeat: Repeat the same bounded Resilience and post-setback adaptation design only when the context
       and burden remain appropriate.
-    adapt: Change the Resilience and post-setback adaptation medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Use dictation, an accessible checklist or a willing helper. A small supplied writing task is
+      a valid adaptation exercise but does not reproduce resilience after major loss. Do not create a
+      stressful failure or withhold support to make a retry harder.
     stop: Stop Resilience and post-setback adaptation when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Resilience and post-setback adaptation
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Resilience and post-setback adaptation criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Resilience and post-setback adaptation criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Resilience and post-setback adaptation criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Resilience and post-setback adaptation action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: A missing reply route was identified, a four-part check was added and the second invitation
+      contained all necessary information.
+    mixed: The revised invitation was complete but no shared time was available; communication improved
+      while the real-world constraint remained.
+    contradictory: The person repeated the same approach with more pressure, blamed themselves for another
+      person's availability or ignored the need for recovery.
+    inconclusive: A lesson about trying harder was written without a specific adjustment or a renewed
+      attempt.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Resilience and post-setback adaptation.
+    context_heading: Use a setback to redesign and retry one meaningful attempt
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Resilience
       and post-setback adaptation.
   check_in_labels:
-    c0712_a1_primary: The bounded Resilience and post-setback adaptation criterion for action 1 was observed
+    c0712_a1_primary: 'Observed checks: reconstruct the setback without collapsing every cause into blame'
     c0712_a1_boundary: Action 1 stayed inside its stated Resilience and post-setback adaptation boundary
     c0712_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0712_a2_primary: The bounded Resilience and post-setback adaptation criterion for action 2 was observed
+    c0712_a2_primary: 'Observed checks: change the mechanism that contributed to the setback'
     c0712_a2_boundary: Action 2 stayed inside its stated Resilience and post-setback adaptation boundary
     c0712_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0712_a3_primary: The bounded Resilience and post-setback adaptation criterion for action 3 was observed
+    c0712_a3_primary: 'Observed checks: retry with the adjustment and compare the actual outcomes'
     c0712_a3_boundary: Action 3 stayed inside its stated Resilience and post-setback adaptation boundary
     c0712_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Resilience and post-setback
-    adaptation practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Which adjustment changed the result, what support or recovery mattered and what remains
+    outside your control? Keep, revise or end the approach with reasons. Persistence alone is not proof
+    that a goal is wise. Completion is not mastery.
+  plain_language_evidence: A missing reply route was identified, a four-part check was added and the second
+    invitation contained all necessary information.
   display_order: 96

@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0701-EMOTIONAL-VOCABULARY-AND-DIFFERENTIATION-01
 slug: c0701-emotional-vocabulary-and-differentiation-practice
-name: Bounded Emotional vocabulary and differentiation Practice
+name: Describe a difficult feeling precisely enough to choose a response
 parent_competency_id: '07.01'
 domain_id: '07'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 07.01
-      (Emotional vocabulary and differentiation); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 07.01; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,39 +34,38 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Emotional vocabulary and differentiation through a qualified-support preparation
-    bounded by the canonical scope: Name emotions, intensity, bodily sensations, triggers, meanings, and
-    action urges with precision.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can distinguish similar
-    states such as anger, hurt, shame, fear, envy, grief, and exhaustion. The protocol creates a small
-    opportunity to examine that target without treating completion as broad capability.'
+  purpose: Separate emotions, physical sensations, interpretations and action urges, then choose a response
+    that fits the actual concern.
+  why_recommended: Separate emotions, physical sensations, interpretations and action urges, then choose
+    a response that fits the actual concern.
   claims:
-  - statement: Using the canonical scope and evidence target for Emotional vocabulary and differentiation
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Separate emotions, physical sensations, interpretations and action urges, then choose a
+      response that fits the actual concern.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Emotional vocabulary and differentiation practice
     fit the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Emotional vocabulary and differentiation as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Emotional vocabulary
-    and differentiation context, understand the source-only status, and stop without losing safety, care,
-    employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Emotional
-    vocabulary and differentiation; do not manufacture conflict, deprivation, exposure, disclosure, danger,
-    urgency, or dependence for evidence.
+  readiness_considerations: Use familiar words in any language, pictures, intensity words or a communication
+    partner who does not select feelings for you. Bodily sensations can remain unknown. A fictional comparison
+    exercises vocabulary and reasoning, not live emotional regulation.
+  opportunity_considerations: 'Use a private note or voice memo and a recent manageable moment, or this
+    supplied case: a friend cancels a visit; you feel hot and tired, want to send a sharp message, and
+    think you do not matter. The reason for cancellation is unknown. No distressing memory is required.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Emotional vocabulary and differentiation.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use a private note or voice memo and a recent manageable moment, or this supplied case: a friend
+    cancels a visit; you feel hot and tired, want to send a sharp message, and think you do not matter.
+    The reason for cancellation is unknown. No distressing memory is required.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Emotional vocabulary and differentiation
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use familiar words in any language, pictures, intensity words or a communication partner who does
+    not select feelings for you. Bodily sensations can remain unknown. A fictional comparison exercises
+    vocabulary and reasoning, not live emotional regulation.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +77,28 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Emotional vocabulary and differentiation
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-QUALIFIED-CONSULTATION
+  protocol_class: PF-KNOWLEDGE-APPLICATION
   duration_days: 10
-  cadence: Complete three bounded Emotional vocabulary and differentiation actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Emotional vocabulary and differentiation; copy the canonical scope and
-    evidence target into a private working note; define the action boundary, valid supports, privacy limit,
-    and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Emotional
-    vocabulary and differentiation. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Emotional vocabulary and differentiation
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use a private note or voice memo and a recent manageable moment, or this supplied case: a friend
+    cancels a visit; you feel hot and tired, want to send a sharp message, and think you do not matter.
+    The reason for cancellation is unknown. No distressing memory is required. Goal: Separate emotions,
+    physical sensations, interpretations and action urges, then choose a response that fits the actual
+    concern. Scope: Two ordinary moments exercise emotional differentiation. Labels are working descriptions,
+    not diagnoses or evidence that an interpretation of another person is true. Time and effort: About
+    15 minutes for the first description and 10 minutes for a second ordinary moment or case variation.
+    Adaptation: Use familiar words in any language, pictures, intensity words or a communication partner
+    who does not select feelings for you. Bodily sensations can remain unknown. A fictional comparison
+    exercises vocabulary and reasoning, not live emotional regulation. Keep personal working notes outside
+    the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use familiar words in any language, pictures, intensity words or a communication
+    partner who does not select feelings for you. Bodily sensations can remain unknown. A fictional comparison
+    exercises vocabulary and reasoning, not live emotional regulation.
+  expected_burden: About 15 minutes for the first description and 10 minutes for a second ordinary moment
+    or case variation.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Emotional vocabulary and differentiation protocol to rank worth, coerce participation, demand
@@ -101,20 +106,27 @@ intervention:
   - Treating a completed Emotional vocabulary and differentiation action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Emotional vocabulary and differentiation situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Not therapy or diagnosis; severe or persistent symptoms require qualified mental-health or medical
-    care.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use familiar
+    words in any language, pictures, intensity words or a communication partner who does not select feelings
+    for you. Bodily sensations can remain unknown. A fictional comparison exercises vocabulary and reasoning,
+    not live emotional regulation.
   actions:
   - stable_id: PRACTICE-COMP-0701-EMOTIONAL-VOCABULARY-AND-DIFFERENTIATION-01-A1
     sequence: 1
-    title: Bound the qualified question for Emotional vocabulary and differentiation
-    instructions: 'Turn Emotional vocabulary and differentiation into one educational or planning question
-      and identify the qualification and jurisdiction needed to answer it. Use the canonical scope to
-      separate general learning from diagnosis, treatment, legal advice, financial advice, safeguarding
-      decisions, or other professional judgment: Name emotions, intensity, bodily sensations, triggers,
-      meanings, and action urges with precision.'
+    title: Separate what happened from what the moment seemed to mean
+    instructions: 'Write six short lines: the observable event; possible emotions; their mild, moderate
+      or strong intensity; bodily sensations or unknown; the meaning you gave the event; and the action
+      urge. For the supplied case, cancellation is the event, feeling unimportant is an interpretation,
+      heat is a sensation and sending a sharp reply is an urge. Do not turn I feel ignored into proof
+      of the friend''s intention. Allow several feelings and different intensities to coexist. If using
+      the fictional case, mark inferred feelings as possibilities rather than claiming to know the person''s
+      inner state.
+
+
+      Observation checks: The observable event is separated from interpretation; Emotions and intensity
+      are described provisionally; Sensations are distinguished from action urges; Unknown intentions
+      remain unknown. Mark only what you observed. Missing, mixed and negative results are valid; a deferred
+      action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -136,9 +148,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0701_a1_question_bounded
-        - c0701_a1_qualification_named
-        - c0701_a1_professional_boundary_explicit
+        - the_observable_event_is_separated_from_interpretation
+        - emotions_and_intensity_are_described_provisionally
+        - sensations_are_distinguished_from_action_urges
+        - unknown_intentions_remain_unknown
       - measurement_id: c0701_a1_boundary
         kind: boolean
         role: supporting
@@ -155,12 +168,20 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0701-EMOTIONAL-VOCABULARY-AND-DIFFERENTIATION-01-A2
     sequence: 2
-    title: Prepare minimum information for Emotional vocabulary and differentiation
-    instructions: Create a privacy-minimized Emotional vocabulary and differentiation consultation note
-      containing only the question, relevant category-level facts, current constraints, and desired decision.
-      Omit diagnoses, allegations, account numbers, credentials, protected work information, intimate
-      detail, and third-party identity unless a qualified professional lawfully requires it through an
-      appropriate channel.
+    title: Distinguish neighboring feelings by the concern each points toward
+    instructions: 'Compare these possible meanings: anger about a broken agreement; hurt about disconnection;
+      shame about seeing oneself as unwanted; fear about losing the relationship; envy about someone else
+      receiving time; grief about an actual loss; and exhaustion about depleted capacity. These are prompts,
+      not definitions that fit everyone. Select the one or two best-supported descriptions and explain
+      why a nearby label fits less well. In the cancellation case, no evidence yet establishes envy or
+      a permanent loss. Write one question that could clarify the situation, such as whether the friend
+      wants to reschedule, without demanding that they certify your worth.
+
+
+      Observation checks: All seven neighboring states are considered; Selected labels have case-specific
+      reasons; An unsupported label is left uncertain; A clarifying question addresses the actual concern.
+      Mark only what you observed. Missing, mixed and negative results are valid; a deferred action is
+      not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -182,9 +203,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0701_a2_minimum_information_only
-        - c0701_a2_sensitive_detail_excluded
-        - c0701_a2_decision_need_named
+        - all_seven_neighboring_states_are_considered
+        - selected_labels_have_case_specific_reasons
+        - an_unsupported_label_is_left_uncertain
+        - a_clarifying_question_addresses_the_actual_concern
       - measurement_id: c0701_a2_boundary
         kind: boolean
         role: supporting
@@ -201,12 +223,41 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0701-EMOTIONAL-VOCABULARY-AND-DIFFERENTIATION-01-A3
     sequence: 3
-    title: Record a bounded Emotional vocabulary and differentiation disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: Can distinguish similar states such as anger, hurt, shame, fear, envy,
-      grief, and exhaustion.'
+    title: Check whether greater precision changes the next response
+    instructions: 'Choose a proportionate response to the leading concern: ask about another date for
+      disconnection, state an agreement that needs repair, or postpone an optional discussion until rested.
+      Draft or make that response in a suitable real context. Repeat the six-line description at a second
+      ordinary moment. For a fictional variation, the friend explains they are ill and offers another
+      date; reconsider what changes and what remains unknown. Compare the original urge with the chosen
+      response. Keep an unchanged feeling visible; a clearer description can be useful without immediately
+      changing mood.
+
+
+      Observation checks: The response fits the identified concern; A second moment or explicit case variation
+      is examined; New information can revise the interpretation; Mood change is not required to claim
+      clearer description. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.
+
+
+      Final review: Which distinction changed your response, and which label remains tentative? Keep the
+      useful question or response and revisit it after new information. Two descriptions do not establish
+      emotional accuracy across relationships.
+
+
+      Examples: Supportive: A cancelled visit was first called anger; distinguishing hurt and exhaustion
+      led to a clear rescheduling request instead of an accusation.
+
+
+      Mixed: The person identified hurt but still did not know the reason for cancellation, so the interpretation
+      stayed provisional.
+
+
+      Contradictory: A feeling of rejection was recorded as proof that the friend intended harm, and the
+      label justified a hostile reply.
+
+
+      Inconclusive: A list of emotion words was copied without connecting any word to an event, meaning
+      or possible response.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -222,14 +273,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0701_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0701_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - the_response_fits_the_identified_concern
+        - a_second_moment_or_explicit_case_variation_is_examined
+        - new_information_can_revise_the_interpretation
+        - mood_change_is_not_required_to_claim_clearer_description
       - measurement_id: c0701_a3_boundary
         kind: boolean
         role: supporting
@@ -250,17 +303,17 @@ intervention:
       Emotional vocabulary and differentiation; no purchase, subscription, travel, credential, or public
       artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Emotional vocabulary and differentiation; assistive technology, interpretation, a support
-      person, and a deferred action are valid without penalty.
+    - Use familiar words in any language, pictures, intensity words or a communication partner who does
+      not select feelings for you. Bodily sensations can remain unknown. A fictional comparison exercises
+      vocabulary and reasoning, not live emotional regulation.
     cultural_context:
     - Adapt the expression of Emotional vocabulary and differentiation to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Emotional vocabulary and differentiation opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use familiar words in any language, pictures, intensity words or a communication partner who does
+      not select feelings for you. Bodily sensations can remain unknown. A fictional comparison exercises
+      vocabulary and reasoning, not live emotional regulation.
   pause_conditions:
   - Pause Emotional vocabulary and differentiation when capacity, consent, authority, privacy, access,
     care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make
@@ -292,10 +345,8 @@ evidence_and_scoring:
   - c0701_a3_boundary
   - c0701_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Emotional vocabulary and differentiation action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Emotional vocabulary and differentiation criterion, depended
-    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - A feeling of rejection was recorded as proof that the friend intended harm, and the label justified
+    a hostile reply.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Emotional vocabulary and differentiation explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -306,14 +357,22 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Emotional vocabulary and differentiation rules withhold observations older than
     90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can distinguish similar states such as anger, hurt, shame, fear, envy, grief, and exhaustion.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Emotional vocabulary and differentiation requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Separate what happened from what the moment seemed to mean. Observed
+    checks: The observable event is separated from interpretation; Emotions and intensity are described
+    provisionally; Sensations are distinguished from action urges; Unknown intentions remain unknown.
+    Action 2: Distinguish neighboring feelings by the concern each points toward. Observed checks: All
+    seven neighboring states are considered; Selected labels have case-specific reasons; An unsupported
+    label is left uncertain; A clarifying question addresses the actual concern. Action 3: Check whether
+    greater precision changes the next response. Observed checks: The response fits the identified concern;
+    A second moment or explicit case variation is examined; New information can revise the interpretation;
+    Mood change is not required to claim clearer description.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A list of emotion words was copied without connecting
+    any word to an event, meaning or possible response.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Emotional
     vocabulary and differentiation contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -321,9 +380,8 @@ evidence_and_scoring:
   recommendation_target_lever_ids:
   - L06
   - L23
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Emotional vocabulary and differentiation evidence.
@@ -331,12 +389,18 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for emotional vocabulary and differentiation action was attempted
-    or explicitly deferred.
-  - The prepare minimum information for emotional vocabulary and differentiation action was attempted
-    or explicitly deferred.
-  - The record a bounded emotional vocabulary and differentiation disposition action preserved a limited
-    conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Separate what happened from what the moment seemed to mean. Observed checks: The observable
+    event is separated from interpretation; Emotions and intensity are described provisionally; Sensations
+    are distinguished from action urges; Unknown intentions remain unknown.'
+  - 'Action 2: Distinguish neighboring feelings by the concern each points toward. Observed checks: All
+    seven neighboring states are considered; Selected labels have case-specific reasons; An unsupported
+    label is left uncertain; A clarifying question addresses the actual concern.'
+  - 'Action 3: Check whether greater precision changes the next response. Observed checks: The response
+    fits the identified concern; A second moment or explicit case variation is examined; New information
+    can revise the interpretation; Mood change is not required to claim clearer description.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -345,62 +409,59 @@ completion_and_review:
     - c0701_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Emotional vocabulary and differentiation only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Emotional vocabulary and differentiation across
-    roles, cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: Which distinction changed your response, and which label remains tentative? Keep
+    the useful question or response and revisit it after new information. Two descriptions do not establish
+    emotional accuracy across relationships.
+  transfer_limit: Two ordinary moments exercise emotional differentiation. Labels are working descriptions,
+    not diagnoses or evidence that an interpretation of another person is true.
   reflection:
-    before: What does Emotional vocabulary and differentiation require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Emotional vocabulary and differentiation criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can distinguish similar states such as anger, hurt, shame,
-      fear, envy, grief, and exhaustion.', what contradiction or missing context matters most, and should
-      this Emotional vocabulary and differentiation design be repeated, adapted, deferred, stopped, or
-      referred?
+    before: 'What would count as doing this honestly? Goal: Separate emotions, physical sensations, interpretations
+      and action urges, then choose a response that fits the actual concern.'
+    during: Which checks have actually been observed? The person identified hurt but still did not know
+      the reason for cancellation, so the interpretation stayed provisional.
+    after: Which distinction changed your response, and which label remains tentative? Keep the useful
+      question or response and revisit it after new information. Two descriptions do not establish emotional
+      accuracy across relationships.
   review_guidance:
     repeat: Repeat the same bounded Emotional vocabulary and differentiation design only when the context
       and burden remain appropriate.
-    adapt: Change the Emotional vocabulary and differentiation medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Use familiar words in any language, pictures, intensity words or a communication partner who
+      does not select feelings for you. Bodily sensations can remain unknown. A fictional comparison exercises
+      vocabulary and reasoning, not live emotional regulation.
     stop: Stop Emotional vocabulary and differentiation when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Emotional vocabulary and differentiation
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Emotional vocabulary and differentiation criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Emotional vocabulary and differentiation criteria were observed while burden, support,
-      contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Emotional vocabulary and differentiation criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Emotional vocabulary and differentiation action was deferred, not observed, not
-      applicable, stale, insufficiently bounded, or too confounded to interpret.
+    supportive: A cancelled visit was first called anger; distinguishing hurt and exhaustion led to a
+      clear rescheduling request instead of an accusation.
+    mixed: The person identified hurt but still did not know the reason for cancellation, so the interpretation
+      stayed provisional.
+    contradictory: A feeling of rejection was recorded as proof that the friend intended harm, and the
+      label justified a hostile reply.
+    inconclusive: A list of emotion words was copied without connecting any word to an event, meaning
+      or possible response.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Emotional vocabulary and differentiation.
+    context_heading: Describe a difficult feeling precisely enough to choose a response
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Emotional
       vocabulary and differentiation.
   check_in_labels:
-    c0701_a1_primary: The bounded Emotional vocabulary and differentiation criterion for action 1 was
-      observed
+    c0701_a1_primary: 'Observed checks: separate what happened from what the moment seemed to mean'
     c0701_a1_boundary: Action 1 stayed inside its stated Emotional vocabulary and differentiation boundary
     c0701_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0701_a2_primary: The bounded Emotional vocabulary and differentiation criterion for action 2 was
-      observed
+    c0701_a2_primary: 'Observed checks: distinguish neighboring feelings by the concern each points toward'
     c0701_a2_boundary: Action 2 stayed inside its stated Emotional vocabulary and differentiation boundary
     c0701_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0701_a3_primary: The bounded Emotional vocabulary and differentiation criterion for action 3 was
-      observed
+    c0701_a3_primary: 'Observed checks: check whether greater precision changes the next response'
     c0701_a3_boundary: Action 3 stayed inside its stated Emotional vocabulary and differentiation boundary
     c0701_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Emotional vocabulary
-    and differentiation practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Which distinction changed your response, and which label remains tentative? Keep the
+    useful question or response and revisit it after new information. Two descriptions do not establish
+    emotional accuracy across relationships. Completion is not mastery.
+  plain_language_evidence: A cancelled visit was first called anger; distinguishing hurt and exhaustion
+    led to a clear rescheduling request instead of an accusation.
   display_order: 85

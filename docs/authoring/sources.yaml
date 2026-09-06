@@ -1,5 +1,37 @@
 # Inspected reference support; exercises themselves are original product designs.
 sources:
+  - source_id: SRC-NHS-GRADUAL-FEAR-APPROACH
+    title: Facing your fears
+    authors_or_issuing_body: National Health Service Every Mind Matters
+    publication_date: 'undated current page'
+    locator: https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/facing-your-fears/
+    locator_kind: external_url
+    content_sha256: null
+    source_class: official_guidance
+    evidence_strength: authoritative
+    supported_claim: NHS self-help guidance describes approaching feared situations gradually and repeating manageable steps rather than beginning with the most difficult situation.
+    claim_classification: safety_precaution
+    limitations: Supports only the gradual-approach principle. The product-authored ordinary communication experiment is not the NHS treatment protocol, does not use its fear-reduction threshold, does not remove necessary supports and is not validated anxiety treatment or trauma exposure.
+    applicable_competency_ids: ['07.04']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Original brief paraphrase with attribution; no copied worksheet, symptom scale, video or therapeutic sequence.
+  - source_id: SRC-NIMH-SELF-HELP-LIMITS
+    title: 'My Mental Health: Do I Need Help?'
+    authors_or_issuing_body: National Institute of Mental Health
+    publication_date: '2025 revision'
+    locator: https://www.nimh.nih.gov/health/publications/my-mental-health-do-i-need-help
+    locator_kind: external_url
+    content_sha256: null
+    source_class: official_guidance
+    evidence_strength: authoritative
+    supported_claim: Worsening symptoms and severe persistent distress affecting usual activities call for professional help; suicidal thoughts or urges to self-harm call for immediate help.
+    claim_classification: safety_precaution
+    limitations: Public help-seeking guidance, not a diagnosis or validated product screening tool. The source's duration examples are not instructions to wait during danger or deterioration. It does not validate the original emotional-awareness, hope or strategy-transfer exercises.
+    applicable_competency_ids: ['07.02', '07.04', '07.06', '07.11', '07.13', '07.14']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Original concise summary with attribution; publication text is identified as public domain, but no images or reproduced screening instrument are used.
   - source_id: SRC-NIMH-PTSD-LITERACY
     title: Post-Traumatic Stress Disorder
     authors_or_issuing_body: National Institute of Mental Health
@@ -28,7 +60,7 @@ sources:
     supported_claim: US life-threatening emergencies call for 911; 988 provides suicide and emotional-crisis support by call or text, and ordinary mental health care requires an appropriate provider.
     claim_classification: safety_precaution
     limitations: US public resource guidance only. Local availability, accessibility, eligibility and other countries' services need current verification. A resource card or rehearsal is not a clinical assessment or emergency-response qualification.
-    applicable_competency_ids: ['06.02', '06.14']
+    applicable_competency_ids: ['06.02', '06.14', '07.13']
     applicable_protocol_ids: []
     date_accessed: '2026-09-06'
     license_or_quotation_constraints: Citation and brief original paraphrase only; no service endorsement by the product or reproduced screening tool.
@@ -172,7 +204,7 @@ sources:
     supported_claim: Grief responses vary between people and can follow losses other than bereavement; support is available when coping is difficult.
     claim_classification: safety_precaution
     limitations: Supports acknowledging varied responses and appropriate support. It does not validate this educational exercise, prescribe a grief timetable or establish readiness for personal loss reflection.
-    applicable_competency_ids: ['04.01', '04.04', '04.06']
+    applicable_competency_ids: ['04.01', '04.04', '04.06', '07.06']
     applicable_protocol_ids: []
     date_accessed: '2026-09-06'
     license_or_quotation_constraints: Link and brief original summary only; no copied therapeutic worksheet, symptom measure or intervention.

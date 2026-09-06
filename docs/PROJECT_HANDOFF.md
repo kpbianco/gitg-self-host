@@ -7,42 +7,38 @@ representative of its underlying goal, self-contained and usable by different
 individuals. The owner specifically redirected this continuation away from
 PR/merge work and back to that content requirement.
 
-M6J-01 through M6J-03 supplied 77 authored practices in domains 01 through 05
-and 13. M6J-04 adds all 14 practices in domain 06, vulnerability, trauma,
-disability, neurodiversity and dependency. Its 42 distinct action instructions,
-168 observable checks and 56 worked outcome examples bring the total to 91
-authored practices with 292 explicitly rewrite-pending. No automated count
-represents human review or empirical acceptance. The competency-by-competency
-relationship to canonical scope is recorded in
-`docs/authoring/M6J-04-SCOPE-MAP.md`. The complete new content is in
-`docs/authoring/M6J-04-PRACTICE-READER.md`.
+M6J-01 through M6J-04 supplied 91 authored practices in domains 01 through 06
+and 13. M6J-05 adds all 14 domain 07 practices for emotional maturity,
+resilience and mental well-being: 42 distinct action instructions, 168 checks
+and 56 worked outcome examples. Total authoring is 105/383, with exactly 278
+rewrite-pending. This count is not human review or empirical acceptance.
+See `docs/authoring/M6J-05-SCOPE-MAP.md` for every canonical facet and
+`docs/authoring/M6J-05-PRACTICE-READER.md` for the full new text.
 
-Each entry supplies a usable default, necessary materials, a goal, distinct
-ordered tasks, concrete observations, adaptations, limits and meaningful
-review. The care agreement retains the recipient's choices; access redesign
-produces a testable notice; trauma literacy uses a fictional case and a real
-professional support route. No personal trauma, diagnosis, treatment change,
-disability simulation, forced independence or disclosure is required. Fictional
-preparation is not represented as actual recovery, care or crisis response.
-Ten inspected references provide limited factual, safety and design support;
-they do not validate the original exercises or establish local legal authority.
+Each practice supplies a concrete default, materials, distinct ordered tasks,
+observable checks, adaptations, scope limits and meaningful review. Emotional
+labels remain hypotheses; pauses return to the issue; ordinary anxiety
+experiments require real repeated attempts; grief has no prescribed timetable;
+help plans distinguish preparation, contact and care received. Two new inspected
+NHS/NIMH references and two rechecked existing references support narrow factual
+claims, not the effectiveness of the original exercises or specialist acceptance.
 
-Authoring inputs in `docs/authoring/exercises/` compile into the canonical YAML
-consumed by the application. They are not a competing runtime catalog. All
-383 protocol identities, 1,151 action identities, parent mappings, activation,
-assessment, ranking, scoring mathematics and explicit human closeout remain
-unchanged. The other 369 practice packages are byte-identical to the M6J-03
-baseline `b8188ab66bc129bb87d2ee8d3e6a617a46139788`. Active/paused
-practice import protection and historical snapshot replay remain mandatory.
+Authoring inputs compile into the canonical runtime practice YAML. The other
+369 packages must remain byte-identical to M6J-04 baseline
+`0a3939a468dac1e9ffd9451c012968e88840930c`. All 383 protocol identities,
+1,151 action identities, parent mappings, activation, assessment, ranking,
+scoring mathematics and explicit human closeout remain unchanged. Ongoing
+practice import protection and immutable historical replay remain mandatory.
+See the M6J-05 evidence record for exact executed and unverified checks.
 
-Continue through the remaining domains with the same scope-mapping and
-self-contained instruction standard. Do not revert to noun-swapped exercises
-or substitute publication status for content progress. Domain 07, emotional
-maturity, resilience and mental well-being, is the next unwritten domain in
-canonical order; the earlier eight pre-frontier packages
-still need explicit review against this standard. The two original concerns
-are not collectively closed: scoring software exists, content remediation is
-partial, and specialist/source/empirical acceptance remains open.
+Continue with domain 08, Attention, Desire, Temperance, and Discipline, using
+the same explicit scope maps and standalone content standard. Its 08.02
+legacy runtime projection is frozen: enrich its source-only guide without
+silently changing compatible runtime evidence or claiming the legacy package
+has been rewritten. The earlier eight pre-frontier packages still need explicit
+standards review. Do not substitute publication status for content progress.
+The two original concerns are not collectively closed: scoring software exists,
+content remediation is partial and specialist/source/empirical acceptance remains open.
 
 ## What this project is
 Grounded Growth is a personalized human-development curriculum and adaptive practice system. It began as an 876-item list of traits/tasks, was reconstructed into a pluralist 383-competency curriculum, mapped to 37 trainable developmental levers, and paired with a 50-item assessment that initializes provisional lever states and task rankings.

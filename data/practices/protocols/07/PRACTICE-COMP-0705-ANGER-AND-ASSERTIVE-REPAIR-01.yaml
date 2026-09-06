@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0705-ANGER-AND-ASSERTIVE-REPAIR-01
 slug: c0705-anger-and-assertive-repair-practice
-name: Bounded Anger and assertive repair Practice
+name: Turn one angry reaction into a clear boundary and proportionate repair
 parent_competency_id: '07.05'
 domain_id: '07'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 07.05
-      (Anger and assertive repair); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 07.05; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,39 +34,38 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Anger and assertive repair through a qualified-support preparation bounded by the
-    canonical scope: Distinguish violated values or boundaries from ego threat, reduce escalation, and
-    communicate directly.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Expresses anger proportionately
-    without intimidation, suppression, or passive aggression. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Distinguish a real violation from an injured self-image, reduce escalation and state a concrete
+    concern without intimidation, suppression or indirect punishment.
+  why_recommended: Distinguish a real violation from an injured self-image, reduce escalation and state
+    a concrete concern without intimidation, suppression or indirect punishment.
   claims:
-  - statement: Using the canonical scope and evidence target for Anger and assertive repair is a traceable
-      product-design basis for a source-only draft protocol.
+  - statement: Distinguish a real violation from an injured self-image, reduce escalation and state a
+      concrete concern without intimidation, suppression or indirect punishment.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Anger and assertive repair practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Anger and assertive repair as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Anger and assertive
-    repair context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Anger and
-    assertive repair; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Use a written exchange, an agreed mediator or rehearsal when direct discussion
+    is unsuitable. For coercion or credible retaliation, use an appropriate support route instead of confrontation.
+    A boundary can be clear in different cultural communication styles without requiring personal humiliation.
+  opportunity_considerations: 'Use a manageable disagreement with a reasonably safe counterpart, or this
+    case: a shared item was used without asking and returned late; you want to call the person selfish.
+    Paper or an unsent message is enough for rehearsal. Do not manufacture a violation.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Anger and assertive repair.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use a manageable disagreement with a reasonably safe counterpart, or this case: a shared item was
+    used without asking and returned late; you want to call the person selfish. Paper or an unsent message
+    is enough for rehearsal. Do not manufacture a violation.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Anger and assertive repair instead
-    of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a written exchange, an agreed mediator or rehearsal when direct discussion is unsuitable. For
+    coercion or credible retaliation, use an appropriate support route instead of confrontation. A boundary
+    can be clear in different cultural communication styles without requiring personal humiliation.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +77,28 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Anger and assertive repair
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-QUALIFIED-CONSULTATION
+  protocol_class: PF-RELATIONAL-CONVERSATION
   duration_days: 10
-  cadence: Complete three bounded Anger and assertive repair actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Anger and assertive repair; copy the canonical scope and evidence target
-    into a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Anger and
-    assertive repair. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Anger and assertive repair actions, and
-    review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use a manageable disagreement with a reasonably safe counterpart, or this case: a shared item
+    was used without asking and returned late; you want to call the person selfish. Paper or an unsent
+    message is enough for rehearsal. Do not manufacture a violation. Goal: Distinguish a real violation
+    from an injured self-image, reduce escalation and state a concrete concern without intimidation, suppression
+    or indirect punishment. Scope: One ordinary disagreement tests assertive communication and responsibility
+    for impact. It is not mediation for abuse or a requirement to confront a person who may retaliate.
+    Time and effort: About 15 minutes of preparation, one suitable conversation or rehearsal, and 10 minutes
+    afterward. Adaptation: Use a written exchange, an agreed mediator or rehearsal when direct discussion
+    is unsuitable. For coercion or credible retaliation, use an appropriate support route instead of confrontation.
+    A boundary can be clear in different cultural communication styles without requiring personal humiliation.
+    Keep personal working notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a written exchange, an agreed mediator or rehearsal when direct discussion
+    is unsuitable. For coercion or credible retaliation, use an appropriate support route instead of confrontation.
+    A boundary can be clear in different cultural communication styles without requiring personal humiliation.
+  expected_burden: About 15 minutes of preparation, one suitable conversation or rehearsal, and 10 minutes
+    afterward.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Anger and assertive repair protocol to rank worth, coerce participation, demand disclosure,
@@ -101,20 +106,26 @@ intervention:
   - Treating a completed Anger and assertive repair action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Anger and assertive repair situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Not therapy or diagnosis; severe or persistent symptoms require qualified mental-health or medical
-    care.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a written
+    exchange, an agreed mediator or rehearsal when direct discussion is unsuitable. For coercion or credible
+    retaliation, use an appropriate support route instead of confrontation. A boundary can be clear in
+    different cultural communication styles without requiring personal humiliation.
   actions:
   - stable_id: PRACTICE-COMP-0705-ANGER-AND-ASSERTIVE-REPAIR-01-A1
     sequence: 1
-    title: Bound the qualified question for Anger and assertive repair
-    instructions: 'Turn Anger and assertive repair into one educational or planning question and identify
-      the qualification and jurisdiction needed to answer it. Use the canonical scope to separate general
-      learning from diagnosis, treatment, legal advice, financial advice, safeguarding decisions, or other
-      professional judgment: Distinguish violated values or boundaries from ego threat, reduce escalation,
-      and communicate directly.'
+    title: Locate the violation without treating anger as proof of intent
+    instructions: 'Write what happened, the agreement or value affected, the impact and what remains unknown.
+      In the case, permission and access to the item are at issue; the person''s character is not established.
+      Then examine the ego-threat possibility: are you upset because an agreement was broken, because
+      you were not given special deference, or both? An injured self-image does not erase a real violation,
+      and a strong feeling does not create one. Choose a concrete outcome such as return by an agreed
+      time or asking permission next time, rather than making the other person feel small.
+
+
+      Observation checks: The concern is anchored to an event and value or agreement; Impact is separated
+      from inferred intent; Possible ego threat is considered without dismissing a real boundary; The
+      desired outcome is concrete and proportionate. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -136,9 +147,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0705_a1_question_bounded
-        - c0705_a1_qualification_named
-        - c0705_a1_professional_boundary_explicit
+        - the_concern_is_anchored_to_an_event_and_value_or_agreement
+        - impact_is_separated_from_inferred_intent
+        - possible_ego_threat_is_considered_without_dismissing_a_real_boundary
+        - the_desired_outcome_is_concrete_and_proportionate
       - measurement_id: c0705_a1_boundary
         kind: boolean
         role: supporting
@@ -155,11 +167,19 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0705-ANGER-AND-ASSERTIVE-REPAIR-01-A2
     sequence: 2
-    title: Prepare minimum information for Anger and assertive repair
-    instructions: Create a privacy-minimized Anger and assertive repair consultation note containing only
-      the question, relevant category-level facts, current constraints, and desired decision. Omit diagnoses,
-      allegations, account numbers, credentials, protected work information, intimate detail, and third-party
-      identity unless a qualified professional lawfully requires it through an appropriate channel.
+    title: State the concern directly while reducing escalation
+    instructions: 'Before a suitable exchange, remove threats, insults, sarcasm and unrelated past grievances
+      from the opening. If needed, take a brief communicated pause with a return time. Say or rehearse:
+      When the item was used without asking and returned late, I could not use it as planned. I am angry
+      about that. Please ask before borrowing it and agree a return time. Invite correction of the facts
+      and listen to the reply without surrendering the boundary automatically. Keep volume, distance and
+      communication format appropriate; anger need not be disguised as a joke or expressed through withdrawal.
+
+
+      Observation checks: The statement names behavior impact feeling and request; Intimidation and indirect
+      punishment are removed; A factual correction can be heard; The boundary remains explicit without
+      requiring agreement. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -181,9 +201,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0705_a2_minimum_information_only
-        - c0705_a2_sensitive_detail_excluded
-        - c0705_a2_decision_need_named
+        - the_statement_names_behavior_impact_feeling_and_request
+        - intimidation_and_indirect_punishment_are_removed
+        - a_factual_correction_can_be_heard
+        - the_boundary_remains_explicit_without_requiring_agreement
       - measurement_id: c0705_a2_boundary
         kind: boolean
         role: supporting
@@ -200,12 +221,41 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0705-ANGER-AND-ASSERTIVE-REPAIR-01-A3
     sequence: 3
-    title: Record a bounded Anger and assertive repair disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: Expresses anger proportionately without intimidation, suppression, or passive
-      aggression.'
+    title: Repair your contribution and follow through on an agreed boundary
+    instructions: 'Record the reply and whether a workable agreement exists. If you insulted or threatened
+      earlier, acknowledge the specific act and offer a concrete correction without making the apology
+      conditional on their apology. In the case, a proportionate follow-through could be declining further
+      lending until a return arrangement is reliable; damaging their property would not repair the issue.
+      In rehearsal, try both an accepting response and a refusal, then state what you can choose yourself.
+      Review whether your expression clarified the concern, escalated it or concealed it. Do not count
+      a drafted agreement as accepted by another person.
+
+
+      Observation checks: The other person''s actual or rehearsed response is recorded accurately; Any
+      harmful contribution receives a specific repair; Follow-through stays within the person''s own choices;
+      Agreement is not inferred from an unsent draft or silence. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.
+
+
+      Final review: Was anger expressed in a way that protected the legitimate value and respected the
+      other person''s agency? Identify one repair, boundary or unresolved issue to carry forward. An unsuccessful
+      negotiation does not mean the feeling was illegitimate.
+
+
+      Examples: Supportive: The person named the borrowing problem, acknowledged an earlier insult and
+      agreed a permission-and-return arrangement without attacking character.
+
+
+      Mixed: The concern was stated clearly but the counterpart refused an agreement; further lending
+      was declined without threats.
+
+
+      Contradictory: The person used anger to demand submission, retaliated against property or hid the
+      concern behind sarcasm and punishment.
+
+
+      Inconclusive: The person wrote that anger was valid but did not identify a violation, state a request
+      or rehearse a response.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -221,14 +271,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0705_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0705_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - the_other_person_s_actual_or_rehearsed_response_is_recorded_accurately
+        - any_harmful_contribution_receives_a_specific_repair
+        - follow_through_stays_within_the_person_s_own_choices
+        - agreement_is_not_inferred_from_an_unsent_draft_or_silence
       - measurement_id: c0705_a3_boundary
         kind: boolean
         role: supporting
@@ -249,16 +301,17 @@ intervention:
       Anger and assertive repair; no purchase, subscription, travel, credential, or public artifact is
       required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Anger and assertive repair; assistive technology, interpretation, a support person, and
-      a deferred action are valid without penalty.
+    - Use a written exchange, an agreed mediator or rehearsal when direct discussion is unsuitable. For
+      coercion or credible retaliation, use an appropriate support route instead of confrontation. A boundary
+      can be clear in different cultural communication styles without requiring personal humiliation.
     cultural_context:
     - Adapt the expression of Anger and assertive repair to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Anger and assertive repair opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use a written exchange, an agreed mediator or rehearsal when direct discussion is unsuitable. For
+      coercion or credible retaliation, use an appropriate support route instead of confrontation. A boundary
+      can be clear in different cultural communication styles without requiring personal humiliation.
   pause_conditions:
   - Pause Anger and assertive repair when capacity, consent, authority, privacy, access, care duties,
     uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the next action
@@ -290,10 +343,8 @@ evidence_and_scoring:
   - c0705_a3_boundary
   - c0705_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Anger and assertive repair action exceeded consent, authority, privacy, qualification, role, burden,
-    or safety boundaries.
-  - The evidence contradicted the intended Anger and assertive repair criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - The person used anger to demand submission, retaliated against property or hid the concern behind
+    sarcasm and punishment.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Anger and assertive repair explicitly; support can enable access and never reduces dignity or
     silently changes the typed value.
@@ -303,14 +354,23 @@ evidence_and_scoring:
     origins are rejected and later repetitions use the typed contract's explicit diminishing multipliers.
   recency_rule: Generated Anger and assertive repair rules withhold observations older than 90 days; no
     unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Expresses anger proportionately without intimidation, suppression, or passive aggression.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Anger and assertive repair requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Locate the violation without treating anger as proof of intent. Observed
+    checks: The concern is anchored to an event and value or agreement; Impact is separated from inferred
+    intent; Possible ego threat is considered without dismissing a real boundary; The desired outcome
+    is concrete and proportionate. Action 2: State the concern directly while reducing escalation. Observed
+    checks: The statement names behavior impact feeling and request; Intimidation and indirect punishment
+    are removed; A factual correction can be heard; The boundary remains explicit without requiring agreement.
+    Action 3: Repair your contribution and follow through on an agreed boundary. Observed checks: The
+    other person''s actual or rehearsed response is recorded accurately; Any harmful contribution receives
+    a specific repair; Follow-through stays within the person''s own choices; Agreement is not inferred
+    from an unsent draft or silence.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. The person wrote that anger was valid but did not identify
+    a violation, state a request or rehearse a response.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Anger
     and assertive repair contribution under typed evaluation; protocol performance remains distinct and
     is never counted twice.
@@ -320,9 +380,8 @@ evidence_and_scoring:
   - L23
   - L25
   - L29
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Anger and assertive repair evidence.
@@ -330,12 +389,19 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for anger and assertive repair action was attempted or explicitly
-    deferred.
-  - The prepare minimum information for anger and assertive repair action was attempted or explicitly
-    deferred.
-  - The record a bounded anger and assertive repair disposition action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Locate the violation without treating anger as proof of intent. Observed checks: The concern
+    is anchored to an event and value or agreement; Impact is separated from inferred intent; Possible
+    ego threat is considered without dismissing a real boundary; The desired outcome is concrete and proportionate.'
+  - 'Action 2: State the concern directly while reducing escalation. Observed checks: The statement names
+    behavior impact feeling and request; Intimidation and indirect punishment are removed; A factual correction
+    can be heard; The boundary remains explicit without requiring agreement.'
+  - 'Action 3: Repair your contribution and follow through on an agreed boundary. Observed checks: The
+    other person''s actual or rehearsed response is recorded accurately; Any harmful contribution receives
+    a specific repair; Follow-through stays within the person''s own choices; Agreement is not inferred
+    from an unsent draft or silence.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -344,56 +410,60 @@ completion_and_review:
     - c0705_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Anger and assertive repair only when the initial context remained
-    safe, the evidence criteria were usable, burden was acceptable, and a new context can be named without
-    assuming transfer.
-  transfer_limit: Three bounded actions do not establish Anger and assertive repair across roles, cultures,
-    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: Was anger expressed in a way that protected the legitimate value and respected
+    the other person's agency? Identify one repair, boundary or unresolved issue to carry forward. An
+    unsuccessful negotiation does not mean the feeling was illegitimate.
+  transfer_limit: One ordinary disagreement tests assertive communication and responsibility for impact.
+    It is not mediation for abuse or a requirement to confront a person who may retaliate.
   reflection:
-    before: What does Anger and assertive repair require in this exact context, what remains outside my
-      role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Anger and assertive repair criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Expresses anger proportionately without intimidation, suppression,
-      or passive aggression.', what contradiction or missing context matters most, and should this Anger
-      and assertive repair design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Distinguish a real violation from an injured
+      self-image, reduce escalation and state a concrete concern without intimidation, suppression or
+      indirect punishment.'
+    during: Which checks have actually been observed? The concern was stated clearly but the counterpart
+      refused an agreement; further lending was declined without threats.
+    after: Was anger expressed in a way that protected the legitimate value and respected the other person's
+      agency? Identify one repair, boundary or unresolved issue to carry forward. An unsuccessful negotiation
+      does not mean the feeling was illegitimate.
   review_guidance:
     repeat: Repeat the same bounded Anger and assertive repair design only when the context and burden
       remain appropriate.
-    adapt: Change the Anger and assertive repair medium, scope, support, timing, criteria, or context
-      while preserving provenance and the narrower evidence claim.
+    adapt: Use a written exchange, an agreed mediator or rehearsal when direct discussion is unsuitable.
+      For coercion or credible retaliation, use an appropriate support route instead of confrontation.
+      A boundary can be clear in different cultural communication styles without requiring personal humiliation.
     stop: Stop Anger and assertive repair when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Anger and assertive repair questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Anger and assertive repair criteria were observed with provenance and no adverse
-      boundary signal in the selected context.
-    mixed: Some Anger and assertive repair criteria were observed while burden, support, contextual change,
-      or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Anger and assertive repair criterion, introduced
-      harm or coercion, or showed the design was not workable.
-    inconclusive: The Anger and assertive repair action was deferred, not observed, not applicable, stale,
-      insufficiently bounded, or too confounded to interpret.
+    supportive: The person named the borrowing problem, acknowledged an earlier insult and agreed a permission-and-return
+      arrangement without attacking character.
+    mixed: The concern was stated clearly but the counterpart refused an agreement; further lending was
+      declined without threats.
+    contradictory: The person used anger to demand submission, retaliated against property or hid the
+      concern behind sarcasm and punishment.
+    inconclusive: The person wrote that anger was valid but did not identify a violation, state a request
+      or rehearse a response.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Anger and assertive repair.
+    context_heading: Turn one angry reaction into a clear boundary and proportionate repair
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Anger and
       assertive repair.
   check_in_labels:
-    c0705_a1_primary: The bounded Anger and assertive repair criterion for action 1 was observed
+    c0705_a1_primary: 'Observed checks: locate the violation without treating anger as proof of intent'
     c0705_a1_boundary: Action 1 stayed inside its stated Anger and assertive repair boundary
     c0705_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0705_a2_primary: The bounded Anger and assertive repair criterion for action 2 was observed
+    c0705_a2_primary: 'Observed checks: state the concern directly while reducing escalation'
     c0705_a2_boundary: Action 2 stayed inside its stated Anger and assertive repair boundary
     c0705_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0705_a3_primary: The bounded Anger and assertive repair criterion for action 3 was observed
+    c0705_a3_primary: 'Observed checks: repair your contribution and follow through on an agreed boundary'
     c0705_a3_boundary: Action 3 stayed inside its stated Anger and assertive repair boundary
     c0705_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Anger and assertive
-    repair practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Was anger expressed in a way that protected the legitimate value and respected the
+    other person's agency? Identify one repair, boundary or unresolved issue to carry forward. An unsuccessful
+    negotiation does not mean the feeling was illegitimate. Completion is not mastery.
+  plain_language_evidence: The person named the borrowing problem, acknowledged an earlier insult and
+    agreed a permission-and-return arrangement without attacking character.
   display_order: 89

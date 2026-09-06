@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0707-SHAME-GUILT-AND-REMORSE-01
 slug: c0707-shame-guilt-and-remorse-practice
-name: Bounded Shame, guilt, and remorse Practice
+name: Replace a verdict on your whole self with responsibility and repair
 parent_competency_id: '07.07'
 domain_id: '07'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 07.07
-      (Shame, guilt, and remorse); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 07.07; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,38 +34,38 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Shame, guilt, and remorse through a qualified-support preparation bounded by the
-    canonical scope: Separate global self-condemnation from responsibility for specific behavior.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Uses guilt to repair
-    conduct while refusing shame''s claim that change is impossible. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Separate global self-condemnation from a specific responsibility, make a proportionate repair
+    and identify conduct that can change.
+  why_recommended: Separate global self-condemnation from a specific responsibility, make a proportionate
+    repair and identify conduct that can change.
   claims:
-  - statement: Using the canonical scope and evidence target for Shame, guilt, and remorse is a traceable
-      product-design basis for a source-only draft protocol.
+  - statement: Separate global self-condemnation from a specific responsibility, make a proportionate
+      repair and identify conduct that can change.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Shame, guilt, and remorse practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Shame, guilt, and remorse as not applicable, consciously unchosen, or
     deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Shame, guilt, and
-    remorse context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Shame, guilt,
-    and remorse; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency, or dependence
-    for evidence.
+  readiness_considerations: Use a private draft or an accessible communication channel. An apology is
+    not required when the supposed obligation was coercive or no wrongdoing is established. Seek appropriate
+    professional advice for high-stakes responsibility questions; this exercise cannot adjudicate them.
+  opportunity_considerations: 'Use an ordinary lapse or this supplied case: you promised to return a borrowed
+    book yesterday, forgot and have not yet told its owner. You now think you are an entirely unreliable
+    person. Do not select abuse, a legal dispute or a traumatic event for this exercise.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Shame, guilt, and remorse.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use an ordinary lapse or this supplied case: you promised to return a borrowed book yesterday, forgot
+    and have not yet told its owner. You now think you are an entirely unreliable person. Do not select
+    abuse, a legal dispute or a traumatic event for this exercise.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Shame, guilt, and remorse instead
-    of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a private draft or an accessible communication channel. An apology is not required when the supposed
+    obligation was coercive or no wrongdoing is established. Seek appropriate professional advice for
+    high-stakes responsibility questions; this exercise cannot adjudicate them.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -78,21 +77,28 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Shame, guilt, and remorse
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-QUALIFIED-CONSULTATION
+  protocol_class: PF-BEHAVIORAL-EXPERIMENT
   duration_days: 10
-  cadence: Complete three bounded Shame, guilt, and remorse actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Shame, guilt, and remorse; copy the canonical scope and evidence target
-    into a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Shame, guilt,
-    and remorse. Do not store private prose, names, identities, diagnoses, allegations, credentials, account
-    data, protected work information, intimate detail, artifact contents, observer narrative, or another
-    person's secrets. This source-only draft is not surveillance, professional advice, treatment, certification,
-    or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Shame, guilt, and remorse actions, and
-    review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use an ordinary lapse or this supplied case: you promised to return a borrowed book yesterday,
+    forgot and have not yet told its owner. You now think you are an entirely unreliable person. Do not
+    select abuse, a legal dispute or a traumatic event for this exercise. Goal: Separate global self-condemnation
+    from a specific responsibility, make a proportionate repair and identify conduct that can change.
+    Scope: One manageable lapse exercises remorse and repair. The exercise does not establish legal fault,
+    require confession of private history or assume that every guilty feeling reflects actual wrongdoing.
+    Time and effort: About 15 minutes to separate claims, one practical repair opportunity, and a short
+    review at the next comparable commitment. Adaptation: Use a private draft or an accessible communication
+    channel. An apology is not required when the supposed obligation was coercive or no wrongdoing is
+    established. Seek appropriate professional advice for high-stakes responsibility questions; this exercise
+    cannot adjudicate them. Keep personal working notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a private draft or an accessible communication channel. An apology is not required
+    when the supposed obligation was coercive or no wrongdoing is established. Seek appropriate professional
+    advice for high-stakes responsibility questions; this exercise cannot adjudicate them.
+  expected_burden: About 15 minutes to separate claims, one practical repair opportunity, and a short
+    review at the next comparable commitment.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Shame, guilt, and remorse protocol to rank worth, coerce participation, demand disclosure,
@@ -100,19 +106,26 @@ intervention:
   - Treating a completed Shame, guilt, and remorse action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Shame, guilt, and remorse situation involving emergency response, abuse, retaliation, illegal
-    conduct, medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous
-    equipment, or other consequences beyond a reversible source-only exercise.
-  - Not therapy or diagnosis; severe or persistent symptoms require qualified mental-health or medical
-    care.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a private
+    draft or an accessible communication channel. An apology is not required when the supposed obligation
+    was coercive or no wrongdoing is established. Seek appropriate professional advice for high-stakes
+    responsibility questions; this exercise cannot adjudicate them.
   actions:
   - stable_id: PRACTICE-COMP-0707-SHAME-GUILT-AND-REMORSE-01-A1
     sequence: 1
-    title: Bound the qualified question for Shame, guilt, and remorse
-    instructions: 'Turn Shame, guilt, and remorse into one educational or planning question and identify
-      the qualification and jurisdiction needed to answer it. Use the canonical scope to separate general
-      learning from diagnosis, treatment, legal advice, financial advice, safeguarding decisions, or other
-      professional judgment: Separate global self-condemnation from responsibility for specific behavior.'
+    title: Translate self-condemnation into a checkable account of conduct
+    instructions: 'Write the global verdict, then replace it with the specific action or omission, the
+      actual agreement, known impact and uncertainty. For the case, I missed the agreed return date is
+      supported; I can never be trusted goes beyond the evidence. Ask whether the obligation was freely
+      yours and realistic, rather than accepting blame assigned by someone else. If no wrongdoing is supported,
+      write a clarification or boundary instead of manufacturing an apology. Where responsibility is real,
+      name it plainly without using contextual difficulty as automatic absolution.
+
+
+      Observation checks: The global verdict is distinguished from a specific act; Responsibility is checked
+      against a real obligation; Known impact is separated from imagined blame; Context neither erases
+      responsibility nor establishes total badness. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -134,9 +147,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0707_a1_question_bounded
-        - c0707_a1_qualification_named
-        - c0707_a1_professional_boundary_explicit
+        - the_global_verdict_is_distinguished_from_a_specific_act
+        - responsibility_is_checked_against_a_real_obligation
+        - known_impact_is_separated_from_imagined_blame
+        - context_neither_erases_responsibility_nor_establishes_total_badness
       - measurement_id: c0707_a1_boundary
         kind: boolean
         role: supporting
@@ -153,11 +167,19 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0707-SHAME-GUILT-AND-REMORSE-01-A2
     sequence: 2
-    title: Prepare minimum information for Shame, guilt, and remorse
-    instructions: Create a privacy-minimized Shame, guilt, and remorse consultation note containing only
-      the question, relevant category-level facts, current constraints, and desired decision. Omit diagnoses,
-      allegations, account numbers, credentials, protected work information, intimate detail, and third-party
-      identity unless a qualified professional lawfully requires it through an appropriate channel.
+    title: Offer a repair that addresses the impact without demanding absolution
+    instructions: 'For a real lapse, communicate the act you own, its known impact and an achievable correction.
+      In the case: I missed the return date and should have told you. I can return the book this afternoon;
+      does that work, or is another arrangement needed? Avoid asking the owner to reassure you that you
+      are good, explain away the harm or forgive on demand. Carry out the agreed correction if possible
+      and record what actually happened. In rehearsal, write the offer and respond to a delayed or declined
+      arrangement without inventing acceptance.
+
+
+      Observation checks: The repair addresses the specific impact; The offer does not demand reassurance
+      or forgiveness; Promised correction is distinguished from completed correction; The affected person''s
+      response remains their choice. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -179,9 +201,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0707_a2_minimum_information_only
-        - c0707_a2_sensitive_detail_excluded
-        - c0707_a2_decision_need_named
+        - the_repair_addresses_the_specific_impact
+        - the_offer_does_not_demand_reassurance_or_forgiveness
+        - promised_correction_is_distinguished_from_completed_correction
+        - the_affected_person_s_response_remains_their_choice
       - measurement_id: c0707_a2_boundary
         kind: boolean
         role: supporting
@@ -198,12 +221,40 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0707-SHAME-GUILT-AND-REMORSE-01-A3
     sequence: 3
-    title: Record a bounded Shame, guilt, and remorse disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: Uses guilt to repair conduct while refusing shame''s claim that change
-      is impossible.'
+    title: Change one repeatable behavior and revisit it at the next opportunity
+    instructions: 'Choose a change directly connected to the lapse: record the return date where you will
+      see it, agree a date you can meet, or notify the owner before a delay. Put the change in place and
+      use it at the next comparable ordinary commitment when available. Compare what you did with the
+      earlier pattern, including any repeat lapse. Renew responsibility and adjust the arrangement if
+      needed; do not turn a second mistake into proof that change is impossible. If no new opportunity
+      occurs, record the installed support and leave changed future conduct untested.
+
+
+      Observation checks: A prevention change is tied to the original lapse; The change is actually put
+      in place; Its use is checked at a real later opportunity when available; A repeat lapse prompts
+      specific revision rather than global condemnation. Mark only what you observed. Missing, mixed and
+      negative results are valid; a deferred action is not completed.
+
+
+      Final review: What responsibility was yours, what repair occurred and what changed in conduct? Leave
+      the other person''s forgiveness and the next opportunity unknown when unavailable. Neither remorse
+      nor a completed repair measures total character.
+
+
+      Examples: Supportive: The late return was acknowledged, the book was returned as agreed and a visible
+      reminder was used for the next borrowing arrangement.
+
+
+      Mixed: The correction was completed but the owner remained upset; the person accepted that response
+      and kept the prevention change.
+
+
+      Contradictory: An apology became a demand for reassurance, or self-hatred replaced returning the
+      item and changing the unreliable arrangement.
+
+
+      Inconclusive: The person wrote that everyone makes mistakes but did not examine responsibility,
+      propose a correction or install a conduct change.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -219,14 +270,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0707_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0707_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - a_prevention_change_is_tied_to_the_original_lapse
+        - the_change_is_actually_put_in_place
+        - its_use_is_checked_at_a_real_later_opportunity_when_available
+        - a_repeat_lapse_prompts_specific_revision_rather_than_global_condemnation
       - measurement_id: c0707_a3_boundary
         kind: boolean
         role: supporting
@@ -247,16 +300,17 @@ intervention:
       Shame, guilt, and remorse; no purchase, subscription, travel, credential, or public artifact is
       required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Shame, guilt, and remorse; assistive technology, interpretation, a support person, and
-      a deferred action are valid without penalty.
+    - Use a private draft or an accessible communication channel. An apology is not required when the
+      supposed obligation was coercive or no wrongdoing is established. Seek appropriate professional
+      advice for high-stakes responsibility questions; this exercise cannot adjudicate them.
     cultural_context:
     - Adapt the expression of Shame, guilt, and remorse to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Shame, guilt, and remorse opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use a private draft or an accessible communication channel. An apology is not required when the
+      supposed obligation was coercive or no wrongdoing is established. Seek appropriate professional
+      advice for high-stakes responsibility questions; this exercise cannot adjudicate them.
   pause_conditions:
   - Pause Shame, guilt, and remorse when capacity, consent, authority, privacy, access, care duties, uncertainty,
     distress, fatigue, pain, resource scarcity, or changed circumstances make the next action unwise.
@@ -287,10 +341,8 @@ evidence_and_scoring:
   - c0707_a3_boundary
   - c0707_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Shame, guilt, and remorse action exceeded consent, authority, privacy, qualification, role, burden,
-    or safety boundaries.
-  - The evidence contradicted the intended Shame, guilt, and remorse criterion, depended on coercion or
-    hidden private content, or could not distinguish the protocol from contextual change.
+  - An apology became a demand for reassurance, or self-hatred replaced returning the item and changing
+    the unreliable arrangement.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Shame, guilt, and remorse explicitly; support can enable access and never reduces dignity or silently
     changes the typed value.
@@ -300,14 +352,23 @@ evidence_and_scoring:
     origins are rejected and later repetitions use the typed contract's explicit diminishing multipliers.
   recency_rule: Generated Shame, guilt, and remorse rules withhold observations older than 90 days; no
     unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Uses guilt to repair conduct while refusing shame's claim that change is impossible.—not completion,
-    confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Shame, guilt, and remorse requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Translate self-condemnation into a checkable account of conduct. Observed
+    checks: The global verdict is distinguished from a specific act; Responsibility is checked against
+    a real obligation; Known impact is separated from imagined blame; Context neither erases responsibility
+    nor establishes total badness. Action 2: Offer a repair that addresses the impact without demanding
+    absolution. Observed checks: The repair addresses the specific impact; The offer does not demand reassurance
+    or forgiveness; Promised correction is distinguished from completed correction; The affected person''s
+    response remains their choice. Action 3: Change one repeatable behavior and revisit it at the next
+    opportunity. Observed checks: A prevention change is tied to the original lapse; The change is actually
+    put in place; Its use is checked at a real later opportunity when available; A repeat lapse prompts
+    specific revision rather than global condemnation.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. The person wrote that everyone makes mistakes but did
+    not examine responsibility, propose a correction or install a conduct change.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Shame,
     guilt, and remorse contribution under typed evaluation; protocol performance remains distinct and
     is never counted twice.
@@ -317,9 +378,8 @@ evidence_and_scoring:
   - L06
   - L07
   - L29
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Shame, guilt, and remorse evidence.
@@ -327,11 +387,21 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for shame, guilt, and remorse action was attempted or explicitly
-    deferred.
-  - The prepare minimum information for shame, guilt, and remorse action was attempted or explicitly deferred.
-  - The record a bounded shame, guilt, and remorse disposition action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Translate self-condemnation into a checkable account of conduct. Observed checks: The global
+    verdict is distinguished from a specific act; Responsibility is checked against a real obligation;
+    Known impact is separated from imagined blame; Context neither erases responsibility nor establishes
+    total badness.'
+  - 'Action 2: Offer a repair that addresses the impact without demanding absolution. Observed checks:
+    The repair addresses the specific impact; The offer does not demand reassurance or forgiveness; Promised
+    correction is distinguished from completed correction; The affected person''s response remains their
+    choice.'
+  - 'Action 3: Change one repeatable behavior and revisit it at the next opportunity. Observed checks:
+    A prevention change is tied to the original lapse; The change is actually put in place; Its use is
+    checked at a real later opportunity when available; A repeat lapse prompts specific revision rather
+    than global condemnation.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -340,56 +410,59 @@ completion_and_review:
     - c0707_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Shame, guilt, and remorse only when the initial context remained
-    safe, the evidence criteria were usable, burden was acceptable, and a new context can be named without
-    assuming transfer.
-  transfer_limit: Three bounded actions do not establish Shame, guilt, and remorse across roles, cultures,
-    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: What responsibility was yours, what repair occurred and what changed in conduct?
+    Leave the other person's forgiveness and the next opportunity unknown when unavailable. Neither remorse
+    nor a completed repair measures total character.
+  transfer_limit: One manageable lapse exercises remorse and repair. The exercise does not establish legal
+    fault, require confession of private history or assume that every guilty feeling reflects actual wrongdoing.
   reflection:
-    before: What does Shame, guilt, and remorse require in this exact context, what remains outside my
-      role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Shame, guilt, and remorse criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Uses guilt to repair conduct while refusing shame's claim
-      that change is impossible.', what contradiction or missing context matters most, and should this
-      Shame, guilt, and remorse design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Separate global self-condemnation from a specific
+      responsibility, make a proportionate repair and identify conduct that can change.'
+    during: Which checks have actually been observed? The correction was completed but the owner remained
+      upset; the person accepted that response and kept the prevention change.
+    after: What responsibility was yours, what repair occurred and what changed in conduct? Leave the
+      other person's forgiveness and the next opportunity unknown when unavailable. Neither remorse nor
+      a completed repair measures total character.
   review_guidance:
     repeat: Repeat the same bounded Shame, guilt, and remorse design only when the context and burden
       remain appropriate.
-    adapt: Change the Shame, guilt, and remorse medium, scope, support, timing, criteria, or context while
-      preserving provenance and the narrower evidence claim.
+    adapt: Use a private draft or an accessible communication channel. An apology is not required when
+      the supposed obligation was coercive or no wrongdoing is established. Seek appropriate professional
+      advice for high-stakes responsibility questions; this exercise cannot adjudicate them.
     stop: Stop Shame, guilt, and remorse when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Shame, guilt, and remorse questions beyond
-      this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Shame, guilt, and remorse criteria were observed with provenance and no adverse
-      boundary signal in the selected context.
-    mixed: Some Shame, guilt, and remorse criteria were observed while burden, support, contextual change,
-      or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Shame, guilt, and remorse criterion, introduced
-      harm or coercion, or showed the design was not workable.
-    inconclusive: The Shame, guilt, and remorse action was deferred, not observed, not applicable, stale,
-      insufficiently bounded, or too confounded to interpret.
+    supportive: The late return was acknowledged, the book was returned as agreed and a visible reminder
+      was used for the next borrowing arrangement.
+    mixed: The correction was completed but the owner remained upset; the person accepted that response
+      and kept the prevention change.
+    contradictory: An apology became a demand for reassurance, or self-hatred replaced returning the item
+      and changing the unreliable arrangement.
+    inconclusive: The person wrote that everyone makes mistakes but did not examine responsibility, propose
+      a correction or install a conduct change.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Shame, guilt, and remorse.
+    context_heading: Replace a verdict on your whole self with responsibility and repair
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Shame, guilt,
       and remorse.
   check_in_labels:
-    c0707_a1_primary: The bounded Shame, guilt, and remorse criterion for action 1 was observed
+    c0707_a1_primary: 'Observed checks: translate self-condemnation into a checkable account of conduct'
     c0707_a1_boundary: Action 1 stayed inside its stated Shame, guilt, and remorse boundary
     c0707_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0707_a2_primary: The bounded Shame, guilt, and remorse criterion for action 2 was observed
+    c0707_a2_primary: 'Observed checks: offer a repair that addresses the impact without demanding absolution'
     c0707_a2_boundary: Action 2 stayed inside its stated Shame, guilt, and remorse boundary
     c0707_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0707_a3_primary: The bounded Shame, guilt, and remorse criterion for action 3 was observed
+    c0707_a3_primary: 'Observed checks: change one repeatable behavior and revisit it at the next opportunity'
     c0707_a3_boundary: Action 3 stayed inside its stated Shame, guilt, and remorse boundary
     c0707_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Shame, guilt, and
-    remorse practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What responsibility was yours, what repair occurred and what changed in conduct? Leave
+    the other person's forgiveness and the next opportunity unknown when unavailable. Neither remorse
+    nor a completed repair measures total character. Completion is not mastery.
+  plain_language_evidence: The late return was acknowledged, the book was returned as agreed and a visible
+    reminder was used for the next borrowing arrangement.
   display_order: 91
