@@ -591,7 +591,7 @@ def test_play_protocol_setup_is_specific_and_score_active(live_server, page: Pag
             "Mixed: The glossary was accurate",
             "Scope: This is literacy and support preparation using a fictional case",
             "nimh.nih.gov",
-            "All eight concepts receive a plain-language explanation",
+            "All eight concepts receive a plain language explanation",
             "The response gives a choice about support",
         ),
         (
