@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0603-RECOVERY-AFTER-VIOLATION-AND-BETRAYAL-01
 slug: c0603-recovery-after-violation-and-betrayal-practice
-name: Bounded Recovery after violation and betrayal Practice
+name: Build a choice-preserving support plan after a violation
 parent_competency_id: '06.03'
 domain_id: '06'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-RAINN-CHOICE-AND-SUPPORT
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 06.03
-      (Recovery after violation and betrayal); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 06.03; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,39 +35,50 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Recovery after violation and betrayal through a non-confrontational safety preparation
-    bounded by the canonical scope: Rebuild safety, agency, trust, bodily ownership, boundaries, and meaning
-    after abuse, assault, coercion, or severe betrayal.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can identify protective
-    supports and choose recovery steps without assigning blame to the harmed person. The protocol creates
-    a small opportunity to examine that target without treating completion as broad capability.'
+  purpose: Identify protective supports and survivor-chosen steps that address safety, agency, trust,
+    bodily ownership, boundaries and meaning without blaming the harmed person.
+  why_recommended: Identify protective supports and survivor-chosen steps that address safety, agency,
+    trust, bodily ownership, boundaries and meaning without blaming the harmed person.
   claims:
-  - statement: Using the canonical scope and evidence target for Recovery after violation and betrayal
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Identify protective supports and survivor-chosen steps that address safety, agency, trust,
+      bodily ownership, boundaries and meaning without blaming the harmed person.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: RAINN describes survivor support that prioritizes safety, trust, autonomy and choices without
+      pressure; it recognizes that recovery follows different paths.
+    classification: safety_precaution
+    source_ids:
+    - SRC-RAINN-CHOICE-AND-SUPPORT
+    limitations: A sexual-violence support provider's description of its approach, not empirical validation
+      of the exercise or a claim that this service handles every kind of betrayal. No treatment method
+      or published support mnemonic is reproduced.
   applicability_question: Does a voluntary, bounded Recovery after violation and betrayal practice fit
     the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Recovery after violation and betrayal as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Recovery after violation
-    and betrayal context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Recovery
-    after violation and betrayal; do not manufacture conflict, deprivation, exposure, disclosure, danger,
-    urgency, or dependence for evidence.
+  readiness_considerations: Keep the exercise fictional or work with a qualified support person. Use a
+    neutral written response if speech or role-play is uncomfortable. Do not ask a survivor to supply
+    training material, remove their supports or document private evidence here. Immediate danger requires
+    local emergency help rather than finishing this plan.
+  opportunity_considerations: 'Use this fictional case: a trusted person shared private correspondence
+    after repeatedly pressuring its owner; the owner wants privacy and support but does not want physical
+    comfort or a detailed retelling. Do not invent additional violence. Read RAINN''s explanation of its
+    approach to choice and support as one provider''s example, not as a service for every kind of betrayal.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Recovery after violation and betrayal.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use this fictional case: a trusted person shared private correspondence after repeatedly pressuring
+    its owner; the owner wants privacy and support but does not want physical comfort or a detailed retelling.
+    Do not invent additional violence. Read RAINN''s explanation of its approach to choice and support
+    as one provider''s example, not as a service for every kind of betrayal.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Recovery after violation and betrayal
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Keep the exercise fictional or work with a qualified support person. Use a neutral written response
+    if speech or role-play is uncomfortable. Do not ask a survivor to supply training material, remove
+    their supports or document private evidence here. Immediate danger requires local emergency help rather
+    than finishing this plan.
   role_conditions:
   - This competency is context contingent; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -81,19 +92,35 @@ meaning_and_fit:
 intervention:
   protocol_class: PF-SAFETY-PREPARATION
   duration_days: 10
-  cadence: Complete three bounded Recovery after violation and betrayal actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Recovery after violation and betrayal; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Recovery
-    after violation and betrayal. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Recovery after violation and betrayal
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use this fictional case: a trusted person shared private correspondence after repeatedly pressuring
+    its owner; the owner wants privacy and support but does not want physical comfort or a detailed retelling.
+    Do not invent additional violence. Read RAINN''s explanation of its approach to choice and support
+    as one provider''s example, not as a service for every kind of betrayal. Goal: Identify protective
+    supports and survivor-chosen steps that address safety, agency, trust, bodily ownership, boundaries
+    and meaning without blaming the harmed person. Scope: The supplied case supports planning and response
+    rehearsal. It does not demonstrate recovery from assault, abuse, coercion or betrayal, and it does
+    not authorize investigating harm or confronting a suspected perpetrator. Time and effort: About 20
+    minutes for the plan, a short private rehearsal, and 10 minutes to check a support route. Adaptation:
+    Keep the exercise fictional or work with a qualified support person. Use a neutral written response
+    if speech or role-play is uncomfortable. Do not ask a survivor to supply training material, remove
+    their supports or document private evidence here. Immediate danger requires local emergency help rather
+    than finishing this plan. Keep personal working notes outside the check-in; record only the listed
+    observations.
+
+
+    Reference support:
+
+    Help and Healing: https://rainn.org/help-and-healing/'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Keep the exercise fictional or work with a qualified support person. Use a neutral
+    written response if speech or role-play is uncomfortable. Do not ask a survivor to supply training
+    material, remove their supports or document private evidence here. Immediate danger requires local
+    emergency help rather than finishing this plan.
+  expected_burden: About 20 minutes for the plan, a short private rehearsal, and 10 minutes to check a
+    support route.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Recovery after violation and betrayal protocol to rank worth, coerce participation, demand
@@ -101,19 +128,27 @@ intervention:
   - Treating a completed Recovery after violation and betrayal action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Recovery after violation and betrayal situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Educational and developmental only; trauma, suicidality, abuse, psychosis, addiction, severe functional
-    decline, and medical concerns require qualified professional or emergency support.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Keep the exercise
+    fictional or work with a qualified support person. Use a neutral written response if speech or role-play
+    is uncomfortable. Do not ask a survivor to supply training material, remove their supports or document
+    private evidence here. Immediate danger requires local emergency help rather than finishing this plan.
   actions:
   - stable_id: PRACTICE-COMP-0603-RECOVERY-AFTER-VIOLATION-AND-BETRAYAL-01-A1
     sequence: 1
-    title: Identify the non-emergency boundary for Recovery after violation and betrayal
-    instructions: 'Define one planning-only question for Recovery after violation and betrayal, the hazards
-      that must not be rehearsed, and the local qualified or emergency authority that supersedes this
-      source-only protocol. Do not create, approach, or simulate danger: Rebuild safety, agency, trust,
-      bodily ownership, boundaries, and meaning after abuse, assault, coercion, or severe betrayal.'
+    title: Give each area of recovery a concrete protective option
+    instructions: 'Create six entries for the fictional person: safety may require advice about further
+      access to private material; agency means choosing the next step; trust can begin with a limited
+      agreed task; bodily ownership means asking before touch; boundaries define what information may
+      be shared; meaning can include an ordinary valued activity without a redemptive explanation. For
+      each, write what the person can choose and what a supporter must ask before doing. Separate the
+      violator''s responsibility from the harmed person''s options now. Safety planning for ongoing abuse
+      belongs with an appropriate trained service, not a generic instruction to confront or abruptly leave.
+
+
+      Observation checks: Six recovery areas have concrete protective options; Choices remain with the
+      harmed person; Harm is not attributed to insufficient resilience or prevention; Ongoing danger calls
+      for appropriate professional safety support. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -135,9 +170,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0603_a1_planning_scope_bounded
-        - c0603_a1_hazards_excluded
-        - c0603_a1_authority_identified
+        - six_recovery_areas_have_concrete_protective_options
+        - choices_remain_with_the_harmed_person
+        - harm_is_not_attributed_to_insufficient_resilience_or_prevention
+        - ongoing_danger_calls_for_appropriate_professional_safety_support
       - measurement_id: c0603_a1_boundary
         kind: boolean
         role: supporting
@@ -154,11 +190,20 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0603-RECOVERY-AFTER-VIOLATION-AND-BETRAYAL-01-A2
     sequence: 2
-    title: Prepare one safe Recovery after violation and betrayal support step
-    instructions: Create one non-confrontational Recovery after violation and betrayal step such as locating
-      official guidance, checking accessible contact information, assembling a category-level checklist,
-      or scheduling qualified instruction. Do not test emergency response, weapons, rescue, medical treatment,
-      confrontation, evasion, or hazardous equipment.
+    title: Rehearse support without taking control of the account
+    instructions: 'Privately practice this opening: What happened to your privacy matters; you can choose
+      what to tell me. Would you prefer company, practical help finding support, or space? Then rehearse
+      the person declining touch, declining details and accepting help finding a service. Respond to each
+      choice directly. Do not add a demand to forgive, reconcile, report, explain a lesson or prove credibility
+      to you. State that confidentiality has limits where immediate safety or applicable reporting duties
+      require help; avoid promises you cannot keep. No message is sent and no real person''s story is
+      solicited for the rehearsal.
+
+
+      Observation checks: The opening acknowledges the particular violation; Three different preferences
+      receive respectful responses; Forgiveness reporting and reconciliation are not imposed; Confidentiality
+      is described without an absolute promise. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -180,9 +225,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0603_a2_step_is_preparatory
-        - c0603_a2_official_or_qualified_path_used
-        - c0603_a2_no_hazard_rehearsed
+        - the_opening_acknowledges_the_particular_violation
+        - three_different_preferences_receive_respectful_responses
+        - forgiveness_reporting_and_reconciliation_are_not_imposed
+        - confidentiality_is_described_without_an_absolute_promise
       - measurement_id: c0603_a2_boundary
         kind: boolean
         role: supporting
@@ -199,11 +245,41 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0603-RECOVERY-AFTER-VIOLATION-AND-BETRAYAL-01-A3
     sequence: 3
-    title: Review the Recovery after violation and betrayal plan against stop conditions
-    instructions: 'Check whether the plan identifies when to stop, leave, call emergency services, contact
-      a qualified professional, or follow local authority. Mark unknown requirements rather than inventing
-      them and compare only with: Can identify protective supports and choose recovery steps without assigning
-      blame to the harmed person.'
+    title: Make one protective support option usable
+    instructions: 'Choose one need from the plan and locate a relevant public service: a survivor-support
+      organization for sexual violence, an abuse-support service for coercion, a qualified clinician,
+      or an appropriate privacy or advocacy service for the supplied case. Check what it actually offers,
+      who can use it and how someone can ask about privacy before sharing details. Add a draft request
+      limited to the help wanted. For an actual manageable situation, any contact is the affected person''s
+      choice and may require a safer device or channel advised by the service. A saved public route is
+      preparation; it is not a completed recovery step for someone else.
+
+
+      Observation checks: The service fits the specific support need; Its scope and access conditions
+      are checked; The draft request discloses only necessary information; The record distinguishes preparation
+      from chosen live contact. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.
+
+
+      Final review: Which concrete choice does each part of the plan protect? Where could helpful intent
+      become pressure or takeover? Keep unresolved safety and access questions visible, and name the next
+      appropriate support step without assigning a recovery deadline.
+
+
+      Examples: Supportive: The plan covered privacy, bodily choice and trust, and the rehearsal accepted
+      a refusal of touch while identifying an appropriate support route.
+
+
+      Mixed: The supporter respected the person''s wishes but initially selected a service outside its
+      stated scope; the mismatch was recorded and corrected.
+
+
+      Contradictory: Help was made conditional on reporting, reconciliation or a detailed account, or
+      blame was placed on the person whose boundary was violated.
+
+
+      Inconclusive: The plan contained general encouragement but no specific choice, protective option
+      or usable support route.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -219,15 +295,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0603_a3_primary
-        kind: scenario
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0603_a3_stop_conditions_present
-        - c0603_a3_escalation_path_present
-        - c0603_a3_unknowns_retained
+        - the_service_fits_the_specific_support_need
+        - its_scope_and_access_conditions_are_checked
+        - the_draft_request_discloses_only_necessary_information
+        - the_record_distinguishes_preparation_from_chosen_live_contact
       - measurement_id: c0603_a3_boundary
         kind: boolean
         role: supporting
@@ -248,17 +325,19 @@ intervention:
       Recovery after violation and betrayal; no purchase, subscription, travel, credential, or public
       artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Recovery after violation and betrayal; assistive technology, interpretation, a support
-      person, and a deferred action are valid without penalty.
+    - Keep the exercise fictional or work with a qualified support person. Use a neutral written response
+      if speech or role-play is uncomfortable. Do not ask a survivor to supply training material, remove
+      their supports or document private evidence here. Immediate danger requires local emergency help
+      rather than finishing this plan.
     cultural_context:
     - Adapt the expression of Recovery after violation and betrayal to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Recovery after violation and betrayal opportunity is unavailable or inappropriate, use
-      a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Keep the exercise fictional or work with a qualified support person. Use a neutral written response
+      if speech or role-play is uncomfortable. Do not ask a survivor to supply training material, remove
+      their supports or document private evidence here. Immediate danger requires local emergency help
+      rather than finishing this plan.
   pause_conditions:
   - Pause Recovery after violation and betrayal when capacity, consent, authority, privacy, access, care
     duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the
@@ -290,10 +369,8 @@ evidence_and_scoring:
   - c0603_a3_boundary
   - c0603_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Recovery after violation and betrayal action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Recovery after violation and betrayal criterion, depended on
-    coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - Help was made conditional on reporting, reconciliation or a detailed account, or blame was placed
+    on the person whose boundary was violated.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Recovery after violation and betrayal explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -304,14 +381,23 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Recovery after violation and betrayal rules withhold observations older than
     90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can identify protective supports and choose recovery steps without assigning blame to the harmed
-    person.—not completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Recovery after violation and betrayal requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Give each area of recovery a concrete protective option. Observed checks:
+    Six recovery areas have concrete protective options; Choices remain with the harmed person; Harm is
+    not attributed to insufficient resilience or prevention; Ongoing danger calls for appropriate professional
+    safety support. Action 2: Rehearse support without taking control of the account. Observed checks:
+    The opening acknowledges the particular violation; Three different preferences receive respectful
+    responses; Forgiveness reporting and reconciliation are not imposed; Confidentiality is described
+    without an absolute promise. Action 3: Make one protective support option usable. Observed checks:
+    The service fits the specific support need; Its scope and access conditions are checked; The draft
+    request discloses only necessary information; The record distinguishes preparation from chosen live
+    contact.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. The plan contained general encouragement but no specific
+    choice, protective option or usable support route.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Recovery
     after violation and betrayal contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -321,9 +407,8 @@ evidence_and_scoring:
   - L24
   - L25
   - L29
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Recovery after violation and betrayal evidence.
@@ -331,12 +416,19 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The identify the non-emergency boundary for recovery after violation and betrayal action was attempted
-    or explicitly deferred.
-  - The prepare one safe recovery after violation and betrayal support step action was attempted or explicitly
-    deferred.
-  - The review the recovery after violation and betrayal plan against stop conditions action preserved
-    a limited conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Give each area of recovery a concrete protective option. Observed checks: Six recovery
+    areas have concrete protective options; Choices remain with the harmed person; Harm is not attributed
+    to insufficient resilience or prevention; Ongoing danger calls for appropriate professional safety
+    support.'
+  - 'Action 2: Rehearse support without taking control of the account. Observed checks: The opening acknowledges
+    the particular violation; Three different preferences receive respectful responses; Forgiveness reporting
+    and reconciliation are not imposed; Confidentiality is described without an absolute promise.'
+  - 'Action 3: Make one protective support option usable. Observed checks: The service fits the specific
+    support need; Its scope and access conditions are checked; The draft request discloses only necessary
+    information; The record distinguishes preparation from chosen live contact.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -345,59 +437,62 @@ completion_and_review:
     - c0603_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Recovery after violation and betrayal only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Recovery after violation and betrayal across
-    roles, cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: Which concrete choice does each part of the plan protect? Where could helpful
+    intent become pressure or takeover? Keep unresolved safety and access questions visible, and name
+    the next appropriate support step without assigning a recovery deadline.
+  transfer_limit: The supplied case supports planning and response rehearsal. It does not demonstrate
+    recovery from assault, abuse, coercion or betrayal, and it does not authorize investigating harm or
+    confronting a suspected perpetrator.
   reflection:
-    before: What does Recovery after violation and betrayal require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Recovery after violation and betrayal criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can identify protective supports and choose recovery steps
-      without assigning blame to the harmed person.', what contradiction or missing context matters most,
-      and should this Recovery after violation and betrayal design be repeated, adapted, deferred, stopped,
-      or referred?
+    before: 'What would count as doing this honestly? Goal: Identify protective supports and survivor-chosen
+      steps that address safety, agency, trust, bodily ownership, boundaries and meaning without blaming
+      the harmed person.'
+    during: Which checks have actually been observed? The supporter respected the person's wishes but
+      initially selected a service outside its stated scope; the mismatch was recorded and corrected.
+    after: Which concrete choice does each part of the plan protect? Where could helpful intent become
+      pressure or takeover? Keep unresolved safety and access questions visible, and name the next appropriate
+      support step without assigning a recovery deadline.
   review_guidance:
     repeat: Repeat the same bounded Recovery after violation and betrayal design only when the context
       and burden remain appropriate.
-    adapt: Change the Recovery after violation and betrayal medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Keep the exercise fictional or work with a qualified support person. Use a neutral written
+      response if speech or role-play is uncomfortable. Do not ask a survivor to supply training material,
+      remove their supports or document private evidence here. Immediate danger requires local emergency
+      help rather than finishing this plan.
     stop: Stop Recovery after violation and betrayal when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Recovery after violation and betrayal
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Recovery after violation and betrayal criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Recovery after violation and betrayal criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Recovery after violation and betrayal criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Recovery after violation and betrayal action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The plan covered privacy, bodily choice and trust, and the rehearsal accepted a refusal
+      of touch while identifying an appropriate support route.
+    mixed: The supporter respected the person's wishes but initially selected a service outside its stated
+      scope; the mismatch was recorded and corrected.
+    contradictory: Help was made conditional on reporting, reconciliation or a detailed account, or blame
+      was placed on the person whose boundary was violated.
+    inconclusive: The plan contained general encouragement but no specific choice, protective option or
+      usable support route.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Recovery after violation and betrayal.
+    context_heading: Build a choice-preserving support plan after a violation
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Recovery
       after violation and betrayal.
   check_in_labels:
-    c0603_a1_primary: The bounded Recovery after violation and betrayal criterion for action 1 was observed
+    c0603_a1_primary: 'Observed checks: give each area of recovery a concrete protective option'
     c0603_a1_boundary: Action 1 stayed inside its stated Recovery after violation and betrayal boundary
     c0603_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0603_a2_primary: The bounded Recovery after violation and betrayal criterion for action 2 was observed
+    c0603_a2_primary: 'Observed checks: rehearse support without taking control of the account'
     c0603_a2_boundary: Action 2 stayed inside its stated Recovery after violation and betrayal boundary
     c0603_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0603_a3_primary: The bounded Recovery after violation and betrayal criterion for action 3 was observed
+    c0603_a3_primary: 'Observed checks: make one protective support option usable'
     c0603_a3_boundary: Action 3 stayed inside its stated Recovery after violation and betrayal boundary
     c0603_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Recovery after violation
-    and betrayal practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Which concrete choice does each part of the plan protect? Where could helpful intent
+    become pressure or takeover? Keep unresolved safety and access questions visible, and name the next
+    appropriate support step without assigning a recovery deadline. Completion is not mastery.
+  plain_language_evidence: The plan covered privacy, bodily choice and trust, and the rehearsal accepted
+    a refusal of touch while identifying an appropriate support route.
   display_order: 73

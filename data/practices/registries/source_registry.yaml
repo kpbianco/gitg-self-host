@@ -1007,6 +1007,240 @@ sources:
   date_accessed: '2026-08-15'
   license_or_quotation_constraints: Guidance may be summarized with attribution; follow any notices in
     the source document.
+- source_id: SRC-NIMH-PTSD-LITERACY
+  title: Post-Traumatic Stress Disorder
+  authors_or_issuing_body: National Institute of Mental Health
+  publication_date: 2023 revision
+  locator: https://www.nimh.nih.gov/health/publications/post-traumatic-stress-disorder-ptsd
+  locator_kind: external_url
+  content_sha256: null
+  source_class: official_guidance
+  evidence_strength: authoritative
+  supported_claim: Trauma-related experiences can involve unwanted recollections, avoidance, heightened
+    arousal, detachment and changes in mood or cognition; diagnosis and treatment require an appropriate
+    mental health professional.
+  claim_classification: safety_precaution
+  limitations: Supports literacy and professional boundaries, not diagnosis from a short case, a screening
+    score, forced exposure or the effectiveness of the product-authored exercise. The attachment concept
+    is a broader educational category rather than an added diagnostic criterion.
+  applicable_competency_ids:
+  - '06.02'
+  applicable_protocol_ids:
+  - PRACTICE-COMP-0602-TRAUMA-AND-POST-TRAUMATIC-STRESS-LITERACY-01
+  date_accessed: '2026-09-06'
+  license_or_quotation_constraints: Original concise summary with attribution; no copied clinical instrument
+    or therapy exercise. The page identifies its publication text as public domain; images are not reused.
+- source_id: SRC-NIMH-HELP-ROUTES
+  title: Help for Mental Illnesses
+  authors_or_issuing_body: National Institute of Mental Health
+  publication_date: undated current page
+  locator: https://www.nimh.nih.gov/health/find-help
+  locator_kind: external_url
+  content_sha256: null
+  source_class: official_guidance
+  evidence_strength: authoritative
+  supported_claim: US life-threatening emergencies call for 911; 988 provides suicide and emotional-crisis
+    support by call or text, and ordinary mental health care requires an appropriate provider.
+  claim_classification: safety_precaution
+  limitations: US public resource guidance only. Local availability, accessibility, eligibility and other
+    countries' services need current verification. A resource card or rehearsal is not a clinical assessment
+    or emergency-response qualification.
+  applicable_competency_ids:
+  - '06.02'
+  - '06.14'
+  applicable_protocol_ids:
+  - PRACTICE-COMP-0602-TRAUMA-AND-POST-TRAUMATIC-STRESS-LITERACY-01
+  - PRACTICE-COMP-0614-PROFESSIONAL-AND-EMERGENCY-BOUNDARIES-01
+  date_accessed: '2026-09-06'
+  license_or_quotation_constraints: Citation and brief original paraphrase only; no service endorsement
+    by the product or reproduced screening tool.
+- source_id: SRC-RAINN-CHOICE-AND-SUPPORT
+  title: Help and Healing
+  authors_or_issuing_body: RAINN
+  publication_date: undated current page
+  locator: https://rainn.org/help-and-healing/
+  locator_kind: external_url
+  content_sha256: null
+  source_class: authoritative_primary_source
+  evidence_strength: authoritative
+  supported_claim: RAINN describes survivor support that prioritizes safety, trust, autonomy and choices
+    without pressure; it recognizes that recovery follows different paths.
+  claim_classification: safety_precaution
+  limitations: A sexual-violence support provider's description of its approach, not empirical validation
+    of the exercise or a claim that this service handles every kind of betrayal. No treatment method or
+    published support mnemonic is reproduced.
+  applicable_competency_ids:
+  - '06.03'
+  - '06.11'
+  applicable_protocol_ids:
+  - PRACTICE-COMP-0603-RECOVERY-AFTER-VIOLATION-AND-BETRAYAL-01
+  - PRACTICE-COMP-0611-RELAPSE-RECURRENCE-AND-NONLINEAR-RECOVERY-01
+  date_accessed: '2026-09-06'
+  license_or_quotation_constraints: Link and concise original summary only; no copied survivor story,
+    illustration, hotline interaction or training material.
+- source_id: SRC-CDC-MECFS-CAPACITY-BOUNDARY
+  title: Manage ME/CFS
+  authors_or_issuing_body: Centers for Disease Control and Prevention
+  publication_date: '2024-05-10'
+  locator: https://www.cdc.gov/me-cfs/management/index.html
+  locator_kind: external_url
+  content_sha256: null
+  source_class: official_guidance
+  evidence_strength: authoritative
+  supported_claim: ME/CFS can involve delayed symptom worsening after exertion; activity management must
+    respect individual limits, and standard exercise advice for healthy people can be unsuitable.
+  claim_classification: safety_precaution
+  limitations: Disease-specific caution against a universal activity-increase rule, not a diagnosis or
+    a pacing prescription for every illness. The exercise preserves existing qualified care and does not
+    set activity doses or change treatment.
+  applicable_competency_ids:
+  - '06.04'
+  - '06.05'
+  - '06.11'
+  applicable_protocol_ids:
+  - PRACTICE-COMP-0604-CHRONIC-ILLNESS-ADAPTATION-01
+  - PRACTICE-COMP-0605-CHRONIC-PAIN-AND-PAIN-RELATED-FUNCTIONING-01
+  - PRACTICE-COMP-0611-RELAPSE-RECURRENCE-AND-NONLINEAR-RECOVERY-01
+  date_accessed: '2026-09-06'
+  license_or_quotation_constraints: Citation and concise original paraphrase of the activity-management
+    boundary; no copied treatment plan or medication advice.
+- source_id: SRC-MEDLINEPLUS-CHRONIC-PAIN
+  title: Chronic Pain
+  authors_or_issuing_body: MedlinePlus / US National Library of Medicine
+  publication_date: undated current topic page
+  locator: https://medlineplus.gov/chronicpain.html
+  locator_kind: external_url
+  content_sha256: null
+  source_class: official_guidance
+  evidence_strength: authoritative
+  supported_claim: Chronic pain can affect daily function and wellbeing, and care may involve different
+    approaches and professional support.
+  claim_classification: safety_precaution
+  limitations: General pain literacy only; does not establish a cause, certify an activity as safe, prescribe
+    a regimen or validate the original participation-planning exercise. Cure, management and adaptation
+    are used as explanatory distinctions, not promised outcomes.
+  applicable_competency_ids:
+  - '06.05'
+  applicable_protocol_ids:
+  - PRACTICE-COMP-0605-CHRONIC-PAIN-AND-PAIN-RELATED-FUNCTIONING-01
+  date_accessed: '2026-09-06'
+  license_or_quotation_constraints: Link and short original summary only; no medical protocol or linked
+    third-party treatment material is reproduced.
+- source_id: SRC-WHO-DISABILITY-AND-BARRIERS
+  title: Disability
+  authors_or_issuing_body: World Health Organization
+  publication_date: undated current overview
+  locator: https://www.who.int/health-topics/disability
+  locator_kind: external_url
+  content_sha256: null
+  source_class: official_guidance
+  evidence_strength: authoritative
+  supported_claim: Disability involves interaction between health conditions and personal or environmental
+    factors; inaccessible environments and negative attitudes can obstruct participation.
+  claim_classification: professional_or_public_standard
+  limitations: Conceptual and inclusion support only. It does not assign an identity, establish a local
+    legal entitlement or prove that a proposed accommodation works for a particular person.
+  applicable_competency_ids:
+  - '06.06'
+  - '06.13'
+  applicable_protocol_ids:
+  - PRACTICE-COMP-0606-DISABILITY-IDENTITY-ACCESS-AND-ADAPTIVE-EXCELLENCE-01
+  - PRACTICE-COMP-0613-ABLEISM-STIGMA-AND-INCLUSIVE-PARTICIPATION-01
+  date_accessed: '2026-09-06'
+  license_or_quotation_constraints: Citation and brief original paraphrase; no copied imagery, report
+    or survey instrument.
+- source_id: SRC-W3C-COGNITIVE-ACCESS-NEEDS
+  title: Cognitive and learning in Diverse Abilities and Barriers
+  authors_or_issuing_body: W3C Web Accessibility Initiative
+  publication_date: 2024-06-25 page update
+  locator: https://www.w3.org/WAI/people-use-web/abilities-barriers/cognitive/
+  locator_kind: external_url
+  content_sha256: null
+  source_class: authoritative_primary_source
+  evidence_strength: authoritative
+  supported_claim: Cognitive access needs vary across functions, and clear structure, understandable language,
+    predictable interaction and suitable formats can address design barriers.
+  claim_classification: professional_or_public_standard
+  limitations: Web-accessibility guidance, not a diagnostic taxonomy or a guarantee that the product's
+    support works for every neurodivergent person. A self-check is not a full accessibility audit or representative
+    user testing.
+  applicable_competency_ids:
+  - '06.07'
+  - '06.09'
+  applicable_protocol_ids:
+  - PRACTICE-COMP-0607-NEURODIVERSITY-AND-COGNITIVE-VARIATION-01
+  - PRACTICE-COMP-0609-ACCOMMODATION-ASSISTIVE-TECHNOLOGY-AND-UNIVERSAL-DESIGN-01
+  date_accessed: '2026-09-06'
+  license_or_quotation_constraints: Attribution and concise original paraphrase only; no source user story,
+    video or full design pattern reproduced.
+- source_id: SRC-WHO-ASSISTIVE-TECHNOLOGY
+  title: Assistive technology
+  authors_or_issuing_body: World Health Organization
+  publication_date: '2024-01-02'
+  locator: https://www.who.int/news-room/fact-sheets/detail/assistive-technology
+  locator_kind: external_url
+  content_sha256: null
+  source_class: official_guidance
+  evidence_strength: authoritative
+  supported_claim: Assistive technology includes products and related services that support functions
+    such as cognition, communication and mobility, with participation as a practical purpose.
+  claim_classification: professional_or_public_standard
+  limitations: General purpose and examples only, not product selection, medical-device fitting or a claim
+    that one tool is suitable for all users. The exercise requires no purchase or removal of existing
+    aids.
+  applicable_competency_ids:
+  - '06.09'
+  applicable_protocol_ids:
+  - PRACTICE-COMP-0609-ACCOMMODATION-ASSISTIVE-TECHNOLOGY-AND-UNIVERSAL-DESIGN-01
+  date_accessed: '2026-09-06'
+  license_or_quotation_constraints: Citation and short original summary only; no source images or procurement
+    guidance reproduced.
+- source_id: SRC-NHS-CONSENT-PRINCIPLES
+  title: Consent to treatment — overview
+  authors_or_issuing_body: National Health Service
+  publication_date: 2022-12-08 displayed review
+  locator: https://www.nhs.uk/tests-and-treatments/consent-to-treatment/
+  locator_kind: external_url
+  content_sha256: null
+  source_class: official_guidance
+  evidence_strength: authoritative
+  supported_claim: The general consent principle requires an informed and voluntary choice; agreeing to
+    one act is not an unlimited permission, and preferences can change.
+  claim_classification: professional_or_public_standard
+  limitations: Used only for the general consent principle. The displayed review is overdue; jurisdiction-specific
+    legal rules, exceptions, capacity decisions and treatment authority are not adopted or certified as
+    current by this exercise. An ordinary help agreement is not a legal consent form.
+  applicable_competency_ids:
+  - '06.08'
+  - '06.12'
+  applicable_protocol_ids:
+  - PRACTICE-COMP-0608-RECEIVING-CARE-AND-SEASONS-OF-REDUCED-AGENCY-01
+  - PRACTICE-COMP-0612-CARE-RECIPIENT-AGENCY-AND-SAFEGUARDING-01
+  date_accessed: '2026-09-06'
+  license_or_quotation_constraints: Citation and original brief summary only; no copied legal form, capacity
+    assessment or statutory interpretation.
+- source_id: SRC-NHS-ADULT-SAFEGUARDING
+  title: Abuse and neglect of adults at risk
+  authors_or_issuing_body: National Health Service
+  publication_date: 2024-03-26 displayed review
+  locator: https://www.nhs.uk/social-care-and-support/help-from-social-services-and-charities/abuse-and-neglect-adults-at-risk/
+  locator_kind: external_url
+  content_sha256: null
+  source_class: official_guidance
+  evidence_strength: authoritative
+  supported_claim: Abuse and neglect may occur within care relationships; concerns can require appropriate
+    professional or safeguarding support, and helpers should not promise absolute secrecy.
+  claim_classification: safety_precaution
+  limitations: UK service examples and safeguarding literacy only. Local duties, complaint channels, emergency
+    routes and legal authority require relevant local guidance; the exercise does not investigate allegations
+    or certify care as safe.
+  applicable_competency_ids:
+  - '06.12'
+  applicable_protocol_ids:
+  - PRACTICE-COMP-0612-CARE-RECIPIENT-AGENCY-AND-SAFEGUARDING-01
+  date_accessed: '2026-09-06'
+  license_or_quotation_constraints: Citation and concise original summary only; no copied allegation narrative,
+    screening tool or reporting form.
 - source_id: SRC-NHS-GRIEF-AND-LOSS
   title: Grief after bereavement or loss
   authors_or_issuing_body: National Health Service

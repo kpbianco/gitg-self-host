@@ -1,8 +1,8 @@
 {
   "schema_version": "GG-TAILORED-PRACTICE-AUTHORING-1.0",
   "target": 383,
-  "authored": 77,
-  "remaining": 306,
+  "authored": 91,
+  "remaining": 292,
   "human_review_complete": 0,
   "rows": [
     {
@@ -313,72 +313,72 @@
     {
       "competency_id": "06.01",
       "name": "Vulnerability as a human condition",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "06.02",
       "name": "Trauma and post-traumatic stress literacy",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "06.03",
       "name": "Recovery after violation and betrayal",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "06.04",
       "name": "Chronic illness adaptation",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "06.05",
       "name": "Chronic pain and pain-related functioning",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "06.06",
       "name": "Disability identity, access, and adaptive excellence",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "06.07",
       "name": "Neurodiversity and cognitive variation",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "06.08",
       "name": "Receiving care and seasons of reduced agency",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "06.09",
       "name": "Accommodation, assistive technology, and universal design",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "06.10",
       "name": "Dignity under limitation and loss of role",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "06.11",
       "name": "Relapse, recurrence, and nonlinear recovery",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "06.12",
       "name": "Care-recipient agency and safeguarding",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "06.13",
       "name": "Ableism, stigma, and inclusive participation",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "06.14",
       "name": "Professional and emergency boundaries",
-      "status": "rewrite_pending"
+      "status": "authored_pending_review"
     },
     {
       "competency_id": "07.01",

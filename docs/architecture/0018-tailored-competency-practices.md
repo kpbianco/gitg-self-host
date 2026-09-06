@@ -72,7 +72,7 @@ what the competency involves, obtain the stated materials, follow the supplied
 default without inventing a rubric, recognize supportive and adverse outcomes,
 adapt the exercise without losing its purpose, and identify the next review?
 Rehearsal, source study, live participation and long-term competence must stay
-distinguishable. M6J-03 records this mapping for every competency in domains
-03 and 04 and supplies a readable projection of the complete new instructions.
-The catalog-wide target remains all 383; 77 authored records do not resolve
-the remaining 306 rewrites or any deferred human or empirical review.
+distinguishable. M6J-03 and M6J-04 record this mapping for every competency in
+domains 03, 04 and 06 and supply readable copies of the complete instructions.
+The catalog-wide target remains all 383; 91 authored records do not resolve
+the remaining 292 rewrites or any deferred human or empirical review.
