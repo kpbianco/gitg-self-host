@@ -541,7 +541,7 @@ docs/evidence/M6I-03-ASSESSMENT-CALIBRATION-READINESS-2026-09-02.md	2188
 docs/evidence/M6I-04-CONSENTED-ASSESSMENT-CALIBRATION-DATA-2026-09-02.md	4038
 docs/evidence/M6I-05-ASSESSMENT-CALIBRATION-ANALYSIS-READINESS-2026-09-03.md	4196
 docs/evidence/M6J-01-TAILORED-COMPETENCY-PRACTICES-2026-09-05.md	3691
-docs/evidence/M6J-02-SELF-KNOWLEDGE-PRACTICES-2026-09-05.md	7041
+docs/evidence/M6J-02-SELF-KNOWLEDGE-PRACTICES-2026-09-05.md	8878
 docs/evidence/local/.gitignore	14
 docs/ideal_person_curriculum_scope_audit.md	4060
 docs/ideal_person_curriculum_v2_revision_report.md	5987
@@ -863,7 +863,7 @@ tests/test_context_readiness.py	3741
 tests/test_context_services.py	13403
 tests/test_data_lifecycle.py	18873
 tests/test_database_and_backup.py	3636
-tests/test_deployment_contract.py	7123
+tests/test_deployment_contract.py	7246
 tests/test_evidence_audit.py	16889
 tests/test_evidence_dispatch.py	5190
 tests/test_evidence_engine.py	14027

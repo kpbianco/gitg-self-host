@@ -528,7 +528,7 @@ def test_play_protocol_setup_is_specific_and_score_active(live_server, page: Pag
             "Mixed: The label predicted one situation",
             "Scope: This tests one practical prediction",
             "simine.com",
-            "A label becomes a context-specific prediction",
+            "A label becomes a context specific prediction",
             "Two opportunities are described with their conditions",
         ),
         (

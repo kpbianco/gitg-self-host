@@ -101,3 +101,34 @@ text and targets. This follow-up requires a fresh complete CI run; the first
   commit. The PR must record exact head/tree, run and final result. No
   participant data, deployment, specialist acceptance or empirical
   validation was produced by this batch.
+
+## CI contract correction — 2026-09-06
+
+Final-head run
+[33978826191](https://github.com/tranquilWorks/gitg-self-host/actions/runs/33978826191)
+failed on two test expectations. The quality job passed 445 tests but the
+deployment contract still expected the previous 120-minute quality budget;
+its subsequent 35-minute Compose assertion was stale too. These assertions
+now check the parsed quality and Compose jobs for the already-approved 180
+and 60 minutes respectively. The workflow itself is byte-identical.
+
+The browser job passed 16 of 17 journeys. The personality observation locator
+expected `A label becomes a context-specific prediction`, while the actual
+checkbox correctly uses the existing criterion-ID display conversion:
+`A label becomes a context specific prediction`. Only the expected literal
+changes; exact matching, visibility, action scoping, overflow assertions and
+all 17 journeys remain intact. Canonical content, runtime Python, templates,
+CSS, scoring, ranking and activation are unchanged from `f53db5c`.
+
+Compose passed on that failed candidate; the aggregate failed. Neither the
+partial test results nor that Compose pass authorize the replacement head.
+The replacement requires its own complete hosted suite, readiness gates,
+Compose drill and final browser artifact inspection before merge.
+
+The restored local environment passes all 14 focused tests (ten tailored
+authoring/import/closeout/replay tests and four deployment-contract tests),
+Ruff, Django system and migration-drift checks, manifest verification and the
+repository contract runner. All 17 browser journeys collect successfully;
+collection is not execution. Chromium installation failed twice with a
+Playwright directory-lock error, and Docker is unavailable. Hosted browser
+execution and final screenshot review therefore remain mandatory.
