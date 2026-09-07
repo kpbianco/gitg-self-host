@@ -1,0 +1,38 @@
+name: M6J isolated authoring source export
+
+on:
+  push:
+    branches: [codex/m6j-complete-competency-authoring]
+    paths: [.github/workflows/m6j-authoring-source-export.yml]
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: c3491a4ff4c0ba77c7d8f2244bae7218ae568880
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Export tracked source and declared development wheels only
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = c3491a4ff4c0ba77c7d8f2244bae7218ae568880
+          mkdir -p export/wheels
+          git archive --format=tar --prefix=gitg-base/ HEAD | gzip -n > export/gitg-base.tar.gz
+          python -m pip download --only-binary=:all: -r requirements-dev.txt --dest export/wheels
+          printf '%s\n' 'Exact source only; this export is not verification or acceptance evidence.' > export/README.txt
+          (cd export && sha256sum gitg-base.tar.gz wheels/* > SHA256SUMS)
+      - uses: actions/upload-artifact@v6
+        with:
+          name: m6j-exact-base-c3491a4
+          path: export/
+          if-no-files-found: error
+          retention-days: 1
