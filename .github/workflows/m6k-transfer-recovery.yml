@@ -1,0 +1,42 @@
+name: M6K transfer recovery
+on:
+  push:
+    branches: [codex/m6k-transfer-recovery]
+permissions:
+  contents: read
+jobs:
+  recover:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Recover previously uploaded source bytes without executing them
+        run: |
+          mkdir -p recovered
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, json, lzma
+          rows = []
+          parts = sorted(Path('m6k-transfer').glob('part*'))
+          for p in parts:
+              b = p.read_bytes()
+              rows.append({'path': str(p), 'size': len(b), 'sha256': hashlib.sha256(b).hexdigest(), 'prefix': b[:16].hex()})
+          combined = b''.join(p.read_bytes() for p in parts)
+          Path('recovered/transfer.xz').write_bytes(combined)
+          try:
+              decoded = lzma.decompress(combined)
+              Path('recovered/transfer.decoded').write_bytes(decoded)
+              print('Decoded',len(decoded),'bytes; SHA256',hashlib.sha256(decoded).hexdigest())
+          except lzma.LZMAError as exc:
+              print('Not a complete concatenated XZ stream:',str(exc))
+          Path('recovered/parts.json').write_text(json.dumps(rows,indent=2)+'\n')
+          print(json.dumps(rows,indent=2))
+          PY
+      - uses: actions/upload-artifact@v6
+        with:
+          name: m6k-recovered-transfer
+          path: recovered/
+          retention-days: 1
+          if-no-files-found: error
