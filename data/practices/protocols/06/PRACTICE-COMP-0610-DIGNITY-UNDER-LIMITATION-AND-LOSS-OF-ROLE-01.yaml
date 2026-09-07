@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0610-DIGNITY-UNDER-LIMITATION-AND-LOSS-OF-ROLE-01
 slug: c0610-dignity-under-limitation-and-loss-of-role-practice
-name: Bounded Dignity under limitation and loss of role Practice
+name: Preserve dignity and connection when a valued role changes
 parent_competency_id: '06.10'
 domain_id: '06'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 06.10
-      (Dignity under limitation and loss of role); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 06.10; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,40 +34,39 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Dignity under limitation and loss of role through a qualified-support preparation
-    bounded by the canonical scope: Separate human worth from independence, productivity, cognition, appearance,
-    or social usefulness.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can sustain self-respect
-    and relationship when a valued ability or role is reduced. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Separate human worth from independence, productivity, cognition, appearance and usefulness,
+    then choose conduct that sustains self-respect and relationship under limitation.
+  why_recommended: Separate human worth from independence, productivity, cognition, appearance and usefulness,
+    then choose conduct that sustains self-respect and relationship under limitation.
   claims:
-  - statement: Using the canonical scope and evidence target for Dignity under limitation and loss of
-      role is a traceable product-design basis for a source-only draft protocol.
+  - statement: Separate human worth from independence, productivity, cognition, appearance and usefulness,
+      then choose conduct that sustains self-respect and relationship under limitation.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Dignity under limitation and loss of role practice
     fit the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Dignity under limitation and loss of role as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Dignity under limitation
-    and loss of role context, understand the source-only status, and stop without losing safety, care,
-    employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Dignity under
-    limitation and loss of role; do not manufacture conflict, deprivation, exposure, disclosure, danger,
-    urgency, or dependence for evidence.
+  readiness_considerations: Stay with the fictional case, use a trusted reader or express the choices
+    through a familiar communication aid. Do not require memory tests, appearance changes, job replacement
+    or proof of resilience. If personal reflection is too painful, defer it without interpreting that
+    choice as a deficit in dignity.
+  opportunity_considerations: 'Use this fictional case: a former community organizer can no longer manage
+    events and fears being welcome only when useful. A small manageable personal role change is optional.
+    Use a private note or spoken reflection; no painful personal history or public statement is required.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Dignity under limitation and loss
-    of role.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use this fictional case: a former community organizer can no longer manage events and fears being
+    welcome only when useful. A small manageable personal role change is optional. Use a private note
+    or spoken reflection; no painful personal history or public statement is required.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Dignity under limitation and loss
-    of role instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Stay with the fictional case, use a trusted reader or express the choices through a familiar communication
+    aid. Do not require memory tests, appearance changes, job replacement or proof of resilience. If personal
+    reflection is too painful, defer it without interpreting that choice as a deficit in dignity.
   role_conditions:
   - This competency is context contingent; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -81,21 +79,30 @@ meaning_and_fit:
     loss of role as inferiority; competing reasonable interpretations and conscientious refusal remain
     visible.
 intervention:
-  protocol_class: PF-QUALIFIED-CONSULTATION
+  protocol_class: PF-CONTEMPLATIVE-MEANING
   duration_days: 10
-  cadence: Complete three bounded Dignity under limitation and loss of role actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Dignity under limitation and loss of role; copy the canonical scope and
-    evidence target into a private working note; define the action boundary, valid supports, privacy limit,
-    and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Dignity
-    under limitation and loss of role. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Dignity under limitation and loss of
-    role actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use this fictional case: a former community organizer can no longer manage events and fears
+    being welcome only when useful. A small manageable personal role change is optional. Use a private
+    note or spoken reflection; no painful personal history or public statement is required. Goal: Separate
+    human worth from independence, productivity, cognition, appearance and usefulness, then choose conduct
+    that sustains self-respect and relationship under limitation. Scope: The exercise examines a changed-role
+    situation and one relational action. It does not require feeling positive about loss or prove adaptation
+    to a permanent disability or cognitive change. Time and effort: About 15 minutes for the distinction,
+    one modest relational step or rehearsal, and a 10-minute review. Adaptation: Stay with the fictional
+    case, use a trusted reader or express the choices through a familiar communication aid. Do not require
+    memory tests, appearance changes, job replacement or proof of resilience. If personal reflection is
+    too painful, defer it without interpreting that choice as a deficit in dignity. Keep personal working
+    notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Stay with the fictional case, use a trusted reader or express the choices through
+    a familiar communication aid. Do not require memory tests, appearance changes, job replacement or
+    proof of resilience. If personal reflection is too painful, defer it without interpreting that choice
+    as a deficit in dignity.
+  expected_burden: About 15 minutes for the distinction, one modest relational step or rehearsal, and
+    a 10-minute review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Dignity under limitation and loss of role protocol to rank worth, coerce participation,
@@ -104,20 +111,27 @@ intervention:
   - Treating a completed Dignity under limitation and loss of role action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Dignity under limitation and loss of role situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Educational and developmental only; trauma, suicidality, abuse, psychosis, addiction, severe functional
-    decline, and medical concerns require qualified professional or emergency support.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Stay with the
+    fictional case, use a trusted reader or express the choices through a familiar communication aid.
+    Do not require memory tests, appearance changes, job replacement or proof of resilience. If personal
+    reflection is too painful, defer it without interpreting that choice as a deficit in dignity.
   actions:
   - stable_id: PRACTICE-COMP-0610-DIGNITY-UNDER-LIMITATION-AND-LOSS-OF-ROLE-01-A1
     sequence: 1
-    title: Bound the qualified question for Dignity under limitation and loss of role
-    instructions: 'Turn Dignity under limitation and loss of role into one educational or planning question
-      and identify the qualification and jurisdiction needed to answer it. Use the canonical scope to
-      separate general learning from diagnosis, treatment, legal advice, financial advice, safeguarding
-      decisions, or other professional judgment: Separate human worth from independence, productivity,
-      cognition, appearance, or social usefulness.'
+    title: Identify five conditions that must not become a price of belonging
+    instructions: 'Consider five mistaken conditions: being independent enough, producing enough, remembering
+      or reasoning quickly enough, looking a certain way, and being useful to others. For each, name a
+      concrete respectful response that does not depend on meeting the condition: asking how help is wanted,
+      including someone without an assigned job, allowing communication time, respecting appearance preferences,
+      or offering company without repayment. In the case, distinguish the real loss of organizing ability
+      from the unsupported claim that the person no longer deserves welcome. Let sadness or anger about
+      the loss remain.
+
+
+      Observation checks: Five conditional judgments of worth are examined; Each is paired with a concrete
+      respectful response; Actual loss is distinguished from loss of human worth; Difficult feelings are
+      not treated as a failed attitude. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -139,9 +153,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0610_a1_question_bounded
-        - c0610_a1_qualification_named
-        - c0610_a1_professional_boundary_explicit
+        - five_conditional_judgments_of_worth_are_examined
+        - each_is_paired_with_a_concrete_respectful_response
+        - actual_loss_is_distinguished_from_loss_of_human_worth
+        - difficult_feelings_are_not_treated_as_a_failed_attitude
       - measurement_id: c0610_a1_boundary
         kind: boolean
         role: supporting
@@ -158,12 +173,20 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0610-DIGNITY-UNDER-LIMITATION-AND-LOSS-OF-ROLE-01-A2
     sequence: 2
-    title: Prepare minimum information for Dignity under limitation and loss of role
-    instructions: Create a privacy-minimized Dignity under limitation and loss of role consultation note
-      containing only the question, relevant category-level facts, current constraints, and desired decision.
-      Omit diagnoses, allegations, account numbers, credentials, protected work information, intimate
-      detail, and third-party identity unless a qualified professional lawfully requires it through an
-      appropriate channel.
+    title: Offer or request connection without requiring a replacement achievement
+    instructions: 'Choose a low-demand form of contact with a suitable person, or draft this for the fictional
+      organizer: I would like to stay in touch as a participant; I cannot run the event, but I would welcome
+      a short conversation if it suits us both. The other person''s response can offer genuine company
+      without immediately assigning a new useful role. Agree on timing, form and a way to decline or end
+      the exchange. An actual message is sent only in an appropriate relationship; fictional drafting
+      remains rehearsal. No one must earn connection by telling an inspiring story or displaying cheerful
+      endurance.
+
+
+      Observation checks: The proposed connection does not depend on a productive role; Limits and the
+      desired form of contact are explicit; Both people can freely decline or end the exchange; Actual
+      contact is distinguished from a fictional draft. Mark only what you observed. Missing, mixed and
+      negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -185,9 +208,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0610_a2_minimum_information_only
-        - c0610_a2_sensitive_detail_excluded
-        - c0610_a2_decision_need_named
+        - the_proposed_connection_does_not_depend_on_a_productive_role
+        - limits_and_the_desired_form_of_contact_are_explicit
+        - both_people_can_freely_decline_or_end_the_exchange
+        - actual_contact_is_distinguished_from_a_fictional_draft
       - measurement_id: c0610_a2_boundary
         kind: boolean
         role: supporting
@@ -204,12 +228,40 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0610-DIGNITY-UNDER-LIMITATION-AND-LOSS-OF-ROLE-01-A3
     sequence: 3
-    title: Record a bounded Dignity under limitation and loss of role disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: Can sustain self-respect and relationship when a valued ability or role
-      is reduced.'
+    title: Check whether respect survives the absence of improvement
+    instructions: 'Review the actual exchange, or add this variation: the fictional organizer''s limitation
+      persists and communication takes longer than before. Ask whether the same welcome, privacy and opportunity
+      to express preferences still apply. Identify any subtle bargain such as inclusion only if the person
+      becomes useful again, improves quickly or hides their needs. Revise one phrase or arrangement that
+      makes dignity conditional. Choose a sustainable way to remain connected, including supported communication
+      or quiet company, while allowing grief and realistic limits to coexist.
+
+
+      Observation checks: Continuing limitation is considered without a recovery requirement; A conditional
+      bargain is identified or explicitly checked for; One phrase or arrangement is reviewed against equal
+      dignity; Connection can continue through supported or nonproductive forms. Mark only what you observed.
+      Missing, mixed and negative results are valid; a deferred action is not completed.
+
+
+      Final review: What real loss needs acknowledgment, and what respect or relationship should not depend
+      on recovering it? Identify one changed interaction or an unresolved need for support. No response
+      to this exercise measures human worth.
+
+
+      Examples: Supportive: The former organizer was invited to participate without a job, and the arrangement
+      allowed more time and a shorter visit without demanding improvement.
+
+
+      Mixed: A warm invitation still assumed the person would resume organizing soon; the expectation
+      was named and removed.
+
+
+      Contradictory: Belonging was made conditional on usefulness, looking well or presenting the limitation
+      as an inspirational success story.
+
+
+      Inconclusive: The learner affirmed dignity in general but examined no conditional judgment or concrete
+      relational choice.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -225,14 +277,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0610_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0610_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - continuing_limitation_is_considered_without_a_recovery_requirement
+        - a_conditional_bargain_is_identified_or_explicitly_checked_for
+        - one_phrase_or_arrangement_is_reviewed_against_equal_dignity
+        - connection_can_continue_through_supported_or_nonproductive_forms
       - measurement_id: c0610_a3_boundary
         kind: boolean
         role: supporting
@@ -253,17 +307,17 @@ intervention:
       Dignity under limitation and loss of role; no purchase, subscription, travel, credential, or public
       artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Dignity under limitation and loss of role; assistive technology, interpretation, a support
-      person, and a deferred action are valid without penalty.
+    - Stay with the fictional case, use a trusted reader or express the choices through a familiar communication
+      aid. Do not require memory tests, appearance changes, job replacement or proof of resilience. If
+      personal reflection is too painful, defer it without interpreting that choice as a deficit in dignity.
     cultural_context:
     - Adapt the expression of Dignity under limitation and loss of role to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Dignity under limitation and loss of role opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Stay with the fictional case, use a trusted reader or express the choices through a familiar communication
+      aid. Do not require memory tests, appearance changes, job replacement or proof of resilience. If
+      personal reflection is too painful, defer it without interpreting that choice as a deficit in dignity.
   pause_conditions:
   - Pause Dignity under limitation and loss of role when capacity, consent, authority, privacy, access,
     care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make
@@ -295,10 +349,8 @@ evidence_and_scoring:
   - c0610_a3_boundary
   - c0610_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Dignity under limitation and loss of role action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Dignity under limitation and loss of role criterion, depended
-    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - Belonging was made conditional on usefulness, looking well or presenting the limitation as an inspirational
+    success story.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Dignity under limitation and loss of role explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -309,14 +361,23 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Dignity under limitation and loss of role rules withhold observations older
     than 90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can sustain self-respect and relationship when a valued ability or role is reduced.—not completion,
-    confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Dignity under limitation and loss of role requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Identify five conditions that must not become a price of belonging. Observed
+    checks: Five conditional judgments of worth are examined; Each is paired with a concrete respectful
+    response; Actual loss is distinguished from loss of human worth; Difficult feelings are not treated
+    as a failed attitude. Action 2: Offer or request connection without requiring a replacement achievement.
+    Observed checks: The proposed connection does not depend on a productive role; Limits and the desired
+    form of contact are explicit; Both people can freely decline or end the exchange; Actual contact is
+    distinguished from a fictional draft. Action 3: Check whether respect survives the absence of improvement.
+    Observed checks: Continuing limitation is considered without a recovery requirement; A conditional
+    bargain is identified or explicitly checked for; One phrase or arrangement is reviewed against equal
+    dignity; Connection can continue through supported or nonproductive forms.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. The learner affirmed dignity in general but examined
+    no conditional judgment or concrete relational choice.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Dignity
     under limitation and loss of role contribution under typed evaluation; protocol performance remains
     distinct and is never counted twice.
@@ -326,9 +387,8 @@ evidence_and_scoring:
   - L04
   - L05
   - L31
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Dignity under limitation and loss of role evidence.
@@ -336,12 +396,20 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for dignity under limitation and loss of role action was attempted
-    or explicitly deferred.
-  - The prepare minimum information for dignity under limitation and loss of role action was attempted
-    or explicitly deferred.
-  - The record a bounded dignity under limitation and loss of role disposition action preserved a limited
-    conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Identify five conditions that must not become a price of belonging. Observed checks: Five
+    conditional judgments of worth are examined; Each is paired with a concrete respectful response; Actual
+    loss is distinguished from loss of human worth; Difficult feelings are not treated as a failed attitude.'
+  - 'Action 2: Offer or request connection without requiring a replacement achievement. Observed checks:
+    The proposed connection does not depend on a productive role; Limits and the desired form of contact
+    are explicit; Both people can freely decline or end the exchange; Actual contact is distinguished
+    from a fictional draft.'
+  - 'Action 3: Check whether respect survives the absence of improvement. Observed checks: Continuing
+    limitation is considered without a recovery requirement; A conditional bargain is identified or explicitly
+    checked for; One phrase or arrangement is reviewed against equal dignity; Connection can continue
+    through supported or nonproductive forms.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -350,61 +418,61 @@ completion_and_review:
     - c0610_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Dignity under limitation and loss of role only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Dignity under limitation and loss of role across
-    roles, cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: What real loss needs acknowledgment, and what respect or relationship should not
+    depend on recovering it? Identify one changed interaction or an unresolved need for support. No response
+    to this exercise measures human worth.
+  transfer_limit: The exercise examines a changed-role situation and one relational action. It does not
+    require feeling positive about loss or prove adaptation to a permanent disability or cognitive change.
   reflection:
-    before: What does Dignity under limitation and loss of role require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Dignity under limitation and loss of role criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can sustain self-respect and relationship when a valued ability
-      or role is reduced.', what contradiction or missing context matters most, and should this Dignity
-      under limitation and loss of role design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Separate human worth from independence, productivity,
+      cognition, appearance and usefulness, then choose conduct that sustains self-respect and relationship
+      under limitation.'
+    during: Which checks have actually been observed? A warm invitation still assumed the person would
+      resume organizing soon; the expectation was named and removed.
+    after: What real loss needs acknowledgment, and what respect or relationship should not depend on
+      recovering it? Identify one changed interaction or an unresolved need for support. No response to
+      this exercise measures human worth.
   review_guidance:
     repeat: Repeat the same bounded Dignity under limitation and loss of role design only when the context
       and burden remain appropriate.
-    adapt: Change the Dignity under limitation and loss of role medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Stay with the fictional case, use a trusted reader or express the choices through a familiar
+      communication aid. Do not require memory tests, appearance changes, job replacement or proof of
+      resilience. If personal reflection is too painful, defer it without interpreting that choice as
+      a deficit in dignity.
     stop: Stop Dignity under limitation and loss of role when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Dignity under limitation and loss of
-      role questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Dignity under limitation and loss of role criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Dignity under limitation and loss of role criteria were observed while burden, support,
-      contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Dignity under limitation and loss of role
-      criterion, introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Dignity under limitation and loss of role action was deferred, not observed, not
-      applicable, stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The former organizer was invited to participate without a job, and the arrangement allowed
+      more time and a shorter visit without demanding improvement.
+    mixed: A warm invitation still assumed the person would resume organizing soon; the expectation was
+      named and removed.
+    contradictory: Belonging was made conditional on usefulness, looking well or presenting the limitation
+      as an inspirational success story.
+    inconclusive: The learner affirmed dignity in general but examined no conditional judgment or concrete
+      relational choice.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Dignity under limitation and loss of role.
+    context_heading: Preserve dignity and connection when a valued role changes
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Dignity under
       limitation and loss of role.
   check_in_labels:
-    c0610_a1_primary: The bounded Dignity under limitation and loss of role criterion for action 1 was
-      observed
+    c0610_a1_primary: 'Observed checks: identify five conditions that must not become a price of belonging'
     c0610_a1_boundary: Action 1 stayed inside its stated Dignity under limitation and loss of role boundary
     c0610_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0610_a2_primary: The bounded Dignity under limitation and loss of role criterion for action 2 was
-      observed
+    c0610_a2_primary: 'Observed checks: offer or request connection without requiring a replacement achievement'
     c0610_a2_boundary: Action 2 stayed inside its stated Dignity under limitation and loss of role boundary
     c0610_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0610_a3_primary: The bounded Dignity under limitation and loss of role criterion for action 3 was
-      observed
+    c0610_a3_primary: 'Observed checks: check whether respect survives the absence of improvement'
     c0610_a3_boundary: Action 3 stayed inside its stated Dignity under limitation and loss of role boundary
     c0610_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Dignity under limitation
-    and loss of role practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What real loss needs acknowledgment, and what respect or relationship should not depend
+    on recovering it? Identify one changed interaction or an unresolved need for support. No response
+    to this exercise measures human worth. Completion is not mastery.
+  plain_language_evidence: The former organizer was invited to participate without a job, and the arrangement
+    allowed more time and a shorter visit without demanding improvement.
   display_order: 80

@@ -147,6 +147,11 @@ def test_tailored_setup_and_action_copy_are_visible_in_authenticated_journey(cli
         ("03.10", True),
         ("04.07", False),
         ("04.08", True),
+        ("06.02", False),
+        ("06.08", True),
+        ("06.09", False),
+        ("06.12", True),
+        ("06.14", True),
     ],
 )
 def test_tailored_evidence_closeout_and_replay_survive_a_later_content_revision(

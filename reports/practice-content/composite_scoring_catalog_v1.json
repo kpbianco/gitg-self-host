@@ -34907,12 +34907,12 @@
       "lever_id": "L37"
     }
   ],
-  "report_hash": "3c4b3aa9c8608522085549306ef13254813c5f4cc0b3b4ffafa739fd242b49d4",
+  "report_hash": "cec59462ad10722dc9f1f5353df211eed8cf6160923d5551895c78809fff41b8",
   "schema_version": "GG-COMPOSITE-SCORING-CATALOG-1.0",
   "scoring_contract_version": "GG-COMPOSITE-CLOSEOUT-SCORING-1.0",
   "source_hashes": {
     "canonical_model": "6958ccfbe0c0d80b7485ac866a8418578850284b58956f59168429819447dfc5",
-    "practice_content": "815dc8a47f39a45448ab0fa8b2043e7807094101845da6b7cfeb57ddc23d8922",
+    "practice_content": "8101ec2776ade0986097157e68f33aa2475dc622237f10477b842519422fe732",
     "scoring_contract": "7db7fc622e0f3673536257c1be0aebe989a1d8a551ab1ca2fbf5cddbd0f6ec64",
     "scoring_schema": "5e6c52b0d7e5f770564e1bed60f3fdf20045a3a89939c121549aa13b7ecc0852"
   }

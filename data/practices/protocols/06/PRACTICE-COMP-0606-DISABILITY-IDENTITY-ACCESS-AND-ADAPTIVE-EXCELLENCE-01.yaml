@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0606-DISABILITY-IDENTITY-ACCESS-AND-ADAPTIVE-EXCELLENCE-01
 slug: c0606-disability-identity-access-and-adaptive-excellence-practice
-name: Bounded Disability identity, access, and adaptive excellence Practice
+name: Translate one access barrier into a specific participation request
 parent_competency_id: '06.06'
 domain_id: '06'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-WHO-DISABILITY-AND-BARRIERS
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 06.06
-      (Disability identity, access, and adaptive excellence); canonical scope, evidence target, classification,
-      domain boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 06.06; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,40 +35,49 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Disability identity, access, and adaptive excellence through a qualified-support
-    preparation bounded by the canonical scope: Understand disability through medical, social, and identity
-    lenses; use accommodation without shame.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can identify barriers,
-    request access, and define excellence relative to real function and chosen values. The protocol creates
-    a small opportunity to examine that target without treating completion as broad capability.'
+  purpose: Use medical, social and identity perspectives to understand disability, request an appropriate
+    accommodation, and define success by chosen participation rather than unsupported performance.
+  why_recommended: Use medical, social and identity perspectives to understand disability, request an
+    appropriate accommodation, and define success by chosen participation rather than unsupported performance.
   claims:
-  - statement: Using the canonical scope and evidence target for Disability identity, access, and adaptive
-      excellence is a traceable product-design basis for a source-only draft protocol.
+  - statement: Use medical, social and identity perspectives to understand disability, request an appropriate
+      accommodation, and define success by chosen participation rather than unsupported performance.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Disability involves interaction between health conditions and personal or environmental
+      factors; inaccessible environments and negative attitudes can obstruct participation.
+    classification: professional_or_public_standard
+    source_ids:
+    - SRC-WHO-DISABILITY-AND-BARRIERS
+    limitations: Conceptual and inclusion support only. It does not assign an identity, establish a local
+      legal entitlement or prove that a proposed accommodation works for a particular person.
   applicability_question: Does a voluntary, bounded Disability identity, access, and adaptive excellence
     practice fit the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Disability identity, access, and adaptive excellence as not applicable,
     consciously unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity,
     or safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Disability identity,
-    access, and adaptive excellence context, understand the source-only status, and stop without losing
-    safety, care, employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Disability
-    identity, access, and adaptive excellence; do not manufacture conflict, deprivation, exposure, disclosure,
-    danger, urgency, or dependence for evidence.
+  readiness_considerations: Dictate the request or use a chosen advocate while retaining the affected
+    person's preferences. A person without a current access need can analyze the supplied case without
+    pretending to have the experience. No disability simulation, forced disclosure, removal of accommodation
+    or expensive purchase is required.
+  opportunity_considerations: 'Use a real event you want to access, or this supplied case: an advertised
+    community talk mentions only stairs, long standing periods and spoken questions. A participant wants
+    to understand the talk and contribute a question using a suitable format. Read the WHO disability
+    overview. Do not simulate an impairment or remove an existing aid.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Disability identity, access, and
-    adaptive excellence.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use a real event you want to access, or this supplied case: an advertised community talk mentions
+    only stairs, long standing periods and spoken questions. A participant wants to understand the talk
+    and contribute a question using a suitable format. Read the WHO disability overview. Do not simulate
+    an impairment or remove an existing aid.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Disability identity, access, and
-    adaptive excellence instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Dictate the request or use a chosen advocate while retaining the affected person's preferences. A
+    person without a current access need can analyze the supplied case without pretending to have the
+    experience. No disability simulation, forced disclosure, removal of accommodation or expensive purchase
+    is required.
   role_conditions:
   - This competency is context contingent; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -81,21 +90,36 @@ meaning_and_fit:
     and adaptive excellence as inferiority; competing reasonable interpretations and conscientious refusal
     remain visible.
 intervention:
-  protocol_class: PF-QUALIFIED-CONSULTATION
+  protocol_class: PF-AUDIT-REDESIGN
   duration_days: 10
-  cadence: Complete three bounded Disability identity, access, and adaptive excellence actions over ten
-    days, preserving explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Disability identity, access, and adaptive excellence; copy the canonical
-    scope and evidence target into a private working note; define the action boundary, valid supports,
-    privacy limit, and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Disability
-    identity, access, and adaptive excellence. Do not store private prose, names, identities, diagnoses,
-    allegations, credentials, account data, protected work information, intimate detail, artifact contents,
-    observer narrative, or another person's secrets. This source-only draft is not surveillance, professional
-    advice, treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Disability identity, access, and adaptive
-    excellence actions, and review; scope may be reduced or deferred for access, care, health, workload,
-    conscience, or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use a real event you want to access, or this supplied case: an advertised community talk mentions
+    only stairs, long standing periods and spoken questions. A participant wants to understand the talk
+    and contribute a question using a suitable format. Read the WHO disability overview. Do not simulate
+    an impairment or remove an existing aid. Goal: Use medical, social and identity perspectives to understand
+    disability, request an appropriate accommodation, and define success by chosen participation rather
+    than unsupported performance. Scope: One access case illustrates distinct perspectives and a concrete
+    request. It does not certify accessibility, determine legal eligibility, or assign a disability identity
+    to anyone. Time and effort: About 20 minutes to examine the case, one request or draft, and a short
+    review of the response or supplied variation. Adaptation: Dictate the request or use a chosen advocate
+    while retaining the affected person''s preferences. A person without a current access need can analyze
+    the supplied case without pretending to have the experience. No disability simulation, forced disclosure,
+    removal of accommodation or expensive purchase is required. Keep personal working notes outside the
+    check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Disability: https://www.who.int/health-topics/disability'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Dictate the request or use a chosen advocate while retaining the affected person's
+    preferences. A person without a current access need can analyze the supplied case without pretending
+    to have the experience. No disability simulation, forced disclosure, removal of accommodation or expensive
+    purchase is required.
+  expected_burden: About 20 minutes to examine the case, one request or draft, and a short review of the
+    response or supplied variation.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Disability identity, access, and adaptive excellence protocol to rank worth, coerce participation,
@@ -104,20 +128,27 @@ intervention:
   - Treating a completed Disability identity, access, and adaptive excellence action, a polished artifact,
     agreement, confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Disability identity, access, and adaptive excellence situation involving emergency response, abuse,
-    retaliation, illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Educational and developmental only; trauma, suicidality, abuse, psychosis, addiction, severe functional
-    decline, and medical concerns require qualified professional or emergency support.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Dictate the
+    request or use a chosen advocate while retaining the affected person's preferences. A person without
+    a current access need can analyze the supplied case without pretending to have the experience. No
+    disability simulation, forced disclosure, removal of accommodation or expensive purchase is required.
   actions:
   - stable_id: PRACTICE-COMP-0606-DISABILITY-IDENTITY-ACCESS-AND-ADAPTIVE-EXCELLENCE-01-A1
     sequence: 1
-    title: Bound the qualified question for Disability identity, access, and adaptive excellence
-    instructions: 'Turn Disability identity, access, and adaptive excellence into one educational or planning
-      question and identify the qualification and jurisdiction needed to answer it. Use the canonical
-      scope to separate general learning from diagnosis, treatment, legal advice, financial advice, safeguarding
-      decisions, or other professional judgment: Understand disability through medical, social, and identity
-      lenses; use accommodation without shame.'
+    title: Examine the same barrier through three different perspectives
+    instructions: 'Write three short accounts. A medical perspective asks about relevant function, symptoms
+      and individual care needs; a social perspective asks how stairs, standing and one communication
+      format restrict participation; an identity perspective asks how the person understands and wishes
+      to describe their own experience. Each can matter without one erasing the others. Identify the goal
+      of understanding and asking a question, then choose one barrier to address. For a real case, use
+      only information the affected person chooses to share; access needs do not authorize guessing a
+      diagnosis or imposing a label.
+
+
+      Observation checks: Medical social and identity perspectives are distinguished; A specific environmental
+      or participation barrier is selected; The person''s chosen goal is explicit; No diagnosis or identity
+      is assigned from an access need. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -139,9 +170,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0606_a1_question_bounded
-        - c0606_a1_qualification_named
-        - c0606_a1_professional_boundary_explicit
+        - medical_social_and_identity_perspectives_are_distinguished
+        - a_specific_environmental_or_participation_barrier_is_selected
+        - the_person_s_chosen_goal_is_explicit
+        - no_diagnosis_or_identity_is_assigned_from_an_access_need
       - measurement_id: c0606_a1_boundary
         kind: boolean
         role: supporting
@@ -158,12 +190,20 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0606-DISABILITY-IDENTITY-ACCESS-AND-ADAPTIVE-EXCELLENCE-01-A2
     sequence: 2
-    title: Prepare minimum information for Disability identity, access, and adaptive excellence
-    instructions: Create a privacy-minimized Disability identity, access, and adaptive excellence consultation
-      note containing only the question, relevant category-level facts, current constraints, and desired
-      decision. Omit diagnoses, allegations, account numbers, credentials, protected work information,
-      intimate detail, and third-party identity unless a qualified professional lawfully requires it through
-      an appropriate channel.
+    title: Write an access request with a concrete usable alternative
+    instructions: 'Use this structure: I would like to participate in the talk. The standing-only format
+      prevents that for me; can seating be available with the same view and a way to submit a question?
+      Replace the barrier and requested change with the actual need. Ask who can confirm the arrangement
+      and by when, and identify what remains unknown rather than assuming a promise. Offer a suitable
+      alternative such as equivalent remote participation if it genuinely serves the goal. Drafting is
+      sufficient for the supplied case; a real request is sent only with the affected person''s agreement.
+      Local rights and formal documentation requirements need appropriate local guidance.
+
+
+      Observation checks: The request connects a barrier to a participation goal; The proposed change
+      is specific enough to answer; Responsibility and confirmation timing are requested; Disclosure and
+      any real contact remain the person''s choice. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -185,9 +225,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0606_a2_minimum_information_only
-        - c0606_a2_sensitive_detail_excluded
-        - c0606_a2_decision_need_named
+        - the_request_connects_a_barrier_to_a_participation_goal
+        - the_proposed_change_is_specific_enough_to_answer
+        - responsibility_and_confirmation_timing_are_requested
+        - disclosure_and_any_real_contact_remain_the_person_s_choice
       - measurement_id: c0606_a2_boundary
         kind: boolean
         role: supporting
@@ -204,12 +245,40 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0606-DISABILITY-IDENTITY-ACCESS-AND-ADAPTIVE-EXCELLENCE-01-A3
     sequence: 3
-    title: Record a bounded Disability identity, access, and adaptive excellence disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: Can identify barriers, request access, and define excellence relative to
-      real function and chosen values.'
+    title: Evaluate the arrangement against the chosen function
+    instructions: 'Define success as access to the content and a usable way to ask a question, not standing
+      for the entire event or appearing independent. Examine an actual response, or this variation: seating
+      is offered but placed where the talk cannot be heard. State which barrier is reduced, what still
+      blocks participation and what clarification is needed. If an appropriate arrangement is used, record
+      the actual result; an organizer''s assurance alone is not evidence that it worked. Retain the person''s
+      preferred description and consider whether another request or a different format is warranted.
+
+
+      Observation checks: Success is defined by chosen function and values; A response or supplied variation
+      is actually evaluated; Partial access is distinguished from effective participation; Any live result
+      is distinguished from an assurance or draft. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.
+
+
+      Final review: Which perspective helped reveal the barrier, what would confirm a usable change, and
+      what remains unresolved? Excellence can include skilled use of support; this exercise cannot decide
+      another person''s identity, legal entitlement or overall ability.
+
+
+      Examples: Supportive: A request specified seating with a usable view and question format; the response
+      was checked against those functions rather than mere attendance.
+
+
+      Mixed: Seating was available but the audio was inaccessible, so the arrangement was recognized as
+      partial and a further change was requested.
+
+
+      Contradictory: The person was told to prove commitment by managing without an aid, or participation
+      was celebrated while the actual access barrier remained.
+
+
+      Inconclusive: The learner endorsed inclusion in general but identified neither a concrete barrier
+      nor a request someone could answer.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -225,14 +294,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0606_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0606_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - success_is_defined_by_chosen_function_and_values
+        - a_response_or_supplied_variation_is_actually_evaluated
+        - partial_access_is_distinguished_from_effective_participation
+        - any_live_result_is_distinguished_from_an_assurance_or_draft
       - measurement_id: c0606_a3_boundary
         kind: boolean
         role: supporting
@@ -253,17 +324,19 @@ intervention:
       Disability identity, access, and adaptive excellence; no purchase, subscription, travel, credential,
       or public artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Disability identity, access, and adaptive excellence; assistive technology, interpretation,
-      a support person, and a deferred action are valid without penalty.
+    - Dictate the request or use a chosen advocate while retaining the affected person's preferences.
+      A person without a current access need can analyze the supplied case without pretending to have
+      the experience. No disability simulation, forced disclosure, removal of accommodation or expensive
+      purchase is required.
     cultural_context:
     - Adapt the expression of Disability identity, access, and adaptive excellence to direct or indirect
       communication, collective or individual decision structures, local norms, faith or secular commitments,
       and role obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Disability identity, access, and adaptive excellence opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Dictate the request or use a chosen advocate while retaining the affected person's preferences.
+      A person without a current access need can analyze the supplied case without pretending to have
+      the experience. No disability simulation, forced disclosure, removal of accommodation or expensive
+      purchase is required.
   pause_conditions:
   - Pause Disability identity, access, and adaptive excellence when capacity, consent, authority, privacy,
     access, care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances
@@ -296,11 +369,8 @@ evidence_and_scoring:
   - c0606_a3_boundary
   - c0606_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Disability identity, access, and adaptive excellence action exceeded consent, authority, privacy,
-    qualification, role, burden, or safety boundaries.
-  - The evidence contradicted the intended Disability identity, access, and adaptive excellence criterion,
-    depended on coercion or hidden private content, or could not distinguish the protocol from contextual
-    change.
+  - The person was told to prove commitment by managing without an aid, or participation was celebrated
+    while the actual access barrier remained.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Disability identity, access, and adaptive excellence explicitly; support can enable access and
     never reduces dignity or silently changes the typed value.
@@ -312,14 +382,23 @@ evidence_and_scoring:
     diminishing multipliers.
   recency_rule: Generated Disability identity, access, and adaptive excellence rules withhold observations
     older than 90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can identify barriers, request access, and define excellence relative to real function and
-    chosen values.—not completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Disability identity, access, and adaptive excellence requires a
-    bounded context, allowlisted observations, provenance, contradiction and adverse handling, and preserved
-    uncertainty; free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Examine the same barrier through three different perspectives. Observed
+    checks: Medical social and identity perspectives are distinguished; A specific environmental or participation
+    barrier is selected; The person''s chosen goal is explicit; No diagnosis or identity is assigned from
+    an access need. Action 2: Write an access request with a concrete usable alternative. Observed checks:
+    The request connects a barrier to a participation goal; The proposed change is specific enough to
+    answer; Responsibility and confirmation timing are requested; Disclosure and any real contact remain
+    the person''s choice. Action 3: Evaluate the arrangement against the chosen function. Observed checks:
+    Success is defined by chosen function and values; A response or supplied variation is actually evaluated;
+    Partial access is distinguished from effective participation; Any live result is distinguished from
+    an assurance or draft.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. The learner endorsed inclusion in general but identified
+    neither a concrete barrier nor a request someone could answer.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Disability
     identity, access, and adaptive excellence contribution under typed evaluation; protocol performance
     remains distinct and is never counted twice.
@@ -330,9 +409,8 @@ evidence_and_scoring:
   - L17
   - L31
   - L36
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Disability identity, access, and adaptive excellence evidence.
@@ -340,12 +418,20 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for disability identity, access, and adaptive excellence action was
-    attempted or explicitly deferred.
-  - The prepare minimum information for disability identity, access, and adaptive excellence action was
-    attempted or explicitly deferred.
-  - The record a bounded disability identity, access, and adaptive excellence disposition action preserved
-    a limited conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Examine the same barrier through three different perspectives. Observed checks: Medical
+    social and identity perspectives are distinguished; A specific environmental or participation barrier
+    is selected; The person''s chosen goal is explicit; No diagnosis or identity is assigned from an access
+    need.'
+  - 'Action 2: Write an access request with a concrete usable alternative. Observed checks: The request
+    connects a barrier to a participation goal; The proposed change is specific enough to answer; Responsibility
+    and confirmation timing are requested; Disclosure and any real contact remain the person''s choice.'
+  - 'Action 3: Evaluate the arrangement against the chosen function. Observed checks: Success is defined
+    by chosen function and values; A response or supplied variation is actually evaluated; Partial access
+    is distinguished from effective participation; Any live result is distinguished from an assurance
+    or draft.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -354,65 +440,64 @@ completion_and_review:
     - c0606_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Disability identity, access, and adaptive excellence only when
-    the initial context remained safe, the evidence criteria were usable, burden was acceptable, and a
-    new context can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Disability identity, access, and adaptive excellence
-    across roles, cultures, relationships, seasons, stress levels, disability states, institutions, or
-    high-consequence settings.
+  progression_criteria: Which perspective helped reveal the barrier, what would confirm a usable change,
+    and what remains unresolved? Excellence can include skilled use of support; this exercise cannot decide
+    another person's identity, legal entitlement or overall ability.
+  transfer_limit: One access case illustrates distinct perspectives and a concrete request. It does not
+    certify accessibility, determine legal eligibility, or assign a disability identity to anyone.
   reflection:
-    before: What does Disability identity, access, and adaptive excellence require in this exact context,
-      what remains outside my role or authority, and which scope sentence or evidence criterion will keep
-      the practice honest?
-    during: Which observable Disability identity, access, and adaptive excellence criterion is present,
-      absent, mixed, or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can identify barriers, request access, and define excellence
-      relative to real function and chosen values.', what contradiction or missing context matters most,
-      and should this Disability identity, access, and adaptive excellence design be repeated, adapted,
-      deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Use medical, social and identity perspectives
+      to understand disability, request an appropriate accommodation, and define success by chosen participation
+      rather than unsupported performance.'
+    during: Which checks have actually been observed? Seating was available but the audio was inaccessible,
+      so the arrangement was recognized as partial and a further change was requested.
+    after: Which perspective helped reveal the barrier, what would confirm a usable change, and what remains
+      unresolved? Excellence can include skilled use of support; this exercise cannot decide another person's
+      identity, legal entitlement or overall ability.
   review_guidance:
     repeat: Repeat the same bounded Disability identity, access, and adaptive excellence design only when
       the context and burden remain appropriate.
-    adapt: Change the Disability identity, access, and adaptive excellence medium, scope, support, timing,
-      criteria, or context while preserving provenance and the narrower evidence claim.
+    adapt: Dictate the request or use a chosen advocate while retaining the affected person's preferences.
+      A person without a current access need can analyze the supplied case without pretending to have
+      the experience. No disability simulation, forced disclosure, removal of accommodation or expensive
+      purchase is required.
     stop: Stop Disability identity, access, and adaptive excellence when the practice becomes coercive,
       unsafe, privacy-invasive, role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Disability identity, access, and adaptive
-      excellence questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Disability identity, access, and adaptive excellence criteria were observed
-      with provenance and no adverse boundary signal in the selected context.
-    mixed: Some Disability identity, access, and adaptive excellence criteria were observed while burden,
-      support, contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Disability identity, access, and adaptive
-      excellence criterion, introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Disability identity, access, and adaptive excellence action was deferred, not observed,
-      not applicable, stale, insufficiently bounded, or too confounded to interpret.
+    supportive: A request specified seating with a usable view and question format; the response was checked
+      against those functions rather than mere attendance.
+    mixed: Seating was available but the audio was inaccessible, so the arrangement was recognized as
+      partial and a further change was requested.
+    contradictory: The person was told to prove commitment by managing without an aid, or participation
+      was celebrated while the actual access barrier remained.
+    inconclusive: The learner endorsed inclusion in general but identified neither a concrete barrier
+      nor a request someone could answer.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Disability identity, access, and adaptive excellence.
+    context_heading: Translate one access barrier into a specific participation request
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Disability
       identity, access, and adaptive excellence.
   check_in_labels:
-    c0606_a1_primary: The bounded Disability identity, access, and adaptive excellence criterion for action
-      1 was observed
+    c0606_a1_primary: 'Observed checks: examine the same barrier through three different perspectives'
     c0606_a1_boundary: Action 1 stayed inside its stated Disability identity, access, and adaptive excellence
       boundary
     c0606_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0606_a2_primary: The bounded Disability identity, access, and adaptive excellence criterion for action
-      2 was observed
+    c0606_a2_primary: 'Observed checks: write an access request with a concrete usable alternative'
     c0606_a2_boundary: Action 2 stayed inside its stated Disability identity, access, and adaptive excellence
       boundary
     c0606_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0606_a3_primary: The bounded Disability identity, access, and adaptive excellence criterion for action
-      3 was observed
+    c0606_a3_primary: 'Observed checks: evaluate the arrangement against the chosen function'
     c0606_a3_boundary: Action 3 stayed inside its stated Disability identity, access, and adaptive excellence
       boundary
     c0606_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Disability identity,
-    access, and adaptive excellence practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Which perspective helped reveal the barrier, what would confirm a usable change, and
+    what remains unresolved? Excellence can include skilled use of support; this exercise cannot decide
+    another person's identity, legal entitlement or overall ability. Completion is not mastery.
+  plain_language_evidence: A request specified seating with a usable view and question format; the response
+    was checked against those functions rather than mere attendance.
   display_order: 76

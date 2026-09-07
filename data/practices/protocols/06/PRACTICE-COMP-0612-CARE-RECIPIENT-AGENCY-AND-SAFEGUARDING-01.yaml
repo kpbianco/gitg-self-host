@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0612-CARE-RECIPIENT-AGENCY-AND-SAFEGUARDING-01
 slug: c0612-care-recipient-agency-and-safeguarding-practice
-name: Bounded Care-recipient agency and safeguarding Practice
+name: Give a care recipient a usable voice and an independent help route
 parent_competency_id: '06.12'
 domain_id: '06'
 governance:
@@ -14,10 +14,11 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-NHS-CONSENT-PRINCIPLES
+  - SRC-NHS-ADULT-SAFEGUARDING
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 06.12
-      (Care-recipient agency and safeguarding); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 06.12; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,39 +36,59 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Care-recipient agency and safeguarding through a qualified-support preparation bounded
-    by the canonical scope: Protect consent, privacy, voice, choice, and freedom from neglect or abuse
-    when another person depends on care.'
-  why_recommended: 'The parent competency identifies this limited evidence target: A care plan contains
-    mechanisms for the dependent person''s preferences, complaints, and protection. The protocol creates
-    a small opportunity to examine that target without treating completion as broad capability.'
+  purpose: Build preferences, consent, privacy, complaints and protection from neglect or abuse into a
+    practical care-support arrangement.
+  why_recommended: Build preferences, consent, privacy, complaints and protection from neglect or abuse
+    into a practical care-support arrangement.
   claims:
-  - statement: Using the canonical scope and evidence target for Care-recipient agency and safeguarding
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Build preferences, consent, privacy, complaints and protection from neglect or abuse into
+      a practical care-support arrangement.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: The general consent principle requires an informed and voluntary choice; agreeing to one
+      act is not an unlimited permission, and preferences can change.
+    classification: professional_or_public_standard
+    source_ids:
+    - SRC-NHS-CONSENT-PRINCIPLES
+    limitations: Used only for the general consent principle. The displayed review is overdue; jurisdiction-specific
+      legal rules, exceptions, capacity decisions and treatment authority are not adopted or certified
+      as current by this exercise. An ordinary help agreement is not a legal consent form.
+  - statement: Abuse and neglect may occur within care relationships; concerns can require appropriate
+      professional or safeguarding support, and helpers should not promise absolute secrecy.
+    classification: safety_precaution
+    source_ids:
+    - SRC-NHS-ADULT-SAFEGUARDING
+    limitations: UK service examples and safeguarding literacy only. Local duties, complaint channels,
+      emergency routes and legal authority require relevant local guidance; the exercise does not investigate
+      allegations or certify care as safe.
   applicability_question: Does a voluntary, bounded Care-recipient agency and safeguarding practice fit
     the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Care-recipient agency and safeguarding as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Care-recipient agency
-    and safeguarding context, understand the source-only status, and stop without losing safety, care,
-    employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Care-recipient
-    agency and safeguarding; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Use a communication aid, interpreter, chosen advocate or plain-language version
+    without bypassing the recipient. Do not record personal allegations or care details in the app. If
+    there is an actual concern, use appropriate local safeguarding or emergency help promptly; completing
+    a worksheet is never a condition for receiving protection.
+  opportunity_considerations: 'Use this fictional case: an adult uses a communication device to express
+    choices, but a helper routinely answers instead. The adult wants to choose visit times and discuss
+    a concern privately; an agreed daily need was missed during a handover. Use a private note and the
+    NHS safeguarding reference for examples of concerns and appropriate professional routes, with its
+    UK scope kept explicit.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Care-recipient agency and safeguarding.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use this fictional case: an adult uses a communication device to express choices, but a helper routinely
+    answers instead. The adult wants to choose visit times and discuss a concern privately; an agreed
+    daily need was missed during a handover. Use a private note and the NHS safeguarding reference for
+    examples of concerns and appropriate professional routes, with its UK scope kept explicit.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Care-recipient agency and safeguarding
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a communication aid, interpreter, chosen advocate or plain-language version without bypassing
+    the recipient. Do not record personal allegations or care details in the app. If there is an actual
+    concern, use appropriate local safeguarding or emergency help promptly; completing a worksheet is
+    never a condition for receiving protection.
   role_conditions:
   - This competency is context contingent; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -80,21 +101,39 @@ meaning_and_fit:
     safeguarding as inferiority; competing reasonable interpretations and conscientious refusal remain
     visible.
 intervention:
-  protocol_class: PF-QUALIFIED-CONSULTATION
+  protocol_class: PF-SAFETY-PREPARATION
   duration_days: 10
-  cadence: Complete three bounded Care-recipient agency and safeguarding actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Care-recipient agency and safeguarding; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Care-recipient
-    agency and safeguarding. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Care-recipient agency and safeguarding
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use this fictional case: an adult uses a communication device to express choices, but a helper
+    routinely answers instead. The adult wants to choose visit times and discuss a concern privately;
+    an agreed daily need was missed during a handover. Use a private note and the NHS safeguarding reference
+    for examples of concerns and appropriate professional routes, with its UK scope kept explicit. Goal:
+    Build preferences, consent, privacy, complaints and protection from neglect or abuse into a practical
+    care-support arrangement. Scope: This is an ordinary preference and safeguarding-plan review using
+    a fictional case unless a suitable real context is authorized. It is not a legal capacity judgment,
+    investigation, substitute clinical care plan or authorization to override consent. Time and effort:
+    Three sessions of up to 15 minutes; no real concern should wait for the exercise to finish. Adaptation:
+    Use a communication aid, interpreter, chosen advocate or plain-language version without bypassing
+    the recipient. Do not record personal allegations or care details in the app. If there is an actual
+    concern, use appropriate local safeguarding or emergency help promptly; completing a worksheet is
+    never a condition for receiving protection. Keep personal working notes outside the check-in; record
+    only the listed observations.
+
+
+    Reference support:
+
+    Consent to treatment — overview: https://www.nhs.uk/tests-and-treatments/consent-to-treatment/
+
+    Abuse and neglect of adults at risk: https://www.nhs.uk/social-care-and-support/help-from-social-services-and-charities/abuse-and-neglect-adults-at-risk/'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a communication aid, interpreter, chosen advocate or plain-language version
+    without bypassing the recipient. Do not record personal allegations or care details in the app. If
+    there is an actual concern, use appropriate local safeguarding or emergency help promptly; completing
+    a worksheet is never a condition for receiving protection.
+  expected_burden: Three sessions of up to 15 minutes; no real concern should wait for the exercise to
+    finish.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Care-recipient agency and safeguarding protocol to rank worth, coerce participation, demand
@@ -102,20 +141,28 @@ intervention:
   - Treating a completed Care-recipient agency and safeguarding action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Care-recipient agency and safeguarding situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Educational and developmental only; trauma, suicidality, abuse, psychosis, addiction, severe functional
-    decline, and medical concerns require qualified professional or emergency support.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a communication
+    aid, interpreter, chosen advocate or plain-language version without bypassing the recipient. Do not
+    record personal allegations or care details in the app. If there is an actual concern, use appropriate
+    local safeguarding or emergency help promptly; completing a worksheet is never a condition for receiving
+    protection.
   actions:
   - stable_id: PRACTICE-COMP-0612-CARE-RECIPIENT-AGENCY-AND-SAFEGUARDING-01-A1
     sequence: 1
-    title: Bound the qualified question for Care-recipient agency and safeguarding
-    instructions: 'Turn Care-recipient agency and safeguarding into one educational or planning question
-      and identify the qualification and jurisdiction needed to answer it. Use the canonical scope to
-      separate general learning from diagnosis, treatment, legal advice, financial advice, safeguarding
-      decisions, or other professional judgment: Protect consent, privacy, voice, choice, and freedom
-      from neglect or abuse when another person depends on care.'
+    title: Put the person's communication and choices into the arrangement
+    instructions: 'Write a brief preference section in the person''s chosen form: what matters to them,
+      which everyday choices they want to make, how to ask permission before help, how they express no
+      or uncertainty, and who may receive private information. In the case, address the adult directly
+      through the device and allow time for an answer before asking a helper to interpret. Record the
+      request for a private conversation and chosen visit times. A diagnosis, reliance on care or a nonspeaking
+      communication method does not by itself settle decision-making authority; genuine legal or clinical
+      questions need qualified local assessment.
+
+
+      Observation checks: Preferences are expressed through the person''s usable communication method;
+      Ordinary choices and permission checks are explicit; Refusal uncertainty and privacy have practical
+      arrangements; Care dependence is not treated as blanket loss of decision authority. Mark only what
+      you observed. Missing, mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -137,9 +184,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0612_a1_question_bounded
-        - c0612_a1_qualification_named
-        - c0612_a1_professional_boundary_explicit
+        - preferences_are_expressed_through_the_person_s_usable_communication_method
+        - ordinary_choices_and_permission_checks_are_explicit
+        - refusal_uncertainty_and_privacy_have_practical_arrangements
+        - care_dependence_is_not_treated_as_blanket_loss_of_decision_authority
       - measurement_id: c0612_a1_boundary
         kind: boolean
         role: supporting
@@ -156,12 +204,20 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0612-CARE-RECIPIENT-AGENCY-AND-SAFEGUARDING-01-A2
     sequence: 2
-    title: Prepare minimum information for Care-recipient agency and safeguarding
-    instructions: Create a privacy-minimized Care-recipient agency and safeguarding consultation note
-      containing only the question, relevant category-level facts, current constraints, and desired decision.
-      Omit diagnoses, allegations, account numbers, credentials, protected work information, intimate
-      detail, and third-party identity unless a qualified professional lawfully requires it through an
-      appropriate channel.
+    title: Build a complaints and protection route beyond the immediate helper
+    instructions: 'Add a way to raise concerns privately with an appropriate person independent of the
+      immediate helper: a service supervisor, patient advocate, safeguarding professional or relevant
+      local protection service. Specify how the care recipient can access that route using their communication
+      method and what happens if the first contact is unavailable or implicated. Identify the missed daily
+      need as a concern requiring follow-up without deciding from one sentence whether neglect is established.
+      Do not promise absolute secrecy, investigate a suspected abuser yourself or require the care recipient
+      to confront someone who controls essential support. Immediate danger requires local emergency assistance.
+
+
+      Observation checks: An independent concern route is identified; It is accessible without relying
+      solely on the person complained about; A missed essential need receives appropriate follow-up; Investigation
+      and urgent protection stay with suitable services. Mark only what you observed. Missing, mixed and
+      negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -183,9 +239,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0612_a2_minimum_information_only
-        - c0612_a2_sensitive_detail_excluded
-        - c0612_a2_decision_need_named
+        - an_independent_concern_route_is_identified
+        - it_is_accessible_without_relying_solely_on_the_person_complained_about
+        - a_missed_essential_need_receives_appropriate_follow_up
+        - investigation_and_urgent_protection_stay_with_suitable_services
       - measurement_id: c0612_a2_boundary
         kind: boolean
         role: supporting
@@ -202,12 +259,41 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0612-CARE-RECIPIENT-AGENCY-AND-SAFEGUARDING-01-A3
     sequence: 3
-    title: Record a bounded Care-recipient agency and safeguarding disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: A care plan contains mechanisms for the dependent person''s preferences,
-      complaints, and protection.'
+    title: Test the handover against preference refusal and a missed need
+    instructions: 'Walk through three variations: the adult changes the visit time, declines an offered
+      nonessential task, and reports the missed need. For each, identify who listens, how the choice or
+      concern is recorded privately, who follows up and how the person learns what happened. Locate an
+      actual public advocacy or safeguarding contact for the relevant area and note access conditions
+      without sending a fictional report. In an authorized real care arrangement, ask the affected person
+      whether the route is usable and seek professional help for unresolved concerns. A written plan alone
+      does not prove that care is safe or that a complaint was resolved.
+
+
+      Observation checks: Three distinct preference and concern scenarios are worked through; Follow-up
+      ownership and feedback to the person are explicit; A real relevant public contact is retrievable;
+      A plan is not represented as proof of safe care or resolved harm. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.
+
+
+      Final review: Can the person change a choice, refuse an ordinary offer and raise a concern through
+      a route that does not depend entirely on the helper? Identify any remaining barrier and who can
+      address it. The person''s voice must remain visible even when substantial assistance is necessary.
+
+
+      Examples: Supportive: The arrangement used the recipient''s communication device, preserved private
+      choices and identified an independent contact with a clear follow-up route.
+
+
+      Mixed: Preferences were recorded, but the only complaint route required the same helper being questioned;
+      an independent accessible route was added.
+
+
+      Contradictory: The helper answered every question and treated dependence as blanket consent, or
+      an unresolved missed need was dismissed to keep the plan looking successful.
+
+
+      Inconclusive: A care schedule existed but offered no usable way for the recipient to refuse, communicate
+      privately or learn what happened after a concern.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -223,14 +309,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0612_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0612_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - three_distinct_preference_and_concern_scenarios_are_worked_through
+        - follow_up_ownership_and_feedback_to_the_person_are_explicit
+        - a_real_relevant_public_contact_is_retrievable
+        - a_plan_is_not_represented_as_proof_of_safe_care_or_resolved_harm
       - measurement_id: c0612_a3_boundary
         kind: boolean
         role: supporting
@@ -251,17 +339,19 @@ intervention:
       Care-recipient agency and safeguarding; no purchase, subscription, travel, credential, or public
       artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Care-recipient agency and safeguarding; assistive technology, interpretation, a support
-      person, and a deferred action are valid without penalty.
+    - Use a communication aid, interpreter, chosen advocate or plain-language version without bypassing
+      the recipient. Do not record personal allegations or care details in the app. If there is an actual
+      concern, use appropriate local safeguarding or emergency help promptly; completing a worksheet is
+      never a condition for receiving protection.
     cultural_context:
     - Adapt the expression of Care-recipient agency and safeguarding to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Care-recipient agency and safeguarding opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use a communication aid, interpreter, chosen advocate or plain-language version without bypassing
+      the recipient. Do not record personal allegations or care details in the app. If there is an actual
+      concern, use appropriate local safeguarding or emergency help promptly; completing a worksheet is
+      never a condition for receiving protection.
   pause_conditions:
   - Pause Care-recipient agency and safeguarding when capacity, consent, authority, privacy, access, care
     duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the
@@ -293,10 +383,8 @@ evidence_and_scoring:
   - c0612_a3_boundary
   - c0612_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Care-recipient agency and safeguarding action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Care-recipient agency and safeguarding criterion, depended
-    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - The helper answered every question and treated dependence as blanket consent, or an unresolved missed
+    need was dismissed to keep the plan looking successful.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Care-recipient agency and safeguarding explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -307,14 +395,24 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Care-recipient agency and safeguarding rules withhold observations older than
     90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—A care plan contains mechanisms for the dependent person's preferences, complaints, and protection.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Care-recipient agency and safeguarding requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Put the person''s communication and choices into the arrangement. Observed
+    checks: Preferences are expressed through the person''s usable communication method; Ordinary choices
+    and permission checks are explicit; Refusal uncertainty and privacy have practical arrangements; Care
+    dependence is not treated as blanket loss of decision authority. Action 2: Build a complaints and
+    protection route beyond the immediate helper. Observed checks: An independent concern route is identified;
+    It is accessible without relying solely on the person complained about; A missed essential need receives
+    appropriate follow-up; Investigation and urgent protection stay with suitable services. Action 3:
+    Test the handover against preference refusal and a missed need. Observed checks: Three distinct preference
+    and concern scenarios are worked through; Follow-up ownership and feedback to the person are explicit;
+    A real relevant public contact is retrievable; A plan is not represented as proof of safe care or
+    resolved harm.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A care schedule existed but offered no usable way for
+    the recipient to refuse, communicate privately or learn what happened after a concern.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Care-recipient
     agency and safeguarding contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -324,9 +422,8 @@ evidence_and_scoring:
   - L25
   - L28
   - L31
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Care-recipient agency and safeguarding evidence.
@@ -334,12 +431,21 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for care-recipient agency and safeguarding action was attempted or
-    explicitly deferred.
-  - The prepare minimum information for care-recipient agency and safeguarding action was attempted or
-    explicitly deferred.
-  - The record a bounded care-recipient agency and safeguarding disposition action preserved a limited
-    conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Put the person''s communication and choices into the arrangement. Observed checks: Preferences
+    are expressed through the person''s usable communication method; Ordinary choices and permission checks
+    are explicit; Refusal uncertainty and privacy have practical arrangements; Care dependence is not
+    treated as blanket loss of decision authority.'
+  - 'Action 2: Build a complaints and protection route beyond the immediate helper. Observed checks: An
+    independent concern route is identified; It is accessible without relying solely on the person complained
+    about; A missed essential need receives appropriate follow-up; Investigation and urgent protection
+    stay with suitable services.'
+  - 'Action 3: Test the handover against preference refusal and a missed need. Observed checks: Three
+    distinct preference and concern scenarios are worked through; Follow-up ownership and feedback to
+    the person are explicit; A real relevant public contact is retrievable; A plan is not represented
+    as proof of safe care or resolved harm.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -348,59 +454,62 @@ completion_and_review:
     - c0612_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Care-recipient agency and safeguarding only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Care-recipient agency and safeguarding across
-    roles, cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: Can the person change a choice, refuse an ordinary offer and raise a concern through
+    a route that does not depend entirely on the helper? Identify any remaining barrier and who can address
+    it. The person's voice must remain visible even when substantial assistance is necessary.
+  transfer_limit: This is an ordinary preference and safeguarding-plan review using a fictional case unless
+    a suitable real context is authorized. It is not a legal capacity judgment, investigation, substitute
+    clinical care plan or authorization to override consent.
   reflection:
-    before: What does Care-recipient agency and safeguarding require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Care-recipient agency and safeguarding criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'A care plan contains mechanisms for the dependent person's
-      preferences, complaints, and protection.', what contradiction or missing context matters most, and
-      should this Care-recipient agency and safeguarding design be repeated, adapted, deferred, stopped,
-      or referred?
+    before: 'What would count as doing this honestly? Goal: Build preferences, consent, privacy, complaints
+      and protection from neglect or abuse into a practical care-support arrangement.'
+    during: Which checks have actually been observed? Preferences were recorded, but the only complaint
+      route required the same helper being questioned; an independent accessible route was added.
+    after: Can the person change a choice, refuse an ordinary offer and raise a concern through a route
+      that does not depend entirely on the helper? Identify any remaining barrier and who can address
+      it. The person's voice must remain visible even when substantial assistance is necessary.
   review_guidance:
     repeat: Repeat the same bounded Care-recipient agency and safeguarding design only when the context
       and burden remain appropriate.
-    adapt: Change the Care-recipient agency and safeguarding medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Use a communication aid, interpreter, chosen advocate or plain-language version without bypassing
+      the recipient. Do not record personal allegations or care details in the app. If there is an actual
+      concern, use appropriate local safeguarding or emergency help promptly; completing a worksheet is
+      never a condition for receiving protection.
     stop: Stop Care-recipient agency and safeguarding when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Care-recipient agency and safeguarding
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Care-recipient agency and safeguarding criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Care-recipient agency and safeguarding criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Care-recipient agency and safeguarding criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Care-recipient agency and safeguarding action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The arrangement used the recipient's communication device, preserved private choices and
+      identified an independent contact with a clear follow-up route.
+    mixed: Preferences were recorded, but the only complaint route required the same helper being questioned;
+      an independent accessible route was added.
+    contradictory: The helper answered every question and treated dependence as blanket consent, or an
+      unresolved missed need was dismissed to keep the plan looking successful.
+    inconclusive: A care schedule existed but offered no usable way for the recipient to refuse, communicate
+      privately or learn what happened after a concern.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Care-recipient agency and safeguarding.
+    context_heading: Give a care recipient a usable voice and an independent help route
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Care-recipient
       agency and safeguarding.
   check_in_labels:
-    c0612_a1_primary: The bounded Care-recipient agency and safeguarding criterion for action 1 was observed
+    c0612_a1_primary: 'Observed checks: put the person''s communication and choices into the arrangement'
     c0612_a1_boundary: Action 1 stayed inside its stated Care-recipient agency and safeguarding boundary
     c0612_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0612_a2_primary: The bounded Care-recipient agency and safeguarding criterion for action 2 was observed
+    c0612_a2_primary: 'Observed checks: build a complaints and protection route beyond the immediate helper'
     c0612_a2_boundary: Action 2 stayed inside its stated Care-recipient agency and safeguarding boundary
     c0612_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0612_a3_primary: The bounded Care-recipient agency and safeguarding criterion for action 3 was observed
+    c0612_a3_primary: 'Observed checks: test the handover against preference refusal and a missed need'
     c0612_a3_boundary: Action 3 stayed inside its stated Care-recipient agency and safeguarding boundary
     c0612_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Care-recipient agency
-    and safeguarding practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Can the person change a choice, refuse an ordinary offer and raise a concern through
+    a route that does not depend entirely on the helper? Identify any remaining barrier and who can address
+    it. The person's voice must remain visible even when substantial assistance is necessary. Completion
+    is not mastery.
+  plain_language_evidence: The arrangement used the recipient's communication device, preserved private
+    choices and identified an independent contact with a clear follow-up route.
   display_order: 82

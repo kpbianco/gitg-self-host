@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0605-CHRONIC-PAIN-AND-PAIN-RELATED-FUNCTIONING-01
 slug: c0605-chronic-pain-and-pain-related-functioning-practice
-name: Bounded Chronic pain and pain-related functioning Practice
+name: Prepare a pain-care conversation around sustainable participation
 parent_competency_id: '06.05'
 domain_id: '06'
 governance:
@@ -14,10 +14,11 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-CDC-MECFS-CAPACITY-BOUNDARY
+  - SRC-MEDLINEPLUS-CHRONIC-PAIN
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 06.05
-      (Chronic pain and pain-related functioning); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 06.05; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,39 +36,58 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Chronic pain and pain-related functioning through a qualified-support preparation
-    bounded by the canonical scope: Understand pain, pacing, fear avoidance, medical uncertainty, and
-    the difference between cure, management, and adaptation.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Uses qualified care
-    and a sustainable activity plan without interpreting pain as moral weakness. The protocol creates
-    a small opportunity to examine that target without treating completion as broad capability.'
+  purpose: Distinguish pain treatment, management and adaptation, raise questions about uncertainty and
+    feared activity, and prepare a sustainable participation plan with qualified care.
+  why_recommended: Distinguish pain treatment, management and adaptation, raise questions about uncertainty
+    and feared activity, and prepare a sustainable participation plan with qualified care.
   claims:
-  - statement: Using the canonical scope and evidence target for Chronic pain and pain-related functioning
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Distinguish pain treatment, management and adaptation, raise questions about uncertainty
+      and feared activity, and prepare a sustainable participation plan with qualified care.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: ME/CFS can involve delayed symptom worsening after exertion; activity management must respect
+      individual limits, and standard exercise advice for healthy people can be unsuitable.
+    classification: safety_precaution
+    source_ids:
+    - SRC-CDC-MECFS-CAPACITY-BOUNDARY
+    limitations: Disease-specific caution against a universal activity-increase rule, not a diagnosis
+      or a pacing prescription for every illness. The exercise preserves existing qualified care and does
+      not set activity doses or change treatment.
+  - statement: Chronic pain can affect daily function and wellbeing, and care may involve different approaches
+      and professional support.
+    classification: safety_precaution
+    source_ids:
+    - SRC-MEDLINEPLUS-CHRONIC-PAIN
+    limitations: General pain literacy only; does not establish a cause, certify an activity as safe,
+      prescribe a regimen or validate the original participation-planning exercise. Cure, management and
+      adaptation are used as explanatory distinctions, not promised outcomes.
   applicability_question: Does a voluntary, bounded Chronic pain and pain-related functioning practice
     fit the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Chronic pain and pain-related functioning as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Chronic pain and
-    pain-related functioning context, understand the source-only status, and stop without losing safety,
-    care, employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Chronic pain
-    and pain-related functioning; do not manufacture conflict, deprivation, exposure, disclosure, danger,
-    urgency, or dependence for evidence.
+  readiness_considerations: Use a helper to prepare the agenda, reduce writing or stay with the fictional
+    concern. Follow individual guidance for fatigue or delayed worsening as well as pain. New severe or
+    concerning symptoms require appropriate medical help, not an experiment. No physical challenge or
+    medication change is part of completion.
+  opportunity_considerations: 'Use the linked MedlinePlus chronic-pain overview and a private note. Start
+    with this fictional concern: a person wants to join a regular conversation, but pain and worry about
+    a flare make planning difficult. If using a personal example, use an ordinary activity already covered
+    by your care guidance; keep treatment instructions unchanged.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Chronic pain and pain-related functioning.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use the linked MedlinePlus chronic-pain overview and a private note. Start with this fictional concern:
+    a person wants to join a regular conversation, but pain and worry about a flare make planning difficult.
+    If using a personal example, use an ordinary activity already covered by your care guidance; keep
+    treatment instructions unchanged.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Chronic pain and pain-related functioning
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a helper to prepare the agenda, reduce writing or stay with the fictional concern. Follow individual
+    guidance for fatigue or delayed worsening as well as pain. New severe or concerning symptoms require
+    appropriate medical help, not an experiment. No physical challenge or medication change is part of
+    completion.
   role_conditions:
   - This competency is context contingent; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -82,19 +102,36 @@ meaning_and_fit:
 intervention:
   protocol_class: PF-QUALIFIED-CONSULTATION
   duration_days: 10
-  cadence: Complete three bounded Chronic pain and pain-related functioning actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Chronic pain and pain-related functioning; copy the canonical scope and
-    evidence target into a private working note; define the action boundary, valid supports, privacy limit,
-    and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Chronic
-    pain and pain-related functioning. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Chronic pain and pain-related functioning
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use the linked MedlinePlus chronic-pain overview and a private note. Start with this fictional
+    concern: a person wants to join a regular conversation, but pain and worry about a flare make planning
+    difficult. If using a personal example, use an ordinary activity already covered by your care guidance;
+    keep treatment instructions unchanged. Goal: Distinguish pain treatment, management and adaptation,
+    raise questions about uncertainty and feared activity, and prepare a sustainable participation plan
+    with qualified care. Scope: This is care-conversation preparation and review of an existing plan.
+    It does not diagnose pain, prescribe movement, decide which pain is safe, or test tolerance through
+    deliberate provocation. Time and effort: Two preparation sessions of about 15 minutes and one review
+    after an ordinary permitted activity or the supplied fictional scenario. Adaptation: Use a helper
+    to prepare the agenda, reduce writing or stay with the fictional concern. Follow individual guidance
+    for fatigue or delayed worsening as well as pain. New severe or concerning symptoms require appropriate
+    medical help, not an experiment. No physical challenge or medication change is part of completion.
+    Keep personal working notes outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Manage ME/CFS: https://www.cdc.gov/me-cfs/management/index.html
+
+    Chronic Pain: https://medlineplus.gov/chronicpain.html'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a helper to prepare the agenda, reduce writing or stay with the fictional concern.
+    Follow individual guidance for fatigue or delayed worsening as well as pain. New severe or concerning
+    symptoms require appropriate medical help, not an experiment. No physical challenge or medication
+    change is part of completion.
+  expected_burden: Two preparation sessions of about 15 minutes and one review after an ordinary permitted
+    activity or the supplied fictional scenario.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Chronic pain and pain-related functioning protocol to rank worth, coerce participation,
@@ -103,20 +140,27 @@ intervention:
   - Treating a completed Chronic pain and pain-related functioning action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Chronic pain and pain-related functioning situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Educational and developmental only; trauma, suicidality, abuse, psychosis, addiction, severe functional
-    decline, and medical concerns require qualified professional or emergency support.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a helper
+    to prepare the agenda, reduce writing or stay with the fictional concern. Follow individual guidance
+    for fatigue or delayed worsening as well as pain. New severe or concerning symptoms require appropriate
+    medical help, not an experiment. No physical challenge or medication change is part of completion.
   actions:
   - stable_id: PRACTICE-COMP-0605-CHRONIC-PAIN-AND-PAIN-RELATED-FUNCTIONING-01-A1
     sequence: 1
-    title: Bound the qualified question for Chronic pain and pain-related functioning
-    instructions: 'Turn Chronic pain and pain-related functioning into one educational or planning question
-      and identify the qualification and jurisdiction needed to answer it. Use the canonical scope to
-      separate general learning from diagnosis, treatment, legal advice, financial advice, safeguarding
-      decisions, or other professional judgment: Understand pain, pacing, fear avoidance, medical uncertainty,
-      and the difference between cure, management, and adaptation.'
+    title: Separate the pain experience from three different care goals
+    instructions: 'Explain three aims in your own words: cure would resolve an underlying problem where
+      possible; management seeks to reduce symptoms or their effects; adaptation changes how a valued
+      activity is done. They can coexist without a promise that pain will disappear. For the fictional
+      concern, separate the reported pain, the feared consequence of joining the conversation and what
+      remains medically unknown. Describe pacing as planning activity and rest around individually appropriate
+      limits, not a rule to do more each time. Neither fear nor normal-looking test results establish
+      that pain is imaginary or that an activity is safe.
+
+
+      Observation checks: Cure management and adaptation are distinguished; Reported pain feared consequences
+      and uncertainty are separated; Pacing does not become an automatic increase rule; Pain is not treated
+      as a measure of weakness or honesty. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -138,9 +182,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0605_a1_question_bounded
-        - c0605_a1_qualification_named
-        - c0605_a1_professional_boundary_explicit
+        - cure_management_and_adaptation_are_distinguished
+        - reported_pain_feared_consequences_and_uncertainty_are_separated
+        - pacing_does_not_become_an_automatic_increase_rule
+        - pain_is_not_treated_as_a_measure_of_weakness_or_honesty
       - measurement_id: c0605_a1_boundary
         kind: boolean
         role: supporting
@@ -157,12 +202,20 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0605-CHRONIC-PAIN-AND-PAIN-RELATED-FUNCTIONING-01-A2
     sequence: 2
-    title: Prepare minimum information for Chronic pain and pain-related functioning
-    instructions: Create a privacy-minimized Chronic pain and pain-related functioning consultation note
-      containing only the question, relevant category-level facts, current constraints, and desired decision.
-      Omit diagnoses, allegations, account numbers, credentials, protected work information, intimate
-      detail, and third-party identity unless a qualified professional lawfully requires it through an
-      appropriate channel.
+    title: Prepare questions that a qualified care conversation must answer
+    instructions: 'Make a short agenda with the valued activity, its practical difficulty and these questions:
+      what needs further assessment; what existing activities and adaptations fit my situation; what changes
+      should prompt contact; and when should the plan be reviewed? Include a question about fear of activity
+      without asking a peer to decide whether to push through it. Identify the actual clinician or service
+      to contact and any access difficulty. If there is no current care relationship, locate a qualified
+      entry point rather than approving a plan yourself. Keep medication changes, tests and rehabilitation
+      decisions outside this exercise.
+
+
+      Observation checks: The agenda connects care questions to a valued activity; Uncertainty and contact
+      conditions have explicit questions; A qualified service or existing clinician is identified; The
+      exercise does not approve treatment or activity limits. Mark only what you observed. Missing, mixed
+      and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -184,9 +237,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0605_a2_minimum_information_only
-        - c0605_a2_sensitive_detail_excluded
-        - c0605_a2_decision_need_named
+        - the_agenda_connects_care_questions_to_a_valued_activity
+        - uncertainty_and_contact_conditions_have_explicit_questions
+        - a_qualified_service_or_existing_clinician_is_identified
+        - the_exercise_does_not_approve_treatment_or_activity_limits
       - measurement_id: c0605_a2_boundary
         kind: boolean
         role: supporting
@@ -203,12 +257,41 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0605-CHRONIC-PAIN-AND-PAIN-RELATED-FUNCTIONING-01-A3
     sequence: 3
-    title: Record a bounded Chronic pain and pain-related functioning disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: Uses qualified care and a sustainable activity plan without interpreting
-      pain as moral weakness.'
+    title: Make the participation plan conditional on real care guidance
+    instructions: 'Using existing guidance, specify an allowed form of the ordinary activity, available
+      support, the agreed way to pause or stop and the next review. For the fictional case, compare a
+      shorter remote conversation with a visit and identify what the person and care team would need to
+      decide before either is called suitable. A personal trial occurs only within existing guidance and
+      ordinary capacity; record what participation was possible and any concern to take back to care.
+      An unanswered care question means the plan remains a proposal. Do not generate pain or remove useful
+      aids to test a claim about avoidance.
+
+
+      Observation checks: The plan identifies guidance or clearly states what is unapproved; Participation
+      has an available supported form; Pause and review arrangements are explicit; Any actual result is
+      distinguished from a fictional comparison. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.
+
+
+      Final review: What does the person want to participate in, which clinical question remains open,
+      and what next contact or review is appropriate? Distinguish a useful care conversation from symptom
+      relief, and an approved supported activity from an untested proposal.
+
+
+      Examples: Supportive: A person brought a specific participation goal to their existing care plan,
+      used an already agreed shorter format and recorded a question for follow-up.
+
+
+      Mixed: The agenda was useful but the activity limits were not yet clear, so the proposal remained
+      unapproved instead of becoming a self-prescribed trial.
+
+
+      Contradictory: Pain was dismissed as weak character, or the exercise was used to push through a
+      feared activity without appropriate guidance.
+
+
+      Inconclusive: The learner listed treatments but did not connect a valued activity to a qualified
+      contact, a question or a conditional plan.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -224,14 +307,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0605_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0605_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - the_plan_identifies_guidance_or_clearly_states_what_is_unapproved
+        - participation_has_an_available_supported_form
+        - pause_and_review_arrangements_are_explicit
+        - any_actual_result_is_distinguished_from_a_fictional_comparison
       - measurement_id: c0605_a3_boundary
         kind: boolean
         role: supporting
@@ -252,17 +337,19 @@ intervention:
       Chronic pain and pain-related functioning; no purchase, subscription, travel, credential, or public
       artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Chronic pain and pain-related functioning; assistive technology, interpretation, a support
-      person, and a deferred action are valid without penalty.
+    - Use a helper to prepare the agenda, reduce writing or stay with the fictional concern. Follow individual
+      guidance for fatigue or delayed worsening as well as pain. New severe or concerning symptoms require
+      appropriate medical help, not an experiment. No physical challenge or medication change is part
+      of completion.
     cultural_context:
     - Adapt the expression of Chronic pain and pain-related functioning to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Chronic pain and pain-related functioning opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use a helper to prepare the agenda, reduce writing or stay with the fictional concern. Follow individual
+      guidance for fatigue or delayed worsening as well as pain. New severe or concerning symptoms require
+      appropriate medical help, not an experiment. No physical challenge or medication change is part
+      of completion.
   pause_conditions:
   - Pause Chronic pain and pain-related functioning when capacity, consent, authority, privacy, access,
     care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make
@@ -294,10 +381,8 @@ evidence_and_scoring:
   - c0605_a3_boundary
   - c0605_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Chronic pain and pain-related functioning action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Chronic pain and pain-related functioning criterion, depended
-    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - Pain was dismissed as weak character, or the exercise was used to push through a feared activity without
+    appropriate guidance.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Chronic pain and pain-related functioning explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -308,14 +393,23 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Chronic pain and pain-related functioning rules withhold observations older
     than 90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Uses qualified care and a sustainable activity plan without interpreting pain as moral weakness.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Chronic pain and pain-related functioning requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Separate the pain experience from three different care goals. Observed
+    checks: Cure management and adaptation are distinguished; Reported pain feared consequences and uncertainty
+    are separated; Pacing does not become an automatic increase rule; Pain is not treated as a measure
+    of weakness or honesty. Action 2: Prepare questions that a qualified care conversation must answer.
+    Observed checks: The agenda connects care questions to a valued activity; Uncertainty and contact
+    conditions have explicit questions; A qualified service or existing clinician is identified; The exercise
+    does not approve treatment or activity limits. Action 3: Make the participation plan conditional on
+    real care guidance. Observed checks: The plan identifies guidance or clearly states what is unapproved;
+    Participation has an available supported form; Pause and review arrangements are explicit; Any actual
+    result is distinguished from a fictional comparison.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. The learner listed treatments but did not connect a
+    valued activity to a qualified contact, a question or a conditional plan.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Chronic
     pain and pain-related functioning contribution under typed evaluation; protocol performance remains
     distinct and is never counted twice.
@@ -325,9 +419,8 @@ evidence_and_scoring:
   - L11
   - L17
   - L36
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Chronic pain and pain-related functioning evidence.
@@ -335,12 +428,21 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for chronic pain and pain-related functioning action was attempted
-    or explicitly deferred.
-  - The prepare minimum information for chronic pain and pain-related functioning action was attempted
-    or explicitly deferred.
-  - The record a bounded chronic pain and pain-related functioning disposition action preserved a limited
-    conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Separate the pain experience from three different care goals. Observed checks: Cure management
+    and adaptation are distinguished; Reported pain feared consequences and uncertainty are separated;
+    Pacing does not become an automatic increase rule; Pain is not treated as a measure of weakness or
+    honesty.'
+  - 'Action 2: Prepare questions that a qualified care conversation must answer. Observed checks: The
+    agenda connects care questions to a valued activity; Uncertainty and contact conditions have explicit
+    questions; A qualified service or existing clinician is identified; The exercise does not approve
+    treatment or activity limits.'
+  - 'Action 3: Make the participation plan conditional on real care guidance. Observed checks: The plan
+    identifies guidance or clearly states what is unapproved; Participation has an available supported
+    form; Pause and review arrangements are explicit; Any actual result is distinguished from a fictional
+    comparison.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -349,62 +451,61 @@ completion_and_review:
     - c0605_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Chronic pain and pain-related functioning only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Chronic pain and pain-related functioning across
-    roles, cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: What does the person want to participate in, which clinical question remains open,
+    and what next contact or review is appropriate? Distinguish a useful care conversation from symptom
+    relief, and an approved supported activity from an untested proposal.
+  transfer_limit: This is care-conversation preparation and review of an existing plan. It does not diagnose
+    pain, prescribe movement, decide which pain is safe, or test tolerance through deliberate provocation.
   reflection:
-    before: What does Chronic pain and pain-related functioning require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Chronic pain and pain-related functioning criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Uses qualified care and a sustainable activity plan without
-      interpreting pain as moral weakness.', what contradiction or missing context matters most, and should
-      this Chronic pain and pain-related functioning design be repeated, adapted, deferred, stopped, or
-      referred?
+    before: 'What would count as doing this honestly? Goal: Distinguish pain treatment, management and
+      adaptation, raise questions about uncertainty and feared activity, and prepare a sustainable participation
+      plan with qualified care.'
+    during: Which checks have actually been observed? The agenda was useful but the activity limits were
+      not yet clear, so the proposal remained unapproved instead of becoming a self-prescribed trial.
+    after: What does the person want to participate in, which clinical question remains open, and what
+      next contact or review is appropriate? Distinguish a useful care conversation from symptom relief,
+      and an approved supported activity from an untested proposal.
   review_guidance:
     repeat: Repeat the same bounded Chronic pain and pain-related functioning design only when the context
       and burden remain appropriate.
-    adapt: Change the Chronic pain and pain-related functioning medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Use a helper to prepare the agenda, reduce writing or stay with the fictional concern. Follow
+      individual guidance for fatigue or delayed worsening as well as pain. New severe or concerning symptoms
+      require appropriate medical help, not an experiment. No physical challenge or medication change
+      is part of completion.
     stop: Stop Chronic pain and pain-related functioning when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Chronic pain and pain-related functioning
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Chronic pain and pain-related functioning criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Chronic pain and pain-related functioning criteria were observed while burden, support,
-      contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Chronic pain and pain-related functioning
-      criterion, introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Chronic pain and pain-related functioning action was deferred, not observed, not
-      applicable, stale, insufficiently bounded, or too confounded to interpret.
+    supportive: A person brought a specific participation goal to their existing care plan, used an already
+      agreed shorter format and recorded a question for follow-up.
+    mixed: The agenda was useful but the activity limits were not yet clear, so the proposal remained
+      unapproved instead of becoming a self-prescribed trial.
+    contradictory: Pain was dismissed as weak character, or the exercise was used to push through a feared
+      activity without appropriate guidance.
+    inconclusive: The learner listed treatments but did not connect a valued activity to a qualified contact,
+      a question or a conditional plan.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Chronic pain and pain-related functioning.
+    context_heading: Prepare a pain-care conversation around sustainable participation
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Chronic pain
       and pain-related functioning.
   check_in_labels:
-    c0605_a1_primary: The bounded Chronic pain and pain-related functioning criterion for action 1 was
-      observed
+    c0605_a1_primary: 'Observed checks: separate the pain experience from three different care goals'
     c0605_a1_boundary: Action 1 stayed inside its stated Chronic pain and pain-related functioning boundary
     c0605_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0605_a2_primary: The bounded Chronic pain and pain-related functioning criterion for action 2 was
-      observed
+    c0605_a2_primary: 'Observed checks: prepare questions that a qualified care conversation must answer'
     c0605_a2_boundary: Action 2 stayed inside its stated Chronic pain and pain-related functioning boundary
     c0605_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0605_a3_primary: The bounded Chronic pain and pain-related functioning criterion for action 3 was
-      observed
+    c0605_a3_primary: 'Observed checks: make the participation plan conditional on real care guidance'
     c0605_a3_boundary: Action 3 stayed inside its stated Chronic pain and pain-related functioning boundary
     c0605_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Chronic pain and pain-related
-    functioning practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What does the person want to participate in, which clinical question remains open,
+    and what next contact or review is appropriate? Distinguish a useful care conversation from symptom
+    relief, and an approved supported activity from an untested proposal. Completion is not mastery.
+  plain_language_evidence: A person brought a specific participation goal to their existing care plan,
+    used an already agreed shorter format and recorded a question for follow-up.
   display_order: 75

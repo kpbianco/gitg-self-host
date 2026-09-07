@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0608-RECEIVING-CARE-AND-SEASONS-OF-REDUCED-AGENCY-01
 slug: c0608-receiving-care-and-seasons-of-reduced-agency-practice
-name: Bounded Receiving care and seasons of reduced agency Practice
+name: Agree on help that preserves consent during reduced capacity
 parent_competency_id: '06.08'
 domain_id: '06'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-NHS-CONSENT-PRINCIPLES
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 06.08
-      (Receiving care and seasons of reduced agency); canonical scope, evidence target, classification,
-      domain boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 06.08; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,40 +35,50 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Receiving care and seasons of reduced agency through a qualified-support preparation
-    bounded by the canonical scope: Practice being cared for during illness, injury, grief, unemployment,
-    aging, or crisis while maintaining communication and consent.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can accept appropriate
-    dependence and participate in decisions to the extent possible. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Accept appropriate care during a season of reduced agency while communicating preferences and
+    participating in decisions through an accessible form.
+  why_recommended: Accept appropriate care during a season of reduced agency while communicating preferences
+    and participating in decisions through an accessible form.
   claims:
-  - statement: Using the canonical scope and evidence target for Receiving care and seasons of reduced
-      agency is a traceable product-design basis for a source-only draft protocol.
+  - statement: Accept appropriate care during a season of reduced agency while communicating preferences
+      and participating in decisions through an accessible form.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: The general consent principle requires an informed and voluntary choice; agreeing to one
+      act is not an unlimited permission, and preferences can change.
+    classification: professional_or_public_standard
+    source_ids:
+    - SRC-NHS-CONSENT-PRINCIPLES
+    limitations: Used only for the general consent principle. The displayed review is overdue; jurisdiction-specific
+      legal rules, exceptions, capacity decisions and treatment authority are not adopted or certified
+      as current by this exercise. An ordinary help agreement is not a legal consent form.
   applicability_question: Does a voluntary, bounded Receiving care and seasons of reduced agency practice
     fit the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Receiving care and seasons of reduced agency as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Receiving care and
-    seasons of reduced agency context, understand the source-only status, and stop without losing safety,
-    care, employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Receiving
-    care and seasons of reduced agency; do not manufacture conflict, deprivation, exposure, disclosure,
-    danger, urgency, or dependence for evidence.
+  readiness_considerations: Use accessible yes/no options, extra processing time, an interpreter or a
+    chosen advocate without bypassing the person. No one is required to provide intimate care, disclose
+    credentials or surrender an existing support. If decision-making ability is genuinely uncertain, use
+    qualified local guidance instead of a peer verdict.
+  opportunity_considerations: 'Use an ordinary, genuinely needed offer of help or this fictional case:
+    someone recovering under an existing care plan wants assistance arranging a grocery delivery but wants
+    to choose the items and keep financial details private. Use a note, preferred communication aid or
+    willing helper. Nobody needs to enact illness or intimate care.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Receiving care and seasons of reduced
-    agency.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use an ordinary, genuinely needed offer of help or this fictional case: someone recovering under
+    an existing care plan wants assistance arranging a grocery delivery but wants to choose the items
+    and keep financial details private. Use a note, preferred communication aid or willing helper. Nobody
+    needs to enact illness or intimate care.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Receiving care and seasons of reduced
-    agency instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use accessible yes/no options, extra processing time, an interpreter or a chosen advocate without
+    bypassing the person. No one is required to provide intimate care, disclose credentials or surrender
+    an existing support. If decision-making ability is genuinely uncertain, use qualified local guidance
+    instead of a peer verdict.
   role_conditions:
   - This competency is context contingent; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -81,21 +91,35 @@ meaning_and_fit:
     of reduced agency as inferiority; competing reasonable interpretations and conscientious refusal remain
     visible.
 intervention:
-  protocol_class: PF-QUALIFIED-CONSULTATION
+  protocol_class: PF-RELATIONAL-CONVERSATION
   duration_days: 10
-  cadence: Complete three bounded Receiving care and seasons of reduced agency actions over ten days,
-    preserving explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Receiving care and seasons of reduced agency; copy the canonical scope
-    and evidence target into a private working note; define the action boundary, valid supports, privacy
-    limit, and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Receiving
-    care and seasons of reduced agency. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Receiving care and seasons of reduced
-    agency actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use an ordinary, genuinely needed offer of help or this fictional case: someone recovering under
+    an existing care plan wants assistance arranging a grocery delivery but wants to choose the items
+    and keep financial details private. Use a note, preferred communication aid or willing helper. Nobody
+    needs to enact illness or intimate care. Goal: Accept appropriate care during a season of reduced
+    agency while communicating preferences and participating in decisions through an accessible form.
+    Scope: One ordinary help agreement practices receiving care and retaining a voice. A rehearsal does
+    not establish experience of illness, injury, grief, unemployment, aging or crisis. It is not a legal
+    capacity assessment or medical consent form. Time and effort: About 15 minutes to prepare, one short
+    agreement or rehearsal, and a brief review. Adaptation: Use accessible yes/no options, extra processing
+    time, an interpreter or a chosen advocate without bypassing the person. No one is required to provide
+    intimate care, disclose credentials or surrender an existing support. If decision-making ability is
+    genuinely uncertain, use qualified local guidance instead of a peer verdict. Keep personal working
+    notes outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Consent to treatment — overview: https://www.nhs.uk/tests-and-treatments/consent-to-treatment/'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use accessible yes/no options, extra processing time, an interpreter or a chosen
+    advocate without bypassing the person. No one is required to provide intimate care, disclose credentials
+    or surrender an existing support. If decision-making ability is genuinely uncertain, use qualified
+    local guidance instead of a peer verdict.
+  expected_burden: About 15 minutes to prepare, one short agreement or rehearsal, and a brief review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Receiving care and seasons of reduced agency protocol to rank worth, coerce participation,
@@ -104,20 +128,27 @@ intervention:
   - Treating a completed Receiving care and seasons of reduced agency action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Receiving care and seasons of reduced agency situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Educational and developmental only; trauma, suicidality, abuse, psychosis, addiction, severe functional
-    decline, and medical concerns require qualified professional or emergency support.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use accessible
+    yes/no options, extra processing time, an interpreter or a chosen advocate without bypassing the person.
+    No one is required to provide intimate care, disclose credentials or surrender an existing support.
+    If decision-making ability is genuinely uncertain, use qualified local guidance instead of a peer
+    verdict.
   actions:
   - stable_id: PRACTICE-COMP-0608-RECEIVING-CARE-AND-SEASONS-OF-REDUCED-AGENCY-01-A1
     sequence: 1
-    title: Bound the qualified question for Receiving care and seasons of reduced agency
-    instructions: 'Turn Receiving care and seasons of reduced agency into one educational or planning
-      question and identify the qualification and jurisdiction needed to answer it. Use the canonical
-      scope to separate general learning from diagnosis, treatment, legal advice, financial advice, safeguarding
-      decisions, or other professional judgment: Practice being cared for during illness, injury, grief,
-      unemployment, aging, or crisis while maintaining communication and consent.'
+    title: Make the person's choices visible before assigning the helper's tasks
+    instructions: 'Divide the activity into choices the person wants to make, practical work they want
+      help with and information they want kept private. For the case, the person chooses items; the helper
+      may explain or enter agreed delivery options; payment credentials remain private. State how the
+      person communicates yes, no, uncertainty and a request for more time, using their usual reliable
+      method. Ask rather than assume which choices they want help considering. Reduced speed, fatigue
+      or use of a communication aid does not itself establish that the person cannot decide.
+
+
+      Observation checks: Decision choices and practical assistance are separated; Privacy preferences
+      are explicit; Yes no uncertainty and pause have usable communication forms; Reduced capacity is
+      not automatically treated as loss of decision authority. Mark only what you observed. Missing, mixed
+      and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -139,9 +170,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0608_a1_question_bounded
-        - c0608_a1_qualification_named
-        - c0608_a1_professional_boundary_explicit
+        - decision_choices_and_practical_assistance_are_separated
+        - privacy_preferences_are_explicit
+        - yes_no_uncertainty_and_pause_have_usable_communication_forms
+        - reduced_capacity_is_not_automatically_treated_as_loss_of_decision_authority
       - measurement_id: c0608_a1_boundary
         kind: boolean
         role: supporting
@@ -158,12 +190,20 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0608-RECEIVING-CARE-AND-SEASONS-OF-REDUCED-AGENCY-01-A2
     sequence: 2
-    title: Prepare minimum information for Receiving care and seasons of reduced agency
-    instructions: Create a privacy-minimized Receiving care and seasons of reduced agency consultation
-      note containing only the question, relevant category-level facts, current constraints, and desired
-      decision. Omit diagnoses, allegations, account numbers, credentials, protected work information,
-      intimate detail, and third-party identity unless a qualified professional lawfully requires it through
-      an appropriate channel.
+    title: Negotiate a bounded agreement that can be changed
+    instructions: 'Use this opening: I would like help with the delivery options; I want to choose the
+      items, and please check before changing anything. Agree on the task, timing, information the helper
+      needs, the pause signal and a backup if the helper is unavailable. The helper states their own limits
+      without threatening abandonment or demanding gratitude. Rehearse a change of mind, such as declining
+      a substitution, and require a fresh check rather than treating the earlier agreement as blanket
+      permission. Clinical or legal decisions need the relevant professional process; this ordinary agreement
+      creates no such authority.
+
+
+      Observation checks: The agreement identifies task timing and helper limits; Help is limited to what
+      was agreed; A changed preference prompts a fresh check; Backup arrangements do not depend on coercion
+      or unlimited access. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -185,9 +225,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0608_a2_minimum_information_only
-        - c0608_a2_sensitive_detail_excluded
-        - c0608_a2_decision_need_named
+        - the_agreement_identifies_task_timing_and_helper_limits
+        - help_is_limited_to_what_was_agreed
+        - a_changed_preference_prompts_a_fresh_check
+        - backup_arrangements_do_not_depend_on_coercion_or_unlimited_access
       - measurement_id: c0608_a2_boundary
         kind: boolean
         role: supporting
@@ -204,12 +245,41 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0608-RECEIVING-CARE-AND-SEASONS-OF-REDUCED-AGENCY-01-A3
     sequence: 3
-    title: Record a bounded Receiving care and seasons of reduced agency disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: Can accept appropriate dependence and participate in decisions to the extent
-      possible.'
+    title: Use the agreement and check whose decision actually prevailed
+    instructions: 'Carry out the agreed ordinary help if the context is real. Otherwise rehearse this
+      variation: the helper recommends a different item because it is convenient, while the person prefers
+      the original. Resolve it through the person''s accessible communication and the helper''s genuine
+      practical limits, not by assuming dependence settles the disagreement. Review whether help met the
+      stated need, whether privacy was respected and whether the person could pause or revise the arrangement.
+      If essential needs are unmet, seek an appropriate support service rather than treating self-sufficiency
+      as the required solution.
+
+
+      Observation checks: An actual exchange or explicitly labeled variation is examined; The person''s
+      stated preference affects the outcome; Privacy and the option to pause remain effective; Unmet essential
+      needs lead to appropriate support rather than blame. Mark only what you observed. Missing, mixed
+      and negative results are valid; a deferred action is not completed.
+
+
+      Final review: Did assistance make the person''s chosen participation possible, and could they meaningfully
+      revise or refuse it? Identify one improvement to communication or backup. Accepting care is compatible
+      with dignity even when independent performance is not possible.
+
+
+      Examples: Supportive: The recipient chose the items, the helper handled agreed logistics, and a
+      changed preference was checked without demanding private credentials.
+
+
+      Mixed: The task was completed but the pause signal was missed, so the agreement was revised before
+      another exchange.
+
+
+      Contradictory: The helper overruled an expressed preference because providing care was treated as
+      entitlement to decide everything.
+
+
+      Inconclusive: A general offer to help was made without clarifying the person''s choices, information
+      boundaries or a usable way to change the agreement.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -225,14 +295,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0608_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0608_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - an_actual_exchange_or_explicitly_labeled_variation_is_examined
+        - the_person_s_stated_preference_affects_the_outcome
+        - privacy_and_the_option_to_pause_remain_effective
+        - unmet_essential_needs_lead_to_appropriate_support_rather_than_blame
       - measurement_id: c0608_a3_boundary
         kind: boolean
         role: supporting
@@ -253,17 +325,19 @@ intervention:
       Receiving care and seasons of reduced agency; no purchase, subscription, travel, credential, or
       public artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Receiving care and seasons of reduced agency; assistive technology, interpretation, a
-      support person, and a deferred action are valid without penalty.
+    - Use accessible yes/no options, extra processing time, an interpreter or a chosen advocate without
+      bypassing the person. No one is required to provide intimate care, disclose credentials or surrender
+      an existing support. If decision-making ability is genuinely uncertain, use qualified local guidance
+      instead of a peer verdict.
     cultural_context:
     - Adapt the expression of Receiving care and seasons of reduced agency to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Receiving care and seasons of reduced agency opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use accessible yes/no options, extra processing time, an interpreter or a chosen advocate without
+      bypassing the person. No one is required to provide intimate care, disclose credentials or surrender
+      an existing support. If decision-making ability is genuinely uncertain, use qualified local guidance
+      instead of a peer verdict.
   pause_conditions:
   - Pause Receiving care and seasons of reduced agency when capacity, consent, authority, privacy, access,
     care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make
@@ -295,10 +369,8 @@ evidence_and_scoring:
   - c0608_a3_boundary
   - c0608_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Receiving care and seasons of reduced agency action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Receiving care and seasons of reduced agency criterion, depended
-    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - The helper overruled an expressed preference because providing care was treated as entitlement to
+    decide everything.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Receiving care and seasons of reduced agency explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -309,14 +381,23 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Receiving care and seasons of reduced agency rules withhold observations older
     than 90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can accept appropriate dependence and participate in decisions to the extent possible.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Receiving care and seasons of reduced agency requires a bounded
-    context, allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Make the person''s choices visible before assigning the helper''s tasks.
+    Observed checks: Decision choices and practical assistance are separated; Privacy preferences are
+    explicit; Yes no uncertainty and pause have usable communication forms; Reduced capacity is not automatically
+    treated as loss of decision authority. Action 2: Negotiate a bounded agreement that can be changed.
+    Observed checks: The agreement identifies task timing and helper limits; Help is limited to what was
+    agreed; A changed preference prompts a fresh check; Backup arrangements do not depend on coercion
+    or unlimited access. Action 3: Use the agreement and check whose decision actually prevailed. Observed
+    checks: An actual exchange or explicitly labeled variation is examined; The person''s stated preference
+    affects the outcome; Privacy and the option to pause remain effective; Unmet essential needs lead
+    to appropriate support rather than blame.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A general offer to help was made without clarifying
+    the person's choices, information boundaries or a usable way to change the agreement.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Receiving
     care and seasons of reduced agency contribution under typed evaluation; protocol performance remains
     distinct and is never counted twice.
@@ -326,9 +407,8 @@ evidence_and_scoring:
   - L05
   - L28
   - L36
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Receiving care and seasons of reduced agency evidence.
@@ -336,12 +416,20 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for receiving care and seasons of reduced agency action was attempted
-    or explicitly deferred.
-  - The prepare minimum information for receiving care and seasons of reduced agency action was attempted
-    or explicitly deferred.
-  - The record a bounded receiving care and seasons of reduced agency disposition action preserved a limited
-    conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Make the person''s choices visible before assigning the helper''s tasks. Observed checks:
+    Decision choices and practical assistance are separated; Privacy preferences are explicit; Yes no
+    uncertainty and pause have usable communication forms; Reduced capacity is not automatically treated
+    as loss of decision authority.'
+  - 'Action 2: Negotiate a bounded agreement that can be changed. Observed checks: The agreement identifies
+    task timing and helper limits; Help is limited to what was agreed; A changed preference prompts a
+    fresh check; Backup arrangements do not depend on coercion or unlimited access.'
+  - 'Action 3: Use the agreement and check whose decision actually prevailed. Observed checks: An actual
+    exchange or explicitly labeled variation is examined; The person''s stated preference affects the
+    outcome; Privacy and the option to pause remain effective; Unmet essential needs lead to appropriate
+    support rather than blame.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -350,64 +438,66 @@ completion_and_review:
     - c0608_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Receiving care and seasons of reduced agency only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Receiving care and seasons of reduced agency
-    across roles, cultures, relationships, seasons, stress levels, disability states, institutions, or
-    high-consequence settings.
+  progression_criteria: Did assistance make the person's chosen participation possible, and could they
+    meaningfully revise or refuse it? Identify one improvement to communication or backup. Accepting care
+    is compatible with dignity even when independent performance is not possible.
+  transfer_limit: One ordinary help agreement practices receiving care and retaining a voice. A rehearsal
+    does not establish experience of illness, injury, grief, unemployment, aging or crisis. It is not
+    a legal capacity assessment or medical consent form.
   reflection:
-    before: What does Receiving care and seasons of reduced agency require in this exact context, what
-      remains outside my role or authority, and which scope sentence or evidence criterion will keep the
-      practice honest?
-    during: Which observable Receiving care and seasons of reduced agency criterion is present, absent,
-      mixed, or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can accept appropriate dependence and participate in decisions
-      to the extent possible.', what contradiction or missing context matters most, and should this Receiving
-      care and seasons of reduced agency design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Accept appropriate care during a season of
+      reduced agency while communicating preferences and participating in decisions through an accessible
+      form.'
+    during: Which checks have actually been observed? The task was completed but the pause signal was
+      missed, so the agreement was revised before another exchange.
+    after: Did assistance make the person's chosen participation possible, and could they meaningfully
+      revise or refuse it? Identify one improvement to communication or backup. Accepting care is compatible
+      with dignity even when independent performance is not possible.
   review_guidance:
     repeat: Repeat the same bounded Receiving care and seasons of reduced agency design only when the
       context and burden remain appropriate.
-    adapt: Change the Receiving care and seasons of reduced agency medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Use accessible yes/no options, extra processing time, an interpreter or a chosen advocate without
+      bypassing the person. No one is required to provide intimate care, disclose credentials or surrender
+      an existing support. If decision-making ability is genuinely uncertain, use qualified local guidance
+      instead of a peer verdict.
     stop: Stop Receiving care and seasons of reduced agency when the practice becomes coercive, unsafe,
       privacy-invasive, role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Receiving care and seasons of reduced
-      agency questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Receiving care and seasons of reduced agency criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Receiving care and seasons of reduced agency criteria were observed while burden, support,
-      contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Receiving care and seasons of reduced agency
-      criterion, introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Receiving care and seasons of reduced agency action was deferred, not observed,
-      not applicable, stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The recipient chose the items, the helper handled agreed logistics, and a changed preference
+      was checked without demanding private credentials.
+    mixed: The task was completed but the pause signal was missed, so the agreement was revised before
+      another exchange.
+    contradictory: The helper overruled an expressed preference because providing care was treated as
+      entitlement to decide everything.
+    inconclusive: A general offer to help was made without clarifying the person's choices, information
+      boundaries or a usable way to change the agreement.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Receiving care and seasons of reduced agency.
+    context_heading: Agree on help that preserves consent during reduced capacity
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Receiving
       care and seasons of reduced agency.
   check_in_labels:
-    c0608_a1_primary: The bounded Receiving care and seasons of reduced agency criterion for action 1
-      was observed
+    c0608_a1_primary: 'Observed checks: make the person''s choices visible before assigning the helper''s
+      tasks'
     c0608_a1_boundary: Action 1 stayed inside its stated Receiving care and seasons of reduced agency
       boundary
     c0608_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0608_a2_primary: The bounded Receiving care and seasons of reduced agency criterion for action 2
-      was observed
+    c0608_a2_primary: 'Observed checks: negotiate a bounded agreement that can be changed'
     c0608_a2_boundary: Action 2 stayed inside its stated Receiving care and seasons of reduced agency
       boundary
     c0608_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0608_a3_primary: The bounded Receiving care and seasons of reduced agency criterion for action 3
-      was observed
+    c0608_a3_primary: 'Observed checks: use the agreement and check whose decision actually prevailed'
     c0608_a3_boundary: Action 3 stayed inside its stated Receiving care and seasons of reduced agency
       boundary
     c0608_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Receiving care and
-    seasons of reduced agency practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Did assistance make the person's chosen participation possible, and could they meaningfully
+    revise or refuse it? Identify one improvement to communication or backup. Accepting care is compatible
+    with dignity even when independent performance is not possible. Completion is not mastery.
+  plain_language_evidence: The recipient chose the items, the helper handled agreed logistics, and a changed
+    preference was checked without demanding private credentials.
   display_order: 78

@@ -1,0 +1,39 @@
+# Scope map: vulnerability, disability, access and care
+
+All 14 domain 06 competencies receive distinct authored instructions in
+`exercises/06.yaml`. Each entry provides a usable starting point, ordered
+actions, four observation checks per action, adaptations, review and four
+worked outcome examples. Action numbers below refer to those actual entries.
+The compiler projects them into the canonical runtime practice packages.
+
+This map is an explicit authoring review, not a completed specialist or
+empirical assessment. A fictional plan establishes preparedness only; a real
+support need does not have to be invented to complete an exercise. Conditional
+personal pathways retain qualified care and the affected person's choices.
+
+| Competency | How the canonical scope is represented | Observable result and limit |
+| --- | --- | --- |
+| 06.01 Vulnerability as a human condition | A1 examines bodily needs, emotional exposure, reliance on others, uncertainty and limits of self-sufficiency. A2 states a real need and a bounded request. A3 receives help while retaining choices and proportionate appreciation. | An actual help exchange supports receiving-care evidence. A draft or refused request remains preparation; dependence never reduces dignity. |
+| 06.02 Trauma and post-traumatic stress literacy | A1 explains threat, avoidance, intrusion, dissociation, shame, hyperarousal, memory and attachment, distinguishing observation from inference. A2 compares a choice-preserving response with forced disclosure or exposure. A3 verifies a professional route and prepares consent/fit questions. | A glossary, bounded response and retrievable support route. No symptom score, diagnosis, personal trauma retelling or treatment is produced. |
+| 06.03 Recovery after violation and betrayal | A1 maps safety, agency, trust, bodily ownership, boundaries and meaning to concrete choices. A2 rehearses responses to declined touch, declined disclosure and accepted practical help. A3 makes a relevant support option usable. | Protective preparation avoids victim blame and imposed forgiveness, reporting or reconciliation. It does not claim actual recovery or authorize confrontation. |
+| 06.04 Chronic illness adaptation | A1 plans care, ordinary needs and valued interests with usual, reduced and supported forms. A2 communicates limits and a feasible alternative. A3 applies a changed-capacity situation and considers later effects. | A flexible schedule, specific message and review of a trial or labeled scenario. No automatic activity increases, altered treatment or assumption that one good day establishes capacity. |
+| 06.05 Chronic pain and pain-related functioning | A1 distinguishes cure, management, adaptation, feared consequences, pacing and medical uncertainty. A2 brings a participation goal and activity/contact questions to a qualified route. A3 keeps a plan conditional on existing guidance and actual capacity. | A care agenda and supported participation plan or explicit proposal. Pain is not moral weakness; no movement prescription, pain provocation or peer judgment that an activity is safe. |
+| 06.06 Disability identity, access and adaptive excellence | A1 distinguishes medical, social and self-chosen identity perspectives. A2 formulates a concrete access request. A3 judges an arrangement against chosen participation and values, including a supplied partial-access variation. | A request and functional evaluation. An assurance is not a successful access trial; no assigned identity, disability simulation or legal eligibility decision. |
+| 06.07 Neurodiversity and cognitive variation | A1 explains attention, sensory processing, social communication, executive function, learning and regulation as task demands. A2 supplies a concrete support for an observed mismatch. A3 tests its utility and burden without removing needed assistance. | A task-specific support and actual use. The comparison neither romanticizes impairment nor treats every difference as a disorder; it does not establish a global profile. |
+| 06.08 Receiving care and seasons of reduced agency | A1 separates choices, practical assistance, privacy and communication. A2 negotiates task/timing/limits and changed consent. A3 checks a real exchange or disagreement variation against the recipient's preference and unmet needs. | A usable ordinary help agreement. Reduced agency can arise in different seasons; no illness performance, credential sharing or legal authority is required. |
+| 06.09 Accommodation, assistive technology and universal design | A1 compares tools, environment, communication support and inclusive defaults against five information needs. A2 supplies a complete revised notice. A3 repeats the same task through an actual access method and records remaining barriers. | A concrete before-and-after artifact. No assistive-product purchase or false claim of universal accessibility; unknown physical access stays unknown. |
+| 06.10 Dignity under limitation and loss of role | A1 examines worth made conditional on independence, productivity, cognition, appearance and usefulness. A2 offers connection without a replacement achievement. A3 checks whether respect persists when limitation does not improve. | Specific relational language and choices preserve dignity alongside grief. No positive mood, recovery promise or new productive role is required. |
+| 06.11 Relapse, recurrence and nonlinear recovery | A1 preserves earlier progress and current setbacks without inventing their cause. A2 specifies reduced demands, support, professional contact and return conditions. A3 tests an unavailable helper and later checks usability. | A recurrence plan with a real contact and fallback. Rehearsal is not an actual relapse; no treatment withdrawal, detox plan or fixed recovery trajectory. |
+| 06.12 Care-recipient agency and safeguarding | A1 makes consent, voice, choice and privacy workable through the person's communication method. A2 supplies an independent concern/protection route. A3 tests changed preference, refusal and a missed need with follow-up and feedback. | A preference section, accessible concern route and handover review. No legal capacity judgment, allegation investigation or claim that a written plan proves care is safe. |
+| 06.13 Ableism, stigma and inclusive participation | A1 examines stereotype, stigma, compelled disclosure, inaccessible defaults and imposed inspiration. A2 replaces the notice with concrete participation choices. A3 tests different access needs, non-disclosure and implementation gaps. | An actual replacement notice or clearly labeled proposal. Equitable participation must have a working mechanism; no compulsory story or claim that nicer wording alone removes exclusion. |
+| 06.14 Professional and emergency boundaries | A1 gives a professional boundary for trauma, suicidality, abuse, psychosis-related concerns, addiction, marked decline and medical symptoms. A2 verifies location-appropriate emergency, crisis, clinical and protection routes. A3 rehearses distinct handoffs. | A public-resource card and response rehearsal. No diagnosis, low-risk score, test emergency call or waiting for exercise completion during an actual concern. |
+
+The sources support limited factual, safety or access-design claims. The
+exercise instructions themselves are original educational designs; source
+links do not establish intervention effectiveness or local legal authority.
+In particular, ME/CFS guidance is used to reject a universal activity-increase
+rule, not generalized into a treatment for every chronic condition.
+
+This cohort raises authored coverage from 77 to 91 of 383. Exactly 292 remain
+rewrite-pending. All authored entries remain pending the appropriate human
+semantic, source, safety and accessibility review and empirical work.
