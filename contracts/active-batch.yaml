@@ -1,8 +1,8 @@
 schema_version: 1
 batch:
-  id: M6J-04-VULNERABILITY-PRACTICES
-  title: Tailored vulnerability disability access and care practices
-  goal: Individually rewrite all 14 domain 06 practices with explicit canonical scope maps; retain the 77 previously authored practices and an exact inventory of 292 still pending.
+  id: M6J-05-EMOTIONAL-RESILIENCE-PRACTICES
+  title: Tailored emotional maturity resilience and mental well-being practices
+  goal: Individually rewrite all 14 domain 07 practices with explicit clinical and safety boundaries; retain the 91 previously authored practices and an exact inventory of 278 still pending.
 sources:
   product: products/gitg-self-host/product.yaml
   requirements:
@@ -10,9 +10,9 @@ sources:
     - docs/PRODUCT_DECISIONS.md#decision-053
     - docs/program/M6_CURRICULUM_EXPANSION.md
   milestone: owner-directed-M6J-continuation
-  baseline_commit: b8188ab66bc129bb87d2ee8d3e6a617a46139788
+  baseline_commit: 0a3939a468dac1e9ffd9451c012968e88840930c
 dependencies:
-  - M6J-03-FOUNDATIONAL-PRACTICES
+  - M6J-04-VULNERABILITY-PRACTICES
 scope:
   allowed_paths:
     - AGENTS.md
@@ -20,7 +20,7 @@ scope:
     - MANIFEST.tsv
     - contracts/**
     - docs/**
-    - data/practices/protocols/06/**
+    - data/practices/protocols/07/**
     - data/practices/registries/source_registry.yaml
     - data/practices/registries/research_gap_registry.yaml
     - data/practices/release_manifest.yaml
@@ -45,16 +45,16 @@ scope:
     - .github/workflows/**
     - data/practices/registries/activation_ledger.yaml
 acceptance:
-  - All 14 domain 06 competencies have individually authored instructions aligned with canonical scope and an explicit bounded exercise goal.
-  - The other 369 practice packages remain byte-identical; exactly 91 authored and 292 rewrite-pending rows are reported.
+  - All 14 domain 07 competencies have individually authored instructions aligned with canonical scope and an explicit bounded exercise goal.
+  - The other 369 practice packages remain byte-identical; exactly 105 authored and 278 rewrite-pending rows are reported.
   - Each action supplies observable success criteria and a usable example without requiring the person to design a rubric or exercise.
   - Prerequisites materials burden meaningful review and accessible equivalents are explicit.
   - Simulation and preparation do not claim live performance or comprehensive mastery.
   - Deferral N/A and unattempted actions do not satisfy completion.
   - Sources support specific factual claims and do not imply validation of the product-authored exercise.
   - Every canonical scope facet maps to concrete actions or an explicit legitimate pathway choice; a supplied rehearsal never claims live participation.
-  - The trauma literacy access and care-choice journeys show readable instructions setup and observations at desktop and mobile widths; retain all existing browser journeys and overflow assertions.
-  - No trauma exposure diagnosis treatment schedule legal authority assessment or forced independence is introduced; actual support plans preserve qualified care and the affected person's choices.
+  - The emotion differentiation graduated approach expression and help-route journeys show readable instructions setup and observations at desktop and mobile widths; retain all existing browser journeys and overflow assertions.
+  - No diagnosis unsupervised clinical exposure deliberate dysregulation treatment change unsafe confrontation or delayed emergency response is introduced; help routes require current local verification.
   - All 383 protocol IDs 1151 action IDs parent mappings activation records assessment and scoring mathematics remain unchanged.
   - Existing submitted events replay from their original snapshots and content import refuses to change active or paused practices.
   - Every canonical competency receives an explicit authored-pending-review or rewrite-pending disposition; 13.02 retains its existing typed evidence fixtures and the five frozen legacy runtime packages remain byte-equivalent.
@@ -90,7 +90,7 @@ rollback:
   strategy: Revert the content release before import or restore the verified pre-upgrade backup; never reinterpret existing event snapshots.
 evidence:
   output:
-    - docs/evidence/M6J-04-VULNERABILITY-PRACTICES-2026-09-06.md
+    - docs/evidence/M6J-05-EMOTIONAL-RESILIENCE-PRACTICES-2026-09-06.md
     - exact per-competency content coverage and residual gaps
     - exact local and hosted verification results
   claim_boundary: Authored educational practices and software verification; no automatic human review or empirical validation acceptance.

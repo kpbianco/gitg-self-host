@@ -464,10 +464,12 @@ or effectiveness validation.
 M6J-01 individually rewrites all 42 practices in domains 01, 02 and 13. M6J-02
 adds all 12 self-knowledge practices in domain 05. M6J-03 adds all 23 practices
 in domains 03 and 04. M6J-04 adds all 14 vulnerability/disability/care practices
-in domain 06, for 91 authored. The broader owner requirement covers all 383;
-the remaining 292 must stay explicitly rewrite-pending. The owner
+in domain 06. M6J-05 adds all 14 emotional-maturity/resilience practices in
+domain 07, for 105 authored. The broader owner requirement covers all 383;
+the remaining 278 must stay explicitly rewrite-pending. The owner
 requires focus on the substantive content rewrite, with explicit canonical
-scope maps and self-contained tasks; publication status is not content progress. Compiler inputs live in `docs/authoring/exercises/`, while
+scope maps and self-contained tasks; publication status is not content
+progress. Compiler inputs live in `docs/authoring/exercises/`, while
 the canonical runtime source remains the manifest-listed practice YAML.
 The compiler must reject missing competencies, duplicated instructions and
 invalid observation checks; passing those checks is not human acceptance.

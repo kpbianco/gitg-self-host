@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0706-SADNESS-GRIEF-AND-LOSS-01
 slug: c0706-sadness-grief-and-loss-practice
-name: Bounded Sadness, grief, and loss Practice
+name: Carry one bounded loss through remembrance, support and changed action
 parent_competency_id: '07.06'
 domain_id: '07'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-NHS-GRIEF-AND-LOSS
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 07.06
-      (Sadness, grief, and loss); canonical scope, evidence target, classification, domain boundary, and
-      parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 07.06; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,38 +35,48 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Sadness, grief, and loss through a qualified-support preparation bounded by the canonical
-    scope: Allow sorrow, remembrance, ritual, support, changed expectations, and continued living.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can name what was lost,
-    what remains, and what must now be carried forward. The protocol creates a small opportunity to examine
-    that target without treating completion as broad capability.'
+  purpose: Name what was lost, what remains and what expectations changed, then make room for sorrow while
+    choosing one form of remembrance, support and continued living.
+  why_recommended: Name what was lost, what remains and what expectations changed, then make room for
+    sorrow while choosing one form of remembrance, support and continued living.
   claims:
-  - statement: Using the canonical scope and evidence target for Sadness, grief, and loss is a traceable
-      product-design basis for a source-only draft protocol.
+  - statement: Name what was lost, what remains and what expectations changed, then make room for sorrow
+      while choosing one form of remembrance, support and continued living.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Grief responses vary between people and can follow losses other than bereavement; support
+      is available when coping is difficult.
+    classification: safety_precaution
+    source_ids:
+    - SRC-NHS-GRIEF-AND-LOSS
+    limitations: Supports acknowledging varied responses and appropriate support. It does not validate
+      this educational exercise, prescribe a grief timetable or establish readiness for personal loss
+      reflection.
   applicability_question: Does a voluntary, bounded Sadness, grief, and loss practice fit the person's
     current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Sadness, grief, and loss as not applicable, consciously unchosen, or
     deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Sadness, grief, and
-    loss context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Sadness,
-    grief, and loss; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Use objects, images, music without quoted lyrics, brief dictation or a support
+    person. A fictional case practices the structure but is not evidence of grieving a real loss. For
+    recent, traumatic, function-impairing or unsafe grief, use appropriate personal, spiritual, medical
+    or mental-health support instead.
+  opportunity_considerations: Choose a loss safe enough to approach, such as the end of a hobby group,
+    a missed opportunity or a familiar place closing. Use a fictional case if personal grief is too close.
+    Prepare three headings—lost, remaining and now changed—and one ordinary care obligation that still
+    needs attention.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Sadness, grief, and loss.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Choose a loss safe enough to approach, such as the end of a hobby group, a missed opportunity or a
+    familiar place closing. Use a fictional case if personal grief is too close. Prepare three headings—lost,
+    remaining and now changed—and one ordinary care obligation that still needs attention.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Sadness, grief, and loss instead
-    of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use objects, images, music without quoted lyrics, brief dictation or a support person. A fictional
+    case practices the structure but is not evidence of grieving a real loss. For recent, traumatic, function-impairing
+    or unsafe grief, use appropriate personal, spiritual, medical or mental-health support instead.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -78,21 +88,35 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Sadness, grief, and loss as
     inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-QUALIFIED-CONSULTATION
+  protocol_class: PF-CONTEMPLATIVE-MEANING
   duration_days: 10
-  cadence: Complete three bounded Sadness, grief, and loss actions over ten days, preserving explicit
-    not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Sadness, grief, and loss; copy the canonical scope and evidence target
-    into a private working note; define the action boundary, valid supports, privacy limit, and stop condition
-    before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Sadness,
-    grief, and loss. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Sadness, grief, and loss actions, and
-    review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose a loss safe enough to approach, such as the end of a hobby group, a missed opportunity
+    or a familiar place closing. Use a fictional case if personal grief is too close. Prepare three headings—lost,
+    remaining and now changed—and one ordinary care obligation that still needs attention. Goal: Name
+    what was lost, what remains and what expectations changed, then make room for sorrow while choosing
+    one form of remembrance, support and continued living. Scope: This uses a manageable loss and does
+    not prescribe a grief timetable, require positive meaning or replace bereavement, medical or mental-health
+    support. Time and effort: One private 20-minute reflection, one 10–20 minute remembrance or support
+    action and a later 10-minute review. Adaptation: Use objects, images, music without quoted lyrics,
+    brief dictation or a support person. A fictional case practices the structure but is not evidence
+    of grieving a real loss. For recent, traumatic, function-impairing or unsafe grief, use appropriate
+    personal, spiritual, medical or mental-health support instead. Keep personal working notes outside
+    the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Grief after bereavement or loss: https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/grief-bereavement-loss/'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use objects, images, music without quoted lyrics, brief dictation or a support
+    person. A fictional case practices the structure but is not evidence of grieving a real loss. For
+    recent, traumatic, function-impairing or unsafe grief, use appropriate personal, spiritual, medical
+    or mental-health support instead.
+  expected_burden: One private 20-minute reflection, one 10–20 minute remembrance or support action and
+    a later 10-minute review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Sadness, grief, and loss protocol to rank worth, coerce participation, demand disclosure,
@@ -100,20 +124,24 @@ intervention:
   - Treating a completed Sadness, grief, and loss action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Sadness, grief, and loss situation involving emergency response, abuse, retaliation, illegal conduct,
-    medical treatment, legal representation, financial-loss decisions, safeguarding, hazardous equipment,
-    or other consequences beyond a reversible source-only exercise.
-  - Not therapy or diagnosis; severe or persistent symptoms require qualified mental-health or medical
-    care.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use objects,
+    images, music without quoted lyrics, brief dictation or a support person. A fictional case practices
+    the structure but is not evidence of grieving a real loss. For recent, traumatic, function-impairing
+    or unsafe grief, use appropriate personal, spiritual, medical or mental-health support instead.
   actions:
   - stable_id: PRACTICE-COMP-0706-SADNESS-GRIEF-AND-LOSS-01-A1
     sequence: 1
-    title: Bound the qualified question for Sadness, grief, and loss
-    instructions: 'Turn Sadness, grief, and loss into one educational or planning question and identify
-      the qualification and jurisdiction needed to answer it. Use the canonical scope to separate general
-      learning from diagnosis, treatment, legal advice, financial advice, safeguarding decisions, or other
-      professional judgment: Allow sorrow, remembrance, ritual, support, changed expectations, and continued
-      living.'
+    title: Describe the loss without erasing either sorrow or continuity
+    instructions: 'Name the person, role, future, place or routine that is absent and the expectation
+      that changed. Add what genuinely remains, such as a skill, relationship, responsibility or memory,
+      without calling the loss beneficial. Record the present feeling and intensity, and stop if the chosen
+      material becomes too destabilizing for self-guided reflection.
+
+
+      Observation checks: The lost good and changed expectation are specific; What remains is named without
+      canceling the loss; Present feeling and intensity receive an honest entry; The exercise stops or
+      narrows when self-guided reflection is unsuitable. Mark only what you observed. Missing, mixed and
+      negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -135,9 +163,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0706_a1_question_bounded
-        - c0706_a1_qualification_named
-        - c0706_a1_professional_boundary_explicit
+        - the_lost_good_and_changed_expectation_are_specific
+        - what_remains_is_named_without_canceling_the_loss
+        - present_feeling_and_intensity_receive_an_honest_entry
+        - the_exercise_stops_or_narrows_when_self_guided_reflection_is_unsuitable
       - measurement_id: c0706_a1_boundary
         kind: boolean
         role: supporting
@@ -154,11 +183,17 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0706-SADNESS-GRIEF-AND-LOSS-01-A2
     sequence: 2
-    title: Prepare minimum information for Sadness, grief, and loss
-    instructions: Create a privacy-minimized Sadness, grief, and loss consultation note containing only
-      the question, relevant category-level facts, current constraints, and desired decision. Omit diagnoses,
-      allegations, account numbers, credentials, protected work information, intimate detail, and third-party
-      identity unless a qualified professional lawfully requires it through an appropriate channel.
+    title: Choose remembrance and support that fit this loss
+    instructions: 'Complete one bounded act such as saving a photo, writing the group''s final date, visiting
+      the place, observing a fitting ritual or telling a willing person what is missed. Also make or accept
+      one specific support request, even if it is simply company during a routine task. A private ritual
+      is valid; public disclosure, gratitude and closure are not required.
+
+
+      Observation checks: A concrete remembrance act is completed; One specific support request or accepted
+      offer occurs; Participation and disclosure remain voluntary; The action does not demand closure
+      or a positive interpretation. Mark only what you observed. Missing, mixed and negative results are
+      valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -180,9 +215,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0706_a2_minimum_information_only
-        - c0706_a2_sensitive_detail_excluded
-        - c0706_a2_decision_need_named
+        - a_concrete_remembrance_act_is_completed
+        - one_specific_support_request_or_accepted_offer_occurs
+        - participation_and_disclosure_remain_voluntary
+        - the_action_does_not_demand_closure_or_a_positive_interpretation
       - measurement_id: c0706_a2_boundary
         kind: boolean
         role: supporting
@@ -199,11 +235,36 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0706-SADNESS-GRIEF-AND-LOSS-01-A3
     sequence: 3
-    title: Record a bounded Sadness, grief, and loss disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: Can name what was lost, what remains, and what must now be carried forward.'
+    title: Carry one changed responsibility into ordinary life
+    instructions: 'Choose one action that continues life under the changed conditions: attend the next
+      class elsewhere, update a calendar, care for a remaining responsibility or schedule qualified support.
+      Complete it or record why it must wait. Later, name what the action carried forward and what sorrow
+      or uncertainty remains rather than claiming resolution.
+
+
+      Observation checks: A continued-life action fits the changed circumstances; The action is completed
+      or honestly deferred; What is carried forward and what remains painful are both named; Need for
+      additional support is reviewed without a deadline. Mark only what you observed. Missing, mixed and
+      negative results are valid; a deferred action is not completed.
+
+
+      Final review: What deserves remembrance, what still needs carrying, and which expectation now has
+      to change?
+
+
+      Examples: Supportive: The person named the lost weekly group, kept one friendship, archived a photo
+      and registered for one replacement session without calling the loss good.
+
+
+      Mixed: A remembrance was completed and support accepted, but the new routine is not yet workable.
+
+
+      Contradictory: The loss was minimized, rushed into gratitude or used to impose a required timetable
+      for closure.
+
+
+      Inconclusive: General thoughts about grief were recorded without identifying a loss, remembrance,
+      support or changed action.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -219,14 +280,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0706_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0706_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - a_continued_life_action_fits_the_changed_circumstances
+        - the_action_is_completed_or_honestly_deferred
+        - what_is_carried_forward_and_what_remains_painful_are_both_named
+        - need_for_additional_support_is_reviewed_without_a_deadline
       - measurement_id: c0706_a3_boundary
         kind: boolean
         role: supporting
@@ -246,16 +309,19 @@ intervention:
     - Use paper, an offline note, a library resource, a public example, or a no-cost conversation for
       Sadness, grief, and loss; no purchase, subscription, travel, credential, or public artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Sadness, grief, and loss; assistive technology, interpretation, a support person, and
-      a deferred action are valid without penalty.
+    - Use objects, images, music without quoted lyrics, brief dictation or a support person. A fictional
+      case practices the structure but is not evidence of grieving a real loss. For recent, traumatic,
+      function-impairing or unsafe grief, use appropriate personal, spiritual, medical or mental-health
+      support instead.
     cultural_context:
     - Adapt the expression of Sadness, grief, and loss to direct or indirect communication, collective
       or individual decision structures, local norms, faith or secular commitments, and role obligations
       while preserving consent and dignity.
     resource_variants:
-    - When a real Sadness, grief, and loss opportunity is unavailable or inappropriate, use a fictional,
-      historical, public, simulated, or planning-only equivalent and retain the narrower evidence classification.
+    - Use objects, images, music without quoted lyrics, brief dictation or a support person. A fictional
+      case practices the structure but is not evidence of grieving a real loss. For recent, traumatic,
+      function-impairing or unsafe grief, use appropriate personal, spiritual, medical or mental-health
+      support instead.
   pause_conditions:
   - Pause Sadness, grief, and loss when capacity, consent, authority, privacy, access, care duties, uncertainty,
     distress, fatigue, pain, resource scarcity, or changed circumstances make the next action unwise.
@@ -286,10 +352,7 @@ evidence_and_scoring:
   - c0706_a3_boundary
   - c0706_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Sadness, grief, and loss action exceeded consent, authority, privacy, qualification, role, burden,
-    or safety boundaries.
-  - The evidence contradicted the intended Sadness, grief, and loss criterion, depended on coercion or
-    hidden private content, or could not distinguish the protocol from contextual change.
+  - The loss was minimized, rushed into gratitude or used to impose a required timetable for closure.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Sadness, grief, and loss explicitly; support can enable access and never reduces dignity or silently
     changes the typed value.
@@ -299,14 +362,23 @@ evidence_and_scoring:
     origins are rejected and later repetitions use the typed contract's explicit diminishing multipliers.
   recency_rule: Generated Sadness, grief, and loss rules withhold observations older than 90 days; no
     unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can name what was lost, what remains, and what must now be carried forward.—not completion,
-    confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Sadness, grief, and loss requires a bounded context, allowlisted
-    observations, provenance, contradiction and adverse handling, and preserved uncertainty; free text
-    and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Describe the loss without erasing either sorrow or continuity. Observed
+    checks: The lost good and changed expectation are specific; What remains is named without canceling
+    the loss; Present feeling and intensity receive an honest entry; The exercise stops or narrows when
+    self-guided reflection is unsuitable. Action 2: Choose remembrance and support that fit this loss.
+    Observed checks: A concrete remembrance act is completed; One specific support request or accepted
+    offer occurs; Participation and disclosure remain voluntary; The action does not demand closure or
+    a positive interpretation. Action 3: Carry one changed responsibility into ordinary life. Observed
+    checks: A continued-life action fits the changed circumstances; The action is completed or honestly
+    deferred; What is carried forward and what remains painful are both named; Need for additional support
+    is reviewed without a deadline.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. General thoughts about grief were recorded without
+    identifying a loss, remembrance, support or changed action.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Sadness,
     grief, and loss contribution under typed evaluation; protocol performance remains distinct and is
     never counted twice.
@@ -316,9 +388,8 @@ evidence_and_scoring:
   - L06
   - L07
   - L24
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Sadness, grief, and loss evidence.
@@ -326,10 +397,20 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for sadness, grief, and loss action was attempted or explicitly deferred.
-  - The prepare minimum information for sadness, grief, and loss action was attempted or explicitly deferred.
-  - The record a bounded sadness, grief, and loss disposition action preserved a limited conclusion, contradiction,
-    or inconclusive result.
+  - 'Action 1: Describe the loss without erasing either sorrow or continuity. Observed checks: The lost
+    good and changed expectation are specific; What remains is named without canceling the loss; Present
+    feeling and intensity receive an honest entry; The exercise stops or narrows when self-guided reflection
+    is unsuitable.'
+  - 'Action 2: Choose remembrance and support that fit this loss. Observed checks: A concrete remembrance
+    act is completed; One specific support request or accepted offer occurs; Participation and disclosure
+    remain voluntary; The action does not demand closure or a positive interpretation.'
+  - 'Action 3: Carry one changed responsibility into ordinary life. Observed checks: A continued-life
+    action fits the changed circumstances; The action is completed or honestly deferred; What is carried
+    forward and what remains painful are both named; Need for additional support is reviewed without a
+    deadline.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -338,56 +419,56 @@ completion_and_review:
     - c0706_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Sadness, grief, and loss only when the initial context remained
-    safe, the evidence criteria were usable, burden was acceptable, and a new context can be named without
-    assuming transfer.
-  transfer_limit: Three bounded actions do not establish Sadness, grief, and loss across roles, cultures,
-    relationships, seasons, stress levels, disability states, institutions, or high-consequence settings.
+  progression_criteria: What deserves remembrance, what still needs carrying, and which expectation now
+    has to change?
+  transfer_limit: This uses a manageable loss and does not prescribe a grief timetable, require positive
+    meaning or replace bereavement, medical or mental-health support.
   reflection:
-    before: What does Sadness, grief, and loss require in this exact context, what remains outside my
-      role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Sadness, grief, and loss criterion is present, absent, mixed, or unknown,
-      and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can name what was lost, what remains, and what must now be
-      carried forward.', what contradiction or missing context matters most, and should this Sadness,
-      grief, and loss design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Name what was lost, what remains and what
+      expectations changed, then make room for sorrow while choosing one form of remembrance, support
+      and continued living.'
+    during: Which checks have actually been observed? A remembrance was completed and support accepted,
+      but the new routine is not yet workable.
+    after: What deserves remembrance, what still needs carrying, and which expectation now has to change?
   review_guidance:
     repeat: Repeat the same bounded Sadness, grief, and loss design only when the context and burden remain
       appropriate.
-    adapt: Change the Sadness, grief, and loss medium, scope, support, timing, criteria, or context while
-      preserving provenance and the narrower evidence claim.
+    adapt: Use objects, images, music without quoted lyrics, brief dictation or a support person. A fictional
+      case practices the structure but is not evidence of grieving a real loss. For recent, traumatic,
+      function-impairing or unsafe grief, use appropriate personal, spiritual, medical or mental-health
+      support instead.
     stop: Stop Sadness, grief, and loss when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Sadness, grief, and loss questions beyond
-      this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Sadness, grief, and loss criteria were observed with provenance and no adverse
-      boundary signal in the selected context.
-    mixed: Some Sadness, grief, and loss criteria were observed while burden, support, contextual change,
-      or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Sadness, grief, and loss criterion, introduced
-      harm or coercion, or showed the design was not workable.
-    inconclusive: The Sadness, grief, and loss action was deferred, not observed, not applicable, stale,
-      insufficiently bounded, or too confounded to interpret.
+    supportive: The person named the lost weekly group, kept one friendship, archived a photo and registered
+      for one replacement session without calling the loss good.
+    mixed: A remembrance was completed and support accepted, but the new routine is not yet workable.
+    contradictory: The loss was minimized, rushed into gratitude or used to impose a required timetable
+      for closure.
+    inconclusive: General thoughts about grief were recorded without identifying a loss, remembrance,
+      support or changed action.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Sadness, grief, and loss.
+    context_heading: Carry one bounded loss through remembrance, support and changed action
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Sadness,
       grief, and loss.
   check_in_labels:
-    c0706_a1_primary: The bounded Sadness, grief, and loss criterion for action 1 was observed
+    c0706_a1_primary: 'Observed checks: describe the loss without erasing either sorrow or continuity'
     c0706_a1_boundary: Action 1 stayed inside its stated Sadness, grief, and loss boundary
     c0706_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0706_a2_primary: The bounded Sadness, grief, and loss criterion for action 2 was observed
+    c0706_a2_primary: 'Observed checks: choose remembrance and support that fit this loss'
     c0706_a2_boundary: Action 2 stayed inside its stated Sadness, grief, and loss boundary
     c0706_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0706_a3_primary: The bounded Sadness, grief, and loss criterion for action 3 was observed
+    c0706_a3_primary: 'Observed checks: carry one changed responsibility into ordinary life'
     c0706_a3_boundary: Action 3 stayed inside its stated Sadness, grief, and loss boundary
     c0706_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Sadness, grief, and
-    loss practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What deserves remembrance, what still needs carrying, and which expectation now has
+    to change? Completion is not mastery.
+  plain_language_evidence: The person named the lost weekly group, kept one friendship, archived a photo
+    and registered for one replacement session without calling the loss good.
   display_order: 90
