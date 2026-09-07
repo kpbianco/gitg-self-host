@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0407-MORAL-INJURY-AND-COMPROMISED-ACTION-01
 slug: c0407-moral-injury-and-compromised-action-practice
-name: Bounded Moral injury and compromised action Practice
+name: Distinguish moral distress responsibility and the support needed
 parent_competency_id: '04.07'
 domain_id: '04'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-VA-MORAL-INJURY-LITERACY
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 04.07
-      (Moral injury and compromised action); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 04.07; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,39 +35,50 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Moral injury and compromised action through a qualified-support preparation bounded
-    by the canonical scope: Recognize distress caused by perpetrating, witnessing, failing to prevent,
-    or being betrayed around morally serious events.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can distinguish guilt,
-    shame, trauma, responsibility, repair, and the need for qualified support. The protocol creates a
-    small opportunity to examine that target without treating completion as broad capability.'
+  purpose: Recognize distress around acting, witnessing, failing to prevent or being betrayed in morally
+    serious events, and distinguish guilt, shame, trauma, responsibility, possible repair and qualified
+    support.
+  why_recommended: Recognize distress around acting, witnessing, failing to prevent or being betrayed
+    in morally serious events, and distinguish guilt, shame, trauma, responsibility, possible repair and
+    qualified support.
   claims:
-  - statement: Using the canonical scope and evidence target for Moral injury and compromised action is
-      a traceable product-design basis for a source-only draft protocol.
+  - statement: Recognize distress around acting, witnessing, failing to prevent or being betrayed in morally
+      serious events, and distinguish guilt, shame, trauma, responsibility, possible repair and qualified
+      support.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Moral injury concerns distress after events violating deeply held values; it can involve
+      guilt, shame or betrayal and coexist with PTSD, but is not itself a diagnosis.
+    classification: safety_precaution
+    source_ids:
+    - SRC-VA-MORAL-INJURY-LITERACY
+    limitations: Supports terminology and qualified-support boundaries, not diagnosis, culpability judgments
+      or a treatment protocol. No published therapy, questionnaire or symptom scoring is reproduced.
   applicability_question: Does a voluntary, bounded Moral injury and compromised action practice fit the
     person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Moral injury and compromised action as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Moral injury and
-    compromised action context, understand the source-only status, and stop without losing safety, care,
-    employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Moral injury
-    and compromised action; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Use the fictional case throughout, read with support or skip details. No personal
+    narrative, symptom score, exposure exercise, apology, forgiveness or contact with an affected person
+    is required. Persistent distress merits qualified help; immediate danger requires urgent local support.
+  opportunity_considerations: 'Use this fictional case: a volunteer coordinator made a decision with incomplete
+    information, later learned someone lost access to needed help and feels both guilt about the choice
+    and betrayed by withheld information. The case contains no details of violence. Read the linked National
+    Center for PTSD explanation for terminology; no screening questionnaire or disclosure is required.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Moral injury and compromised action.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use this fictional case: a volunteer coordinator made a decision with incomplete information, later
+    learned someone lost access to needed help and feels both guilt about the choice and betrayed by withheld
+    information. The case contains no details of violence. Read the linked National Center for PTSD explanation
+    for terminology; no screening questionnaire or disclosure is required.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Moral injury and compromised action
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use the fictional case throughout, read with support or skip details. No personal narrative, symptom
+    score, exposure exercise, apology, forgiveness or contact with an affected person is required. Persistent
+    distress merits qualified help; immediate danger requires urgent local support.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -81,19 +92,33 @@ meaning_and_fit:
 intervention:
   protocol_class: PF-QUALIFIED-CONSULTATION
   duration_days: 10
-  cadence: Complete three bounded Moral injury and compromised action actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Moral injury and compromised action; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Moral injury
-    and compromised action. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Moral injury and compromised action actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use this fictional case: a volunteer coordinator made a decision with incomplete information,
+    later learned someone lost access to needed help and feels both guilt about the choice and betrayed
+    by withheld information. The case contains no details of violence. Read the linked National Center
+    for PTSD explanation for terminology; no screening questionnaire or disclosure is required. Goal:
+    Recognize distress around acting, witnessing, failing to prevent or being betrayed in morally serious
+    events, and distinguish guilt, shame, trauma, responsibility, possible repair and qualified support.
+    Scope: This is literacy and support preparation using a fictional case. Moral injury is not itself
+    a diagnosis, and this exercise cannot diagnose PTSD, determine culpability or provide trauma treatment.
+    It does not ask for a personal account of a morally injurious event. Time and effort: Three sessions
+    of up to 15 minutes; pause or stop if the material is uncomfortable. Adaptation: Use the fictional
+    case throughout, read with support or skip details. No personal narrative, symptom score, exposure
+    exercise, apology, forgiveness or contact with an affected person is required. Persistent distress
+    merits qualified help; immediate danger requires urgent local support. Keep personal working notes
+    outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Moral Injury and PTSD: https://www.ptsd.va.gov/understand/related/moral_injury_ptsd.asp'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use the fictional case throughout, read with support or skip details. No personal
+    narrative, symptom score, exposure exercise, apology, forgiveness or contact with an affected person
+    is required. Persistent distress merits qualified help; immediate danger requires urgent local support.
+  expected_burden: Three sessions of up to 15 minutes; pause or stop if the material is uncomfortable.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Moral injury and compromised action protocol to rank worth, coerce participation, demand
@@ -101,20 +126,27 @@ intervention:
   - Treating a completed Moral injury and compromised action action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Moral injury and compromised action situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use the fictional
+    case throughout, read with support or skip details. No personal narrative, symptom score, exposure
+    exercise, apology, forgiveness or contact with an affected person is required. Persistent distress
+    merits qualified help; immediate danger requires urgent local support.
   actions:
   - stable_id: PRACTICE-COMP-0407-MORAL-INJURY-AND-COMPROMISED-ACTION-01-A1
     sequence: 1
-    title: Bound the qualified question for Moral injury and compromised action
-    instructions: 'Turn Moral injury and compromised action into one educational or planning question
-      and identify the qualification and jurisdiction needed to answer it. Use the canonical scope to
-      separate general learning from diagnosis, treatment, legal advice, financial advice, safeguarding
-      decisions, or other professional judgment: Recognize distress caused by perpetrating, witnessing,
-      failing to prevent, or being betrayed around morally serious events.'
+    title: Separate feelings facts and judgments of the whole person
+    instructions: 'Make six brief entries. Guilt concerns an action or omission; shame can become a judgment
+      of the whole self; trauma-related symptoms need qualified assessment; responsibility concerns what
+      the person knew, could control and owed; repair concerns what may still help; support concerns who
+      is qualified and safe to assist. Apply these distinctions to the fictional case without assigning
+      a diagnosis or declaring innocence or guilt. Note the four possible relations to a morally serious
+      event: acting, witnessing, not preventing and betrayal. Feelings alone do not establish the facts
+      of responsibility.
+
+
+      Observation checks: All six distinctions are explained without diagnosis; Four possible relations
+      to the event are recognized; Feelings and factual responsibility are separated; Missing knowledge
+      and control are made explicit. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -136,9 +168,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0407_a1_question_bounded
-        - c0407_a1_qualification_named
-        - c0407_a1_professional_boundary_explicit
+        - all_six_distinctions_are_explained_without_diagnosis
+        - four_possible_relations_to_the_event_are_recognized
+        - feelings_and_factual_responsibility_are_separated
+        - missing_knowledge_and_control_are_made_explicit
       - measurement_id: c0407_a1_boundary
         kind: boolean
         role: supporting
@@ -155,12 +188,20 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0407-MORAL-INJURY-AND-COMPROMISED-ACTION-01-A2
     sequence: 2
-    title: Prepare minimum information for Moral injury and compromised action
-    instructions: Create a privacy-minimized Moral injury and compromised action consultation note containing
-      only the question, relevant category-level facts, current constraints, and desired decision. Omit
-      diagnoses, allegations, account numbers, credentials, protected work information, intimate detail,
-      and third-party identity unless a qualified professional lawfully requires it through an appropriate
-      channel.
+    title: Prepare questions that need a qualified or trusted response
+    instructions: 'For the case, write four questions: what happened and what is still unknown; what responsibility
+      was actually held; what repair could help without causing more harm; and what support is needed
+      for continuing distress. Match needs to roles: a qualified mental health professional for symptoms,
+      an appropriate independent adviser for institutional or legal responsibility, and a freely chosen
+      trusted person or chaplain for companionship or meaning. Ask about confidentiality and its limits
+      before sensitive disclosure. A friend cannot settle a diagnosis and a clinician does not automatically
+      decide legal liability.
+
+
+      Observation checks: Questions separate facts responsibility repair and support; Support roles fit
+      the questions they can address; Confidentiality limits are considered before disclosure; No helper
+      is treated as an all-purpose authority. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -182,9 +223,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0407_a2_minimum_information_only
-        - c0407_a2_sensitive_detail_excluded
-        - c0407_a2_decision_need_named
+        - questions_separate_facts_responsibility_repair_and_support
+        - support_roles_fit_the_questions_they_can_address
+        - confidentiality_limits_are_considered_before_disclosure
+        - no_helper_is_treated_as_an_all_purpose_authority
       - measurement_id: c0407_a2_boundary
         kind: boolean
         role: supporting
@@ -201,12 +243,39 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0407-MORAL-INJURY-AND-COMPROMISED-ACTION-01-A3
     sequence: 3
-    title: Record a bounded Moral injury and compromised action disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: Can distinguish guilt, shame, trauma, responsibility, repair, and the need
-      for qualified support.'
+    title: Create a safe next-step route without forcing confession or repair
+    instructions: 'Locate one appropriate public support route or provider information page and note how
+      an initial appointment or question could be requested. For the fictional case, draft a short request
+      that names the type of help without private incident details. Identify why contacting an affected
+      person, public confession or unsolicited restitution may be premature and requires care about their
+      wishes and safety. Choose a low-risk interim step such as preserving ordinary care and gathering
+      questions. Keep preparation distinct from treatment, actual repair or a decision about blame.
+
+
+      Observation checks: An appropriate support route is actually located; A minimal initial request
+      protects private details; Premature confession or repair risks are recognized; Preparation is not
+      recorded as treatment or absolution. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.
+
+
+      Final review: Which question belongs to facts, responsibility, care or qualified assessment, and
+      what is the safest appropriate route for the next unanswered one?
+
+
+      Examples: Supportive: The learner separated shame from a specific responsibility question, identified
+      a suitable support route and drafted a private first inquiry without claiming a diagnosis or repair.
+
+
+      Mixed: The distinctions were clear, but provider access or confidentiality remained uncertain and
+      needed checking.
+
+
+      Contradictory: A checklist assigned blame or a diagnosis, or the person was urged to confess publicly
+      or contact someone harmed without regard for safety and consent.
+
+
+      Inconclusive: Distress was labeled moral injury without distinguishing its questions or finding
+      an appropriate support route.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -222,14 +291,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0407_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0407_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - an_appropriate_support_route_is_actually_located
+        - a_minimal_initial_request_protects_private_details
+        - premature_confession_or_repair_risks_are_recognized
+        - preparation_is_not_recorded_as_treatment_or_absolution
       - measurement_id: c0407_a3_boundary
         kind: boolean
         role: supporting
@@ -250,17 +321,17 @@ intervention:
       Moral injury and compromised action; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Moral injury and compromised action; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - Use the fictional case throughout, read with support or skip details. No personal narrative, symptom
+      score, exposure exercise, apology, forgiveness or contact with an affected person is required. Persistent
+      distress merits qualified help; immediate danger requires urgent local support.
     cultural_context:
     - Adapt the expression of Moral injury and compromised action to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Moral injury and compromised action opportunity is unavailable or inappropriate, use
-      a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use the fictional case throughout, read with support or skip details. No personal narrative, symptom
+      score, exposure exercise, apology, forgiveness or contact with an affected person is required. Persistent
+      distress merits qualified help; immediate danger requires urgent local support.
   pause_conditions:
   - Pause Moral injury and compromised action when capacity, consent, authority, privacy, access, care
     duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the
@@ -292,10 +363,8 @@ evidence_and_scoring:
   - c0407_a3_boundary
   - c0407_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Moral injury and compromised action action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Moral injury and compromised action criterion, depended on
-    coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - A checklist assigned blame or a diagnosis, or the person was urged to confess publicly or contact
+    someone harmed without regard for safety and consent.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Moral injury and compromised action explicitly; support can enable access and never reduces dignity
     or silently changes the typed value.
@@ -306,14 +375,22 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Moral injury and compromised action rules withhold observations older than 90
     days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can distinguish guilt, shame, trauma, responsibility, repair, and the need for qualified support.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Moral injury and compromised action requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Separate feelings facts and judgments of the whole person. Observed checks:
+    All six distinctions are explained without diagnosis; Four possible relations to the event are recognized;
+    Feelings and factual responsibility are separated; Missing knowledge and control are made explicit.
+    Action 2: Prepare questions that need a qualified or trusted response. Observed checks: Questions
+    separate facts responsibility repair and support; Support roles fit the questions they can address;
+    Confidentiality limits are considered before disclosure; No helper is treated as an all-purpose authority.
+    Action 3: Create a safe next-step route without forcing confession or repair. Observed checks: An
+    appropriate support route is actually located; A minimal initial request protects private details;
+    Premature confession or repair risks are recognized; Preparation is not recorded as treatment or absolution.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. Distress was labeled moral injury without distinguishing
+    its questions or finding an appropriate support route.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Moral
     injury and compromised action contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -323,9 +400,8 @@ evidence_and_scoring:
   - L04
   - L07
   - L29
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Moral injury and compromised action evidence.
@@ -333,12 +409,18 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for moral injury and compromised action action was attempted or explicitly
-    deferred.
-  - The prepare minimum information for moral injury and compromised action action was attempted or explicitly
-    deferred.
-  - The record a bounded moral injury and compromised action disposition action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Separate feelings facts and judgments of the whole person. Observed checks: All six distinctions
+    are explained without diagnosis; Four possible relations to the event are recognized; Feelings and
+    factual responsibility are separated; Missing knowledge and control are made explicit.'
+  - 'Action 2: Prepare questions that need a qualified or trusted response. Observed checks: Questions
+    separate facts responsibility repair and support; Support roles fit the questions they can address;
+    Confidentiality limits are considered before disclosure; No helper is treated as an all-purpose authority.'
+  - 'Action 3: Create a safe next-step route without forcing confession or repair. Observed checks: An
+    appropriate support route is actually located; A minimal initial request protects private details;
+    Premature confession or repair risks are recognized; Preparation is not recorded as treatment or absolution.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -347,58 +429,58 @@ completion_and_review:
     - c0407_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Moral injury and compromised action only when the initial context
-    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
-    named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Moral injury and compromised action across roles,
-    cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: Which question belongs to facts, responsibility, care or qualified assessment,
+    and what is the safest appropriate route for the next unanswered one?
+  transfer_limit: This is literacy and support preparation using a fictional case. Moral injury is not
+    itself a diagnosis, and this exercise cannot diagnose PTSD, determine culpability or provide trauma
+    treatment. It does not ask for a personal account of a morally injurious event.
   reflection:
-    before: What does Moral injury and compromised action require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Moral injury and compromised action criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can distinguish guilt, shame, trauma, responsibility, repair,
-      and the need for qualified support.', what contradiction or missing context matters most, and should
-      this Moral injury and compromised action design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Recognize distress around acting, witnessing,
+      failing to prevent or being betrayed in morally serious events, and distinguish guilt, shame, trauma,
+      responsibility, possible repair and qualified support.'
+    during: Which checks have actually been observed? The distinctions were clear, but provider access
+      or confidentiality remained uncertain and needed checking.
+    after: Which question belongs to facts, responsibility, care or qualified assessment, and what is
+      the safest appropriate route for the next unanswered one?
   review_guidance:
     repeat: Repeat the same bounded Moral injury and compromised action design only when the context and
       burden remain appropriate.
-    adapt: Change the Moral injury and compromised action medium, scope, support, timing, criteria, or
-      context while preserving provenance and the narrower evidence claim.
+    adapt: Use the fictional case throughout, read with support or skip details. No personal narrative,
+      symptom score, exposure exercise, apology, forgiveness or contact with an affected person is required.
+      Persistent distress merits qualified help; immediate danger requires urgent local support.
     stop: Stop Moral injury and compromised action when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Moral injury and compromised action questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Moral injury and compromised action criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Moral injury and compromised action criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Moral injury and compromised action criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Moral injury and compromised action action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The learner separated shame from a specific responsibility question, identified a suitable
+      support route and drafted a private first inquiry without claiming a diagnosis or repair.
+    mixed: The distinctions were clear, but provider access or confidentiality remained uncertain and
+      needed checking.
+    contradictory: A checklist assigned blame or a diagnosis, or the person was urged to confess publicly
+      or contact someone harmed without regard for safety and consent.
+    inconclusive: Distress was labeled moral injury without distinguishing its questions or finding an
+      appropriate support route.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Moral injury and compromised action.
+    context_heading: Distinguish moral distress responsibility and the support needed
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Moral injury
       and compromised action.
   check_in_labels:
-    c0407_a1_primary: The bounded Moral injury and compromised action criterion for action 1 was observed
+    c0407_a1_primary: 'Observed checks: separate feelings facts and judgments of the whole person'
     c0407_a1_boundary: Action 1 stayed inside its stated Moral injury and compromised action boundary
     c0407_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0407_a2_primary: The bounded Moral injury and compromised action criterion for action 2 was observed
+    c0407_a2_primary: 'Observed checks: prepare questions that need a qualified or trusted response'
     c0407_a2_boundary: Action 2 stayed inside its stated Moral injury and compromised action boundary
     c0407_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0407_a3_primary: The bounded Moral injury and compromised action criterion for action 3 was observed
+    c0407_a3_primary: 'Observed checks: create a safe next-step route without forcing confession or repair'
     c0407_a3_boundary: Action 3 stayed inside its stated Moral injury and compromised action boundary
     c0407_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Moral injury and compromised
-    action practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Which question belongs to facts, responsibility, care or qualified assessment, and
+    what is the safest appropriate route for the next unanswered one? Completion is not mastery.
+  plain_language_evidence: The learner separated shame from a specific responsibility question, identified
+    a suitable support route and drafted a private first inquiry without claiming a diagnosis or repair.
   display_order: 55

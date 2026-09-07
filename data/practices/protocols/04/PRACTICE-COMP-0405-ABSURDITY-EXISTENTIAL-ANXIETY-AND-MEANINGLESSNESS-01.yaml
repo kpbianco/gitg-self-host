@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0405-ABSURDITY-EXISTENTIAL-ANXIETY-AND-MEANINGLESSNESS-01
 slug: c0405-absurdity-existential-anxiety-and-meaninglessness-practice
-name: Bounded Absurdity, existential anxiety, and meaninglessness Practice
+name: Act on a chosen responsibility while a meaning question stays open
 parent_competency_id: '04.05'
 domain_id: '04'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 04.05
-      (Absurdity, existential anxiety, and meaninglessness); canonical scope, evidence target, classification,
-      domain boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 04.05; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,41 +34,39 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Absurdity, existential anxiety, and meaninglessness through a pluralist meaning practice
-    bounded by the canonical scope: Examine experiences in which life feels arbitrary, empty, repetitive,
-    or unsupported by certainty.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can act from chosen
-    responsibility or faith without pretending the existential question has been conclusively solved.
-    The protocol creates a small opportunity to examine that target without treating completion as broad
-    capability.'
+  purpose: Examine a feeling of emptiness, repetition or arbitrariness and choose a defensible act of
+    responsibility, care or faith without pretending that the existential question is settled.
+  why_recommended: Examine a feeling of emptiness, repetition or arbitrariness and choose a defensible
+    act of responsibility, care or faith without pretending that the existential question is settled.
   claims:
-  - statement: Using the canonical scope and evidence target for Absurdity, existential anxiety, and meaninglessness
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Examine a feeling of emptiness, repetition or arbitrariness and choose a defensible act
+      of responsibility, care or faith without pretending that the existential question is settled.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Absurdity, existential anxiety, and meaninglessness
     practice fit the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Absurdity, existential anxiety, and meaninglessness as not applicable,
     consciously unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity,
     or safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Absurdity, existential
-    anxiety, and meaninglessness context, understand the source-only status, and stop without losing safety,
-    care, employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Absurdity,
-    existential anxiety, and meaninglessness; do not manufacture conflict, deprivation, exposure, disclosure,
-    danger, urgency, or dependence for evidence.
+  readiness_considerations: Use a tiny accessible task, a seated sorting action, dictation or assistance
+    by consent. If nothing feels manageable, defer rather than using activity as a moral test. Seek suitable
+    support for persistent low mood, hopelessness or difficulty functioning; immediate danger needs urgent
+    local help.
+  opportunity_considerations: 'Use the supplied thought: I keep doing the same household tasks; if they
+    never stay finished, what is the point? Choose a neutral repetitive task such as returning reusable
+    items to their places. No crisis, isolation, deprivation or dramatic life change is needed.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Absurdity, existential anxiety,
-    and meaninglessness.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use the supplied thought: I keep doing the same household tasks; if they never stay finished, what
+    is the point? Choose a neutral repetitive task such as returning reusable items to their places. No
+    crisis, isolation, deprivation or dramatic life change is needed.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Absurdity, existential anxiety,
-    and meaninglessness instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a tiny accessible task, a seated sorting action, dictation or assistance by consent. If nothing
+    feels manageable, defer rather than using activity as a moral test. Seek suitable support for persistent
+    low mood, hopelessness or difficulty functioning; immediate danger needs urgent local help.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -82,21 +79,30 @@ meaning_and_fit:
     and meaninglessness as inferiority; competing reasonable interpretations and conscientious refusal
     remain visible.
 intervention:
-  protocol_class: PF-CONTEMPLATIVE-MEANING
+  protocol_class: PF-BEHAVIORAL-EXPERIMENT
   duration_days: 10
-  cadence: Complete three bounded Absurdity, existential anxiety, and meaninglessness actions over ten
-    days, preserving explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Absurdity, existential anxiety, and meaninglessness; copy the canonical
-    scope and evidence target into a private working note; define the action boundary, valid supports,
-    privacy limit, and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Absurdity,
-    existential anxiety, and meaninglessness. Do not store private prose, names, identities, diagnoses,
-    allegations, credentials, account data, protected work information, intimate detail, artifact contents,
-    observer narrative, or another person's secrets. This source-only draft is not surveillance, professional
-    advice, treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Absurdity, existential anxiety, and meaninglessness
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use the supplied thought: I keep doing the same household tasks; if they never stay finished,
+    what is the point? Choose a neutral repetitive task such as returning reusable items to their places.
+    No crisis, isolation, deprivation or dramatic life change is needed. Goal: Examine a feeling of emptiness,
+    repetition or arbitrariness and choose a defensible act of responsibility, care or faith without pretending
+    that the existential question is settled. Scope: An ordinary existential question is not a diagnosis.
+    This exercise neither disproves meaninglessness nor treats depression; persistent distress or difficulty
+    functioning calls for support beyond a philosophical task. Time and effort: About 15 minutes of clarification,
+    one 10-minute ordinary action and a short review on the following day. Adaptation: Use a tiny accessible
+    task, a seated sorting action, dictation or assistance by consent. If nothing feels manageable, defer
+    rather than using activity as a moral test. Seek suitable support for persistent low mood, hopelessness
+    or difficulty functioning; immediate danger needs urgent local help. Keep personal working notes outside
+    the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a tiny accessible task, a seated sorting action, dictation or assistance by
+    consent. If nothing feels manageable, defer rather than using activity as a moral test. Seek suitable
+    support for persistent low mood, hopelessness or difficulty functioning; immediate danger needs urgent
+    local help.
+  expected_burden: About 15 minutes of clarification, one 10-minute ordinary action and a short review
+    on the following day.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Absurdity, existential anxiety, and meaninglessness protocol to rank worth, coerce participation,
@@ -105,19 +111,26 @@ intervention:
   - Treating a completed Absurdity, existential anxiety, and meaninglessness action, a polished artifact,
     agreement, confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Absurdity, existential anxiety, and meaninglessness situation involving emergency response, abuse,
-    retaliation, illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a tiny
+    accessible task, a seated sorting action, dictation or assistance by consent. If nothing feels manageable,
+    defer rather than using activity as a moral test. Seek suitable support for persistent low mood, hopelessness
+    or difficulty functioning; immediate danger needs urgent local help.
   actions:
   - stable_id: PRACTICE-COMP-0405-ABSURDITY-EXISTENTIAL-ANXIETY-AND-MEANINGLESSNESS-01-A1
     sequence: 1
-    title: Choose a declared frame for Absurdity, existential anxiety, and meaninglessness
-    instructions: 'Select a religious, spiritual, philosophical, cultural, or secular frame through which
-      to explore Absurdity, existential anxiety, and meaninglessness. State the frame, one alternative,
-      and the limits of personal authority using this canonical scope: Examine experiences in which life
-      feels arbitrary, empty, repetitive, or unsupported by certainty.'
+    title: Make the question precise enough to examine
+    instructions: 'Distinguish four claims: the task feels empty; it repeats; you cannot prove an ultimate
+      purpose; and nothing you do can matter to anyone. Ask whether the first three actually establish
+      the fourth. Name a concrete experience behind the thought and one thing still unknown. Consider
+      both a secular chosen responsibility and a religious or philosophical commitment if genuinely yours;
+      neither is required to resolve every question. Avoid arguing yourself into a preferred emotion or
+      treating uncertainty as an intellectual failure.
+
+
+      Observation checks: Feeling repetition uncertainty and a total conclusion are separated; The question
+      is tied to a concrete example; A questionable inference is examined; A genuine commitment or honest
+      uncertainty is retained. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -133,15 +146,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0405_a1_primary
-        kind: conceptual
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0405_a1_frame_declared
-        - c0405_a1_alternative_acknowledged
-        - c0405_a1_authority_limited
+        - feeling_repetition_uncertainty_and_a_total_conclusion_are_separated
+        - the_question_is_tied_to_a_concrete_example
+        - a_questionable_inference_is_examined
+        - a_genuine_commitment_or_honest_uncertainty_is_retained
       - measurement_id: c0405_a1_boundary
         kind: boolean
         role: supporting
@@ -158,11 +172,19 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0405-ABSURDITY-EXISTENTIAL-ANXIETY-AND-MEANINGLESSNESS-01-A2
     sequence: 2
-    title: Complete two bounded Absurdity, existential anxiety, and meaninglessness practices
-    instructions: Complete two short, freely chosen Absurdity, existential anxiety, and meaninglessness
-      practices appropriate to the declared frame, such as reading, silence, prayer, observation, ritual,
-      dialogue, or reflection. Stop for distress, coercion, altered-state risk, conscience conflict, or
-      pressure from an authority or group.
+    title: Choose an action with a local reason you can defend
+    instructions: 'For the default, return three shared or personal reusable items to their proper places
+      so they are available when needed. State a local reason: preventing needless inconvenience is worthwhile
+      to me even though the task will recur. If another small task better fits, identify its beneficiary
+      and actual use before substituting. Spend no more than the planned ten minutes and record what you
+      actually did. The action is an experiment in chosen responsibility, not a test that you must feel
+      fulfilled afterward.
+
+
+      Observation checks: An ordinary action has a specific beneficiary or use; The reason does not require
+      a final metaphysical answer; The action is actually carried out; Time and expectations remain proportionate.
+      Mark only what you observed. Missing, mixed and negative results are valid; a deferred action is
+      not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -178,15 +200,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0405_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - an_ordinary_action_has_a_specific_beneficiary_or_use
+        - the_reason_does_not_require_a_final_metaphysical_answer
+        - the_action_is_actually_carried_out
+        - time_and_expectations_remain_proportionate
       - measurement_id: c0405_a2_boundary
         kind: boolean
         role: supporting
@@ -203,11 +226,39 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0405-ABSURDITY-EXISTENTIAL-ANXIETY-AND-MEANINGLESSNESS-01-A3
     sequence: 3
-    title: Interpret the Absurdity, existential anxiety, and meaninglessness experience modestly
-    instructions: 'Review what was noticed without treating intensity, calm, certainty, group agreement,
-      or unusual experience as automatic truth. Compare the limited record with this evidence target:
-      Can act from chosen responsibility or faith without pretending the existential question has been
-      conclusively solved.'
+    title: Review meaning conduct and mood as different things
+    instructions: 'The next day, check the practical consequence: were the items available, did someone
+      avoid extra effort, or is the use still unknown? Separately record whether the sense of emptiness
+      changed. Decide whether the local reason remains one you endorse, even if the feeling persists.
+      State the unresolved existential question accurately and choose repeat, another fitting action,
+      rest or additional support. Do not turn one helpful act into a proof of universal meaning or one
+      flat mood into proof that nothing matters.
+
+
+      Observation checks: A practical consequence is checked or left unknown; Mood and endorsed responsibility
+      are reviewed separately; The unresolved question is stated honestly; The next step does not depend
+      on a forced conclusion. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.
+
+
+      Final review: What could you reasonably care for without certainty, and what did doing it answer
+      or leave unanswered?
+
+
+      Examples: Supportive: The small task reduced avoidable inconvenience while the larger meaning question
+      remained open and was described more precisely.
+
+
+      Mixed: The action had a useful effect but did not change the empty feeling, and the participant
+      kept those outcomes separate.
+
+
+      Contradictory: A person was told that busy work proves life meaningful or that lingering emptiness
+      shows laziness or deficient faith.
+
+
+      Inconclusive: The philosophical question was debated without specifying or attempting any locally
+      justified action.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -229,9 +280,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0405_a3_experience_and_interpretation_separated
-        - c0405_a3_alternative_explanation_retained
-        - c0405_a3_target_evidence_compared
+        - a_practical_consequence_is_checked_or_left_unknown
+        - mood_and_endorsed_responsibility_are_reviewed_separately
+        - the_unresolved_question_is_stated_honestly
+        - the_next_step_does_not_depend_on_a_forced_conclusion
       - measurement_id: c0405_a3_boundary
         kind: boolean
         role: supporting
@@ -252,17 +304,17 @@ intervention:
       Absurdity, existential anxiety, and meaninglessness; no purchase, subscription, travel, credential,
       or public artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Absurdity, existential anxiety, and meaninglessness; assistive technology, interpretation,
-      a support person, and a deferred action are valid without penalty.
+    - Use a tiny accessible task, a seated sorting action, dictation or assistance by consent. If nothing
+      feels manageable, defer rather than using activity as a moral test. Seek suitable support for persistent
+      low mood, hopelessness or difficulty functioning; immediate danger needs urgent local help.
     cultural_context:
     - Adapt the expression of Absurdity, existential anxiety, and meaninglessness to direct or indirect
       communication, collective or individual decision structures, local norms, faith or secular commitments,
       and role obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Absurdity, existential anxiety, and meaninglessness opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use a tiny accessible task, a seated sorting action, dictation or assistance by consent. If nothing
+      feels manageable, defer rather than using activity as a moral test. Seek suitable support for persistent
+      low mood, hopelessness or difficulty functioning; immediate danger needs urgent local help.
   pause_conditions:
   - Pause Absurdity, existential anxiety, and meaninglessness when capacity, consent, authority, privacy,
     access, care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances
@@ -295,11 +347,8 @@ evidence_and_scoring:
   - c0405_a3_boundary
   - c0405_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Absurdity, existential anxiety, and meaninglessness action exceeded consent, authority, privacy,
-    qualification, role, burden, or safety boundaries.
-  - The evidence contradicted the intended Absurdity, existential anxiety, and meaninglessness criterion,
-    depended on coercion or hidden private content, or could not distinguish the protocol from contextual
-    change.
+  - A person was told that busy work proves life meaningful or that lingering emptiness shows laziness
+    or deficient faith.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Absurdity, existential anxiety, and meaninglessness explicitly; support can enable access and
     never reduces dignity or silently changes the typed value.
@@ -310,14 +359,22 @@ evidence_and_scoring:
     diminishing multipliers.
   recency_rule: Generated Absurdity, existential anxiety, and meaninglessness rules withhold observations
     older than 90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can act from chosen responsibility or faith without pretending the existential question has
-    been conclusively solved.—not completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Absurdity, existential anxiety, and meaninglessness requires a
-    bounded context, allowlisted observations, provenance, contradiction and adverse handling, and preserved
-    uncertainty; free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Make the question precise enough to examine. Observed checks: Feeling
+    repetition uncertainty and a total conclusion are separated; The question is tied to a concrete example;
+    A questionable inference is examined; A genuine commitment or honest uncertainty is retained. Action
+    2: Choose an action with a local reason you can defend. Observed checks: An ordinary action has a
+    specific beneficiary or use; The reason does not require a final metaphysical answer; The action is
+    actually carried out; Time and expectations remain proportionate. Action 3: Review meaning conduct
+    and mood as different things. Observed checks: A practical consequence is checked or left unknown;
+    Mood and endorsed responsibility are reviewed separately; The unresolved question is stated honestly;
+    The next step does not depend on a forced conclusion.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. The philosophical question was debated without specifying
+    or attempting any locally justified action.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Absurdity,
     existential anxiety, and meaninglessness contribution under typed evaluation; protocol performance
     remains distinct and is never counted twice.
@@ -326,9 +383,8 @@ evidence_and_scoring:
   - L01
   - L04
   - L07
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Absurdity, existential anxiety, and meaninglessness evidence.
@@ -336,12 +392,18 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The choose a declared frame for absurdity, existential anxiety, and meaninglessness action was attempted
-    or explicitly deferred.
-  - The complete two bounded absurdity, existential anxiety, and meaninglessness practices action was
-    attempted or explicitly deferred.
-  - The interpret the absurdity, existential anxiety, and meaninglessness experience modestly action preserved
-    a limited conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Make the question precise enough to examine. Observed checks: Feeling repetition uncertainty
+    and a total conclusion are separated; The question is tied to a concrete example; A questionable inference
+    is examined; A genuine commitment or honest uncertainty is retained.'
+  - 'Action 2: Choose an action with a local reason you can defend. Observed checks: An ordinary action
+    has a specific beneficiary or use; The reason does not require a final metaphysical answer; The action
+    is actually carried out; Time and expectations remain proportionate.'
+  - 'Action 3: Review meaning conduct and mood as different things. Observed checks: A practical consequence
+    is checked or left unknown; Mood and endorsed responsibility are reviewed separately; The unresolved
+    question is stated honestly; The next step does not depend on a forced conclusion.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -350,65 +412,62 @@ completion_and_review:
     - c0405_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Absurdity, existential anxiety, and meaninglessness only when
-    the initial context remained safe, the evidence criteria were usable, burden was acceptable, and a
-    new context can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Absurdity, existential anxiety, and meaninglessness
-    across roles, cultures, relationships, seasons, stress levels, disability states, institutions, or
-    high-consequence settings.
+  progression_criteria: What could you reasonably care for without certainty, and what did doing it answer
+    or leave unanswered?
+  transfer_limit: An ordinary existential question is not a diagnosis. This exercise neither disproves
+    meaninglessness nor treats depression; persistent distress or difficulty functioning calls for support
+    beyond a philosophical task.
   reflection:
-    before: What does Absurdity, existential anxiety, and meaninglessness require in this exact context,
-      what remains outside my role or authority, and which scope sentence or evidence criterion will keep
-      the practice honest?
-    during: Which observable Absurdity, existential anxiety, and meaninglessness criterion is present,
-      absent, mixed, or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can act from chosen responsibility or faith without pretending
-      the existential question has been conclusively solved.', what contradiction or missing context matters
-      most, and should this Absurdity, existential anxiety, and meaninglessness design be repeated, adapted,
-      deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Examine a feeling of emptiness, repetition
+      or arbitrariness and choose a defensible act of responsibility, care or faith without pretending
+      that the existential question is settled.'
+    during: Which checks have actually been observed? The action had a useful effect but did not change
+      the empty feeling, and the participant kept those outcomes separate.
+    after: What could you reasonably care for without certainty, and what did doing it answer or leave
+      unanswered?
   review_guidance:
     repeat: Repeat the same bounded Absurdity, existential anxiety, and meaninglessness design only when
       the context and burden remain appropriate.
-    adapt: Change the Absurdity, existential anxiety, and meaninglessness medium, scope, support, timing,
-      criteria, or context while preserving provenance and the narrower evidence claim.
+    adapt: Use a tiny accessible task, a seated sorting action, dictation or assistance by consent. If
+      nothing feels manageable, defer rather than using activity as a moral test. Seek suitable support
+      for persistent low mood, hopelessness or difficulty functioning; immediate danger needs urgent local
+      help.
     stop: Stop Absurdity, existential anxiety, and meaninglessness when the practice becomes coercive,
       unsafe, privacy-invasive, role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Absurdity, existential anxiety, and meaninglessness
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Absurdity, existential anxiety, and meaninglessness criteria were observed
-      with provenance and no adverse boundary signal in the selected context.
-    mixed: Some Absurdity, existential anxiety, and meaninglessness criteria were observed while burden,
-      support, contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Absurdity, existential anxiety, and meaninglessness
-      criterion, introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Absurdity, existential anxiety, and meaninglessness action was deferred, not observed,
-      not applicable, stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The small task reduced avoidable inconvenience while the larger meaning question remained
+      open and was described more precisely.
+    mixed: The action had a useful effect but did not change the empty feeling, and the participant kept
+      those outcomes separate.
+    contradictory: A person was told that busy work proves life meaningful or that lingering emptiness
+      shows laziness or deficient faith.
+    inconclusive: The philosophical question was debated without specifying or attempting any locally
+      justified action.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Absurdity, existential anxiety, and meaninglessness.
+    context_heading: Act on a chosen responsibility while a meaning question stays open
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Absurdity,
       existential anxiety, and meaninglessness.
   check_in_labels:
-    c0405_a1_primary: The bounded Absurdity, existential anxiety, and meaninglessness criterion for action
-      1 was observed
+    c0405_a1_primary: 'Observed checks: make the question precise enough to examine'
     c0405_a1_boundary: Action 1 stayed inside its stated Absurdity, existential anxiety, and meaninglessness
       boundary
     c0405_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0405_a2_primary: The bounded Absurdity, existential anxiety, and meaninglessness criterion for action
-      2 was observed
+    c0405_a2_primary: 'Observed checks: choose an action with a local reason you can defend'
     c0405_a2_boundary: Action 2 stayed inside its stated Absurdity, existential anxiety, and meaninglessness
       boundary
     c0405_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0405_a3_primary: The bounded Absurdity, existential anxiety, and meaninglessness criterion for action
-      3 was observed
+    c0405_a3_primary: 'Observed checks: review meaning conduct and mood as different things'
     c0405_a3_boundary: Action 3 stayed inside its stated Absurdity, existential anxiety, and meaninglessness
       boundary
     c0405_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Absurdity, existential
-    anxiety, and meaninglessness practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What could you reasonably care for without certainty, and what did doing it answer
+    or leave unanswered? Completion is not mastery.
+  plain_language_evidence: The small task reduced avoidable inconvenience while the larger meaning question
+    remained open and was described more precisely.
   display_order: 53

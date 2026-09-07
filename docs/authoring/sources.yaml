@@ -1,5 +1,325 @@
 # Inspected reference support; exercises themselves are original product designs.
 sources:
+  - source_id: SRC-NIMH-PTSD-LITERACY
+    title: Post-Traumatic Stress Disorder
+    authors_or_issuing_body: National Institute of Mental Health
+    publication_date: '2023 revision'
+    locator: https://www.nimh.nih.gov/health/publications/post-traumatic-stress-disorder-ptsd
+    locator_kind: external_url
+    content_sha256: null
+    source_class: official_guidance
+    evidence_strength: authoritative
+    supported_claim: Trauma-related experiences can involve unwanted recollections, avoidance, heightened arousal, detachment and changes in mood or cognition; diagnosis and treatment require an appropriate mental health professional.
+    claim_classification: safety_precaution
+    limitations: Supports literacy and professional boundaries, not diagnosis from a short case, a screening score, forced exposure or the effectiveness of the product-authored exercise. The attachment concept is a broader educational category rather than an added diagnostic criterion.
+    applicable_competency_ids: ['06.02']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Original concise summary with attribution; no copied clinical instrument or therapy exercise. The page identifies its publication text as public domain; images are not reused.
+  - source_id: SRC-NIMH-HELP-ROUTES
+    title: Help for Mental Illnesses
+    authors_or_issuing_body: National Institute of Mental Health
+    publication_date: 'undated current page'
+    locator: https://www.nimh.nih.gov/health/find-help
+    locator_kind: external_url
+    content_sha256: null
+    source_class: official_guidance
+    evidence_strength: authoritative
+    supported_claim: US life-threatening emergencies call for 911; 988 provides suicide and emotional-crisis support by call or text, and ordinary mental health care requires an appropriate provider.
+    claim_classification: safety_precaution
+    limitations: US public resource guidance only. Local availability, accessibility, eligibility and other countries' services need current verification. A resource card or rehearsal is not a clinical assessment or emergency-response qualification.
+    applicable_competency_ids: ['06.02', '06.14']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Citation and brief original paraphrase only; no service endorsement by the product or reproduced screening tool.
+  - source_id: SRC-RAINN-CHOICE-AND-SUPPORT
+    title: Help and Healing
+    authors_or_issuing_body: RAINN
+    publication_date: 'undated current page'
+    locator: https://rainn.org/help-and-healing/
+    locator_kind: external_url
+    content_sha256: null
+    source_class: authoritative_primary_source
+    evidence_strength: authoritative
+    supported_claim: RAINN describes survivor support that prioritizes safety, trust, autonomy and choices without pressure; it recognizes that recovery follows different paths.
+    claim_classification: safety_precaution
+    limitations: A sexual-violence support provider's description of its approach, not empirical validation of the exercise or a claim that this service handles every kind of betrayal. No treatment method or published support mnemonic is reproduced.
+    applicable_competency_ids: ['06.03', '06.11']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Link and concise original summary only; no copied survivor story, illustration, hotline interaction or training material.
+  - source_id: SRC-CDC-MECFS-CAPACITY-BOUNDARY
+    title: Manage ME/CFS
+    authors_or_issuing_body: Centers for Disease Control and Prevention
+    publication_date: '2024-05-10'
+    locator: https://www.cdc.gov/me-cfs/management/index.html
+    locator_kind: external_url
+    content_sha256: null
+    source_class: official_guidance
+    evidence_strength: authoritative
+    supported_claim: ME/CFS can involve delayed symptom worsening after exertion; activity management must respect individual limits, and standard exercise advice for healthy people can be unsuitable.
+    claim_classification: safety_precaution
+    limitations: Disease-specific caution against a universal activity-increase rule, not a diagnosis or a pacing prescription for every illness. The exercise preserves existing qualified care and does not set activity doses or change treatment.
+    applicable_competency_ids: ['06.04', '06.05', '06.11']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Citation and concise original paraphrase of the activity-management boundary; no copied treatment plan or medication advice.
+  - source_id: SRC-MEDLINEPLUS-CHRONIC-PAIN
+    title: Chronic Pain
+    authors_or_issuing_body: MedlinePlus / US National Library of Medicine
+    publication_date: 'undated current topic page'
+    locator: https://medlineplus.gov/chronicpain.html
+    locator_kind: external_url
+    content_sha256: null
+    source_class: official_guidance
+    evidence_strength: authoritative
+    supported_claim: Chronic pain can affect daily function and wellbeing, and care may involve different approaches and professional support.
+    claim_classification: safety_precaution
+    limitations: General pain literacy only; does not establish a cause, certify an activity as safe, prescribe a regimen or validate the original participation-planning exercise. Cure, management and adaptation are used as explanatory distinctions, not promised outcomes.
+    applicable_competency_ids: ['06.05']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Link and short original summary only; no medical protocol or linked third-party treatment material is reproduced.
+  - source_id: SRC-WHO-DISABILITY-AND-BARRIERS
+    title: Disability
+    authors_or_issuing_body: World Health Organization
+    publication_date: 'undated current overview'
+    locator: https://www.who.int/health-topics/disability
+    locator_kind: external_url
+    content_sha256: null
+    source_class: official_guidance
+    evidence_strength: authoritative
+    supported_claim: Disability involves interaction between health conditions and personal or environmental factors; inaccessible environments and negative attitudes can obstruct participation.
+    claim_classification: professional_or_public_standard
+    limitations: Conceptual and inclusion support only. It does not assign an identity, establish a local legal entitlement or prove that a proposed accommodation works for a particular person.
+    applicable_competency_ids: ['06.06', '06.13']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Citation and brief original paraphrase; no copied imagery, report or survey instrument.
+  - source_id: SRC-W3C-COGNITIVE-ACCESS-NEEDS
+    title: Cognitive and learning in Diverse Abilities and Barriers
+    authors_or_issuing_body: W3C Web Accessibility Initiative
+    publication_date: '2024-06-25 page update'
+    locator: https://www.w3.org/WAI/people-use-web/abilities-barriers/cognitive/
+    locator_kind: external_url
+    content_sha256: null
+    source_class: authoritative_primary_source
+    evidence_strength: authoritative
+    supported_claim: Cognitive access needs vary across functions, and clear structure, understandable language, predictable interaction and suitable formats can address design barriers.
+    claim_classification: professional_or_public_standard
+    limitations: Web-accessibility guidance, not a diagnostic taxonomy or a guarantee that the product's support works for every neurodivergent person. A self-check is not a full accessibility audit or representative user testing.
+    applicable_competency_ids: ['06.07', '06.09']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Attribution and concise original paraphrase only; no source user story, video or full design pattern reproduced.
+  - source_id: SRC-WHO-ASSISTIVE-TECHNOLOGY
+    title: Assistive technology
+    authors_or_issuing_body: World Health Organization
+    publication_date: '2024-01-02'
+    locator: https://www.who.int/news-room/fact-sheets/detail/assistive-technology
+    locator_kind: external_url
+    content_sha256: null
+    source_class: official_guidance
+    evidence_strength: authoritative
+    supported_claim: Assistive technology includes products and related services that support functions such as cognition, communication and mobility, with participation as a practical purpose.
+    claim_classification: professional_or_public_standard
+    limitations: General purpose and examples only, not product selection, medical-device fitting or a claim that one tool is suitable for all users. The exercise requires no purchase or removal of existing aids.
+    applicable_competency_ids: ['06.09']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Citation and short original summary only; no source images or procurement guidance reproduced.
+  - source_id: SRC-NHS-CONSENT-PRINCIPLES
+    title: Consent to treatment — overview
+    authors_or_issuing_body: National Health Service
+    publication_date: '2022-12-08 displayed review'
+    locator: https://www.nhs.uk/tests-and-treatments/consent-to-treatment/
+    locator_kind: external_url
+    content_sha256: null
+    source_class: official_guidance
+    evidence_strength: authoritative
+    supported_claim: The general consent principle requires an informed and voluntary choice; agreeing to one act is not an unlimited permission, and preferences can change.
+    claim_classification: professional_or_public_standard
+    limitations: Used only for the general consent principle. The displayed review is overdue; jurisdiction-specific legal rules, exceptions, capacity decisions and treatment authority are not adopted or certified as current by this exercise. An ordinary help agreement is not a legal consent form.
+    applicable_competency_ids: ['06.08', '06.12']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Citation and original brief summary only; no copied legal form, capacity assessment or statutory interpretation.
+  - source_id: SRC-NHS-ADULT-SAFEGUARDING
+    title: Abuse and neglect of adults at risk
+    authors_or_issuing_body: National Health Service
+    publication_date: '2024-03-26 displayed review'
+    locator: https://www.nhs.uk/social-care-and-support/help-from-social-services-and-charities/abuse-and-neglect-adults-at-risk/
+    locator_kind: external_url
+    content_sha256: null
+    source_class: official_guidance
+    evidence_strength: authoritative
+    supported_claim: Abuse and neglect may occur within care relationships; concerns can require appropriate professional or safeguarding support, and helpers should not promise absolute secrecy.
+    claim_classification: safety_precaution
+    limitations: UK service examples and safeguarding literacy only. Local duties, complaint channels, emergency routes and legal authority require relevant local guidance; the exercise does not investigate allegations or certify care as safe.
+    applicable_competency_ids: ['06.12']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Citation and concise original summary only; no copied allegation narrative, screening tool or reporting form.
+  - source_id: SRC-NHS-GRIEF-AND-LOSS
+    title: Grief after bereavement or loss
+    authors_or_issuing_body: National Health Service
+    publication_date: 'undated current page'
+    locator: https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/grief-bereavement-loss/
+    locator_kind: external_url
+    content_sha256: null
+    source_class: official_guidance
+    evidence_strength: authoritative
+    supported_claim: Grief responses vary between people and can follow losses other than bereavement; support is available when coping is difficult.
+    claim_classification: safety_precaution
+    limitations: Supports acknowledging varied responses and appropriate support. It does not validate this educational exercise, prescribe a grief timetable or establish readiness for personal loss reflection.
+    applicable_competency_ids: ['04.01', '04.04', '04.06']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Link and brief original summary only; no copied therapeutic worksheet, symptom measure or intervention.
+  - source_id: SRC-VA-MORAL-INJURY-LITERACY
+    title: Moral Injury and PTSD
+    authors_or_issuing_body: US Department of Veterans Affairs, National Center for PTSD
+    publication_date: 'undated current page'
+    locator: https://www.ptsd.va.gov/understand/related/moral_injury_ptsd.asp
+    locator_kind: external_url
+    content_sha256: null
+    source_class: official_guidance
+    evidence_strength: authoritative
+    supported_claim: Moral injury concerns distress after events violating deeply held values; it can involve guilt, shame or betrayal and coexist with PTSD, but is not itself a diagnosis.
+    claim_classification: safety_precaution
+    limitations: Supports terminology and qualified-support boundaries, not diagnosis, culpability judgments or a treatment protocol. No published therapy, questionnaire or symptom scoring is reproduced.
+    applicable_competency_ids: ['04.07']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Official public guidance summarized briefly in original language; no clinical instrument or treatment exercise copied.
+  - source_id: SRC-NIH-ADVANCE-CARE-PREPARATION
+    title: 'Advance care plan: A checklist for the future'
+    authors_or_issuing_body: NIH MedlinePlus Magazine / National Institute on Aging
+    publication_date: '2024-11-01'
+    locator: https://magazine.medlineplus.gov/article/advance-care-plan-a-checklist-for-the-future
+    locator_kind: external_url
+    content_sha256: null
+    source_class: official_guidance
+    evidence_strength: authoritative
+    supported_claim: Advance care planning considers values, preferences and trusted decision support for a time when a person cannot communicate; formal advance directives are legal documents.
+    claim_classification: professional_or_public_standard
+    limitations: US public information used only for conceptual preparation. Local legal formalities, document validity, clinical choices and eligibility require qualified local guidance; the product does not reproduce a directive or prescribe universal signing requirements.
+    applicable_competency_ids: ['04.08']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Citation and concise original summary; no legal document, checklist wording or medical order reproduced.
+  - source_id: SRC-NHS-PALLIATIVE-CARE-OVERVIEW
+    title: What end of life care involves
+    authors_or_issuing_body: National Health Service
+    publication_date: '2026-05-06'
+    locator: https://www.nhs.uk/tests-and-treatments/end-of-life-care/what-it-involves-and-when-it-starts/
+    locator_kind: external_url
+    content_sha256: null
+    source_class: official_guidance
+    evidence_strength: authoritative
+    supported_claim: Palliative support addresses comfort and psychological, social and spiritual needs; care should take account of the person's wishes and involve appropriate professionals.
+    claim_classification: professional_or_public_standard
+    limitations: UK public guidance used for basic care literacy and accompaniment boundaries. It does not establish eligibility elsewhere, offer prognosis or authorize treatment decisions by a visitor or by this product.
+    applicable_competency_ids: ['04.08']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Link and concise original paraphrase; no clinical protocol or treatment advice copied.
+  - source_id: SRC-EPICTETUS-ENCHIRIDION
+    title: 'Enchiridion: sections 1, 17 and 31'
+    authors_or_issuing_body: Epictetus / Internet Classics Archive edition
+    publication_date: 'ancient text; archive edition undated'
+    locator: https://classics.mit.edu/Epictetus/epicench.html
+    locator_kind: external_url
+    content_sha256: null
+    source_class: authoritative_primary_source
+    evidence_strength: authoritative
+    supported_claim: These selected passages connect judgments and choice with assigned roles and a providential account of the gods.
+    claim_classification: philosophical_or_normative_position
+    limitations: Historical philosophical positions, not established scientific findings. The archive credits Elizabeth Carter; this exercise uses the displayed edition without reproducing its wording. No claim that all Stoics agree or that ancient prescriptions about suffering and obedience should govern present conduct.
+    applicable_competency_ids: ['03.01', '03.02']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Linked primary passage and original concise paraphrase; no copied exercise or extended quotation.
+  - source_id: SRC-MARCUS-MEDITATIONS-BOOK-ONE
+    title: 'Meditations: Book One, opening entries through Rusticus'
+    authors_or_issuing_body: Marcus Aurelius / George Long translation, Internet Classics Archive
+    publication_date: 'ancient text; George Long translation 1862'
+    locator: https://classics.mit.edu/Antoninus/meditations.1.one.html
+    locator_kind: external_url
+    content_sha256: null
+    source_class: authoritative_primary_source
+    evidence_strength: authoritative
+    supported_claim: Marcus identifies lessons received from family and teachers; the Rusticus entry includes careful reading and a willingness to recognize a need for correction.
+    claim_classification: philosophical_or_normative_position
+    limitations: A particular author's account of exemplars, not evidence that every claim in the text is accurate or that the product's study and practice unit develops virtue.
+    applicable_competency_ids: ['03.02']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Public-domain classical text and historical translation; citation and original paraphrase only in this unit.
+  - source_id: SRC-MODERN-STOICISM-SELF-DESCRIPTION
+    title: About Modern Stoicism
+    authors_or_issuing_body: Modern Stoicism
+    publication_date: 'undated page'
+    locator: https://modernstoicism.com/about-us/
+    locator_kind: external_url
+    content_sha256: null
+    source_class: authoritative_primary_source
+    evidence_strength: limited
+    supported_claim: This organization describes a project originating in 2012 and welcomes different religious views and interpretations within its contemporary Stoic activities.
+    claim_classification: philosophical_or_normative_position
+    limitations: The organization's own description is a primary account of its stated approach, not independent verification of its practices, a representation of all Stoics or endorsement of its research claims.
+    applicable_competency_ids: ['03.02']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Link and brief original paraphrase; no copied program, exercises or research instruments.
+  - source_id: SRC-NCCIH-MEDITATION-SAFETY
+    title: 'Meditation and Mindfulness: Effectiveness and Safety'
+    authors_or_issuing_body: National Center for Complementary and Integrative Health
+    publication_date: '2022-06'
+    locator: https://www.nccih.nih.gov/health/meditation-and-mindfulness-effectiveness-and-safety
+    locator_kind: external_url
+    content_sha256: null
+    source_class: official_guidance
+    evidence_strength: authoritative
+    supported_claim: Meditation can involve negative experiences; health concerns should not be managed by replacing appropriate care with meditation.
+    claim_classification: safety_precaution
+    limitations: Supports a cautious stop-and-support boundary only. It does not establish safety or effectiveness of this product's short pause, classify a spiritual experience, or validate individual outcomes.
+    applicable_competency_ids: ['03.03', '03.13']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Government public information; link and original brief summary, with no copied intervention or questionnaire.
+  - source_id: SRC-VATICAN-NICENE-CREED
+    title: 'The Credo: Nicene Creed'
+    authors_or_issuing_body: Catechism of the Catholic Church / Vatican
+    publication_date: 'undated online edition'
+    locator: https://www.vatican.va/archive/ENG0015/__P13.HTM
+    locator_kind: external_url
+    content_sha256: null
+    source_class: authoritative_primary_source
+    evidence_strength: authoritative
+    supported_claim: The published Nicene Creed affirms one divine creator.
+    claim_classification: philosophical_or_normative_position
+    limitations: A specified religious confession, not empirical proof, a complete account of Christianity or evidence that every Christian expresses belief identically. It is compared without requiring assent.
+    applicable_competency_ids: ['03.12']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Citation and short original paraphrase only; no liturgical text reproduced.
+  - source_id: SRC-HUMANISTS-UK-HUMANISM
+    title: Humanism
+    authors_or_issuing_body: Humanists UK
+    publication_date: 'undated page'
+    locator: https://humanists.uk/humanism/
+    locator_kind: external_url
+    content_sha256: null
+    source_class: authoritative_primary_source
+    evidence_strength: limited
+    supported_claim: Humanists UK describes humanism through a nonreligious naturalistic outlook, reason and concern for human welfare.
+    claim_classification: philosophical_or_normative_position
+    limitations: A named organization's self-description, not a claim about every nonreligious person or a proof against religious belief. It supports comparison of stated positions, not validation of the dialogue exercise.
+    applicable_competency_ids: ['03.12']
+    applicable_protocol_ids: []
+    date_accessed: '2026-09-06'
+    license_or_quotation_constraints: Link and concise original paraphrase only; no source exercises or extended prose reproduced.
   - source_id: SRC-VAZIRE-SELF-OTHER-2010
     title: Who Knows What About a Person? The Self–Other Knowledge Asymmetry (SOKA) Model
     authors_or_issuing_body: Simine Vazire

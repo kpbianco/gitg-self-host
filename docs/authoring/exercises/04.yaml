@@ -1,0 +1,233 @@
+schema_version: GG-TAILORED-PRACTICE-AUTHORING-1.0
+domain_id: '04'
+exercises:
+  '04.01':
+    title: "Name suffering honestly and choose one humane response"
+    goal: "Respond to pain, injustice, tragedy or unanswered questions with truthful lament and a proportionate act of care, without requiring a tidy explanation before acting."
+    scope_note: "This is an exercise in honest language and humane response, not a treatment for distress or a solution to evil. Lament may be religious, secular, spoken, written or silent; no explanation of another person's suffering is imposed."
+    burden: "Three short sessions of up to 15 minutes, with pauses or deferral whenever useful."
+    setup: "Use this fictional case: a much-used neighborhood meeting place closes after storm damage, disrupting connection despite volunteers' sincere efforts. You may instead use a settled, manageable disappointment. Do not select an acute traumatic event, recent bereavement or someone else's private pain for the sake of producing evidence."
+    actions:
+      - title: "Describe the hurt without correcting it into a lesson"
+        instructions: "Make four short entries: what happened; what is lost or unfair; what you feel or cannot yet name; and what remains unanswered. In the supplied case, separate physical damage from the loss of a shared place and from any question about why this happened. If prayer is part of your pathway, an unanswered prayer may be named without inventing a divine answer. Otherwise address the situation in ordinary language. Do not add at least, everything happens for a reason or an obligatory growth lesson to make the lament acceptable."
+        checks: [The event and its consequences are described concretely, Loss unfairness and unanswered questions are distinguished, Feeling or difficulty naming it is recorded honestly, No reassuring explanation is imposed]
+      - title: "Make room for a response without demanding agreement"
+        instructions: "Read the four entries privately or, if useful, share a limited version with a willing listener after asking whether they can listen without solving it. Use the request: I want this acknowledged; I am not asking you to explain why it happened. For the fictional case, rehearse an acknowledgment that names the lost place and effort, then contrast it with a response that minimizes the loss. Notice whether silence, anger, sorrow or uncertainty can remain without being judged as a failed performance."
+        checks: [An acknowledgment names the particular loss, Any listener freely agrees to the request, A minimizing response is distinguished from acknowledgment, The experience need not resolve into a preferred emotion]
+      - title: "Act on a need that does not depend on solving the question"
+        instructions: "Identify one ordinary need you can appropriately address: offer a wanted check-in, help someone find a permitted alternative meeting place, or take care of your own immediate rest or routine. In the fictional case, draft a practical notice separating confirmed closure information from unknown reopening dates; then make one comparable, modest act of care in ordinary life. Review what it helped and what it could not repair. Keep the unanswered question visible rather than calling the action an explanation of suffering."
+        checks: [A proportionate need and action are identified, An ordinary act of care is actually attempted, Help provided and loss remaining are separated, The unanswered question is not concealed by the action]
+    adaptation: "Use a drawing, a few words or the fictional case. No public lament, theological agreement, painful disclosure or positive feeling is required. Stop if the topic becomes overwhelming; use support suited to your needs rather than pushing through for completion."
+    review: "What was acknowledged accurately, what care remained possible, and which question still deserves to remain unanswered?"
+    examples:
+      supportive: "The loss was named without a forced lesson, a wanted check-in occurred and uncertainty about the future remained explicit."
+      mixed: "An honest lament was possible, but the offered help was not wanted and the participant respected that response."
+      contradictory: "A listener insisted that suffering was deserved, secretly beneficial or evidence of insufficient faith."
+      inconclusive: "A general statement about resilience replaced acknowledgment of the particular loss and no care action was attempted."
+  '04.02':
+    title: "Let finite time change one ordinary priority"
+    goal: "Recognize impermanence in bodies, relationships, possessions and achievements, and translate that recognition into one concrete priority or appropriate reconciliation."
+    scope_note: "This considers finitude without predicting your death or assigning an expiry date to someone else. One changed priority is evidence of conduct, not proof of peace with mortality."
+    burden: "About 20 minutes to reflect, one small action within a week and a 15-minute review."
+    setup: "Use a familiar object that has aged, a photograph you can comfortably view, or the supplied case of a favorite book whose pages are wearing out. No graphic material, illness scenario, cemetery visit or death countdown is needed. Keep the focus on an ordinary choice you can make safely."
+    actions:
+      - title: "Notice what changes and what cannot be kept indefinitely"
+        instructions: "Use four headings: body and capacity; relationships; possessions; achievements and roles. For each, name one ordinary way time changes it, and one thing you value that the change makes visible. The worn book may prompt preserving a note from its giver rather than buying more copies. Distinguish the fact that time is finite from a claim to know how much time remains. Include aging and loss without requiring yourself to imagine a frightening death or decide what follows it."
+        checks: [All four areas include a concrete form of change, A valued good is connected to the change, Finite time is separated from a predicted deadline, The reflection remains manageable and specific]
+      - title: "Choose a priority with an actual tradeoff"
+        instructions: "Pick one feasible change: spend twenty attentive minutes on a valued relationship, preserve a meaningful record, use an owned item well or make a small overdue repair. State what optional activity you will reduce to make room. If considering reconciliation, distinguish a safe invitation or acknowledgment from demanding contact or forgiveness; no unsafe relationship must be reopened. Use the default of preserving a short note about the book and making time to enjoy it. Decide when and how the action will happen."
+        checks: [A finite-time insight leads to a concrete priority, A real tradeoff creates room for the action, Any relational action respects safety and consent, A feasible time and method are specified]
+      - title: "Make the change and examine what it served"
+        instructions: "Carry out the chosen action and record the ordinary result. Did you actually give attention, preserve something, make a repair or offer a welcome without coercion? Compare the use of time with the optional activity displaced. Name what remains unfinished and what you can let remain so. Choose one sustainable continuation or conclude that the small change is enough. The aim is a more considered allocation of finite time, not urgency about maximizing every moment."
+        checks: [The chosen action is actually carried out, Its value is compared with the displaced activity, Unfinished matters are acknowledged without a total-life verdict, Any continuation remains sustainable]
+    adaptation: "Use a neutral object, a supplied fictional example or spoken reflection. Rest may be the right priority. No bucket list, major purchase, medical forecast, farewell conversation or forced reconciliation is required. Defer if mortality reflection is destabilizing."
+    review: "Which specific choice changed because time is finite, and did it serve something you truly value?"
+    examples:
+      supportive: "The participant reduced an optional distraction, spent attentive time with a willing friend and kept one unfinished ambition in proportion."
+      mixed: "The priority was sound, but the planned time was interrupted and a smaller attempt was honestly recorded."
+      contradictory: "Finitude became panic to optimize every minute, pressure for forgiveness or a reason to neglect ordinary responsibilities."
+      inconclusive: "A list of life goals was produced without changing an actual use of time or attention."
+  '04.03':
+    title: "Face a costly choice without inventing a lossless answer"
+    goal: "Recognize that decent people can suffer, good efforts can fail and some choices preserve one good while losing another, then reason and act without denial or automatic nihilism."
+    scope_note: "A fictional low-stakes conflict develops tragic reasoning. It does not equip the participant to make emergency, clinical or life-and-death allocation decisions. Some losses can be reduced; that does not mean every conflict has a painless resolution."
+    burden: "Three sessions of about 20 minutes using the supplied case and one ordinary application."
+    setup: "Use this case: a volunteer group has one remaining quiet room and the same two-hour slot requested by a study group and a bereavement-support group. Both followed the rules and neither caused the shortage. No safe extra room or different date is currently available. Your task is to reason about a fair process, not decide a real group's access."
+    actions:
+      - title: "Identify the real goods and the loss in every available option"
+        instructions: "Write what each group needs and why both claims matter. List three options: a transparent previously agreed rule, an agreed limited division if both activities can genuinely function, or a fair draw when no stronger relevant claim exists. For each, state who bears the cost and what remains unmet. Check the premises: if an accessible alternative room actually exists, the case changes. Do not invent one simply to avoid the hard part, blame either group for needing help, or assume that worthy effort guarantees a successful outcome."
+        checks: [Both legitimate goods are represented fairly, Each available option has an explicit residual loss, Relevant facts and hypothetical escape routes are distinguished, Need or failure is not converted into blame]
+      - title: "Choose a process you can justify to the disadvantaged side"
+        instructions: "Select a process for the stated facts, giving a reason connected to access, need, prior commitments or fair treatment. Explain it as if speaking to the group that loses the slot, without claiming they should be grateful. Name a mitigation that is genuinely available, such as first consideration at the next opening, and label it insufficient to replace the lost occasion. State who would have actual authority to decide and how a factual mistake could be corrected. Acknowledging moral remainder is part of the answer."
+        checks: [A decision process has a relevant reason, The explanation acknowledges the disadvantaged side, Mitigation does not erase the remaining loss, Authority and a route for factual correction are specified]
+      - title: "Apply the distinction between loss and meaninglessness"
+        instructions: "Choose a much smaller real conflict in your own time, such as two valued activities in one free hour. Decide, carry out the selected activity and acknowledge the other good left unsatisfied. Review whether disappointment led you to deny its value or declare all effort pointless. Return to the room case and state what good conduct still required even without a perfect outcome: honesty, fair process, care and practical mitigation. Keep the fictional high-consequence reasoning separate from your ordinary trial."
+        checks: [A small real conflict receives a decision and action, The unchosen good retains its acknowledged value, Disappointment is separated from total meaninglessness, The limits of transfer from the fictional case are explicit]
+    adaptation: "Use drawings or spoken alternatives and a neutral scheduling conflict. No real vulnerable group should be involved to test your reasoning. If the case is personally distressing, use two recreational activities competing for one shared room instead."
+    review: "What loss could you reduce, what loss remained, and what still made responsible conduct possible?"
+    examples:
+      supportive: "The process was explained honestly, mitigation stayed proportionate and the ordinary trial preserved respect for the activity that could not be chosen."
+      mixed: "A fair process was proposed, but an assumption about room access remained uncertain and needed checking."
+      contradictory: "A nonexistent solution was invented to avoid acknowledging loss, or disappointment was treated as proof that goodness and effort are pointless."
+      inconclusive: "The conflict was called difficult without identifying its goods, costs, authority or a defensible process."
+  '04.04':
+    title: "Find a small next orientation after a major disruption"
+    goal: "Distinguish what a major loss has ended from what remains, identify practical and relational support, and choose one life-supporting commitment without requiring a redemptive story."
+    scope_note: "Bereavement, betrayal, disaster, illness, displacement and identity collapse differ in their demands. The default is fictional preparation, not evidence of recovery from catastrophe; personal use is limited to what feels manageable alongside appropriate support."
+    burden: "Three sessions of up to 15 minutes, separated by rest; a single short entry or deferral is acceptable when capacity is low."
+    setup: "Use this fictional case: a community workshop is destroyed by a storm. Nobody is injured, but a craftsperson loses tools, routines, a shared place and part of an identity built around making things. Immediate safety and shelter are already arranged. The exercise begins after urgent needs; it must never delay them. No personal disaster story is required."
+    actions:
+      - title: "Separate what ended from what is still present"
+        instructions: "Make four small sections: ended, changed, remains and unknown. In the workshop case, the building and some tools are gone; routines and access have changed; knowledge, some relationships and the person's dignity remain; reopening is unknown. Include practical, relational and identity losses without calling remaining strengths compensation for everything lost. Name one thing that cannot currently be restored and one assumption you should not rush to settle. Do not require gratitude, forgiveness or a claim that the disaster happened for a reason."
+        checks: [Ended changed remaining and unknown elements are distinguished, Practical relational and identity effects are considered, An irretrievable loss is named without erasure, A premature conclusion is kept open]
+      - title: "Identify support by the need it can actually meet"
+        instructions: "Match each immediate nonemergency need to a realistic kind of support: information about the space, help with one practical task, companionship, financial or legal advice from a qualified source, or health support if needed. For the default, draft a bounded request to a trusted peer for a short conversation about accessible work space; do not send it as if the fictional loss were real. Specify what the helper is being asked to do and what remains outside that role. Include a second route if the first cannot help."
+        checks: [Different needs have appropriate support roles, One bounded request is specific and feasible, Helpers are not assigned authority beyond their role, A second route or unresolved support gap is recorded]
+      - title: "Try one life-supporting commitment without declaring recovery"
+        instructions: "Choose a small action that remains meaningful even if the former life cannot immediately return: maintain a basic routine, accept wanted company, care for an existing belonging or spend ten minutes on a familiar craft using available safe materials. In the fictional pathway, try one ordinary sustaining action yourself without claiming it proves recovery from loss. Later review effort, help and whether the action was tolerable or useful. Keep, reduce or stop it. A next step can coexist with grief, anger or uncertainty about identity."
+        checks: [A small sustaining commitment is freely chosen, One ordinary action is actually attempted, Its burden and support are reviewed, The conclusion does not equate action with recovery]
+    adaptation: "Use the fictional case, four spoken words or a trusted helper who does not demand details. There is no schedule for rebuilding meaning. If the topic is overwhelming or basic needs are insecure, defer the exercise and prioritize suitable practical or professional help."
+    review: "What has ended, what remains available, who can help with which need, and what is one tolerable next commitment?"
+    examples:
+      supportive: "The map preserved the scale of the loss, identified a bounded request and supported one small routine without claiming the former identity was restored."
+      mixed: "One action was attempted but cost too much effort, so the participant reduced it and retained the need for more support."
+      contradictory: "Remaining strengths were used to minimize catastrophe or the person was pressured to find growth, forgive betrayal or rebuild on a deadline."
+      inconclusive: "A hopeful future story was written without identifying what ended, a realistic support need or any tolerable action."
+  '04.05':
+    title: "Act on a chosen responsibility while a meaning question stays open"
+    goal: "Examine a feeling of emptiness, repetition or arbitrariness and choose a defensible act of responsibility, care or faith without pretending that the existential question is settled."
+    scope_note: "An ordinary existential question is not a diagnosis. This exercise neither disproves meaninglessness nor treats depression; persistent distress or difficulty functioning calls for support beyond a philosophical task."
+    burden: "About 15 minutes of clarification, one 10-minute ordinary action and a short review on the following day."
+    setup: "Use the supplied thought: I keep doing the same household tasks; if they never stay finished, what is the point? Choose a neutral repetitive task such as returning reusable items to their places. No crisis, isolation, deprivation or dramatic life change is needed."
+    actions:
+      - title: "Make the question precise enough to examine"
+        instructions: "Distinguish four claims: the task feels empty; it repeats; you cannot prove an ultimate purpose; and nothing you do can matter to anyone. Ask whether the first three actually establish the fourth. Name a concrete experience behind the thought and one thing still unknown. Consider both a secular chosen responsibility and a religious or philosophical commitment if genuinely yours; neither is required to resolve every question. Avoid arguing yourself into a preferred emotion or treating uncertainty as an intellectual failure."
+        checks: [Feeling repetition uncertainty and a total conclusion are separated, The question is tied to a concrete example, A questionable inference is examined, A genuine commitment or honest uncertainty is retained]
+      - title: "Choose an action with a local reason you can defend"
+        instructions: "For the default, return three shared or personal reusable items to their proper places so they are available when needed. State a local reason: preventing needless inconvenience is worthwhile to me even though the task will recur. If another small task better fits, identify its beneficiary and actual use before substituting. Spend no more than the planned ten minutes and record what you actually did. The action is an experiment in chosen responsibility, not a test that you must feel fulfilled afterward."
+        checks: [An ordinary action has a specific beneficiary or use, The reason does not require a final metaphysical answer, The action is actually carried out, Time and expectations remain proportionate]
+      - title: "Review meaning conduct and mood as different things"
+        instructions: "The next day, check the practical consequence: were the items available, did someone avoid extra effort, or is the use still unknown? Separately record whether the sense of emptiness changed. Decide whether the local reason remains one you endorse, even if the feeling persists. State the unresolved existential question accurately and choose repeat, another fitting action, rest or additional support. Do not turn one helpful act into a proof of universal meaning or one flat mood into proof that nothing matters."
+        checks: [A practical consequence is checked or left unknown, Mood and endorsed responsibility are reviewed separately, The unresolved question is stated honestly, The next step does not depend on a forced conclusion]
+    adaptation: "Use a tiny accessible task, a seated sorting action, dictation or assistance by consent. If nothing feels manageable, defer rather than using activity as a moral test. Seek suitable support for persistent low mood, hopelessness or difficulty functioning; immediate danger needs urgent local help."
+    review: "What could you reasonably care for without certainty, and what did doing it answer or leave unanswered?"
+    examples:
+      supportive: "The small task reduced avoidable inconvenience while the larger meaning question remained open and was described more precisely."
+      mixed: "The action had a useful effect but did not change the empty feeling, and the participant kept those outcomes separate."
+      contradictory: "A person was told that busy work proves life meaningful or that lingering emptiness shows laziness or deficient faith."
+      inconclusive: "The philosophical question was debated without specifying or attempting any locally justified action."
+  '04.06':
+    title: "Sustain humane care when improvement is not the assignment"
+    goal: "Practice patience, lament, companionship, rest and faithful attention during a slow or unresolved season, without turning endurance into an obligation to optimize yourself."
+    scope_note: "The measure here is whether care and boundaries were honored, not whether the situation improved. Ordinary waiting provides a small practice; it does not demonstrate capacity to endure illness, deprivation or extreme suffering."
+    burden: "About 15 minutes to prepare and three short observations during a week; no extra workload or endurance challenge is added."
+    setup: "Use a manageable unresolved situation such as waiting for an ordinary repair you cannot accelerate. Identify what essential tasks still need doing and what can wait. No one is asked to create hardship or remain in an unsafe situation for practice."
+    actions:
+      - title: "Define enough care for this period"
+        instructions: "Choose a deliberately small care floor: one ordinary need to protect, one necessary responsibility and one optional demand to reduce. Add room to name disappointment, accept suitable company and rest without earning it. For the repair case, protect a normal meal or break, keep the agreed appointment information available and pause a nonessential improvement project. Say what patience means here: avoiding needless pressure while taking useful action when information changes. It does not mean silence about harm or refusing help."
+        checks: [A small care floor and essential responsibility are defined, One optional demand is reduced, Lament companionship and rest have legitimate room, Patience is distinguished from enduring preventable harm]
+      - title: "Keep company with the situation without demanding a result"
+        instructions: "At three natural points during the week, notice whether the care floor was met, what help was available and what was difficult. One occasion may include a short wanted conversation, shared ordinary activity or quiet company. Ask for listening or practical help plainly rather than making another person fix the season. If alone, use a familiar gentle activity or a public contribution you value without pretending it is reciprocal companionship. Record missed care as information about need, not a failed character test."
+        checks: [Three ordinary occasions are reviewed without inventing success, Care and difficulty are recorded together, Any companionship respects the limits of the other person, Missed care leads to attention rather than self-punishment]
+      - title: "Review what should be carried and what should be put down"
+        instructions: "Compare the occasions for unnecessary burden, useful company, rest and responsibilities actually met. Ask whether the plan respected your capacity and whether a neglected need now requires practical or qualified help. Retain one sustainable commitment and release or reduce one unnecessary demand. The unresolved repair may still be unresolved; do not call that a failed exercise. If conditions can be improved or left safely, consider that option rather than treating avoidable suffering as a badge of endurance."
+        checks: [Care and burden are reviewed without an improvement quota, A remaining need or help gap is identified, One commitment and one reduction are justified, Avoidable hardship is not made a virtue requirement]
+    adaptation: "Use a single word per occasion, a reminder object or voluntary assistance. Rest, lament and accepting help are legitimate actions. There is no streak, forced gratitude, productivity target or requirement to tolerate mistreatment."
+    review: "What helped you remain humane while the situation stayed unresolved, and what demand can you reasonably stop carrying?"
+    examples:
+      supportive: "The participant kept a modest care floor, accepted a short visit and reduced an optional project even though the waiting continued."
+      mixed: "Some basic care was missed, revealing that the plan needed less burden and more support rather than a stricter routine."
+      contradictory: "Endurance became refusal of available help, neglect of basic needs or pride in tolerating preventable mistreatment."
+      inconclusive: "A demanding improvement plan replaced attention to patience, company, lament or rest."
+  '04.07':
+    title: "Distinguish moral distress responsibility and the support needed"
+    goal: "Recognize distress around acting, witnessing, failing to prevent or being betrayed in morally serious events, and distinguish guilt, shame, trauma, responsibility, possible repair and qualified support."
+    scope_note: "This is literacy and support preparation using a fictional case. Moral injury is not itself a diagnosis, and this exercise cannot diagnose PTSD, determine culpability or provide trauma treatment. It does not ask for a personal account of a morally injurious event."
+    burden: "Three sessions of up to 15 minutes; pause or stop if the material is uncomfortable."
+    setup: "Use this fictional case: a volunteer coordinator made a decision with incomplete information, later learned someone lost access to needed help and feels both guilt about the choice and betrayed by withheld information. The case contains no details of violence. Read the linked National Center for PTSD explanation for terminology; no screening questionnaire or disclosure is required."
+    actions:
+      - title: "Separate feelings facts and judgments of the whole person"
+        instructions: "Make six brief entries. Guilt concerns an action or omission; shame can become a judgment of the whole self; trauma-related symptoms need qualified assessment; responsibility concerns what the person knew, could control and owed; repair concerns what may still help; support concerns who is qualified and safe to assist. Apply these distinctions to the fictional case without assigning a diagnosis or declaring innocence or guilt. Note the four possible relations to a morally serious event: acting, witnessing, not preventing and betrayal. Feelings alone do not establish the facts of responsibility."
+        checks: [All six distinctions are explained without diagnosis, Four possible relations to the event are recognized, Feelings and factual responsibility are separated, Missing knowledge and control are made explicit]
+      - title: "Prepare questions that need a qualified or trusted response"
+        instructions: "For the case, write four questions: what happened and what is still unknown; what responsibility was actually held; what repair could help without causing more harm; and what support is needed for continuing distress. Match needs to roles: a qualified mental health professional for symptoms, an appropriate independent adviser for institutional or legal responsibility, and a freely chosen trusted person or chaplain for companionship or meaning. Ask about confidentiality and its limits before sensitive disclosure. A friend cannot settle a diagnosis and a clinician does not automatically decide legal liability."
+        checks: [Questions separate facts responsibility repair and support, Support roles fit the questions they can address, Confidentiality limits are considered before disclosure, No helper is treated as an all-purpose authority]
+      - title: "Create a safe next-step route without forcing confession or repair"
+        instructions: "Locate one appropriate public support route or provider information page and note how an initial appointment or question could be requested. For the fictional case, draft a short request that names the type of help without private incident details. Identify why contacting an affected person, public confession or unsolicited restitution may be premature and requires care about their wishes and safety. Choose a low-risk interim step such as preserving ordinary care and gathering questions. Keep preparation distinct from treatment, actual repair or a decision about blame."
+        checks: [An appropriate support route is actually located, A minimal initial request protects private details, Premature confession or repair risks are recognized, Preparation is not recorded as treatment or absolution]
+    adaptation: "Use the fictional case throughout, read with support or skip details. No personal narrative, symptom score, exposure exercise, apology, forgiveness or contact with an affected person is required. Persistent distress merits qualified help; immediate danger requires urgent local support."
+    review: "Which question belongs to facts, responsibility, care or qualified assessment, and what is the safest appropriate route for the next unanswered one?"
+    examples:
+      supportive: "The learner separated shame from a specific responsibility question, identified a suitable support route and drafted a private first inquiry without claiming a diagnosis or repair."
+      mixed: "The distinctions were clear, but provider access or confidentiality remained uncertain and needed checking."
+      contradictory: "A checklist assigned blame or a diagnosis, or the person was urged to confess publicly or contact someone harmed without regard for safety and consent."
+      inconclusive: "Distress was labeled moral injury without distinguishing its questions or finding an appropriate support route."
+  '04.08':
+    title: "Prepare care preferences and practice respectful accompaniment"
+    goal: "Understand basic advance-care and comfort-care concepts, prepare questions about personal preferences and decision support, and practice presence that respects the dignity and choices of someone seriously ill."
+    scope_note: "This prepares a conversation; it creates no legally effective directive, treatment decision, prognosis or consent on another person's behalf. Advance-care requirements and clinical options need qualified local guidance. No dying person must participate in this exercise."
+    burden: "About 25 minutes of reading and private preparation, a 15-minute conversation rehearsal and a short practical follow-through."
+    setup: "Read the linked NIH MedlinePlus advance-care overview and NHS explanation of end-of-life and palliative care. Use the fictional case of an adult who wants understandable information, relief from discomfort and control over visitors. Keep any personal preferences in your own private document; the app needs only the observation checks."
+    actions:
+      - title: "Prepare values and questions before choosing medical options"
+        instructions: "Explain the distinction between planning for future decisions and making a current treatment choice. The sources describe advance directives as legal documents, while palliative care concerns relief and support during serious illness; specific eligibility and services need local confirmation. Privately note what matters in care, whom you would want involved if you could not communicate, what that person would need to understand, and questions for a clinician about options and tradeoffs. Unknown is a valid preference. Locate the appropriate local health-service or qualified advice route for forms rather than signing an invented template."
+        checks: [Planning legal documentation and current treatment are distinguished, Comfort and support are included in the care questions, Values decision support and unknown preferences are identified, A qualified local route for formal documents is located]
+      - title: "Rehearse presence that follows the person's wishes"
+        instructions: "In the fictional visit, first ask whether the person wants company, quiet or practical help. Practice listening to fear or grief without promising recovery. Try: I cannot know what happens next; would quiet company or help asking the care team a question be useful? Let the person correct the offer rather than insisting it is comforting. Ask what would make the next few minutes easier and who should be consulted about discomfort. Offer a small choice, such as whether to continue the visit, and accept no. If unfinished relationships arise, ask whether the person wants help communicating; do not organize reconciliation, spiritual counsel or visitors without consent. Medical questions and symptoms go to the care team."
+        checks: [The person chooses the kind and duration of company, Listening avoids false reassurance, Practical comfort is separated from medical advice, Relationships privacy and spiritual preferences remain voluntary]
+      - title: "Make one appropriate preparation step and preserve revisability"
+        instructions: "Choose one step within your authority: organize your own care questions, ask a willing prospective support person whether they could discuss the role, or locate a suitable appointment route. Do not assign someone legal authority merely by naming them. Review the fictional visit for dignity, grief and unwanted assumptions. Record when you will revisit your private notes and where they can be found by the appropriate people if formally completed. A rehearsal is not actual accompaniment, and a conversation note is not an executed directive."
+        checks: [One preparation step is actually completed, Any proposed support role is voluntary, Preferences and questions have a review point, Rehearsal and informal notes are not claimed as legal or clinical completion]
+    adaptation: "Use the fictional case, accessible official information, interpretation support or a trusted helper. No disclosure of diagnoses, treatment choices, family conflict or existing documents is required. Defer emotionally difficult material; urgent symptoms and immediate care needs take priority over this educational task."
+    review: "What do you want a future conversation to clarify, and how would you accompany someone without taking over their choices or denying their situation?"
+    examples:
+      supportive: "The participant prepared values and clinician questions, found the proper local documentation route and rehearsed a visit that respected refusal and uncertainty."
+      mixed: "The private questions were ready, but the proposed support person's willingness and the local document requirements remained unconfirmed."
+      contradictory: "An informal note was treated as a valid directive, symptoms were managed without the care team or a visit imposed reassurance, reconciliation or belief."
+      inconclusive: "A generic preference to be comfortable was recorded without understanding the terms, preparing questions or taking an appropriate next step."
+  '04.09':
+    title: "Hold a reason for hope alongside the reasons for grief"
+    goal: "Develop realistic hope through relationship, remaining possibility, faith, meaning or action while acknowledging adverse evidence and outcomes you cannot promise."
+    scope_note: "Hope can concern a particular outcome or how people will meet it; those are different claims. This small practice does not manufacture optimism, predict recovery or require a hopeful feeling."
+    burden: "About 15 minutes to map the situation, one small action and a 15-minute review at a natural decision point."
+    setup: "Use this fictional case: a community garden may lose access to its site, and an appeal might fail. Members still value one another and the knowledge they share. Alternatively choose a low-stakes uncertain outcome from ordinary life. Do not use an acute medical prognosis or someone else's crisis."
+    actions:
+      - title: "Write the hopeful and adverse evidence on the same page"
+        instructions: "Use two columns: reasons this outcome might improve, and reasons it might not. Mark facts, interpretations and unknowns in each. In the garden case, a review meeting is possible but continued access has not been promised. Add a separate line for what is already worth grieving. Name at least one kind of hope beyond winning the appeal, such as remaining connected or preserving knowledge, without claiming it replaces the lost place. Do not invent numerical odds; use them only if a trustworthy relevant source supplies them."
+        checks: [Hopeful and adverse considerations are both concrete, Facts assumptions and unknowns are distinguished, A reason for grief is acknowledged, Outcome hope is separated from hope about response]
+      - title: "Choose an action justified under more than one outcome"
+        instructions: "For the case, design a modest plan to preserve a shared planting note and ask permission before sharing it. For a real ordinary application, do one useful action that remains worthwhile whether the preferred outcome happens or not, such as keeping a wanted connection or making accurate information easier to find. State how relationship, faith, meaning or practical possibility supports the action if that is genuinely your reason. Do not make others reassure you or commit to the same belief in order to participate."
+        checks: [The action remains useful under different outcomes, A real ordinary action is attempted, Its reason for hope is honestly stated, Others are not required to supply reassurance or agreement]
+      - title: "Update hope when new information arrives"
+        instructions: "At the decision point, add the actual result or state that it remains unknown. Revise the preferred-outcome expectation in light of evidence, and review what the action accomplished. Keep grief and disappointment visible even if some hope remains. If the outcome fails, identify whether a relationship, responsibility or possible next step still warrants care; if none is clear, uncertainty and rest are acceptable. Do not reinterpret a failed prediction as proof that it was secretly guaranteed all along."
+        checks: [New information changes the expectation when appropriate, The action is evaluated by its actual effect, Grief and any remaining hope can coexist, The conclusion avoids guaranteed or unfalsifiable reassurance]
+    adaptation: "Use the fictional garden, spoken columns or a neutral uncertain hobby plan. Hope need not feel positive. No optimistic affirmation, religious explanation, public promise or pressure on another person's grief is required."
+    review: "What can you reasonably hope for, what must you still grieve, and what action remains worthwhile without a guarantee?"
+    examples:
+      supportive: "The appeal failed, the loss was acknowledged and a wanted connection and shared knowledge remained worth preserving without pretending the loss was good."
+      mixed: "The useful action occurred but the outcome was still unknown, so both confidence and disappointment remained provisional."
+      contradictory: "Adverse evidence was hidden to protect optimism or someone was blamed for an outcome because they did not hope or pray hard enough."
+      inconclusive: "A reassuring prediction was repeated without considering evidence, grief or any worthwhile action."
+  '04.10':
+    title: "Continue responsibility when an important consequence cannot be undone"
+    goal: "Distinguish irreversible consequence from remaining responsibility, make proportionate repair where possible and continue service or changed conduct without demanding that remorse erase the past."
+    scope_note: "This uses an ordinary fictional mistake, not a process for adjudicating serious wrongdoing or recovering from trauma. Repair can be incomplete, forgiveness belongs to others and personal growth does not cancel a consequence."
+    burden: "About 20 minutes to examine the case, one bounded responsibility action and a review several days later."
+    setup: "Use this fictional case: someone carelessly discards a friend's handwritten note while tidying. The original cannot be recovered. An apology and a changed handling rule are possible, but a replacement would not be the same object. No participant needs to disclose a serious regret or contact a person harmed."
+    actions:
+      - title: "Separate the irreversible loss from what remains yours to do"
+        instructions: "Make three entries: cannot undo, can still address and do not control. In the note case, the original is gone; the person can acknowledge the mistake, ask whether any practical response is wanted and change how belongings are handled; they cannot require forgiveness or renewed trust. State the particular responsibility without turning it into a verdict that the whole person is worthless. Consider the related cases of a missed opportunity and incomplete restitution: regret may remain even after an appropriate next action."
+        checks: [Irreversible consequence and possible action are separated, A specific responsibility is acknowledged without a total worth verdict, Forgiveness and trust remain outside personal control, Incomplete restitution and missed opportunity are recognized]
+      - title: "Define repair that respects the affected person"
+        instructions: "Draft a brief acknowledgment for the fictional case: name the mistake and consequence, omit excuses, ask whether a practical response would be welcome and allow no response. Do not claim a replacement will restore the original. Add a prevention rule: do not discard another person's paper or objects without permission. For a real low-stakes application within your authority, put that handling rule into use or complete an already agreed small responsibility. Serious or unsafe contact requires appropriate independent advice rather than an exercise-driven apology."
+        checks: [The acknowledgment names the consequence without erasing it, Any proposed repair respects the wishes of the affected person, A prevention rule addresses the actual failure, A safe ordinary responsibility action is actually taken]
+      - title: "Review continued conduct without asking it to absolve the past"
+        instructions: "Several days later, check whether the rule or responsibility was followed at an actual opportunity; if none occurred, keep that part unverified. Distinguish remorse, practical learning and any remaining consequence. Choose a sustainable commitment to care or service that follows the value violated, such as careful treatment of shared belongings, without treating it as a purchase of forgiveness. Decide what must remain acknowledged and what repetitive self-punishment does not help repair. Support may be needed for continuing distress."
+        checks: [A later opportunity or its absence is recorded, Learning remorse and permanent consequence remain distinct, Continued care is connected to the violated value, Service is not treated as entitlement to forgiveness]
+    adaptation: "Use only the fictional note, a spoken acknowledgment or an impersonal missed-opportunity case. No confession, apology delivery, self-punishment, reconciliation or forgiveness is required. If the topic is overwhelming or involves legal, trauma or safety concerns, use qualified support instead of escalating the exercise."
+    review: "What cannot be restored, what responsibility continues, and how can you live that responsibility without pretending either innocence or permanent worthlessness?"
+    examples:
+      supportive: "The learner acknowledged the permanent loss, practiced a permission rule and reviewed a later opportunity without treating better conduct as restoration of the original."
+      mixed: "The prevention rule was installed but had not yet faced a real opportunity, and the continuing consequence remained explicit."
+      contradictory: "Good deeds were presented as buying forgiveness, a replacement was said to erase the loss or remorse became an obligation to punish oneself indefinitely."
+      inconclusive: "Regret was expressed repeatedly without distinguishing consequences, proposing appropriate repair or taking any responsible action."

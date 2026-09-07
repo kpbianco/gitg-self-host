@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0302-SERIOUS-STUDY-OF-A-WISDOM-TRADITION-01
 slug: c0302-serious-study-of-a-wisdom-tradition-practice
-name: Bounded Serious study of a wisdom tradition Practice
+name: Study one wisdom tradition beyond its slogans
 parent_competency_id: '03.02'
 domain_id: '03'
 governance:
@@ -14,10 +14,12 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-EPICTETUS-ENCHIRIDION
+  - SRC-MARCUS-MEDITATIONS-BOOK-ONE
+  - SRC-MODERN-STOICISM-SELF-DESCRIPTION
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 03.02
-      (Serious study of a wisdom tradition); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 03.02; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +37,67 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Serious study of a wisdom tradition through a pluralist meaning practice bounded
-    by the canonical scope: Engage primary texts, history, practices, exemplars, internal disputes, and
-    lived communities rather than slogans.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can explain at least
-    one tradition from the inside and distinguish it from popular caricature. The protocol creates a small
-    opportunity to examine that target without treating completion as broad capability.'
+  purpose: Build an account of one tradition from primary passages, historical setting, an exemplar, practice,
+    internal differences and a present community's own account.
+  why_recommended: Build an account of one tradition from primary passages, historical setting, an exemplar,
+    practice, internal differences and a present community's own account.
   claims:
-  - statement: Using the canonical scope and evidence target for Serious study of a wisdom tradition is
-      a traceable product-design basis for a source-only draft protocol.
+  - statement: Build an account of one tradition from primary passages, historical setting, an exemplar,
+      practice, internal differences and a present community's own account.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: These selected passages connect judgments and choice with assigned roles and a providential
+      account of the gods.
+    classification: philosophical_or_normative_position
+    source_ids:
+    - SRC-EPICTETUS-ENCHIRIDION
+    limitations: Historical philosophical positions, not established scientific findings. The archive
+      credits Elizabeth Carter; this exercise uses the displayed edition without reproducing its wording.
+      No claim that all Stoics agree or that ancient prescriptions about suffering and obedience should
+      govern present conduct.
+  - statement: Marcus identifies lessons received from family and teachers; the Rusticus entry includes
+      careful reading and a willingness to recognize a need for correction.
+    classification: philosophical_or_normative_position
+    source_ids:
+    - SRC-MARCUS-MEDITATIONS-BOOK-ONE
+    limitations: A particular author's account of exemplars, not evidence that every claim in the text
+      is accurate or that the product's study and practice unit develops virtue.
+  - statement: This organization describes a project originating in 2012 and welcomes different religious
+      views and interpretations within its contemporary Stoic activities.
+    classification: philosophical_or_normative_position
+    source_ids:
+    - SRC-MODERN-STOICISM-SELF-DESCRIPTION
+    limitations: The organization's own description is a primary account of its stated approach, not independent
+      verification of its practices, a representation of all Stoics or endorsement of its research claims.
   applicability_question: Does a voluntary, bounded Serious study of a wisdom tradition practice fit the
     person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Serious study of a wisdom tradition as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Serious study of
-    a wisdom tradition context, understand the source-only status, and stop without losing safety, care,
-    employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Serious study
-    of a wisdom tradition; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Use text to speech or divide the named sections into short readings. If source
+    access fails, use the included summaries only for orientation and leave primary-text and community-study
+    checks unmarked until the sources are available; do not invent a substitute quotation. No visit, membership,
+    donation or assent is needed.
+  opportunity_considerations: Use the linked Enchiridion sections 1, 17 and 31; Marcus Aurelius, Meditations
+    Book One, opening entries through Rusticus; and Modern Stoicism's About Us page. The numbered passages
+    and prompts below define the unit. Paper or spoken notes suffice. Another chosen tradition needs an
+    accessible primary passage, historical context, an exemplar and a self-described living community
+    before substitution; otherwise use this default.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Serious study of a wisdom tradition.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Use the linked Enchiridion sections 1, 17 and 31; Marcus Aurelius, Meditations Book One, opening entries
+    through Rusticus; and Modern Stoicism's About Us page. The numbered passages and prompts below define
+    the unit. Paper or spoken notes suffice. Another chosen tradition needs an accessible primary passage,
+    historical context, an exemplar and a self-described living community before substitution; otherwise
+    use this default.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Serious study of a wisdom tradition
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use text to speech or divide the named sections into short readings. If source access fails, use the
+    included summaries only for orientation and leave primary-text and community-study checks unmarked
+    until the sources are available; do not invent a substitute quotation. No visit, membership, donation
+    or assent is needed.
   role_conditions:
   - This competency is pathway dependent; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +109,41 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Serious study of a wisdom
     tradition as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-CONTEMPLATIVE-MEANING
+  protocol_class: PF-KNOWLEDGE-APPLICATION
   duration_days: 10
-  cadence: Complete three bounded Serious study of a wisdom tradition actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Serious study of a wisdom tradition; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Serious
-    study of a wisdom tradition. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Serious study of a wisdom tradition actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use the linked Enchiridion sections 1, 17 and 31; Marcus Aurelius, Meditations Book One, opening
+    entries through Rusticus; and Modern Stoicism''s About Us page. The numbered passages and prompts
+    below define the unit. Paper or spoken notes suffice. Another chosen tradition needs an accessible
+    primary passage, historical context, an exemplar and a self-described living community before substitution;
+    otherwise use this default. Goal: Build an account of one tradition from primary passages, historical
+    setting, an exemplar, practice, internal differences and a present community''s own account. Scope:
+    This is a small study unit, not completion of a tradition. The default examines ancient Stoic texts
+    and a contemporary organization; one organization never represents all adherents. Study does not require
+    adopting the beliefs. Time and effort: Three study sessions of about 25 minutes over a week; allow
+    more time or split the reading if needed. Adaptation: Use text to speech or divide the named sections
+    into short readings. If source access fails, use the included summaries only for orientation and leave
+    primary-text and community-study checks unmarked until the sources are available; do not invent a
+    substitute quotation. No visit, membership, donation or assent is needed. Keep personal working notes
+    outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Enchiridion: sections 1, 17 and 31: https://classics.mit.edu/Epictetus/epicench.html
+
+    Meditations: Book One, opening entries through Rusticus: https://classics.mit.edu/Antoninus/meditations.1.one.html
+
+    About Modern Stoicism: https://modernstoicism.com/about-us/'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use text to speech or divide the named sections into short readings. If source
+    access fails, use the included summaries only for orientation and leave primary-text and community-study
+    checks unmarked until the sources are available; do not invent a substitute quotation. No visit, membership,
+    donation or assent is needed.
+  expected_burden: Three study sessions of about 25 minutes over a week; allow more time or split the
+    reading if needed.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Serious study of a wisdom tradition protocol to rank worth, coerce participation, demand
@@ -101,19 +151,28 @@ intervention:
   - Treating a completed Serious study of a wisdom tradition action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Serious study of a wisdom tradition situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use text to
+    speech or divide the named sections into short readings. If source access fails, use the included
+    summaries only for orientation and leave primary-text and community-study checks unmarked until the
+    sources are available; do not invent a substitute quotation. No visit, membership, donation or assent
+    is needed.
   actions:
   - stable_id: PRACTICE-COMP-0302-SERIOUS-STUDY-OF-A-WISDOM-TRADITION-01-A1
     sequence: 1
-    title: Choose a declared frame for Serious study of a wisdom tradition
-    instructions: 'Select a religious, spiritual, philosophical, cultural, or secular frame through which
-      to explore Serious study of a wisdom tradition. State the frame, one alternative, and the limits
-      of personal authority using this canonical scope: Engage primary texts, history, practices, exemplars,
-      internal disputes, and lived communities rather than slogans.'
+    title: Read a primary passage inside its setting
+    instructions: 'Read the three Enchiridion sections and the opening Meditations entries. Record author,
+      work and section so you can find each again. Contrast the handbook''s counsel about choice, assigned
+      roles and providential gods with Marcus''s acknowledgments of teachers and family. Locate the ancient
+      texts before the contemporary organization in a simple timeline; use the archive''s dating as an
+      approximate guide. In your own words, explain what kind of life these selected passages commend
+      and what conception of the world supports it. Mark an unfamiliar term instead of silently translating
+      it into a modern slogan.
+
+
+      Observation checks: Primary passages have retrievable locations; Ancient and contemporary settings
+      are distinguished; A way of life and its underlying view are connected; An unfamiliar term or assumption
+      is investigated. Mark only what you observed. Missing, mixed and negative results are valid; a deferred
+      action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -129,15 +188,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0302_a1_primary
-        kind: conceptual
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0302_a1_frame_declared
-        - c0302_a1_alternative_acknowledged
-        - c0302_a1_authority_limited
+        - primary_passages_have_retrievable_locations
+        - ancient_and_contemporary_settings_are_distinguished
+        - a_way_of_life_and_its_underlying_view_are_connected
+        - an_unfamiliar_term_or_assumption_is_investigated
       - measurement_id: c0302_a1_boundary
         kind: boolean
         role: supporting
@@ -154,11 +214,20 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0302-SERIOUS-STUDY-OF-A-WISDOM-TRADITION-01-A2
     sequence: 2
-    title: Complete two bounded Serious study of a wisdom tradition practices
-    instructions: Complete two short, freely chosen Serious study of a wisdom tradition practices appropriate
-      to the declared frame, such as reading, silence, prayer, observation, ritual, dialogue, or reflection.
-      Stop for distress, coercion, altered-state risk, conscience conflict, or pressure from an authority
-      or group.
+    title: Test an interpretation through a modest practice
+    instructions: 'Use Marcus''s account of Rusticus as the selected exemplar: careful reading and accepting
+      correction matter more than displaying learned words. Re-read one passage and correct your first
+      interpretation using its actual wording. Then try one ordinary action inspired by the texts, such
+      as preparing a clear request while leaving the other person''s reply to them. Record what you did
+      and whether it served the stated purpose. Do not adopt ancient claims about illness, enslavement
+      or obedience as instructions to dismiss suffering or tolerate abuse; explain that interpretive limit
+      explicitly.
+
+
+      Observation checks: An exemplar is connected to a concrete teaching; The first interpretation is
+      checked against the passage; An ordinary practice receives an actual attempt; An ethical or historical
+      limitation remains visible. Mark only what you observed. Missing, mixed and negative results are
+      valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -174,15 +243,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0302_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - an_exemplar_is_connected_to_a_concrete_teaching
+        - the_first_interpretation_is_checked_against_the_passage
+        - an_ordinary_practice_receives_an_actual_attempt
+        - an_ethical_or_historical_limitation_remains_visible
       - measurement_id: c0302_a2_boundary
         kind: boolean
         role: supporting
@@ -199,10 +269,40 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0302-SERIOUS-STUDY-OF-A-WISDOM-TRADITION-01-A3
     sequence: 3
-    title: Interpret the Serious study of a wisdom tradition experience modestly
-    instructions: 'Review what was noticed without treating intensity, calm, certainty, group agreement,
-      or unusual experience as automatic truth. Compare the limited record with this evidence target:
-      Can explain at least one tradition from the inside and distinguish it from popular caricature.'
+    title: Explain the tradition with its live differences intact
+    instructions: 'Read Modern Stoicism''s own description of its origins, activities and range of religious
+      views. Compare that contemporary range with Enchiridion 31''s providential account: identify the
+      interpretive question rather than declaring them identical. Prepare a two-minute explanation with
+      one primary teaching, its historical setting, an exemplar, your trial, this difference, and the
+      organization''s present activities. End by correcting a caricature, such as treating Stoicism as
+      simply hiding every feeling, using the selected passages. Name what further reading or a voluntary
+      community conversation would need to check.
+
+
+      Observation checks: A present community is described from its own account; A real interpretive difference
+      is preserved; The explanation connects all six study elements; A caricature is corrected without
+      claiming total expertise. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.
+
+
+      Final review: Could a beginner distinguish this account from a motivational slogan, and which claim
+      would you most want a knowledgeable practitioner or scholar to correct?
+
+
+      Examples: Supportive: The learner connected passage, setting, exemplar, a request they actually
+      made, a disagreement over providence and a current organization''s self-description.
+
+
+      Mixed: The primary passages and practice were examined, but a contemporary community''s account
+      was unavailable and that part remained unverified.
+
+
+      Contradictory: One modern adaptation was called the whole tradition, or an ancient prescription
+      was used to excuse mistreatment without examination.
+
+
+      Inconclusive: An attractive quotation was collected without its context, a practical attempt, or
+      examination of interpretive differences.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -224,9 +324,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0302_a3_experience_and_interpretation_separated
-        - c0302_a3_alternative_explanation_retained
-        - c0302_a3_target_evidence_compared
+        - a_present_community_is_described_from_its_own_account
+        - a_real_interpretive_difference_is_preserved
+        - the_explanation_connects_all_six_study_elements
+        - a_caricature_is_corrected_without_claiming_total_expertise
       - measurement_id: c0302_a3_boundary
         kind: boolean
         role: supporting
@@ -247,17 +348,19 @@ intervention:
       Serious study of a wisdom tradition; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Serious study of a wisdom tradition; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - Use text to speech or divide the named sections into short readings. If source access fails, use
+      the included summaries only for orientation and leave primary-text and community-study checks unmarked
+      until the sources are available; do not invent a substitute quotation. No visit, membership, donation
+      or assent is needed.
     cultural_context:
     - Adapt the expression of Serious study of a wisdom tradition to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Serious study of a wisdom tradition opportunity is unavailable or inappropriate, use
-      a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use text to speech or divide the named sections into short readings. If source access fails, use
+      the included summaries only for orientation and leave primary-text and community-study checks unmarked
+      until the sources are available; do not invent a substitute quotation. No visit, membership, donation
+      or assent is needed.
   pause_conditions:
   - Pause Serious study of a wisdom tradition when capacity, consent, authority, privacy, access, care
     duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the
@@ -289,10 +392,8 @@ evidence_and_scoring:
   - c0302_a3_boundary
   - c0302_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Serious study of a wisdom tradition action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Serious study of a wisdom tradition criterion, depended on
-    coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - One modern adaptation was called the whole tradition, or an ancient prescription was used to excuse
+    mistreatment without examination.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Serious study of a wisdom tradition explicitly; support can enable access and never reduces dignity
     or silently changes the typed value.
@@ -303,14 +404,22 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Serious study of a wisdom tradition rules withhold observations older than 90
     days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can explain at least one tradition from the inside and distinguish it from popular caricature.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Serious study of a wisdom tradition requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Read a primary passage inside its setting. Observed checks: Primary passages
+    have retrievable locations; Ancient and contemporary settings are distinguished; A way of life and
+    its underlying view are connected; An unfamiliar term or assumption is investigated. Action 2: Test
+    an interpretation through a modest practice. Observed checks: An exemplar is connected to a concrete
+    teaching; The first interpretation is checked against the passage; An ordinary practice receives an
+    actual attempt; An ethical or historical limitation remains visible. Action 3: Explain the tradition
+    with its live differences intact. Observed checks: A present community is described from its own account;
+    A real interpretive difference is preserved; The explanation connects all six study elements; A caricature
+    is corrected without claiming total expertise.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. An attractive quotation was collected without its context,
+    a practical attempt, or examination of interpretive differences.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Serious
     study of a wisdom tradition contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -319,9 +428,8 @@ evidence_and_scoring:
   - L03
   - L15
   - L31
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Serious study of a wisdom tradition evidence.
@@ -329,12 +437,18 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The choose a declared frame for serious study of a wisdom tradition action was attempted or explicitly
-    deferred.
-  - The complete two bounded serious study of a wisdom tradition practices action was attempted or explicitly
-    deferred.
-  - The interpret the serious study of a wisdom tradition experience modestly action preserved a limited
-    conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Read a primary passage inside its setting. Observed checks: Primary passages have retrievable
+    locations; Ancient and contemporary settings are distinguished; A way of life and its underlying view
+    are connected; An unfamiliar term or assumption is investigated.'
+  - 'Action 2: Test an interpretation through a modest practice. Observed checks: An exemplar is connected
+    to a concrete teaching; The first interpretation is checked against the passage; An ordinary practice
+    receives an actual attempt; An ethical or historical limitation remains visible.'
+  - 'Action 3: Explain the tradition with its live differences intact. Observed checks: A present community
+    is described from its own account; A real interpretive difference is preserved; The explanation connects
+    all six study elements; A caricature is corrected without claiming total expertise.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -343,58 +457,59 @@ completion_and_review:
     - c0302_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Serious study of a wisdom tradition only when the initial context
-    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
-    named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Serious study of a wisdom tradition across roles,
-    cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: Could a beginner distinguish this account from a motivational slogan, and which
+    claim would you most want a knowledgeable practitioner or scholar to correct?
+  transfer_limit: This is a small study unit, not completion of a tradition. The default examines ancient
+    Stoic texts and a contemporary organization; one organization never represents all adherents. Study
+    does not require adopting the beliefs.
   reflection:
-    before: What does Serious study of a wisdom tradition require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Serious study of a wisdom tradition criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can explain at least one tradition from the inside and distinguish
-      it from popular caricature.', what contradiction or missing context matters most, and should this
-      Serious study of a wisdom tradition design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Build an account of one tradition from primary
+      passages, historical setting, an exemplar, practice, internal differences and a present community''s
+      own account.'
+    during: Which checks have actually been observed? The primary passages and practice were examined,
+      but a contemporary community's account was unavailable and that part remained unverified.
+    after: Could a beginner distinguish this account from a motivational slogan, and which claim would
+      you most want a knowledgeable practitioner or scholar to correct?
   review_guidance:
     repeat: Repeat the same bounded Serious study of a wisdom tradition design only when the context and
       burden remain appropriate.
-    adapt: Change the Serious study of a wisdom tradition medium, scope, support, timing, criteria, or
-      context while preserving provenance and the narrower evidence claim.
+    adapt: Use text to speech or divide the named sections into short readings. If source access fails,
+      use the included summaries only for orientation and leave primary-text and community-study checks
+      unmarked until the sources are available; do not invent a substitute quotation. No visit, membership,
+      donation or assent is needed.
     stop: Stop Serious study of a wisdom tradition when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Serious study of a wisdom tradition questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Serious study of a wisdom tradition criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Serious study of a wisdom tradition criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Serious study of a wisdom tradition criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Serious study of a wisdom tradition action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The learner connected passage, setting, exemplar, a request they actually made, a disagreement
+      over providence and a current organization's self-description.
+    mixed: The primary passages and practice were examined, but a contemporary community's account was
+      unavailable and that part remained unverified.
+    contradictory: One modern adaptation was called the whole tradition, or an ancient prescription was
+      used to excuse mistreatment without examination.
+    inconclusive: An attractive quotation was collected without its context, a practical attempt, or examination
+      of interpretive differences.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Serious study of a wisdom tradition.
+    context_heading: Study one wisdom tradition beyond its slogans
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Serious study
       of a wisdom tradition.
   check_in_labels:
-    c0302_a1_primary: The bounded Serious study of a wisdom tradition criterion for action 1 was observed
+    c0302_a1_primary: 'Observed checks: read a primary passage inside its setting'
     c0302_a1_boundary: Action 1 stayed inside its stated Serious study of a wisdom tradition boundary
     c0302_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0302_a2_primary: The bounded Serious study of a wisdom tradition criterion for action 2 was observed
+    c0302_a2_primary: 'Observed checks: test an interpretation through a modest practice'
     c0302_a2_boundary: Action 2 stayed inside its stated Serious study of a wisdom tradition boundary
     c0302_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0302_a3_primary: The bounded Serious study of a wisdom tradition criterion for action 3 was observed
+    c0302_a3_primary: 'Observed checks: explain the tradition with its live differences intact'
     c0302_a3_boundary: Action 3 stayed inside its stated Serious study of a wisdom tradition boundary
     c0302_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Serious study of a
-    wisdom tradition practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Could a beginner distinguish this account from a motivational slogan, and which claim
+    would you most want a knowledgeable practitioner or scholar to correct? Completion is not mastery.
+  plain_language_evidence: The learner connected passage, setting, exemplar, a request they actually made,
+    a disagreement over providence and a current organization's self-description.
   display_order: 37

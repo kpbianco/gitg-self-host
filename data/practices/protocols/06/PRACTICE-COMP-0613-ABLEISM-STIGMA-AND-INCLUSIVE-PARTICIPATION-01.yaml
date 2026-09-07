@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0613-ABLEISM-STIGMA-AND-INCLUSIVE-PARTICIPATION-01
 slug: c0613-ableism-stigma-and-inclusive-participation-practice
-name: Bounded Ableism, stigma, and inclusive participation Practice
+name: Replace an exclusionary default with a workable invitation
 parent_competency_id: '06.13'
 domain_id: '06'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-WHO-DISABILITY-AND-BARRIERS
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 06.13
-      (Ableism, stigma, and inclusive participation); canonical scope, evidence target, classification,
-      domain boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 06.13; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,40 +35,50 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Ableism, stigma, and inclusive participation through a qualified-support preparation
-    bounded by the canonical scope: Recognize stereotypes, exclusion, inspiration narratives, inaccessible
-    defaults, and discrimination.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Changes language, environment,
-    policy, or behavior to increase equitable participation. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Recognize ableist stereotypes, stigma, inaccessible defaults and unequal treatment, then change
+    language and participation arrangements within your authority.
+  why_recommended: Recognize ableist stereotypes, stigma, inaccessible defaults and unequal treatment,
+    then change language and participation arrangements within your authority.
   claims:
-  - statement: Using the canonical scope and evidence target for Ableism, stigma, and inclusive participation
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Recognize ableist stereotypes, stigma, inaccessible defaults and unequal treatment, then
+      change language and participation arrangements within your authority.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Disability involves interaction between health conditions and personal or environmental
+      factors; inaccessible environments and negative attitudes can obstruct participation.
+    classification: professional_or_public_standard
+    source_ids:
+    - SRC-WHO-DISABILITY-AND-BARRIERS
+    limitations: Conceptual and inclusion support only. It does not assign an identity, establish a local
+      legal entitlement or prove that a proposed accommodation works for a particular person.
   applicability_question: Does a voluntary, bounded Ableism, stigma, and inclusive participation practice
     fit the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Ableism, stigma, and inclusive participation as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Ableism, stigma,
-    and inclusive participation context, understand the source-only status, and stop without losing safety,
-    care, employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Ableism,
-    stigma, and inclusive participation; do not manufacture conflict, deprivation, exposure, disclosure,
-    danger, urgency, or dependence for evidence.
+  readiness_considerations: Use a private invitation, small group or fictional notice if you lack policy
+    authority. Work in the person's preferred language and format. No disability simulation, public confrontation,
+    compulsory disclosure or claim that good intentions prove access is required. Formal legal questions
+    need relevant local expertise.
+  opportunity_considerations: 'Use this fictional club notice: Everyone must stand to introduce themselves;
+    special seating is available only after explaining your condition to the group. Members who overcome
+    disability will be celebrated as an inspiration. Work on a private replacement, or choose a similarly
+    manageable notice or invitation you have authority to change. No actual person supplies a diagnosis
+    or an inspirational story.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Ableism, stigma, and inclusive
-    participation.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Use this fictional club notice: Everyone must stand to introduce themselves; special seating is available
+    only after explaining your condition to the group. Members who overcome disability will be celebrated
+    as an inspiration. Work on a private replacement, or choose a similarly manageable notice or invitation
+    you have authority to change. No actual person supplies a diagnosis or an inspirational story.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Ableism, stigma, and inclusive
-    participation instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a private invitation, small group or fictional notice if you lack policy authority. Work in the
+    person's preferred language and format. No disability simulation, public confrontation, compulsory
+    disclosure or claim that good intentions prove access is required. Formal legal questions need relevant
+    local expertise.
   role_conditions:
   - This competency is context contingent; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -81,21 +91,35 @@ meaning_and_fit:
     participation as inferiority; competing reasonable interpretations and conscientious refusal remain
     visible.
 intervention:
-  protocol_class: PF-QUALIFIED-CONSULTATION
+  protocol_class: PF-COMMUNITY-CONTRIBUTION
   duration_days: 10
-  cadence: Complete three bounded Ableism, stigma, and inclusive participation actions over ten days,
-    preserving explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Ableism, stigma, and inclusive participation; copy the canonical scope
-    and evidence target into a private working note; define the action boundary, valid supports, privacy
-    limit, and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Ableism,
-    stigma, and inclusive participation. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Ableism, stigma, and inclusive participation
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use this fictional club notice: Everyone must stand to introduce themselves; special seating
+    is available only after explaining your condition to the group. Members who overcome disability will
+    be celebrated as an inspiration. Work on a private replacement, or choose a similarly manageable notice
+    or invitation you have authority to change. No actual person supplies a diagnosis or an inspirational
+    story. Goal: Recognize ableist stereotypes, stigma, inaccessible defaults and unequal treatment, then
+    change language and participation arrangements within your authority. Scope: One invitation or participation
+    rule is revised and checked against concrete cases. This is a bounded inclusion improvement, not a
+    legal finding about discrimination or certification of an organization''s accessibility. Time and
+    effort: About 15 minutes to analyze, 20 minutes to replace the default, and a short review. Adaptation:
+    Use a private invitation, small group or fictional notice if you lack policy authority. Work in the
+    person''s preferred language and format. No disability simulation, public confrontation, compulsory
+    disclosure or claim that good intentions prove access is required. Formal legal questions need relevant
+    local expertise. Keep personal working notes outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Disability: https://www.who.int/health-topics/disability'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a private invitation, small group or fictional notice if you lack policy authority.
+    Work in the person's preferred language and format. No disability simulation, public confrontation,
+    compulsory disclosure or claim that good intentions prove access is required. Formal legal questions
+    need relevant local expertise.
+  expected_burden: About 15 minutes to analyze, 20 minutes to replace the default, and a short review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Ableism, stigma, and inclusive participation protocol to rank worth, coerce participation,
@@ -104,20 +128,26 @@ intervention:
   - Treating a completed Ableism, stigma, and inclusive participation action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Ableism, stigma, and inclusive participation situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Educational and developmental only; trauma, suicidality, abuse, psychosis, addiction, severe functional
-    decline, and medical concerns require qualified professional or emergency support.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a private
+    invitation, small group or fictional notice if you lack policy authority. Work in the person's preferred
+    language and format. No disability simulation, public confrontation, compulsory disclosure or claim
+    that good intentions prove access is required. Formal legal questions need relevant local expertise.
   actions:
   - stable_id: PRACTICE-COMP-0613-ABLEISM-STIGMA-AND-INCLUSIVE-PARTICIPATION-01-A1
     sequence: 1
-    title: Bound the qualified question for Ableism, stigma, and inclusive participation
-    instructions: 'Turn Ableism, stigma, and inclusive participation into one educational or planning
-      question and identify the qualification and jurisdiction needed to answer it. Use the canonical
-      scope to separate general learning from diagnosis, treatment, legal advice, financial advice, safeguarding
-      decisions, or other professional judgment: Recognize stereotypes, exclusion, inspiration narratives,
-      inaccessible defaults, and discrimination.'
+    title: Identify what the wording makes people do or disclose
+    instructions: 'Mark five problems in the notice: a stereotype about the right way to participate,
+      stigma attached to asking for support, compelled personal disclosure, an inaccessible standing-and-speaking
+      default, and an inspiration story imposed on a person. For each, explain its likely practical effect
+      rather than merely labeling the writer bad. Separate intent from the rule''s consequences and identify
+      who controls the change. Ask what the club actually needs from an introduction, such as a preferred
+      name and an optional interest, and which demands do not serve that purpose.
+
+
+      Observation checks: Five distinct exclusion mechanisms are examined; Each mechanism is linked to
+      a practical participation effect; The legitimate purpose is separated from unnecessary demands;
+      Authority to change the notice or only propose a change is stated. Mark only what you observed.
+      Missing, mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -139,9 +169,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0613_a1_question_bounded
-        - c0613_a1_qualification_named
-        - c0613_a1_professional_boundary_explicit
+        - five_distinct_exclusion_mechanisms_are_examined
+        - each_mechanism_is_linked_to_a_practical_participation_effect
+        - the_legitimate_purpose_is_separated_from_unnecessary_demands
+        - authority_to_change_the_notice_or_only_propose_a_change_is_stated
       - measurement_id: c0613_a1_boundary
         kind: boolean
         role: supporting
@@ -158,12 +189,20 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0613-ABLEISM-STIGMA-AND-INCLUSIVE-PARTICIPATION-01-A2
     sequence: 2
-    title: Prepare minimum information for Ableism, stigma, and inclusive participation
-    instructions: Create a privacy-minimized Ableism, stigma, and inclusive participation consultation
-      note containing only the question, relevant category-level facts, current constraints, and desired
-      decision. Omit diagnoses, allegations, account numbers, credentials, protected work information,
-      intimate detail, and third-party identity unless a qualified professional lawfully requires it through
-      an appropriate channel.
+    title: Write a replacement that makes ordinary participation possible
+    instructions: 'Produce a complete invitation: You may introduce yourself seated, standing, in writing,
+      through your usual communication method, or pass. Share the name and interest you choose. Ask the
+      organizer privately about access arrangements; personal medical details are not part of the group
+      introduction. Remove the compulsory inspiration feature and offer recognition for chosen contributions
+      only with consent. For an actual event, include a real contact route and only access arrangements
+      that can be delivered; identify anything still unconfirmed. A private draft must remain labeled
+      a proposal until the responsible person adopts it.
+
+
+      Observation checks: A complete replacement notice is produced; Participation has usable choices
+      including passing; Medical disclosure and inspirational storytelling are not required; Any real
+      access promise is within authority and confirmed. Mark only what you observed. Missing, mixed and
+      negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -185,9 +224,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0613_a2_minimum_information_only
-        - c0613_a2_sensitive_detail_excluded
-        - c0613_a2_decision_need_named
+        - a_complete_replacement_notice_is_produced
+        - participation_has_usable_choices_including_passing
+        - medical_disclosure_and_inspirational_storytelling_are_not_required
+        - any_real_access_promise_is_within_authority_and_confirmed
       - measurement_id: c0613_a2_boundary
         kind: boolean
         role: supporting
@@ -204,12 +244,42 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0613-ABLEISM-STIGMA-AND-INCLUSIVE-PARTICIPATION-01-A3
     sequence: 3
-    title: Record a bounded Ableism, stigma, and inclusive participation disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: Changes language, environment, policy, or behavior to increase equitable
-      participation.'
+    title: Check inclusion through two different participation needs
+    instructions: 'Apply the replacement to a person who cannot stand and a person who communicates through
+      text or a device. Can each learn how to join, choose what to share and take part without becoming
+      a special public case? Then consider someone who prefers not to disclose an access need: which options
+      are already available by default? Record a remaining practical issue such as an organizer who cannot
+      receive text, and specify a realistic correction. If real participants voluntarily provide feedback,
+      use only what they choose to share and do not make them unpaid representatives of an entire group.
+
+
+      Observation checks: Two different participation cases are examined concretely; Non-disclosure remains
+      compatible with available default options; A remaining practical barrier is checked and addressed
+      or recorded; Feedback does not turn an individual into a representative of all disabled people.
+      Mark only what you observed. Missing, mixed and negative results are valid; a deferred action is
+      not completed.
+
+
+      Final review: What can someone now do without standing, speaking aloud or explaining a diagnosis
+      to the group? Identify the actual changed default, its remaining delivery conditions and whether
+      it was adopted or remains a proposal. Respectful wording must connect to a workable participation
+      option.
+
+
+      Examples: Supportive: The replacement allowed seated and written participation, offered private
+      access contact and removed compulsory public disclosure and inspiration framing.
+
+
+      Mixed: The new wording offered text participation, but nobody had arranged how text would reach
+      the organizer; that practical gap remained to resolve.
+
+
+      Contradictory: The notice used kinder language while still requiring public medical disclosure or
+      rewarding disabled members for appearing to overcome their needs.
+
+
+      Inconclusive: The learner objected to the original notice but produced no replacement or concrete
+      test of how someone would participate.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -225,14 +295,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0613_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0613_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - two_different_participation_cases_are_examined_concretely
+        - non_disclosure_remains_compatible_with_available_default_options
+        - a_remaining_practical_barrier_is_checked_and_addressed_or_recorded
+        - feedback_does_not_turn_an_individual_into_a_representative_of_all_disabled_people
       - measurement_id: c0613_a3_boundary
         kind: boolean
         role: supporting
@@ -253,17 +325,19 @@ intervention:
       Ableism, stigma, and inclusive participation; no purchase, subscription, travel, credential, or
       public artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Ableism, stigma, and inclusive participation; assistive technology, interpretation, a
-      support person, and a deferred action are valid without penalty.
+    - Use a private invitation, small group or fictional notice if you lack policy authority. Work in
+      the person's preferred language and format. No disability simulation, public confrontation, compulsory
+      disclosure or claim that good intentions prove access is required. Formal legal questions need relevant
+      local expertise.
     cultural_context:
     - Adapt the expression of Ableism, stigma, and inclusive participation to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Ableism, stigma, and inclusive participation opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use a private invitation, small group or fictional notice if you lack policy authority. Work in
+      the person's preferred language and format. No disability simulation, public confrontation, compulsory
+      disclosure or claim that good intentions prove access is required. Formal legal questions need relevant
+      local expertise.
   pause_conditions:
   - Pause Ableism, stigma, and inclusive participation when capacity, consent, authority, privacy, access,
     care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make
@@ -295,10 +369,8 @@ evidence_and_scoring:
   - c0613_a3_boundary
   - c0613_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Ableism, stigma, and inclusive participation action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Ableism, stigma, and inclusive participation criterion, depended
-    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - The notice used kinder language while still requiring public medical disclosure or rewarding disabled
+    members for appearing to overcome their needs.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Ableism, stigma, and inclusive participation explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -309,14 +381,23 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Ableism, stigma, and inclusive participation rules withhold observations older
     than 90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Changes language, environment, policy, or behavior to increase equitable participation.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Ableism, stigma, and inclusive participation requires a bounded
-    context, allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Identify what the wording makes people do or disclose. Observed checks:
+    Five distinct exclusion mechanisms are examined; Each mechanism is linked to a practical participation
+    effect; The legitimate purpose is separated from unnecessary demands; Authority to change the notice
+    or only propose a change is stated. Action 2: Write a replacement that makes ordinary participation
+    possible. Observed checks: A complete replacement notice is produced; Participation has usable choices
+    including passing; Medical disclosure and inspirational storytelling are not required; Any real access
+    promise is within authority and confirmed. Action 3: Check inclusion through two different participation
+    needs. Observed checks: Two different participation cases are examined concretely; Non-disclosure
+    remains compatible with available default options; A remaining practical barrier is checked and addressed
+    or recorded; Feedback does not turn an individual into a representative of all disabled people.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. The learner objected to the original notice but produced
+    no replacement or concrete test of how someone would participate.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Ableism,
     stigma, and inclusive participation contribution under typed evaluation; protocol performance remains
     distinct and is never counted twice.
@@ -326,9 +407,8 @@ evidence_and_scoring:
   - L25
   - L30
   - L31
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Ableism, stigma, and inclusive participation evidence.
@@ -336,12 +416,20 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for ableism, stigma, and inclusive participation action was attempted
-    or explicitly deferred.
-  - The prepare minimum information for ableism, stigma, and inclusive participation action was attempted
-    or explicitly deferred.
-  - The record a bounded ableism, stigma, and inclusive participation disposition action preserved a limited
-    conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Identify what the wording makes people do or disclose. Observed checks: Five distinct exclusion
+    mechanisms are examined; Each mechanism is linked to a practical participation effect; The legitimate
+    purpose is separated from unnecessary demands; Authority to change the notice or only propose a change
+    is stated.'
+  - 'Action 2: Write a replacement that makes ordinary participation possible. Observed checks: A complete
+    replacement notice is produced; Participation has usable choices including passing; Medical disclosure
+    and inspirational storytelling are not required; Any real access promise is within authority and confirmed.'
+  - 'Action 3: Check inclusion through two different participation needs. Observed checks: Two different
+    participation cases are examined concretely; Non-disclosure remains compatible with available default
+    options; A remaining practical barrier is checked and addressed or recorded; Feedback does not turn
+    an individual into a representative of all disabled people.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -350,64 +438,66 @@ completion_and_review:
     - c0613_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Ableism, stigma, and inclusive participation only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Ableism, stigma, and inclusive participation
-    across roles, cultures, relationships, seasons, stress levels, disability states, institutions, or
-    high-consequence settings.
+  progression_criteria: What can someone now do without standing, speaking aloud or explaining a diagnosis
+    to the group? Identify the actual changed default, its remaining delivery conditions and whether it
+    was adopted or remains a proposal. Respectful wording must connect to a workable participation option.
+  transfer_limit: One invitation or participation rule is revised and checked against concrete cases.
+    This is a bounded inclusion improvement, not a legal finding about discrimination or certification
+    of an organization's accessibility.
   reflection:
-    before: What does Ableism, stigma, and inclusive participation require in this exact context, what
-      remains outside my role or authority, and which scope sentence or evidence criterion will keep the
-      practice honest?
-    during: Which observable Ableism, stigma, and inclusive participation criterion is present, absent,
-      mixed, or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Changes language, environment, policy, or behavior to increase
-      equitable participation.', what contradiction or missing context matters most, and should this Ableism,
-      stigma, and inclusive participation design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Recognize ableist stereotypes, stigma, inaccessible
+      defaults and unequal treatment, then change language and participation arrangements within your
+      authority.'
+    during: Which checks have actually been observed? The new wording offered text participation, but
+      nobody had arranged how text would reach the organizer; that practical gap remained to resolve.
+    after: What can someone now do without standing, speaking aloud or explaining a diagnosis to the group?
+      Identify the actual changed default, its remaining delivery conditions and whether it was adopted
+      or remains a proposal. Respectful wording must connect to a workable participation option.
   review_guidance:
     repeat: Repeat the same bounded Ableism, stigma, and inclusive participation design only when the
       context and burden remain appropriate.
-    adapt: Change the Ableism, stigma, and inclusive participation medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Use a private invitation, small group or fictional notice if you lack policy authority. Work
+      in the person's preferred language and format. No disability simulation, public confrontation, compulsory
+      disclosure or claim that good intentions prove access is required. Formal legal questions need relevant
+      local expertise.
     stop: Stop Ableism, stigma, and inclusive participation when the practice becomes coercive, unsafe,
       privacy-invasive, role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Ableism, stigma, and inclusive participation
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Ableism, stigma, and inclusive participation criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Ableism, stigma, and inclusive participation criteria were observed while burden, support,
-      contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Ableism, stigma, and inclusive participation
-      criterion, introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Ableism, stigma, and inclusive participation action was deferred, not observed,
-      not applicable, stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The replacement allowed seated and written participation, offered private access contact
+      and removed compulsory public disclosure and inspiration framing.
+    mixed: The new wording offered text participation, but nobody had arranged how text would reach the
+      organizer; that practical gap remained to resolve.
+    contradictory: The notice used kinder language while still requiring public medical disclosure or
+      rewarding disabled members for appearing to overcome their needs.
+    inconclusive: The learner objected to the original notice but produced no replacement or concrete
+      test of how someone would participate.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Ableism, stigma, and inclusive participation.
+    context_heading: Replace an exclusionary default with a workable invitation
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Ableism,
       stigma, and inclusive participation.
   check_in_labels:
-    c0613_a1_primary: The bounded Ableism, stigma, and inclusive participation criterion for action 1
-      was observed
+    c0613_a1_primary: 'Observed checks: identify what the wording makes people do or disclose'
     c0613_a1_boundary: Action 1 stayed inside its stated Ableism, stigma, and inclusive participation
       boundary
     c0613_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0613_a2_primary: The bounded Ableism, stigma, and inclusive participation criterion for action 2
-      was observed
+    c0613_a2_primary: 'Observed checks: write a replacement that makes ordinary participation possible'
     c0613_a2_boundary: Action 2 stayed inside its stated Ableism, stigma, and inclusive participation
       boundary
     c0613_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0613_a3_primary: The bounded Ableism, stigma, and inclusive participation criterion for action 3
-      was observed
+    c0613_a3_primary: 'Observed checks: check inclusion through two different participation needs'
     c0613_a3_boundary: Action 3 stayed inside its stated Ableism, stigma, and inclusive participation
       boundary
     c0613_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Ableism, stigma, and
-    inclusive participation practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What can someone now do without standing, speaking aloud or explaining a diagnosis
+    to the group? Identify the actual changed default, its remaining delivery conditions and whether it
+    was adopted or remains a proposal. Respectful wording must connect to a workable participation option.
+    Completion is not mastery.
+  plain_language_evidence: The replacement allowed seated and written participation, offered private access
+    contact and removed compulsory public disclosure and inspiration framing.
   display_order: 83

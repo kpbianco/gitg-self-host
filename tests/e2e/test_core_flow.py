@@ -540,6 +540,87 @@ def test_play_protocol_setup_is_specific_and_score_active(live_server, page: Pag
             "Feedback is voluntary and about one shared event",
             "The giver can correct the summary",
         ),
+        (
+            "03.02",
+            "wisdom-study",
+            "Mixed: The primary passages and practice were examined",
+            "Scope: This is a small study unit",
+            "classics.mit.edu",
+            "Primary passages have retrievable locations",
+            "An exemplar is connected to a concrete teaching",
+        ),
+        (
+            "03.03",
+            "contemplation",
+            "Mixed: The pause sometimes helped attention",
+            "Scope: Five brief occasions provide an initial pattern",
+            "nccih.nih.gov",
+            "A cue and exact short sequence are defined",
+            "Five opportunities are accounted for without inventing attempts",
+        ),
+        (
+            "03.10",
+            "shared-remembrance",
+            "Mixed: A visitor understood the gathering better",
+            "Scope: One permitted communal form is practiced",
+            None,
+            "The form has an identified tradition or honestly named shared story",
+            "An actual communal occasion takes place",
+        ),
+        (
+            "04.07",
+            "moral-distress",
+            "Mixed: The distinctions were clear",
+            "Scope: This is literacy and support preparation using a fictional case",
+            "ptsd.va.gov",
+            "All six distinctions are explained without diagnosis",
+            "Questions separate facts responsibility repair and support",
+        ),
+        (
+            "04.08",
+            "care-preferences",
+            "Mixed: The private questions were ready",
+            "Scope: This prepares a conversation",
+            "medlineplus.gov",
+            "Planning legal documentation and current treatment are distinguished",
+            "The person chooses the kind and duration of company",
+        ),
+        (
+            "06.02",
+            "trauma-literacy",
+            "Mixed: The glossary was accurate",
+            "Scope: This is literacy and support preparation using a fictional case",
+            "nimh.nih.gov",
+            "All eight concepts receive a plain language explanation",
+            "The response gives a choice about support",
+        ),
+        (
+            "06.08",
+            "receiving-care",
+            "Mixed: The task was completed but the pause signal was missed",
+            "Scope: One ordinary help agreement practices receiving care",
+            "nhs.uk",
+            "Decision choices and practical assistance are separated",
+            "The agreement identifies task timing and helper limits",
+        ),
+        (
+            "06.09",
+            "access-redesign",
+            "Mixed: The words were clearer",
+            "Scope: A before-and-after information task demonstrates a bounded design change",
+            "w3.org",
+            "The five information needs are checked against the original",
+            "A revised notice is actually produced",
+        ),
+        (
+            "06.14",
+            "professional-handoff",
+            "Mixed: The emergency route was clear",
+            "Scope: This is resource preparation and fictional response rehearsal",
+            "nimh.nih.gov",
+            "All seven categories have an appropriate boundary explanation",
+            "Four types of help have location-appropriate public routes",
+        ),
     ],
 )
 def test_tailored_practices_show_readable_scope_examples_and_observation_checks(
@@ -560,7 +641,10 @@ def test_tailored_practices_show_readable_scope_examples_and_observation_checks(
     page.get_by_label("Yes, this activity or context is available").check()
     page.get_by_role("button", name="Continue").click()
     expect(page.get_by_text(scope, exact=False)).to_be_visible()
-    expect(page.get_by_role("link", name=re.compile(re.escape(reference))).first).to_be_visible()
+    if reference is not None:
+        expect(
+            page.get_by_role("link", name=re.compile(re.escape(reference))).first
+        ).to_be_visible()
     assert_no_horizontal_overflow(page)
     save_walkthrough_screenshot(page, f"mobile-tailored-{label}-setup")
     sprint = start_practice(

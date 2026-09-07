@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0614-PROFESSIONAL-AND-EMERGENCY-BOUNDARIES-01
 slug: c0614-professional-and-emergency-boundaries-practice
-name: Bounded Professional and emergency boundaries Practice
+name: Prepare a clear handoff when a concern exceeds self-help
 parent_competency_id: '06.14'
 domain_id: '06'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-NIMH-HELP-ROUTES
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 06.14
-      (Professional and emergency boundaries); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 06.14; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,39 +35,55 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Professional and emergency boundaries through a non-confrontational safety preparation
-    bounded by the canonical scope: Know when trauma, suicidality, abuse, psychosis, addiction, severe
-    functional decline, or medical symptoms exceed peer or self-help competence.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Uses qualified clinical
-    or emergency resources promptly and does not substitute the curriculum for treatment. The protocol
-    creates a small opportunity to examine that target without treating completion as broad capability.'
+  purpose: Recognize the limits of peer and self-guided support across trauma, suicidality, abuse, psychosis,
+    addiction, severe functional decline and medical concerns, and identify appropriate professional or
+    emergency routes.
+  why_recommended: Recognize the limits of peer and self-guided support across trauma, suicidality, abuse,
+    psychosis, addiction, severe functional decline and medical concerns, and identify appropriate professional
+    or emergency routes.
   claims:
-  - statement: Using the canonical scope and evidence target for Professional and emergency boundaries
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Recognize the limits of peer and self-guided support across trauma, suicidality, abuse,
+      psychosis, addiction, severe functional decline and medical concerns, and identify appropriate professional
+      or emergency routes.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: US life-threatening emergencies call for 911; 988 provides suicide and emotional-crisis
+      support by call or text, and ordinary mental health care requires an appropriate provider.
+    classification: safety_precaution
+    source_ids:
+    - SRC-NIMH-HELP-ROUTES
+    limitations: US public resource guidance only. Local availability, accessibility, eligibility and
+      other countries' services need current verification. A resource card or rehearsal is not a clinical
+      assessment or emergency-response qualification.
   applicability_question: Does a voluntary, bounded Professional and emergency boundaries practice fit
     the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Professional and emergency boundaries as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Professional and
-    emergency boundaries context, understand the source-only status, and stop without losing safety, care,
-    employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Professional
-    and emergency boundaries; do not manufacture conflict, deprivation, exposure, disclosure, danger,
-    urgency, or dependence for evidence.
+  readiness_considerations: Prepare text or communication-aid wording and a locally appropriate accessible
+    contact route. A trusted helper may assist with public information. Keep the rehearsal fictional and
+    brief. Contact details and service scope can change, so check the card before relying on it later;
+    actual urgency takes precedence over this practice.
+  opportunity_considerations: Use the linked NIMH help page and official services for the country where
+    the plan would be used. Work with fictional categories rather than a real person's private symptoms.
+    If a concern is occurring now, contact suitable support promptly instead of completing the exercise.
+    In the US, call 911 for life-threatening emergencies and call or text 988 for suicide or emotional-crisis
+    support; outside the US use local emergency and crisis services.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Professional and emergency boundaries.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Use the linked NIMH help page and official services for the country where the plan would be used.
+    Work with fictional categories rather than a real person's private symptoms. If a concern is occurring
+    now, contact suitable support promptly instead of completing the exercise. In the US, call 911 for
+    life-threatening emergencies and call or text 988 for suicide or emotional-crisis support; outside
+    the US use local emergency and crisis services.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Professional and emergency boundaries
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Prepare text or communication-aid wording and a locally appropriate accessible contact route. A trusted
+    helper may assist with public information. Keep the rehearsal fictional and brief. Contact details
+    and service scope can change, so check the card before relying on it later; actual urgency takes precedence
+    over this practice.
   role_conditions:
   - This competency is context contingent; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -81,19 +97,35 @@ meaning_and_fit:
 intervention:
   protocol_class: PF-SAFETY-PREPARATION
   duration_days: 10
-  cadence: Complete three bounded Professional and emergency boundaries actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Professional and emergency boundaries; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Professional
-    and emergency boundaries. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Professional and emergency boundaries
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use the linked NIMH help page and official services for the country where the plan would be
+    used. Work with fictional categories rather than a real person''s private symptoms. If a concern is
+    occurring now, contact suitable support promptly instead of completing the exercise. In the US, call
+    911 for life-threatening emergencies and call or text 988 for suicide or emotional-crisis support;
+    outside the US use local emergency and crisis services. Goal: Recognize the limits of peer and self-guided
+    support across trauma, suicidality, abuse, psychosis, addiction, severe functional decline and medical
+    concerns, and identify appropriate professional or emergency routes. Scope: This is resource preparation
+    and fictional response rehearsal, not diagnosis, a risk score, emergency-response certification or
+    a substitute for contacting help in a real situation. Time and effort: About 20 minutes to locate
+    resources and a short private handoff rehearsal; no real emergency or test call is needed. Adaptation:
+    Prepare text or communication-aid wording and a locally appropriate accessible contact route. A trusted
+    helper may assist with public information. Keep the rehearsal fictional and brief. Contact details
+    and service scope can change, so check the card before relying on it later; actual urgency takes precedence
+    over this practice. Keep personal working notes outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Help for Mental Illnesses: https://www.nimh.nih.gov/health/find-help'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Prepare text or communication-aid wording and a locally appropriate accessible
+    contact route. A trusted helper may assist with public information. Keep the rehearsal fictional and
+    brief. Contact details and service scope can change, so check the card before relying on it later;
+    actual urgency takes precedence over this practice.
+  expected_burden: About 20 minutes to locate resources and a short private handoff rehearsal; no real
+    emergency or test call is needed.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Professional and emergency boundaries protocol to rank worth, coerce participation, demand
@@ -101,20 +133,30 @@ intervention:
   - Treating a completed Professional and emergency boundaries action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Professional and emergency boundaries situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Educational and developmental only; trauma, suicidality, abuse, psychosis, addiction, severe functional
-    decline, and medical concerns require qualified professional or emergency support.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Prepare text
+    or communication-aid wording and a locally appropriate accessible contact route. A trusted helper
+    may assist with public information. Keep the rehearsal fictional and brief. Contact details and service
+    scope can change, so check the card before relying on it later; actual urgency takes precedence over
+    this practice.
   actions:
   - stable_id: PRACTICE-COMP-0614-PROFESSIONAL-AND-EMERGENCY-BOUNDARIES-01-A1
     sequence: 1
-    title: Identify the non-emergency boundary for Professional and emergency boundaries
-    instructions: 'Define one planning-only question for Professional and emergency boundaries, the hazards
-      that must not be rehearsed, and the local qualified or emergency authority that supersedes this
-      source-only protocol. Do not create, approach, or simulate danger: Know when trauma, suicidality,
-      abuse, psychosis, addiction, severe functional decline, or medical symptoms exceed peer or self-help
-      competence.'
+    title: Recognize seven situations in which the curriculum is insufficient
+    instructions: 'Make seven short entries: persistent trauma-related distress needs a qualified assessment
+      rather than forced retelling; suicidal thoughts need prompt crisis or professional help rather than
+      a promise to cope alone; suspected abuse needs appropriate protection support; new experiences such
+      as hearing things others do not or losing touch with reality need prompt clinical assessment; substance
+      dependence or withdrawal concerns need qualified treatment advice; marked decline in basic functioning
+      needs medical or clinical evaluation; and concerning physical symptoms need appropriate medical
+      care. These are reasons to seek help, not diagnoses or an exhaustive list of emergencies. If danger
+      is immediate or life-threatening, use emergency services; uncertainty is a reason to ask a professional,
+      not to award a low-risk label.
+
+
+      Observation checks: All seven categories have an appropriate boundary explanation; The entries direct
+      to qualified help without making diagnoses; Immediate danger is separated from a routine appointment
+      process; Uncertainty does not become a claim that the situation is safe. Mark only what you observed.
+      Missing, mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -136,9 +178,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0614_a1_planning_scope_bounded
-        - c0614_a1_hazards_excluded
-        - c0614_a1_authority_identified
+        - all_seven_categories_have_an_appropriate_boundary_explanation
+        - the_entries_direct_to_qualified_help_without_making_diagnoses
+        - immediate_danger_is_separated_from_a_routine_appointment_process
+        - uncertainty_does_not_become_a_claim_that_the_situation_is_safe
       - measurement_id: c0614_a1_boundary
         kind: boolean
         role: supporting
@@ -155,11 +198,20 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0614-PROFESSIONAL-AND-EMERGENCY-BOUNDARIES-01-A2
     sequence: 2
-    title: Prepare one safe Professional and emergency boundaries support step
-    instructions: Create one non-confrontational Professional and emergency boundaries step such as locating
-      official guidance, checking accessible contact information, assembling a category-level checklist,
-      or scheduling qualified instruction. Do not test emergency response, weapons, rescue, medical treatment,
-      confrontation, evasion, or hazardous equipment.
+    title: Build a small resource card that works in the relevant location
+    instructions: 'Record the official local emergency number, a crisis-support route, an ordinary clinical
+      entry point and an appropriate safeguarding or abuse-support route. For the US starting example,
+      verify 911 and 988 through the NIMH reference, then locate the actual local clinical and protection
+      services. Check location served, contact method, availability and any accessibility or eligibility
+      information; leave unknown details explicit. Include an alternative when an ordinary service is
+      closed or unreachable. Save public contact information where it is accessible; do not call emergency
+      or crisis lines just to test them or submit a fictional report.
+
+
+      Observation checks: Four types of help have location-appropriate public routes; Availability accessibility
+      and eligibility are checked or marked unknown; An unavailable-service alternative is recorded; Verification
+      uses public information without a test emergency contact. Mark only what you observed. Missing,
+      mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -181,9 +233,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0614_a2_step_is_preparatory
-        - c0614_a2_official_or_qualified_path_used
-        - c0614_a2_no_hazard_rehearsed
+        - four_types_of_help_have_location_appropriate_public_routes
+        - availability_accessibility_and_eligibility_are_checked_or_marked_unknown
+        - an_unavailable_service_alternative_is_recorded
+        - verification_uses_public_information_without_a_test_emergency_contact
       - measurement_id: c0614_a2_boundary
         kind: boolean
         role: supporting
@@ -200,11 +253,42 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0614-PROFESSIONAL-AND-EMERGENCY-BOUNDARIES-01-A3
     sequence: 3
-    title: Review the Professional and emergency boundaries plan against stop conditions
-    instructions: 'Check whether the plan identifies when to stop, leave, call emergency services, contact
-      a qualified professional, or follow local authority. Mark unknown requirements rather than inventing
-      them and compare only with: Uses qualified clinical or emergency resources promptly and does not
-      substitute the curriculum for treatment.'
+    title: Rehearse a brief handoff without trying to become the clinician
+    instructions: 'Privately rehearse: I am concerned because of this observed change. I can help contact
+      the appropriate service; this needs more than our exercise. Supply only a plain observation, not
+      a diagnosis, and ask how to make contact in the person''s usable communication form. Compare a nonurgent
+      care appointment, a suicidal statement needing prompt crisis support and an immediate life-threatening
+      medical situation needing emergency help. Do not promise secrecy, argue someone out of an unusual
+      belief, investigate abuse or improvise treatment. In a real event, use the appropriate service promptly
+      and follow trained guidance while keeping your own safety in view; never wait to collect exercise
+      evidence.
+
+
+      Observation checks: The handoff states an observation and a concrete help route; Three scenarios
+      receive distinct appropriate contact responses; Privacy is respected without promising absolute
+      secrecy; No treatment investigation or delay for evidence is introduced. Mark only what you observed.
+      Missing, mixed and negative results are valid; a deferred action is not completed.
+
+
+      Final review: Can you find the right kind of help and communicate a concern without diagnosing or
+      delaying? Identify an unresolved access detail and a realistic way to clarify it. Completing a card
+      or rehearsal does not qualify someone to manage a crisis alone.
+
+
+      Examples: Supportive: The card contained verified local routes and the rehearsal distinguished an
+      ordinary appointment from prompt crisis contact and a life-threatening emergency.
+
+
+      Mixed: The emergency route was clear but the preferred crisis contact had an unresolved communication-access
+      question, which remained explicitly open.
+
+
+      Contradictory: A peer labeled a situation safe without assessment, promised secrecy, or delayed
+      seeking help until the curriculum exercise was complete.
+
+
+      Inconclusive: The learner listed professional titles without usable contact routes or a concrete
+      handoff for the supplied scenarios.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -220,15 +304,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0614_a3_primary
-        kind: scenario
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0614_a3_stop_conditions_present
-        - c0614_a3_escalation_path_present
-        - c0614_a3_unknowns_retained
+        - the_handoff_states_an_observation_and_a_concrete_help_route
+        - three_scenarios_receive_distinct_appropriate_contact_responses
+        - privacy_is_respected_without_promising_absolute_secrecy
+        - no_treatment_investigation_or_delay_for_evidence_is_introduced
       - measurement_id: c0614_a3_boundary
         kind: boolean
         role: supporting
@@ -249,17 +334,19 @@ intervention:
       Professional and emergency boundaries; no purchase, subscription, travel, credential, or public
       artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Professional and emergency boundaries; assistive technology, interpretation, a support
-      person, and a deferred action are valid without penalty.
+    - Prepare text or communication-aid wording and a locally appropriate accessible contact route. A
+      trusted helper may assist with public information. Keep the rehearsal fictional and brief. Contact
+      details and service scope can change, so check the card before relying on it later; actual urgency
+      takes precedence over this practice.
     cultural_context:
     - Adapt the expression of Professional and emergency boundaries to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Professional and emergency boundaries opportunity is unavailable or inappropriate, use
-      a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Prepare text or communication-aid wording and a locally appropriate accessible contact route. A
+      trusted helper may assist with public information. Keep the rehearsal fictional and brief. Contact
+      details and service scope can change, so check the card before relying on it later; actual urgency
+      takes precedence over this practice.
   pause_conditions:
   - Pause Professional and emergency boundaries when capacity, consent, authority, privacy, access, care
     duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the
@@ -291,10 +378,8 @@ evidence_and_scoring:
   - c0614_a3_boundary
   - c0614_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Professional and emergency boundaries action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Professional and emergency boundaries criterion, depended on
-    coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - A peer labeled a situation safe without assessment, promised secrecy, or delayed seeking help until
+    the curriculum exercise was complete.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Professional and emergency boundaries explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -305,14 +390,24 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Professional and emergency boundaries rules withhold observations older than
     90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Uses qualified clinical or emergency resources promptly and does not substitute the curriculum
-    for treatment.—not completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Professional and emergency boundaries requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Recognize seven situations in which the curriculum is insufficient. Observed
+    checks: All seven categories have an appropriate boundary explanation; The entries direct to qualified
+    help without making diagnoses; Immediate danger is separated from a routine appointment process; Uncertainty
+    does not become a claim that the situation is safe. Action 2: Build a small resource card that works
+    in the relevant location. Observed checks: Four types of help have location-appropriate public routes;
+    Availability accessibility and eligibility are checked or marked unknown; An unavailable-service alternative
+    is recorded; Verification uses public information without a test emergency contact. Action 3: Rehearse
+    a brief handoff without trying to become the clinician. Observed checks: The handoff states an observation
+    and a concrete help route; Three scenarios receive distinct appropriate contact responses; Privacy
+    is respected without promising absolute secrecy; No treatment investigation or delay for evidence
+    is introduced.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. The learner listed professional titles without usable
+    contact routes or a concrete handoff for the supplied scenarios.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Professional
     and emergency boundaries contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -322,9 +417,8 @@ evidence_and_scoring:
   - L25
   - L28
   - L32
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Professional and emergency boundaries evidence.
@@ -332,12 +426,21 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The identify the non-emergency boundary for professional and emergency boundaries action was attempted
-    or explicitly deferred.
-  - The prepare one safe professional and emergency boundaries support step action was attempted or explicitly
-    deferred.
-  - The review the professional and emergency boundaries plan against stop conditions action preserved
-    a limited conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Recognize seven situations in which the curriculum is insufficient. Observed checks: All
+    seven categories have an appropriate boundary explanation; The entries direct to qualified help without
+    making diagnoses; Immediate danger is separated from a routine appointment process; Uncertainty does
+    not become a claim that the situation is safe.'
+  - 'Action 2: Build a small resource card that works in the relevant location. Observed checks: Four
+    types of help have location-appropriate public routes; Availability accessibility and eligibility
+    are checked or marked unknown; An unavailable-service alternative is recorded; Verification uses public
+    information without a test emergency contact.'
+  - 'Action 3: Rehearse a brief handoff without trying to become the clinician. Observed checks: The handoff
+    states an observation and a concrete help route; Three scenarios receive distinct appropriate contact
+    responses; Privacy is respected without promising absolute secrecy; No treatment investigation or
+    delay for evidence is introduced.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -346,59 +449,61 @@ completion_and_review:
     - c0614_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Professional and emergency boundaries only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Professional and emergency boundaries across
-    roles, cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: Can you find the right kind of help and communicate a concern without diagnosing
+    or delaying? Identify an unresolved access detail and a realistic way to clarify it. Completing a
+    card or rehearsal does not qualify someone to manage a crisis alone.
+  transfer_limit: This is resource preparation and fictional response rehearsal, not diagnosis, a risk
+    score, emergency-response certification or a substitute for contacting help in a real situation.
   reflection:
-    before: What does Professional and emergency boundaries require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Professional and emergency boundaries criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Uses qualified clinical or emergency resources promptly and
-      does not substitute the curriculum for treatment.', what contradiction or missing context matters
-      most, and should this Professional and emergency boundaries design be repeated, adapted, deferred,
-      stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Recognize the limits of peer and self-guided
+      support across trauma, suicidality, abuse, psychosis, addiction, severe functional decline and medical
+      concerns, and identify appropriate professional or emergency routes.'
+    during: Which checks have actually been observed? The emergency route was clear but the preferred
+      crisis contact had an unresolved communication-access question, which remained explicitly open.
+    after: Can you find the right kind of help and communicate a concern without diagnosing or delaying?
+      Identify an unresolved access detail and a realistic way to clarify it. Completing a card or rehearsal
+      does not qualify someone to manage a crisis alone.
   review_guidance:
     repeat: Repeat the same bounded Professional and emergency boundaries design only when the context
       and burden remain appropriate.
-    adapt: Change the Professional and emergency boundaries medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Prepare text or communication-aid wording and a locally appropriate accessible contact route.
+      A trusted helper may assist with public information. Keep the rehearsal fictional and brief. Contact
+      details and service scope can change, so check the card before relying on it later; actual urgency
+      takes precedence over this practice.
     stop: Stop Professional and emergency boundaries when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Professional and emergency boundaries
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Professional and emergency boundaries criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Professional and emergency boundaries criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Professional and emergency boundaries criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Professional and emergency boundaries action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The card contained verified local routes and the rehearsal distinguished an ordinary appointment
+      from prompt crisis contact and a life-threatening emergency.
+    mixed: The emergency route was clear but the preferred crisis contact had an unresolved communication-access
+      question, which remained explicitly open.
+    contradictory: A peer labeled a situation safe without assessment, promised secrecy, or delayed seeking
+      help until the curriculum exercise was complete.
+    inconclusive: The learner listed professional titles without usable contact routes or a concrete handoff
+      for the supplied scenarios.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Professional and emergency boundaries.
+    context_heading: Prepare a clear handoff when a concern exceeds self-help
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Professional
       and emergency boundaries.
   check_in_labels:
-    c0614_a1_primary: The bounded Professional and emergency boundaries criterion for action 1 was observed
+    c0614_a1_primary: 'Observed checks: recognize seven situations in which the curriculum is insufficient'
     c0614_a1_boundary: Action 1 stayed inside its stated Professional and emergency boundaries boundary
     c0614_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0614_a2_primary: The bounded Professional and emergency boundaries criterion for action 2 was observed
+    c0614_a2_primary: 'Observed checks: build a small resource card that works in the relevant location'
     c0614_a2_boundary: Action 2 stayed inside its stated Professional and emergency boundaries boundary
     c0614_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0614_a3_primary: The bounded Professional and emergency boundaries criterion for action 3 was observed
+    c0614_a3_primary: 'Observed checks: rehearse a brief handoff without trying to become the clinician'
     c0614_a3_boundary: Action 3 stayed inside its stated Professional and emergency boundaries boundary
     c0614_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Professional and emergency
-    boundaries practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Can you find the right kind of help and communicate a concern without diagnosing or
+    delaying? Identify an unresolved access detail and a realistic way to clarify it. Completing a card
+    or rehearsal does not qualify someone to manage a crisis alone. Completion is not mastery.
+  plain_language_evidence: The card contained verified local routes and the rehearsal distinguished an
+    ordinary appointment from prompt crisis contact and a life-threatening emergency.
   display_order: 84

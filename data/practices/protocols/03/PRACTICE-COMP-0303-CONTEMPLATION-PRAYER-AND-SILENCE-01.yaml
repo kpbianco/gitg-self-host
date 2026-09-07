@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0303-CONTEMPLATION-PRAYER-AND-SILENCE-01
 slug: c0303-contemplation-prayer-and-silence-practice
-name: Bounded Contemplation, prayer, and silence Practice
+name: Build a short contemplative practice and examine its effects
 parent_competency_id: '03.03'
 domain_id: '03'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-NCCIH-MEDITATION-SAFETY
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 03.03
-      (Contemplation, prayer, and silence); canonical scope, evidence target, classification, domain boundary,
-      and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 03.03; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +35,50 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Contemplation, prayer, and silence through a pluralist meaning practice bounded by
-    the canonical scope: Develop a practice of prayer, meditation, examen, sacred reading, silence, chanting,
-    or attentive presence.'
-  why_recommended: 'The parent competency identifies this limited evidence target: The practice reliably
-    increases honesty, attention, gratitude, moral resolve, or peace. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Establish a freely chosen prayer, reading, silence or attention practice and examine whether
+    it supports honesty, attention, gratitude, resolve or peace in ordinary conduct.
+  why_recommended: Establish a freely chosen prayer, reading, silence or attention practice and examine
+    whether it supports honesty, attention, gratitude, resolve or peace in ordinary conduct.
   claims:
-  - statement: Using the canonical scope and evidence target for Contemplation, prayer, and silence is
-      a traceable product-design basis for a source-only draft protocol.
+  - statement: Establish a freely chosen prayer, reading, silence or attention practice and examine whether
+      it supports honesty, attention, gratitude, resolve or peace in ordinary conduct.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Meditation can involve negative experiences; health concerns should not be managed by replacing
+      appropriate care with meditation.
+    classification: safety_precaution
+    source_ids:
+    - SRC-NCCIH-MEDITATION-SAFETY
+    limitations: Supports a cautious stop-and-support boundary only. It does not establish safety or effectiveness
+      of this product's short pause, classify a spiritual experience, or validate individual outcomes.
   applicability_question: Does a voluntary, bounded Contemplation, prayer, and silence practice fit the
     person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Contemplation, prayer, and silence as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Contemplation, prayer,
-    and silence context, understand the source-only status, and stop without losing safety, care, employment,
-    housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Contemplation,
-    prayer, and silence; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Attend to touch, sound or an ordinary task using a comfortable posture; keep
+    eyes open if preferred. Use a familiar prayer only by choice. No fasting, sleep deprivation, breath
+    manipulation, isolation or altered-state induction belongs to this exercise. Stop an upsetting practice
+    and seek suitable support if distress persists.
+  opportunity_considerations: 'Choose a familiar safe place and an ordinary daily cue. The usable default
+    is an eyes-open three-minute pause: notice the room, attend to one ordinary sound or object, then
+    name one honest next action. Prayer, sacred reading, examen or quiet recitation may replace the middle
+    minute if already suitable to your tradition. No special posture, breath control, equipment or belief
+    is required.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Contemplation, prayer, and silence.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Choose a familiar safe place and an ordinary daily cue. The usable default is an eyes-open three-minute
+    pause: notice the room, attend to one ordinary sound or object, then name one honest next action.
+    Prayer, sacred reading, examen or quiet recitation may replace the middle minute if already suitable
+    to your tradition. No special posture, breath control, equipment or belief is required.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Contemplation, prayer, and silence
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Attend to touch, sound or an ordinary task using a comfortable posture; keep eyes open if preferred.
+    Use a familiar prayer only by choice. No fasting, sleep deprivation, breath manipulation, isolation
+    or altered-state induction belongs to this exercise. Stop an upsetting practice and seek suitable
+    support if distress persists.
   role_conditions:
   - This competency is pathway dependent; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +90,37 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Contemplation, prayer, and
     silence as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-CONTEMPLATIVE-MEANING
+  protocol_class: PF-REPEATED-HABIT
   duration_days: 10
-  cadence: Complete three bounded Contemplation, prayer, and silence actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Contemplation, prayer, and silence; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Contemplation,
-    prayer, and silence. Do not store private prose, names, identities, diagnoses, allegations, credentials,
-    account data, protected work information, intimate detail, artifact contents, observer narrative,
-    or another person's secrets. This source-only draft is not surveillance, professional advice, treatment,
-    certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Contemplation, prayer, and silence actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose a familiar safe place and an ordinary daily cue. The usable default is an eyes-open three-minute
+    pause: notice the room, attend to one ordinary sound or object, then name one honest next action.
+    Prayer, sacred reading, examen or quiet recitation may replace the middle minute if already suitable
+    to your tradition. No special posture, breath control, equipment or belief is required. Goal: Establish
+    a freely chosen prayer, reading, silence or attention practice and examine whether it supports honesty,
+    attention, gratitude, resolve or peace in ordinary conduct. Scope: Five brief occasions provide an
+    initial pattern, not reliable clinical or spiritual efficacy. The practice may be useful, neutral
+    or unwelcome; concentration, calm and religious feeling are not scores of worth. Time and effort:
+    About 15 minutes to prepare, five three-minute occasions during a week, and a 15-minute review. Adaptation:
+    Attend to touch, sound or an ordinary task using a comfortable posture; keep eyes open if preferred.
+    Use a familiar prayer only by choice. No fasting, sleep deprivation, breath manipulation, isolation
+    or altered-state induction belongs to this exercise. Stop an upsetting practice and seek suitable
+    support if distress persists. Keep personal working notes outside the check-in; record only the listed
+    observations.
+
+
+    Reference support:
+
+    Meditation and Mindfulness: Effectiveness and Safety: https://www.nccih.nih.gov/health/meditation-and-mindfulness-effectiveness-and-safety'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Attend to touch, sound or an ordinary task using a comfortable posture; keep eyes
+    open if preferred. Use a familiar prayer only by choice. No fasting, sleep deprivation, breath manipulation,
+    isolation or altered-state induction belongs to this exercise. Stop an upsetting practice and seek
+    suitable support if distress persists.
+  expected_burden: About 15 minutes to prepare, five three-minute occasions during a week, and a 15-minute
+    review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Contemplation, prayer, and silence protocol to rank worth, coerce participation, demand
@@ -101,19 +128,26 @@ intervention:
   - Treating a completed Contemplation, prayer, and silence action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Contemplation, prayer, and silence situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Attend to touch,
+    sound or an ordinary task using a comfortable posture; keep eyes open if preferred. Use a familiar
+    prayer only by choice. No fasting, sleep deprivation, breath manipulation, isolation or altered-state
+    induction belongs to this exercise. Stop an upsetting practice and seek suitable support if distress
+    persists.
   actions:
   - stable_id: PRACTICE-COMP-0303-CONTEMPLATION-PRAYER-AND-SILENCE-01-A1
     sequence: 1
-    title: Choose a declared frame for Contemplation, prayer, and silence
-    instructions: 'Select a religious, spiritual, philosophical, cultural, or secular frame through which
-      to explore Contemplation, prayer, and silence. State the frame, one alternative, and the limits
-      of personal authority using this canonical scope: Develop a practice of prayer, meditation, examen,
-      sacred reading, silence, chanting, or attentive presence.'
+    title: Define a practice small enough to repeat honestly
+    instructions: 'Write the cue, the three-minute sequence and one conduct marker: for example, notice
+      that you do not know before making a claim, thank a helper specifically, or return attention to
+      the next task. Choose one of honesty, attention, gratitude, resolve or peace as the focus, while
+      checking that the others are not being undermined. State how to stop comfortably. Rehearse the sequence
+      once; record an interrupted rehearsal as interrupted rather than stretching it until it looks successful.
+
+
+      Observation checks: A cue and exact short sequence are defined; One observable conduct marker is
+      selected; A comfortable stopping option is available; One rehearsal is recorded accurately. Mark
+      only what you observed. Missing, mixed and negative results are valid; a deferred action is not
+      completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -129,15 +163,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0303_a1_primary
-        kind: conceptual
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0303_a1_frame_declared
-        - c0303_a1_alternative_acknowledged
-        - c0303_a1_authority_limited
+        - a_cue_and_exact_short_sequence_are_defined
+        - one_observable_conduct_marker_is_selected
+        - a_comfortable_stopping_option_is_available
+        - one_rehearsal_is_recorded_accurately
       - measurement_id: c0303_a1_boundary
         kind: boolean
         role: supporting
@@ -154,11 +189,19 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0303-CONTEMPLATION-PRAYER-AND-SILENCE-01-A2
     sequence: 2
-    title: Complete two bounded Contemplation, prayer, and silence practices
-    instructions: Complete two short, freely chosen Contemplation, prayer, and silence practices appropriate
-      to the declared frame, such as reading, silence, prayer, observation, ritual, dialogue, or reflection.
-      Stop for distress, coercion, altered-state risk, conscience conflict, or pressure from an authority
-      or group.
+    title: Repeat without requiring a special internal state
+    instructions: 'On five available occasions, follow the sequence or record why it was missed. After
+      each, privately note the setting, whether you actually practiced, what happened to the chosen marker
+      in the next ordinary activity, and any discomfort or distraction. If attention wanders, gently return
+      once; wandering is information rather than misconduct. Do not increase intensity to force an effect.
+      If the practice becomes distressing, stop, return to an ordinary activity and record that it was
+      unsuitable.
+
+
+      Observation checks: Five opportunities are accounted for without inventing attempts; Actual practice
+      and missed opportunities are separated; Conduct after practice is observed; Discomfort and distractions
+      remain in the record. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -174,15 +217,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0303_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - five_opportunities_are_accounted_for_without_inventing_attempts
+        - actual_practice_and_missed_opportunities_are_separated
+        - conduct_after_practice_is_observed
+        - discomfort_and_distractions_remain_in_the_record
       - measurement_id: c0303_a2_boundary
         kind: boolean
         role: supporting
@@ -199,10 +243,38 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0303-CONTEMPLATION-PRAYER-AND-SILENCE-01-A3
     sequence: 3
-    title: Interpret the Contemplation, prayer, and silence experience modestly
-    instructions: 'Review what was noticed without treating intensity, calm, certainty, group agreement,
-      or unusual experience as automatic truth. Compare the limited record with this evidence target:
-      The practice reliably increases honesty, attention, gratitude, moral resolve, or peace.'
+    title: Choose a sustainable next step from the whole pattern
+    instructions: 'Compare the actual occasions, including neutral and difficult ones. Ask whether any
+      apparent change could instead reflect sleep, workload, company or expectations. Look separately
+      at honest acknowledgment, sustained attention, appreciation, follow-through and ease; do not require
+      every effect. Keep, shorten, change or stop the sequence for a stated reason. A useful result might
+      be admitting uncertainty twice even though you never felt peaceful. Describe the pattern as a small
+      personal observation, not proof that this practice works for everyone.
+
+
+      Observation checks: Helpful neutral and difficult occasions are compared; At least one competing
+      explanation is considered; A specific keep adapt or stop decision follows; The conclusion stays
+      within the observed pattern. Mark only what you observed. Missing, mixed and negative results are
+      valid; a deferred action is not completed.
+
+
+      Final review: What happened to your chosen conduct marker, what did the practice cost, and is the
+      next version justified by your actual experience?
+
+
+      Examples: Supportive: Four brief attempts were recorded, one was missed, and two later conversations
+      included honest acknowledgment of uncertainty; no general effectiveness claim was made.
+
+
+      Mixed: The pause sometimes helped attention but also felt burdensome, so the participant shortened
+      it and retained the uncertainty.
+
+
+      Contradictory: A participant extended an upsetting session to force calm, concealed missed occasions
+      or treated distraction as spiritual failure.
+
+
+      Inconclusive: A preferred routine was planned but no actual occasions or later conduct were observed.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -224,9 +296,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0303_a3_experience_and_interpretation_separated
-        - c0303_a3_alternative_explanation_retained
-        - c0303_a3_target_evidence_compared
+        - helpful_neutral_and_difficult_occasions_are_compared
+        - at_least_one_competing_explanation_is_considered
+        - a_specific_keep_adapt_or_stop_decision_follows
+        - the_conclusion_stays_within_the_observed_pattern
       - measurement_id: c0303_a3_boundary
         kind: boolean
         role: supporting
@@ -247,17 +320,19 @@ intervention:
       Contemplation, prayer, and silence; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Contemplation, prayer, and silence; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - Attend to touch, sound or an ordinary task using a comfortable posture; keep eyes open if preferred.
+      Use a familiar prayer only by choice. No fasting, sleep deprivation, breath manipulation, isolation
+      or altered-state induction belongs to this exercise. Stop an upsetting practice and seek suitable
+      support if distress persists.
     cultural_context:
     - Adapt the expression of Contemplation, prayer, and silence to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Contemplation, prayer, and silence opportunity is unavailable or inappropriate, use
-      a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Attend to touch, sound or an ordinary task using a comfortable posture; keep eyes open if preferred.
+      Use a familiar prayer only by choice. No fasting, sleep deprivation, breath manipulation, isolation
+      or altered-state induction belongs to this exercise. Stop an upsetting practice and seek suitable
+      support if distress persists.
   pause_conditions:
   - Pause Contemplation, prayer, and silence when capacity, consent, authority, privacy, access, care
     duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the
@@ -289,10 +364,8 @@ evidence_and_scoring:
   - c0303_a3_boundary
   - c0303_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Contemplation, prayer, and silence action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Contemplation, prayer, and silence criterion, depended on coercion
-    or hidden private content, or could not distinguish the protocol from contextual change.
+  - A participant extended an upsetting session to force calm, concealed missed occasions or treated distraction
+    as spiritual failure.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Contemplation, prayer, and silence explicitly; support can enable access and never reduces dignity
     or silently changes the typed value.
@@ -303,14 +376,22 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Contemplation, prayer, and silence rules withhold observations older than 90
     days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—The practice reliably increases honesty, attention, gratitude, moral resolve, or peace.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Contemplation, prayer, and silence requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Define a practice small enough to repeat honestly. Observed checks: A
+    cue and exact short sequence are defined; One observable conduct marker is selected; A comfortable
+    stopping option is available; One rehearsal is recorded accurately. Action 2: Repeat without requiring
+    a special internal state. Observed checks: Five opportunities are accounted for without inventing
+    attempts; Actual practice and missed opportunities are separated; Conduct after practice is observed;
+    Discomfort and distractions remain in the record. Action 3: Choose a sustainable next step from the
+    whole pattern. Observed checks: Helpful neutral and difficult occasions are compared; At least one
+    competing explanation is considered; A specific keep adapt or stop decision follows; The conclusion
+    stays within the observed pattern.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A preferred routine was planned but no actual occasions
+    or later conduct were observed.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Contemplation,
     prayer, and silence contribution under typed evaluation; protocol performance remains distinct and
     is never counted twice.
@@ -319,9 +400,8 @@ evidence_and_scoring:
   - L03
   - L07
   - L08
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Contemplation, prayer, and silence evidence.
@@ -329,12 +409,18 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The choose a declared frame for contemplation, prayer, and silence action was attempted or explicitly
-    deferred.
-  - The complete two bounded contemplation, prayer, and silence practices action was attempted or explicitly
-    deferred.
-  - The interpret the contemplation, prayer, and silence experience modestly action preserved a limited
-    conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Define a practice small enough to repeat honestly. Observed checks: A cue and exact short
+    sequence are defined; One observable conduct marker is selected; A comfortable stopping option is
+    available; One rehearsal is recorded accurately.'
+  - 'Action 2: Repeat without requiring a special internal state. Observed checks: Five opportunities
+    are accounted for without inventing attempts; Actual practice and missed opportunities are separated;
+    Conduct after practice is observed; Discomfort and distractions remain in the record.'
+  - 'Action 3: Choose a sustainable next step from the whole pattern. Observed checks: Helpful neutral
+    and difficult occasions are compared; At least one competing explanation is considered; A specific
+    keep adapt or stop decision follows; The conclusion stays within the observed pattern.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -343,57 +429,58 @@ completion_and_review:
     - c0303_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Contemplation, prayer, and silence only when the initial context
-    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
-    named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Contemplation, prayer, and silence across roles,
-    cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: What happened to your chosen conduct marker, what did the practice cost, and is
+    the next version justified by your actual experience?
+  transfer_limit: Five brief occasions provide an initial pattern, not reliable clinical or spiritual
+    efficacy. The practice may be useful, neutral or unwelcome; concentration, calm and religious feeling
+    are not scores of worth.
   reflection:
-    before: What does Contemplation, prayer, and silence require in this exact context, what remains outside
-      my role or authority, and which scope sentence or evidence criterion will keep the practice honest?
-    during: Which observable Contemplation, prayer, and silence criterion is present, absent, mixed, or
-      unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'The practice reliably increases honesty, attention, gratitude,
-      moral resolve, or peace.', what contradiction or missing context matters most, and should this Contemplation,
-      prayer, and silence design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Establish a freely chosen prayer, reading,
+      silence or attention practice and examine whether it supports honesty, attention, gratitude, resolve
+      or peace in ordinary conduct.'
+    during: Which checks have actually been observed? The pause sometimes helped attention but also felt
+      burdensome, so the participant shortened it and retained the uncertainty.
+    after: What happened to your chosen conduct marker, what did the practice cost, and is the next version
+      justified by your actual experience?
   review_guidance:
     repeat: Repeat the same bounded Contemplation, prayer, and silence design only when the context and
       burden remain appropriate.
-    adapt: Change the Contemplation, prayer, and silence medium, scope, support, timing, criteria, or
-      context while preserving provenance and the narrower evidence claim.
+    adapt: Attend to touch, sound or an ordinary task using a comfortable posture; keep eyes open if preferred.
+      Use a familiar prayer only by choice. No fasting, sleep deprivation, breath manipulation, isolation
+      or altered-state induction belongs to this exercise. Stop an upsetting practice and seek suitable
+      support if distress persists.
     stop: Stop Contemplation, prayer, and silence when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Contemplation, prayer, and silence questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Contemplation, prayer, and silence criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Contemplation, prayer, and silence criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Contemplation, prayer, and silence criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Contemplation, prayer, and silence action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: Four brief attempts were recorded, one was missed, and two later conversations included
+      honest acknowledgment of uncertainty; no general effectiveness claim was made.
+    mixed: The pause sometimes helped attention but also felt burdensome, so the participant shortened
+      it and retained the uncertainty.
+    contradictory: A participant extended an upsetting session to force calm, concealed missed occasions
+      or treated distraction as spiritual failure.
+    inconclusive: A preferred routine was planned but no actual occasions or later conduct were observed.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Contemplation, prayer, and silence.
+    context_heading: Build a short contemplative practice and examine its effects
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Contemplation,
       prayer, and silence.
   check_in_labels:
-    c0303_a1_primary: The bounded Contemplation, prayer, and silence criterion for action 1 was observed
+    c0303_a1_primary: 'Observed checks: define a practice small enough to repeat honestly'
     c0303_a1_boundary: Action 1 stayed inside its stated Contemplation, prayer, and silence boundary
     c0303_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0303_a2_primary: The bounded Contemplation, prayer, and silence criterion for action 2 was observed
+    c0303_a2_primary: 'Observed checks: repeat without requiring a special internal state'
     c0303_a2_boundary: Action 2 stayed inside its stated Contemplation, prayer, and silence boundary
     c0303_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0303_a3_primary: The bounded Contemplation, prayer, and silence criterion for action 3 was observed
+    c0303_a3_primary: 'Observed checks: choose a sustainable next step from the whole pattern'
     c0303_a3_boundary: Action 3 stayed inside its stated Contemplation, prayer, and silence boundary
     c0303_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Contemplation, prayer,
-    and silence practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What happened to your chosen conduct marker, what did the practice cost, and is the
+    next version justified by your actual experience? Completion is not mastery.
+  plain_language_evidence: Four brief attempts were recorded, one was missed, and two later conversations
+    included honest acknowledgment of uncertainty; no general effectiveness claim was made.
   display_order: 38

@@ -57,3 +57,22 @@ The acceptance review spans all 27 domains and every canonical scope. Generic
 or role-dependent content is revised, not hidden behind a completion count.
 The five legacy protocols retain their frozen runtime compatibility, but their
 source-only guides and examples may be enriched where needed.
+
+The owner reiterated this requirement on 2026-09-06 and redirected work away
+from publication mechanics toward the content itself. Each continuation must
+map the canonical scope and evidence-of-progress goal to its actual actions,
+examples and review. Naming a facet without explaining or exercising it is
+insufficient. When the canonical scope lists alternative religious forms,
+life situations or roles, distinguish legitimate chosen pathways from missing
+coverage; never require incompatible beliefs, invented distress or an absent
+real-world opportunity merely to fill a checklist.
+
+The standalone reading test is concrete: can an unfamiliar person explain
+what the competency involves, obtain the stated materials, follow the supplied
+default without inventing a rubric, recognize supportive and adverse outcomes,
+adapt the exercise without losing its purpose, and identify the next review?
+Rehearsal, source study, live participation and long-term competence must stay
+distinguishable. M6J-03 and M6J-04 record this mapping for every competency in
+domains 03, 04 and 06 and supply readable copies of the complete instructions.
+The catalog-wide target remains all 383; 91 authored records do not resolve
+the remaining 292 rewrites or any deferred human or empirical review.

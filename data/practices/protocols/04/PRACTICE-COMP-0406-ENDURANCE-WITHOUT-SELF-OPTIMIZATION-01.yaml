@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0406-ENDURANCE-WITHOUT-SELF-OPTIMIZATION-01
 slug: c0406-endurance-without-self-optimization-practice
-name: Bounded Endurance without self-optimization Practice
+name: Sustain humane care when improvement is not the assignment
 parent_competency_id: '04.06'
 domain_id: '04'
 governance:
@@ -14,10 +14,10 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-NHS-GRIEF-AND-LOSS
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 04.06
-      (Endurance without self-optimization); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 04.06; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,39 +35,46 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Endurance without self-optimization through a pluralist meaning practice bounded
-    by the canonical scope: Learn forms of patience, lament, companionship, rest, and faithfulness appropriate
-    when improvement is slow or impossible.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can remain present
-    and humane during a season that cannot be converted into a productivity project. The protocol creates
-    a small opportunity to examine that target without treating completion as broad capability.'
+  purpose: Practice patience, lament, companionship, rest and faithful attention during a slow or unresolved
+    season, without turning endurance into an obligation to optimize yourself.
+  why_recommended: Practice patience, lament, companionship, rest and faithful attention during a slow
+    or unresolved season, without turning endurance into an obligation to optimize yourself.
   claims:
-  - statement: Using the canonical scope and evidence target for Endurance without self-optimization is
-      a traceable product-design basis for a source-only draft protocol.
+  - statement: Practice patience, lament, companionship, rest and faithful attention during a slow or
+      unresolved season, without turning endurance into an obligation to optimize yourself.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Grief responses vary between people and can follow losses other than bereavement; support
+      is available when coping is difficult.
+    classification: safety_precaution
+    source_ids:
+    - SRC-NHS-GRIEF-AND-LOSS
+    limitations: Supports acknowledging varied responses and appropriate support. It does not validate
+      this educational exercise, prescribe a grief timetable or establish readiness for personal loss
+      reflection.
   applicability_question: Does a voluntary, bounded Endurance without self-optimization practice fit the
     person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Endurance without self-optimization as not applicable, consciously unchosen,
     or deferred without penalty when the role, pathway, capacity, authority, opportunity, or safe context
     is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Endurance without
-    self-optimization context, understand the source-only status, and stop without losing safety, care,
-    employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Endurance
-    without self-optimization; do not manufacture conflict, deprivation, exposure, disclosure, danger,
-    urgency, or dependence for evidence.
+  readiness_considerations: Use a single word per occasion, a reminder object or voluntary assistance.
+    Rest, lament and accepting help are legitimate actions. There is no streak, forced gratitude, productivity
+    target or requirement to tolerate mistreatment.
+  opportunity_considerations: Use a manageable unresolved situation such as waiting for an ordinary repair
+    you cannot accelerate. Identify what essential tasks still need doing and what can wait. No one is
+    asked to create hardship or remain in an unsafe situation for practice.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Endurance without self-optimization.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Use a manageable unresolved situation such as waiting for an ordinary repair you cannot accelerate.
+    Identify what essential tasks still need doing and what can wait. No one is asked to create hardship
+    or remain in an unsafe situation for practice.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Endurance without self-optimization
-    instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a single word per occasion, a reminder object or voluntary assistance. Rest, lament and accepting
+    help are legitimate actions. There is no streak, forced gratitude, productivity target or requirement
+    to tolerate mistreatment.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -79,21 +86,34 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Endurance without self-optimization
     as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-CONTEMPLATIVE-MEANING
+  protocol_class: PF-LONGITUDINAL-REVIEW
   duration_days: 10
-  cadence: Complete three bounded Endurance without self-optimization actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Endurance without self-optimization; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Endurance
-    without self-optimization. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Endurance without self-optimization actions,
-    and review; scope may be reduced or deferred for access, care, health, workload, conscience, or resource
-    reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Use a manageable unresolved situation such as waiting for an ordinary repair you cannot accelerate.
+    Identify what essential tasks still need doing and what can wait. No one is asked to create hardship
+    or remain in an unsafe situation for practice. Goal: Practice patience, lament, companionship, rest
+    and faithful attention during a slow or unresolved season, without turning endurance into an obligation
+    to optimize yourself. Scope: The measure here is whether care and boundaries were honored, not whether
+    the situation improved. Ordinary waiting provides a small practice; it does not demonstrate capacity
+    to endure illness, deprivation or extreme suffering. Time and effort: About 15 minutes to prepare
+    and three short observations during a week; no extra workload or endurance challenge is added. Adaptation:
+    Use a single word per occasion, a reminder object or voluntary assistance. Rest, lament and accepting
+    help are legitimate actions. There is no streak, forced gratitude, productivity target or requirement
+    to tolerate mistreatment. Keep personal working notes outside the check-in; record only the listed
+    observations.
+
+
+    Reference support:
+
+    Grief after bereavement or loss: https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/grief-bereavement-loss/'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a single word per occasion, a reminder object or voluntary assistance. Rest,
+    lament and accepting help are legitimate actions. There is no streak, forced gratitude, productivity
+    target or requirement to tolerate mistreatment.
+  expected_burden: About 15 minutes to prepare and three short observations during a week; no extra workload
+    or endurance challenge is added.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Endurance without self-optimization protocol to rank worth, coerce participation, demand
@@ -101,19 +121,26 @@ intervention:
   - Treating a completed Endurance without self-optimization action, a polished artifact, agreement, confidence,
     speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Endurance without self-optimization situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a single
+    word per occasion, a reminder object or voluntary assistance. Rest, lament and accepting help are
+    legitimate actions. There is no streak, forced gratitude, productivity target or requirement to tolerate
+    mistreatment.
   actions:
   - stable_id: PRACTICE-COMP-0406-ENDURANCE-WITHOUT-SELF-OPTIMIZATION-01-A1
     sequence: 1
-    title: Choose a declared frame for Endurance without self-optimization
-    instructions: 'Select a religious, spiritual, philosophical, cultural, or secular frame through which
-      to explore Endurance without self-optimization. State the frame, one alternative, and the limits
-      of personal authority using this canonical scope: Learn forms of patience, lament, companionship,
-      rest, and faithfulness appropriate when improvement is slow or impossible.'
+    title: Define enough care for this period
+    instructions: 'Choose a deliberately small care floor: one ordinary need to protect, one necessary
+      responsibility and one optional demand to reduce. Add room to name disappointment, accept suitable
+      company and rest without earning it. For the repair case, protect a normal meal or break, keep the
+      agreed appointment information available and pause a nonessential improvement project. Say what
+      patience means here: avoiding needless pressure while taking useful action when information changes.
+      It does not mean silence about harm or refusing help.
+
+
+      Observation checks: A small care floor and essential responsibility are defined; One optional demand
+      is reduced; Lament companionship and rest have legitimate room; Patience is distinguished from enduring
+      preventable harm. Mark only what you observed. Missing, mixed and negative results are valid; a
+      deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -129,15 +156,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0406_a1_primary
-        kind: conceptual
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0406_a1_frame_declared
-        - c0406_a1_alternative_acknowledged
-        - c0406_a1_authority_limited
+        - a_small_care_floor_and_essential_responsibility_are_defined
+        - one_optional_demand_is_reduced
+        - lament_companionship_and_rest_have_legitimate_room
+        - patience_is_distinguished_from_enduring_preventable_harm
       - measurement_id: c0406_a1_boundary
         kind: boolean
         role: supporting
@@ -154,11 +182,19 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0406-ENDURANCE-WITHOUT-SELF-OPTIMIZATION-01-A2
     sequence: 2
-    title: Complete two bounded Endurance without self-optimization practices
-    instructions: Complete two short, freely chosen Endurance without self-optimization practices appropriate
-      to the declared frame, such as reading, silence, prayer, observation, ritual, dialogue, or reflection.
-      Stop for distress, coercion, altered-state risk, conscience conflict, or pressure from an authority
-      or group.
+    title: Keep company with the situation without demanding a result
+    instructions: 'At three natural points during the week, notice whether the care floor was met, what
+      help was available and what was difficult. One occasion may include a short wanted conversation,
+      shared ordinary activity or quiet company. Ask for listening or practical help plainly rather than
+      making another person fix the season. If alone, use a familiar gentle activity or a public contribution
+      you value without pretending it is reciprocal companionship. Record missed care as information about
+      need, not a failed character test.
+
+
+      Observation checks: Three ordinary occasions are reviewed without inventing success; Care and difficulty
+      are recorded together; Any companionship respects the limits of the other person; Missed care leads
+      to attention rather than self-punishment. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -174,15 +210,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0406_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - three_ordinary_occasions_are_reviewed_without_inventing_success
+        - care_and_difficulty_are_recorded_together
+        - any_companionship_respects_the_limits_of_the_other_person
+        - missed_care_leads_to_attention_rather_than_self_punishment
       - measurement_id: c0406_a2_boundary
         kind: boolean
         role: supporting
@@ -199,10 +236,38 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0406-ENDURANCE-WITHOUT-SELF-OPTIMIZATION-01-A3
     sequence: 3
-    title: Interpret the Endurance without self-optimization experience modestly
-    instructions: 'Review what was noticed without treating intensity, calm, certainty, group agreement,
-      or unusual experience as automatic truth. Compare the limited record with this evidence target:
-      Can remain present and humane during a season that cannot be converted into a productivity project.'
+    title: Review what should be carried and what should be put down
+    instructions: 'Compare the occasions for unnecessary burden, useful company, rest and responsibilities
+      actually met. Ask whether the plan respected your capacity and whether a neglected need now requires
+      practical or qualified help. Retain one sustainable commitment and release or reduce one unnecessary
+      demand. The unresolved repair may still be unresolved; do not call that a failed exercise. If conditions
+      can be improved or left safely, consider that option rather than treating avoidable suffering as
+      a badge of endurance.
+
+
+      Observation checks: Care and burden are reviewed without an improvement quota; A remaining need
+      or help gap is identified; One commitment and one reduction are justified; Avoidable hardship is
+      not made a virtue requirement. Mark only what you observed. Missing, mixed and negative results
+      are valid; a deferred action is not completed.
+
+
+      Final review: What helped you remain humane while the situation stayed unresolved, and what demand
+      can you reasonably stop carrying?
+
+
+      Examples: Supportive: The participant kept a modest care floor, accepted a short visit and reduced
+      an optional project even though the waiting continued.
+
+
+      Mixed: Some basic care was missed, revealing that the plan needed less burden and more support rather
+      than a stricter routine.
+
+
+      Contradictory: Endurance became refusal of available help, neglect of basic needs or pride in tolerating
+      preventable mistreatment.
+
+
+      Inconclusive: A demanding improvement plan replaced attention to patience, company, lament or rest.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -224,9 +289,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0406_a3_experience_and_interpretation_separated
-        - c0406_a3_alternative_explanation_retained
-        - c0406_a3_target_evidence_compared
+        - care_and_burden_are_reviewed_without_an_improvement_quota
+        - a_remaining_need_or_help_gap_is_identified
+        - one_commitment_and_one_reduction_are_justified
+        - avoidable_hardship_is_not_made_a_virtue_requirement
       - measurement_id: c0406_a3_boundary
         kind: boolean
         role: supporting
@@ -247,17 +313,17 @@ intervention:
       Endurance without self-optimization; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Endurance without self-optimization; assistive technology, interpretation, a support person,
-      and a deferred action are valid without penalty.
+    - Use a single word per occasion, a reminder object or voluntary assistance. Rest, lament and accepting
+      help are legitimate actions. There is no streak, forced gratitude, productivity target or requirement
+      to tolerate mistreatment.
     cultural_context:
     - Adapt the expression of Endurance without self-optimization to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Endurance without self-optimization opportunity is unavailable or inappropriate, use
-      a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use a single word per occasion, a reminder object or voluntary assistance. Rest, lament and accepting
+      help are legitimate actions. There is no streak, forced gratitude, productivity target or requirement
+      to tolerate mistreatment.
   pause_conditions:
   - Pause Endurance without self-optimization when capacity, consent, authority, privacy, access, care
     duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the
@@ -289,10 +355,8 @@ evidence_and_scoring:
   - c0406_a3_boundary
   - c0406_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Endurance without self-optimization action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Endurance without self-optimization criterion, depended on
-    coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - Endurance became refusal of available help, neglect of basic needs or pride in tolerating preventable
+    mistreatment.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Endurance without self-optimization explicitly; support can enable access and never reduces dignity
     or silently changes the typed value.
@@ -303,14 +367,22 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Endurance without self-optimization rules withhold observations older than 90
     days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can remain present and humane during a season that cannot be converted into a productivity
-    project.—not completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Endurance without self-optimization requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Define enough care for this period. Observed checks: A small care floor
+    and essential responsibility are defined; One optional demand is reduced; Lament companionship and
+    rest have legitimate room; Patience is distinguished from enduring preventable harm. Action 2: Keep
+    company with the situation without demanding a result. Observed checks: Three ordinary occasions are
+    reviewed without inventing success; Care and difficulty are recorded together; Any companionship respects
+    the limits of the other person; Missed care leads to attention rather than self-punishment. Action
+    3: Review what should be carried and what should be put down. Observed checks: Care and burden are
+    reviewed without an improvement quota; A remaining need or help gap is identified; One commitment
+    and one reduction are justified; Avoidable hardship is not made a virtue requirement.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A demanding improvement plan replaced attention to
+    patience, company, lament or rest.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Endurance
     without self-optimization contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -320,9 +392,8 @@ evidence_and_scoring:
   - L05
   - L07
   - L34
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Endurance without self-optimization evidence.
@@ -330,12 +401,18 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The choose a declared frame for endurance without self-optimization action was attempted or explicitly
-    deferred.
-  - The complete two bounded endurance without self-optimization practices action was attempted or explicitly
-    deferred.
-  - The interpret the endurance without self-optimization experience modestly action preserved a limited
-    conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Define enough care for this period. Observed checks: A small care floor and essential responsibility
+    are defined; One optional demand is reduced; Lament companionship and rest have legitimate room; Patience
+    is distinguished from enduring preventable harm.'
+  - 'Action 2: Keep company with the situation without demanding a result. Observed checks: Three ordinary
+    occasions are reviewed without inventing success; Care and difficulty are recorded together; Any companionship
+    respects the limits of the other person; Missed care leads to attention rather than self-punishment.'
+  - 'Action 3: Review what should be carried and what should be put down. Observed checks: Care and burden
+    are reviewed without an improvement quota; A remaining need or help gap is identified; One commitment
+    and one reduction are justified; Avoidable hardship is not made a virtue requirement.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -344,59 +421,57 @@ completion_and_review:
     - c0406_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Endurance without self-optimization only when the initial context
-    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
-    named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Endurance without self-optimization across roles,
-    cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: What helped you remain humane while the situation stayed unresolved, and what
+    demand can you reasonably stop carrying?
+  transfer_limit: The measure here is whether care and boundaries were honored, not whether the situation
+    improved. Ordinary waiting provides a small practice; it does not demonstrate capacity to endure illness,
+    deprivation or extreme suffering.
   reflection:
-    before: What does Endurance without self-optimization require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Endurance without self-optimization criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can remain present and humane during a season that cannot
-      be converted into a productivity project.', what contradiction or missing context matters most,
-      and should this Endurance without self-optimization design be repeated, adapted, deferred, stopped,
-      or referred?
+    before: 'What would count as doing this honestly? Goal: Practice patience, lament, companionship,
+      rest and faithful attention during a slow or unresolved season, without turning endurance into an
+      obligation to optimize yourself.'
+    during: Which checks have actually been observed? Some basic care was missed, revealing that the plan
+      needed less burden and more support rather than a stricter routine.
+    after: What helped you remain humane while the situation stayed unresolved, and what demand can you
+      reasonably stop carrying?
   review_guidance:
     repeat: Repeat the same bounded Endurance without self-optimization design only when the context and
       burden remain appropriate.
-    adapt: Change the Endurance without self-optimization medium, scope, support, timing, criteria, or
-      context while preserving provenance and the narrower evidence claim.
+    adapt: Use a single word per occasion, a reminder object or voluntary assistance. Rest, lament and
+      accepting help are legitimate actions. There is no streak, forced gratitude, productivity target
+      or requirement to tolerate mistreatment.
     stop: Stop Endurance without self-optimization when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Endurance without self-optimization questions
-      beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Endurance without self-optimization criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Endurance without self-optimization criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Endurance without self-optimization criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Endurance without self-optimization action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The participant kept a modest care floor, accepted a short visit and reduced an optional
+      project even though the waiting continued.
+    mixed: Some basic care was missed, revealing that the plan needed less burden and more support rather
+      than a stricter routine.
+    contradictory: Endurance became refusal of available help, neglect of basic needs or pride in tolerating
+      preventable mistreatment.
+    inconclusive: A demanding improvement plan replaced attention to patience, company, lament or rest.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Endurance without self-optimization.
+    context_heading: Sustain humane care when improvement is not the assignment
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Endurance
       without self-optimization.
   check_in_labels:
-    c0406_a1_primary: The bounded Endurance without self-optimization criterion for action 1 was observed
+    c0406_a1_primary: 'Observed checks: define enough care for this period'
     c0406_a1_boundary: Action 1 stayed inside its stated Endurance without self-optimization boundary
     c0406_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0406_a2_primary: The bounded Endurance without self-optimization criterion for action 2 was observed
+    c0406_a2_primary: 'Observed checks: keep company with the situation without demanding a result'
     c0406_a2_boundary: Action 2 stayed inside its stated Endurance without self-optimization boundary
     c0406_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0406_a3_primary: The bounded Endurance without self-optimization criterion for action 3 was observed
+    c0406_a3_primary: 'Observed checks: review what should be carried and what should be put down'
     c0406_a3_boundary: Action 3 stayed inside its stated Endurance without self-optimization boundary
     c0406_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Endurance without
-    self-optimization practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What helped you remain humane while the situation stayed unresolved, and what demand
+    can you reasonably stop carrying? Completion is not mastery.
+  plain_language_evidence: The participant kept a modest care floor, accepted a short visit and reduced
+    an optional project even though the waiting continued.
   display_order: 54

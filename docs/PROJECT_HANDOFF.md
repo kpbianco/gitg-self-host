@@ -1,33 +1,48 @@
 # Grounded Growth — Project Handoff
 
-## Current owner priority — tailored competency content, 2026-09-05
+## Current owner priority — rich competency content, 2026-09-06
 
-The owner confirmed that scoring/ranking implementation and 383-package
-coverage did not resolve the generic tasking problem. M6J is the actual
-catalog-wide content rewrite described in ADR 0018. M6J-01 merged in PR #52
-at `e993ad142dee7652c3c029d6b1c75c0cdaf3d298`, supplying 42 practices across
-domains 01, 02 and 13. M6J-02 adds all 12 domain 05 self-knowledge practices,
-bringing the authored cohort to 54. Its branch is `codex/m6j-02-self-knowledge`.
-They include concrete materials, ordered actions, observation checks, worked
-outcomes, individual adaptations, realistic burden and explicit scope limits.
-The exact remaining-work inventory is
-`reports/practice-content/tailored_practice_coverage_v1.json`: 329 practices
-remain rewrite-pending and zero are represented as human-review-complete.
+The owner reiterated that the task is to make each competency rich,
+representative of its underlying goal, self-contained and usable by different
+individuals. The owner specifically redirected this continuation away from
+PR/merge work and back to that content requirement.
 
-These authored inputs compile into the canonical YAML consumed by the app;
-they are not another runtime catalog. The home-upkeep package retains its
-existing typed rules and synthetic fixture. The importer refuses a catalog
-change affecting an active or paused practice, so an operator must finish or
-explicitly stop affected work before importing revised instructions. Existing
-submitted events keep their own replay rules.
+M6J-01 through M6J-03 supplied 77 authored practices in domains 01 through 05
+and 13. M6J-04 adds all 14 practices in domain 06, vulnerability, trauma,
+disability, neurodiversity and dependency. Its 42 distinct action instructions,
+168 observable checks and 56 worked outcome examples bring the total to 91
+authored practices with 292 explicitly rewrite-pending. No automated count
+represents human review or empirical acceptance. The competency-by-competency
+relationship to canonical scope is recorded in
+`docs/authoring/M6J-04-SCOPE-MAP.md`. The complete new content is in
+`docs/authoring/M6J-04-PRACTICE-READER.md`.
 
-This continuation brings domain 05 ahead of the previously proposed domain 03;
-spirituality and religion remains the next unauthored cohort, followed by the
-remaining domains and explicit review of the other eight earlier packages.
-The target remains all 383. The two earlier roadblocks are not collectively
-closed: Decision 053's scoring software is implemented; content remediation
-is partial; specialist and empirical acceptance remain open. See the M6J-02
-evidence record for verification and publication status.
+Each entry supplies a usable default, necessary materials, a goal, distinct
+ordered tasks, concrete observations, adaptations, limits and meaningful
+review. The care agreement retains the recipient's choices; access redesign
+produces a testable notice; trauma literacy uses a fictional case and a real
+professional support route. No personal trauma, diagnosis, treatment change,
+disability simulation, forced independence or disclosure is required. Fictional
+preparation is not represented as actual recovery, care or crisis response.
+Ten inspected references provide limited factual, safety and design support;
+they do not validate the original exercises or establish local legal authority.
+
+Authoring inputs in `docs/authoring/exercises/` compile into the canonical YAML
+consumed by the application. They are not a competing runtime catalog. All
+383 protocol identities, 1,151 action identities, parent mappings, activation,
+assessment, ranking, scoring mathematics and explicit human closeout remain
+unchanged. The other 369 practice packages are byte-identical to the M6J-03
+baseline `b8188ab66bc129bb87d2ee8d3e6a617a46139788`. Active/paused
+practice import protection and historical snapshot replay remain mandatory.
+
+Continue through the remaining domains with the same scope-mapping and
+self-contained instruction standard. Do not revert to noun-swapped exercises
+or substitute publication status for content progress. Domain 07, emotional
+maturity, resilience and mental well-being, is the next unwritten domain in
+canonical order; the earlier eight pre-frontier packages
+still need explicit review against this standard. The two original concerns
+are not collectively closed: scoring software exists, content remediation is
+partial, and specialist/source/empirical acceptance remains open.
 
 ## What this project is
 Grounded Growth is a personalized human-development curriculum and adaptive practice system. It began as an 876-item list of traits/tasks, was reconstructed into a pluralist 383-competency curriculum, mapped to 37 trainable developmental levers, and paired with a 50-item assessment that initializes provisional lever states and task rankings.

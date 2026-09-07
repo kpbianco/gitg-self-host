@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0602-TRAUMA-AND-POST-TRAUMATIC-STRESS-LITERACY-01
 slug: c0602-trauma-and-post-traumatic-stress-literacy-practice
-name: Bounded Trauma and post-traumatic stress literacy Practice
+name: Recognize possible trauma effects and prepare a suitable support route
 parent_competency_id: '06.02'
 domain_id: '06'
 governance:
@@ -14,10 +14,11 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-NIMH-PTSD-LITERACY
+  - SRC-NIMH-HELP-ROUTES
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 06.02
-      (Trauma and post-traumatic stress literacy); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 06.02; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,40 +36,59 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Trauma and post-traumatic stress literacy through a qualified-support preparation
-    bounded by the canonical scope: Understand trauma responses involving threat, avoidance, intrusion,
-    dissociation, shame, hyperarousal, memory, and attachment.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can recognize possible
-    trauma effects and seek trauma-informed professional support rather than forcing self-exposure. The
-    protocol creates a small opportunity to examine that target without treating completion as broad capability.'
+  purpose: Understand possible trauma-related responses, distinguish observations from diagnoses, and
+    prepare to seek qualified help without forcing disclosure or exposure.
+  why_recommended: Understand possible trauma-related responses, distinguish observations from diagnoses,
+    and prepare to seek qualified help without forcing disclosure or exposure.
   claims:
-  - statement: Using the canonical scope and evidence target for Trauma and post-traumatic stress literacy
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Understand possible trauma-related responses, distinguish observations from diagnoses,
+      and prepare to seek qualified help without forcing disclosure or exposure.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Trauma-related experiences can involve unwanted recollections, avoidance, heightened arousal,
+      detachment and changes in mood or cognition; diagnosis and treatment require an appropriate mental
+      health professional.
+    classification: safety_precaution
+    source_ids:
+    - SRC-NIMH-PTSD-LITERACY
+    limitations: Supports literacy and professional boundaries, not diagnosis from a short case, a screening
+      score, forced exposure or the effectiveness of the product-authored exercise. The attachment concept
+      is a broader educational category rather than an added diagnostic criterion.
+  - statement: US life-threatening emergencies call for 911; 988 provides suicide and emotional-crisis
+      support by call or text, and ordinary mental health care requires an appropriate provider.
+    classification: safety_precaution
+    source_ids:
+    - SRC-NIMH-HELP-ROUTES
+    limitations: US public resource guidance only. Local availability, accessibility, eligibility and
+      other countries' services need current verification. A resource card or rehearsal is not a clinical
+      assessment or emergency-response qualification.
   applicability_question: Does a voluntary, bounded Trauma and post-traumatic stress literacy practice
     fit the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Trauma and post-traumatic stress literacy as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Trauma and post-traumatic
-    stress literacy context, understand the source-only status, and stop without losing safety, care,
-    employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Trauma and
-    post-traumatic stress literacy; do not manufacture conflict, deprivation, exposure, disclosure, danger,
-    urgency, or dependence for evidence.
+  readiness_considerations: Use a short spoken glossary or a reader's help with public information. Skip
+    distressing detail and retain the fictional case. This is not exposure practice; a professional can
+    advise on appropriate personal work. If the topic is destabilizing, stop and seek suitable support
+    rather than recording endurance as success.
+  opportunity_considerations: 'Read the NIMH PTSD overview through the reference. Use this fictional case:
+    following a frightening accident, someone startles at noises, has unwanted recollections, avoids a
+    familiar route and finds it harder to trust others. No account of the accident is needed. Do not substitute
+    an active personal trauma for this case.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Trauma and post-traumatic stress
-    literacy.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'Read the NIMH PTSD overview through the reference. Use this fictional case: following a frightening
+    accident, someone startles at noises, has unwanted recollections, avoids a familiar route and finds
+    it harder to trust others. No account of the accident is needed. Do not substitute an active personal
+    trauma for this case.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Trauma and post-traumatic stress
-    literacy instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a short spoken glossary or a reader's help with public information. Skip distressing detail and
+    retain the fictional case. This is not exposure practice; a professional can advise on appropriate
+    personal work. If the topic is destabilizing, stop and seek suitable support rather than recording
+    endurance as success.
   role_conditions:
   - This competency is context contingent; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -83,19 +103,34 @@ meaning_and_fit:
 intervention:
   protocol_class: PF-QUALIFIED-CONSULTATION
   duration_days: 10
-  cadence: Complete three bounded Trauma and post-traumatic stress literacy actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Trauma and post-traumatic stress literacy; copy the canonical scope and
-    evidence target into a private working note; define the action boundary, valid supports, privacy limit,
-    and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Trauma and
-    post-traumatic stress literacy. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Trauma and post-traumatic stress literacy
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Read the NIMH PTSD overview through the reference. Use this fictional case: following a frightening
+    accident, someone startles at noises, has unwanted recollections, avoids a familiar route and finds
+    it harder to trust others. No account of the accident is needed. Do not substitute an active personal
+    trauma for this case. Goal: Understand possible trauma-related responses, distinguish observations
+    from diagnoses, and prepare to seek qualified help without forcing disclosure or exposure. Scope:
+    This is literacy and support preparation using a fictional case. It is not a symptom screen, diagnosis,
+    trauma narrative, memory-recovery exercise or treatment. Time and effort: Three sessions of up to
+    15 minutes, with reading split or deferred as needed. Adaptation: Use a short spoken glossary or a
+    reader''s help with public information. Skip distressing detail and retain the fictional case. This
+    is not exposure practice; a professional can advise on appropriate personal work. If the topic is
+    destabilizing, stop and seek suitable support rather than recording endurance as success. Keep personal
+    working notes outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Post-Traumatic Stress Disorder: https://www.nimh.nih.gov/health/publications/post-traumatic-stress-disorder-ptsd
+
+    Help for Mental Illnesses: https://www.nimh.nih.gov/health/find-help'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a short spoken glossary or a reader's help with public information. Skip distressing
+    detail and retain the fictional case. This is not exposure practice; a professional can advise on
+    appropriate personal work. If the topic is destabilizing, stop and seek suitable support rather than
+    recording endurance as success.
+  expected_burden: Three sessions of up to 15 minutes, with reading split or deferred as needed.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Trauma and post-traumatic stress literacy protocol to rank worth, coerce participation,
@@ -104,20 +139,27 @@ intervention:
   - Treating a completed Trauma and post-traumatic stress literacy action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Trauma and post-traumatic stress literacy situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Educational and developmental only; trauma, suicidality, abuse, psychosis, addiction, severe functional
-    decline, and medical concerns require qualified professional or emergency support.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a short
+    spoken glossary or a reader's help with public information. Skip distressing detail and retain the
+    fictional case. This is not exposure practice; a professional can advise on appropriate personal work.
+    If the topic is destabilizing, stop and seek suitable support rather than recording endurance as success.
   actions:
   - stable_id: PRACTICE-COMP-0602-TRAUMA-AND-POST-TRAUMATIC-STRESS-LITERACY-01-A1
     sequence: 1
-    title: Bound the qualified question for Trauma and post-traumatic stress literacy
-    instructions: 'Turn Trauma and post-traumatic stress literacy into one educational or planning question
-      and identify the qualification and jurisdiction needed to answer it. Use the canonical scope to
-      separate general learning from diagnosis, treatment, legal advice, financial advice, safeguarding
-      decisions, or other professional judgment: Understand trauma responses involving threat, avoidance,
-      intrusion, dissociation, shame, hyperarousal, memory, and attachment.'
+    title: Explain eight concepts without diagnosing the case
+    instructions: 'Make a short glossary: threat means perceived danger; avoidance means steering away
+      from reminders; intrusion means unwelcome recollections or images; dissociation can involve feeling
+      detached or unreal; shame concerns negative judgment of oneself; hyperarousal means being persistently
+      on guard; memory difficulties can include gaps or trouble concentrating; attachment concerns security
+      and trust in relationships. Match only the case''s stated observations to possible concepts and
+      mark the rest unknown. Consult the NIMH account to check the symptom-related terms. These experiences
+      can have different causes; neither a matching word nor an absent sign decides a diagnosis.
+
+
+      Observation checks: All eight concepts receive a plain-language explanation; Case observations are
+      kept separate from inferred causes; Unstated experiences remain unknown; Clinical diagnosis is reserved
+      for a qualified assessment. Mark only what you observed. Missing, mixed and negative results are
+      valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -139,9 +181,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0602_a1_question_bounded
-        - c0602_a1_qualification_named
-        - c0602_a1_professional_boundary_explicit
+        - all_eight_concepts_receive_a_plain_language_explanation
+        - case_observations_are_kept_separate_from_inferred_causes
+        - unstated_experiences_remain_unknown
+        - clinical_diagnosis_is_reserved_for_a_qualified_assessment
       - measurement_id: c0602_a1_boundary
         kind: boolean
         role: supporting
@@ -158,12 +201,20 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0602-TRAUMA-AND-POST-TRAUMATIC-STRESS-LITERACY-01-A2
     sequence: 2
-    title: Prepare minimum information for Trauma and post-traumatic stress literacy
-    instructions: Create a privacy-minimized Trauma and post-traumatic stress literacy consultation note
-      containing only the question, relevant category-level facts, current constraints, and desired decision.
-      Omit diagnoses, allegations, account numbers, credentials, protected work information, intimate
-      detail, and third-party identity unless a qualified professional lawfully requires it through an
-      appropriate channel.
+    title: Compare a supportive response with pressure to perform recovery
+    instructions: 'Write a two-sentence response to the fictional person: You do not have to describe
+      the accident to me. Would help finding a clinician or practical support with an ordinary task be
+      useful? Contrast it with being told to retell the event, confront reminders alone or recover on
+      someone else''s timetable. Explain how choice, predictability and control over disclosure alter
+      the interaction. Identify a peer''s role in listening or practical help and the clinician''s role
+      in assessment and treatment. Do not test reactions to reminders or ask anyone to recount a traumatic
+      event.
+
+
+      Observation checks: The response gives a choice about support; Disclosure is optional and limited;
+      Pressure or unsupervised exposure is explicitly rejected; Peer support and clinical treatment have
+      different roles. Mark only what you observed. Missing, mixed and negative results are valid; a deferred
+      action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -185,9 +236,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0602_a2_minimum_information_only
-        - c0602_a2_sensitive_detail_excluded
-        - c0602_a2_decision_need_named
+        - the_response_gives_a_choice_about_support
+        - disclosure_is_optional_and_limited
+        - pressure_or_unsupervised_exposure_is_explicitly_rejected
+        - peer_support_and_clinical_treatment_have_different_roles
       - measurement_id: c0602_a2_boundary
         kind: boolean
         role: supporting
@@ -204,12 +256,42 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0602-TRAUMA-AND-POST-TRAUMATIC-STRESS-LITERACY-01-A3
     sequence: 3
-    title: Record a bounded Trauma and post-traumatic stress literacy disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: Can recognize possible trauma effects and seek trauma-informed professional
-      support rather than forcing self-exposure.'
+    title: Find an actual professional entry point and prepare questions
+    instructions: 'Use the linked NIMH help page or an official health-service directory for your location
+      to locate a real route to a clinician experienced with trauma. Record the service name, public contact
+      route, area served and what eligibility or cost information still needs checking. Prepare these
+      questions: how do you assess fit; how is consent handled during treatment; and what choices are
+      available if a method is unsuitable? No appointment or disclosure is required for this preparation.
+      If there is a current urgent concern, use qualified or emergency help now rather than finishing
+      the exercise; in the US, 988 offers crisis support and 911 is for life-threatening emergencies.
+      Elsewhere use local services.
+
+
+      Observation checks: A real service has a retrievable contact route; Eligibility and unknown access
+      conditions are recorded; Questions address expertise consent and alternatives; Preparation is distinguished
+      from obtaining assessment or treatment. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.
+
+
+      Final review: Can you explain what might be happening without claiming to know its cause, and identify
+      a usable next support step? Preserve unanswered access questions. Success here is informed preparation
+      and appropriate boundaries, not reduced symptoms or demonstrated recovery.
+
+
+      Examples: Supportive: The case was described without a diagnosis, missing experiences stayed unknown,
+      and a local clinical entry point and consent questions were identified.
+
+
+      Mixed: The glossary was accurate but the selected service had unclear eligibility, so access remained
+      a question to resolve.
+
+
+      Contradictory: A learner declared PTSD from the short case or proposed forcing a return to the feared
+      location as a test of progress.
+
+
+      Inconclusive: Symptom words were copied but neither their meaning nor a real professional entry
+      point was established.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -225,14 +307,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0602_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0602_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - a_real_service_has_a_retrievable_contact_route
+        - eligibility_and_unknown_access_conditions_are_recorded
+        - questions_address_expertise_consent_and_alternatives
+        - preparation_is_distinguished_from_obtaining_assessment_or_treatment
       - measurement_id: c0602_a3_boundary
         kind: boolean
         role: supporting
@@ -253,17 +337,19 @@ intervention:
       Trauma and post-traumatic stress literacy; no purchase, subscription, travel, credential, or public
       artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Trauma and post-traumatic stress literacy; assistive technology, interpretation, a support
-      person, and a deferred action are valid without penalty.
+    - Use a short spoken glossary or a reader's help with public information. Skip distressing detail
+      and retain the fictional case. This is not exposure practice; a professional can advise on appropriate
+      personal work. If the topic is destabilizing, stop and seek suitable support rather than recording
+      endurance as success.
     cultural_context:
     - Adapt the expression of Trauma and post-traumatic stress literacy to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Trauma and post-traumatic stress literacy opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use a short spoken glossary or a reader's help with public information. Skip distressing detail
+      and retain the fictional case. This is not exposure practice; a professional can advise on appropriate
+      personal work. If the topic is destabilizing, stop and seek suitable support rather than recording
+      endurance as success.
   pause_conditions:
   - Pause Trauma and post-traumatic stress literacy when capacity, consent, authority, privacy, access,
     care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make
@@ -295,10 +381,8 @@ evidence_and_scoring:
   - c0602_a3_boundary
   - c0602_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Trauma and post-traumatic stress literacy action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Trauma and post-traumatic stress literacy criterion, depended
-    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - A learner declared PTSD from the short case or proposed forcing a return to the feared location as
+    a test of progress.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Trauma and post-traumatic stress literacy explicitly; support can enable access and never reduces
     dignity or silently changes the typed value.
@@ -309,14 +393,23 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Trauma and post-traumatic stress literacy rules withhold observations older
     than 90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can recognize possible trauma effects and seek trauma-informed professional support rather
-    than forcing self-exposure.—not completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Trauma and post-traumatic stress literacy requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Explain eight concepts without diagnosing the case. Observed checks:
+    All eight concepts receive a plain-language explanation; Case observations are kept separate from
+    inferred causes; Unstated experiences remain unknown; Clinical diagnosis is reserved for a qualified
+    assessment. Action 2: Compare a supportive response with pressure to perform recovery. Observed checks:
+    The response gives a choice about support; Disclosure is optional and limited; Pressure or unsupervised
+    exposure is explicitly rejected; Peer support and clinical treatment have different roles. Action
+    3: Find an actual professional entry point and prepare questions. Observed checks: A real service
+    has a retrievable contact route; Eligibility and unknown access conditions are recorded; Questions
+    address expertise consent and alternatives; Preparation is distinguished from obtaining assessment
+    or treatment.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. Symptom words were copied but neither their meaning
+    nor a real professional entry point was established.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Trauma
     and post-traumatic stress literacy contribution under typed evaluation; protocol performance remains
     distinct and is never counted twice.
@@ -327,9 +420,8 @@ evidence_and_scoring:
   - L17
   - L20
   - L28
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Trauma and post-traumatic stress literacy evidence.
@@ -337,12 +429,19 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for trauma and post-traumatic stress literacy action was attempted
-    or explicitly deferred.
-  - The prepare minimum information for trauma and post-traumatic stress literacy action was attempted
-    or explicitly deferred.
-  - The record a bounded trauma and post-traumatic stress literacy disposition action preserved a limited
-    conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Explain eight concepts without diagnosing the case. Observed checks: All eight concepts
+    receive a plain-language explanation; Case observations are kept separate from inferred causes; Unstated
+    experiences remain unknown; Clinical diagnosis is reserved for a qualified assessment.'
+  - 'Action 2: Compare a supportive response with pressure to perform recovery. Observed checks: The response
+    gives a choice about support; Disclosure is optional and limited; Pressure or unsupervised exposure
+    is explicitly rejected; Peer support and clinical treatment have different roles.'
+  - 'Action 3: Find an actual professional entry point and prepare questions. Observed checks: A real
+    service has a retrievable contact route; Eligibility and unknown access conditions are recorded; Questions
+    address expertise consent and alternatives; Preparation is distinguished from obtaining assessment
+    or treatment.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -351,62 +450,61 @@ completion_and_review:
     - c0602_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Trauma and post-traumatic stress literacy only when the initial
-    context remained safe, the evidence criteria were usable, burden was acceptable, and a new context
-    can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Trauma and post-traumatic stress literacy across
-    roles, cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: Can you explain what might be happening without claiming to know its cause, and
+    identify a usable next support step? Preserve unanswered access questions. Success here is informed
+    preparation and appropriate boundaries, not reduced symptoms or demonstrated recovery.
+  transfer_limit: This is literacy and support preparation using a fictional case. It is not a symptom
+    screen, diagnosis, trauma narrative, memory-recovery exercise or treatment.
   reflection:
-    before: What does Trauma and post-traumatic stress literacy require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Trauma and post-traumatic stress literacy criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can recognize possible trauma effects and seek trauma-informed
-      professional support rather than forcing self-exposure.', what contradiction or missing context
-      matters most, and should this Trauma and post-traumatic stress literacy design be repeated, adapted,
-      deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Understand possible trauma-related responses,
+      distinguish observations from diagnoses, and prepare to seek qualified help without forcing disclosure
+      or exposure.'
+    during: Which checks have actually been observed? The glossary was accurate but the selected service
+      had unclear eligibility, so access remained a question to resolve.
+    after: Can you explain what might be happening without claiming to know its cause, and identify a
+      usable next support step? Preserve unanswered access questions. Success here is informed preparation
+      and appropriate boundaries, not reduced symptoms or demonstrated recovery.
   review_guidance:
     repeat: Repeat the same bounded Trauma and post-traumatic stress literacy design only when the context
       and burden remain appropriate.
-    adapt: Change the Trauma and post-traumatic stress literacy medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Use a short spoken glossary or a reader's help with public information. Skip distressing detail
+      and retain the fictional case. This is not exposure practice; a professional can advise on appropriate
+      personal work. If the topic is destabilizing, stop and seek suitable support rather than recording
+      endurance as success.
     stop: Stop Trauma and post-traumatic stress literacy when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Trauma and post-traumatic stress literacy
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Trauma and post-traumatic stress literacy criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Trauma and post-traumatic stress literacy criteria were observed while burden, support,
-      contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Trauma and post-traumatic stress literacy
-      criterion, introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Trauma and post-traumatic stress literacy action was deferred, not observed, not
-      applicable, stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The case was described without a diagnosis, missing experiences stayed unknown, and a
+      local clinical entry point and consent questions were identified.
+    mixed: The glossary was accurate but the selected service had unclear eligibility, so access remained
+      a question to resolve.
+    contradictory: A learner declared PTSD from the short case or proposed forcing a return to the feared
+      location as a test of progress.
+    inconclusive: Symptom words were copied but neither their meaning nor a real professional entry point
+      was established.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Trauma and post-traumatic stress literacy.
+    context_heading: Recognize possible trauma effects and prepare a suitable support route
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Trauma and
       post-traumatic stress literacy.
   check_in_labels:
-    c0602_a1_primary: The bounded Trauma and post-traumatic stress literacy criterion for action 1 was
-      observed
+    c0602_a1_primary: 'Observed checks: explain eight concepts without diagnosing the case'
     c0602_a1_boundary: Action 1 stayed inside its stated Trauma and post-traumatic stress literacy boundary
     c0602_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0602_a2_primary: The bounded Trauma and post-traumatic stress literacy criterion for action 2 was
-      observed
+    c0602_a2_primary: 'Observed checks: compare a supportive response with pressure to perform recovery'
     c0602_a2_boundary: Action 2 stayed inside its stated Trauma and post-traumatic stress literacy boundary
     c0602_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0602_a3_primary: The bounded Trauma and post-traumatic stress literacy criterion for action 3 was
-      observed
+    c0602_a3_primary: 'Observed checks: find an actual professional entry point and prepare questions'
     c0602_a3_boundary: Action 3 stayed inside its stated Trauma and post-traumatic stress literacy boundary
     c0602_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Trauma and post-traumatic
-    stress literacy practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: Can you explain what might be happening without claiming to know its cause, and identify
+    a usable next support step? Preserve unanswered access questions. Success here is informed preparation
+    and appropriate boundaries, not reduced symptoms or demonstrated recovery. Completion is not mastery.
+  plain_language_evidence: The case was described without a diagnosis, missing experiences stayed unknown,
+    and a local clinical entry point and consent questions were identified.
   display_order: 72

@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0408-DYING-END-OF-LIFE-CHOICES-AND-ACCOMPANIMENT-01
 slug: c0408-dying-end-of-life-choices-and-accompaniment-practice
-name: Bounded Dying, end-of-life choices, and accompaniment Practice
+name: Prepare care preferences and practice respectful accompaniment
 parent_competency_id: '04.08'
 domain_id: '04'
 governance:
@@ -14,10 +14,11 @@ governance:
   scoring_status: active
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
+  - SRC-NIH-ADVANCE-CARE-PREPARATION
+  - SRC-NHS-PALLIATIVE-CARE-OVERVIEW
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 04.08
-      (Dying, end-of-life choices, and accompaniment); canonical scope, evidence target, classification,
-      domain boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 04.08; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,40 +36,61 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Dying, end-of-life choices, and accompaniment through a qualified-support preparation
-    bounded by the canonical scope: Understand advance care, palliative care, grief, presence, unfinished
-    relationships, and the dignity of dying persons.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can prepare basic preferences
-    and accompany serious illness without imposing false reassurance. The protocol creates a small opportunity
-    to examine that target without treating completion as broad capability.'
+  purpose: Understand basic advance-care and comfort-care concepts, prepare questions about personal preferences
+    and decision support, and practice presence that respects the dignity and choices of someone seriously
+    ill.
+  why_recommended: Understand basic advance-care and comfort-care concepts, prepare questions about personal
+    preferences and decision support, and practice presence that respects the dignity and choices of someone
+    seriously ill.
   claims:
-  - statement: Using the canonical scope and evidence target for Dying, end-of-life choices, and accompaniment
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Understand basic advance-care and comfort-care concepts, prepare questions about personal
+      preferences and decision support, and practice presence that respects the dignity and choices of
+      someone seriously ill.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
+  - statement: Advance care planning considers values, preferences and trusted decision support for a
+      time when a person cannot communicate; formal advance directives are legal documents.
+    classification: professional_or_public_standard
+    source_ids:
+    - SRC-NIH-ADVANCE-CARE-PREPARATION
+    limitations: US public information used only for conceptual preparation. Local legal formalities,
+      document validity, clinical choices and eligibility require qualified local guidance; the product
+      does not reproduce a directive or prescribe universal signing requirements.
+  - statement: Palliative support addresses comfort and psychological, social and spiritual needs; care
+      should take account of the person's wishes and involve appropriate professionals.
+    classification: professional_or_public_standard
+    source_ids:
+    - SRC-NHS-PALLIATIVE-CARE-OVERVIEW
+    limitations: UK public guidance used for basic care literacy and accompaniment boundaries. It does
+      not establish eligibility elsewhere, offer prognosis or authorize treatment decisions by a visitor
+      or by this product.
   applicability_question: Does a voluntary, bounded Dying, end-of-life choices, and accompaniment practice
     fit the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Dying, end-of-life choices, and accompaniment as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Dying, end-of-life
-    choices, and accompaniment context, understand the source-only status, and stop without losing safety,
-    care, employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Dying, end-of-life
-    choices, and accompaniment; do not manufacture conflict, deprivation, exposure, disclosure, danger,
-    urgency, or dependence for evidence.
+  readiness_considerations: Use the fictional case, accessible official information, interpretation support
+    or a trusted helper. No disclosure of diagnoses, treatment choices, family conflict or existing documents
+    is required. Defer emotionally difficult material; urgent symptoms and immediate care needs take priority
+    over this educational task.
+  opportunity_considerations: Read the linked NIH MedlinePlus advance-care overview and NHS explanation
+    of end-of-life and palliative care. Use the fictional case of an adult who wants understandable information,
+    relief from discomfort and control over visitors. Keep any personal preferences in your own private
+    document; the app needs only the observation checks.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Dying, end-of-life choices, and
-    accompaniment.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Read the linked NIH MedlinePlus advance-care overview and NHS explanation of end-of-life and palliative
+    care. Use the fictional case of an adult who wants understandable information, relief from discomfort
+    and control over visitors. Keep any personal preferences in your own private document; the app needs
+    only the observation checks.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Dying, end-of-life choices, and
-    accompaniment instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use the fictional case, accessible official information, interpretation support or a trusted helper.
+    No disclosure of diagnoses, treatment choices, family conflict or existing documents is required.
+    Defer emotionally difficult material; urgent symptoms and immediate care needs take priority over
+    this educational task.
   role_conditions:
   - This competency is cross context core; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -83,19 +105,37 @@ meaning_and_fit:
 intervention:
   protocol_class: PF-QUALIFIED-CONSULTATION
   duration_days: 10
-  cadence: Complete three bounded Dying, end-of-life choices, and accompaniment actions over ten days,
-    preserving explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Dying, end-of-life choices, and accompaniment; copy the canonical scope
-    and evidence target into a private working note; define the action boundary, valid supports, privacy
-    limit, and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Dying, end-of-life
-    choices, and accompaniment. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Dying, end-of-life choices, and accompaniment
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Read the linked NIH MedlinePlus advance-care overview and NHS explanation of end-of-life and
+    palliative care. Use the fictional case of an adult who wants understandable information, relief from
+    discomfort and control over visitors. Keep any personal preferences in your own private document;
+    the app needs only the observation checks. Goal: Understand basic advance-care and comfort-care concepts,
+    prepare questions about personal preferences and decision support, and practice presence that respects
+    the dignity and choices of someone seriously ill. Scope: This prepares a conversation; it creates
+    no legally effective directive, treatment decision, prognosis or consent on another person''s behalf.
+    Advance-care requirements and clinical options need qualified local guidance. No dying person must
+    participate in this exercise. Time and effort: About 25 minutes of reading and private preparation,
+    a 15-minute conversation rehearsal and a short practical follow-through. Adaptation: Use the fictional
+    case, accessible official information, interpretation support or a trusted helper. No disclosure of
+    diagnoses, treatment choices, family conflict or existing documents is required. Defer emotionally
+    difficult material; urgent symptoms and immediate care needs take priority over this educational task.
+    Keep personal working notes outside the check-in; record only the listed observations.
+
+
+    Reference support:
+
+    Advance care plan: A checklist for the future: https://magazine.medlineplus.gov/article/advance-care-plan-a-checklist-for-the-future
+
+    What end of life care involves: https://www.nhs.uk/tests-and-treatments/end-of-life-care/what-it-involves-and-when-it-starts/'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use the fictional case, accessible official information, interpretation support
+    or a trusted helper. No disclosure of diagnoses, treatment choices, family conflict or existing documents
+    is required. Defer emotionally difficult material; urgent symptoms and immediate care needs take priority
+    over this educational task.
+  expected_burden: About 25 minutes of reading and private preparation, a 15-minute conversation rehearsal
+    and a short practical follow-through.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Dying, end-of-life choices, and accompaniment protocol to rank worth, coerce participation,
@@ -104,20 +144,27 @@ intervention:
   - Treating a completed Dying, end-of-life choices, and accompaniment action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Dying, end-of-life choices, and accompaniment situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use the fictional
+    case, accessible official information, interpretation support or a trusted helper. No disclosure of
+    diagnoses, treatment choices, family conflict or existing documents is required. Defer emotionally
+    difficult material; urgent symptoms and immediate care needs take priority over this educational task.
   actions:
   - stable_id: PRACTICE-COMP-0408-DYING-END-OF-LIFE-CHOICES-AND-ACCOMPANIMENT-01-A1
     sequence: 1
-    title: Bound the qualified question for Dying, end-of-life choices, and accompaniment
-    instructions: 'Turn Dying, end-of-life choices, and accompaniment into one educational or planning
-      question and identify the qualification and jurisdiction needed to answer it. Use the canonical
-      scope to separate general learning from diagnosis, treatment, legal advice, financial advice, safeguarding
-      decisions, or other professional judgment: Understand advance care, palliative care, grief, presence,
-      unfinished relationships, and the dignity of dying persons.'
+    title: Prepare values and questions before choosing medical options
+    instructions: 'Explain the distinction between planning for future decisions and making a current
+      treatment choice. The sources describe advance directives as legal documents, while palliative care
+      concerns relief and support during serious illness; specific eligibility and services need local
+      confirmation. Privately note what matters in care, whom you would want involved if you could not
+      communicate, what that person would need to understand, and questions for a clinician about options
+      and tradeoffs. Unknown is a valid preference. Locate the appropriate local health-service or qualified
+      advice route for forms rather than signing an invented template.
+
+
+      Observation checks: Planning legal documentation and current treatment are distinguished; Comfort
+      and support are included in the care questions; Values decision support and unknown preferences
+      are identified; A qualified local route for formal documents is located. Mark only what you observed.
+      Missing, mixed and negative results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -139,9 +186,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0408_a1_question_bounded
-        - c0408_a1_qualification_named
-        - c0408_a1_professional_boundary_explicit
+        - planning_legal_documentation_and_current_treatment_are_distinguished
+        - comfort_and_support_are_included_in_the_care_questions
+        - values_decision_support_and_unknown_preferences_are_identified
+        - a_qualified_local_route_for_formal_documents_is_located
       - measurement_id: c0408_a1_boundary
         kind: boolean
         role: supporting
@@ -158,12 +206,21 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0408-DYING-END-OF-LIFE-CHOICES-AND-ACCOMPANIMENT-01-A2
     sequence: 2
-    title: Prepare minimum information for Dying, end-of-life choices, and accompaniment
-    instructions: Create a privacy-minimized Dying, end-of-life choices, and accompaniment consultation
-      note containing only the question, relevant category-level facts, current constraints, and desired
-      decision. Omit diagnoses, allegations, account numbers, credentials, protected work information,
-      intimate detail, and third-party identity unless a qualified professional lawfully requires it through
-      an appropriate channel.
+    title: Rehearse presence that follows the person's wishes
+    instructions: 'In the fictional visit, first ask whether the person wants company, quiet or practical
+      help. Practice listening to fear or grief without promising recovery. Try: I cannot know what happens
+      next; would quiet company or help asking the care team a question be useful? Let the person correct
+      the offer rather than insisting it is comforting. Ask what would make the next few minutes easier
+      and who should be consulted about discomfort. Offer a small choice, such as whether to continue
+      the visit, and accept no. If unfinished relationships arise, ask whether the person wants help communicating;
+      do not organize reconciliation, spiritual counsel or visitors without consent. Medical questions
+      and symptoms go to the care team.
+
+
+      Observation checks: The person chooses the kind and duration of company; Listening avoids false
+      reassurance; Practical comfort is separated from medical advice; Relationships privacy and spiritual
+      preferences remain voluntary. Mark only what you observed. Missing, mixed and negative results are
+      valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -185,9 +242,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0408_a2_minimum_information_only
-        - c0408_a2_sensitive_detail_excluded
-        - c0408_a2_decision_need_named
+        - the_person_chooses_the_kind_and_duration_of_company
+        - listening_avoids_false_reassurance
+        - practical_comfort_is_separated_from_medical_advice
+        - relationships_privacy_and_spiritual_preferences_remain_voluntary
       - measurement_id: c0408_a2_boundary
         kind: boolean
         role: supporting
@@ -204,12 +262,39 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0408-DYING-END-OF-LIFE-CHOICES-AND-ACCOMPANIMENT-01-A3
     sequence: 3
-    title: Record a bounded Dying, end-of-life choices, and accompaniment disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: Can prepare basic preferences and accompany serious illness without imposing
-      false reassurance.'
+    title: Make one appropriate preparation step and preserve revisability
+    instructions: 'Choose one step within your authority: organize your own care questions, ask a willing
+      prospective support person whether they could discuss the role, or locate a suitable appointment
+      route. Do not assign someone legal authority merely by naming them. Review the fictional visit for
+      dignity, grief and unwanted assumptions. Record when you will revisit your private notes and where
+      they can be found by the appropriate people if formally completed. A rehearsal is not actual accompaniment,
+      and a conversation note is not an executed directive.
+
+
+      Observation checks: One preparation step is actually completed; Any proposed support role is voluntary;
+      Preferences and questions have a review point; Rehearsal and informal notes are not claimed as legal
+      or clinical completion. Mark only what you observed. Missing, mixed and negative results are valid;
+      a deferred action is not completed.
+
+
+      Final review: What do you want a future conversation to clarify, and how would you accompany someone
+      without taking over their choices or denying their situation?
+
+
+      Examples: Supportive: The participant prepared values and clinician questions, found the proper
+      local documentation route and rehearsed a visit that respected refusal and uncertainty.
+
+
+      Mixed: The private questions were ready, but the proposed support person''s willingness and the
+      local document requirements remained unconfirmed.
+
+
+      Contradictory: An informal note was treated as a valid directive, symptoms were managed without
+      the care team or a visit imposed reassurance, reconciliation or belief.
+
+
+      Inconclusive: A generic preference to be comfortable was recorded without understanding the terms,
+      preparing questions or taking an appropriate next step.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -225,14 +310,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0408_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0408_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - one_preparation_step_is_actually_completed
+        - any_proposed_support_role_is_voluntary
+        - preferences_and_questions_have_a_review_point
+        - rehearsal_and_informal_notes_are_not_claimed_as_legal_or_clinical_completion
       - measurement_id: c0408_a3_boundary
         kind: boolean
         role: supporting
@@ -253,17 +340,19 @@ intervention:
       Dying, end-of-life choices, and accompaniment; no purchase, subscription, travel, credential, or
       public artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Dying, end-of-life choices, and accompaniment; assistive technology, interpretation, a
-      support person, and a deferred action are valid without penalty.
+    - Use the fictional case, accessible official information, interpretation support or a trusted helper.
+      No disclosure of diagnoses, treatment choices, family conflict or existing documents is required.
+      Defer emotionally difficult material; urgent symptoms and immediate care needs take priority over
+      this educational task.
     cultural_context:
     - Adapt the expression of Dying, end-of-life choices, and accompaniment to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Dying, end-of-life choices, and accompaniment opportunity is unavailable or inappropriate,
-      use a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use the fictional case, accessible official information, interpretation support or a trusted helper.
+      No disclosure of diagnoses, treatment choices, family conflict or existing documents is required.
+      Defer emotionally difficult material; urgent symptoms and immediate care needs take priority over
+      this educational task.
   pause_conditions:
   - Pause Dying, end-of-life choices, and accompaniment when capacity, consent, authority, privacy, access,
     care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make
@@ -295,10 +384,8 @@ evidence_and_scoring:
   - c0408_a3_boundary
   - c0408_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Dying, end-of-life choices, and accompaniment action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Dying, end-of-life choices, and accompaniment criterion, depended
-    on coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - An informal note was treated as a valid directive, symptoms were managed without the care team or
+    a visit imposed reassurance, reconciliation or belief.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Dying, end-of-life choices, and accompaniment explicitly; support can enable access and never
     reduces dignity or silently changes the typed value.
@@ -309,14 +396,23 @@ evidence_and_scoring:
     diminishing multipliers.
   recency_rule: Generated Dying, end-of-life choices, and accompaniment rules withhold observations older
     than 90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can prepare basic preferences and accompany serious illness without imposing false reassurance.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Dying, end-of-life choices, and accompaniment requires a bounded
-    context, allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Prepare values and questions before choosing medical options. Observed
+    checks: Planning legal documentation and current treatment are distinguished; Comfort and support
+    are included in the care questions; Values decision support and unknown preferences are identified;
+    A qualified local route for formal documents is located. Action 2: Rehearse presence that follows
+    the person''s wishes. Observed checks: The person chooses the kind and duration of company; Listening
+    avoids false reassurance; Practical comfort is separated from medical advice; Relationships privacy
+    and spiritual preferences remain voluntary. Action 3: Make one appropriate preparation step and preserve
+    revisability. Observed checks: One preparation step is actually completed; Any proposed support role
+    is voluntary; Preferences and questions have a review point; Rehearsal and informal notes are not
+    claimed as legal or clinical completion.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A generic preference to be comfortable was recorded
+    without understanding the terms, preparing questions or taking an appropriate next step.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Dying,
     end-of-life choices, and accompaniment contribution under typed evaluation; protocol performance remains
     distinct and is never counted twice.
@@ -326,9 +422,8 @@ evidence_and_scoring:
   - L04
   - L23
   - L28
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Dying, end-of-life choices, and accompaniment evidence.
@@ -336,12 +431,19 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for dying, end-of-life choices, and accompaniment action was attempted
-    or explicitly deferred.
-  - The prepare minimum information for dying, end-of-life choices, and accompaniment action was attempted
-    or explicitly deferred.
-  - The record a bounded dying, end-of-life choices, and accompaniment disposition action preserved a
-    limited conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Prepare values and questions before choosing medical options. Observed checks: Planning
+    legal documentation and current treatment are distinguished; Comfort and support are included in the
+    care questions; Values decision support and unknown preferences are identified; A qualified local
+    route for formal documents is located.'
+  - 'Action 2: Rehearse presence that follows the person''s wishes. Observed checks: The person chooses
+    the kind and duration of company; Listening avoids false reassurance; Practical comfort is separated
+    from medical advice; Relationships privacy and spiritual preferences remain voluntary.'
+  - 'Action 3: Make one appropriate preparation step and preserve revisability. Observed checks: One preparation
+    step is actually completed; Any proposed support role is voluntary; Preferences and questions have
+    a review point; Rehearsal and informal notes are not claimed as legal or clinical completion.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -350,65 +452,62 @@ completion_and_review:
     - c0408_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Dying, end-of-life choices, and accompaniment only when the
-    initial context remained safe, the evidence criteria were usable, burden was acceptable, and a new
-    context can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Dying, end-of-life choices, and accompaniment
-    across roles, cultures, relationships, seasons, stress levels, disability states, institutions, or
-    high-consequence settings.
+  progression_criteria: What do you want a future conversation to clarify, and how would you accompany
+    someone without taking over their choices or denying their situation?
+  transfer_limit: This prepares a conversation; it creates no legally effective directive, treatment decision,
+    prognosis or consent on another person's behalf. Advance-care requirements and clinical options need
+    qualified local guidance. No dying person must participate in this exercise.
   reflection:
-    before: What does Dying, end-of-life choices, and accompaniment require in this exact context, what
-      remains outside my role or authority, and which scope sentence or evidence criterion will keep the
-      practice honest?
-    during: Which observable Dying, end-of-life choices, and accompaniment criterion is present, absent,
-      mixed, or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can prepare basic preferences and accompany serious illness
-      without imposing false reassurance.', what contradiction or missing context matters most, and should
-      this Dying, end-of-life choices, and accompaniment design be repeated, adapted, deferred, stopped,
-      or referred?
+    before: 'What would count as doing this honestly? Goal: Understand basic advance-care and comfort-care
+      concepts, prepare questions about personal preferences and decision support, and practice presence
+      that respects the dignity and choices of someone seriously ill.'
+    during: Which checks have actually been observed? The private questions were ready, but the proposed
+      support person's willingness and the local document requirements remained unconfirmed.
+    after: What do you want a future conversation to clarify, and how would you accompany someone without
+      taking over their choices or denying their situation?
   review_guidance:
     repeat: Repeat the same bounded Dying, end-of-life choices, and accompaniment design only when the
       context and burden remain appropriate.
-    adapt: Change the Dying, end-of-life choices, and accompaniment medium, scope, support, timing, criteria,
-      or context while preserving provenance and the narrower evidence claim.
+    adapt: Use the fictional case, accessible official information, interpretation support or a trusted
+      helper. No disclosure of diagnoses, treatment choices, family conflict or existing documents is
+      required. Defer emotionally difficult material; urgent symptoms and immediate care needs take priority
+      over this educational task.
     stop: Stop Dying, end-of-life choices, and accompaniment when the practice becomes coercive, unsafe,
       privacy-invasive, role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Dying, end-of-life choices, and accompaniment
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Dying, end-of-life choices, and accompaniment criteria were observed with
-      provenance and no adverse boundary signal in the selected context.
-    mixed: Some Dying, end-of-life choices, and accompaniment criteria were observed while burden, support,
-      contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Dying, end-of-life choices, and accompaniment
-      criterion, introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Dying, end-of-life choices, and accompaniment action was deferred, not observed,
-      not applicable, stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The participant prepared values and clinician questions, found the proper local documentation
+      route and rehearsed a visit that respected refusal and uncertainty.
+    mixed: The private questions were ready, but the proposed support person's willingness and the local
+      document requirements remained unconfirmed.
+    contradictory: An informal note was treated as a valid directive, symptoms were managed without the
+      care team or a visit imposed reassurance, reconciliation or belief.
+    inconclusive: A generic preference to be comfortable was recorded without understanding the terms,
+      preparing questions or taking an appropriate next step.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Dying, end-of-life choices, and accompaniment.
+    context_heading: Prepare care preferences and practice respectful accompaniment
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Dying, end-of-life
       choices, and accompaniment.
   check_in_labels:
-    c0408_a1_primary: The bounded Dying, end-of-life choices, and accompaniment criterion for action 1
-      was observed
+    c0408_a1_primary: 'Observed checks: prepare values and questions before choosing medical options'
     c0408_a1_boundary: Action 1 stayed inside its stated Dying, end-of-life choices, and accompaniment
       boundary
     c0408_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0408_a2_primary: The bounded Dying, end-of-life choices, and accompaniment criterion for action 2
-      was observed
+    c0408_a2_primary: 'Observed checks: rehearse presence that follows the person''s wishes'
     c0408_a2_boundary: Action 2 stayed inside its stated Dying, end-of-life choices, and accompaniment
       boundary
     c0408_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0408_a3_primary: The bounded Dying, end-of-life choices, and accompaniment criterion for action 3
-      was observed
+    c0408_a3_primary: 'Observed checks: make one appropriate preparation step and preserve revisability'
     c0408_a3_boundary: Action 3 stayed inside its stated Dying, end-of-life choices, and accompaniment
       boundary
     c0408_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Dying, end-of-life
-    choices, and accompaniment practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What do you want a future conversation to clarify, and how would you accompany someone
+    without taking over their choices or denying their situation? Completion is not mastery.
+  plain_language_evidence: The participant prepared values and clinician questions, found the proper local
+    documentation route and rehearsed a visit that respected refusal and uncertainty.
   display_order: 56

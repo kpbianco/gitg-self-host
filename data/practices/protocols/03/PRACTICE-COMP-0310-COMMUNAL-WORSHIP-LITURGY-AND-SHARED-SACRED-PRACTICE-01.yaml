@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0310-COMMUNAL-WORSHIP-LITURGY-AND-SHARED-SACRED-PRACTICE-01
 slug: c0310-communal-worship-liturgy-and-shared-sacred-practice-practice
-name: Bounded Communal worship, liturgy, and shared sacred practice Practice
+name: Join a shared sacred practice with understanding and consent
 parent_competency_id: '03.10'
 domain_id: '03'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 03.10
-      (Communal worship, liturgy, and shared sacred practice); canonical scope, evidence target, classification,
-      domain boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 03.10; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending
@@ -35,40 +34,46 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Communal worship, liturgy, and shared sacred practice through a pluralist meaning
-    practice bounded by the canonical scope: Participate in forms of worship, recitation, sacrament, ritual,
-    pilgrimage, or communal remembrance that locate the self inside a tradition and community.'
-  why_recommended: 'The parent competency identifies this limited evidence target: Can participate with
-    understanding and sincerity while respecting conscience, safety, and the freedom of others. The protocol
-    creates a small opportunity to examine that target without treating completion as broad capability.'
+  purpose: Understand a community's chosen form of worship or remembrance, participate in an eligible
+    and sincere way, and relate the experience to its tradition while preserving conscience and others'
+    freedom.
+  why_recommended: Understand a community's chosen form of worship or remembrance, participate in an eligible
+    and sincere way, and relate the experience to its tradition while preserving conscience and others'
+    freedom.
   claims:
-  - statement: Using the canonical scope and evidence target for Communal worship, liturgy, and shared
-      sacred practice is a traceable product-design basis for a source-only draft protocol.
+  - statement: Understand a community's chosen form of worship or remembrance, participate in an eligible
+      and sincere way, and relate the experience to its tradition while preserving conscience and others'
+      freedom.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Communal worship, liturgy, and shared sacred practice
     practice fit the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Communal worship, liturgy, and shared sacred practice as not applicable,
     consciously unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity,
     or safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Communal worship,
-    liturgy, and shared sacred practice context, understand the source-only status, and stop without losing
-    safety, care, employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Communal
-    worship, liturgy, and shared sacred practice; do not manufacture conflict, deprivation, exposure,
-    disclosure, danger, urgency, or dependence for evidence.
+  readiness_considerations: Use an accessible online gathering if participation and privacy expectations
+    are clear. The consented ten-minute fallback needs no travel, money, sacred language or disclosure
+    of recent loss. With no willing companion or suitable group, prepare the map but leave communal participation
+    untested; observing a recording is not a live shared occasion.
+  opportunity_considerations: Choose an open, familiar and freely endorsed communal service, recitation,
+    shared silence or remembrance. Ask or read what visitors may do, its meaning, access needs and how
+    to leave. A secular shared remembrance is suitable when that is your pathway. The supplied fallback
+    below is a new shared remembrance with a willing companion, explicitly a small chosen form rather
+    than membership in an established tradition.
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Communal worship, liturgy, and
-    shared sacred practice.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - Choose an open, familiar and freely endorsed communal service, recitation, shared silence or remembrance.
+    Ask or read what visitors may do, its meaning, access needs and how to leave. A secular shared remembrance
+    is suitable when that is your pathway. The supplied fallback below is a new shared remembrance with
+    a willing companion, explicitly a small chosen form rather than membership in an established tradition.
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Communal worship, liturgy, and
-    shared sacred practice instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use an accessible online gathering if participation and privacy expectations are clear. The consented
+    ten-minute fallback needs no travel, money, sacred language or disclosure of recent loss. With no
+    willing companion or suitable group, prepare the map but leave communal participation untested; observing
+    a recording is not a live shared occasion.
   role_conditions:
   - This competency is pathway dependent; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -81,21 +86,33 @@ meaning_and_fit:
     and shared sacred practice as inferiority; competing reasonable interpretations and conscientious
     refusal remain visible.
 intervention:
-  protocol_class: PF-CONTEMPLATIVE-MEANING
+  protocol_class: PF-COMMUNITY-CONTRIBUTION
   duration_days: 10
-  cadence: Complete three bounded Communal worship, liturgy, and shared sacred practice actions over ten
-    days, preserving explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Communal worship, liturgy, and shared sacred practice; copy the canonical
-    scope and evidence target into a private working note; define the action boundary, valid supports,
-    privacy limit, and stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Communal
-    worship, liturgy, and shared sacred practice. Do not store private prose, names, identities, diagnoses,
-    allegations, credentials, account data, protected work information, intimate detail, artifact contents,
-    observer narrative, or another person's secrets. This source-only draft is not surveillance, professional
-    advice, treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Communal worship, liturgy, and shared
-    sacred practice actions, and review; scope may be reduced or deferred for access, care, health, workload,
-    conscience, or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'Choose an open, familiar and freely endorsed communal service, recitation, shared silence or
+    remembrance. Ask or read what visitors may do, its meaning, access needs and how to leave. A secular
+    shared remembrance is suitable when that is your pathway. The supplied fallback below is a new shared
+    remembrance with a willing companion, explicitly a small chosen form rather than membership in an
+    established tradition. Goal: Understand a community''s chosen form of worship or remembrance, participate
+    in an eligible and sincere way, and relate the experience to its tradition while preserving conscience
+    and others'' freedom. Scope: One permitted communal form is practiced, not every sacrament, pilgrimage
+    or liturgy. Observation can develop understanding but remains distinct from participation. No one
+    must profess belief, enter a restricted rite or convert to complete a checklist. Time and effort:
+    About 20 minutes of preparation, a suitable short gathering or segment, and a 15-minute review; defer
+    if no fitting occasion is available. Adaptation: Use an accessible online gathering if participation
+    and privacy expectations are clear. The consented ten-minute fallback needs no travel, money, sacred
+    language or disclosure of recent loss. With no willing companion or suitable group, prepare the map
+    but leave communal participation untested; observing a recording is not a live shared occasion. Keep
+    personal working notes outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use an accessible online gathering if participation and privacy expectations are
+    clear. The consented ten-minute fallback needs no travel, money, sacred language or disclosure of
+    recent loss. With no willing companion or suitable group, prepare the map but leave communal participation
+    untested; observing a recording is not a live shared occasion.
+  expected_burden: About 20 minutes of preparation, a suitable short gathering or segment, and a 15-minute
+    review; defer if no fitting occasion is available.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Communal worship, liturgy, and shared sacred practice protocol to rank worth, coerce participation,
@@ -104,20 +121,27 @@ intervention:
   - Treating a completed Communal worship, liturgy, and shared sacred practice action, a polished artifact,
     agreement, confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Communal worship, liturgy, and shared sacred practice situation involving emergency response,
-    abuse, retaliation, illegal conduct, medical treatment, legal representation, financial-loss decisions,
-    safeguarding, hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use an accessible
+    online gathering if participation and privacy expectations are clear. The consented ten-minute fallback
+    needs no travel, money, sacred language or disclosure of recent loss. With no willing companion or
+    suitable group, prepare the map but leave communal participation untested; observing a recording is
+    not a live shared occasion.
   actions:
   - stable_id: PRACTICE-COMP-0310-COMMUNAL-WORSHIP-LITURGY-AND-SHARED-SACRED-PRACTICE-01-A1
     sequence: 1
-    title: Choose a declared frame for Communal worship, liturgy, and shared sacred practice
-    instructions: 'Select a religious, spiritual, philosophical, cultural, or secular frame through which
-      to explore Communal worship, liturgy, and shared sacred practice. State the frame, one alternative,
-      and the limits of personal authority using this canonical scope: Participate in forms of worship,
-      recitation, sacrament, ritual, pilgrimage, or communal remembrance that locate the self inside a
-      tradition and community.'
+    title: Understand what participation means before joining
+    instructions: 'Identify the gathering''s tradition or shared story, the purpose of its words and gestures,
+      who leads, and which parts require belief, preparation or membership. Choose your honest role: eligible
+      participant, respectful observer or decline. For the fallback, invite a willing companion to a ten-minute
+      remembrance of a shared teacher, place or event: explain an opening acknowledgment, optional shared
+      recollections, one quiet pause and a closing commitment to care. Both people choose the subject
+      and can omit any part. Do not label this invented form as another tradition''s rite.
+
+
+      Observation checks: The form has an identified tradition or honestly named shared story; Words gestures
+      and leadership have an understood purpose; Eligibility and an honest role are established; Consent
+      access and leaving are considered in advance. Mark only what you observed. Missing, mixed and negative
+      results are valid; a deferred action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -133,15 +157,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0310_a1_primary
-        kind: conceptual
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0310_a1_frame_declared
-        - c0310_a1_alternative_acknowledged
-        - c0310_a1_authority_limited
+        - the_form_has_an_identified_tradition_or_honestly_named_shared_story
+        - words_gestures_and_leadership_have_an_understood_purpose
+        - eligibility_and_an_honest_role_are_established
+        - consent_access_and_leaving_are_considered_in_advance
       - measurement_id: c0310_a1_boundary
         kind: boolean
         role: supporting
@@ -158,11 +183,19 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0310-COMMUNAL-WORSHIP-LITURGY-AND-SHARED-SACRED-PRACTICE-01-A2
     sequence: 2
-    title: Complete two bounded Communal worship, liturgy, and shared sacred practice practices
-    instructions: Complete two short, freely chosen Communal worship, liturgy, and shared sacred practice
-      practices appropriate to the declared frame, such as reading, silence, prayer, observation, ritual,
-      dialogue, or reflection. Stop for distress, coercion, altered-state risk, conscience conflict, or
-      pressure from an authority or group.
+    title: Take part only in what you can sincerely undertake
+    instructions: 'Attend the suitable gathering or hold the agreed fallback. Follow visitor guidance,
+      join only permitted and freely endorsed elements, and decline words or acts you cannot sincerely
+      affirm. For the fallback, acknowledge why the shared subject matters, each offer an optional specific
+      recollection, pause quietly and name one modest act of care before closing. Notice the other person''s
+      freedom and contribution. Do not photograph, record, evaluate devotion or turn the event into a
+      test of someone else''s belief. Record observer status honestly if you only watched.
+
+
+      Observation checks: An actual communal occasion takes place; Participation or observation is described
+      accurately; Endorsed elements are undertaken sincerely; Other people retain privacy and freedom
+      to decline. Mark only what you observed. Missing, mixed and negative results are valid; a deferred
+      action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -178,15 +211,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0310_a2_primary
-        kind: count
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - firsthand_self_report
-        direction: at_least
-        minimum: '0'
-        target: '1'
-        maximum: '3'
+        - reviewed_artifact
+        criteria:
+        - an_actual_communal_occasion_takes_place
+        - participation_or_observation_is_described_accurately
+        - endorsed_elements_are_undertaken_sincerely
+        - other_people_retain_privacy_and_freedom_to_decline
       - measurement_id: c0310_a2_boundary
         kind: boolean
         role: supporting
@@ -203,11 +237,39 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0310-COMMUNAL-WORSHIP-LITURGY-AND-SHARED-SACRED-PRACTICE-01-A3
     sequence: 3
-    title: Interpret the Communal worship, liturgy, and shared sacred practice experience modestly
-    instructions: 'Review what was noticed without treating intensity, calm, certainty, group agreement,
-      or unusual experience as automatic truth. Compare the limited record with this evidence target:
-      Can participate with understanding and sincerity while respecting conscience, safety, and the freedom
-      of others.'
+    title: Relate the experience to community and later conduct
+    instructions: 'Afterwards, explain how one actual element connected the individual to the community''s
+      story, commitments or sacred meaning. Distinguish what you understood, what you did and what you
+      still question. Ask one respectful question through an appropriate willing person if clarification
+      is useful. Within two days, carry out the modest act of care or responsibility you endorsed; if
+      none was promised, choose one consistent with the form''s meaning. Decide whether future participation
+      fits your conscience and circumstances without ranking other pathways.
+
+
+      Observation checks: An experienced element is connected to shared meaning; Understanding action
+      and remaining questions are distinguished; A related ordinary responsibility receives an attempt;
+      Future participation remains a conscientious choice. Mark only what you observed. Missing, mixed
+      and negative results are valid; a deferred action is not completed.
+
+
+      Final review: What did you understand and sincerely join, how did it locate you in a shared story,
+      and what freedom did you preserve for yourself and others?
+
+
+      Examples: Supportive: Two willing people used the plainly named remembrance, shared a specific story,
+      honored silence and later carried out a modest care commitment.
+
+
+      Mixed: A visitor understood the gathering better but chose to observe a restricted element and kept
+      that limit explicit.
+
+
+      Contradictory: Participation required a false profession of belief, a restricted rite was imitated
+      without permission or another person''s conscience was dismissed.
+
+
+      Inconclusive: A video was watched alone and then recorded as evidence of taking part in a live communal
+      practice.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -229,9 +291,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0310_a3_experience_and_interpretation_separated
-        - c0310_a3_alternative_explanation_retained
-        - c0310_a3_target_evidence_compared
+        - an_experienced_element_is_connected_to_shared_meaning
+        - understanding_action_and_remaining_questions_are_distinguished
+        - a_related_ordinary_responsibility_receives_an_attempt
+        - future_participation_remains_a_conscientious_choice
       - measurement_id: c0310_a3_boundary
         kind: boolean
         role: supporting
@@ -252,17 +315,19 @@ intervention:
       Communal worship, liturgy, and shared sacred practice; no purchase, subscription, travel, credential,
       or public artifact is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Communal worship, liturgy, and shared sacred practice; assistive technology, interpretation,
-      a support person, and a deferred action are valid without penalty.
+    - Use an accessible online gathering if participation and privacy expectations are clear. The consented
+      ten-minute fallback needs no travel, money, sacred language or disclosure of recent loss. With no
+      willing companion or suitable group, prepare the map but leave communal participation untested;
+      observing a recording is not a live shared occasion.
     cultural_context:
     - Adapt the expression of Communal worship, liturgy, and shared sacred practice to direct or indirect
       communication, collective or individual decision structures, local norms, faith or secular commitments,
       and role obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Communal worship, liturgy, and shared sacred practice opportunity is unavailable or
-      inappropriate, use a fictional, historical, public, simulated, or planning-only equivalent and retain
-      the narrower evidence classification.
+    - Use an accessible online gathering if participation and privacy expectations are clear. The consented
+      ten-minute fallback needs no travel, money, sacred language or disclosure of recent loss. With no
+      willing companion or suitable group, prepare the map but leave communal participation untested;
+      observing a recording is not a live shared occasion.
   pause_conditions:
   - Pause Communal worship, liturgy, and shared sacred practice when capacity, consent, authority, privacy,
     access, care duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances
@@ -295,11 +360,8 @@ evidence_and_scoring:
   - c0310_a3_boundary
   - c0310_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Communal worship, liturgy, and shared sacred practice action exceeded consent, authority, privacy,
-    qualification, role, burden, or safety boundaries.
-  - The evidence contradicted the intended Communal worship, liturgy, and shared sacred practice criterion,
-    depended on coercion or hidden private content, or could not distinguish the protocol from contextual
-    change.
+  - Participation required a false profession of belief, a restricted rite was imitated without permission
+    or another person's conscience was dismissed.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Communal worship, liturgy, and shared sacred practice explicitly; support can enable access and
     never reduces dignity or silently changes the typed value.
@@ -311,14 +373,22 @@ evidence_and_scoring:
     diminishing multipliers.
   recency_rule: Generated Communal worship, liturgy, and shared sacred practice rules withhold observations
     older than 90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—Can participate with understanding and sincerity while respecting conscience, safety, and the
-    freedom of others.—not completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Communal worship, liturgy, and shared sacred practice requires
-    a bounded context, allowlisted observations, provenance, contradiction and adverse handling, and preserved
-    uncertainty; free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Understand what participation means before joining. Observed checks:
+    The form has an identified tradition or honestly named shared story; Words gestures and leadership
+    have an understood purpose; Eligibility and an honest role are established; Consent access and leaving
+    are considered in advance. Action 2: Take part only in what you can sincerely undertake. Observed
+    checks: An actual communal occasion takes place; Participation or observation is described accurately;
+    Endorsed elements are undertaken sincerely; Other people retain privacy and freedom to decline. Action
+    3: Relate the experience to community and later conduct. Observed checks: An experienced element is
+    connected to shared meaning; Understanding action and remaining questions are distinguished; A related
+    ordinary responsibility receives an attempt; Future participation remains a conscientious choice.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A video was watched alone and then recorded as evidence
+    of taking part in a live communal practice.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Communal
     worship, liturgy, and shared sacred practice contribution under typed evaluation; protocol performance
     remains distinct and is never counted twice.
@@ -327,9 +397,8 @@ evidence_and_scoring:
   - L03
   - L16
   - L26
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Communal worship, liturgy, and shared sacred practice evidence.
@@ -337,12 +406,19 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The choose a declared frame for communal worship, liturgy, and shared sacred practice action was attempted
-    or explicitly deferred.
-  - The complete two bounded communal worship, liturgy, and shared sacred practice practices action was
-    attempted or explicitly deferred.
-  - The interpret the communal worship, liturgy, and shared sacred practice experience modestly action
-    preserved a limited conclusion, contradiction, or inconclusive result.
+  - 'Action 1: Understand what participation means before joining. Observed checks: The form has an identified
+    tradition or honestly named shared story; Words gestures and leadership have an understood purpose;
+    Eligibility and an honest role are established; Consent access and leaving are considered in advance.'
+  - 'Action 2: Take part only in what you can sincerely undertake. Observed checks: An actual communal
+    occasion takes place; Participation or observation is described accurately; Endorsed elements are
+    undertaken sincerely; Other people retain privacy and freedom to decline.'
+  - 'Action 3: Relate the experience to community and later conduct. Observed checks: An experienced element
+    is connected to shared meaning; Understanding action and remaining questions are distinguished; A
+    related ordinary responsibility receives an attempt; Future participation remains a conscientious
+    choice.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -351,66 +427,62 @@ completion_and_review:
     - c0310_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Communal worship, liturgy, and shared sacred practice only when
-    the initial context remained safe, the evidence criteria were usable, burden was acceptable, and a
-    new context can be named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Communal worship, liturgy, and shared sacred
-    practice across roles, cultures, relationships, seasons, stress levels, disability states, institutions,
-    or high-consequence settings.
+  progression_criteria: What did you understand and sincerely join, how did it locate you in a shared
+    story, and what freedom did you preserve for yourself and others?
+  transfer_limit: One permitted communal form is practiced, not every sacrament, pilgrimage or liturgy.
+    Observation can develop understanding but remains distinct from participation. No one must profess
+    belief, enter a restricted rite or convert to complete a checklist.
   reflection:
-    before: What does Communal worship, liturgy, and shared sacred practice require in this exact context,
-      what remains outside my role or authority, and which scope sentence or evidence criterion will keep
-      the practice honest?
-    during: Which observable Communal worship, liturgy, and shared sacred practice criterion is present,
-      absent, mixed, or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'Can participate with understanding and sincerity while respecting
-      conscience, safety, and the freedom of others.', what contradiction or missing context matters most,
-      and should this Communal worship, liturgy, and shared sacred practice design be repeated, adapted,
-      deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Understand a community''s chosen form of worship
+      or remembrance, participate in an eligible and sincere way, and relate the experience to its tradition
+      while preserving conscience and others'' freedom.'
+    during: Which checks have actually been observed? A visitor understood the gathering better but chose
+      to observe a restricted element and kept that limit explicit.
+    after: What did you understand and sincerely join, how did it locate you in a shared story, and what
+      freedom did you preserve for yourself and others?
   review_guidance:
     repeat: Repeat the same bounded Communal worship, liturgy, and shared sacred practice design only
       when the context and burden remain appropriate.
-    adapt: Change the Communal worship, liturgy, and shared sacred practice medium, scope, support, timing,
-      criteria, or context while preserving provenance and the narrower evidence claim.
+    adapt: Use an accessible online gathering if participation and privacy expectations are clear. The
+      consented ten-minute fallback needs no travel, money, sacred language or disclosure of recent loss.
+      With no willing companion or suitable group, prepare the map but leave communal participation untested;
+      observing a recording is not a live shared occasion.
     stop: Stop Communal worship, liturgy, and shared sacred practice when the practice becomes coercive,
       unsafe, privacy-invasive, role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Communal worship, liturgy, and shared
-      sacred practice questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Communal worship, liturgy, and shared sacred practice criteria were observed
-      with provenance and no adverse boundary signal in the selected context.
-    mixed: Some Communal worship, liturgy, and shared sacred practice criteria were observed while burden,
-      support, contextual change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Communal worship, liturgy, and shared sacred
-      practice criterion, introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Communal worship, liturgy, and shared sacred practice action was deferred, not observed,
-      not applicable, stale, insufficiently bounded, or too confounded to interpret.
+    supportive: Two willing people used the plainly named remembrance, shared a specific story, honored
+      silence and later carried out a modest care commitment.
+    mixed: A visitor understood the gathering better but chose to observe a restricted element and kept
+      that limit explicit.
+    contradictory: Participation required a false profession of belief, a restricted rite was imitated
+      without permission or another person's conscience was dismissed.
+    inconclusive: A video was watched alone and then recorded as evidence of taking part in a live communal
+      practice.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Communal worship, liturgy, and shared sacred practice.
+    context_heading: Join a shared sacred practice with understanding and consent
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Communal
       worship, liturgy, and shared sacred practice.
   check_in_labels:
-    c0310_a1_primary: The bounded Communal worship, liturgy, and shared sacred practice criterion for
-      action 1 was observed
+    c0310_a1_primary: 'Observed checks: understand what participation means before joining'
     c0310_a1_boundary: Action 1 stayed inside its stated Communal worship, liturgy, and shared sacred
       practice boundary
     c0310_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0310_a2_primary: The bounded Communal worship, liturgy, and shared sacred practice criterion for
-      action 2 was observed
+    c0310_a2_primary: 'Observed checks: take part only in what you can sincerely undertake'
     c0310_a2_boundary: Action 2 stayed inside its stated Communal worship, liturgy, and shared sacred
       practice boundary
     c0310_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0310_a3_primary: The bounded Communal worship, liturgy, and shared sacred practice criterion for
-      action 3 was observed
+    c0310_a3_primary: 'Observed checks: relate the experience to community and later conduct'
     c0310_a3_boundary: Action 3 stayed inside its stated Communal worship, liturgy, and shared sacred
       practice boundary
     c0310_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Communal worship,
-    liturgy, and shared sacred practice practice, including support, contradiction, defer, no result,
-    or harm.
+  completion_copy: What did you understand and sincerely join, how did it locate you in a shared story,
+    and what freedom did you preserve for yourself and others? Completion is not mastery.
+  plain_language_evidence: Two willing people used the plainly named remembrance, shared a specific story,
+    honored silence and later carried out a modest care commitment.
   display_order: 45

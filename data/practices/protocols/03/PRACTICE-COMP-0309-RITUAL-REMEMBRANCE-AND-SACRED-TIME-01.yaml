@@ -1,8 +1,8 @@
 schema_version: GG-PRACTICE-CONTENT-1.0
-protocol_version: 0.1.0
+protocol_version: 0.2.0
 stable_id: PRACTICE-COMP-0309-RITUAL-REMEMBRANCE-AND-SACRED-TIME-01
 slug: c0309-ritual-remembrance-and-sacred-time-practice
-name: Bounded Ritual, remembrance, and sacred time Practice
+name: Use a small ritual to connect remembrance with action
 parent_competency_id: '03.09'
 domain_id: '03'
 governance:
@@ -15,9 +15,8 @@ governance:
   source_ids:
   - SRC-CANONICAL-CURRICULUM-V2
   authoring:
-    provenance: Individually materialized source-only frontier package for canonical competency 03.09
-      (Ritual, remembrance, and sacred time); canonical scope, evidence target, classification, domain
-      boundary, and parent mapping remain explicit and reviewable.
+    provenance: M6J individually authored exercise for 03.09; compiled from explicit instructions, observation
+      checks, adaptations and worked examples. Editorial and specialist acceptance remain pending.
     content_review_status: pending
     research_review_status: internal_sources_only_external_review_required
     safety_review_status: pending_specialist_expansion_review
@@ -35,40 +34,40 @@ governance:
     deprecated: false
     replaced_by: null
 meaning_and_fit:
-  purpose: 'Practice Ritual, remembrance, and sacred time through a qualified-support preparation bounded
-    by the canonical scope: Use rituals for beginnings, endings, grief, gratitude, rest, commitment, repentance,
-    celebration, and belonging.'
-  why_recommended: 'The parent competency identifies this limited evidence target: A ritual strengthens
-    memory, identity, and action rather than functioning as empty performance. The protocol creates a
-    small opportunity to examine that target without treating completion as broad capability.'
+  purpose: Create or freely adopt a meaningful sequence for a transition, remembrance or shared value,
+    then examine whether its repetition supports memory, identity and practical conduct.
+  why_recommended: Create or freely adopt a meaningful sequence for a transition, remembrance or shared
+    value, then examine whether its repetition supports memory, identity and practical conduct.
   claims:
-  - statement: Using the canonical scope and evidence target for Ritual, remembrance, and sacred time
-      is a traceable product-design basis for a source-only draft protocol.
+  - statement: Create or freely adopt a meaningful sequence for a transition, remembrance or shared value,
+      then examine whether its repetition supports memory, identity and practical conduct.
     classification: product_design_judgment
     source_ids:
     - SRC-CANONICAL-CURRICULUM-V2
-    limitations: The canonical curriculum is not empirical intervention validation, a professional standard,
-      a diagnosis, a universal prescription, or evidence that this exact protocol improves the competency.
+    limitations: Original educational practice design, not evidence of effectiveness, specialist acceptance
+      or comprehensive competency coverage.
   applicability_question: Does a voluntary, bounded Ritual, remembrance, and sacred time practice fit
     the person's current role, pathway, capacity, authority, resources, and safety conditions?
   not_applicable_behavior: Record Ritual, remembrance, and sacred time as not applicable, consciously
     unchosen, or deferred without penalty when the role, pathway, capacity, authority, opportunity, or
     safe context is absent.
-  readiness_considerations: Proceed only when the person can freely choose a limited Ritual, remembrance,
-    and sacred time context, understand the source-only status, and stop without losing safety, care,
-    employment, housing, services, relationship access, or dignity.
-  opportunity_considerations: Use one naturally available low-stakes opportunity relevant to Ritual, remembrance,
-    and sacred time; do not manufacture conflict, deprivation, exposure, disclosure, danger, urgency,
-    or dependence for evidence.
+  readiness_considerations: Use a tactile cue, a brief written line or a silent accessible pause. For
+    grief or repentance, choose a manageable event or defer; no forced disclosure, forgiveness or reenactment
+    belongs here. A familiar religious ritual may be used within its community's rules and your conscience.
+  opportunity_considerations: 'The default is a weekly closing ritual using an ordinary object you own:
+    set it down, name one received good, acknowledge one unfinished matter, state one next action, then
+    begin a short period of rest. No flame, food restriction, purchase, sacred object or public performance
+    is required. Use private notes if speaking aloud is unsuitable.'
   prerequisites:
-  - One user-chosen context that genuinely fits the canonical scope of Ritual, remembrance, and sacred
-    time.
-  - Enough authority, consent, capacity, and resources to stop or defer safely.
+  - 'The default is a weekly closing ritual using an ordinary object you own: set it down, name one received
+    good, acknowledge one unfinished matter, state one next action, then begin a short period of rest.
+    No flame, food restriction, purchase, sacred object or public performance is required. Use private
+    notes if speaking aloud is unsuitable.'
   dependencies: []
   safe_alternatives:
-  - Use a fictional, public, retrospective, or category-level case for Ritual, remembrance, and sacred
-    time instead of a live situation.
-  - Defer, reduce scope, use an accessible equivalent, or seek appropriate support without a deficit interpretation.
+  - Use a tactile cue, a brief written line or a silent accessible pause. For grief or repentance, choose
+    a manageable event or defer; no forced disclosure, forgiveness or reenactment belongs here. A familiar
+    religious ritual may be used within its community's rules and your conscience.
   role_conditions:
   - This competency is pathway dependent; roles, duties, and authority must be explicitly chosen or actually
     held before the practice applies.
@@ -80,21 +79,29 @@ meaning_and_fit:
   - The practice does not require one worldview or treat disagreement about Ritual, remembrance, and sacred
     time as inferiority; competing reasonable interpretations and conscientious refusal remain visible.
 intervention:
-  protocol_class: PF-QUALIFIED-CONSULTATION
+  protocol_class: PF-CONTEMPLATIVE-MEANING
   duration_days: 10
-  cadence: Complete three bounded Ritual, remembrance, and sacred time actions over ten days, preserving
-    explicit not-applicable, defer, interruption, adverse, and unknown outcomes.
-  setup: Choose one context for Ritual, remembrance, and sacred time; copy the canonical scope and evidence
-    target into a private working note; define the action boundary, valid supports, privacy limit, and
-    stop condition before beginning.
-  privacy_and_boundaries: Store only allowlisted criteria and category-level observations for Ritual,
-    remembrance, and sacred time. Do not store private prose, names, identities, diagnoses, allegations,
-    credentials, account data, protected work information, intimate detail, artifact contents, observer
-    narrative, or another person's secrets. This source-only draft is not surveillance, professional advice,
-    treatment, certification, or proof of character.
-  expected_burden: About 45-75 minutes total across setup, three Ritual, remembrance, and sacred time
-    actions, and review; scope may be reduced or deferred for access, care, health, workload, conscience,
-    or resource reasons.
+  cadence: Work through the numbered actions at a sustainable pace. Preserve their order; use the review
+    point specified in the instructions and defer if the context is unsuitable.
+  setup: 'The default is a weekly closing ritual using an ordinary object you own: set it down, name one
+    received good, acknowledge one unfinished matter, state one next action, then begin a short period
+    of rest. No flame, food restriction, purchase, sacred object or public performance is required. Use
+    private notes if speaking aloud is unsuitable. Goal: Create or freely adopt a meaningful sequence
+    for a transition, remembrance or shared value, then examine whether its repetition supports memory,
+    identity and practical conduct. Scope: Beginnings, endings, grief, gratitude, rest, commitment, repentance,
+    celebration and belonging have different purposes. One appropriate ritual is practiced; painful loss
+    or religious obligation need not be introduced to cover every possible use. Time and effort: About
+    20 minutes to prepare, two five-minute occasions and a 15-minute review. Adaptation: Use a tactile
+    cue, a brief written line or a silent accessible pause. For grief or repentance, choose a manageable
+    event or defer; no forced disclosure, forgiveness or reenactment belongs here. A familiar religious
+    ritual may be used within its community''s rules and your conscience. Keep personal working notes
+    outside the check-in; record only the listed observations.'
+  privacy_and_boundaries: Keep working notes private. Record only the listed observation checks, not document
+    contents, identifying details or another person's private information. Participation and any help
+    must be voluntary. Use a tactile cue, a brief written line or a silent accessible pause. For grief
+    or repentance, choose a manageable event or defer; no forced disclosure, forgiveness or reenactment
+    belongs here. A familiar religious ritual may be used within its community's rules and your conscience.
+  expected_burden: About 20 minutes to prepare, two five-minute occasions and a 15-minute review.
   action_count_rationale: null
   foreseeable_misuse:
   - Using the Ritual, remembrance, and sacred time protocol to rank worth, coerce participation, demand
@@ -102,20 +109,26 @@ intervention:
   - Treating a completed Ritual, remembrance, and sacred time action, a polished artifact, agreement,
     confidence, speed, independence, or output as mastery or universal transfer.
   exclusions:
-  - Any Ritual, remembrance, and sacred time situation involving emergency response, abuse, retaliation,
-    illegal conduct, medical treatment, legal representation, financial-loss decisions, safeguarding,
-    hazardous equipment, or other consequences beyond a reversible source-only exercise.
-  - Use qualified, local, or emergency support whenever the situation exceeds a voluntary low-stakes developmental
-    practice.
+  - Follow the material, equipment, consent and scope limits in the setup and each action. Use a tactile
+    cue, a brief written line or a silent accessible pause. For grief or repentance, choose a manageable
+    event or defer; no forced disclosure, forgiveness or reenactment belongs here. A familiar religious
+    ritual may be used within its community's rules and your conscience.
   actions:
   - stable_id: PRACTICE-COMP-0309-RITUAL-REMEMBRANCE-AND-SACRED-TIME-01-A1
     sequence: 1
-    title: Bound the qualified question for Ritual, remembrance, and sacred time
-    instructions: 'Turn Ritual, remembrance, and sacred time into one educational or planning question
-      and identify the qualification and jurisdiction needed to answer it. Use the canonical scope to
-      separate general learning from diagnosis, treatment, legal advice, financial advice, safeguarding
-      decisions, or other professional judgment: Use rituals for beginnings, endings, grief, gratitude,
-      rest, commitment, repentance, celebration, and belonging.'
+    title: Give each part of the sequence a purpose
+    instructions: 'Choose a real beginning, ending or recurring pause. Briefly distinguish remembering
+      a loss, expressing thanks, making repair, celebrating, belonging and committing: they ask different
+      things of a ritual. For the default, map the object to an ending, thanks to remembrance, the unfinished
+      matter to honesty, the next action to commitment and the final pause to rest. State when the ritual
+      starts and ends and what it does not promise. If borrowing a tradition''s form, verify that it is
+      appropriate for you to use; otherwise keep the supplied ordinary sequence.
+
+
+      Observation checks: The occasion and purpose are specific; Each chosen element has an intelligible
+      meaning; Different ritual purposes are not collapsed together; Use of objects and any borrowed form
+      is appropriate. Mark only what you observed. Missing, mixed and negative results are valid; a deferred
+      action is not completed.'
     expected_time: 15-25 minutes
     due_within_days: 3
     typed_evidence_identity:
@@ -137,9 +150,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0309_a1_question_bounded
-        - c0309_a1_qualification_named
-        - c0309_a1_professional_boundary_explicit
+        - the_occasion_and_purpose_are_specific
+        - each_chosen_element_has_an_intelligible_meaning
+        - different_ritual_purposes_are_not_collapsed_together
+        - use_of_objects_and_any_borrowed_form_is_appropriate
       - measurement_id: c0309_a1_boundary
         kind: boolean
         role: supporting
@@ -156,12 +170,19 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0309-RITUAL-REMEMBRANCE-AND-SACRED-TIME-01-A2
     sequence: 2
-    title: Prepare minimum information for Ritual, remembrance, and sacred time
-    instructions: Create a privacy-minimized Ritual, remembrance, and sacred time consultation note containing
-      only the question, relevant category-level facts, current constraints, and desired decision. Omit
-      diagnoses, allegations, account numbers, credentials, protected work information, intimate detail,
-      and third-party identity unless a qualified professional lawfully requires it through an appropriate
-      channel.
+    title: Perform the sequence with attention and freedom
+    instructions: 'On the chosen occasion, follow the five-part sequence at a comfortable pace. Name a
+      concrete good and unfinished matter, then choose a small next action such as returning an item or
+      correcting a misunderstanding. Begin the planned rest rather than turning the ceremony into more
+      work. Notice which element helped you remember and which felt empty. If others join, explain the
+      sequence first and make speaking, silence and declining equally available; do not require disclosure
+      of grief, guilt or belief.
+
+
+      Observation checks: The defined sequence is actually performed; Remembrance refers to a concrete
+      good or event; A specific next action is named; Rest and any participant choice are respected. Mark
+      only what you observed. Missing, mixed and negative results are valid; a deferred action is not
+      completed.'
     expected_time: 15-25 minutes
     due_within_days: 7
     typed_evidence_identity:
@@ -183,9 +204,10 @@ intervention:
         allowed_provenance:
         - reviewed_artifact
         criteria:
-        - c0309_a2_minimum_information_only
-        - c0309_a2_sensitive_detail_excluded
-        - c0309_a2_decision_need_named
+        - the_defined_sequence_is_actually_performed
+        - remembrance_refers_to_a_concrete_good_or_event
+        - a_specific_next_action_is_named
+        - rest_and_any_participant_choice_are_respected
       - measurement_id: c0309_a2_boundary
         kind: boolean
         role: supporting
@@ -202,12 +224,36 @@ intervention:
         expected: true
   - stable_id: PRACTICE-COMP-0309-RITUAL-REMEMBRANCE-AND-SACRED-TIME-01-A3
     sequence: 3
-    title: Record a bounded Ritual, remembrance, and sacred time disposition
-    instructions: 'Use an appropriately qualified source or consultation to record only a next-step category:
-      proceed within stated limits, seek a different qualification, gather missing information, defer,
-      or use urgent support. Do not store professional narrative or convert the disposition into mastery.
-      Target evidence remains: A ritual strengthens memory, identity, and action rather than functioning
-      as empty performance.'
+    title: Check the action and revise the next observance
+    instructions: 'Before the next occasion, check whether you did the named action and what prevented
+      it if not. Repeat the ritual once, preserving or changing one element for a reason: an object may
+      now remind you to return the borrowed item, while an ornate speech may be removed. Ask what identity
+      or belonging the sequence expresses and whether your conduct supports it. A ritual can be sincere
+      without strong emotion; repeated symbolism does not replace a repair or practical promise.
+
+
+      Observation checks: The promised action is checked against what happened; A second observance is
+      recorded; One retained or revised element has a reason; Symbolic meaning is compared with actual
+      conduct. Mark only what you observed. Missing, mixed and negative results are valid; a deferred
+      action is not completed.
+
+
+      Final review: What did the sequence help you remember, and what changed outside the ceremony?
+
+
+      Examples: Supportive: The weekly pause recalled help received, prompted return of a borrowed item
+      and made room for rest; the second observance removed an empty flourish.
+
+
+      Mixed: The sequence felt meaningful, but the next action was missed and the review made that gap
+      explicit.
+
+
+      Contradictory: A ceremony substituted for making a needed repair, pressured others to disclose grief
+      or borrowed a restricted practice without permission.
+
+
+      Inconclusive: A ritual was described beautifully but never performed or linked to an observed action.'
     expected_time: 15-25 minutes
     due_within_days: 10
     typed_evidence_identity:
@@ -223,14 +269,16 @@ intervention:
       transfer_disposition: context_bound
       measurements:
       - measurement_id: c0309_a3_primary
-        kind: attestation
+        kind: artifact
         role: primary
         weight: '1'
         allowed_provenance:
-        - qualified_attestation
-        allowed_attestation_ids:
-        - c0309_a3_qualified_disposition
-        consent_required: true
+        - reviewed_artifact
+        criteria:
+        - the_promised_action_is_checked_against_what_happened
+        - a_second_observance_is_recorded
+        - one_retained_or_revised_element_has_a_reason
+        - symbolic_meaning_is_compared_with_actual_conduct
       - measurement_id: c0309_a3_boundary
         kind: boolean
         role: supporting
@@ -251,17 +299,17 @@ intervention:
       Ritual, remembrance, and sacred time; no purchase, subscription, travel, credential, or public artifact
       is required.
     accessibility:
-    - Change timing, duration, medium, language, sensory load, location, posture, response mode, or support
-      level for Ritual, remembrance, and sacred time; assistive technology, interpretation, a support
-      person, and a deferred action are valid without penalty.
+    - Use a tactile cue, a brief written line or a silent accessible pause. For grief or repentance, choose
+      a manageable event or defer; no forced disclosure, forgiveness or reenactment belongs here. A familiar
+      religious ritual may be used within its community's rules and your conscience.
     cultural_context:
     - Adapt the expression of Ritual, remembrance, and sacred time to direct or indirect communication,
       collective or individual decision structures, local norms, faith or secular commitments, and role
       obligations while preserving consent and dignity.
     resource_variants:
-    - When a real Ritual, remembrance, and sacred time opportunity is unavailable or inappropriate, use
-      a fictional, historical, public, simulated, or planning-only equivalent and retain the narrower
-      evidence classification.
+    - Use a tactile cue, a brief written line or a silent accessible pause. For grief or repentance, choose
+      a manageable event or defer; no forced disclosure, forgiveness or reenactment belongs here. A familiar
+      religious ritual may be used within its community's rules and your conscience.
   pause_conditions:
   - Pause Ritual, remembrance, and sacred time when capacity, consent, authority, privacy, access, care
     duties, uncertainty, distress, fatigue, pain, resource scarcity, or changed circumstances make the
@@ -293,10 +341,8 @@ evidence_and_scoring:
   - c0309_a3_boundary
   - c0309_a3_adverse
   adverse_or_contradictory_indicators:
-  - The Ritual, remembrance, and sacred time action exceeded consent, authority, privacy, qualification,
-    role, burden, or safety boundaries.
-  - The evidence contradicted the intended Ritual, remembrance, and sacred time criterion, depended on
-    coercion or hidden private content, or could not distinguish the protocol from contextual change.
+  - A ceremony substituted for making a needed repair, pressured others to disclose grief or borrowed
+    a restricted practice without permission.
   independence_rule: Record self-directed, planning-aid, guided, artifact, observer, or qualified support
     for Ritual, remembrance, and sacred time explicitly; support can enable access and never reduces dignity
     or silently changes the typed value.
@@ -307,14 +353,21 @@ evidence_and_scoring:
     multipliers.
   recency_rule: Generated Ritual, remembrance, and sacred time rules withhold observations older than
     90 days; no unrecorded retention or carry-forward assumption applies.
-  performance_rubric: Performance concerns only the action-specific criteria derived from the canonical
-    target—A ritual strengthens memory, identity, and action rather than functioning as empty performance.—not
-    completion, confidence, conformity, output, independence, or worth.
-  evidence_quality_rubric: Quality for Ritual, remembrance, and sacred time requires a bounded context,
-    allowlisted observations, provenance, contradiction and adverse handling, and preserved uncertainty;
-    free text and artifact contents are excluded.
-  scoring_eligibility: Replay-verified structured evidence is score eligible under the explicit activation
-    ledger; action-specific provenance and withholding rules still apply.
+  performance_rubric: 'Action 1: Give each part of the sequence a purpose. Observed checks: The occasion
+    and purpose are specific; Each chosen element has an intelligible meaning; Different ritual purposes
+    are not collapsed together; Use of objects and any borrowed form is appropriate. Action 2: Perform
+    the sequence with attention and freedom. Observed checks: The defined sequence is actually performed;
+    Remembrance refers to a concrete good or event; A specific next action is named; Rest and any participant
+    choice are respected. Action 3: Check the action and revise the next observance. Observed checks:
+    The promised action is checked against what happened; A second observance is recorded; One retained
+    or revised element has a reason; Symbolic meaning is compared with actual conduct.'
+  evidence_quality_rubric: Record the listed checks only after reviewing the actual work or a privately
+    kept record of the attempt. A participant's checked criteria remain self-attested observations, not
+    an independent assessment or proof of mastery. A ritual was described beautifully but never performed
+    or linked to an observed action.
+  scoring_eligibility: Check-ins capture immutable evidence only for composite-version practices. Completion
+    credit requires an explicit human final closeout. Historical event-level scoring retains its own versioned
+    contract.
   competency_contribution: Designated primary measurements may produce one context-bound direct Ritual,
     remembrance, and sacred time contribution under typed evaluation; protocol performance remains distinct
     and is never counted twice.
@@ -324,9 +377,8 @@ evidence_and_scoring:
   - L26
   - L34
   - L36
-  minimum_evidence_before_state_update: One submitted replay-verified event with an observed competency
-    measurement and no applicable withholding condition may update current state; completion alone never
-    does.
+  minimum_evidence_before_state_update: Composite-version practices require the configured completed-action
+    minimum, meaningful-attempt criterion and explicit final closeout; check-ins award no credit.
   withholding_conditions:
   - Withhold unattempted, unknown, not-observed, not-applicable, deferred, inconclusive, stale, duplicate-origin,
     or adverse Ritual, remembrance, and sacred time evidence.
@@ -334,12 +386,18 @@ evidence_and_scoring:
     inference, or evidence outside its assessment epoch.
 completion_and_review:
   completion_criteria:
-  - The bound the qualified question for ritual, remembrance, and sacred time action was attempted or
-    explicitly deferred.
-  - The prepare minimum information for ritual, remembrance, and sacred time action was attempted or explicitly
-    deferred.
-  - The record a bounded ritual, remembrance, and sacred time disposition action preserved a limited conclusion,
-    contradiction, or inconclusive result.
+  - 'Action 1: Give each part of the sequence a purpose. Observed checks: The occasion and purpose are
+    specific; Each chosen element has an intelligible meaning; Different ritual purposes are not collapsed
+    together; Use of objects and any borrowed form is appropriate.'
+  - 'Action 2: Perform the sequence with attention and freedom. Observed checks: The defined sequence
+    is actually performed; Remembrance refers to a concrete good or event; A specific next action is named;
+    Rest and any participant choice are respected.'
+  - 'Action 3: Check the action and revise the next observance. Observed checks: The promised action is
+    checked against what happened; A second observance is recorded; One retained or revised element has
+    a reason; Symbolic meaning is compared with actual conduct.'
+  - For minimum completion, finish at least 2 of these 3 actions and record a meaningful observation,
+    then explicitly submit your final review. Finish every action for full completion. Deferral and N/A
+    are not completed actions.
   completion_rules:
     minimum_completed: 2
     substantive_markers:
@@ -348,58 +406,54 @@ completion_and_review:
     - c0309_a3_primary
     marker_mode: any
   mastery_disclaimer: Completing this practice does not establish mastery.
-  progression_criteria: Repeat or broaden Ritual, remembrance, and sacred time only when the initial context
-    remained safe, the evidence criteria were usable, burden was acceptable, and a new context can be
-    named without assuming transfer.
-  transfer_limit: Three bounded actions do not establish Ritual, remembrance, and sacred time across roles,
-    cultures, relationships, seasons, stress levels, disability states, institutions, or high-consequence
-    settings.
+  progression_criteria: What did the sequence help you remember, and what changed outside the ceremony?
+  transfer_limit: Beginnings, endings, grief, gratitude, rest, commitment, repentance, celebration and
+    belonging have different purposes. One appropriate ritual is practiced; painful loss or religious
+    obligation need not be introduced to cover every possible use.
   reflection:
-    before: What does Ritual, remembrance, and sacred time require in this exact context, what remains
-      outside my role or authority, and which scope sentence or evidence criterion will keep the practice
-      honest?
-    during: Which observable Ritual, remembrance, and sacred time criterion is present, absent, mixed,
-      or unknown, and are consent, privacy, access, burden, and stop conditions still intact?
-    after: How did the result compare with 'A ritual strengthens memory, identity, and action rather than
-      functioning as empty performance.', what contradiction or missing context matters most, and should
-      this Ritual, remembrance, and sacred time design be repeated, adapted, deferred, stopped, or referred?
+    before: 'What would count as doing this honestly? Goal: Create or freely adopt a meaningful sequence
+      for a transition, remembrance or shared value, then examine whether its repetition supports memory,
+      identity and practical conduct.'
+    during: Which checks have actually been observed? The sequence felt meaningful, but the next action
+      was missed and the review made that gap explicit.
+    after: What did the sequence help you remember, and what changed outside the ceremony?
   review_guidance:
     repeat: Repeat the same bounded Ritual, remembrance, and sacred time design only when the context
       and burden remain appropriate.
-    adapt: Change the Ritual, remembrance, and sacred time medium, scope, support, timing, criteria, or
-      context while preserving provenance and the narrower evidence claim.
+    adapt: Use a tactile cue, a brief written line or a silent accessible pause. For grief or repentance,
+      choose a manageable event or defer; no forced disclosure, forgiveness or reenactment belongs here.
+      A familiar religious ritual may be used within its community's rules and your conscience.
     stop: Stop Ritual, remembrance, and sacred time when the practice becomes coercive, unsafe, privacy-invasive,
       role-inappropriate, professionally restricted, or harmful.
-    escalate: Use appropriate qualified or emergency support for Ritual, remembrance, and sacred time
-      questions beyond this educational source-only boundary.
+    escalate: Obtain appropriate help if the next action exceeds the setup's limits, your authority or
+      safe access.
   evidence_examples:
-    supportive: The bounded Ritual, remembrance, and sacred time criteria were observed with provenance
-      and no adverse boundary signal in the selected context.
-    mixed: Some Ritual, remembrance, and sacred time criteria were observed while burden, support, contextual
-      change, or a contradiction limited the conclusion.
-    contradictory: The observed result opposed the intended Ritual, remembrance, and sacred time criterion,
-      introduced harm or coercion, or showed the design was not workable.
-    inconclusive: The Ritual, remembrance, and sacred time action was deferred, not observed, not applicable,
-      stale, insufficiently bounded, or too confounded to interpret.
+    supportive: The weekly pause recalled help received, prompted return of a borrowed item and made room
+      for rest; the second observance removed an empty flourish.
+    mixed: The sequence felt meaningful, but the next action was missed and the review made that gap explicit.
+    contradictory: A ceremony substituted for making a needed repair, pressured others to disclose grief
+      or borrowed a restricted practice without permission.
+    inconclusive: A ritual was described beautifully but never performed or linked to an observed action.
 presentation:
   setup_copy:
-    context_heading: Choose one bounded context for Ritual, remembrance, and sacred time.
+    context_heading: Use a small ritual to connect remembrance with action
     boundary_heading: Not applicable, defer, support, and stop decisions carry no deficit.
-    timing_hint: Use three short actions over ten days; do not manufacture an opportunity.
+    timing_hint: Work through the numbered actions at a sustainable pace. Preserve their order; use the
+      review point specified in the instructions and defer if the context is unsuitable.
     applicability_heading: Confirm role, pathway, authority, consent, access, and safety for Ritual, remembrance,
       and sacred time.
   check_in_labels:
-    c0309_a1_primary: The bounded Ritual, remembrance, and sacred time criterion for action 1 was observed
+    c0309_a1_primary: 'Observed checks: give each part of the sequence a purpose'
     c0309_a1_boundary: Action 1 stayed inside its stated Ritual, remembrance, and sacred time boundary
     c0309_a1_adverse: Action 1 produced harm, pressure, or a boundary violation
-    c0309_a2_primary: The bounded Ritual, remembrance, and sacred time criterion for action 2 was observed
+    c0309_a2_primary: 'Observed checks: perform the sequence with attention and freedom'
     c0309_a2_boundary: Action 2 stayed inside its stated Ritual, remembrance, and sacred time boundary
     c0309_a2_adverse: Action 2 produced harm, pressure, or a boundary violation
-    c0309_a3_primary: The bounded Ritual, remembrance, and sacred time criterion for action 3 was observed
+    c0309_a3_primary: 'Observed checks: check the action and revise the next observance'
     c0309_a3_boundary: Action 3 stayed inside its stated Ritual, remembrance, and sacred time boundary
     c0309_a3_adverse: Action 3 produced harm, pressure, or a boundary violation
-  completion_copy: Review the bounded evidence without claiming mastery, broad transfer, professional
-    validation, identity, dignity, or human worth.
-  plain_language_evidence: The structured record shows what happened in one limited Ritual, remembrance,
-    and sacred time practice, including support, contradiction, defer, no result, or harm.
+  completion_copy: What did the sequence help you remember, and what changed outside the ceremony? Completion
+    is not mastery.
+  plain_language_evidence: The weekly pause recalled help received, prompted return of a borrowed item
+    and made room for rest; the second observance removed an empty flourish.
   display_order: 44
